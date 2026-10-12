@@ -222,7 +222,7 @@ kit = "case"
 part = "open"
 bed = "rain"
 lines = [
-  { say = "gault", text = "Case file eleven twelve. The Warm Chair. Mrs Odile Fenwick came home and sat in her favourite chair, and it was warm. She lives alone. The cat was also surprised." },
+  { say = "gault", text = "Case file eleven twelve. The Warm Chair. Missus Odile Fenwick came home and sat in her favourite chair, and it was warm. She lives alone. The cat was also surprised." },
 ]
 
 [[clip]]
