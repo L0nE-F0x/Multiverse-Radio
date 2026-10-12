@@ -8,6 +8,8 @@ station = "end-lounge"
 host = { voice = "bm_fable", speed = 0.88, name = "Barnaby Velvet" }
 gilbert = { voice = "bm_lewis", speed = 0.95, name = "Gilbert (Bartender)" }
 bev = { voice = "af_nova", fx = "phone", name = "Bev" }
+# v3: serial.
+greg = { voice = "am_onyx", fx = "whisper", name = "Greg, a Shadow" }
 
 # ── Idents ────────────────────────────────────────────────────────────────────
 
@@ -222,4 +224,285 @@ lines = [
   { say = "host", text = "Bev, I don't know it. But I want you to know. It's a real heartbreaker." },
   { say = "bev", text = "That's what I keep saying, love!" },
   { sfx = "phone-hangup" },
+]
+
+# ══ v3: the living schedule ═══════════════════════════════════════════════════
+#
+# Shows, the dj kit (an opener, one to three notes from the room, a heartbreaker), serial
+# episodes and Halloween. Lady Entropy, the Proton Decay Four and Smooth Harold Oblivion
+# are resident artists (src/content/packs/grand.ts). Existing clips above are rendered and
+# deployed; only add.
+
+# ── Shows ─────────────────────────────────────────────────────────────────────
+
+[[show]]
+id = "last-call"
+name = "Last Call"
+blurb = "Last call has been going on for eleven billion years. This is the good part."
+start = 0
+end = 3
+
+[[show]]
+id = "the-cocktail-hour"
+name = "The Cocktail Hour"
+blurb = "Gilbert mixes, Barnaby introduces heartbreakers, and the universe dims the lights."
+start = 18
+end = 20
+
+[[clip]]
+id = "last-call-open"
+category = "id"
+show = "last-call"
+part = "open"
+title = "Last Call"
+lines = [
+  { say = "host", text = "This is Last Call, at the Lounge at the End of Time.", gap = 0.6 },
+  { say = "gilbert", text = "Last call.", gap = 0.6 },
+  { say = "host", text = "He says that every night. Pull up a booth." },
+]
+
+[[clip]]
+id = "last-call-01"
+category = "dj"
+show = "last-call"
+lines = [
+  { say = "host", text = "This is the good part of last call. The part where nobody leaves. Gilbert has put the chairs up on two of the tables, purely for show.", gap = 0.6 },
+  { say = "gilbert", text = "I'm going somewhere." },
+  { say = "host", text = "You're not, darling." },
+]
+
+[[clip]]
+id = "last-call-02"
+category = "dj"
+show = "last-call"
+lines = [
+  { say = "host", text = "A star just went out over the left side of the big window. If you saw it, make a wish." },
+  { say = "host", text = "If you didn't, make one anyway. It won't mind. It was very generous all its life." },
+]
+
+[[clip]]
+id = "the-cocktail-hour-open"
+category = "id"
+show = "the-cocktail-hour"
+part = "open"
+title = "The Cocktail Hour"
+lines = [
+  { say = "host", text = "Good evening. It's the Cocktail Hour. Gilbert has eight shakers going, and the universe has dimmed the lights for us. Wasn't that kind." },
+]
+
+[[clip]]
+id = "the-cocktail-hour-01"
+category = "dj"
+show = "the-cocktail-hour"
+lines = [
+  { say = "host", text = "Gilbert, what are you mixing?" },
+  { say = "gilbert", text = "A Slow Collapse." },
+  { say = "host", text = "And what's in a Slow Collapse?" },
+  { say = "gilbert", text = "Everything. Gradually.", gap = 0.6 },
+  { say = "host", text = "Two, please." },
+]
+
+[[clip]]
+id = "the-cocktail-hour-02"
+category = "dj"
+show = "the-cocktail-hour"
+lines = [
+  { say = "host", text = "The Cocktail Hour is the only hour in which I introduce a song before it's played, so you have time to prepare your heart.", gap = 0.6 },
+  { say = "host", text = "This next one is a real heartbreaker. You have been warned." },
+]
+
+# ── DJ kit ────────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "dj-open-01"
+category = "dj"
+kit = "dj"
+part = "open"
+lines = [
+  { say = "host", text = "Oh, that was a real heartbreaker. I mean it, darling." },
+]
+
+[[clip]]
+id = "dj-open-02"
+category = "dj"
+kit = "dj"
+part = "open"
+lines = [
+  { say = "host", text = "Good evening, from the last booth, at the end of everything." },
+]
+
+[[clip]]
+id = "dj-open-03"
+category = "dj"
+kit = "dj"
+part = "open"
+lines = [
+  { say = "gilbert", text = "Another round?" },
+  { say = "host", text = "Always, Gilbert. Always." },
+]
+
+[[clip]]
+id = "dj-body-01"
+category = "dj"
+kit = "dj"
+part = "body"
+lines = [
+  { say = "host", text = "Lady Entropy is in the far booth tonight, in a dress made of the last light from a dying galaxy. She's ordered a mineral water. She's driving." },
+]
+
+[[clip]]
+id = "dj-body-02"
+category = "dj"
+kit = "dj"
+part = "body"
+lines = [
+  { say = "host", text = "The Proton Decay Four are now the Proton Decay Three. Nobody's quite sure what happened to the fourth. One moment he was there, and then he was simply, slowly, less there.", gap = 0.6 },
+  { say = "host", text = "They play on. They always will." },
+]
+
+[[clip]]
+id = "dj-body-03"
+category = "dj"
+kit = "dj"
+part = "body"
+lines = [
+  { say = "host", text = "The gentleman in booth four has asked for the bill.", gap = 0.8 },
+  { say = "gilbert", text = "He's what?", gap = 0.6 },
+  { say = "host", text = "Gilbert has dropped six of his eight glasses. Eleven billion years, darling. We'd stopped printing bills." },
+]
+
+[[clip]]
+id = "dj-body-04"
+category = "dj"
+kit = "dj"
+part = "body"
+lines = [
+  { say = "host", text = "Smooth Harold Oblivion is at the piano tonight. He plays everything at half speed, so it lasts twice as long. At the end of time, darling, that isn't indulgence. That's manners." },
+]
+
+[[clip]]
+id = "dj-body-05"
+category = "dj"
+kit = "dj"
+part = "body"
+lines = [
+  { say = "host", text = "The microphone on our little stage is still empty, and the spotlight is still on. Someone might come. Someone always might.", gap = 0.6 },
+  { say = "host", text = "That's the whole point of a spotlight." },
+]
+
+[[clip]]
+id = "dj-body-06"
+category = "dj"
+kit = "dj"
+part = "body"
+lines = [
+  { say = "host", text = "Gilbert has been polishing the same glass for an hour.", gap = 0.6 },
+  { say = "gilbert", text = "It's a nice glass.", gap = 0.6 },
+  { say = "host", text = "It is a nice glass, darling. Carry on." },
+]
+
+[[clip]]
+id = "dj-close-01"
+category = "dj"
+kit = "dj"
+part = "close"
+lines = [
+  { say = "host", text = "And now, darling. A real heartbreaker." },
+]
+
+[[clip]]
+id = "dj-close-02"
+category = "dj"
+kit = "dj"
+part = "close"
+lines = [
+  { say = "host", text = "Here's another one. Hold somebody's hand. Or a coat stand's." },
+]
+
+[[clip]]
+id = "dj-close-03"
+category = "dj"
+kit = "dj"
+part = "close"
+lines = [
+  { say = "host", text = "Something slow, now. There's no hurry. There's no anything." },
+]
+
+# ── Serials (one episode a day; see the other stations for the rest) ─────────
+
+[[clip]]
+id = "greg-comes-home-08"
+category = "story"
+serial = { id = "greg-comes-home", episode = 8 }
+title = "Greg Comes Home, Part Eight: Last Call"
+bed = "room"
+lines = [
+  { say = "host", text = "The shadow at the end of the bar is back. Greg. A dry ginger, Gilbert." },
+  { say = "gilbert", text = "Already poured." },
+  { say = "host", text = "You're on your way home, I'm told. The whole dial's talking about it.", gap = 0.6 },
+  { say = "greg", text = "I'm losing my nerve, Barnaby." },
+  { say = "host", text = "Well, you've come to the right place. Everybody here lost theirs eons ago. We keep them behind the bar.", gap = 0.8 },
+  { say = "greg", text = "What if he's got a new one? There's a man on the radio who sells replacement shadows. A ballroom dancer. A basketball player." },
+  { say = "host", text = "Darling. A man doesn't leave the porch light on for a basketball player.", gap = 1.2 },
+  { say = "greg", text = "What if I've been gone too long?" },
+  { say = "gilbert", text = "Eleven billion years of last calls. Nobody has ever regretted going home.", gap = 1.0 },
+  { say = "host", text = "That's the most Gilbert has said in a century. I'd listen to him." },
+  { say = "greg", text = "Can I pay my tab?" },
+  { say = "gilbert", text = "Paid." },
+  { say = "host", text = "Paid? By whom?" },
+  { say = "gilbert", text = "The gentleman in booth four." },
+  { say = "host", text = "Booth four has never paid for anything. Not since the first galaxies." },
+  { say = "gilbert", text = "He says, for the lad going home.", gap = 1.2 },
+  { say = "host", text = "Then go, darling. Go before the next song. It's a real heartbreaker, and you'll only stay to hear it." },
+  { say = "greg", text = "Thank you, Barnaby. Thank you, Gilbert.", gap = 1.2 },
+  { say = "host", text = "Goodnight, Greg. Here's a real heartbreaker. For everyone who's still deciding." },
+]
+
+[[clip]]
+id = "bev-gets-her-song-08"
+category = "story"
+serial = { id = "bev-gets-her-song", episode = 8 }
+title = "Bev Gets Her Song, Part Eight: The Space After the Third Note"
+bed = "room"
+lines = [
+  { sfx = "phone-ring" },
+  { say = "host", text = "A call in the last booth. Bev, darling. I hear you've got the whole tune now." },
+  { say = "bev", text = "Both halves, love. The void gave me the second bit. But it still hasn't got a name, and nobody can play it for me." },
+  { say = "host", text = "Bev, the microphone on our little stage has been empty for eleven billion years. The spotlight's always on. It's been waiting for someone.", gap = 0.8 },
+  { say = "host", text = "Would you sing it for us?" },
+  { say = "bev", text = "Oh, I couldn't." },
+  { say = "gilbert", text = "You could." },
+  { say = "host", text = "Gilbert has spoken. Go on, darling." },
+  { say = "bev", text = "Dum. Dum. Da dum.", speed = 0.75, gap = 2.4 },
+  { say = "bev", text = "I'm sorry. I'm sorry, love. I can't do the next bit. I've gone.", gap = 1.4 },
+  { say = "bev", text = "Oh.", gap = 1.0 },
+  { say = "bev", text = "Oh, that's why he cried. It isn't the song. It's the gap. There's a little gap after the third note, and you have to wait in it, and you don't know what's coming next.", gap = 1.0 },
+  { say = "host", text = "And that's where he was." },
+  { say = "bev", text = "That's where he was. Every time.", gap = 1.6 },
+  { say = "host", text = "Bev. That is a real heartbreaker. And I have never meant it more." },
+  { say = "gilbert", text = "Ice?" },
+  { say = "bev", text = "Go on, then, love." },
+]
+
+# ── Halloween (24 to 31 October) ──────────────────────────────────────────────
+
+[[clip]]
+id = "halloween-01"
+category = "dj"
+kit = "dj"
+part = "body"
+title = "Ghosts at the Bar"
+dates = ["10-24", "10-25", "10-26", "10-27", "10-28", "10-29", "10-30", "10-31"]
+lines = [
+  { say = "host", text = "It's Halloween at the end of time, darling, which means very little changes. Most of our regulars have been ghosts for millennia.", gap = 0.6 },
+  { say = "host", text = "Tonight, one of them has come dressed as a man who's alive. Gilbert asked for proof of age. It took a while." },
+]
+
+[[clip]]
+id = "halloween-02"
+category = "id"
+title = "The Lounge, Halloween"
+dates = ["10-24", "10-25", "10-26", "10-27", "10-28", "10-29", "10-30", "10-31"]
+lines = [
+  { say = "host", text = "The Lounge at the End of Time. Halloween. Everything ends here, darling. Beautifully. Boo." },
 ]

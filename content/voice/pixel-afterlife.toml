@@ -7,6 +7,9 @@ station = "pixel-afterlife"
 host = { voice = "am_echo", speed = 1.12, name = "Player Two" }
 lag = { voice = "bm_lewis", speed = 0.9, fx = "cave", name = "Lag (Ghost)" }
 bev = { voice = "af_nova", fx = "phone", name = "Bev" }
+# v3: serials.
+greg = { voice = "am_onyx", fx = "whisper", name = "Greg, a Shadow" }
+teodor = { voice = "bm_daniel", fx = "distant", name = "Teodor, Relay Four" }
 
 # ── Idents ────────────────────────────────────────────────────────────────────
 
@@ -229,4 +232,301 @@ lines = [
   { say = "host", text = "That's my favourite song!" },
   { say = "bev", text = "Oh, bless you. I'll keep looking." },
   { sfx = "phone-hangup" },
+]
+
+# ══ v3: the living schedule ═══════════════════════════════════════════════════
+#
+# Shows, the dj kit (an opener, one to three bits of arcade news, a hand-off), serial
+# episodes and Halloween. The Insert Coins, Sprite Flicker and Save State are resident
+# artists (src/content/packs/bright.ts). Existing clips above are rendered and deployed;
+# only add.
+
+# ── Shows ─────────────────────────────────────────────────────────────────────
+
+[[show]]
+id = "attract-mode"
+name = "Attract Mode"
+blurb = "After hours, when the cabinets play themselves to remember how."
+start = 1
+end = 4
+
+[[show]]
+id = "after-school-special"
+name = "After School Special"
+blurb = "Two-player tunes for the busiest hour in the arcade. Player One, this could be it."
+start = 15
+end = 18
+
+[[clip]]
+id = "attract-mode-open"
+category = "id"
+show = "attract-mode"
+part = "open"
+title = "Attract Mode"
+lines = [
+  { say = "host", text = "It's Attract Mode, on Eight-Bit Afterlife. The arcade's closed. The cabinets are playing themselves.", speed = 1.0 },
+]
+
+[[clip]]
+id = "attract-mode-01"
+category = "dj"
+show = "attract-mode"
+lines = [
+  { say = "host", text = "In attract mode, the little characters run through the level on their own. Nobody's holding the controller. They don't mind. They're just remembering the way.", speed = 1.0, gap = 0.8 },
+  { say = "host", text = "It's kind of beautiful. Here's a song.", speed = 1.0 },
+]
+
+[[clip]]
+id = "attract-mode-02"
+category = "dj"
+show = "attract-mode"
+lines = [
+  { say = "host", text = "Lag's still here, after hours. At the cabinet by the door.", speed = 1.0 },
+  { say = "lag", text = "Nearly had him." },
+  { say = "host", text = "Lag, buddy, it's attract mode. The game's playing itself. You're just watching.", speed = 1.0 },
+  { say = "lag", text = "Nearly had him.", gap = 0.6 },
+]
+
+[[clip]]
+id = "after-school-special-open"
+category = "id"
+show = "after-school-special"
+part = "open"
+title = "After School Special"
+lines = [
+  { say = "host", text = "It's the After School Special! The arcade is packed! Player One, if you're out there, now's a great time!" },
+]
+
+[[clip]]
+id = "after-school-special-01"
+category = "dj"
+show = "after-school-special"
+lines = [
+  { say = "host", text = "Ghosts everywhere! A queue at every cabinet! And somebody saw AAA today, at the high score machine!" },
+  { say = "host", text = "They said he had a very kind face, and couldn't work the letters. We love you, AAA!" },
+]
+
+[[clip]]
+id = "after-school-special-02"
+category = "dj"
+show = "after-school-special"
+lines = [
+  { say = "host", text = "Two-player mode is free this hour! Bring a friend! And if you haven't got one, I'll be your Player Two!" },
+  { say = "host", text = "That's literally my name! I'm qualified!" },
+]
+
+# ── DJ kit ────────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "dj-open-01"
+category = "dj"
+kit = "dj"
+part = "open"
+lines = [
+  { say = "host", text = "Eight-Bit Afterlife! Still here! Still waiting! Still great!" },
+]
+
+[[clip]]
+id = "dj-open-02"
+category = "dj"
+kit = "dj"
+part = "open"
+lines = [
+  { say = "host", text = "Level complete! That was a good one!" },
+  { sfx = "ding" },
+]
+
+[[clip]]
+id = "dj-open-03"
+category = "dj"
+kit = "dj"
+part = "open"
+lines = [
+  { sfx = "ding" },
+  { say = "host", text = "Extra life! Okay! Back to the show!" },
+]
+
+[[clip]]
+id = "dj-open-04"
+category = "dj"
+kit = "dj"
+part = "open"
+daypart = "night"
+lines = [
+  { say = "host", text = "It's late in the arcade. The carpet's glowing. Hi.", speed = 1.0 },
+]
+
+[[clip]]
+id = "dj-body-01"
+category = "dj"
+kit = "dj"
+part = "body"
+lines = [
+  { say = "host", text = "The Insert Coins have a new track out! They recorded it inside a coin slot! It's very short, and it sounds like money!" },
+]
+
+[[clip]]
+id = "dj-body-02"
+category = "dj"
+kit = "dj"
+part = "body"
+lines = [
+  { say = "host", text = "Lag update! Lag has lost again!" },
+  { say = "lag", text = "I had him." },
+  { say = "host", text = "He did not have him! That's his four hundred and first continue! That's a record! That's a kind of winning!" },
+]
+
+[[clip]]
+id = "dj-body-03"
+category = "dj"
+kit = "dj"
+part = "body"
+lines = [
+  { say = "host", text = "Sprite Flicker played a live set tonight, but she flickered so much that half the audience only saw every other song. They say it was the best half!" },
+]
+
+[[clip]]
+id = "dj-body-04"
+category = "dj"
+kit = "dj"
+part = "body"
+lines = [
+  { say = "host", text = "The cleaner ghost has finished mopping the pixel he's been mopping since launch day! It's very shiny! He's moved on to the next pixel! We're all so proud of him!" },
+]
+
+[[clip]]
+id = "dj-body-05"
+category = "dj"
+kit = "dj"
+part = "body"
+lines = [
+  { say = "host", text = "Save State have a new album, and it's exactly the same as their last album, because they saved right before the bad bit. Smart band. Very smart band." },
+]
+
+[[clip]]
+id = "dj-body-06"
+category = "dj"
+kit = "dj"
+part = "body"
+lines = [
+  { say = "host", text = "Somebody asked what I'll do if Player One ever presses start. And I don't know! I've never thought that far!", gap = 0.8 },
+  { say = "host", text = "I think I'll just say hi. I've been holding your controller. It's warm.", speed = 1.0 },
+]
+
+[[clip]]
+id = "dj-close-01"
+category = "dj"
+kit = "dj"
+part = "close"
+lines = [
+  { say = "host", text = "Here's a bop! Press play! Well, I'll press play!" },
+]
+
+[[clip]]
+id = "dj-close-02"
+category = "dj"
+kit = "dj"
+part = "close"
+lines = [
+  { say = "host", text = "Next track loading! Loading! Loaded! Ready? Ready!" },
+  { sfx = "beep" },
+]
+
+[[clip]]
+id = "dj-close-03"
+category = "dj"
+kit = "dj"
+part = "close"
+lines = [
+  { say = "host", text = "Here's another one! Respawning now! Three! Two! One!" },
+]
+
+[[clip]]
+id = "dj-close-04"
+category = "dj"
+kit = "dj"
+part = "close"
+lines = [
+  { say = "host", text = "Insert coin! Just kidding! It's free! Here's a song!" },
+]
+
+# ── Serials (one episode a day; see the other stations for the rest) ─────────
+
+[[clip]]
+id = "greg-comes-home-06"
+category = "story"
+serial = { id = "greg-comes-home", episode = 6 }
+title = "Greg Comes Home, Part Six: Player One"
+lines = [
+  { say = "host", text = "Big news, arcade! The shadow from level four! Greg! Best player we've ever had! And today he's leaving!" },
+  { say = "greg", text = "Sorry, Player Two." },
+  { say = "host", text = "Don't be sorry! Be great! Okay, I'm a bit sad. Greg, buddy, can I ask you something?" },
+  { say = "greg", text = "Go on." },
+  { say = "host", text = "Would you be my Player One? I've been holding the controller since nineteen eighty-seven. You'd just have to press start.", speed = 1.0, gap = 1.2 },
+  { say = "greg", text = "I can't. I'm already somebody's. He's been waiting too.", gap = 1.0 },
+  { say = "host", text = "Oh.", speed = 1.0, gap = 1.0 },
+  { say = "host", text = "Waiting. Yeah. I know about waiting.", speed = 1.0 },
+  { say = "lag", text = "He's going home, Two. Let him go home." },
+  { say = "host", text = "Lag's right! Lag's never right! But he's right! Greg, how are you getting there?" },
+  { say = "greg", text = "I don't know. It's a long way to the eastern Overlap." },
+  { say = "host", text = "Level nine! At the end of level nine there's a door! Nobody uses it, because nobody ever gets to level nine! It comes out through the back of a bathroom mirror!" },
+  { say = "host", text = "The password's got a lot of B's in it. And a heart. Try the heart!" },
+  { say = "greg", text = "Thank you, Player Two." },
+  { say = "host", text = "Hey, Greg. When you get there, tell him somebody else was waiting for somebody too. Tell him it's worth it.", speed = 1.0 },
+  { sfx = "beep" },
+  { sfx = "beep" },
+  { sfx = "ding" },
+  { say = "host", text = "He's in! He's through! He's gone!", gap = 1.0 },
+  { say = "host", text = "Okay. Here's a song. Not a sad one. A medium one.", speed = 1.0 },
+]
+
+[[clip]]
+id = "teodor-is-heard-07"
+category = "story"
+serial = { id = "teodor-is-heard", episode = 7 }
+title = "Teodor Is Heard, Part Seven: Press Start"
+lines = [
+  { say = "host", text = "Something's coming in on the arcade's link cable! From really far away! Hello?" },
+  { say = "teodor", text = "This is Relay Four. Is anyone receiving this." },
+  { say = "host", text = "Teodor! Teodor from the news! It's Player Two! Can you hear me?" },
+  { say = "teodor", text = "In bits. I hear in bits, now. Someone said you've been waiting since nineteen eighty-seven." },
+  { say = "host", text = "For Player One! Yeah! How long have you been waiting?" },
+  { say = "teodor", text = "Eleven years." },
+  { say = "host", text = "Rookie!", gap = 1.0 },
+  { say = "host", text = "Sorry. That was mean. It's a waiting joke. We do waiting jokes here.", speed = 1.0 },
+  { say = "teodor", text = "I asked the same question every night for eleven years. Is anyone receiving this. And now people are answering, and I don't know what to say." },
+  { say = "host", text = "Can I give you a tip? From a professional waiter?", speed = 1.0 },
+  { say = "teodor", text = "Please." },
+  { say = "host", text = "On the start screen, it says, press start. And you wait for somebody to press it. But sometimes, you have to press it yourself.", speed = 1.0, gap = 0.8 },
+  { say = "host", text = "Stop asking if anyone's there! Assume they are! Tell them something! Tell them about your day!", gap = 1.4 },
+  { say = "teodor", text = "This is Relay Four.", gap = 0.8 },
+  { say = "teodor", text = "Today I mended the fence. Captain came at three. He stole a biscuit. It was a good biscuit.", gap = 0.8 },
+  { say = "host", text = "That's it! That's a game! You've started!" },
+  { say = "lag", text = "Nearly had him." },
+  { say = "host", text = "Lag! Not now!" },
+]
+
+# ── Halloween (24 to 31 October) ──────────────────────────────────────────────
+
+[[clip]]
+id = "halloween-01"
+category = "dj"
+kit = "dj"
+part = "body"
+title = "Ghosts Dressed as People"
+dates = ["10-24", "10-25", "10-26", "10-27", "10-28", "10-29", "10-30", "10-31"]
+lines = [
+  { say = "host", text = "It's Halloween in the arcade, and all the ghosts have dressed up as people! Lag's come as a guy who wins!" },
+  { say = "lag", text = "It's a costume." },
+  { say = "host", text = "It's a great costume, Lag! Nobody believes it!" },
+]
+
+[[clip]]
+id = "halloween-02"
+category = "id"
+title = "Eight-Bit Afterlife, Halloween"
+dates = ["10-24", "10-25", "10-26", "10-27", "10-28", "10-29", "10-30", "10-31"]
+lines = [
+  { say = "host", text = "Eight-Bit Afterlife! Halloween! Everybody here is already a ghost! Easiest costume ever!" },
+  { sting = "halloween" },
 ]
