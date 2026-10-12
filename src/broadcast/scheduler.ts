@@ -23,6 +23,7 @@
 //   - Modular parts: clips with `part` chain open → 1–3 bodies → close from one kit.
 
 import { trackMeta } from '../content/tracks';
+import { artistSeed } from '../music/recipes/artist';
 import { createRng, hash, weightedPick, type Rng } from './random';
 import { browserTzOffset, localMinuteToMs, localTime, showAtHour, type TzOffset } from './time';
 import type {
@@ -895,7 +896,7 @@ function computeRuns(station: StationDef, segments: Segment[], failed?: Readonly
         recipe: s.recipe,
         seed: s.seed,
         tweaks: tweaksFor(s.recipe),
-        artist: hash(s.meta.artist),
+        artist: artistSeed(s.meta.artist),
       });
       pending = [];
     } else if (s.bed || failed?.has(s.id)) {

@@ -1,3 +1,4 @@
+import { artistSeed } from '../music/recipes/artist';
 import { describe, expect, it } from 'vitest';
 import { STATIONS, stationById } from '../stations/roster';
 import { oddities } from './dial';
@@ -542,7 +543,7 @@ describe('the living schedule (v3)', () => {
     const hour = schedule.hour(HOUR0 + 3);
     for (const run of schedule.runsInHour(HOUR0 + 3)) {
       const track = hour.find((x) => x.kind === 'track' && run.id.startsWith(`${x.id}@`));
-      if (track?.kind === 'track') expect(run.artist).toBe(hash(track.meta.artist));
+      if (track?.kind === 'track') expect(run.artist).toBe(artistSeed(track.meta.artist));
       else expect(run.artist).toBeUndefined();
     }
   });
