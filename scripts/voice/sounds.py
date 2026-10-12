@@ -9,7 +9,7 @@ from __future__ import annotations
 import numpy as np
 
 import dsp
-from dsp import SR, TAU, db, f32, note, ns, place, times
+from dsp import SR, TAU, f32, note, ns, place, times
 
 # ── Instruments ───────────────────────────────────────────────────────────────
 
@@ -26,7 +26,8 @@ def partials(freq: float, dur: float, ratios, amps, decays, attack: float = 0.00
             continue
         phase = rng.uniform(0, TAU) if rng is not None else 0.0
         out += a * np.exp(-t / d) * np.sin(TAU * f * t + phase)
-    return f32(out * np.minimum(1, t / attack))
+    # Damp whatever is still ringing at the end so truncation never clicks.
+    return dsp.fade(f32(out * np.minimum(1, t / attack)), 0, min(0.08, dur / 4))
 
 
 def bell(freq: float, dur: float = 1.5, rng=None) -> np.ndarray:
@@ -73,7 +74,7 @@ def timpani(freq: float, dur: float = 1.2, rng=None) -> np.ndarray:
     body = sum(a * np.exp(-t / d) * np.sin(r * ph) for r, a, d in
                [(1, 1, 0.7), (1.5, 0.45, 0.45), (1.98, 0.3, 0.3), (2.44, 0.15, 0.2)])
     hit = dsp.band(dsp.white(rng or np.random.default_rng(1), n), 60, 900) * np.exp(-t / 0.025) * 0.5
-    return f32((body + hit) * np.minimum(1, t / 0.002))
+    return dsp.fade(f32((body + hit) * np.minimum(1, t / 0.002)), 0, 0.08)
 
 
 def snare(rng: np.random.Generator, dur: float = 0.25) -> np.ndarray:
@@ -81,7 +82,7 @@ def snare(rng: np.random.Generator, dur: float = 0.25) -> np.ndarray:
     t = times(n)
     rattle = dsp.band(dsp.white(rng, n), 1500, 9000) * np.exp(-t / 0.08)
     body = np.sin(TAU * 190 * t) * np.exp(-t / 0.04)
-    return f32(rattle * 0.8 + body * 0.6)
+    return dsp.fade(f32(rattle * 0.8 + body * 0.6), 0, 0.04)
 
 
 def cymbal(rng: np.random.Generator, dur: float = 1.8) -> np.ndarray:
@@ -89,14 +90,14 @@ def cymbal(rng: np.random.Generator, dur: float = 1.8) -> np.ndarray:
     t = times(n)
     wash = dsp.band(dsp.white(rng, n), 3500, 11000) * np.exp(-t / (dur * 0.35))
     ping = partials(1.0, dur, rng.uniform(3200, 9000, 8), rng.uniform(0.02, 0.06, 8), [dur * 0.3] * 8, rng=rng)
-    return f32((wash + ping) * np.minimum(1, t / 0.003))
+    return dsp.fade(f32((wash + ping) * np.minimum(1, t / 0.003)), 0, 0.2)
 
 
 def boom(dur: float = 0.6) -> np.ndarray:
     n = ns(dur)
     t = times(n)
     f = 45 + 80 * np.exp(-t / 0.05)
-    return f32(np.sin(dsp.phase_of(f)) * np.exp(-t / 0.18) * np.minimum(1, t / 0.002))
+    return dsp.fade(f32(np.sin(dsp.phase_of(f)) * np.exp(-t / 0.18) * np.minimum(1, t / 0.002)), 0, 0.05)
 
 
 def chord(instrument, names, dur, spread: float = 0.0, **kw) -> np.ndarray:
@@ -155,13 +156,18 @@ def clinks(rng: np.random.Generator, seconds: float, rate: float) -> np.ndarray:
 
 
 def clap_texture(rng: np.random.Generator, seconds: float, rate: float, density_wander: float = 0.3) -> np.ndarray:
+    """Many hands: each clapper has its own hand resonance, so the texture never combs."""
     n = ns(seconds)
-    clap = ns(0.012)
-    shape = np.exp(-np.arange(clap) / (SR * 0.0025)).astype(np.float32)
+    clap = ns(0.014)
     density = 1 - density_wander + density_wander * dsp.wander(rng, n, 1.5)
-    imp = dsp.impulses(rng, n, rate, 0.3, 1.0) * (rng.random(n) < density)
-    out = dsp.convolve(imp, dsp.white(rng, clap) * shape)[:n]
-    return dsp.band(out, 600, 8000)
+    out = np.zeros(n, np.float32)
+    hands = 16
+    for _ in range(hands):
+        shape = np.exp(-np.arange(clap) / (SR * rng.uniform(0.0015, 0.0035))).astype(np.float32)
+        kernel = dsp.resonances(dsp.white(rng, clap) * shape, [(rng.uniform(900, 2600), rng.uniform(300, 900), 8)])
+        imp = dsp.impulses(rng, n, rate / hands, 0.3, 1.0) * (rng.random(n) < density)
+        out += dsp.convolve(imp, kernel)[:n]
+    return dsp.band(out, 500, 9000)
 
 
 # ── Beds ──────────────────────────────────────────────────────────────────────
@@ -169,7 +175,7 @@ def clap_texture(rng: np.random.Generator, seconds: float, rate: float, density_
 
 def bed_rain(rng, s):
     n = ns(s)
-    hush = dsp.shaped_noise(rng, n, lambda t, f: (f > 300) * (np.maximum(f, 1) / 1000.0) ** -0.4 * (f < 10000))
+    hush = dsp.shaped_noise(rng, n, lambda t, f: (f > 300) * (np.maximum(f, 1) / 1000.0) ** -0.7 * (f < 10000))
     hush *= 0.85 + 0.15 * dsp.wander(rng, n, 0.3)
     drop = dsp.white(rng, ns(0.004)) * np.exp(-np.arange(ns(0.004)) / (SR * 0.0008))
     drops = dsp.band(dsp.convolve(dsp.impulses(rng, n, 260, 0.05, 1.0), drop)[:n], 1500, 9000)
@@ -182,7 +188,7 @@ def bed_rain(rng, s):
         tt = times(m)
         place(plinks, f32(np.sin(dsp.phase_of(f0 * (1 - 0.4 * tt / 0.03))) * np.exp(-tt / 0.008)), at, rng.uniform(0.2, 1))
     rumble = dsp.band(dsp.colored(rng, n, -6), 40, 300)
-    return dsp.at_rms(hush, -20) + dsp.at_rms(drops, -25) + dsp.at_rms(plinks, -33) + dsp.at_rms(rumble, -30)
+    return dsp.at_rms(hush, -22) + dsp.at_rms(drops, -22) + dsp.at_rms(plinks, -30) + dsp.at_rms(rumble, -30)
 
 
 def bed_crowd(rng, s):
@@ -366,17 +372,17 @@ def bed_cafe(rng, s):
 
 
 BEDS = {
-    "rain": (bed_rain, -35.0),
+    "rain": (bed_rain, -36.0),
     "crowd": (bed_crowd, -34.0),
-    "applause": (bed_applause, -32.0),
-    "stadium": (bed_stadium, -31.0),
-    "sizzle": (bed_sizzle, -34.0),
+    "applause": (bed_applause, -34.0),
+    "stadium": (bed_stadium, -33.0),
+    "sizzle": (bed_sizzle, -37.0),
     "organ": (bed_organ, -33.0),
     "room": (bed_room, -43.0),
     "wind": (bed_wind, -35.0),
     "space": (bed_space, -35.0),
-    "static": (bed_static, -37.0),
-    "ocean": (bed_ocean, -34.0),
+    "static": (bed_static, -38.0),
+    "ocean": (bed_ocean, -36.0),
     "fluorescent": (bed_fluorescent, -40.0),
     "cafe": (bed_cafe, -35.0),
 }
@@ -485,12 +491,17 @@ def sfx_record_scratch(rng, s):
     src_s = 3.0
     m = ns(src_s)
     t = times(m)
-    music = sum(np.sign(np.sin(TAU * note(nm) * t)) * 0.25 for nm in ("C3", "E3", "G3", "C4"))
+    # A bright, vowel-like chord so speed changes come out as clear pitch and formant sweeps.
+    music = np.zeros(m)
+    for nm in ("C3", "G3", "C4", "E4"):
+        f0 = note(nm)
+        for k in range(1, int(5000 / f0)):
+            music += np.sin(TAU * f0 * k * t) / k
+    music = dsp.resonances(dsp.band(f32(music), 100, 5000), [(750, 300, 14), (1250, 400, 10), (2600, 600, 6)])
     for beat in np.arange(0, src_s, 0.5):
         place_at = ns(beat)
         k = min(m - place_at, ns(0.2))
-        music[place_at : place_at + k] += np.sin(TAU * 60 * times(k)) * np.exp(-times(k) / 0.06) * 1.5
-    music = dsp.band(f32(music), 80, 4000) + dsp.band(dsp.white(rng, m), 1000, 6000) * 0.1
+        music[place_at : place_at + k] += np.sin(TAU * 60 * times(k)) * np.exp(-times(k) / 0.06) * 3 * dsp.rms(music)
 
     n = ns(s)
     tt = times(n)
@@ -498,7 +509,7 @@ def sfx_record_scratch(rng, s):
     rate = np.interp(u, [0, 0.12, 0.14, 0.35, 0.38, 0.6, 0.62, 0.8, 1.0], [1, 1, -3.5, -2.5, 4.5, 3.5, -2.5, -0.3, 0])
     pos = 1.0 * SR + np.cumsum(rate)
     out = np.interp(pos, np.arange(m), music)
-    friction = dsp.band(dsp.white(rng, n), 800, 5000) * np.abs(rate) * 0.12
+    friction = dsp.band(dsp.white(rng, n), 1500, 6000) * np.abs(rate) * 0.04 * dsp.rms(music) / 0.5
     env = np.minimum(1, (s - tt) / 0.05)
     return f32((out + friction) * env)
 
@@ -535,6 +546,11 @@ def sfx_gong(rng, s):
         decay = np.exp(-t / (5.5 / (1 + 0.35 * i)))
         beat = 1 + 0.15 * np.sin(TAU * rng.uniform(0.3, 1.5) * t + rng.uniform(0, TAU))
         out += (1 / (1 + 0.25 * i)) * np.sin(dsp.phase_of(f) + rng.uniform(0, TAU)) * bloom * decay * beat
+    # Shimmer: dense inharmonic partials higher up that swell after the strike, then fade.
+    for _ in range(28):
+        f = rng.uniform(600, 4500)
+        swell = (1 - np.exp(-t / rng.uniform(0.15, 0.6))) * np.exp(-t / rng.uniform(0.6, 2.0))
+        out += 0.25 * np.sin(TAU * f * t + rng.uniform(0, TAU)) * swell * (900 / f) ** 0.5
     strike = dsp.band(dsp.white(rng, ns(0.05)), 80, 1500) * np.exp(-times(ns(0.05)) / 0.01)
     out[: len(strike)] += strike * 2
     return dsp.fade(f32(out), 0, 1.0)
@@ -557,7 +573,7 @@ def sfx_crickets(rng, s):
                 place(out, f32(chirp), at + p * 0.032, gain)
             at += period * rng.uniform(0.9, 1.1)
     air = dsp.band(dsp.colored(rng, n, -3), 100, 3000)
-    return dsp.fade(out + dsp.at_rms(air, 20 * np.log10(dsp.rms(out) + 1e-9) - 14), 0.15, 0.25)
+    return dsp.fade(out + dsp.at_rms(air, 20 * np.log10(dsp.rms(out) + 1e-9) - 22), 0.15, 0.25)
 
 
 def sfx_tiny_explosion(rng, s):
@@ -684,12 +700,12 @@ def sting_news(rng):
 def sting_sports(rng):
     out = np.zeros(ns(2.6), np.float32)
     for k, at in enumerate(np.arange(0, 0.58, 1 / 18)):
-        place(out, snare(rng, 0.15) * (0.1 + 0.5 * k / 10), at)
+        place(out, snare(rng, 0.15) * (0.04 + 0.2 * k / 10), at)
     for i, name in enumerate(("G4", "G4", "G4")):
         place(out, brass(note(name), 0.09, bright=1.0) * 0.3, 0.3 + i * 0.1)
     held = sum(brass(note(nm), 1.4, bright=1.0, vibrato=0.6, release=0.35) for nm in ("C5", "E5", "G5", "C4"))
     place(out, held * 0.18, 0.6)
-    place(out, cymbal(rng, 1.8) * 0.25, 0.6)
+    place(out, cymbal(rng, 1.8) * 0.08, 0.6)
     place(out, timpani(note("C3"), 1.0, rng) * 0.6, 0.6)
     return out
 
@@ -731,7 +747,7 @@ def sting_fanfare(rng):
     place(out, brass(note("C4"), 1.5, bright=0.8) * 0.2, 1.14)
     for k, at in enumerate(np.arange(1.14, 2.4, 1 / 14)):
         place(out, timpani(note("C3"), 0.5, rng) * 0.25 * (1 - k / 20), at)
-    place(out, cymbal(rng, 2.0) * 0.25, 1.14)
+    place(out, cymbal(rng, 2.0) * 0.08, 1.14)
     return out
 
 

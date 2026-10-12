@@ -14,12 +14,23 @@ import dsp
 import sounds
 import voicefx
 from dsp import SR, ns
+import voicescript
 from tts import TTS
 from voicescript import LENGTH_GUIDE, STING_GAP, STING_SECONDS, Clip, Pause, Sfx, Speech, Sting
 
+# The validator's catalog and the engine must agree on every name.
+for _kind, _catalog, _engine in (
+    ("fx", voicescript.FX, voicefx.PRESETS),
+    ("bed", voicescript.BEDS, sounds.BEDS),
+    ("sfx", voicescript.SFX, sounds.SFX),
+    ("sting", voicescript.STINGS, sounds.STINGS),
+):
+    if set(_catalog) != set(_engine):
+        raise RuntimeError(f"{_kind} catalog mismatch: {sorted(set(_catalog) ^ set(_engine))}")
+
 TARGET_LUFS = -16.0
 LIMIT_CEILING_DB = -2.3  # limiter ceiling before encoding
-MAX_TRUE_PEAK_DB = -1.5  # verified on the decoded MP3
+MAX_TRUE_PEAK_DB = -1.8  # verified on the decoded MP3 (4x oversampled; leaves margin for 8x meters)
 EDGE = 0.05  # silence kept at each end
 BED_LEAD, BED_TAIL = 0.4, 0.6  # bed before the first and after the last sound
 BITRATE = "48k"
@@ -155,22 +166,24 @@ def encode(x: np.ndarray, path: Path, target: float | None = TARGET_LUFS) -> tup
     peaks, so correct and re-encode until the decoded file is on target. Peaks win ties."""
     path.parent.mkdir(parents=True, exist_ok=True)
     tmp = path.with_name(f".{path.stem}.{os.getpid()}.tmp.mp3")
-    peak_bound = False
+    ceiling = LIMIT_CEILING_DB
     try:
-        for _ in range(5):
+        for attempt in range(6):
             dsp.encode_mp3(x, str(tmp), BITRATE)
             decoded = dsp.decode(str(tmp))
             tp = dsp.true_peak_db(decoded)
-            if tp > MAX_TRUE_PEAK_DB:
-                x = x * dsp.db(MAX_TRUE_PEAK_DB - tp - 0.2)
-                peak_bound = True
+            level = dsp.loudness(decoded)
+            peak_ok = tp <= MAX_TRUE_PEAK_DB
+            level_ok = target is None or level < -70 or abs(target - level) <= 0.25
+            if peak_ok and level_ok:
+                break
+            if attempt == 4:  # last resort: guarantee the peak, accept the loudness
+                x = x * dsp.db(min(0.0, MAX_TRUE_PEAK_DB - tp - 0.3))
                 continue
-            if target is None or peak_bound:
-                break
-            miss = target - dsp.loudness(decoded)
-            if abs(miss) <= 0.25 or dsp.loudness(decoded) < -70:
-                break
-            x = dsp.limit(x * dsp.db(miss), LIMIT_CEILING_DB)
+            if not peak_ok:  # the codec overshoots: limit harder rather than turning everything down
+                ceiling -= tp - MAX_TRUE_PEAK_DB + 0.2
+            gain = 0.0 if target is None or level < -70 else target - level
+            x = dsp.limit(x * dsp.db(gain), ceiling)
         os.replace(tmp, path)
     finally:
         tmp.unlink(missing_ok=True)

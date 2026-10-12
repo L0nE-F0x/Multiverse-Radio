@@ -51,6 +51,11 @@ def hiss(level_db: float, lo: float, hi: float, crackle: float = 0.0) -> Step:
     return run
 
 
+def bandlimit(lo: float, hi: float, order: int = 4) -> Step:
+    """Steep band-limit, e.g. after distortion so a phone line stays a phone line."""
+    return lambda x, rng: dsp.band(x, lo, hi, order)
+
+
 def flutter(depth: float, rate: float) -> Step:
     def run(x: np.ndarray, rng: np.random.Generator) -> np.ndarray:
         t = dsp.times(len(x))
@@ -130,6 +135,7 @@ PRESETS: dict[str, Preset] = {
            "acompressor=threshold=-30dB:ratio=6:attack=2:release=60:makeup=6dB"),
         drive(5),
         hiss(-42, 300, 3300),
+        bandlimit(300, 3400),
     ), level_db=-1.0),
     "radio": Preset((
         ff("highpass=f=480,highpass=f=480,lowpass=f=2700,lowpass=f=2700,equalizer=f=1200:t=q:w=1:g=4,"
@@ -137,11 +143,13 @@ PRESETS: dict[str, Preset] = {
         drive(7),
         flutter(0.06, 3.1),
         hiss(-30, 400, 2800, crackle=6),
+        bandlimit(450, 3000),
     ), level_db=-1.5),
     "megaphone": Preset((
         ff("highpass=f=550,highpass=f=550,lowpass=f=4200,lowpass=f=4200,equalizer=f=2000:t=q:w=0.7:g=8,"
            "acompressor=threshold=-28dB:ratio=6:attack=1:release=50:makeup=8dB"),
         drive(12),
+        bandlimit(450, 5000),
         echoes([(0.11, -11), (0.23, -18), (0.37, -25)], lo=400, hi=3500),
     )),
     "robot": Preset((
@@ -169,7 +177,7 @@ PRESETS: dict[str, Preset] = {
         ff("rubberband=pitch=1.5:formant=shifted,highpass=f=220"),
     )),
     "giant": Preset((
-        ff("rubberband=pitch=0.7:formant=shifted,equalizer=f=110:t=q:w=1:g=5,lowpass=f=6500"),
+        ff("rubberband=pitch=0.78:formant=shifted,equalizer=f=110:t=q:w=1:g=4,lowpass=f=7000"),
         reverb(1.6, -11, predelay=0.03, hi=4000),
     ), level_db=0.5),
     "kid": Preset((
@@ -183,7 +191,7 @@ PRESETS: dict[str, Preset] = {
     "distant": Preset((
         ff("highpass=f=250,lowpass=f=3800"),
         reverb(1.1, -3, dry=0.75, predelay=0.03, hi=3500),
-    ), level_db=-6.0),
+    ), level_db=-4.0),
 }
 
 
