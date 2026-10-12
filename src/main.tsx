@@ -4,6 +4,8 @@ import '@fontsource/bebas-neue/400.css';
 import '@fontsource-variable/inter';
 import '@fontsource/ibm-plex-mono/400.css';
 import '@fontsource/ibm-plex-mono/600.css';
+import '@fontsource/vt323/400.css';
+import '@fontsource/yellowtail/400.css';
 import './index.css';
 import App from './App';
 
