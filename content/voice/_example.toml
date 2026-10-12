@@ -1,0 +1,28 @@
+# A tiny example script so the voice renderer has something to chew on before the
+# writers' room delivers. Not aired anywhere (no station uses the id "_example").
+station = "_example"
+
+[voices]
+host = { voice = "af_heart", speed = 0.92, name = "DJ Eventually" }
+caller = { voice = "am_puck", fx = "phone", name = "Caller" }
+
+[[clip]]
+id = "id-001"
+category = "id"
+lines = [
+  { say = "host", text = "You're tuned to Void Beats. The void is also studying." },
+  { sting = "id" },
+]
+
+[[clip]]
+id = "call-001"
+category = "call"
+title = "A caller with a question"
+bed = "room"
+lines = [
+  { sfx = "phone-ring" },
+  { say = "host", text = "You're on the air. Go ahead." },
+  { say = "caller", text = "Hi. Long time listener, first time existing. Is it normal for my shadow to arrive before me?" },
+  { say = "host", text = "Only on Tuesdays, sweetheart.", gap = 0.6 },
+  { sfx = "phone-hangup" },
+]
