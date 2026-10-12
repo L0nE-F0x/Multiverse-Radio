@@ -1,6 +1,8 @@
 import { describe, expect, it } from 'vitest';
 import { STATIONS, stationById } from '../stations/roster';
-import { parseManifest } from './manifest';
+import { oddities } from './dial';
+import { parseManifest, parseShowIndex } from './manifest';
+import { hash } from './random';
 import {
   HOUR_MS,
   StationSchedule,
@@ -8,10 +10,13 @@ import {
   joinOffset,
   segmentAt,
   segmentsBetween,
+  serialEpisode,
+  serialMinutes,
   skipOffset,
   type StationClips,
 } from './scheduler';
-import type { Daypart, Segment, StationDef, VoiceCategory, VoiceClip } from './types';
+import { fixedTzOffset, localMinuteToMs, localTime, showAtHour } from './time';
+import type { Daypart, Segment, ShowDef, StationDef, VoiceCategory, VoiceClip, VoiceSegment } from './types';
 
 const utcDaypart = (ms: number): Daypart => daypartForHour(new Date(ms).getUTCHours());
 const opts = { daypartOf: utcDaypart };
@@ -25,13 +30,6 @@ function station(id: string): StationDef {
   if (!s) throw new Error(`no station ${id}`);
   return s;
 }
-
-const V3_IDS = new Set([
-  'smoke-ring-trio', 'lower-hollow', 'bubble-economy', 'tomorrows-leftovers', 'cat-fm', 'piano-empty-rooms',
-  'unsolved-dimensions', 'breakbeat-observatory', 'other-horoscopes', 'drowned-shanty-hour', 'waystation-9',
-  'wall-of-fog', 'win-this-planet', 'yesterday-fm', 'event-horizon-surf', 'bedtime-for-giants', 'gristwick-parish',
-  'tiny-hour', 'infinite-song', 'plant-fm', 'hush-after-hours', 'last-lighthouse', 'transmission-zero',
-]);
 
 const RANGES: Record<VoiceCategory, [number, number]> = {
   id: [2, 8],
@@ -276,10 +274,7 @@ describe('scheduler', () => {
   });
 
   it('does not repeat clips within a few hours', () => {
-    // TODO(director v3): make this hold for every station; some v3 talk stations repeat a clip
-    // near a shuffle-bag boundary.
-    const v2 = STATIONS.slice().filter((x) => !V3_IDS.has(x.id));
-    for (const s of v2) {
+    for (const s of STATIONS) {
       const lib = library(s.id);
       const segments = segmentsBetween(s, lib, DAY0 + 2 * HOUR_MS, DAY0 + 5 * HOUR_MS, opts);
       const voices = segments.flatMap((x) => (x.kind === 'voice' ? [x.clip] : []));
@@ -378,5 +373,228 @@ describe('scheduler', () => {
     expect(manifest?.clips[1]!.daypart).toBeUndefined();
     expect(manifest?.clips[1]!.stations).toEqual(['void-beats']);
     expect(parseManifest('<!doctype html>')).toBeNull();
+  });
+});
+
+const voices = (segments: Segment[]) => segments.filter((x): x is VoiceSegment => x.kind === 'voice');
+
+describe('the living schedule (v3)', () => {
+  const utc = { daypartOf: utcDaypart, tzOffset: fixedTzOffset(0) };
+
+  it('finds the show by local hour, wrapping midnight', () => {
+    const late: ShowDef = { id: 'late', name: 'Late', blurb: '', start: 22, end: 2 };
+    const am: ShowDef = { id: 'am', name: 'AM', blurb: '', start: 6, end: 10 };
+    const shows = [late, am];
+    expect(showAtHour(shows, 21)).toBeNull();
+    expect(showAtHour(shows, 22)?.id).toBe('late');
+    expect(showAtHour(shows, 23)?.id).toBe('late');
+    expect(showAtHour(shows, 0)?.id).toBe('late');
+    expect(showAtHour(shows, 1)?.id).toBe('late');
+    expect(showAtHour(shows, 2)).toBeNull();
+    expect(showAtHour(shows, 6)?.id).toBe('am');
+    expect(showAtHour(shows, 9)?.id).toBe('am');
+    expect(showAtHour(shows, 10)).toBeNull();
+    expect(showAtHour([{ ...am, start: 0, end: 24 }], 23)?.id).toBe('am');
+    // The listener's clock decides: 20:00 UTC is 22:00 two hours east.
+    const schedule = new StationSchedule(station('void-beats'), { own: [], shared: [], shows }, { tzOffset: fixedTzOffset(120) });
+    expect(schedule.showAt(DAY0 + 20 * HOUR_MS + 1)?.id).toBe('late');
+    expect(schedule.showAt(DAY0 + 23.5 * HOUR_MS)?.id).toBe('late');
+    expect(schedule.showAt(DAY0 + 0.5 * HOUR_MS)).toBeNull();
+  });
+
+  it('opens a show with its opener and keeps show clips inside it', () => {
+    const s = station('void-beats');
+    const show: ShowDef = { id: 'the-3am-hour', name: 'The 3 AM Hour', blurb: '', start: 2, end: 5 };
+    const base = library(s.id);
+    const lib: StationClips = {
+      own: [...base.own, ...clips(s.id, 'id', 2, { show: show.id, part: 'open' }), ...clips(s.id, 'dj', 6, { show: show.id })],
+      shared: base.shared,
+      shows: [show],
+    };
+    for (const offset of [0, 330]) {
+      const tz = fixedTzOffset(offset);
+      const schedule = new StationSchedule(s, lib, { tzOffset: tz });
+      const segments = schedule.segmentsBetween(DAY0 - 6 * HOUR_MS, DAY0 + 30 * HOUR_MS);
+      const openers = voices(segments).filter((x) => x.clip.show === show.id && x.clip.part === 'open');
+      expect(openers).toHaveLength(2);
+      for (const o of openers) {
+        const minute = localTime(o.startMs, tz).minuteOfDay;
+        expect(minute).toBeGreaterThanOrEqual(120);
+        expect(minute).toBeLessThan(120 + 10);
+      }
+      if (offset === 0) for (const o of openers) expect(o.startMs % HOUR_MS).toBe(0); // in place of the ident
+      for (const x of voices(segments).filter((v) => v.clip.show)) {
+        const hour = localTime(x.startMs, tz).hour;
+        expect(hour >= 2 && hour < 5, `${x.clip.id} at ${hour}:00`).toBe(true);
+      }
+      const during = voices(segments).filter(
+        (x) => x.clip.category === 'dj' && localTime(x.startMs, tz).hour >= 2 && localTime(x.startMs, tz).hour < 5,
+      );
+      expect(during.filter((x) => x.clip.show).length).toBeGreaterThanOrEqual(during.length / 3);
+    }
+  });
+
+  it('airs one serial episode a day, two or three times, at seeded local times', () => {
+    const s = station('every-news');
+    const base = library(s.id);
+    const episodes = [1, 2, 3, 4].map((episode) => clips(s.id, 'story', 1, { serial: { id: 'greg-comes-home', episode } })[0]!);
+    const tz = fixedTzOffset(-300);
+    const schedule = new StationSchedule(s, { own: [...base.own, ...episodes], shared: base.shared }, { tzOffset: tz });
+    const first = localTime(DAY0 + 12 * HOUR_MS, tz).day;
+    const aired: number[] = [];
+    for (let day = first; day < first + 5; day++) {
+      const from = localMinuteToMs(day, 0, tz);
+      const airings = voices(schedule.segmentsBetween(from, from + 24 * HOUR_MS)).filter((x) => x.clip.serial);
+      const minutes = serialMinutes('greg-comes-home', day);
+      expect(minutes.length).toBeGreaterThanOrEqual(2);
+      expect(minutes.length).toBeLessThanOrEqual(3);
+      expect(airings).toHaveLength(minutes.length);
+      const episode = serialEpisode([1, 2, 3, 4], day)!;
+      expect(episode).toBe([1, 2, 3, 4][day % 4]);
+      airings.forEach((a, i) => {
+        expect(a.clip.serial!.episode).toBe(episode);
+        const minute = localTime(a.startMs, tz).minuteOfDay;
+        expect(minute).toBeGreaterThanOrEqual(minutes[i]!);
+        expect(minute).toBeLessThan(minutes[i]! + 12);
+      });
+      aired.push(episode);
+    }
+    // The story advances a day at a time.
+    for (let i = 1; i < aired.length; i++) expect(aired[i]).toBe((aired[i - 1]! % 4) + 1);
+  });
+
+  it('airs dated clips only on their day, and prefers them then', () => {
+    const s = station('void-beats');
+    const base = library(s.id);
+    const halloween = clips(s.id, 'dj', 3, { dates: ['10-31'] });
+    const schedule = new StationSchedule(s, { own: [...base.own, ...halloween], shared: base.shared }, utc);
+    const oct31 = Date.UTC(2026, 9, 31);
+    const dated = (from: number) => voices(schedule.segmentsBetween(from, from + 24 * HOUR_MS)).filter((x) => x.clip.dates);
+    expect(dated(oct31 - 24 * HOUR_MS)).toHaveLength(0);
+    expect(dated(oct31 + 24 * HOUR_MS)).toHaveLength(0);
+    const on = dated(oct31);
+    expect(on.length).toBeGreaterThanOrEqual(6);
+    expect(new Set(on.map((x) => x.clip.url)).size).toBe(3);
+  });
+
+  it('chains modular parts: an open, one to three different bodies and a close, from one kit', () => {
+    const s = station('every-news');
+    const part = (owner: string, n: number, which: 'open' | 'body' | 'close', seconds: number) =>
+      clips(owner, 'news', n, { part: which, kit: 'bulletin' }).map((c) => ({ ...c, durationMs: seconds * 1000 }));
+    const lib: StationClips = {
+      own: [
+        ...clips(s.id, 'id', 12),
+        ...clips(s.id, 'dj', 12),
+        ...part(s.id, 5, 'open', 5),
+        ...part(s.id, 12, 'body', 25),
+        ...part(s.id, 5, 'close', 4),
+      ],
+      shared: [...clips('_shared', 'ad', 20), ...part('_shared', 3, 'open', 5), ...part('_shared', 4, 'body', 20), ...part('_shared', 3, 'close', 4)],
+    };
+    const segments = new StationSchedule(s, lib, utc).segmentsBetween(DAY0, DAY0 + 8 * HOUR_MS);
+    const chains: VoiceClip[][] = [];
+    for (let i = 0; i < segments.length; i++) {
+      const x = segments[i]!;
+      if (x.kind !== 'voice' || !x.clip.part) continue;
+      if (x.clip.part === 'body') {
+        const prev = segments[i - 1]!;
+        expect(prev.kind === 'voice' && (prev.clip.part === 'open' || prev.clip.part === 'body')).toBe(true);
+        continue;
+      }
+      if (x.clip.part !== 'open') continue;
+      const chain = [x.clip];
+      let j = i + 1;
+      for (let y = segments[j]; y?.kind === 'voice' && y.clip.part === 'body'; y = segments[++j]) chain.push(y.clip);
+      const close = segments[j]!;
+      expect(close.kind === 'voice' && close.clip.part).toBe('close');
+      if (close.kind === 'voice') chain.push(close.clip);
+      chains.push(chain);
+    }
+    expect(chains.length).toBeGreaterThan(10);
+    for (const chain of chains) {
+      const bodies = chain.slice(1, -1);
+      expect(bodies.length).toBeGreaterThanOrEqual(1);
+      expect(bodies.length).toBeLessThanOrEqual(3);
+      expect(new Set(bodies.map((b) => b.url)).size).toBe(bodies.length);
+      const owner = chain[0]!.url.split('/')[2];
+      for (const c of chain) {
+        expect(c.kit).toBe('bulletin');
+        expect(c.url.split('/')[2]).toBe(owner);
+      }
+    }
+    expect(new Set(chains.map((c) => c.map((x) => x.id).join('+'))).size).toBeGreaterThan(chains.length * 0.8);
+  });
+
+  it('runs oddities on their own slow clock', () => {
+    const loop = oddities().find((o) => o.oddity === 'stuck-loop')!.station;
+    const segments = new StationSchedule(loop, [], { ...utc, clock: 'oddity' }).segmentsBetween(DAY0, DAY0 + 3 * HOUR_MS);
+    checkContiguous(segments, DAY0, DAY0 + 3 * HOUR_MS);
+    const seeds = new Set(segments.map((x) => (x.kind === 'track' ? `${x.recipe}#${x.seed}` : 'voice')));
+    expect([...seeds]).toEqual([`stuck-loop#${hash(loop.id, 'loop')}`]);
+    const pips = oddities().find((o) => o.oddity === 'time-signal')!.station;
+    const hour = new StationSchedule(pips, [], { ...utc, clock: 'oddity' }).segmentsBetween(DAY0, DAY0 + HOUR_MS);
+    for (const x of hour) expect(x.kind === 'track' && x.recipe === 'time-signal' && x.meta.title).toBe('Time signal');
+  });
+
+  it('gives every track its artist’s signature', () => {
+    const s = station('void-beats');
+    const schedule = new StationSchedule(s, library(s.id), utc);
+    const hour = schedule.hour(HOUR0 + 3);
+    for (const run of schedule.runsInHour(HOUR0 + 3)) {
+      const track = hour.find((x) => x.kind === 'track' && run.id.startsWith(`${x.id}@`));
+      if (track?.kind === 'track') expect(run.artist).toBe(hash(track.meta.artist));
+      else expect(run.artist).toBeUndefined();
+    }
+  });
+
+  it('parses v3 clip fields and the show index defensively', () => {
+    const manifest = parseManifest({
+      version: 1,
+      station: 'x',
+      clips: [
+        {
+          id: 'a',
+          category: 'news',
+          url: '/a.mp3',
+          durationMs: 9000,
+          part: 'body',
+          kit: 'bulletin',
+          show: 'late',
+          serial: { id: 'greg', episode: '2' },
+          dates: ['10-31', 'Halloween'],
+          level: 7,
+          event: 'the-hum',
+        },
+        { id: 'b', category: 'ship', url: '/b.mp3', durationMs: 4000, part: 'middle', serial: { id: 'x' }, event: 'nope', level: -1 },
+      ],
+    });
+    const [a, b] = manifest!.clips;
+    expect(a).toMatchObject({
+      part: 'body',
+      kit: 'bulletin',
+      show: 'late',
+      serial: { id: 'greg', episode: 2 },
+      dates: ['10-31'],
+      level: 3,
+      event: 'the-hum',
+    });
+    expect(b!.part).toBeUndefined();
+    expect(b!.serial).toBeUndefined();
+    expect(b!.event).toBeUndefined();
+    expect(b!.level).toBe(0);
+    const index = parseShowIndex({
+      version: 1,
+      shows: {
+        'void-beats': [
+          { id: 'late', name: 'Late', blurb: 'b', start: 22, end: 2 },
+          { id: 'bad', name: 'Bad', start: 25, end: 2 },
+          { id: 'same', name: 'Same', start: 3, end: 3 },
+        ],
+        nope: 'x',
+      },
+    });
+    expect(index?.shows['void-beats']!.map((x) => x.id)).toEqual(['late']);
+    expect(index?.shows.nope).toBeUndefined();
+    expect(parseShowIndex('<html>')).toBeNull();
   });
 });

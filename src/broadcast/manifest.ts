@@ -1,6 +1,15 @@
 // Voice manifests: validation, URL resolution and building a station's clip pool.
 
-import { VOICE_CATEGORIES, type CaptionLine, type Daypart, type VoiceClip, type VoiceManifest } from './types';
+import {
+  EVENT_IDS,
+  VOICE_CATEGORIES,
+  type CaptionLine,
+  type Daypart,
+  type ShowDef,
+  type ShowIndex,
+  type VoiceClip,
+  type VoiceManifest,
+} from './types';
 
 const DAYPARTS: readonly Daypart[] = ['morning', 'day', 'evening', 'night'];
 
@@ -72,7 +81,46 @@ function parseClip(raw: unknown): VoiceClip | null {
   if (typeof raw.title === 'string' && raw.title) clip.title = raw.title;
   if (DAYPARTS.includes(raw.daypart as Daypart)) clip.daypart = raw.daypart as Daypart;
   if (Array.isArray(raw.stations)) clip.stations = raw.stations.filter((s): s is string => typeof s === 'string');
+  // v3: modular parts, shows, serials, holidays, HUSH levels and events.
+  if (PARTS.includes(raw.part as Part)) clip.part = raw.part as Part;
+  if (isId(raw.kit)) clip.kit = raw.kit;
+  if (isId(raw.show)) clip.show = raw.show;
+  if (isRecord(raw.serial) && isId(raw.serial.id) && Number.isInteger(Number(raw.serial.episode))) {
+    clip.serial = { id: raw.serial.id, episode: Number(raw.serial.episode) };
+  }
+  if (Array.isArray(raw.dates)) {
+    const dates = raw.dates.filter((d): d is string => typeof d === 'string' && /^\d\d-\d\d$/.test(d));
+    if (dates.length) clip.dates = dates;
+  }
+  if (raw.level !== undefined && Number.isFinite(Number(raw.level))) clip.level = Math.min(3, Math.max(0, Math.round(Number(raw.level))));
+  if ((EVENT_IDS as readonly string[]).includes(raw.event as string)) clip.event = raw.event as string;
   return clip;
+}
+
+type Part = NonNullable<VoiceClip['part']>;
+const PARTS: readonly Part[] = ['open', 'body', 'close'];
+const isId = (value: unknown): value is string => typeof value === 'string' && value.length > 0;
+
+/** Validates `/voice/_shows.json`. Bad shows are dropped; returns null if it isn't an index. */
+export function parseShowIndex(data: unknown): ShowIndex | null {
+  if (!isRecord(data) || !isRecord(data.shows)) return null;
+  const shows: Record<string, ShowDef[]> = {};
+  for (const [stationId, list] of Object.entries(data.shows)) {
+    if (!Array.isArray(list)) continue;
+    const valid = list.flatMap((raw): ShowDef[] => {
+      if (!isRecord(raw) || !isId(raw.id) || typeof raw.name !== 'string') return [];
+      const start = Number(raw.start);
+      const end = Number(raw.end);
+      if (!Number.isInteger(start) || !Number.isInteger(end) || start < 0 || start > 23 || end < 1 || end > 24 || start === end) {
+        return [];
+      }
+      const show: ShowDef = { id: raw.id, name: raw.name, blurb: typeof raw.blurb === 'string' ? raw.blurb : '', start, end };
+      if (typeof raw.host === 'string' && raw.host) show.host = raw.host;
+      return [show];
+    });
+    if (valid.length) shows[stationId] = valid;
+  }
+  return { version: 1, shows };
 }
 
 function isRecord(value: unknown): value is Record<string, unknown> {
