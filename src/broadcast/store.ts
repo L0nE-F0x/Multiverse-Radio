@@ -1,154 +1,164 @@
 // The broadcast store: the one place the UI reads radio state from and sends actions to.
-//
-// SIMULATOR: until the broadcast-director workstream lands, this implements the
-// BroadcastStore contract with a fake schedule and no audio, so the UI can be built
-// against it. The director replaces the internals; `useBroadcast` and the contract in
-// ./types stay the same.
+// Implements the BroadcastStore contract in ./types on top of the director (audio) and
+// the scheduler (what's on air). Audio starts only from a user gesture (togglePlay/tune).
 
 import { create } from 'zustand';
-import { trackMeta } from '../content';
 import { DEFAULT_STATION_ID, STATIONS } from '../stations/roster';
-import type { BroadcastStore, Segment, StationDef } from './types';
+import { Director } from './director';
+import { VoiceLibrary } from './library';
+import type { OutputMode } from './mixer';
+import { storage } from './storage';
+import type { BroadcastState, BroadcastStore, Segment } from './types';
 
-const TRACK_MS = 150_000;
-const VOICE_MS = 14_000;
-const CYCLE_MS = TRACK_MS + VOICE_MS;
+const RECENT_MAX = 30;
+/** A segment counts as heard after this long on air while playing. */
+const HEARD_MS = 2500;
+const UP_NEXT = 5;
 
-function hash(text: string): number {
-  let h = 2166136261;
-  for (let i = 0; i < text.length; i++) h = Math.imul(h ^ text.charCodeAt(i), 16777619);
-  return h >>> 0;
-}
+const isStation = (id: string | null | undefined): id is string => !!id && STATIONS.some((s) => s.id === id);
 
-/** Fake programme: every cycle is one track followed by one host link. */
-function segmentsFrom(station: StationDef, atMs: number, count: number): Segment[] {
-  const cycle = Math.floor(atMs / CYCLE_MS);
-  const out: Segment[] = [];
-  for (let c = cycle; out.length < count + 2; c++) {
-    const start = c * CYCLE_MS;
-    const seed = hash(`${station.id}:${c}`);
-    out.push({
-      kind: 'track',
-      id: `${station.id}:${c}:0`,
-      stationId: station.id,
-      startMs: start,
-      durationMs: TRACK_MS,
-      recipe: station.recipe,
-      seed,
-      meta: trackMeta(station, seed),
-    });
-    out.push({
-      kind: 'voice',
-      id: `${station.id}:${c}:1`,
-      stationId: station.id,
-      startMs: start + TRACK_MS,
-      durationMs: VOICE_MS,
-      bed: true,
-      clip: {
-        id: `sim-${c}`,
-        category: 'dj',
-        url: '',
-        durationMs: VOICE_MS,
-        overMusic: true,
-        lines: [
-          { speaker: station.host.name, text: `You're listening to ${station.name}.`, startMs: 0 },
-          { speaker: station.host.name, text: station.tagline, startMs: 4000 },
-        ],
-      },
-    });
+function searchParam(name: string): string | null {
+  try {
+    return typeof location === 'undefined' ? null : new URLSearchParams(location.search).get(name);
+  } catch {
+    return null;
   }
-  return out.filter((s) => s.startMs + s.durationMs > atMs).slice(0, count);
 }
 
-const offsets: Record<string, number> = {};
-let tuneTimer: ReturnType<typeof setTimeout> | undefined;
+/** `?station=` beats the last station listened to, which beats the default. */
+function initialStationId(): string {
+  const fromUrl = searchParam('station');
+  if (isStation(fromUrl)) return fromUrl;
+  const saved = storage.getLastStation();
+  if (isStation(saved)) return saved;
+  return DEFAULT_STATION_ID;
+}
+
+/** `?output=element|destination` forces the audio output path (for testing). */
+function outputMode(): OutputMode {
+  const value = searchParam('output');
+  return value === 'element' || value === 'destination' ? value : 'auto';
+}
+
+const initialVolume = storage.getVolume() ?? 0.8;
+
+export const library = new VoiceLibrary();
+
+/** The audio director behind the store. The UI shouldn't need it; the labs do. */
+export const director = new Director({
+  library,
+  stations: STATIONS,
+  stationId: initialStationId(),
+  volume: initialVolume,
+  output: outputMode(),
+});
 
 export const useBroadcast = create<BroadcastStore>()((set, get) => {
-  const now = () => Date.now() + (offsets[get().stationId] ?? 0);
+  /** The segment we last saw on air while playing; it joins `recent` once it's over. */
+  let heard: { segment: Segment; since: number; last: number } | null = null;
 
   const refresh = () => {
-    const station = STATIONS.find((s) => s.id === get().stationId);
-    if (!station) return;
-    const at = now();
-    const [onAir = null, ...upNext] = segmentsFrom(station, at, 6);
-    let caption: BroadcastStore['caption'] = null;
-    if (onAir?.kind === 'voice' && get().status === 'playing') {
-      const into = at - onAir.startMs;
-      const line = [...onAir.clip.lines].reverse().find((l) => l.startMs <= into);
+    const state = get();
+    const station = director.station;
+    const now = director.stationNow(station.id);
+    const [onAir = null, ...upNext] = director.schedule(station).upcoming(now, UP_NEXT);
+    const playing = director.status === 'playing';
+
+    let caption: BroadcastState['caption'] = null;
+    if (playing && onAir?.kind === 'voice' && !director.isFailed(onAir.id)) {
+      const into = now - onAir.startMs - director.latencyMs;
+      let line: (typeof onAir.clip.lines)[number] | undefined;
+      for (const l of onAir.clip.lines) {
+        if (l.startMs > into) break;
+        line = l;
+      }
       if (line) caption = { speaker: line.speaker, text: line.text };
     }
-    const previous = get().onAir;
-    const recent =
-      previous && previous.id !== onAir?.id && get().status === 'playing'
-        ? [previous, ...get().recent].slice(0, 30)
-        : get().recent;
-    set({ onAir, upNext, caption, recent });
+
+    let recent = state.recent;
+    if (playing && onAir) {
+      const wall = Date.now();
+      if (heard?.segment.id === onAir.id) {
+        heard.last = wall;
+      } else {
+        if (heard && heard.last - heard.since >= HEARD_MS && recent[0]?.id !== heard.segment.id) {
+          const done = heard.segment;
+          recent = [done, ...recent.filter((s) => s.id !== done.id)].slice(0, RECENT_MAX);
+        }
+        heard = { segment: onAir, since: wall, last: wall };
+      }
+    }
+
+    const patch: Partial<BroadcastState> = {};
+    if (state.onAir !== onAir) patch.onAir = onAir;
+    if (state.upNext.length !== upNext.length || state.upNext.some((s, i) => s !== upNext[i])) patch.upNext = upNext;
+    if (state.caption?.text !== caption?.text || state.caption?.speaker !== caption?.speaker) patch.caption = caption;
+    if (recent !== state.recent) patch.recent = recent;
+    if (state.stationId !== director.stationId) patch.stationId = director.stationId;
+    if (state.status !== director.status) patch.status = director.status;
+    if (state.signalMessage !== director.message) patch.signalMessage = director.message;
+    if (Object.keys(patch).length > 0) set(patch);
   };
 
-  const goLive = () => {
-    clearTimeout(tuneTimer);
-    set({ status: 'tuning', caption: null });
-    tuneTimer = setTimeout(() => {
-      set({ status: 'playing' });
-      refresh();
-    }, 700);
-  };
-
-  setInterval(refresh, 500);
+  director.subscribe(refresh);
+  director.onTick(refresh);
+  library.subscribe(refresh);
+  void director.prefetchStation(director.stationId);
   queueMicrotask(refresh);
+  // Hot reload would otherwise leave the old director playing underneath the new one.
+  import.meta.hot?.dispose(() => director.dispose());
+
+  const tune = (stationId: string) => {
+    if (!isStation(stationId)) return;
+    storage.setLastStation(stationId);
+    director.tune(stationId);
+    refresh();
+  };
 
   return {
     stations: STATIONS,
-    stationId: DEFAULT_STATION_ID,
+    stationId: director.stationId,
     status: 'off',
     signalMessage: null,
     onAir: null,
     upNext: [],
     recent: [],
     caption: null,
-    volume: 0.8,
+    volume: initialVolume,
     muted: false,
 
     togglePlay() {
-      const { status } = get();
-      if (status === 'playing' || status === 'tuning') {
-        clearTimeout(tuneTimer);
-        set({ status: 'paused', caption: null });
-      } else {
-        goLive();
-      }
-    },
-    tune(stationId) {
-      if (!STATIONS.some((s) => s.id === stationId)) return;
-      set({ stationId });
+      director.togglePlay();
       refresh();
-      goLive();
     },
+    tune,
     stepStation(delta) {
       const i = STATIONS.findIndex((s) => s.id === get().stationId);
       const next = STATIONS[(i + delta + STATIONS.length) % STATIONS.length];
-      if (next) get().tune(next.id);
+      if (next) tune(next.id);
     },
     scan() {
       const others = STATIONS.filter((s) => s.id !== get().stationId);
       const pick = others[Math.floor(Math.random() * others.length)];
-      if (pick) get().tune(pick.id);
+      if (pick) tune(pick.id);
     },
     skip() {
-      const { onAir, stationId } = get();
-      if (!onAir) return;
-      offsets[stationId] = (offsets[stationId] ?? 0) + (onAir.startMs + onAir.durationMs - now()) + 1;
+      director.skip();
       refresh();
-      goLive();
     },
     setVolume(volume) {
-      set({ volume: Math.min(1, Math.max(0, volume)), muted: false });
+      const value = Math.min(1, Math.max(0, Number.isFinite(volume) ? volume : 0));
+      director.setVolume(value, false);
+      storage.setVolume(value);
+      set({ volume: value, muted: false });
     },
     toggleMute() {
-      set({ muted: !get().muted });
+      const muted = !get().muted;
+      director.setVolume(get().volume, muted);
+      set({ muted });
     },
     getAnalyser() {
-      return null;
+      return director.getAnalyser();
     },
   };
 });
