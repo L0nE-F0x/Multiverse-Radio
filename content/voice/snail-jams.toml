@@ -5,6 +5,8 @@ station = "snail-jams"
 
 [voices]
 host = { voice = "af_sky", speed = 0.78, name = "Shelley Shellbourne" }
+# v3: serial.
+greg = { voice = "am_onyx", fx = "whisper", name = "Greg, a Shadow" }
 
 # ── Idents ────────────────────────────────────────────────────────────────────
 
@@ -229,4 +231,264 @@ lines = [
   { say = "host", text = "A chance of one leaf turning over, late in the afternoon.", gap = 0.6 },
   { say = "host", text = "Wind: none, thank you.", gap = 0.6 },
   { say = "host", text = "That's the forecast for today. And, knowing us, tomorrow." },
+]
+
+# ══ v3: the living schedule ═══════════════════════════════════════════════════
+#
+# Shows, the dj kit (an opener, one to three slow observations, a hand-off), a serial
+# episode and Halloween. Everything here is slow on purpose. The Patient Ones, the Moss
+# Collective and the Lettuce Quartet are resident artists (src/content/packs/chill.ts).
+# Existing clips above are rendered and deployed; only add.
+
+# ── Shows ─────────────────────────────────────────────────────────────────────
+
+[[show]]
+id = "dew-patrol"
+name = "Dew Patrol"
+blurb = "Live traffic on the leaf, and the first sip of the morning."
+start = 5
+end = 8
+
+[[show]]
+id = "the-slow-hour"
+name = "The Slow Hour"
+blurb = "It lasts three hours. We're working on it."
+start = 21
+end = 24
+
+[[clip]]
+id = "dew-patrol-open"
+category = "id"
+show = "dew-patrol"
+part = "open"
+title = "Dew Patrol"
+lines = [
+  { say = "host", text = "Good morning. This is Dew Patrol.", gap = 0.8 },
+  { say = "host", text = "The dew is out. So are we. Eventually." },
+]
+
+[[clip]]
+id = "dew-patrol-01"
+category = "dj"
+show = "dew-patrol"
+lines = [
+  { say = "host", text = "Dew report.", gap = 0.6 },
+  { say = "host", text = "Heavy on the leaf. Light on the mushroom.", gap = 0.6 },
+  { say = "host", text = "One very large drop on the clover, which we're calling Big Doris.", gap = 0.8 },
+  { say = "host", text = "Morning, Doris." },
+]
+
+[[clip]]
+id = "dew-patrol-02"
+category = "dj"
+show = "dew-patrol"
+lines = [
+  { say = "host", text = "Traffic on the leaf this morning.", gap = 0.6 },
+  { say = "host", text = "Two snails, heading east. One snail, heading west.", gap = 0.8 },
+  { say = "host", text = "They're going to meet on Thursday. We'll be live." },
+]
+
+[[clip]]
+id = "the-slow-hour-open"
+category = "id"
+show = "the-slow-hour"
+part = "open"
+title = "The Slow Hour"
+lines = [
+  { say = "host", text = "This is the Slow Hour.", gap = 0.8 },
+  { say = "host", text = "It lasts three hours.", gap = 0.8 },
+  { say = "host", text = "We're working on it." },
+]
+
+[[clip]]
+id = "the-slow-hour-01"
+category = "dj"
+show = "the-slow-hour"
+lines = [
+  { say = "host", text = "We're about halfway through the Slow Hour.", gap = 0.8 },
+  { say = "host", text = "Of the first song.", gap = 0.8 },
+  { say = "host", text = "Don't rush it. It's a good one." },
+]
+
+[[clip]]
+id = "the-slow-hour-02"
+category = "dj"
+show = "the-slow-hour"
+lines = [
+  { say = "host", text = "A firefly has landed on the microphone.", gap = 0.6 },
+  { say = "host", text = "It's very bright. I can see the whole garden.", gap = 0.8 },
+  { say = "host", text = "The lettuce is further away than I thought." },
+]
+
+# ── DJ kit ────────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "dj-open-01"
+category = "dj"
+kit = "dj"
+part = "open"
+lines = [
+  { say = "host", text = "Snail Jams.", gap = 0.8 },
+  { say = "host", text = "Still here." },
+]
+
+[[clip]]
+id = "dj-open-02"
+category = "dj"
+kit = "dj"
+part = "open"
+lines = [
+  { say = "host", text = "That was lovely.", gap = 0.8 },
+  { say = "host", text = "I'm still listening to it." },
+]
+
+[[clip]]
+id = "dj-open-03"
+category = "dj"
+kit = "dj"
+part = "open"
+lines = [
+  { say = "host", text = "Hello.", gap = 1.0 },
+  { say = "host", text = "Take your time." },
+]
+
+[[clip]]
+id = "dj-body-01"
+category = "dj"
+kit = "dj"
+part = "body"
+lines = [
+  { say = "host", text = "The Patient Ones have a new album out.", gap = 0.6 },
+  { say = "host", text = "It's been out since spring.", gap = 0.6 },
+  { say = "host", text = "We're on track two." },
+]
+
+[[clip]]
+id = "dj-body-02"
+category = "dj"
+kit = "dj"
+part = "body"
+lines = [
+  { say = "host", text = "A breeze came through earlier. Everybody held on.", gap = 0.6 },
+  { say = "host", text = "The Moss Collective held on to each other.", gap = 0.6 },
+  { say = "host", text = "It was very moving. Slowly." },
+]
+
+[[clip]]
+id = "dj-body-03"
+category = "dj"
+kit = "dj"
+part = "body"
+lines = [
+  { say = "host", text = "Live traffic. On the leaf.", gap = 0.6 },
+  { say = "host", text = "Heading north, one snail. Me.", gap = 0.8 },
+  { say = "host", text = "I've moved. You can't tell. But I have." },
+]
+
+[[clip]]
+id = "dj-body-04"
+category = "dj"
+kit = "dj"
+part = "body"
+lines = [
+  { say = "host", text = "Someone asked me what I'm in such a hurry for.", gap = 0.8 },
+  { say = "host", text = "Nobody has ever asked me that before.", gap = 0.8 },
+  { say = "host", text = "I enjoyed it." },
+]
+
+[[clip]]
+id = "dj-body-05"
+category = "dj"
+kit = "dj"
+part = "body"
+lines = [
+  { say = "host", text = "The Lettuce Quartet have finally reached the lettuce.", gap = 0.6 },
+  { say = "host", text = "They're so happy.", gap = 0.6 },
+  { say = "host", text = "They'll be back on tour in about a year." },
+]
+
+[[clip]]
+id = "dj-close-01"
+category = "dj"
+kit = "dj"
+part = "close"
+lines = [
+  { say = "host", text = "Here's the next song.", gap = 0.6 },
+  { say = "host", text = "It's slow. You'll like it." },
+]
+
+[[clip]]
+id = "dj-close-02"
+category = "dj"
+kit = "dj"
+part = "close"
+lines = [
+  { say = "host", text = "More music.", gap = 0.8 },
+  { say = "host", text = "No rush." },
+]
+
+[[clip]]
+id = "dj-close-03"
+category = "dj"
+kit = "dj"
+part = "close"
+lines = [
+  { say = "host", text = "Here's another one.", gap = 0.6 },
+  { say = "host", text = "See you at the end of it. Probably." },
+]
+
+# ── Serials (one episode a day; see the other stations for the rest) ─────────
+
+[[clip]]
+id = "greg-comes-home-05"
+category = "story"
+serial = { id = "greg-comes-home", episode = 5 }
+title = "Greg Comes Home, Part Five: Half a Hat"
+lines = [
+  { say = "host", text = "We have a guest on the leaf.", gap = 0.8 },
+  { say = "host", text = "He came through very fast this morning. Again. And this time, I called out. I said, slow down.", gap = 0.8 },
+  { say = "host", text = "And he did.", gap = 1.0 },
+  { say = "greg", text = "Hello. Sorry. I'm in a bit of a hurry. I'm going home." },
+  { say = "host", text = "We'll fix that.", gap = 0.8 },
+  { say = "host", text = "Last time you went past, you dropped something. We kept it for you. Under the mushroom.", gap = 0.8 },
+  { say = "host", text = "Half a hat." },
+  { say = "greg", text = "Oh. That's the shadow of half my hat. I've been wondering where it went." },
+  { say = "host", text = "It's been very good. It didn't move at all.", gap = 0.8 },
+  { say = "greg", text = "Why is everyone being so kind?" },
+  { say = "host", text = "Because you're going home.", gap = 0.8 },
+  { say = "host", text = "And the way home should be slow. So you notice it.", gap = 1.0 },
+  { say = "greg", text = "How slow?" },
+  { say = "host", text = "Stay for one song. Just one. Sit on the leaf." },
+  { say = "greg", text = "Okay.", gap = 2.4 },
+  { say = "host", text = "See?", gap = 0.8 },
+  { say = "host", text = "Nothing happened.", gap = 0.8 },
+  { say = "host", text = "Isn't it nice." },
+  { say = "greg", text = "It is, actually." },
+  { say = "host", text = "When it gets dark, the fireflies will light you to the edge of the garden. They don't offer that to just anyone.", gap = 0.8 },
+  { say = "host", text = "Here's your song, Greg. Take your time." },
+]
+
+# ── Halloween (24 to 31 October) ──────────────────────────────────────────────
+
+[[clip]]
+id = "halloween-01"
+category = "dj"
+title = "The Pumpkin"
+dates = ["10-24", "10-25", "10-26", "10-27", "10-28", "10-29", "10-30", "10-31"]
+lines = [
+  { say = "host", text = "It's Halloween week.", gap = 0.8 },
+  { say = "host", text = "We've carved a pumpkin.", gap = 0.8 },
+  { say = "host", text = "Well. We've started.", gap = 0.8 },
+  { say = "host", text = "We'll have a face by Christmas." },
+]
+
+[[clip]]
+id = "halloween-02"
+category = "id"
+title = "Snail Jams, Boo"
+dates = ["10-24", "10-25", "10-26", "10-27", "10-28", "10-29", "10-30", "10-31"]
+lines = [
+  { say = "host", text = "Snail Jams.", gap = 1.0 },
+  { say = "host", text = "Boo.", gap = 1.2 },
+  { say = "host", text = "Sorry. That took a while to get here." },
 ]
