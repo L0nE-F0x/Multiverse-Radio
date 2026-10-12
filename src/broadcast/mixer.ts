@@ -1,10 +1,16 @@
 // The receiver's audio graph. Only plumbing lives here; the director decides what plays when.
 //
 //   music engine ─ musicIn ─ duck ─ musicBus ─┐
-//   voice clips ─ (per-clip gain) ─ voiceBus ─┴─ programme ─┐
-//   static + whistle (tuning), hiss ─ staticBus ────────────┴─ mix ─┬─ analyser   (pre-volume)
-//                                                                   └─ master ─ output
-//   dial click ─────────────────────────────────────────────────────────┘
+//   voice clips ─ (per-clip gain) ─ voiceBus ─┴─ programme ─ wobble ─ eventDuck ─ reception ─┐
+//   tuning static, dial noise + whistle, hiss ─ staticBus ───────────────────────────────────┤
+//   HUSH, event clips and event sound ─ overlayBus ──────────────────────────────────────────┴─ mix ─┬─ analyser (pre-volume)
+//                                                                                                   └─ master ─ output
+//   dial click ─────────────────────────────────────────────────────────────────────────────────────────┘
+//
+// Reception (v3): the programme passes through a high-pass, a low-pass and a gain that follow
+// the signal at the dial position, so a detuned station thins out and sinks into the dial
+// noise, and a distant one is only a faint band-passed bleed. One programme, one music
+// engine: bleed is the same audio, shaped, never a second station.
 //
 // Output is either the context destination or, on mobile, a MediaStream played by an
 // <audio> element: that keeps iOS/Android treating us as a media player (lock screen,
@@ -15,7 +21,7 @@ import { resolveAsset } from './manifest';
 
 export type OutputMode = 'auto' | 'destination' | 'element';
 export type StaticKind = 'channel' | 'short';
-export type Bus = 'music' | 'voice' | 'mix';
+export type Bus = 'music' | 'voice' | 'overlay' | 'mix';
 
 export interface VoiceHandle {
   /** Context time the clip stops (or stopped). */
@@ -36,6 +42,18 @@ export interface VoiceOptions {
   gain: number;
 }
 
+/** What the receiver hears at the dial position (see Mixer.setReception). */
+export interface ReceptionLevels {
+  /** The programme's signal at the dial, 0–1. */
+  signal: number;
+  /** Faint bleed beyond its reach, 0–1 (scaled down a lot). */
+  bleed: number;
+  /** How much dial noise, 0–1 (1 = nothing decoded). */
+  noise: number;
+  /** Distance from the programme's centre in MHz (texture and the heterodyne whistle). */
+  detune: number;
+}
+
 interface StaticVoice {
   source: AudioBufferSourceNode;
   filter: BiquadFilterNode;
@@ -44,7 +62,31 @@ interface StaticVoice {
   gain: GainNode;
 }
 
+interface DialNoise {
+  source: AudioBufferSourceNode;
+  filter: BiquadFilterNode;
+  gain: GainNode;
+  whistle: OscillatorNode;
+  whistleGain: GainNode;
+}
+
+interface Wobble {
+  lfos: OscillatorNode[];
+  depths: GainNode[];
+}
+
 const STATIC_LEVEL = 0.6;
+/** Dial noise at no signal (the tuning burst is STATIC_LEVEL). */
+const NOISE_LEVEL = 0.8;
+/** Programme level of a distant station's bleed at the edge of its reach. */
+const BLEED_LEVEL = 0.075;
+const WHISTLE_LEVEL = 0.012;
+/** Reception filter range (Hz). */
+const LP_MIN = 1600;
+const HP_MAX = 520;
+/** Gains and filters follow the dial with these time constants (s): smooth, no zipper noise. */
+const DIAL_TAU = 0.035;
+const FILTER_TAU = 0.05;
 
 /** Mobile browsers get the media-element output; desktop plays straight to the destination. */
 function prefersElementOutput(): boolean {
@@ -61,8 +103,16 @@ export class Mixer {
   readonly duck: GainNode;
   readonly musicBus: GainNode;
   readonly voiceBus: GainNode;
+  /** HUSH and multiverse events: heard on every frequency, through the static. */
+  readonly overlayBus: GainNode;
+  /** Ducks the programme under HUSH and events. */
+  readonly eventDuck: GainNode;
   readonly analyser: AnalyserNode;
   private readonly programme: GainNode;
+  private readonly wobbleDelay: DelayNode;
+  private readonly highpass: BiquadFilterNode;
+  private readonly lowpass: BiquadFilterNode;
+  private readonly reception: GainNode;
   private readonly staticBus: GainNode;
   private readonly mix: GainNode;
   private readonly master: GainNode;
@@ -77,6 +127,10 @@ export class Mixer {
   private clickBuffer: AudioBuffer;
   private staticVoice: StaticVoice | null = null;
   private hissVoice: { source: AudioBufferSourceNode; gain: GainNode } | null = null;
+  private dialNoise: DialNoise | null = null;
+  private dialRelease: ReturnType<typeof setTimeout> | undefined;
+  private levels: ReceptionLevels = { signal: 1, bleed: 0, noise: 0, detune: 0 };
+  private wobble: Wobble | null = null;
 
   /** Called when the OS interrupts or pauses playback behind our back. */
   onInterrupted: (() => void) | null = null;
@@ -93,7 +147,20 @@ export class Mixer {
     this.duck = gain();
     this.musicBus = gain();
     this.voiceBus = gain();
+    this.overlayBus = gain();
+    this.eventDuck = gain();
     this.programme = gain(0);
+    this.wobbleDelay = ctx.createDelay(0.1);
+    this.wobbleDelay.delayTime.value = 0;
+    this.highpass = ctx.createBiquadFilter();
+    this.highpass.type = 'highpass';
+    this.highpass.frequency.value = 20;
+    this.highpass.Q.value = 0.5;
+    this.lowpass = ctx.createBiquadFilter();
+    this.lowpass.type = 'lowpass';
+    this.lowpass.frequency.value = this.lpMax;
+    this.lowpass.Q.value = 0.5;
+    this.reception = gain();
     this.staticBus = gain();
     this.mix = gain();
     this.master = gain(0);
@@ -105,8 +172,10 @@ export class Mixer {
 
     this.musicIn.connect(this.duck).connect(this.musicBus).connect(this.programme);
     this.voiceBus.connect(this.programme);
-    this.programme.connect(this.mix);
+    this.programme.connect(this.wobbleDelay).connect(this.eventDuck).connect(this.highpass).connect(this.lowpass);
+    this.lowpass.connect(this.reception).connect(this.mix);
     this.staticBus.connect(this.mix);
+    this.overlayBus.connect(this.mix);
     this.mix.connect(this.analyser);
     this.mix.connect(this.master);
     this.connectOutput(mode === 'auto' ? (prefersElementOutput() ? 'element' : 'destination') : mode);
@@ -244,7 +313,8 @@ export class Mixer {
       node = this.ctx.createAnalyser();
       node.fftSize = 512;
       node.smoothingTimeConstant = 0.5;
-      (bus === 'music' ? this.musicBus : bus === 'voice' ? this.voiceBus : this.mix).connect(node);
+      const source = { music: this.musicBus, voice: this.voiceBus, overlay: this.overlayBus, mix: this.mix }[bus];
+      source.connect(node);
       this.taps.set(bus, node);
     }
     return node;
@@ -252,7 +322,8 @@ export class Mixer {
 
   // ── Voice ─────────────────────────────────────────────────────────────────
 
-  playVoice(buffer: AudioBuffer, { when, offset, end, fadeIn, gain }: VoiceOptions): VoiceHandle {
+  /** Plays a clip on the station's voice bus, or on the overlay (HUSH, events). */
+  playVoice(buffer: AudioBuffer, { when, offset, end, fadeIn, gain }: VoiceOptions, bus: 'voice' | 'overlay' = 'voice'): VoiceHandle {
     const { ctx } = this;
     const source = ctx.createBufferSource();
     source.buffer = buffer;
@@ -273,7 +344,7 @@ export class Mixer {
       level.gain.linearRampToValueAtTime(0, end);
       stopAt = end;
     }
-    source.connect(level).connect(this.voiceBus);
+    source.connect(level).connect(bus === 'overlay' ? this.overlayBus : this.voiceBus);
     source.start(when, Math.max(0, offset));
     source.stop(stopAt + 0.02);
 
@@ -358,6 +429,8 @@ export class Mixer {
     voice.whistleGain.gain.linearRampToValueAtTime(whistleLevel, now + 0.05);
     voice.whistleGain.gain.linearRampToValueAtTime(0, now + sweep);
     setGain(ctx, voice.gain.gain, kind === 'channel' ? STATIC_LEVEL : STATIC_LEVEL * 0.7, 0.012);
+    // The burst stands in for the dial noise while it plays.
+    this.applyReception(0.5);
   }
 
   stopStatic(seconds: number): void {
@@ -369,10 +442,161 @@ export class Mixer {
     voice.source.stop(end);
     voice.whistle.stop(end);
     voice.source.addEventListener('ended', () => voice.gain.disconnect());
+    this.applyReception(Math.max(1, seconds * 3));
   }
 
   get staticPlaying(): boolean {
     return this.staticVoice !== null;
+  }
+
+  // ── Reception (v3) ────────────────────────────────────────────────────────
+
+  private get lpMax(): number {
+    return Math.min(18_000, this.ctx.sampleRate / 2 - 500);
+  }
+
+  /** Static level (dial noise, tuning burst) from 0 to 1; events from beyond turn it down. */
+  setStaticLevel(level: number, seconds = 0.5): void {
+    setGain(this.ctx, this.staticBus.gain, level, seconds / 3);
+  }
+
+  /**
+   * Shapes the programme and the dial noise for the signal at the dial position. Call as
+   * often as the dial moves: everything glides (tens of milliseconds), so dragging is smooth.
+   */
+  setReception(levels: ReceptionLevels): void {
+    this.levels = levels;
+    this.applyReception();
+  }
+
+  private applyReception(tauScale = 1): void {
+    const { ctx } = this;
+    const { signal, bleed, noise, detune } = this.levels;
+    const s = clamp01(signal);
+    setGain(ctx, this.reception.gain, Math.max(s ** 1.25, clamp01(bleed) * BLEED_LEVEL), DIAL_TAU * tauScale);
+    setGain(ctx, this.lowpass.frequency, LP_MIN * (this.lpMax / LP_MIN) ** (s ** 0.8), FILTER_TAU * tauScale);
+    setGain(ctx, this.highpass.frequency, 20 + HP_MAX * (1 - s) ** 2, FILTER_TAU * tauScale);
+
+    const noiseLevel = this.staticVoice ? 0 : NOISE_LEVEL * clamp01(noise) ** 1.35;
+    const whistleLevel = !this.staticVoice && s > 0.06 && s < 0.94 ? WHISTLE_LEVEL * Math.sin(Math.PI * s) : 0;
+    if (noiseLevel < 0.001 && whistleLevel < 0.0005) {
+      const dial = this.dialNoise;
+      if (dial) {
+        setGain(ctx, dial.gain.gain, 0, DIAL_TAU * tauScale);
+        setGain(ctx, dial.whistleGain.gain, 0, DIAL_TAU);
+        // Release the nodes once they've been silent a while (saves battery when tuned in).
+        if (this.dialRelease === undefined) this.dialRelease = setTimeout(() => this.releaseDialNoise(), 3000);
+      }
+      return;
+    }
+    clearTimeout(this.dialRelease);
+    this.dialRelease = undefined;
+    const dial = this.ensureDialNoise();
+    setGain(ctx, dial.gain.gain, noiseLevel, DIAL_TAU * tauScale);
+    setGain(ctx, dial.filter.frequency, 1300 + Math.min(1, Math.abs(detune) * 3) * 2600, FILTER_TAU);
+    setGain(ctx, dial.whistleGain.gain, whistleLevel, DIAL_TAU);
+    setGain(ctx, dial.whistle.frequency, 180 + Math.min(0.5, Math.abs(detune)) * 7000, FILTER_TAU);
+  }
+
+  private ensureDialNoise(): DialNoise {
+    if (this.dialNoise) return this.dialNoise;
+    const { ctx } = this;
+    const source = ctx.createBufferSource();
+    source.buffer = this.staticBuffer;
+    source.loop = true;
+    const length = this.staticBuffer.duration;
+    if (length > 0.4) {
+      source.loopStart = 0.08;
+      source.loopEnd = length - 0.08;
+    }
+    const filter = ctx.createBiquadFilter();
+    filter.type = 'bandpass';
+    filter.Q.value = 0.45;
+    filter.frequency.value = 2000;
+    const gain = ctx.createGain();
+    gain.gain.value = 0;
+    const whistle = ctx.createOscillator();
+    whistle.frequency.value = 600;
+    const whistleGain = ctx.createGain();
+    whistleGain.gain.value = 0;
+    source.connect(filter).connect(gain).connect(this.staticBus);
+    whistle.connect(whistleGain).connect(this.staticBus);
+    source.start(ctx.currentTime, Math.random() * length * 0.6);
+    whistle.start();
+    return (this.dialNoise = { source, filter, gain, whistle, whistleGain });
+  }
+
+  private releaseDialNoise(): void {
+    this.dialRelease = undefined;
+    const dial = this.dialNoise;
+    if (!dial || dial.gain.gain.value > 0.001) return;
+    this.dialNoise = null;
+    try {
+      dial.source.stop();
+      dial.whistle.stop();
+    } catch {
+      // Already stopped.
+    }
+    dial.gain.disconnect();
+    dial.whistleGain.disconnect();
+  }
+
+  /** Silences the dial noise at once (pause, power off). */
+  quietDial(): void {
+    const dial = this.dialNoise;
+    if (!dial) return;
+    setGain(this.ctx, dial.gain.gain, 0, 0.03);
+    setGain(this.ctx, dial.whistleGain.gain, 0, 0.03);
+    clearTimeout(this.dialRelease);
+    this.dialRelease = setTimeout(() => this.releaseDialNoise(), 400);
+  }
+
+  /** True while the dial noise nodes exist (for the lab and battery checks). */
+  get dialNoiseActive(): boolean {
+    return this.dialNoise !== null;
+  }
+
+  /** A seamless loop of noise, for event treatments. */
+  get noiseBuffer(): AudioBuffer {
+    return this.staticBuffer;
+  }
+
+  /**
+   * Time-slip tape wobble on the programme: a slowly modulated delay (pitch drift of about
+   * a percent). Glides in and out; costs nothing when off.
+   */
+  setWobble(on: boolean): void {
+    const { ctx } = this;
+    const now = ctx.currentTime;
+    const delay = this.wobbleDelay.delayTime;
+    if (on && !this.wobble) {
+      const lfos: OscillatorNode[] = [];
+      const depths: GainNode[] = [];
+      for (const [rate, depth] of [
+        [0.55, 0.0035],
+        [0.17, 0.006],
+      ] as const) {
+        const lfo = ctx.createOscillator();
+        lfo.frequency.value = rate;
+        const g = ctx.createGain();
+        g.gain.value = 0;
+        g.gain.setValueAtTime(0, now);
+        g.gain.linearRampToValueAtTime(depth, now + 1.5);
+        lfo.connect(g).connect(delay);
+        lfo.start(now);
+        lfos.push(lfo);
+        depths.push(g);
+      }
+      this.wobble = { lfos, depths };
+      setGain(ctx, delay, 0.025, 0.15);
+    } else if (!on && this.wobble) {
+      const { lfos, depths } = this.wobble;
+      this.wobble = null;
+      for (const g of depths) setGain(ctx, g.gain, 0, 0.2);
+      for (const lfo of lfos) lfo.stop(now + 1.2);
+      lfos[0]?.addEventListener('ended', () => depths.forEach((g) => g.disconnect()));
+      setGain(ctx, delay, 0, 0.25);
+    }
   }
 
   /** A faint, filtered noise floor (used when the music engine is unavailable). */
@@ -403,6 +627,8 @@ export class Mixer {
     setGain(ctx, this.hissVoice.gain.gain, level, 0.3);
   }
 }
+
+const clamp01 = (x: number) => Math.min(1, Math.max(0, Number.isFinite(x) ? x : 0));
 
 /** Smoothly approaches `value` (time constant in seconds) from wherever it is now, without clicks. */
 export function setGain(ctx: BaseAudioContext, param: AudioParam, value: number, timeConstant: number): void {
