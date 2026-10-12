@@ -1,6 +1,7 @@
 // Static Lullabies: a dark bedroom lit by an old TV full of soft snow. A three-eyed cat
 // sleeps on top. Now and then the snow arranges itself into a smile, then forgets.
 
+import { gloom, motes } from '../kit/atmos';
 import { hex, mix, ramp, shade } from '../kit/color';
 import { blinking, envelope, stars } from '../kit/fx';
 import { glyph } from '../kit/font';
@@ -18,9 +19,10 @@ const def: SceneDef = {
   focusY: 78,
   rareEvents: 3,
   rareDuration: 7,
+  grade: { temperature: -0.25, contrast: 1.12, saturation: 0.8, bloom: 0.75, threshold: 0.62, vignette: 0.5, shadows: '#04050c' },
   create({ accent }) {
     const ink = hex('#07070f');
-    const wall = [hex('#0b0d1d'), hex('#111530'), hex('#161b3a')];
+    const wall = [hex('#080a16'), hex('#0d1024'), hex('#11152e')];
     const floor = [hex('#0d0c18'), hex('#08080f')];
     const plastic = { l: hex('#8c8a86'), m: hex('#64625f'), d: hex('#3d3c3d'), bezel: hex('#18171e') };
     const woodC = { d: hex('#1c1416'), m: hex('#2c1f20'), l: hex('#3e2c2a') };
@@ -164,11 +166,16 @@ const def: SceneDef = {
         g.rect(66, 128, 12, 16, hex('#2a2c48'));
         g.disc(72, 134, 5, hex('#ffe2a8'));
         g.disc(74, 132, 4, hex('#2a2c48'));
-        g.glow(71, 134, 30, warm, 0.35, 4);
+        g.glow(71, 134, 26, warm, 0.25, 4);
 
         // TV light washing the room (base layer; flicker added per frame).
-        g.glow(154, 92, 120, glowC, 0.13, 5);
-        g.glow(154, 150, 70, glowC, 0.08, 4);
+        g.glow(154, 92, 120, glowC, 0.11, 5);
+        g.glow(154, 150, 70, glowC, 0.07, 4);
+        gloom(g, g.left, 156, g.w, g.bottom - 156, 0.5);
+        g.lighting(0.42);
+        g.light(154, 92, 120, 0.75, 90);
+        g.light(72, 134, 40, 0.35);
+        g.light(60, 50, 40, 0.2);
 
         // Precompute the screen pixels for the current view.
         const n = SCR.w * SCR.h;
@@ -299,9 +306,9 @@ const def: SceneDef = {
         g.px(hx - 1, hy + 5, cat[0]!);
         g.px(hx + 1, hy + 5, cat[0]!);
 
-        // A tiny 'z' now and then while the station plays on.
-        const zp = (t * 0.2) % 1;
-        if (!blinking(t, 5, 9)) g.text('z', hx - 14 - zp * 4, hy - 10 - zp * 14, mix(hex('#8a94d8'), wall[1]!, zp));
+        // Dust turning in the screen light.
+        if (!f.reduced) motes(g, t, 110, 30, 210, 120, 12, hex('#c8d0ff'), 0.25, 4);
+        void blinking;
 
         // Star mobile hanging from the ceiling (tall views see more of it).
         for (let i = 0; i < 3; i++) {
@@ -309,11 +316,12 @@ const def: SceneDef = {
           const mx = 72 + i * 14 + sway;
           const my = -2 + i * 5;
           g.vline(72 + i * 14, g.top, my - 3, hex('#2a2c48'));
-          g.px(mx, my - 2, hex('#ffe08a'));
-          g.hline(mx - 2, mx + 2, my - 1, hex('#ffe08a'));
-          g.hline(mx - 1, mx + 1, my, hex('#ffe08a'));
-          g.px(mx - 1, my + 1, hex('#ffe08a'));
-          g.px(mx + 1, my + 1, hex('#ffe08a'));
+          const sc = hex('#6a6448');
+          g.px(mx, my - 2, sc);
+          g.hline(mx - 2, mx + 2, my - 1, sc);
+          g.hline(mx - 1, mx + 1, my, sc);
+          g.px(mx - 1, my + 1, sc);
+          g.px(mx + 1, my + 1, sc);
         }
         arc(g, 86, g.top + 2, 20, 2, 0, Math.PI, hex('#2a2c48'));
       },

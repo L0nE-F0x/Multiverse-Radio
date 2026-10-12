@@ -1,7 +1,8 @@
 // Every Possible News: a late-night news desk. A globe of nested globes turns, a ticker
 // crawls, the anchor's side part is perfect, and every clock on the wall is wrong.
 
-import { type Color, hex, mix, ramp, shade } from '../kit/color';
+import { gloom } from '../kit/atmos';
+import { type Color, hex, mix, mute, ramp, shade } from '../kit/color';
 import { envelope, smoothstep, TAU } from '../kit/fx';
 import { textWidth } from '../kit/font';
 import type { Gfx } from '../kit/gfx';
@@ -9,10 +10,13 @@ import { fbm, hash3 } from '../kit/rng';
 import { frameRect, roundRect } from '../kit/shapes';
 import type { SceneDef } from '../types';
 
-const DESK_Y = 118;
-const TICK_Y = 162;
+// Everything sits between the HUD's bands: clocks just below the top one, the ticker just
+// above the bottom one.
+const DESK_Y = 112;
+const TICK_Y = 120;
+const CLOCK_Y = 36;
 const ANCHOR = { x: 160, y: DESK_Y };
-const GLOBE = { x: 236, y: 98, r: 15 };
+const GLOBE = { x: 236, y: 92, r: 15 };
 
 const CLOCKS = [
   { label: 'NOW', speed: 1, dir: 1, off: 0.1 },
@@ -42,10 +46,12 @@ const def: SceneDef = {
   fps: 20,
   rareEvents: 4,
   rareDuration: 7,
+  focusY: 80,
+  grade: { contrast: 1.15, saturation: 0.8, bloom: 0.6, threshold: 0.7, vignette: 0.45, shadows: '#05040c' },
   create({ accent }) {
-    const ink = hex('#06050c');
-    const bg = [hex('#0a0a1e'), hex('#141436'), hex('#1e1a4a')];
-    const pink = accent;
+    const ink = hex('#04030a');
+    const bg = [hex('#05050f'), hex('#0b0b20'), hex('#12102c')];
+    const pink = mute(accent, 0.75, 0.9);
     const pinkD = shade(accent, 0.45);
     const sil = hex('#0c0a16');
     const hairHi = hex('#3e3860');
@@ -57,7 +63,8 @@ const def: SceneDef = {
     const clock = (g: Gfx, x: number, y: number, r: number, t: number, c: (typeof CLOCKS)[number], wobble: number) => {
       g.disc(x, y, r + 2, ink);
       g.disc(x, y, r + 1, shade(pink, 0.7));
-      g.disc(x, y, r, hex('#f4f0e8'));
+      g.disc(x, y, r, hex('#aaa498'));
+      g.disc(x - 2, y - 2, r - 4, hex('#bab4a6'));
       for (let k = 0; k < 12; k++) {
         const a = (k / 12) * TAU;
         g.px(x + Math.cos(a) * (r - 2), y + Math.sin(a) * (r - 2), hex('#8a849a'));
@@ -109,35 +116,37 @@ const def: SceneDef = {
         // Studio light streaks.
         for (let i = 0; i < 6; i++) g.tri(40 + i * 50, g.top, 64 + i * 50, g.top, 120 + i * 20, DESK_Y, pink, 2, 0.025);
         // A curved video wall behind: big faint city grid.
-        for (let y = 60; y < DESK_Y; y += 6) g.rect(g.left, y, g.w, 1, mix(bg[1]!, pink, 0.12));
-        for (let x = g.left - (g.left % 14); x < g.right; x += 14) g.rect(x, 60, 1, DESK_Y - 60, mix(bg[1]!, pink, 0.1));
+        for (let y = 62; y < DESK_Y; y += 6) g.rect(g.left, y, g.w, 1, mix(bg[1]!, pink, 0.08));
+        for (let x = g.left - (g.left % 14); x < g.right; x += 14) g.rect(x, 62, 1, DESK_Y - 62, mix(bg[1]!, pink, 0.07));
         // Clock wall.
-        g.rect(54, 12, 212, 44, hex('#100e26'));
-        frameRect(g, 54, 12, 212, 44, pinkD);
-        CLOCKS.forEach((c, i) => g.textCenter(c.label, 74 + i * 34, 46, mix(pink, hex('#ffffff'), 0.3)));
+        g.rect(54, CLOCK_Y - 18, 212, 42, hex('#0a0918'));
+        frameRect(g, 54, CLOCK_Y - 18, 212, 42, pinkD);
+        CLOCKS.forEach((c, i) => g.textCenter(c.label, 74 + i * 34, CLOCK_Y + 15, mix(pink, hex('#d8d0d8'), 0.2)));
 
         // Desk: curved front, pink stripe, logo.
         g.rect(g.left, DESK_Y, g.w, 4, deskC[2]!);
         g.rect(g.left, DESK_Y, g.w, 1, mix(deskC[2]!, hex('#ffffff'), 0.3));
-        for (let y = DESK_Y + 4; y < TICK_Y; y++) {
-          const curve = Math.round(((y - DESK_Y) / (TICK_Y - DESK_Y)) * 10);
+        for (let y = DESK_Y + 4; y < g.bottom; y++) {
+          const curve = Math.round(Math.min(1, (y - DESK_Y) / 50) * 10);
           g.rect(g.left, y, g.w, 1, ink);
           g.rect(40 + curve, y, 240 - curve * 2, 1, deskC[1]!);
           g.rect(40 + curve, y, 6, 1, deskC[2]!);
         }
-        g.rect(46, DESK_Y + 18, 228, 4, pink);
-        g.rect(46, DESK_Y + 22, 228, 1, pinkD);
-        g.disc(160, DESK_Y + 20, 13, ink);
-        g.disc(160, DESK_Y + 20, 12, pink);
-        g.disc(160, DESK_Y + 20, 10, deskC[0]!);
-        g.textCenter('EPN', 160, DESK_Y + 18, pink);
+        g.rect(46, DESK_Y + 30, 228, 2, pinkD);
+        g.disc(160, DESK_Y + 40, 11, ink);
+        g.disc(160, DESK_Y + 40, 10, pinkD);
+        g.disc(160, DESK_Y + 40, 8, deskC[0]!);
+        g.textCenter('EPN', 160, DESK_Y + 38, pinkD);
         // a mug on the desk, a laptop glow
-        g.rect(196, DESK_Y - 7, 6, 7, hex('#f4f0e8'));
-        g.rect(202, DESK_Y - 5, 2, 3, hex('#f4f0e8'));
-        g.text('#1', 197, DESK_Y - 6, pink);
+        g.rect(196, DESK_Y - 7, 6, 7, hex('#b8b0a8'));
+        g.rect(202, DESK_Y - 5, 2, 3, hex('#b8b0a8'));
         g.poly([104, DESK_Y, 128, DESK_Y, 126, DESK_Y - 2, 106, DESK_Y - 2], hex('#2a2a3a'));
         // Floor below the ticker (tall views).
-        g.vgrad([hex('#0a0816'), hex('#05040a')], TICK_Y + 16, g.bottom, TICK_Y + 16);
+        gloom(g, g.left, TICK_Y + 16, g.w, g.bottom - TICK_Y - 16, 0.6);
+        g.lighting(0.5);
+        g.light(ANCHOR.x, 70, 70, 0.45, 56);
+        g.light(160, CLOCK_Y, 130, 0.2, 30);
+        g.light(GLOBE.x, GLOBE.y, 30, 0.3);
         // Upper wall in tall views: studio lights rig.
         g.rect(g.left, -30, g.w, 3, hex('#2a2a3a'));
         for (let x = 70; x < 260; x += 40) {
@@ -162,7 +171,7 @@ const def: SceneDef = {
             wob = Math.sin(ev * 20) * 2 * k;
             dy = Math.round(k * 3);
           }
-          clock(g, 74 + i * 34, 30 + dy, 11, knocked && i === 2 ? t * 8 : t, c, wob);
+          clock(g, 74 + i * 34, CLOCK_Y - 4 + dy, 11, knocked && i === 2 ? t * 8 : t, c, wob);
         }
 
         // Nested globes, each turning its own way.
@@ -213,19 +222,20 @@ const def: SceneDef = {
         // shuffling papers every so often
         const shuffle = (t % 11) / 11;
         const lift = shuffle > 0.8 ? Math.round(Math.abs(Math.sin((shuffle - 0.8) * 5 * TAU * 1.5)) * 4) : 0;
-        g.rect(146, DESK_Y - 3 - lift, 28, 3, hex('#f4f0e8'));
-        g.rect(147, DESK_Y - 4 - lift, 26, 1, hex('#d8d4cc'));
+        g.rect(146, DESK_Y - 3 - lift, 28, 3, hex('#c8c0b4'));
+        g.rect(147, DESK_Y - 4 - lift, 26, 1, hex('#a8a098'));
         g.rect(142, DESK_Y - 5 - lift, 6, 4, sil);
         g.rect(172, DESK_Y - 5 - lift, 6, 4, sil);
 
         // On-air light pulses while the voice is going.
-        g.disc(270, 64, 3, f.playing ? hex('#ff4a5a') : hex('#4a1a20'));
-        if (f.playing) g.glow(270, 64, 10, hex('#ff4a5a'), 0.3 + f.energy * 0.4);
-        g.text('LIVE', 276, 62, f.playing ? hex('#ff8a9a') : hex('#4a3a40'));
+        g.disc(270, 70, 3, f.playing ? hex('#e04a50') : hex('#4a1a20'));
+        if (f.playing) g.glow(270, 70, 10, hex('#e04a50'), 0.25 + f.energy * 0.3);
+        g.text('LIVE', 276, 68, f.playing ? hex('#d8808a') : hex('#4a3a40'));
 
         // ── the ticker ──
-        g.rect(g.left, TICK_Y, g.w, 14, pink);
-        g.rect(g.left, TICK_Y, g.w, 1, mix(pink, hex('#ffffff'), 0.4));
+        const bar = mix(pink, hex('#2a1420'), 0.2);
+        g.rect(g.left, TICK_Y, g.w, 14, bar);
+        g.rect(g.left, TICK_Y, g.w, 1, mix(bar, hex('#ffffff'), 0.25));
         g.rect(g.left, TICK_Y + 13, g.w, 1, pinkD);
         const breaking = f.rare === 3 && ev < 7;
         const lx = Math.max(g.left, 0);
