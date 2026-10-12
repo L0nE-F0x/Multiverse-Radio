@@ -1,0 +1,211 @@
+# Voices heard on the oddities between stations (ODDITY_IDS in src/broadcast/types.ts).
+#
+# Each clip id starts with the oddity it belongs to, so the director can pick by prefix:
+#   time-signal-*      the time signal announcer (over the time-signal recipe)
+#   distress-beacon-*  faint distress messages, never dark: everyone is fine, mostly embarrassed
+#   stuck-loop-*       Ray Bellamy's one link, stuck on loop since 1974, on an old record
+#   test-tone-*        the test card announcer, for the test tone
+station = "_oddities"
+
+[voices]
+clock = { voice = "bm_fable", speed = 0.9, fx = "radio", name = "Time Signal" }
+testcard = { voice = "bf_alice", speed = 0.92, fx = "radio", name = "Test Transmission" }
+ray = { voice = "am_michael", speed = 1.05, fx = "vinyl", name = "Ray Bellamy (1974)" }
+marjorie = { voice = "bf_isabella", fx = "distant", name = "Pleasure Boat Marjorie" }
+beacon = { voice = "af_kore", speed = 0.92, fx = "robot", name = "Automatic Beacon" }
+balloon = { voice = "am_puck", fx = "distant", name = "Balloon Persistence" }
+skipper = { voice = "bm_daniel", fx = "radio", name = "Unknown Vessel" }
+
+# ── Time signal ───────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "time-signal-001"
+category = "psa"
+title = "Time Signal"
+lines = [
+  { say = "clock", text = "At the final pip, it will be exactly now. Precisely now. Now, give or take." },
+  { sfx = "pips" },
+]
+
+[[clip]]
+id = "time-signal-002"
+category = "psa"
+title = "Time Signal"
+lines = [
+  { say = "clock", text = "At the long tone, it will be later than you think, but not as late as you feared." },
+  { sfx = "pips" },
+]
+
+[[clip]]
+id = "time-signal-003"
+category = "psa"
+title = "Time Signal"
+lines = [
+  { say = "clock", text = "Following the pips, it will be one second later than it was a second ago. This service is provided free, as it always has been." },
+  { sfx = "pips" },
+]
+
+[[clip]]
+id = "time-signal-004"
+category = "psa"
+title = "Time Signal"
+lines = [
+  { say = "clock", text = "At the sixth pip, the time in every dimension will be slightly different. Please set your clock to whichever one you like best." },
+  { sfx = "pips" },
+]
+
+[[clip]]
+id = "time-signal-005"
+category = "psa"
+title = "Time Signal"
+lines = [
+  { say = "clock", text = "At the tone, it will be eleven o'clock on Every Possible News. It is always eleven o'clock there. Elsewhere, please use your judgement." },
+  { sfx = "pips" },
+]
+
+# ── Distress beacon ───────────────────────────────────────────────────────────
+
+[[clip]]
+id = "distress-beacon-001"
+category = "interrupt"
+title = "Pleasure Boat Marjorie"
+bed = "sea"
+lines = [
+  { sfx = "morse", seconds = 1.5, level = 0.5 },
+  { say = "marjorie", text = "Mayday, mayday, mayday. This is the pleasure boat Marjorie. We are not in danger." },
+  { say = "marjorie", text = "We are lost, and we have run out of biscuits. If anyone is passing, could they bring biscuits. Over." },
+]
+
+[[clip]]
+id = "distress-beacon-002"
+category = "interrupt"
+title = "Survey Ship Pemberton"
+lines = [
+  { sfx = "morse", seconds = 1.5, level = 0.5 },
+  { say = "beacon", text = "Automatic beacon. Distress level, mild. The crew of the survey ship Pemberton are locked out of the bridge." },
+  { say = "beacon", text = "They are fine. They are having a picnic. Please send a locksmith, at your leisure." },
+]
+
+[[clip]]
+id = "distress-beacon-003"
+category = "interrupt"
+title = "Balloon Persistence"
+bed = "wind"
+lines = [
+  { say = "balloon", text = "Pan pan. This is the hot air balloon Persistence. Our situation is stable, and has been for nine years." },
+  { say = "balloon", text = "We are drifting gently over a dimension made of cloud. Please do not rescue us. We only wanted to say hello." },
+]
+
+[[clip]]
+id = "distress-beacon-004"
+category = "interrupt"
+title = "A Red Balloon"
+lines = [
+  { sfx = "morse", seconds = 1.5, level = 0.5 },
+  { say = "beacon", text = "Beacon, automatic. Somebody has let go of a balloon. It is red. It is rising steadily. It is safe, and very happy." },
+  { say = "beacon", text = "This beacon is tied to the string. Hello from the balloon." },
+]
+
+[[clip]]
+id = "distress-beacon-005"
+category = "interrupt"
+title = "Unknown Vessel"
+bed = "sea"
+lines = [
+  { say = "skipper", text = "S. O. S. Repeat, S. O. S. This is a small boat in a large sea. Correction. A large boat, in a small sea." },
+  { say = "skipper", text = "We have run aground on all sides at once. Nobody is hurt. Everybody is embarrassed. Please advise." },
+]
+
+# ── The song stuck on loop since 1974 ─────────────────────────────────────────
+
+[[clip]]
+id = "stuck-loop-001"
+category = "dj"
+title = "Right After This"
+lines = [
+  { say = "ray", text = "That was a lovely one. And there's plenty more where that came from, right after this.", gap = 0.5 },
+  { say = "ray", text = "That was a lovely one. And there's plenty more where that came from, right after this.", gap = 0.5 },
+  { say = "ray", text = "That was a lovely one. And there's plenty more where that came from, right after this." },
+]
+
+[[clip]]
+id = "stuck-loop-002"
+category = "dj"
+title = "Right After This"
+lines = [
+  { say = "ray", text = "That was a lovely one. And there's plenty more where that came from, right after this.", gap = 0.5 },
+  { say = "ray", text = "That was a lovely one. And there's plenty more where that came from, right after", cut = 0.9 },
+  { sfx = "tape-rewind" },
+  { say = "ray", text = "That was a lovely one. And there's plenty more where that came from, right after this." },
+]
+
+[[clip]]
+id = "stuck-loop-003"
+category = "dj"
+title = "Right After This"
+lines = [
+  { say = "ray", text = "That was a lovely one. And there's plenty more where that came from, right after this.", gap = 0.5 },
+  { say = "ray", text = "That was a lovely one. And there's plenty more where that", gap = 0.9 },
+  { say = "ray", text = "Hang on. Have I said this before?", gap = 1.2 },
+  { sfx = "tape-rewind" },
+  { say = "ray", text = "That was a lovely one. And there's plenty more where that came from, right after this." },
+]
+
+[[clip]]
+id = "stuck-loop-004"
+category = "dj"
+title = "Right After This"
+lines = [
+  { say = "ray", text = "That was a lovely one. And there's plenty more where that came from, right after this.", gap = 2.0 },
+  { say = "ray", text = "Any minute now.", gap = 1.0 },
+  { sfx = "tape-rewind" },
+  { say = "ray", text = "That was a lovely one. And there's plenty more where that came from, right after this.", speed = 0.92 },
+]
+
+# ── Test card ─────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "test-tone-001"
+category = "psa"
+title = "Test Transmission"
+lines = [
+  { say = "testcard", text = "This is a test transmission. Normal programmes will resume shortly.", gap = 1.2 },
+  { say = "testcard", text = "They have been resuming shortly for some time. Please be patient. They are nearly ready." },
+]
+
+[[clip]]
+id = "test-tone-002"
+category = "psa"
+title = "Test Transmission"
+lines = [
+  { say = "testcard", text = "The tone you are hearing is one thousand cycles per second.", gap = 0.8 },
+  { say = "testcard", text = "Please adjust your set until the tone sounds friendly." },
+]
+
+[[clip]]
+id = "test-tone-003"
+category = "psa"
+title = "Test Card"
+lines = [
+  { say = "testcard", text = "The picture on your screen is a test card. It shows a bowl of fruit, a grey scale, and a small, brave dog.", gap = 0.8 },
+  { say = "testcard", text = "Adjust your set until the dog looks confident." },
+]
+
+[[clip]]
+id = "test-tone-004"
+category = "psa"
+title = "Test Transmission"
+lines = [
+  { say = "testcard", text = "This is a test transmission, from the gap between stations.", gap = 0.8 },
+  { say = "testcard", text = "Nothing is wrong. Nothing is on. Those are different things, and both of them are fine." },
+]
+
+[[clip]]
+id = "test-tone-005"
+category = "psa"
+title = "Test Transmission"
+daypart = "night"
+lines = [
+  { say = "testcard", text = "This is a test transmission. If you are still watching this at this hour, the test is going very well.", gap = 0.8 },
+  { say = "testcard", text = "Thank you for your help. The dog says thank you too." },
+]

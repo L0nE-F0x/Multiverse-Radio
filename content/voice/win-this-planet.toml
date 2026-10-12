@@ -1,0 +1,461 @@
+# Win This Planet! — 100.0, Studio Infinity, before a live studio audience of one.
+#
+# Chaz Brightley reads every question as if it were the final one. It never is. The
+# questions are about the contestants themselves, and the contestants get them wrong:
+# Unit Seven (a robot with no self found), Wendell (a nervous blob) and Grandma Hester
+# (whose answer to everything is nineteen fifty-two; it is finally right at Halloween).
+# The studio audience is Doreen. She claps alone. Nobody has ever won the planet. The
+# consolation prize is a toaster that wins you another toaster.
+#
+# The `quiz` kit chains a question, one to three attempts and the scores. Every question
+# is an open question about yourself, so every wrong answer fits every question.
+station = "win-this-planet"
+
+[voices]
+chaz = { voice = "am_puck", speed = 1.12, name = "Chaz Brightley" }
+robot = { voice = "am_adam", fx = "robot", name = "Unit Seven" }
+wendell = { voice = "am_echo", speed = 1.15, name = "Wendell, a Nervous Blob" }
+hester = { voice = "bf_isabella", name = "Grandma Hester" }
+doreen = { voice = "af_bella", name = "Doreen, the Studio Audience" }
+announcer = { voice = "am_fenrir", fx = "trailer", name = "The Announcer" }
+
+[[show]]
+id = "primetime"
+name = "Win This Planet!"
+blurb = "The quiz where the questions are about you, and the answers are wrong. Live, before a studio audience of one."
+start = 19
+end = 22
+
+[[show]]
+id = "win-this-moon"
+name = "Win This Moon!"
+blurb = "The daytime spin-off. Smaller prizes, smaller stakes, the same three contestants."
+start = 12
+end = 15
+
+[[show]]
+id = "graveyard-round"
+name = "The Graveyard Round"
+blurb = "Late-night quizzing with the lights down and the buzzer muffled. The planet is asleep. Don't wake it."
+start = 1
+end = 4
+
+# ── Idents ────────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "id-001"
+category = "id"
+lines = [
+  { say = "chaz", text = "Win This Planet! The quiz where the questions are about you, and the answers are wrong!" },
+  { sting = "quiz" },
+]
+
+[[clip]]
+id = "id-002"
+category = "id"
+lines = [
+  { say = "chaz", text = "You're listening to Win This Planet, on one hundred point oh! Everybody's a winner! Nobody's won!" },
+]
+
+[[clip]]
+id = "id-003"
+category = "id"
+lines = [
+  { say = "announcer", text = "Win This Planet! Live from Studio Infinity!" },
+  { say = "doreen", text = "Woo." },
+]
+
+[[clip]]
+id = "id-004"
+category = "id"
+lines = [
+  { say = "chaz", text = "Nobody has ever won the planet. Tonight, that could change! It won't! But it could!" },
+  { sting = "quiz" },
+]
+
+# ── Show openers and show links ───────────────────────────────────────────────
+
+[[clip]]
+id = "show-primetime-open"
+category = "id"
+show = "primetime"
+part = "open"
+bed = "studio"
+lines = [
+  { sting = "fanfare" },
+  { say = "chaz", text = "Good evening, and welcome to Win This Planet! Live, before a studio audience of one!" },
+  { sfx = "applause", seconds = 0.8, level = 0.25 },
+  { say = "chaz", text = "Thank you, Doreen!" },
+]
+
+[[clip]]
+id = "show-primetime-001"
+category = "dj"
+show = "primetime"
+bed = "studio"
+lines = [
+  { say = "chaz", text = "Doreen, you've been our studio audience for four hundred episodes! What keeps you coming back?" },
+  { say = "doreen", text = "I live here, Chaz. They built the studio around my house." },
+  { say = "chaz", text = "And we are so glad they did! Doreen, everybody!" },
+  { sfx = "applause", seconds = 0.8, level = 0.25 },
+]
+
+[[clip]]
+id = "show-moon-open"
+category = "id"
+show = "win-this-moon"
+part = "open"
+bed = "studio"
+lines = [
+  { say = "chaz", text = "It's Win This Moon! The daytime edition! Smaller prizes, smaller stakes, and the same three contestants, who live here now!" },
+]
+
+[[clip]]
+id = "show-moon-001"
+category = "dj"
+show = "win-this-moon"
+bed = "studio"
+lines = [
+  { say = "chaz", text = "Today's moon is a lovely little moon called Pebble! It's about the size of a large village. It has one crater, and the crater has a bench!" },
+  { say = "chaz", text = "Is that a moon you could love? It is! It is a moon you could love!" },
+]
+
+[[clip]]
+id = "show-graveyard-open"
+category = "id"
+show = "graveyard-round"
+part = "open"
+daypart = "night"
+lines = [
+  { say = "chaz", text = "Welcome to the Graveyard Round. We've turned the lights down. We've muffled the buzzer. The planet is asleep. Let's not wake it.", fx = "whisper", speed = 1.0 },
+]
+
+[[clip]]
+id = "show-graveyard-001"
+category = "dj"
+show = "graveyard-round"
+lines = [
+  { say = "chaz", text = "A question for the operator on the relay ship. Yes, you. It's a hard one. Ready?", fx = "whisper", speed = 1.0 },
+  { say = "chaz", text = "What's your heading?", fx = "whisper", speed = 1.0 },
+  { pause = 2.5 },
+  { say = "chaz", text = "No idea? That's all right. Nobody knows their heading at this hour. Ten points.", fx = "whisper", speed = 1.0 },
+]
+
+[[clip]]
+id = "show-graveyard-002"
+category = "dj"
+show = "graveyard-round"
+lines = [
+  { say = "hester", text = "Chaz, I've fallen asleep at my podium." },
+  { say = "chaz", text = "Hester, you're talking to me.", fx = "whisper", speed = 1.0 },
+  { say = "hester", text = "I talk in my sleep, dear.", gap = 0.8 },
+  { say = "hester", text = "Nineteen fifty two." },
+  { pause = 1.0 },
+  { say = "chaz", text = "Ten points to Hester.", fx = "whisper", speed = 1.0 },
+]
+
+# ── Quiz kit: question, attempts, scores ──────────────────────────────────────
+
+[[clip]]
+id = "quiz-open-1"
+category = "show"
+kit = "quiz"
+part = "open"
+bed = "studio"
+lines = [
+  { sting = "quiz" },
+  { say = "chaz", text = "Fingers on buzzers! For four hundred points: what is your name?" },
+]
+
+[[clip]]
+id = "quiz-open-2"
+category = "show"
+kit = "quiz"
+part = "open"
+bed = "studio"
+lines = [
+  { say = "chaz", text = "Next question! This one's about you, and only you: how old are you? Take your time! Don't take your time!" },
+]
+
+[[clip]]
+id = "quiz-open-3"
+category = "show"
+kit = "quiz"
+part = "open"
+bed = "studio"
+lines = [
+  { say = "chaz", text = "For the planet! Where, exactly, do you live? You may confer! You may not use a map!" },
+]
+
+[[clip]]
+id = "quiz-open-4"
+category = "show"
+kit = "quiz"
+part = "open"
+bed = "studio"
+lines = [
+  { sfx = "drumroll", seconds = 1.5 },
+  { say = "chaz", text = "Lightning round! What did you have for breakfast this morning? Buzzers ready!" },
+]
+
+[[clip]]
+id = "quiz-open-5"
+category = "show"
+kit = "quiz"
+part = "open"
+bed = "studio"
+lines = [
+  { say = "chaz", text = "Here's a tricky one! What is your favourite colour? It's on the card! I can see it! Can you?" },
+]
+
+[[clip]]
+id = "quiz-open-6"
+category = "show"
+kit = "quiz"
+part = "open"
+bed = "studio"
+lines = [
+  { sting = "quiz" },
+  { say = "chaz", text = "For a thousand points and a moon! How many hands have you got? Show your working!" },
+]
+
+[[clip]]
+id = "quiz-answer-1"
+category = "show"
+kit = "quiz"
+part = "body"
+bed = "studio"
+lines = [
+  { say = "robot", text = "Calculating. Calculating. The answer is: no." },
+  { sfx = "buzzer" },
+  { say = "chaz", text = "It wasn't a yes or no question, Unit Seven!" },
+  { say = "robot", text = "Then the answer is: also no." },
+  { say = "chaz", text = "That's minus two hundred, and a warning!" },
+]
+
+[[clip]]
+id = "quiz-answer-2"
+category = "show"
+kit = "quiz"
+part = "body"
+bed = "studio"
+lines = [
+  { say = "wendell", text = "Is it, um, me? Is the answer me?" },
+  { sfx = "buzzer" },
+  { say = "chaz", text = "So close, Wendell! The question's about you! The answer isn't you!" },
+  { say = "wendell", text = "That's how I feel most days, Chaz." },
+  { say = "chaz", text = "And that's the spirit we love on this show!" },
+]
+
+[[clip]]
+id = "quiz-answer-3"
+category = "show"
+kit = "quiz"
+part = "body"
+bed = "studio"
+lines = [
+  { say = "hester", text = "Nineteen fifty two." },
+  { sfx = "buzzer" },
+  { say = "chaz", text = "Hester, that's your answer to everything!" },
+  { say = "hester", text = "It was right once." },
+  { say = "chaz", text = "It has never been right, Hester!" },
+  { say = "hester", text = "It was right in nineteen fifty two." },
+]
+
+[[clip]]
+id = "quiz-answer-4"
+category = "show"
+kit = "quiz"
+part = "body"
+bed = "studio"
+lines = [
+  { say = "hester", text = "Is the answer on the card, dear?" },
+  { say = "chaz", text = "It is, Hester!" },
+  { say = "hester", text = "Then it's whatever's on the card." },
+  { sfx = "correct" },
+  { say = "chaz", text = "That's technically correct! Judges? The judges are conferring!", gap = 0.6 },
+  { say = "chaz", text = "The judges have confiscated the card!" },
+]
+
+[[clip]]
+id = "quiz-answer-5"
+category = "show"
+kit = "quiz"
+part = "body"
+bed = "studio"
+lines = [
+  { sfx = "buzzer" },
+  { say = "chaz", text = "And Wendell's buzzed in already! Wendell, your answer?" },
+  { say = "wendell", text = "I don't know. I panicked. The button was right there." },
+  { say = "chaz", text = "The button is always right there, Wendell! That's what buttons do!" },
+  { say = "wendell", text = "It's a lot of pressure, Chaz." },
+]
+
+[[clip]]
+id = "quiz-answer-6"
+category = "show"
+kit = "quiz"
+part = "body"
+bed = "studio"
+lines = [
+  { say = "chaz", text = "No answer from our contestants! Let's go to the studio audience! Doreen?" },
+  { say = "doreen", text = "Is it a goose?" },
+  { sfx = "buzzer" },
+  { say = "chaz", text = "It is not a goose, Doreen! It is never a goose! Lovely to have you, Doreen!" },
+  { sfx = "applause", seconds = 0.8, level = 0.25 },
+]
+
+[[clip]]
+id = "quiz-answer-7"
+category = "show"
+kit = "quiz"
+part = "body"
+bed = "studio"
+lines = [
+  { say = "robot", text = "Question requires knowledge of self. Searching. Searching." },
+  { pause = 1.5 },
+  { say = "robot", text = "No self found." },
+  { say = "chaz", text = "Oh, Unit Seven. That's a lot for a weeknight. We'll come back to you!" },
+]
+
+[[clip]]
+id = "quiz-answer-8"
+category = "show"
+kit = "quiz"
+part = "body"
+bed = "studio"
+lines = [
+  { say = "hester", text = "Can I phone a friend?" },
+  { say = "chaz", text = "There's no phoning a friend, Hester! This is Win This Planet!" },
+  { say = "hester", text = "I've already phoned her. She says, try the cupboard." },
+  { sfx = "buzzer" },
+  { say = "chaz", text = "That's not an answer, Hester, that's a place!" },
+  { say = "hester", text = "It's where she keeps the answers." },
+]
+
+[[clip]]
+id = "quiz-close-1"
+category = "show"
+kit = "quiz"
+part = "close"
+bed = "studio"
+lines = [
+  { say = "chaz", text = "The scores! Hester, minus twelve! Unit Seven, a rounding error! Wendell, unclear! The planet remains unwon!" },
+  { sting = "quiz" },
+]
+
+[[clip]]
+id = "quiz-close-2"
+category = "show"
+kit = "quiz"
+part = "close"
+bed = "studio"
+lines = [
+  { say = "chaz", text = "That's the round! Nobody has any points, so everybody's still in it! Don't go anywhere! The planet can't! It's a planet!" },
+]
+
+[[clip]]
+id = "quiz-close-3"
+category = "show"
+kit = "quiz"
+part = "close"
+bed = "studio"
+lines = [
+  { say = "chaz", text = "Scores on the doors! Doreen is in the lead, and she isn't even playing! Take a bow, Doreen!" },
+  { sfx = "applause", seconds = 0.8, level = 0.25 },
+]
+
+[[clip]]
+id = "quiz-close-4"
+category = "show"
+kit = "quiz"
+part = "close"
+bed = "studio"
+lines = [
+  { say = "chaz", text = "And at the end of that round, the planet is still up for grabs! It always is! It's the one thing you can count on!" },
+  { sting = "sad-trombone" },
+]
+
+# ── Prizes ────────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "prize-001"
+category = "dj"
+title = "Tonight's Planet: Varnell Four"
+bed = "studio"
+lines = [
+  { say = "chaz", text = "Let's see what you could win! Announcer?" },
+  { say = "announcer", text = "Tonight's planet is Varnell Four! Two moons, one careful previous owner, and an ocean that's mostly gravy! Comes with a weather system and a small, polite volcano!" },
+  { say = "chaz", text = "A polite volcano!" },
+]
+
+[[clip]]
+id = "prize-002"
+category = "dj"
+title = "The Consolation Toaster"
+bed = "studio"
+lines = [
+  { say = "announcer", text = "And if you don't win the planet, you'll go home with our consolation prize: a toaster that wins you another toaster!" },
+  { say = "chaz", text = "Hester has eleven of them!" },
+  { say = "hester", text = "Twelve. One of them won one in the car park." },
+]
+
+[[clip]]
+id = "prize-003"
+category = "dj"
+title = "Tonight's Planet: Little Osk"
+bed = "studio"
+lines = [
+  { say = "announcer", text = "Tonight's planet is Little Osk! A starter planet, perfect for first-time owners! One continent, no mortgage, and a single tree that everybody agrees is lovely!" },
+  { say = "chaz", text = "Everybody agrees! That never happens!" },
+]
+
+[[clip]]
+id = "dj-001"
+category = "dj"
+bed = "studio"
+lines = [
+  { say = "chaz", text = "People ask me, Chaz, has anyone ever won the planet? And I say: not yet! And they say, will anyone? And I say: not yet!" },
+  { say = "chaz", text = "And then they ask me to stop shouting, and I say: not yet!" },
+]
+
+# ── Halloween ─────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "halloween-1"
+category = "show"
+title = "Win This Haunted Planet!"
+bed = "studio"
+dates = ["10-24", "10-25", "10-26", "10-27", "10-28", "10-29", "10-30", "10-31"]
+lines = [
+  { sting = "halloween" },
+  { say = "chaz", text = "It's a spooky special! Welcome to Win This Haunted Planet!" },
+  { say = "announcer", text = "Tonight's prize is Varnell Nine! Fully haunted, slightly damp, and very affordable, because nobody will go there!" },
+  { say = "chaz", text = "Not even Doreen! Doreen?" },
+  { say = "doreen", text = "Not even me, Chaz." },
+  { say = "chaz", text = "Halloween round! Contestants, what have you come as?" },
+  { say = "robot", text = "A robot." },
+  { sfx = "buzzer" },
+  { say = "chaz", text = "Unit Seven, you are a robot!" },
+  { say = "robot", text = "Then it is a very good costume." },
+  { say = "hester", text = "I've come as nineteen fifty two." },
+  { sfx = "correct" },
+  { pause = 1.0 },
+  { say = "chaz", text = "Hester, that's correct! After four hundred episodes! Hester is correct!" },
+  { say = "hester", text = "I told you, dear. It was only ever a matter of time." },
+  { sfx = "applause", seconds = 1.5, level = 0.25 },
+]
+
+[[clip]]
+id = "halloween-2"
+category = "dj"
+title = "The Scariest Question"
+bed = "studio"
+dates = ["10-24", "10-25", "10-26", "10-27", "10-28", "10-29", "10-30", "10-31"]
+lines = [
+  { say = "chaz", text = "Halloween week on Win This Planet, and this is the scariest question we've ever asked.", gap = 0.6 },
+  { say = "chaz", text = "Wendell. What are you afraid of?" },
+  { say = "wendell", text = "This. Specifically this, Chaz." },
+  { sfx = "buzzer" },
+  { say = "chaz", text = "Wrong! The card says spiders! Ten points for honesty, though! We don't give points for honesty!" },
+]

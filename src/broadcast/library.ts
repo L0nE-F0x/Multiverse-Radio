@@ -2,6 +2,7 @@
 // StationSchedule built from whatever has loaded. A missing manifest means "no clips",
 // so every station always has at least a music-only schedule.
 
+import { trackPacksReady } from '../content';
 import { manifestUrl, parseManifest } from './manifest';
 import { StationSchedule, type ScheduleOptions } from './scheduler';
 import type { StationDef, VoiceManifest } from './types';
@@ -61,7 +62,8 @@ export class VoiceLibrary {
   schedule(station: StationDef): StationSchedule {
     const own = this.manifest(station.id);
     const shared = this.manifest(SHARED);
-    const key = `${this.versions.get(station.id) ?? 0}:${this.versions.get(SHARED) ?? 0}`;
+    // Track names come from lazily loaded packs: rebuild once they arrive.
+    const key = `${this.versions.get(station.id) ?? 0}:${this.versions.get(SHARED) ?? 0}:${trackPacksReady() ? 1 : 0}`;
     const cached = this.schedules.get(station.id);
     this.schedules.delete(station.id);
     if (cached && cached.key === key) {

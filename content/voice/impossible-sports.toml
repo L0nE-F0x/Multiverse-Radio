@@ -18,6 +18,9 @@ sun = { voice = "af_sky", fx = "tiny", name = "The Ball, a Small Sun" }
 greg = { voice = "am_onyx", fx = "whisper", name = "Greg, Number Zero" }
 bev = { voice = "af_nova", fx = "phone", name = "Bev" }
 grumbel = { voice = "am_eric", name = "Arnold Grumbel" }
+# v3: Halloween.
+ghost = { voice = "bm_fable", fx = "ghost", name = "Old Wendell, a Ghost" }
+teen = { voice = "am_puck", name = "A Teenager in a Sheet" }
 
 # ── Idents ────────────────────────────────────────────────────────────────────
 
@@ -444,4 +447,543 @@ lines = [
   { say = "doug", text = "Gracious in defeat, though. Look. She's left it a biscuit." },
   { say = "chip", text = "The void has taken the biscuit! First time in history! Doug, what does it mean?" },
   { say = "doug", text = "It means it was hungry, Chip. Studying's hard work." },
+]
+
+# ══ v3: the living schedule ═══════════════════════════════════════════════════
+#
+# Shows, the sports kit (an intro, then one to three results with Doug's commentary,
+# then a sign-off or a very short Doug's Corner), serial episodes and Halloween.
+# Existing clips above are rendered and deployed; only add.
+
+# ── Shows ─────────────────────────────────────────────────────────────────────
+
+[[show]]
+id = "the-overnight-results"
+name = "The Overnight Results"
+blurb = "Chip's asleep. Doug reads the scores from the sports that are still going. Most of them are still going."
+start = 1
+end = 4
+host = "Doug Steadman"
+
+[[show]]
+id = "the-warm-up"
+name = "The Warm-Up"
+blurb = "Chip does his morning stretches, live, with full commentary."
+start = 7
+end = 9
+
+[[show]]
+id = "sunball-tonight"
+name = "Sunball Tonight"
+blurb = "Live from Coliseum Zero, where the ball is a small, polite sun."
+start = 19
+end = 22
+
+[[clip]]
+id = "the-overnight-results-open"
+category = "id"
+show = "the-overnight-results"
+part = "open"
+title = "The Overnight Results"
+lines = [
+  { say = "doug", text = "This is the Overnight Results. Chip's asleep. I'll be reading the scores. Slowly, and with context." },
+]
+
+[[clip]]
+id = "the-overnight-results-01"
+category = "dj"
+show = "the-overnight-results"
+lines = [
+  { say = "doug", text = "Chip's asleep in the commentary box. He sleeps the way he commentates. Every so often he shouts, it's in, and rolls over.", gap = 0.8 },
+  { say = "doug", text = "Let him have it. It's usually in." },
+]
+
+[[clip]]
+id = "the-overnight-results-02"
+category = "dj"
+show = "the-overnight-results"
+lines = [
+  { say = "doug", text = "Competitive Waiting, still waiting. Hide and Seek, still hiding. The Long Jump, still in the air.", gap = 0.8 },
+  { say = "doug", text = "That's the thing about the overnight. Nothing ends. You just check in on it, like a friend in hospital." },
+]
+
+[[clip]]
+id = "the-overnight-results-03"
+category = "dj"
+show = "the-overnight-results"
+lines = [
+  { say = "doug", text = "We played Cloudball at night sometimes. You could only see the goals when the moon was behind them. Lovely silver edges.", gap = 0.8 },
+  { say = "doug", text = "Never scored a thing. Wouldn't change it." },
+]
+
+[[clip]]
+id = "the-warm-up-open"
+category = "id"
+show = "the-warm-up"
+part = "open"
+title = "The Warm-Up"
+lines = [
+  { sting = "sports" },
+  { say = "chip", text = "Good morning, and welcome to the Warm-Up! I'm Chip Thunderbuckle, and I am stretching! Live!" },
+]
+
+[[clip]]
+id = "the-warm-up-01"
+category = "dj"
+show = "the-warm-up"
+lines = [
+  { say = "chip", text = "And we're into the hamstring stretch! He's reaching! He's reaching for his toes! He's nowhere near his toes, folks! The toes are a distant memory!" },
+  { say = "doug", text = "Breathe, Chip." },
+  { say = "chip", text = "I'm breathing, Doug! It's a personal best!" },
+]
+
+[[clip]]
+id = "the-warm-up-02"
+category = "dj"
+show = "the-warm-up"
+lines = [
+  { say = "chip", text = "Jumping jacks! One! Two! He's in the air! He's in the air, folks! He's landed! The crowd goes mild!" },
+  { say = "doug", text = "There is no crowd, Chip. It's seven in the morning." },
+  { say = "chip", text = "The crowd in my heart, Doug!" },
+]
+
+[[clip]]
+id = "sunball-tonight-open"
+category = "id"
+show = "sunball-tonight"
+part = "open"
+title = "Sunball Tonight"
+bed = "stadium"
+lines = [
+  { sting = "sports" },
+  { say = "chip", text = "It's Sunball Tonight, live from Coliseum Zero! The ball is up! The ball is glowing! The ball has not apologised to anyone yet!" },
+]
+
+[[clip]]
+id = "sunball-tonight-01"
+category = "dj"
+show = "sunball-tonight"
+bed = "stadium"
+lines = [
+  { say = "chip", text = "Doug, ninety thousand fans tonight, and every one of them has got sun cream on!" },
+  { say = "doug", text = "You can always spot the veterans, Chip. Wide hat, factor nine thousand, and the look of a man who once headed a free kick." },
+]
+
+[[clip]]
+id = "sunball-tonight-02"
+category = "dj"
+show = "sunball-tonight"
+bed = "stadium"
+lines = [
+  { say = "chip", text = "Fun Sunball fact, folks! The ball is legally a star, so every goal is technically a sunset in the net!" },
+  { say = "doug", text = "It's not, Chip." },
+  { say = "chip", text = "It feels like one!", gap = 0.8 },
+  { say = "doug", text = "It does a bit." },
+]
+
+[[clip]]
+id = "sunball-tonight-03"
+category = "dj"
+show = "sunball-tonight"
+lines = [
+  { say = "doug", text = "People ask what it's like, heading a sun. Warm. Mostly warm. Briefly, very warm." },
+  { say = "doug", text = "And then, for the rest of your life, a little bit warmer than everybody else." },
+]
+
+# ── Sports kit: intros ────────────────────────────────────────────────────────
+
+[[clip]]
+id = "sports-open-01"
+category = "sports"
+kit = "sports"
+part = "open"
+lines = [
+  { sting = "sports" },
+  { say = "chip", text = "Let's go round the multiverse for tonight's results! I'll read them, Doug, you explain them!" },
+  { say = "doug", text = "I'll try, Chip." },
+]
+
+[[clip]]
+id = "sports-open-02"
+category = "sports"
+kit = "sports"
+part = "open"
+lines = [
+  { sting = "sports" },
+  { say = "chip", text = "It's the Impossible Sports round-up! Scores, standings, and things that should not have happened!" },
+]
+
+[[clip]]
+id = "sports-open-03"
+category = "sports"
+kit = "sports"
+part = "open"
+lines = [
+  { say = "chip", text = "Results time, folks! Grab your foam hand! Grab somebody else's foam hand! Wave them both!" },
+]
+
+[[clip]]
+id = "sports-open-04"
+category = "sports"
+kit = "sports"
+part = "open"
+lines = [
+  { sting = "sports" },
+  { say = "chip", text = "Here come the scores! Some of them are even numbers!" },
+]
+
+[[clip]]
+id = "sports-open-05"
+category = "sports"
+kit = "sports"
+part = "open"
+lines = [
+  { say = "chip", text = "It's the Grumbel's Ladders Results Round-Up! Up is a choice! So, it turns out, is the offside rule!" },
+  { sting = "fanfare" },
+]
+
+[[clip]]
+id = "sports-open-06"
+category = "sports"
+kit = "sports"
+part = "open"
+daypart = "night"
+lines = [
+  { say = "doug", text = "The late scores. Chip's gone for a sandwich, so I'll be doing them properly." },
+]
+
+[[clip]]
+id = "sports-open-07"
+category = "sports"
+kit = "sports"
+part = "open"
+show = "sunball-tonight"
+bed = "stadium"
+lines = [
+  { say = "chip", text = "From Coliseum Zero, the Sunball scores! And some other scores, which also happened!" },
+  { sting = "sports" },
+]
+
+# ── Sports kit: results ───────────────────────────────────────────────────────
+
+[[clip]]
+id = "sports-body-01"
+category = "sports"
+kit = "sports"
+part = "body"
+lines = [
+  { say = "chip", text = "Gravity Polo! The Upward Falcons fourteen, the Downward Wolves, the ceiling!" },
+  { say = "doug", text = "Wolves spent the whole second half up there, Chip. Lovely touch on the ball. No idea where the goal was." },
+]
+
+[[clip]]
+id = "sports-body-02"
+category = "sports"
+kit = "sports"
+part = "body"
+lines = [
+  { say = "chip", text = "Competitive Waiting! Agatha Venn waited through the night, and is now waiting through the morning! No result!" },
+  { say = "doug", text = "No result is the result, Chip. That's the beauty of it. She'll be thrilled." },
+]
+
+[[clip]]
+id = "sports-body-03"
+category = "sports"
+kit = "sports"
+part = "body"
+lines = [
+  { say = "chip", text = "Mirror Tennis! It's a draw! Three hundred and one years, folks, and every match a draw!" },
+  { say = "doug", text = "Except the one, Chip. We don't talk about the one." },
+]
+
+[[clip]]
+id = "sports-body-04"
+category = "sports"
+kit = "sports"
+part = "body"
+lines = [
+  { say = "chip", text = "Sunball! The Glow Wardens two, Eclipse United, a sort of afternoon!" },
+  { say = "doug", text = "They'll take the afternoon. Better than a morning. Mornings are very hard to defend." },
+]
+
+[[clip]]
+id = "sports-body-05"
+category = "sports"
+kit = "sports"
+part = "body"
+lines = [
+  { say = "chip", text = "The Backwards Marathon! A new record! The winner finished the race before he'd even heard about it!" },
+  { say = "doug", text = "That's pure talent, Chip. You can't coach regret like that." },
+]
+
+[[clip]]
+id = "sports-body-06"
+category = "sports"
+kit = "sports"
+part = "body"
+lines = [
+  { say = "chip", text = "Synchronized Existing! The pair from the Overlap score a perfect ten, after not once thinking about lunch!" },
+  { say = "doug", text = "First time anyone's done it. One of them's thinking about lunch now, Chip. You can see it in her shoulders." },
+]
+
+[[clip]]
+id = "sports-body-07"
+category = "sports"
+kit = "sports"
+part = "body"
+lines = [
+  { say = "chip", text = "Hide and Seek, year forty one! The seeker has checked the airing cupboard again!" },
+  { say = "doug", text = "Third time this week. She's not in the airing cupboard, Chip. She's never been in the airing cupboard." },
+  { say = "chip", text = "Then where is she?" },
+  { say = "doug", text = "That's the sport, Chip." },
+]
+
+[[clip]]
+id = "sports-body-08"
+category = "sports"
+kit = "sports"
+part = "body"
+lines = [
+  { say = "chip", text = "The Tug of War Against Time! Team Present pulled next Thursday all the way to Tuesday, and then it got away again!" },
+  { say = "doug", text = "It always gets away, Chip. You've got to love it anyway." },
+]
+
+[[clip]]
+id = "sports-body-09"
+category = "sports"
+kit = "sports"
+part = "body"
+lines = [
+  { say = "chip", text = "Extreme Staring! Rosalind Teague lasted nine minutes against the void before she blinked!" },
+  { say = "doug", text = "The void blinked too, Chip. I saw it. Nobody believes me." },
+]
+
+[[clip]]
+id = "sports-body-10"
+category = "sports"
+kit = "sports"
+part = "body"
+lines = [
+  { say = "chip", text = "The Grand Slow Prix, live from the leaf! Barry leads by one millimetre after a stunning second month!" },
+  { say = "doug", text = "He's left it all out there, Chip. A lot of trail. Too much trail, if you ask me." },
+]
+
+[[clip]]
+id = "sports-body-11"
+category = "sports"
+kit = "sports"
+part = "body"
+lines = [
+  { say = "chip", text = "The Long Jump! Ottoline Brisk, four hundred years airborne, has been spotted over the Damp Dimension, and she's waving!" },
+  { say = "doug", text = "Someone's thrown her an umbrella, Chip. That's within the rules." },
+]
+
+[[clip]]
+id = "sports-body-12"
+category = "sports"
+kit = "sports"
+part = "body"
+lines = [
+  { say = "chip", text = "Cross Country Napping! The favourite fell asleep on the start line, and is still the favourite!" },
+  { say = "doug", text = "Nobody wants to wake him, Chip. It's a mark of respect." },
+]
+
+[[clip]]
+id = "sports-body-13"
+category = "sports"
+kit = "sports"
+part = "body"
+lines = [
+  { say = "chip", text = "Underwater Darts! The darts are still sinking! A result is expected some time in the spring!" },
+  { say = "doug", text = "A patience sport, underwater darts. Like most of the good ones." },
+]
+
+[[clip]]
+id = "sports-body-14"
+category = "sports"
+kit = "sports"
+part = "body"
+lines = [
+  { say = "chip", text = "The Coin Toss! The coin tossed in the spring has still not come down! One of the captains has opened a small shop in the centre circle!" },
+  { say = "doug", text = "Does a very good sandwich, as it goes." },
+]
+
+[[clip]]
+id = "sports-body-15"
+category = "sports"
+kit = "sports"
+part = "body"
+lines = [
+  { say = "chip", text = "Musical Chairs, the world final! There's one chair left, and it has chosen nobody!" },
+  { say = "doug", text = "That's the Last Chair, Chip. From the advert. It's a free agent." },
+]
+
+[[clip]]
+id = "sports-body-16"
+category = "sports"
+kit = "sports"
+part = "body"
+lines = [
+  { say = "chip", text = "The Interdimensional Relay! The baton has been passed between realities, and is currently in a man's kitchen in Precinct Nine!" },
+  { say = "doug", text = "He's put it in a vase, Chip. He's not giving it back. Can't blame him. It's a nice baton." },
+]
+
+# ── Sports kit: sign-offs and Doug's Corner ───────────────────────────────────
+
+[[clip]]
+id = "sports-close-01"
+category = "sports"
+kit = "sports"
+part = "close"
+lines = [
+  { say = "chip", text = "And those are your results! Doug, any final thoughts?" },
+  { say = "doug", text = "Drink some water, Chip." },
+]
+
+[[clip]]
+id = "sports-close-02"
+category = "sports"
+kit = "sports"
+part = "close"
+lines = [
+  { say = "doug", text = "Doug's Corner, very briefly. Somebody always loses. Bring them an orange." },
+]
+
+[[clip]]
+id = "sports-close-03"
+category = "sports"
+kit = "sports"
+part = "close"
+lines = [
+  { say = "doug", text = "Doug's Corner. It's only a game. That's what makes it so important." },
+]
+
+[[clip]]
+id = "sports-close-04"
+category = "sports"
+kit = "sports"
+part = "close"
+lines = [
+  { say = "chip", text = "That's the round-up! Nobody knows the rules! Everybody knows the score! The score is a color!" },
+  { sting = "sports" },
+]
+
+[[clip]]
+id = "sports-close-05"
+category = "sports"
+kit = "sports"
+part = "close"
+lines = [
+  { say = "doug", text = "Doug's Corner. If you're watching a sport you don't understand tonight, good. That's most of them. Cheer anyway." },
+]
+
+[[clip]]
+id = "sports-close-06"
+category = "sports"
+kit = "sports"
+part = "close"
+lines = [
+  { say = "chip", text = "Back after this with more sports that should not be legal, or possible!" },
+]
+
+[[clip]]
+id = "sports-close-07"
+category = "sports"
+kit = "sports"
+part = "close"
+lines = [
+  { say = "doug", text = "Doug's Corner. Eleven seasons, and I never once read my own name in the results. Doesn't matter. Go and chase something tomorrow." },
+]
+
+# ── Serials (one episode a day; see the other stations for the rest) ─────────
+
+[[clip]]
+id = "bev-gets-her-song-05"
+category = "story"
+serial = { id = "bev-gets-her-song", episode = 5 }
+title = "Bev Gets Her Song, Part Five: The Lift Boy"
+bed = "stadium"
+lines = [
+  { sting = "sports" },
+  { say = "chip", text = "Sports Phone-In! Lines are open! Caller, you're on!" },
+  { say = "bev", text = "Hello, Chip, it's Bev. I've had some numbers from the Numbers Station. They say it's the second half of my song." },
+  { say = "chip", text = "Bev! Let's hear it! Ninety thousand fans, quiet please!" },
+  { say = "bev", text = "Da da dum. Da da.", speed = 0.8, gap = 1.8 },
+  { say = "doug", text = "Bev. Where did you hear that?" },
+  { say = "bev", text = "In a lift, love. The Grand Overlap Hotel. Lift two." },
+  { say = "doug", text = "Stuck between floors four and five. Three hours. A lady with a big handbag, and a man in a brown suit.", speed = 0.95 },
+  { say = "bev", text = "How on earth do you know that?" },
+  { say = "doug", text = "After Cloudball ended, there wasn't much work for a centre half. I ran the lifts at the Grand Overlap for six years. Lift two was mine." },
+  { say = "chip", text = "Doug!" },
+  { say = "doug", text = "I was the voice on the emergency phone, Bev. Telling you the engineer was coming. He took three hours. I'm sorry about that." },
+  { say = "bev", text = "Don't be, love. Best three hours of my life." },
+  { say = "doug", text = "When the doors opened, your fella cried. I never forgot it. I'd never seen a man so sorry to be rescued." },
+  { say = "bev", text = "That was Stan." },
+  { say = "doug", text = "That song came down the line from Relay Four every afternoon. We called it the long one. I never knew its proper name.", gap = 1.0 },
+  { say = "chip", text = "Folks, I don't know what to say.", speed = 1.0 },
+  { say = "doug", text = "That's a first, Chip. Bev, tell Relay Four the lift boy says hello." },
+]
+
+[[clip]]
+id = "greg-comes-home-09"
+category = "story"
+serial = { id = "greg-comes-home", episode = 9 }
+title = "Greg Comes Home, Part Nine: The Wrong Way Round"
+bed = "crowd"
+lines = [
+  { sting = "sports" },
+  { say = "chip", text = "A late entry in tonight's Backwards Marathon, folks! In lane zero, a shadow with no person attached! Doug, it's Greg!" },
+  { say = "doug", text = "Number Zero. Scored the winner at Sunball in the spring. Hasn't been seen on a pitch since." },
+  { say = "chip", text = "And Greg is running it forwards! He's running the Backwards Marathon the right way round!" },
+  { say = "doug", text = "That's a disqualification, Chip. Look at him. He doesn't care." },
+  { say = "chip", text = "Greg! Why forwards?" },
+  { say = "greg", text = "The course finishes at the long bridge into the eastern Overlap. Backwards, it goes away from his house. Forwards, it goes home." },
+  { say = "chip", text = "Hollis!" },
+  { say = "greg", text = "You remembered." },
+  { say = "chip", text = "I remember everything, Greg! I don't understand any of it!" },
+  { say = "doug", text = "Chip, the backwards runners are coming the other way. They can't see where they're going. Only where they've been." },
+  { say = "chip", text = "And they're parting for him! The whole field is stepping aside! Pelham Ostrander has stopped and waved him through!" },
+  { say = "doug", text = "Course they have. Every one of them's running away from something. Here's one running towards it. You let that through.", gap = 0.8 },
+  { say = "chip", text = "Doug, are you crying?" },
+  { say = "doug", text = "It's the wind, Chip. Eleven seasons in the wind." },
+  { say = "chip", text = "Greg, any message for the fans?" },
+  { say = "greg", text = "Tell him I'm nearly there. Don't tell him I'm nervous." },
+  { say = "chip", text = "I won't, Greg!", gap = 1.0 },
+  { say = "doug", text = "Chip." },
+  { say = "chip", text = "Oh." },
+]
+
+# ── Halloween (24 to 31 October) ──────────────────────────────────────────────
+
+[[clip]]
+id = "halloween-01"
+category = "sports"
+title = "Competitive Haunting: The Halloween Classic"
+bed = "crowd"
+dates = ["10-24", "10-25", "10-26", "10-27", "10-28", "10-29", "10-30", "10-31"]
+lines = [
+  { sting = "halloween" },
+  { say = "chip", text = "It's the Halloween Classic, folks! Competitive Haunting! The oldest ghost in the eastern Overlap against a teenager in a sheet!" },
+  { say = "doug", text = "Experience against enthusiasm, Chip. Always a good contest." },
+  { say = "chip", text = "The teenager goes first! He's waving his arms! He's making the noise!" },
+  { say = "teen", text = "Woooo! Wooooo!" },
+  { say = "doug", text = "Too much, too early. You can't sustain that." },
+  { say = "chip", text = "And here's Old Wendell, two hundred years a ghost! He's drifting in! He's barely moving!" },
+  { say = "ghost", text = "Boo.", gap = 1.4 },
+  { say = "chip", text = "Ninety thousand fans have gone very quiet! Somebody's dropped a hot dog!" },
+  { say = "doug", text = "That's technique, Chip. One small boo, at the right moment. The teenager's tripped over his sheet." },
+  { say = "chip", text = "Final score, a shiver to a giggle! Old Wendell takes it!" },
+  { say = "doug", text = "Never run in a sheet, son. That's the first thing they teach you." },
+]
+
+[[clip]]
+id = "halloween-02"
+category = "sports"
+kit = "sports"
+part = "body"
+title = "Apple Bobbing, the Final"
+dates = ["10-24", "10-25", "10-26", "10-27", "10-28", "10-29", "10-30", "10-31"]
+lines = [
+  { say = "chip", text = "Apple Bobbing, the Halloween final! The champion has had her head in the barrel for four minutes!" },
+  { say = "doug", text = "She's not bobbing any more, Chip. She lives there now. Lovely apple, to be fair." },
 ]

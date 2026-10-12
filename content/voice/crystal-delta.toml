@@ -7,6 +7,8 @@ station = "crystal-delta"
 host = { voice = "af_aoede", name = "Prism" }
 refract = { voice = "af_aoede", speed = 1.04, fx = "cave", name = "Prism" }
 miner = { voice = "am_puck", fx = "tiny", name = "The Tiny Miner" }
+# v3: serial.
+teodor = { voice = "bm_daniel", fx = "distant", name = "Teodor, Relay Four" }
 
 # ── Idents ────────────────────────────────────────────────────────────────────
 
@@ -228,4 +230,266 @@ lines = [
   { say = "host", text = "Sometimes people ask which of my sentences is the real one.", gap = 0.3 },
   { say = "refract", text = "Sometimes people ask which of my sentences is the real me." },
   { say = "host", text = "I tell them, it's the light in between. That's where I live. Here's a song." },
+]
+
+# ══ v3: the living schedule ═══════════════════════════════════════════════════
+#
+# Shows, the dj kit (an opener, one to three refractions, a hand-off), a serial episode
+# and Halloween. Facet, Opaline and the Glass Harp Society are resident artists
+# (src/content/packs/chill.ts). Existing clips above are rendered and deployed; only add.
+
+# ── Shows ─────────────────────────────────────────────────────────────────────
+
+[[show]]
+id = "the-refraction-hour"
+name = "The Refraction Hour"
+blurb = "Everything said twice, nearly, in the small hours."
+start = 1
+end = 3
+
+[[show]]
+id = "the-tiny-miners-tea-break"
+name = "The Tiny Miner's Tea Break"
+blurb = "The tiny miner puts the kettle on and shows you what he found."
+start = 15
+end = 17
+host = "The Tiny Miner"
+
+[[clip]]
+id = "the-refraction-hour-open"
+category = "id"
+show = "the-refraction-hour"
+part = "open"
+title = "The Refraction Hour"
+lines = [
+  { say = "host", text = "This is the Refraction Hour, on Crystal Radio Delta.", gap = 0.3 },
+  { say = "refract", text = "This is the Hour Refraction, on Crystal Delta Radio." },
+]
+
+[[clip]]
+id = "the-refraction-hour-01"
+category = "dj"
+show = "the-refraction-hour"
+lines = [
+  { say = "host", text = "At this hour, the light in the cave goes very slow.", gap = 0.3 },
+  { say = "refract", text = "At this hour, the slow in the cave goes very light." },
+  { say = "host", text = "Both are lovely. Lie back and watch the ceiling." },
+]
+
+[[clip]]
+id = "the-refraction-hour-02"
+category = "dj"
+show = "the-refraction-hour"
+lines = [
+  { say = "host", text = "If you're awake right now, you're one of the lights in here.", gap = 0.3 },
+  { say = "refract", text = "If you're a light right now, you're one of the awake in here." },
+  { say = "host", text = "Shine a little. Nobody's watching. Well. I am." },
+]
+
+[[clip]]
+id = "the-tiny-miners-tea-break-open"
+category = "id"
+show = "the-tiny-miners-tea-break"
+part = "open"
+title = "The Tiny Miner's Tea Break"
+lines = [
+  { say = "miner", text = "Tea break." },
+  { say = "host", text = "It's the Tiny Miner's Tea Break.", gap = 0.3 },
+  { say = "refract", text = "It's the Tiny Tea's Miner Break." },
+]
+
+[[clip]]
+id = "the-tiny-miners-tea-break-01"
+category = "dj"
+show = "the-tiny-miners-tea-break"
+lines = [
+  { say = "miner", text = "Found a crystal that hums when you're sad." },
+  { say = "host", text = "What does it do when you're happy?" },
+  { say = "miner", text = "Stops humming. Very rude." },
+  { say = "refract", text = "Very rude, nearly." },
+]
+
+[[clip]]
+id = "the-tiny-miners-tea-break-02"
+category = "dj"
+show = "the-tiny-miners-tea-break"
+lines = [
+  { say = "miner", text = "Tea's ready." },
+  { say = "host", text = "What kind?" },
+  { say = "miner", text = "The kind you drink." },
+  { say = "host", text = "He's a man of few words.", gap = 0.3 },
+  { say = "refract", text = "He's a few of man words." },
+]
+
+# ── DJ kit ────────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "dj-open-01"
+category = "dj"
+kit = "dj"
+part = "open"
+lines = [
+  { say = "host", text = "Crystal Radio Delta.", gap = 0.3 },
+  { say = "refract", text = "Crystal Radio Deltas." },
+]
+
+[[clip]]
+id = "dj-open-02"
+category = "dj"
+kit = "dj"
+part = "open"
+lines = [
+  { say = "host", text = "That one sparkled.", gap = 0.3 },
+  { say = "refract", text = "That one sparkles still." },
+]
+
+[[clip]]
+id = "dj-open-03"
+category = "dj"
+kit = "dj"
+part = "open"
+lines = [
+  { say = "host", text = "Hello again.", gap = 0.3 },
+  { say = "refract", text = "Hello, again and again." },
+]
+
+[[clip]]
+id = "dj-body-01"
+category = "dj"
+kit = "dj"
+part = "body"
+lines = [
+  { say = "host", text = "Facet have a new single out. It's one note, held for four minutes, while the light moves across it.", gap = 0.3 },
+  { say = "refract", text = "It's four minutes, held for one note, while it moves across the light." },
+  { say = "host", text = "Either way, it's beautiful." },
+]
+
+[[clip]]
+id = "dj-body-02"
+category = "dj"
+kit = "dj"
+part = "body"
+lines = [
+  { say = "host", text = "The Glass Harp Society are tuning up. They tune by running a wet finger round the rim of the whole cave.", gap = 0.3 },
+  { say = "refract", text = "They tune the whole cave by running a rim round a wet finger." },
+  { say = "host", text = "It takes a while." },
+]
+
+[[clip]]
+id = "dj-body-03"
+category = "dj"
+kit = "dj"
+part = "body"
+lines = [
+  { say = "miner", text = "Found another one." },
+  { say = "host", text = "What is it?" },
+  { say = "miner", text = "Blue." },
+  { say = "host", text = "The tiny miner has found something blue.", gap = 0.3 },
+  { say = "refract", text = "Something blue has found the tiny miner." },
+]
+
+[[clip]]
+id = "dj-body-04"
+category = "dj"
+kit = "dj"
+part = "body"
+lines = [
+  { say = "host", text = "Every crystal in here remembers the last song played near it.", gap = 0.3 },
+  { say = "refract", text = "Every song in here remembers the last crystal played near it." },
+  { say = "host", text = "So be nice. They'll be humming you for years." },
+]
+
+[[clip]]
+id = "dj-body-05"
+category = "dj"
+kit = "dj"
+part = "body"
+lines = [
+  { say = "host", text = "Opaline sent a postcard from the big chandelier. It just says, the view from up here is mostly me.", gap = 0.3 },
+  { say = "refract", text = "It just says, the me from up here is mostly view." },
+]
+
+[[clip]]
+id = "dj-close-01"
+category = "dj"
+kit = "dj"
+part = "close"
+lines = [
+  { say = "host", text = "Here's the next one.", gap = 0.3 },
+  { say = "refract", text = "Here's the one after the last one." },
+]
+
+[[clip]]
+id = "dj-close-02"
+category = "dj"
+kit = "dj"
+part = "close"
+lines = [
+  { say = "host", text = "Something clear, coming up.", gap = 0.3 },
+  { say = "refract", text = "Something coming up, clearly." },
+]
+
+[[clip]]
+id = "dj-close-03"
+category = "dj"
+kit = "dj"
+part = "close"
+lines = [
+  { say = "host", text = "More glass beats.", gap = 0.3 },
+  { say = "refract", text = "More glass, beating." },
+]
+
+# ── Serials (one episode a day; see the other stations for the rest) ─────────
+
+[[clip]]
+id = "teodor-is-heard-09"
+category = "story"
+serial = { id = "teodor-is-heard", episode = 9 }
+title = "Teodor Is Heard, Part Nine: A Crystal for Relay Four"
+bed = "cave-drip"
+lines = [
+  { say = "miner", text = "Found one." },
+  { say = "host", text = "The tiny miner has found a crystal.", gap = 0.3 },
+  { say = "refract", text = "The crystal has found a tiny miner." },
+  { say = "miner", text = "It hums. At Relay Four.", gap = 1.0 },
+  { say = "host", text = "He's right. Listen. I'm holding it up to the microphone.", gap = 1.4 },
+  { say = "teodor", text = "Is anyone receiving this. Relay Four.", gap = 1.2 },
+  { say = "host", text = "It's picking him up all on its own. No wires. No power. Just a little stone that wants to listen.", gap = 0.3 },
+  { say = "refract", text = "Just a little listen that wants to stone." },
+  { say = "host", text = "That's all a crystal radio is. The simplest receiver there is. It only needs somebody who wants to hear.", gap = 0.8 },
+  { say = "host", text = "Teodor's receiver broke eleven years ago. Tiny miner, could we send him this one?" },
+  { say = "miner", text = "Gull." },
+  { say = "host", text = "The gull who visits Relay Four at three o'clock. Captain. He's here. He's been on the big chandelier all afternoon, looking at the tea.", gap = 0.3 },
+  { say = "refract", text = "He's been on the big tea all afternoon, looking at the chandelier." },
+  { say = "miner", text = "He'll take it. For a biscuit." },
+  { say = "host", text = "Give him two. One for the journey. And tie it on very tight. Captain eats the post." },
+  { sfx = "whoosh" },
+  { say = "host", text = "There he goes. Out past the big chandelier, toward the edge of the dial.", gap = 1.0 },
+  { say = "host", text = "Teodor. Something's coming. It's mostly beak." },
+]
+
+# ── Halloween (24 to 31 October) ──────────────────────────────────────────────
+
+[[clip]]
+id = "halloween-01"
+category = "dj"
+kit = "dj"
+part = "body"
+title = "Little Glowing Faces"
+dates = ["10-24", "10-25", "10-26", "10-27", "10-28", "10-29", "10-30", "10-31"]
+lines = [
+  { say = "host", text = "Halloween in the cave. Every crystal has a little face carved in it, and a candle behind it.", gap = 0.3 },
+  { say = "refract", text = "Every candle has a little crystal behind it, and a face carved in it." },
+  { say = "host", text = "The whole cave is full of tiny glowing faces. It's lovely. It's a bit much." },
+]
+
+[[clip]]
+id = "halloween-02"
+category = "id"
+title = "Crystal Radio Dreadful"
+dates = ["10-24", "10-25", "10-26", "10-27", "10-28", "10-29", "10-30", "10-31"]
+lines = [
+  { say = "host", text = "Crystal Radio Delta.", gap = 0.3 },
+  { say = "refract", text = "Crystal Radio Dreadful." },
+  { say = "host", text = "It's Halloween. We're both in costume." },
 ]

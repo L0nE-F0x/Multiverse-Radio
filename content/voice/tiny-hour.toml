@@ -1,0 +1,407 @@
+# The Tiny Hour — 104.35, a studio inside a matchbox.
+#
+# Auntie Pim, about two centimetres tall, presents a children's programme for very small
+# listeners: songs (spoken as rhymes), crafts made from things the big people dropped, and
+# how to avoid being hoovered. Dot the ladybird puppet helps, and has very neat edges.
+# Listeners' ages are given in days.
+#
+# The `craft` kit chains Crafty Corner's craft of the day, one to three steps and the
+# show-a-grown-up finish. Steps fit any craft and any order.
+station = "tiny-hour"
+
+[voices]
+pim = { voice = "af_sky", speed = 1.05, name = "Auntie Pim" }
+dot = { voice = "af_jessica", fx = "tiny", name = "Dot, the Ladybird" }
+
+[[show]]
+id = "good-morning-small-ones"
+name = "Good Morning, Small Ones"
+blurb = "Breakfast with Auntie Pim: one oat each, a song, and the day's safety tip."
+start = 7
+end = 9
+
+[[show]]
+id = "crafternoon"
+name = "Crafternoon"
+blurb = "Crafts for very small hands, made from things the big people dropped."
+start = 14
+end = 17
+
+[[show]]
+id = "very-small-hours"
+name = "The Very Small Hours"
+blurb = "For very small listeners who can't sleep. The clock is very loud from down here."
+start = 1
+end = 5
+
+# ── Idents ────────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "id-001"
+category = "id"
+lines = [
+  { sting = "kids" },
+  { say = "pim", text = "The Tiny Hour! A programme for very small listeners. Please lean in." },
+]
+
+[[clip]]
+id = "id-002"
+category = "id"
+lines = [
+  { say = "pim", text = "Hello, small ones! It's The Tiny Hour, from inside a matchbox." },
+]
+
+[[clip]]
+id = "id-003"
+category = "id"
+lines = [
+  { say = "dot", text = "This is The Tiny Hour!" },
+  { say = "pim", text = "Well done, Dot!" },
+  { sting = "kids" },
+]
+
+[[clip]]
+id = "id-004"
+category = "id"
+lines = [
+  { say = "pim", text = "The Tiny Hour, on one hundred and four point three five. That's a big number. We're very proud of it." },
+]
+
+# ── Show openers and show links ───────────────────────────────────────────────
+
+[[clip]]
+id = "show-morning-open"
+category = "id"
+show = "good-morning-small-ones"
+part = "open"
+lines = [
+  { sting = "kids" },
+  { say = "pim", text = "Good morning, small ones! It's breakfast time! I've got one oat. You've got one oat. Let's chew!" },
+]
+
+[[clip]]
+id = "show-morning-001"
+category = "dj"
+show = "good-morning-small-ones"
+lines = [
+  { say = "pim", text = "Breakfast tip! One grain of sugar is enough for six of us. Give it a lick, and pass it on." },
+  { say = "pim", text = "Sharing is caring! And a bit sticky!" },
+]
+
+[[clip]]
+id = "show-crafternoon-open"
+category = "id"
+show = "crafternoon"
+part = "open"
+bed = "room"
+lines = [
+  { say = "pim", text = "It's Crafternoon! Gather round the matchbox, everyone. Mind the pencil. It's rolling." },
+]
+
+[[clip]]
+id = "show-crafternoon-001"
+category = "dj"
+show = "crafternoon"
+bed = "room"
+lines = [
+  { say = "dot", text = "Auntie Pim, what's that big round thing?" },
+  { say = "pim", text = "That's a button, Dot! We could make a table out of it! Or a trampoline! Or a very small moon!" },
+  { say = "dot", text = "Can it be all three?" },
+  { say = "pim", text = "On Crafternoon, everything can be all three!" },
+]
+
+[[clip]]
+id = "show-small-hours-open"
+category = "id"
+show = "very-small-hours"
+part = "open"
+daypart = "night"
+lines = [
+  { say = "pim", text = "Hello, small ones. It's the very small hours. The big people are asleep. Let's be very quiet.", speed = 0.92 },
+]
+
+[[clip]]
+id = "show-small-hours-001"
+category = "dj"
+show = "very-small-hours"
+lines = [
+  { say = "pim", text = "If you can't sleep, listen to the big clock. Every tick is the clock saying: still here. Still here. It's a very good clock.", speed = 0.92 },
+  { say = "pim", text = "And hello to the operator on the big ship out there. From far enough away, you're quite small too. You're very welcome here.", speed = 0.92 },
+]
+
+[[clip]]
+id = "show-small-hours-002"
+category = "dj"
+show = "very-small-hours"
+title = "The Goodnight Song"
+lines = [
+  { say = "pim", text = "Here's the goodnight song. Whisper it with me.", speed = 0.92, gap = 0.8 },
+  { say = "pim", text = "The moon is a button, the stars are pins,", speed = 0.9 },
+  { say = "pim", text = "the night is a blanket, so tuck yourself in.", speed = 0.9, gap = 0.6 },
+  { say = "pim", text = "The big clock ticks, and the big house sleeps.", speed = 0.9 },
+  { say = "pim", text = "Goodnight, small ones. And not a peep.", speed = 0.9 },
+]
+
+# ── Craft kit: today's craft, steps, finished ─────────────────────────────────
+
+[[clip]]
+id = "craft-open-1"
+category = "show"
+kit = "craft"
+part = "open"
+bed = "room"
+lines = [
+  { sting = "kids" },
+  { say = "pim", text = "Crafty Corner! Today we're making a hat out of a raindrop. You'll need one raindrop, and somewhere dry to put it." },
+]
+
+[[clip]]
+id = "craft-open-2"
+category = "show"
+kit = "craft"
+part = "open"
+bed = "room"
+lines = [
+  { say = "pim", text = "Crafty Corner! Today, a bed made from a matchbox. I'm sitting on mine! You'll need a matchbox, and something soft. A dandelion clock is perfect." },
+]
+
+[[clip]]
+id = "craft-open-3"
+category = "show"
+kit = "craft"
+part = "open"
+bed = "room"
+lines = [
+  { say = "pim", text = "Crafty Corner! A sail for your boat, from one sweet wrapper. Ask a grown-up for a sweet. Eat the sweet. Keep the wrapper." },
+]
+
+[[clip]]
+id = "craft-open-4"
+category = "show"
+kit = "craft"
+part = "open"
+bed = "room"
+lines = [
+  { sting = "kids" },
+  { say = "pim", text = "It's Crafty Corner! Today: a lovely warm scarf, knitted from one strand of wool. Just the one. It's plenty." },
+]
+
+[[clip]]
+id = "craft-step-1"
+category = "show"
+kit = "craft"
+part = "body"
+bed = "room"
+lines = [
+  { say = "pim", text = "Find a nice flat button to work on. That's your table." },
+  { say = "pim", text = "If it's got four holes, you've got four places to put things down, and one of them can be for your juice." },
+]
+
+[[clip]]
+id = "craft-step-2"
+category = "show"
+kit = "craft"
+part = "body"
+bed = "room"
+lines = [
+  { say = "pim", text = "Now for the glue. We use honey. One drop. Only one!" },
+  { say = "pim", text = "If you use two drops, you become part of the craft, and that's how I lost most of last Thursday." },
+]
+
+[[clip]]
+id = "craft-step-3"
+category = "show"
+kit = "craft"
+part = "body"
+bed = "room"
+lines = [
+  { say = "pim", text = "Time for cutting! Never use the big people's scissors. They're the size of a bridge. Ask a ladybird instead. Ladybirds have very neat edges. Dot?" },
+  { say = "dot", text = "Snip!" },
+  { say = "pim", text = "Thank you, Dot!" },
+]
+
+[[clip]]
+id = "craft-step-4"
+category = "show"
+kit = "craft"
+part = "body"
+bed = "room"
+lines = [
+  { say = "pim", text = "Made a mistake? That's all right! Blow on it, gently." },
+  { say = "pim", text = "At our size, everything blows away if you ask it nicely. Even mistakes." },
+]
+
+[[clip]]
+id = "craft-step-5"
+category = "show"
+kit = "craft"
+part = "body"
+bed = "room"
+lines = [
+  { say = "pim", text = "Now we wait for it to dry. While we wait, let's look around. What's that big shiny thing?" },
+  { say = "pim", text = "It's a spoon! Hello, spoon! Look, there's your face in it! Upside down! Isn't that silly?" },
+]
+
+[[clip]]
+id = "craft-step-6"
+category = "show"
+kit = "craft"
+part = "body"
+bed = "room"
+lines = [
+  { say = "pim", text = "Hold it up to the light! The light might be a lamp, or the sun, or the fridge door. Any of those is perfect.", gap = 0.6 },
+  { say = "pim", text = "Ooh. Look at it shine." },
+]
+
+[[clip]]
+id = "craft-step-7"
+category = "show"
+kit = "craft"
+part = "body"
+bed = "room"
+lines = [
+  { say = "dot", text = "Auntie Pim, mine's gone wrong." },
+  { say = "pim", text = "Has it, Dot? Let's see.", gap = 1.0 },
+  { say = "pim", text = "Oh, Dot. That isn't wrong. That's a different thing. It's a lovely different thing. Let's call it a surprise." },
+]
+
+[[clip]]
+id = "craft-close-1"
+category = "show"
+kit = "craft"
+part = "close"
+bed = "room"
+lines = [
+  { say = "pim", text = "And there it is! Go and show a grown-up! You may need to stand on something and wave." },
+]
+
+[[clip]]
+id = "craft-close-2"
+category = "show"
+kit = "craft"
+part = "close"
+bed = "room"
+lines = [
+  { say = "pim", text = "Well done, everybody! Pop it somewhere safe, where nobody can hoover it." },
+  { sting = "kids" },
+]
+
+[[clip]]
+id = "craft-close-3"
+category = "show"
+kit = "craft"
+part = "close"
+bed = "room"
+lines = [
+  { say = "dot", text = "Can I keep it, Auntie Pim?" },
+  { say = "pim", text = "Of course you can, Dot. That's what crafts are for." },
+]
+
+# ── Songs, spoken as rhymes ───────────────────────────────────────────────────
+
+[[clip]]
+id = "song-001"
+category = "dj"
+title = "The Hoover Song"
+lines = [
+  { say = "pim", text = "Song time! This one's about the hoover. Sing along, very quietly.", gap = 0.8 },
+  { say = "pim", text = "Here comes the hoover, hum, hum, hum." },
+  { say = "pim", text = "Under the thimble, quick as a crumb." },
+  { say = "pim", text = "Hold on to something, hold on tight." },
+  { say = "pim", text = "The hoover goes by, and we're all right!", gap = 0.8 },
+  { say = "pim", text = "Well done! Is everybody still here? Good." },
+]
+
+[[clip]]
+id = "song-002"
+category = "dj"
+title = "Big Shoes"
+lines = [
+  { sting = "kids" },
+  { say = "pim", text = "Big shoes walking, one and two," },
+  { say = "pim", text = "step to the side and let them through." },
+  { say = "pim", text = "They don't mean harm, they don't look down," },
+  { say = "pim", text = "they're only big shoes, walking round." },
+]
+
+[[clip]]
+id = "song-003"
+category = "dj"
+title = "The Crumb Song"
+lines = [
+  { say = "pim", text = "Everybody knows this one! The Crumb Song!", gap = 0.6 },
+  { say = "pim", text = "I found a crumb, a crumb, a crumb," },
+  { say = "pim", text = "it's twice as big as my left thumb." },
+  { say = "pim", text = "I'll share it out with all my friends," },
+  { say = "pim", text = "and that's the way the crumb song ends!" },
+  { say = "dot", text = "Again!" },
+]
+
+[[clip]]
+id = "song-004"
+category = "dj"
+title = "One Raindrop"
+lines = [
+  { say = "pim", text = "One raindrop, big as a ball," },
+  { say = "pim", text = "rolled down the window and paid us a call." },
+  { say = "pim", text = "We said hello, and it said splash," },
+  { sfx = "splash" },
+  { say = "pim", text = "and off it went, in a silver flash." },
+  { sting = "kids" },
+]
+
+# ── Safety tips and letters ───────────────────────────────────────────────────
+
+[[clip]]
+id = "psa-001"
+category = "psa"
+title = "Auntie Pim's Safety Tip: The Hoover"
+lines = [
+  { say = "pim", text = "Auntie Pim's safety tip! If you hear a big hum getting nearer, that's the hoover." },
+  { say = "pim", text = "Get under a chair, hold on to a rug tassel, and think heavy thoughts. Bricks. Mondays. Very full suitcases." },
+]
+
+[[clip]]
+id = "psa-002"
+category = "psa"
+title = "Auntie Pim's Safety Tip: The Cat"
+lines = [
+  { say = "pim", text = "Auntie Pim's safety tip! If a cat looks at you, don't run. Cats love it when you run." },
+  { say = "pim", text = "Stand very still, and look like a button. Cats aren't interested in buttons. Not for long, anyway." },
+]
+
+[[clip]]
+id = "dj-001"
+category = "dj"
+title = "Letters and Drawings"
+lines = [
+  { say = "pim", text = "Thank you to Ottilie, aged four days, for her drawing. It's a dot. It's a lovely dot. It's up on the fridge, which, for us, is a sort of mountain." },
+  { say = "pim", text = "And happy birthday to Benedict, who is six minutes old today! Well done, Benedict!" },
+]
+
+# ── Halloween ─────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "halloween-1"
+category = "dj"
+title = "Halloween Crafty Corner"
+dates = ["10-24", "10-25", "10-26", "10-27", "10-28", "10-29", "10-30", "10-31"]
+lines = [
+  { sting = "halloween" },
+  { say = "pim", text = "Halloween Crafty Corner! Today's costume is made from one sweet wrapper. Wrap it round you, and twist both ends. You're a sweet!" },
+  { say = "pim", text = "Now, the big children will try to collect you. So roll away, as fast as you can. Happy Halloween!" },
+]
+
+[[clip]]
+id = "halloween-2"
+category = "dj"
+title = "The Pumpkin Song"
+dates = ["10-24", "10-25", "10-26", "10-27", "10-28", "10-29", "10-30", "10-31"]
+lines = [
+  { say = "pim", text = "It's the Pumpkin Song!", gap = 0.6 },
+  { say = "pim", text = "The pumpkin's big, the pumpkin's round," },
+  { say = "pim", text = "it's got a face, it's on the ground." },
+  { say = "pim", text = "We'll climb inside and stay the night," },
+  { say = "pim", text = "it's warm in there, and full of light." },
+  { sting = "halloween" },
+]

@@ -22,10 +22,12 @@ export default defineConfig({
         'lab-music': 'lab/music.html',
         'lab-director': 'lab/director.html',
         'lab-scenes': 'lab/scenes.html',
+        'lab-onboarding': 'lab/onboarding.html',
       },
     },
   },
   test: {
+    setupFiles: ['src/test-setup.ts'],
     include: ['src/**/*.test.ts', 'scripts/**/*.test.ts'],
     // Playwright specs run with `npm run test:e2e`, never under vitest.
     exclude: [...configDefaults.exclude, 'tests/e2e/**'],

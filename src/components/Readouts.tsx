@@ -1,109 +1,140 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useRef } from 'react';
 import { useBroadcast } from '../broadcast/store';
-import { receptionReport } from '../content';
-import { useRotatingSeed } from '../hooks/useRotatingSeed';
-import { useStationId, useStatus } from '../ui/select';
-import { useUi } from '../ui/store';
+import type { Segment } from '../broadcast/types';
+import { useDocumentVisible } from '../hooks/useDocumentVisible';
+import { segmentElapsed } from '../ui/clock';
+import { inMainBand } from '../ui/dial';
+import { FORMAT_LABEL, formatDuration, formatMhz, segmentLabel } from '../ui/format';
+import { useOnAir, useSource, useStatus, useTuned } from '../ui/select';
+import { KIND_TAG, ODDITY_SIGNAL } from '../ui/source';
 
-/** The chrome nameplate riveted to the cabinet's top rail. */
-export function Badge() {
+/** Who's on this frequency: name, origin, host and the show on air. */
+export function SourceBlock() {
+  const source = useSource();
+  const frequency = useBroadcast((s) => s.frequency);
+  const show = useBroadcast((s) => s.show);
+  const deep = !inMainBand(frequency);
+
   return (
-    <div className="badge">
-      <p className="badge-maker">Gloaming &amp; Daughters</p>
-      <p className="badge-script">Yondertone</p>
-      <p className="badge-model">
-        Model YT-22 · Omniband<span className="badge-motto"> · Picks up everything. Puts most of it back.</span>
-      </p>
+    <section className="readout readout-source" aria-labelledby="source-name">
+      <header className="readout-head">
+        <span className="readout-title">Source</span>
+        <span className="tag" data-kind={source.kind}>
+          {source.secret ? 'Unlisted' : KIND_TAG[source.kind]}
+        </span>
+        {source.format && <span className="tag tag-quiet">{FORMAT_LABEL[source.format]}</span>}
+        {deep && <span className="tag tag-deep">Deep band</span>}
+      </header>
+      <h2 id="source-name" className="source-name">
+        {source.name}
+      </h2>
+      <dl className="source-meta">
+        <div>
+          <dt>Freq</dt>
+          <dd className="tabular">{formatMhz(frequency)} MHz</dd>
+        </div>
+        {source.origin && (
+          <div className="source-origin">
+            <dt>Origin</dt>
+            <dd>{source.origin}</dd>
+          </div>
+        )}
+        {source.host && (
+          <div>
+            <dt>Host</dt>
+            <dd>{show?.host ?? source.host}</dd>
+          </div>
+        )}
+        {show && (
+          <div>
+            <dt>Show</dt>
+            <dd>{show.name}</dd>
+          </div>
+        )}
+        {!source.origin && <SearchHint />}
+      </dl>
+    </section>
+  );
+}
+
+function SearchHint() {
+  return (
+    <div>
+      <dt>Note</dt>
+      <dd>Nothing on this frequency. Fine-tune, or scan.</dd>
     </div>
   );
 }
 
-export function OnAirSign() {
+/** What's on air: track or clip, who, and how far through. */
+export function NowBlock() {
+  const segment = useOnAir();
   const status = useStatus();
+  const source = useSource();
+  const tuned = useTuned();
+
+  const airing = (status === 'playing' || status === 'paused' || status === 'tuning') && (tuned.kind === 'station' || tuned.kind === 'pirate');
+  let code = '—';
+  let title: string;
+  let byline: string | null = null;
+  let note: string | null = null;
+
+  if (status === 'off') {
+    title = 'Receiver cold';
+    byline = 'Power on to begin the shift.';
+  } else if (status === 'lost') {
+    title = 'Signal lost';
+    byline = 'Retrying.';
+  } else if (source.kind === 'static') {
+    code = 'Carrier';
+    title = 'No carrier';
+    byline = 'Open band. Static only.';
+  } else if (tuned.kind === 'oddity') {
+    code = 'Signal';
+    title = ODDITY_SIGNAL[tuned.oddity] ?? source.name;
+    byline = source.tagline;
+  } else if (segment) {
+    const label = segmentLabel(segment, source.station ?? undefined);
+    code = label.code;
+    title = label.title;
+    byline = label.byline;
+    note = segment.kind === 'track' ? (segment.meta.note ?? null) : null;
+  } else {
+    title = 'Standing by';
+    byline = 'Waiting for programme.';
+  }
+
   return (
-    <span className="on-air-sign" data-on={status === 'playing'} data-blink={status === 'tuning'} aria-hidden>
-      On air
-    </span>
+    <section className="readout readout-now" aria-label="Now on air">
+      <header className="readout-head">
+        <span className="readout-title">Now</span>
+        {code !== '—' && <span className="tag">{code}</span>}
+        {segment && airing && <span className="now-length tabular">{formatDuration(segment.durationMs)}</span>}
+      </header>
+      <p className="now-title">{title}</p>
+      {byline && <p className="now-by">{byline}</p>}
+      {note && <p className="now-note">{note}</p>}
+      {segment && airing && <Progress segment={segment} running={status === 'playing'} />}
+    </section>
   );
 }
 
-/**
- * An analog meter that reads the (procedural, deeply unscientific) reception report.
- * Smacking the cabinet or wiggling the antenna boosts it for a while.
- */
-export function ReceptionMeter() {
-  const stationId = useStationId();
-  const status = useStatus();
-  const signalMessage = useBroadcast((s) => s.signalMessage);
-  const nonce = useUi((s) => s.receptionNonce);
-  const boostUntil = useUi((s) => s.boostUntil);
-  const live = status === 'playing';
-  const seed = useRotatingSeed(`reception:${stationId}:${nonce}`, 30_000, live);
-  const report = useMemo(() => receptionReport(seed), [seed]);
-  const [boosted, setBoosted] = useState(false);
-
+/** A thin progress rule, nudged once a second (no animation frames while it sits there). */
+function Progress({ segment, running }: { segment: Segment; running: boolean }) {
+  const ref = useRef<HTMLSpanElement>(null);
+  const visible = useDocumentVisible();
   useEffect(() => {
-    const left = boostUntil - Date.now();
-    setBoosted(left > 0);
-    if (left <= 0) return;
-    const timer = setTimeout(() => setBoosted(false), left);
-    return () => clearTimeout(timer);
-  }, [boostUntil]);
-
-  const parsed = /(\d{1,3})\s*%/.exec(report);
-  const base = parsed ? Math.min(100, Number(parsed[1])) : 35 + (seed % 60);
-  const value =
-    status === 'off' ? 0 : status === 'lost' ? 4 : status === 'tuning' ? 20 : Math.min(99, base + (boosted ? 18 : 0));
-  const text =
-    status === 'off'
-      ? 'Off. Reception is excellent at receiving nothing.'
-      : status === 'tuning'
-        ? 'Searching the static…'
-        : status === 'lost'
-          ? (signalMessage ?? 'Nothing. Not even a moth.')
-          : boosted
-            ? `${report} (Boosted, briefly.)`
-            : report;
-  const angle = -58 + (value / 100) * 116;
-
+    const bar = ref.current;
+    if (!bar) return;
+    const update = () => bar.style.setProperty('--p', (segmentElapsed(segment) / Math.max(1, segment.durationMs)).toFixed(4));
+    update();
+    if (!running || !visible) return;
+    const timer = setInterval(update, 1000);
+    return () => clearInterval(timer);
+  }, [segment, running, visible]);
   return (
-    <div
-      className="meter"
-      role="meter"
-      aria-label="Reception"
-      aria-valuemin={0}
-      aria-valuemax={100}
-      aria-valuenow={value}
-      aria-valuetext={text}
-      data-status={status}
-    >
-      <svg viewBox="0 0 120 68" className="meter-dial" aria-hidden>
-        <path d="M14 60a46 46 0 0 1 92 0" fill="none" stroke="rgb(40 25 15 / 0.25)" strokeWidth="9" />
-        <path d="M14 60a46 46 0 0 1 22-39" fill="none" stroke="#d2553a" strokeWidth="5" strokeOpacity="0.8" />
-        <path d="M84 21a46 46 0 0 1 22 39" fill="none" stroke="#4f9a5a" strokeWidth="5" strokeOpacity="0.8" />
-        {Array.from({ length: 11 }, (_, i) => {
-          const a = ((-58 + i * 11.6) * Math.PI) / 180;
-          return (
-            <line
-              key={i}
-              x1={60 + Math.sin(a) * 38}
-              y1={60 - Math.cos(a) * 38}
-              x2={60 + Math.sin(a) * (i % 5 === 0 ? 30 : 33)}
-              y2={60 - Math.cos(a) * (i % 5 === 0 ? 30 : 33)}
-              stroke="#2b1d14"
-              strokeWidth={i % 5 === 0 ? 1.8 : 1}
-            />
-          );
-        })}
-        <text x="60" y="44" textAnchor="middle" className="meter-word">
-          signal
-        </text>
-        <g className="meter-needle" style={{ transform: `rotate(${angle}deg)` }}>
-          <line x1="60" y1="62" x2="60" y2="16" stroke="#b3261e" strokeWidth="1.8" strokeLinecap="round" />
-        </g>
-        <circle cx="60" cy="61" r="4.5" fill="#2b1d14" />
-      </svg>
-      <p className="meter-text">{text}</p>
+    <div className="progress" aria-hidden>
+      <span ref={ref} />
     </div>
   );
 }

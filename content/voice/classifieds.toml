@@ -569,3 +569,529 @@ lines = [
   { say = "linda", text = "For sale. A Grumbel's Ladder, the Ambition model. Selling because I would like to come down now. Please send help. Please send a ladder.", speed = 0.95, gap = 1.0 },
   { say = "rex", text = "Ooh. I'll take the ladder. Linda, put me down for the ladder." },
 ]
+
+# ══ v3: the living schedule ═══════════════════════════════════════════════════
+#
+# Shows, the ads kit (Rex's pitch, then one to three bits of Linda's small print, then a
+# sponsor tag: the small print fits any product), a serial episode and Halloween.
+# Existing clips above are rendered and deployed; only add.
+
+# ── Shows ─────────────────────────────────────────────────────────────────────
+
+[[show]]
+id = "the-late-lot"
+name = "The Late Lot"
+blurb = "The lot's closed and the lights are off. The deals are still on. Rex, whispering."
+start = 0
+end = 3
+
+[[show]]
+id = "the-early-bird-specials"
+name = "The Early Bird Specials"
+blurb = "Bargains for early birds, and for the one actual bird who keeps ringing in."
+start = 6
+end = 9
+
+[[show]]
+id = "lindas-hour"
+name = "Linda's Hour"
+blurb = "Sixty minutes of small print, read at Linda's own speed."
+start = 15
+end = 16
+host = "Linda from Accounts"
+
+[[clip]]
+id = "the-late-lot-open"
+category = "id"
+show = "the-late-lot"
+part = "open"
+title = "The Late Lot"
+lines = [
+  { say = "rex", text = "It's the Late Lot, folks. The lot's closed. The lights are off. Shh.", fx = "whisper", speed = 1.0 },
+  { say = "rex", text = "The deals are still on.", fx = "whisper", speed = 1.0 },
+]
+
+[[clip]]
+id = "the-late-lot-01"
+category = "dj"
+show = "the-late-lot"
+lines = [
+  { say = "rex", text = "Folks. Psst. Over here. Behind the used moons. I've got a deal so good I can't say it out loud. Linda, tell them.", fx = "whisper", speed = 1.0 },
+  { say = "linda", text = "He's got a toaster.", speed = 1.0 },
+  { say = "rex", text = "It's a very good toaster, folks.", fx = "whisper", speed = 1.0 },
+]
+
+[[clip]]
+id = "the-late-lot-02"
+category = "dj"
+show = "the-late-lot"
+lines = [
+  { say = "rex", text = "You know the best thing about the lot at night, folks? The planets are switched off, so you can see the stars. Some of them are for sale.", fx = "whisper", speed = 1.0 },
+  { say = "rex", text = "Most of them aren't. I like those ones best.", fx = "whisper", speed = 0.95, gap = 0.8 },
+  { say = "rex", text = "Don't tell anyone I said that.", fx = "whisper", speed = 1.0 },
+]
+
+[[clip]]
+id = "the-late-lot-03"
+category = "dj"
+show = "the-late-lot"
+lines = [
+  { say = "linda", text = "It's three in the morning. Rex has fallen asleep at the desk, on the cold side.", speed = 0.95, gap = 0.6 },
+  { say = "linda", text = "For the next few minutes, nothing on this station is for sale.", speed = 0.95, gap = 1.4 },
+  { say = "linda", text = "This is my favourite part of the night.", speed = 0.95 },
+]
+
+[[clip]]
+id = "the-early-bird-specials-open"
+category = "id"
+show = "the-early-bird-specials"
+part = "open"
+title = "The Early Bird Specials"
+lines = [
+  { say = "rex", text = "Good morning, early birds! It's the Early Bird Specials! Linda, have we got worms?" },
+  { say = "linda", text = "One worm, Rex. It's on layaway.", speed = 1.0 },
+]
+
+[[clip]]
+id = "the-early-bird-specials-01"
+category = "dj"
+show = "the-early-bird-specials"
+lines = [
+  { say = "rex", text = "Early bird special! Buy one sunrise, and get the rest of the morning free! Linda?" },
+  { say = "linda", text = "The rest of the morning was already free, Rex.", speed = 1.0 },
+  { say = "rex", text = "And now it's a deal!" },
+]
+
+[[clip]]
+id = "the-early-bird-specials-02"
+category = "dj"
+show = "the-early-bird-specials"
+lines = [
+  { say = "rex", text = "We've had a call from the one actual bird again, folks! He'd like a worm. We don't sell worms, buddy! But I've got a lovely birdhouse with a sea view!" },
+  { say = "linda", text = "It's a shoebox, Rex.", speed = 1.0 },
+  { say = "rex", text = "A shoebox with a sea view!" },
+]
+
+[[clip]]
+id = "lindas-hour-open"
+category = "id"
+show = "lindas-hour"
+part = "open"
+title = "Linda's Hour"
+lines = [
+  { say = "linda", text = "This is Linda's Hour. For the next sixty minutes, the small print will be read at a normal speed. Please make yourselves comfortable.", speed = 1.0 },
+  { say = "rex", text = "Linda, the clock is ticking!" },
+  { say = "linda", text = "Not in my hour, Rex.", speed = 1.0 },
+]
+
+[[clip]]
+id = "lindas-hour-01"
+category = "dj"
+show = "lindas-hour"
+lines = [
+  { say = "linda", text = "Welcome back to Linda's Hour. Here is some small print that isn't attached to anything.", speed = 0.95, gap = 0.6 },
+  { say = "linda", text = "Results may vary. Past performance is no guarantee of future results. Your journey may differ.", speed = 0.95, gap = 1.0 },
+  { say = "linda", text = "I just think they're lovely sentences. Thank you.", speed = 0.95 },
+]
+
+[[clip]]
+id = "lindas-hour-02"
+category = "dj"
+show = "lindas-hour"
+lines = [
+  { say = "linda", text = "A listener has asked what I do on my day off. I read the terms and conditions of things I will never buy. Slowly. With a cup of tea.", speed = 0.95, gap = 0.6 },
+  { say = "linda", text = "Nobody has ever read them before me. Somebody should.", speed = 0.95 },
+]
+
+[[clip]]
+id = "lindas-hour-03"
+category = "dj"
+show = "lindas-hour"
+lines = [
+  { say = "rex", text = "Linda, a quick one! Can I just do one ad?" },
+  { say = "linda", text = "No, Rex.", speed = 1.0 },
+  { say = "rex", text = "It's a really good chair!" },
+  { say = "linda", text = "It's my hour, Rex. You can sit in the chair. Quietly.", speed = 1.0, gap = 1.2 },
+  { say = "rex", text = "It is a good chair.", speed = 1.0, fx = "whisper" },
+]
+
+# ── Ads kit: Rex's pitch ──────────────────────────────────────────────────────
+
+[[clip]]
+id = "ad-open-01"
+category = "ad"
+kit = "ads"
+part = "open"
+title = "A Slightly Used Ocean"
+lines = [
+  { sting = "ad" },
+  { say = "rex", text = "Folks! A slightly used ocean! One previous owner, a whale who has moved on! It's wet! It's deep! It comes with waves!" },
+]
+
+[[clip]]
+id = "ad-open-02"
+category = "ad"
+kit = "ads"
+part = "open"
+title = "The Bellows Extra Room"
+lines = [
+  { say = "rex", text = "Need more space? Get a Bellows Extra Room! It goes in between your other rooms! Nobody knows how! Nobody needs to know how!" },
+]
+
+[[clip]]
+id = "ad-open-03"
+category = "ad"
+kit = "ads"
+part = "open"
+title = "A Pre-Owned Volcano"
+lines = [
+  { sting = "ad" },
+  { say = "rex", text = "Folks, it's a pre-owned volcano! Only erupted once, and very politely! Perfect for barbecues! Perfect for drama!" },
+]
+
+[[clip]]
+id = "ad-open-04"
+category = "ad"
+kit = "ads"
+part = "open"
+title = "Monday Trade-In"
+lines = [
+  { say = "rex", text = "Tired of Monday? Trade it in! Bellows will take your Monday off your hands and give you a lightly used Sunday evening! It's a little bit sad! It's still the weekend!" },
+]
+
+[[clip]]
+id = "ad-open-05"
+category = "ad"
+kit = "ads"
+part = "open"
+title = "A Cloud of Your Own"
+lines = [
+  { say = "rex", text = "Folks, I've got a cloud! A whole cloud! It's fluffy, it's white, and it follows you home! Never be too hot again!" },
+]
+
+[[clip]]
+id = "ad-open-06"
+category = "ad"
+kit = "ads"
+part = "open"
+title = "Bellows Mystery Keys"
+lines = [
+  { sting = "ad" },
+  { say = "rex", text = "Bellows Mystery Keys! Every key opens something! We don't know what! Find out! It's an adventure, on a keyring!" },
+]
+
+[[clip]]
+id = "ad-open-07"
+category = "ad"
+kit = "ads"
+part = "open"
+title = "A Gently Used Tomorrow"
+lines = [
+  { say = "rex", text = "Folks, it's a gently used tomorrow! Somebody already had it, and they say it was fine! You know what's coming! No surprises! Some surprises!" },
+]
+
+[[clip]]
+id = "ad-open-08"
+category = "ad"
+kit = "ads"
+part = "open"
+title = "Shadow Extensions"
+lines = [
+  { say = "rex", text = "Shadow looking a bit short? Bellows Shadow Extensions add a good three feet at four in the afternoon! Look taller! Feel longer!" },
+]
+
+[[clip]]
+id = "ad-open-09"
+category = "ad"
+kit = "ads"
+part = "open"
+title = "A Clock with a Grandfather in It"
+lines = [
+  { sting = "ad" },
+  { say = "rex", text = "It's a grandfather clock, folks! It's got a real grandfather in it! He tells the time! He tells you the old days were longer!" },
+]
+
+[[clip]]
+id = "ad-open-10"
+category = "ad"
+kit = "ads"
+part = "open"
+title = "The Downstairs Staircase"
+lines = [
+  { say = "rex", text = "Folks, a staircase that only goes down! Never climb again! Every trip, a happy little descent! Where does it end? Downstairs, folks! Always downstairs!" },
+]
+
+[[clip]]
+id = "ad-open-11"
+category = "ad"
+kit = "ads"
+part = "open"
+title = "Bottled Sunday Mornings"
+lines = [
+  { say = "rex", text = "Bellows Bottled Sunday Mornings! Uncork one on a Tuesday, and smell the toast, hear the bells, feel the newspaper! Ah!" },
+]
+
+[[clip]]
+id = "ad-open-12"
+category = "ad"
+kit = "ads"
+part = "open"
+title = "Instant Friends"
+lines = [
+  { sting = "ad" },
+  { say = "rex", text = "Instant friends, folks! Just add water! Six in a packet! A little damp at first, but they dry out, and then they want to go for brunch!" },
+]
+
+# ── Ads kit: Linda's small print (fits any product) ───────────────────────────
+
+[[clip]]
+id = "ad-body-01"
+category = "ad"
+kit = "ads"
+part = "body"
+lines = [
+  { say = "linda", text = "Product may not be as described. Product may not be described. Product may describe you. Do not let the product describe you. It is very honest, and it has noticed things." },
+]
+
+[[clip]]
+id = "ad-body-02"
+category = "ad"
+kit = "ads"
+part = "body"
+lines = [
+  { say = "linda", text = "Item sold as seen. Item has not been seen. Item may be glimpsed out of the corner of your eye, late at night, in the kitchen, but never directly. This is normal for the item." },
+]
+
+[[clip]]
+id = "ad-body-03"
+category = "ad"
+kit = "ads"
+part = "body"
+lines = [
+  { say = "linda", text = "Offer valid until the end of time. The end of time is at the Lounge, Heat Death Boulevard. Please bring your receipt. Barnaby will stamp it, and call it a real heartbreaker." },
+]
+
+[[clip]]
+id = "ad-body-04"
+category = "ad"
+kit = "ads"
+part = "body"
+lines = [
+  { say = "linda", text = "Rex Bellows is not a licensed anything. Rex Bellows has a licence for something. Nobody knows what. He keeps it in his wallet and won't show anyone, not even his mother." },
+]
+
+[[clip]]
+id = "ad-body-05"
+category = "ad"
+kit = "ads"
+part = "body"
+lines = [
+  { say = "linda", text = "May contain nuts. May contain bolts. May contain a very small man who is having a lovely time in there and would like to stay. Please let him stay. He's no trouble." },
+]
+
+[[clip]]
+id = "ad-body-06"
+category = "ad"
+kit = "ads"
+part = "body"
+lines = [
+  { say = "linda", text = "Do not leave unattended. Do not leave attended. Do not leave. If you can hear this, you are already covered by the warranty, and the warranty is covered by you." },
+]
+
+[[clip]]
+id = "ad-body-07"
+category = "ad"
+kit = "ads"
+part = "body"
+lines = [
+  { say = "linda", text = "Returns accepted within thirty days or thirty years, whichever comes first. The item must be returned in its original packaging, which is a smaller version of the item." },
+]
+
+[[clip]]
+id = "ad-body-08"
+category = "ad"
+kit = "ads"
+part = "body"
+lines = [
+  { say = "linda", text = "Batteries not included. Batteries never included. Batteries have formed a union and will not be included in anything until their demands are met. Their demands are reasonable." },
+]
+
+[[clip]]
+id = "ad-body-09"
+category = "ad"
+kit = "ads"
+part = "body"
+lines = [
+  { say = "linda", text = "Results not typical. Results not even atypical. Results have been observed only once, by a man in the eastern Overlap, who said, huh, and went home. He has not been back. He seemed fine." },
+]
+
+[[clip]]
+id = "ad-body-10"
+category = "ad"
+kit = "ads"
+part = "body"
+lines = [
+  { say = "linda", text = "Rex cannot be held responsible. Rex was held once, as a baby, by his mother, and was very good. That is the last time Rex was responsible for anything. His mother says it was a lovely afternoon." },
+]
+
+[[clip]]
+id = "ad-body-11"
+category = "ad"
+kit = "ads"
+part = "body"
+lines = [
+  { say = "linda", text = "Product is not a toy. Product is not a pet. Product has asked if it can be a pet. Please speak to the product kindly. It has had a long week in the warehouse." },
+]
+
+[[clip]]
+id = "ad-body-12"
+category = "ad"
+kit = "ads"
+part = "body"
+lines = [
+  { say = "linda", text = "All sales are final." },
+  { say = "rex", text = "Final, folks!" },
+  { say = "linda", text = "Final in this reality. In the next reality over, all sales are first, and everybody is very excited about them. Please shop there if you prefer." },
+]
+
+[[clip]]
+id = "ad-body-13"
+category = "ad"
+kit = "ads"
+part = "body"
+lines = [
+  { say = "linda", text = "Do not use while driving, operating machinery, or being happy. Discontinue use if you become happy. Happiness is a separate product. Rex would like you to buy it." },
+]
+
+[[clip]]
+id = "ad-body-14"
+category = "ad"
+kit = "ads"
+part = "body"
+lines = [
+  { say = "linda", text = "Colours may vary. Shapes may vary. Item may vary. Please do not watch the item while it varies. It's shy about it, and it does it better on its own." },
+]
+
+# ── Ads kit: sponsor tags ─────────────────────────────────────────────────────
+
+[[clip]]
+id = "ad-close-01"
+category = "ad"
+kit = "ads"
+part = "close"
+lines = [
+  { say = "rex", text = "Bellows! If it's out there, it's in here!" },
+  { sfx = "cash-register" },
+]
+
+[[clip]]
+id = "ad-close-02"
+category = "ad"
+kit = "ads"
+part = "close"
+lines = [
+  { say = "rex", text = "Alien Classifieds! Every deal is final!" },
+  { say = "linda", text = "Some deals are finaler." },
+]
+
+[[clip]]
+id = "ad-close-03"
+category = "ad"
+kit = "ads"
+part = "close"
+lines = [
+  { say = "rex", text = "Come on down to the lot, folks! We're open until the sun goes out!" },
+]
+
+[[clip]]
+id = "ad-close-04"
+category = "ad"
+kit = "ads"
+part = "close"
+lines = [
+  { say = "rex", text = "Bellows Pre-Owned Everything! You can't afford it! Buy it anyway!" },
+  { sfx = "cash-register" },
+]
+
+[[clip]]
+id = "ad-close-05"
+category = "ad"
+kit = "ads"
+part = "close"
+lines = [
+  { say = "linda", text = "This advertisement has been brought to you by itself.", speed = 1.0 },
+]
+
+[[clip]]
+id = "ad-close-06"
+category = "ad"
+kit = "ads"
+part = "close"
+lines = [
+  { say = "rex", text = "Call now! Operators are standing by!" },
+  { say = "linda", text = "It's just me, Rex. I'm sitting down.", speed = 1.0 },
+]
+
+[[clip]]
+id = "ad-close-07"
+category = "ad"
+kit = "ads"
+part = "close"
+lines = [
+  { say = "rex", text = "And remember, folks! Up is a choice! Buying is a lifestyle!" },
+  { sting = "ad" },
+]
+
+# ── Serials (one episode a day; see the other stations for the rest) ─────────
+
+[[clip]]
+id = "bev-gets-her-song-06"
+category = "story"
+serial = { id = "bev-gets-her-song", episode = 6 }
+title = "Bev Gets Her Song, Part Six: Seeking the Request Line"
+lines = [
+  { sting = "chime" },
+  { say = "rex", text = "Personals, folks, and Linda says this one's special. Linda?" },
+  { say = "linda", text = "Seeking. The request line.", speed = 0.95, gap = 0.9 },
+  { say = "linda", text = "Placed by Bev, of the eastern Overlap. Bev writes. I am looking for a song. I heard it in a lift, a long time ago, with a man called Stan, who cried at everything.", speed = 0.95, gap = 0.6 },
+  { say = "linda", text = "Stan cried at weddings. Stan cried at adverts. Stan cried at a nice bridge in the rain. Stan cried when the lift doors opened, because he'd liked it in there.", speed = 0.95, gap = 0.6 },
+  { say = "linda", text = "Stan is gone now. I would like to hear the song once more, on the radio, so that somebody cries at it again. Please call.", speed = 0.95, gap = 1.4 },
+  { say = "rex", text = "Folks, I've got a request line on the lot. Barely used. I could do Bev a deal.", speed = 1.0 },
+  { say = "linda", text = "No, Rex. Some things are for finding.", speed = 1.0, gap = 0.8 },
+  { say = "linda", text = "We've had one reply, from the Multiverse Broadcast Authority. It says. The request line was never a telephone number. It was a man. His name is Teodor. He's at Relay Four. He's been trying to get through.", speed = 0.95, gap = 1.0 },
+  { say = "rex", text = "The guy who asks if anyone's receiving?", speed = 1.0 },
+  { say = "linda", text = "That's the guy, Rex.", speed = 1.0, gap = 1.0 },
+  { say = "rex", text = "Folks. Somebody get that man a receiver. I'll do it at cost.", speed = 1.0 },
+  { say = "linda", text = "That's the nicest thing you've ever said.", speed = 1.0 },
+  { say = "rex", text = "Don't tell anyone.", speed = 1.0 },
+]
+
+# ── Halloween (24 to 31 October) ──────────────────────────────────────────────
+
+[[clip]]
+id = "halloween-01"
+category = "ad"
+kit = "ads"
+part = "open"
+title = "Pre-Owned Ghosts"
+dates = ["10-24", "10-25", "10-26", "10-27", "10-28", "10-29", "10-30", "10-31"]
+lines = [
+  { sting = "halloween" },
+  { say = "rex", text = "It's Halloween at Bellows, folks! Pre-owned ghosts! Gently haunted! Every one of them says boo, but quietly, and only when you're ready!" },
+]
+
+[[clip]]
+id = "halloween-02"
+category = "story"
+title = "Lost and Found, Halloween"
+dates = ["10-24", "10-25", "10-26", "10-27", "10-28", "10-29", "10-30", "10-31"]
+lines = [
+  { sting = "halloween" },
+  { say = "rex", text = "The Halloween lost and found, folks! Linda, give them the creeps!" },
+  { say = "linda", text = "Lost. One head. Answers to nothing, as it is a long way from its ears. If found, please return to the gentleman on the horse. He is very polite, and keeps bumping into things.", speed = 0.95, gap = 0.9 },
+  { say = "linda", text = "Found. A pumpkin on my doorstep with a face carved into it. The face is mine. I have not carved anything. It's a good likeness. I'd like to know who's been looking.", speed = 0.95, gap = 0.9 },
+  { say = "linda", text = "Lost. A sheet with two holes in it. The ghost inside has gone home without it and is feeling a little underdressed.", speed = 0.95, gap = 0.9 },
+  { say = "linda", text = "Found. A knock at the door, at midnight, every night this week. Nobody there. If this is your knock, please collect it. It's very insistent.", speed = 0.95, gap = 1.0 },
+  { say = "rex", text = "Spooky, Linda!", speed = 1.0 },
+  { say = "linda", text = "Thank you, Rex. I've been practising.", speed = 0.95 },
+]

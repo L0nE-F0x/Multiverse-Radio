@@ -1,0 +1,703 @@
+# The pirate pool: generic DJs, idents, adverts and warnings for every generated pirate
+# station on the dial (ids `pirate-<frequency>`, named by `pirateIdentity()` in
+# src/content/pirates.ts). Nothing here ever names a station, so any clip fits any pirate.
+#
+# The DJs (all captioned "Pirate DJ", so they sit under any generated host name):
+#   gravel   – thirty one years in a shed, world-weary, secretly sentimental
+#   sunny    – broadcasting from her nan's loft; relentlessly upbeat; cousin Derek pedals the generator
+#   quiet    – whispers so the detector vans can't find her
+#   posh     – a disinherited gentleman pirate in a rowing boat, still getting into it
+#   rookie   – first night on air, very nervous, very kind
+#   oldtimer – fifty years on the wrong frequency, on a thin AM line
+#   trucker  – on CB from a lay-by between two realities
+#   kid      – supposedly doing homework
+#
+# Callbacks: Teodor at Relay Four, Bev and the request line, Grumbel's Ladders (a bloke
+# round the back sells the seconds), the Multiverse Broadcast Authority and its vans.
+# Shout-outs name other pirates that `pirateIdentity()` can actually generate, so with
+# luck a listener finds them.
+station = "_pirate"
+
+[voices]
+gravel = { voice = "am_fenrir", speed = 0.92, name = "Pirate DJ" }
+sunny = { voice = "af_bella", speed = 1.08, name = "Pirate DJ" }
+quiet = { voice = "af_nicole", fx = "whisper", name = "Pirate DJ" }
+posh = { voice = "bm_fable", speed = 0.95, name = "Pirate DJ" }
+rookie = { voice = "am_liam", speed = 1.05, name = "Pirate DJ" }
+oldtimer = { voice = "bm_lewis", fx = "radio", name = "Pirate DJ" }
+trucker = { voice = "am_echo", fx = "cb", name = "Pirate DJ" }
+kid = { voice = "am_puck", speed = 1.1, name = "Pirate DJ" }
+hawker = { voice = "am_eric", speed = 1.08, name = "Advert" }
+hawker_low = { voice = "am_eric", fx = "whisper", name = "Advert" }
+smooth = { voice = "bf_isabella", speed = 0.95, name = "Advert" }
+small_print = { voice = "af_jessica", speed = 1.35, name = "Small Print" }
+lorna = { voice = "af_sarah", fx = "phone", name = "Lorna" }
+caller = { voice = "af_river", fx = "phone", name = "Caller" }
+inspector = { voice = "bm_daniel", fx = "phone", name = "Caller" }
+bev = { voice = "af_nova", fx = "phone", name = "Bev" }
+authority = { voice = "bm_daniel", fx = "megaphone", name = "Multiverse Broadcast Authority" }
+
+# ── Idents (never a station name) ─────────────────────────────────────────────
+
+[[clip]]
+id = "id-001"
+category = "id"
+lines = [
+  { say = "gravel", text = "You found us. Don't tell anyone how." },
+]
+
+[[clip]]
+id = "id-002"
+category = "id"
+lines = [
+  { say = "posh", text = "This frequency does not exist. And yet here you are, listening to it. Splendid." },
+]
+
+[[clip]]
+id = "id-003"
+category = "id"
+lines = [
+  { say = "sunny", text = "Unlicensed! Unregistered! Unbelievably on air! Stay tuned!" },
+]
+
+[[clip]]
+id = "id-004"
+category = "id"
+lines = [
+  { say = "quiet", text = "Shh. You found us. Keep it down. They've got ears everywhere." },
+]
+
+[[clip]]
+id = "id-005"
+category = "id"
+lines = [
+  { sfx = "squelch" },
+  { say = "trucker", text = "Breaker, breaker. You've got the station that isn't. Come on back." },
+  { sfx = "squelch" },
+]
+
+[[clip]]
+id = "id-006"
+category = "id"
+lines = [
+  { say = "oldtimer", text = "You are not listening to this. Officially.", gap = 0.6 },
+  { say = "oldtimer", text = "Unofficially, welcome." },
+]
+
+[[clip]]
+id = "id-007"
+category = "id"
+lines = [
+  { say = "gravel", text = "Broadcasting from a secret location. It's a shed. Don't tell anyone it's a shed." },
+]
+
+[[clip]]
+id = "id-008"
+category = "id"
+lines = [
+  { say = "rookie", text = "Um. This is pirate radio. Hi. You're listening to pirate radio. That's, yeah. That's it." },
+]
+
+[[clip]]
+id = "id-009"
+category = "id"
+lines = [
+  { say = "posh", text = "No name. No licence. No fixed abode. We do, however, have a kettle." },
+]
+
+[[clip]]
+id = "id-010"
+category = "id"
+lines = [
+  { say = "sunny", text = "Hello to everybody who tuned in by accident! That's everybody! Welcome!" },
+]
+
+[[clip]]
+id = "id-011"
+category = "id"
+lines = [
+  { say = "kid", text = "You've drifted off the edge of the dial. Don't panic. It's nicer out here. Fewer rules." },
+]
+
+[[clip]]
+id = "id-012"
+category = "id"
+lines = [
+  { say = "oldtimer", text = "This station has been shut down eleven times. This is the twelfth time it's open." },
+]
+
+[[clip]]
+id = "id-013"
+category = "id"
+lines = [
+  { say = "gravel", text = "Nobody sent you. Nobody's listening. Except you, and us, and possibly a van." },
+]
+
+[[clip]]
+id = "id-014"
+category = "id"
+lines = [
+  { say = "quiet", text = "If you can hear this, you're one of us now. Sorry. There isn't a form." },
+]
+
+[[clip]]
+id = "id-015"
+category = "id"
+lines = [
+  { say = "posh", text = "Please do not adjust your set. Your set is fine. It is we who are wrong." },
+]
+
+[[clip]]
+id = "id-016"
+category = "id"
+lines = [
+  { sfx = "squelch" },
+  { say = "trucker", text = "Off the map, off the books, on the air. Keep it between the lines, drivers." },
+]
+
+[[clip]]
+id = "id-017"
+category = "id"
+lines = [
+  { say = "sunny", text = "This is the station your mum warned you about! Hi, your mum!" },
+]
+
+# ── DJ links ──────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "dj-001"
+category = "dj"
+lines = [
+  { say = "gravel", text = "Right. That was a record. I don't know who made it. I don't think they know either." },
+  { say = "gravel", text = "Somebody left it on the step of the shed with a note that said, play this. So I did. That's how it works out here. Nobody sends anything in properly." },
+]
+
+[[clip]]
+id = "dj-002"
+category = "dj"
+lines = [
+  { say = "gravel", text = "Thirty one years I've been doing this. Never had a licence. Never had a sponsor. Never had a listener I could prove.", gap = 0.7 },
+  { say = "gravel", text = "And yet here you are. Hello, proof." },
+]
+
+[[clip]]
+id = "dj-003"
+category = "dj"
+daypart = "night"
+lines = [
+  { say = "gravel", text = "Funny thing. You put a voice out into the dark with no name on it, and now and then the dark writes back. One letter a year, maybe.", gap = 0.6 },
+  { say = "gravel", text = "Last year's said, keep going. So." },
+]
+
+[[clip]]
+id = "dj-004"
+category = "dj"
+lines = [
+  { say = "sunny", text = "Good evening, or morning, or whatever it is out there! It's always about four in the afternoon up here, because of the skylight!" },
+  { say = "sunny", text = "My nan says hello! She says keep it down! Hello, nan!" },
+]
+
+[[clip]]
+id = "dj-005"
+category = "dj"
+lines = [
+  { say = "sunny", text = "Big shout out to everyone listening! Both of you!" },
+  { say = "sunny", text = "I can see the signal meter going. That's you! You're the little needle! Love the little needle!" },
+]
+
+[[clip]]
+id = "dj-006"
+category = "dj"
+lines = [
+  { say = "sunny", text = "Ooh, just had a message from a listener. It says, please stop.", gap = 0.7 },
+  { say = "sunny", text = "Love that! Love the engagement! Here's another one!" },
+]
+
+[[clip]]
+id = "dj-007"
+category = "dj"
+lines = [
+  { say = "quiet", text = "Sorry, I have to keep it down tonight. There's a detector van parked across the street." },
+  { say = "quiet", text = "It's doing a three point turn. Now it's doing a seven point turn. Bless it. Here's a quiet one." },
+]
+
+[[clip]]
+id = "dj-008"
+category = "dj"
+lines = [
+  { say = "quiet", text = "We're broadcasting in a whisper tonight, so they can't find us. That's how it works. I think. I read it on the back of a cereal box." },
+  { say = "quiet", text = "The next song is also very quiet. Lean in." },
+]
+
+[[clip]]
+id = "dj-009"
+category = "dj"
+lines = [
+  { say = "posh", text = "Good evening. Pirate radio. One never imagined. Father wanted one to go into law." },
+  { say = "posh", text = "Instead, one is broadcasting from a rowing boat, at night, without permission. Father would be furious.", gap = 0.6 },
+  { say = "posh", text = "Father may be listening. Hello, Father." },
+]
+
+[[clip]]
+id = "dj-010"
+category = "dj"
+lines = [
+  { say = "posh", text = "Next, a tune of uncertain provenance. Found in a drawer. One suspects it was stolen.", gap = 0.6 },
+  { say = "posh", text = "One is a pirate, after all. One is trying to get into the spirit of the thing." },
+]
+
+[[clip]]
+id = "dj-011"
+category = "dj"
+lines = [
+  { say = "rookie", text = "Hi. Um. Is this on? The red light's on. That means it's on." },
+  { say = "rookie", text = "Hi. This is my first night. I'm a pirate. Sorry. I'm supposed to say that with more swagger.", gap = 0.6 },
+  { say = "rookie", text = "I'm a pirate. Yeah." },
+]
+
+[[clip]]
+id = "dj-012"
+category = "dj"
+lines = [
+  { say = "rookie", text = "Okay, I've been told to say something cool between songs. I wrote it down. It says, stay rebellious.", gap = 0.6 },
+  { say = "rookie", text = "Okay. Stay rebellious. And drink some water. That bit's not on the card. That's from me." },
+]
+
+[[clip]]
+id = "dj-013"
+category = "dj"
+lines = [
+  { say = "oldtimer", text = "When I started, there were no rules. Then they made rules, and I broke them." },
+  { say = "oldtimer", text = "Then they made rules about breaking rules. I broke those too. Now I'm mostly just tired. Here's a song." },
+]
+
+[[clip]]
+id = "dj-014"
+category = "dj"
+lines = [
+  { say = "oldtimer", text = "People ask why I keep going. Fifty years on a frequency nobody's supposed to find." },
+  { say = "oldtimer", text = "Somebody has to play the songs nobody asked for. Otherwise, who would? This is one of those." },
+]
+
+[[clip]]
+id = "dj-015"
+category = "dj"
+daypart = "night"
+lines = [
+  { sfx = "squelch" },
+  { say = "trucker", text = "This is your overnight driver, coming at you from a lay by between two realities." },
+  { say = "trucker", text = "Road's quiet. Kettle's plugged into the lighter socket. Life is good. Here's one for the long stretch." },
+]
+
+[[clip]]
+id = "dj-016"
+category = "dj"
+lines = [
+  { say = "kid", text = "Okay, I have to be quick, because my mum thinks I'm doing homework. This is technically homework." },
+  { say = "kid", text = "It's a project about radio waves. I'm the radio waves. Next track!" },
+]
+
+[[clip]]
+id = "dj-017"
+category = "dj"
+lines = [
+  { say = "kid", text = "Mum's just asked if I'm talking to someone. I said no. Technically, I'm talking to everyone.", gap = 0.6 },
+  { say = "kid", text = "Hi, everyone. Please don't tell my mum." },
+]
+
+[[clip]]
+id = "dj-018"
+category = "dj"
+lines = [
+  { say = "posh", text = "A reminder that this station is entirely unofficial. We are not affiliated with any authority, network, empire or society." },
+  { say = "posh", text = "We did once write to the society. They wrote back, asking us to stop writing." },
+]
+
+[[clip]]
+id = "dj-019"
+category = "dj"
+lines = [
+  { say = "gravel", text = "If you've just joined us, there's nothing to join. We're not a club. There's no badge.", gap = 0.6 },
+  { say = "gravel", text = "I mean, I made a badge. It says pirate. There's only the one. I'm wearing it." },
+]
+
+[[clip]]
+id = "dj-020"
+category = "dj"
+lines = [
+  { say = "sunny", text = "Fun fact! This whole station runs off a bicycle! My cousin is pedalling it right now! Say hello, Derek!", gap = 1.2 },
+  { say = "sunny", text = "Derek can't talk, he's pedalling! Here's a fast one, to help Derek!" },
+]
+
+[[clip]]
+id = "dj-021"
+category = "dj"
+lines = [
+  { sfx = "squelch" },
+  { say = "trucker", text = "Weather on the sideways road tonight is fog, with a chance of Tuesday. Drive slow. Wave at the ghosts. They like a wave." },
+  { sfx = "squelch" },
+]
+
+[[clip]]
+id = "dj-022"
+category = "dj"
+lines = [
+  { say = "oldtimer", text = "That record was older than I am. I found it in a skip behind the Broadcast Authority.", gap = 0.6 },
+  { say = "oldtimer", text = "They throw out all the good ones. Every Thursday. I'm always there." },
+]
+
+[[clip]]
+id = "dj-023"
+category = "dj"
+lines = [
+  { say = "rookie", text = "Someone just asked what genre this station is. Good question. I think the genre is, we had these records.", gap = 0.6 },
+  { say = "rookie", text = "So. More of those." },
+]
+
+[[clip]]
+id = "dj-024"
+category = "dj"
+lines = [
+  { say = "quiet", text = "If you're listening on headphones, hello. You're the only one I can be properly quiet for.", gap = 0.6 },
+  { say = "quiet", text = "Everyone else, turn it up a bit. We're right here." },
+]
+
+# ── Shout-outs and requests ───────────────────────────────────────────────────
+
+[[clip]]
+id = "dj-025"
+category = "dj"
+title = "Shout-out"
+lines = [
+  { say = "gravel", text = "Shout out to the lads at Radio Free Shed. Keep the faith, boys.", gap = 0.6 },
+  { say = "gravel", text = "And fix your aerial. You're coming in sideways." },
+]
+
+[[clip]]
+id = "dj-026"
+category = "dj"
+title = "Shout-out"
+lines = [
+  { say = "sunny", text = "Big love to everyone at the Midnight Wrong Number! Keep ringing! Somebody's bound to pick up eventually!" },
+  { say = "sunny", text = "And to the man who keeps ringing us for a taxi. We're not a taxi! But we play you a song every time, and that's sort of a lift!" },
+]
+
+[[clip]]
+id = "dj-027"
+category = "dj"
+title = "Shout-out"
+lines = [
+  { say = "quiet", text = "Respect to Teodor, at Relay Four. Not a pirate. Just out there, asking if anyone can hear him.", gap = 0.7 },
+  { say = "quiet", text = "We hear you, Teodor. We can't say so properly. We're not allowed to exist." },
+]
+
+[[clip]]
+id = "dj-028"
+category = "dj"
+title = "Request"
+lines = [
+  { say = "posh", text = "We've had a request. It arrived on a paper aeroplane, through the window of the boat." },
+  { say = "posh", text = "It says, play something sad that you can dance to.", gap = 0.6 },
+  { say = "posh", text = "One could not agree more." },
+]
+
+[[clip]]
+id = "dj-029"
+category = "dj"
+title = "For the night shift"
+daypart = "night"
+lines = [
+  { say = "gravel", text = "A dedication. This goes out to the night shift. The cleaners, the bakers, the drivers hauling weather, and anyone on a ship out there, keeping the lights on.", gap = 0.6 },
+  { say = "gravel", text = "We see you. Well. We don't. But we know you're there." },
+]
+
+[[clip]]
+id = "dj-030"
+category = "dj"
+title = "Request"
+lines = [
+  { say = "rookie", text = "This one's a request from a listener who'd rather not be named, for a listener who'd rather not be named.", gap = 0.5 },
+  { say = "rookie", text = "From someone who isn't allowed to be named. Pirate radio, everyone. Isn't it romantic." },
+]
+
+[[clip]]
+id = "dj-031"
+category = "dj"
+title = "Shout-out"
+lines = [
+  { say = "oldtimer", text = "Greetings to all the other pirates on the deep band. The Kitchen Table Broadcasting Company. The Unlicensed Hour. That bloke who only plays bells.", gap = 0.6 },
+  { say = "oldtimer", text = "Keep it up. Somebody's listening. It's usually me." },
+]
+
+[[clip]]
+id = "dj-032"
+category = "dj"
+title = "Shout-out"
+lines = [
+  { sfx = "squelch" },
+  { say = "trucker", text = "Shout out to the convoy on the river road, and to whoever's hauling that lorry full of fog.", gap = 0.5 },
+  { say = "trucker", text = "Can't see you, friend. But we can hear your indicator." },
+]
+
+[[clip]]
+id = "dj-033"
+category = "dj"
+title = "Request"
+lines = [
+  { say = "kid", text = "We've had a request for something with a good drum bit, from someone called Grandad.", gap = 0.5 },
+  { say = "kid", text = "Hi, Grandad. How did you find this? Never mind. Good drum bit, coming up." },
+]
+
+# ── Adverts ───────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "ad-001"
+category = "ad"
+title = "Hot Batteries"
+lines = [
+  { say = "hawker", text = "Hot Batteries! Batteries that fell off the back of a dimension! Still warm! Still ninety percent full of somebody else's energy!" },
+  { say = "hawker", text = "Use them in your torch. Use them in your radio. Use them in your clock, and get a few extra hours from somebody else's week." },
+  { say = "hawker", text = "Hot Batteries. Don't ask where they came from. We genuinely don't know." },
+]
+
+[[clip]]
+id = "ad-002"
+category = "ad"
+title = "Big Terry's Bargain Aerials"
+lines = [
+  { say = "hawker", text = "Big Terry's Bargain Aerials. Picks up every station. Including the ones you don't want." },
+  { say = "hawker", text = "Picks up your neighbour's phone calls. Picks up radio plays from the year before last. On a clear night, picks up a man in a lighthouse, reading the weather to nobody." },
+  { say = "hawker", text = "Big Terry's. Your neighbours will hate it." },
+]
+
+[[clip]]
+id = "ad-003"
+category = "ad"
+title = "Lightly Used Frequencies"
+lines = [
+  { say = "smooth", text = "Always wanted a frequency of your own? We've got loads. All lightly used. Previous owners, mostly gone." },
+  { say = "smooth", text = "One of them still plays faint jazz in the evenings. We consider that a feature. Make us an offer." },
+  { say = "small_print", text = "Frequencies sold as seen. Faint jazz cannot be removed. Please do not ask the jazz to leave. It lives there." },
+]
+
+[[clip]]
+id = "ad-004"
+category = "ad"
+title = "Unofficial Licences"
+lines = [
+  { say = "hawker", text = "Worried about the authorities? Get a licence! An Unofficial Licence looks almost exactly like a real one. It's got a stamp!", gap = 0.6 },
+  { say = "hawker", text = "The stamp is a potato. Nobody looks that closely." },
+  { say = "small_print", text = "Unofficial Licences are not licences. They are paper. Very nice paper. Potato not included." },
+]
+
+[[clip]]
+id = "ad-005"
+category = "ad"
+title = "Van-Away"
+lines = [
+  { say = "hawker", text = "Van-Away! The spray that keeps detector vans at bay!" },
+  { say = "hawker", text = "Just spray it round your shed, and detector vans will drive straight past, with a vague feeling of loss and a sudden urge to ring their mothers." },
+  { say = "hawker", text = "Van-Away. Smells of lavender. And defiance." },
+]
+
+[[clip]]
+id = "ad-006"
+category = "ad"
+title = "The Midnight Pantry"
+daypart = "night"
+lines = [
+  { say = "smooth", text = "The Midnight Pantry. The shop that's only open when it's shut. Knock twice. Ask for Lorna." },
+  { say = "lorna", text = "Hello, love. What do you need? Don't tell me. I've got it. It's in a bag." },
+  { say = "smooth", text = "Whatever you need, Lorna has it, in a bag. Don't open the bag until you get home. Lorna is very clear about the bag." },
+]
+
+[[clip]]
+id = "ad-007"
+category = "ad"
+title = "Aerial Tom"
+lines = [
+  { say = "hawker", text = "Aerial Tom! He'll fit your aerial! He'll fix your aerial! And if necessary, he'll talk to your aerial. Some aerials just need to be heard." },
+  { say = "hawker", text = "Aerial Tom. He's been up on a roof since before you were born. Please, somebody, take him a sandwich." },
+]
+
+[[clip]]
+id = "ad-008"
+category = "ad"
+title = "Grumbel's Seconds"
+lines = [
+  { say = "hawker_low", text = "Psst. Round the back of Grumbel's Ladders, there's a bloke. He sells the ladders that didn't pass inspection." },
+  { say = "hawker_low", text = "Too tall. Too short. One of them goes slightly sideways in time." },
+  { say = "hawker_low", text = "Grumbel's Seconds. Up is a choice. Down is a bargain." },
+  { say = "small_print", text = "Not affiliated with Grumbel's Ladders. Mister Grumbel has asked us to stop. Up is a choice. So is stopping. We have chosen not to." },
+]
+
+[[clip]]
+id = "ad-009"
+category = "ad"
+title = "Mystery Records by the Kilo"
+lines = [
+  { say = "hawker", text = "Mystery Records, by the kilo! No labels! No sleeves! No questions!" },
+  { say = "hawker", text = "Some of them are music. Some of them are somebody's wedding speech. One of them is a man saying hello down a well, for forty minutes." },
+  { say = "hawker", text = "Mystery Records. Fifty pence a kilo. You'll never know what you've got. Neither will we." },
+]
+
+[[clip]]
+id = "ad-010"
+category = "ad"
+title = "Reconditioned Silence"
+lines = [
+  { say = "smooth", text = "Reconditioned Silence. Second hand quiet, from libraries, mountaintops, and the ends of long arguments." },
+  { say = "smooth", text = "Lightly scuffed. Ideal for flats, offices, and the back seat on long journeys.", gap = 0.6 },
+  { say = "smooth", text = "Reconditioned Silence. You'll hardly hear it." },
+]
+
+[[clip]]
+id = "ad-011"
+category = "ad"
+title = "Shed Shield"
+lines = [
+  { say = "hawker", text = "Is your shed secretly a radio station? Is your radio station secretly a shed?" },
+  { say = "hawker", text = "Then you need Shed Shield. The only insurance for sheds that are quietly something else. Covers fire, flood, and men in grey coats." },
+  { say = "small_print", text = "Shed Shield does not cover sheds that are bigger on the inside. Those are a different policy, and a different conversation." },
+]
+
+# ── Warnings about the authorities ────────────────────────────────────────────
+
+[[clip]]
+id = "psa-001"
+category = "psa"
+title = "The Man in the Grey Coat"
+lines = [
+  { say = "gravel", text = "Public service announcement. If a man in a grey coat knocks and asks whether you've been listening to unlicensed broadcasts, the correct answer is, what's a broadcast." },
+  { say = "gravel", text = "Then offer him a biscuit. They never get offered biscuits. It throws them right off." },
+]
+
+[[clip]]
+id = "psa-002"
+category = "psa"
+title = "Detector Van Update"
+lines = [
+  { say = "sunny", text = "Detector van update! A van's been spotted on the corner of Third and Elsewhere! Another's been spotted on the corner of Elsewhere and Third!" },
+  { say = "sunny", text = "We think it's the same van. It's lost. Can somebody give it directions? It looks sad." },
+]
+
+[[clip]]
+id = "psa-003"
+category = "psa"
+title = "Lunch Break"
+lines = [
+  { say = "posh", text = "The Multiverse Broadcast Authority would like you to know that this station is illegal." },
+  { say = "posh", text = "We would like you to know that the Multiverse Broadcast Authority listens to us on its lunch break. We can tell. They ring in requests." },
+]
+
+[[clip]]
+id = "psa-004"
+category = "psa"
+title = "The Device"
+lines = [
+  { say = "quiet", text = "Warning. The authorities have a new device that can tell whether you're listening to pirate radio. It works by asking you." },
+  { say = "quiet", text = "Don't answer it. It's very polite, and very persuasive. Just hum until it goes away." },
+]
+
+[[clip]]
+id = "psa-005"
+category = "psa"
+title = "Safety Tip"
+lines = [
+  { say = "oldtimer", text = "Safety tip. Never tell anyone where we are.", gap = 0.7 },
+  { say = "oldtimer", text = "You don't know where we are. We don't know where we are. That's the safety." },
+]
+
+[[clip]]
+id = "psa-006"
+category = "psa"
+title = "If We Go Off Air"
+lines = [
+  { say = "rookie", text = "If we suddenly go off the air, don't worry. We'll be back. Probably on a different frequency. Possibly as different people." },
+  { say = "rookie", text = "Listen out for the same bad jokes. That's how you'll know it's us." },
+]
+
+[[clip]]
+id = "psa-007"
+category = "psa"
+title = "Flashing Lights"
+lines = [
+  { sfx = "squelch" },
+  { say = "trucker", text = "A word to the drivers. If you see flashing lights on the sideways road, it's the Broadcast Authority." },
+  { say = "trucker", text = "Wave. Smile. Tell them you're listening to the weather. You are, in a way." },
+  { sfx = "squelch" },
+]
+
+# ── Calls ─────────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "call-001"
+category = "call"
+title = "Real-ish"
+lines = [
+  { sfx = "phone-ring" },
+  { say = "caller", text = "Hello? Am I on?" },
+  { say = "gravel", text = "You're on. Who's this?" },
+  { say = "caller", text = "I've been trying to find you for weeks. I tuned past you on a Tuesday, and I've been going up and down the dial ever since." },
+  { say = "gravel", text = "Well. You found us. What do you want to hear?" },
+  { say = "caller", text = "Oh, I don't mind. I just wanted to know you were real.", gap = 0.8 },
+  { say = "gravel", text = "Real-ish. Same as everyone. This one's for you." },
+  { sfx = "phone-hangup" },
+]
+
+[[clip]]
+id = "call-002"
+category = "call"
+title = "Bev Finds the Pirates"
+lines = [
+  { sfx = "phone-ring" },
+  { say = "sunny", text = "You're on the air! Who's this?" },
+  { say = "bev", text = "Hello, love. It's Bev. Is this the request line?" },
+  { say = "sunny", text = "Bev! We've heard all about you! It's not the request line. But for you, Bev, it can be. Go on." },
+  { say = "bev", text = "It goes, da da dum, da da.", gap = 1.4 },
+  { say = "sunny", text = "Right.", gap = 0.8 },
+  { say = "sunny", text = "We'll have a look, Bev. We'll have a proper look." },
+  { say = "bev", text = "That's what they all say, love. Thank you anyway." },
+  { sfx = "phone-hangup" },
+]
+
+[[clip]]
+id = "call-003"
+category = "call"
+title = "A Request and a Complaint"
+lines = [
+  { sfx = "phone-ring" },
+  { say = "rookie", text = "Hello, you're on. Um. Live. Sort of." },
+  { say = "inspector", text = "Good evening. I'd like to make a request. And also, a formal complaint." },
+  { say = "rookie", text = "Oh. Okay. Which one first?" },
+  { say = "inspector", text = "The request. The complaint can wait. It's been waiting eleven years. Have you got anything with a saxophone in it?" },
+  { say = "rookie", text = "We've got one saxophone record." },
+  { say = "inspector", text = "That'll do. Lovely. Thank you.", gap = 0.8 },
+  { say = "inspector", text = "And the complaint is, you are operating an unlicensed station." },
+  { say = "rookie", text = "That's fair." },
+  { say = "inspector", text = "Right. Well. Same time tomorrow, then." },
+  { sfx = "phone-hangup" },
+]
+
+# ── Interruptions ─────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "interrupt-001"
+category = "interrupt"
+title = "Wrong Cable"
+lines = [
+  { say = "authority", text = "This is the Multiverse Broadcast Authority. This station is operating without a licence and must", cut = 0.8 },
+  { sfx = "zap" },
+  { say = "gravel", text = "Sorry about that. Wrong cable. Where were we." },
+]
+
+[[clip]]
+id = "interrupt-002"
+category = "interrupt"
+title = "A Knock"
+lines = [
+  { sfx = "squelch" },
+  { say = "trucker", text = "Hang on, hang on. Someone's knocking on the cab.", gap = 1.6 },
+  { say = "trucker", text = "It's all right. It's an owl." },
+  { sfx = "squelch" },
+]

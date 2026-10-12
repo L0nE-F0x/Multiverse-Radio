@@ -6,6 +6,8 @@ station = "numbers-omega"
 
 [voices]
 host = { voice = "af_kore", speed = 0.9, fx = "radio", name = "The Counter" }
+# v3: serial.
+teodor = { voice = "bm_daniel", fx = "distant", name = "Teodor, Relay Four" }
 
 # ── Idents ────────────────────────────────────────────────────────────────────
 
@@ -403,5 +405,347 @@ lines = [
   { say = "host", text = "It means: keep talking, Teodor. Somebody is always listening.", gap = 1.2 },
   { say = "host", text = "Four. Four. Four. Repeat. Four. Four. Four." },
   { say = "host", text = "End of message.", gap = 0.8 },
+  { sting = "chime" },
+]
+
+# ══ v3: the living schedule ═══════════════════════════════════════════════════
+#
+# Shows, the reading kit (a call sign and a sequence, one to three messages, end of
+# message), serial episodes and Halloween. All over the music box.
+# Existing clips above are rendered and deployed; only add.
+
+# ── Shows ─────────────────────────────────────────────────────────────────────
+
+[[show]]
+id = "the-late-sequence"
+name = "The Late Sequence"
+blurb = "Numbers for the small hours. Some of them are for you."
+start = 0
+end = 4
+
+[[show]]
+id = "the-morning-sequence"
+name = "The Morning Sequence"
+blurb = "Please have a pencil ready."
+start = 6
+end = 8
+
+[[clip]]
+id = "the-late-sequence-open"
+category = "id"
+show = "the-late-sequence"
+part = "open"
+title = "The Late Sequence"
+lines = [
+  { sting = "chime" },
+  { say = "host", text = "Numbers Station Omega. The Late Sequence.", gap = 1.0 },
+  { say = "host", text = "You know who you are." },
+]
+
+[[clip]]
+id = "the-late-sequence-01"
+category = "dj"
+show = "the-late-sequence"
+lines = [
+  { say = "host", text = "Two. Five. Nine.", gap = 1.2 },
+  { say = "host", text = "That is not a code. It is the time, near enough.", gap = 1.0 },
+  { say = "host", text = "Go to sleep." },
+]
+
+[[clip]]
+id = "the-late-sequence-02"
+category = "dj"
+show = "the-late-sequence"
+lines = [
+  { say = "host", text = "The fox at the bottom of the mast has curled up for the night.", gap = 1.0 },
+  { say = "host", text = "Transmissions will continue at a lower volume.", gap = 1.2 },
+  { say = "host", text = "Good fox." },
+]
+
+[[clip]]
+id = "the-morning-sequence-open"
+category = "id"
+show = "the-morning-sequence"
+part = "open"
+title = "The Morning Sequence"
+lines = [
+  { sting = "chime" },
+  { say = "host", text = "The Morning Sequence. Please have a pencil ready.", gap = 1.0 },
+  { say = "host", text = "A pen is acceptable." },
+]
+
+[[clip]]
+id = "the-morning-sequence-01"
+category = "dj"
+show = "the-morning-sequence"
+lines = [
+  { say = "host", text = "Morning sequence. One. Two. Three.", gap = 1.0 },
+  { say = "host", text = "Get up. Two. Three.", gap = 1.0 },
+  { say = "host", text = "Kettle. Two. Three." },
+]
+
+[[clip]]
+id = "the-morning-sequence-02"
+category = "dj"
+show = "the-morning-sequence"
+lines = [
+  { say = "host", text = "Attention. The geese are awake.", gap = 1.0 },
+  { say = "host", text = "They are counting you. Please hold still.", gap = 1.0 },
+  { say = "host", text = "Please be countable." },
+]
+
+# ── Reading kit ───────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "reading-open-01"
+category = "story"
+kit = "reading"
+part = "open"
+over_music = true
+lines = [
+  { sting = "chime" },
+  { say = "host", text = "Attention.", gap = 1.0 },
+  { say = "host", text = "Five. Two. Five.", gap = 1.0 },
+]
+
+[[clip]]
+id = "reading-open-02"
+category = "story"
+kit = "reading"
+part = "open"
+over_music = true
+lines = [
+  { sting = "chime" },
+  { say = "host", text = "Stand by for sequence.", gap = 1.0 },
+  { say = "host", text = "Eight. Eight. One.", gap = 1.0 },
+]
+
+[[clip]]
+id = "reading-open-03"
+category = "story"
+kit = "reading"
+part = "open"
+over_music = true
+lines = [
+  { sting = "chime" },
+  { say = "host", text = "Attention. Attention.", gap = 1.0 },
+  { say = "host", text = "Zero. Four.", gap = 1.0 },
+]
+
+[[clip]]
+id = "reading-open-04"
+category = "story"
+kit = "reading"
+part = "open"
+over_music = true
+lines = [
+  { sting = "chime" },
+  { say = "host", text = "Omega. Stand by.", gap = 1.0 },
+  { say = "host", text = "Seven. Seven. Four.", gap = 1.0 },
+]
+
+[[clip]]
+id = "reading-body-01"
+category = "story"
+kit = "reading"
+part = "body"
+over_music = true
+lines = [
+  { say = "host", text = "Message for the listener at the kitchen table.", gap = 0.9 },
+  { say = "host", text = "The letter can wait until morning. It has waited this long. It is not angry.", gap = 1.2 },
+]
+
+[[clip]]
+id = "reading-body-02"
+category = "story"
+kit = "reading"
+part = "body"
+over_music = true
+lines = [
+  { say = "host", text = "Message for the person who cannot find their glasses.", gap = 0.9 },
+  { say = "host", text = "They are on your head. They have been on your head the whole time. They did not want to interrupt.", gap = 1.2 },
+]
+
+[[clip]]
+id = "reading-body-03"
+category = "story"
+kit = "reading"
+part = "body"
+over_music = true
+lines = [
+  { say = "host", text = "Message for the listener who is worried about tomorrow.", gap = 0.9 },
+  { say = "host", text = "We have seen tomorrow. It is mostly fine. There is a nice moment at about four. Look out for it.", gap = 1.2 },
+]
+
+[[clip]]
+id = "reading-body-04"
+category = "story"
+kit = "reading"
+part = "body"
+over_music = true
+lines = [
+  { say = "host", text = "Message for the geese.", gap = 0.9 },
+  { say = "host", text = "You are doing very well. Keep counting. Do not count the ducks. The ducks know what they did.", gap = 1.2 },
+]
+
+[[clip]]
+id = "reading-body-05"
+category = "story"
+kit = "reading"
+part = "body"
+over_music = true
+lines = [
+  { say = "host", text = "Message for the person who has not replied to a message.", gap = 0.9 },
+  { say = "host", text = "They are not cross. They are only waiting. Two words would do. Hello. Sorry. Either.", gap = 1.2 },
+]
+
+[[clip]]
+id = "reading-body-06"
+category = "story"
+kit = "reading"
+part = "body"
+over_music = true
+lines = [
+  { say = "host", text = "Message for the night shift.", gap = 0.9 },
+  { say = "host", text = "You are not alone on the dial. Somebody else is listening to these same numbers. They are also tired. They also have tea.", gap = 1.2 },
+]
+
+[[clip]]
+id = "reading-body-07"
+category = "story"
+kit = "reading"
+part = "body"
+over_music = true
+lines = [
+  { say = "host", text = "Message for the fox.", gap = 0.9 },
+  { say = "host", text = "You may come in from the fog now. The kettle is on. Do not tell anyone we have a kettle.", gap = 1.2 },
+]
+
+[[clip]]
+id = "reading-close-01"
+category = "story"
+kit = "reading"
+part = "close"
+over_music = true
+lines = [
+  { say = "host", text = "End of message.", gap = 0.8 },
+  { sting = "chime" },
+]
+
+[[clip]]
+id = "reading-close-02"
+category = "story"
+kit = "reading"
+part = "close"
+over_music = true
+lines = [
+  { say = "host", text = "That is all.", gap = 1.0 },
+  { say = "host", text = "End of message.", gap = 0.8 },
+  { sting = "chime" },
+]
+
+[[clip]]
+id = "reading-close-03"
+category = "story"
+kit = "reading"
+part = "close"
+over_music = true
+lines = [
+  { say = "host", text = "Disregard the last part. Do not disregard the rest.", gap = 0.8 },
+  { say = "host", text = "End of message." },
+  { sting = "chime" },
+]
+
+[[clip]]
+id = "reading-close-04"
+category = "story"
+kit = "reading"
+part = "close"
+over_music = true
+lines = [
+  { say = "host", text = "Repeat. Repeat.", gap = 1.0 },
+  { say = "host", text = "No. That was enough. End of message." },
+  { sting = "chime" },
+]
+
+# ── Serials (one episode a day; see the other stations for the rest) ─────────
+
+[[clip]]
+id = "teodor-is-heard-04"
+category = "story"
+serial = { id = "teodor-is-heard", episode = 4 }
+title = "Teodor Is Heard, Part Four: Four. Four. Four."
+over_music = true
+lines = [
+  { sting = "chime" },
+  { say = "host", text = "Attention.", gap = 1.2 },
+  { say = "host", text = "Four. Four. Four.", gap = 1.2 },
+  { say = "host", text = "Relay Four. Relay Four.", gap = 1.0 },
+  { say = "host", text = "Teodor. We are only allowed to say numbers. We have found a way.", gap = 1.0 },
+  { say = "host", text = "The following are numbers. They are also instructions. Nobody has said we cannot do both.", gap = 1.2 },
+  { say = "host", text = "Open the panel at the back of your receiver. Four screws.", gap = 1.0 },
+  { say = "host", text = "Find the small glass valve, third from the left. It is loose. It has been loose for eleven years.", gap = 1.0 },
+  { say = "host", text = "Tap it. Twice. Two.", gap = 2.4 },
+  { say = "teodor", text = "Is somebody counting?", gap = 1.2 },
+  { say = "host", text = "Yes.", gap = 1.0 },
+  { say = "host", text = "That is also a number. It means yes.", gap = 1.0 },
+  { say = "teodor", text = "I heard a number. I heard a number. I haven't heard anything in eleven years.", gap = 1.2 },
+  { say = "host", text = "It will not last. The valve is old. But it is a start.", gap = 1.0 },
+  { say = "host", text = "Four. Four. Four. End of message.", gap = 0.8 },
+  { sting = "chime" },
+]
+
+[[clip]]
+id = "bev-gets-her-song-04"
+category = "story"
+serial = { id = "bev-gets-her-song", episode = 4 }
+title = "Bev Gets Her Song, Part Four: Two. Two. One."
+over_music = true
+lines = [
+  { sting = "chime" },
+  { say = "host", text = "Attention.", gap = 1.2 },
+  { say = "host", text = "Two. Two. One.", gap = 1.2 },
+  { say = "host", text = "Message for Bev.", gap = 1.0 },
+  { say = "host", text = "Bev. We have located reference two, two, one. A song. Retired eleven years ago, from the line at Relay Four.", gap = 1.2 },
+  { say = "host", text = "We are not allowed to sing. We are only allowed to say numbers. So here are the numbers.", gap = 1.4 },
+  { say = "host", text = "One. One. Two. One.", gap = 1.4 },
+  { say = "host", text = "That is the part you know. Here is the part after the man cries.", gap = 1.4 },
+  { say = "host", text = "Three. Three. Five.", gap = 0.8 },
+  { say = "host", text = "Three. Three.", gap = 1.6 },
+  { say = "host", text = "Count it slowly. It is the tune.", gap = 1.2 },
+  { say = "host", text = "We have been humming it in the mast, when nobody is listening. The fox likes it.", gap = 1.2 },
+  { say = "host", text = "This is still not the request line, Bev. The request line is a person. He cannot hear you yet. He will.", gap = 1.2 },
+  { say = "host", text = "Two. Two. One. End of message.", gap = 0.8 },
+  { sting = "chime" },
+]
+
+# ── Halloween (24 to 31 October) ──────────────────────────────────────────────
+
+[[clip]]
+id = "halloween-01"
+category = "story"
+title = "Thirteen. Thirteen."
+over_music = true
+dates = ["10-24", "10-25", "10-26", "10-27", "10-28", "10-29", "10-30", "10-31"]
+lines = [
+  { sting = "halloween" },
+  { say = "host", text = "Attention.", gap = 1.2 },
+  { say = "host", text = "Thirteen. Thirteen.", gap = 1.2 },
+  { say = "host", text = "Message for the listener who has heard a noise downstairs.", gap = 1.0 },
+  { say = "host", text = "It is the boiler. It is always the boiler.", gap = 1.2 },
+  { say = "host", text = "Tonight, it is wearing a sheet.", gap = 1.4 },
+  { say = "host", text = "It would like you to know that it has only ever been the boiler. It is a little hurt that you thought otherwise. Go down and say goodnight to it.", gap = 1.2 },
+  { say = "host", text = "Thirteen. End of message.", gap = 0.8 },
+  { sting = "chime" },
+]
+
+[[clip]]
+id = "halloween-02"
+category = "id"
+title = "Boo. Boo. Four."
+dates = ["10-24", "10-25", "10-26", "10-27", "10-28", "10-29", "10-30", "10-31"]
+lines = [
+  { say = "host", text = "Numbers Station Omega. Halloween.", gap = 1.0 },
+  { say = "host", text = "Boo. Boo. Four." },
   { sting = "chime" },
 ]

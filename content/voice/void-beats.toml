@@ -234,3 +234,330 @@ lines = [
   { say = "bev", text = "That's what happened to me, love. Thank you. I'll try the next one." },
   { sfx = "phone-hangup" },
 ]
+
+# ══ v3: the living schedule ═══════════════════════════════════════════════════
+#
+# Shows, the dj kit (an opener, one to three observations, a hand-off into the next
+# track), a serial episode and Halloween. Residents mentioned here (the Late Bus, Kettle
+# Boy) are resident artists in src/content/packs/chill.ts. Existing clips above are
+# rendered and deployed; only add.
+
+# ── Shows ─────────────────────────────────────────────────────────────────────
+
+[[show]]
+id = "the-3am-hour"
+name = "The 3 AM Hour"
+blurb = "For the ones still awake, and the ones who never sleep."
+start = 2
+end = 5
+
+[[show]]
+id = "the-void-takes-over"
+name = "The Void Takes Over"
+blurb = "DJ Eventually has fallen asleep at the desk. The void is minding the station."
+start = 5
+end = 6
+host = "The Void"
+
+[[show]]
+id = "study-hall"
+name = "Study Hall"
+blurb = "Beats to finish the thing to. The void is also behind on its reading."
+start = 14
+end = 17
+
+[[clip]]
+id = "the-3am-hour-open"
+category = "id"
+show = "the-3am-hour"
+part = "open"
+title = "The 3 AM Hour"
+lines = [
+  { say = "host", text = "This is the three in the morning hour, on Void Beats. If you're awake, you're in the right place." },
+  { say = "host", text = "If you're asleep, that's also the right place." },
+  { sting = "id" },
+]
+
+[[clip]]
+id = "the-3am-hour-01"
+category = "dj"
+show = "the-3am-hour"
+lines = [
+  { say = "host", text = "It's three in the morning. The best hour. Nobody wants anything from you at three in the morning. Even the void has gone quiet.", gap = 0.8 },
+  { say = "host", text = "Well. Quieter." },
+]
+
+[[clip]]
+id = "the-3am-hour-02"
+category = "dj"
+show = "the-3am-hour"
+lines = [
+  { say = "host", text = "If you're up because you can't sleep, hi. If you're up because you're working, hi." },
+  { say = "host", text = "And if a thought woke you up and won't leave, it's not as big as it feels. It's three in the morning. Everything's wearing a bigger coat." },
+]
+
+[[clip]]
+id = "the-3am-hour-03"
+category = "dj"
+show = "the-3am-hour"
+lines = [
+  { say = "host", text = "The probably-a-cat has moved from my notes to my lap. So I'm not allowed to get up now. That's the rule." },
+  { say = "host", text = "I'm here till dawn, then. With you. Here's something soft." },
+]
+
+[[clip]]
+id = "the-void-takes-over-open"
+category = "id"
+show = "the-void-takes-over"
+part = "open"
+title = "The Void Takes Over"
+lines = [
+  { say = "void", text = "Void Beats.", gap = 1.0 },
+  { say = "void", text = "She's asleep.", gap = 1.2 },
+  { say = "void", text = "Hm." },
+]
+
+[[clip]]
+id = "the-void-takes-over-01"
+category = "dj"
+show = "the-void-takes-over"
+lines = [
+  { say = "void", text = "She's asleep on the desk.", gap = 1.4 },
+  { say = "void", text = "I put a blanket on her.", gap = 1.6 },
+  { say = "void", text = "Here is a song." },
+]
+
+[[clip]]
+id = "the-void-takes-over-02"
+category = "dj"
+show = "the-void-takes-over"
+lines = [
+  { say = "void", text = "Someone asked if I get lonely.", gap = 2.0 },
+  { say = "void", text = "I made two cups of tea.", gap = 1.6 },
+  { say = "void", text = "Hm." },
+]
+
+[[clip]]
+id = "the-void-takes-over-03"
+category = "dj"
+show = "the-void-takes-over"
+lines = [
+  { say = "void", text = "I did the dishes.", gap = 2.0 },
+  { say = "void", text = "Don't tell her.", gap = 1.4 },
+  { say = "void", text = "Next song." },
+]
+
+[[clip]]
+id = "study-hall-open"
+category = "id"
+show = "study-hall"
+part = "open"
+title = "Study Hall"
+lines = [
+  { say = "host", text = "Study Hall, on Void Beats. Phones face down. Books face up. The void is face, um. It hasn't really got a face. Let's begin." },
+]
+
+[[clip]]
+id = "study-hall-01"
+category = "dj"
+show = "study-hall"
+lines = [
+  { say = "host", text = "Study tip. Every forty minutes, stand up, look out of a window, and blink." },
+  { say = "host", text = "If you're in Room Zero, the window just shows the void, and the void blinks back. That counts. Okay. Back to it." },
+]
+
+[[clip]]
+id = "study-hall-02"
+category = "dj"
+show = "study-hall"
+lines = [
+  { say = "host", text = "The void has been reading the same page for an hour. I think it's a hard page. Or a really good one.", gap = 0.8 },
+  { say = "host", text = "I'm not going to ask. Let's both keep going." },
+]
+
+# ── DJ kit ────────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "dj-open-01"
+category = "dj"
+kit = "dj"
+part = "open"
+lines = [
+  { say = "host", text = "That was, yeah. That was one. That was definitely one." },
+]
+
+[[clip]]
+id = "dj-open-02"
+category = "dj"
+kit = "dj"
+part = "open"
+lines = [
+  { say = "host", text = "Mm. Sorry. I was somewhere else for a bit. I'm back." },
+]
+
+[[clip]]
+id = "dj-open-03"
+category = "dj"
+kit = "dj"
+part = "open"
+lines = [
+  { say = "host", text = "Void Beats. Still here. Still mostly awake." },
+]
+
+[[clip]]
+id = "dj-open-04"
+category = "dj"
+kit = "dj"
+part = "open"
+daypart = "night"
+lines = [
+  { say = "host", text = "Hey. It's late, and you're still here. Me too." },
+]
+
+[[clip]]
+id = "dj-body-01"
+category = "dj"
+kit = "dj"
+part = "body"
+lines = [
+  { say = "host", text = "Update on the void. It still hasn't done the dishes. But it has stacked them, very neatly, in order of size." },
+  { say = "host", text = "I think that's growth. I'm going to say that's growth." },
+]
+
+[[clip]]
+id = "dj-body-02"
+category = "dj"
+kit = "dj"
+part = "body"
+lines = [
+  { say = "host", text = "People ask about the Late Bus. They're always late. They were late to their own name. By the time they turned up, everyone was already calling them that." },
+]
+
+[[clip]]
+id = "dj-body-03"
+category = "dj"
+kit = "dj"
+part = "body"
+lines = [
+  { say = "host", text = "Kettle Boy sent us a note. It just says, the kettle is on. That's all Kettle Boy ever says. It's always true. I find it very reassuring." },
+]
+
+[[clip]]
+id = "dj-body-04"
+category = "dj"
+kit = "dj"
+part = "body"
+lines = [
+  { say = "host", text = "I tried to tidy the desk earlier. I moved one book. Underneath it was a smaller book, and under that, a note from me, from last year." },
+  { say = "host", text = "It said, don't bother. So I didn't." },
+]
+
+[[clip]]
+id = "dj-body-05"
+category = "dj"
+kit = "dj"
+part = "body"
+lines = [
+  { say = "host", text = "The thing asleep on my notes has started purring in time with the beat. I don't know if it's listening, or if the beat's listening to it. Either way. Very cozy." },
+]
+
+[[clip]]
+id = "dj-body-06"
+category = "dj"
+kit = "dj"
+part = "body"
+lines = [
+  { say = "host", text = "If you've got something due tomorrow, you've got time. You've got exactly enough time, if you start in about, now.", gap = 0.8 },
+  { say = "host", text = "Or now. Or, okay. Now's fine too." },
+]
+
+[[clip]]
+id = "dj-close-01"
+category = "dj"
+kit = "dj"
+part = "close"
+lines = [
+  { say = "host", text = "Anyway. I've lost my thread. Here's another one." },
+]
+
+[[clip]]
+id = "dj-close-02"
+category = "dj"
+kit = "dj"
+part = "close"
+lines = [
+  { say = "host", text = "Here's something warm. Hold it with both hands." },
+]
+
+[[clip]]
+id = "dj-close-03"
+category = "dj"
+kit = "dj"
+part = "close"
+lines = [
+  { say = "host", text = "Okay. More beats. For the void. And for you." },
+]
+
+[[clip]]
+id = "dj-close-04"
+category = "dj"
+kit = "dj"
+part = "close"
+lines = [
+  { say = "host", text = "Here's the next one. I'm going to stare at a planet for a bit." },
+]
+
+# ── Serials (one episode a day; see the other stations for the rest) ─────────
+
+[[clip]]
+id = "bev-gets-her-song-07"
+category = "story"
+serial = { id = "bev-gets-her-song", episode = 7 }
+title = "Bev Gets Her Song, Part Seven: The Other Half"
+bed = "room"
+lines = [
+  { sfx = "phone-ring" },
+  { say = "host", text = "Oh. A caller. Hello, you're on Void Beats." },
+  { say = "bev", text = "Hello, love. It's Bev. I rang before, about the song." },
+  { say = "host", text = "Da da dum, da da. I still think about it every day. I was right. It's for life." },
+  { say = "bev", text = "I've only got the first half, love. Stan's half. Everyone says, try the void. They say everything lost ends up in there." },
+  { say = "host", text = "It's true. My keys are in there. A whole Thursday. Okay. Hum your half. I'll hold the phone up to the window." },
+  { say = "bev", text = "Dum. Dum. Da dum.", speed = 0.75, gap = 2.4 },
+  { say = "void", text = "Da da dum.", speed = 0.7, gap = 1.2 },
+  { say = "void", text = "Da da.", speed = 0.7, gap = 2.0 },
+  { say = "host", text = "That was the void. It's never done that before." },
+  { say = "bev", text = "That's it. That's the bit after he cried. I haven't heard that bit since he went.", gap = 1.0 },
+  { say = "host", text = "Sorry, Bev. I'm crying a bit. The probably-a-cat looks concerned." },
+  { say = "bev", text = "Does it know what it's called, love?" },
+  { say = "host", text = "Void? What's it called?", gap = 2.5 },
+  { say = "void", text = "Hm.", gap = 1.0 },
+  { say = "host", text = "It doesn't know. It just kept it safe. That's sort of what it does." },
+  { say = "bev", text = "That's what Stan did. He never knew what anything was called. He just kept it." },
+  { say = "host", text = "Keep going, Bev. The name's out there somewhere." },
+  { say = "bev", text = "Thank you, love. Thank the void for me." },
+  { say = "void", text = "Hm." },
+]
+
+# ── Halloween (24 to 31 October) ──────────────────────────────────────────────
+
+[[clip]]
+id = "halloween-01"
+category = "dj"
+kit = "dj"
+part = "body"
+title = "The Void in a Sheet"
+dates = ["10-24", "10-25", "10-26", "10-27", "10-28", "10-29", "10-30", "10-31"]
+lines = [
+  { say = "host", text = "The void has dressed up for Halloween. It's put a sheet over itself. So now it's a ghost. Or it's a void with a sheet on. It's honestly hard to tell." },
+  { say = "host", text = "It's very proud. Please don't say anything." },
+]
+
+[[clip]]
+id = "halloween-02"
+category = "id"
+title = "Void Beats, Halloween Week"
+dates = ["10-24", "10-25", "10-26", "10-27", "10-28", "10-29", "10-30", "10-31"]
+lines = [
+  { say = "host", text = "Void Beats. Halloween week. The void does this all year, for free." },
+  { sting = "halloween" },
+]
