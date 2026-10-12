@@ -52,6 +52,8 @@ export const CATEGORY_LABEL: Record<VoiceCategory, string> = {
   story: 'Story hour',
   show: 'Feature presentation',
   interrupt: 'Interference',
+  ship: 'Ship computer',
+  event: 'Multiverse event',
 };
 
 /** Short label for the program log. */
@@ -67,6 +69,8 @@ export const CATEGORY_SHORT: Record<VoiceCategory, string> = {
   story: 'Story',
   show: 'Feature',
   interrupt: 'Glitch',
+  ship: 'HUSH',
+  event: 'Event',
 };
 
 export interface SegmentLabel {

@@ -3,7 +3,8 @@
 // the scheduler (what's on air). Audio starts only from a user gesture (togglePlay/tune).
 
 import { create } from 'zustand';
-import { DEFAULT_STATION_ID, STATIONS } from '../stations/roster';
+import { DIAL } from './types';
+import { DEFAULT_STATION_ID, MAIN_STATIONS, STATIONS } from '../stations/roster';
 import { Director } from './director';
 import { VoiceLibrary } from './library';
 import type { OutputMode } from './mixer';
@@ -94,7 +95,12 @@ export const useBroadcast = create<BroadcastStore>()((set, get) => {
     if (state.upNext.length !== upNext.length || state.upNext.some((s, i) => s !== upNext[i])) patch.upNext = upNext;
     if (state.caption?.text !== caption?.text || state.caption?.speaker !== caption?.speaker) patch.caption = caption;
     if (recent !== state.recent) patch.recent = recent;
-    if (state.stationId !== director.stationId) patch.stationId = director.stationId;
+    if (state.stationId !== director.stationId) {
+      // v3 stub until the director owns the continuous dial: the dial sits on the station.
+      const tuned = STATIONS.find((s) => s.id === director.stationId);
+      patch.stationId = director.stationId;
+      if (tuned) Object.assign(patch, { frequency: tuned.frequency, signal: 1, tuned: { kind: 'station', station: tuned } });
+    }
     if (state.status !== director.status) patch.status = director.status;
     if (state.signalMessage !== director.message) patch.signalMessage = director.message;
     if (Object.keys(patch).length > 0) set(patch);
@@ -115,9 +121,25 @@ export const useBroadcast = create<BroadcastStore>()((set, get) => {
     refresh();
   };
 
+  const initial = STATIONS.find((s) => s.id === director.stationId) ?? STATIONS[0]!;
+
+  /** v3 stub: snap to the nearest station. The director replaces this with the infinite dial. */
+  const tuneFrequency = (mhz: number) => {
+    const f = Math.min(DIAL.max, Math.max(DIAL.min, mhz));
+    let best = MAIN_STATIONS[0]!;
+    for (const s of MAIN_STATIONS) if (Math.abs(s.frequency - f) < Math.abs(best.frequency - f)) best = s;
+    if (best.id !== get().stationId) tune(best.id);
+  };
+
   return {
     stations: STATIONS,
     stationId: director.stationId,
+    frequency: initial.frequency,
+    signal: 1,
+    tuned: { kind: 'station', station: initial },
+    show: null,
+    event: null,
+    discovered: [],
     status: 'off',
     signalMessage: null,
     onAir: null,
@@ -133,12 +155,16 @@ export const useBroadcast = create<BroadcastStore>()((set, get) => {
     },
     tune,
     stepStation(delta) {
-      const i = STATIONS.findIndex((s) => s.id === get().stationId);
-      const next = STATIONS[(i + delta + STATIONS.length) % STATIONS.length];
+      const i = MAIN_STATIONS.findIndex((s) => s.id === get().stationId);
+      const next = MAIN_STATIONS[(i + delta + MAIN_STATIONS.length) % MAIN_STATIONS.length];
       if (next) tune(next.id);
     },
+    tuneFrequency,
+    nudge(deltaMhz) {
+      tuneFrequency(get().frequency + deltaMhz);
+    },
     scan() {
-      const others = STATIONS.filter((s) => s.id !== get().stationId);
+      const others = MAIN_STATIONS.filter((s) => s.id !== get().stationId);
       const pick = others[Math.floor(Math.random() * others.length)];
       if (pick) tune(pick.id);
     },

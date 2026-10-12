@@ -2,6 +2,8 @@
 // carries this table. Labels are short one-sentence descriptions for screen readers.
 
 import type { SceneId } from '../broadcast/types';
+import { DEEP_SCENES } from './registry-deep';
+import { STATION_SCENES_V3 } from './registry-stations';
 import type { SceneDef } from './types';
 
 export interface SceneEntry {
@@ -9,7 +11,10 @@ export interface SceneEntry {
   load: () => Promise<{ default: SceneDef }>;
 }
 
-export const SCENES: Record<SceneId, SceneEntry> = {
+/** Scenes still to be drawn are missing here and fall back to FALLBACK_SCENE (see sceneEntry). */
+export const SCENES: Partial<Record<SceneId, SceneEntry>> = {
+  ...STATION_SCENES_V3,
+  ...DEEP_SCENES,
   'study-desk': {
     label: 'A sleepy many-eyed creature in big headphones studies at a desk by a window onto the purple void.',
     load: () => import('./defs/study-desk'),
@@ -100,13 +105,23 @@ export const SCENES: Record<SceneId, SceneEntry> = {
   },
 };
 
+/** Shown for any scene that hasn't been drawn yet: a TV full of snow. */
+export const FALLBACK_SCENE: SceneEntry = {
+  label: 'An old television full of soft static, waiting for a picture.',
+  load: () => import('./defs/crt-snow'),
+};
+
+export function sceneEntry(id: SceneId): SceneEntry {
+  return SCENES[id] ?? FALLBACK_SCENE;
+}
+
 const cache = new Map<SceneId, Promise<SceneDef>>();
 
 /** Load (or start loading) a scene module. Safe to call repeatedly. */
 export function loadScene(id: SceneId): Promise<SceneDef> {
   let p = cache.get(id);
   if (!p) {
-    p = SCENES[id].load().then((m) => m.default);
+    p = sceneEntry(id).load().then((m) => m.default);
     p.catch(() => cache.delete(id));
     cache.set(id, p);
   }

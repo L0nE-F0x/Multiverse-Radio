@@ -16,9 +16,15 @@ import { composePolka } from './polka';
 import { composeSynthwave } from './synthwave';
 import { composeTropical } from './tropical';
 
-type Composer = (req: TrackRequest) => Score;
+import { BEDS_V3 } from './v3-beds';
+import { GENRES_V3 } from './v3-genres';
 
-const COMPOSERS: Record<RecipeId, Composer> = {
+export type Composer = (req: TrackRequest) => Score;
+
+/** Recipes without a composer yet fall back to lo-fi (see compose). */
+const COMPOSERS: Partial<Record<RecipeId, Composer>> = {
+  ...GENRES_V3,
+  ...BEDS_V3,
   'lofi-hiphop': composeLofi,
   'lofi-rain': composeLofi,
   'lofi-slow': composeLofi,

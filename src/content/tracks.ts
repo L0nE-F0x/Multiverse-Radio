@@ -13,15 +13,17 @@ import { hashSeed, rngFor } from './rng';
  * recipe pool (picked by seed) or main recipe.
  */
 export function packFor(station: StationDef, seed: number, recipe?: RecipeId): TrackPack {
-  if (recipe && recipe !== station.recipe) return RECIPE_PACKS[recipe];
+  const forRecipe = recipe && recipe !== station.recipe ? RECIPE_PACKS[recipe] : undefined;
+  if (forRecipe) return forRecipe;
   const own = STATION_PACKS[station.id];
   if (own) return own;
   const pool = station.recipePool;
   if (pool && pool.length > 0) {
     const pick = pool[hashSeed(station.id, 'pool', seed) % pool.length];
-    if (pick) return RECIPE_PACKS[pick];
+    const pooled = pick ? RECIPE_PACKS[pick] : undefined;
+    if (pooled) return pooled;
   }
-  return RECIPE_PACKS[station.recipe];
+  return RECIPE_PACKS[station.recipe] ?? RECIPE_PACKS['lofi-hiphop']!;
 }
 
 /** Accidental stutters like "Crater Crater Dub". */

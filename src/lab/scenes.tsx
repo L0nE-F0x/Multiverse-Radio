@@ -11,7 +11,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import { SCENE_IDS, type SceneId, type StationDef } from '../broadcast/types';
 import { SceneView } from '../scenes/SceneView';
-import { SCENES, loadScene } from '../scenes/registry';
+import { loadScene, sceneEntry } from '../scenes/registry';
 import type { SceneRunner } from '../scenes/runner';
 import { STATIONS } from '../stations/roster';
 import '@fontsource/bebas-neue/400.css';
@@ -266,7 +266,7 @@ function Brief({ station }: { station: StationDef }) {
     <details className="rounded border border-cream/10 p-2 text-cream/70">
       <summary className="cursor-pointer text-cream/50">Brief &amp; label</summary>
       <p className="mt-2">{station.sceneBrief}</p>
-      <p className="mt-2 text-cream/50">aria-label: “{SCENES[station.scene].label}”</p>
+      <p className="mt-2 text-cream/50">aria-label: “{sceneEntry(station.scene).label}”</p>
     </details>
   );
 }

@@ -3,7 +3,7 @@
 
 import { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import type { SceneId } from '../broadcast/types';
-import { SCENES, loadScene } from './registry';
+import { loadScene, sceneEntry } from './registry';
 import { type RunnerInputs, SceneRunner } from './runner';
 
 export interface SceneViewProps {
@@ -86,7 +86,7 @@ export function SceneView({
     <div
       ref={containerRef}
       role="img"
-      aria-label={label ?? SCENES[sceneId].label}
+      aria-label={label ?? sceneEntry(sceneId).label}
       className={className}
       style={{
         position: 'relative',

@@ -15,6 +15,8 @@ export const CATEGORY_LABELS: Record<VoiceCategory, string> = {
   story: 'Storytime',
   show: 'Feature presentation',
   interrupt: 'Interference',
+  ship: 'Ship computer',
+  event: 'Multiverse event',
 };
 
 /** "Untitled Transmission #12" for tracks; the clip title or its category for voice. */

@@ -12,6 +12,17 @@ content/voice/_shared.toml        →  public/voice/_shared/…  +  public/voice
 One file per station (ids from `src/stations/roster.ts`). `_shared.toml` holds clips any
 station may air: ads for ad breaks, PSAs, cross-station interrupts.
 
+v3 adds a few special pools (same format, `station = "<name>"`):
+
+| File | What |
+| --- | --- |
+| `_ship.toml` | HUSH, the relay ship's computer: `ship` clips aired over any station (use `level`) |
+| `_pirate.toml` | Generic pirate DJs for generated pirate stations: ids, links, ads that never name a station |
+| `_oddities.toml` | Voices heard on oddities between stations (time signal announcer, beacon messages) |
+| `_events.toml` | `event` clips for the multiverse-wide events (use `event`) |
+
+The renderer also compiles every file's `[[show]]` blocks into `public/voice/_shows.json`.
+
 ## Format (TOML)
 
 ```toml
@@ -30,6 +41,14 @@ over_music = true            # optional; default true for id/dj/interrupt, false
 daypart = "night"            # optional: morning | day | evening | night
 bed = "rain"                 # optional ambience baked under the whole clip
 stations = ["void-beats"]    # optional, _shared.toml only: restrict to these stations
+# v3 (all optional):
+part = "open"                # modular part: open | body | close (see "Modular parts")
+kit = "news"                 # which set of parts (default: the category)
+show = "the-3am-hour"        # belongs to this show ([[show]] id)
+serial = { id = "greg-comes-home", episode = 3 }   # daily storyline episode
+dates = ["10-31"]            # only on these local dates (MM-DD); preferred that day
+level = 2                    # _ship.toml only: strangeness 0-3
+event = "dimensional-storm"  # _events.toml only: which event
 lines = [
   { say = "host", text = "You're tuned to Void Beats." },
   { pause = 0.4 },
@@ -39,6 +58,32 @@ lines = [
   { sting = "id" },
 ]
 ```
+
+### Shows (v3)
+
+Named programmes by the listener's local time. Hours are local; `end` is exclusive and may be
+smaller than `start` to wrap past midnight. Gaps between shows are regular programming.
+
+```toml
+[[show]]
+id = "the-3am-hour"
+name = "The 3 AM Hour"
+blurb = "For the ones still awake, and the ones who never sleep."
+start = 2
+end = 5
+host = "DJ Eventually"   # optional display name, if not the station host
+```
+
+Give a show an `id` (category) clip with `show = "<id>"` and `part = "open"` to open it, and
+`dj` links with `show = "<id>"` for show-specific chat. Clips without `show` air at any time.
+
+### Modular parts (v3)
+
+Clips with `part` are chained by the director: one `open`, one to three `body`, one `close`,
+all from the same station and `kit`. Write bodies that work after any open and before any
+close: ten opens, twenty bodies and ten closes make thousands of different segments.
+Typical kits: `news` (anchor intro, stories, sign-off), `ads` (pitch, small print, sponsor
+tag), `calls` (caller's problem, advice, goodbye), `quiz` (question, wrong answers, score).
 
 ### Line types
 
@@ -54,22 +99,30 @@ lines = [
 `clean` (default broadcast voice) · `phone` · `radio` (thin AM) · `megaphone` · `robot` ·
 `whisper` · `cave` (big reverb) · `underwater` · `alien` (pitched, ring-modulated) ·
 `tiny` (pitched up) · `giant` (pitched down) · `kid` · `trailer` (deep movie-trailer voice) ·
-`distant`
+`distant` · v3: `ship` (HUSH: calm ship's-PA voice, slight shimmer) · `cb` (CB radio: narrow,
+squelchy) · `vinyl` (an old record) · `ghost` (airy, slightly behind itself)
 
 ### Beds (`bed`, under a whole clip)
 
 `rain` · `crowd` · `applause` · `stadium` · `sizzle` · `organ` · `room` · `wind` · `space` ·
-`static` · `ocean` · `fluorescent` · `cafe`
+`static` · `ocean` · `fluorescent` · `cafe` · v3: `kitchen` · `truckstop` · `sea` (waves and
+creaking timbers) · `night` (crickets, an owl) · `fete` (village fête, distant brass) · `hall`
+(council-meeting room tone) · `studio` · `storm` (dimensional storm) · `cockpit` (the
+Nightjar's hum) · `greenhouse` · `cave-drip`
 
 ### SFX (`sfx`)
 
 `zap` (channel flip) · `applause` · `phone-ring` · `phone-hangup` · `ding` · `cash-register` ·
 `record-scratch` · `boing` · `laser` · `gong` · `crickets` · `tiny-explosion` · `door-creak` ·
-`typing` · `whoosh` · `beep`
+`typing` · `whoosh` · `beep` · v3: `meow` · `purr` · `knock-over` (something falls off a
+desk) · `ship-chime` (HUSH notice) · `alarm` · `morse` · `squelch` (CB) · `kettle` · `buzzer`
+(wrong answer) · `correct` · `drumroll` · `bell` · `foghorn` · `chopping` · `pips` (time
+signal) · `splash` · `tape-rewind`
 
 ### Stings (`sting`)
 
-`id` · `news` · `sports` · `ad` · `weather` · `chime` · `fanfare` · `sad-trombone`
+`id` · `news` · `sports` · `ad` · `weather` · `chime` · `fanfare` · `sad-trombone` · v3:
+`quiz` · `crime` · `kids` · `community` · `mystic` · `ship` · `halloween`
 
 Everything is synthesized by the renderer (no third-party samples), so any name above is
 safe to use. Unknown names fail the render with a clear error.
@@ -90,5 +143,6 @@ safe to use. Unknown names fail the render with a clear error.
 ## Lengths (guide)
 
 id 2–8 s · dj 8–30 s · ad 15–45 s · news 20–90 s · weather 15–60 s · psa 10–40 s ·
-call 30–120 s · sports 20–90 s · story 30–120 s · show 45–180 s · interrupt 3–12 s.
+call 30–120 s · sports 20–90 s · story 30–120 s · show 45–180 s · interrupt 3–12 s ·
+ship 3–20 s · event 5–60 s. Modular parts are shorter: open/close 3–10 s, body 8–40 s.
 Kokoro speaks roughly 3.2 words per second at speed 1.0.

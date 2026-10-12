@@ -134,6 +134,103 @@ export const RECIPE_INFO: Partial<Record<RecipeId, RecipeInfo>> = {
     label: 'Documentary',
     description: 'Hushed strings, a patient piano ostinato and swelling horns, for majestic narration.',
   },
+  // v3 recipes: info first; composers arrive with the music v3 workstream.
+  'jazz-trio': {
+    label: 'Jazz trio',
+    description: 'Late-night piano trio: brushed drums, walking upright bass, rubato ballads and medium swing.',
+  },
+  'city-pop': {
+    label: 'City pop',
+    description: 'Glossy mid-80s city pop: chorus-drenched electric piano, slap bass, gated drums and a bright synth hook.',
+  },
+  'drum-and-bass': {
+    label: 'Drum and bass',
+    description: 'Fast breakbeats at ~172 bpm, rolling sub bass, atmospheric pads and the odd reese growl.',
+  },
+  'ambient-piano': {
+    label: 'Ambient piano',
+    description: 'Sparse solo piano in a big room: slow phrases, long sustain, silence as an instrument.',
+  },
+  'shoegaze': {
+    label: 'Shoegaze',
+    description: 'Walls of reverse-reverb guitar, buried melodies, steady drums and a wash of noise.',
+  },
+  'sea-shanty': {
+    label: 'Sea shanty',
+    description: 'Accordion, fiddle and stamping feet in a rolling six-eight; a call-and-response melody.',
+  },
+  'surf-rock': {
+    label: 'Surf rock',
+    description: 'Twangy spring-reverb guitar, tremolo picking, driving drums and a bouncing bass.',
+  },
+  'soft-rock': {
+    label: 'Soft rock',
+    description: 'Golden-hour seventies soft rock: electric piano, warm bass, gentle backbeat and a lazy guitar lead.',
+  },
+  'cat-piano': {
+    label: 'Cat piano',
+    description: 'Sleepy lo-fi with long silences, interrupted by enthusiastic notes from a cat walking on the keys.',
+  },
+  'photosynth': {
+    label: 'Photosynth',
+    description: 'Very slow, sunny ambient drones and plucks for houseplants. Changes at the speed of growth.',
+  },
+  'infinite-song': {
+    label: 'The Infinite Song',
+    description: 'One song that never ends: the same key and refrain forever, with every verse a little different.',
+  },
+  'cooking-bed': {
+    label: 'Cooking bed',
+    description: 'Jaunty kitchen-show bed: pizzicato strings, marimba and a light shuffle.',
+  },
+  'horoscope-bed': {
+    label: 'Horoscope bed',
+    description: 'Mystic harp and glassy pads with a slow shimmer, for readings.',
+  },
+  'noir-bed': {
+    label: 'Noir bed',
+    description: 'Tense late-night noir: muted trumpet, brushed snare, upright bass and rain.',
+  },
+  'quiz-bed': {
+    label: 'Quiz bed',
+    description: 'Game-show tension bed with a ticking clock, stabs and a cheesy organ.',
+  },
+  'sleep-bed': {
+    label: 'Sleep bed',
+    description: 'The softest possible pads and a music-box lull, for bedtime stories.',
+  },
+  'kids-bed': {
+    label: 'Kids bed',
+    description: "Bouncy children's-TV bed: ukulele, glockenspiel and hand claps.",
+  },
+  'community-bed': {
+    label: 'Community bed',
+    description: 'Homely local-radio bed: acoustic guitar, light piano and a friendly shaker.',
+  },
+  'brass-band': {
+    label: 'Brass band',
+    description: 'A village brass band: cornets, euphonium and a bass drum, slightly out of time.',
+  },
+  'trucker-country': {
+    label: 'Trucker country',
+    description: 'Late-night trucker country: pedal-steel swells, a boom-chicka rhythm and a lonesome harmonica.',
+  },
+  'test-tone': {
+    label: 'Test tone',
+    description: 'Line-up tones and pips, as found between stations.',
+  },
+  'distress-beacon': {
+    label: 'Distress beacon',
+    description: 'A faint, repeating morse beacon through the noise.',
+  },
+  'stuck-loop': {
+    label: 'Stuck loop',
+    description: 'Four bars of a forgotten 1974 soft-rock single, looping forever.',
+  },
+  'time-signal': {
+    label: 'Time signal',
+    description: 'Precise pips on the second, from a clock that is very sure of itself.',
+  },
 };
 
 /**
