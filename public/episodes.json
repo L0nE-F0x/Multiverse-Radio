@@ -1,0 +1,149 @@
+{
+  "channels": [
+    {
+      "id": "rixty",
+      "name": "Rixty Minutes",
+      "tagline": "Channel-surfing chaos from infinite realities",
+      "color": "#ff6b35",
+      "episodes": [
+        {
+          "id": "rixty-001",
+          "title": "Prime Time in Dimension 35-C",
+          "description": "A movie trailer, a cooking show, and a soap opera about a hallway, all at once.",
+          "audioUrl": "/audio/rixty/episode-001.mp3",
+          "durationSeconds": 59,
+          "publishedAt": "2026-09-28"
+        },
+        {
+          "id": "rixty-002",
+          "title": "Late Night Surf",
+          "description": "A talk show guest who is a chair, a nature documentary about a lost remote, and other things you shouldn't be awake for.",
+          "audioUrl": "/audio/rixty/episode-002.mp3",
+          "durationSeconds": 54,
+          "publishedAt": "2026-10-05"
+        },
+        {
+          "id": "rixty-003",
+          "title": "Previously, On",
+          "description": "Recaps of shows you never saw, a cereal made of spoons, and a workout for your second spine.",
+          "audioUrl": "/audio/rixty/episode-003.mp3",
+          "durationSeconds": 47,
+          "publishedAt": "2026-10-12"
+        }
+      ]
+    },
+    {
+      "id": "plumbus",
+      "name": "The Plumbus Report",
+      "tagline": "Deadpan news from every possible tonight",
+      "color": "#ff8fb1",
+      "episodes": [
+        {
+          "id": "plumbus-001",
+          "title": "The Thing in Your Attic",
+          "description": "Scientists confirm it's you, from next Tuesday. Officials ask that you stop going up there.",
+          "audioUrl": "/audio/plumbus/episode-001.mp3",
+          "durationSeconds": 60,
+          "publishedAt": "2026-09-30"
+        },
+        {
+          "id": "plumbus-002",
+          "title": "Live from the Collapse",
+          "description": "Our field reporter is standing in it. Someone has handed her a soup.",
+          "audioUrl": "/audio/plumbus/episode-002.mp3",
+          "durationSeconds": 52,
+          "publishedAt": "2026-10-06"
+        },
+        {
+          "id": "plumbus-003",
+          "title": "Weather & Traffic Across All Timelines",
+          "description": "Scattered Tuesdays out west, and a ten-mile backup behind a very polite deer.",
+          "audioUrl": "/audio/plumbus/episode-003.mp3",
+          "durationSeconds": 52,
+          "publishedAt": "2026-10-11"
+        }
+      ]
+    },
+    {
+      "id": "classifieds",
+      "name": "Alien Classifieds",
+      "tagline": "Products you can't afford from places you can't reach",
+      "color": "#ffd23f",
+      "episodes": [
+        {
+          "id": "classifieds-001",
+          "title": "Gary's Hole Emporium",
+          "description": "Big holes, small holes, holes you can put in your pocket. Located wherever you fall.",
+          "audioUrl": "/audio/classifieds/episode-001.mp3",
+          "durationSeconds": 30,
+          "publishedAt": "2026-09-29"
+        },
+        {
+          "id": "classifieds-002",
+          "title": "Crazy Zorbo's Used Planets",
+          "description": "One previous owner. Two moons. Comes with an ocean, and the ocean comes with a guy.",
+          "audioUrl": "/audio/classifieds/episode-002.mp3",
+          "durationSeconds": 41,
+          "publishedAt": "2026-10-04"
+        },
+        {
+          "id": "classifieds-003",
+          "title": "Personals, Lost & Found",
+          "description": "Lost: one shadow, answers to Greg. Found: a Tuesday, some damage on the afternoon.",
+          "audioUrl": "/audio/classifieds/episode-003.mp3",
+          "durationSeconds": 57,
+          "publishedAt": "2026-10-10"
+        }
+      ]
+    },
+    {
+      "id": "hop",
+      "name": "Dimension Hop",
+      "tagline": "Two hosts, two realities, zero preparation",
+      "color": "#4ecdc4",
+      "episodes": [
+        {
+          "id": "hop-001",
+          "title": "Legs?",
+          "description": "In Mara's reality everyone rolls. Jace tries to explain walking. It goes poorly.",
+          "audioUrl": "/audio/hop/episode-001.mp3",
+          "durationSeconds": 50,
+          "publishedAt": "2026-09-27"
+        },
+        {
+          "id": "hop-002",
+          "title": "Four Seconds Ahead",
+          "description": "Mara lives four seconds in the future. She already knows how this episode ends.",
+          "audioUrl": "/audio/hop/episode-002.mp3",
+          "durationSeconds": 44,
+          "publishedAt": "2026-10-03"
+        },
+        {
+          "id": "hop-003",
+          "title": "Listener Mail",
+          "description": "A man whose dog owns him, and a letter that insists it is the same letter.",
+          "audioUrl": "/audio/hop/episode-003.mp3",
+          "durationSeconds": 49,
+          "publishedAt": "2026-10-09"
+        }
+      ]
+    },
+    {
+      "id": "static",
+      "name": "Static",
+      "tagline": "The sound between stations. Something is listening.",
+      "color": "#9aa8ff",
+      "episodes": [
+        {
+          "id": "static-001",
+          "title": "Between Stations",
+          "description": "Nothing is broadcasting. Listen anyway.",
+          "audioUrl": "/audio/static/ambient-001.mp3",
+          "durationSeconds": 90,
+          "publishedAt": "2026-10-12",
+          "loop": true
+        }
+      ]
+    }
+  ]
+}

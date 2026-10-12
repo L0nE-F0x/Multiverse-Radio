@@ -1,0 +1,24 @@
+# Netlify picks this up automatically once the GitHub repo is linked.
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "24"
+
+# Vite fingerprints everything in /assets, so it can be cached forever.
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Audio isn't fingerprinted: cache for a day so regenerated files still show up.
+[[headers]]
+  for = "/audio/*"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
+
+[[headers]]
+  for = "/sfx/*"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
