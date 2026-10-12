@@ -175,7 +175,7 @@ const def: SceneDef = {
         // Moonlight through each window onto the floor, and the dusty air between.
         for (const [a, b] of WINDOWS) {
           const w1 = 0.04 + slide * 0.004;
-          const w2 = w1 + 0.24 + (a + b) * 0.06;
+          const w2 = w1 + 0.16 + (a + b) * 0.32;
           const d = 0.2;
           // shaft through the air: window top edge down to the far edge of the patch
           const [tx0, ty0] = wallPt(a, 0.12);
