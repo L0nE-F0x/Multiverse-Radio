@@ -11,8 +11,9 @@ export default defineConfig({
     tailwindcss(),
     // Service worker + %SITE_URL% for social cards (SITE_URL env var, or Netlify's URL).
     pwa(),
-    // Warns (never fails) when the main page's JS outgrows these gzip budgets.
-    bundleBudget({ initialJsKb: 200, totalJsKb: 450 }),
+    // Warns (never fails) when the main page's JS outgrows these gzip budgets. The total is
+    // mostly lazily loaded scenes and recipes (one per station, fetched on tune).
+    bundleBudget({ initialJsKb: 200, totalJsKb: 600 }),
   ],
   build: {
     rollupOptions: {
