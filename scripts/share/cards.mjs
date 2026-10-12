@@ -13,6 +13,7 @@
 // amber "used future" HUD in the station's phosphor colour (scripts/share/card.html).
 // Re-run after scenes or station names/taglines change, and commit public/share/ and
 // public/og-image.png. Undrawn scenes show the lab's snow-TV fallback; the run lists them.
+// `npm run share:all` also re-renders the manifest screenshots (scripts/share/screenshots.mjs).
 
 import { chromium } from '@playwright/test';
 import { mkdirSync, readFileSync, readdirSync, statSync, writeFileSync } from 'node:fs';

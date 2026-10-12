@@ -80,3 +80,9 @@
   for = "/og-image.png"
   [headers.values]
     Cache-Control = "public, max-age=86400, stale-while-revalidate=604800"
+
+# The manifest's install-dialog screenshots (npm run share:screenshots): same idea.
+[[headers]]
+  for = "/screenshots/*"
+  [headers.values]
+    Cache-Control = "public, max-age=86400, stale-while-revalidate=604800"

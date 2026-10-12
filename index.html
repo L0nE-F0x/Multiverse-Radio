@@ -15,6 +15,11 @@
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/manifest.webmanifest" />
     <meta name="apple-mobile-web-app-title" content="Multiverse" />
+    <!-- Installed (standalone): full-screen on Android and iOS; on iOS the status bar floats
+         over the page (viewport-fit=cover above; the UI pads with env(safe-area-inset-*)). -->
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
     <!-- Social cards. The build makes these URLs absolute and copies this page to
          /station/<id>/ for every main station with that station's title, description and

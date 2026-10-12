@@ -73,9 +73,12 @@ test('every main station has a share page with its own tags and card', async ({ 
     expect(response.headers()['content-security-policy']).toContain("default-src 'self'");
     const html = await response.text();
 
-    // Same app: same entry script, no unreplaced placeholders.
+    // Same app: same entry script, install metadata and no unreplaced placeholders.
     expect(html).toContain(`src="${entry}"`);
     expect(html).not.toContain('%SITE_URL%');
+    expect(tag(html, 'rel', 'manifest')).toBe('/manifest.webmanifest');
+    expect(tag(html, 'rel', 'apple-touch-icon')).toBe('/apple-touch-icon.png');
+    expect(tag(html, 'name', 'apple-mobile-web-app-status-bar-style')).toBe('black-translucent');
 
     const pageUrl = `${site}${pagePath}`;
     const card = `${site}/share/${station.id}.jpg`;
@@ -122,6 +125,33 @@ test('the default card is absolute and 1200×630', async ({ request }) => {
   expect(image.status()).toBe(200);
   expect(image.headers()['cache-control']).toBe('public, max-age=86400, stale-while-revalidate=604800');
   expect(pngSize(await image.body())).toEqual({ width: 1200, height: 630 });
+});
+
+test('install metadata: standalone tags and manifest screenshots for the richer install dialog', async ({
+  request,
+}) => {
+  const html = await (await request.get('/')).text();
+  expect(tag(html, 'name', 'mobile-web-app-capable')).toBe('yes');
+  expect(tag(html, 'name', 'apple-mobile-web-app-capable')).toBe('yes');
+  expect(tag(html, 'name', 'apple-mobile-web-app-status-bar-style')).toBe('black-translucent');
+  expect(tag(html, 'name', 'viewport')).toContain('viewport-fit=cover');
+
+  const manifest = await (await request.get('/manifest.webmanifest')).json();
+  const screenshots: { src: string; sizes: string; type: string; form_factor?: string; label?: string }[] =
+    manifest.screenshots ?? [];
+  expect(screenshots.map((s) => s.form_factor).sort()).toEqual(['narrow', 'wide']);
+  for (const shot of screenshots) {
+    const response = await request.get(shot.src);
+    expect(response.status(), shot.src).toBe(200);
+    expect(response.headers()['content-type']).toBe(shot.type);
+    expect(response.headers()['cache-control']).toBe('public, max-age=86400, stale-while-revalidate=604800');
+    const bytes = await response.body();
+    const size = shot.type === 'image/png' ? pngSize(bytes) : jpegSize(bytes);
+    expect(size && `${size.width}x${size.height}`, shot.src).toBe(shot.sizes);
+    expect(shot.label, shot.src).toBeTruthy();
+    // Chrome wants wide shots wider than tall and narrow ones taller than wide.
+    expect(size!.width > size!.height, shot.src).toBe(shot.form_factor === 'wide');
+  }
 });
 
 test('secret stations and unknown station paths are 404s', async ({ request }) => {
