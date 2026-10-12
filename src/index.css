@@ -237,7 +237,12 @@
       transform 0.7s var(--ease-out);
   }
 
-  .hud[data-hud='dim'] .hud-chrome {
+  /* Dim the readouts but keep their scrim, so a busy scene doesn't bleed through. */
+  .hud-chrome > * {
+    transition: opacity 0.7s ease;
+  }
+
+  .hud[data-hud='dim'] .hud-chrome > * {
     opacity: 0.4;
   }
 
@@ -645,7 +650,14 @@
     grid-template-columns: minmax(0, 1fr);
     gap: 12px;
     padding: 40px var(--gutter) calc(12px + var(--safe-b));
-    background: linear-gradient(to top, rgb(var(--scrim) / 0.96), rgb(var(--scrim) / 0.9) calc(100% - 64px), rgb(var(--scrim) / 0.55) calc(100% - 26px), transparent);
+    background: linear-gradient(
+      to top,
+      rgb(var(--scrim) / 0.985),
+      rgb(var(--scrim) / 0.96) 45%,
+      rgb(var(--scrim) / 0.9) calc(100% - 64px),
+      rgb(var(--scrim) / 0.55) calc(100% - 26px),
+      transparent
+    );
   }
 
   .hud-readouts {
@@ -874,6 +886,7 @@
   }
 
   .dial-band {
+    white-space: nowrap;
     font-size: 10px;
     letter-spacing: 0.2em;
     text-transform: uppercase;
@@ -2138,7 +2151,7 @@
     .hud-dock {
       gap: 10px;
       padding: 34px 12px calc(10px + var(--safe-b));
-      background: linear-gradient(to top, rgb(var(--scrim) / 0.99), rgb(var(--scrim) / 0.97) calc(100% - 40px), transparent);
+      background: linear-gradient(to top, rgb(var(--scrim) / 0.99), rgb(var(--scrim) / 0.975) calc(100% - 40px), transparent);
     }
 
     .fkeys-group .fkey,
@@ -2477,6 +2490,7 @@
     .dial-strip,
     .bandmap-needle,
     .hud-chrome,
+    .hud-chrome > *,
     .hud-float {
       transition-duration: 0.01ms !important;
     }
