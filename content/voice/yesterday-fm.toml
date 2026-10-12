@@ -1,0 +1,386 @@
+# Yesterday FM — 100.85, twenty-four hours ago.
+#
+# Gordon Ago broadcasts from yesterday. Everything he reports has already happened and
+# turned out fine, more or less. The calendar is stuck on yesterday, the tea has already
+# gone cold, the clock runs gently backwards, and the soft rock is golden. He can't tell
+# you about tomorrow: he's only licensed for yesterday.
+#
+# The `news` kit chains a headline intro, one to three stories that are already over, and
+# a sign-off with yesterday's weather.
+station = "yesterday-fm"
+
+[voices]
+gordon = { voice = "am_onyx", speed = 0.92, name = "Gordon Ago" }
+maggie = { voice = "af_sarah", fx = "phone", name = "Maggie, Worried About Tomorrow" }
+
+[[show]]
+id = "yesterday-morning"
+name = "Yesterday Morning"
+blurb = "The breakfast show from yesterday. The toast is already eaten. It was lovely."
+start = 6
+end = 10
+
+[[show]]
+id = "afternoon-before"
+name = "The Afternoon Before"
+blurb = "Gentle songs and reassuring news from a long, golden afternoon that has already ended well."
+start = 14
+end = 17
+
+[[show]]
+id = "last-night-tonight"
+name = "Last Night, Tonight"
+blurb = "Gordon goes through last night, hour by hour. Nothing bad happened in any of them."
+start = 22
+end = 2
+
+# ── Idents ────────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "id-001"
+category = "id"
+lines = [
+  { say = "gordon", text = "Yesterday FM. The news is reassuringly over." },
+]
+
+[[clip]]
+id = "id-002"
+category = "id"
+lines = [
+  { say = "gordon", text = "You're listening to Yesterday FM, broadcasting from twenty four hours ago. Nothing left to worry about." },
+]
+
+[[clip]]
+id = "id-003"
+category = "id"
+lines = [
+  { sfx = "tape-rewind" },
+  { say = "gordon", text = "Yesterday FM. It's already happened. You liked it." },
+]
+
+[[clip]]
+id = "id-004"
+category = "id"
+lines = [
+  { say = "gordon", text = "Yesterday FM, one hundred point eight five. Everything turned out fine.", gap = 0.6 },
+  { say = "gordon", text = "More or less." },
+]
+
+# ── Show openers and show links ───────────────────────────────────────────────
+
+[[clip]]
+id = "show-morning-open"
+category = "id"
+show = "yesterday-morning"
+part = "open"
+lines = [
+  { say = "gordon", text = "Good morning, yesterday. This is Yesterday Morning. Breakfast has been eaten. The dishes are done." },
+]
+
+[[clip]]
+id = "show-morning-001"
+category = "dj"
+show = "yesterday-morning"
+lines = [
+  { say = "gordon", text = "Yesterday morning's top story: you woke up.", gap = 0.8 },
+  { say = "gordon", text = "Well done. Everything after that was a bonus." },
+]
+
+[[clip]]
+id = "show-afternoon-open"
+category = "id"
+show = "afternoon-before"
+part = "open"
+lines = [
+  { say = "gordon", text = "This is The Afternoon Before. The light's gone gold. It stays gold. It's already stayed gold. Put your feet up." },
+]
+
+[[clip]]
+id = "show-afternoon-001"
+category = "dj"
+show = "afternoon-before"
+lines = [
+  { say = "gordon", text = "A little traffic from yesterday afternoon. The school run went well. Everybody had their bag. One child had two bags." },
+  { say = "gordon", text = "We don't know whose the other bag was. It's being looked into. Gently." },
+]
+
+[[clip]]
+id = "show-lastnight-open"
+category = "id"
+show = "last-night-tonight"
+part = "open"
+daypart = "night"
+lines = [
+  { say = "gordon", text = "Good evening. This is Last Night, Tonight. We'll go through it together. Don't worry. I know how it ends." },
+]
+
+[[clip]]
+id = "show-lastnight-001"
+category = "dj"
+show = "last-night-tonight"
+lines = [
+  { say = "gordon", text = "Last night, at about two in the morning, the operator on the relay ship Nightjar was still at the console, with the kettle on." },
+  { say = "gordon", text = "They made it through the shift. I know. I've read the log. Well done, you." },
+]
+
+[[clip]]
+id = "show-lastnight-002"
+category = "dj"
+show = "last-night-tonight"
+lines = [
+  { say = "gordon", text = "Four in the morning, last night. Everything very still. Somebody, somewhere, couldn't sleep.", gap = 1.0 },
+  { say = "gordon", text = "Then, at about half past, they could. That might have been you. It went fine." },
+]
+
+# ── News kit: headlines, stories that are over, yesterday's weather ───────────
+
+[[clip]]
+id = "news-open-1"
+category = "news"
+kit = "news"
+part = "open"
+lines = [
+  { sting = "news" },
+  { say = "gordon", text = "Here's the news. It's yesterday's. Don't worry. It's over." },
+]
+
+[[clip]]
+id = "news-open-2"
+category = "news"
+kit = "news"
+part = "open"
+lines = [
+  { say = "gordon", text = "The headlines, from yesterday. Settle in. Everything turned out fine, more or less." },
+]
+
+[[clip]]
+id = "news-open-3"
+category = "news"
+kit = "news"
+part = "open"
+lines = [
+  { sfx = "pips" },
+  { say = "gordon", text = "At the third pip, it was yesterday. Here's the news." },
+]
+
+[[clip]]
+id = "news-001"
+category = "news"
+kit = "news"
+part = "body"
+lines = [
+  { say = "gordon", text = "A man on Pell Street was worried about a meeting yesterday. The meeting happened. It was eleven minutes long. Nobody mentioned the thing he was worried about." },
+  { say = "gordon", text = "He's forgotten it already. So, in a way, have we." },
+]
+
+[[clip]]
+id = "news-002"
+category = "news"
+kit = "news"
+part = "body"
+lines = [
+  { say = "gordon", text = "It nearly rained yesterday. It looked like it was going to, all afternoon. Several people took coats." },
+  { say = "gordon", text = "In the end, it didn't. The coats have been informed." },
+]
+
+[[clip]]
+id = "news-003"
+category = "news"
+kit = "news"
+part = "body"
+lines = [
+  { say = "gordon", text = "Yesterday's big story: a missing Tuesday was found in a ditch outside Precinct Nine. That's old news now, which is the best kind of news." },
+  { say = "gordon", text = "The Tuesday is recovering at home, and is expected to go ahead next week as planned." },
+]
+
+[[clip]]
+id = "news-004"
+category = "news"
+kit = "news"
+part = "body"
+lines = [
+  { say = "gordon", text = "A cat got stuck up a tree yesterday afternoon. A crowd gathered. The fire brigade was called." },
+  { say = "gordon", text = "Then the cat came down by itself, as cats do, and walked off as though nothing had happened. Nothing had." },
+]
+
+[[clip]]
+id = "news-005"
+category = "news"
+kit = "news"
+part = "body"
+lines = [
+  { say = "gordon", text = "Sport. There was a match yesterday. Somebody won." },
+  { say = "gordon", text = "The other side played very well, considering, and everybody shook hands and went home for their tea." },
+]
+
+[[clip]]
+id = "news-006"
+category = "news"
+kit = "news"
+part = "body"
+lines = [
+  { say = "gordon", text = "A letter was posted yesterday that someone had been putting off for months. It said what it needed to say." },
+  { say = "gordon", text = "The reply came this morning. It said: thank you for writing. That was all. That was enough." },
+]
+
+[[clip]]
+id = "news-007"
+category = "news"
+kit = "news"
+part = "body"
+lines = [
+  { say = "gordon", text = "The markets went up yesterday, and then down, and then closed, as they do." },
+  { say = "gordon", text = "Nobody lost anything they haven't since found down the back of a sofa." },
+]
+
+[[clip]]
+id = "news-008"
+category = "news"
+kit = "news"
+part = "body"
+lines = [
+  { say = "gordon", text = "A kettle was put on yesterday at four, and again at half past, and once more just after six. All three cups of tea were drunk." },
+  { say = "gordon", text = "One of them went cold first. It has been forgiven." },
+]
+
+[[clip]]
+id = "news-close-1"
+category = "news"
+kit = "news"
+part = "close"
+lines = [
+  { say = "gordon", text = "And yesterday's weather: mild, then evening. You were there for most of it." },
+]
+
+[[clip]]
+id = "news-close-2"
+category = "news"
+kit = "news"
+part = "close"
+lines = [
+  { say = "gordon", text = "That was the news. All of it has happened. None of it can happen again. Rest easy." },
+]
+
+[[clip]]
+id = "news-close-3"
+category = "news"
+kit = "news"
+part = "close"
+lines = [
+  { say = "gordon", text = "Yesterday's weather: a bright start, some cloud after lunch, and a lovely sunset nobody quite stopped to look at. It's on again tonight. Do stop." },
+]
+
+[[clip]]
+id = "news-close-4"
+category = "news"
+kit = "news"
+part = "close"
+lines = [
+  { say = "gordon", text = "That was yesterday. It went fine. Most days do, in the end." },
+  { sting = "news" },
+]
+
+# ── Weather, traffic and links ────────────────────────────────────────────────
+
+[[clip]]
+id = "weather-001"
+category = "weather"
+title = "Yesterday's Weather, in Full"
+lines = [
+  { sting = "weather" },
+  { say = "gordon", text = "Yesterday's weather, in full. The morning was grey, and then it made up its mind. Light winds from the west, which is where they'd been heading all along." },
+  { say = "gordon", text = "In the afternoon, a cloud shaped like a dog went over Pell Street. Then it was evening, and then it was night, and then it was today.", gap = 0.8 },
+  { say = "gordon", text = "And here we are." },
+]
+
+[[clip]]
+id = "weather-002"
+category = "weather"
+title = "Yesterday's Traffic"
+lines = [
+  { say = "gordon", text = "Yesterday's traffic and travel. All the roads went where they were going. There was a hold-up on the ring road at about five, and then there wasn't." },
+  { say = "gordon", text = "Everyone got home. Some of them stopped for chips on the way. Good for them." },
+]
+
+[[clip]]
+id = "dj-001"
+category = "dj"
+lines = [
+  { say = "gordon", text = "That was a song from yesterday. You liked it then. You'll like it now." },
+  { say = "gordon", text = "It isn't going anywhere. That's the lovely thing about yesterday." },
+]
+
+[[clip]]
+id = "dj-002"
+category = "dj"
+lines = [
+  { say = "gordon", text = "The calendar on the wall still says yesterday. Somebody asked if I'd like to tear the page off." },
+  { say = "gordon", text = "I said, what for? It was a good day. Let's leave it up a bit." },
+]
+
+[[clip]]
+id = "dj-003"
+category = "dj"
+lines = [
+  { say = "gordon", text = "My tea's gone cold. It went cold yesterday. That's the kind of tea it is." },
+  { say = "gordon", text = "I drink it anyway. Cold tea is only tea that waited for you." },
+]
+
+[[clip]]
+id = "dj-004"
+category = "dj"
+lines = [
+  { say = "gordon", text = "The clock on the wall runs gently backwards. Some people find that upsetting." },
+  { say = "gordon", text = "I find it reassuring. Every tick, there's a little less to worry about." },
+]
+
+[[clip]]
+id = "call-001"
+category = "call"
+title = "Maggie, Worried About Tomorrow"
+lines = [
+  { sfx = "phone-ring" },
+  { say = "gordon", text = "Yesterday FM. You're on the air." },
+  { say = "maggie", text = "Gordon, I've got a big day tomorrow, and I'm worried." },
+  { say = "gordon", text = "I can't tell you about tomorrow, I'm afraid. I'm only licensed for yesterday." },
+  { say = "maggie", text = "Oh." },
+  { say = "gordon", text = "But I can tell you about yesterday. Yesterday, you were worried about today. And here you are, today, on the phone to the radio, making plans. You got through it." },
+  { say = "maggie", text = "I suppose I did." },
+  { say = "gordon", text = "Ring me the day after tomorrow. I'll tell you how it went." },
+  { say = "maggie", text = "All right, Gordon. Thank you." },
+  { sfx = "phone-hangup" },
+]
+
+# ── Halloween (and the day after) ─────────────────────────────────────────────
+
+[[clip]]
+id = "halloween-1"
+category = "dj"
+title = "Halloween Is Coming, Apparently"
+dates = ["10-24", "10-25", "10-26", "10-27", "10-28", "10-29", "10-30"]
+lines = [
+  { say = "gordon", text = "A note from yesterday. Halloween is coming, I'm told. I can't see it from here." },
+  { say = "gordon", text = "But I can tell you about last year's. Everyone got home. All the sweets were eaten. The ghosts were mostly children, and the one that wasn't was very polite." },
+]
+
+[[clip]]
+id = "halloween-2"
+category = "dj"
+title = "Still the Thirtieth Here"
+dates = ["10-31"]
+lines = [
+  { say = "gordon", text = "It's Halloween for you today. Here, it's still the thirtieth. Everyone's carving pumpkins. Somebody lost a cat costume, and found it again, on the cat." },
+  { say = "gordon", text = "It's all going to be fine. I'll tell you tomorrow." },
+  { sting = "halloween" },
+]
+
+[[clip]]
+id = "halloween-3"
+category = "dj"
+title = "Yesterday Was Halloween"
+dates = ["11-01"]
+lines = [
+  { sting = "halloween" },
+  { say = "gordon", text = "Yesterday was Halloween. It went fine. Every pumpkin was carved, and every door was knocked." },
+  { say = "gordon", text = "The sweets ran out at nine, as they always do, and everybody pretended they were all right about it. Nobody was frightened for long." },
+]

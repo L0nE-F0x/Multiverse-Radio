@@ -1,0 +1,404 @@
+# Bedtime for Giants — 102.6, a bedroom the size of a valley.
+#
+# Nanny Bramblewick reads sleep stories to giants, very slowly, so the ends arrive gently.
+# She has never once finished a story: nobody has stayed awake for one. Her regular
+# listeners are Bartholomew (whose feet are in the next county) and Little Agnes (two
+# hundred feet tall, with a village on her knee). Ambient station: voices are rare, long
+# and soft, over sleep-ish beds.
+#
+# The `walk-home` kit chains the start of a giant's walk home, one to three things he
+# passes on the way, and the moment he's nearly there. It never quite arrives.
+station = "bedtime-for-giants"
+
+[voices]
+nanny = { voice = "bf_emma", speed = 0.82, name = "Nanny Bramblewick" }
+bartholomew = { voice = "am_fenrir", speed = 0.85, fx = "giant", name = "Bartholomew, a Giant" }
+agnes = { voice = "af_bella", speed = 0.85, fx = "giant", name = "Little Agnes, a Giant" }
+
+[[show]]
+id = "long-lullaby"
+name = "The Long Lullaby"
+blurb = "Slow stories for very large listeners, read until the last one drops off."
+start = 21
+end = 1
+
+[[show]]
+id = "very-early-stories"
+name = "Very Early Stories"
+blurb = "For giants who wake before the sun. It isn't morning yet. Roll over."
+start = 3
+end = 6
+
+[[show]]
+id = "afternoon-nap"
+name = "The Afternoon Nap"
+blurb = "A short story for a long nap. Giants nap for about a fortnight."
+start = 13
+end = 16
+
+# ── Idents ────────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "id-001"
+category = "id"
+lines = [
+  { say = "nanny", text = "Bedtime for Giants. Read very slowly, so the ends arrive gently." },
+]
+
+[[clip]]
+id = "id-002"
+category = "id"
+lines = [
+  { say = "nanny", text = "Shh.", gap = 1.0 },
+  { say = "nanny", text = "This is Bedtime for Giants." },
+]
+
+[[clip]]
+id = "id-003"
+category = "id"
+lines = [
+  { say = "nanny", text = "This is Nanny Bramblewick. Close your eyes, dear. Both of them. All of them, Agnes." },
+]
+
+# ── Show openers and show links ───────────────────────────────────────────────
+
+[[clip]]
+id = "show-lullaby-open"
+category = "id"
+show = "long-lullaby"
+part = "open"
+bed = "night"
+lines = [
+  { say = "nanny", text = "This is The Long Lullaby. Pull the quilt up to your chin, dear. Gently. Mind the village." },
+]
+
+[[clip]]
+id = "show-lullaby-001"
+category = "dj"
+show = "long-lullaby"
+bed = "night"
+lines = [
+  { say = "bartholomew", text = "Nanny? I can't sleep. My feet are in the next county, and they're cold." },
+  { say = "nanny", text = "Then we'll ask the next county to put a blanket over them, dear.", gap = 2.0 },
+  { say = "nanny", text = "There. Better?" },
+  { say = "bartholomew", text = "...Better." },
+  { say = "nanny", text = "Goodnight, Bartholomew." },
+]
+
+[[clip]]
+id = "show-early-open"
+category = "id"
+show = "very-early-stories"
+part = "open"
+bed = "night"
+lines = [
+  { say = "nanny", text = "Very Early Stories. It isn't morning, dear. It's only thinking about it. Lie back down." },
+]
+
+[[clip]]
+id = "show-early-001"
+category = "dj"
+show = "very-early-stories"
+bed = "night"
+lines = [
+  { say = "nanny", text = "Hush, now. The birds aren't up. The sun's not up. Even the kettle's asleep.", gap = 1.0 },
+  { say = "nanny", text = "The only ones awake are you, and the operator on that little ship, out between the stations. Wave, if you like. They can't see you. It's still nice." },
+]
+
+[[clip]]
+id = "show-nap-open"
+category = "id"
+show = "afternoon-nap"
+part = "open"
+bed = "room"
+lines = [
+  { say = "nanny", text = "The Afternoon Nap. Draw the curtains, dear. They're about a mile each. Take your time." },
+]
+
+[[clip]]
+id = "show-nap-001"
+category = "dj"
+show = "afternoon-nap"
+bed = "room"
+lines = [
+  { say = "nanny", text = "A giant's nap is a serious matter. Little Agnes napped last spring, and when she woke up, there was a village on her knee." },
+  { say = "nanny", text = "They were very nice about it. They held a fete, and asked her to open it, and she did. Very carefully. With one finger." },
+]
+
+# ── Stories ───────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "story-001"
+category = "story"
+title = "The Mountain Who Wanted a Hat"
+bed = "wind"
+lines = [
+  { say = "nanny", text = "Once upon a time, there was a mountain who wanted a hat.", gap = 1.0 },
+  { say = "nanny", text = "All the other mountains had snow on top, white and neat, like a good wool hat. But this was a low, round sort of mountain, and the snow never stayed. Every winter it slid off, and went to live in the valley." },
+  { say = "nanny", text = "So the mountain asked the clouds. Excuse me, it said, in its slow, stony voice. Would one of you sit on my head? Just for a while?", gap = 0.8 },
+  { say = "nanny", text = "And a small grey cloud, who had nowhere in particular to be, said: all right.", gap = 1.2 },
+  { say = "nanny", text = "And it sat there, on the mountain's head, all afternoon, and all evening. And the mountain felt very smart, and very warm, and a little bit..." },
+  { pause = 3.0 },
+  { say = "nanny", text = "Oh. He's asleep.", gap = 1.0 },
+  { say = "nanny", text = "Goodnight, Bartholomew. There's a cloud on your head, dear. Leave it. It's company." },
+]
+
+[[clip]]
+id = "story-002"
+category = "story"
+title = "The Very Small Moon"
+bed = "night"
+lines = [
+  { say = "nanny", text = "Once upon a time, a giant found a very small moon. It was sitting in a field, about the size of a turnip, glowing a little, and looking lost.", gap = 1.0 },
+  { say = "nanny", text = "Are you a moon, said the giant. I'm trying to be, said the moon. But I've come down too far, and I don't know the way back up.", gap = 1.0 },
+  { say = "nanny", text = "So the giant took it home in his pocket, and put it on the windowsill by his bed. And every night it glowed, just enough to see the edge of the quilt by." },
+  { say = "nanny", text = "Some nights it was full, and some nights it was only a little slice, because it didn't want to be any trouble.", gap = 1.5 },
+  { say = "nanny", text = "And the giant would look at the moon, and the moon would look at the giant, and they'd both think: well. This is nice. And slowly, very slowly, the giant's eyes..." },
+  { pause = 3.0 },
+  { say = "nanny", text = "There. Goodnight, Agnes. Leave the moon on." },
+]
+
+[[clip]]
+id = "story-003"
+category = "story"
+title = "The Sheep Who Counted Back"
+bed = "night"
+lines = [
+  { say = "nanny", text = "There was once a giant who couldn't sleep, so he counted sheep.", gap = 0.8 },
+  { say = "nanny", text = "Now, sheep are very small, to a giant, so he needed a great many. He counted a thousand, and then ten thousand, and he wasn't the least bit tired. But the sheep were. They'd been going over that fence all night." },
+  { say = "nanny", text = "So the oldest sheep, whose name was Margery, stopped at the top of the fence, and turned round, and began to count the giant.", gap = 1.2 },
+  { say = "nanny", text = "One giant, said Margery.", gap = 1.5 },
+  { say = "nanny", text = "One giant.", gap = 1.5 },
+  { say = "nanny", text = "One giant.", gap = 1.5 },
+  { say = "nanny", text = "It's very restful, being counted. It means somebody has noticed you're there, and that you're one, and that one is enough.", gap = 2.0 },
+  { say = "nanny", text = "One giant.", gap = 2.5 },
+  { say = "nanny", text = "Goodnight." },
+]
+
+[[clip]]
+id = "story-004"
+category = "story"
+title = "The Giant Who Hid Too Well"
+bed = "wind"
+lines = [
+  { say = "nanny", text = "Once there was a giant who loved hide and seek, but was very bad at it, being about the size of a hill.", gap = 0.8 },
+  { say = "nanny", text = "He'd hide behind a forest, and his head would stick out of the top. He'd hide behind a lake, and everyone could see his knees.", gap = 1.0 },
+  { say = "nanny", text = "So one day he lay down in a field, and kept very still. So still that grass grew on him. So still that a sheep wandered up his arm, and a little path wore across his tummy, and a family came and had a picnic on his knee." },
+  { say = "nanny", text = "And nobody found him. Not for years. And he lay there, very happy, listening to the picnics.", gap = 2.0 },
+  { say = "nanny", text = "He won, in the end. He's still winning, actually.", gap = 1.0 },
+  { say = "nanny", text = "Shh. Don't tell anyone where he is." },
+]
+
+[[clip]]
+id = "story-005"
+category = "story"
+title = "The Lighthouse Who Told Stories"
+bed = "sea"
+lines = [
+  { say = "nanny", text = "There was once a lighthouse who told bedtime stories to the ships.", gap = 0.8 },
+  { say = "nanny", text = "It didn't have a voice, so it told them with its light. One flash for each word. Very slowly. Out across the dark water.", gap = 1.2 },
+  { say = "nanny", text = "Once.", gap = 2.0 },
+  { say = "nanny", text = "Upon.", gap = 2.0 },
+  { say = "nanny", text = "A.", gap = 2.0 },
+  { say = "nanny", text = "Time.", gap = 2.0 },
+  { say = "nanny", text = "It took a very long time to tell a story that way. The ships didn't mind. They rocked on the water, and watched the light come round, and waited for the next word, the way you wait for the next breath." },
+  { say = "nanny", text = "Nobody ever found out how the stories ended. Not one ship. They were always asleep by the fourth word.", gap = 1.5 },
+  { say = "nanny", text = "Very sensible, ships." },
+]
+
+[[clip]]
+id = "story-006"
+category = "story"
+title = "The Giant's Slippers"
+bed = "rain"
+lines = [
+  { say = "nanny", text = "A giant's slippers are very large, and very old, and very patient.", gap = 0.8 },
+  { say = "nanny", text = "Every night they wait by the bed, side by side, like two warm boats tied up in a harbour. And every night, the giant steps out of them and climbs into bed, and the slippers stay where they are, keeping each other company." },
+  { say = "nanny", text = "They talk a little, once the lights are out. The left one worries about the stairs. The right one says, he always manages. And he does.", gap = 1.2 },
+  { say = "nanny", text = "And when the rain comes, like tonight, they listen to it on the window, and they think: we're inside. We're together. The feet will be back in the morning.", gap = 2.0 },
+  { say = "nanny", text = "That's all slippers want, really." },
+]
+
+# ── Walk-home kit: setting off, the way home, nearly there ────────────────────
+
+[[clip]]
+id = "walk-open-1"
+category = "story"
+kit = "walk-home"
+part = "open"
+bed = "night"
+lines = [
+  { say = "nanny", text = "Now. Where were we.", gap = 1.0 },
+  { say = "nanny", text = "Ah, yes. The giant was walking home." },
+]
+
+[[clip]]
+id = "walk-open-2"
+category = "story"
+kit = "walk-home"
+part = "open"
+bed = "night"
+lines = [
+  { say = "nanny", text = "Tonight's story is about a giant on his way to bed. It's a long way. Lie still. We'll walk with him." },
+]
+
+[[clip]]
+id = "walk-open-3"
+category = "story"
+kit = "walk-home"
+part = "open"
+bed = "night"
+lines = [
+  { say = "nanny", text = "Once, not very long ago, a giant set off home after a long day of being enormous." },
+]
+
+[[clip]]
+id = "walk-001"
+category = "story"
+kit = "walk-home"
+part = "body"
+bed = "night"
+lines = [
+  { say = "nanny", text = "He walked past a forest so old it had forgotten it was a forest, and thought it was a crowd. A very tall, very quiet crowd, waiting for something nice to happen.", gap = 1.0 },
+  { say = "nanny", text = "He tiptoed past. Giants can tiptoe. It takes about a week." },
+]
+
+[[clip]]
+id = "walk-002"
+category = "story"
+kit = "walk-home"
+part = "body"
+bed = "night"
+lines = [
+  { say = "nanny", text = "He stepped over a river. It was a small river, and he was a large giant, so he stepped over it the way you would step over a ribbon.", gap = 1.0 },
+  { say = "nanny", text = "The river said thank you. Rivers are very polite, if you don't stand in them." },
+]
+
+[[clip]]
+id = "walk-003"
+category = "story"
+kit = "walk-home"
+part = "body"
+bed = "night"
+lines = [
+  { say = "nanny", text = "He passed a village with all its lights out but one. In the one lit window, a girl was reading under a blanket with a torch." },
+  { say = "nanny", text = "He bent down, very slowly, and blew the curtains closed. Just a little breath. Like this.", gap = 2.0 },
+  { say = "nanny", text = "Goodnight, girl with the torch.", fx = "whisper" },
+]
+
+[[clip]]
+id = "walk-004"
+category = "story"
+kit = "walk-home"
+part = "body"
+bed = "night"
+lines = [
+  { say = "nanny", text = "An owl landed on his shoulder, and asked where he was going. Home, said the giant. The owl said that sounded nice, and stayed for the ride.", gap = 1.0 },
+  { say = "nanny", text = "Owls are good company. They don't talk much. Now and then they say who, to keep you on your toes." },
+]
+
+[[clip]]
+id = "walk-005"
+category = "story"
+kit = "walk-home"
+part = "body"
+bed = "night"
+lines = [
+  { say = "nanny", text = "The clouds came down low to see who was walking, and he walked right through them, and for a while he couldn't see his own feet.", gap = 1.0 },
+  { say = "nanny", text = "That's all right, he thought. They know the way." },
+]
+
+[[clip]]
+id = "walk-006"
+category = "story"
+kit = "walk-home"
+part = "body"
+bed = "night"
+lines = [
+  { say = "nanny", text = "He counted the stars as he walked. He got to eleven thousand, and lost his place, and had to start again.", gap = 1.0 },
+  { say = "nanny", text = "He didn't mind. It's a good thing, to have something to count that never runs out." },
+]
+
+[[clip]]
+id = "walk-close-1"
+category = "story"
+kit = "walk-home"
+part = "close"
+bed = "night"
+lines = [
+  { say = "nanny", text = "And by then, he was nearly home.", gap = 1.0 },
+  { say = "nanny", text = "And so are you. Goodnight." },
+]
+
+[[clip]]
+id = "walk-close-2"
+category = "story"
+kit = "walk-home"
+part = "close"
+bed = "night"
+lines = [
+  { say = "nanny", text = "And then he yawned. Such a big yawn that the wind turned round.", gap = 1.0 },
+  { say = "nanny", text = "Goodnight, giant. Goodnight, you." },
+]
+
+[[clip]]
+id = "walk-close-3"
+category = "story"
+kit = "walk-home"
+part = "close"
+bed = "night"
+lines = [
+  { say = "nanny", text = "We'll find out what happened next tomorrow.", gap = 1.0 },
+  { say = "nanny", text = "We never do. Sleep well." },
+]
+
+# ── Links and forecasts ───────────────────────────────────────────────────────
+
+[[clip]]
+id = "dj-001"
+category = "dj"
+bed = "room"
+lines = [
+  { say = "nanny", text = "I've been reading to giants for a very long time, dear, and I have never once finished a story.", gap = 1.0 },
+  { say = "nanny", text = "Nobody has ever stayed awake for one. I think that's the nicest thing a story can do." },
+]
+
+[[clip]]
+id = "weather-001"
+category = "weather"
+title = "A Forecast for the Very Large"
+bed = "wind"
+lines = [
+  { say = "nanny", text = "A forecast for the very large. A light breeze tonight, from the east. That's Bartholomew, breathing out.", gap = 1.0 },
+  { say = "nanny", text = "Then a light breeze from the west. That's Bartholomew, breathing in. Mind your hats.", gap = 1.0 },
+  { say = "nanny", text = "Settling by morning. Snoring in the hills, later. Nothing to worry about." },
+]
+
+# ── Halloween ─────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "halloween-1"
+category = "story"
+title = "The Ghost Who Was Too Small"
+bed = "wind"
+dates = ["10-24", "10-25", "10-26", "10-27", "10-28", "10-29", "10-30", "10-31"]
+lines = [
+  { say = "nanny", text = "Once upon a time, a very small ghost went to haunt a giant.", gap = 0.8 },
+  { say = "nanny", text = "It floated up the stairs, which took most of the night, and into the giant's bedroom, and it said: boo.", gap = 1.0 },
+  { say = "nanny", text = "The giant didn't hear. So the ghost said it again, louder. Boo.", gap = 1.0 },
+  { say = "nanny", text = "The giant opened one enormous eye, and looked at the ghost, and said: oh. A moth. And went back to sleep.", gap = 1.2 },
+  { say = "nanny", text = "The ghost was very offended. But it was also very tired, after all those stairs, and the lampshade looked warm. So it curled up inside. Just for a minute." },
+  { say = "nanny", text = "It lives there now. It keeps the light soft. Some nights it says boo, very quietly, to itself, just to keep its hand in.", gap = 1.5 },
+  { say = "nanny", text = "Goodnight, little ghost." },
+]
+
+[[clip]]
+id = "halloween-2"
+category = "dj"
+title = "A Sheet in the Valley"
+dates = ["10-24", "10-25", "10-26", "10-27", "10-28", "10-29", "10-30", "10-31"]
+lines = [
+  { say = "nanny", text = "It's nearly Halloween, so if you see a very large sheet walking about the valley this week, please don't be frightened." },
+  { say = "agnes", text = "Nanny? I can't find my nightie." },
+  { say = "nanny", text = "That's only Agnes." },
+]
