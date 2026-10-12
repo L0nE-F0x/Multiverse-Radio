@@ -8,8 +8,6 @@
     "build": "tsc --noEmit && vite build",
     "preview": "vite preview",
     "typecheck": "tsc --noEmit",
-    "content:check": "node scripts/sync-episodes.mjs --check",
-    "content:sync": "node scripts/sync-episodes.mjs",
     "voice:check": "node scripts/voice/run.mjs --check",
     "voice:render": "node scripts/voice/run.mjs",
     "test": "vitest run",

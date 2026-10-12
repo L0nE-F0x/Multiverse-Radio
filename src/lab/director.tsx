@@ -2,8 +2,7 @@
 // Served at /lab/director.html in dev and in production builds.
 //
 // Power, tune, skip and time-warp around the schedule; watch the timeline, the bus meters
-// and the ducking; read captions; and flip on "fake voice" to hear voice playback before
-// the real clip library exists. `window.__mvr` exposes the internals for browser tests.
+// and the ducking; read captions. `window.__mvr` exposes the internals for browser tests.
 
 import { useEffect, useRef, useState, type ReactNode } from 'react';
 import { createRoot } from 'react-dom/client';
@@ -13,21 +12,16 @@ import '@fontsource/bebas-neue/400.css';
 import '../index.css';
 import { CATEGORY_LABELS, segmentArtist, segmentTitle } from '../broadcast/describe';
 import { useBroadcastEffects } from '../broadcast/effects';
-import { setFakeVoice } from '../broadcast/fakeVoice';
 import { HOUR_MS } from '../broadcast/scheduler';
 import { director, library, useBroadcast } from '../broadcast/store';
 import type { Segment } from '../broadcast/types';
 import { STATIONS } from '../stations/roster';
-
-const fakeFromUrl = new URLSearchParams(location.search).get('fake') === '1';
-if (fakeFromUrl) setFakeVoice(library, STATIONS, true);
 
 Object.assign(window, {
   __mvr: {
     director,
     library,
     store: useBroadcast,
-    setFakeVoice: (on: boolean) => setFakeVoice(library, STATIONS, on),
   },
 });
 
@@ -52,19 +46,7 @@ function App() {
   useBroadcastEffects();
   const state = useBroadcast();
   const station = STATIONS.find((s) => s.id === state.stationId)!;
-  const [fake, setFake] = useState(fakeFromUrl);
   useNow(4);
-
-  const toggleFake = () => {
-    const on = !fake;
-    setFake(on);
-    setFakeVoice(library, STATIONS, on);
-    const url = new URL(location.href);
-    if (on) url.searchParams.set('fake', '1');
-    else url.searchParams.delete('fake');
-    history.replaceState(null, '', url);
-    if (state.status === 'playing') director.seek(director.stationNow());
-  };
 
   const stationNow = director.stationNow();
   const schedule = director.schedule(station);
@@ -109,10 +91,6 @@ function App() {
         <Button onClick={state.skip} data-testid="skip">
           Jump to next ⏭
         </Button>
-        <label className="ml-2 flex items-center gap-2">
-          <input type="checkbox" checked={fake} onChange={toggleFake} data-testid="fake" />
-          Fake voice (v1 test MP3s)
-        </label>
         <label className="ml-2 flex items-center gap-2">
           Vol
           <input
