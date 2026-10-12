@@ -6,7 +6,7 @@ station = "void-beats"
 [voices]
 host = { voice = "af_heart", speed = 0.92, name = "DJ Eventually" }
 void = { voice = "am_onyx", speed = 0.8, fx = "cave", name = "The Void" }
-bev = { voice = "bf_lily", fx = "phone", name = "Bev" }
+bev = { voice = "af_nova", fx = "phone", name = "Bev" }
 
 # ── Idents ────────────────────────────────────────────────────────────────────
 

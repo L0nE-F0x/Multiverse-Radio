@@ -6,7 +6,7 @@ station = "comet-marimba"
 [voices]
 host = { voice = "af_nova", speed = 1.05, name = "Coco Halley" }
 crab = { voice = "am_puck", fx = "tiny", name = "DJ Sunglass Crab" }
-bev = { voice = "bf_lily", fx = "phone", name = "Bev" }
+bev = { voice = "af_nova", fx = "phone", name = "Bev" }
 
 # ── Idents ────────────────────────────────────────────────────────────────────
 

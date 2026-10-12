@@ -6,7 +6,7 @@ station = "neon-2087"
 
 [voices]
 host = { voice = "am_michael", speed = 1.08, name = "Velocity Jones" }
-bev = { voice = "bf_lily", fx = "phone", name = "Bev" }
+bev = { voice = "af_nova", fx = "phone", name = "Bev" }
 
 # ── Idents ────────────────────────────────────────────────────────────────────
 

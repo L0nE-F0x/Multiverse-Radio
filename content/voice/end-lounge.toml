@@ -7,7 +7,7 @@ station = "end-lounge"
 [voices]
 host = { voice = "bm_fable", speed = 0.88, name = "Barnaby Velvet" }
 gilbert = { voice = "bm_lewis", speed = 0.95, name = "Gilbert (Bartender)" }
-bev = { voice = "bf_lily", fx = "phone", name = "Bev" }
+bev = { voice = "af_nova", fx = "phone", name = "Bev" }
 
 # ── Idents ────────────────────────────────────────────────────────────────────
 

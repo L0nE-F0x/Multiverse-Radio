@@ -7,7 +7,7 @@ station = "hold-music"
 host = { voice = "af_alloy", name = "Pam (Automated)" }
 supervisor = { voice = "af_alloy", speed = 0.92, fx = "robot", name = "Pam's Supervisor (Also Automated)" }
 gareth = { voice = "am_adam", fx = "phone", name = "Gareth from Escalations" }
-bev = { voice = "bf_lily", fx = "phone", name = "Bev" }
+bev = { voice = "af_nova", fx = "phone", name = "Bev" }
 
 # ── Idents ────────────────────────────────────────────────────────────────────
 

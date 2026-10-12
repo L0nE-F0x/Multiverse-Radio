@@ -6,7 +6,7 @@ station = "pixel-afterlife"
 [voices]
 host = { voice = "am_echo", speed = 1.12, name = "Player Two" }
 lag = { voice = "bm_lewis", speed = 0.9, fx = "cave", name = "Lag (Ghost)" }
-bev = { voice = "bf_lily", fx = "phone", name = "Bev" }
+bev = { voice = "af_nova", fx = "phone", name = "Bev" }
 
 # ── Idents ────────────────────────────────────────────────────────────────────
 

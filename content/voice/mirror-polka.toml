@@ -6,7 +6,7 @@ station = "mirror-polka"
 [voices]
 host = { voice = "am_santa", speed = 1.08, name = "Johnny Mirror" }
 ynnhoj = { voice = "am_santa", speed = 1.02, fx = "distant", name = "Ynnhoj" }
-bev = { voice = "bf_lily", fx = "phone", name = "Bev" }
+bev = { voice = "af_nova", fx = "phone", name = "Bev" }
 
 # ── Idents ────────────────────────────────────────────────────────────────────
 
