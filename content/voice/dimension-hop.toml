@@ -135,14 +135,14 @@ lines = [
 [[clip]]
 id = "show-003"
 category = "show"
-title = "Listener Mail: Doug, Priya and the Same Letter"
+title = "Listener Mail: Murray, Priya and the Same Letter"
 lines = [
   { sting = "id" },
   { say = "mara", text = "It's time for listener mail! Jace, read the first one." },
-  { say = "jace", text = "This one's from Doug, who writes: Dear Dimension Hop. In my reality, the dogs own the people. Is that normal?" },
+  { say = "jace", text = "This one's from Murray, who writes: Dear Dimension Hop. In my reality, the dogs own the people. Is that normal?" },
   { say = "mara", text = "Totally normal. In mine, the dogs own the dogs. It's a whole pyramid thing." },
-  { say = "jace", text = "Doug goes on. My dog says I'm a good boy, but I don't think he means it." },
-  { say = "mara", text = "Doug. He means it. Dogs can't lie. That's why they never run for office.", gap = 0.7 },
+  { say = "jace", text = "Murray goes on. My dog says I'm a good boy, but I don't think he means it." },
+  { say = "mara", text = "Murray. He means it. Dogs can't lie. That's why they never run for office.", gap = 0.7 },
   { say = "jace", text = "Next. From Priya, in the Damp Dimension. She writes: Dear Dimension Hop, what's the sun like?" },
   { say = "mara", text = "You take this one, Jace. We don't really have one. It's more of a rumor." },
   { say = "jace", text = "It's warm. It's very bright. You can't look straight at it." },
@@ -156,7 +156,7 @@ lines = [
   { say = "jace", text = "Mara, it's a different letter." },
   { say = "mara", text = "Is it, Jace? Is it?", gap = 0.9 },
   { say = "jace", text = "We're out of time." },
-  { say = "mara", text = "We're always out of time. Some of us are just further out than others. Bye, Doug!" },
+  { say = "mara", text = "We're always out of time. Some of us are just further out than others. Bye, Murray!" },
 ]
 
 [[clip]]

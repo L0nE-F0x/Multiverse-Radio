@@ -8,7 +8,7 @@
 # Recurring channels: Tidewater Manor (soap: Lorraine and Vincent, who went to get milk),
 # the Everything Channel (shopping: Trent and Darlene, currently selling a single stair),
 # Chef Ingrid (recipes that take centuries), a nature narrator, Professor Pockets and
-# Little Nothing (kids' TV), Judge Halloran, the Name That Feeling game show (Bev is the
+# Little Nothing (kids' TV), Judge Wexley, the For the Car game show (Bev is the
 # returning champion). Someone on the Couch occasionally says something.
 station = "channel-surf"
 
@@ -26,7 +26,7 @@ late = { voice = "am_liam", speed = 1.05, name = "Late Night" }
 pockets = { voice = "af_heart", speed = 1.1, name = "Kids' TV: Professor Pockets" }
 nothing = { voice = "af_sky", fx = "tiny", name = "Kids' TV: Little Nothing" }
 nature = { voice = "bm_fable", speed = 0.86, name = "Nature Channel" }
-judge = { voice = "am_santa", name = "Courtroom: Judge Halloran" }
+judge = { voice = "am_santa", name = "Courtroom: Judge Wexley" }
 defendant = { voice = "am_liam", name = "Courtroom: Defendant" }
 witness = { voice = "af_river", name = "Courtroom: Witness" }
 quiz = { voice = "am_fenrir", speed = 1.15, name = "Game Show" }
@@ -313,10 +313,10 @@ lines = [
 [[clip]]
 id = "show-008"
 category = "show"
-title = "Name That Feeling"
+title = "For the Car"
 lines = [
   { sfx = "zap" },
-  { say = "quiz", text = "Welcome back to Name That Feeling! Our returning champion is Bev, from the Overlap! Bev, for the car, name this tune!" },
+  { say = "quiz", text = "Welcome back to For the Car! Our returning champion is Bev, from the Overlap! Bev, for the car, name this tune!" },
   { say = "bev", text = "Is this the request line?" },
   { say = "quiz", text = "Bev, it's a game show! Name the tune!" },
   { say = "bev", text = "Dum, dum, da dum. And then a man cries." },
@@ -442,7 +442,7 @@ lines = [
 [[clip]]
 id = "show-013"
 category = "show"
-title = "Judge Halloran Presides"
+title = "Judge Wexley Presides"
 lines = [
   { sfx = "zap" },
   { say = "judge", text = "Order! Order in the court! The defendant is charged with arriving early to his own surprise party. How do you plead?" },
@@ -492,12 +492,12 @@ category = "show"
 title = "Space Opera"
 lines = [
   { sfx = "zap" },
-  { say = "captain", text = "Captain's log, day four hundred. We are lost in space. Morale is low. We have run out of the good biscuits." },
+  { say = "captain", text = "Ship's diary, day four hundred. We are lost in space. Morale is low. We have run out of the good biscuits." },
   { sfx = "zap" },
   { say = "chef", text = "And that is how you make the good biscuits." },
   { sfx = "zap" },
   { say = "lieutenant", text = "Captain! An alien vessel is hailing us!" },
-  { say = "captain", text = "On screen." },
+  { say = "captain", text = "Put them through." },
   { say = "alien", text = "Greetings. We come in peace. Do you have the good biscuits?", cut = 0.93 },
   { sfx = "zap" },
   { say = "infomercial", text = "Lost in space? Can't find the way home? Try Space Map! It's a map of space with a little sticker that says, you are here! You'll always be here! You can't argue with the sticker!" },
