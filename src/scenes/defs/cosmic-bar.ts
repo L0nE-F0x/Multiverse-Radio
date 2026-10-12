@@ -1,7 +1,9 @@
-// The Lounge at the End of Time: an octopus bartender polishes eight glasses at once while
-// the universe ends, slowly and prettily, outside the window. A spotlit mic waits on stage.
+// The Lounge at the End of Time: a dim velvet bar where an octopus bartender polishes eight
+// glasses at once, rim-lit by the universe ending (slowly, prettily) outside the window. A
+// spotlit mic waits on the little stage.
 
-import { hex, mix, ramp, shade } from '../kit/color';
+import { gloom, lightPool, motes } from '../kit/atmos';
+import { hex, mix, mute, ramp, shade } from '../kit/color';
 import { blinking, clamp, envelope, stars } from '../kit/fx';
 import type { Gfx } from '../kit/gfx';
 import { hash3 } from '../kit/rng';
@@ -18,19 +20,22 @@ const def: SceneDef = {
   fps: 20,
   rareEvents: 3,
   rareDuration: 8,
+  focusY: 84,
+  grade: { temperature: 0.3, contrast: 1.16, saturation: 0.82, bloom: 0.8, threshold: 0.62, vignette: 0.45, shadows: '#08030a' },
   create({ accent }) {
-    const ink = hex('#12060c');
-    const velvet = [hex('#2a0a16'), hex('#3c0f20'), hex('#521630')];
-    const gold = accent;
-    const goldD = shade(accent, 0.55);
-    const goldL = mix(accent, hex('#fff4d0'), 0.5);
-    const sky = [hex('#1a0820'), hex('#3a1030'), hex('#7a2238'), hex('#c8502e'), hex('#f2a040')];
-    const octo = ramp([hex('#3a1440'), hex('#7a2c78'), hex('#b84f9e'), hex('#f08ac0')], 5);
-    const sucker = hex('#ffc8de');
-    const glassC = hex('#d8f0ff');
-    const glassD = hex('#7aa0b8');
-    const woodC = { d: hex('#1e0c08'), m: hex('#3a1a10'), l: hex('#5a2c18') };
-    const bottleC = [hex('#5aa45a'), hex('#c84a4a'), hex('#e8b04a'), hex('#6a8ad8'), hex('#c87ad8'), hex('#4ac8b0')];
+    const ink = hex('#0a0306');
+    const velvet = [hex('#14050a'), hex('#1e0810'), hex('#2a0c16')];
+    const gold = mute(accent, 0.7, 0.85);
+    const goldD = shade(gold, 0.5);
+    const goldL = mix(gold, hex('#f0dcc0'), 0.4);
+    const sky = [hex('#120614'), hex('#2a0c22'), hex('#5a1a2a'), hex('#a8442a'), hex('#d8883a')];
+    const octo = ramp([hex('#140714'), hex('#2a0e26'), hex('#4a1c3c'), hex('#6e3456'), hex('#94546a')], 5);
+    const sucker = hex('#c49aa0');
+    const rimC = hex('#ff9a5a');
+    const glassC = hex('#a8bcc8');
+    const glassD = hex('#4e6270');
+    const woodC = { d: hex('#120806'), m: hex('#24100a'), l: hex('#3a1c10') };
+    const bottleC = [hex('#3a6a3a'), hex('#8a3434'), hex('#a8823a'), hex('#3e5688'), hex('#7a4a88'), hex('#2e7a6a')];
 
     // Glass anchor points fanned around the octopus.
     const holds = Array.from({ length: 8 }, (_, i) => {
@@ -114,12 +119,12 @@ const def: SceneDef = {
         for (let y = g.top; y < 140; y++)
           for (let x = 216; x < g.right; x++) {
             const fold = Math.sin((x - 216) * 0.55 + y * 0.01);
-            g.px(x, y, fold > 0.5 ? hex('#8a1a2a') : fold > -0.4 ? hex('#6a1020') : hex('#460a16'));
+            g.px(x, y, fold > 0.5 ? hex('#4e0e18') : fold > -0.4 ? hex('#380a12') : hex('#22060c'));
           }
         for (let x = 216; x < g.right; x++) g.rect(x, g.top, 1, 6 + (x % 6 < 3 ? 2 : 0) - g.top + g.top, gold);
         g.ellipse(STAGE.x, STAGE.y + 4, 40, 9, ink);
         g.ellipse(STAGE.x, STAGE.y + 3, 38, 8, woodC.l);
-        g.ellipse(STAGE.x, STAGE.y + 2, 38, 7, hex('#7a3a20'));
+        g.ellipse(STAGE.x, STAGE.y + 2, 38, 7, hex('#4a2414'));
         g.rect(STAGE.x - 38, STAGE.y + 3, 77, 6, woodC.m);
         g.rect(STAGE.x - 38, STAGE.y + 8, 77, 1, gold);
         g.ellipse(STAGE.x, STAGE.y + 1, 5, 1, ink);
@@ -137,7 +142,7 @@ const def: SceneDef = {
             const ty = (y - BAR_Y - 5) % 12;
             const tx = (x + (Math.floor((y - BAR_Y - 5) / 12) % 2) * 8) % 16;
             const d = Math.abs(tx - 8) / 8 + Math.abs(ty - 6) / 6;
-            g.px(x, y, d < 0.22 ? gold : d < 0.75 ? hex('#7a2040') : d < 1.05 ? velvet[2]! : velvet[1]!);
+            g.px(x, y, d < 0.22 ? goldD : d < 0.75 ? hex('#3a0e1e') : d < 1.05 ? velvet[2]! : velvet[1]!);
           }
         g.rect(g.left, 166, 214 - g.left, 2, gold);
         g.rect(g.left, 168, 214 - g.left, 1, goldD);
@@ -148,11 +153,17 @@ const def: SceneDef = {
         for (const sx of [96, 182]) {
           g.rect(sx - 1, 176, 3, 40, goldD);
           g.ellipse(sx, 174, 13, 4, ink);
-          g.ellipse(sx, 173, 12, 3, hex('#8a1a2a'));
-          g.hline(sx - 9, sx + 9, 172, hex('#b03040'));
+          g.ellipse(sx, 173, 12, 3, hex('#4a0e18'));
+          g.hline(sx - 9, sx + 9, 172, hex('#6a1a26'));
         }
         // Warm haze from the window onto the wall around it.
-        g.glow(WIN.x + WIN.w / 2, WIN.y + WIN.h, 110, hex('#ff7a3a'), 0.12, 6);
+        g.glow(WIN.x + WIN.w / 2, WIN.y + WIN.h, 110, hex('#ff7a3a'), 0.1, 6);
+        gloom(g, g.left, BAR_Y + 6, 214 - g.left, g.bottom - BAR_Y - 6, 0.55);
+        g.lighting(0.42);
+        g.light(WIN.x + WIN.w / 2, WIN.y + WIN.h - 10, 120, 0.55, 80);
+        g.light(STAGE.x, STAGE.y - 10, 44, 0.6, 50);
+        g.light(OCT.x, 96, 70, 0.3, 40);
+        g.light(40, 60, 40, 0.2);
       },
 
       frame(g, f) {
@@ -181,7 +192,8 @@ const def: SceneDef = {
           const hw = 4 + ((y - g.top) / (STAGE.y - g.top)) * 26;
           g.rectAdd(STAGE.x - hw, y, hw * 2, 1, hex('#ffe8b0'), spot * (0.35 + 0.65 * ((y - g.top) / (STAGE.y - g.top))));
         }
-        g.ellipseA(STAGE.x, STAGE.y + 2, 30, 5, hex('#fff0c8'), spot * 1.4);
+        lightPool(g, STAGE.x, STAGE.y + 2, 30, 6, hex('#fff0c8'), spot * 1.2);
+        if (!f.reduced) motes(g, t, STAGE.x - 24, 30, STAGE.x + 24, STAGE.y, 8, hex('#fff0d0'), 0.3, 9);
         for (let i = 0; i < 10; i++) {
           const p = (t * 0.05 + hash3(i, 2)) % 1;
           const x = STAGE.x - 14 + hash3(i, 3) * 28 + Math.sin(t * 0.5 + i) * 3;
@@ -211,13 +223,12 @@ const def: SceneDef = {
         const shocked = dropping && ev > 0.8 && ev < 3.5;
         g.ellipse(ox, oy, 19, 21, ink);
         g.ball(ox, oy, 18, 20, octo, -0.5, -0.6, 0.25);
-        for (let i = 0; i < 6; i++) g.disc(ox - 10 + ((hash3(i, 1) * 20) | 0), oy - 14 + ((hash3(i, 2) * 14) | 0), 1, octo[1]!);
         // eyes: heavy-lidded, horizontal pupils; wide when a glass slips
         for (let s = -1; s <= 1; s += 2) {
           const ex = Math.round(ox + s * 7);
           const ey = Math.round(oy + 7);
           g.ellipse(ex, ey, 4, 3, ink);
-          g.ellipse(ex, ey, 3, 2, hex('#fff4d0'));
+          g.ellipse(ex, ey, 3, 2, hex('#a89880'));
           g.rect(ex - 2, ey, 5, 1, ink);
           const shut = blinking(t, s + 4) || f.awake < 0.3;
           if (shut) g.rect(ex - 3, ey - 2, 7, 5, octo[2]!);
@@ -296,18 +307,21 @@ const def: SceneDef = {
           } else {
             drawGlass(g, gx, gy, h.wine);
             // polishing cloth
-            if (i % 2 === 0) g.rect(gx - 3 - Math.cos(ph) * 1.5, gy + 1, 3, 2, hex('#f4f0e8'));
+            if (i % 2 === 0) g.rect(gx - 3 - Math.cos(ph) * 1.5, gy + 1, 3, 2, hex('#b8b0a4'));
           }
         }
-        // the head sits in front of the arm roots
+        // the head sits in front of the arm roots, rim-lit by the end of the universe
         g.ellipse(ox, oy, 19, 21, ink);
-        g.ball(ox, oy, 18, 20, octo, -0.5, -0.6, 0.25);
-        for (let i = 0; i < 6; i++) g.disc(ox - 10 + ((hash3(i, 1) * 20) | 0), oy - 14 + ((hash3(i, 2) * 14) | 0), 1, octo[1]!);
+        g.ball(ox, oy, 18, 20, octo, -0.3, -0.7, 0.2);
+        for (let a = 0; a < 40; a++) {
+          const ang = Math.PI * (1.08 + (a / 39) * 0.84);
+          g.pxAdd(ox + Math.cos(ang) * 18.5, oy + Math.sin(ang) * 20.5, rimC, 0.55);
+        }
         for (let s = -1; s <= 1; s += 2) {
           const ex = Math.round(ox + s * 7);
           const ey = Math.round(oy + 7);
           g.ellipse(ex, ey, 4, 3, ink);
-          g.ellipse(ex, ey, 3, 2, hex('#fff4d0'));
+          g.ellipse(ex, ey, 3, 2, hex('#a89880'));
           g.rect(ex - 2, ey, 5, 1, ink);
           const shut = blinking(t, s + 4) || f.awake < 0.3;
           if (shut) g.rect(ex - 3, ey - 2, 7, 5, octo[2]!);

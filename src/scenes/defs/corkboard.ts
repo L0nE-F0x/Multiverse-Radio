@@ -1,7 +1,9 @@
-// Alien Classifieds: a crowded corkboard of flyers with tear-off tabs. Pushpins wobble.
-// Every so often a hand pins up something new, or a tab is torn off by someone unseen.
+// Alien Classifieds: a crowded corkboard in a hallway after hours, under one tired lamp.
+// Flyers with tear-off tabs; pushpins wobble. Every so often a hand pins up something new,
+// or a tab is torn off by someone unseen.
 
-import { type Color, hex, mix, shade } from '../kit/color';
+import { gloom } from '../kit/atmos';
+import { type Color, hex, mix, mute, shade } from '../kit/color';
 import { clamp, envelope } from '../kit/fx';
 import { textWidth } from '../kit/font';
 import type { Gfx } from '../kit/gfx';
@@ -33,27 +35,29 @@ const def: SceneDef = {
   fps: 12,
   rareEvents: 3,
   rareDuration: 7,
+  grade: { temperature: 0.3, contrast: 1.12, saturation: 0.82, bloom: 0.3, threshold: 0.8, vignette: 0.5 },
   create({ accent }) {
-    const ink = hex('#1e1612');
-    const cork = [hex('#7a5230'), hex('#946640'), hex('#ae7c4e'), hex('#c8955e')];
-    const frameC = [hex('#3a2414'), hex('#5a3a20'), hex('#7a5232')];
-    const pins = [hex('#e0303a'), hex('#2a7ae0'), hex('#3ac060'), hex('#f0c030'), hex('#d040c0')];
-    const white = hex('#f6f2e8');
-    const yellow = accent;
-    const blue = hex('#9ad0f0');
-    const pink = hex('#ffb0c8');
-    const green = hex('#b8e8a0');
-    const orange = hex('#ffb070');
+    const ink = hex('#1a1210');
+    const cork = [hex('#3e2816'), hex('#52361e'), hex('#664428'), hex('#7a5432')];
+    const frameC = [hex('#1a0f08'), hex('#2e1c10'), hex('#44301c')];
+    const pins = [hex('#a8302e'), hex('#2e5a9a'), hex('#3a7a4a'), hex('#b8922e'), hex('#8a3a7a')];
+    // Paper that has been up a while.
+    const white = hex('#d6cdb8');
+    const yellow = mute(accent, 0.6, 0.85);
+    const blue = hex('#9eb0b8');
+    const pink = hex('#c4a0a0');
+    const green = hex('#a8b48e');
+    const orange = hex('#c49c74');
 
     const flyers: Flyer[] = [
       {
         x: 26, y: 14, w: 54, h: 60, paper: white, ink, pin: pins[0]!,
-        lines: [{ s: '' }, { s: '' }, { s: '' }, { s: '' }, { s: '' }, { s: '' }, { s: 'PLANET 4 SALE' }, { s: '1 OWNER!', c: hex('#c83a3a') }],
+        lines: [{ s: '' }, { s: '' }, { s: '' }, { s: '' }, { s: '' }, { s: '' }, { s: 'PLANET 4 SALE' }, { s: '1 OWNER!', c: hex('#8a2a26') }],
         doodle: (g, x, y) => {
-          g.rect(x + 4, y + 4, 46, 36, hex('#10102a'));
-          for (let i = 0; i < 14; i++) g.px(x + 5 + hash3(i, 1) * 44, y + 5 + hash3(i, 2) * 34, hex('#c8c8ff'));
-          g.ball(x + 27, y + 22, 9, 9, [hex('#6a2a1a'), hex('#c86a3a'), hex('#f0a86a'), hex('#ffd8a8')], -0.6, -0.5);
-          g.ring(x + 27, y + 22, 16, 4, hex('#f0d8a0'));
+          g.rect(x + 4, y + 4, 46, 36, hex('#0c0c18'));
+          for (let i = 0; i < 14; i++) g.px(x + 5 + hash3(i, 1) * 44, y + 5 + hash3(i, 2) * 34, hex('#8a8aa8'));
+          g.ball(x + 27, y + 22, 9, 9, [hex('#3a1a12'), hex('#8a4a2e'), hex('#b8805a'), hex('#d8b088')], -0.6, -0.5);
+          g.ring(x + 27, y + 22, 16, 4, hex('#b8a080'));
         },
       },
       {
@@ -75,7 +79,7 @@ const def: SceneDef = {
         x: 156, y: 16, w: 52, h: 42, paper: blue, ink, pin: pins[3]!,
         lines: [{ s: 'USED MOON' }, { s: 'LOW MILES' }, { s: '' }, { s: '' }, { s: 'NO CRATERS*' }],
         doodle: (g, x, y) => {
-          g.disc(x + 26, y + 22, 6, hex('#f4f0d8'));
+          g.disc(x + 26, y + 22, 6, hex('#e0dac4'));
           g.disc(x + 29, y + 20, 5, blue);
         },
       },
@@ -83,15 +87,15 @@ const def: SceneDef = {
         x: 216, y: 10, w: 62, h: 58, paper: pink, ink, pin: pins[2]!, tabs: 9,
         lines: [{ s: 'GUITAR' }, { s: 'LESSONS' }, { s: 'FOR YOUR' }, { s: 'GUITAR' }],
         doodle: (g, x, y) => {
-          g.disc(x + 46, y + 22, 5, hex('#8a4a2a'));
-          g.disc(x + 46, y + 16, 4, hex('#8a4a2a'));
+          g.disc(x + 46, y + 22, 5, hex('#6a3a22'));
+          g.disc(x + 46, y + 16, 4, hex('#6a3a22'));
           g.disc(x + 46, y + 20, 1, ink);
           g.rect(x + 45, y + 2, 2, 12, hex('#4a2a1a'));
         },
       },
       {
         x: 18, y: 82, w: 62, h: 52, paper: white, ink, pin: pins[4]!,
-        lines: [{ s: 'FREE!', k: 2, c: hex('#3a8a3a') }, { s: 'BOX OF SMALLER' }, { s: 'BOXES' }],
+        lines: [{ s: 'FREE!', k: 2, c: hex('#2e5a30') }, { s: 'BOX OF SMALLER' }, { s: 'BOXES' }],
         doodle: (g, x, y) => {
           for (let k = 0; k < 4; k++) frameRect(g, x + 24 + k * 2, y + 35 + k * 2, 14 - k * 4, 14 - k * 4, ink);
         },
@@ -102,7 +106,7 @@ const def: SceneDef = {
       },
       {
         x: 168, y: 66, w: 48, h: 26, paper: white, ink, pin: pins[1]!,
-        lines: [{ s: 'REX BELLOWS', c: hex('#c83a3a') }, { s: 'USED PLANETS' }, { s: 'ALL DEALS FINAL' }],
+        lines: [{ s: 'REX BELLOWS', c: hex('#8a2a26') }, { s: 'USED PLANETS' }, { s: 'ALL DEALS FINAL' }],
       },
       {
         x: 168, y: 100, w: 54, h: 46, paper: orange, ink, pin: pins[3]!,
@@ -112,10 +116,10 @@ const def: SceneDef = {
         x: 230, y: 76, w: 52, h: 56, paper: white, ink, pin: pins[4]!, tabs: 7,
         lines: [{ s: 'HAVE YOU' }, { s: 'SEEN THIS' }, { s: 'CLOUD?' }],
         doodle: (g, x, y) => {
-          g.disc(x + 18, y + 30, 5, hex('#c8d8f0'));
-          g.disc(x + 26, y + 27, 7, hex('#c8d8f0'));
-          g.disc(x + 34, y + 31, 5, hex('#c8d8f0'));
-          g.rect(x + 14, y + 31, 24, 5, hex('#c8d8f0'));
+          g.disc(x + 18, y + 30, 5, hex('#a8b4c4'));
+          g.disc(x + 26, y + 27, 7, hex('#a8b4c4'));
+          g.disc(x + 34, y + 31, 5, hex('#a8b4c4'));
+          g.rect(x + 14, y + 31, 24, 5, hex('#a8b4c4'));
           g.px(x + 24, y + 28, ink);
           g.px(x + 29, y + 28, ink);
         },
@@ -143,17 +147,20 @@ const def: SceneDef = {
     let lastTearSlot = -1;
 
     const extras: Flyer[] = [
-      { x: 120, y: 56, w: 70, h: 36, paper: hex('#d8c8ff'), ink, pin: pins[2]!, lines: [{ s: 'WANTED:' }, { s: 'ONE (1) MORE' }, { s: 'HOUR IN THE DAY' }] },
-      { x: 120, y: 56, w: 70, h: 36, paper: hex('#ffe0a0'), ink, pin: pins[0]!, lines: [{ s: 'GARAGE SALE' }, { s: 'EVERYTHING MUST' }, { s: 'GO (ELSEWHERE)' }] },
-      { x: 120, y: 56, w: 70, h: 36, paper: hex('#c0f0e0'), ink, pin: pins[4]!, lines: [{ s: 'FREE GRAVITY' }, { s: 'SLIGHTLY USED' }, { s: 'YOU COLLECT' }] },
+      { x: 120, y: 56, w: 70, h: 36, paper: hex('#b8b0c8'), ink, pin: pins[2]!, lines: [{ s: 'WANTED:' }, { s: 'ONE (1) MORE' }, { s: 'HOUR IN THE DAY' }] },
+      { x: 120, y: 56, w: 70, h: 36, paper: hex('#d0b88a'), ink, pin: pins[0]!, lines: [{ s: 'GARAGE SALE' }, { s: 'EVERYTHING MUST' }, { s: 'GO (ELSEWHERE)' }] },
+      { x: 120, y: 56, w: 70, h: 36, paper: hex('#a8c0b4'), ink, pin: pins[4]!, lines: [{ s: 'FREE GRAVITY' }, { s: 'SLIGHTLY USED' }, { s: 'YOU COLLECT' }] },
     ];
+    // Keep the headlines below the HUD's top band.
+    for (const fl of [...flyers, ...extras]) fl.y += 12;
     let extraCount = 0;
     let lastRare = -1;
 
     const drawFlyer = (g: Gfx, fl: Flyer, t: number, wobble: number, drawPin = true, yOverride?: number) => {
       const { x, w, h } = fl;
       const y = yOverride ?? fl.y;
-      g.rectA(x + 2, y + 2, w, h, ink, 0.35);
+      // Lamp above and to the left: shadows fall down and right.
+      g.rectA(x + 3, y + 3, w, h + (fl.tabs ? 12 : 0), ink, 0.45);
       g.rect(x, y, w, h, fl.paper);
       g.rect(x, y + h - 1, w, 1, shade(fl.paper, 0.85));
       g.rect(x + w - 1, y, 1, h, shade(fl.paper, 0.9));
@@ -181,16 +188,16 @@ const def: SceneDef = {
       }
       if (drawPin) {
         const px = x + Math.floor(w / 2) + wobble;
-        g.disc(px + 1, y + 2, 2, shade(ink, 1));
+        g.disc(px + 2, y + 3, 2, ink);
         g.disc(px, y + 1, 2, fl.pin);
-        g.px(px - 1, y, mix(fl.pin, hex('#ffffff'), 0.7));
+        g.px(px - 1, y, mix(fl.pin, hex('#ffffff'), 0.5));
       }
     };
 
     return {
       background(g) {
         // Wall around the board (wide/tall views).
-        g.fill(hex('#3a3430'));
+        g.fill(hex('#1c1916'));
         // Cork.
         for (let y = g.top; y < g.bottom; y++)
           for (let x = 8; x < 312; x++) {
@@ -207,6 +214,9 @@ const def: SceneDef = {
         }
         // Old pin holes and staples.
         for (let i = 0; i < 60; i++) g.px(10 + hash3(i, 3) * 300, g.top + hash3(i, 4) * g.h, cork[0]!);
+        g.lighting(0.42);
+        g.light(140, 50, 190, 0.85, 120);
+        g.light(140, 70, 80, 0.2);
       },
 
       frame(g, f) {
@@ -231,9 +241,10 @@ const def: SceneDef = {
           drawFlyer(g, fl, t, wob);
         }
         // Sticky note.
-        g.rect(196, 52, 20, 18, hex('#fff27a'));
-        g.text('CALL', 198, 55, ink);
-        g.text('BACK?', 198, 62, hex('#c83a3a'));
+        g.rectA(199, 67, 20, 18, ink, 0.4);
+        g.rect(196, 64, 20, 18, hex('#d8cc78'));
+        g.text('CALL', 198, 67, ink);
+        g.text('BACK?', 198, 74, hex('#8a2a26'));
 
         // Freshly pinned flyers (from the rare event) stay up until the next one.
         if (f.rare === 0 && ev < 7 && lastRare !== f.rareSeed) {
@@ -252,10 +263,10 @@ const def: SceneDef = {
           if (placed || inK > 0) drawFlyer(g, ex, t, 0, placed, Math.round(fy));
           const hx = ex.x + ex.w / 2 + 4;
           const hy = Math.round(placed ? ex.y + 4 + (1 - inK) * 150 : fy + 4);
-          const skin = hex('#e8b890');
-          const skinD = hex('#c8906a');
-          g.rect(hx - 7, hy + 12, 14, 70, hex('#3a5a9a'));
-          g.rect(hx - 8, hy + 12, 16, 3, hex('#2a4a8a'));
+          const skin = hex('#b88a6a');
+          const skinD = hex('#8a5e44');
+          g.rect(hx - 7, hy + 12, 14, 70, hex('#24304a'));
+          g.rect(hx - 8, hy + 12, 16, 3, hex('#1a2238'));
           roundRect(g, hx - 7, hy + 2, 14, 11, 3, skin);
           for (let k = 0; k < 4; k++) {
             g.rect(hx - 6 + k * 3, hy - 3, 2, 6, skin);
@@ -287,6 +298,12 @@ const def: SceneDef = {
           g.rect(tx, ty, flip ? 6 : 2, flip ? 12 : 10, fl.paper);
           g.rect(tx + (flip ? 2 : 0), ty + 2, 1, 6, mix(fl.ink, fl.paper, 0.4));
         }
+        // The lamp is old: now and then it stutters.
+        if (!f.reduced) {
+          const cyc = t % 23;
+          if ((cyc > 9 && cyc < 9.08) || (cyc > 9.2 && cyc < 9.26)) g.tintAll(ink, 0.35);
+        }
+        gloom(g, g.left, 140, g.w, g.bottom - 140, 0.6);
         void arc;
       },
     };
