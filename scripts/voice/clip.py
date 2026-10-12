@@ -29,8 +29,11 @@ for _kind, _catalog, _engine in (
         raise RuntimeError(f"{_kind} catalog mismatch: {sorted(set(_catalog) ^ set(_engine))}")
 
 TARGET_LUFS = -16.0
-LIMIT_CEILING_DB = -2.3  # limiter ceiling before encoding
-MAX_TRUE_PEAK_DB = -1.8  # verified on the decoded MP3 (4x oversampled; leaves margin for 8x meters)
+LOUDNESS_TOLERANCE = 0.3
+CODEC_LOSS_LU = 0.3  # 48 kbps MP3 shaves about this much loudness (mostly highs)
+LIMIT_CEILING_DB = -3.0  # limiter ceiling before encoding; 48 kbps MP3 adds ~0.5-1.2 dB of peaks
+TARGET_TRUE_PEAK_DB = -1.8  # aimed for on the decoded MP3 (4x oversampled; margin for 8x meters)
+MAX_TRUE_PEAK_DB = -1.5  # never exceeded
 EDGE = 0.05  # silence kept at each end
 BED_LEAD, BED_TAIL = 0.4, 0.6  # bed before the first and after the last sound
 BITRATE = "48k"
@@ -154,7 +157,7 @@ def master(x: np.ndarray) -> np.ndarray:
         level = dsp.loudness(x)
         if level < -70:
             return x
-        gain = float(np.clip(TARGET_LUFS - level, -30, 30))
+        gain = float(np.clip(TARGET_LUFS + CODEC_LOSS_LU - level, -30, 30))
         if attempt and abs(gain) < 0.15:
             break
         x = dsp.limit(x * dsp.db(gain), LIMIT_CEILING_DB)
@@ -168,22 +171,27 @@ def encode(x: np.ndarray, path: Path, target: float | None = TARGET_LUFS) -> tup
     tmp = path.with_name(f".{path.stem}.{os.getpid()}.tmp.mp3")
     ceiling = LIMIT_CEILING_DB
     try:
-        for attempt in range(6):
+        attempts = 5
+        for attempt in range(attempts):
             dsp.encode_mp3(x, str(tmp), BITRATE)
             decoded = dsp.decode(str(tmp))
             tp = dsp.true_peak_db(decoded)
             level = dsp.loudness(decoded)
-            peak_ok = tp <= MAX_TRUE_PEAK_DB
-            level_ok = target is None or level < -70 or abs(target - level) <= 0.25
-            if peak_ok and level_ok:
+            peak_ok = tp <= TARGET_TRUE_PEAK_DB
+            level_ok = target is None or level < -70 or abs(target - level) <= LOUDNESS_TOLERANCE
+            if (peak_ok and level_ok) or attempt == attempts - 1:
                 break
-            if attempt == 4:  # last resort: guarantee the peak, accept the loudness
-                x = x * dsp.db(min(0.0, MAX_TRUE_PEAK_DB - tp - 0.3))
-                continue
             if not peak_ok:  # the codec overshoots: limit harder rather than turning everything down
-                ceiling -= tp - MAX_TRUE_PEAK_DB + 0.2
+                ceiling -= tp - TARGET_TRUE_PEAK_DB + 0.2
             gain = 0.0 if target is None or level < -70 else target - level
             x = dsp.limit(x * dsp.db(gain), ceiling)
+        for _ in range(4):  # last resort: the hard peak limit wins over loudness
+            if tp <= MAX_TRUE_PEAK_DB:
+                break
+            x = x * dsp.db(TARGET_TRUE_PEAK_DB - tp)
+            dsp.encode_mp3(x, str(tmp), BITRATE)
+            decoded = dsp.decode(str(tmp))
+            tp = dsp.true_peak_db(decoded)
         os.replace(tmp, path)
     finally:
         tmp.unlink(missing_ok=True)
