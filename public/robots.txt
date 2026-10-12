@@ -1,0 +1,5 @@
+# Multiverse Radio. Everyone is welcome to listen.
+User-agent: *
+Allow: /
+# Developer labs: not for broadcast.
+Disallow: /lab/

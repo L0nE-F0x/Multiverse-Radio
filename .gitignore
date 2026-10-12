@@ -6,3 +6,5 @@ scripts/.cache
 .netlify
 .env
 .claude/worktrees
+playwright-report
+test-results

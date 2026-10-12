@@ -1,4 +1,7 @@
 # Netlify picks this up automatically once the GitHub repo is linked.
+# The same headers are applied locally by tests/e2e/serve-dist.mjs, so `npm run test:e2e`
+# checks the CSP against the real build. Keep header values on one line (that server's TOML
+# reader is deliberately tiny).
 [build]
   command = "npm run build"
   publish = "dist"
@@ -6,17 +9,58 @@
 [build.environment]
   NODE_VERSION = "24"
 
+# Security headers for every response.
+#
+# Content-Security-Policy, directive by directive:
+#   default-src 'self'                      nothing from other origins
+#   script-src 'self' blob:                 bundled JS; blob: for AudioWorklet modules built at runtime
+#   style-src 'self' 'unsafe-inline'        Tailwind CSS + inline styles (React style props, 404/offline pages)
+#   img-src 'self' data: blob:              inlined SVG noise, canvas snapshots, artwork
+#   font-src 'self' data:                   bundled fonts (small ones may be inlined)
+#   media-src 'self' blob: data:            voice clips, synthesized/recorded audio as blob URLs
+#   connect-src 'self' blob: data:          fetch() of voice manifests/clips and in-memory audio
+#   worker-src 'self' blob:                 the service worker, Web Workers (incl. blob workers)
+#   manifest-src 'self'                     web app manifest
+#   object-src 'none', base-uri 'self', form-action 'self', frame-ancestors 'none'
+# No 'unsafe-eval' and no inline scripts.
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Content-Security-Policy = "default-src 'self'; script-src 'self' blob:; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; media-src 'self' blob: data:; connect-src 'self' blob: data:; worker-src 'self' blob:; manifest-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'"
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "DENY"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=(), payment=(), usb=(), serial=(), hid=(), display-capture=(), browsing-topics=()"
+
+# Caching. Netlify comma-joins values when several rules set the same header on one path,
+# so every Cache-Control rule below must match a disjoint set of paths.
+
 # Vite fingerprints everything in /assets, so it can be cached forever.
 [[headers]]
   for = "/assets/*"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
-# Audio isn't fingerprinted: cache for a day so regenerated files still show up.
+# Voice library (see content/voice/SCHEMA.md):
+#   /voice/<station>.json          manifests: always revalidate, so new clips show up at once
+#   /voice/<station>/<clip>.mp3    clips: a day, so regenerated audio still shows up
+# Placeholders (match one path segment) instead of "*.json"/"*.mp3": on Netlify a "*" can
+# swallow the rest of the path, which would make the two rules overlap.
 [[headers]]
-  for = "/audio/*"
+  for = "/voice/:manifest"
+  [headers.values]
+    Cache-Control = "no-cache"
+
+[[headers]]
+  for = "/voice/:station/:clip"
   [headers.values]
     Cache-Control = "public, max-age=86400"
+
+# The service worker must never be cached, or deploys reach returning visitors late.
+[[headers]]
+  for = "/sw.js"
+  [headers.values]
+    Cache-Control = "no-cache"
 
 [[headers]]
   for = "/sfx/*"
