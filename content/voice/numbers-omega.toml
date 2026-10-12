@@ -1,0 +1,407 @@
+# Numbers Station Omega — The Counter, coordinates withheld.
+# Flat, even number readings that drift into oddly specific, personal messages. Readings
+# air over the music box (over_music = true) and are framed with chimes.
+# Bits: seven seven four, the geese you owe, the fox at the bottom of the mast.
+station = "numbers-omega"
+
+[voices]
+host = { voice = "af_kore", speed = 0.9, fx = "radio", name = "The Counter" }
+
+# ── Idents ────────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "id-001"
+category = "id"
+lines = [
+  { say = "host", text = "Numbers Station Omega.", gap = 0.9 },
+  { say = "host", text = "Seven. Seven. Four." },
+  { sting = "chime" },
+]
+
+[[clip]]
+id = "id-002"
+category = "id"
+lines = [
+  { say = "host", text = "This is Numbers Station Omega. Stand by." },
+  { sting = "chime" },
+]
+
+[[clip]]
+id = "id-003"
+category = "id"
+lines = [
+  { say = "host", text = "Omega. One oh six point six. Coordinates withheld." },
+  { sting = "chime" },
+]
+
+[[clip]]
+id = "id-004"
+category = "id"
+daypart = "night"
+lines = [
+  { say = "host", text = "Numbers Station Omega. Good evening. You know who you are." },
+  { sting = "chime" },
+]
+
+[[clip]]
+id = "id-005"
+category = "id"
+lines = [
+  { say = "host", text = "Numbers Station Omega. Seven. Seven. Four.", gap = 0.9 },
+  { say = "host", text = "You owe it geese." },
+  { sting = "chime" },
+]
+
+[[clip]]
+id = "id-006"
+category = "id"
+daypart = "morning"
+lines = [
+  { say = "host", text = "Numbers Station Omega. Morning sequence. Please have a pencil ready." },
+  { sting = "chime" },
+]
+
+[[clip]]
+id = "id-007"
+category = "id"
+lines = [
+  { sting = "chime" },
+  { say = "host", text = "Omega.", gap = 0.9 },
+  { say = "host", text = "Repeat. Omega." },
+]
+
+# ── Readings ──────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "story-001"
+category = "story"
+title = "For the listener in the blue kitchen"
+over_music = true
+lines = [
+  { sting = "chime" },
+  { say = "host", text = "Attention.", gap = 1.2 },
+  { say = "host", text = "Seven. Seven. Four.", gap = 1.0 },
+  { say = "host", text = "Seven. Seven. Four.", gap = 1.0 },
+  { say = "host", text = "Nine. One.", gap = 1.2 },
+  { say = "host", text = "Message for the listener in the blue kitchen.", gap = 0.9 },
+  { say = "host", text = "The milk is fine.", gap = 0.9 },
+  { say = "host", text = "You have smelled it three times. It is fine. Put it in the tea.", gap = 1.2 },
+  { say = "host", text = "Also, the noise in the attic is the boiler. It has always been the boiler.", gap = 1.2 },
+  { say = "host", text = "Seven. Seven. Four." },
+  { say = "host", text = "End of message.", gap = 0.8 },
+  { sting = "chime" },
+]
+
+[[clip]]
+id = "story-002"
+category = "story"
+title = "Account update"
+over_music = true
+lines = [
+  { sting = "chime" },
+  { say = "host", text = "Stand by for sequence.", gap = 1.2 },
+  { say = "host", text = "Four. Four. Two. Zero.", gap = 1.0 },
+  { say = "host", text = "Account update.", gap = 0.9 },
+  { say = "host", text = "Geese owed: eleven. Geese received: none.", gap = 0.9 },
+  { say = "host", text = "This is your final reminder. It is also your first reminder. We do not send reminders.", gap = 1.0 },
+  { say = "host", text = "The geese will come to you.", gap = 1.2 },
+  { say = "host", text = "They know where you live. They have known for some time. They are being patient about it.", gap = 1.2 },
+  { say = "host", text = "Four. Four. Two. Zero." },
+  { say = "host", text = "End of message.", gap = 0.8 },
+  { sting = "chime" },
+]
+
+[[clip]]
+id = "story-003"
+category = "story"
+title = "For the night bus, top deck"
+over_music = true
+lines = [
+  { sting = "chime" },
+  { say = "host", text = "Attention. Attention.", gap = 1.2 },
+  { say = "host", text = "One. Eight.", gap = 1.0 },
+  { say = "host", text = "One. Eight.", gap = 1.2 },
+  { say = "host", text = "For the man on the night bus. Top deck. Second seat from the front.", gap = 0.9 },
+  { say = "host", text = "Your stop was two stops ago.", gap = 0.9 },
+  { say = "host", text = "Do not get off now. Ride to the end of the line. There is a bakery. It opens at five.", gap = 1.2 },
+  { say = "host", text = "Ask for the end of yesterday's loaf. Tell them Omega sent you. They will not know what that means. They will give you the loaf anyway.", gap = 1.2 },
+  { say = "host", text = "One. Eight." },
+  { say = "host", text = "End of message.", gap = 0.8 },
+  { sting = "chime" },
+]
+
+[[clip]]
+id = "story-004"
+category = "story"
+title = "For Greg"
+over_music = true
+daypart = "night"
+lines = [
+  { sting = "chime" },
+  { say = "host", text = "Attention. Stand by.", gap = 1.2 },
+  { say = "host", text = "Three. Three. Three.", gap = 1.2 },
+  { say = "host", text = "This message is for Greg.", gap = 0.9 },
+  { say = "host", text = "Greg.", gap = 1.0 },
+  { say = "host", text = "Hollis is not angry. Hollis kept your hat.", gap = 0.9 },
+  { say = "host", text = "The porch light is on. It has been on every night. The bulb has been changed twice.", gap = 1.2 },
+  { say = "host", text = "Your hat is on the hook by the door. Nobody else is allowed to wear it.", gap = 1.2 },
+  { say = "host", text = "Three. Three. Three." },
+  { say = "host", text = "End of message.", gap = 0.8 },
+  { sting = "chime" },
+]
+
+[[clip]]
+id = "story-005"
+category = "story"
+title = "For the listener pretending to be asleep"
+over_music = true
+daypart = "night"
+lines = [
+  { sting = "chime" },
+  { say = "host", text = "Attention.", gap = 1.2 },
+  { say = "host", text = "Six. Zero. Nine.", gap = 1.0 },
+  { say = "host", text = "Six. Zero. Nine.", gap = 1.2 },
+  { say = "host", text = "To the listener who is pretending to be asleep.", gap = 0.9 },
+  { say = "host", text = "We can tell. Your breathing is too neat.", gap = 1.0 },
+  { say = "host", text = "Let it go. Let it be untidy.", gap = 1.4 },
+  { say = "host", text = "That is better. That is much better.", gap = 1.4 },
+  { say = "host", text = "There.", gap = 1.2 },
+  { say = "host", text = "Six. Zero. Nine. Repeat. Six. Zero. Nine." },
+  { say = "host", text = "End of message.", gap = 0.8 },
+  { sting = "chime" },
+]
+
+[[clip]]
+id = "story-006"
+category = "story"
+title = "For Bev"
+over_music = true
+lines = [
+  { sting = "chime" },
+  { say = "host", text = "Stand by for sequence.", gap = 1.2 },
+  { say = "host", text = "Two. Two. One.", gap = 1.2 },
+  { say = "host", text = "Message for Bev.", gap = 0.9 },
+  { say = "host", text = "Bev. The song you are looking for.", gap = 1.0 },
+  { say = "host", text = "It goes. Da. Da. Dum.", gap = 0.8 },
+  { say = "host", text = "Da. Da.", gap = 1.2 },
+  { say = "host", text = "We do not know what it is called either. We have also been looking. This is not the request line.", gap = 1.2 },
+  { say = "host", text = "If you find the request line, Bev, ask them for us.", gap = 1.2 },
+  { say = "host", text = "Two. Two. One." },
+  { say = "host", text = "End of message.", gap = 0.8 },
+  { sting = "chime" },
+]
+
+[[clip]]
+id = "story-007"
+category = "story"
+title = "Water the fern"
+over_music = true
+lines = [
+  { sting = "chime" },
+  { say = "host", text = "Attention. Attention.", gap = 1.2 },
+  { say = "host", text = "Eight. Five.", gap = 1.0 },
+  { say = "host", text = "Eight. Five.", gap = 1.2 },
+  { say = "host", text = "Water the fern.", gap = 0.9 },
+  { say = "host", text = "Not the plastic one. You know which one.", gap = 0.9 },
+  { say = "host", text = "You have been watering the plastic one since March. It is very grateful. It is still plastic.", gap = 1.2 },
+  { say = "host", text = "The real fern is behind the curtain. It has been very brave about all this.", gap = 1.2 },
+  { say = "host", text = "Eight. Five." },
+  { say = "host", text = "End of message.", gap = 0.8 },
+  { sting = "chime" },
+]
+
+[[clip]]
+id = "story-008"
+category = "story"
+title = "Disregard"
+over_music = true
+lines = [
+  { sting = "chime" },
+  { say = "host", text = "Attention. Stand by.", gap = 1.2 },
+  { say = "host", text = "Zero. Zero. Seven.", gap = 1.2 },
+  { say = "host", text = "Disregard. That one was not for you.", gap = 1.0 },
+  { say = "host", text = "Zero. Zero. Seven.", gap = 1.2 },
+  { say = "host", text = "That one was for the fox at the bottom of the mast.", gap = 0.9 },
+  { say = "host", text = "The fox has listened to every transmission since the mast was built. It has never once written anything down.", gap = 0.9 },
+  { say = "host", text = "The fox knows what it means. The fox will not tell you.", gap = 1.2 },
+  { say = "host", text = "Good fox." },
+  { say = "host", text = "End of message.", gap = 0.8 },
+  { sting = "chime" },
+]
+
+[[clip]]
+id = "story-009"
+category = "story"
+title = "This sequence is sponsored"
+over_music = true
+lines = [
+  { sting = "chime" },
+  { say = "host", text = "Attention.", gap = 1.2 },
+  { say = "host", text = "Nine. Nine. Nine. Nine.", gap = 1.2 },
+  { say = "host", text = "This sequence is sponsored.", gap = 1.0 },
+  { say = "host", text = "Grumbel's Ladders. Up is a choice.", gap = 1.0 },
+  { say = "host", text = "We have been asked to read that. We have been asked to sound pleased.", gap = 1.4 },
+  { say = "host", text = "We are pleased. This is how we sound when we are pleased.", gap = 1.4 },
+  { say = "host", text = "Nine. Nine. Nine. Nine. Repeat. Nine. Nine. Nine. Nine." },
+  { say = "host", text = "End of message.", gap = 0.8 },
+  { sting = "chime" },
+]
+
+[[clip]]
+id = "story-010"
+category = "story"
+title = "About Tuesday"
+over_music = true
+lines = [
+  { sting = "chime" },
+  { say = "host", text = "Stand by for sequence.", gap = 1.2 },
+  { say = "host", text = "Four. Seven.", gap = 1.0 },
+  { say = "host", text = "Four. Seven.", gap = 1.2 },
+  { say = "host", text = "For the person who said something unkind on Tuesday, and cannot stop thinking about it.", gap = 1.0 },
+  { say = "host", text = "They have forgotten. They forgot by Wednesday lunchtime.", gap = 1.0 },
+  { say = "host", text = "You may stop now.", gap = 1.2 },
+  { say = "host", text = "Also, they liked your shoes. They said so to someone else, on Thursday.", gap = 1.2 },
+  { say = "host", text = "Four. Seven." },
+  { say = "host", text = "End of message.", gap = 0.8 },
+  { sting = "chime" },
+]
+
+[[clip]]
+id = "story-011"
+category = "story"
+title = "This is a test"
+over_music = true
+daypart = "morning"
+lines = [
+  { sting = "chime" },
+  { say = "host", text = "Attention. Attention.", gap = 1.2 },
+  { say = "host", text = "One. Two. Three. Four. Five.", gap = 1.0 },
+  { say = "host", text = "This is a test.", gap = 1.2 },
+  { say = "host", text = "One. Two. Three. Four. Five.", gap = 1.2 },
+  { say = "host", text = "You passed. Well done. Nobody else took it. You are top of the class.", gap = 1.2 },
+  { say = "host", text = "Your prize is a small feeling of satisfaction. It will arrive within the hour.", gap = 1.2 },
+  { say = "host", text = "Five. Four. Three. Two. One. Pencils down." },
+  { say = "host", text = "End of message.", gap = 0.8 },
+  { sting = "chime" },
+]
+
+[[clip]]
+id = "story-012"
+category = "story"
+title = "What seven seven four means"
+over_music = true
+lines = [
+  { sting = "chime" },
+  { say = "host", text = "Attention. Stand by.", gap = 1.2 },
+  { say = "host", text = "Seven. Seven. Four.", gap = 1.2 },
+  { say = "host", text = "We are often asked what seven seven four means.", gap = 0.9 },
+  { say = "host", text = "It means seven. Then it means seven again. Then it means four.", gap = 1.0 },
+  { say = "host", text = "There is nothing hidden. Some things are only what they are.", gap = 1.0 },
+  { say = "host", text = "That is the message.", gap = 1.2 },
+  { say = "host", text = "Not everything is a code. Sometimes a number is just keeping you company.", gap = 1.2 },
+  { say = "host", text = "Seven. Seven. Four." },
+  { say = "host", text = "End of message.", gap = 0.8 },
+  { sting = "chime" },
+]
+
+[[clip]]
+id = "story-013"
+category = "story"
+title = "The spare key"
+over_music = true
+lines = [
+  { sting = "chime" },
+  { say = "host", text = "Attention.", gap = 1.2 },
+  { say = "host", text = "Two. Nine.", gap = 1.0 },
+  { say = "host", text = "Two. Nine.", gap = 1.2 },
+  { say = "host", text = "The spare key is not under the mat. You moved it.", gap = 0.9 },
+  { say = "host", text = "It is under the gnome.", gap = 0.9 },
+  { say = "host", text = "The gnome has been watching the door for you all this time. Thank the gnome.", gap = 1.2 },
+  { say = "host", text = "Out loud. He has been waiting a long time for someone to notice.", gap = 1.2 },
+  { say = "host", text = "Two. Nine." },
+  { say = "host", text = "End of message.", gap = 0.8 },
+  { sting = "chime" },
+]
+
+[[clip]]
+id = "story-014"
+category = "story"
+title = "The geese have got in"
+over_music = true
+lines = [
+  { sting = "chime" },
+  { say = "host", text = "Stand by for sequence.", gap = 1.2 },
+  { say = "host", text = "Geese.", gap = 0.8 },
+  { say = "host", text = "Geese.", gap = 0.8 },
+  { say = "host", text = "Geese.", gap = 1.2 },
+  { say = "host", text = "Apologies. That was not a number.", gap = 0.9 },
+  { say = "host", text = "The geese have got into the transmitter. They are collecting. Please have your geese ready.", gap = 1.0 },
+  { say = "host", text = "Eight.", gap = 0.8 },
+  { say = "host", text = "Eight geese. Thank you." },
+  { say = "host", text = "Correction. Nine geese. One of them is new. He does not know the rules yet.", gap = 1.0 },
+  { say = "host", text = "Please leave the geese at the bottom of the mast. The fox will sign for them." },
+  { say = "host", text = "End of message.", gap = 0.8 },
+  { sting = "chime" },
+]
+
+[[clip]]
+id = "story-015"
+category = "story"
+title = "Countdown"
+over_music = true
+daypart = "night"
+lines = [
+  { sting = "chime" },
+  { say = "host", text = "Attention. Attention.", gap = 1.2 },
+  { say = "host", text = "Ten.", gap = 1.0 },
+  { say = "host", text = "Nine.", gap = 1.0 },
+  { say = "host", text = "Eight.", gap = 1.2 },
+  { say = "host", text = "This is a countdown. Nothing happens at the end. You will simply be a little sleepier.", gap = 1.2 },
+  { say = "host", text = "You do not have to count along. We will do the counting. That is what we are for.", gap = 1.2 },
+  { say = "host", text = "Seven.", gap = 1.0 },
+  { say = "host", text = "Six. Five. Four.", gap = 1.2 },
+  { say = "host", text = "Three. Two.", gap = 1.4 },
+  { say = "host", text = "One.", gap = 2.0 },
+  { say = "host", text = "There." },
+  { say = "host", text = "End of message.", gap = 0.8 },
+  { sting = "chime" },
+]
+
+[[clip]]
+id = "story-016"
+category = "story"
+title = "For the laundrette"
+over_music = true
+lines = [
+  { sting = "chime" },
+  { say = "host", text = "Attention. Stand by.", gap = 1.2 },
+  { say = "host", text = "Five. One. Five.", gap = 1.0 },
+  { say = "host", text = "Five. One. Five.", gap = 1.2 },
+  { say = "host", text = "For the person in the laundrette.", gap = 0.9 },
+  { say = "host", text = "The sock you are looking for is inside the duvet cover.", gap = 0.9 },
+  { say = "host", text = "It has been there since the autumn. It was happy there. Let it finish the cycle.", gap = 1.2 },
+  { say = "host", text = "The other sock has been told. It is relieved.", gap = 1.2 },
+  { say = "host", text = "Five. One. Five." },
+  { say = "host", text = "End of message.", gap = 0.8 },
+  { sting = "chime" },
+]
+
+[[clip]]
+id = "story-017"
+category = "story"
+title = "Relay Four"
+over_music = true
+daypart = "night"
+lines = [
+  { sting = "chime" },
+  { say = "host", text = "Attention.", gap = 1.2 },
+  { say = "host", text = "Four. Four. Four.", gap = 1.2 },
+  { say = "host", text = "Relay Four. Relay Four.", gap = 1.0 },
+  { say = "host", text = "Teodor. We hear you. We have always heard you.", gap = 1.0 },
+  { say = "host", text = "We did not answer because we are only allowed to say numbers.", gap = 1.0 },
+  { say = "host", text = "This is a number.", gap = 1.2 },
+  { say = "host", text = "It means: keep talking, Teodor. Somebody is always listening.", gap = 1.2 },
+  { say = "host", text = "Four. Four. Four. Repeat. Four. Four. Four." },
+  { say = "host", text = "End of message.", gap = 0.8 },
+  { sting = "chime" },
+]
