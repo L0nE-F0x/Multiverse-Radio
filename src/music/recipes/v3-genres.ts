@@ -4,5 +4,12 @@
 
 import type { RecipeId } from '../../broadcast/types';
 import type { Composer } from './index';
+import { composeCityPop } from './city-pop';
+import { composeDrumAndBass } from './drum-and-bass';
+import { composeJazzTrio } from './jazz-trio';
 
-export const GENRES_V3: Partial<Record<RecipeId, Composer>> = {};
+export const GENRES_V3: Partial<Record<RecipeId, Composer>> = {
+  'jazz-trio': composeJazzTrio,
+  'city-pop': composeCityPop,
+  'drum-and-bass': composeDrumAndBass,
+};
