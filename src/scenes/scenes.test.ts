@@ -28,10 +28,8 @@ function frame(): Frame {
 }
 
 describe('scene registry', () => {
-  // TODO(v3 integration): back to "every SceneId" once the v3 scenes have landed.
-  it('registers only known scenes, including every v2 scene', () => {
-    for (const id of Object.keys(SCENES)) expect(SCENE_IDS).toContain(id);
-    for (const id of SCENE_IDS.slice(0, SCENE_IDS.indexOf('cloud-club'))) expect(SCENES[id], id).toBeDefined();
+  it('has a scene module for every SceneId and nothing else', () => {
+    expect(Object.keys(SCENES).sort()).toEqual([...SCENE_IDS].sort());
   });
 
   it('gives every scene a short one-sentence aria-label', () => {
