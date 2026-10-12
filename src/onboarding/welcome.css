@@ -1,0 +1,569 @@
+/* Welcome card and install steps: a translucent "used future" terminal over the viewport.
+   Self-contained on purpose (scoped .nj-* classes, no Tailwind, no reliance on the global
+   reset), coloured by the HUD's --phosphor with amber as the fallback. */
+
+.nj-term {
+  --nj-ph: var(--phosphor, #ffb000);
+  --nj-dim: rgba(255, 176, 0, 0.74);
+  --nj-faint: rgba(255, 176, 0, 0.34);
+  --nj-ghost: rgba(255, 176, 0, 0.1);
+  --nj-glow: rgba(255, 176, 0, 0.42);
+  --nj-ink: #140d02;
+  --nj-gap: 20px;
+
+  box-sizing: border-box;
+  position: fixed;
+  inset: 0;
+  margin: auto;
+  width: min(36rem, calc(100% - 24px));
+  max-width: none;
+  height: fit-content;
+  max-height: calc(100vh - 24px);
+  max-height: calc(100dvh - 24px - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px));
+  overflow: auto;
+  overscroll-behavior: contain;
+  padding: 0;
+  border: 1px solid var(--nj-faint);
+  border-radius: 3px;
+  color: var(--nj-ph);
+  font-family: var(--font-hud, var(--font-mono, 'IBM Plex Mono', ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace));
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.55;
+  letter-spacing: 0;
+  text-align: left;
+  -webkit-text-size-adjust: 100%;
+  /* Corner brackets, scanlines (scrolling with the content) and the glass. */
+  background:
+    linear-gradient(var(--nj-ph), var(--nj-ph)) left 6px top 6px / 12px 1.5px no-repeat local,
+    linear-gradient(var(--nj-ph), var(--nj-ph)) left 6px top 6px / 1.5px 12px no-repeat local,
+    linear-gradient(var(--nj-ph), var(--nj-ph)) right 6px top 6px / 12px 1.5px no-repeat local,
+    linear-gradient(var(--nj-ph), var(--nj-ph)) right 6px top 6px / 1.5px 12px no-repeat local,
+    linear-gradient(var(--nj-ph), var(--nj-ph)) left 6px bottom 6px / 12px 1.5px no-repeat local,
+    linear-gradient(var(--nj-ph), var(--nj-ph)) left 6px bottom 6px / 1.5px 12px no-repeat local,
+    linear-gradient(var(--nj-ph), var(--nj-ph)) right 6px bottom 6px / 12px 1.5px no-repeat local,
+    linear-gradient(var(--nj-ph), var(--nj-ph)) right 6px bottom 6px / 1.5px 12px no-repeat local,
+    repeating-linear-gradient(to bottom, rgba(0, 0, 0, 0.22) 0 1px, transparent 1px 3px) local,
+    radial-gradient(ellipse 90% 70% at 50% 0%, var(--nj-ghost), transparent 70%) local,
+    rgba(9, 7, 3, 0.88);
+  box-shadow:
+    0 0 0 1px rgba(0, 0, 0, 0.6),
+    0 24px 70px rgba(0, 0, 0, 0.6),
+    0 0 48px var(--nj-ghost);
+  animation: nj-in 420ms cubic-bezier(0.2, 0.8, 0.25, 1) both;
+}
+
+@supports (color: color-mix(in srgb, red, blue)) {
+  .nj-term {
+    --nj-dim: color-mix(in srgb, var(--nj-ph) 74%, transparent);
+    --nj-faint: color-mix(in srgb, var(--nj-ph) 34%, transparent);
+    --nj-ghost: color-mix(in srgb, var(--nj-ph) 10%, transparent);
+    --nj-glow: color-mix(in srgb, var(--nj-ph) 42%, transparent);
+  }
+}
+
+.nj-term:not([open]) {
+  display: none;
+}
+
+.nj-term::backdrop {
+  background: radial-gradient(ellipse 80% 70% at 50% 45%, rgba(3, 2, 1, 0.3), rgba(0, 0, 0, 0.72));
+  animation: nj-fade 420ms ease both;
+}
+
+.nj-term *,
+.nj-term *::before,
+.nj-term *::after {
+  box-sizing: border-box;
+}
+
+.nj-term :where(h2, h3, p, ol, li) {
+  margin: 0;
+  padding: 0;
+}
+
+/* A single bright line sweeps down the glass as the card powers up. The wrapper clips it,
+   so it never adds scrollable overflow. */
+.nj-term__fx {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.nj-term__sweep {
+  position: absolute;
+  inset: 0 0 auto;
+  height: 38%;
+  pointer-events: none;
+  background: linear-gradient(to bottom, transparent, var(--nj-ghost) 70%, var(--nj-faint) 99%, transparent);
+  opacity: 0;
+  animation: nj-sweep 1100ms ease-out 120ms both;
+}
+
+.nj-term__bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 4px 16px;
+  padding: 10px var(--nj-gap) 9px;
+  border-bottom: 1px solid var(--nj-faint);
+  color: var(--nj-dim);
+  font-size: 10.5px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.nj-led {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin-right: 4px;
+  vertical-align: 1px;
+  background: var(--nj-ph);
+  box-shadow: 0 0 6px var(--nj-ph);
+  animation: nj-blink 2.4s steps(1, end) infinite;
+}
+
+.nj-term__body {
+  position: relative;
+  padding: 18px var(--nj-gap) 22px;
+}
+
+.nj-term__kicker {
+  margin-bottom: 6px;
+  color: var(--nj-dim);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.nj-term__title {
+  margin-bottom: 12px;
+  color: var(--nj-ph);
+  font: inherit;
+  font-size: clamp(21px, 5.4vw, 27px);
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-shadow: 0 0 12px var(--nj-glow);
+}
+
+.nj-term__title--small {
+  font-size: clamp(19px, 4.6vw, 23px);
+}
+
+.nj-term__cursor {
+  display: inline-block;
+  width: 0.55em;
+  height: 0.85em;
+  margin-left: 0.15em;
+  vertical-align: -0.05em;
+  background: var(--nj-ph);
+  box-shadow: 0 0 10px var(--nj-glow);
+  animation: nj-blink 1.06s steps(1, end) infinite;
+}
+
+.nj-term__text {
+  margin-bottom: 16px;
+  text-shadow: 0 0 8px var(--nj-ghost);
+  text-wrap: pretty;
+}
+
+.nj-term__patch {
+  margin-bottom: 18px;
+  padding: 8px 12px;
+  border-left: 2px solid var(--nj-ph);
+  background: var(--nj-ghost);
+  text-wrap: pretty;
+}
+
+.nj-term__patch strong {
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.nj-term__label {
+  display: block;
+  margin-bottom: 2px;
+  color: var(--nj-dim);
+  font-size: 10.5px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.nj-term__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.nj-term__actions--end {
+  justify-content: flex-end;
+  margin-top: 16px;
+}
+
+/* Buttons: F-key style, caps, square-ish. */
+.nj-btn {
+  appearance: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 46px;
+  margin: 0;
+  padding: 10px 18px;
+  border: 1px solid var(--nj-ph);
+  border-radius: 2px;
+  background: transparent;
+  color: var(--nj-ph);
+  font: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  cursor: pointer;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  transition:
+    background-color 140ms ease,
+    box-shadow 140ms ease,
+    border-color 140ms ease;
+}
+
+.nj-btn:focus-visible {
+  outline: 2px solid var(--nj-ph);
+  outline-offset: 3px;
+}
+
+.nj-btn--primary {
+  flex: 2 1 9rem;
+  background: var(--nj-ph);
+  color: var(--nj-ink);
+  box-shadow: 0 0 20px var(--nj-glow);
+}
+
+.nj-btn--primary:hover {
+  box-shadow:
+    0 0 0 1px var(--nj-ph),
+    0 0 30px var(--nj-glow);
+}
+
+.nj-btn--primary:active {
+  transform: translateY(1px);
+}
+
+.nj-btn--ghost {
+  flex: 1 1 auto;
+  border-color: var(--nj-faint);
+}
+
+.nj-btn--ghost:hover {
+  border-color: var(--nj-dim);
+  background: var(--nj-ghost);
+}
+
+.nj-btn--install {
+  width: 100%;
+  border-color: var(--nj-dim);
+}
+
+.nj-btn[aria-disabled='true'] {
+  cursor: progress;
+  opacity: 0.6;
+}
+
+.nj-btn kbd {
+  margin-left: 2px;
+  padding: 1px 5px;
+  border: 1px solid currentColor;
+  border-radius: 2px;
+  font: inherit;
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  opacity: 0.7;
+}
+
+@media not ((hover: hover) and (pointer: fine)) {
+  .nj-btn kbd {
+    display: none;
+  }
+}
+
+.nj-glyph {
+  flex: none;
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  vertical-align: -3px;
+}
+
+.nj-step__do .nj-glyph {
+  margin-left: 6px;
+}
+
+.nj-glyph--solid {
+  width: 14px;
+  height: 14px;
+  fill: currentColor;
+  stroke: none;
+}
+
+/* Install ("dock") section. */
+.nj-dock {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px dashed var(--nj-faint);
+}
+
+.nj-dock__title {
+  margin-bottom: 6px;
+  color: var(--nj-ph);
+  font: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.nj-dock__text,
+.nj-dock__status {
+  margin-bottom: 12px;
+  color: var(--nj-dim);
+  font-size: 13px;
+  text-wrap: pretty;
+}
+
+.nj-dock__status {
+  margin-bottom: 0;
+  color: var(--nj-ph);
+}
+
+/* iOS steps. */
+.nj-steps {
+  display: grid;
+  gap: 8px;
+  list-style: none;
+}
+
+.nj-step {
+  display: grid;
+  grid-template-columns: auto 76px 1fr;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 12px 8px 10px;
+  border: 1px solid var(--nj-ghost);
+  background: linear-gradient(90deg, var(--nj-ghost), transparent);
+}
+
+.nj-step__n {
+  align-self: start;
+  padding-top: 2px;
+  color: var(--nj-dim);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+}
+
+.nj-step__do {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  line-height: 1.3;
+  text-transform: uppercase;
+}
+
+.nj-step__note {
+  margin-top: 3px;
+  color: var(--nj-dim);
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.nj-art {
+  display: block;
+  width: 76px;
+  height: 52px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.nj-art__frame {
+  stroke-opacity: 0.32;
+  fill: rgba(0, 0, 0, 0.35);
+}
+
+.nj-art__faint {
+  stroke-opacity: 0.18;
+}
+
+.nj-art__dim {
+  stroke-opacity: 0.42;
+}
+
+.nj-art__hi {
+  stroke-width: 1.7;
+  filter: drop-shadow(0 0 2px var(--nj-glow));
+}
+
+.nj-art__ring {
+  stroke-width: 1.2;
+  stroke-dasharray: 2.4 2;
+  stroke-opacity: 0.85;
+}
+
+.nj-art__band {
+  fill: var(--nj-ghost);
+  stroke-opacity: 0.55;
+}
+
+.nj-art__moon {
+  fill: currentColor;
+  stroke: none;
+}
+
+.nj-art__dot {
+  fill: currentColor;
+  stroke: none;
+}
+
+.nj-art__text {
+  fill: currentColor;
+  stroke: none;
+  font: 600 8px var(--font-hud, var(--font-mono, ui-monospace, monospace));
+  letter-spacing: 0.02em;
+}
+
+@media (max-width: 420px) {
+  .nj-term__bar {
+    gap: 4px 10px;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+  }
+}
+
+@media (max-width: 380px) {
+  .nj-term {
+    --nj-gap: 16px;
+    font-size: 13.5px;
+  }
+
+  .nj-btn {
+    padding-inline: 14px;
+    letter-spacing: 0.12em;
+  }
+
+  .nj-step {
+    grid-template-columns: 64px 1fr;
+    gap: 10px;
+  }
+
+  .nj-step__n {
+    display: none;
+  }
+
+  .nj-art {
+    width: 64px;
+    height: 44px;
+  }
+}
+
+@media (min-width: 720px) {
+  .nj-term {
+    --nj-gap: 26px;
+    font-size: 15px;
+  }
+
+  .nj-term__body {
+    padding-top: 22px;
+    padding-bottom: 26px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .nj-term {
+    width: 40rem;
+    font-size: 16px;
+  }
+}
+
+@keyframes nj-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.99);
+  }
+}
+
+@keyframes nj-fade {
+  from {
+    opacity: 0;
+  }
+}
+
+@keyframes nj-sweep {
+  0% {
+    opacity: 1;
+    transform: translateY(-100%);
+  }
+  85% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(240%);
+  }
+}
+
+@keyframes nj-blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nj-term,
+  .nj-term::backdrop,
+  .nj-led,
+  .nj-term__cursor {
+    animation: none;
+  }
+
+  .nj-term__fx {
+    display: none;
+  }
+
+  .nj-btn {
+    transition: none;
+  }
+
+  .nj-btn--primary:active {
+    transform: none;
+  }
+}
+
+@media (forced-colors: active) {
+  .nj-term {
+    border: 2px solid CanvasText;
+  }
+
+  .nj-btn {
+    border: 1px solid ButtonText;
+  }
+
+  .nj-term__cursor,
+  .nj-led,
+  .nj-term__fx {
+    display: none;
+  }
+}
