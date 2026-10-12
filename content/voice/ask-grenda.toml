@@ -1138,7 +1138,7 @@ lines = [
   { say = "teodor_far", text = "This is Relay Four. Is anyone receiving this.", gap = 1.0 },
   { say = "bev", text = "Hello? Is this the request line?", gap = 1.6 },
   { say = "teodor_far", text = "Yes. Yes it is. I'm sorry it took so long. What can I play for you?" },
-  { say = "bev", text = "It goes, dum, dum, da dum. And then, da da dum, da da. I heard it in a lift, eleven years ago." },
+  { say = "bev", text = "It goes, dum, dum, da dum. And then, da da dum, da da. I heard it in a lift, a long time ago." },
   { say = "teodor_far", text = "Grand Overlap Hotel. Lift two. I remember putting it through. Hold on. Reel four. Track two, two, one." },
   { sfx = "tape-rewind" },
   { say = "teodor_far", text = "It's called Pleasant Interval.", gap = 1.4 },

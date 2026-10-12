@@ -1053,7 +1053,7 @@ lines = [
   { sting = "chime" },
   { say = "rex", text = "Personals, folks, and Linda says this one's special. Linda?" },
   { say = "linda", text = "Seeking. The request line.", speed = 0.95, gap = 0.9 },
-  { say = "linda", text = "Placed by Bev, of the eastern Overlap. Bev writes. I am looking for a song. I heard it in a lift, eleven years ago, with a man called Stan, who cried at everything.", speed = 0.95, gap = 0.6 },
+  { say = "linda", text = "Placed by Bev, of the eastern Overlap. Bev writes. I am looking for a song. I heard it in a lift, a long time ago, with a man called Stan, who cried at everything.", speed = 0.95, gap = 0.6 },
   { say = "linda", text = "Stan cried at weddings. Stan cried at adverts. Stan cried at a nice bridge in the rain. Stan cried when the lift doors opened, because he'd liked it in there.", speed = 0.95, gap = 0.6 },
   { say = "linda", text = "Stan is gone now. I would like to hear the song once more, on the radio, so that somebody cries at it again. Please call.", speed = 0.95, gap = 1.4 },
   { say = "rex", text = "Folks, I've got a request line on the lot. Barely used. I could do Bev a deal.", speed = 1.0 },

@@ -13,6 +13,9 @@ station = "dimension-hop"
 [voices]
 jace = { voice = "am_michael", name = "Jace" }
 mara = { voice = "af_bella", name = "Mara" }
+# v3: serials.
+bev = { voice = "af_nova", fx = "phone", name = "Bev" }
+teodor = { voice = "bm_daniel", fx = "distant", name = "Teodor, Relay Four" }
 
 # ── Idents ────────────────────────────────────────────────────────────────────
 
@@ -489,4 +492,545 @@ lines = [
   { say = "mara", text = "What did it do?" },
   { say = "jace", text = "It went round." },
   { say = "mara", text = "Oh, Jace. Did it ever get there?" },
+]
+
+# ══ v3: the living schedule ═══════════════════════════════════════════════════
+#
+# Shows, the banter kit (an intro, then one to three rounds of Jace explaining something
+# ordinary and Mara reframing it, then a break), serial episodes and Halloween.
+# Existing clips above are rendered and deployed; only add.
+
+# ── Shows ─────────────────────────────────────────────────────────────────────
+
+[[show]]
+id = "four-seconds-early"
+name = "Four Seconds Early"
+blurb = "The breakfast show that started four seconds before you woke up."
+start = 6
+end = 8
+host = "Mara"
+
+[[show]]
+id = "normal-or-not-normal-live"
+name = "Normal or Not Normal: Live"
+blurb = "The game where Jace's entire reality is on trial, and losing."
+start = 19
+end = 21
+
+[[show]]
+id = "the-late-hop"
+name = "The Late Hop"
+blurb = "Jace and Mara after dark, when both realities are a bit sleepy."
+start = 22
+end = 1
+
+[[clip]]
+id = "four-seconds-early-open"
+category = "id"
+show = "four-seconds-early"
+part = "open"
+title = "Four Seconds Early"
+lines = [
+  { say = "mara", text = "Good morning! This is Four Seconds Early! I've already had breakfast!" },
+  { say = "jace", text = "I'm still in bed, Mara.", speed = 0.9 },
+  { say = "mara", text = "I know. You'll be up in a minute." },
+]
+
+[[clip]]
+id = "four-seconds-early-01"
+category = "dj"
+show = "four-seconds-early"
+lines = [
+  { say = "mara", text = "Morning traffic on my side! Downhill is clear, uphill is closed for emergencies, and my aunt is still up the hill with the oven." },
+  { say = "jace", text = "Is the oven still off?" },
+  { say = "mara", text = "Nineteen years, Jace. Still off. She checks it every morning. It's the most reassuring thing on my side of the rift." },
+]
+
+[[clip]]
+id = "four-seconds-early-02"
+category = "dj"
+show = "four-seconds-early"
+lines = [
+  { say = "jace", text = "Mara, I've got a question about breakfast." },
+  { say = "mara", text = "Toast." },
+  { say = "jace", text = "I haven't asked yet." },
+  { say = "mara", text = "You were going to ask what I'm having. Toast. Backwards. It turns back into bread at the end. It's very relaxing." },
+]
+
+[[clip]]
+id = "normal-or-not-normal-live-open"
+category = "id"
+show = "normal-or-not-normal-live"
+part = "open"
+title = "Normal or Not Normal: Live"
+lines = [
+  { sting = "fanfare" },
+  { say = "mara", text = "It's Normal or Not Normal, live! Jace's reality is on trial, and it's not looking good!" },
+  { say = "jace", text = "It's looking fine." },
+]
+
+[[clip]]
+id = "normal-or-not-normal-live-01"
+category = "dj"
+show = "normal-or-not-normal-live"
+lines = [
+  { say = "mara", text = "Live audience tonight, Jace! They can see you!" },
+  { say = "jace", text = "There's no audience, Mara. It's a radio show." },
+  { say = "mara", text = "On my side there's a live audience. They're upside down. They're waving." },
+  { sfx = "applause", seconds = 1.6, level = 0.5 },
+  { say = "jace", text = "Hi." },
+]
+
+[[clip]]
+id = "normal-or-not-normal-live-02"
+category = "dj"
+show = "normal-or-not-normal-live"
+lines = [
+  { say = "jace", text = "Before we start, I'd like to say that my reality is fine, and most of the things in it are normal." },
+  { say = "mara", text = "Noted. Not normal." },
+  { sfx = "beep" },
+  { say = "jace", text = "That wasn't a round!" },
+  { say = "mara", text = "Everything's a round, Jace." },
+]
+
+[[clip]]
+id = "the-late-hop-open"
+category = "id"
+show = "the-late-hop"
+part = "open"
+title = "The Late Hop"
+lines = [
+  { say = "jace", text = "This is the Late Hop. It's late on my side." },
+  { say = "mara", text = "It's later on mine. About four seconds later." },
+  { sting = "id" },
+]
+
+[[clip]]
+id = "the-late-hop-01"
+category = "dj"
+show = "the-late-hop"
+lines = [
+  { say = "jace", text = "Mara, what do people do at night, on your side?" },
+  { say = "mara", text = "We roll slower. And we tell the hill a story, so it doesn't worry about the dark." },
+  { say = "jace", text = "Hills worry?" },
+  { say = "mara", text = "Gerald does. He's very sensitive about being a silhouette." },
+]
+
+[[clip]]
+id = "the-late-hop-02"
+category = "dj"
+show = "the-late-hop"
+lines = [
+  { say = "mara", text = "It's past midnight on your side, Jace, which means it's tomorrow. Happy tomorrow." },
+  { say = "jace", text = "Thanks. Is it nice?" },
+  { say = "mara", text = "It's the same as today, but you're more tired. Sorry. I've seen it." },
+]
+
+# ── Banter kit: intros ────────────────────────────────────────────────────────
+
+[[clip]]
+id = "banter-open-01"
+category = "show"
+kit = "banter"
+part = "open"
+lines = [
+  { sting = "id" },
+  { say = "jace", text = "Welcome back to Dimension Hop. I'm Jace." },
+  { say = "mara", text = "And I'm Mara. I welcomed you back four seconds ago." },
+]
+
+[[clip]]
+id = "banter-open-02"
+category = "show"
+kit = "banter"
+part = "open"
+lines = [
+  { say = "mara", text = "We're back! Jace, tell me something normal from your side." },
+  { say = "jace", text = "Okay. Here goes." },
+]
+
+[[clip]]
+id = "banter-open-03"
+category = "show"
+kit = "banter"
+part = "open"
+lines = [
+  { sting = "fanfare" },
+  { say = "mara", text = "It's time for Normal, or Not Normal! Jace describes a thing, and I judge his entire reality!" },
+]
+
+[[clip]]
+id = "banter-open-04"
+category = "show"
+kit = "banter"
+part = "open"
+lines = [
+  { say = "jace", text = "Mara, I want to explain something from my side." },
+  { say = "mara", text = "Oh no. Go on." },
+]
+
+[[clip]]
+id = "banter-open-05"
+category = "show"
+kit = "banter"
+part = "open"
+lines = [
+  { say = "mara", text = "Jace has brought in some listener questions. He's holding them upside down. On my side, that's correct." },
+]
+
+[[clip]]
+id = "banter-open-06"
+category = "show"
+kit = "banter"
+part = "open"
+daypart = "night"
+lines = [
+  { say = "jace", text = "It's the late bit of the show, where we're both tired and say true things." },
+  { say = "mara", text = "Or I do. You'll catch up." },
+]
+
+# ── Banter kit: rounds ────────────────────────────────────────────────────────
+
+[[clip]]
+id = "banter-body-01"
+category = "show"
+kit = "banter"
+part = "body"
+title = "Socks"
+lines = [
+  { say = "jace", text = "Socks. You wear one on each foot, and they have to match." },
+  { say = "mara", text = "Who checks?" },
+  { say = "jace", text = "Nobody checks." },
+  { say = "mara", text = "So you've all agreed to match, in secret, under your trousers, where nobody can see." },
+  { say = "jace", text = "Yes." },
+  { say = "mara", text = "Normal. Romantic. Normal." },
+  { sfx = "ding" },
+]
+
+[[clip]]
+id = "banter-body-02"
+category = "show"
+kit = "banter"
+part = "body"
+title = "Queueing"
+lines = [
+  { say = "jace", text = "Queueing. When lots of people are waiting, we stand in a line, in the order we arrived." },
+  { say = "mara", text = "Who's in charge?" },
+  { say = "jace", text = "Nobody." },
+  { say = "mara", text = "And if somebody pushes in?" },
+  { say = "jace", text = "Everyone sighs. Quite loudly." },
+  { say = "mara", text = "Not normal. That's a choir, Jace. You're all in a choir and you don't know it." },
+  { sfx = "beep" },
+]
+
+[[clip]]
+id = "banter-body-03"
+category = "show"
+kit = "banter"
+part = "body"
+title = "Sorry"
+lines = [
+  { say = "jace", text = "Saying sorry when someone else bumps into you." },
+  { say = "mara", text = "Why would you say sorry?" },
+  { say = "jace", text = "I don't know. It just comes out." },
+  { say = "mara", text = "So when you get hurt, you apologise to the thing that hurt you." },
+  { say = "jace", text = "Mostly." },
+  { say = "mara", text = "Jace. That's the kindest, saddest thing your reality does. Normal. Sorry. Normal." },
+  { sfx = "ding" },
+]
+
+[[clip]]
+id = "banter-body-04"
+category = "show"
+kit = "banter"
+part = "body"
+title = "Cake at Work"
+lines = [
+  { say = "jace", text = "Birthdays at work. Somebody brings in a cake, and everybody stands round it, and sings, and then goes back to their desk." },
+  { say = "mara", text = "How long do you all stand there?" },
+  { say = "jace", text = "Exactly as long as the song." },
+  { say = "mara", text = "Not normal. Totally normal. I'm going to need a minute." },
+]
+
+[[clip]]
+id = "banter-body-05"
+category = "show"
+kit = "banter"
+part = "body"
+title = "Voicemail"
+lines = [
+  { say = "jace", text = "Voicemail. You ring someone, they don't answer, so you talk to a little machine, and they listen to it later." },
+  { say = "mara", text = "So you talk to their future, from your past." },
+  { say = "jace", text = "No, I just leave a message." },
+  { say = "mara", text = "Jace, that's what I do all day. Welcome to my life. Normal." },
+  { sfx = "ding" },
+]
+
+[[clip]]
+id = "banter-body-06"
+category = "show"
+kit = "banter"
+part = "body"
+title = "The Cold Side of the Pillow"
+lines = [
+  { say = "jace", text = "Pillows. You put your head on a soft thing, and in the night you turn it over, to the cold side." },
+  { say = "mara", text = "Who keeps the cold side cold?" },
+  { say = "jace", text = "Nobody. It just is." },
+  { say = "mara", text = "A free supply of coldness, every night, and nobody's in charge of it? Not normal. Suspicious. Somebody's selling that." },
+  { sfx = "beep" },
+]
+
+[[clip]]
+id = "banter-body-07"
+category = "show"
+kit = "banter"
+part = "body"
+title = "Stairs"
+lines = [
+  { say = "mara", text = "A listener wants to know what stairs are." },
+  { say = "jace", text = "It's a lot of little floors, stacked up at an angle, so you can walk up them." },
+  { say = "mara", text = "Uphill. On purpose. Every day." },
+  { say = "jace", text = "I've been up and down about four times today." },
+  { say = "mara", text = "Jace. On my side you'd be a hero. They'd put you on a stamp." },
+]
+
+[[clip]]
+id = "banter-body-08"
+category = "show"
+kit = "banter"
+part = "body"
+title = "Bless You"
+lines = [
+  { say = "jace", text = "Sneezing. Your nose just goes, and you say, achoo, and everyone nearby says bless you." },
+  { say = "mara", text = "Everyone?" },
+  { say = "jace", text = "Strangers. On the bus. Anyone." },
+  { say = "mara", text = "So your nose does a tiny explosion, and the whole bus blesses you. Jace, that's the nicest thing I've ever heard. Normal. Lovely. Normal." },
+  { sfx = "ding" },
+]
+
+[[clip]]
+id = "banter-body-09"
+category = "show"
+kit = "banter"
+part = "body"
+title = "Holding the Door"
+lines = [
+  { say = "jace", text = "Holding the door. If somebody's behind you, you hold it open for them." },
+  { say = "mara", text = "How far behind?" },
+  { say = "jace", text = "That's the thing. If they're too far back, they have to do a little run." },
+  { say = "mara", text = "So your kindness makes people jog." },
+  { say = "jace", text = "A bit." },
+  { say = "mara", text = "Not normal. But I'll allow it." },
+  { sfx = "beep" },
+]
+
+[[clip]]
+id = "banter-body-10"
+category = "show"
+kit = "banter"
+part = "body"
+title = "The Key Bowl"
+lines = [
+  { say = "mara", text = "Jace, why do you keep your keys in a bowl by the door?" },
+  { say = "jace", text = "So I know where they are." },
+  { say = "mara", text = "And do you always know where they are?" },
+  { say = "jace", text = "Never." },
+  { say = "mara", text = "So the bowl isn't working." },
+  { say = "jace", text = "The bowl is a hope, Mara.", gap = 0.7 },
+  { say = "mara", text = "Oh. That's beautiful. Get a bigger bowl." },
+]
+
+[[clip]]
+id = "banter-body-11"
+category = "show"
+kit = "banter"
+part = "body"
+title = "Weekends"
+lines = [
+  { say = "jace", text = "Weekends. Five days of work, then two days off." },
+  { say = "mara", text = "Who decided five?" },
+  { say = "jace", text = "Somebody. Ages ago." },
+  { say = "mara", text = "And nobody's ever asked for three off?" },
+  { say = "jace", text = "Nobody's ever asked." },
+  { say = "mara", text = "Jace, ask. Ask tomorrow. I'll be listening, four seconds before." },
+]
+
+[[clip]]
+id = "banter-body-12"
+category = "show"
+kit = "banter"
+part = "body"
+title = "Lullabies"
+lines = [
+  { say = "jace", text = "Lullabies. When a baby can't sleep, you sing it a very slow song about a cradle in a tree, and the wind, and the cradle falling." },
+  { say = "mara", text = "And the baby goes to sleep?" },
+  { say = "jace", text = "Every time." },
+  { say = "mara", text = "Your babies are tougher than you, Jace. Not normal. Respect." },
+  { sfx = "beep" },
+]
+
+# ── Banter kit: breaks ────────────────────────────────────────────────────────
+
+[[clip]]
+id = "banter-close-01"
+category = "show"
+kit = "banter"
+part = "close"
+lines = [
+  { say = "jace", text = "We'll be right back." },
+  { say = "mara", text = "I'm back already. You'll catch up." },
+]
+
+[[clip]]
+id = "banter-close-02"
+category = "show"
+kit = "banter"
+part = "close"
+lines = [
+  { say = "mara", text = "That's the score! Jace's reality, still losing! Stay with us!" },
+]
+
+[[clip]]
+id = "banter-close-03"
+category = "show"
+kit = "banter"
+part = "close"
+lines = [
+  { say = "jace", text = "More Dimension Hop after this." },
+  { say = "mara", text = "I liked it. You'll see." },
+]
+
+[[clip]]
+id = "banter-close-04"
+category = "show"
+kit = "banter"
+part = "close"
+lines = [
+  { say = "mara", text = "Quick break. Don't go anywhere. Or roll somewhere. Either's fine." },
+]
+
+[[clip]]
+id = "banter-close-05"
+category = "show"
+kit = "banter"
+part = "close"
+lines = [
+  { say = "jace", text = "That's all for this bit." },
+  { say = "mara", text = "That was all for this bit four seconds ago, Jace." },
+]
+
+[[clip]]
+id = "banter-close-06"
+category = "show"
+kit = "banter"
+part = "close"
+daypart = "night"
+lines = [
+  { say = "mara", text = "Night night, Jace's reality. You're very strange, and we love you." },
+]
+
+# ── Serials (one episode a day; see the other stations for the rest) ─────────
+
+[[clip]]
+id = "bev-gets-her-song-09"
+category = "show"
+serial = { id = "bev-gets-her-song", episode = 9 }
+title = "Bev Gets Her Song, Part Nine: Hello, Night Shift"
+lines = [
+  { sting = "id" },
+  { say = "jace", text = "Mara, the phone's ringing." },
+  { say = "mara", text = "I know. I answered it four seconds ago. It's Bev." },
+  { say = "bev", text = "Hello, loves. Is this the request line?" },
+  { say = "jace", text = "It's still Dimension Hop, Bev. But we've been following. The lift, the numbers, Doug. Everyone's been following." },
+  { say = "bev", text = "They all say the request line is a man at Relay Four. But his line's broken. He can talk, but he can't hear." },
+  { say = "mara", text = "Then you need a relay. Something in between, to carry it both ways." },
+  { say = "jace", text = "Like what?" },
+  { say = "mara", text = "Like a ship. A relay ship, out past the edge of the dial, listening to all of us. With someone on the night shift." },
+  { say = "jace", text = "Is there one?" },
+  { say = "mara", text = "There's one listening right now, Jace. I can see it four seconds from now. It's called the Nightjar.", gap = 1.2 },
+  { say = "mara", text = "Hello, night shift." },
+  { say = "jace", text = "Mara, who are you talking to?" },
+  { say = "mara", text = "The person with their hand on the dial. Hi. Don't touch it for a bit. Bev needs you." },
+  { say = "bev", text = "Hello, night shift. If you can, love, put me through to Relay Four. I'll wait. I'm very good at waiting." },
+  { say = "jace", text = "She really is." },
+]
+
+[[clip]]
+id = "teodor-is-heard-11"
+category = "show"
+serial = { id = "teodor-is-heard", episode = 11 }
+title = "Teodor Is Heard, Part Eleven: Relay Seven"
+lines = [
+  { sting = "id" },
+  { say = "jace", text = "Mara, there's something on the line. It's very faint." },
+  { say = "teodor", text = "This is Relay Four. I can hear you. A little. I've got a crystal now." },
+  { say = "mara", text = "Teodor! Hi! You sound like you're in a biscuit tin." },
+  { say = "teodor", text = "I can hear the stations in bits now. But I need a relay, to reach everyone at once. There used to be seven of us." },
+  { say = "jace", text = "What happened to the others?" },
+  { say = "teodor", text = "One, Two and Three were switched off. Five fell in the sea. Six is a cafe now. And Seven just went. Nobody knows where." },
+  { say = "mara", text = "I know where. Seven's a ship. It drifts about past the edge of the dial, listening to everybody. It's got someone on the night shift and everything." },
+  { say = "teodor", text = "Relay Seven is still running?" },
+  { say = "mara", text = "Point your antenna up and to the left. Bit more. Bit more." },
+  { say = "jace", text = "Mara, how do you know which way is left from Relay Four?" },
+  { say = "mara", text = "I don't, Jace. But he's going to try it, and in four seconds, it's going to work.", gap = 1.8 },
+  { say = "teodor", text = "There's a light on my board. The Relay Seven light. It hasn't been on in eleven years." },
+  { say = "mara", text = "Told you. Not tonight, Teodor. Tomorrow. Put the kettle on, and get some sleep." },
+]
+
+[[clip]]
+id = "greg-comes-home-13"
+category = "show"
+serial = { id = "greg-comes-home", episode = 13 }
+title = "Greg Comes Home, Part Thirteen: Two Shapes"
+lines = [
+  { sting = "id" },
+  { say = "mara", text = "Listener mail, Jace. And look. It's a postcard. From the sea." },
+  { say = "jace", text = "There's no writing on it." },
+  { say = "mara", text = "Hold it up to the light." },
+  { say = "jace", text = "Oh. There's two shapes. A man, sitting on the sand with his knees up. And right next to him, a bit to the left, the same shape again. Flat." },
+  { say = "mara", text = "That's Hollis and Greg." },
+  { say = "jace", text = "They went to the sea? Together?" },
+  { say = "mara", text = "He took him somewhere nice, Jace. First time in forty one years." },
+  { say = "jace", text = "There's something written at the bottom, really small. Hollis must have done it." },
+  { say = "mara", text = "Read it." },
+  { say = "jace", text = "Having a lovely time. He was very small at noon. We stayed till four, so he could stretch out. Leaving the porch light on anyway. For the next one.", speed = 0.92, gap = 1.2 },
+  { say = "mara", text = "Jace, you're going to cry in about four seconds." },
+  { say = "jace", text = "I'm not going to cry." },
+  { pause = 2.0 },
+  { say = "jace", text = "Why is it so nice? It's two shapes.", speed = 0.92 },
+  { say = "mara", text = "It's the space between them, Jace. There isn't any." },
+]
+
+# ── Halloween (24 to 31 October) ──────────────────────────────────────────────
+
+[[clip]]
+id = "halloween-01"
+category = "show"
+kit = "banter"
+part = "body"
+title = "Trick or Treat"
+dates = ["10-24", "10-25", "10-26", "10-27", "10-28", "10-29", "10-30", "10-31"]
+lines = [
+  { say = "jace", text = "Halloween. Children dress up as monsters, knock on strangers' doors, and ask for sweets." },
+  { say = "mara", text = "And the strangers give them sweets?" },
+  { say = "jace", text = "Usually." },
+  { say = "mara", text = "And if they don't?" },
+  { say = "jace", text = "Then it's a trick." },
+  { say = "mara", text = "So it's a tiny, adorable protection racket. Not normal. Do it every week." },
+  { sfx = "beep" },
+]
+
+[[clip]]
+id = "halloween-02"
+category = "show"
+kit = "banter"
+part = "body"
+title = "Pumpkins"
+dates = ["10-24", "10-25", "10-26", "10-27", "10-28", "10-29", "10-30", "10-31"]
+lines = [
+  { say = "jace", text = "Pumpkins. You take a big orange vegetable, scoop out its insides, carve a face into it, and put a candle inside so the face glows." },
+  { say = "mara", text = "And then?" },
+  { say = "jace", text = "You put it on the doorstep to look at people." },
+  { say = "mara", text = "Jace. That's the most frightening thing you've ever told me. Not normal. Keep it away from Gerald." },
+  { sfx = "beep" },
 ]
