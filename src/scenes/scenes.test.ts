@@ -103,7 +103,7 @@ describe.each(SCENE_IDS.filter((id) => SCENES[id]))('scene %s', (id) => {
     for (const aspect of [16 / 9, 9 / 16, 4 / 3, 21 / 9]) {
       const v = computeView(aspect, def.focusX, def.focusY);
       const g = new Gfx(v.w, v.h, v.ox, v.oy);
-      const scene = def.create({ accent: hex(station.color), rng: new Rng(hashString(id)) });
+      const scene = def.create({ accent: hex(station.color), rng: new Rng(hashString(id)), variant: 0 });
       g.target(g.bg);
       scene.background(g);
       g.target();
