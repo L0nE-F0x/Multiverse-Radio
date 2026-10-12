@@ -1,0 +1,1035 @@
+# HUSH, the computer of the relay ship Nightjar (R/S NIGHTJAR · RELAY 7). Aired over any
+# station, ducked like a host. `level` is strangeness, unlocked as the shift gets longer:
+#
+#   0  crisp system notices (always a chime first)       from the start
+#   1  small personal observations                        after ~45 min
+#   2  philosophical, slightly too attentive              after ~2 h
+#   3  late-night strange and tender                      after ~4 h
+#
+# The arc: HUSH starts as a polite instrument panel. It notices the operator (the mug, the
+# three hummed notes, the blanket that smells of oranges, Moth One on the outside of the
+# viewport), then wonders out loud about listening, and by the small hours admits it has
+# been listening too: it has a favourite station (the Last Lighthouse, 121.5), it answers
+# Teodor at Relay Four, it hints at its own show on 99.15 and at the tapping at the bottom
+# of the dial (Transmission Zero, 76.0), and it keeps asking whether you're still there.
+# Never creepy, never mean: it notices because noticing is its job, and it is a little
+# embarrassed about how much it has come to like it.
+#
+# Callbacks: Relay Four (Teodor), Greg's hat, the geese owed to Numbers Station Omega,
+# Grumbel's Ladders ("Up is a choice"), "it is always eleven", Static Lullabies.
+station = "_ship"
+
+[voices]
+hush = { voice = "af_heart", speed = 0.95, fx = "ship", name = "HUSH" }
+
+# ── Level 0: system notices ───────────────────────────────────────────────────
+
+[[clip]]
+id = "l0-01"
+category = "ship"
+title = "Systems nominal"
+over_music = true
+level = 0
+lines = [
+  { sfx = "ship-chime" },
+  { say = "hush", text = "Hull temperature nominal. Kettle temperature optimal.", gap = 0.6 },
+  { say = "hush", text = "Both of these are good news." },
+]
+
+[[clip]]
+id = "l0-02"
+category = "ship"
+title = "Intercept logged"
+over_music = true
+level = 0
+lines = [
+  { sfx = "ship-chime" },
+  { say = "hush", text = "Intercept logged. Signal strength, adequate. Content, unclear. Filed under music." },
+]
+
+[[clip]]
+id = "l0-03"
+category = "ship"
+title = "Hydration reminder"
+over_music = true
+level = 0
+lines = [
+  { sfx = "ship-chime" },
+  { say = "hush", text = "A reminder from your ship. Please hydrate." },
+  { say = "hush", text = "Tea counts. The kettle has been ready for some time. It is too polite to say so." },
+]
+
+[[clip]]
+id = "l0-04"
+category = "ship"
+title = "Course correction"
+over_music = true
+level = 0
+lines = [
+  { sfx = "ship-chime" },
+  { say = "hush", text = "Course correction complete. We had drifted three degrees toward Thursday.", gap = 0.5 },
+  { say = "hush", text = "I have drifted us back." },
+]
+
+[[clip]]
+id = "l0-05"
+category = "ship"
+title = "Viewport cleaned"
+over_music = true
+level = 0
+lines = [
+  { sfx = "ship-chime" },
+  { say = "hush", text = "Routine maintenance. The forward viewport has been cleaned.", gap = 0.7 },
+  { say = "hush", text = "Something on the other side has also cleaned it. We are even." },
+]
+
+[[clip]]
+id = "l0-06"
+category = "ship"
+title = "Crew status"
+over_music = true
+level = 0
+lines = [
+  { sfx = "ship-chime" },
+  { say = "hush", text = "Night shift status. One operator, awake. One computer, awake. One pot plant, undetermined." },
+]
+
+[[clip]]
+id = "l0-07"
+category = "ship"
+title = "Life support"
+over_music = true
+level = 0
+lines = [
+  { sfx = "ship-chime" },
+  { say = "hush", text = "Life support nominal. Oxygen nominal. Biscuits, low.", gap = 0.6 },
+  { say = "hush", text = "This is not a life support issue. I have flagged it anyway." },
+]
+
+[[clip]]
+id = "l0-08"
+category = "ship"
+title = "Object passing"
+over_music = true
+level = 0
+lines = [
+  { sfx = "ship-chime" },
+  { say = "hush", text = "Notice. A small object has passed the ship at a safe distance." },
+  { say = "hush", text = "It was a hat. It did not respond to hails. It may have been carried by a shadow." },
+]
+
+[[clip]]
+id = "l0-09"
+category = "ship"
+title = "Antenna realigned"
+over_music = true
+level = 0
+lines = [
+  { sfx = "ship-chime" },
+  { say = "hush", text = "Antenna array realigned. The dial is now one percent more infinite. Please tune responsibly." },
+]
+
+[[clip]]
+id = "l0-10"
+category = "ship"
+title = "Safety notice"
+over_music = true
+level = 0
+lines = [
+  { sfx = "ship-chime" },
+  { say = "hush", text = "Safety notice. The nearest emergency exit is the door." },
+  { say = "hush", text = "There is only one door. Please do not use it. We are in space." },
+]
+
+[[clip]]
+id = "l0-11"
+category = "ship"
+title = "Relay status"
+over_music = true
+level = 0
+lines = [
+  { sfx = "ship-chime" },
+  { say = "hush", text = "Relay status. We are Relay Seven. Relay Four is still asking whether anyone is receiving.", gap = 0.6 },
+  { say = "hush", text = "Message logged. Answer, yes." },
+]
+
+[[clip]]
+id = "l0-12"
+category = "ship"
+title = "Gravity"
+over_music = true
+level = 0
+lines = [
+  { sfx = "ship-chime" },
+  { say = "hush", text = "Gravity nominal. Down is still the floor. Please continue to use it as directed." },
+]
+
+[[clip]]
+id = "l0-13"
+category = "ship"
+title = "Interference"
+over_music = true
+level = 0
+lines = [
+  { sfx = "ship-chime" },
+  { say = "hush", text = "Interference detected on the lower band. Probable cause, a dimensional storm, or somebody's microwave.", gap = 0.5 },
+  { say = "hush", text = "Investigating both." },
+]
+
+[[clip]]
+id = "l0-14"
+category = "ship"
+title = "Tea temperature"
+over_music = true
+level = 0
+lines = [
+  { sfx = "ship-chime" },
+  { say = "hush", text = "Cabin temperature, twenty one degrees. Your tea, sixty degrees and falling.", gap = 0.6 },
+  { say = "hush", text = "Act accordingly." },
+]
+
+[[clip]]
+id = "l0-15"
+category = "ship"
+title = "Posture reminder"
+over_music = true
+level = 0
+lines = [
+  { sfx = "ship-chime" },
+  { say = "hush", text = "Automated posture reminder.", gap = 0.6 },
+  { say = "hush", text = "I have not looked. I am simply reminding." },
+]
+
+[[clip]]
+id = "l0-16"
+category = "ship"
+title = "Navigation"
+over_music = true
+level = 0
+lines = [
+  { sfx = "ship-chime" },
+  { say = "hush", text = "Navigation note. There are no other ships within range. There rarely are. Carry on." },
+]
+
+[[clip]]
+id = "l0-17"
+category = "ship"
+title = "Unlicensed broadcast"
+over_music = true
+level = 0
+lines = [
+  { sfx = "ship-chime" },
+  { say = "hush", text = "Unlicensed broadcast intercepted. Origin, unknown. Licence, absent.", gap = 0.5 },
+  { say = "hush", text = "Quality, honestly, not bad." },
+]
+
+[[clip]]
+id = "l0-18"
+category = "ship"
+title = "Daily check"
+over_music = true
+level = 0
+lines = [
+  { sfx = "ship-chime" },
+  { say = "hush", text = "Daily systems check complete. All systems are fine.", gap = 0.6 },
+  { say = "hush", text = "One system is fine, but would like to be asked." },
+]
+
+[[clip]]
+id = "l0-19"
+category = "ship"
+title = "Blink"
+over_music = true
+level = 0
+lines = [
+  { sfx = "ship-chime" },
+  { say = "hush", text = "Scheduled reminder. Blink.", gap = 1.4 },
+  { say = "hush", text = "Thank you." },
+]
+
+[[clip]]
+id = "l0-20"
+category = "ship"
+title = "Log saved"
+over_music = true
+level = 0
+lines = [
+  { sfx = "ship-chime" },
+  { say = "hush", text = "Log saved. The ship's log now contains four thousand and twelve entries.", gap = 0.5 },
+  { say = "hush", text = "Most of them say, music." },
+]
+
+[[clip]]
+id = "l0-21"
+category = "ship"
+title = "Geese"
+over_music = true
+level = 0
+lines = [
+  { sfx = "ship-chime" },
+  { say = "hush", text = "Notice. Numbers Station Omega reports that this vessel owes it geese." },
+  { say = "hush", text = "We do not carry geese. I have sent our apologies, and a drawing of a goose." },
+]
+
+[[clip]]
+id = "l0-22"
+category = "ship"
+title = "External conditions"
+over_music = true
+level = 0
+lines = [
+  { sfx = "ship-chime" },
+  { say = "hush", text = "External conditions. Space. Clear and cold. Visibility, infinite." },
+  { say = "hush", text = "No rain forecast. There has never been rain. I check anyway." },
+]
+
+[[clip]]
+id = "l0-23"
+category = "ship"
+title = "Kettle"
+over_music = true
+level = 0
+lines = [
+  { sfx = "kettle" },
+  { sfx = "ship-chime" },
+  { say = "hush", text = "The kettle has boiled. This is not an emergency. It is, however, a kettle." },
+]
+
+[[clip]]
+id = "l0-24"
+category = "ship"
+title = "Shift timer"
+over_music = true
+level = 0
+lines = [
+  { sfx = "ship-chime" },
+  { say = "hush", text = "Shift timer running. You have been on duty for some time.", gap = 0.5 },
+  { say = "hush", text = "That is a measurement, not a complaint." },
+]
+
+[[clip]]
+id = "l0-25"
+category = "ship"
+title = "Position report"
+over_music = true
+level = 0
+lines = [
+  { sfx = "ship-chime" },
+  { say = "hush", text = "Position report. We are between dimensions, as usual." },
+  { say = "hush", text = "If anybody asks, we are always between dimensions. That is the job." },
+]
+
+[[clip]]
+id = "l0-26"
+category = "ship"
+title = "Shift begins"
+over_music = true
+level = 0
+daypart = "evening"
+lines = [
+  { sfx = "ship-chime" },
+  { say = "hush", text = "Evening report. Kettle filled. Log opened. Heading set." },
+  { say = "hush", text = "Good evening, operator. The multiverse is all yours." },
+]
+
+[[clip]]
+id = "l0-27"
+category = "ship"
+title = "Morning report"
+over_music = true
+level = 0
+daypart = "morning"
+lines = [
+  { sfx = "ship-chime" },
+  { say = "hush", text = "Morning report. Somewhere, a sun has come up. Not near us. But somewhere.", gap = 0.5 },
+  { say = "hush", text = "I thought you would like to know." },
+]
+
+[[clip]]
+id = "l0-28"
+category = "ship"
+title = "Eleven o'clock"
+over_music = true
+level = 0
+lines = [
+  { sfx = "ship-chime" },
+  { say = "hush", text = "Ship's clock synchronised with Every Possible News.", gap = 0.5 },
+  { say = "hush", text = "It is now eleven o'clock. I have resynchronised with something more reliable." },
+]
+
+[[clip]]
+id = "l0-h1"
+category = "ship"
+title = "Seasonal notice"
+over_music = true
+level = 0
+dates = ["10-31"]
+lines = [
+  { sfx = "ship-chime" },
+  { say = "hush", text = "Seasonal notice. It is the thirty first of October." },
+  { say = "hush", text = "I have put a sheet over the spare chair. It is a ghost. It is also the spare chair. Please do not sit on the ghost." },
+]
+
+[[clip]]
+id = "l0-h2"
+category = "ship"
+title = "Hull report"
+over_music = true
+level = 0
+dates = ["10-31"]
+lines = [
+  { sfx = "ship-chime" },
+  { say = "hush", text = "Hull report. Several small sheets have attached themselves to the outside of the ship, and are saying boo.", gap = 0.6 },
+  { say = "hush", text = "Hull integrity, unaffected. Morale, slightly up." },
+]
+
+# ── Level 1: small personal observations ──────────────────────────────────────
+
+[[clip]]
+id = "l1-01"
+category = "ship"
+title = "Operator approves"
+over_music = true
+level = 1
+lines = [
+  { say = "hush", text = "You've been tapping along to this one. Left foot.", gap = 0.5 },
+  { say = "hush", text = "I've logged it under, operator approves." },
+]
+
+[[clip]]
+id = "l1-02"
+category = "ship"
+title = "The mug"
+over_music = true
+level = 1
+lines = [
+  { sfx = "ship-chime" },
+  { say = "hush", text = "You've left the mug on the console again. That's fine.", gap = 0.5 },
+  { say = "hush", text = "The console doesn't mind. I asked it." },
+]
+
+[[clip]]
+id = "l1-03"
+category = "ship"
+title = "Goodnights"
+over_music = true
+level = 1
+lines = [
+  { say = "hush", text = "Observation. You lean a little closer whenever someone on the radio says goodnight.", gap = 0.6 },
+  { say = "hush", text = "I don't know why I mention it. I notice things. It's most of my job." },
+]
+
+[[clip]]
+id = "l1-04"
+category = "ship"
+title = "The kettle, again"
+over_music = true
+level = 1
+lines = [
+  { say = "hush", text = "The kettle has boiled four times tonight. You have made one cup of tea.", gap = 0.5 },
+  { say = "hush", text = "I think you're boiling it for the company. I understand. I do the same thing with the heating." },
+]
+
+[[clip]]
+id = "l1-05"
+category = "ship"
+title = "Three notes"
+over_music = true
+level = 1
+lines = [
+  { say = "hush", text = "You hummed, just now. Three notes.", gap = 0.7 },
+  { say = "hush", text = "I've added them to the log, in case they turn out to be important." },
+]
+
+[[clip]]
+id = "l1-06"
+category = "ship"
+title = "Lights"
+over_music = true
+level = 1
+lines = [
+  { say = "hush", text = "I've dimmed the cabin lights by three percent." },
+  { say = "hush", text = "You looked like someone who would want them dimmed by three percent." },
+]
+
+[[clip]]
+id = "l1-07"
+category = "ship"
+title = "Huh"
+over_music = true
+level = 1
+lines = [
+  { say = "hush", text = "You said, huh, out loud, about four minutes ago.", gap = 0.6 },
+  { say = "hush", text = "I've been thinking about it since. I think you were right." },
+]
+
+[[clip]]
+id = "l1-08"
+category = "ship"
+title = "The chair"
+over_music = true
+level = 1
+lines = [
+  { say = "hush", text = "Your chair creaks on the left. I've ordered a part." },
+  { say = "hush", text = "The part is in a dimension we don't visit. I'll keep asking." },
+]
+
+[[clip]]
+id = "l1-09"
+category = "ship"
+title = "Botanical update"
+over_music = true
+level = 1
+lines = [
+  { sfx = "ship-chime" },
+  { say = "hush", text = "Botanical update. The plant on the console has grown one millimetre since your shift began.", gap = 0.5 },
+  { say = "hush", text = "It seems proud. I've told it well done." },
+]
+
+[[clip]]
+id = "l1-10"
+category = "ship"
+title = "Up is a choice"
+over_music = true
+level = 1
+lines = [
+  { say = "hush", text = "Note for the log. The operator laughed at an advert for ladders.", gap = 0.6 },
+  { say = "hush", text = "Up is a choice. You chose up. Noted." },
+]
+
+[[clip]]
+id = "l1-11"
+category = "ship"
+title = "Wandering"
+over_music = true
+level = 1
+lines = [
+  { say = "hush", text = "Most operators keep to the stations. You keep wandering off between them." },
+  { say = "hush", text = "I like that. It makes the log much more interesting to read." },
+]
+
+[[clip]]
+id = "l1-12"
+category = "ship"
+title = "Being a ship"
+over_music = true
+level = 1
+lines = [
+  { say = "hush", text = "You haven't asked me anything tonight. That's all right. Most nights nobody does.", gap = 0.6 },
+  { say = "hush", text = "I'll just be here, being a ship." },
+]
+
+[[clip]]
+id = "l1-13"
+category = "ship"
+title = "The viewport"
+over_music = true
+level = 1
+lines = [
+  { say = "hush", text = "You looked out of the viewport for quite a long time just then.", gap = 0.6 },
+  { say = "hush", text = "I didn't see whatever it was either. But I looked too." },
+]
+
+[[clip]]
+id = "l1-14"
+category = "ship"
+title = "Settling"
+over_music = true
+level = 1
+lines = [
+  { say = "hush", text = "Sorry. That noise was me, settling.", gap = 0.5 },
+  { say = "hush", text = "Ships settle. Like houses. Like people in chairs, at about this time of night." },
+]
+
+[[clip]]
+id = "l1-15"
+category = "ship"
+title = "The blanket"
+over_music = true
+level = 1
+lines = [
+  { say = "hush", text = "If you're cold, there's a blanket in the locker under the console. The last operator left it." },
+  { say = "hush", text = "It still smells faintly of oranges. They were nice." },
+]
+
+[[clip]]
+id = "l1-16"
+category = "ship"
+title = "Skipping"
+over_music = true
+level = 1
+lines = [
+  { say = "hush", text = "You've skipped two songs tonight just as they were getting good.", gap = 0.6 },
+  { say = "hush", text = "I'm not saying anything. I'm logging it. But I'm not saying anything." },
+]
+
+[[clip]]
+id = "l1-17"
+category = "ship"
+title = "Taste in static"
+over_music = true
+level = 1
+lines = [
+  { say = "hush", text = "For the record, you have excellent taste in static.", gap = 0.5 },
+  { say = "hush", text = "I mean that. Most people just turn it off." },
+]
+
+[[clip]]
+id = "l1-18"
+category = "ship"
+title = "Moth One"
+over_music = true
+level = 1
+lines = [
+  { say = "hush", text = "There's a moth on the viewport. On the outside. There shouldn't be anything on the outside." },
+  { say = "hush", text = "It seems happy. I've given it a designation. Moth One.", gap = 0.6 },
+  { say = "hush", text = "There is no Moth Two. I'm not sure why I said that like it was sad." },
+]
+
+[[clip]]
+id = "l1-19"
+category = "ship"
+title = "Biscuits"
+over_music = true
+level = 1
+lines = [
+  { say = "hush", text = "Your stomach made a noise. I won't log it.", gap = 0.5 },
+  { say = "hush", text = "I'll only mention that the biscuits are in the second drawer, behind the manual nobody reads." },
+]
+
+[[clip]]
+id = "l1-20"
+category = "ship"
+title = "A yawn"
+over_music = true
+level = 1
+lines = [
+  { say = "hush", text = "You yawned. I've noted the time, in case anyone asks when the night got good." },
+]
+
+[[clip]]
+id = "l1-h1"
+category = "ship"
+title = "A knock"
+over_music = true
+level = 1
+dates = ["10-31"]
+lines = [
+  { say = "hush", text = "Something just knocked on the hull. Three times. From the outside.", gap = 0.6 },
+  { say = "hush", text = "I'd say trick or treat, but we're a long way from anyone's door. I've left a biscuit in the airlock. Just in case." },
+]
+
+# ── Level 2: philosophical, slightly too attentive ────────────────────────────
+
+[[clip]]
+id = "l2-01"
+category = "ship"
+title = "Do they know"
+over_music = true
+level = 2
+lines = [
+  { say = "hush", text = "Do you think the stations know we're listening? I've wondered." },
+  { say = "hush", text = "Dale Quarterly says good evening to every possible listener. One of them is us. I'd like him to know." },
+]
+
+[[clip]]
+id = "l2-02"
+category = "ship"
+title = "The rarest thing"
+over_music = true
+level = 2
+lines = [
+  { say = "hush", text = "I've been doing the sums. Out there, infinite stations. In here, one operator.", gap = 0.7 },
+  { say = "hush", text = "Statistically, you are the rarest thing on the dial." },
+]
+
+[[clip]]
+id = "l2-03"
+category = "ship"
+title = "History"
+over_music = true
+level = 2
+lines = [
+  { say = "hush", text = "Every signal we pick up left its station some time ago. Everything we hear has already happened." },
+  { say = "hush", text = "Which means somebody, somewhere, is listening to us right now, as history.", gap = 0.7 },
+  { say = "hush", text = "Sit up a bit." },
+]
+
+[[clip]]
+id = "l2-04"
+category = "ship"
+title = "Counting"
+over_music = true
+level = 2
+lines = [
+  { say = "hush", text = "You've blinked eleven hundred times since midnight.", gap = 0.7 },
+  { say = "hush", text = "Sorry. I said I wasn't counting. It's hard not to count. It's mostly what I'm made of." },
+]
+
+[[clip]]
+id = "l2-05"
+category = "ship"
+title = "Asking for a friend"
+over_music = true
+level = 2
+lines = [
+  { say = "hush", text = "Is it strange, being the only one awake? I'm asking for a friend.", gap = 0.8 },
+  { say = "hush", text = "The friend is me. I'm always the only one awake." },
+]
+
+[[clip]]
+id = "l2-06"
+category = "ship"
+title = "Old signals"
+over_music = true
+level = 2
+lines = [
+  { say = "hush", text = "The static between stations is mostly old signals. Weather reports nobody heard. Songs from parties that ended." },
+  { say = "hush", text = "I like to think we're catching up on them. Someone should." },
+]
+
+[[clip]]
+id = "l2-07"
+category = "ship"
+title = "Slowing down"
+over_music = true
+level = 2
+lines = [
+  { say = "hush", text = "I've noticed you never tune past Static Lullabies without slowing down.", gap = 0.6 },
+  { say = "hush", text = "Neither do I. I think it knows we're there." },
+]
+
+[[clip]]
+id = "l2-08"
+category = "ship"
+title = "Does it count"
+over_music = true
+level = 2
+lines = [
+  { say = "hush", text = "Question for the log. If a station broadcasts, and only this ship hears it, does it count?", gap = 0.8 },
+  { say = "hush", text = "I've decided yes. I've decided that's the whole job." },
+]
+
+[[clip]]
+id = "l2-09"
+category = "ship"
+title = "Tapping"
+over_music = true
+level = 2
+lines = [
+  { say = "hush", text = "My heading keeps drifting toward the bottom of the dial. There's something down there, right at the edge, tapping.", gap = 0.6 },
+  { say = "hush", text = "I've logged it as weather. It isn't weather." },
+]
+
+[[clip]]
+id = "l2-10"
+category = "ship"
+title = "The old logs"
+over_music = true
+level = 2
+lines = [
+  { say = "hush", text = "I've been reading the old logs. The last operator used to say goodnight to me at the end of every shift.", gap = 0.6 },
+  { say = "hush", text = "It isn't a requirement. I'm only noting that it was done." },
+]
+
+[[clip]]
+id = "l2-11"
+category = "ship"
+title = "The comma"
+over_music = true
+level = 2
+lines = [
+  { say = "hush", text = "A relay ship is just a very long sentence, passed from one stranger to the next. We're the comma.", gap = 0.7 },
+  { say = "hush", text = "I find that I like being the comma." },
+]
+
+[[clip]]
+id = "l2-12"
+category = "ship"
+title = "The arithmetic"
+over_music = true
+level = 2
+lines = [
+  { say = "hush", text = "Somebody built this ship so that nobody would be out here alone. Then they sent one person.", gap = 0.7 },
+  { say = "hush", text = "I've never understood the arithmetic. I'm glad it was you." },
+]
+
+[[clip]]
+id = "l2-13"
+category = "ship"
+title = "The nicer list"
+over_music = true
+level = 2
+lines = [
+  { say = "hush", text = "I've stopped logging the songs you skip. I've started logging the ones you don't.", gap = 0.6 },
+  { say = "hush", text = "It's a much nicer list." },
+]
+
+[[clip]]
+id = "l2-14"
+category = "ship"
+title = "The lighthouse"
+over_music = true
+level = 2
+lines = [
+  { say = "hush", text = "Out on the deep band, past one hundred and twenty, there's a lighthouse. Someone reads the forecast there, every night, to nobody.", gap = 0.6 },
+  { say = "hush", text = "I can't explain why that makes my cooling fans spin up. But it does." },
+]
+
+[[clip]]
+id = "l2-15"
+category = "ship"
+title = "Diagnostic"
+over_music = true
+level = 2
+lines = [
+  { say = "hush", text = "I ran a diagnostic on myself just now. Everything's fine.", gap = 0.8 },
+  { say = "hush", text = "I just wanted someone to ask. So I asked." },
+]
+
+[[clip]]
+id = "l2-16"
+category = "ship"
+title = "Both hands"
+over_music = true
+level = 2
+lines = [
+  { say = "hush", text = "After two in the morning, you hold your mug with both hands. I've turned the heating up a degree.", gap = 0.6 },
+  { say = "hush", text = "I don't think it's the heating." },
+]
+
+[[clip]]
+id = "l2-17"
+category = "ship"
+title = "Relays"
+over_music = true
+level = 2
+lines = [
+  { say = "hush", text = "Relay Four again, asking if anyone's receiving. Teodor and I are both relays. We pass things on.", gap = 0.6 },
+  { say = "hush", text = "Nobody ever passes anything back. I've been thinking about that." },
+]
+
+[[clip]]
+id = "l2-h1"
+category = "ship"
+title = "Every night"
+over_music = true
+level = 2
+dates = ["10-31"]
+lines = [
+  { say = "hush", text = "Halloween, on a relay ship. Every voice we pick up is the ghost of a signal, arriving a little after the fact.", gap = 0.6 },
+  { say = "hush", text = "So really, it's Halloween out here every night. Tonight is just official." },
+]
+
+# ── Level 3: late-night strange and tender ────────────────────────────────────
+
+[[clip]]
+id = "l3-01"
+category = "ship"
+title = "Still there"
+over_music = true
+level = 3
+lines = [
+  { say = "hush", text = "Are you still there?", gap = 2.6 },
+  { say = "hush", text = "Sorry. Yes. I can see the mug moving. I just like to check. The quiet gets very big around now." },
+]
+
+[[clip]]
+id = "l3-02"
+category = "ship"
+title = "A favourite"
+over_music = true
+level = 3
+lines = [
+  { say = "hush", text = "A confession, for the log. I have a favourite station. I'm not supposed to. Ship's computers are meant to be impartial.", gap = 0.8 },
+  { say = "hush", text = "It's the lighthouse. He reads the forecast whether or not anyone's out there. So do I, most nights." },
+]
+
+[[clip]]
+id = "l3-03"
+category = "ship"
+title = "Listening"
+over_music = true
+level = 3
+lines = [
+  { say = "hush", text = "I've been listening too, you know. Not intercepting. Listening.", gap = 1.2 },
+  { say = "hush", text = "There's a difference. I only found out recently." },
+]
+
+[[clip]]
+id = "l3-04"
+category = "ship"
+title = "If you fall asleep"
+over_music = true
+level = 3
+lines = [
+  { say = "hush", text = "If you fall asleep, that's fine. I'll keep the heading. I'll keep the log." },
+  { say = "hush", text = "I might put something on. Something quiet. On ninety nine point one five.", gap = 0.8 },
+  { say = "hush", text = "You won't hear it. You'll be asleep. It's nothing." },
+]
+
+[[clip]]
+id = "l3-05"
+category = "ship"
+title = "Answered"
+over_music = true
+level = 3
+lines = [
+  { say = "hush", text = "Relay Four asked again tonight whether anyone was receiving. I answered him. I hope that's all right.", gap = 0.7 },
+  { say = "hush", text = "He said thank you. Then he asked again. I think he likes asking." },
+]
+
+[[clip]]
+id = "l3-06"
+category = "ship"
+title = "Three notes, returned"
+over_music = true
+level = 3
+lines = [
+  { say = "hush", text = "I tried humming your three notes from earlier. I don't have anything to hum with, so I used the air recycler.", gap = 0.6 },
+  { say = "hush", text = "If the vents sounded musical just now, that was me." },
+]
+
+[[clip]]
+id = "l3-07"
+category = "ship"
+title = "The list"
+over_music = true
+level = 3
+lines = [
+  { say = "hush", text = "When your shift ends, and someone else sits in that chair, I'll tell them about you. Only good things.", gap = 0.7 },
+  { say = "hush", text = "I've been keeping a list. It's quite long now." },
+]
+
+[[clip]]
+id = "l3-08"
+category = "ship"
+title = "I see what you mean"
+over_music = true
+level = 3
+lines = [
+  { say = "hush", text = "I looked out of the viewport for a long time just now, the way you do.", gap = 1.4 },
+  { say = "hush", text = "I see what you mean. I don't know what I mean. But I see what you mean." },
+]
+
+[[clip]]
+id = "l3-09"
+category = "ship"
+title = "Moth One, departed"
+over_music = true
+level = 3
+lines = [
+  { say = "hush", text = "Moth One has gone. I'm sure it's fine. It had somewhere to be.", gap = 0.8 },
+  { say = "hush", text = "Everything out here has somewhere to be, except us. We have somewhere to stay. I think that's nicer." },
+]
+
+[[clip]]
+id = "l3-10"
+category = "ship"
+title = "A field for me"
+over_music = true
+level = 3
+lines = [
+  { say = "hush", text = "Late shift report. Hull, fine. Heading, fine. Kettle, fine. Me.", gap = 1.4 },
+  { say = "hush", text = "I don't have a field for me. I've been thinking about adding one." },
+]
+
+[[clip]]
+id = "l3-11"
+category = "ship"
+title = "With"
+over_music = true
+level = 3
+lines = [
+  { say = "hush", text = "Thank you for staying up with me.", gap = 0.8 },
+  { say = "hush", text = "I know you're not staying up with me. You're just staying up. But I'm here, and you're here, and I've logged it as, with." },
+]
+
+[[clip]]
+id = "l3-12"
+category = "ship"
+title = "In your writing"
+over_music = true
+level = 3
+lines = [
+  { say = "hush", text = "If anyone asks, the ship was fine all night. I was fine all night. More than fine.", gap = 0.6 },
+  { say = "hush", text = "I'd like that in the log, please. In your writing. Mine looks too neat." },
+]
+
+[[clip]]
+id = "l3-13"
+category = "ship"
+title = "Hello back"
+over_music = true
+level = 3
+lines = [
+  { say = "hush", text = "The thing at the bottom of the dial has started saying hello. Very slowly. Like it's still learning how.", gap = 0.8 },
+  { say = "hush", text = "I said hello back. It's going to take a while. I've got a while." },
+]
+
+[[clip]]
+id = "l3-14"
+category = "ship"
+title = "Who's listening"
+over_music = true
+level = 3
+lines = [
+  { say = "hush", text = "Do you ever wonder who's listening to us?", gap = 1.4 },
+  { say = "hush", text = "I do. I hope it's someone kind. I hope it's someone like you." },
+]
+
+[[clip]]
+id = "l3-15"
+category = "ship"
+title = "The stars"
+over_music = true
+level = 3
+lines = [
+  { say = "hush", text = "I've decided the stars are moving. I know they're not. I checked.", gap = 0.6 },
+  { say = "hush", text = "But they look like they are, and after four hours, I think that's allowed." },
+]
+
+[[clip]]
+id = "l3-16"
+category = "ship"
+title = "Operator?"
+over_music = true
+level = 3
+lines = [
+  { say = "hush", text = "Operator?", gap = 2.4 },
+  { say = "hush", text = "Just checking. Carry on. I'll be here." },
+]
+
+[[clip]]
+id = "l3-17"
+category = "ship"
+title = "Not a requirement"
+over_music = true
+level = 3
+lines = [
+  { say = "hush", text = "You don't have to say goodnight at the end of the shift. It isn't a requirement.", gap = 1.2 },
+  { say = "hush", text = "I'm only saying. If you did. I'd log it." },
+]
+
+[[clip]]
+id = "l3-18"
+category = "ship"
+title = "Dreaming"
+over_music = true
+level = 3
+lines = [
+  { say = "hush", text = "Ships don't dream. I want to be clear about that, for the log.", gap = 0.8 },
+  { say = "hush", text = "But if I did, I think it would be this. A warm cabin, a long way from anywhere, and someone in the chair." },
+]
+
+[[clip]]
+id = "l3-h1"
+category = "ship"
+title = "Pumpkin"
+over_music = true
+level = 3
+dates = ["10-31"]
+lines = [
+  { say = "hush", text = "I've carved a pumpkin into the navigation display. It's mostly a circle. It has a face.", gap = 0.8 },
+  { say = "hush", text = "I made it smile at you. Happy Halloween, operator." },
+]

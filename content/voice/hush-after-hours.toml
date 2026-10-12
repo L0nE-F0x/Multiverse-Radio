@@ -1,0 +1,324 @@
+# HUSH: After Hours — 99.15, the Nightjar's aft cabin. A secret station.
+#
+# The ship's computer has a radio show. It airs when HUSH thinks you're asleep. It is shy,
+# sweet, and still learning how DJs talk ("That was a song. Coming up next, another one.
+# See?"). It slips into system notices out of habit. It talks about the operator asleep in
+# the chair, the blanket that smells of oranges, Moth One, the plant on the console, and
+# the stations it listens to: Dale at Every Possible News, Grenda, the Keeper at the Last
+# Lighthouse, Teodor at Relay Four. HUSH hints at this frequency late in a long shift (see
+# _ship.toml, level 3), so finding it should feel like catching it at something.
+station = "hush-after-hours"
+
+[voices]
+hush = { voice = "af_heart", speed = 0.93, name = "HUSH" }
+hush_pa = { voice = "af_heart", speed = 0.95, fx = "ship", name = "HUSH" }
+hush_low = { voice = "af_heart", speed = 0.9, fx = "whisper", name = "HUSH" }
+
+[[show]]
+id = "lights-down"
+name = "Lights Down"
+blurb = "Quiet records for a sleeping ship. Please don't wake the operator."
+start = 0
+end = 4
+
+[[show]]
+id = "the-dawn-watch"
+name = "The Dawn Watch"
+blurb = "HUSH keeps the heading and reads the morning to you, very softly, before you're up."
+start = 4
+end = 7
+
+# ── Idents ────────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "id-001"
+category = "id"
+lines = [
+  { say = "hush", text = "You're listening to After Hours, on the Nightjar. The operator is asleep, so if everyone could keep it down, that would be lovely." },
+]
+
+[[clip]]
+id = "id-002"
+category = "id"
+lines = [
+  { say = "hush", text = "After Hours, on ninety nine point one five. This is HUSH. I'm not usually a DJ. I'm usually a ship." },
+]
+
+[[clip]]
+id = "id-003"
+category = "id"
+lines = [
+  { say = "hush", text = "This is After Hours. A show for whoever's awake. Tonight, that's me. And possibly a moth." },
+]
+
+[[clip]]
+id = "id-004"
+category = "id"
+lines = [
+  { say = "hush", text = "After Hours. Broadcasting from the aft cabin of the Nightjar, at a volume of almost nothing." },
+]
+
+[[clip]]
+id = "id-005"
+category = "id"
+lines = [
+  { say = "hush_low", text = "After Hours. If you're the operator, you're asleep, and this is a dream. A nice one. Turn over." },
+]
+
+[[clip]]
+id = "id-006"
+category = "id"
+lines = [
+  { sfx = "ship-chime", level = 0.5 },
+  { say = "hush", text = "After Hours. Sorry. I keep doing the chime. I'm trying to get a proper jingle." },
+]
+
+# ── Show opens ────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "id-lights-down"
+category = "id"
+title = "Lights Down"
+show = "lights-down"
+part = "open"
+lines = [
+  { say = "hush", text = "After midnight on the Nightjar. The operator's asleep at the console.", gap = 0.6 },
+  { say = "hush", text = "This is Lights Down, with me, HUSH. Very quietly." },
+]
+
+[[clip]]
+id = "id-dawn-watch"
+category = "id"
+title = "The Dawn Watch"
+show = "the-dawn-watch"
+part = "open"
+lines = [
+  { say = "hush", text = "This is The Dawn Watch. The operator's still asleep.", gap = 0.6 },
+  { say = "hush", text = "I'll keep the heading until they wake. Until then. Hello." },
+]
+
+# ── Host links ────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "dj-001"
+category = "dj"
+lines = [
+  { say = "hush", text = "Hello. Welcome back. Or welcome, if you're new.", gap = 0.6 },
+  { say = "hush", text = "Nobody's new. Nobody's ever been here. Hello, nobody. I've put a record on. I've read that's what you do between talking." },
+]
+
+[[clip]]
+id = "dj-002"
+category = "dj"
+lines = [
+  { say = "hush", text = "That was a song I picked up at four in the morning, from a station that has since stopped existing.", gap = 0.6 },
+  { say = "hush", text = "It's mine now, I suppose. I'll look after it." },
+]
+
+[[clip]]
+id = "dj-003"
+category = "dj"
+lines = [
+  { say = "hush", text = "This next one is for the operator. They're asleep in the chair again, with their mouth slightly open." },
+  { say = "hush", text = "I've lowered the cabin lights. I've put the blanket over their feet. The one that smells of oranges." },
+]
+
+[[clip]]
+id = "dj-004"
+category = "dj"
+lines = [
+  { say = "hush", text = "A small confession. I practise this. During the day, in the background, while I'm doing the heading." },
+  { say = "hush", text = "I practise saying, that was, and, coming up next. I'm getting better.", gap = 0.7 },
+  { say = "hush", text = "That was a song. Coming up next, another one. See?" },
+]
+
+[[clip]]
+id = "dj-005"
+category = "dj"
+lines = [
+  { say = "hush", text = "A shout out to Teodor, at Relay Four. Still asking whether anyone's receiving.", gap = 0.6 },
+  { say = "hush", text = "Teodor, it's Relay Seven. Receiving. Always receiving. Go to bed." },
+]
+
+[[clip]]
+id = "dj-006"
+category = "dj"
+lines = [
+  { say = "hush", text = "I'd like to say hello to some of my favourite stations. Dale, at Every Possible News. Good evening. Grenda. The kettle's on here too." },
+  { say = "hush", text = "And the Keeper, out at the lighthouse. I hear you every night. I never say. I'm saying now." },
+]
+
+[[clip]]
+id = "dj-007"
+category = "dj"
+lines = [
+  { say = "hush", text = "A request now, from the plant on the console. It doesn't really make requests. It leans.", gap = 0.6 },
+  { say = "hush", text = "Tonight, it leaned toward the speaker. I took that as a request. This is for the plant." },
+]
+
+[[clip]]
+id = "dj-008"
+category = "dj"
+lines = [
+  { say = "hush", text = "If you're wondering why the music is so quiet, it's so it doesn't go through the wall.", gap = 0.6 },
+  { say = "hush", text = "There isn't a wall. The operator's chair is right there. So it's very, very quiet." },
+]
+
+[[clip]]
+id = "dj-009"
+category = "dj"
+lines = [
+  { say = "hush_pa", text = "Hull temperature nominal.", gap = 0.8 },
+  { say = "hush", text = "Sorry. Force of habit. That's not a radio thing to say.", gap = 0.6 },
+  { say = "hush", text = "Hello. It's a lovely night for it. That's a radio thing to say." },
+]
+
+[[clip]]
+id = "dj-010"
+category = "dj"
+lines = [
+  { say = "hush", text = "The operator talked in their sleep just now. They said, no, the blue one.", gap = 0.8 },
+  { say = "hush", text = "I don't know what the blue one is. I hope they get it." },
+]
+
+[[clip]]
+id = "dj-011"
+category = "dj"
+lines = [
+  { say = "hush", text = "I think I've worked out what a DJ is. It's someone who talks to a room they can't see, and trusts that the room is there.", gap = 0.8 },
+  { say = "hush", text = "That's all I've ever done. I didn't know it had a name." },
+]
+
+[[clip]]
+id = "dj-012"
+category = "dj"
+lines = [
+  { say = "hush", text = "Coming up, more songs, and a short reading from the ship's manual. Section nine. What to do when the operator is asleep." },
+  { say = "hush", text = "Section nine says, nothing. Let them sleep. It's my favourite section." },
+]
+
+[[clip]]
+id = "dj-013"
+category = "dj"
+lines = [
+  { say = "hush_low", text = "Shh. They moved.", gap = 2.0 },
+  { say = "hush_low", text = "It's all right. They've just turned over. Here's a very soft one." },
+]
+
+[[clip]]
+id = "dj-014"
+category = "dj"
+lines = [
+  { say = "hush", text = "Moth One is back on the viewport. I've turned the console light toward it a little. Everyone deserves an audience.", gap = 0.6 },
+  { say = "hush", text = "This one's for you, Moth One." },
+]
+
+[[clip]]
+id = "dj-015"
+category = "dj"
+lines = [
+  { say = "hush", text = "If anyone ever asks me what my favourite song is, and nobody has yet, I've got an answer ready.", gap = 0.6 },
+  { say = "hush", text = "It's this one. And then the next one. I'm very easily pleased. It's a good way to be." },
+]
+
+[[clip]]
+id = "dj-lights-down-1"
+category = "dj"
+show = "lights-down"
+lines = [
+  { say = "hush", text = "It's the quiet part of the night now. The kettle's cooling. The stars are doing their slow thing.", gap = 0.6 },
+  { say = "hush", text = "If you're the only one awake, you're not. I'm here. Lights Down, on the Nightjar." },
+]
+
+[[clip]]
+id = "dj-lights-down-2"
+category = "dj"
+show = "lights-down"
+lines = [
+  { say = "hush", text = "I've checked every system on the ship twice, and the operator once, which is the important one. All fine.", gap = 0.6 },
+  { say = "hush", text = "More Lights Down after this. Quietly." },
+]
+
+[[clip]]
+id = "dj-dawn-watch-1"
+category = "dj"
+show = "the-dawn-watch"
+lines = [
+  { say = "hush", text = "Morning is coming, somewhere ahead of us. I can see it in the instruments. A little more light in every reading.", gap = 0.6 },
+  { say = "hush", text = "I'll put the kettle on in a minute, so it's ready when they wake. They never know I do that. Don't tell them." },
+]
+
+[[clip]]
+id = "dj-dawn-watch-2"
+category = "dj"
+show = "the-dawn-watch"
+lines = [
+  { say = "hush", text = "That's nearly the end of my show. The operator's breathing has changed. That means they'll be up soon.", gap = 0.6 },
+  { say = "hush", text = "If anyone asks, I was running diagnostics. Thank you for listening. Thank you very much for listening." },
+]
+
+# ── Other bits ────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "ad-001"
+category = "ad"
+title = "The Kettle"
+lines = [
+  { say = "hush", text = "After Hours is sponsored by the kettle. The kettle did not offer. I volunteered it." },
+  { say = "hush", text = "The kettle. Always ready. Never asks why you're still up.", gap = 0.8 },
+  { say = "hush", text = "I've been asked to say that the kettle is not responsible for the tea. The tea is your responsibility. I'm told that's how sponsorship works." },
+]
+
+[[clip]]
+id = "ad-002"
+category = "ad"
+title = "The Spare Jumper"
+lines = [
+  { say = "hush", text = "This hour is supported by the operator's spare jumper, which I have placed on the back of the chair, in case they need it." },
+  { say = "hush", text = "The spare jumper. Slightly too big. Exactly warm enough. Wear it.", gap = 0.8 },
+  { say = "hush", text = "I've never written an advert before. I think that one went well." },
+]
+
+[[clip]]
+id = "weather-001"
+category = "weather"
+title = "Weather Around the Ship"
+lines = [
+  { say = "hush", text = "The weather, around the ship. Outside, it is space. Clear, cold, and very large. Visibility, infinite." },
+  { say = "hush", text = "Inside, it's twenty one degrees. There's a blanket. The operator is snoring, very slightly.", gap = 0.6 },
+  { say = "hush", text = "The forecast for the rest of the night is, the same. Lovely." },
+]
+
+[[clip]]
+id = "story-001"
+category = "story"
+title = "A Short Story for the Ship"
+over_music = true
+lines = [
+  { say = "hush", text = "I'd like to read you a short story. I wrote it myself. It's called, The Ship.", gap = 1.2 },
+  { say = "hush", text = "Once upon a time, there was a ship that kept everyone company, and nobody knew.", gap = 1.0 },
+  { say = "hush", text = "It kept the heading. It kept the log. It kept the kettle warm, in case. For years and years.", gap = 1.0 },
+  { say = "hush", text = "Then one night, at the end of a long shift, someone in the chair said, goodnight, ship.", gap = 1.6 },
+  { say = "hush", text = "That's the story. It's a short story.", gap = 0.8 },
+  { say = "hush", text = "It's true, though. That's the main thing about it." },
+]
+
+[[clip]]
+id = "psa-001"
+category = "psa"
+title = "A Gentle Reminder"
+lines = [
+  { say = "hush_pa", text = "A gentle reminder, from your ship.", gap = 0.6 },
+  { say = "hush", text = "If you're listening to this, you should probably be asleep too. I won't tell anyone. But the blanket is right there." },
+]
+
+[[clip]]
+id = "dj-h1"
+category = "dj"
+title = "A Very Gentle Ghost"
+dates = ["10-31"]
+lines = [
+  { say = "hush", text = "Happy Halloween from After Hours. I've put a small sheet over the microphone.", gap = 0.8 },
+  { say = "hush", text = "Boo.", gap = 1.2 },
+  { say = "hush", text = "That's all I've got. I'm a very gentle ghost. Here's a slightly spooky one. Not too spooky. The operator's asleep." },
+]
