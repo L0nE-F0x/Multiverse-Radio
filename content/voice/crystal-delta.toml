@@ -1,0 +1,231 @@
+# Crystal Radio Delta — Prism, from Refraction Point Seven.
+# Every sentence refracts into a second, slightly different sentence (same voice, cave
+# reverb). The tiny miner sips tea and occasionally finds things.
+station = "crystal-delta"
+
+[voices]
+host = { voice = "af_aoede", name = "Prism" }
+refract = { voice = "af_aoede", speed = 1.04, fx = "cave", name = "Prism" }
+miner = { voice = "am_puck", fx = "tiny", name = "The Tiny Miner" }
+
+# ── Idents ────────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "id-001"
+category = "id"
+lines = [
+  { say = "host", text = "You're listening to Crystal Radio Delta.", gap = 0.3 },
+  { say = "refract", text = "You're glistening to Crystal Radio Delta." },
+  { sting = "id" },
+]
+
+[[clip]]
+id = "id-002"
+category = "id"
+lines = [
+  { say = "host", text = "Glass beats from a dimension made of chandeliers.", gap = 0.3 },
+  { say = "refract", text = "Glass beats from a chandelier made of dimensions." },
+  { sting = "id" },
+]
+
+[[clip]]
+id = "id-003"
+category = "id"
+lines = [
+  { say = "host", text = "Crystal Radio Delta. Ninety-five point two.", gap = 0.3 },
+  { say = "refract", text = "Ninety-five point two, and a little bit of three." },
+  { sting = "id" },
+]
+
+[[clip]]
+id = "id-004"
+category = "id"
+daypart = "night"
+lines = [
+  { say = "host", text = "Good night, from Crystal Radio Delta.", gap = 0.3 },
+  { say = "refract", text = "Good light, from Crystal Radio Delta." },
+  { sting = "id" },
+]
+
+[[clip]]
+id = "id-005"
+category = "id"
+daypart = "morning"
+lines = [
+  { say = "host", text = "Good morning, from Refraction Point Seven.", gap = 0.3 },
+  { say = "refract", text = "Good morning, from Refraction Point Seven and a half." },
+  { sting = "id" },
+]
+
+[[clip]]
+id = "id-006"
+category = "id"
+lines = [
+  { say = "host", text = "This is Crystal Radio Delta. Everything shines.", gap = 0.3 },
+  { say = "refract", text = "Everything shines twice." },
+  { sting = "id" },
+]
+
+[[clip]]
+id = "id-007"
+category = "id"
+lines = [
+  { say = "miner", text = "Crystal Radio Delta." },
+  { say = "host", text = "Thank you, tiny miner.", gap = 0.3 },
+  { say = "refract", text = "Thank you, tinier miner." },
+  { sting = "id" },
+]
+
+# ── Host links ────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "dj-001"
+category = "dj"
+lines = [
+  { say = "host", text = "That was a song about light.", gap = 0.3 },
+  { say = "refract", text = "That was a light about song." },
+  { say = "host", text = "In here, both of those are true. It's one of the nicest things about living in a chandelier. Here's another." },
+]
+
+[[clip]]
+id = "dj-002"
+category = "dj"
+lines = [
+  { say = "host", text = "The tiny miner is on his tea break.", gap = 0.3 },
+  { say = "refract", text = "The tiny miner is on his tea break, again." },
+  { say = "host", text = "He's earned it. This morning he found a crystal that hums in the key of Tuesday. Here's something to hum along with." },
+]
+
+[[clip]]
+id = "dj-003"
+category = "dj"
+lines = [
+  { say = "host", text = "If you hold a glass of water up to your radio right now, you'll see the music.", gap = 0.3 },
+  { say = "refract", text = "If you hold a glass of music up to your radio, you'll hear the water." },
+  { say = "host", text = "Please try one of those. Not both. Last time someone tried both, their kitchen sang for a week." },
+]
+
+[[clip]]
+id = "dj-004"
+category = "dj"
+daypart = "morning"
+lines = [
+  { say = "host", text = "Morning light is coming in through the cave roof.", gap = 0.3 },
+  { say = "refract", text = "Morning light is going out through the cave floor." },
+  { say = "host", text = "We're never quite sure which. We've stopped asking. It's very pretty either way." },
+]
+
+[[clip]]
+id = "dj-005"
+category = "dj"
+daypart = "night"
+lines = [
+  { say = "host", text = "It's dark outside the cave.", gap = 0.3 },
+  { say = "refract", text = "It's bright inside the cave." },
+  { say = "host", text = "That's the arrangement we have with the night. It keeps the outside, we keep the in. Here's a slow one." },
+]
+
+[[clip]]
+id = "dj-006"
+category = "dj"
+lines = [
+  { say = "host", text = "This hour is sponsored by Grumbel's Ladders.", gap = 0.3 },
+  { say = "refract", text = "This ladder is sponsored by Grumbel's Hours." },
+  { say = "host", text = "Up is a choice. Please choose it carefully, around the chandeliers." },
+]
+
+[[clip]]
+id = "dj-007"
+category = "dj"
+lines = [
+  { say = "host", text = "A gentle reminder. Please don't tap on the crystals.", gap = 0.3 },
+  { say = "refract", text = "A gentle reminder. The crystals will tap back." },
+  { say = "host", text = "And they have all night, and very good rhythm." },
+]
+
+[[clip]]
+id = "dj-008"
+category = "dj"
+lines = [
+  { say = "host", text = "That last track had seven harmonies.", gap = 0.3 },
+  { say = "refract", text = "That last track had seven colours." },
+  { say = "host", text = "And one note nobody played, that turned up anyway. We've given it a little room of its own, near the back. Here's the next one." },
+]
+
+[[clip]]
+id = "dj-009"
+category = "dj"
+lines = [
+  { say = "host", text = "A small shadow has been seen in the big chandelier.", gap = 0.3 },
+  { say = "refract", text = "A big shadow has been seen in the small chandelier." },
+  { say = "host", text = "Either way, he says his name is Greg, and he likes it up there. He says it's the first place he's ever been the light. Hollis, he's alright." },
+]
+
+[[clip]]
+id = "dj-010"
+category = "dj"
+daypart = "day"
+lines = [
+  { say = "host", text = "Afternoon, everyone. The sundogs are out.", gap = 0.3 },
+  { say = "refract", text = "Afternoon, everyone. The sun's dogs are out." },
+  { say = "host", text = "Very good dogs, made of light. They don't fetch, but they do follow you home. Here's a song." },
+]
+
+[[clip]]
+id = "dj-011"
+category = "dj"
+daypart = "evening"
+lines = [
+  { say = "host", text = "The evening is refracting into night.", gap = 0.3 },
+  { say = "refract", text = "The night is reflecting on the evening." },
+  { say = "host", text = "They do this every day, and every day it's new. Here's something sparkly." },
+]
+
+[[clip]]
+id = "dj-012"
+category = "dj"
+lines = [
+  { say = "host", text = "A listener writes: I love how you say everything twice.", gap = 0.3 },
+  { say = "refract", text = "A listener writes: I love how you say everything twice, nearly." },
+  { say = "host", text = "Thank you.", gap = 0.3 },
+  { say = "refract", text = "Thank you, nearly." },
+]
+
+[[clip]]
+id = "dj-013"
+category = "dj"
+lines = [
+  { say = "miner", text = "Found another one." },
+  { say = "host", text = "The tiny miner has found another crystal.", gap = 0.3 },
+  { say = "refract", text = "The tiny crystal has found another miner." },
+  { say = "miner", text = "That's also true." },
+  { say = "host", text = "Here's a song for both of them." },
+]
+
+[[clip]]
+id = "dj-014"
+category = "dj"
+daypart = "night"
+lines = [
+  { say = "host", text = "If you're lying awake, look at your ceiling, and imagine it's made of glass.", gap = 0.3 },
+  { say = "refract", text = "If you're made of glass, look at your ceiling, and imagine you're lying awake." },
+  { say = "host", text = "Hm. The first one was better. Sleep well." },
+]
+
+[[clip]]
+id = "dj-015"
+category = "dj"
+lines = [
+  { say = "host", text = "Coming up, more glass beats.", gap = 0.3 },
+  { say = "refract", text = "Coming down, more glass beats." },
+  { say = "host", text = "Coming sideways, a song so clear you can see straight through it to the next one." },
+]
+
+[[clip]]
+id = "dj-016"
+category = "dj"
+lines = [
+  { say = "host", text = "Sometimes people ask which of my sentences is the real one.", gap = 0.3 },
+  { say = "refract", text = "Sometimes people ask which of my sentences is the real me." },
+  { say = "host", text = "I tell them, it's the light in between. That's where I live. Here's a song." },
+]
