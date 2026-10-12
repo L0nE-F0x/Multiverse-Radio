@@ -176,22 +176,30 @@ export function eggBox(g: Gfx, x: number, y: number, w: number, h: number, base:
 export function djSilhouette(g: Gfx, x: number, y: number, body: Color, rim: Color, bob: number, hair = 0, facing = 1) {
   const hy = Math.round(y + bob * 1.5);
   // shoulders and chest
-  g.ellipse(x, hy + 15, 9, 6, body);
-  g.rect(x - 9, hy + 15, 19, 12, body);
-  // neck + head
+  g.ellipse(x, hy + 14, 9, 5, body);
+  g.rect(x - 9, hy + 14, 19, 12, body);
+  // neck + head (in three-quarter profile toward `facing`)
   g.rect(x - 2, hy + 7, 5, 5, body);
-  g.ellipse(x, hy + 4, 4, 5, body);
-  if (hair === 1) g.ellipse(x - facing, hy + 1, 5, 4, body); // big hair
-  if (hair === 2) g.rect(x - 4 - facing, hy - 1, 9, 3, body); // beanie
-  if (hair === 2) g.rect(x - 1, hy - 3, 2, 2, body);
-  // headphones
-  g.rect(x - 6, hy + 2, 2, 5, rim);
-  g.rect(x + 5, hy + 2, 2, 5, shade(rim, 0.6));
-  g.hline(x - 5, x + 5, hy - 2, shade(rim, 0.7));
-  // rim light on the lit side
-  g.vline(x + facing * 4, hy + 2, hy + 6, rim);
-  g.px(x + facing * 3, hy, rim);
-  g.vline(x + facing * 9, hy + 15, hy + 26, shade(rim, 0.8));
+  g.ellipse(x, hy + 3, 4, 5, body);
+  g.px(x + facing * 5, hy + 4, body); // nose
+  if (hair === 1) g.ellipse(x - facing, hy, 5, 4, body); // big hair
+  if (hair === 2) {
+    g.rect(x - 4, hy - 2, 9, 3, body); // beanie
+    g.rect(x - 1, hy - 4, 3, 2, body);
+  }
+  // headphones: band over the top, a cup over the ear
+  const band = shade(body, 1.8);
+  g.hline(x - 4, x + 4, hy - 3, band);
+  g.px(x - 5, hy - 2, band);
+  g.px(x + 5, hy - 2, band);
+  g.rect(x - facing * 2 - 1, hy + 1, 3, 5, band);
+  g.px(x - facing * 2 - 1 + (facing > 0 ? 0 : 2), hy + 1, rim);
+  // rim light along the lit side of the face and shoulder
+  g.vline(x + facing * 4, hy + 1, hy + 5, rim);
+  g.px(x + facing * 5, hy + 4, rim);
+  g.px(x + facing * 3, hy - 1, rim);
+  g.vline(x + facing * 9, hy + 15, hy + 26, shade(rim, 0.7));
+  g.hline(x + facing * 3, x + facing * 8, hy + 13, shade(rim, 0.6));
 }
 
 // ── per-pirate variation ─────────────────────────────────────────────────────
@@ -241,11 +249,11 @@ const SKIES: Record<TimeOfDay, string[][]> = {
 
 const CALL_A = ['K', 'W', 'X', 'Z', 'R', 'V', 'Q', 'J'];
 const CALL_B = ['RFS', 'LOW', 'NITE', 'ZAP', 'MUD', 'FOG', 'OWL', 'BRR', 'HUM', 'DIY', 'SKY', 'RAT', 'GNO', 'WAX', 'DUB'];
-const CALL_C = ['FM', '', '', '!', ' FM', ''];
+const CALL_C = [' FM', '', '', '!', ' FM', ''];
 
 /** Pick a pirate's look from its variant hash. `salt` keeps the four kinds from correlating. */
 export function pirateLook(variant: number, accent: Color, salt: number, allowSnow = true): PirateLook {
-  const rng = new Rng((variant ^ Math.imul(salt + 1, 0x9e3779b1)) >>> 0 || 7);
+  const rng = new Rng(Math.floor(hash3(variant | 0, salt, 911) * 4294967296) || 7);
   const tod = rng.pick<TimeOfDay>(['night', 'night', 'moon', 'moon', 'dusk', 'dawn']);
   const weathers: Weather[] = ['clear', 'clear', 'rain', 'fog', 'wind', 'rain'];
   if (allowSnow) weathers.push('snow');
@@ -313,3 +321,148 @@ export function dith(a: Color, b: Color, f: number, x: number, y: number): Color
 }
 
 export const DEEP_INK = hex('#040509');
+
+// ── pirate props ──────────────────────────────────────────────────────────────
+
+/** A row of rounded, ragged tree canopies standing on `base` (background use). */
+export function treeLine(g: Gfx, base: number, seed: number, c: Color, minR = 10, maxR = 22, gap = 0.75) {
+  let x = g.left - maxR;
+  let i = 0;
+  while (x < g.right + maxR) {
+    const r = minR + hash3(i, seed, 1) * (maxR - minR);
+    const cy = base - r * (0.9 + hash3(i, seed, 2) * 0.9);
+    g.rect(x - 1, cy, 3, base - cy + 1, c);
+    const ir = Math.ceil(r * 1.2);
+    for (let dy = -ir; dy <= ir; dy++)
+      for (let dx = -ir; dx <= ir; dx++) {
+        const d = Math.hypot(dx, dy * 1.15) / r + (fbm((x + dx) / 6, (cy + dy) / 6, seed, 3) - 0.5) * 0.7;
+        if (d < 1 && cy + dy < base) g.px(x + dx, cy + dy, c);
+      }
+    x += r * gap * 2;
+    i++;
+  }
+}
+
+/** A coat-hanger dipole on top of a pole at (x, y): two bent wire triangles and a hook. */
+export function coatHanger(g: Gfx, x: number, y: number, wire: Color, s = 1) {
+  const w = Math.round(9 * s);
+  const h = Math.round(3 * s);
+  for (const d of [-1, 1]) {
+    g.line(x, y, x + d * w, y - 1, wire);
+    g.line(x + d * w, y - 1, x + d * Math.round(w * 0.45), y - h - 1, wire);
+    g.line(x + d * Math.round(w * 0.45), y - h - 1, x, y, wire);
+  }
+  g.px(x, y - h - 2, wire);
+  g.px(x + 1, y - h - 3, wire);
+}
+
+/** A sagging string of bulbs alternating between two colours; `on` 0..1. */
+export function stringLights(g: Gfx, x0: number, y0: number, x1: number, y1: number, sag: number, n: number, a: Color, b: Color, on: number, t: number, wire: Color) {
+  const len = Math.max(1, Math.round(Math.abs(x1 - x0)));
+  for (let i = 0; i <= len; i++) {
+    const u = i / len;
+    g.px(x0 + (x1 - x0) * u, y0 + (y1 - y0) * u + Math.sin(u * Math.PI) * sag, wire);
+  }
+  for (let i = 0; i < n; i++) {
+    const u = (i + 0.5) / n;
+    const x = x0 + (x1 - x0) * u;
+    const y = y0 + (y1 - y0) * u + Math.sin(u * Math.PI) * sag + 1;
+    const c = i % 2 ? a : b;
+    const k = on * (0.75 + 0.25 * Math.sin(t * 2 + i * 1.7));
+    g.px(x, y, mix(shade(c, 0.25), c, k));
+    if (k > 0.2) g.glow(x, y, 3, c, k * 0.35);
+  }
+}
+
+/** A board with a hand-painted call sign. Returns the board's width. */
+export function paintedSign(g: Gfx, text: string, x: number, y: number, board: Color, paint: Color, seed: number, scale = 1, pad = 3): number {
+  const tw = paintedWidth(text, scale);
+  const w = tw + pad * 2;
+  const h = 5 * scale + pad * 2;
+  g.rect(x, y, w, h, board);
+  g.hline(x, x + w - 1, y + Math.floor(h / 2), shade(board, 0.8));
+  g.px(x + w - 1, y, shade(board, 0.6));
+  for (let i = 0; i < w; i += 3) if (hash3(i, seed, 4) < 0.3) g.px(x + i, y + h - 1, shade(board, 0.7));
+  paintedText(g, text, x + pad, y + pad, paint, scale, seed, scale > 1);
+  return w;
+}
+
+export type LookoutKind = 'person' | 'cat' | 'gnome' | 'dog';
+
+/**
+ * A lookout, side-on, facing `dir`; (x, y) is the feet. `alert` 0..1 lowers the binoculars and
+ * waves (or flattens ears). `rim` is the colour of whatever light is nearby.
+ */
+export function lookout(g: Gfx, kind: LookoutKind, x: number, y: number, dir: 1 | -1, t: number, alert: number, body: Color, rim: Color) {
+  const X = (dx: number) => x + dx * dir;
+  const R = (dx: number, yy: number, w: number, h: number, c: Color) => g.rect(dir > 0 ? X(dx) : X(dx) - w + 1, yy, w, h, c);
+  const dark = shade(body, 0.6);
+  const skin = hex('#6a4a3c');
+  if (kind === 'person') {
+    R(-2, y - 1, 2, 1, dark);
+    R(1, y - 1, 2, 1, dark);
+    R(-2, y - 7, 2, 6, dark);
+    R(1, y - 7, 2, 6, dark);
+    R(-3, y - 15, 7, 8, body);
+    R(-2, y - 20, 5, 5, body);
+    R(2, y - 18, 1, 2, skin);
+    if (alert < 0.5) {
+      R(3, y - 19, 2, 2, hex('#15161a'));
+      R(2, y - 15, 3, 1, body);
+      g.px(X(4), y - 19, rim);
+    } else {
+      const wave = Math.sin(t * 10) > 0 ? 1 : 0;
+      R(3, y - 22 - wave, 1, 7, body);
+      R(3, y - 23 - wave, 1, 1, skin);
+    }
+    g.vline(X(-3), y - 15, y - 8, rim);
+    g.px(X(-2), y - 20, rim);
+  } else if (kind === 'gnome') {
+    R(-2, y - 4, 5, 4, hex('#2e3a54'));
+    R(-2, y - 7, 5, 3, hex('#b8b0a0'));
+    R(-1, y - 8, 3, 1, hex('#a07a60'));
+    g.tri(X(-2), y - 8, X(3), y - 8, X(0), y - 14, hex('#6a2420'));
+    R(2, y - 9, 2, 2, hex('#15161a'));
+    if (alert > 0.5) R(0, y - 15, 1, 1, rim);
+    g.vline(X(-2), y - 7, y - 1, rim);
+  } else if (kind === 'cat') {
+    const ears = alert > 0.5 ? 0 : 1;
+    R(-3, y - 4, 6, 4, body);
+    R(1, y - 7, 4, 3, body);
+    R(1, y - 7 - ears, 1, 1, body);
+    R(4, y - 7 - ears, 1, 1, body);
+    g.px(X(3), y - 6, mix(rim, hex('#d8e060'), 0.6));
+    const sw = Math.round(Math.sin(t * 1.3) * 2);
+    g.line(X(-3), y - 2, X(-6), y - 5 + sw, body);
+    g.vline(X(-3), y - 4, y - 1, rim);
+  } else {
+    R(-3, y - 6, 6, 6, body);
+    R(1, y - 10, 4, 4, body);
+    R(4, y - 9, 2, 2, body);
+    R(1, y - 11 + (alert > 0.5 ? -1 : 0), 1, 2, dark);
+    g.px(X(3), y - 9, hex('#0a0a0a'));
+    const wag = Math.sin(t * (alert > 0.5 ? 14 : 3)) > 0 ? -1 : 0;
+    R(-5, y - 3 + wag, 2, 1, body);
+    g.vline(X(-3), y - 6, y - 1, rim);
+  }
+}
+
+/** A plain van with a rotating detector dish, for "they're coming" events. */
+export function detectorVan(g: Gfx, x: number, ground: number, t: number, dir: 1 | -1, body: Color, lights: number) {
+  const X = (dx: number) => x + dx * dir;
+  const w = 30;
+  g.rect(x - w / 2, ground - 13, w, 10, body);
+  g.rect(Math.min(X(w / 2 - 9), X(w / 2 - 1)), ground - 16, 9, 4, body);
+  g.rect(Math.min(X(w / 2 - 8), X(w / 2 - 3)), ground - 15, 6, 2, shade(body, 1.8));
+  g.disc(X(-9), ground - 3, 3, hex('#050608'));
+  g.disc(X(9), ground - 3, 3, hex('#050608'));
+  const a = Math.cos(t * 2.4);
+  g.vline(X(-4), ground - 18, ground - 13, body);
+  const dw = Math.max(1, Math.abs(Math.round(a * 8)));
+  g.rect(X(-4) - Math.floor(dw / 2), ground - 21, dw, 3, shade(body, 1.5));
+  if (lights > 0) {
+    g.px(X(w / 2), ground - 9, hex('#fff2c0'));
+    for (let i = 1; i < 60; i++) g.pxAdd(X(w / 2 + i), ground - 9 + i * 0.05, hex('#fff2c0'), lights * 0.3 * (1 - i / 60));
+    g.glow(X(w / 2), ground - 9, 8, hex('#fff2c0'), lights * 0.4);
+  }
+}
