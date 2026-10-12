@@ -44,4 +44,12 @@ export const STATION_SCENES_V3: Partial<Record<SceneId, SceneEntry>> = {
     label: 'A translucent crew stamps around an accordion player on a foggy ship deck above a faintly glowing green sea.',
     load: () => import('./defs/ghost-ship'),
   },
+  'truck-stop': {
+    label: 'A neon truck-stop diner at a desert crossroads where one road climbs into the sky; a big rig waits outside.',
+    load: () => import('./defs/truck-stop'),
+  },
+  'fog-wall': {
+    label: 'Four blurry musicians stand in thick fog and pink-blue light, pedals glowing at their feet, watched by three shapes and a lamp.',
+    load: () => import('./defs/fog-wall'),
+  },
 };
