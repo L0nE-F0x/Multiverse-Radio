@@ -52,4 +52,12 @@ export const STATION_SCENES_V3: Partial<Record<SceneId, SceneEntry>> = {
     label: 'Four blurry musicians stand in thick fog and pink-blue light, pedals glowing at their feet, watched by three shapes and a lamp.',
     load: () => import('./defs/fog-wall'),
   },
+  'quiz-stage': {
+    label: 'On a dark game-show stage a robot, a nervous blob and a grandmother wait at podiums before a wheel with a planet on it.',
+    load: () => import('./defs/quiz-stage'),
+  },
+  'yesterday-room': {
+    label: "A 1970s living room in golden afternoon light: a dog asleep on the rug, yesterday's date, a clock running backwards.",
+    load: () => import('./defs/yesterday-room'),
+  },
 };
