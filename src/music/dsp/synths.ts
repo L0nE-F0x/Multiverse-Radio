@@ -6,6 +6,7 @@
 import type { SynthPatch } from '../score';
 import { midiToFreq } from '../theory';
 import { Biquad, Noise, sinc, TAU } from './core';
+import { BEDS_SYNTHS } from './beds-v3';
 import { GENRE_SYNTHS } from './genres';
 
 export type Wave =
@@ -62,6 +63,7 @@ export interface SynthDef {
 }
 
 export const SYNTHS: Record<SynthPatch, SynthDef> = {
+  ...BEDS_SYNTHS,
   'pad-warm': {
     oscs: [
       { wave: 'sawtooth', detune: -8, gain: 0.6 },

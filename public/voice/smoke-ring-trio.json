@@ -1,0 +1,586 @@
+{
+  "version": 1,
+  "station": "smoke-ring-trio",
+  "clips": [
+    {
+      "id": "id-001",
+      "category": "id",
+      "url": "/voice/smoke-ring-trio/id-001.mp3",
+      "durationMs": 6593,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Octavia Lowe",
+          "text": "You're listening to Smoke Ring Trio. A little jazz club, inside a storm cloud. Mind the step. There isn't one.",
+          "startMs": 39
+        }
+      ]
+    },
+    {
+      "id": "id-002",
+      "category": "id",
+      "url": "/voice/smoke-ring-trio/id-002.mp3",
+      "durationMs": 6609,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Octavia Lowe",
+          "text": "Smoke Ring Trio. Piano, bass and brushes, about two miles up. Find a table, darling. Hold on to it.",
+          "startMs": 38
+        }
+      ]
+    },
+    {
+      "id": "id-003",
+      "category": "id",
+      "url": "/voice/smoke-ring-trio/id-003.mp3",
+      "durationMs": 6042,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Octavia Lowe",
+          "text": "This is Smoke Ring Trio. If you feel the floor give a little, that's only the cloud. It's listening too.",
+          "startMs": 42
+        }
+      ]
+    },
+    {
+      "id": "id-004",
+      "category": "id",
+      "url": "/voice/smoke-ring-trio/id-004.mp3",
+      "durationMs": 6815,
+      "overMusic": true,
+      "daypart": "night",
+      "lines": [
+        {
+          "speaker": "Octavia Lowe",
+          "text": "Smoke Ring Trio. It's late. The candles are low, the cloud is high, and nobody in here is in any hurry at all.",
+          "startMs": 38
+        }
+      ]
+    },
+    {
+      "id": "id-005",
+      "category": "id",
+      "url": "/voice/smoke-ring-trio/id-005.mp3",
+      "durationMs": 6867,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Octavia Lowe",
+          "text": "Smoke Ring Trio, eighty eight point eight five. No smoking, please. The room does quite enough of that on its own.",
+          "startMs": 38
+        }
+      ]
+    },
+    {
+      "id": "id-006",
+      "category": "id",
+      "url": "/voice/smoke-ring-trio/id-006.mp3",
+      "durationMs": 6395,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Octavia Lowe",
+          "text": "You're in the Cumulus Room, home of the Smoke Ring Trio. Tonight's forecast: brushes, with a chance of piano.",
+          "startMs": 42
+        }
+      ]
+    },
+    {
+      "id": "id-007",
+      "category": "id",
+      "url": "/voice/smoke-ring-trio/id-007.mp3",
+      "durationMs": 8047,
+      "overMusic": true,
+      "daypart": "day",
+      "lines": [
+        {
+          "speaker": "Octavia Lowe",
+          "text": "Smoke Ring Trio. The cloud has drifted somewhere sunny this afternoon. We've drawn the curtains. It's night in here. It always is.",
+          "startMs": 38
+        }
+      ]
+    },
+    {
+      "id": "dj-001",
+      "category": "dj",
+      "url": "/voice/smoke-ring-trio/dj-001.mp3",
+      "durationMs": 14419,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Octavia Lowe",
+          "text": "That piano solo was a warm front. It came in low from the west, it lingered over the middle eight, and it left everybody slightly damp around the eyes.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Octavia Lowe",
+          "text": "The bass is now clearing from the north. Lovely conditions. Stay exactly where you are.",
+          "startMs": 9041
+        }
+      ]
+    },
+    {
+      "id": "dj-002",
+      "category": "dj",
+      "url": "/voice/smoke-ring-trio/dj-002.mp3",
+      "durationMs": 18189,
+      "title": "Please Don't Applaud",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Octavia Lowe",
+          "text": "A reminder for those of you in the room. Please don't applaud. We're inside a cloud, and every time you clap, it rains on somebody down below.",
+          "startMs": 47
+        },
+        {
+          "speaker": "Octavia Lowe",
+          "text": "Last week's standing ovation fell on a village fête. They carried on. They always carry on. So in here we snap our fingers. Snapping is drizzle. Drizzle is fine.",
+          "startMs": 8446
+        }
+      ]
+    },
+    {
+      "id": "dj-003",
+      "category": "dj",
+      "url": "/voice/smoke-ring-trio/dj-003.mp3",
+      "durationMs": 15622,
+      "title": "Florian Sets Off",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Octavia Lowe",
+          "text": "Florian, our waiter, is crossing to table nine with a tray of drinks. He set off at the start of the last number.",
+          "startMs": 42
+        },
+        {
+          "speaker": "Octavia Lowe",
+          "text": "You have to go carefully, crossing a cloud. You have to believe in every single step. He's halfway. He's doing beautifully. Let's give him one more ballad.",
+          "startMs": 6876
+        }
+      ]
+    },
+    {
+      "id": "dj-004",
+      "category": "dj",
+      "url": "/voice/smoke-ring-trio/dj-004.mp3",
+      "durationMs": 17399,
+      "title": "Florian Arrives",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Octavia Lowe",
+          "text": "News from the floor. Florian has reached table nine. Table nine had drifted off towards the bandstand during the ballad, but he followed it with great dignity, and he didn't spill a drop.",
+          "startMs": 40
+        },
+        {
+          "speaker": "Octavia Lowe",
+          "text": "The ice has melted. They're delighted. Florian?",
+          "startMs": 11452
+        },
+        {
+          "speaker": "Florian, the Waiter",
+          "text": "Very good, madam. Setting off for table ten.",
+          "startMs": 14858
+        }
+      ]
+    },
+    {
+      "id": "dj-005",
+      "category": "dj",
+      "url": "/voice/smoke-ring-trio/dj-005.mp3",
+      "durationMs": 15003,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Octavia Lowe",
+          "text": "A word about Silas, our drummer. Silas plays with brushes, and he plays them so softly that some nights he's only a rumour.",
+          "startMs": 40
+        },
+        {
+          "speaker": "Octavia Lowe",
+          "text": "People ask me, is there really a drummer? There is, darling. Look closely. That faint weather at the back of the stage. That's Silas.",
+          "startMs": 7420
+        }
+      ]
+    },
+    {
+      "id": "dj-006",
+      "category": "dj",
+      "url": "/voice/smoke-ring-trio/dj-006.mp3",
+      "durationMs": 13986,
+      "title": "The Long Walk Home",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Octavia Lowe",
+          "text": "Augustin, on the bass, has been walking the same bass line since the spring. It's a long walk. He doesn't hurry it.",
+          "startMs": 40
+        },
+        {
+          "speaker": "Octavia Lowe",
+          "text": "Tonight, for the first time, I think he can see home. Listen for it. Somewhere in the next tune, the bass is going to arrive.",
+          "startMs": 7065
+        }
+      ]
+    },
+    {
+      "id": "dj-007",
+      "category": "dj",
+      "url": "/voice/smoke-ring-trio/dj-007.mp3",
+      "durationMs": 13626,
+      "title": "The Walk Back",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Octavia Lowe",
+          "text": "Did you hear it, at the end of that one? The bass got home. Months on the road, and Augustin walked it right up to the front door.",
+          "startMs": 37
+        },
+        {
+          "speaker": "Octavia Lowe",
+          "text": "And then he turned round, and started walking back. Of course he did. He's a bass player. Here's the walk back.",
+          "startMs": 7358
+        }
+      ]
+    },
+    {
+      "id": "dj-008",
+      "category": "dj",
+      "url": "/voice/smoke-ring-trio/dj-008.mp3",
+      "durationMs": 15958,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Octavia Lowe",
+          "text": "Tonight's forecast in the room. Scattered piano, mostly in the upper register. A low bank of bass settling over the front tables. Brushes, light and variable.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Octavia Lowe",
+          "text": "And a ninety percent chance of the pianist closing her eyes, and not opening them again until the bridge.",
+          "startMs": 10060
+        }
+      ]
+    },
+    {
+      "id": "dj-009",
+      "category": "dj",
+      "url": "/voice/smoke-ring-trio/dj-009.mp3",
+      "durationMs": 16378,
+      "title": "Bev Hums It",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Octavia Lowe",
+          "text": "Bev's in again, at the bar, still looking for her song. Tonight she hummed it to Mercy, at the piano. Da da dum. Da da.",
+          "startMs": 48
+        },
+        {
+          "speaker": "Octavia Lowe",
+          "text": "Mercy played it straight back to her, with three new chords in it. Bev cried. Bev says it still isn't the song. But it's closer. Keep looking, darling.",
+          "startMs": 7585
+        }
+      ]
+    },
+    {
+      "id": "dj-010",
+      "category": "dj",
+      "url": "/voice/smoke-ring-trio/dj-010.mp3",
+      "durationMs": 13645,
+      "title": "For the Night Shift",
+      "overMusic": true,
+      "daypart": "night",
+      "lines": [
+        {
+          "speaker": "Octavia Lowe",
+          "text": "A word for the operator on the relay ship, drifting slowly under the cloud. We can see your running lights through the floor.",
+          "startMs": 35
+        },
+        {
+          "speaker": "Octavia Lowe",
+          "text": "There's a table by the window, darling, if you ever come up. We'll keep the candle going. This one's for the night shift.",
+          "startMs": 7272
+        }
+      ]
+    },
+    {
+      "id": "dj-011",
+      "category": "dj",
+      "url": "/voice/smoke-ring-trio/dj-011.mp3",
+      "durationMs": 13844,
+      "overMusic": true,
+      "daypart": "night",
+      "lines": [
+        {
+          "speaker": "Octavia Lowe",
+          "text": "If you saw a flicker in the walls just then, that was the lightning. It lives in here with us. It's terribly shy. It only comes out for the ballads.",
+          "startMs": 36
+        },
+        {
+          "speaker": "Octavia Lowe",
+          "text": "We've asked it to sit in for a number. It says it can't read music. It just knows when.",
+          "startMs": 8818
+        }
+      ]
+    },
+    {
+      "id": "dj-012",
+      "category": "dj",
+      "url": "/voice/smoke-ring-trio/dj-012.mp3",
+      "durationMs": 13990,
+      "title": "Sponsored by Grumbel's Ladders",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Octavia Lowe",
+          "text": "Tonight's set comes to you courtesy of Grumbel's Ladders. Getting up to a club inside a cloud takes a very long ladder, and a very calm disposition.",
+          "startMs": 37
+        },
+        {
+          "speaker": "Octavia Lowe",
+          "text": "Grumbel's Ladders. Up is a choice. Down is a long way, darling, so take your time.",
+          "startMs": 8979
+        }
+      ]
+    },
+    {
+      "id": "dj-013",
+      "category": "dj",
+      "url": "/voice/smoke-ring-trio/dj-013.mp3",
+      "durationMs": 10846,
+      "overMusic": true,
+      "daypart": "evening",
+      "lines": [
+        {
+          "speaker": "Octavia Lowe",
+          "text": "Good evening. The cloud is drifting west tonight, over the hills and the lit-up farms.",
+          "startMs": 37
+        },
+        {
+          "speaker": "Octavia Lowe",
+          "text": "If you're down there, and you hear a piano in the rain, wave. We'll see you. We won't wave back. We'll be playing.",
+          "startMs": 4989
+        }
+      ]
+    },
+    {
+      "id": "id-supper-club",
+      "category": "id",
+      "url": "/voice/smoke-ring-trio/id-supper-club.mp3",
+      "durationMs": 10134,
+      "overMusic": true,
+      "part": "open",
+      "show": "supper-club",
+      "lines": [
+        {
+          "speaker": "Octavia Lowe",
+          "text": "Good evening, and welcome to the Supper Club Forecast. The tables are floating, the candles are lit, and the soup is, as ever, mostly cloud.",
+          "startMs": 38
+        }
+      ]
+    },
+    {
+      "id": "dj-supper-club-001",
+      "category": "dj",
+      "url": "/voice/smoke-ring-trio/dj-supper-club-001.mp3",
+      "durationMs": 11096,
+      "overMusic": true,
+      "show": "supper-club",
+      "lines": [
+        {
+          "speaker": "Octavia Lowe",
+          "text": "A note from the kitchen. Tonight the chef recommends the consommé. It's a clear soup, which, up here, makes it the only clear thing in the building.",
+          "startMs": 35
+        },
+        {
+          "speaker": "Octavia Lowe",
+          "text": "The trio will now play something to digest to.",
+          "startMs": 8332
+        }
+      ]
+    },
+    {
+      "id": "dj-supper-club-002",
+      "category": "dj",
+      "url": "/voice/smoke-ring-trio/dj-supper-club-002.mp3",
+      "durationMs": 10877,
+      "overMusic": true,
+      "show": "supper-club",
+      "lines": [
+        {
+          "speaker": "Octavia Lowe",
+          "text": "Table six has ordered the chocolate cake for two. It's arrived. It's floating. They're chasing it gently with their spoons.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Octavia Lowe",
+          "text": "That's romance, darling. Here's something for the chase.",
+          "startMs": 7819
+        }
+      ]
+    },
+    {
+      "id": "id-the-3am-set",
+      "category": "id",
+      "url": "/voice/smoke-ring-trio/id-the-3am-set.mp3",
+      "durationMs": 9108,
+      "overMusic": true,
+      "part": "open",
+      "show": "the-3am-set",
+      "lines": [
+        {
+          "speaker": "Octavia Lowe",
+          "text": "It's three in the morning, and this is the Three AM Set. The diners have gone. The trio is playing for each other now. Pull up a cloud. Keep your voice down.",
+          "startMs": 37
+        }
+      ]
+    },
+    {
+      "id": "dj-the-3am-set-001",
+      "category": "dj",
+      "url": "/voice/smoke-ring-trio/dj-the-3am-set-001.mp3",
+      "durationMs": 12342,
+      "overMusic": true,
+      "show": "the-3am-set",
+      "lines": [
+        {
+          "speaker": "Octavia Lowe",
+          "text": "This is the hour when Mercy plays the tune she wrote for someone who never came to hear it. She doesn't say who.",
+          "startMs": 37
+        },
+        {
+          "speaker": "Octavia Lowe",
+          "text": "She plays it every night, at about this time, just in case. Here it is. Or something very like it.",
+          "startMs": 6457
+        }
+      ]
+    },
+    {
+      "id": "dj-the-3am-set-002",
+      "category": "dj",
+      "url": "/voice/smoke-ring-trio/dj-the-3am-set-002.mp3",
+      "durationMs": 13114,
+      "overMusic": true,
+      "show": "the-3am-set",
+      "lines": [
+        {
+          "speaker": "Octavia Lowe",
+          "text": "At this time of night the cloud goes very still, and the lightning in the walls is only resting. You can hear Augustin's fingers on the strings. You can hear the candles.",
+          "startMs": 35
+        },
+        {
+          "speaker": "Octavia Lowe",
+          "text": "You can hear yourself, too. Don't worry. You sound lovely.",
+          "startMs": 9971
+        }
+      ]
+    },
+    {
+      "id": "id-the-morning-after",
+      "category": "id",
+      "url": "/voice/smoke-ring-trio/id-the-morning-after.mp3",
+      "durationMs": 9965,
+      "overMusic": true,
+      "part": "open",
+      "show": "the-morning-after",
+      "lines": [
+        {
+          "speaker": "Octavia Lowe",
+          "text": "Good morning. This is the Morning After, on Smoke Ring Trio. The chairs are on the tables, the coffee's on, and the trio is still playing. Nobody has had the heart to tell them.",
+          "startMs": 37
+        }
+      ]
+    },
+    {
+      "id": "dj-the-morning-after-001",
+      "category": "dj",
+      "url": "/voice/smoke-ring-trio/dj-the-morning-after-001.mp3",
+      "durationMs": 11266,
+      "overMusic": true,
+      "show": "the-morning-after",
+      "lines": [
+        {
+          "speaker": "Octavia Lowe",
+          "text": "The cleaner has come in. She's mopping the cloud. It doesn't need mopping, it's a cloud, but she says it's the principle.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Octavia Lowe",
+          "text": "The trio is playing her a waltz. She is pretending very hard not to dance.",
+          "startMs": 6754
+        }
+      ]
+    },
+    {
+      "id": "dj-the-morning-after-002",
+      "category": "dj",
+      "url": "/voice/smoke-ring-trio/dj-the-morning-after-002.mp3",
+      "durationMs": 7603,
+      "overMusic": true,
+      "show": "the-morning-after",
+      "lines": [
+        {
+          "speaker": "Octavia Lowe",
+          "text": "Silas has fallen asleep at the drums. He's still playing. Some of his finest brushwork, honestly. I wouldn't dream of waking him.",
+          "startMs": 42
+        }
+      ]
+    },
+    {
+      "id": "dj-halloween-001",
+      "category": "dj",
+      "url": "/voice/smoke-ring-trio/dj-halloween-001.mp3",
+      "durationMs": 14666,
+      "title": "The Fourth Member",
+      "overMusic": true,
+      "dates": [
+        "10-24",
+        "10-25",
+        "10-26",
+        "10-27",
+        "10-28",
+        "10-29",
+        "10-30",
+        "10-31"
+      ],
+      "lines": [
+        {
+          "speaker": "Octavia Lowe",
+          "text": "We have a guest tonight. We're a trio. We've always been a trio. But there's a cold draught by the piano, and it has been keeping perfect time since Tuesday.",
+          "startMs": 40
+        },
+        {
+          "speaker": "Octavia Lowe",
+          "text": "It won't say who it is. It likes the minor keys. So tonight, darlings, we're a quartet.",
+          "startMs": 9236
+        }
+      ]
+    },
+    {
+      "id": "id-halloween-001",
+      "category": "id",
+      "url": "/voice/smoke-ring-trio/id-halloween-001.mp3",
+      "durationMs": 9670,
+      "overMusic": true,
+      "dates": [
+        "10-24",
+        "10-25",
+        "10-26",
+        "10-27",
+        "10-28",
+        "10-29",
+        "10-30",
+        "10-31"
+      ],
+      "lines": [
+        {
+          "speaker": "Octavia Lowe",
+          "text": "Smoke Ring Trio. The cloud has gone dark grey for Halloween. It's been practising.",
+          "startMs": 38
+        }
+      ]
+    }
+  ]
+}

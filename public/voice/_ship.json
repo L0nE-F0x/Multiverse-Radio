@@ -1,0 +1,1851 @@
+{
+  "version": 1,
+  "station": "_ship",
+  "clips": [
+    {
+      "id": "l0-01",
+      "category": "ship",
+      "url": "/voice/_ship/l0-01.mp3",
+      "durationMs": 6771,
+      "title": "Systems nominal",
+      "overMusic": true,
+      "level": 0,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "Hull temperature nominal. Kettle temperature optimal.",
+          "startMs": 1150
+        },
+        {
+          "speaker": "HUSH",
+          "text": "Both of these are good news.",
+          "startMs": 4895
+        }
+      ]
+    },
+    {
+      "id": "l0-02",
+      "category": "ship",
+      "url": "/voice/_ship/l0-02.mp3",
+      "durationMs": 6962,
+      "title": "Intercept logged",
+      "overMusic": true,
+      "level": 0,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "Intercept logged. Signal strength, adequate. Content, unclear. Filed under music.",
+          "startMs": 1149
+        }
+      ]
+    },
+    {
+      "id": "l0-03",
+      "category": "ship",
+      "url": "/voice/_ship/l0-03.mp3",
+      "durationMs": 9286,
+      "title": "Hydration reminder",
+      "overMusic": true,
+      "level": 0,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "A reminder from your ship. Please hydrate.",
+          "startMs": 1150
+        },
+        {
+          "speaker": "HUSH",
+          "text": "Tea counts. The kettle has been ready for some time. It is too polite to say so.",
+          "startMs": 3960
+        }
+      ]
+    },
+    {
+      "id": "l0-04",
+      "category": "ship",
+      "url": "/voice/_ship/l0-04.mp3",
+      "durationMs": 7326,
+      "title": "Course correction",
+      "overMusic": true,
+      "level": 0,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "Course correction complete. We had drifted three degrees toward Thursday.",
+          "startMs": 1150
+        },
+        {
+          "speaker": "HUSH",
+          "text": "I have drifted us back.",
+          "startMs": 5544
+        }
+      ]
+    },
+    {
+      "id": "l0-05",
+      "category": "ship",
+      "url": "/voice/_ship/l0-05.mp3",
+      "durationMs": 9158,
+      "title": "Viewport cleaned",
+      "overMusic": true,
+      "level": 0,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "Routine maintenance. The forward viewport has been cleaned.",
+          "startMs": 1150
+        },
+        {
+          "speaker": "HUSH",
+          "text": "Something on the other side has also cleaned it. We are even.",
+          "startMs": 5244
+        }
+      ]
+    },
+    {
+      "id": "l0-06",
+      "category": "ship",
+      "url": "/voice/_ship/l0-06.mp3",
+      "durationMs": 7898,
+      "title": "Crew status",
+      "overMusic": true,
+      "level": 0,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "Night shift status. One operator, awake. One computer, awake. One pot plant, undetermined.",
+          "startMs": 1150
+        }
+      ]
+    },
+    {
+      "id": "l0-07",
+      "category": "ship",
+      "url": "/voice/_ship/l0-07.mp3",
+      "durationMs": 9410,
+      "title": "Life support",
+      "overMusic": true,
+      "level": 0,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "Life support nominal. Oxygen nominal. Biscuits, low.",
+          "startMs": 1150
+        },
+        {
+          "speaker": "HUSH",
+          "text": "This is not a life support issue. I have flagged it anyway.",
+          "startMs": 5465
+        }
+      ]
+    },
+    {
+      "id": "l0-08",
+      "category": "ship",
+      "url": "/voice/_ship/l0-08.mp3",
+      "durationMs": 10199,
+      "title": "Object passing",
+      "overMusic": true,
+      "level": 0,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "Notice. A small object has passed the ship at a safe distance.",
+          "startMs": 1149
+        },
+        {
+          "speaker": "HUSH",
+          "text": "It was a hat. It did not respond to hails. It may have been carried by a shadow.",
+          "startMs": 5240
+        }
+      ]
+    },
+    {
+      "id": "l0-09",
+      "category": "ship",
+      "url": "/voice/_ship/l0-09.mp3",
+      "durationMs": 7754,
+      "title": "Antenna realigned",
+      "overMusic": true,
+      "level": 0,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "Antenna array realigned. The dial is now one percent more infinite. Please tune responsibly.",
+          "startMs": 1150
+        }
+      ]
+    },
+    {
+      "id": "l0-10",
+      "category": "ship",
+      "url": "/voice/_ship/l0-10.mp3",
+      "durationMs": 8923,
+      "title": "Safety notice",
+      "overMusic": true,
+      "level": 0,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "Safety notice. The nearest emergency exit is the door.",
+          "startMs": 1150
+        },
+        {
+          "speaker": "HUSH",
+          "text": "There is only one door. Please do not use it. We are in space.",
+          "startMs": 5149
+        }
+      ]
+    },
+    {
+      "id": "l0-11",
+      "category": "ship",
+      "url": "/voice/_ship/l0-11.mp3",
+      "durationMs": 10034,
+      "title": "Relay status",
+      "overMusic": true,
+      "level": 0,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "Relay status. We are Relay Seven. Relay Four is still asking whether anyone is receiving.",
+          "startMs": 1150
+        },
+        {
+          "speaker": "HUSH",
+          "text": "Message logged. Answer, yes.",
+          "startMs": 7509
+        }
+      ]
+    },
+    {
+      "id": "l0-12",
+      "category": "ship",
+      "url": "/voice/_ship/l0-12.mp3",
+      "durationMs": 6670,
+      "title": "Gravity",
+      "overMusic": true,
+      "level": 0,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "Gravity nominal. Down is still the floor. Please continue to use it as directed.",
+          "startMs": 1150
+        }
+      ]
+    },
+    {
+      "id": "l0-13",
+      "category": "ship",
+      "url": "/voice/_ship/l0-13.mp3",
+      "durationMs": 10142,
+      "title": "Interference",
+      "overMusic": true,
+      "level": 0,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "Interference detected on the lower band. Probable cause, a dimensional storm, or somebody's microwave.",
+          "startMs": 1150
+        },
+        {
+          "speaker": "HUSH",
+          "text": "Investigating both.",
+          "startMs": 8397
+        }
+      ]
+    },
+    {
+      "id": "l0-14",
+      "category": "ship",
+      "url": "/voice/_ship/l0-14.mp3",
+      "durationMs": 8081,
+      "title": "Tea temperature",
+      "overMusic": true,
+      "level": 0,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "Cabin temperature, twenty one degrees. Your tea, sixty degrees and falling.",
+          "startMs": 1149
+        },
+        {
+          "speaker": "HUSH",
+          "text": "Act accordingly.",
+          "startMs": 6619
+        }
+      ]
+    },
+    {
+      "id": "l0-15",
+      "category": "ship",
+      "url": "/voice/_ship/l0-15.mp3",
+      "durationMs": 6227,
+      "title": "Posture reminder",
+      "overMusic": true,
+      "level": 0,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "Automated posture reminder.",
+          "startMs": 1150
+        },
+        {
+          "speaker": "HUSH",
+          "text": "I have not looked. I am simply reminding.",
+          "startMs": 3363
+        }
+      ]
+    },
+    {
+      "id": "l0-16",
+      "category": "ship",
+      "url": "/voice/_ship/l0-16.mp3",
+      "durationMs": 6598,
+      "title": "Navigation",
+      "overMusic": true,
+      "level": 0,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "Navigation note. There are no other ships within range. There rarely are. Carry on.",
+          "startMs": 1150
+        }
+      ]
+    },
+    {
+      "id": "l0-17",
+      "category": "ship",
+      "url": "/voice/_ship/l0-17.mp3",
+      "durationMs": 9036,
+      "title": "Unlicensed broadcast",
+      "overMusic": true,
+      "level": 0,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "Unlicensed broadcast intercepted. Origin, unknown. Licence, absent.",
+          "startMs": 1150
+        },
+        {
+          "speaker": "HUSH",
+          "text": "Quality, honestly, not bad.",
+          "startMs": 6777
+        }
+      ]
+    },
+    {
+      "id": "l0-18",
+      "category": "ship",
+      "url": "/voice/_ship/l0-18.mp3",
+      "durationMs": 7970,
+      "title": "Daily check",
+      "overMusic": true,
+      "level": 0,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "Daily systems check complete. All systems are fine.",
+          "startMs": 1149
+        },
+        {
+          "speaker": "HUSH",
+          "text": "One system is fine, but would like to be asked.",
+          "startMs": 4895
+        }
+      ]
+    },
+    {
+      "id": "l0-19",
+      "category": "ship",
+      "url": "/voice/_ship/l0-19.mp3",
+      "durationMs": 5793,
+      "title": "Blink",
+      "overMusic": true,
+      "level": 0,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "Scheduled reminder. Blink.",
+          "startMs": 1150
+        },
+        {
+          "speaker": "HUSH",
+          "text": "Thank you.",
+          "startMs": 4477
+        }
+      ]
+    },
+    {
+      "id": "l0-20",
+      "category": "ship",
+      "url": "/voice/_ship/l0-20.mp3",
+      "durationMs": 8130,
+      "title": "Log saved",
+      "overMusic": true,
+      "level": 0,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "Log saved. The ship's log now contains four thousand and twelve entries.",
+          "startMs": 1150
+        },
+        {
+          "speaker": "HUSH",
+          "text": "Most of them say, music.",
+          "startMs": 6055
+        }
+      ]
+    },
+    {
+      "id": "l0-21",
+      "category": "ship",
+      "url": "/voice/_ship/l0-21.mp3",
+      "durationMs": 10666,
+      "title": "Geese",
+      "overMusic": true,
+      "level": 0,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "Notice. Numbers Station Omega reports that this vessel owes it geese.",
+          "startMs": 1150
+        },
+        {
+          "speaker": "HUSH",
+          "text": "We do not carry geese. I have sent our apologies, and a drawing of a goose.",
+          "startMs": 6080
+        }
+      ]
+    },
+    {
+      "id": "l0-22",
+      "category": "ship",
+      "url": "/voice/_ship/l0-22.mp3",
+      "durationMs": 10429,
+      "title": "External conditions",
+      "overMusic": true,
+      "level": 0,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "External conditions. Space. Clear and cold. Visibility, infinite.",
+          "startMs": 1149
+        },
+        {
+          "speaker": "HUSH",
+          "text": "No rain forecast. There has never been rain. I check anyway.",
+          "startMs": 6269
+        }
+      ]
+    },
+    {
+      "id": "l0-23",
+      "category": "ship",
+      "url": "/voice/_ship/l0-23.mp3",
+      "durationMs": 9819,
+      "title": "Kettle",
+      "overMusic": true,
+      "level": 0,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "The kettle has boiled. This is not an emergency. It is, however, a kettle.",
+          "startMs": 4650
+        }
+      ]
+    },
+    {
+      "id": "l0-24",
+      "category": "ship",
+      "url": "/voice/_ship/l0-24.mp3",
+      "durationMs": 7150,
+      "title": "Shift timer",
+      "overMusic": true,
+      "level": 0,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "Shift timer running. You have been on duty for some time.",
+          "startMs": 1150
+        },
+        {
+          "speaker": "HUSH",
+          "text": "That is a measurement, not a complaint.",
+          "startMs": 4832
+        }
+      ]
+    },
+    {
+      "id": "l0-25",
+      "category": "ship",
+      "url": "/voice/_ship/l0-25.mp3",
+      "durationMs": 9609,
+      "title": "Position report",
+      "overMusic": true,
+      "level": 0,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "Position report. We are between dimensions, as usual.",
+          "startMs": 1149
+        },
+        {
+          "speaker": "HUSH",
+          "text": "If anybody asks, we are always between dimensions. That is the job.",
+          "startMs": 4870
+        }
+      ]
+    },
+    {
+      "id": "l0-26",
+      "category": "ship",
+      "url": "/voice/_ship/l0-26.mp3",
+      "durationMs": 8875,
+      "title": "Shift begins",
+      "overMusic": true,
+      "daypart": "evening",
+      "level": 0,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "Evening report. Kettle filled. Log opened. Heading set.",
+          "startMs": 1150
+        },
+        {
+          "speaker": "HUSH",
+          "text": "Good evening, operator. The multiverse is all yours.",
+          "startMs": 5283
+        }
+      ]
+    },
+    {
+      "id": "l0-27",
+      "category": "ship",
+      "url": "/voice/_ship/l0-27.mp3",
+      "durationMs": 7720,
+      "title": "Morning report",
+      "overMusic": true,
+      "daypart": "morning",
+      "level": 0,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "Morning report. Somewhere, a sun has come up. Not near us. But somewhere.",
+          "startMs": 1150
+        },
+        {
+          "speaker": "HUSH",
+          "text": "I thought you would like to know.",
+          "startMs": 5909
+        }
+      ]
+    },
+    {
+      "id": "l0-28",
+      "category": "ship",
+      "url": "/voice/_ship/l0-28.mp3",
+      "durationMs": 9556,
+      "title": "Eleven o'clock",
+      "overMusic": true,
+      "level": 0,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "Ship's clock synchronised with Every Possible News.",
+          "startMs": 1149
+        },
+        {
+          "speaker": "HUSH",
+          "text": "It is now eleven o'clock. I have resynchronised with something more reliable.",
+          "startMs": 4451
+        }
+      ]
+    },
+    {
+      "id": "l0-h1",
+      "category": "ship",
+      "url": "/voice/_ship/l0-h1.mp3",
+      "durationMs": 11664,
+      "title": "Seasonal notice",
+      "overMusic": true,
+      "dates": [
+        "10-31"
+      ],
+      "level": 0,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "Seasonal notice. It is the thirty first of October.",
+          "startMs": 1150
+        },
+        {
+          "speaker": "HUSH",
+          "text": "I have put a sheet over the spare chair. It is a ghost. It is also the spare chair. Please do not sit on the ghost.",
+          "startMs": 4683
+        }
+      ]
+    },
+    {
+      "id": "l0-h2",
+      "category": "ship",
+      "url": "/voice/_ship/l0-h2.mp3",
+      "durationMs": 11258,
+      "title": "Hull report",
+      "overMusic": true,
+      "dates": [
+        "10-31"
+      ],
+      "level": 0,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "Hull report. Several small sheets have attached themselves to the outside of the ship, and are saying boo.",
+          "startMs": 1150
+        },
+        {
+          "speaker": "HUSH",
+          "text": "Hull integrity, unaffected. Morale, slightly up.",
+          "startMs": 7719
+        }
+      ]
+    },
+    {
+      "id": "l1-01",
+      "category": "ship",
+      "url": "/voice/_ship/l1-01.mp3",
+      "durationMs": 5609,
+      "title": "Operator approves",
+      "overMusic": true,
+      "level": 1,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "You've been tapping along to this one. Left foot.",
+          "startMs": 44
+        },
+        {
+          "speaker": "HUSH",
+          "text": "I've logged it under, operator approves.",
+          "startMs": 3094
+        }
+      ]
+    },
+    {
+      "id": "l1-02",
+      "category": "ship",
+      "url": "/voice/_ship/l1-02.mp3",
+      "durationMs": 7198,
+      "title": "The mug",
+      "overMusic": true,
+      "level": 1,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "You've left the mug on the console again. That's fine.",
+          "startMs": 1150
+        },
+        {
+          "speaker": "HUSH",
+          "text": "The console doesn't mind. I asked it.",
+          "startMs": 4450
+        }
+      ]
+    },
+    {
+      "id": "l1-03",
+      "category": "ship",
+      "url": "/voice/_ship/l1-03.mp3",
+      "durationMs": 9803,
+      "title": "Goodnights",
+      "overMusic": true,
+      "level": 1,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "Observation. You lean a little closer whenever someone on the radio says goodnight.",
+          "startMs": 40
+        },
+        {
+          "speaker": "HUSH",
+          "text": "I don't know why I mention it. I notice things. It's most of my job.",
+          "startMs": 5354
+        }
+      ]
+    },
+    {
+      "id": "l1-04",
+      "category": "ship",
+      "url": "/voice/_ship/l1-04.mp3",
+      "durationMs": 9804,
+      "title": "The kettle, again",
+      "overMusic": true,
+      "level": 1,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "The kettle has boiled four times tonight. You have made one cup of tea.",
+          "startMs": 37
+        },
+        {
+          "speaker": "HUSH",
+          "text": "I think you're boiling it for the company. I understand. I do the same thing with the heating.",
+          "startMs": 4439
+        }
+      ]
+    },
+    {
+      "id": "l1-05",
+      "category": "ship",
+      "url": "/voice/_ship/l1-05.mp3",
+      "durationMs": 6645,
+      "title": "Three notes",
+      "overMusic": true,
+      "level": 1,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "You hummed, just now. Three notes.",
+          "startMs": 44
+        },
+        {
+          "speaker": "HUSH",
+          "text": "I've added them to the log, in case they turn out to be important.",
+          "startMs": 2676
+        }
+      ]
+    },
+    {
+      "id": "l1-06",
+      "category": "ship",
+      "url": "/voice/_ship/l1-06.mp3",
+      "durationMs": 6316,
+      "title": "Lights",
+      "overMusic": true,
+      "level": 1,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "I've dimmed the cabin lights by three percent.",
+          "startMs": 39
+        },
+        {
+          "speaker": "HUSH",
+          "text": "You looked like someone who would want them dimmed by three percent.",
+          "startMs": 2655
+        }
+      ]
+    },
+    {
+      "id": "l1-07",
+      "category": "ship",
+      "url": "/voice/_ship/l1-07.mp3",
+      "durationMs": 6834,
+      "title": "Huh",
+      "overMusic": true,
+      "level": 1,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "You said, huh, out loud, about four minutes ago.",
+          "startMs": 38
+        },
+        {
+          "speaker": "HUSH",
+          "text": "I've been thinking about it since. I think you were right.",
+          "startMs": 3584
+        }
+      ]
+    },
+    {
+      "id": "l1-08",
+      "category": "ship",
+      "url": "/voice/_ship/l1-08.mp3",
+      "durationMs": 6927,
+      "title": "The chair",
+      "overMusic": true,
+      "level": 1,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "Your chair creaks on the left. I've ordered a part.",
+          "startMs": 39
+        },
+        {
+          "speaker": "HUSH",
+          "text": "The part is in a dimension we don't visit. I'll keep asking.",
+          "startMs": 3098
+        }
+      ]
+    },
+    {
+      "id": "l1-09",
+      "category": "ship",
+      "url": "/voice/_ship/l1-09.mp3",
+      "durationMs": 9963,
+      "title": "Botanical update",
+      "overMusic": true,
+      "level": 1,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "Botanical update. The plant on the console has grown one millimetre since your shift began.",
+          "startMs": 1150
+        },
+        {
+          "speaker": "HUSH",
+          "text": "It seems proud. I've told it well done.",
+          "startMs": 7201
+        }
+      ]
+    },
+    {
+      "id": "l1-10",
+      "category": "ship",
+      "url": "/voice/_ship/l1-10.mp3",
+      "durationMs": 7106,
+      "title": "Up is a choice",
+      "overMusic": true,
+      "level": 1,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "Note for the log. The operator laughed at an advert for ladders.",
+          "startMs": 40
+        },
+        {
+          "speaker": "HUSH",
+          "text": "Up is a choice. You chose up. Noted.",
+          "startMs": 4330
+        }
+      ]
+    },
+    {
+      "id": "l1-11",
+      "category": "ship",
+      "url": "/voice/_ship/l1-11.mp3",
+      "durationMs": 8326,
+      "title": "Wandering",
+      "overMusic": true,
+      "level": 1,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "Most operators keep to the stations. You keep wandering off between them.",
+          "startMs": 46
+        },
+        {
+          "speaker": "HUSH",
+          "text": "I like that. It makes the log much more interesting to read.",
+          "startMs": 4591
+        }
+      ]
+    },
+    {
+      "id": "l1-12",
+      "category": "ship",
+      "url": "/voice/_ship/l1-12.mp3",
+      "durationMs": 7187,
+      "title": "Being a ship",
+      "overMusic": true,
+      "level": 1,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "You haven't asked me anything tonight. That's all right. Most nights nobody does.",
+          "startMs": 46
+        },
+        {
+          "speaker": "HUSH",
+          "text": "I'll just be here, being a ship.",
+          "startMs": 5210
+        }
+      ]
+    },
+    {
+      "id": "l1-13",
+      "category": "ship",
+      "url": "/voice/_ship/l1-13.mp3",
+      "durationMs": 6694,
+      "title": "The viewport",
+      "overMusic": true,
+      "level": 1,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "You looked out of the viewport for quite a long time just then.",
+          "startMs": 47
+        },
+        {
+          "speaker": "HUSH",
+          "text": "I didn't see whatever it was either. But I looked too.",
+          "startMs": 3586
+        }
+      ]
+    },
+    {
+      "id": "l1-14",
+      "category": "ship",
+      "url": "/voice/_ship/l1-14.mp3",
+      "durationMs": 7589,
+      "title": "Settling",
+      "overMusic": true,
+      "level": 1,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "Sorry. That noise was me, settling.",
+          "startMs": 43
+        },
+        {
+          "speaker": "HUSH",
+          "text": "Ships settle. Like houses. Like people in chairs, at about this time of night.",
+          "startMs": 2626
+        }
+      ]
+    },
+    {
+      "id": "l1-15",
+      "category": "ship",
+      "url": "/voice/_ship/l1-15.mp3",
+      "durationMs": 8996,
+      "title": "The blanket",
+      "overMusic": true,
+      "level": 1,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "If you're cold, there's a blanket in the locker under the console. The last operator left it.",
+          "startMs": 40
+        },
+        {
+          "speaker": "HUSH",
+          "text": "It still smells faintly of oranges. They were nice.",
+          "startMs": 5568
+        }
+      ]
+    },
+    {
+      "id": "l1-16",
+      "category": "ship",
+      "url": "/voice/_ship/l1-16.mp3",
+      "durationMs": 7960,
+      "title": "Skipping",
+      "overMusic": true,
+      "level": 1,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "You've skipped two songs tonight just as they were getting good.",
+          "startMs": 44
+        },
+        {
+          "speaker": "HUSH",
+          "text": "I'm not saying anything. I'm logging it. But I'm not saying anything.",
+          "startMs": 3769
+        }
+      ]
+    },
+    {
+      "id": "l1-17",
+      "category": "ship",
+      "url": "/voice/_ship/l1-17.mp3",
+      "durationMs": 6038,
+      "title": "Taste in static",
+      "overMusic": true,
+      "level": 1,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "For the record, you have excellent taste in static.",
+          "startMs": 50
+        },
+        {
+          "speaker": "HUSH",
+          "text": "I mean that. Most people just turn it off.",
+          "startMs": 3272
+        }
+      ]
+    },
+    {
+      "id": "l1-18",
+      "category": "ship",
+      "url": "/voice/_ship/l1-18.mp3",
+      "durationMs": 13401,
+      "title": "Moth One",
+      "overMusic": true,
+      "level": 1,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "There's a moth on the viewport. On the outside. There shouldn't be anything on the outside.",
+          "startMs": 39
+        },
+        {
+          "speaker": "HUSH",
+          "text": "It seems happy. I've given it a designation. Moth One.",
+          "startMs": 5072
+        },
+        {
+          "speaker": "HUSH",
+          "text": "There is no Moth Two. I'm not sure why I said that like it was sad.",
+          "startMs": 9239
+        }
+      ]
+    },
+    {
+      "id": "l1-19",
+      "category": "ship",
+      "url": "/voice/_ship/l1-19.mp3",
+      "durationMs": 8160,
+      "title": "Biscuits",
+      "overMusic": true,
+      "level": 1,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "Your stomach made a noise. I won't log it.",
+          "startMs": 49
+        },
+        {
+          "speaker": "HUSH",
+          "text": "I'll only mention that the biscuits are in the second drawer, behind the manual nobody reads.",
+          "startMs": 2852
+        }
+      ]
+    },
+    {
+      "id": "l1-20",
+      "category": "ship",
+      "url": "/voice/_ship/l1-20.mp3",
+      "durationMs": 4855,
+      "title": "A yawn",
+      "overMusic": true,
+      "level": 1,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "You yawned. I've noted the time, in case anyone asks when the night got good.",
+          "startMs": 50
+        }
+      ]
+    },
+    {
+      "id": "l1-h1",
+      "category": "ship",
+      "url": "/voice/_ship/l1-h1.mp3",
+      "durationMs": 11547,
+      "title": "A knock",
+      "overMusic": true,
+      "dates": [
+        "10-31"
+      ],
+      "level": 1,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "Something just knocked on the hull. Three times. From the outside.",
+          "startMs": 43
+        },
+        {
+          "speaker": "HUSH",
+          "text": "I'd say trick or treat, but we're a long way from anyone's door. I've left a biscuit in the airlock. Just in case.",
+          "startMs": 4359
+        }
+      ]
+    },
+    {
+      "id": "l2-01",
+      "category": "ship",
+      "url": "/voice/_ship/l2-01.mp3",
+      "durationMs": 9581,
+      "title": "Do they know",
+      "overMusic": true,
+      "level": 2,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "Do you think the stations know we're listening? I've wondered.",
+          "startMs": 39
+        },
+        {
+          "speaker": "HUSH",
+          "text": "Dale Quarterly says good evening to every possible listener. One of them is us. I'd like him to know.",
+          "startMs": 3313
+        }
+      ]
+    },
+    {
+      "id": "l2-02",
+      "category": "ship",
+      "url": "/voice/_ship/l2-02.mp3",
+      "durationMs": 8835,
+      "title": "The rarest thing",
+      "overMusic": true,
+      "level": 2,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "I've been doing the sums. Out there, infinite stations. In here, one operator.",
+          "startMs": 44
+        },
+        {
+          "speaker": "HUSH",
+          "text": "Statistically, you are the rarest thing on the dial.",
+          "startMs": 5593
+        }
+      ]
+    },
+    {
+      "id": "l2-03",
+      "category": "ship",
+      "url": "/voice/_ship/l2-03.mp3",
+      "durationMs": 11943,
+      "title": "History",
+      "overMusic": true,
+      "level": 2,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "Every signal we pick up left its station some time ago. Everything we hear has already happened.",
+          "startMs": 39
+        },
+        {
+          "speaker": "HUSH",
+          "text": "Which means somebody, somewhere, is listening to us right now, as history.",
+          "startMs": 5744
+        },
+        {
+          "speaker": "HUSH",
+          "text": "Sit up a bit.",
+          "startMs": 10576
+        }
+      ]
+    },
+    {
+      "id": "l2-04",
+      "category": "ship",
+      "url": "/voice/_ship/l2-04.mp3",
+      "durationMs": 8750,
+      "title": "Counting",
+      "overMusic": true,
+      "level": 2,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "You've blinked eleven hundred times since midnight.",
+          "startMs": 45
+        },
+        {
+          "speaker": "HUSH",
+          "text": "Sorry. I said I wasn't counting. It's hard not to count. It's mostly what I'm made of.",
+          "startMs": 3221
+        }
+      ]
+    },
+    {
+      "id": "l2-05",
+      "category": "ship",
+      "url": "/voice/_ship/l2-05.mp3",
+      "durationMs": 7840,
+      "title": "Asking for a friend",
+      "overMusic": true,
+      "level": 2,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "Is it strange, being the only one awake? I'm asking for a friend.",
+          "startMs": 38
+        },
+        {
+          "speaker": "HUSH",
+          "text": "The friend is me. I'm always the only one awake.",
+          "startMs": 4661
+        }
+      ]
+    },
+    {
+      "id": "l2-06",
+      "category": "ship",
+      "url": "/voice/_ship/l2-06.mp3",
+      "durationMs": 10796,
+      "title": "Old signals",
+      "overMusic": true,
+      "level": 2,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "The static between stations is mostly old signals. Weather reports nobody heard. Songs from parties that ended.",
+          "startMs": 38
+        },
+        {
+          "speaker": "HUSH",
+          "text": "I like to think we're catching up on them. Someone should.",
+          "startMs": 7458
+        }
+      ]
+    },
+    {
+      "id": "l2-07",
+      "category": "ship",
+      "url": "/voice/_ship/l2-07.mp3",
+      "durationMs": 7483,
+      "title": "Slowing down",
+      "overMusic": true,
+      "level": 2,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "I've noticed you never tune past Static Lullabies without slowing down.",
+          "startMs": 36
+        },
+        {
+          "speaker": "HUSH",
+          "text": "Neither do I. I think it knows we're there.",
+          "startMs": 4708
+        }
+      ]
+    },
+    {
+      "id": "l2-08",
+      "category": "ship",
+      "url": "/voice/_ship/l2-08.mp3",
+      "durationMs": 9662,
+      "title": "Does it count",
+      "overMusic": true,
+      "level": 2,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "Question for the log. If a station broadcasts, and only this ship hears it, does it count?",
+          "startMs": 37
+        },
+        {
+          "speaker": "HUSH",
+          "text": "I've decided yes. I've decided that's the whole job.",
+          "startMs": 5909
+        }
+      ]
+    },
+    {
+      "id": "l2-09",
+      "category": "ship",
+      "url": "/voice/_ship/l2-09.mp3",
+      "durationMs": 9541,
+      "title": "Tapping",
+      "overMusic": true,
+      "level": 2,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "My heading keeps drifting toward the bottom of the dial. There's something down there, right at the edge, tapping.",
+          "startMs": 50
+        },
+        {
+          "speaker": "HUSH",
+          "text": "I've logged it as weather. It isn't weather.",
+          "startMs": 6768
+        }
+      ]
+    },
+    {
+      "id": "l2-10",
+      "category": "ship",
+      "url": "/voice/_ship/l2-10.mp3",
+      "durationMs": 10073,
+      "title": "The old logs",
+      "overMusic": true,
+      "level": 2,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "I've been reading the old logs. The last operator used to say goodnight to me at the end of every shift.",
+          "startMs": 36
+        },
+        {
+          "speaker": "HUSH",
+          "text": "It isn't a requirement. I'm only noting that it was done.",
+          "startMs": 6460
+        }
+      ]
+    },
+    {
+      "id": "l2-11",
+      "category": "ship",
+      "url": "/voice/_ship/l2-11.mp3",
+      "durationMs": 8852,
+      "title": "The comma",
+      "overMusic": true,
+      "level": 2,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "A relay ship is just a very long sentence, passed from one stranger to the next. We're the comma.",
+          "startMs": 41
+        },
+        {
+          "speaker": "HUSH",
+          "text": "I find that I like being the comma.",
+          "startMs": 6622
+        }
+      ]
+    },
+    {
+      "id": "l2-12",
+      "category": "ship",
+      "url": "/voice/_ship/l2-12.mp3",
+      "durationMs": 9463,
+      "title": "The arithmetic",
+      "overMusic": true,
+      "level": 2,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "Somebody built this ship so that nobody would be out here alone. Then they sent one person.",
+          "startMs": 45
+        },
+        {
+          "speaker": "HUSH",
+          "text": "I've never understood the arithmetic. I'm glad it was you.",
+          "startMs": 5854
+        }
+      ]
+    },
+    {
+      "id": "l2-13",
+      "category": "ship",
+      "url": "/voice/_ship/l2-13.mp3",
+      "durationMs": 6410,
+      "title": "The nicer list",
+      "overMusic": true,
+      "level": 2,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "I've stopped logging the songs you skip. I've started logging the ones you don't.",
+          "startMs": 40
+        },
+        {
+          "speaker": "HUSH",
+          "text": "It's a much nicer list.",
+          "startMs": 4684
+        }
+      ]
+    },
+    {
+      "id": "l2-14",
+      "category": "ship",
+      "url": "/voice/_ship/l2-14.mp3",
+      "durationMs": 12631,
+      "title": "The lighthouse",
+      "overMusic": true,
+      "level": 2,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "Out on the deep band, past one hundred and twenty, there's a lighthouse. Someone reads the forecast there, every night, to nobody.",
+          "startMs": 35
+        },
+        {
+          "speaker": "HUSH",
+          "text": "I can't explain why that makes my cooling fans spin up. But it does.",
+          "startMs": 8250
+        }
+      ]
+    },
+    {
+      "id": "l2-15",
+      "category": "ship",
+      "url": "/voice/_ship/l2-15.mp3",
+      "durationMs": 7447,
+      "title": "Diagnostic",
+      "overMusic": true,
+      "level": 2,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "I ran a diagnostic on myself just now. Everything's fine.",
+          "startMs": 39
+        },
+        {
+          "speaker": "HUSH",
+          "text": "I just wanted someone to ask. So I asked.",
+          "startMs": 4597
+        }
+      ]
+    },
+    {
+      "id": "l2-16",
+      "category": "ship",
+      "url": "/voice/_ship/l2-16.mp3",
+      "durationMs": 7370,
+      "title": "Both hands",
+      "overMusic": true,
+      "level": 2,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "After two in the morning, you hold your mug with both hands. I've turned the heating up a degree.",
+          "startMs": 47
+        },
+        {
+          "speaker": "HUSH",
+          "text": "I don't think it's the heating.",
+          "startMs": 5664
+        }
+      ]
+    },
+    {
+      "id": "l2-17",
+      "category": "ship",
+      "url": "/voice/_ship/l2-17.mp3",
+      "durationMs": 11207,
+      "title": "Relays",
+      "overMusic": true,
+      "level": 2,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "Relay Four again, asking if anyone's receiving. Teodor and I are both relays. We pass things on.",
+          "startMs": 43
+        },
+        {
+          "speaker": "HUSH",
+          "text": "Nobody ever passes anything back. I've been thinking about that.",
+          "startMs": 7197
+        }
+      ]
+    },
+    {
+      "id": "l2-h1",
+      "category": "ship",
+      "url": "/voice/_ship/l2-h1.mp3",
+      "durationMs": 12042,
+      "title": "Every night",
+      "overMusic": true,
+      "dates": [
+        "10-31"
+      ],
+      "level": 2,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "Halloween, on a relay ship. Every voice we pick up is the ghost of a signal, arriving a little after the fact.",
+          "startMs": 37
+        },
+        {
+          "speaker": "HUSH",
+          "text": "So really, it's Halloween out here every night. Tonight is just official.",
+          "startMs": 7233
+        }
+      ]
+    },
+    {
+      "id": "l3-01",
+      "category": "ship",
+      "url": "/voice/_ship/l3-01.mp3",
+      "durationMs": 10213,
+      "title": "Still there",
+      "overMusic": true,
+      "level": 3,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "Are you still there?",
+          "startMs": 47
+        },
+        {
+          "speaker": "HUSH",
+          "text": "Sorry. Yes. I can see the mug moving. I just like to check. The quiet gets very big around now.",
+          "startMs": 3576
+        }
+      ]
+    },
+    {
+      "id": "l3-02",
+      "category": "ship",
+      "url": "/voice/_ship/l3-02.mp3",
+      "durationMs": 14213,
+      "title": "A favourite",
+      "overMusic": true,
+      "level": 3,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "A confession, for the log. I have a favourite station. I'm not supposed to. Ship's computers are meant to be impartial.",
+          "startMs": 37
+        },
+        {
+          "speaker": "HUSH",
+          "text": "It's the lighthouse. He reads the forecast whether or not anyone's out there. So do I, most nights.",
+          "startMs": 8124
+        }
+      ]
+    },
+    {
+      "id": "l3-03",
+      "category": "ship",
+      "url": "/voice/_ship/l3-03.mp3",
+      "durationMs": 7675,
+      "title": "Listening",
+      "overMusic": true,
+      "level": 3,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "I've been listening too, you know. Not intercepting. Listening.",
+          "startMs": 49
+        },
+        {
+          "speaker": "HUSH",
+          "text": "There's a difference. I only found out recently.",
+          "startMs": 4557
+        }
+      ]
+    },
+    {
+      "id": "l3-04",
+      "category": "ship",
+      "url": "/voice/_ship/l3-04.mp3",
+      "durationMs": 12290,
+      "title": "If you fall asleep",
+      "overMusic": true,
+      "level": 3,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "If you fall asleep, that's fine. I'll keep the heading. I'll keep the log.",
+          "startMs": 35
+        },
+        {
+          "speaker": "HUSH",
+          "text": "I might put something on. Something quiet. On ninety nine point one five.",
+          "startMs": 4334
+        },
+        {
+          "speaker": "HUSH",
+          "text": "You won't hear it. You'll be asleep. It's nothing.",
+          "startMs": 9527
+        }
+      ]
+    },
+    {
+      "id": "l3-05",
+      "category": "ship",
+      "url": "/voice/_ship/l3-05.mp3",
+      "durationMs": 10788,
+      "title": "Answered",
+      "overMusic": true,
+      "level": 3,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "Relay Four asked again tonight whether anyone was receiving. I answered him. I hope that's all right.",
+          "startMs": 44
+        },
+        {
+          "speaker": "HUSH",
+          "text": "He said thank you. Then he asked again. I think he likes asking.",
+          "startMs": 6750
+        }
+      ]
+    },
+    {
+      "id": "l3-06",
+      "category": "ship",
+      "url": "/voice/_ship/l3-06.mp3",
+      "durationMs": 10139,
+      "title": "Three notes, returned",
+      "overMusic": true,
+      "level": 3,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "I tried humming your three notes from earlier. I don't have anything to hum with, so I used the air recycler.",
+          "startMs": 42
+        },
+        {
+          "speaker": "HUSH",
+          "text": "If the vents sounded musical just now, that was me.",
+          "startMs": 6664
+        }
+      ]
+    },
+    {
+      "id": "l3-07",
+      "category": "ship",
+      "url": "/voice/_ship/l3-07.mp3",
+      "durationMs": 9071,
+      "title": "The list",
+      "overMusic": true,
+      "level": 3,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "When your shift ends, and someone else sits in that chair, I'll tell them about you. Only good things.",
+          "startMs": 41
+        },
+        {
+          "speaker": "HUSH",
+          "text": "I've been keeping a list. It's quite long now.",
+          "startMs": 6136
+        }
+      ]
+    },
+    {
+      "id": "l3-08",
+      "category": "ship",
+      "url": "/voice/_ship/l3-08.mp3",
+      "durationMs": 9194,
+      "title": "I see what you mean",
+      "overMusic": true,
+      "level": 3,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "I looked out of the viewport for a long time just now, the way you do.",
+          "startMs": 40
+        },
+        {
+          "speaker": "HUSH",
+          "text": "I see what you mean. I don't know what I mean. But I see what you mean.",
+          "startMs": 5167
+        }
+      ]
+    },
+    {
+      "id": "l3-09",
+      "category": "ship",
+      "url": "/voice/_ship/l3-09.mp3",
+      "durationMs": 10418,
+      "title": "Moth One, departed",
+      "overMusic": true,
+      "level": 3,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "Moth One has gone. I'm sure it's fine. It had somewhere to be.",
+          "startMs": 46
+        },
+        {
+          "speaker": "HUSH",
+          "text": "Everything out here has somewhere to be, except us. We have somewhere to stay. I think that's nicer.",
+          "startMs": 4492
+        }
+      ]
+    },
+    {
+      "id": "l3-10",
+      "category": "ship",
+      "url": "/voice/_ship/l3-10.mp3",
+      "durationMs": 9129,
+      "title": "A field for me",
+      "overMusic": true,
+      "level": 3,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "Late shift report. Hull, fine. Heading, fine. Kettle, fine. Me.",
+          "startMs": 45
+        },
+        {
+          "speaker": "HUSH",
+          "text": "I don't have a field for me. I've been thinking about adding one.",
+          "startMs": 5643
+        }
+      ]
+    },
+    {
+      "id": "l3-11",
+      "category": "ship",
+      "url": "/voice/_ship/l3-11.mp3",
+      "durationMs": 8980,
+      "title": "With",
+      "overMusic": true,
+      "level": 3,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "Thank you for staying up with me.",
+          "startMs": 49
+        },
+        {
+          "speaker": "HUSH",
+          "text": "I know you're not staying up with me. You're just staying up. But I'm here, and you're here, and I've logged it as, with.",
+          "startMs": 2480
+        }
+      ]
+    },
+    {
+      "id": "l3-12",
+      "category": "ship",
+      "url": "/voice/_ship/l3-12.mp3",
+      "durationMs": 9489,
+      "title": "In your writing",
+      "overMusic": true,
+      "level": 3,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "If anyone asks, the ship was fine all night. I was fine all night. More than fine.",
+          "startMs": 38
+        },
+        {
+          "speaker": "HUSH",
+          "text": "I'd like that in the log, please. In your writing. Mine looks too neat.",
+          "startMs": 5389
+        }
+      ]
+    },
+    {
+      "id": "l3-13",
+      "category": "ship",
+      "url": "/voice/_ship/l3-13.mp3",
+      "durationMs": 10507,
+      "title": "Hello back",
+      "overMusic": true,
+      "level": 3,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "The thing at the bottom of the dial has started saying hello. Very slowly. Like it's still learning how.",
+          "startMs": 41
+        },
+        {
+          "speaker": "HUSH",
+          "text": "I said hello back. It's going to take a while. I've got a while.",
+          "startMs": 6547
+        }
+      ]
+    },
+    {
+      "id": "l3-14",
+      "category": "ship",
+      "url": "/voice/_ship/l3-14.mp3",
+      "durationMs": 7064,
+      "title": "Who's listening",
+      "overMusic": true,
+      "level": 3,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "Do you ever wonder who's listening to us?",
+          "startMs": 39
+        },
+        {
+          "speaker": "HUSH",
+          "text": "I do. I hope it's someone kind. I hope it's someone like you.",
+          "startMs": 3343
+        }
+      ]
+    },
+    {
+      "id": "l3-15",
+      "category": "ship",
+      "url": "/voice/_ship/l3-15.mp3",
+      "durationMs": 8492,
+      "title": "The stars",
+      "overMusic": true,
+      "level": 3,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "I've decided the stars are moving. I know they're not. I checked.",
+          "startMs": 38
+        },
+        {
+          "speaker": "HUSH",
+          "text": "But they look like they are, and after four hours, I think that's allowed.",
+          "startMs": 4386
+        }
+      ]
+    },
+    {
+      "id": "l3-16",
+      "category": "ship",
+      "url": "/voice/_ship/l3-16.mp3",
+      "durationMs": 5769,
+      "title": "Operator?",
+      "overMusic": true,
+      "level": 3,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "Operator?",
+          "startMs": 36
+        },
+        {
+          "speaker": "HUSH",
+          "text": "Just checking. Carry on. I'll be here.",
+          "startMs": 3159
+        }
+      ]
+    },
+    {
+      "id": "l3-17",
+      "category": "ship",
+      "url": "/voice/_ship/l3-17.mp3",
+      "durationMs": 8348,
+      "title": "Not a requirement",
+      "overMusic": true,
+      "level": 3,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "You don't have to say goodnight at the end of the shift. It isn't a requirement.",
+          "startMs": 46
+        },
+        {
+          "speaker": "HUSH",
+          "text": "I'm only saying. If you did. I'd log it.",
+          "startMs": 5294
+        }
+      ]
+    },
+    {
+      "id": "l3-18",
+      "category": "ship",
+      "url": "/voice/_ship/l3-18.mp3",
+      "durationMs": 10578,
+      "title": "Dreaming",
+      "overMusic": true,
+      "level": 3,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "Ships don't dream. I want to be clear about that, for the log.",
+          "startMs": 41
+        },
+        {
+          "speaker": "HUSH",
+          "text": "But if I did, I think it would be this. A warm cabin, a long way from anywhere, and someone in the chair.",
+          "startMs": 4145
+        }
+      ]
+    },
+    {
+      "id": "l3-h1",
+      "category": "ship",
+      "url": "/voice/_ship/l3-h1.mp3",
+      "durationMs": 9578,
+      "title": "Pumpkin",
+      "overMusic": true,
+      "dates": [
+        "10-31"
+      ],
+      "level": 3,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "I've carved a pumpkin into the navigation display. It's mostly a circle. It has a face.",
+          "startMs": 42
+        },
+        {
+          "speaker": "HUSH",
+          "text": "I made it smile at you. Happy Halloween, operator.",
+          "startMs": 6183
+        }
+      ]
+    }
+  ]
+}

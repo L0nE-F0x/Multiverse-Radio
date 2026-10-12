@@ -1,0 +1,949 @@
+{
+  "version": 1,
+  "station": "waystation-9",
+  "clips": [
+    {
+      "id": "id-001",
+      "category": "id",
+      "url": "/voice/waystation-9/id-001.mp3",
+      "durationMs": 7190,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Big Rosalind",
+          "text": "This is Waystation Nine CB, ninety seven point four. Channel's open, coffee's hot, and the roads go every which way.",
+          "startMs": 41
+        }
+      ]
+    },
+    {
+      "id": "id-002",
+      "category": "id",
+      "url": "/voice/waystation-9/id-002.mp3",
+      "durationMs": 7206,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Big Rosalind",
+          "text": "Waystation Nine. The truck stop at the crossroads of everywhere. Big Rosalind on dispatch.",
+          "startMs": 46
+        }
+      ]
+    },
+    {
+      "id": "id-003",
+      "category": "id",
+      "url": "/voice/waystation-9/id-003.mp3",
+      "durationMs": 6990,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Big Rosalind",
+          "text": "Waystation Nine CB. Up, down or sideways, somebody's driving it tonight.",
+          "startMs": 46
+        }
+      ]
+    },
+    {
+      "id": "id-004",
+      "category": "id",
+      "url": "/voice/waystation-9/id-004.mp3",
+      "durationMs": 5917,
+      "overMusic": true,
+      "daypart": "night",
+      "lines": [
+        {
+          "speaker": "Midnight Mongoose",
+          "text": "Breaker, breaker. You're listening to Waystation Nine.",
+          "startMs": 400
+        },
+        {
+          "speaker": "Big Rosalind",
+          "text": "That's right, Mongoose. They are.",
+          "startMs": 3907
+        }
+      ]
+    },
+    {
+      "id": "id-005",
+      "category": "id",
+      "url": "/voice/waystation-9/id-005.mp3",
+      "durationMs": 6231,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Big Rosalind",
+          "text": "Waystation Nine CB. Fragile loads, long hauls, and strong opinions about the sideways road.",
+          "startMs": 44
+        }
+      ]
+    },
+    {
+      "id": "id-006",
+      "category": "id",
+      "url": "/voice/waystation-9/id-006.mp3",
+      "durationMs": 6958,
+      "overMusic": true,
+      "daypart": "morning",
+      "lines": [
+        {
+          "speaker": "Big Rosalind",
+          "text": "Morning, drivers. Waystation Nine. Coffee's on, the Up Road's awake, and the sideways road is pretending not to be.",
+          "startMs": 43
+        }
+      ]
+    },
+    {
+      "id": "chat-001",
+      "category": "dj",
+      "url": "/voice/waystation-9/chat-001.mp3",
+      "durationMs": 17319,
+      "title": "Forty Tonne of Tuesday",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Big Rosalind",
+          "text": "Mongoose, what are you hauling tonight?",
+          "startMs": 41
+        },
+        {
+          "speaker": "Midnight Mongoose",
+          "text": "Same as always, Rosalind. Forty tonne of Tuesday, northbound.",
+          "startMs": 2796
+        },
+        {
+          "speaker": "Big Rosalind",
+          "text": "Fragile?",
+          "startMs": 6950
+        },
+        {
+          "speaker": "Midnight Mongoose",
+          "text": "Says so on the side. Hit a pothole on the Down Road last month, and a whole town got two Tuesdays. Nobody was happy.",
+          "startMs": 8435
+        },
+        {
+          "speaker": "Big Rosalind",
+          "text": "Drive careful, Mongoose.",
+          "startMs": 15396
+        }
+      ]
+    },
+    {
+      "id": "chat-002",
+      "category": "dj",
+      "url": "/voice/waystation-9/chat-002.mp3",
+      "durationMs": 15933,
+      "title": "Grandma Diesel Passes",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Midnight Mongoose",
+          "text": "Rosalind, you seen Grandma Diesel tonight?",
+          "startMs": 400
+        },
+        {
+          "speaker": "Big Rosalind",
+          "text": "Seen her? She came through here four minutes ago doing a hundred and ten. Knitting.",
+          "startMs": 3536
+        },
+        {
+          "speaker": "Grandma Diesel",
+          "text": "Hundred and twelve, dear. And it's a cardigan.",
+          "startMs": 8616
+        },
+        {
+          "speaker": "Midnight Mongoose",
+          "text": "She's... she's behind me, Rosalind.",
+          "startMs": 11585
+        },
+        {
+          "speaker": "Grandma Diesel",
+          "text": "Not any more, pet.",
+          "startMs": 14125
+        }
+      ]
+    },
+    {
+      "id": "chat-003",
+      "category": "dj",
+      "url": "/voice/waystation-9/chat-003.mp3",
+      "durationMs": 19548,
+      "title": "Weather in the Back",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Grandma Diesel",
+          "text": "Rosalind, I'll need a wide berth on the Up Road. I've got a thunderstorm in the back, and it's getting restless.",
+          "startMs": 400
+        },
+        {
+          "speaker": "Big Rosalind",
+          "text": "How restless?",
+          "startMs": 6738
+        },
+        {
+          "speaker": "Grandma Diesel",
+          "text": "Rattling the doors since the county line. I've put the radio on for it. It likes the slow ones.",
+          "startMs": 8398
+        },
+        {
+          "speaker": "Big Rosalind",
+          "text": "Copy that. All drivers, Grandma Diesel's coming through with weather. Pull over and put your hoods up.",
+          "startMs": 14146
+        }
+      ]
+    },
+    {
+      "id": "chat-004",
+      "category": "dj",
+      "url": "/voice/waystation-9/chat-004.mp3",
+      "durationMs": 20145,
+      "title": "Since It Was a River",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Midnight Mongoose",
+          "text": "You know, Rosalind, I been driving this stretch since it was a river.",
+          "startMs": 400
+        },
+        {
+          "speaker": "Big Rosalind",
+          "text": "I know, Mongoose.",
+          "startMs": 4500
+        },
+        {
+          "speaker": "Midnight Mongoose",
+          "text": "Used to row it. Had a little boat. Then one spring the water just got up and left, and they paved it over, and I thought, well. I know the way.",
+          "startMs": 6414
+        },
+        {
+          "speaker": "Big Rosalind",
+          "text": "You still steer round the rocks.",
+          "startMs": 13969
+        },
+        {
+          "speaker": "Midnight Mongoose",
+          "text": "Rocks are still there, Rosalind. You just can't see them.",
+          "startMs": 16296
+        }
+      ]
+    },
+    {
+      "id": "chat-005",
+      "category": "dj",
+      "url": "/voice/waystation-9/chat-005.mp3",
+      "durationMs": 14633,
+      "title": "The Sideways Road",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Big Rosalind",
+          "text": "A word about the sideways road. I don't trust it. It knows where you're going before you do, and it gets there first, and it waits for you.",
+          "startMs": 37
+        },
+        {
+          "speaker": "Big Rosalind",
+          "text": "Drivers, if you must take the sideways road: eyes front, doors locked, and don't, whatever you do, let it choose the radio station.",
+          "startMs": 7446
+        }
+      ]
+    },
+    {
+      "id": "chat-006",
+      "category": "dj",
+      "url": "/voice/waystation-9/chat-006.mp3",
+      "durationMs": 16922,
+      "title": "Compost for Gristwick",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Big Rosalind",
+          "text": "All drivers, oversized load on the Down Road tonight. Forty tonne of compost, bound for Gristwick. For one marrow.",
+          "startMs": 36
+        },
+        {
+          "speaker": "Midnight Mongoose",
+          "text": "One marrow, Rosalind?",
+          "startMs": 7307
+        },
+        {
+          "speaker": "Big Rosalind",
+          "text": "One marrow. Second load this week. It's got its own postcode, Mongoose. It eats well.",
+          "startMs": 9335
+        },
+        {
+          "speaker": "Midnight Mongoose",
+          "text": "Copy. I'll pull in and let it by.",
+          "startMs": 14476
+        }
+      ]
+    },
+    {
+      "id": "chat-007",
+      "category": "dj",
+      "url": "/voice/waystation-9/chat-007.mp3",
+      "durationMs": 13187,
+      "title": "The Fog Delivery",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Grandma Diesel",
+          "text": "Rosalind, I've dropped that load of fog off at the shoegaze place.",
+          "startMs": 400
+        },
+        {
+          "speaker": "Big Rosalind",
+          "text": "How'd it go?",
+          "startMs": 4382
+        },
+        {
+          "speaker": "Grandma Diesel",
+          "text": "Lovely boy on the stage. Mumbled at me for ten minutes. I agreed with everything.",
+          "startMs": 5859
+        },
+        {
+          "speaker": "Big Rosalind",
+          "text": "Everybody does, Grandma.",
+          "startMs": 11197
+        }
+      ]
+    },
+    {
+      "id": "chat-008",
+      "category": "dj",
+      "url": "/voice/waystation-9/chat-008.mp3",
+      "durationMs": 11858,
+      "title": "For the Night Shift",
+      "overMusic": true,
+      "daypart": "night",
+      "lines": [
+        {
+          "speaker": "Big Rosalind",
+          "text": "And the Nightjar's on the channel again. Night operator, we can see your running lights over the crossroads.",
+          "startMs": 36
+        },
+        {
+          "speaker": "Big Rosalind",
+          "text": "You want coffee, you'll have to come down. We don't deliver up. Well. Grandma Diesel does. But she charges.",
+          "startMs": 6188
+        }
+      ]
+    },
+    {
+      "id": "chat-009",
+      "category": "dj",
+      "url": "/voice/waystation-9/chat-009.mp3",
+      "durationMs": 16001,
+      "title": "Relay Four on the Long Range",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Midnight Mongoose",
+          "text": "Rosalind, I keep picking up a fella on the long range. Teodor. Relay Four. Asking if anybody can hear him.",
+          "startMs": 400
+        },
+        {
+          "speaker": "Big Rosalind",
+          "text": "We hear him, Mongoose. Everybody does. Say hello.",
+          "startMs": 7184
+        },
+        {
+          "speaker": "Midnight Mongoose",
+          "text": "Teodor, this is Midnight Mongoose, on the old river road. We hear you, friend. Ten four.",
+          "startMs": 10321
+        }
+      ]
+    },
+    {
+      "id": "serial-new-guy-001",
+      "category": "dj",
+      "url": "/voice/waystation-9/serial-new-guy-001.mp3",
+      "durationMs": 16660,
+      "title": "The New Guy",
+      "overMusic": true,
+      "serial": {
+        "id": "the-new-guy",
+        "episode": 1
+      },
+      "lines": [
+        {
+          "speaker": "The New Guy",
+          "text": "Uh. Waystation Nine, this is... um. This is the new guy.",
+          "startMs": 400
+        },
+        {
+          "speaker": "Big Rosalind",
+          "text": "Evening, new guy. Got a handle yet?",
+          "startMs": 3727
+        },
+        {
+          "speaker": "The New Guy",
+          "text": "Not yet. I was thinking... Thunder Hawk?",
+          "startMs": 6337
+        },
+        {
+          "speaker": "Big Rosalind",
+          "text": "No.",
+          "startMs": 8547
+        },
+        {
+          "speaker": "The New Guy",
+          "text": "Night Wolf?",
+          "startMs": 9669
+        },
+        {
+          "speaker": "Big Rosalind",
+          "text": "No.",
+          "startMs": 10734
+        },
+        {
+          "speaker": "The New Guy",
+          "text": "What about...",
+          "startMs": 11856
+        },
+        {
+          "speaker": "Big Rosalind",
+          "text": "You don't pick your handle, sweetheart. The road picks it. Just drive.",
+          "startMs": 12912
+        }
+      ]
+    },
+    {
+      "id": "serial-new-guy-002",
+      "category": "dj",
+      "url": "/voice/waystation-9/serial-new-guy-002.mp3",
+      "durationMs": 19296,
+      "title": "The New Guy Takes the Sideways Road",
+      "overMusic": true,
+      "serial": {
+        "id": "the-new-guy",
+        "episode": 2
+      },
+      "lines": [
+        {
+          "speaker": "Big Rosalind",
+          "text": "New guy, what's your twenty?",
+          "startMs": 38
+        },
+        {
+          "speaker": "The New Guy",
+          "text": "I took the sideways road, Rosalind. I think... I think I'm in last Thursday.",
+          "startMs": 2747
+        },
+        {
+          "speaker": "Big Rosalind",
+          "text": "I told you about the sideways road.",
+          "startMs": 7572
+        },
+        {
+          "speaker": "The New Guy",
+          "text": "You did.",
+          "startMs": 10280
+        },
+        {
+          "speaker": "Grandma Diesel",
+          "text": "Welcome to the network, Thursday.",
+          "startMs": 11604
+        },
+        {
+          "speaker": "Big Rosalind",
+          "text": "There it is. The road's picked it. That's your handle now. Thursday.",
+          "startMs": 14102
+        },
+        {
+          "speaker": "Thursday",
+          "text": "...Copy that.",
+          "startMs": 18042
+        }
+      ]
+    },
+    {
+      "id": "serial-new-guy-003",
+      "category": "dj",
+      "url": "/voice/waystation-9/serial-new-guy-003.mp3",
+      "durationMs": 14396,
+      "title": "Thursday's First Fragile Load",
+      "overMusic": true,
+      "serial": {
+        "id": "the-new-guy",
+        "episode": 3
+      },
+      "lines": [
+        {
+          "speaker": "Big Rosalind",
+          "text": "Thursday, what are you hauling?",
+          "startMs": 41
+        },
+        {
+          "speaker": "Thursday",
+          "text": "First fragile load, Rosalind. A whole crate of first impressions.",
+          "startMs": 2503
+        },
+        {
+          "speaker": "Big Rosalind",
+          "text": "Steady with those. You only get the one go.",
+          "startMs": 6658
+        },
+        {
+          "speaker": "Thursday",
+          "text": "Copy that. Thursday out.",
+          "startMs": 9623
+        },
+        {
+          "speaker": "Big Rosalind",
+          "text": "Listen to him. Thursday out. Proud of you, kid.",
+          "startMs": 11657
+        }
+      ]
+    },
+    {
+      "id": "roads-open-001",
+      "category": "weather",
+      "url": "/voice/waystation-9/roads-open-001.mp3",
+      "durationMs": 5590,
+      "overMusic": false,
+      "part": "open",
+      "kit": "roads",
+      "lines": [
+        {
+          "speaker": "Big Rosalind",
+          "text": "Road report, from Waystation Nine dispatch. Here's how the roads are feeling.",
+          "startMs": 439
+        }
+      ]
+    },
+    {
+      "id": "roads-open-002",
+      "category": "weather",
+      "url": "/voice/waystation-9/roads-open-002.mp3",
+      "durationMs": 5302,
+      "overMusic": false,
+      "part": "open",
+      "kit": "roads",
+      "lines": [
+        {
+          "speaker": "Big Rosalind",
+          "text": "Time for the road report. Pens out, drivers. Big Rosalind, on the map.",
+          "startMs": 438
+        }
+      ]
+    },
+    {
+      "id": "roads-body-001",
+      "category": "weather",
+      "url": "/voice/waystation-9/roads-body-001.mp3",
+      "durationMs": 12362,
+      "title": "The Up Road",
+      "overMusic": false,
+      "part": "body",
+      "kit": "roads",
+      "lines": [
+        {
+          "speaker": "Big Rosalind",
+          "text": "The Up Road. Steady climb, good surface, light traffic. Some icing near the top, where it's never once been warm.",
+          "startMs": 440
+        },
+        {
+          "speaker": "Big Rosalind",
+          "text": "Keep it under fifty, and say something nice to it as you pass. It's been a bit low lately.",
+          "startMs": 6920
+        }
+      ]
+    },
+    {
+      "id": "roads-body-002",
+      "category": "weather",
+      "url": "/voice/waystation-9/roads-body-002.mp3",
+      "durationMs": 9327,
+      "title": "The Down Road",
+      "overMusic": false,
+      "part": "body",
+      "kit": "roads",
+      "lines": [
+        {
+          "speaker": "Big Rosalind",
+          "text": "The Down Road is moving well, southbound. Northbound is also moving well, but it's also going down.",
+          "startMs": 438
+        },
+        {
+          "speaker": "Big Rosalind",
+          "text": "Don't ask. Just enjoy it.",
+          "startMs": 6616
+        }
+      ]
+    },
+    {
+      "id": "roads-body-003",
+      "category": "weather",
+      "url": "/voice/waystation-9/roads-body-003.mp3",
+      "durationMs": 13558,
+      "title": "The Sideways Road",
+      "overMusic": false,
+      "part": "body",
+      "kit": "roads",
+      "lines": [
+        {
+          "speaker": "Big Rosalind",
+          "text": "The sideways road. I won't tell you how it's doing, because it'll hear me, and it'll take it personally.",
+          "startMs": 438
+        },
+        {
+          "speaker": "Big Rosalind",
+          "text": "I will say there's a three mile tailback of drivers who took it to save time, and are now in last week. Take the long way.",
+          "startMs": 6064
+        }
+      ]
+    },
+    {
+      "id": "roads-body-004",
+      "category": "weather",
+      "url": "/voice/waystation-9/roads-body-004.mp3",
+      "durationMs": 10796,
+      "title": "The Loop",
+      "overMusic": false,
+      "part": "body",
+      "kit": "roads",
+      "lines": [
+        {
+          "speaker": "Big Rosalind",
+          "text": "The Loop is running smooth, clockwise. If you've been on the Loop more than a day, you'll be passing the diner every forty minutes.",
+          "startMs": 437
+        },
+        {
+          "speaker": "Big Rosalind",
+          "text": "Wave at Dolores. She'll wave back. She always does.",
+          "startMs": 7278
+        }
+      ]
+    },
+    {
+      "id": "roads-body-005",
+      "category": "weather",
+      "url": "/voice/waystation-9/roads-body-005.mp3",
+      "durationMs": 12232,
+      "title": "The Old River Road",
+      "overMusic": false,
+      "part": "body",
+      "kit": "roads",
+      "lines": [
+        {
+          "speaker": "Big Rosalind",
+          "text": "The old river road. Dry, as it has been for a hundred years, but drivers report the feeling of a current near the old bridge.",
+          "startMs": 438
+        },
+        {
+          "speaker": "Big Rosalind",
+          "text": "Midnight Mongoose says steer left of the middle. Do as Mongoose says.",
+          "startMs": 7993
+        }
+      ]
+    },
+    {
+      "id": "roads-body-006",
+      "category": "weather",
+      "url": "/voice/waystation-9/roads-body-006.mp3",
+      "durationMs": 14766,
+      "title": "Weather on the Network",
+      "overMusic": false,
+      "part": "body",
+      "kit": "roads",
+      "lines": [
+        {
+          "speaker": "Big Rosalind",
+          "text": "Weather on the network. Grandma Diesel was hauling a thunderstorm eastbound, and it's got loose.",
+          "startMs": 442
+        },
+        {
+          "speaker": "Big Rosalind",
+          "text": "Expect rain on the Up Road, a short hailstorm at the junction, and one very confused rainbow on the sideways road, pointing the wrong way.",
+          "startMs": 6082
+        }
+      ]
+    },
+    {
+      "id": "roads-close-001",
+      "category": "weather",
+      "url": "/voice/waystation-9/roads-close-001.mp3",
+      "durationMs": 6358,
+      "overMusic": false,
+      "part": "close",
+      "kit": "roads",
+      "lines": [
+        {
+          "speaker": "Big Rosalind",
+          "text": "That's the road report. Drive careful, drink your coffee, and if the road talks back, don't argue.",
+          "startMs": 446
+        }
+      ]
+    },
+    {
+      "id": "roads-close-002",
+      "category": "weather",
+      "url": "/voice/waystation-9/roads-close-002.mp3",
+      "durationMs": 5870,
+      "overMusic": false,
+      "part": "close",
+      "kit": "roads",
+      "lines": [
+        {
+          "speaker": "Big Rosalind",
+          "text": "That's your roads. Waystation Nine dispatch, standing by. Keep the shiny side up.",
+          "startMs": 447
+        }
+      ]
+    },
+    {
+      "id": "id-graveyard-shift",
+      "category": "id",
+      "url": "/voice/waystation-9/id-graveyard-shift.mp3",
+      "durationMs": 8539,
+      "overMusic": true,
+      "part": "open",
+      "show": "graveyard-shift",
+      "lines": [
+        {
+          "speaker": "Big Rosalind",
+          "text": "This is the Graveyard Shift, on Waystation Nine CB. Coffee's black, the roads are dark, and every driver out there is wide awake. Talk to me.",
+          "startMs": 36
+        }
+      ]
+    },
+    {
+      "id": "dj-graveyard-shift-001",
+      "category": "dj",
+      "url": "/voice/waystation-9/dj-graveyard-shift-001.mp3",
+      "durationMs": 14242,
+      "overMusic": true,
+      "show": "graveyard-shift",
+      "lines": [
+        {
+          "speaker": "Midnight Mongoose",
+          "text": "Rosalind, you still up?",
+          "startMs": 400
+        },
+        {
+          "speaker": "Big Rosalind",
+          "text": "I'm always up, Mongoose.",
+          "startMs": 2369
+        },
+        {
+          "speaker": "Midnight Mongoose",
+          "text": "Me too. Road's real quiet. Just me, the headlights, and a fox that's been running alongside me for ten miles.",
+          "startMs": 4543
+        },
+        {
+          "speaker": "Big Rosalind",
+          "text": "Is he keeping up?",
+          "startMs": 11098
+        },
+        {
+          "speaker": "Midnight Mongoose",
+          "text": "He's winning.",
+          "startMs": 12859
+        }
+      ]
+    },
+    {
+      "id": "dj-graveyard-shift-002",
+      "category": "dj",
+      "url": "/voice/waystation-9/dj-graveyard-shift-002.mp3",
+      "durationMs": 9704,
+      "overMusic": true,
+      "show": "graveyard-shift",
+      "lines": [
+        {
+          "speaker": "Big Rosalind",
+          "text": "Three in the morning on the network. Long stretches, no lights, and the radio for company.",
+          "startMs": 50
+        },
+        {
+          "speaker": "Big Rosalind",
+          "text": "If you're out there and you're tired, pull in. I'll leave the light on. I always do.",
+          "startMs": 5307
+        }
+      ]
+    },
+    {
+      "id": "id-dawn-run",
+      "category": "id",
+      "url": "/voice/waystation-9/id-dawn-run.mp3",
+      "durationMs": 6840,
+      "overMusic": true,
+      "part": "open",
+      "show": "dawn-run",
+      "lines": [
+        {
+          "speaker": "Big Rosalind",
+          "text": "Morning, drivers. This is the Dawn Run. Night convoy's pulling in, day convoy's heading out. Mind the lot. Bacon's on.",
+          "startMs": 46
+        }
+      ]
+    },
+    {
+      "id": "dj-dawn-run-001",
+      "category": "dj",
+      "url": "/voice/waystation-9/dj-dawn-run-001.mp3",
+      "durationMs": 9715,
+      "overMusic": true,
+      "show": "dawn-run",
+      "lines": [
+        {
+          "speaker": "Grandma Diesel",
+          "text": "Morning, Rosalind. Coming in off the Up Road. Delivered a sunrise to the eastern counties.",
+          "startMs": 400
+        },
+        {
+          "speaker": "Big Rosalind",
+          "text": "How'd it go?",
+          "startMs": 6147
+        },
+        {
+          "speaker": "Grandma Diesel",
+          "text": "Bit pink. They liked it.",
+          "startMs": 7625
+        }
+      ]
+    },
+    {
+      "id": "dj-dawn-run-002",
+      "category": "dj",
+      "url": "/voice/waystation-9/dj-dawn-run-002.mp3",
+      "durationMs": 10639,
+      "overMusic": true,
+      "show": "dawn-run",
+      "lines": [
+        {
+          "speaker": "Big Rosalind",
+          "text": "Bacon report. Dolores has done four hundred rashers this morning, and they're all gone. Grandma Diesel had a hundred of them.",
+          "startMs": 40
+        },
+        {
+          "speaker": "Big Rosalind",
+          "text": "She says it's for the drive. She's eighty four. I'm not arguing.",
+          "startMs": 7284
+        }
+      ]
+    },
+    {
+      "id": "id-supper-at-the-crossroads",
+      "category": "id",
+      "url": "/voice/waystation-9/id-supper-at-the-crossroads.mp3",
+      "durationMs": 6820,
+      "overMusic": true,
+      "part": "open",
+      "show": "supper-at-the-crossroads",
+      "lines": [
+        {
+          "speaker": "Big Rosalind",
+          "text": "Evening, all. This is Supper at the Crossroads. Pull in, pull up a stool, and let's talk about anything but the sideways road.",
+          "startMs": 37
+        }
+      ]
+    },
+    {
+      "id": "dj-supper-at-the-crossroads-001",
+      "category": "dj",
+      "url": "/voice/waystation-9/dj-supper-at-the-crossroads-001.mp3",
+      "durationMs": 15194,
+      "overMusic": true,
+      "show": "supper-at-the-crossroads",
+      "lines": [
+        {
+          "speaker": "Big Rosalind",
+          "text": "Dolores says the coffee's fresh. Dolores has said the coffee's fresh every night since this place opened, and Dolores has never once lied to a driver.",
+          "startMs": 37
+        },
+        {
+          "speaker": "Big Rosalind",
+          "text": "So either the coffee's fresh, or time works different in that pot. Either way, it's very good coffee. Pull in.",
+          "startMs": 9175
+        }
+      ]
+    },
+    {
+      "id": "dj-supper-at-the-crossroads-002",
+      "category": "dj",
+      "url": "/voice/waystation-9/dj-supper-at-the-crossroads-002.mp3",
+      "durationMs": 11383,
+      "overMusic": true,
+      "show": "supper-at-the-crossroads",
+      "lines": [
+        {
+          "speaker": "Big Rosalind",
+          "text": "Supper chatter. Somebody at the counter says the sideways road took him past his own house, and his own self was in the window, waving.",
+          "startMs": 40
+        },
+        {
+          "speaker": "Big Rosalind",
+          "text": "I don't want to hear it. Nobody wants to hear it. Eat your pie.",
+          "startMs": 7908
+        }
+      ]
+    },
+    {
+      "id": "dj-halloween-001",
+      "category": "dj",
+      "url": "/voice/waystation-9/dj-halloween-001.mp3",
+      "durationMs": 16341,
+      "title": "A Passenger Since 1958",
+      "overMusic": true,
+      "dates": [
+        "10-24",
+        "10-25",
+        "10-26",
+        "10-27",
+        "10-28",
+        "10-29",
+        "10-30",
+        "10-31"
+      ],
+      "lines": [
+        {
+          "speaker": "Big Rosalind",
+          "text": "Halloween on the network. Drivers, if somebody thumbs a ride on the Down Road, and they tell you they've been waiting since nineteen fifty eight, give them a lift.",
+          "startMs": 41
+        },
+        {
+          "speaker": "Big Rosalind",
+          "text": "They're harmless. Very polite. They tip in old coins. Just don't take the sideways road with them in the cab. They don't like it either.",
+          "startMs": 9064
+        }
+      ]
+    },
+    {
+      "id": "dj-halloween-002",
+      "category": "dj",
+      "url": "/voice/waystation-9/dj-halloween-002.mp3",
+      "durationMs": 15090,
+      "title": "Wide Load",
+      "overMusic": true,
+      "dates": [
+        "10-24",
+        "10-25",
+        "10-26",
+        "10-27",
+        "10-28",
+        "10-29",
+        "10-30",
+        "10-31"
+      ],
+      "lines": [
+        {
+          "speaker": "Grandma Diesel",
+          "text": "Rosalind, I'm running a full moon out to the hill country for the thirty first.",
+          "startMs": 400
+        },
+        {
+          "speaker": "Big Rosalind",
+          "text": "Wide load?",
+          "startMs": 5010
+        },
+        {
+          "speaker": "Grandma Diesel",
+          "text": "Widest there is, dear. Tell the drivers, if they see a big orange light coming up behind them, that's just me and the moon. Don't howl. It only encourages it.",
+          "startMs": 6497
+        }
+      ]
+    }
+  ]
+}

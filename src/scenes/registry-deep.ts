@@ -1,6 +1,57 @@
 // Scenes for secret stations, pirate stations and oddities (owned by the scenes-deep workstream).
+// Pirate scenes are shared by many generated stations, so their labels stay generic.
 
 import type { SceneId } from '../broadcast/types';
 import type { SceneEntry } from './registry';
 
-export const DEEP_SCENES: Partial<Record<SceneId, SceneEntry>> = {};
+export const DEEP_SCENES: Partial<Record<SceneId, SceneEntry>> = {
+  // ── secret stations ──
+  'nightjar-cabin': {
+    label: "The Nightjar's dim cabin from behind the empty operator's chair, the console glowing amber and HUSH's light breathing softly.",
+    load: () => import('./defs/nightjar-cabin'),
+  },
+  lighthouse: {
+    label: 'A lighthouse on a lonely rock sweeps its beam over a dark sea under strange stars while the keeper reads at a lit window.',
+    load: () => import('./defs/lighthouse'),
+  },
+  'first-transmitter': {
+    label: 'In a firelit cave at the dawn of time, a figure in furs taps a horn wired to a lightning-struck tree under a huge moon.',
+    load: () => import('./defs/first-transmitter'),
+  },
+
+  // ── pirate stations (each shared by many pirates, varied by ctx.variant) ──
+  'pirate-shed': {
+    label: 'An unlicensed studio glows in a garden shed at night, egg boxes in the window and a coat-hanger aerial on the roof.',
+    load: () => import('./defs/pirate-shed'),
+  },
+  'pirate-van': {
+    label: 'A battered van parked at night, its side door open on a makeshift studio, a lashed-up mast on the roof.',
+    load: () => import('./defs/pirate-van'),
+  },
+  'pirate-rooftop': {
+    label: 'A makeshift studio on a tower-block roof above the city at night, under a mast of mismatched aerials.',
+    load: () => import('./defs/pirate-rooftop'),
+  },
+  'pirate-boat': {
+    label: 'A small boat at anchor at night, egg boxes in its lit windows and a long-wire aerial strung from the mast.',
+    load: () => import('./defs/pirate-boat'),
+  },
+
+  // ── oddities between stations ──
+  'oddity-testcard': {
+    label: 'An old television glows with a test card in a dark room, an empty armchair facing it.',
+    load: () => import('./defs/oddity-testcard'),
+  },
+  'oddity-beacon': {
+    label: 'A lone distress buoy turns slowly in deep space, blinking red against a faint nebula.',
+    load: () => import('./defs/oddity-beacon'),
+  },
+  'oddity-jukebox': {
+    label: 'A glowing jukebox plays the same record in an empty diner at night, rain on the windows.',
+    load: () => import('./defs/oddity-jukebox'),
+  },
+  'oddity-clock': {
+    label: 'An atomic clock in a steel vault tosses a glowing ball of atoms each second beside a nixie readout.',
+    load: () => import('./defs/oddity-clock'),
+  },
+};

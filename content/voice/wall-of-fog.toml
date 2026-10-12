@@ -1,0 +1,314 @@
+# Wall of Fog — 98.25, a dimension made entirely of reverb.
+#
+# Ellis hosts: mumbles beautifully, has never finished a sentence, and everybody agrees with
+# him anyway. Every sound here echoes forever, so old gigs, dropped spoons and soundchecks
+# from 1991 are still coming round the back. The audience is three blurry shapes and a lamp.
+#
+# Running bits: the lamp (his best friend); pedals that make the other pedals further away;
+# the one complete sentence Ellis has ever said (it's about water and backups). The captions
+# carry the mumbles, so the ellipses are the jokes. Cross-station: Grandma Diesel from
+# Waystation 9 delivered a truckload of fog.
+station = "wall-of-fog"
+
+[voices]
+host = { voice = "am_echo", speed = 0.9, name = "Ellis" }
+reverb = { voice = "am_echo", speed = 0.9, fx = "cave", name = "The Reverb" }
+
+[[show]]
+id = "soundcheck"
+name = "Soundcheck"
+blurb = "The soundcheck began in 1991. Some of it is still going. Join it."
+start = 16
+end = 19
+
+[[show]]
+id = "the-loud-quiet"
+name = "The Loud Quiet"
+blurb = "Very loud, then very, very quiet, then very loud. Ellis has notes. Nobody can read them."
+start = 22
+end = 2
+
+[[show]]
+id = "fogbound"
+name = "Fogbound"
+blurb = "The small hours, where the reverb is deepest and the lamp keeps watch."
+start = 2
+end = 6
+
+# ── Idents ────────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "id-001"
+category = "id"
+lines = [
+  { say = "host", text = "...this is Wall of Fog... ninety eight point... something... yeah." },
+]
+
+[[clip]]
+id = "id-002"
+category = "id"
+lines = [
+  { say = "host", text = "...you're listening to... Wall of Fog... it's... all of it, really... yeah.", gap = 0.8 },
+  { say = "reverb", text = "...yeah..." },
+]
+
+[[clip]]
+id = "id-003"
+category = "id"
+lines = [
+  { say = "host", text = "This is Wall of Fog.", gap = 0.9 },
+  { say = "reverb", text = "...of Fog...", gap = 0.9 },
+  { say = "reverb", text = "...Fog..." },
+]
+
+[[clip]]
+id = "id-004"
+category = "id"
+lines = [
+  { say = "host", text = "...hey... it's Ellis... Wall of Fog... don't... no, it's fine... yeah." },
+]
+
+[[clip]]
+id = "id-005"
+category = "id"
+daypart = "night"
+lines = [
+  { say = "host", text = "...it's late... Wall of Fog... turn it up... no, more... no... yeah. That." },
+]
+
+[[clip]]
+id = "id-006"
+category = "id"
+lines = [
+  { say = "host", text = "Wall of Fog. Every sound you make here... lasts forever... so... be nice." },
+]
+
+[[clip]]
+id = "id-007"
+category = "id"
+lines = [
+  { say = "host", text = "...Wall of Fog... sorry... is this... on?" },
+  { sting = "id" },
+]
+
+# ── Host links ────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "dj-001"
+category = "dj"
+lines = [
+  { say = "host", text = "...that was... them... the ones with the... you know... the pedals... seventeen pedals... no, more..." },
+  { say = "host", text = "...it's about a... a feeling... that you had once... near a lamp... yeah." },
+]
+
+[[clip]]
+id = "dj-002"
+category = "dj"
+lines = [
+  { say = "host", text = "...quick thing... some of you are still hearing... last Tuesday's set... that's normal... that's the room..." },
+  { say = "host", text = "...it'll pass... it won't... but... yeah." },
+]
+
+[[clip]]
+id = "dj-003"
+category = "dj"
+title = "The Full Sentence"
+lines = [
+  { say = "host", text = "...okay... so...", gap = 1.0 },
+  { say = "host", text = "Please remember to drink some water, call the people you love, and back up your files.", speed = 1.0, gap = 1.2 },
+  { say = "host", text = "...sorry... that was... a lot... here's a song." },
+]
+
+[[clip]]
+id = "dj-004"
+category = "dj"
+lines = [
+  { say = "host", text = "...got a new pedal... it doesn't... do anything... it just makes the other pedals... further away..." },
+  { say = "host", text = "...I love it... here's a song... I can't hear." },
+]
+
+[[clip]]
+id = "dj-005"
+category = "dj"
+daypart = "evening"
+title = "Hello, Lamp"
+lines = [
+  { say = "host", text = "...the lamp's on... so it's evening... or the lamp just... felt like it..." },
+  { say = "host", text = "...hello to the audience... all three of you... and the lamp... hi, lamp... this one's for you... and the lamp." },
+]
+
+[[clip]]
+id = "dj-006"
+category = "dj"
+title = "First Gig"
+lines = [
+  { say = "host", text = "...it's quiet tonight... you can hear the old stuff... coming round the back...", gap = 1.0 },
+  { say = "reverb", text = "...is this thing on...", gap = 1.0 },
+  { say = "host", text = "...that's me... first gig... nineteen ninety one... I still don't know... if it was on." },
+]
+
+[[clip]]
+id = "dj-007"
+category = "dj"
+lines = [
+  { say = "host", text = "...people ask... what the words are... nobody knows... the singer doesn't know... I asked her..." },
+  { say = "host", text = "...she said... something... and it was beautiful... and I agreed... yeah." },
+]
+
+[[clip]]
+id = "dj-008"
+category = "dj"
+lines = [
+  { say = "host", text = "...anyway... I think the thing is... you know... with the... when you're... and it's... yeah?" },
+  { pause = 1.2 },
+  { say = "host", text = "...yeah. Exactly... I knew you'd get it." },
+]
+
+[[clip]]
+id = "dj-009"
+category = "dj"
+daypart = "night"
+title = "For the Night Shift"
+lines = [
+  { say = "host", text = "...hey... the person... on the ship... the night... you... yeah... hi..." },
+  { say = "host", text = "...the fog's coming up... to your window... it's fine... it's friendly... it's mostly us." },
+]
+
+[[clip]]
+id = "dj-010"
+category = "dj"
+title = "The Spoon"
+lines = [
+  { say = "host", text = "...if you're new... everything here echoes... forever... so if you dropped something... in like... nineteen ninety three... you can still hear it... landing...", gap = 0.6 },
+  { sfx = "ding", level = 0.5 },
+  { say = "host", text = "...that one... yeah... that's a spoon." },
+]
+
+[[clip]]
+id = "dj-011"
+category = "dj"
+daypart = "morning"
+lines = [
+  { say = "host", text = "...is it morning... hard to tell... the fog's... lighter... pinker... yeah... morning, I think..." },
+  { say = "host", text = "...don't open the curtains... it's just more fog... I checked." },
+]
+
+[[clip]]
+id = "dj-012"
+category = "dj"
+title = "The Delivery"
+lines = [
+  { say = "host", text = "...big delivery today... a truck came... with more fog... from the crossroads... a lady called... Grandma... something..." },
+  { say = "host", text = "...she reversed it right up to the stage... and just... let it go... and talked to me for ages... I agreed with everything... so... that's why it's... like this." },
+]
+
+# ── Soundcheck (16–19) ────────────────────────────────────────────────────────
+
+[[clip]]
+id = "id-soundcheck"
+category = "id"
+show = "soundcheck"
+part = "open"
+lines = [
+  { say = "host", text = "...this is Soundcheck... on Wall of Fog... one... two...", gap = 0.8 },
+  { say = "reverb", text = "...two...", gap = 0.8 },
+  { say = "host", text = "...the one's gone home... the two's still out there... looking for it." },
+]
+
+[[clip]]
+id = "dj-soundcheck-001"
+category = "dj"
+show = "soundcheck"
+lines = [
+  { say = "host", text = "...could I get... a little more... of everything... in the monitors... more... no, more..." },
+  { say = "host", text = "...yeah... perfect... I can't hear anything at all... that's perfect." },
+]
+
+[[clip]]
+id = "dj-soundcheck-002"
+category = "dj"
+show = "soundcheck"
+lines = [
+  { say = "host", text = "...the drummer's checking the snare... she's been checking it since about three... it's a really good snare..." },
+  { say = "host", text = "...she says... it's nearly... right." },
+]
+
+# ── The Loud Quiet (22–2) ─────────────────────────────────────────────────────
+
+[[clip]]
+id = "id-the-loud-quiet"
+category = "id"
+show = "the-loud-quiet"
+part = "open"
+lines = [
+  { say = "host", text = "...this is... The Loud Quiet... on Wall of Fog... it's gonna be loud... and then... yeah." },
+]
+
+[[clip]]
+id = "dj-the-loud-quiet-001"
+category = "dj"
+show = "the-loud-quiet"
+lines = [
+  { say = "host", text = "...this next one gets... really loud... at the end... like... really..." },
+  { say = "host", text = "...you might want to... no... don't turn it down... turn it... sideways." },
+]
+
+[[clip]]
+id = "dj-the-loud-quiet-002"
+category = "dj"
+show = "the-loud-quiet"
+lines = [
+  { say = "host", text = "...that was the quiet bit... I know... it's hard to tell... the loud bit's coming..." },
+  { say = "host", text = "...it's always coming... like weather... like... yeah." },
+]
+
+# ── Fogbound (2–6) ────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "id-fogbound"
+category = "id"
+show = "fogbound"
+part = "open"
+lines = [
+  { say = "host", text = "...Fogbound... it's really late... the fog's all the way in... stay close... yeah." },
+]
+
+[[clip]]
+id = "dj-fogbound-001"
+category = "dj"
+show = "fogbound"
+lines = [
+  { say = "host", text = "...it's four... ish... the audience went home... the lamp stayed..." },
+  { say = "host", text = "...the lamp always stays... I think the lamp's... my best friend." },
+]
+
+[[clip]]
+id = "dj-fogbound-002"
+category = "dj"
+show = "fogbound"
+lines = [
+  { say = "host", text = "...if you can't sleep... that's okay... lie down... let the fog... do the thinking..." },
+  { say = "host", text = "...it's really good at it... it's had... a lot of practice." },
+]
+
+# ── Halloween ─────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "dj-halloween-001"
+category = "dj"
+dates = ["10-24", "10-25", "10-26", "10-27", "10-28", "10-29", "10-30", "10-31"]
+lines = [
+  { say = "host", text = "...it's that time... the fog's... spookier... no... it's the same fog..." },
+  { say = "host", text = "...it just knows... what day it is." },
+]
+
+[[clip]]
+id = "dj-halloween-002"
+category = "dj"
+title = "Boo"
+dates = ["10-24", "10-25", "10-26", "10-27", "10-28", "10-29", "10-30", "10-31"]
+lines = [
+  { say = "host", text = "...there's a voice... in the reverb... it's been going boo... since nineteen ninety four...", gap = 0.8 },
+  { say = "reverb", text = "...boo...", gap = 0.9 },
+  { say = "host", text = "...we said boo back... it was us... it was always us... happy Halloween." },
+]

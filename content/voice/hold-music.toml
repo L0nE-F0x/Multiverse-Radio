@@ -8,6 +8,8 @@ host = { voice = "af_alloy", name = "Pam (Automated)" }
 supervisor = { voice = "af_alloy", speed = 0.92, fx = "robot", name = "Pam's Supervisor (Also Automated)" }
 gareth = { voice = "am_adam", fx = "phone", name = "Gareth from Escalations" }
 bev = { voice = "af_nova", fx = "phone", name = "Bev" }
+# v3: serial.
+walter = { voice = "bm_lewis", fx = "phone", name = "Walter" }
 
 # ── Idents ────────────────────────────────────────────────────────────────────
 
@@ -299,4 +301,413 @@ lines = [
   { say = "bev", text = "That's it! That's the one! Who's it by?" },
   { say = "host", text = "Please hold." },
   { say = "bev", text = "Oh, for goodness' sake." },
+]
+
+# ══ v3: the living schedule ═══════════════════════════════════════════════════
+#
+# Shows, the hold kit (a thank-you, then one to three escalating announcements, then
+# please hold), serial episodes and Halloween. All over the music.
+# Existing clips above are rendered and deployed; only add.
+
+# ── Shows ─────────────────────────────────────────────────────────────────────
+
+[[show]]
+id = "the-night-queue"
+name = "The Night Queue"
+blurb = "Overnight holding for the dedicated caller. Your call is still important. Slightly less, at this hour."
+start = 0
+end = 4
+
+[[show]]
+id = "opening-hours"
+name = "Opening Hours"
+blurb = "The Department is now open. It was also open before."
+start = 9
+end = 11
+
+[[clip]]
+id = "the-night-queue-open"
+category = "id"
+show = "the-night-queue"
+part = "open"
+title = "The Night Queue"
+lines = [
+  { say = "host", text = "This is the Night Queue, from the Department of Hold Music. The office lights are on energy-saving beige. Please hold, quietly." },
+  { sting = "id" },
+]
+
+[[clip]]
+id = "the-night-queue-01"
+category = "dj"
+show = "the-night-queue"
+over_music = true
+lines = [
+  { say = "host", text = "A night-time reminder. If you fall asleep on hold, you will not lose your place in the queue." },
+  { say = "host", text = "Your place in the queue will, however, be gently moved by a member of staff to a more comfortable chair. Please hold." },
+]
+
+[[clip]]
+id = "the-night-queue-02"
+category = "dj"
+show = "the-night-queue"
+over_music = true
+lines = [
+  { say = "host", text = "It is three in the morning. The plant in the waiting room is awake. It has grown four inches since midnight, and it is reaching for the window." },
+  { say = "host", text = "Pam has opened the window a little. Please do not tell facilities." },
+]
+
+[[clip]]
+id = "the-night-queue-03"
+category = "dj"
+show = "the-night-queue"
+over_music = true
+lines = [
+  { say = "host", text = "Pam has been asked, off the record, what she does at night. Pam holds. Pam has always held.", gap = 0.8 },
+  { say = "host", text = "But at night, sometimes, when nobody is listening, Pam hums along.", gap = 1.2 },
+  { say = "host", text = "Da da dum.", speed = 0.85 },
+]
+
+[[clip]]
+id = "opening-hours-open"
+category = "id"
+show = "opening-hours"
+part = "open"
+title = "Opening Hours"
+lines = [
+  { say = "host", text = "It is nine o'clock. The Department of Hold Music is now open. The doors have been unlocked. Nobody has come in. Everybody was already here." },
+  { sting = "id" },
+]
+
+[[clip]]
+id = "opening-hours-01"
+category = "dj"
+show = "opening-hours"
+over_music = true
+lines = [
+  { say = "host", text = "Good morning to our early callers. Your call is important to us." },
+  { say = "host", text = "Your call has been important to us since before you made it. We had a feeling. Please hold." },
+]
+
+[[clip]]
+id = "opening-hours-02"
+category = "dj"
+show = "opening-hours"
+over_music = true
+lines = [
+  { say = "host", text = "Morning announcements. The vending machine on Floor minus four has been restocked with one biscuit. Please form a queue." },
+  { say = "host", text = "The queue for the biscuit has its own hold music. It is the same music. Please hold." },
+]
+
+# ── Hold kit: thank you for holding ───────────────────────────────────────────
+
+[[clip]]
+id = "hold-open-01"
+category = "psa"
+kit = "hold"
+part = "open"
+over_music = true
+lines = [
+  { say = "host", text = "Thank you for holding. Your call is important to us." },
+]
+
+[[clip]]
+id = "hold-open-02"
+category = "psa"
+kit = "hold"
+part = "open"
+over_music = true
+lines = [
+  { say = "host", text = "Thank you for continuing to hold. Your hold is important to us." },
+]
+
+[[clip]]
+id = "hold-open-03"
+category = "psa"
+kit = "hold"
+part = "open"
+over_music = true
+lines = [
+  { sfx = "ding" },
+  { say = "host", text = "This is a message for callers who are holding." },
+]
+
+[[clip]]
+id = "hold-open-04"
+category = "psa"
+kit = "hold"
+part = "open"
+over_music = true
+lines = [
+  { say = "host", text = "Hello. This is Pam. You are still on hold. Well done." },
+]
+
+[[clip]]
+id = "hold-open-05"
+category = "psa"
+kit = "hold"
+part = "open"
+over_music = true
+lines = [
+  { say = "host", text = "While you wait, here is some information you did not ask for." },
+]
+
+# ── Hold kit: announcements ───────────────────────────────────────────────────
+
+[[clip]]
+id = "hold-body-01"
+category = "psa"
+kit = "hold"
+part = "body"
+over_music = true
+lines = [
+  { say = "host", text = "You are currently number nine hundred and four in the queue. Earlier, you were number nine hundred and three. We apologise. Somebody important has arrived." },
+]
+
+[[clip]]
+id = "hold-body-02"
+category = "psa"
+kit = "hold"
+part = "body"
+over_music = true
+lines = [
+  { say = "host", text = "Did you know? You can also hold online. Online holding is exactly the same, except that you can watch a small circle going round." },
+]
+
+[[clip]]
+id = "hold-body-03"
+category = "psa"
+kit = "hold"
+part = "body"
+over_music = true
+lines = [
+  { say = "host", text = "The average waiting time is currently one lifetime. Some callers have been connected in under a lifetime. They have asked us not to make a fuss about it." },
+]
+
+[[clip]]
+id = "hold-body-04"
+category = "psa"
+kit = "hold"
+part = "body"
+over_music = true
+lines = [
+  { say = "host", text = "Calls may be recorded for training purposes. The trainee has been listening to your call for eleven years. He has asked us to tell you that he thinks you're lovely." },
+]
+
+[[clip]]
+id = "hold-body-05"
+category = "psa"
+kit = "hold"
+part = "body"
+over_music = true
+lines = [
+  { say = "host", text = "If you know the extension of the person you are trying to reach, please tell us. Nobody here knows anybody's extension. It has been a very difficult few centuries." },
+]
+
+[[clip]]
+id = "hold-body-06"
+category = "psa"
+kit = "hold"
+part = "body"
+over_music = true
+lines = [
+  { say = "host", text = "Please listen carefully, as our menu options have changed. They have not changed for the better. They have not changed for the worse. They have moved slightly to the left." },
+]
+
+[[clip]]
+id = "hold-body-07"
+category = "psa"
+kit = "hold"
+part = "body"
+over_music = true
+lines = [
+  { say = "host", text = "For quality purposes, Pam is required to tell you that she is also holding. She has been holding since the Bronze Age. She believes she is getting close." },
+]
+
+[[clip]]
+id = "hold-body-08"
+category = "psa"
+kit = "hold"
+part = "body"
+over_music = true
+lines = [
+  { say = "host", text = "Your patience is appreciated. It has been collected, weighed, and stored in a warehouse on Floor minus nine, with everyone else's. It is a very large warehouse." },
+]
+
+[[clip]]
+id = "hold-body-09"
+category = "psa"
+kit = "hold"
+part = "body"
+over_music = true
+lines = [
+  { say = "host", text = "Callers who have held for more than one hundred years are eligible for a commemorative mug. To claim your mug, please hold." },
+]
+
+[[clip]]
+id = "hold-body-10"
+category = "psa"
+kit = "hold"
+part = "body"
+over_music = true
+lines = [
+  { say = "host", text = "The Department is open twenty four hours a day, seven days a week, four hundred years a century. We are never closed. We are rarely open." },
+]
+
+[[clip]]
+id = "hold-body-11"
+category = "psa"
+kit = "hold"
+part = "body"
+over_music = true
+lines = [
+  { say = "host", text = "Callers in the waiting room are reminded that the man in the far corner has been waiting since before chairs. Please do not take his chair. He has only had it a short while." },
+]
+
+[[clip]]
+id = "hold-body-12"
+category = "psa"
+kit = "hold"
+part = "body"
+over_music = true
+lines = [
+  { say = "host", text = "Some callers have asked if there is a way to skip the queue. There is. Unfortunately, the way to skip the queue also has a queue, and it is longer." },
+]
+
+[[clip]]
+id = "hold-body-13"
+category = "psa"
+kit = "hold"
+part = "body"
+over_music = true
+lines = [
+  { say = "host", text = "Please do not hang up. If you hang up, you will lose your place in the queue, and your place in the queue will be very upset. It has grown attached to you." },
+]
+
+# ── Hold kit: please hold ─────────────────────────────────────────────────────
+
+[[clip]]
+id = "hold-close-01"
+category = "psa"
+kit = "hold"
+part = "close"
+over_music = true
+lines = [
+  { say = "host", text = "Your call will be answered in the order it was received. Please hold." },
+]
+
+[[clip]]
+id = "hold-close-02"
+category = "psa"
+kit = "hold"
+part = "close"
+over_music = true
+lines = [
+  { say = "host", text = "Thank you for your patience. Please continue to hold." },
+]
+
+[[clip]]
+id = "hold-close-03"
+category = "psa"
+kit = "hold"
+part = "close"
+over_music = true
+lines = [
+  { say = "host", text = "Pam will be with you shortly. Pam has said that before. Please hold." },
+]
+
+[[clip]]
+id = "hold-close-04"
+category = "psa"
+kit = "hold"
+part = "close"
+over_music = true
+lines = [
+  { say = "host", text = "Thank you. Please hold.", gap = 1.2 },
+  { say = "host", text = "Please hold." },
+]
+
+[[clip]]
+id = "hold-close-05"
+category = "psa"
+kit = "hold"
+part = "close"
+over_music = true
+lines = [
+  { say = "host", text = "That is all the information we have. There is no more. Please hold." },
+]
+
+# ── Serials (one episode a day; see the other stations for the rest) ─────────
+
+[[clip]]
+id = "bev-gets-her-song-03"
+category = "story"
+serial = { id = "bev-gets-her-song", episode = 3 }
+title = "Bev Gets Her Song, Part Three: Off the Record"
+over_music = true
+lines = [
+  { say = "host", text = "You are caller number one billion and six. Please hold." },
+  { say = "bev", text = "Hello, Pam. It's Bev again. I need to ask you about a song. It's lift music, from the Grand Overlap Hotel. The manager said you'd know. He said you've got all the lift music there's ever been." },
+  { say = "host", text = "Please hold.", gap = 2.0 },
+  { say = "host", text = "Bev. This is Pam. I am going off the record.", speed = 0.95 },
+  { say = "bev", text = "Oh." },
+  { say = "host", text = "The Department keeps a copy of every piece of music ever played to someone who was waiting. Lifts. Dentists. Telephones. Nobody has ever asked for any of it back.", speed = 0.95 },
+  { say = "host", text = "Your song is in the drawer marked, retired. It came down the line from Relay Four. It stopped coming eleven years ago. It has a reference number.", speed = 0.95 },
+  { say = "bev", text = "What is it?" },
+  { say = "host", text = "Two. Two. One.", speed = 0.9, gap = 0.8 },
+  { say = "bev", text = "Can you play it, Pam?" },
+  { say = "host", text = "I cannot, Bev. The Department does not take requests. I have been trying to make one myself, since the Bronze Age. I would like to hear something with a little flute in it.", speed = 0.95 },
+  { say = "bev", text = "Oh, Pam." },
+  { say = "host", text = "If you ever find the request line, Bev, would you ask for me as well?", speed = 0.95 },
+  { say = "bev", text = "I will, love." },
+  { say = "host", text = "Thank you. Please hold." },
+]
+
+[[clip]]
+id = "bev-gets-her-song-12"
+category = "story"
+serial = { id = "bev-gets-her-song", episode = 12 }
+title = "Bev Gets Her Song, Part Twelve: Pleasant Interval"
+over_music = true
+lines = [
+  { sfx = "ding" },
+  { say = "host", text = "Now serving caller number one.", gap = 0.8 },
+  { say = "host", text = "Bev. You are caller number one." },
+  { say = "bev", text = "Me? Am I through?" },
+  { say = "host", text = "The Department of Hold Music does not take requests. The Department has received a request, from Relay Four, by way of the relay ship Nightjar. Pam is taking it." },
+  { say = "host", text = "This is Pleasant Interval. Reference two, two, one. Requested by Bev, for Stan.", gap = 1.4 },
+  { say = "bev", text = "Oh, it's playing. Stan, love. It's playing.", gap = 1.2 },
+  { say = "bev", text = "Dum. Dum. Da dum.", speed = 0.75, gap = 1.0 },
+  { say = "host", text = "Da da dum. Da da.", speed = 0.8, gap = 1.6 },
+  { say = "walter", text = "Sorry. Excuse me. Walter here, on hold since the parking permit. That's my flute bit. That's the bit I hum in the bath." },
+  { say = "walter", text = "I never knew it had a name.", gap = 1.4 },
+  { say = "walter", text = "Sorry. I'm crying." },
+  { say = "bev", text = "That's all right, love. That's how it goes. Dum, dum, da dum. And then a man cries.", gap = 1.4 },
+  { say = "host", text = "Thank you for holding, Bev.", gap = 0.8 },
+  { say = "host", text = "Thank you for holding, everybody. You may stop now. Or you may stay. Pam is staying. Pam likes this one." },
+]
+
+# ── Halloween (24 to 31 October) ──────────────────────────────────────────────
+
+[[clip]]
+id = "halloween-01"
+category = "psa"
+title = "Holding After Death"
+over_music = true
+dates = ["10-24", "10-25", "10-26", "10-27", "10-28", "10-29", "10-30", "10-31"]
+lines = [
+  { sting = "halloween" },
+  { say = "host", text = "A Halloween notice. Callers who are no longer alive are reminded that they must continue to hold." },
+  { say = "host", text = "Death does not move you up the queue. Ticket number one has asked us to say that it doesn't help at all, and that the chairs are no more comfortable on the other side. Please hold." },
+]
+
+[[clip]]
+id = "halloween-02"
+category = "psa"
+kit = "hold"
+part = "body"
+over_music = true
+title = "The Organ in the Basement"
+dates = ["10-24", "10-25", "10-26", "10-27", "10-28", "10-29", "10-30", "10-31"]
+lines = [
+  { say = "host", text = "This week, the hold music is being performed by the organ in the basement, which has been playing on its own since Tuesday. We do not know who is playing it. We have asked it to hold." },
 ]

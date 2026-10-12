@@ -1,0 +1,691 @@
+{
+  "version": 1,
+  "station": "cat-fm",
+  "clips": [
+    {
+      "id": "id-001",
+      "category": "id",
+      "url": "/voice/cat-fm/id-001.mp3",
+      "durationMs": 5814,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Dennis (the intern)",
+          "text": "You're listening to Cat FM. A radio station run by a cat called Gloria. I'm Dennis. I just work here.",
+          "startMs": 41
+        }
+      ]
+    },
+    {
+      "id": "id-002",
+      "category": "id",
+      "url": "/voice/cat-fm/id-002.mp3",
+      "durationMs": 6131,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Dennis (the intern)",
+          "text": "Cat FM. Programming is at the cat's discretion.",
+          "startMs": 37
+        }
+      ]
+    },
+    {
+      "id": "id-003",
+      "category": "id",
+      "url": "/voice/cat-fm/id-003.mp3",
+      "durationMs": 4025,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Dennis (the intern)",
+          "text": "That was the ident. She's done the ident. Cat FM.",
+          "startMs": 1043
+        }
+      ]
+    },
+    {
+      "id": "id-004",
+      "category": "id",
+      "url": "/voice/cat-fm/id-004.mp3",
+      "durationMs": 3844,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Dennis (the intern)",
+          "text": "Cat FM, ninety two point two five. Or whatever she's lying on.",
+          "startMs": 36
+        }
+      ]
+    },
+    {
+      "id": "show-window-open",
+      "category": "id",
+      "url": "/voice/cat-fm/show-window-open.mp3",
+      "durationMs": 6575,
+      "overMusic": true,
+      "part": "open",
+      "show": "morning-window",
+      "lines": [
+        {
+          "speaker": "Dennis (the intern)",
+          "text": "Good morning. This is The Morning Window. The station manager, Gloria, is at the window. So are the birds. So, I suppose, am I.",
+          "startMs": 38
+        }
+      ]
+    },
+    {
+      "id": "show-window-001",
+      "category": "dj",
+      "url": "/voice/cat-fm/show-window-001.mp3",
+      "durationMs": 7747,
+      "overMusic": true,
+      "show": "morning-window",
+      "lines": [
+        {
+          "speaker": "Dennis (the intern)",
+          "text": "Bird report. A pigeon, on the left. She's making the noise. The clicking one.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Dennis (the intern)",
+          "text": "The pigeon doesn't know what's happening. Honestly, neither do I.",
+          "startMs": 4250
+        }
+      ]
+    },
+    {
+      "id": "show-sunbeam-open",
+      "category": "id",
+      "url": "/voice/cat-fm/show-sunbeam-open.mp3",
+      "durationMs": 8155,
+      "overMusic": true,
+      "part": "open",
+      "show": "sunbeam-show",
+      "lines": [
+        {
+          "speaker": "Dennis (the intern)",
+          "text": "This is The Sunbeam Show, live from a patch of carpet by the window. We'll move when it moves.",
+          "startMs": 39
+        }
+      ]
+    },
+    {
+      "id": "show-sunbeam-001",
+      "category": "dj",
+      "url": "/voice/cat-fm/show-sunbeam-001.mp3",
+      "durationMs": 6994,
+      "overMusic": true,
+      "show": "sunbeam-show",
+      "lines": [
+        {
+          "speaker": "Dennis (the intern)",
+          "text": "We've moved about a foot to the left. The sun has, I mean. So she has. So we have.",
+          "startMs": 41
+        },
+        {
+          "speaker": "Dennis (the intern)",
+          "text": "It's a slow show, but it is going somewhere.",
+          "startMs": 4710
+        }
+      ]
+    },
+    {
+      "id": "show-zoomies-open",
+      "category": "id",
+      "url": "/voice/cat-fm/show-zoomies-open.mp3",
+      "durationMs": 7242,
+      "overMusic": true,
+      "daypart": "night",
+      "part": "open",
+      "show": "three-am-zoomies",
+      "lines": [
+        {
+          "speaker": "Dennis (the intern)",
+          "text": "It's three in the morning. This is The Zoomies.",
+          "startMs": 900
+        },
+        {
+          "speaker": "Dennis (the intern)",
+          "text": "She's gone.",
+          "startMs": 4309
+        },
+        {
+          "speaker": "Dennis (the intern)",
+          "text": "She's back.",
+          "startMs": 6436
+        }
+      ]
+    },
+    {
+      "id": "show-zoomies-001",
+      "category": "dj",
+      "url": "/voice/cat-fm/show-zoomies-001.mp3",
+      "durationMs": 12349,
+      "overMusic": true,
+      "show": "three-am-zoomies",
+      "lines": [
+        {
+          "speaker": "Dennis (the intern)",
+          "text": "She's just run up the curtains. She's on the curtain rail. She's looking down at me like I put her there.",
+          "startMs": 40
+        },
+        {
+          "speaker": "Dennis (the intern)",
+          "text": "The curtain rail is now on the floor. She's fine. She's on the floor too. It was her idea.",
+          "startMs": 7606
+        }
+      ]
+    },
+    {
+      "id": "show-zoomies-002",
+      "category": "dj",
+      "url": "/voice/cat-fm/show-zoomies-002.mp3",
+      "durationMs": 8860,
+      "overMusic": true,
+      "show": "three-am-zoomies",
+      "lines": [
+        {
+          "speaker": "Dennis (the intern)",
+          "text": "To the operator on the relay ship. If you've got a cat aboard, it's doing this as well. Right now. Up and down the corridor.",
+          "startMs": 36
+        },
+        {
+          "speaker": "Dennis (the intern)",
+          "text": "It isn't personal. It's three o'clock.",
+          "startMs": 6657
+        }
+      ]
+    },
+    {
+      "id": "decision-open-1",
+      "category": "dj",
+      "url": "/voice/cat-fm/decision-open-1.mp3",
+      "durationMs": 3282,
+      "overMusic": true,
+      "part": "open",
+      "kit": "decision",
+      "lines": [
+        {
+          "speaker": "Dennis (the intern)",
+          "text": "Hi, it's Dennis, the intern. A quick update on the schedule.",
+          "startMs": 39
+        }
+      ]
+    },
+    {
+      "id": "decision-open-2",
+      "category": "dj",
+      "url": "/voice/cat-fm/decision-open-2.mp3",
+      "durationMs": 2073,
+      "overMusic": true,
+      "part": "open",
+      "kit": "decision",
+      "lines": [
+        {
+          "speaker": "Dennis (the intern)",
+          "text": "Sorry. Just a moment. She's moving.",
+          "startMs": 38
+        }
+      ]
+    },
+    {
+      "id": "decision-open-3",
+      "category": "dj",
+      "url": "/voice/cat-fm/decision-open-3.mp3",
+      "durationMs": 4761,
+      "overMusic": true,
+      "part": "open",
+      "kit": "decision",
+      "lines": [
+        {
+          "speaker": "Dennis (the intern)",
+          "text": "This is Dennis. The station manager has made a decision.",
+          "startMs": 38
+        }
+      ]
+    },
+    {
+      "id": "decision-open-4",
+      "category": "dj",
+      "url": "/voice/cat-fm/decision-open-4.mp3",
+      "durationMs": 3725,
+      "overMusic": true,
+      "part": "open",
+      "kit": "decision",
+      "lines": [
+        {
+          "speaker": "Dennis (the intern)",
+          "text": "Okay. Okay. That's the meow. Programming change.",
+          "startMs": 1043
+        }
+      ]
+    },
+    {
+      "id": "decision-001",
+      "category": "dj",
+      "url": "/voice/cat-fm/decision-001.mp3",
+      "durationMs": 9907,
+      "overMusic": true,
+      "part": "body",
+      "kit": "decision",
+      "lines": [
+        {
+          "speaker": "Dennis (the intern)",
+          "text": "That was the news. She's knocked the news off the desk. So there won't be any news this hour.",
+          "startMs": 1644
+        },
+        {
+          "speaker": "Dennis (the intern)",
+          "text": "If anything happens, I'm afraid you'll have to find out by yourself.",
+          "startMs": 6402
+        }
+      ]
+    },
+    {
+      "id": "decision-002",
+      "category": "dj",
+      "url": "/voice/cat-fm/decision-002.mp3",
+      "durationMs": 8407,
+      "overMusic": true,
+      "part": "body",
+      "kit": "decision",
+      "lines": [
+        {
+          "speaker": "Dennis (the intern)",
+          "text": "She's lying on the fader. So the next song is going to be very loud or very quiet, depending on how she's breathing.",
+          "startMs": 40
+        },
+        {
+          "speaker": "Dennis (the intern)",
+          "text": "I'd keep a hand near the volume.",
+          "startMs": 6505
+        }
+      ]
+    },
+    {
+      "id": "decision-003",
+      "category": "dj",
+      "url": "/voice/cat-fm/decision-003.mp3",
+      "durationMs": 8779,
+      "overMusic": true,
+      "part": "body",
+      "kit": "decision",
+      "lines": [
+        {
+          "speaker": "Dennis (the intern)",
+          "text": "She's moved into the patch of sunlight on the carpet, so the programme is now coming to you from the carpet.",
+          "startMs": 42
+        },
+        {
+          "speaker": "Dennis (the intern)",
+          "text": "When the sun moves, we'll move. Please be patient. The sun is.",
+          "startMs": 5644
+        }
+      ]
+    },
+    {
+      "id": "decision-004",
+      "category": "dj",
+      "url": "/voice/cat-fm/decision-004.mp3",
+      "durationMs": 9291,
+      "overMusic": true,
+      "part": "body",
+      "kit": "decision",
+      "lines": [
+        {
+          "speaker": "Dennis (the intern)",
+          "text": "That's the purr. The purr means we're staying on this song. Possibly for the rest of the day.",
+          "startMs": 2519
+        },
+        {
+          "speaker": "Dennis (the intern)",
+          "text": "I've known it go on until Tuesday.",
+          "startMs": 7232
+        }
+      ]
+    },
+    {
+      "id": "decision-005",
+      "category": "dj",
+      "url": "/voice/cat-fm/decision-005.mp3",
+      "durationMs": 12261,
+      "overMusic": true,
+      "part": "body",
+      "kit": "decision",
+      "lines": [
+        {
+          "speaker": "Dennis (the intern)",
+          "text": "She's staring at the corner of the studio. There's nothing in the corner. She's very interested in it.",
+          "startMs": 41
+        },
+        {
+          "speaker": "Dennis (the intern)",
+          "text": "So for the next little while, we're broadcasting nothing.",
+          "startMs": 5283
+        },
+        {
+          "speaker": "Dennis (the intern)",
+          "text": "She's enjoying it very much.",
+          "startMs": 10360
+        }
+      ]
+    },
+    {
+      "id": "decision-006",
+      "category": "dj",
+      "url": "/voice/cat-fm/decision-006.mp3",
+      "durationMs": 7795,
+      "overMusic": true,
+      "part": "body",
+      "kit": "decision",
+      "lines": [
+        {
+          "speaker": "Dennis (the intern)",
+          "text": "She's brought in a sock. She's put the sock on the microphone. Apparently, this is our new presenter.",
+          "startMs": 39
+        },
+        {
+          "speaker": "Dennis (the intern)",
+          "text": "It's doing quite well, honestly.",
+          "startMs": 6003
+        }
+      ]
+    },
+    {
+      "id": "decision-007",
+      "category": "dj",
+      "url": "/voice/cat-fm/decision-007.mp3",
+      "durationMs": 6461,
+      "overMusic": true,
+      "part": "body",
+      "kit": "decision",
+      "lines": [
+        {
+          "speaker": "Dennis (the intern)",
+          "text": "She's walking across the keyboard. You'll hear that in the next song.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Dennis (the intern)",
+          "text": "We're calling it a collaboration. Please don't write in.",
+          "startMs": 3637
+        }
+      ]
+    },
+    {
+      "id": "decision-008",
+      "category": "dj",
+      "url": "/voice/cat-fm/decision-008.mp3",
+      "durationMs": 12842,
+      "overMusic": true,
+      "part": "body",
+      "kit": "decision",
+      "lines": [
+        {
+          "speaker": "Dennis (the intern)",
+          "text": "The mug is at the very edge of the desk. She's looking at it.",
+          "startMs": 36
+        },
+        {
+          "speaker": "Dennis (the intern)",
+          "text": "Now she's looking at me.",
+          "startMs": 4163
+        },
+        {
+          "speaker": "Dennis (the intern)",
+          "text": "Nobody move.",
+          "startMs": 7132
+        },
+        {
+          "speaker": "Dennis (the intern)",
+          "text": "And that was the mug.",
+          "startMs": 11436
+        }
+      ]
+    },
+    {
+      "id": "decision-009",
+      "category": "dj",
+      "url": "/voice/cat-fm/decision-009.mp3",
+      "durationMs": 9784,
+      "overMusic": true,
+      "part": "body",
+      "kit": "decision",
+      "lines": [
+        {
+          "speaker": "Dennis (the intern)",
+          "text": "She wants to go out.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Dennis (the intern)",
+          "text": "She does not want to go out. She wants the door open. These are different things, and she'd like you to know that.",
+          "startMs": 4501
+        }
+      ]
+    },
+    {
+      "id": "decision-close-1",
+      "category": "dj",
+      "url": "/voice/cat-fm/decision-close-1.mp3",
+      "durationMs": 1977,
+      "overMusic": true,
+      "part": "close",
+      "kit": "decision",
+      "lines": [
+        {
+          "speaker": "Dennis (the intern)",
+          "text": "Sorry. Back to the music, I think.",
+          "startMs": 42
+        }
+      ]
+    },
+    {
+      "id": "decision-close-2",
+      "category": "dj",
+      "url": "/voice/cat-fm/decision-close-2.mp3",
+      "durationMs": 5127,
+      "overMusic": true,
+      "part": "close",
+      "kit": "decision",
+      "lines": [
+        {
+          "speaker": "Dennis (the intern)",
+          "text": "That's the schedule, until she changes it.",
+          "startMs": 39
+        },
+        {
+          "speaker": "Dennis (the intern)",
+          "text": "Which she's doing now.",
+          "startMs": 3650
+        }
+      ]
+    },
+    {
+      "id": "decision-close-3",
+      "category": "dj",
+      "url": "/voice/cat-fm/decision-close-3.mp3",
+      "durationMs": 2956,
+      "overMusic": true,
+      "part": "close",
+      "kit": "decision",
+      "lines": [
+        {
+          "speaker": "Dennis (the intern)",
+          "text": "This has been Dennis. I'm going to go and pick up the mug.",
+          "startMs": 44
+        }
+      ]
+    },
+    {
+      "id": "dj-001",
+      "category": "dj",
+      "url": "/voice/cat-fm/dj-001.mp3",
+      "durationMs": 9547,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Dennis (the intern)",
+          "text": "People ask me what it's like, working for a cat. Honestly? It's fine. Gloria is very clear about what she wants.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Dennis (the intern)",
+          "text": "It's just that it's the opposite of what she wanted a minute ago.",
+          "startMs": 6514
+        }
+      ]
+    },
+    {
+      "id": "dj-002",
+      "category": "dj",
+      "url": "/voice/cat-fm/dj-002.mp3",
+      "durationMs": 11573,
+      "title": "Sponsored by Grumbel's Ladders",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Dennis (the intern)",
+          "text": "Cat FM is sponsored by Grumbel's Ladders. Gloria is on top of one now. She can't get down.",
+          "startMs": 36
+        },
+        {
+          "speaker": "Arnold Grumbel",
+          "text": "Grumbel's Ladders. Up is a choice.",
+          "startMs": 6544
+        },
+        {
+          "speaker": "Dennis (the intern)",
+          "text": "Down, it turns out, is a whole separate conversation.",
+          "startMs": 8715
+        }
+      ]
+    },
+    {
+      "id": "dj-003",
+      "category": "dj",
+      "url": "/voice/cat-fm/dj-003.mp3",
+      "durationMs": 11197,
+      "title": "Dinner Time Is Now",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Dennis (the intern)",
+          "text": "She says it's dinner time. It isn't dinner time. It's eleven in the morning.",
+          "startMs": 1042
+        },
+        {
+          "speaker": "Dennis (the intern)",
+          "text": "She's been very clear.",
+          "startMs": 6112
+        },
+        {
+          "speaker": "Dennis (the intern)",
+          "text": "Right. Dinner time is now. Back after dinner.",
+          "startMs": 8894
+        }
+      ]
+    },
+    {
+      "id": "dj-004",
+      "category": "dj",
+      "url": "/voice/cat-fm/dj-004.mp3",
+      "durationMs": 16083,
+      "title": "A Listener's Cat",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "A Listener With a Cat",
+          "text": "Hi, Dennis. My cat listens to your station, and ever since, she's been knocking things off my desk.",
+          "startMs": 42
+        },
+        {
+          "speaker": "Dennis (the intern)",
+          "text": "I'm so sorry. That isn't us. That's just cats. We're just the only ones on the radio about it.",
+          "startMs": 5881
+        },
+        {
+          "speaker": "A Listener With a Cat",
+          "text": "She's just knocked the radio off now.",
+          "startMs": 11053
+        },
+        {
+          "speaker": "Dennis (the intern)",
+          "text": "Hello?",
+          "startMs": 15263
+        }
+      ]
+    },
+    {
+      "id": "halloween-1",
+      "category": "dj",
+      "url": "/voice/cat-fm/halloween-1.mp3",
+      "durationMs": 12689,
+      "title": "The Pumpkin Costume",
+      "overMusic": true,
+      "dates": [
+        "10-24",
+        "10-25",
+        "10-26",
+        "10-27",
+        "10-28",
+        "10-29",
+        "10-30",
+        "10-31"
+      ],
+      "lines": [
+        {
+          "speaker": "Dennis (the intern)",
+          "text": "It's Halloween week, so I tried to put Gloria in a little pumpkin costume.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Dennis (the intern)",
+          "text": "I've got a plaster on now. She is not in the pumpkin costume. She's dressed as a cat, she says.",
+          "startMs": 5391
+        },
+        {
+          "speaker": "Dennis (the intern)",
+          "text": "She'd like it noted that she always is.",
+          "startMs": 10599
+        }
+      ]
+    },
+    {
+      "id": "halloween-2",
+      "category": "dj",
+      "url": "/voice/cat-fm/halloween-2.mp3",
+      "durationMs": 16647,
+      "title": "The Corner, Again",
+      "overMusic": true,
+      "dates": [
+        "10-24",
+        "10-25",
+        "10-26",
+        "10-27",
+        "10-28",
+        "10-29",
+        "10-30",
+        "10-31"
+      ],
+      "lines": [
+        {
+          "speaker": "Dennis (the intern)",
+          "text": "She's staring at the corner again. It's Halloween. The lights are low.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Dennis (the intern)",
+          "text": "She's said hello to it.",
+          "startMs": 6657
+        },
+        {
+          "speaker": "Dennis (the intern)",
+          "text": "That's fine. That's all fine. Here's a song. A cheerful one.",
+          "startMs": 9330
+        }
+      ]
+    }
+  ]
+}

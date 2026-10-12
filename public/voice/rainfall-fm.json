@@ -20,7 +20,7 @@
       "id": "id-002",
       "category": "id",
       "url": "/voice/rainfall-fm/id-002.mp3",
-      "durationMs": 7027,
+      "durationMs": 7023,
       "overMusic": true,
       "lines": [
         {
@@ -34,7 +34,7 @@
       "id": "id-003",
       "category": "id",
       "url": "/voice/rainfall-fm/id-003.mp3",
-      "durationMs": 6813,
+      "durationMs": 6794,
       "overMusic": true,
       "daypart": "night",
       "lines": [
@@ -49,7 +49,7 @@
       "id": "id-004",
       "category": "id",
       "url": "/voice/rainfall-fm/id-004.mp3",
-      "durationMs": 7003,
+      "durationMs": 7006,
       "overMusic": true,
       "lines": [
         {
@@ -63,7 +63,7 @@
       "id": "id-005",
       "category": "id",
       "url": "/voice/rainfall-fm/id-005.mp3",
-      "durationMs": 7450,
+      "durationMs": 7466,
       "overMusic": true,
       "daypart": "morning",
       "lines": [
@@ -394,6 +394,578 @@
           "speaker": "Drizzle Montgomery",
           "text": "Nineteen years I've been reading this, and I still read it like it might say something else. Rainfall FM. Stay dry. Or stay damp and happy. Both count.",
           "startMs": 13463
+        }
+      ]
+    },
+    {
+      "id": "the-night-tram-open",
+      "category": "id",
+      "url": "/voice/rainfall-fm/the-night-tram-open.mp3",
+      "durationMs": 8127,
+      "title": "The Night Tram",
+      "overMusic": true,
+      "part": "open",
+      "show": "the-night-tram",
+      "lines": [
+        {
+          "speaker": "Drizzle Montgomery",
+          "text": "This is the Night Tram, on Rainfall FM. The last tram home through Precinct Nine. Mind the gap. It's full of water.",
+          "startMs": 442
+        }
+      ]
+    },
+    {
+      "id": "the-night-tram-01",
+      "category": "dj",
+      "url": "/voice/rainfall-fm/the-night-tram-01.mp3",
+      "durationMs": 14241,
+      "overMusic": true,
+      "show": "the-night-tram",
+      "lines": [
+        {
+          "speaker": "Drizzle Montgomery",
+          "text": "The number nine is coming down Lantern Street, lit up like a fish tank. Four passengers. One asleep, one reading, one doing the crossword.",
+          "startMs": 438
+        },
+        {
+          "speaker": "Drizzle Montgomery",
+          "text": "And one just looking out at the rain, the way you do on the last tram. This one's for her.",
+          "startMs": 8680
+        }
+      ]
+    },
+    {
+      "id": "the-night-tram-02",
+      "category": "dj",
+      "url": "/voice/rainfall-fm/the-night-tram-02.mp3",
+      "durationMs": 13419,
+      "overMusic": true,
+      "show": "the-night-tram",
+      "lines": [
+        {
+          "speaker": "Drizzle Montgomery",
+          "text": "The driver on the night route is called Ferdinand. He's driven it for thirty years, and every night, at the bottom of Gutter Hill, he rings the bell twice for no reason.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Drizzle Montgomery",
+          "text": "He says it's for the puddles. Here's one for Ferdinand.",
+          "startMs": 10165
+        }
+      ]
+    },
+    {
+      "id": "the-kettle-hour-open",
+      "category": "id",
+      "url": "/voice/rainfall-fm/the-kettle-hour-open.mp3",
+      "durationMs": 6867,
+      "title": "The Kettle Hour",
+      "overMusic": true,
+      "part": "open",
+      "show": "the-kettle-hour",
+      "lines": [
+        {
+          "speaker": "Drizzle Montgomery",
+          "text": "Good morning. It's the Kettle Hour, on Rainfall FM. The kettle's on, and it's raining. Both of those are always true.",
+          "startMs": 37
+        }
+      ]
+    },
+    {
+      "id": "the-kettle-hour-01",
+      "category": "dj",
+      "url": "/voice/rainfall-fm/the-kettle-hour-01.mp3",
+      "durationMs": 11174,
+      "overMusic": true,
+      "show": "the-kettle-hour",
+      "lines": [
+        {
+          "speaker": "Drizzle Montgomery",
+          "text": "The morning totals. Precinct One, an inch and a half. Precinct Four, an inch and a half. Another draw.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Drizzle Montgomery",
+          "text": "They're getting very good at draws, Precinct One and Four. I think they're friends now.",
+          "startMs": 6612
+        }
+      ]
+    },
+    {
+      "id": "the-kettle-hour-02",
+      "category": "dj",
+      "url": "/voice/rainfall-fm/the-kettle-hour-02.mp3",
+      "durationMs": 9953,
+      "overMusic": true,
+      "show": "the-kettle-hour",
+      "lines": [
+        {
+          "speaker": "Drizzle Montgomery",
+          "text": "If you've just woken up, the rain on your window is the same rain that was there when you went to sleep. It waited up for you.",
+          "startMs": 36
+        },
+        {
+          "speaker": "Drizzle Montgomery",
+          "text": "Isn't that nice. Here's something to drink your tea to.",
+          "startMs": 6783
+        }
+      ]
+    },
+    {
+      "id": "dj-open-01",
+      "category": "dj",
+      "url": "/voice/rainfall-fm/dj-open-01.mp3",
+      "durationMs": 3704,
+      "overMusic": true,
+      "part": "open",
+      "kit": "dj",
+      "lines": [
+        {
+          "speaker": "Drizzle Montgomery",
+          "text": "Rainfall FM. Still raining. Still lovely. Still here.",
+          "startMs": 38
+        }
+      ]
+    },
+    {
+      "id": "dj-open-02",
+      "category": "dj",
+      "url": "/voice/rainfall-fm/dj-open-02.mp3",
+      "durationMs": 3273,
+      "overMusic": true,
+      "part": "open",
+      "kit": "dj",
+      "lines": [
+        {
+          "speaker": "Drizzle Montgomery",
+          "text": "That was lovely, wasn't it. Like rain on a shed roof.",
+          "startMs": 37
+        }
+      ]
+    },
+    {
+      "id": "dj-open-03",
+      "category": "dj",
+      "url": "/voice/rainfall-fm/dj-open-03.mp3",
+      "durationMs": 4062,
+      "overMusic": true,
+      "daypart": "night",
+      "part": "open",
+      "kit": "dj",
+      "lines": [
+        {
+          "speaker": "Drizzle Montgomery",
+          "text": "Evening, all. Or morning. It's hard to tell under this much cloud.",
+          "startMs": 37
+        }
+      ]
+    },
+    {
+      "id": "dj-open-04",
+      "category": "dj",
+      "url": "/voice/rainfall-fm/dj-open-04.mp3",
+      "durationMs": 2700,
+      "overMusic": true,
+      "part": "open",
+      "kit": "dj",
+      "lines": [
+        {
+          "speaker": "Drizzle Montgomery",
+          "text": "Kettle's just boiled, so I'll keep this short.",
+          "startMs": 40
+        }
+      ]
+    },
+    {
+      "id": "dj-body-01",
+      "category": "dj",
+      "url": "/voice/rainfall-fm/dj-body-01.mp3",
+      "durationMs": 8001,
+      "overMusic": true,
+      "part": "body",
+      "kit": "dj",
+      "lines": [
+        {
+          "speaker": "Drizzle Montgomery",
+          "text": "Puddle news. The big one outside the bakery has been given a lighthouse. Very small. Very bright. Several ducks have said thank you.",
+          "startMs": 37
+        }
+      ]
+    },
+    {
+      "id": "dj-body-02",
+      "category": "dj",
+      "url": "/voice/rainfall-fm/dj-body-02.mp3",
+      "durationMs": 8891,
+      "overMusic": true,
+      "part": "body",
+      "kit": "dj",
+      "lines": [
+        {
+          "speaker": "Drizzle Montgomery",
+          "text": "The Drainpipe Choir were in the studio this afternoon. They don't sing, as such. They stand under the gutter and let it happen. It's beautiful. It's very damp.",
+          "startMs": 39
+        }
+      ]
+    },
+    {
+      "id": "dj-body-03",
+      "category": "dj",
+      "url": "/voice/rainfall-fm/dj-body-03.mp3",
+      "durationMs": 10462,
+      "overMusic": true,
+      "part": "body",
+      "kit": "dj",
+      "lines": [
+        {
+          "speaker": "Drizzle Montgomery",
+          "text": "Umbrella news. The two umbrellas on Lantern Street, hovering since spring, have finally sorted it out. They've decided to share. They're one big umbrella now, and they seem very happy.",
+          "startMs": 37
+        }
+      ]
+    },
+    {
+      "id": "dj-body-04",
+      "category": "dj",
+      "url": "/voice/rainfall-fm/dj-body-04.mp3",
+      "durationMs": 8330,
+      "overMusic": true,
+      "part": "body",
+      "kit": "dj",
+      "lines": [
+        {
+          "speaker": "Drizzle Montgomery",
+          "text": "A listener writes that she saw the sun once, through a gap in the clouds, for about a second. She says it was very bright, and she isn't sure she approves.",
+          "startMs": 40
+        }
+      ]
+    },
+    {
+      "id": "dj-body-05",
+      "category": "dj",
+      "url": "/voice/rainfall-fm/dj-body-05.mp3",
+      "durationMs": 8458,
+      "overMusic": true,
+      "part": "body",
+      "kit": "dj",
+      "lines": [
+        {
+          "speaker": "Drizzle Montgomery",
+          "text": "Mizzle have a new record out. It's mostly the sound of a tin roof. If you've ever lain awake under a tin roof, you'll know why it went straight to number one.",
+          "startMs": 39
+        }
+      ]
+    },
+    {
+      "id": "dj-body-06",
+      "category": "dj",
+      "url": "/voice/rainfall-fm/dj-body-06.mp3",
+      "durationMs": 10267,
+      "overMusic": true,
+      "part": "body",
+      "kit": "dj",
+      "lines": [
+        {
+          "speaker": "Drizzle Montgomery",
+          "text": "A reminder from the Precinct Nine Tidy Streets Committee. Please don't empty your wellies on the tram. Empty them into the gutter on the way home. The gutter is very grateful.",
+          "startMs": 50
+        }
+      ]
+    },
+    {
+      "id": "dj-close-01",
+      "category": "dj",
+      "url": "/voice/rainfall-fm/dj-close-01.mp3",
+      "durationMs": 2750,
+      "overMusic": true,
+      "part": "close",
+      "kit": "dj",
+      "lines": [
+        {
+          "speaker": "Drizzle Montgomery",
+          "text": "Here's the next one. Stay damp, everyone.",
+          "startMs": 40
+        }
+      ]
+    },
+    {
+      "id": "dj-close-02",
+      "category": "dj",
+      "url": "/voice/rainfall-fm/dj-close-02.mp3",
+      "durationMs": 2806,
+      "overMusic": true,
+      "part": "close",
+      "kit": "dj",
+      "lines": [
+        {
+          "speaker": "Drizzle Montgomery",
+          "text": "Here's some music. Put the kettle on, love.",
+          "startMs": 50
+        }
+      ]
+    },
+    {
+      "id": "dj-close-03",
+      "category": "dj",
+      "url": "/voice/rainfall-fm/dj-close-03.mp3",
+      "durationMs": 3626,
+      "overMusic": true,
+      "part": "close",
+      "kit": "dj",
+      "lines": [
+        {
+          "speaker": "Drizzle Montgomery",
+          "text": "Rainfall FM. Here's another one, straight from the gutter.",
+          "startMs": 37
+        }
+      ]
+    },
+    {
+      "id": "dj-close-04",
+      "category": "dj",
+      "url": "/voice/rainfall-fm/dj-close-04.mp3",
+      "durationMs": 3335,
+      "overMusic": true,
+      "part": "close",
+      "kit": "dj",
+      "lines": [
+        {
+          "speaker": "Drizzle Montgomery",
+          "text": "Listen to that. Lovely. Here's some more.",
+          "startMs": 446
+        }
+      ]
+    },
+    {
+      "id": "greg-comes-home-04",
+      "category": "story",
+      "url": "/voice/rainfall-fm/greg-comes-home-04.mp3",
+      "durationMs": 70905,
+      "title": "Greg Comes Home, Part Four: Nobody Here Has a Shadow",
+      "overMusic": false,
+      "serial": {
+        "id": "greg-comes-home",
+        "episode": 4
+      },
+      "lines": [
+        {
+          "speaker": "Drizzle Montgomery",
+          "text": "We've a visitor at the studio tonight. He came down through the only gap in the clouds we've had all year, on a moonbeam, and landed in the big puddle outside the bakery. It's Greg.",
+          "startMs": 442
+        },
+        {
+          "speaker": "Greg, a Shadow",
+          "text": "Hello. Sorry about the puddle.",
+          "startMs": 11562
+        },
+        {
+          "speaker": "Drizzle Montgomery",
+          "text": "The puddle's fine, love. It's had worse. How are you finding Precinct Nine?",
+          "startMs": 14169
+        },
+        {
+          "speaker": "Greg, a Shadow",
+          "text": "Dark. Every time I go outside, I sort of disappear.",
+          "startMs": 18800
+        },
+        {
+          "speaker": "Drizzle Montgomery",
+          "text": "That's the clouds. Nobody here has a shadow. You're the first one most of Precinct Nine has ever met.",
+          "startMs": 22648
+        },
+        {
+          "speaker": "Greg, a Shadow",
+          "text": "People keep stopping to look at me.",
+          "startMs": 29043
+        },
+        {
+          "speaker": "Drizzle Montgomery",
+          "text": "They think you're beautiful. Like a sunset that walks about.",
+          "startMs": 31782
+        },
+        {
+          "speaker": "Greg, a Shadow",
+          "text": "I need to get to the eastern Overlap. I'm going home. But I can't go anywhere without a light.",
+          "startMs": 36262
+        },
+        {
+          "speaker": "Drizzle Montgomery",
+          "text": "Then take the night tram. Ferdinand drives it. The number nine has big front lamps, and they'll throw you all the way to the edge of the precinct.",
+          "startMs": 41306
+        },
+        {
+          "speaker": "Greg, a Shadow",
+          "text": "Will he mind?",
+          "startMs": 49886
+        },
+        {
+          "speaker": "Drizzle Montgomery",
+          "text": "Ferdinand? He rings the bell for puddles, love. He'll be thrilled.",
+          "startMs": 51189
+        },
+        {
+          "speaker": "Drizzle Montgomery",
+          "text": "That's him now. Go on. Sit up at the front, in the light.",
+          "startMs": 57054
+        },
+        {
+          "speaker": "Greg, a Shadow",
+          "text": "Thank you, Drizzle.",
+          "startMs": 60629
+        },
+        {
+          "speaker": "Drizzle Montgomery",
+          "text": "And Greg? Your fella's porch light. Is it on?",
+          "startMs": 62247
+        },
+        {
+          "speaker": "Greg, a Shadow",
+          "text": "Every night, they say.",
+          "startMs": 65319
+        },
+        {
+          "speaker": "Drizzle Montgomery",
+          "text": "Then you'll be fine. Here's one for the road. It's wet.",
+          "startMs": 67393
+        }
+      ]
+    },
+    {
+      "id": "teodor-is-heard-10",
+      "category": "story",
+      "url": "/voice/rainfall-fm/teodor-is-heard-10.mp3",
+      "durationMs": 65566,
+      "title": "Teodor Is Heard, Part Ten: Rain at Relay Four",
+      "overMusic": false,
+      "serial": {
+        "id": "teodor-is-heard",
+        "episode": 10
+      },
+      "lines": [
+        {
+          "speaker": "Drizzle Montgomery",
+          "text": "It's nearly three in the morning, and Precinct Nine is doing something it's never done. Every window on Lantern Street is open. Every light is on.",
+          "startMs": 437
+        },
+        {
+          "speaker": "Drizzle Montgomery",
+          "text": "Teodor at Relay Four has a little crystal radio now. It can just about hear, if something carries the signal all the way out to him.",
+          "startMs": 9269
+        },
+        {
+          "speaker": "Drizzle Montgomery",
+          "text": "And round here, love, we've got plenty of something that goes everywhere.",
+          "startMs": 17280
+        },
+        {
+          "speaker": "Drizzle Montgomery",
+          "text": "Rain. So at three o'clock, we're all going to lean out of our windows, say it into the rain, and let the rain take it. Here we go. Ferdinand's ringing the bell.",
+          "startMs": 21787
+        },
+        {
+          "speaker": "Drizzle Montgomery",
+          "text": "Yes.",
+          "startMs": 33028
+        },
+        {
+          "speaker": "Lantern Street",
+          "text": "Yes!",
+          "startMs": 34479
+        },
+        {
+          "speaker": "Lantern Street",
+          "text": "Yes, Teodor.",
+          "startMs": 35531
+        },
+        {
+          "speaker": "Lantern Street",
+          "text": "Yes, love.",
+          "startMs": 36891
+        },
+        {
+          "speaker": "Ferdinand, Tram Driver",
+          "text": "Yes!",
+          "startMs": 38381
+        },
+        {
+          "speaker": "Teodor, Relay Four",
+          "text": "Relay Four. Night four thousand and forty. Something odd. It's raining here.",
+          "startMs": 41302
+        },
+        {
+          "speaker": "Teodor, Relay Four",
+          "text": "It never rains at Relay Four. And the rain is saying something. On the roof. On the window. On Captain, who is not pleased.",
+          "startMs": 46171
+        },
+        {
+          "speaker": "Teodor, Relay Four",
+          "text": "It sounds like. It sounds a lot like yes.",
+          "startMs": 53509
+        },
+        {
+          "speaker": "Drizzle Montgomery",
+          "text": "It is, love. It's from all of us. Close your windows, everybody. And Teodor? Put a towel down. It's our rain. It gets everywhere.",
+          "startMs": 57506
+        }
+      ]
+    },
+    {
+      "id": "halloween-01",
+      "category": "dj",
+      "url": "/voice/rainfall-fm/halloween-01.mp3",
+      "durationMs": 13012,
+      "title": "Halloween in Precinct Nine",
+      "overMusic": true,
+      "dates": [
+        "10-24",
+        "10-25",
+        "10-26",
+        "10-27",
+        "10-28",
+        "10-29",
+        "10-30",
+        "10-31"
+      ],
+      "lines": [
+        {
+          "speaker": "Drizzle Montgomery",
+          "text": "Halloween in Precinct Nine. The children go trick or treating in wellies. The ghosts go out in sheets, and come home in very wet sheets.",
+          "startMs": 39
+        },
+        {
+          "speaker": "Drizzle Montgomery",
+          "text": "Nobody's frightened. Everybody's damp. Here's a spooky one. It's also wet.",
+          "startMs": 8318
+        }
+      ]
+    },
+    {
+      "id": "halloween-02",
+      "category": "weather",
+      "url": "/voice/rainfall-fm/halloween-02.mp3",
+      "durationMs": 15798,
+      "title": "The Halloween Forecast",
+      "overMusic": false,
+      "dates": [
+        "10-24",
+        "10-25",
+        "10-26",
+        "10-27",
+        "10-28",
+        "10-29",
+        "10-30",
+        "10-31"
+      ],
+      "lines": [
+        {
+          "speaker": "Drizzle Montgomery",
+          "text": "The Halloween forecast. Rain, heavy at times, with a ghostly mist at about midnight.",
+          "startMs": 2690
+        },
+        {
+          "speaker": "Drizzle Montgomery",
+          "text": "That's just the rain, standing still for a moment, thinking about its life. Leave it be. It'll start falling again when it's ready.",
+          "startMs": 8035
         }
       ]
     }

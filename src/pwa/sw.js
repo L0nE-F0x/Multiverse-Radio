@@ -9,7 +9,8 @@
 //   `mvr-shell-<version>`. Hashed /assets/* files are reused from older caches instead of
 //   being downloaded again.
 // - Navigations are network-first, so an online visitor always gets the newest deploy (no
-//   stale shells). Offline, the cached shell boots the app; anything else gets offline.html.
+//   stale shells). Offline, the cached shell boots the app (also for the per-station share
+//   pages in BUILD.routes, which are the same app); anything else gets offline.html.
 // - A new build takes over immediately (skipWaiting + clients.claim) but never reloads the
 //   page: the radio keeps playing. The previous shell cache is kept for one more build so a
 //   tab still running old code can lazy-load its old chunks after Netlify has deleted them.
@@ -31,6 +32,8 @@ const VOICE_MAX_AGE_MS = 24 * 60 * 60 * 1000;
 const DATA_MAX_ENTRIES = 40;
 const NAVIGATION_TIMEOUT_MS = 5000;
 const CACHED_AT = 'x-mvr-cached-at';
+// Pages that are the app shell under another URL (e.g. /station/void-beats/).
+const ROUTES = new Set(BUILD.routes || []);
 // Precached files served cache-first (pages are excluded: navigations are network-first).
 const PRECACHED = new Set(
   [...BUILD.required, ...BUILD.optional].filter((url) => url !== BUILD.shell && url !== BUILD.offline),
@@ -126,7 +129,7 @@ async function navigate(event, path) {
     );
   } catch {
     const shell = await caches.open(SHELL);
-    if (path === BASE || path === BASE + 'index.html') {
+    if (path === BASE || path === BASE + 'index.html' || ROUTES.has(path) || ROUTES.has(path + '/')) {
       const cached = (await shell.match(BUILD.shell)) || (await caches.match(BUILD.shell));
       if (cached) return cached;
     }

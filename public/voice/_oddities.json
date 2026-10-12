@@ -1,0 +1,387 @@
+{
+  "version": 1,
+  "station": "_oddities",
+  "clips": [
+    {
+      "id": "time-signal-001",
+      "category": "psa",
+      "url": "/voice/_oddities/time-signal-001.mp3",
+      "durationMs": 11225,
+      "title": "Time Signal",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Time Signal",
+          "text": "At the final pip, it will be exactly now. Precisely now. Now, give or take.",
+          "startMs": 50
+        }
+      ]
+    },
+    {
+      "id": "time-signal-002",
+      "category": "psa",
+      "url": "/voice/_oddities/time-signal-002.mp3",
+      "durationMs": 10739,
+      "title": "Time Signal",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Time Signal",
+          "text": "At the long tone, it will be later than you think, but not as late as you feared.",
+          "startMs": 50
+        }
+      ]
+    },
+    {
+      "id": "time-signal-003",
+      "category": "psa",
+      "url": "/voice/_oddities/time-signal-003.mp3",
+      "durationMs": 13659,
+      "title": "Time Signal",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Time Signal",
+          "text": "Following the pips, it will be one second later than it was a second ago. This service is provided free, as it always has been.",
+          "startMs": 50
+        }
+      ]
+    },
+    {
+      "id": "time-signal-004",
+      "category": "psa",
+      "url": "/voice/_oddities/time-signal-004.mp3",
+      "durationMs": 13215,
+      "title": "Time Signal",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Time Signal",
+          "text": "At the sixth pip, the time in every dimension will be slightly different. Please set your clock to whichever one you like best.",
+          "startMs": 50
+        }
+      ]
+    },
+    {
+      "id": "time-signal-005",
+      "category": "psa",
+      "url": "/voice/_oddities/time-signal-005.mp3",
+      "durationMs": 13968,
+      "title": "Time Signal",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Time Signal",
+          "text": "At the tone, it will be eleven o'clock on Every Possible News. It is always eleven o'clock there. Elsewhere, please use your judgement.",
+          "startMs": 50
+        }
+      ]
+    },
+    {
+      "id": "distress-beacon-001",
+      "category": "interrupt",
+      "url": "/voice/_oddities/distress-beacon-001.mp3",
+      "durationMs": 13528,
+      "title": "Pleasure Boat Marjorie",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Pleasure Boat Marjorie",
+          "text": "Mayday, mayday, mayday. This is the pleasure boat Marjorie. We are not in danger.",
+          "startMs": 1948
+        },
+        {
+          "speaker": "Pleasure Boat Marjorie",
+          "text": "We are lost, and we have run out of biscuits. If anyone is passing, could they bring biscuits. Over.",
+          "startMs": 6961
+        }
+      ]
+    },
+    {
+      "id": "distress-beacon-002",
+      "category": "interrupt",
+      "url": "/voice/_oddities/distress-beacon-002.mp3",
+      "durationMs": 13063,
+      "title": "Survey Ship Pemberton",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Automatic Beacon",
+          "text": "Automatic beacon. Distress level, mild. The crew of the survey ship Pemberton are locked out of the bridge.",
+          "startMs": 1547
+        },
+        {
+          "speaker": "Automatic Beacon",
+          "text": "They are fine. They are having a picnic. Please send a locksmith, at your leisure.",
+          "startMs": 8541
+        }
+      ]
+    },
+    {
+      "id": "distress-beacon-003",
+      "category": "interrupt",
+      "url": "/voice/_oddities/distress-beacon-003.mp3",
+      "durationMs": 14899,
+      "title": "Balloon Persistence",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Balloon Persistence",
+          "text": "Pan pan. This is the hot air balloon Persistence. Our situation is stable, and has been for nine years.",
+          "startMs": 434
+        },
+        {
+          "speaker": "Balloon Persistence",
+          "text": "We are drifting gently over a dimension made of cloud. Please do not rescue us. We only wanted to say hello.",
+          "startMs": 7402
+        }
+      ]
+    },
+    {
+      "id": "distress-beacon-004",
+      "category": "interrupt",
+      "url": "/voice/_oddities/distress-beacon-004.mp3",
+      "durationMs": 12906,
+      "title": "A Red Balloon",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Automatic Beacon",
+          "text": "Beacon, automatic. Somebody has let go of a balloon. It is red. It is rising steadily. It is safe, and very happy.",
+          "startMs": 1547
+        },
+        {
+          "speaker": "Automatic Beacon",
+          "text": "This beacon is tied to the string. Hello from the balloon.",
+          "startMs": 9784
+        }
+      ]
+    },
+    {
+      "id": "distress-beacon-005",
+      "category": "interrupt",
+      "url": "/voice/_oddities/distress-beacon-005.mp3",
+      "durationMs": 12956,
+      "title": "Unknown Vessel",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Unknown Vessel",
+          "text": "S. O. S. Repeat, S. O. S. This is a small boat in a large sea. Correction. A large boat, in a small sea.",
+          "startMs": 450
+        },
+        {
+          "speaker": "Unknown Vessel",
+          "text": "We have run aground on all sides at once. Nobody is hurt. Everybody is embarrassed. Please advise.",
+          "startMs": 6850
+        }
+      ]
+    },
+    {
+      "id": "stuck-loop-001",
+      "category": "dj",
+      "url": "/voice/_oddities/stuck-loop-001.mp3",
+      "durationMs": 16020,
+      "title": "Right After This",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Ray Bellamy (1974)",
+          "text": "That was a lovely one. And there's plenty more where that came from, right after this.",
+          "startMs": 49
+        },
+        {
+          "speaker": "Ray Bellamy (1974)",
+          "text": "That was a lovely one. And there's plenty more where that came from, right after this.",
+          "startMs": 5198
+        },
+        {
+          "speaker": "Ray Bellamy (1974)",
+          "text": "That was a lovely one. And there's plenty more where that came from, right after this.",
+          "startMs": 10348
+        }
+      ]
+    },
+    {
+      "id": "stuck-loop-002",
+      "category": "dj",
+      "url": "/voice/_oddities/stuck-loop-002.mp3",
+      "durationMs": 16448,
+      "title": "Right After This",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Ray Bellamy (1974)",
+          "text": "That was a lovely one. And there's plenty more where that came from, right after this.",
+          "startMs": 47
+        },
+        {
+          "speaker": "Ray Bellamy (1974)",
+          "text": "That was a lovely one. And there's plenty more where that came from, right—",
+          "startMs": 5196
+        },
+        {
+          "speaker": "Ray Bellamy (1974)",
+          "text": "That was a lovely one. And there's plenty more where that came from, right after this.",
+          "startMs": 10808
+        }
+      ]
+    },
+    {
+      "id": "stuck-loop-003",
+      "category": "dj",
+      "url": "/voice/_oddities/stuck-loop-003.mp3",
+      "durationMs": 19534,
+      "title": "Right After This",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Ray Bellamy (1974)",
+          "text": "That was a lovely one. And there's plenty more where that came from, right after this.",
+          "startMs": 48
+        },
+        {
+          "speaker": "Ray Bellamy (1974)",
+          "text": "That was a lovely one. And there's plenty more where that",
+          "startMs": 5197
+        },
+        {
+          "speaker": "Ray Bellamy (1974)",
+          "text": "Hang on. Have I said this before?",
+          "startMs": 8932
+        },
+        {
+          "speaker": "Ray Bellamy (1974)",
+          "text": "That was a lovely one. And there's plenty more where that came from, right after this.",
+          "startMs": 13893
+        }
+      ]
+    },
+    {
+      "id": "stuck-loop-004",
+      "category": "dj",
+      "url": "/voice/_oddities/stuck-loop-004.mp3",
+      "durationMs": 16573,
+      "title": "Right After This",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Ray Bellamy (1974)",
+          "text": "That was a lovely one. And there's plenty more where that came from, right after this.",
+          "startMs": 46
+        },
+        {
+          "speaker": "Ray Bellamy (1974)",
+          "text": "Any minute now.",
+          "startMs": 6696
+        },
+        {
+          "speaker": "Ray Bellamy (1974)",
+          "text": "That was a lovely one. And there's plenty more where that came from, right after this.",
+          "startMs": 10508
+        }
+      ]
+    },
+    {
+      "id": "test-tone-001",
+      "category": "psa",
+      "url": "/voice/_oddities/test-tone-001.mp3",
+      "durationMs": 10337,
+      "title": "Test Transmission",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Test Transmission",
+          "text": "This is a test transmission. Normal programmes will resume shortly.",
+          "startMs": 50
+        },
+        {
+          "speaker": "Test Transmission",
+          "text": "They have been resuming shortly for some time. Please be patient. They are nearly ready.",
+          "startMs": 5497
+        }
+      ]
+    },
+    {
+      "id": "test-tone-002",
+      "category": "psa",
+      "url": "/voice/_oddities/test-tone-002.mp3",
+      "durationMs": 7620,
+      "title": "Test Transmission",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Test Transmission",
+          "text": "The tone you are hearing is one thousand cycles per second.",
+          "startMs": 50
+        },
+        {
+          "speaker": "Test Transmission",
+          "text": "Please adjust your set until the tone sounds friendly.",
+          "startMs": 4261
+        }
+      ]
+    },
+    {
+      "id": "test-tone-003",
+      "category": "psa",
+      "url": "/voice/_oddities/test-tone-003.mp3",
+      "durationMs": 10396,
+      "title": "Test Card",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Test Transmission",
+          "text": "The picture on your screen is a test card. It shows a bowl of fruit, a grey scale, and a small, brave dog.",
+          "startMs": 50
+        },
+        {
+          "speaker": "Test Transmission",
+          "text": "Adjust your set until the dog looks confident.",
+          "startMs": 7339
+        }
+      ]
+    },
+    {
+      "id": "test-tone-004",
+      "category": "psa",
+      "url": "/voice/_oddities/test-tone-004.mp3",
+      "durationMs": 9248,
+      "title": "Test Transmission",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Test Transmission",
+          "text": "This is a test transmission, from the gap between stations.",
+          "startMs": 50
+        },
+        {
+          "speaker": "Test Transmission",
+          "text": "Nothing is wrong. Nothing is on. Those are different things, and both of them are fine.",
+          "startMs": 4380
+        }
+      ]
+    },
+    {
+      "id": "test-tone-005",
+      "category": "psa",
+      "url": "/voice/_oddities/test-tone-005.mp3",
+      "durationMs": 9708,
+      "title": "Test Transmission",
+      "overMusic": false,
+      "daypart": "night",
+      "lines": [
+        {
+          "speaker": "Test Transmission",
+          "text": "This is a test transmission. If you are still watching this at this hour, the test is going very well.",
+          "startMs": 50
+        },
+        {
+          "speaker": "Test Transmission",
+          "text": "Thank you for your help. The dog says thank you too.",
+          "startMs": 6734
+        }
+      ]
+    }
+  ]
+}

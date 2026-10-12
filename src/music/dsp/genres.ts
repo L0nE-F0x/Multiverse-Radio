@@ -17,7 +17,7 @@ export type GenreSamplePatch =
   | 'slap-bass'
   | 'chorus-guitar'
   | 'surf-guitar'
-  | 'folk-guitar'
+  | 'acoustic-steel'
   | 'fuzz-guitar'
   | 'bowed-fiddle'
   | 'hall-piano'
@@ -628,7 +628,7 @@ export const GENRE_PATCHES: Record<GenreSamplePatch, PatchDef> = {
   'slap-bass': { roots: range(24, 60, 3), layers: 2, rate: 32000, level: 0.7, render: (r, l, sr) => renderSlap(r, l === 1, sr) },
   'chorus-guitar': { roots: range(40, 88, 3), layers: 1, rate: 32000, channels: 2, render: (r, _l, sr) => renderChorusGuitar(r, sr) },
   'surf-guitar': { roots: range(40, 88, 3), layers: 1, rate: 32000, render: (r, _l, sr) => renderSurfGuitar(r, sr) },
-  'folk-guitar': { roots: range(40, 84, 3), layers: 1, rate: 32000, render: (r, _l, sr) => renderFolkGuitar(r, sr) },
+  'acoustic-steel': { roots: range(40, 84, 3), layers: 1, rate: 32000, render: (r, _l, sr) => renderFolkGuitar(r, sr) },
   'fuzz-guitar': { roots: range(40, 84, 3), layers: 1, rate: 22050, render: (r, _l, sr) => renderFuzzGuitar(r, sr) },
   'bowed-fiddle': { roots: range(55, 94, 3), layers: 1, rate: 32000, render: (r, _l, sr) => renderFiddle(r, sr) },
   stomp: oneShot(ONE_SHOTS.stomp!, 0.8),

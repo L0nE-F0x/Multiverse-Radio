@@ -1,0 +1,501 @@
+# Lower Hollow Community Radio — 89.7, Lower Hollow (population: fluctuating).
+#
+# A cosy little town built round the rim of an enormous, perfectly round hole. Maureen
+# Pettigrew, retired volunteer, reads every notice with the same gentle urgency, including the
+# ones about the hole. Councillor Dibbs has chaired the Hole Committee for thirty years and has
+# never once said what the hole is. Things float up out of it; everyone politely ignores them.
+#
+# Modular kits (the director chains open → 1–3 bodies → close):
+#   notices (psa)  — the community noticeboard: bake sales, lost pets, lost and found
+#   council (news) — the Hole Committee's update; bodies are agenda items
+# Running bits: Biscuit the spaniel, who is not lost, he's busy (watching the hole); things
+# returned by the hole; "the hole remains". Cross-station: Greg the shadow and Hollis.
+station = "lower-hollow"
+
+[voices]
+host = { voice = "af_river", name = "Maureen Pettigrew" }
+dibbs = { voice = "bm_daniel", name = "Councillor Dibbs" }
+ron = { voice = "am_eric", fx = "phone", name = "Ron, Rim Lane" }
+
+[[show]]
+id = "morning-notices"
+name = "Morning Notices"
+blurb = "Maureen with the noticeboard, the birthdays and the overnight hole report."
+start = 7
+end = 10
+
+[[show]]
+id = "committee-hour"
+name = "The Committee Hour"
+blurb = "Councillor Dibbs and the week's business. The hole remains."
+start = 18
+end = 20
+host = "Councillor Dibbs"
+
+[[show]]
+id = "rim-watch"
+name = "Rim Watch"
+blurb = "Overnight with Maureen, a flask and the binoculars, keeping an eye on the hole so you don't have to."
+start = 0
+end = 4
+
+# ── Idents ────────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "id-001"
+category = "id"
+lines = [
+  { say = "host", text = "You're listening to Lower Hollow Community Radio. Lost pets, bake sales, and the hole." },
+  { sting = "community" },
+]
+
+[[clip]]
+id = "id-002"
+category = "id"
+lines = [
+  { say = "host", text = "This is Lower Hollow Community Radio. If you hear your name called from the hole, please don't answer. It's not rude. It's policy." },
+]
+
+[[clip]]
+id = "id-003"
+category = "id"
+daypart = "morning"
+lines = [
+  { say = "host", text = "Good morning, Lower Hollow. The kettle's on, the noticeboard's full, and the hole is where we left it." },
+]
+
+[[clip]]
+id = "id-004"
+category = "id"
+lines = [
+  { say = "host", text = "Lower Hollow Community Radio, eighty nine point seven. Population, today: fluctuating. Welcome, whoever's new." },
+]
+
+[[clip]]
+id = "id-005"
+category = "id"
+daypart = "night"
+lines = [
+  { say = "host", text = "Lower Hollow Community Radio, overnight. Maureen here. Somebody has to keep an eye on things." },
+  { sting = "community" },
+]
+
+# ── Host links ────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "dj-001"
+category = "dj"
+lines = [
+  { say = "host", text = "People ask me, Maureen, what's in the hole? And I say, it's not my place. I'm a volunteer. I do the notices, the pets and the birthdays. Councillor Dibbs does the hole." },
+  { say = "host", text = "That's how we've always done it, and it's worked very well. Apart from Tuesday." },
+]
+
+[[clip]]
+id = "dj-002"
+category = "dj"
+daypart = "day"
+lines = [
+  { say = "host", text = "Something came up out of the hole this afternoon, outside the post office. Large. Pale. Quite slow. Everybody did the sensible thing, which was to say nothing and carry on queueing." },
+  { say = "host", text = "It went back down at about four. The post office would like to remind customers that it closes at half past five regardless." },
+]
+
+[[clip]]
+id = "dj-003"
+category = "dj"
+daypart = "night"
+title = "For the Night Shift"
+lines = [
+  { say = "host", text = "Hello to the night operator on that ship that drifts over the Hollow at about this time. We can see your little light from the rim." },
+  { say = "host", text = "Mind the hole, dear. It's bigger from above. Everything is." },
+]
+
+[[clip]]
+id = "dj-004"
+category = "dj"
+daypart = "morning"
+title = "Biscuit"
+lines = [
+  { say = "host", text = "An update on Biscuit, Mister Ainsley's spaniel. Biscuit is at the hole. Biscuit is always at the hole. He isn't lost. Please stop bringing him back. He's busy." },
+  { say = "host", text = "He's been watching the same spot since the summer, wagging very slightly. Whatever's down there, Biscuit thinks it's a good boy." },
+]
+
+[[clip]]
+id = "dj-005"
+category = "dj"
+daypart = "evening"
+title = "A Shadow on Rim Lane"
+lines = [
+  { say = "host", text = "Mrs Crabtree on Rim Lane reports a shadow sitting on her garden wall each evening. No person attached. Wears a little hat. Very polite. Leaves before the street lamps come on." },
+  { say = "host", text = "She's given it a cushion. Hollis, dear, if he's yours, he's fine. He likes the view." },
+]
+
+# ── Notices kit (psa): open × 1–3 notices × close ─────────────────────────────
+
+[[clip]]
+id = "notice-open-001"
+category = "psa"
+kit = "notices"
+part = "open"
+over_music = true
+lines = [
+  { say = "host", text = "And now, the community noticeboard. If it's pinned up at the post office, you'll hear it here first." },
+]
+
+[[clip]]
+id = "notice-open-002"
+category = "psa"
+kit = "notices"
+part = "open"
+over_music = true
+lines = [
+  { say = "host", text = "Time for the notices. Pen and paper ready, please. Not the blue pen. You know who you are." },
+]
+
+[[clip]]
+id = "notice-body-001"
+category = "psa"
+kit = "notices"
+part = "body"
+over_music = true
+title = "Bake Sale"
+lines = [
+  { say = "host", text = "The Hollow Bakers' Circle bake sale is this Saturday, on the green. Lemon drizzle, flapjacks, and Edna's fruit cake, which has never once been finished." },
+  { say = "host", text = "A reminder. Please don't feed anything to the hole. Last year it took a whole Victoria sponge, and we had a very awkward week." },
+]
+
+[[clip]]
+id = "notice-body-002"
+category = "psa"
+kit = "notices"
+part = "body"
+over_music = true
+title = "Lost: Duchess"
+lines = [
+  { say = "host", text = "Lost. A grey tabby called Duchess, missing from Rim Lane since Monday. Answers to Duchess, or to the sound of a tin opening." },
+  { say = "host", text = "If you see her, please don't chase her towards the edge. Just open a tin and wait. She'll come. They always come for a tin." },
+]
+
+[[clip]]
+id = "notice-body-003"
+category = "psa"
+kit = "notices"
+part = "body"
+over_music = true
+title = "Found: An Umbrella"
+lines = [
+  { say = "host", text = "Found. One black umbrella, which came up out of the hole on Tuesday morning, perfectly dry, and opened itself on the green." },
+  { say = "host", text = "It's at the post office. If it's yours, please collect it. Please don't explain." },
+]
+
+[[clip]]
+id = "notice-body-004"
+category = "psa"
+kit = "notices"
+part = "body"
+over_music = true
+title = "The Choir"
+lines = [
+  { say = "host", text = "The Lower Hollow choir meets on Thursdays at seven, in the church hall. New voices very welcome, especially tenors." },
+  { say = "host", text = "If you hear an extra voice during the low hymns, coming from somewhere below, carry on. Don't harmonise with it. It only encourages it." },
+]
+
+[[clip]]
+id = "notice-body-005"
+category = "psa"
+kit = "notices"
+part = "body"
+over_music = true
+title = "Jumble Sale"
+lines = [
+  { say = "host", text = "Jumble sale at the Scout hut on Sunday. Books, toys, bric-a-brac, and a quantity of single shoes, all left feet, which came up out of the hole over the summer." },
+  { say = "host", text = "If you've lost a left shoe, it may well be here. If you've lost a right shoe, we can't help you, and frankly, we're worried." },
+]
+
+[[clip]]
+id = "notice-body-006"
+category = "psa"
+kit = "notices"
+part = "body"
+over_music = true
+title = "Birthdays"
+lines = [
+  { say = "host", text = "Happy birthday to Mrs Ivy Cole of Rim Cottages, who is ninety two today. Ivy has lived on the rim all her life." },
+  { say = "host", text = "She says the secret to a long life is a boiled egg every morning, and never looking down for more than a minute. Happy birthday, Ivy. Have an egg." },
+]
+
+[[clip]]
+id = "notice-body-007"
+category = "psa"
+kit = "notices"
+part = "body"
+over_music = true
+title = "Found: A Letter"
+lines = [
+  { say = "host", text = "Found on the green. A letter, addressed to the Hole Committee, in very neat handwriting, with no stamp. It came up on the wind." },
+  { say = "host", text = "Councillor Dibbs has it. He's read it. He's gone very quiet. Thank you." },
+]
+
+[[clip]]
+id = "notice-close-001"
+category = "psa"
+kit = "notices"
+part = "close"
+over_music = true
+lines = [
+  { say = "host", text = "That's the noticeboard. If you've a notice of your own, pop it through my door. My door, please. Not the hole." },
+]
+
+[[clip]]
+id = "notice-close-002"
+category = "psa"
+kit = "notices"
+part = "close"
+over_music = true
+lines = [
+  { say = "host", text = "And that's all the notices for now. Be good to each other, and stay on the town side of the rim." },
+]
+
+# ── Council kit (news): open × 1–3 agenda items × close ───────────────────────
+
+[[clip]]
+id = "council-open-001"
+category = "news"
+kit = "council"
+part = "open"
+bed = "hall"
+lines = [
+  { say = "host", text = "And now the council update, with the chair of the Hole Committee, Councillor Dibbs." },
+  { say = "dibbs", text = "Thank you, Maureen." },
+]
+
+[[clip]]
+id = "council-open-002"
+category = "news"
+kit = "council"
+part = "open"
+bed = "hall"
+lines = [
+  { say = "dibbs", text = "Good evening. Councillor Dibbs, chair of the Hole Committee, with the council update." },
+]
+
+[[clip]]
+id = "council-body-001"
+category = "news"
+kit = "council"
+part = "body"
+bed = "hall"
+title = "The Fence"
+lines = [
+  { say = "dibbs", text = "The committee met on Thursday. Item one. The hole. The committee noted the hole." },
+  { say = "dibbs", text = "Item two. The fence around the hole. The committee noted that the fence is now also, somewhat, in the hole. A new fence has been ordered. It will be placed slightly further back, as is customary." },
+]
+
+[[clip]]
+id = "council-body-002"
+category = "news"
+kit = "council"
+part = "body"
+bed = "hall"
+title = "Residents' Questions"
+lines = [
+  { say = "dibbs", text = "Several residents have asked the committee what the hole is. The committee thanks residents for their interest. The committee has been asked this question every week for thirty years." },
+  { say = "dibbs", text = "And the committee is pleased to say that it has, after careful consideration, once again decided to move on to item three." },
+]
+
+[[clip]]
+id = "council-body-003"
+category = "news"
+kit = "council"
+part = "body"
+bed = "hall"
+title = "The By-Law on Gifts"
+lines = [
+  { say = "dibbs", text = "A reminder of the by-law concerning objects thrown into the hole. Anything thrown into the hole becomes, in law, a gift." },
+  { say = "dibbs", text = "The hole is not obliged to send a thank-you note. It has, on four occasions, sent one anyway. These are on file." },
+]
+
+[[clip]]
+id = "council-body-004"
+category = "news"
+kit = "council"
+part = "body"
+bed = "hall"
+title = "The Microphone"
+lines = [
+  { say = "dibbs", text = "The proposal from the Lower Hollow Radio Club, to lower a microphone into the hole, has been rejected. The committee wishes to reassure the radio club that this is not personal." },
+  { say = "dibbs", text = "It is simply that the last time a microphone was lowered, in nineteen eighty one, it was returned. With a recording on it. Which the committee has listened to, and will not be discussing." },
+]
+
+[[clip]]
+id = "council-body-005"
+category = "news"
+kit = "council"
+part = "body"
+bed = "hall"
+title = "The Annual Inspection"
+lines = [
+  { say = "dibbs", text = "The annual hole inspection. The inspector lowered himself to the usual depth, took the usual readings, and came back up with the usual expression." },
+  { say = "dibbs", text = "He has submitted his report. The report reads, in full: yes. Thank you." },
+]
+
+[[clip]]
+id = "council-close-001"
+category = "news"
+kit = "council"
+part = "close"
+bed = "hall"
+lines = [
+  { say = "dibbs", text = "That concludes the council update.", gap = 0.6 },
+  { say = "dibbs", text = "The hole remains. Thank you." },
+]
+
+[[clip]]
+id = "council-close-002"
+category = "news"
+kit = "council"
+part = "close"
+bed = "hall"
+lines = [
+  { say = "dibbs", text = "The next meeting is on Thursday, in the church hall. Please bring a chair. Not one of the old ones. They lean." },
+]
+
+# ── Calls ─────────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "call-001"
+category = "call"
+title = "Ron and the Fairy Lights"
+bed = "room"
+lines = [
+  { sfx = "phone-ring" },
+  { say = "host", text = "Lower Hollow Community Radio, you're on the air." },
+  { say = "ron", text = "Hello, Maureen. It's Ron, from Rim Lane." },
+  { say = "host", text = "Hello, Ron. How's the knee?" },
+  { say = "ron", text = "Better, thanks. Maureen, I want to put fairy lights up round the hole for the winter. All the way round." },
+  { say = "host", text = "That's a lot of lights, Ron." },
+  { say = "ron", text = "I've got a lot of lights. Is it allowed?" },
+  { say = "host", text = "I'll ask. Councillor?" },
+  { say = "dibbs", text = "The committee has no objection to lights. The committee asks only that you don't run the cable over the edge." },
+  { say = "ron", text = "Why not?" },
+  { say = "dibbs", text = "Because the last time, something plugged itself in.", gap = 1.2 },
+  { say = "ron", text = "Right." },
+  { say = "host", text = "Lovely, Ron. Send us a picture." },
+  { sfx = "phone-hangup" },
+]
+
+# ── Morning Notices (7–10) ────────────────────────────────────────────────────
+
+[[clip]]
+id = "id-morning-notices"
+category = "id"
+show = "morning-notices"
+part = "open"
+lines = [
+  { say = "host", text = "Good morning, and welcome to Morning Notices. I'm Maureen. The overnight report: the hole is still there. It was quiet. Mostly." },
+  { sting = "community" },
+]
+
+[[clip]]
+id = "dj-morning-notices-001"
+category = "dj"
+show = "morning-notices"
+title = "The Overnight Hole Report"
+lines = [
+  { say = "host", text = "The overnight hole report. At two this morning, a warm breeze came up out of the hole, smelling of toast. At three, the toast smell stopped." },
+  { say = "host", text = "At four, a single yellow balloon came up, and drifted east. That's the report. Have a lovely day." },
+]
+
+[[clip]]
+id = "dj-morning-notices-002"
+category = "dj"
+show = "morning-notices"
+lines = [
+  { say = "host", text = "This morning's birthdays. Happy birthday to young Ellie Marsh, who is seven." },
+  { say = "host", text = "And happy birthday to the hole, which, according to the parish records, is either four hundred years old, or always." },
+]
+
+# ── The Committee Hour (18–20) ────────────────────────────────────────────────
+
+[[clip]]
+id = "id-committee-hour"
+category = "id"
+show = "committee-hour"
+part = "open"
+bed = "hall"
+lines = [
+  { say = "dibbs", text = "Good evening. This is the Committee Hour, on Lower Hollow Community Radio. The hole remains. Item one." },
+]
+
+[[clip]]
+id = "dj-committee-hour-001"
+category = "dj"
+show = "committee-hour"
+title = "Correspondence"
+lines = [
+  { say = "dibbs", text = "Correspondence. The committee has received a letter from the hole. It was very well written. The committee has replied, thanking it for its letter, and noting its contents." },
+  { say = "host", text = "What did it say, Councillor?" },
+  { say = "dibbs", text = "It has been noted, Maureen." },
+]
+
+[[clip]]
+id = "dj-committee-hour-002"
+category = "dj"
+show = "committee-hour"
+title = "Any Other Business"
+lines = [
+  { say = "dibbs", text = "Any other business. Mister Ainsley asks whether he may take his dog home from the rim." },
+  { say = "dibbs", text = "The committee has considered the question, and notes that this is a matter for the dog." },
+]
+
+# ── Rim Watch (0–4) ───────────────────────────────────────────────────────────
+
+[[clip]]
+id = "id-rim-watch"
+category = "id"
+show = "rim-watch"
+part = "open"
+lines = [
+  { say = "host", text = "This is Rim Watch. Maureen here, with a flask, a blanket and the binoculars. You go to sleep, dear. I'll keep an eye on it." },
+]
+
+[[clip]]
+id = "dj-rim-watch-001"
+category = "dj"
+show = "rim-watch"
+lines = [
+  { say = "host", text = "Quarter past three. The lamps are on over on the far rim, and nobody lives over there, as far as anyone knows. I've waved." },
+  { say = "host", text = "Somebody has waved back. That's neighbourly. I'll take it." },
+]
+
+[[clip]]
+id = "dj-rim-watch-002"
+category = "dj"
+show = "rim-watch"
+lines = [
+  { say = "host", text = "Very quiet tonight. Biscuit's asleep at the edge, one ear up. The flask's half done. Every so often there's a sound from the hole like somebody turning over in bed." },
+  { say = "host", text = "I always say, goodnight, then. It seems only polite." },
+]
+
+# ── Halloween ─────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "psa-halloween-001"
+category = "psa"
+title = "The Costume Contest"
+dates = ["10-24", "10-25", "10-26", "10-27", "10-28", "10-29", "10-30", "10-31"]
+lines = [
+  { sting = "halloween" },
+  { say = "host", text = "A Halloween reminder for trick-or-treaters. Please stay on the town side of the rim." },
+  { say = "host", text = "Last year, something came up out of the hole wearing a sheet with two eye holes cut in it, and won the costume contest. Nobody knows who it was. It comes back every year to collect the prize." },
+  { say = "host", text = "We've let it keep the rosette." },
+]
+
+[[clip]]
+id = "dj-halloween-001"
+category = "dj"
+title = "Pumpkin Carving Results"
+dates = ["10-24", "10-25", "10-26", "10-27", "10-28", "10-29", "10-30", "10-31"]
+lines = [
+  { say = "host", text = "The pumpkin carving results. Third place, Ellie Marsh, for a lovely cat. Second, the Ainsleys, for a very good owl." },
+  { say = "host", text = "And first place, a pumpkin nobody entered, which came up out of the hole on Thursday, carved from the inside. It's very good. It's smiling. It's been smiling at the post office all week." },
+]

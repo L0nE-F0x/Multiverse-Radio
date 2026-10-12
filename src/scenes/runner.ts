@@ -3,6 +3,7 @@
 
 import { hex } from './kit/color';
 import { Gfx } from './kit/gfx';
+import { Post } from './kit/post';
 import { Rng, hashString } from './kit/rng';
 import type { Frame, Scene, SceneDef } from './types';
 import { computeView } from './viewport';
@@ -14,7 +15,7 @@ export interface RunnerInputs {
 }
 
 export interface RunnerStats {
-  /** Average milliseconds spent drawing a frame (scene + blit). */
+  /** Average milliseconds spent drawing a frame (scene + post + blit). */
   drawMs: number;
   /** Frames per second actually achieved. */
   fps: number;
@@ -34,6 +35,11 @@ export class SceneRunner {
   private scene: Scene;
   private ctx: CanvasRenderingContext2D;
   private image: ImageData | null = null;
+  /** The graded picture that goes to the canvas. */
+  private out = new Int32Array(0);
+  private post: Post | null;
+  /** Lab switch: false shows the raw raster without grade, vignette, grain or bloom. */
+  postEnabled = true;
   private frame: Frame = {
     t: 0,
     dt: 0,
@@ -84,7 +90,8 @@ export class SceneRunner {
     variant = 0,
   ) {
     this.ctx = canvas.getContext('2d', { alpha: false })!;
-    this.rng = new Rng(hashString(def.id) ^ 0x9e3779b9);
+    this.rng = new Rng((hashString(def.id) ^ 0x9e3779b9 ^ variant) >>> 0);
+    this.post = def.grade === false ? null : new Post(def.grade);
     this.scene = def.create({ accent: hex(accent), rng: new Rng(hashString(def.id)), variant });
     this.frame.hour = localHour();
     this.frame.awake = inputs.playing ? 1 : 0;
@@ -211,7 +218,8 @@ export class SceneRunner {
       g.target();
       this.canvas.width = v.w;
       this.canvas.height = v.h;
-      this.image = new ImageData(new Uint8ClampedArray(g.frame.buffer as ArrayBuffer), v.w, v.h);
+      this.out = new Int32Array(v.w * v.h);
+      this.image = new ImageData(new Uint8ClampedArray(this.out.buffer as ArrayBuffer), v.w, v.h);
       this.stats.w = v.w;
       this.stats.h = v.h;
       this.drawNow();
@@ -287,8 +295,12 @@ export class SceneRunner {
     }
 
     const t0 = performance.now();
-    this.gfx.restore();
-    this.scene.frame(this.gfx, f);
+    const g = this.gfx;
+    g.restore();
+    this.scene.frame(g, f);
+    if (this.post && this.postEnabled) {
+      this.post.apply(g.frame, this.out, g.w, g.h, g.ox, g.oy, g.exposure, g.exposureVersion, !reduced);
+    } else this.out.set(g.frame);
     this.ctx.putImageData(this.image, 0, 0);
     f.n++;
     const t1 = performance.now();

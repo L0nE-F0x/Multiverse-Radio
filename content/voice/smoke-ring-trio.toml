@@ -1,0 +1,314 @@
+# Smoke Ring Trio — 88.85, the Cumulus Room, a jazz club inside a storm cloud.
+#
+# Octavia Lowe hosts: velvet, unhurried, describes every solo as a kind of weather. The house
+# trio is Mercy Calloway (piano), Augustin Pell (upright bass) and Silas Brushwood (brushes,
+# so softly he is sometimes only a rumour). Florian the waiter crosses the cloud very carefully.
+#
+# Running bits: applause up here makes it rain on somebody down below (it once rained on the
+# Gristwick fête); Augustin has been walking the same bass line home since spring; Florian's
+# long crossing to table nine. Cross-station: Bev and her song, Grumbel's Ladders.
+station = "smoke-ring-trio"
+
+[voices]
+host = { voice = "bf_isabella", speed = 0.9, name = "Octavia Lowe" }
+florian = { voice = "am_liam", speed = 0.95, name = "Florian, the Waiter" }
+
+[[show]]
+id = "supper-club"
+name = "The Supper Club Forecast"
+blurb = "Dinner, candlelight and a light drizzle of piano. The early set, for people who still have plans."
+start = 19
+end = 22
+
+[[show]]
+id = "the-3am-set"
+name = "The 3 AM Set"
+blurb = "The diners have gone. The trio plays for each other now. You're welcome to listen, quietly."
+start = 2
+end = 5
+
+[[show]]
+id = "the-morning-after"
+name = "The Morning After"
+blurb = "Chairs on the tables, coffee on, and the trio still playing. Nobody has had the heart to tell them."
+start = 6
+end = 9
+
+# ── Idents ────────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "id-001"
+category = "id"
+lines = [
+  { say = "host", text = "You're listening to Smoke Ring Trio. A little jazz club, inside a storm cloud. Mind the step. There isn't one." },
+]
+
+[[clip]]
+id = "id-002"
+category = "id"
+lines = [
+  { say = "host", text = "Smoke Ring Trio. Piano, bass and brushes, about two miles up. Find a table, darling. Hold on to it." },
+]
+
+[[clip]]
+id = "id-003"
+category = "id"
+lines = [
+  { say = "host", text = "This is Smoke Ring Trio. If you feel the floor give a little, that's only the cloud. It's listening too." },
+]
+
+[[clip]]
+id = "id-004"
+category = "id"
+daypart = "night"
+lines = [
+  { say = "host", text = "Smoke Ring Trio. It's late. The candles are low, the cloud is high, and nobody in here is in any hurry at all." },
+]
+
+[[clip]]
+id = "id-005"
+category = "id"
+lines = [
+  { say = "host", text = "Smoke Ring Trio, eighty eight point eight five. No smoking, please. The room does quite enough of that on its own." },
+]
+
+[[clip]]
+id = "id-006"
+category = "id"
+lines = [
+  { say = "host", text = "You're in the Cumulus Room, home of the Smoke Ring Trio. Tonight's forecast: brushes, with a chance of piano." },
+]
+
+[[clip]]
+id = "id-007"
+category = "id"
+daypart = "day"
+lines = [
+  { say = "host", text = "Smoke Ring Trio. The cloud has drifted somewhere sunny this afternoon. We've drawn the curtains. It's night in here. It always is." },
+]
+
+# ── Host links ────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "dj-001"
+category = "dj"
+lines = [
+  { say = "host", text = "That piano solo was a warm front. It came in low from the west, it lingered over the middle eight, and it left everybody slightly damp around the eyes." },
+  { say = "host", text = "The bass is now clearing from the north. Lovely conditions. Stay exactly where you are." },
+]
+
+[[clip]]
+id = "dj-002"
+category = "dj"
+title = "Please Don't Applaud"
+lines = [
+  { say = "host", text = "A reminder for those of you in the room. Please don't applaud. We're inside a cloud, and every time you clap, it rains on somebody down below." },
+  { say = "host", text = "Last week's standing ovation fell on a village fête. They carried on. They always carry on. So in here we snap our fingers. Snapping is drizzle. Drizzle is fine." },
+]
+
+[[clip]]
+id = "dj-003"
+category = "dj"
+title = "Florian Sets Off"
+lines = [
+  { say = "host", text = "Florian, our waiter, is crossing to table nine with a tray of drinks. He set off at the start of the last number." },
+  { say = "host", text = "You have to go carefully, crossing a cloud. You have to believe in every single step. He's halfway. He's doing beautifully. Let's give him one more ballad." },
+]
+
+[[clip]]
+id = "dj-004"
+category = "dj"
+title = "Florian Arrives"
+lines = [
+  { say = "host", text = "News from the floor. Florian has reached table nine. Table nine had drifted off towards the bandstand during the ballad, but he followed it with great dignity, and he didn't spill a drop." },
+  { say = "host", text = "The ice has melted. They're delighted. Florian?", gap = 0.5 },
+  { say = "florian", text = "Very good, madam. Setting off for table ten." },
+]
+
+[[clip]]
+id = "dj-005"
+category = "dj"
+lines = [
+  { say = "host", text = "A word about Silas, our drummer. Silas plays with brushes, and he plays them so softly that some nights he's only a rumour." },
+  { say = "host", text = "People ask me, is there really a drummer? There is, darling. Look closely. That faint weather at the back of the stage. That's Silas." },
+]
+
+[[clip]]
+id = "dj-006"
+category = "dj"
+title = "The Long Walk Home"
+lines = [
+  { say = "host", text = "Augustin, on the bass, has been walking the same bass line since the spring. It's a long walk. He doesn't hurry it." },
+  { say = "host", text = "Tonight, for the first time, I think he can see home. Listen for it. Somewhere in the next tune, the bass is going to arrive." },
+]
+
+[[clip]]
+id = "dj-007"
+category = "dj"
+title = "The Walk Back"
+lines = [
+  { say = "host", text = "Did you hear it, at the end of that one? The bass got home. Months on the road, and Augustin walked it right up to the front door." },
+  { say = "host", text = "And then he turned round, and started walking back. Of course he did. He's a bass player. Here's the walk back." },
+]
+
+[[clip]]
+id = "dj-008"
+category = "dj"
+lines = [
+  { say = "host", text = "Tonight's forecast in the room. Scattered piano, mostly in the upper register. A low bank of bass settling over the front tables. Brushes, light and variable." },
+  { say = "host", text = "And a ninety percent chance of the pianist closing her eyes, and not opening them again until the bridge." },
+]
+
+[[clip]]
+id = "dj-009"
+category = "dj"
+title = "Bev Hums It"
+lines = [
+  { say = "host", text = "Bev's in again, at the bar, still looking for her song. Tonight she hummed it to Mercy, at the piano. Da da dum. Da da." },
+  { say = "host", text = "Mercy played it straight back to her, with three new chords in it. Bev cried. Bev says it still isn't the song. But it's closer. Keep looking, darling." },
+]
+
+[[clip]]
+id = "dj-010"
+category = "dj"
+daypart = "night"
+title = "For the Night Shift"
+lines = [
+  { say = "host", text = "A word for the operator on the relay ship, drifting slowly under the cloud. We can see your running lights through the floor." },
+  { say = "host", text = "There's a table by the window, darling, if you ever come up. We'll keep the candle going. This one's for the night shift." },
+]
+
+[[clip]]
+id = "dj-011"
+category = "dj"
+daypart = "night"
+lines = [
+  { say = "host", text = "If you saw a flicker in the walls just then, that was the lightning. It lives in here with us. It's terribly shy. It only comes out for the ballads." },
+  { say = "host", text = "We've asked it to sit in for a number. It says it can't read music. It just knows when." },
+]
+
+[[clip]]
+id = "dj-012"
+category = "dj"
+title = "Sponsored by Grumbel's Ladders"
+lines = [
+  { say = "host", text = "Tonight's set comes to you courtesy of Grumbel's Ladders. Getting up to a club inside a cloud takes a very long ladder, and a very calm disposition." },
+  { say = "host", text = "Grumbel's Ladders. Up is a choice. Down is a long way, darling, so take your time." },
+]
+
+[[clip]]
+id = "dj-013"
+category = "dj"
+daypart = "evening"
+lines = [
+  { say = "host", text = "Good evening. The cloud is drifting west tonight, over the hills and the lit-up farms." },
+  { say = "host", text = "If you're down there, and you hear a piano in the rain, wave. We'll see you. We won't wave back. We'll be playing." },
+]
+
+# ── The Supper Club Forecast (19–22) ──────────────────────────────────────────
+
+[[clip]]
+id = "id-supper-club"
+category = "id"
+show = "supper-club"
+part = "open"
+lines = [
+  { say = "host", text = "Good evening, and welcome to the Supper Club Forecast. The tables are floating, the candles are lit, and the soup is, as ever, mostly cloud." },
+  { sting = "id" },
+]
+
+[[clip]]
+id = "dj-supper-club-001"
+category = "dj"
+show = "supper-club"
+lines = [
+  { say = "host", text = "A note from the kitchen. Tonight the chef recommends the consommé. It's a clear soup, which, up here, makes it the only clear thing in the building." },
+  { say = "host", text = "The trio will now play something to digest to." },
+]
+
+[[clip]]
+id = "dj-supper-club-002"
+category = "dj"
+show = "supper-club"
+lines = [
+  { say = "host", text = "Table six has ordered the chocolate cake for two. It's arrived. It's floating. They're chasing it gently with their spoons." },
+  { say = "host", text = "That's romance, darling. Here's something for the chase." },
+]
+
+# ── The 3 AM Set (2–5) ────────────────────────────────────────────────────────
+
+[[clip]]
+id = "id-the-3am-set"
+category = "id"
+show = "the-3am-set"
+part = "open"
+lines = [
+  { say = "host", text = "It's three in the morning, and this is the Three AM Set. The diners have gone. The trio is playing for each other now. Pull up a cloud. Keep your voice down." },
+]
+
+[[clip]]
+id = "dj-the-3am-set-001"
+category = "dj"
+show = "the-3am-set"
+lines = [
+  { say = "host", text = "This is the hour when Mercy plays the tune she wrote for someone who never came to hear it. She doesn't say who." },
+  { say = "host", text = "She plays it every night, at about this time, just in case. Here it is. Or something very like it." },
+]
+
+[[clip]]
+id = "dj-the-3am-set-002"
+category = "dj"
+show = "the-3am-set"
+lines = [
+  { say = "host", text = "At this time of night the cloud goes very still, and the lightning in the walls is only resting. You can hear Augustin's fingers on the strings. You can hear the candles." },
+  { say = "host", text = "You can hear yourself, too. Don't worry. You sound lovely." },
+]
+
+# ── The Morning After (6–9) ───────────────────────────────────────────────────
+
+[[clip]]
+id = "id-the-morning-after"
+category = "id"
+show = "the-morning-after"
+part = "open"
+lines = [
+  { say = "host", text = "Good morning. This is the Morning After, on Smoke Ring Trio. The chairs are on the tables, the coffee's on, and the trio is still playing. Nobody has had the heart to tell them." },
+]
+
+[[clip]]
+id = "dj-the-morning-after-001"
+category = "dj"
+show = "the-morning-after"
+lines = [
+  { say = "host", text = "The cleaner has come in. She's mopping the cloud. It doesn't need mopping, it's a cloud, but she says it's the principle." },
+  { say = "host", text = "The trio is playing her a waltz. She is pretending very hard not to dance." },
+]
+
+[[clip]]
+id = "dj-the-morning-after-002"
+category = "dj"
+show = "the-morning-after"
+lines = [
+  { say = "host", text = "Silas has fallen asleep at the drums. He's still playing. Some of his finest brushwork, honestly. I wouldn't dream of waking him." },
+]
+
+# ── Halloween ─────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "dj-halloween-001"
+category = "dj"
+title = "The Fourth Member"
+dates = ["10-24", "10-25", "10-26", "10-27", "10-28", "10-29", "10-30", "10-31"]
+lines = [
+  { say = "host", text = "We have a guest tonight. We're a trio. We've always been a trio. But there's a cold draught by the piano, and it has been keeping perfect time since Tuesday." },
+  { say = "host", text = "It won't say who it is. It likes the minor keys. So tonight, darlings, we're a quartet." },
+]
+
+[[clip]]
+id = "id-halloween-001"
+category = "id"
+dates = ["10-24", "10-25", "10-26", "10-27", "10-28", "10-29", "10-30", "10-31"]
+lines = [
+  { say = "host", text = "Smoke Ring Trio. The cloud has gone dark grey for Halloween. It's been practising." },
+  { sting = "halloween" },
+]

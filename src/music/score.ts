@@ -4,6 +4,7 @@
 import type { RecipeId, RecipeTweaks } from '../broadcast/types';
 import type { GenreSamplePatch, GenreSynthPatch } from './dsp/genres';
 import type { Rng } from './rng';
+import type { BedsSamplePatch, BedsSynthPatch } from './dsp/beds-v3';
 
 export interface NoteEvent {
   /** Start, seconds from track start. */
@@ -43,6 +44,7 @@ export interface AutoEvent {
 }
 
 export type SamplePatch =
+  | BedsSamplePatch
   | 'ep'
   | 'ep-bright'
   | 'wurli'
@@ -99,6 +101,7 @@ export type SamplePatch =
   | GenreSamplePatch;
 
 export type SynthPatch =
+  | BedsSynthPatch
   | 'pad-warm'
   | 'pad-strings'
   | 'pad-glass'

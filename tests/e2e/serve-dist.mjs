@@ -4,7 +4,8 @@
 //
 // It behaves like Netlify where it matters for testing: the [[headers]] rules from
 // netlify.toml (same path matching, values comma-joined when rules overlap), Netlify's default
-// Cache-Control, /foo → foo.html, 404.html with a 404 status, and byte ranges for audio.
+// Cache-Control, /foo → foo.html, /dir → 301 /dir/ (when dir/index.html exists), 404.html
+// with a 404 status, and byte ranges for audio.
 // Unlike `vite preview`, that means the CSP and caching rules are exercised for real.
 
 import { createReadStream, existsSync, readFileSync, statSync } from 'node:fs';
@@ -155,9 +156,14 @@ export async function startServer(options = {}) {
       req.socket.destroy();
       return;
     }
-    const { pathname } = new URL(req.url ?? '/', 'http://localhost');
+    const { pathname, search } = new URL(req.url ?? '/', 'http://localhost');
     if (req.method !== 'GET' && req.method !== 'HEAD') {
       res.writeHead(405, { allow: 'GET, HEAD' }).end();
+      return;
+    }
+    // Like Netlify: a folder with an index page gets its trailing slash (/station/x → /station/x/).
+    if (!pathname.endsWith('/') && !resolve(pathname) && resolve(`${pathname}/`)) {
+      res.writeHead(301, { ...headersFor(rules, pathname), location: `${pathname}/${search}` }).end();
       return;
     }
 

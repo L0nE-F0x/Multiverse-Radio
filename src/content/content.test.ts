@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { RECIPE_IDS } from '../broadcast/types';
+import { ODDITY_IDS, RECIPE_IDS } from '../broadcast/types';
 import { STATIONS } from '../stations/roster';
 import { BANNED_WORDS, findBanned } from './banned';
 import { expand, expandUntil } from './grammar';
@@ -108,11 +108,11 @@ describe('trackMeta', () => {
     }
   });
 
-  // TODO(v3 integration): back to every station and every recipe once the v3 packs land.
-  it('has a pack for every v2 music, mixed and ambient station and every v2 recipe', () => {
-    const v2 = STATIONS.filter((s) => !s.secret && RECIPE_IDS.indexOf(s.recipe) < RECIPE_IDS.indexOf('jazz-trio'));
-    for (const s of v2) if (s.format !== 'talk') expect(STATION_PACKS[s.id], s.id).toBeDefined();
-    for (const r of RECIPE_IDS.slice(0, RECIPE_IDS.indexOf('jazz-trio'))) expect(RECIPE_PACKS[r], r).toBeDefined();
+  it('has a pack for every music, mixed and ambient station and every recipe', () => {
+    for (const s of STATIONS) if (s.format !== 'talk') expect(STATION_PACKS[s.id], s.id).toBeDefined();
+    // Oddities are named by the scheduler itself ("Line-up tone, 1 kHz"), not by packs.
+    const oddities = new Set<string>(ODDITY_IDS);
+    for (const r of RECIPE_IDS) if (!oddities.has(r)) expect(RECIPE_PACKS[r], r).toBeDefined();
   });
 });
 

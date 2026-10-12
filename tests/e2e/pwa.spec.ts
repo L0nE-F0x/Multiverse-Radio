@@ -8,8 +8,10 @@ import { deploy, installServiceWorker } from './helpers';
 const shellCaches = (page: Page) =>
   page.evaluate(async () => (await caches.keys()).filter((key) => key.startsWith('mvr-shell-')).sort());
 
+// The worker stores the key as /current; resolve it absolutely, since the page may be on
+// /station/<id>/ (where a relative 'current' would miss).
 const currentShell = (page: Page) =>
-  page.evaluate(async () => (await (await caches.open('mvr-meta')).match('current'))?.text() ?? null);
+  page.evaluate(async () => (await (await caches.open('mvr-meta')).match(new URL('/current', location.origin).href))?.text() ?? null);
 
 const checkForUpdate = (page: Page) =>
   page.evaluate(async () => {
@@ -23,7 +25,7 @@ test('boots offline from the cached shell; other pages get the offline page', as
     await installServiceWorker(page);
 
     site.setOffline(true);
-    await page.reload();
+    await page.goto(`${site.url}/`);
     await expect(page).toHaveTitle(/Multiverse Radio/);
     await expect(page.getByRole('main')).toBeVisible();
 
@@ -52,7 +54,8 @@ test('a new deploy takes over with no stale shell and no forced reload', async (
 
     // Deploy 2. Online visitors get the new shell at once: navigations are network-first.
     redeploy(2);
-    await page.reload();
+    // The app rewrites the address to /station/<id>/, so go back to / rather than reload.
+    await page.goto(`${site.url}/`);
     await expect(page.locator('meta[name="mvr-build"]')).toHaveAttribute('content', '2');
 
     // The new worker installs and takes over in the background; the page is not reloaded.
@@ -65,7 +68,7 @@ test('a new deploy takes over with no stale shell and no forced reload', async (
 
     // Offline, the new shell boots.
     site.setOffline(true);
-    await page.reload();
+    await page.goto(`${site.url}/`);
     await expect(page.locator('meta[name="mvr-build"]')).toHaveAttribute('content', '2');
     site.setOffline(false);
 

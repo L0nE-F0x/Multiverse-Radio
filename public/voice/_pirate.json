@@ -1,0 +1,1494 @@
+{
+  "version": 1,
+  "station": "_pirate",
+  "clips": [
+    {
+      "id": "id-001",
+      "category": "id",
+      "url": "/voice/_pirate/id-001.mp3",
+      "durationMs": 1903,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Pirate DJ",
+          "text": "You found us. Don't tell anyone how.",
+          "startMs": 37
+        }
+      ]
+    },
+    {
+      "id": "id-002",
+      "category": "id",
+      "url": "/voice/_pirate/id-002.mp3",
+      "durationMs": 5128,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Pirate DJ",
+          "text": "This frequency does not exist. And yet here you are, listening to it. Splendid.",
+          "startMs": 36
+        }
+      ]
+    },
+    {
+      "id": "id-003",
+      "category": "id",
+      "url": "/voice/_pirate/id-003.mp3",
+      "durationMs": 3701,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Pirate DJ",
+          "text": "Unlicensed! Unregistered! Unbelievably on air! Stay tuned!",
+          "startMs": 37
+        }
+      ]
+    },
+    {
+      "id": "id-004",
+      "category": "id",
+      "url": "/voice/_pirate/id-004.mp3",
+      "durationMs": 6661,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Pirate DJ",
+          "text": "Shh. You found us. Keep it down. They've got ears everywhere.",
+          "startMs": 33
+        }
+      ]
+    },
+    {
+      "id": "id-005",
+      "category": "id",
+      "url": "/voice/_pirate/id-005.mp3",
+      "durationMs": 4670,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Pirate DJ",
+          "text": "Breaker, breaker. You've got the station that isn't. Come on back.",
+          "startMs": 400
+        }
+      ]
+    },
+    {
+      "id": "id-006",
+      "category": "id",
+      "url": "/voice/_pirate/id-006.mp3",
+      "durationMs": 4505,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Pirate DJ",
+          "text": "You are not listening to this. Officially.",
+          "startMs": 50
+        },
+        {
+          "speaker": "Pirate DJ",
+          "text": "Unofficially, welcome.",
+          "startMs": 2905
+        }
+      ]
+    },
+    {
+      "id": "id-007",
+      "category": "id",
+      "url": "/voice/_pirate/id-007.mp3",
+      "durationMs": 5121,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Pirate DJ",
+          "text": "Broadcasting from a secret location. It's a shed. Don't tell anyone it's a shed.",
+          "startMs": 37
+        }
+      ]
+    },
+    {
+      "id": "id-008",
+      "category": "id",
+      "url": "/voice/_pirate/id-008.mp3",
+      "durationMs": 4318,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Pirate DJ",
+          "text": "Um. This is pirate radio. Hi. You're listening to pirate radio. That's, yeah. That's it.",
+          "startMs": 37
+        }
+      ]
+    },
+    {
+      "id": "id-009",
+      "category": "id",
+      "url": "/voice/_pirate/id-009.mp3",
+      "durationMs": 5022,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Pirate DJ",
+          "text": "No name. No licence. No fixed abode. We do, however, have a kettle.",
+          "startMs": 37
+        }
+      ]
+    },
+    {
+      "id": "id-010",
+      "category": "id",
+      "url": "/voice/_pirate/id-010.mp3",
+      "durationMs": 4649,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Pirate DJ",
+          "text": "Hello to everybody who tuned in by accident! That's everybody! Welcome!",
+          "startMs": 44
+        }
+      ]
+    },
+    {
+      "id": "id-011",
+      "category": "id",
+      "url": "/voice/_pirate/id-011.mp3",
+      "durationMs": 4357,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Pirate DJ",
+          "text": "You've drifted off the edge of the dial. Don't panic. It's nicer out here. Fewer rules.",
+          "startMs": 38
+        }
+      ]
+    },
+    {
+      "id": "id-012",
+      "category": "id",
+      "url": "/voice/_pirate/id-012.mp3",
+      "durationMs": 5597,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Pirate DJ",
+          "text": "This station has been shut down eleven times. This is the twelfth time it's open.",
+          "startMs": 50
+        }
+      ]
+    },
+    {
+      "id": "id-013",
+      "category": "id",
+      "url": "/voice/_pirate/id-013.mp3",
+      "durationMs": 5230,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Pirate DJ",
+          "text": "Nobody sent you. Nobody's listening. Except you, and us, and possibly a van.",
+          "startMs": 40
+        }
+      ]
+    },
+    {
+      "id": "id-014",
+      "category": "id",
+      "url": "/voice/_pirate/id-014.mp3",
+      "durationMs": 6214,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Pirate DJ",
+          "text": "If you can hear this, you're one of us now. Sorry. There isn't a form.",
+          "startMs": 33
+        }
+      ]
+    },
+    {
+      "id": "id-015",
+      "category": "id",
+      "url": "/voice/_pirate/id-015.mp3",
+      "durationMs": 4621,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Pirate DJ",
+          "text": "Please do not adjust your set. Your set is fine. It is we who are wrong.",
+          "startMs": 36
+        }
+      ]
+    },
+    {
+      "id": "id-016",
+      "category": "id",
+      "url": "/voice/_pirate/id-016.mp3",
+      "durationMs": 4966,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Pirate DJ",
+          "text": "Off the map, off the books, on the air. Keep it between the lines, drivers.",
+          "startMs": 400
+        }
+      ]
+    },
+    {
+      "id": "id-017",
+      "category": "id",
+      "url": "/voice/_pirate/id-017.mp3",
+      "durationMs": 3398,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Pirate DJ",
+          "text": "This is the station your mum warned you about! Hi, your mum!",
+          "startMs": 37
+        }
+      ]
+    },
+    {
+      "id": "dj-001",
+      "category": "dj",
+      "url": "/voice/_pirate/dj-001.mp3",
+      "durationMs": 13467,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Pirate DJ",
+          "text": "Right. That was a record. I don't know who made it. I don't think they know either.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Pirate DJ",
+          "text": "Somebody left it on the step of the shed with a note that said, play this. So I did. That's how it works out here. Nobody sends anything in properly.",
+          "startMs": 4487
+        }
+      ]
+    },
+    {
+      "id": "dj-002",
+      "category": "dj",
+      "url": "/voice/_pirate/dj-002.mp3",
+      "durationMs": 10010,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Pirate DJ",
+          "text": "Thirty one years I've been doing this. Never had a licence. Never had a sponsor. Never had a listener I could prove.",
+          "startMs": 46
+        },
+        {
+          "speaker": "Pirate DJ",
+          "text": "And yet here you are. Hello, proof.",
+          "startMs": 8001
+        }
+      ]
+    },
+    {
+      "id": "dj-003",
+      "category": "dj",
+      "url": "/voice/_pirate/dj-003.mp3",
+      "durationMs": 10181,
+      "overMusic": true,
+      "daypart": "night",
+      "lines": [
+        {
+          "speaker": "Pirate DJ",
+          "text": "Funny thing. You put a voice out into the dark with no name on it, and now and then the dark writes back. One letter a year, maybe.",
+          "startMs": 45
+        },
+        {
+          "speaker": "Pirate DJ",
+          "text": "Last year's said, keep going. So.",
+          "startMs": 8347
+        }
+      ]
+    },
+    {
+      "id": "dj-004",
+      "category": "dj",
+      "url": "/voice/_pirate/dj-004.mp3",
+      "durationMs": 10482,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Pirate DJ",
+          "text": "Good evening, or morning, or whatever it is out there! It's always about four in the afternoon up here, because of the skylight!",
+          "startMs": 37
+        },
+        {
+          "speaker": "Pirate DJ",
+          "text": "My nan says hello! She says keep it down! Hello, nan!",
+          "startMs": 7190
+        }
+      ]
+    },
+    {
+      "id": "dj-005",
+      "category": "dj",
+      "url": "/voice/_pirate/dj-005.mp3",
+      "durationMs": 7989,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Pirate DJ",
+          "text": "Big shout out to everyone listening! Both of you!",
+          "startMs": 37
+        },
+        {
+          "speaker": "Pirate DJ",
+          "text": "I can see the signal meter going. That's you! You're the little needle! Love the little needle!",
+          "startMs": 2926
+        }
+      ]
+    },
+    {
+      "id": "dj-006",
+      "category": "dj",
+      "url": "/voice/_pirate/dj-006.mp3",
+      "durationMs": 7058,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Pirate DJ",
+          "text": "Ooh, just had a message from a listener. It says, please stop.",
+          "startMs": 36
+        },
+        {
+          "speaker": "Pirate DJ",
+          "text": "Love that! Love the engagement! Here's another one!",
+          "startMs": 4104
+        }
+      ]
+    },
+    {
+      "id": "dj-007",
+      "category": "dj",
+      "url": "/voice/_pirate/dj-007.mp3",
+      "durationMs": 16308,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Pirate DJ",
+          "text": "Sorry, I have to keep it down tonight. There's a detector van parked across the street.",
+          "startMs": 31
+        },
+        {
+          "speaker": "Pirate DJ",
+          "text": "It's doing a three point turn. Now it's doing a seven point turn. Bless it. Here's a quiet one.",
+          "startMs": 7241
+        }
+      ]
+    },
+    {
+      "id": "dj-008",
+      "category": "dj",
+      "url": "/voice/_pirate/dj-008.mp3",
+      "durationMs": 16378,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Pirate DJ",
+          "text": "We're broadcasting in a whisper tonight, so they can't find us. That's how it works. I think. I read it on the back of a cereal box.",
+          "startMs": 31
+        },
+        {
+          "speaker": "Pirate DJ",
+          "text": "The next song is also very quiet. Lean in.",
+          "startMs": 12108
+        }
+      ]
+    },
+    {
+      "id": "dj-009",
+      "category": "dj",
+      "url": "/voice/_pirate/dj-009.mp3",
+      "durationMs": 15788,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Pirate DJ",
+          "text": "Good evening. Pirate radio. One never imagined. Father wanted one to go into law.",
+          "startMs": 37
+        },
+        {
+          "speaker": "Pirate DJ",
+          "text": "Instead, one is broadcasting from a rowing boat, at night, without permission. Father would be furious.",
+          "startMs": 5921
+        },
+        {
+          "speaker": "Pirate DJ",
+          "text": "Father may be listening. Hello, Father.",
+          "startMs": 12692
+        }
+      ]
+    },
+    {
+      "id": "dj-010",
+      "category": "dj",
+      "url": "/voice/_pirate/dj-010.mp3",
+      "durationMs": 10992,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Pirate DJ",
+          "text": "Next, a tune of uncertain provenance. Found in a drawer. One suspects it was stolen.",
+          "startMs": 50
+        },
+        {
+          "speaker": "Pirate DJ",
+          "text": "One is a pirate, after all. One is trying to get into the spirit of the thing.",
+          "startMs": 6279
+        }
+      ]
+    },
+    {
+      "id": "dj-011",
+      "category": "dj",
+      "url": "/voice/_pirate/dj-011.mp3",
+      "durationMs": 9901,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Pirate DJ",
+          "text": "Hi. Um. Is this on? The red light's on. That means it's on.",
+          "startMs": 46
+        },
+        {
+          "speaker": "Pirate DJ",
+          "text": "Hi. This is my first night. I'm a pirate. Sorry. I'm supposed to say that with more swagger.",
+          "startMs": 3250
+        },
+        {
+          "speaker": "Pirate DJ",
+          "text": "I'm a pirate. Yeah.",
+          "startMs": 8595
+        }
+      ]
+    },
+    {
+      "id": "dj-012",
+      "category": "dj",
+      "url": "/voice/_pirate/dj-012.mp3",
+      "durationMs": 10470,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Pirate DJ",
+          "text": "Okay, I've been told to say something cool between songs. I wrote it down. It says, stay rebellious.",
+          "startMs": 37
+        },
+        {
+          "speaker": "Pirate DJ",
+          "text": "Okay. Stay rebellious. And drink some water. That bit's not on the card. That's from me.",
+          "startMs": 6042
+        }
+      ]
+    },
+    {
+      "id": "dj-013",
+      "category": "dj",
+      "url": "/voice/_pirate/dj-013.mp3",
+      "durationMs": 11662,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Pirate DJ",
+          "text": "When I started, there were no rules. Then they made rules, and I broke them.",
+          "startMs": 50
+        },
+        {
+          "speaker": "Pirate DJ",
+          "text": "Then they made rules about breaking rules. I broke those too. Now I'm mostly just tired. Here's a song.",
+          "startMs": 4939
+        }
+      ]
+    },
+    {
+      "id": "dj-014",
+      "category": "dj",
+      "url": "/voice/_pirate/dj-014.mp3",
+      "durationMs": 11663,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Pirate DJ",
+          "text": "People ask why I keep going. Fifty years on a frequency nobody's supposed to find.",
+          "startMs": 50
+        },
+        {
+          "speaker": "Pirate DJ",
+          "text": "Somebody has to play the songs nobody asked for. Otherwise, who would? This is one of those.",
+          "startMs": 5813
+        }
+      ]
+    },
+    {
+      "id": "dj-015",
+      "category": "dj",
+      "url": "/voice/_pirate/dj-015.mp3",
+      "durationMs": 11290,
+      "overMusic": true,
+      "daypart": "night",
+      "lines": [
+        {
+          "speaker": "Pirate DJ",
+          "text": "This is your overnight driver, coming at you from a lay by between two realities.",
+          "startMs": 400
+        },
+        {
+          "speaker": "Pirate DJ",
+          "text": "Road's quiet. Kettle's plugged into the lighter socket. Life is good. Here's one for the long stretch.",
+          "startMs": 5387
+        }
+      ]
+    },
+    {
+      "id": "dj-016",
+      "category": "dj",
+      "url": "/voice/_pirate/dj-016.mp3",
+      "durationMs": 9074,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Pirate DJ",
+          "text": "Okay, I have to be quick, because my mum thinks I'm doing homework. This is technically homework.",
+          "startMs": 36
+        },
+        {
+          "speaker": "Pirate DJ",
+          "text": "It's a project about radio waves. I'm the radio waves. Next track!",
+          "startMs": 5431
+        }
+      ]
+    },
+    {
+      "id": "dj-017",
+      "category": "dj",
+      "url": "/voice/_pirate/dj-017.mp3",
+      "durationMs": 7798,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Pirate DJ",
+          "text": "Mum's just asked if I'm talking to someone. I said no. Technically, I'm talking to everyone.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Pirate DJ",
+          "text": "Hi, everyone. Please don't tell my mum.",
+          "startMs": 5969
+        }
+      ]
+    },
+    {
+      "id": "dj-018",
+      "category": "dj",
+      "url": "/voice/_pirate/dj-018.mp3",
+      "durationMs": 13311,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Pirate DJ",
+          "text": "A reminder that this station is entirely unofficial. We are not affiliated with any authority, network, empire or society.",
+          "startMs": 36
+        },
+        {
+          "speaker": "Pirate DJ",
+          "text": "We did once write to the society. They wrote back, asking us to stop writing.",
+          "startMs": 8310
+        }
+      ]
+    },
+    {
+      "id": "dj-019",
+      "category": "dj",
+      "url": "/voice/_pirate/dj-019.mp3",
+      "durationMs": 9917,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Pirate DJ",
+          "text": "If you've just joined us, there's nothing to join. We're not a club. There's no badge.",
+          "startMs": 37
+        },
+        {
+          "speaker": "Pirate DJ",
+          "text": "I mean, I made a badge. It says pirate. There's only the one. I'm wearing it.",
+          "startMs": 5468
+        }
+      ]
+    },
+    {
+      "id": "dj-020",
+      "category": "dj",
+      "url": "/voice/_pirate/dj-020.mp3",
+      "durationMs": 11242,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Pirate DJ",
+          "text": "Fun fact! This whole station runs off a bicycle! My cousin is pedalling it right now! Say hello, Derek!",
+          "startMs": 48
+        },
+        {
+          "speaker": "Pirate DJ",
+          "text": "Derek can't talk, he's pedalling! Here's a fast one, to help Derek!",
+          "startMs": 7759
+        }
+      ]
+    },
+    {
+      "id": "dj-021",
+      "category": "dj",
+      "url": "/voice/_pirate/dj-021.mp3",
+      "durationMs": 7811,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Pirate DJ",
+          "text": "Weather on the sideways road tonight is fog, with a chance of Tuesday. Drive slow. Wave at the ghosts. They like a wave.",
+          "startMs": 400
+        }
+      ]
+    },
+    {
+      "id": "dj-022",
+      "category": "dj",
+      "url": "/voice/_pirate/dj-022.mp3",
+      "durationMs": 10471,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Pirate DJ",
+          "text": "That record was older than I am. I found it in a skip behind the Broadcast Authority.",
+          "startMs": 50
+        },
+        {
+          "speaker": "Pirate DJ",
+          "text": "They throw out all the good ones. Every Thursday. I'm always there.",
+          "startMs": 6389
+        }
+      ]
+    },
+    {
+      "id": "dj-023",
+      "category": "dj",
+      "url": "/voice/_pirate/dj-023.mp3",
+      "durationMs": 7603,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Pirate DJ",
+          "text": "Someone just asked what genre this station is. Good question. I think the genre is, we had these records.",
+          "startMs": 41
+        },
+        {
+          "speaker": "Pirate DJ",
+          "text": "So. More of those.",
+          "startMs": 6356
+        }
+      ]
+    },
+    {
+      "id": "dj-024",
+      "category": "dj",
+      "url": "/voice/_pirate/dj-024.mp3",
+      "durationMs": 12098,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Pirate DJ",
+          "text": "If you're listening on headphones, hello. You're the only one I can be properly quiet for.",
+          "startMs": 31
+        },
+        {
+          "speaker": "Pirate DJ",
+          "text": "Everyone else, turn it up a bit. We're right here.",
+          "startMs": 8108
+        }
+      ]
+    },
+    {
+      "id": "dj-025",
+      "category": "dj",
+      "url": "/voice/_pirate/dj-025.mp3",
+      "durationMs": 7308,
+      "title": "Shout-out",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Pirate DJ",
+          "text": "Shout out to the lads at Radio Free Shed. Keep the faith, boys.",
+          "startMs": 39
+        },
+        {
+          "speaker": "Pirate DJ",
+          "text": "And fix your aerial. You're coming in sideways.",
+          "startMs": 4903
+        }
+      ]
+    },
+    {
+      "id": "dj-026",
+      "category": "dj",
+      "url": "/voice/_pirate/dj-026.mp3",
+      "durationMs": 13502,
+      "title": "Shout-out",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Pirate DJ",
+          "text": "Big love to everyone at the Midnight Wrong Number! Keep ringing! Somebody's bound to pick up eventually!",
+          "startMs": 36
+        },
+        {
+          "speaker": "Pirate DJ",
+          "text": "And to the man who keeps ringing us for a taxi. We're not a taxi! But we play you a song every time, and that's sort of a lift!",
+          "startMs": 6257
+        }
+      ]
+    },
+    {
+      "id": "dj-027",
+      "category": "dj",
+      "url": "/voice/_pirate/dj-027.mp3",
+      "durationMs": 16532,
+      "title": "Shout-out",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Pirate DJ",
+          "text": "Respect to Teodor, at Relay Four. Not a pirate. Just out there, asking if anyone can hear him.",
+          "startMs": 32
+        },
+        {
+          "speaker": "Pirate DJ",
+          "text": "We hear you, Teodor. We can't say so properly. We're not allowed to exist.",
+          "startMs": 9789
+        }
+      ]
+    },
+    {
+      "id": "dj-028",
+      "category": "dj",
+      "url": "/voice/_pirate/dj-028.mp3",
+      "durationMs": 11637,
+      "title": "Request",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Pirate DJ",
+          "text": "We've had a request. It arrived on a paper aeroplane, through the window of the boat.",
+          "startMs": 35
+        },
+        {
+          "speaker": "Pirate DJ",
+          "text": "It says, play something sad that you can dance to.",
+          "startMs": 5534
+        },
+        {
+          "speaker": "Pirate DJ",
+          "text": "One could not agree more.",
+          "startMs": 9569
+        }
+      ]
+    },
+    {
+      "id": "dj-029",
+      "category": "dj",
+      "url": "/voice/_pirate/dj-029.mp3",
+      "durationMs": 12526,
+      "title": "For the night shift",
+      "overMusic": true,
+      "daypart": "night",
+      "lines": [
+        {
+          "speaker": "Pirate DJ",
+          "text": "A dedication. This goes out to the night shift. The cleaners, the bakers, the drivers hauling weather, and anyone on a ship out there, keeping the lights on.",
+          "startMs": 45
+        },
+        {
+          "speaker": "Pirate DJ",
+          "text": "We see you. Well. We don't. But we know you're there.",
+          "startMs": 9942
+        }
+      ]
+    },
+    {
+      "id": "dj-030",
+      "category": "dj",
+      "url": "/voice/_pirate/dj-030.mp3",
+      "durationMs": 9963,
+      "title": "Request",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Pirate DJ",
+          "text": "This one's a request from a listener who'd rather not be named, for a listener who'd rather not be named.",
+          "startMs": 37
+        },
+        {
+          "speaker": "Pirate DJ",
+          "text": "From someone who isn't allowed to be named. Pirate radio, everyone. Isn't it romantic.",
+          "startMs": 5364
+        }
+      ]
+    },
+    {
+      "id": "dj-031",
+      "category": "dj",
+      "url": "/voice/_pirate/dj-031.mp3",
+      "durationMs": 13415,
+      "title": "Shout-out",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Pirate DJ",
+          "text": "Greetings to all the other pirates on the deep band. The Kitchen Table Broadcasting Company. The Unlicensed Hour. That bloke who only plays bells.",
+          "startMs": 50
+        },
+        {
+          "speaker": "Pirate DJ",
+          "text": "Keep it up. Somebody's listening. It's usually me.",
+          "startMs": 10094
+        }
+      ]
+    },
+    {
+      "id": "dj-032",
+      "category": "dj",
+      "url": "/voice/_pirate/dj-032.mp3",
+      "durationMs": 9268,
+      "title": "Shout-out",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Pirate DJ",
+          "text": "Shout out to the convoy on the river road, and to whoever's hauling that lorry full of fog.",
+          "startMs": 400
+        },
+        {
+          "speaker": "Pirate DJ",
+          "text": "Can't see you, friend. But we can hear your indicator.",
+          "startMs": 5925
+        }
+      ]
+    },
+    {
+      "id": "dj-033",
+      "category": "dj",
+      "url": "/voice/_pirate/dj-033.mp3",
+      "durationMs": 8435,
+      "title": "Request",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Pirate DJ",
+          "text": "We've had a request for something with a good drum bit, from someone called Grandad.",
+          "startMs": 39
+        },
+        {
+          "speaker": "Pirate DJ",
+          "text": "Hi, Grandad. How did you find this? Never mind. Good drum bit, coming up.",
+          "startMs": 4571
+        }
+      ]
+    },
+    {
+      "id": "ad-001",
+      "category": "ad",
+      "url": "/voice/_pirate/ad-001.mp3",
+      "durationMs": 15996,
+      "title": "Hot Batteries",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Advert",
+          "text": "Hot Batteries! Batteries that fell off the back of a dimension! Still warm! Still ninety percent full of somebody else's energy!",
+          "startMs": 43
+        },
+        {
+          "speaker": "Advert",
+          "text": "Use them in your torch. Use them in your radio. Use them in your clock, and get a few extra hours from somebody else's week.",
+          "startMs": 6662
+        },
+        {
+          "speaker": "Advert",
+          "text": "Hot Batteries. Don't ask where they came from. We genuinely don't know.",
+          "startMs": 12802
+        }
+      ]
+    },
+    {
+      "id": "ad-002",
+      "category": "ad",
+      "url": "/voice/_pirate/ad-002.mp3",
+      "durationMs": 14234,
+      "title": "Big Terry's Bargain Aerials",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Advert",
+          "text": "Big Terry's Bargain Aerials. Picks up every station. Including the ones you don't want.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Advert",
+          "text": "Picks up your neighbour's phone calls. Picks up radio plays from the year before last. On a clear night, picks up a man in a lighthouse, reading the weather to nobody.",
+          "startMs": 4412
+        },
+        {
+          "speaker": "Advert",
+          "text": "Big Terry's. Your neighbours will hate it.",
+          "startMs": 12343
+        }
+      ]
+    },
+    {
+      "id": "ad-003",
+      "category": "ad",
+      "url": "/voice/_pirate/ad-003.mp3",
+      "durationMs": 16256,
+      "title": "Lightly Used Frequencies",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Advert",
+          "text": "Always wanted a frequency of your own? We've got loads. All lightly used. Previous owners, mostly gone.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Advert",
+          "text": "One of them still plays faint jazz in the evenings. We consider that a feature. Make us an offer.",
+          "startMs": 6501
+        },
+        {
+          "speaker": "Small Print",
+          "text": "Frequencies sold as seen. Faint jazz cannot be removed. Please do not ask the jazz to leave. It lives there.",
+          "startMs": 12317
+        }
+      ]
+    },
+    {
+      "id": "ad-004",
+      "category": "ad",
+      "url": "/voice/_pirate/ad-004.mp3",
+      "durationMs": 13116,
+      "title": "Unofficial Licences",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Advert",
+          "text": "Worried about the authorities? Get a licence! An Unofficial Licence looks almost exactly like a real one. It's got a stamp!",
+          "startMs": 39
+        },
+        {
+          "speaker": "Advert",
+          "text": "The stamp is a potato. Nobody looks that closely.",
+          "startMs": 6599
+        },
+        {
+          "speaker": "Small Print",
+          "text": "Unofficial Licences are not licences. They are paper. Very nice paper. Potato not included.",
+          "startMs": 9465
+        }
+      ]
+    },
+    {
+      "id": "ad-005",
+      "category": "ad",
+      "url": "/voice/_pirate/ad-005.mp3",
+      "durationMs": 12043,
+      "title": "Van-Away",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Advert",
+          "text": "Van-Away! The spray that keeps detector vans at bay!",
+          "startMs": 42
+        },
+        {
+          "speaker": "Advert",
+          "text": "Just spray it round your shed, and detector vans will drive straight past, with a vague feeling of loss and a sudden urge to ring their mothers.",
+          "startMs": 2932
+        },
+        {
+          "speaker": "Advert",
+          "text": "Van-Away. Smells of lavender. And defiance.",
+          "startMs": 9751
+        }
+      ]
+    },
+    {
+      "id": "ad-006",
+      "category": "ad",
+      "url": "/voice/_pirate/ad-006.mp3",
+      "durationMs": 16520,
+      "title": "The Midnight Pantry",
+      "overMusic": false,
+      "daypart": "night",
+      "lines": [
+        {
+          "speaker": "Advert",
+          "text": "The Midnight Pantry. The shop that's only open when it's shut. Knock twice. Ask for Lorna.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Lorna",
+          "text": "Hello, love. What do you need? Don't tell me. I've got it. It's in a bag.",
+          "startMs": 5696
+        },
+        {
+          "speaker": "Advert",
+          "text": "Whatever you need, Lorna has it, in a bag. Don't open the bag until you get home. Lorna is very clear about the bag.",
+          "startMs": 9824
+        }
+      ]
+    },
+    {
+      "id": "ad-007",
+      "category": "ad",
+      "url": "/voice/_pirate/ad-007.mp3",
+      "durationMs": 11177,
+      "title": "Aerial Tom",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Advert",
+          "text": "Aerial Tom! He'll fit your aerial! He'll fix your aerial! And if necessary, he'll talk to your aerial. Some aerials just need to be heard.",
+          "startMs": 45
+        },
+        {
+          "speaker": "Advert",
+          "text": "Aerial Tom. He's been up on a roof since before you were born. Please, somebody, take him a sandwich.",
+          "startMs": 6478
+        }
+      ]
+    },
+    {
+      "id": "ad-008",
+      "category": "ad",
+      "url": "/voice/_pirate/ad-008.mp3",
+      "durationMs": 16952,
+      "title": "Grumbel's Seconds",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Advert",
+          "text": "Psst. Round the back of Grumbel's Ladders, there's a bloke. He sells the ladders that didn't pass inspection.",
+          "startMs": 31
+        },
+        {
+          "speaker": "Advert",
+          "text": "Too tall. Too short. One of them goes slightly sideways in time.",
+          "startMs": 5540
+        },
+        {
+          "speaker": "Advert",
+          "text": "Grumbel's Seconds. Up is a choice. Down is a bargain.",
+          "startMs": 9306
+        },
+        {
+          "speaker": "Small Print",
+          "text": "Not affiliated with Grumbel's Ladders. Mister Grumbel has asked us to stop. Up is a choice. So is stopping. We have chosen not to.",
+          "startMs": 12333
+        }
+      ]
+    },
+    {
+      "id": "ad-009",
+      "category": "ad",
+      "url": "/voice/_pirate/ad-009.mp3",
+      "durationMs": 14632,
+      "title": "Mystery Records by the Kilo",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Advert",
+          "text": "Mystery Records, by the kilo! No labels! No sleeves! No questions!",
+          "startMs": 42
+        },
+        {
+          "speaker": "Advert",
+          "text": "Some of them are music. Some of them are somebody's wedding speech. One of them is a man saying hello down a well, for forty minutes.",
+          "startMs": 3910
+        },
+        {
+          "speaker": "Advert",
+          "text": "Mystery Records. Fifty pence a kilo. You'll never know what you've got. Neither will we.",
+          "startMs": 10635
+        }
+      ]
+    },
+    {
+      "id": "ad-010",
+      "category": "ad",
+      "url": "/voice/_pirate/ad-010.mp3",
+      "durationMs": 14282,
+      "title": "Reconditioned Silence",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Advert",
+          "text": "Reconditioned Silence. Second hand quiet, from libraries, mountaintops, and the ends of long arguments.",
+          "startMs": 42
+        },
+        {
+          "speaker": "Advert",
+          "text": "Lightly scuffed. Ideal for flats, offices, and the back seat on long journeys.",
+          "startMs": 6406
+        },
+        {
+          "speaker": "Advert",
+          "text": "Reconditioned Silence. You'll hardly hear it.",
+          "startMs": 11500
+        }
+      ]
+    },
+    {
+      "id": "ad-011",
+      "category": "ad",
+      "url": "/voice/_pirate/ad-011.mp3",
+      "durationMs": 15891,
+      "title": "Shed Shield",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Advert",
+          "text": "Is your shed secretly a radio station? Is your radio station secretly a shed?",
+          "startMs": 38
+        },
+        {
+          "speaker": "Advert",
+          "text": "Then you need Shed Shield. The only insurance for sheds that are quietly something else. Covers fire, flood, and men in grey coats.",
+          "startMs": 4811
+        },
+        {
+          "speaker": "Small Print",
+          "text": "Shed Shield does not cover sheds that are bigger on the inside. Those are a different policy, and a different conversation.",
+          "startMs": 11544
+        }
+      ]
+    },
+    {
+      "id": "psa-001",
+      "category": "psa",
+      "url": "/voice/_pirate/psa-001.mp3",
+      "durationMs": 15759,
+      "title": "The Man in the Grey Coat",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Pirate DJ",
+          "text": "Public service announcement. If a man in a grey coat knocks and asks whether you've been listening to unlicensed broadcasts, the correct answer is, what's a broadcast.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Pirate DJ",
+          "text": "Then offer him a biscuit. They never get offered biscuits. It throws them right off.",
+          "startMs": 10827
+        }
+      ]
+    },
+    {
+      "id": "psa-002",
+      "category": "psa",
+      "url": "/voice/_pirate/psa-002.mp3",
+      "durationMs": 13135,
+      "title": "Detector Van Update",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Pirate DJ",
+          "text": "Detector van update! A van's been spotted on the corner of Third and Elsewhere! Another's been spotted on the corner of Elsewhere and Third!",
+          "startMs": 37
+        },
+        {
+          "speaker": "Pirate DJ",
+          "text": "We think it's the same van. It's lost. Can somebody give it directions? It looks sad.",
+          "startMs": 8381
+        }
+      ]
+    },
+    {
+      "id": "psa-003",
+      "category": "psa",
+      "url": "/voice/_pirate/psa-003.mp3",
+      "durationMs": 13556,
+      "title": "Lunch Break",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Pirate DJ",
+          "text": "The Multiverse Broadcast Authority would like you to know that this station is illegal.",
+          "startMs": 37
+        },
+        {
+          "speaker": "Pirate DJ",
+          "text": "We would like you to know that the Multiverse Broadcast Authority listens to us on its lunch break. We can tell. They ring in requests.",
+          "startMs": 5753
+        }
+      ]
+    },
+    {
+      "id": "psa-004",
+      "category": "psa",
+      "url": "/voice/_pirate/psa-004.mp3",
+      "durationMs": 19545,
+      "title": "The Device",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Pirate DJ",
+          "text": "Warning. The authorities have a new device that can tell whether you're listening to pirate radio. It works by asking you.",
+          "startMs": 33
+        },
+        {
+          "speaker": "Pirate DJ",
+          "text": "Don't answer it. It's very polite, and very persuasive. Just hum until it goes away.",
+          "startMs": 11340
+        }
+      ]
+    },
+    {
+      "id": "psa-005",
+      "category": "psa",
+      "url": "/voice/_pirate/psa-005.mp3",
+      "durationMs": 7743,
+      "title": "Safety Tip",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Pirate DJ",
+          "text": "Safety tip. Never tell anyone where we are.",
+          "startMs": 50
+        },
+        {
+          "speaker": "Pirate DJ",
+          "text": "You don't know where we are. We don't know where we are. That's the safety.",
+          "startMs": 3569
+        }
+      ]
+    },
+    {
+      "id": "psa-006",
+      "category": "psa",
+      "url": "/voice/_pirate/psa-006.mp3",
+      "durationMs": 9820,
+      "title": "If We Go Off Air",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Pirate DJ",
+          "text": "If we suddenly go off the air, don't worry. We'll be back. Probably on a different frequency. Possibly as different people.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Pirate DJ",
+          "text": "Listen out for the same bad jokes. That's how you'll know it's us.",
+          "startMs": 6471
+        }
+      ]
+    },
+    {
+      "id": "psa-007",
+      "category": "psa",
+      "url": "/voice/_pirate/psa-007.mp3",
+      "durationMs": 10600,
+      "title": "Flashing Lights",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Pirate DJ",
+          "text": "A word to the drivers. If you see flashing lights on the sideways road, it's the Broadcast Authority.",
+          "startMs": 400
+        },
+        {
+          "speaker": "Pirate DJ",
+          "text": "Wave. Smile. Tell them you're listening to the weather. You are, in a way.",
+          "startMs": 6139
+        }
+      ]
+    },
+    {
+      "id": "call-001",
+      "category": "call",
+      "url": "/voice/_pirate/call-001.mp3",
+      "durationMs": 22101,
+      "title": "Real-ish",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Caller",
+          "text": "Hello? Am I on?",
+          "startMs": 2450
+        },
+        {
+          "speaker": "Pirate DJ",
+          "text": "You're on. Who's this?",
+          "startMs": 4074
+        },
+        {
+          "speaker": "Caller",
+          "text": "I've been trying to find you for weeks. I tuned past you on a Tuesday, and I've been going up and down the dial ever since.",
+          "startMs": 5557
+        },
+        {
+          "speaker": "Pirate DJ",
+          "text": "Well. You found us. What do you want to hear?",
+          "startMs": 11681
+        },
+        {
+          "speaker": "Caller",
+          "text": "Oh, I don't mind. I just wanted to know you were real.",
+          "startMs": 14141
+        },
+        {
+          "speaker": "Pirate DJ",
+          "text": "Real-ish. Same as everyone. This one's for you.",
+          "startMs": 17660
+        }
+      ]
+    },
+    {
+      "id": "call-002",
+      "category": "call",
+      "url": "/voice/_pirate/call-002.mp3",
+      "durationMs": 25015,
+      "title": "Bev Finds the Pirates",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Pirate DJ",
+          "text": "You're on the air! Who's this?",
+          "startMs": 2450
+        },
+        {
+          "speaker": "Bev",
+          "text": "Hello, love. It's Bev. Is this the request line?",
+          "startMs": 4189
+        },
+        {
+          "speaker": "Pirate DJ",
+          "text": "Bev! We've heard all about you! It's not the request line. But for you, Bev, it can be. Go on.",
+          "startMs": 7322
+        },
+        {
+          "speaker": "Bev",
+          "text": "It goes, da da dum, da da.",
+          "startMs": 13224
+        },
+        {
+          "speaker": "Pirate DJ",
+          "text": "Right.",
+          "startMs": 16884
+        },
+        {
+          "speaker": "Pirate DJ",
+          "text": "We'll have a look, Bev. We'll have a proper look.",
+          "startMs": 18152
+        },
+        {
+          "speaker": "Bev",
+          "text": "That's what they all say, love. Thank you anyway.",
+          "startMs": 20693
+        }
+      ]
+    },
+    {
+      "id": "call-003",
+      "category": "call",
+      "url": "/voice/_pirate/call-003.mp3",
+      "durationMs": 31058,
+      "title": "A Request and a Complaint",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Pirate DJ",
+          "text": "Hello, you're on. Um. Live. Sort of.",
+          "startMs": 2450
+        },
+        {
+          "speaker": "Caller",
+          "text": "Good evening. I'd like to make a request. And also, a formal complaint.",
+          "startMs": 4700
+        },
+        {
+          "speaker": "Pirate DJ",
+          "text": "Oh. Okay. Which one first?",
+          "startMs": 8964
+        },
+        {
+          "speaker": "Caller",
+          "text": "The request. The complaint can wait. It's been waiting eleven years. Have you got anything with a saxophone in it?",
+          "startMs": 10948
+        },
+        {
+          "speaker": "Pirate DJ",
+          "text": "We've got one saxophone record.",
+          "startMs": 17084
+        },
+        {
+          "speaker": "Caller",
+          "text": "That'll do. Lovely. Thank you.",
+          "startMs": 19332
+        },
+        {
+          "speaker": "Caller",
+          "text": "And the complaint is, you are operating an unlicensed station.",
+          "startMs": 21987
+        },
+        {
+          "speaker": "Pirate DJ",
+          "text": "That's fair.",
+          "startMs": 25784
+        },
+        {
+          "speaker": "Caller",
+          "text": "Right. Well. Same time tomorrow, then.",
+          "startMs": 26942
+        }
+      ]
+    },
+    {
+      "id": "interrupt-001",
+      "category": "interrupt",
+      "url": "/voice/_pirate/interrupt-001.mp3",
+      "durationMs": 7100,
+      "title": "Wrong Cable",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Multiverse Broadcast Authority",
+          "text": "This is the Multiverse Broadcast Authority. This station is operating without a—",
+          "startMs": 44
+        },
+        {
+          "speaker": "Pirate DJ",
+          "text": "Sorry about that. Wrong cable. Where were we.",
+          "startMs": 4673
+        }
+      ]
+    },
+    {
+      "id": "interrupt-002",
+      "category": "interrupt",
+      "url": "/voice/_pirate/interrupt-002.mp3",
+      "durationMs": 7379,
+      "title": "A Knock",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Pirate DJ",
+          "text": "Hang on, hang on. Someone's knocking on the cab.",
+          "startMs": 400
+        },
+        {
+          "speaker": "Pirate DJ",
+          "text": "It's all right. It's an owl.",
+          "startMs": 4987
+        }
+      ]
+    }
+  ]
+}

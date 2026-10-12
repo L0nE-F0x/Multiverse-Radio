@@ -1,0 +1,307 @@
+# Piano for Empty Rooms — 93.05, the unvisited wing.
+#
+# The Caretaker speaks rarely and softly, as if asked not to disturb the rooms. Every piece is
+# dedicated to a room nobody has entered yet. The grand piano plays itself; he listens from
+# the corridor. The door at the back of the music room is open about an inch.
+#
+# Running bits: rooms that have never been told what they're for; dusting the light, not the
+# dust; footprints in the east room (now a visited room, taken off the schedule); the door
+# that is either an invitation or a draught. Keep it spare: short sentences, long rests.
+station = "piano-empty-rooms"
+
+[voices]
+host = { voice = "bm_lewis", speed = 0.85, name = "The Caretaker" }
+
+[[show]]
+id = "dust-sheets"
+name = "Dust Sheets"
+blurb = "The furniture is covered for the night. Slow piano for the drawing room, the hall and the chairs."
+start = 20
+end = 23
+
+[[show]]
+id = "unvisited-hours"
+name = "The Unvisited Hours"
+blurb = "The quietest hours, in the quietest rooms. Nobody comes. Everything is ready."
+start = 1
+end = 5
+
+[[show]]
+id = "first-light"
+name = "First Light in the East Wing"
+blurb = "Morning sun across bare floorboards, and the piano a little brighter for it."
+start = 6
+end = 9
+
+# ── Idents ────────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "id-001"
+category = "id"
+lines = [
+  { say = "host", text = "Piano for Empty Rooms. Ninety three point oh five. Please. Don't get up." },
+]
+
+[[clip]]
+id = "id-002"
+category = "id"
+lines = [
+  { say = "host", text = "This is Piano for Empty Rooms. Music, for rooms nobody has entered yet." },
+]
+
+[[clip]]
+id = "id-003"
+category = "id"
+lines = [
+  { say = "host", text = "Piano for Empty Rooms. The door is open slightly. It always has been." },
+]
+
+[[clip]]
+id = "id-004"
+category = "id"
+lines = [
+  { say = "host", text = "You're listening to Piano for Empty Rooms, from the unvisited wing. Quietly, please." },
+]
+
+[[clip]]
+id = "id-005"
+category = "id"
+daypart = "night"
+lines = [
+  { say = "host", text = "Piano for Empty Rooms. It's late. The rooms don't mind. They have nowhere to be." },
+]
+
+[[clip]]
+id = "id-006"
+category = "id"
+lines = [
+  { say = "host", text = "Piano for Empty Rooms. Nobody is here.", gap = 0.8 },
+  { say = "host", text = "That's the idea." },
+]
+
+# ── Host links ────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "dj-001"
+category = "dj"
+title = "The Linen Room"
+lines = [
+  { say = "host", text = "This next piece is for the linen room on the third floor. It was finished in the spring. Nobody has been in since." },
+  { say = "host", text = "It has shelves, and a window, and it has never been told what it's for." },
+]
+
+[[clip]]
+id = "dj-002"
+category = "dj"
+daypart = "evening"
+title = "The Guest Room"
+lines = [
+  { say = "host", text = "This one is for the guest room. It's been made up for a guest for a very long time. Fresh sheets every Sunday. A glass of water on the nightstand." },
+  { say = "host", text = "The guest hasn't come. The room isn't upset. It's ready. That's all." },
+]
+
+[[clip]]
+id = "dj-003"
+category = "dj"
+lines = [
+  { say = "host", text = "I don't go into the rooms. I'm not supposed to. I sit outside, in the corridor, and the piano plays, and I listen at the doors." },
+  { say = "host", text = "It's a good arrangement. Nobody disturbs anybody." },
+]
+
+[[clip]]
+id = "dj-004"
+category = "dj"
+lines = [
+  { say = "host", text = "The piano is playing itself again tonight. It doesn't need me. I've been told I'm not needed, by several people, quite kindly." },
+  { say = "host", text = "I come anyway. Someone should hear it." },
+]
+
+[[clip]]
+id = "dj-005"
+category = "dj"
+title = "The Ballroom"
+lines = [
+  { say = "host", text = "There's a ballroom on the fourth floor. Sprung floor. Chandeliers. A little balcony for the band. Nobody has ever danced there. Not once." },
+  { say = "host", text = "The floor is perfect. Not a single scuff. This is a waltz for it. You don't have to dance. Neither does the floor." },
+]
+
+[[clip]]
+id = "dj-006"
+category = "dj"
+title = "Footprints in the East Room"
+lines = [
+  { say = "host", text = "Something happened in the east wing this week. Footprints, in the dust. One person. To the window, and back. They stood at the window for a while, I think. Long enough to see the garden.", gap = 1.0 },
+  { say = "host", text = "We've taken the east room off the schedule. It's a visited room now. It'll be all right. It looked out of the window too." },
+]
+
+[[clip]]
+id = "dj-007"
+category = "dj"
+lines = [
+  { say = "host", text = "People ask what a caretaker does, in rooms nobody uses. Mostly, I dust the light." },
+  { say = "host", text = "It comes in through the tall windows and lies on the floorboards, and the dust settles in it. I don't move the dust. I just make sure the light is still there in the morning." },
+]
+
+[[clip]]
+id = "dj-008"
+category = "dj"
+title = "The Room Behind the Bookcase"
+lines = [
+  { say = "host", text = "This piece is for the room behind the bookcase. Nobody has found it. I know it's there, because the corridor is three feet longer than the rooms add up to." },
+  { say = "host", text = "I haven't looked. It's not my place. But it deserves music, the same as the others." },
+]
+
+[[clip]]
+id = "dj-009"
+category = "dj"
+title = "The Door"
+lines = [
+  { say = "host", text = "The door at the back of the music room is open about an inch. It has been since I came here. I've never closed it." },
+  { say = "host", text = "I don't know if it's an invitation or a draught. I've decided it's both. That seems kindest." },
+]
+
+[[clip]]
+id = "dj-010"
+category = "dj"
+daypart = "morning"
+lines = [
+  { say = "host", text = "Morning, now. The light is coming round the east side. In a minute it will reach the piano, and the piano will play a little brighter." },
+  { say = "host", text = "It always does. It doesn't know it does. Don't tell it." },
+]
+
+[[clip]]
+id = "dj-011"
+category = "dj"
+daypart = "night"
+title = "For the Night Watch"
+lines = [
+  { say = "host", text = "If you're the one on the ship, on the night watch. I expect there's a room aboard that nobody uses. A storeroom. A spare cabin. A cupboard with one chair in it." },
+  { say = "host", text = "This one is for it. Leave the door the way you found it." },
+]
+
+[[clip]]
+id = "dj-012"
+category = "dj"
+title = "The Waiting Room"
+lines = [
+  { say = "host", text = "This is for a waiting room, in a station that was built, and finished, and never opened. Rows of benches. A clock that somebody winds." },
+  { say = "host", text = "Nobody is waiting there. Which, if you think about it, is the best kind of waiting room." },
+]
+
+[[clip]]
+id = "dj-013"
+category = "dj"
+title = "A New Attic"
+lines = [
+  { say = "host", text = "This one is for the attic of a house on a road that was only finished last week. Nobody has been up the ladder yet. It's warm up there, and quiet, and it smells of new wood." },
+  { say = "host", text = "One day there'll be boxes. Not yet." },
+]
+
+# ── Dust Sheets (20–23) ───────────────────────────────────────────────────────
+
+[[clip]]
+id = "id-dust-sheets"
+category = "id"
+show = "dust-sheets"
+part = "open"
+lines = [
+  { say = "host", text = "This is Dust Sheets, on Piano for Empty Rooms. The chairs are covered. The lamps are off. Mind the rug." },
+]
+
+[[clip]]
+id = "dj-dust-sheets-001"
+category = "dj"
+show = "dust-sheets"
+lines = [
+  { say = "host", text = "I've been round with the dust sheets. The chairs in the drawing room are covered now, and they look like small ghosts having a meeting." },
+  { say = "host", text = "I don't mind. They're only furniture, being shy." },
+]
+
+[[clip]]
+id = "dj-dust-sheets-002"
+category = "dj"
+show = "dust-sheets"
+lines = [
+  { say = "host", text = "The grandfather clock in the hall has been stopped since before I came. I don't wind it. I think it's resting." },
+  { say = "host", text = "I just like to stand near it, at about this time, and agree with it." },
+]
+
+# ── The Unvisited Hours (1–5) ─────────────────────────────────────────────────
+
+[[clip]]
+id = "id-unvisited-hours"
+category = "id"
+show = "unvisited-hours"
+part = "open"
+lines = [
+  { say = "host", text = "It's the middle of the night. This is the Unvisited Hours. Nobody will come now. We can all relax." },
+]
+
+[[clip]]
+id = "dj-unvisited-hours-001"
+category = "dj"
+show = "unvisited-hours"
+lines = [
+  { say = "host", text = "At this hour the house makes small sounds. The pipes. The stairs settling. A window easing in its frame." },
+  { say = "host", text = "People think a house is quiet when it's empty. It isn't. It's just talking to itself, now that it can." },
+]
+
+[[clip]]
+id = "dj-unvisited-hours-002"
+category = "dj"
+show = "unvisited-hours"
+lines = [
+  { say = "host", text = "Three in the morning. Every room in the wing is empty, every door closed, except the one. The piano is playing for all of them at once." },
+  { say = "host", text = "That takes some doing. It manages." },
+]
+
+# ── First Light in the East Wing (6–9) ────────────────────────────────────────
+
+[[clip]]
+id = "id-first-light"
+category = "id"
+show = "first-light"
+part = "open"
+lines = [
+  { say = "host", text = "Good morning. This is First Light in the East Wing. The sun is in the windows. The piano knows." },
+]
+
+[[clip]]
+id = "dj-first-light-001"
+category = "dj"
+show = "first-light"
+lines = [
+  { say = "host", text = "The sun has reached the ballroom. Long gold stripes from the windows, right across the floor, and the chandelier throwing little lights on the ceiling." },
+  { say = "host", text = "If anyone saw it, they'd gasp. Nobody will. It does it anyway. That's the whole idea, really." },
+]
+
+[[clip]]
+id = "dj-first-light-002"
+category = "dj"
+show = "first-light"
+lines = [
+  { say = "host", text = "Morning on the east side. The footprints are still there in the dust, from the other week. I haven't swept them." },
+  { say = "host", text = "The room seems to like them." },
+]
+
+# ── Halloween ─────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "dj-halloween-001"
+category = "dj"
+title = "Not Haunted"
+dates = ["10-24", "10-25", "10-26", "10-27", "10-28", "10-29", "10-30", "10-31"]
+lines = [
+  { say = "host", text = "It's the time of year when people ask me if the empty rooms are haunted. No. A haunted room has somebody in it." },
+  { say = "host", text = "These rooms are waiting for somebody. That's a different thing entirely. It's much less noise." },
+]
+
+[[clip]]
+id = "dj-halloween-002"
+category = "dj"
+title = "The Pumpkin"
+dates = ["10-24", "10-25", "10-26", "10-27", "10-28", "10-29", "10-30", "10-31"]
+lines = [
+  { say = "host", text = "Someone has left a carved pumpkin at the end of the west corridor. A candle in it. Lit. I didn't light it. Nobody has been in." },
+  { say = "host", text = "It's been glowing all week. I've decided not to look into it. It's company." },
+]

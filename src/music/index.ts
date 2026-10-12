@@ -99,7 +99,7 @@ export const RECIPE_INFO: Partial<Record<RecipeId, RecipeInfo>> = {
   },
   chiptune: {
     label: 'Chiptune',
-    description: 'Pulse-wave leads, a stepped triangle bass, noise drums and fast tracker arpeggios.',
+    description: 'Pulse-wave leads, a stepped triangle bass, noise drums and tracker arpeggios: verses, a chorus hook, a half-time bridge and a last chorus a step up.',
   },
   baroque: {
     label: 'Baroque',
@@ -107,11 +107,11 @@ export const RECIPE_INFO: Partial<Record<RecipeId, RecipeInfo>> = {
   },
   dub: {
     label: 'Dub',
-    description: 'One-drop drums, deep sub bass, offbeat skanks and long tape echoes that throw and fade.',
+    description: 'One-drop drums, a round bass over the sub, guitar-and-piano skanks, and the ends of phrases thrown into a long, dark tape echo.',
   },
   polka: {
     label: 'Polka',
-    description: 'Oom-pah tuba, accordion and clarinet in a brisk two-step. The trio goes to the subdominant.',
+    description: 'Oom-pah tuba, accordion and clarinet in a brisk two-step, with walk-ups and stop-time breaks. The trio goes to the subdominant.',
   },
   'tropical-marimba': {
     label: 'Tropical marimba',
@@ -131,7 +131,7 @@ export const RECIPE_INFO: Partial<Record<RecipeId, RecipeInfo>> = {
   },
   'sports-fanfare': {
     label: 'Sports fanfare',
-    description: 'Brass stabs, timpani and a marching snare: heroic, then politely backs off for commentary.',
+    description: 'Orchestral brass: a horn call and answering trumpets over timpani, then soft horns and a light side drum under the commentary.',
   },
   'numbers-musicbox': {
     label: 'Numbers music box',
@@ -188,55 +188,55 @@ export const RECIPE_INFO: Partial<Record<RecipeId, RecipeInfo>> = {
   },
   'cooking-bed': {
     label: 'Cooking bed',
-    description: 'Jaunty kitchen-show bed: pizzicato strings, marimba and a light shuffle.',
+    description: 'Jaunty kitchen-show bed: pizzicato bass and strings, a rolling marimba, a brushed shuffle and a timer bell to finish.',
   },
   'horoscope-bed': {
     label: 'Horoscope bed',
-    description: 'Mystic harp and glassy pads with a slow shimmer, for readings.',
+    description: 'Mystic harp arpeggios and glissandi over glassy pads and a low drone, for readings. Stranger skies get stranger scales.',
   },
   'noir-bed': {
     label: 'Noir bed',
-    description: 'Tense late-night noir: muted trumpet, brushed snare, upright bass and rain.',
+    description: 'Late-night noir: a minor line cliché on upright bass and low piano, brushes, rain on the window and a muted trumpet in the gaps.',
   },
   'quiz-bed': {
     label: 'Quiz bed',
-    description: 'Game-show tension bed with a ticking clock, stabs and a cheesy organ.',
+    description: 'Game-show tension: a ticking clock, pulse bass, a cheesy organ and brass stabs, climbing a semitone every round.',
   },
   'sleep-bed': {
     label: 'Sleep bed',
-    description: 'The softest possible pads and a music-box lull, for bedtime stories.',
+    description: 'The softest pads, breathing slowly, and a music box that has almost finished winding down.',
   },
   'kids-bed': {
     label: 'Kids bed',
-    description: "Bouncy children's-TV bed: ukulele, glockenspiel and hand claps.",
+    description: "Bouncy children's-TV bed: ukulele strums, a glockenspiel hook, hand claps and the occasional slide whistle.",
   },
   'community-bed': {
     label: 'Community bed',
-    description: 'Homely local-radio bed: acoustic guitar, light piano and a friendly shaker.',
+    description: 'Homely local-radio bed: fingerpicked acoustic guitar, a little light piano, a friendly shaker.',
   },
   'brass-band': {
     label: 'Brass band',
-    description: 'A village brass band: cornets, euphonium and a bass drum, slightly out of time.',
+    description: 'A village brass band: marches, hymns and fête waltzes on cornets, horns, euphonium and basses, each player slightly in their own time.',
   },
   'trucker-country': {
     label: 'Trucker country',
-    description: 'Late-night trucker country: pedal-steel swells, a boom-chicka rhythm and a lonesome harmonica.',
+    description: 'Late-night trucker country: boom-chicka two-steps and waltzes, pedal-steel swells and a lonesome harmonica.',
   },
   'test-tone': {
     label: 'Test tone',
-    description: 'Line-up tones and pips, as found between stations.',
+    description: 'A line-up tone with the left channel interrupted, groups of pips, stretches of hiss and the odd level change.',
   },
   'distress-beacon': {
     label: 'Distress beacon',
-    description: 'A faint, repeating morse beacon through the noise.',
+    description: 'A faint call sign keyed in morse, then a long carrier, drifting in pitch and fading through shortwave noise.',
   },
   'stuck-loop': {
     label: 'Stuck loop',
-    description: 'Four bars of a forgotten 1974 soft-rock single, looping forever.',
+    description: 'Four bars of a forgotten 1974 soft-rock single on a worn tape loop: wow, flutter, dropouts and a splice click every time round.',
   },
   'time-signal': {
     label: 'Time signal',
-    description: 'Precise pips on the second, from a clock that is very sure of itself.',
+    description: 'A pip on every second and a long one on the minute, over a faint carrier. Each dimension has its own idea of a second.',
   },
 };
 

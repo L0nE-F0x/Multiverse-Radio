@@ -1,0 +1,771 @@
+{
+  "version": 1,
+  "station": "tiny-hour",
+  "clips": [
+    {
+      "id": "id-001",
+      "category": "id",
+      "url": "/voice/tiny-hour/id-001.mp3",
+      "durationMs": 5791,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Auntie Pim",
+          "text": "The Tiny Hour! A programme for very small listeners. Please lean in.",
+          "startMs": 1955
+        }
+      ]
+    },
+    {
+      "id": "id-002",
+      "category": "id",
+      "url": "/voice/tiny-hour/id-002.mp3",
+      "durationMs": 3708,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Auntie Pim",
+          "text": "Hello, small ones! It's The Tiny Hour, from inside a matchbox.",
+          "startMs": 50
+        }
+      ]
+    },
+    {
+      "id": "id-003",
+      "category": "id",
+      "url": "/voice/tiny-hour/id-003.mp3",
+      "durationMs": 5155,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Dot, the Ladybird",
+          "text": "This is The Tiny Hour!",
+          "startMs": 40
+        },
+        {
+          "speaker": "Auntie Pim",
+          "text": "Well done, Dot!",
+          "startMs": 2009
+        }
+      ]
+    },
+    {
+      "id": "id-004",
+      "category": "id",
+      "url": "/voice/tiny-hour/id-004.mp3",
+      "durationMs": 5434,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Auntie Pim",
+          "text": "The Tiny Hour, on one hundred and four point three five. That's a big number. We're very proud of it.",
+          "startMs": 40
+        }
+      ]
+    },
+    {
+      "id": "show-morning-open",
+      "category": "id",
+      "url": "/voice/tiny-hour/show-morning-open.mp3",
+      "durationMs": 6474,
+      "overMusic": true,
+      "part": "open",
+      "show": "good-morning-small-ones",
+      "lines": [
+        {
+          "speaker": "Auntie Pim",
+          "text": "Good morning, small ones! It's breakfast time! I've got one oat. You've got one oat. Let's chew!",
+          "startMs": 1955
+        }
+      ]
+    },
+    {
+      "id": "show-morning-001",
+      "category": "dj",
+      "url": "/voice/tiny-hour/show-morning-001.mp3",
+      "durationMs": 7256,
+      "overMusic": true,
+      "show": "good-morning-small-ones",
+      "lines": [
+        {
+          "speaker": "Auntie Pim",
+          "text": "Breakfast tip! One grain of sugar is enough for six of us. Give it a lick, and pass it on.",
+          "startMs": 37
+        },
+        {
+          "speaker": "Auntie Pim",
+          "text": "Sharing is caring! And a bit sticky!",
+          "startMs": 5180
+        }
+      ]
+    },
+    {
+      "id": "show-crafternoon-open",
+      "category": "id",
+      "url": "/voice/tiny-hour/show-crafternoon-open.mp3",
+      "durationMs": 5735,
+      "overMusic": true,
+      "part": "open",
+      "show": "crafternoon",
+      "lines": [
+        {
+          "speaker": "Auntie Pim",
+          "text": "It's Crafternoon! Gather round the matchbox, everyone. Mind the pencil. It's rolling.",
+          "startMs": 441
+        }
+      ]
+    },
+    {
+      "id": "show-crafternoon-001",
+      "category": "dj",
+      "url": "/voice/tiny-hour/show-crafternoon-001.mp3",
+      "durationMs": 12723,
+      "overMusic": true,
+      "show": "crafternoon",
+      "lines": [
+        {
+          "speaker": "Dot, the Ladybird",
+          "text": "Auntie Pim, what's that big round thing?",
+          "startMs": 440
+        },
+        {
+          "speaker": "Auntie Pim",
+          "text": "That's a button, Dot! We could make a table out of it! Or a trampoline! Or a very small moon!",
+          "startMs": 2844
+        },
+        {
+          "speaker": "Dot, the Ladybird",
+          "text": "Can it be all three?",
+          "startMs": 7882
+        },
+        {
+          "speaker": "Auntie Pim",
+          "text": "On Crafternoon, everything can be all three!",
+          "startMs": 9584
+        }
+      ]
+    },
+    {
+      "id": "show-small-hours-open",
+      "category": "id",
+      "url": "/voice/tiny-hour/show-small-hours-open.mp3",
+      "durationMs": 5612,
+      "overMusic": true,
+      "daypart": "night",
+      "part": "open",
+      "show": "very-small-hours",
+      "lines": [
+        {
+          "speaker": "Auntie Pim",
+          "text": "Hello, small ones. It's the very small hours. The big people are asleep. Let's be very quiet.",
+          "startMs": 42
+        }
+      ]
+    },
+    {
+      "id": "show-small-hours-001",
+      "category": "dj",
+      "url": "/voice/tiny-hour/show-small-hours-001.mp3",
+      "durationMs": 14037,
+      "overMusic": true,
+      "show": "very-small-hours",
+      "lines": [
+        {
+          "speaker": "Auntie Pim",
+          "text": "If you can't sleep, listen to the big clock. Every tick is the clock saying: still here. Still here. It's a very good clock.",
+          "startMs": 43
+        },
+        {
+          "speaker": "Auntie Pim",
+          "text": "And hello to the operator on the big ship out there. From far enough away, you're quite small too. You're very welcome here.",
+          "startMs": 7388
+        }
+      ]
+    },
+    {
+      "id": "show-small-hours-002",
+      "category": "dj",
+      "url": "/voice/tiny-hour/show-small-hours-002.mp3",
+      "durationMs": 14703,
+      "title": "The Goodnight Song",
+      "overMusic": true,
+      "show": "very-small-hours",
+      "lines": [
+        {
+          "speaker": "Auntie Pim",
+          "text": "Here's the goodnight song. Whisper it with me.",
+          "startMs": 40
+        },
+        {
+          "speaker": "Auntie Pim",
+          "text": "The moon is a button, the stars are pins,",
+          "startMs": 3313
+        },
+        {
+          "speaker": "Auntie Pim",
+          "text": "the night is a blanket, so tuck yourself in.",
+          "startMs": 6278
+        },
+        {
+          "speaker": "Auntie Pim",
+          "text": "The big clock ticks, and the big house sleeps.",
+          "startMs": 9596
+        },
+        {
+          "speaker": "Auntie Pim",
+          "text": "Goodnight, small ones. And not a peep.",
+          "startMs": 12395
+        }
+      ]
+    },
+    {
+      "id": "craft-open-1",
+      "category": "show",
+      "url": "/voice/tiny-hour/craft-open-1.mp3",
+      "durationMs": 8677,
+      "overMusic": false,
+      "part": "open",
+      "kit": "craft",
+      "lines": [
+        {
+          "speaker": "Auntie Pim",
+          "text": "Crafty Corner! Today we're making a hat out of a raindrop. You'll need one raindrop, and somewhere dry to put it.",
+          "startMs": 2355
+        }
+      ]
+    },
+    {
+      "id": "craft-open-2",
+      "category": "show",
+      "url": "/voice/tiny-hour/craft-open-2.mp3",
+      "durationMs": 9109,
+      "overMusic": false,
+      "part": "open",
+      "kit": "craft",
+      "lines": [
+        {
+          "speaker": "Auntie Pim",
+          "text": "Crafty Corner! Today, a bed made from a matchbox. I'm sitting on mine! You'll need a matchbox, and something soft. A dandelion clock is perfect.",
+          "startMs": 442
+        }
+      ]
+    },
+    {
+      "id": "craft-open-3",
+      "category": "show",
+      "url": "/voice/tiny-hour/craft-open-3.mp3",
+      "durationMs": 7662,
+      "overMusic": false,
+      "part": "open",
+      "kit": "craft",
+      "lines": [
+        {
+          "speaker": "Auntie Pim",
+          "text": "Crafty Corner! A sail for your boat, from one sweet wrapper. Ask a grown-up for a sweet. Eat the sweet. Keep the wrapper.",
+          "startMs": 438
+        }
+      ]
+    },
+    {
+      "id": "craft-open-4",
+      "category": "show",
+      "url": "/voice/tiny-hour/craft-open-4.mp3",
+      "durationMs": 9088,
+      "overMusic": false,
+      "part": "open",
+      "kit": "craft",
+      "lines": [
+        {
+          "speaker": "Auntie Pim",
+          "text": "It's Crafty Corner! Today: a lovely warm scarf, knitted from one strand of wool. Just the one. It's plenty.",
+          "startMs": 2355
+        }
+      ]
+    },
+    {
+      "id": "craft-step-1",
+      "category": "show",
+      "url": "/voice/tiny-hour/craft-step-1.mp3",
+      "durationMs": 9934,
+      "overMusic": false,
+      "part": "body",
+      "kit": "craft",
+      "lines": [
+        {
+          "speaker": "Auntie Pim",
+          "text": "Find a nice flat button to work on. That's your table.",
+          "startMs": 449
+        },
+        {
+          "speaker": "Auntie Pim",
+          "text": "If it's got four holes, you've got four places to put things down, and one of them can be for your juice.",
+          "startMs": 3737
+        }
+      ]
+    },
+    {
+      "id": "craft-step-2",
+      "category": "show",
+      "url": "/voice/tiny-hour/craft-step-2.mp3",
+      "durationMs": 9509,
+      "overMusic": false,
+      "part": "body",
+      "kit": "craft",
+      "lines": [
+        {
+          "speaker": "Auntie Pim",
+          "text": "Now for the glue. We use honey. One drop. Only one!",
+          "startMs": 447
+        },
+        {
+          "speaker": "Auntie Pim",
+          "text": "If you use two drops, you become part of the craft, and that's how I lost most of last Thursday.",
+          "startMs": 3737
+        }
+      ]
+    },
+    {
+      "id": "craft-step-3",
+      "category": "show",
+      "url": "/voice/tiny-hour/craft-step-3.mp3",
+      "durationMs": 11810,
+      "overMusic": false,
+      "part": "body",
+      "kit": "craft",
+      "lines": [
+        {
+          "speaker": "Auntie Pim",
+          "text": "Time for cutting! Never use the big people's scissors. They're the size of a bridge. Ask a ladybird instead. Ladybirds have very neat edges. Dot?",
+          "startMs": 439
+        },
+        {
+          "speaker": "Dot, the Ladybird",
+          "text": "Snip!",
+          "startMs": 9141
+        },
+        {
+          "speaker": "Auntie Pim",
+          "text": "Thank you, Dot!",
+          "startMs": 10124
+        }
+      ]
+    },
+    {
+      "id": "craft-step-4",
+      "category": "show",
+      "url": "/voice/tiny-hour/craft-step-4.mp3",
+      "durationMs": 8171,
+      "overMusic": false,
+      "part": "body",
+      "kit": "craft",
+      "lines": [
+        {
+          "speaker": "Auntie Pim",
+          "text": "Made a mistake? That's all right! Blow on it, gently.",
+          "startMs": 445
+        },
+        {
+          "speaker": "Auntie Pim",
+          "text": "At our size, everything blows away if you ask it nicely. Even mistakes.",
+          "startMs": 3427
+        }
+      ]
+    },
+    {
+      "id": "craft-step-5",
+      "category": "show",
+      "url": "/voice/tiny-hour/craft-step-5.mp3",
+      "durationMs": 10597,
+      "overMusic": false,
+      "part": "body",
+      "kit": "craft",
+      "lines": [
+        {
+          "speaker": "Auntie Pim",
+          "text": "Now we wait for it to dry. While we wait, let's look around. What's that big shiny thing?",
+          "startMs": 447
+        },
+        {
+          "speaker": "Auntie Pim",
+          "text": "It's a spoon! Hello, spoon! Look, there's your face in it! Upside down! Isn't that silly?",
+          "startMs": 5499
+        }
+      ]
+    },
+    {
+      "id": "craft-step-6",
+      "category": "show",
+      "url": "/voice/tiny-hour/craft-step-6.mp3",
+      "durationMs": 8414,
+      "overMusic": false,
+      "part": "body",
+      "kit": "craft",
+      "lines": [
+        {
+          "speaker": "Auntie Pim",
+          "text": "Hold it up to the light! The light might be a lamp, or the sun, or the fridge door. Any of those is perfect.",
+          "startMs": 450
+        },
+        {
+          "speaker": "Auntie Pim",
+          "text": "Ooh. Look at it shine.",
+          "startMs": 6483
+        }
+      ]
+    },
+    {
+      "id": "craft-step-7",
+      "category": "show",
+      "url": "/voice/tiny-hour/craft-step-7.mp3",
+      "durationMs": 10856,
+      "overMusic": false,
+      "part": "body",
+      "kit": "craft",
+      "lines": [
+        {
+          "speaker": "Dot, the Ladybird",
+          "text": "Auntie Pim, mine's gone wrong.",
+          "startMs": 440
+        },
+        {
+          "speaker": "Auntie Pim",
+          "text": "Has it, Dot? Let's see.",
+          "startMs": 2570
+        },
+        {
+          "speaker": "Auntie Pim",
+          "text": "Oh, Dot. That isn't wrong. That's a different thing. It's a lovely different thing. Let's call it a surprise.",
+          "startMs": 4975
+        }
+      ]
+    },
+    {
+      "id": "craft-close-1",
+      "category": "show",
+      "url": "/voice/tiny-hour/craft-close-1.mp3",
+      "durationMs": 5258,
+      "overMusic": false,
+      "part": "close",
+      "kit": "craft",
+      "lines": [
+        {
+          "speaker": "Auntie Pim",
+          "text": "And there it is! Go and show a grown-up! You may need to stand on something and wave.",
+          "startMs": 442
+        }
+      ]
+    },
+    {
+      "id": "craft-close-2",
+      "category": "show",
+      "url": "/voice/tiny-hour/craft-close-2.mp3",
+      "durationMs": 6862,
+      "overMusic": false,
+      "part": "close",
+      "kit": "craft",
+      "lines": [
+        {
+          "speaker": "Auntie Pim",
+          "text": "Well done, everybody! Pop it somewhere safe, where nobody can hoover it.",
+          "startMs": 441
+        }
+      ]
+    },
+    {
+      "id": "craft-close-3",
+      "category": "show",
+      "url": "/voice/tiny-hour/craft-close-3.mp3",
+      "durationMs": 5662,
+      "overMusic": false,
+      "part": "close",
+      "kit": "craft",
+      "lines": [
+        {
+          "speaker": "Dot, the Ladybird",
+          "text": "Can I keep it, Auntie Pim?",
+          "startMs": 440
+        },
+        {
+          "speaker": "Auntie Pim",
+          "text": "Of course you can, Dot. That's what crafts are for.",
+          "startMs": 2420
+        }
+      ]
+    },
+    {
+      "id": "song-001",
+      "category": "dj",
+      "url": "/voice/tiny-hour/song-001.mp3",
+      "durationMs": 17014,
+      "title": "The Hoover Song",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Auntie Pim",
+          "text": "Song time! This one's about the hoover. Sing along, very quietly.",
+          "startMs": 39
+        },
+        {
+          "speaker": "Auntie Pim",
+          "text": "Here comes the hoover, hum, hum, hum.",
+          "startMs": 4502
+        },
+        {
+          "speaker": "Auntie Pim",
+          "text": "Under the thimble, quick as a crumb.",
+          "startMs": 6997
+        },
+        {
+          "speaker": "Auntie Pim",
+          "text": "Hold on to something, hold on tight.",
+          "startMs": 9252
+        },
+        {
+          "speaker": "Auntie Pim",
+          "text": "The hoover goes by, and we're all right!",
+          "startMs": 11749
+        },
+        {
+          "speaker": "Auntie Pim",
+          "text": "Well done! Is everybody still here? Good.",
+          "startMs": 14624
+        }
+      ]
+    },
+    {
+      "id": "song-002",
+      "category": "dj",
+      "url": "/voice/tiny-hour/song-002.mp3",
+      "durationMs": 10867,
+      "title": "Big Shoes",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Auntie Pim",
+          "text": "Big shoes walking, one and two,",
+          "startMs": 1955
+        },
+        {
+          "speaker": "Auntie Pim",
+          "text": "step to the side and let them through.",
+          "startMs": 4033
+        },
+        {
+          "speaker": "Auntie Pim",
+          "text": "They don't mean harm, they don't look down,",
+          "startMs": 6398
+        },
+        {
+          "speaker": "Auntie Pim",
+          "text": "they're only big shoes, walking round.",
+          "startMs": 8700
+        }
+      ]
+    },
+    {
+      "id": "song-003",
+      "category": "dj",
+      "url": "/voice/tiny-hour/song-003.mp3",
+      "durationMs": 12736,
+      "title": "The Crumb Song",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Auntie Pim",
+          "text": "Everybody knows this one! The Crumb Song!",
+          "startMs": 39
+        },
+        {
+          "speaker": "Auntie Pim",
+          "text": "I found a crumb, a crumb, a crumb,",
+          "startMs": 2861
+        },
+        {
+          "speaker": "Auntie Pim",
+          "text": "it's twice as big as my left thumb.",
+          "startMs": 5164
+        },
+        {
+          "speaker": "Auntie Pim",
+          "text": "I'll share it out with all my friends,",
+          "startMs": 7535
+        },
+        {
+          "speaker": "Auntie Pim",
+          "text": "and that's the way the crumb song ends!",
+          "startMs": 9768
+        },
+        {
+          "speaker": "Dot, the Ladybird",
+          "text": "Again!",
+          "startMs": 12023
+        }
+      ]
+    },
+    {
+      "id": "song-004",
+      "category": "dj",
+      "url": "/voice/tiny-hour/song-004.mp3",
+      "durationMs": 12280,
+      "title": "One Raindrop",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Auntie Pim",
+          "text": "One raindrop, big as a ball,",
+          "startMs": 35
+        },
+        {
+          "speaker": "Auntie Pim",
+          "text": "rolled down the window and paid us a call.",
+          "startMs": 2169
+        },
+        {
+          "speaker": "Auntie Pim",
+          "text": "We said hello, and it said splash,",
+          "startMs": 4763
+        },
+        {
+          "speaker": "Auntie Pim",
+          "text": "and off it went, in a silver flash.",
+          "startMs": 8304
+        }
+      ]
+    },
+    {
+      "id": "psa-001",
+      "category": "psa",
+      "url": "/voice/tiny-hour/psa-001.mp3",
+      "durationMs": 10408,
+      "title": "Auntie Pim's Safety Tip: The Hoover",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Auntie Pim",
+          "text": "Auntie Pim's safety tip! If you hear a big hum getting nearer, that's the hoover.",
+          "startMs": 42
+        },
+        {
+          "speaker": "Auntie Pim",
+          "text": "Get under a chair, hold on to a rug tassel, and think heavy thoughts. Bricks. Mondays. Very full suitcases.",
+          "startMs": 4382
+        }
+      ]
+    },
+    {
+      "id": "psa-002",
+      "category": "psa",
+      "url": "/voice/tiny-hour/psa-002.mp3",
+      "durationMs": 10221,
+      "title": "Auntie Pim's Safety Tip: The Cat",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Auntie Pim",
+          "text": "Auntie Pim's safety tip! If a cat looks at you, don't run. Cats love it when you run.",
+          "startMs": 43
+        },
+        {
+          "speaker": "Auntie Pim",
+          "text": "Stand very still, and look like a button. Cats aren't interested in buttons. Not for long, anyway.",
+          "startMs": 4851
+        }
+      ]
+    },
+    {
+      "id": "dj-001",
+      "category": "dj",
+      "url": "/voice/tiny-hour/dj-001.mp3",
+      "durationMs": 12386,
+      "title": "Letters and Drawings",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Auntie Pim",
+          "text": "Thank you to Ottilie, aged four days, for her drawing. It's a dot. It's a lovely dot. It's up on the fridge, which, for us, is a sort of mountain.",
+          "startMs": 41
+        },
+        {
+          "speaker": "Auntie Pim",
+          "text": "And happy birthday to Benedict, who is six minutes old today! Well done, Benedict!",
+          "startMs": 7959
+        }
+      ]
+    },
+    {
+      "id": "halloween-1",
+      "category": "dj",
+      "url": "/voice/tiny-hour/halloween-1.mp3",
+      "durationMs": 15848,
+      "title": "Halloween Crafty Corner",
+      "overMusic": true,
+      "dates": [
+        "10-24",
+        "10-25",
+        "10-26",
+        "10-27",
+        "10-28",
+        "10-29",
+        "10-30",
+        "10-31"
+      ],
+      "lines": [
+        {
+          "speaker": "Auntie Pim",
+          "text": "Halloween Crafty Corner! Today's costume is made from one sweet wrapper. Wrap it round you, and twist both ends. You're a sweet!",
+          "startMs": 3100
+        },
+        {
+          "speaker": "Auntie Pim",
+          "text": "Now, the big children will try to collect you. So roll away, as fast as you can. Happy Halloween!",
+          "startMs": 10298
+        }
+      ]
+    },
+    {
+      "id": "halloween-2",
+      "category": "dj",
+      "url": "/voice/tiny-hour/halloween-2.mp3",
+      "durationMs": 15238,
+      "title": "The Pumpkin Song",
+      "overMusic": true,
+      "dates": [
+        "10-24",
+        "10-25",
+        "10-26",
+        "10-27",
+        "10-28",
+        "10-29",
+        "10-30",
+        "10-31"
+      ],
+      "lines": [
+        {
+          "speaker": "Auntie Pim",
+          "text": "It's the Pumpkin Song!",
+          "startMs": 39
+        },
+        {
+          "speaker": "Auntie Pim",
+          "text": "The pumpkin's big, the pumpkin's round,",
+          "startMs": 1915
+        },
+        {
+          "speaker": "Auntie Pim",
+          "text": "it's got a face, it's on the ground.",
+          "startMs": 4397
+        },
+        {
+          "speaker": "Auntie Pim",
+          "text": "We'll climb inside and stay the night,",
+          "startMs": 6592
+        },
+        {
+          "speaker": "Auntie Pim",
+          "text": "it's warm in there, and full of light.",
+          "startMs": 8882
+        }
+      ]
+    }
+  ]
+}

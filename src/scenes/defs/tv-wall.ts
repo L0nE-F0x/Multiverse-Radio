@@ -1,6 +1,8 @@
-// Channel Surf: a wall of mismatched old TVs, each looping its own tiny programme. A remote
-// floats in front of the couch and will not stop clicking; screens flip at random.
+// Channel Surf: a dark living room lit only by a wall of mismatched old TVs, each looping its
+// own tiny programme. A remote floats in front of the couch and will not stop clicking;
+// screens flip at random.
 
+import { gloom, lightPool, reflectDown } from '../kit/atmos';
 import { type Color, hex, hsv, mix, ramp, shade } from '../kit/color';
 import { blinking, clamp, envelope, TAU } from '../kit/fx';
 import type { Gfx } from '../kit/gfx';
@@ -28,8 +30,9 @@ const def: SceneDef = {
   focusY: 92,
   rareEvents: 3,
   rareDuration: 6,
+  grade: { contrast: 1.14, saturation: 0.8, bloom: 0.7, threshold: 0.66, vignette: 0.36, shadows: '#06050a' },
   create({ accent }) {
-    const ink = hex('#0a0606');
+    const ink = hex('#060406');
     const BARS = [hex('#e8e8e8'), hex('#e8e83a'), hex('#3ae8e8'), hex('#3ae83a'), hex('#e83ae8'), hex('#e83a3a'), hex('#3a3ae8')];
     const FISH = [hex('#ff8a3a'), hex('#ffd34f'), hex('#ff6ab0')];
     const BUTTONS = [hex('#e8e8e8'), hex('#ffd34f'), hex('#4ac0ff')];
@@ -45,6 +48,8 @@ const def: SceneDef = {
       { x: 132, y: 14, w: 48, h: 38, body: hex('#4a3a5a'), knobs: true, antenna: true, ch: 7, staticUntil: 0 },
       { x: 186, y: 22, w: 36, h: 36, body: hex('#d86a2a'), knobs: false, antenna: false, ch: 8, staticUntil: 0 },
     ];
+    // The cabinets sit in the dark; only their screens are lit.
+    for (const tv of tvs) tv.body = mix(shade(tv.body, 0.45), hex('#140c10'), 0.45);
 
     const shows: Show[] = [
       // 0 an egg being folded
@@ -190,15 +195,17 @@ const def: SceneDef = {
     return {
       background(g) {
         // A dark living room with an orange glow from the screens.
-        g.vgrad([hex('#120a0c'), hex('#1e1014'), hex('#2a1418')], g.top, 170);
-        for (let x = g.left - (g.left % 16); x < g.right; x += 16) g.rect(x, g.top, 1, 170 - g.top, hex('#1a0e10'));
-        g.glow(160, 96, 150, accent, 0.12, 6);
-        g.vgrad([hex('#1a1012'), hex('#0e0808')], 162, g.bottom, 162);
+        g.vgrad([hex('#060407'), hex('#0c070a'), hex('#120a0e')], g.top, 170);
+        for (let x = g.left - (g.left % 16); x < g.right; x += 16) g.rect(x, g.top, 1, 170 - g.top, hex('#0e080a'));
+        g.glow(160, 96, 150, accent, 0.04, 6);
+        g.glow(160, 86, 120, hex('#8aa0c8'), 0.08, 6);
+        g.vgrad([hex('#0e080a'), hex('#060404')], 156, g.bottom, 156);
+        lightPool(g, 160, 160, 110, 8, hex('#8aa0c8'), 0.12);
         // TVs.
         for (const tv of tvs) {
           roundRect(g, tv.x - 1, tv.y - 1, tv.w + 2, tv.h + 2, 4, ink);
           roundRect(g, tv.x, tv.y, tv.w, tv.h, 4, tv.body);
-          g.rect(tv.x + 2, tv.y + 1, tv.w - 4, 1, mix(tv.body, hex('#ffffff'), 0.3));
+          g.rect(tv.x + 2, tv.y + 1, tv.w - 4, 1, mix(tv.body, hex('#ffffff'), 0.15));
           g.rect(tv.x + 2, tv.y + tv.h - 2, tv.w - 4, 1, shade(tv.body, 0.6));
           const s = screenOf(tv);
           roundRect(g, s.x - 2, s.y - 2, s.w + 4, s.h + 4, 3, ink);
@@ -211,16 +218,22 @@ const def: SceneDef = {
             for (let k = 0; k < 4; k++) g.hline(kx - 3, kx + 3, tv.y + 30 + k * 2, shade(tv.body, 0.5));
           }
           if (tv.antenna) {
-            g.line(tv.x + tv.w / 2, tv.y, tv.x + tv.w / 2 - 10, tv.y - 16, hex('#9a9aa8'));
-            g.line(tv.x + tv.w / 2, tv.y, tv.x + tv.w / 2 + 12, tv.y - 14, hex('#9a9aa8'));
+            g.line(tv.x + tv.w / 2, tv.y, tv.x + tv.w / 2 - 10, tv.y - 16, hex('#4a4a54'));
+            g.line(tv.x + tv.w / 2, tv.y, tv.x + tv.w / 2 + 12, tv.y - 14, hex('#4a4a54'));
           }
         }
         // The back of the couch, in the foreground.
         for (let y = 168; y < g.bottom; y++) {
           const k = (y - 168) / 20;
-          g.rect(g.left, y, g.w, 1, mix(hex('#8a3a24'), hex('#3a140c'), clamp(k)));
+          g.rect(g.left, y, g.w, 1, mix(hex('#2a120c'), hex('#0e0604'), clamp(k)));
         }
-        for (let x = g.left; x < g.right; x++) g.px(x, 168 + Math.round(Math.sin((x - 20) * 0.04) * 2), hex('#b04a2a'));
+        for (let x = g.left; x < g.right; x++) g.px(x, 168 + Math.round(Math.sin((x - 20) * 0.04) * 2), hex('#4a2414'));
+        gloom(g, g.left, g.top, g.w, 24 - g.top, 0.5, true);
+        g.lighting(0.45);
+        for (const tv of tvs) {
+          const sc = screenOf(tv);
+          g.light(sc.x + sc.w / 2, sc.y + sc.h / 2, sc.w * 1.1, 0.45);
+        }
       },
 
       frame(g, f) {
@@ -272,21 +285,26 @@ const def: SceneDef = {
           for (let y = s.y + 1; y < s.y + s.h; y += 2) g.rectMul(s.x, y, s.w, 1, 0.85);
           g.rectA(s.x + 1, s.y + 1, Math.min(10, s.w / 3), 1, hex('#ffffff'), 0.3);
           g.noClip();
-          g.glow(s.x + s.w / 2, s.y + s.h / 2, s.w * 0.7, hsv(i * 0.13, 0.4, 1), 0.05 + f.energy * 0.06, 4);
+          g.glow(s.x + s.w / 2, s.y + s.h / 2, s.w * 0.8, hsv(i * 0.13, 0.35, 1), 0.06 + f.energy * 0.05, 4);
         }
+
+        // The bottom row's light on the polished floor.
+        reflectDown(g, 56, 264, 156, 12, 0.22);
 
         // The floating remote.
         const bob = f.reduced ? 0 : Math.sin(t * 1.3) * 2;
         const rx = 160;
-        const ry = 154 + bob;
+        const ry = 146 + bob;
         const pressed = t - clickAt < 0.2;
         g.ellipseA(rx, 172, 10, 2, ink, 0.4);
         roundRect(g, rx - 7, ry - 14, 14, 30, 4, ink);
-        roundRect(g, rx - 6, ry - 13, 12, 28, 4, hex('#2a2a32'));
-        g.disc(rx, ry - 9, 2, pressed ? hex('#ff4a4a') : hex('#8a2a2a'));
+        roundRect(g, rx - 6, ry - 13, 12, 28, 4, hex('#1c1c22'));
+        g.vline(rx - 5, ry - 10, ry + 12, hex('#3a3a46'));
+        g.disc(rx, ry - 9, 2, pressed ? hex('#ff4a4a') : hex('#5a1a1a'));
+        if (pressed) g.glow(rx, ry - 9, 4, hex('#ff4a4a'), 0.5);
         for (let r = 0; r < 3; r++)
-          for (let c = 0; c < 3; c++) g.rect(rx - 4 + c * 3, ry - 4 + r * 3 + (pressed && r === 1 && c === 1 ? 1 : 0), 2, 2, BUTTONS[(r + c) % 3]!);
-        g.rect(rx - 4, ry + 6, 8, 4, accent);
+          for (let c = 0; c < 3; c++) g.rect(rx - 4 + c * 3, ry - 4 + r * 3 + (pressed && r === 1 && c === 1 ? 1 : 0), 2, 2, shade(BUTTONS[(r + c) % 3]!, 0.5));
+        g.rect(rx - 4, ry + 6, 8, 4, shade(accent, 0.6));
         // the IR beam to whichever TV it just changed
         if (pressed && clickTv >= 0 && !f.reduced) {
           const s = screenOf(tvs[clickTv]!);

@@ -1,0 +1,827 @@
+{
+  "version": 1,
+  "station": "bedtime-for-giants",
+  "clips": [
+    {
+      "id": "id-001",
+      "category": "id",
+      "url": "/voice/bedtime-for-giants/id-001.mp3",
+      "durationMs": 4733,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Nanny Bramblewick",
+          "text": "Bedtime for Giants. Read very slowly, so the ends arrive gently.",
+          "startMs": 37
+        }
+      ]
+    },
+    {
+      "id": "id-002",
+      "category": "id",
+      "url": "/voice/bedtime-for-giants/id-002.mp3",
+      "durationMs": 4579,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Nanny Bramblewick",
+          "text": "Shh.",
+          "startMs": 50
+        },
+        {
+          "speaker": "Nanny Bramblewick",
+          "text": "This is Bedtime for Giants.",
+          "startMs": 2406
+        }
+      ]
+    },
+    {
+      "id": "id-003",
+      "category": "id",
+      "url": "/voice/bedtime-for-giants/id-003.mp3",
+      "durationMs": 5195,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Nanny Bramblewick",
+          "text": "This is Nanny Bramblewick. Close your eyes, dear. Both of them. All of them, Agnes.",
+          "startMs": 35
+        }
+      ]
+    },
+    {
+      "id": "show-lullaby-open",
+      "category": "id",
+      "url": "/voice/bedtime-for-giants/show-lullaby-open.mp3",
+      "durationMs": 6647,
+      "overMusic": true,
+      "part": "open",
+      "show": "long-lullaby",
+      "lines": [
+        {
+          "speaker": "Nanny Bramblewick",
+          "text": "This is The Long Lullaby. Pull the quilt up to your chin, dear. Gently. Mind the village.",
+          "startMs": 437
+        }
+      ]
+    },
+    {
+      "id": "show-lullaby-001",
+      "category": "dj",
+      "url": "/voice/bedtime-for-giants/show-lullaby-001.mp3",
+      "durationMs": 15853,
+      "overMusic": true,
+      "show": "long-lullaby",
+      "lines": [
+        {
+          "speaker": "Bartholomew, a Giant",
+          "text": "Nanny? I can't sleep. My feet are in the next county, and they're cold.",
+          "startMs": 431
+        },
+        {
+          "speaker": "Nanny Bramblewick",
+          "text": "Then we'll ask the next county to put a blanket over them, dear.",
+          "startMs": 5079
+        },
+        {
+          "speaker": "Nanny Bramblewick",
+          "text": "There. Better?",
+          "startMs": 10805
+        },
+        {
+          "speaker": "Bartholomew, a Giant",
+          "text": "...Better.",
+          "startMs": 12403
+        },
+        {
+          "speaker": "Nanny Bramblewick",
+          "text": "Goodnight, Bartholomew.",
+          "startMs": 13462
+        }
+      ]
+    },
+    {
+      "id": "show-early-open",
+      "category": "id",
+      "url": "/voice/bedtime-for-giants/show-early-open.mp3",
+      "durationMs": 6551,
+      "overMusic": true,
+      "part": "open",
+      "show": "very-early-stories",
+      "lines": [
+        {
+          "speaker": "Nanny Bramblewick",
+          "text": "Very Early Stories. It isn't morning, dear. It's only thinking about it. Lie back down.",
+          "startMs": 436
+        }
+      ]
+    },
+    {
+      "id": "show-early-001",
+      "category": "dj",
+      "url": "/voice/bedtime-for-giants/show-early-001.mp3",
+      "durationMs": 15758,
+      "overMusic": true,
+      "show": "very-early-stories",
+      "lines": [
+        {
+          "speaker": "Nanny Bramblewick",
+          "text": "Hush, now. The birds aren't up. The sun's not up. Even the kettle's asleep.",
+          "startMs": 436
+        },
+        {
+          "speaker": "Nanny Bramblewick",
+          "text": "The only ones awake are you, and the operator on that little ship, out between the stations. Wave, if you like. They can't see you. It's still nice.",
+          "startMs": 6024
+        }
+      ]
+    },
+    {
+      "id": "show-nap-open",
+      "category": "id",
+      "url": "/voice/bedtime-for-giants/show-nap-open.mp3",
+      "durationMs": 6174,
+      "overMusic": true,
+      "part": "open",
+      "show": "afternoon-nap",
+      "lines": [
+        {
+          "speaker": "Nanny Bramblewick",
+          "text": "The Afternoon Nap. Draw the curtains, dear. They're about a mile each. Take your time.",
+          "startMs": 445
+        }
+      ]
+    },
+    {
+      "id": "show-nap-001",
+      "category": "dj",
+      "url": "/voice/bedtime-for-giants/show-nap-001.mp3",
+      "durationMs": 16123,
+      "overMusic": true,
+      "show": "afternoon-nap",
+      "lines": [
+        {
+          "speaker": "Nanny Bramblewick",
+          "text": "A giant's nap is a serious matter. Little Agnes napped last spring, and when she woke up, there was a village on her knee.",
+          "startMs": 436
+        },
+        {
+          "speaker": "Nanny Bramblewick",
+          "text": "They were very nice about it. They held a fete, and asked her to open it, and she did. Very carefully. With one finger.",
+          "startMs": 8377
+        }
+      ]
+    },
+    {
+      "id": "story-001",
+      "category": "story",
+      "url": "/voice/bedtime-for-giants/story-001.mp3",
+      "durationMs": 52987,
+      "title": "The Mountain Who Wanted a Hat",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Nanny Bramblewick",
+          "text": "Once upon a time, there was a mountain who wanted a hat.",
+          "startMs": 436
+        },
+        {
+          "speaker": "Nanny Bramblewick",
+          "text": "All the other mountains had snow on top, white and neat, like a good wool hat. But this was a low, round sort of mountain, and the snow never stayed. Every winter it slid off, and went to live in the valley.",
+          "startMs": 4845
+        },
+        {
+          "speaker": "Nanny Bramblewick",
+          "text": "So the mountain asked the clouds. Excuse me, it said, in its slow, stony voice. Would one of you sit on my head? Just for a while?",
+          "startMs": 17988
+        },
+        {
+          "speaker": "Nanny Bramblewick",
+          "text": "And a small grey cloud, who had nowhere in particular to be, said: all right.",
+          "startMs": 27157
+        },
+        {
+          "speaker": "Nanny Bramblewick",
+          "text": "And it sat there, on the mountain's head, all afternoon, and all evening. And the mountain felt very smart, and very warm, and a little bit...",
+          "startMs": 33039
+        },
+        {
+          "speaker": "Nanny Bramblewick",
+          "text": "Oh. He's asleep.",
+          "startMs": 45039
+        },
+        {
+          "speaker": "Nanny Bramblewick",
+          "text": "Goodnight, Bartholomew. There's a cloud on your head, dear. Leave it. It's company.",
+          "startMs": 47608
+        }
+      ]
+    },
+    {
+      "id": "story-002",
+      "category": "story",
+      "url": "/voice/bedtime-for-giants/story-002.mp3",
+      "durationMs": 51914,
+      "title": "The Very Small Moon",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Nanny Bramblewick",
+          "text": "Once upon a time, a giant found a very small moon. It was sitting in a field, about the size of a turnip, glowing a little, and looking lost.",
+          "startMs": 438
+        },
+        {
+          "speaker": "Nanny Bramblewick",
+          "text": "Are you a moon, said the giant. I'm trying to be, said the moon. But I've come down too far, and I don't know the way back up.",
+          "startMs": 10313
+        },
+        {
+          "speaker": "Nanny Bramblewick",
+          "text": "So the giant took it home in his pocket, and put it on the windowsill by his bed. And every night it glowed, just enough to see the edge of the quilt by.",
+          "startMs": 18887
+        },
+        {
+          "speaker": "Nanny Bramblewick",
+          "text": "Some nights it was full, and some nights it was only a little slice, because it didn't want to be any trouble.",
+          "startMs": 28689
+        },
+        {
+          "speaker": "Nanny Bramblewick",
+          "text": "And the giant would look at the moon, and the moon would look at the giant, and they'd both think: well. This is nice. And slowly, very slowly, the giant's eyes...",
+          "startMs": 36042
+        },
+        {
+          "speaker": "Nanny Bramblewick",
+          "text": "There. Goodnight, Agnes. Leave the moon on.",
+          "startMs": 48719
+        }
+      ]
+    },
+    {
+      "id": "story-003",
+      "category": "story",
+      "url": "/voice/bedtime-for-giants/story-003.mp3",
+      "durationMs": 50097,
+      "title": "The Sheep Who Counted Back",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Nanny Bramblewick",
+          "text": "There was once a giant who couldn't sleep, so he counted sheep.",
+          "startMs": 450
+        },
+        {
+          "speaker": "Nanny Bramblewick",
+          "text": "Now, sheep are very small, to a giant, so he needed a great many. He counted a thousand, and then ten thousand, and he wasn't the least bit tired. But the sheep were. They'd been going over that fence all night.",
+          "startMs": 4757
+        },
+        {
+          "speaker": "Nanny Bramblewick",
+          "text": "So the oldest sheep, whose name was Margery, stopped at the top of the fence, and turned round, and began to count the giant.",
+          "startMs": 18008
+        },
+        {
+          "speaker": "Nanny Bramblewick",
+          "text": "One giant, said Margery.",
+          "startMs": 26293
+        },
+        {
+          "speaker": "Nanny Bramblewick",
+          "text": "One giant.",
+          "startMs": 29795
+        },
+        {
+          "speaker": "Nanny Bramblewick",
+          "text": "One giant.",
+          "startMs": 32570
+        },
+        {
+          "speaker": "Nanny Bramblewick",
+          "text": "It's very restful, being counted. It means somebody has noticed you're there, and that you're one, and that one is enough.",
+          "startMs": 35346
+        },
+        {
+          "speaker": "Nanny Bramblewick",
+          "text": "One giant.",
+          "startMs": 44307
+        },
+        {
+          "speaker": "Nanny Bramblewick",
+          "text": "Goodnight.",
+          "startMs": 48083
+        }
+      ]
+    },
+    {
+      "id": "story-004",
+      "category": "story",
+      "url": "/voice/bedtime-for-giants/story-004.mp3",
+      "durationMs": 45459,
+      "title": "The Giant Who Hid Too Well",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Nanny Bramblewick",
+          "text": "Once there was a giant who loved hide and seek, but was very bad at it, being about the size of a hill.",
+          "startMs": 443
+        },
+        {
+          "speaker": "Nanny Bramblewick",
+          "text": "He'd hide behind a forest, and his head would stick out of the top. He'd hide behind a lake, and everyone could see his knees.",
+          "startMs": 7477
+        },
+        {
+          "speaker": "Nanny Bramblewick",
+          "text": "So one day he lay down in a field, and kept very still. So still that grass grew on him. So still that a sheep wandered up his arm, and a little path wore across his tummy, and a family came and had a picnic on his knee.",
+          "startMs": 15852
+        },
+        {
+          "speaker": "Nanny Bramblewick",
+          "text": "And nobody found him. Not for years. And he lay there, very happy, listening to the picnics.",
+          "startMs": 30128
+        },
+        {
+          "speaker": "Nanny Bramblewick",
+          "text": "He won, in the end. He's still winning, actually.",
+          "startMs": 37899
+        },
+        {
+          "speaker": "Nanny Bramblewick",
+          "text": "Shh. Don't tell anyone where he is.",
+          "startMs": 42079
+        }
+      ]
+    },
+    {
+      "id": "story-005",
+      "category": "story",
+      "url": "/voice/bedtime-for-giants/story-005.mp3",
+      "durationMs": 48103,
+      "title": "The Lighthouse Who Told Stories",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Nanny Bramblewick",
+          "text": "There was once a lighthouse who told bedtime stories to the ships.",
+          "startMs": 435
+        },
+        {
+          "speaker": "Nanny Bramblewick",
+          "text": "It didn't have a voice, so it told them with its light. One flash for each word. Very slowly. Out across the dark water.",
+          "startMs": 5048
+        },
+        {
+          "speaker": "Nanny Bramblewick",
+          "text": "Once.",
+          "startMs": 13997
+        },
+        {
+          "speaker": "Nanny Bramblewick",
+          "text": "Upon.",
+          "startMs": 17027
+        },
+        {
+          "speaker": "Nanny Bramblewick",
+          "text": "A.",
+          "startMs": 19876
+        },
+        {
+          "speaker": "Nanny Bramblewick",
+          "text": "Time.",
+          "startMs": 22656
+        },
+        {
+          "speaker": "Nanny Bramblewick",
+          "text": "It took a very long time to tell a story that way. The ships didn't mind. They rocked on the water, and watched the light come round, and waited for the next word, the way you wait for the next breath.",
+          "startMs": 25427
+        },
+        {
+          "speaker": "Nanny Bramblewick",
+          "text": "Nobody ever found out how the stories ended. Not one ship. They were always asleep by the fourth word.",
+          "startMs": 37507
+        },
+        {
+          "speaker": "Nanny Bramblewick",
+          "text": "Very sensible, ships.",
+          "startMs": 45632
+        }
+      ]
+    },
+    {
+      "id": "story-006",
+      "category": "story",
+      "url": "/voice/bedtime-for-giants/story-006.mp3",
+      "durationMs": 41650,
+      "title": "The Giant's Slippers",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Nanny Bramblewick",
+          "text": "A giant's slippers are very large, and very old, and very patient.",
+          "startMs": 435
+        },
+        {
+          "speaker": "Nanny Bramblewick",
+          "text": "Every night they wait by the bed, side by side, like two warm boats tied up in a harbour. And every night, the giant steps out of them and climbs into bed, and the slippers stay where they are, keeping each other company.",
+          "startMs": 5601
+        },
+        {
+          "speaker": "Nanny Bramblewick",
+          "text": "They talk a little, once the lights are out. The left one worries about the stairs. The right one says, he always manages. And he does.",
+          "startMs": 19100
+        },
+        {
+          "speaker": "Nanny Bramblewick",
+          "text": "And when the rain comes, like tonight, they listen to it on the window, and they think: we're inside. We're together. The feet will be back in the morning.",
+          "startMs": 28227
+        },
+        {
+          "speaker": "Nanny Bramblewick",
+          "text": "That's all slippers want, really.",
+          "startMs": 38934
+        }
+      ]
+    },
+    {
+      "id": "walk-open-1",
+      "category": "story",
+      "url": "/voice/bedtime-for-giants/walk-open-1.mp3",
+      "durationMs": 6094,
+      "overMusic": false,
+      "part": "open",
+      "kit": "walk-home",
+      "lines": [
+        {
+          "speaker": "Nanny Bramblewick",
+          "text": "Now. Where were we.",
+          "startMs": 439
+        },
+        {
+          "speaker": "Nanny Bramblewick",
+          "text": "Ah, yes. The giant was walking home.",
+          "startMs": 2967
+        }
+      ]
+    },
+    {
+      "id": "walk-open-2",
+      "category": "story",
+      "url": "/voice/bedtime-for-giants/walk-open-2.mp3",
+      "durationMs": 7326,
+      "overMusic": false,
+      "part": "open",
+      "kit": "walk-home",
+      "lines": [
+        {
+          "speaker": "Nanny Bramblewick",
+          "text": "Tonight's story is about a giant on his way to bed. It's a long way. Lie still. We'll walk with him.",
+          "startMs": 441
+        }
+      ]
+    },
+    {
+      "id": "walk-open-3",
+      "category": "story",
+      "url": "/voice/bedtime-for-giants/walk-open-3.mp3",
+      "durationMs": 6394,
+      "overMusic": false,
+      "part": "open",
+      "kit": "walk-home",
+      "lines": [
+        {
+          "speaker": "Nanny Bramblewick",
+          "text": "Once, not very long ago, a giant set off home after a long day of being enormous.",
+          "startMs": 444
+        }
+      ]
+    },
+    {
+      "id": "walk-001",
+      "category": "story",
+      "url": "/voice/bedtime-for-giants/walk-001.mp3",
+      "durationMs": 16768,
+      "overMusic": false,
+      "part": "body",
+      "kit": "walk-home",
+      "lines": [
+        {
+          "speaker": "Nanny Bramblewick",
+          "text": "He walked past a forest so old it had forgotten it was a forest, and thought it was a crowd. A very tall, very quiet crowd, waiting for something nice to happen.",
+          "startMs": 438
+        },
+        {
+          "speaker": "Nanny Bramblewick",
+          "text": "He tiptoed past. Giants can tiptoe. It takes about a week.",
+          "startMs": 11904
+        }
+      ]
+    },
+    {
+      "id": "walk-002",
+      "category": "story",
+      "url": "/voice/bedtime-for-giants/walk-002.mp3",
+      "durationMs": 14030,
+      "overMusic": false,
+      "part": "body",
+      "kit": "walk-home",
+      "lines": [
+        {
+          "speaker": "Nanny Bramblewick",
+          "text": "He stepped over a river. It was a small river, and he was a large giant, so he stepped over it the way you would step over a ribbon.",
+          "startMs": 441
+        },
+        {
+          "speaker": "Nanny Bramblewick",
+          "text": "The river said thank you. Rivers are very polite, if you don't stand in them.",
+          "startMs": 8892
+        }
+      ]
+    },
+    {
+      "id": "walk-003",
+      "category": "story",
+      "url": "/voice/bedtime-for-giants/walk-003.mp3",
+      "durationMs": 18363,
+      "overMusic": false,
+      "part": "body",
+      "kit": "walk-home",
+      "lines": [
+        {
+          "speaker": "Nanny Bramblewick",
+          "text": "He passed a village with all its lights out but one. In the one lit window, a girl was reading under a blanket with a torch.",
+          "startMs": 450
+        },
+        {
+          "speaker": "Nanny Bramblewick",
+          "text": "He bent down, very slowly, and blew the curtains closed. Just a little breath. Like this.",
+          "startMs": 8081
+        },
+        {
+          "speaker": "Nanny Bramblewick",
+          "text": "Goodnight, girl with the torch.",
+          "startMs": 15705
+        }
+      ]
+    },
+    {
+      "id": "walk-004",
+      "category": "story",
+      "url": "/voice/bedtime-for-giants/walk-004.mp3",
+      "durationMs": 16711,
+      "overMusic": false,
+      "part": "body",
+      "kit": "walk-home",
+      "lines": [
+        {
+          "speaker": "Nanny Bramblewick",
+          "text": "An owl landed on his shoulder, and asked where he was going. Home, said the giant. The owl said that sounded nice, and stayed for the ride.",
+          "startMs": 435
+        },
+        {
+          "speaker": "Nanny Bramblewick",
+          "text": "Owls are good company. They don't talk much. Now and then they say who, to keep you on your toes.",
+          "startMs": 10309
+        }
+      ]
+    },
+    {
+      "id": "walk-005",
+      "category": "story",
+      "url": "/voice/bedtime-for-giants/walk-005.mp3",
+      "durationMs": 11964,
+      "overMusic": false,
+      "part": "body",
+      "kit": "walk-home",
+      "lines": [
+        {
+          "speaker": "Nanny Bramblewick",
+          "text": "The clouds came down low to see who was walking, and he walked right through them, and for a while he couldn't see his own feet.",
+          "startMs": 436
+        },
+        {
+          "speaker": "Nanny Bramblewick",
+          "text": "That's all right, he thought. They know the way.",
+          "startMs": 8890
+        }
+      ]
+    },
+    {
+      "id": "walk-006",
+      "category": "story",
+      "url": "/voice/bedtime-for-giants/walk-006.mp3",
+      "durationMs": 13645,
+      "overMusic": false,
+      "part": "body",
+      "kit": "walk-home",
+      "lines": [
+        {
+          "speaker": "Nanny Bramblewick",
+          "text": "He counted the stars as he walked. He got to eleven thousand, and lost his place, and had to start again.",
+          "startMs": 440
+        },
+        {
+          "speaker": "Nanny Bramblewick",
+          "text": "He didn't mind. It's a good thing, to have something to count that never runs out.",
+          "startMs": 8064
+        }
+      ]
+    },
+    {
+      "id": "walk-close-1",
+      "category": "story",
+      "url": "/voice/bedtime-for-giants/walk-close-1.mp3",
+      "durationMs": 6182,
+      "overMusic": false,
+      "part": "close",
+      "kit": "walk-home",
+      "lines": [
+        {
+          "speaker": "Nanny Bramblewick",
+          "text": "And by then, he was nearly home.",
+          "startMs": 435
+        },
+        {
+          "speaker": "Nanny Bramblewick",
+          "text": "And so are you. Goodnight.",
+          "startMs": 3642
+        }
+      ]
+    },
+    {
+      "id": "walk-close-2",
+      "category": "story",
+      "url": "/voice/bedtime-for-giants/walk-close-2.mp3",
+      "durationMs": 8072,
+      "overMusic": false,
+      "part": "close",
+      "kit": "walk-home",
+      "lines": [
+        {
+          "speaker": "Nanny Bramblewick",
+          "text": "And then he yawned. Such a big yawn that the wind turned round.",
+          "startMs": 441
+        },
+        {
+          "speaker": "Nanny Bramblewick",
+          "text": "Goodnight, giant. Goodnight, you.",
+          "startMs": 5298
+        }
+      ]
+    },
+    {
+      "id": "walk-close-3",
+      "category": "story",
+      "url": "/voice/bedtime-for-giants/walk-close-3.mp3",
+      "durationMs": 6261,
+      "overMusic": false,
+      "part": "close",
+      "kit": "walk-home",
+      "lines": [
+        {
+          "speaker": "Nanny Bramblewick",
+          "text": "We'll find out what happened next tomorrow.",
+          "startMs": 437
+        },
+        {
+          "speaker": "Nanny Bramblewick",
+          "text": "We never do. Sleep well.",
+          "startMs": 3786
+        }
+      ]
+    },
+    {
+      "id": "dj-001",
+      "category": "dj",
+      "url": "/voice/bedtime-for-giants/dj-001.mp3",
+      "durationMs": 13005,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Nanny Bramblewick",
+          "text": "I've been reading to giants for a very long time, dear, and I have never once finished a story.",
+          "startMs": 440
+        },
+        {
+          "speaker": "Nanny Bramblewick",
+          "text": "Nobody has ever stayed awake for one. I think that's the nicest thing a story can do.",
+          "startMs": 6982
+        }
+      ]
+    },
+    {
+      "id": "weather-001",
+      "category": "weather",
+      "url": "/voice/bedtime-for-giants/weather-001.mp3",
+      "durationMs": 19733,
+      "title": "A Forecast for the Very Large",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Nanny Bramblewick",
+          "text": "A forecast for the very large. A light breeze tonight, from the east. That's Bartholomew, breathing out.",
+          "startMs": 440
+        },
+        {
+          "speaker": "Nanny Bramblewick",
+          "text": "Then a light breeze from the west. That's Bartholomew, breathing in. Mind your hats.",
+          "startMs": 8074
+        },
+        {
+          "speaker": "Nanny Bramblewick",
+          "text": "Settling by morning. Snoring in the hills, later. Nothing to worry about.",
+          "startMs": 14125
+        }
+      ]
+    },
+    {
+      "id": "halloween-1",
+      "category": "story",
+      "url": "/voice/bedtime-for-giants/halloween-1.mp3",
+      "durationMs": 46630,
+      "title": "The Ghost Who Was Too Small",
+      "overMusic": false,
+      "dates": [
+        "10-24",
+        "10-25",
+        "10-26",
+        "10-27",
+        "10-28",
+        "10-29",
+        "10-30",
+        "10-31"
+      ],
+      "lines": [
+        {
+          "speaker": "Nanny Bramblewick",
+          "text": "Once upon a time, a very small ghost went to haunt a giant.",
+          "startMs": 449
+        },
+        {
+          "speaker": "Nanny Bramblewick",
+          "text": "It floated up the stairs, which took most of the night, and into the giant's bedroom, and it said: boo.",
+          "startMs": 5136
+        },
+        {
+          "speaker": "Nanny Bramblewick",
+          "text": "The giant didn't hear. So the ghost said it again, louder. Boo.",
+          "startMs": 12010
+        },
+        {
+          "speaker": "Nanny Bramblewick",
+          "text": "The giant opened one enormous eye, and looked at the ghost, and said: oh. A moth. And went back to sleep.",
+          "startMs": 16967
+        },
+        {
+          "speaker": "Nanny Bramblewick",
+          "text": "The ghost was very offended. But it was also very tired, after all those stairs, and the lampshade looked warm. So it curled up inside. Just for a minute.",
+          "startMs": 24838
+        },
+        {
+          "speaker": "Nanny Bramblewick",
+          "text": "It lives there now. It keeps the light soft. Some nights it says boo, very quietly, to itself, just to keep its hand in.",
+          "startMs": 35093
+        },
+        {
+          "speaker": "Nanny Bramblewick",
+          "text": "Goodnight, little ghost.",
+          "startMs": 44217
+        }
+      ]
+    },
+    {
+      "id": "halloween-2",
+      "category": "dj",
+      "url": "/voice/bedtime-for-giants/halloween-2.mp3",
+      "durationMs": 11240,
+      "title": "A Sheet in the Valley",
+      "overMusic": true,
+      "dates": [
+        "10-24",
+        "10-25",
+        "10-26",
+        "10-27",
+        "10-28",
+        "10-29",
+        "10-30",
+        "10-31"
+      ],
+      "lines": [
+        {
+          "speaker": "Nanny Bramblewick",
+          "text": "It's nearly Halloween, so if you see a very large sheet walking about the valley this week, please don't be frightened.",
+          "startMs": 37
+        },
+        {
+          "speaker": "Little Agnes, a Giant",
+          "text": "Nanny? I can't find my nightie.",
+          "startMs": 6962
+        },
+        {
+          "speaker": "Nanny Bramblewick",
+          "text": "That's only Agnes.",
+          "startMs": 9546
+        }
+      ]
+    }
+  ]
+}

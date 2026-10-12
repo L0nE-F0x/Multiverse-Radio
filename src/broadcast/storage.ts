@@ -3,7 +3,9 @@
 
 const KEYS = {
   station: 'multiverse-radio:last-station',
+  frequency: 'multiverse-radio:last-frequency',
   volume: 'multiverse-radio:volume',
+  discovered: 'multiverse-radio:discovered',
 } as const;
 
 function read(key: string): string | null {
@@ -22,6 +24,12 @@ function write(key: string, value: string): void {
   }
 }
 
+const finite = (raw: string | null): number | null => {
+  if (raw === null) return null;
+  const value = Number(raw);
+  return Number.isFinite(value) ? value : null;
+};
+
 export const storage = {
   getLastStation(): string | null {
     return read(KEYS.station);
@@ -29,13 +37,30 @@ export const storage = {
   setLastStation(id: string): void {
     write(KEYS.station, id);
   },
+  /** The dial position at the end of the last visit (MHz). */
+  getLastFrequency(): number | null {
+    return finite(read(KEYS.frequency));
+  },
+  setLastFrequency(mhz: number): void {
+    write(KEYS.frequency, mhz.toFixed(3));
+  },
   getVolume(): number | null {
-    const raw = read(KEYS.volume);
-    if (raw === null) return null;
-    const value = Number(raw);
-    return Number.isFinite(value) ? Math.min(1, Math.max(0, value)) : null;
+    const value = finite(read(KEYS.volume));
+    return value === null ? null : Math.min(1, Math.max(0, value));
   },
   setVolume(volume: number): void {
     write(KEYS.volume, volume.toFixed(3));
+  },
+  /** Ids of secret and pirate stations this listener has found. */
+  getDiscovered(): string[] {
+    try {
+      const value: unknown = JSON.parse(read(KEYS.discovered) ?? '[]');
+      return Array.isArray(value) ? value.filter((x): x is string => typeof x === 'string').slice(0, 500) : [];
+    } catch {
+      return [];
+    }
+  },
+  setDiscovered(ids: string[]): void {
+    write(KEYS.discovered, JSON.stringify(ids.slice(-500)));
   },
 };

@@ -1,0 +1,726 @@
+{
+  "version": 1,
+  "station": "plant-fm",
+  "clips": [
+    {
+      "id": "id-001",
+      "category": "id",
+      "url": "/voice/plant-fm/id-001.mp3",
+      "durationMs": 4419,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Fern",
+          "text": "Plant FM.",
+          "startMs": 441
+        },
+        {
+          "speaker": "Fern",
+          "text": "Light.",
+          "startMs": 3059
+        }
+      ]
+    },
+    {
+      "id": "id-002",
+      "category": "id",
+      "url": "/voice/plant-fm/id-002.mp3",
+      "durationMs": 5959,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Fern",
+          "text": "This is Plant FM. Programming for houseplants. Lean towards the window.",
+          "startMs": 38
+        }
+      ]
+    },
+    {
+      "id": "id-003",
+      "category": "id",
+      "url": "/voice/plant-fm/id-003.mp3",
+      "durationMs": 3924,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Fern",
+          "text": "Plant FM. One oh six. Very slow. Very green.",
+          "startMs": 37
+        }
+      ]
+    },
+    {
+      "id": "id-004",
+      "category": "id",
+      "url": "/voice/plant-fm/id-004.mp3",
+      "durationMs": 5110,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Fern",
+          "text": "Plant FM.",
+          "startMs": 441
+        },
+        {
+          "speaker": "Fern",
+          "text": "Still here.",
+          "startMs": 3559
+        }
+      ]
+    },
+    {
+      "id": "show-first-light-open",
+      "category": "id",
+      "url": "/voice/plant-fm/show-first-light-open.mp3",
+      "durationMs": 4683,
+      "overMusic": true,
+      "part": "open",
+      "show": "first-light",
+      "lines": [
+        {
+          "speaker": "Fern",
+          "text": "First Light.",
+          "startMs": 441
+        },
+        {
+          "speaker": "Fern",
+          "text": "Here it comes.",
+          "startMs": 2921
+        }
+      ]
+    },
+    {
+      "id": "show-first-light-001",
+      "category": "dj",
+      "url": "/voice/plant-fm/show-first-light-001.mp3",
+      "durationMs": 13025,
+      "overMusic": true,
+      "show": "first-light",
+      "lines": [
+        {
+          "speaker": "Fern",
+          "text": "The first light is on the top shelf. The orchid has it. The orchid always has it first.",
+          "startMs": 437
+        },
+        {
+          "speaker": "Fern",
+          "text": "We don't mind.",
+          "startMs": 8735
+        },
+        {
+          "speaker": "Fern",
+          "text": "We mind a little.",
+          "startMs": 11273
+        }
+      ]
+    },
+    {
+      "id": "show-full-sun-open",
+      "category": "id",
+      "url": "/voice/plant-fm/show-full-sun-open.mp3",
+      "durationMs": 5434,
+      "overMusic": true,
+      "part": "open",
+      "show": "full-sun",
+      "lines": [
+        {
+          "speaker": "Fern",
+          "text": "This is Full Sun.",
+          "startMs": 438
+        },
+        {
+          "speaker": "Fern",
+          "text": "Everyone. Open.",
+          "startMs": 3310
+        }
+      ]
+    },
+    {
+      "id": "show-full-sun-001",
+      "category": "dj",
+      "url": "/voice/plant-fm/show-full-sun-001.mp3",
+      "durationMs": 17468,
+      "overMusic": true,
+      "show": "full-sun",
+      "lines": [
+        {
+          "speaker": "Fern",
+          "text": "The sun is right overhead. This is it. This is the good part. We have been waiting all morning.",
+          "startMs": 436
+        },
+        {
+          "speaker": "Fern",
+          "text": "Nobody speak.",
+          "startMs": 8306
+        },
+        {
+          "speaker": "Fern",
+          "text": "Thank you.",
+          "startMs": 15943
+        }
+      ]
+    },
+    {
+      "id": "show-dark-open",
+      "category": "id",
+      "url": "/voice/plant-fm/show-dark-open.mp3",
+      "durationMs": 5920,
+      "overMusic": true,
+      "daypart": "night",
+      "part": "open",
+      "show": "dark-hours",
+      "lines": [
+        {
+          "speaker": "Fern",
+          "text": "The Dark Hours.",
+          "startMs": 41
+        },
+        {
+          "speaker": "Fern",
+          "text": "Rest now. Grow a little. Nobody's watching.",
+          "startMs": 2779
+        }
+      ]
+    },
+    {
+      "id": "show-dark-001",
+      "category": "dj",
+      "url": "/voice/plant-fm/show-dark-001.mp3",
+      "durationMs": 10331,
+      "overMusic": true,
+      "show": "dark-hours",
+      "lines": [
+        {
+          "speaker": "Fern",
+          "text": "Night. The cactus has taken his headphones off. He says the bass is better in the dark.",
+          "startMs": 37
+        },
+        {
+          "speaker": "Fern",
+          "text": "He still doesn't have ears.",
+          "startMs": 8430
+        }
+      ]
+    },
+    {
+      "id": "show-dark-002",
+      "category": "dj",
+      "url": "/voice/plant-fm/show-dark-002.mp3",
+      "durationMs": 7850,
+      "overMusic": true,
+      "show": "dark-hours",
+      "lines": [
+        {
+          "speaker": "Fern",
+          "text": "It is dark.",
+          "startMs": 40
+        },
+        {
+          "speaker": "Fern",
+          "text": "We are not sad about it. We are making sugar from the memory of the day.",
+          "startMs": 2563
+        }
+      ]
+    },
+    {
+      "id": "dj-001",
+      "category": "dj",
+      "url": "/voice/plant-fm/dj-001.mp3",
+      "durationMs": 8765,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Fern",
+          "text": "A cloud.",
+          "startMs": 441
+        },
+        {
+          "speaker": "Fern",
+          "text": "It's gone.",
+          "startMs": 4351
+        },
+        {
+          "speaker": "Fern",
+          "text": "Everyone relax.",
+          "startMs": 6740
+        }
+      ]
+    },
+    {
+      "id": "dj-002",
+      "category": "dj",
+      "url": "/voice/plant-fm/dj-002.mp3",
+      "durationMs": 8498,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Fern",
+          "text": "We have all turned towards the window. All of us. At once.",
+          "startMs": 39
+        },
+        {
+          "speaker": "Fern",
+          "text": "Nobody planned it. It's just what we're like.",
+          "startMs": 5355
+        }
+      ]
+    },
+    {
+      "id": "dj-003",
+      "category": "dj",
+      "url": "/voice/plant-fm/dj-003.mp3",
+      "durationMs": 8323,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Fern",
+          "text": "The cactus is wearing headphones. He says it's for the bass.",
+          "startMs": 37
+        },
+        {
+          "speaker": "Fern",
+          "text": "He doesn't have ears. We don't bring it up.",
+          "startMs": 5762
+        }
+      ]
+    },
+    {
+      "id": "dj-004",
+      "category": "dj",
+      "url": "/voice/plant-fm/dj-004.mp3",
+      "durationMs": 11407,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Fern",
+          "text": "Someone is coming with the watering can.",
+          "startMs": 435
+        },
+        {
+          "speaker": "Fern",
+          "text": "Stay calm.",
+          "startMs": 4594
+        },
+        {
+          "speaker": "Fern",
+          "text": "Be green.",
+          "startMs": 6654
+        },
+        {
+          "speaker": "Fern",
+          "text": "Ah.",
+          "startMs": 10153
+        }
+      ]
+    },
+    {
+      "id": "dj-005",
+      "category": "dj",
+      "url": "/voice/plant-fm/dj-005.mp3",
+      "durationMs": 9960,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Fern",
+          "text": "To the fern in the corner. You are unfurling beautifully. Take your time.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Fern",
+          "text": "Take a week.",
+          "startMs": 6455
+        },
+        {
+          "speaker": "Fern",
+          "text": "Take the spring.",
+          "startMs": 8703
+        }
+      ]
+    },
+    {
+      "id": "dj-006",
+      "category": "dj",
+      "url": "/voice/plant-fm/dj-006.mp3",
+      "durationMs": 11738,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Fern",
+          "text": "Somebody has moved us to a different windowsill. The light is coming from a new direction.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Fern",
+          "text": "We will need about a fortnight to talk about it.",
+          "startMs": 8409
+        }
+      ]
+    },
+    {
+      "id": "dj-007",
+      "category": "dj",
+      "url": "/voice/plant-fm/dj-007.mp3",
+      "durationMs": 9432,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Fern",
+          "text": "To the operator on the relay ship. You are near a star.",
+          "startMs": 39
+        },
+        {
+          "speaker": "Fern",
+          "text": "Turn a little towards it.",
+          "startMs": 5679
+        },
+        {
+          "speaker": "Fern",
+          "text": "It helps.",
+          "startMs": 8562
+        }
+      ]
+    },
+    {
+      "id": "dj-008",
+      "category": "dj",
+      "url": "/voice/plant-fm/dj-008.mp3",
+      "durationMs": 7716,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Fern",
+          "text": "A leaf has fallen. It was a good leaf. It did a lot of light.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Fern",
+          "text": "Thank you, leaf.",
+          "startMs": 6574
+        }
+      ]
+    },
+    {
+      "id": "dj-009",
+      "category": "dj",
+      "url": "/voice/plant-fm/dj-009.mp3",
+      "durationMs": 7324,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The Cactus",
+          "text": "Is this the bass bit?",
+          "startMs": 41
+        },
+        {
+          "speaker": "Fern",
+          "text": "No.",
+          "startMs": 1924
+        },
+        {
+          "speaker": "The Cactus",
+          "text": "Is this?",
+          "startMs": 5108
+        },
+        {
+          "speaker": "Fern",
+          "text": "No, dear.",
+          "startMs": 6316
+        }
+      ]
+    },
+    {
+      "id": "dj-010",
+      "category": "dj",
+      "url": "/voice/plant-fm/dj-010.mp3",
+      "durationMs": 9064,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Fern",
+          "text": "Someone said hello to us this morning. Out loud. In a soft voice.",
+          "startMs": 39
+        },
+        {
+          "speaker": "Fern",
+          "text": "We grew a little. We didn't tell them.",
+          "startMs": 6744
+        }
+      ]
+    },
+    {
+      "id": "light-open-1",
+      "category": "weather",
+      "url": "/voice/plant-fm/light-open-1.mp3",
+      "durationMs": 2379,
+      "overMusic": false,
+      "part": "open",
+      "kit": "light",
+      "lines": [
+        {
+          "speaker": "Fern",
+          "text": "The light report.",
+          "startMs": 437
+        }
+      ]
+    },
+    {
+      "id": "light-open-2",
+      "category": "weather",
+      "url": "/voice/plant-fm/light-open-2.mp3",
+      "durationMs": 2300,
+      "overMusic": false,
+      "part": "open",
+      "kit": "light",
+      "lines": [
+        {
+          "speaker": "Fern",
+          "text": "Here is the light.",
+          "startMs": 441
+        }
+      ]
+    },
+    {
+      "id": "light-001",
+      "category": "weather",
+      "url": "/voice/plant-fm/light-001.mp3",
+      "durationMs": 12019,
+      "overMusic": false,
+      "part": "body",
+      "kit": "light",
+      "lines": [
+        {
+          "speaker": "Fern",
+          "text": "Light from the window. Good. Coming in at an angle. Some of it is landing on the floor.",
+          "startMs": 439
+        },
+        {
+          "speaker": "Fern",
+          "text": "The floor doesn't need it. We don't say anything.",
+          "startMs": 8085
+        }
+      ]
+    },
+    {
+      "id": "light-002",
+      "category": "weather",
+      "url": "/voice/plant-fm/light-002.mp3",
+      "durationMs": 7487,
+      "overMusic": false,
+      "part": "body",
+      "kit": "light",
+      "lines": [
+        {
+          "speaker": "Fern",
+          "text": "Light from the lamp. Warm. Not the sun.",
+          "startMs": 437
+        },
+        {
+          "speaker": "Fern",
+          "text": "But trying. We appreciate the effort.",
+          "startMs": 4366
+        }
+      ]
+    },
+    {
+      "id": "light-003",
+      "category": "weather",
+      "url": "/voice/plant-fm/light-003.mp3",
+      "durationMs": 8197,
+      "overMusic": false,
+      "part": "body",
+      "kit": "light",
+      "lines": [
+        {
+          "speaker": "Fern",
+          "text": "Dust in the sunbeam. Lots of it. Moving very slowly.",
+          "startMs": 438
+        },
+        {
+          "speaker": "Fern",
+          "text": "Like us. We feel seen.",
+          "startMs": 5759
+        }
+      ]
+    },
+    {
+      "id": "light-004",
+      "category": "weather",
+      "url": "/voice/plant-fm/light-004.mp3",
+      "durationMs": 9074,
+      "overMusic": false,
+      "part": "body",
+      "kit": "light",
+      "lines": [
+        {
+          "speaker": "Fern",
+          "text": "Light from the fridge. Briefly. At night. When somebody opens it.",
+          "startMs": 436
+        },
+        {
+          "speaker": "Fern",
+          "text": "It's not much. We'll take it.",
+          "startMs": 6394
+        }
+      ]
+    },
+    {
+      "id": "light-005",
+      "category": "weather",
+      "url": "/voice/plant-fm/light-005.mp3",
+      "durationMs": 10003,
+      "overMusic": false,
+      "part": "body",
+      "kit": "light",
+      "lines": [
+        {
+          "speaker": "Fern",
+          "text": "The sun has gone behind the house next door.",
+          "startMs": 438
+        },
+        {
+          "speaker": "Fern",
+          "text": "It will come back. It always comes back. We lean, and we wait.",
+          "startMs": 4963
+        }
+      ]
+    },
+    {
+      "id": "light-006",
+      "category": "weather",
+      "url": "/voice/plant-fm/light-006.mp3",
+      "durationMs": 10187,
+      "overMusic": false,
+      "part": "body",
+      "kit": "light",
+      "lines": [
+        {
+          "speaker": "Fern",
+          "text": "Light from a screen, very late. Blue. Thin. Somebody is up, reading something.",
+          "startMs": 439
+        },
+        {
+          "speaker": "Fern",
+          "text": "We hope it's good. Go to bed soon.",
+          "startMs": 7227
+        }
+      ]
+    },
+    {
+      "id": "light-close-1",
+      "category": "weather",
+      "url": "/voice/plant-fm/light-close-1.mp3",
+      "durationMs": 4540,
+      "overMusic": false,
+      "part": "close",
+      "kit": "light",
+      "lines": [
+        {
+          "speaker": "Fern",
+          "text": "That is all the light.",
+          "startMs": 441
+        },
+        {
+          "speaker": "Fern",
+          "text": "Thank you.",
+          "startMs": 3014
+        }
+      ]
+    },
+    {
+      "id": "light-close-2",
+      "category": "weather",
+      "url": "/voice/plant-fm/light-close-2.mp3",
+      "durationMs": 5148,
+      "overMusic": false,
+      "part": "close",
+      "kit": "light",
+      "lines": [
+        {
+          "speaker": "Fern",
+          "text": "More light later. Probably.",
+          "startMs": 437
+        },
+        {
+          "speaker": "Fern",
+          "text": "Grow.",
+          "startMs": 3791
+        }
+      ]
+    },
+    {
+      "id": "halloween-1",
+      "category": "dj",
+      "url": "/voice/plant-fm/halloween-1.mp3",
+      "durationMs": 16924,
+      "title": "The Pumpkin",
+      "overMusic": true,
+      "dates": [
+        "10-24",
+        "10-25",
+        "10-26",
+        "10-27",
+        "10-28",
+        "10-29",
+        "10-30",
+        "10-31"
+      ],
+      "lines": [
+        {
+          "speaker": "Fern",
+          "text": "A pumpkin has joined us on the windowsill.",
+          "startMs": 37
+        },
+        {
+          "speaker": "Fern",
+          "text": "It is very big. Very orange.",
+          "startMs": 4529
+        },
+        {
+          "speaker": "Fern",
+          "text": "Somebody has carved a face into it.",
+          "startMs": 8487
+        },
+        {
+          "speaker": "Fern",
+          "text": "We are not going to talk about that.",
+          "startMs": 14362
+        }
+      ]
+    },
+    {
+      "id": "halloween-2",
+      "category": "dj",
+      "url": "/voice/plant-fm/halloween-2.mp3",
+      "durationMs": 9674,
+      "title": "The Candle",
+      "overMusic": true,
+      "dates": [
+        "10-24",
+        "10-25",
+        "10-26",
+        "10-27",
+        "10-28",
+        "10-29",
+        "10-30",
+        "10-31"
+      ],
+      "lines": [
+        {
+          "speaker": "Fern",
+          "text": "There is a candle inside the pumpkin.",
+          "startMs": 37
+        },
+        {
+          "speaker": "Fern",
+          "text": "It is light.",
+          "startMs": 4095
+        },
+        {
+          "speaker": "Fern",
+          "text": "We have decided to forgive everything.",
+          "startMs": 7115
+        }
+      ]
+    }
+  ]
+}

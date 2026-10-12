@@ -6,6 +6,8 @@ station = "wild-multiverse"
 [voices]
 host = { voice = "bm_george", speed = 0.92, name = "Sir Reginald Thistlewood" }
 pip = { voice = "am_liam", fx = "whisper", name = "Pip (Camera)" }
+# v3: serial.
+teodor = { voice = "bm_daniel", fx = "distant", name = "Teodor, Relay Four" }
 
 # ── Idents ────────────────────────────────────────────────────────────────────
 
@@ -287,4 +289,293 @@ lines = [
   { say = "host", text = "I'm sure it is.", gap = 0.8 },
   { say = "host", text = "I think it is. Remarkable creature. Possibly. I'd like to say remarkable. Pip, is it remarkable?", gap = 0.6 },
   { say = "pip", text = "I don't know any more." },
+]
+
+# ══ v3: the living schedule ═══════════════════════════════════════════════════
+#
+# Shows, the nature kit (Sir Reginald settles in, one to three creatures, then a quiet
+# exit), a serial episode and Halloween. Existing clips above are rendered and deployed;
+# only add.
+
+# ── Shows ─────────────────────────────────────────────────────────────────────
+
+[[show]]
+id = "the-dawn-chorus"
+name = "The Dawn Chorus"
+blurb = "Something enormous is waking up. Sir Reginald narrates it, very quietly."
+start = 5
+end = 7
+
+[[show]]
+id = "the-night-shoot"
+name = "The Night Shoot"
+blurb = "Hushed footage from the tall grass after dark. Keep your feet inside the tent."
+start = 22
+end = 2
+
+[[clip]]
+id = "the-dawn-chorus-open"
+category = "id"
+show = "the-dawn-chorus"
+part = "open"
+title = "The Dawn Chorus"
+bed = "wind"
+lines = [
+  { say = "host", text = "Good morning. This is the Dawn Chorus.", gap = 0.6 },
+  { say = "host", text = "Something enormous is waking up. Very quietly now." },
+]
+
+[[clip]]
+id = "the-dawn-chorus-01"
+category = "dj"
+show = "the-dawn-chorus"
+lines = [
+  { say = "host", text = "Dawn. The first bird begins to sing. It is not very good. It is trying its best.", gap = 0.8 },
+  { say = "host", text = "And here comes the second bird. It is worse. They are, I believe, in love." },
+]
+
+[[clip]]
+id = "the-dawn-chorus-02"
+category = "dj"
+show = "the-dawn-chorus"
+lines = [
+  { say = "host", text = "On the horizon, as the sun comes up, the mostly-neck giraffe is still going past. It has been going past since the series began.", gap = 0.6 },
+  { say = "pip", text = "Still no head." },
+  { say = "host", text = "Still no head, Pip. What a morning." },
+]
+
+[[clip]]
+id = "the-night-shoot-open"
+category = "id"
+show = "the-night-shoot"
+part = "open"
+title = "The Night Shoot"
+bed = "night"
+lines = [
+  { say = "host", text = "This is the Night Shoot. Keep your voice down. Keep your feet inside the tent.", gap = 0.6 },
+  { say = "pip", text = "My feet are inside the tent." },
+  { say = "host", text = "Keep them there, Pip." },
+]
+
+[[clip]]
+id = "the-night-shoot-01"
+category = "dj"
+show = "the-night-shoot"
+bed = "night"
+lines = [
+  { say = "host", text = "By night, the tall grass belongs to other creatures. Things with lanterns. Things with opinions.", gap = 0.8 },
+  { say = "host", text = "Something has just walked past the tent, very slowly, humming. Pip is pretending to be asleep.", gap = 0.6 },
+  { say = "pip", text = "I am asleep." },
+]
+
+[[clip]]
+id = "the-night-shoot-02"
+category = "dj"
+show = "the-night-shoot"
+lines = [
+  { say = "host", text = "The night camera sees only warmth. Here is the crew, glowing. Here is the kettle, glowing. And here, in the corner of the frame, a creature we cannot identify.", gap = 1.0 },
+  { say = "host", text = "It is holding a biscuit. It is our biscuit." },
+]
+
+# ── Nature kit ────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "nature-open-01"
+category = "story"
+kit = "nature"
+part = "open"
+bed = "wind"
+lines = [
+  { say = "host", text = "Here, in the tall grass, we wait. Very quietly." },
+]
+
+[[clip]]
+id = "nature-open-02"
+category = "story"
+kit = "nature"
+part = "open"
+bed = "wind"
+lines = [
+  { say = "host", text = "Wild Multiverse. Something is moving. Nobody move." },
+]
+
+[[clip]]
+id = "nature-open-03"
+category = "story"
+kit = "nature"
+part = "open"
+lines = [
+  { say = "host", text = "Something has noticed the camera. Stay very still, everyone." },
+]
+
+[[clip]]
+id = "nature-open-04"
+category = "story"
+kit = "nature"
+part = "open"
+daypart = "night"
+bed = "night"
+lines = [
+  { say = "host", text = "By lamplight, the grass looks different. So, I'm afraid, do we." },
+]
+
+[[clip]]
+id = "nature-body-01"
+category = "story"
+kit = "nature"
+part = "body"
+lines = [
+  { say = "host", text = "The lesser spotted umbrella opens only when it is certain nobody is looking. It has never once been seen open.", gap = 0.6 },
+  { say = "host", text = "And yet every morning, the grass beneath it is dry." },
+]
+
+[[clip]]
+id = "nature-body-02"
+category = "story"
+kit = "nature"
+part = "body"
+lines = [
+  { say = "host", text = "A herd of reluctant antelope crosses the valley. Every few steps, each one stops to ask the one in front if this is really necessary.", gap = 0.6 },
+  { say = "host", text = "It is. It's the migration. They go anyway. They always do." },
+]
+
+[[clip]]
+id = "nature-body-03"
+category = "story"
+kit = "nature"
+part = "body"
+lines = [
+  { say = "host", text = "The apologising moose. When startled, it says sorry. When it startles you, it says sorry.", gap = 0.6 },
+  { say = "host", text = "It has spent its whole life apologising, and it has never once done anything wrong. We have grown very fond of it." },
+]
+
+[[clip]]
+id = "nature-body-04"
+category = "story"
+kit = "nature"
+part = "body"
+lines = [
+  { say = "host", text = "The library owl hunts only in silence, and insists on it from everyone else. When the crew opened a packet of crisps this evening, it turned its head all the way round and looked at us.", gap = 0.6 },
+  { say = "host", text = "We have put the crisps away. We will never take them out again." },
+]
+
+[[clip]]
+id = "nature-body-05"
+category = "story"
+kit = "nature"
+part = "body"
+lines = [
+  { say = "host", text = "The lantern badger trots past, lit by the glowing patch on its back that it cannot see, quite certain that the world is simply brighter wherever it goes.", gap = 0.6 },
+  { say = "host", text = "We still haven't told it. We never will." },
+]
+
+[[clip]]
+id = "nature-body-06"
+category = "story"
+kit = "nature"
+part = "body"
+lines = [
+  { say = "host", text = "Overhead, the great crested doubt is circling. It has already eaten the director's plan, and most of my opening sentence.", gap = 0.6 },
+  { say = "host", text = "I believe this is a documentary. I believe so." },
+]
+
+[[clip]]
+id = "nature-body-07"
+category = "story"
+kit = "nature"
+part = "body"
+lines = [
+  { say = "host", text = "A family of hedgehogs crosses the clearing in single file, each one holding the tail of the one in front. The smallest is at the back, very proud of the job.", gap = 0.6 },
+  { say = "host", text = "Nobody has told it that hedgehogs don't have tails." },
+]
+
+[[clip]]
+id = "nature-close-01"
+category = "story"
+kit = "nature"
+part = "close"
+lines = [
+  { say = "pip", text = "Sir Reginald, it's looking at us." },
+  { say = "host", text = "Then let it look, Pip. We've been looking at it all week." },
+]
+
+[[clip]]
+id = "nature-close-02"
+category = "story"
+kit = "nature"
+part = "close"
+lines = [
+  { say = "host", text = "Magnificent. Pip, keep rolling." },
+  { say = "pip", text = "I'm out of film." },
+  { say = "host", text = "Keep rolling anyway." },
+]
+
+[[clip]]
+id = "nature-close-03"
+category = "story"
+kit = "nature"
+part = "close"
+lines = [
+  { say = "host", text = "We'll leave it there. Quietly. Backing away. Mind the kettle, Pip." },
+]
+
+[[clip]]
+id = "nature-close-04"
+category = "story"
+kit = "nature"
+part = "close"
+lines = [
+  { say = "host", text = "And so the grass closes behind it, as grass does, and it is gone." },
+]
+
+# ── Serials (one episode a day; see the other stations for the rest) ─────────
+
+[[clip]]
+id = "teodor-is-heard-08"
+category = "story"
+serial = { id = "teodor-is-heard", episode = 8 }
+title = "Teodor Is Heard, Part Eight: The Relay Gull"
+bed = "wind"
+lines = [
+  { say = "host", text = "Today, an expedition to the very edge of the dial, to film one of the rarest creatures in the multiverse. The relay keeper." },
+  { say = "host", text = "Note the cardigan. Note the kettle, which is always on. Each night the keeper climbs his tower and calls a single question into the dark.", gap = 0.8 },
+  { say = "teodor", text = "Is anyone receiving this.", gap = 1.2 },
+  { say = "pip", text = "Sir Reginald. Something's coming. It's mostly beak." },
+  { say = "host", text = "And here, at three o'clock precisely, the relay gull. Known to the keeper as Captain.", gap = 0.8 },
+  { say = "host", text = "Each afternoon the gull arrives with small rolled pieces of paper in its beak. Messages. From listeners all across the dial. Replies.", gap = 1.0 },
+  { say = "host", text = "Now, observe.", gap = 1.4 },
+  { say = "pip", text = "He's eating them." },
+  { say = "host", text = "He is eating them, Pip. Every one. For eleven years, the relay gull has carried replies to the relay keeper, and eaten them on the doorstep.", gap = 1.0 },
+  { say = "host", text = "The keeper does not know. He pats the gull, and gives it a biscuit, and says, no post today, Captain.", gap = 1.4 },
+  { say = "pip", text = "Should we tell him?" },
+  { say = "host", text = "We are a nature documentary, Pip. We do not interfere.", gap = 1.6 },
+  { say = "host", text = "Pip has gone to tell him.", gap = 1.0 },
+  { say = "host", text = "Pip has interfered. Magnificently.", gap = 1.2 },
+  { say = "teodor", text = "They're replies? All of them? For eleven years?", gap = 1.2 },
+  { say = "teodor", text = "Captain. You absolute gull." },
+]
+
+# ── Halloween (24 to 31 October) ──────────────────────────────────────────────
+
+[[clip]]
+id = "halloween-01"
+category = "story"
+kit = "nature"
+part = "body"
+title = "The Common Pumpkin"
+dates = ["10-24", "10-25", "10-26", "10-27", "10-28", "10-29", "10-30", "10-31"]
+lines = [
+  { say = "host", text = "The common pumpkin, in the wild, grows a face only in the last week of October. Nobody carves it. It simply decides.", gap = 0.6 },
+  { say = "host", text = "By Halloween, every pumpkin on the hillside is grinning at the crew. Pip has asked to sleep in the van." },
+]
+
+[[clip]]
+id = "halloween-02"
+category = "id"
+title = "Something in the Long Grass"
+dates = ["10-24", "10-25", "10-26", "10-27", "10-28", "10-29", "10-30", "10-31"]
+lines = [
+  { say = "host", text = "Wild Multiverse, at Halloween. Something is moving in the long grass.", gap = 0.6 },
+  { say = "pip", text = "It's me. I'm dressed as a lion." },
+  { say = "host", text = "Magnificent." },
 ]

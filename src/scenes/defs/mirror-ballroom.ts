@@ -1,246 +1,340 @@
-// Mirror World Polka Hour: a checkered ballroom split by a giant mirror. Dancers on one side,
-// reflections on the other, slightly out of step. Sometimes a reflection does something else.
+// Mirror World Polka Hour: a dim ballroom late at night, split down the middle by a giant
+// mirror. A couple polkas across the polished floor beside a tuba player; in the glass their
+// reflections dance a fraction late. Now and then a reflection has other ideas.
 
-import { type Color, hex, mix, shade } from '../kit/color';
-import { envelope } from '../kit/fx';
+import { gloom, haze, lightPool, motes, reflectDown } from '../kit/atmos';
+import { type Color, hex, mix, moodRamp, shade } from '../kit/color';
+import { clamp, envelope } from '../kit/fx';
 import { type Gfx, mulPx } from '../kit/gfx';
-import { arc, frameRect } from '../kit/shapes';
+import { hash3 } from '../kit/rng';
+import { arc } from '../kit/shapes';
 import type { SceneDef } from '../types';
 
-const MX = 160; // mirror line
-const WALL_Y = 92;
+const MX = 160; // the mirror
+const WALL_Y = 88;
 const HOR = 40;
+const COUPLE_Y = 128;
+const TUBA_Y = 113;
 
 interface Pal {
-  skin: Color;
+  skin: Color[];
   hair: Color;
-  suit: Color;
+  suit: Color[];
   shirt: Color;
-  dress: Color;
-  trim: Color;
+  dress: Color[];
+  coat: Color[];
+  brass: Color[];
   ink: Color;
-  brass: Color;
-  brassD: Color;
 }
+
+type Mode = 'polka' | 'idle' | 'wave' | 'twirl';
 
 const def: SceneDef = {
   id: 'mirror-ballroom',
   fps: 20,
-  rareEvents: 3,
+  focusY: 86,
+  rareEvents: 4,
   rareDuration: 7,
+  grade: { temperature: 0.25, contrast: 1.15, saturation: 0.82, bloom: 0.65, vignette: 0.32 },
   create({ accent }) {
-    const ink = hex('#140a10');
-    const wallC = [hex('#3a0c18'), hex('#4e1222'), hex('#64182c')];
-    const gold = hex('#e0b050');
-    const goldD = hex('#8a6420');
-    const tileA = hex('#f2e4d0');
-    const tileB = shade(accent, 0.55);
-    const tint = hex('#9ab0d8');
-    const base: Pal = {
-      skin: hex('#f0c8a0'),
-      hair: hex('#3a2418'),
-      suit: hex('#1e2a4a'),
-      shirt: hex('#f4f0e8'),
-      dress: accent,
-      trim: mix(accent, hex('#ffffff'), 0.5),
+    const ink = hex('#0b0608');
+    const wall = [hex('#1c070d'), hex('#2c0d16'), hex('#3c1420')];
+    const gold = [hex('#3a2810'), hex('#765424'), hex('#b08440'), hex('#e0bc78')];
+    const tileA = hex('#5e4e48');
+    const tileB = hex('#2a141a');
+    const glass = hex('#8aa4c8');
+    const real: Pal = {
+      skin: [hex('#5e3828'), hex('#a8705a'), hex('#d8a080')],
+      hair: hex('#1e140e'),
+      suit: [hex('#0a0c14'), hex('#171b28'), hex('#2a3046')],
+      shirt: hex('#d8d0c4'),
+      dress: moodRamp(accent, 4, { sat: 0.75, dark: 0.16, light: 0.62 }),
+      coat: [hex('#1a0a0e'), hex('#3a1620'), hex('#56222e')],
+      brass: [hex('#3a2408'), hex('#7a5420'), hex('#b8883c'), hex('#ead08a')],
       ink,
-      brass: hex('#e8b84a'),
-      brassD: hex('#9a6a1a'),
     };
-    const mirrorPal = Object.fromEntries(Object.entries(base).map(([k, v]) => [k, mix(v as number, tint, 0.22)])) as unknown as Pal;
-    const dressB = hex('#ffd34f');
+    // In the glass everything is a little colder and dimmer.
+    const cool = (c: Color) => mix(shade(c, 0.86), glass, 0.16);
+    const mirror: Pal = {
+      skin: real.skin.map(cool),
+      hair: cool(real.hair),
+      suit: real.suit.map(cool),
+      shirt: cool(real.shirt),
+      dress: real.dress.map(cool),
+      coat: real.coat.map(cool),
+      brass: real.brass.map(cool),
+      ink,
+    };
 
-    const person = (g: Gfx, x: number, y: number, p: Pal, woman: boolean, hop: number, arm: number, dress?: Color, upside = false) => {
+    const head = (g: Gfx, x: number, y: number, dir: number, p: Pal, woman: boolean) => {
+      g.disc(x, y, 5, ink);
+      g.disc(x, y, 4, p.skin[1]!);
+      g.ellipse(x + dir, y + 1, 2, 3, p.skin[2]!);
+      g.px(x + dir * 5, y, p.skin[1]!);
+      // hair: slicked back for him, a bun for her
+      g.ellipse(x - dir, y - 3, 4, 2, p.hair);
+      g.rect(x - dir * 4 - (dir > 0 ? 0 : 1), y - 3, 2, 4, p.hair);
+      if (woman) {
+        g.disc(x - dir * 4, y - 4, 2.2, p.hair);
+        g.px(x - dir * 4, y - 5, mix(p.hair, hex('#ffffff'), 0.2));
+      }
+      g.px(x + dir * 3, y - 1, ink);
+    };
+
+    // He: tailcoat, white tie. (x, foot) = between the feet.
+    const man = (g: Gfx, x: number, foot: number, dir: 1 | -1, p: Pal, step: number, hop: number) => {
       x = Math.round(x);
-      y = Math.round(y - hop);
-      if (upside) {
-        // a headstand spin, as one does
-        g.disc(x, y - 3, 3, p.skin);
-        g.rect(x - 3, y - 15, 7, 10, woman ? (dress ?? p.dress) : p.suit);
-        g.rect(x - 4 - arm, y - 6, 2, 4, p.skin);
-        g.rect(x + 3 + arm, y - 6, 2, 4, p.skin);
-        g.line(x - 1, y - 15, x - 4 - arm, y - 24, p.suit);
-        g.line(x + 1, y - 15, x + 4 + arm, y - 24, p.suit);
-        return;
-      }
-      // legs
-      const kick = Math.round(hop * 0.7);
-      g.rect(x - 2, y - 6, 1, 6 - kick, woman ? p.skin : p.suit);
-      g.rect(x + 1, y - 6, 1, 6, woman ? p.skin : p.suit);
-      g.rect(x - 3, y - 1 - kick, 2, 1, p.ink);
-      g.rect(x + 1, y - 1, 2, 1, p.ink);
-      if (woman) {
-        const d = dress ?? p.dress;
-        g.poly([x - 2, y - 15, x + 3, y - 15, x + 6, y - 5, x - 5, y - 5], d);
-        g.hline(x - 5, x + 5, y - 6, p.trim);
-        g.rect(x - 2, y - 15, 5, 1, p.trim);
-      } else {
-        g.rect(x - 3, y - 15, 7, 9, p.suit);
-        g.px(x, y - 14, p.shirt);
-        g.px(x, y - 13, p.shirt);
-        g.px(x, y - 12, hex('#c83a3a'));
-      }
-      // arms
-      g.line(x - 3, y - 13, x - 5 - arm, y - 9 - arm, woman ? p.skin : p.suit);
-      g.line(x + 3, y - 13, x + 5 + arm, y - 9 - arm, woman ? p.skin : p.suit);
-      // head
-      g.disc(x, y - 18, 3, p.ink);
-      g.disc(x, y - 18, 2, p.skin);
-      if (woman) {
-        g.rect(x - 2, y - 21, 5, 2, p.hair);
-        g.disc(x, y - 22, 1, p.hair);
-      } else {
-        g.rect(x - 2, y - 21, 5, 2, p.hair);
-        g.px(x - 2, y - 19, p.hair);
-      }
+      const y = Math.round(foot - hop);
+      const lift = Math.round(step * 3);
+      // legs and shoes
+      g.rect(x - 3, y - 18, 3, 17, p.suit[1]!);
+      g.rect(x + 1, y - 18, 3, 17 - lift, p.suit[2]!);
+      g.rect(x - 4, y - 2, 5, 2, ink);
+      g.rect(x + 1 + dir, y - 2 - lift, 5, 2, ink);
+      g.px(x - 3, y - 2, p.suit[2]!);
+      // tails behind, coat, shirt front, white tie
+      g.poly([x - dir * 2, y - 30, x - dir * 7, y - 30, x - dir * 8, y - 13, x - dir * 4, y - 15], p.suit[0]!);
+      g.rect(x - 5, y - 32, 11, 15, ink);
+      g.rect(x - 4, y - 31, 9, 13, p.suit[1]!);
+      g.rect(x + (dir > 0 ? 2 : -4), y - 31, 3, 12, p.suit[2]!);
+      g.tri(x + dir * 1 - 2, y - 31, x + dir * 1 + 2, y - 31, x + dir * 1, y - 24, p.shirt);
+      g.hline(x + dir - 1, x + dir + 1, y - 31, p.shirt);
+      head(g, x + dir, y - 37, dir, p, false);
     };
 
-    const couple = (g: Gfx, cx: number, y: number, t: number, p: Pal, dress: Color, mode: 'polka' | 'wave' | 'headstand' | 'idle') => {
+    // She: a full skirt that flares as she turns.
+    const woman = (g: Gfx, x: number, foot: number, dir: 1 | -1, p: Pal, flare: number, hop: number, t: number) => {
+      x = Math.round(x);
+      const y = Math.round(foot - hop);
+      const hw = 9 + Math.round(flare * 6);
+      g.rect(x - 2, y - 3, 2, 2, ink);
+      g.rect(x + 2, y - 3, 2, 2, ink);
+      g.poly([x - 4, y - 23, x + 4, y - 23, x + hw, y - 3, x - hw, y - 3], ink);
+      g.poly([x - 3, y - 22, x + 3, y - 22, x + hw - 1, y - 4, x - hw + 1, y - 4], p.dress[1]!);
+      g.poly([x, y - 22, x + 3, y - 22, x + hw - 1, y - 4, x + 2, y - 4], p.dress[2]!);
+      // folds sway with the dance
+      for (let k = -1; k <= 1; k++) {
+        const sw = Math.round(Math.sin(t * 6 + k) * flare * 2);
+        g.line(x + k * 3, y - 18, x + k * 6 + sw, y - 5, p.dress[k < 0 ? 0 : 1]!);
+      }
+      g.hline(x - hw + 1, x + hw - 1, y - 4, p.dress[3]!);
+      // bodice and shoulders
+      g.rect(x - 4, y - 32, 9, 10, ink);
+      g.rect(x - 3, y - 31, 7, 9, p.dress[2]!);
+      g.rect(x + (dir > 0 ? 1 : -3), y - 31, 2, 9, p.dress[3]!);
+      g.rect(x - 1, y - 33, 3, 2, p.skin[1]!);
+      head(g, x + dir, y - 37, dir, p, true);
+    };
+
+    const couple = (g: Gfx, cx: number, foot: number, t: number, p: Pal, mode: Mode, mirrorSide: boolean) => {
       const beat = t * 2.1;
-      const hop = mode === 'idle' ? 0 : Math.abs(Math.sin(beat * Math.PI)) * 3;
-      const th = mode === 'idle' ? 0 : t * 1.6;
-      const ax = cx + Math.cos(th) * 5;
-      const bx = cx - Math.cos(th) * 5;
-      const frontA = Math.sin(th) > 0;
-      const arm = Math.round(Math.sin(beat * Math.PI) * 1);
-      if (mode === 'headstand') {
-        person(g, cx - 6, y, p, false, 0, arm, undefined, true);
-        person(g, cx + 6, y, p, true, Math.abs(Math.sin(t * 6)) * 2, arm, dress);
-        return;
-      }
-      if (mode === 'wave') {
-        person(g, cx - 5, y, p, false, 0, 0);
-        person(g, cx + 5, y, p, true, 0, 0, dress);
-        const w = Math.sin(t * 9) > 0 ? -2 : 0;
-        g.line(cx + 9, y - 13, cx + 12, y - 20 + w, p.skin);
-        return;
-      }
-      if (frontA) {
-        person(g, bx, y, p, true, hop, arm, dress);
-        person(g, ax, y, p, false, hop, arm);
+      const moving = mode === 'polka';
+      const hop = moving ? Math.abs(Math.sin(beat * Math.PI)) * 2.5 : 0;
+      const th = moving ? t * 1.5 : 0.5;
+      // Keep them from fully eclipsing each other mid-turn.
+      const r = mode === 'twirl' ? 11 : 9;
+      const c = Math.cos(th);
+      const spread = Math.sign(c || 1) * Math.max(0.45, Math.abs(c));
+      const mxp = cx + spread * r * (mirrorSide ? -1 : 1);
+      const wxp = cx - spread * r * (mirrorSide ? -1 : 1);
+      const manDir: 1 | -1 = wxp > mxp ? 1 : -1;
+      const step = moving ? Math.max(0, Math.sin(beat * Math.PI)) : 0;
+      const manFront = Math.sin(th) > 0;
+      const drawMan = () => man(g, mxp, foot, manDir, p, step, hop);
+      let flare = moving ? 0.5 + 0.5 * Math.abs(Math.sin(th * 2)) : 0;
+      if (mode === 'twirl') flare = 1;
+      const drawWoman = () => {
+        const dir: 1 | -1 = mode === 'twirl' ? (Math.sin(t * 9) > 0 ? 1 : -1) : manDir === 1 ? -1 : 1;
+        woman(g, wxp, foot, dir, p, flare, mode === 'twirl' ? Math.abs(Math.sin(t * 9)) * 1.5 : hop, t);
+      };
+      if (manFront) {
+        drawWoman();
+        drawMan();
       } else {
-        person(g, ax, y, p, false, hop, arm);
-        person(g, bx, y, p, true, hop, arm, dress);
+        drawMan();
+        drawWoman();
       }
+      // Arms: the hold (his hand at her back, hers on his shoulder, joined hands out wide).
+      const sy = Math.round(foot - hop - 29);
+      if (mode === 'polka' || mode === 'idle') {
+        g.line(mxp + manDir * 3, sy, wxp - manDir * 2, sy + 2, p.suit[2]!);
+        const out = manDir * -1;
+        g.line(mxp - manDir * 3, sy, mxp - manDir * 3 + out * 7, sy - 5, p.suit[1]!);
+        g.line(wxp + manDir * 3, sy, mxp - manDir * 3 + out * 7, sy - 5, p.skin[1]!);
+        g.disc(mxp - manDir * 3 + out * 7, sy - 5, 1, p.skin[2]!);
+      } else if (mode === 'wave') {
+        // He has stopped to wave at whoever is on the other side of the glass.
+        const wv = Math.round(Math.sin(t * 8) * 3);
+        const hx = mxp - 8 + wv;
+        g.line(mxp - 3, sy, mxp - 7, sy - 8, p.suit[1]!);
+        g.line(mxp - 3, sy + 1, mxp - 7, sy - 7, p.suit[2]!);
+        g.line(mxp - 7, sy - 8, hx, sy - 16, p.suit[1]!);
+        g.disc(hx, sy - 17, 2, p.skin[2]!);
+      } else {
+        // twirl: he claps
+        const c = Math.sin(t * 10) > 0 ? 1 : 3;
+        g.line(mxp + manDir * 3, sy, mxp + manDir * (6 - c), sy - 6, p.suit[2]!);
+        g.line(mxp + manDir * 3, sy + 1, mxp + manDir * (6 + c), sy - 5, p.suit[1]!);
+      }
+      reflectDown(g, cx - 24, cx + 24, foot + 1, 26, 0.32);
     };
 
-    const tuba = (g: Gfx, x: number, y: number, t: number, p: Pal, flip: boolean, energy: number) => {
-      const bob = Math.round(Math.abs(Math.sin(t * 2.1 * Math.PI)) * 1.5);
-      const s = flip ? -1 : 1;
-      person(g, x, y, p, false, bob, 1);
-      // the tuba: coiled body and a big bell pointing up
-      const by = y - 12 - bob;
-      g.disc(x + s * 2, by, 5, p.brassD);
-      g.disc(x + s * 2, by, 4, p.brass);
-      g.disc(x + s * 2, by, 2, p.brassD);
-      g.line(x + s * 5, by - 3, x + s * 8, by - 14, p.brass);
-      g.line(x + s * 6, by - 3, x + s * 9, by - 14, p.brass);
-      g.ellipse(x + s * 9, by - 15, 5, 2, p.brassD);
-      g.ellipse(x + s * 9, by - 15, 4, 1, hex('#3a2a10'));
-      if (energy > 0.35) {
-        for (let k = 0; k < 3; k++) g.pxA(x + s * (8 + k * 2), by - 18 - k * 2 - ((t * 6) % 3), hex('#fff4d0'), 0.5);
+    const tubist = (g: Gfx, x: number, foot: number, t: number, p: Pal, dir: 1 | -1, playing: boolean, energy: number) => {
+      const bob = playing ? Math.round(Math.abs(Math.sin(t * 2.1 * Math.PI)) * 1.5) : 0;
+      x = Math.round(x);
+      const y = foot - bob;
+      g.rect(x - 3, y - 18, 3, 17, p.coat[0]!);
+      g.rect(x + 1, y - 18, 3, 17, p.coat[1]!);
+      g.rect(x - 4, y - 2, 5, 2, ink);
+      g.rect(x + 1, y - 2, 5, 2, ink);
+      g.rect(x - 6, y - 33, 13, 16, ink);
+      g.rect(x - 5, y - 32, 11, 14, p.coat[1]!);
+      g.rect(x - dir * 4 - (dir > 0 ? 1 : 0), y - 32, 3, 14, p.coat[0]!);
+      for (let k = 0; k < 3; k++) g.px(x + dir * 2, y - 29 + k * 4, p.brass[3]!);
+      head(g, x + dir, y - 38, dir, p, false);
+      // the tuba: a coiled body held in front, the bell up over the shoulder
+      const by = y - 20;
+      const bx = x + dir * 4;
+      // tubing rising past the shoulder to a bell that flares out in front of him
+      g.rect(bx + dir * 4 - (dir > 0 ? 0 : 2), by - 16, 3, 14, ink);
+      g.rect(bx + dir * 4 - (dir > 0 ? 0 : 1) , by - 16, 2, 14, p.brass[1]!);
+      g.tri(bx + dir * 5, by - 14, bx + dir * 14, by - 24, bx + dir * 14, by - 12, ink);
+      g.tri(bx + dir * 5, by - 14, bx + dir * 13, by - 22, bx + dir * 13, by - 13, p.brass[2]!);
+      g.ellipse(bx + dir * 14, by - 18, 2, 6, ink);
+      g.ellipse(bx + dir * 14, by - 18, 1, 5, p.brass[0]!);
+      g.px(bx + dir * 9, by - 18, p.brass[3]!);
+      g.disc(bx, by, 7, ink);
+      g.disc(bx, by, 6, p.brass[1]!);
+      g.disc(bx - dir, by - 1, 4, p.brass[2]!);
+      g.disc(bx, by, 2, p.brass[0]!);
+      g.px(bx - dir * 2, by - 3, p.brass[3]!);
+      g.line(x - dir * 3, y - 30, bx - dir * 2, by - 2, p.coat[2]!);
+      if (playing && energy > 0.35) {
+        for (let k = 0; k < 3; k++) g.pxA(bx + dir * (17 + k * 2), by - 18 - k * 2 + Math.sin(t * 5 + k) * 2, p.brass[3]!, 0.35);
       }
+      reflectDown(g, x - 14, x + 14, foot + 1, 22, 0.28);
     };
 
     return {
       background(g) {
-        // Back wall: red silk, gold pilasters, arched alcoves.
-        g.vgrad(wallC, g.top, WALL_Y);
-        for (let x = 0; x < 160; x += 36) {
-          for (const px of [x + 8, 320 - x - 8]) {
-            g.rect(px - 3, g.top, 6, WALL_Y - g.top, goldD);
-            g.rect(px - 2, g.top, 4, WALL_Y - g.top, gold);
-            g.rect(px - 4, WALL_Y - 6, 8, 6, goldD);
-          }
-          for (const ax of [x + 26, 320 - x - 26]) {
-            arc(g, ax, 40, 10, 10, Math.PI, Math.PI * 2, goldD, 2);
-            g.rect(ax - 10, 40, 1, 40, goldD);
-            g.rect(ax + 9, 40, 1, 40, goldD);
-            g.rectMul(ax - 9, 32, 18, 48, 0.75);
-          }
+        // Left half first; the right half is the same room seen in the glass.
+        g.vgrad(wall, g.top, WALL_Y);
+        // silk damask
+        for (let y = Math.max(g.top, 0); y < WALL_Y; y++)
+          for (let x = g.left; x < MX; x++) if (((x * 3 + y * 5) % 11 === 0 || (x * 5 - y * 3) % 13 === 0) && hash3(x, y) > 0.4) g.px(x, y, wall[2]!);
+        for (let px = MX - 22; px > g.left - 40; px -= 44) {
+          // pilaster
+          g.rect(px - 4, g.top, 8, WALL_Y - g.top, gold[0]!);
+          g.rect(px - 3, g.top, 6, WALL_Y - g.top, gold[1]!);
+          g.rect(px - 1, g.top, 2, WALL_Y - g.top, gold[2]!);
+          g.rect(px - 5, WALL_Y - 7, 10, 7, gold[1]!);
+          g.rect(px - 5, 26, 10, 3, gold[2]!);
+          // arched alcove between pilasters, with a dim sconce
+          const ax = px - 22;
+          g.rect(ax - 10, 42, 20, WALL_Y - 46, shade(wall[0]!, 0.7));
+          g.ellipse(ax, 42, 10, 9, shade(wall[0]!, 0.7));
+          g.rect(ax - 10, 42, 20, 10, shade(wall[0]!, 0.7));
+          arc(g, ax, 42, 10, 9, Math.PI, Math.PI * 2, gold[1]!);
+          g.vline(ax - 11, 42, WALL_Y - 4, gold[1]!);
+          g.vline(ax + 10, 42, WALL_Y - 4, gold[1]!);
+          g.rect(ax - 1, 58, 3, 6, gold[2]!);
         }
-        g.rect(g.left, WALL_Y - 2, g.w, 2, gold);
-        // Checkered floor in perspective.
-        for (let y = WALL_Y; y < g.bottom; y++) {
+        g.rect(g.left, WALL_Y - 2, MX - g.left, 2, gold[2]!);
+        g.rect(g.left, WALL_Y, MX - g.left, 1, gold[0]!);
+        // Checkered marble floor in perspective.
+        for (let y = WALL_Y + 1; y < g.bottom; y++) {
           const z = 900 / (y - HOR);
-          for (let x = g.left; x < g.right; x++) {
+          for (let x = g.left; x < MX; x++) {
             const X = ((x - MX) * z) / 140;
             const k = (Math.floor(X / 3) + Math.floor(z / 3)) & 1;
             g.px(x, y, k ? tileA : tileB);
           }
         }
-        // Fog of distance near the wall.
-        for (let y = WALL_Y; y < WALL_Y + 14; y++) g.rectA(g.left, y, g.w, 1, wallC[1]!, 0.5 * (1 - (y - WALL_Y) / 14));
+        // Lamplight and distance on the left half before it's mirrored.
+        haze(g, wall[1]!, WALL_Y, WALL_Y + 18, 0.6, 0, WALL_Y, WALL_Y + 18);
+        lightPool(g, 112, 128, 70, 16, hex('#ffc070'), 0.22);
+        gloom(g, g.left, 140, MX - g.left, g.bottom - 140, 0.55);
 
-        // The mirror's world is a touch cooler and dimmer, with sheen streaks.
+        // The glass: mirror the left half onto the right, then cool and dim it.
         const b = g.buf;
-        for (let by = 0; by < g.h; by++)
-          for (let bx = Math.max(0, MX + 4 - g.ox); bx < g.w; bx++) {
-            const i = by * g.w + bx;
-            b[i] = mulPx(b[i]!, 228);
+        for (let by = 0; by < g.h; by++) {
+          const row = by * g.w;
+          for (let x = MX; x < g.right; x++) {
+            const sx = 2 * MX - 1 - x;
+            if (sx < g.left) continue;
+            const v = b[row + sx - g.ox]!;
+            b[row + x - g.ox] = mulPx(mix(v, glass, 0.2), 190);
           }
-        g.rectA(MX + 4, g.top, g.right - MX - 4, g.h, tint, 0.12);
+        }
+        // sheen streaks across the glass
         for (let k = 0; k < 3; k++) {
-          const x0 = MX + 20 + k * 40;
-          for (let y = g.top; y < g.bottom; y++) {
-            const x = x0 + (y - g.top) * 0.35;
-            g.rectA(x, y, 3 + k, 1, hex('#ffffff'), 0.06);
-          }
+          const x0 = MX + 26 + k * 46;
+          for (let y = g.top; y < g.bottom; y++) g.rectA(x0 + (y - g.top) * 0.4, y, 2 + k * 3, 1, hex('#cfe0ff'), 0.06);
         }
 
-        // The mirror frame: ornate gold, crowned.
-        g.rect(MX - 4, g.top, 8, g.h, goldD);
-        g.rect(MX - 3, g.top, 6, g.h, gold);
-        g.rect(MX - 1, g.top, 2, g.h, hex('#fff0b0'));
-        for (let y = g.top - (g.top % 12); y < g.bottom; y += 12) {
-          g.disc(MX, y, 3, goldD);
-          g.disc(MX, y, 2, gold);
+        // The mirror's frame: a carved gilt column, with a bevelled edge where the glass starts.
+        g.rect(MX - 6, g.top, 12, g.h, ink);
+        g.rect(MX - 5, g.top, 10, g.h, gold[1]!);
+        g.rect(MX - 3, g.top, 4, g.h, gold[2]!);
+        g.vline(MX - 2, g.top, g.bottom, gold[3]!);
+        g.vline(MX + 4, g.top, g.bottom, gold[0]!);
+        g.rectA(MX + 6, g.top, 2, g.h, hex('#cfe0ff'), 0.25);
+        g.rectA(MX + 8, g.top, 6, g.h, hex('#000000'), 0.25);
+        for (let y = g.top - (((g.top % 10) + 10) % 10); y < g.bottom; y += 10) {
+          g.disc(MX, y, 3, gold[0]!);
+          g.disc(MX, y, 2, gold[2]!);
+          g.px(MX - 1, y - 1, gold[3]!);
         }
-        g.disc(MX, 6, 7, goldD);
-        g.disc(MX, 6, 5, gold);
-        g.disc(MX, 6, 2, accent);
-        frameRect(g, MX - 5, g.top, 10, g.h, ink);
+
+        g.lighting(0.5);
+        g.light(96, 12, 90, 0.4);
+        g.light(224, 12, 90, 0.3);
+        g.light(120, 98, 70, 0.6, 45);
+        g.light(200, 98, 70, 0.45, 45);
       },
 
       frame(g, f) {
         const { t } = f;
         const ev = f.rareT;
         const playing = f.awake > 0.35;
-        const mode = playing ? 'polka' : 'idle';
-        const delay = f.rare === 2 && ev < 7 ? 0.35 + Math.sin((ev / 7) * Math.PI) * 1.4 : 0.35;
+        const mode: Mode = playing ? 'polka' : 'idle';
+        const lagging = f.rare === 2 && ev < 7 ? envelope(ev, 7, 1.5, 1.5) : 0;
+        const delay = 0.3 + lagging * 1.1;
 
-        // Chandeliers (and their reflections).
-        for (let cx = 96; cx <= 224; cx += 128) {
-          g.vline(cx, g.top, 12, goldD);
-          arc(g, cx, 14, 12, 4, 0, Math.PI, gold, 2);
-          for (let i = 0; i < 4; i++) {
-            const x = cx - 10 + i * 7;
-            g.rect(x, 10, 1, 4, hex('#f4ecd8'));
-            g.glow(x, 9, 6, hex('#ffd27a'), 0.4 + (f.reduced ? 0 : 0.05 * Math.sin(t * 9 + i)), 3);
+        // Chandeliers and their twins in the glass.
+        for (const cx of [96, 224]) {
+          const k = cx > MX ? 0.7 : 1;
+          g.vline(cx, g.top, 6, gold[1]!);
+          arc(g, cx, 8, 14, 4, 0, Math.PI, gold[2]!, 2);
+          for (let i = 0; i < 5; i++) {
+            const x = cx - 12 + i * 6;
+            g.rect(x, 5, 1, 3, hex('#e8dcc4'));
+            const fl = f.reduced ? 1 : 0.85 + 0.15 * Math.sin(t * 9 + i * 1.7);
+            g.px(x, 4, hex('#ffd27a'));
+            g.glow(x, 4, 6, hex('#ffc060'), 0.3 * fl * k, 3);
           }
-          g.glow(cx, 14, 30, hex('#ffd27a'), 0.08 + f.energy * 0.08, 4);
         }
 
-        // Couples on the real side…
-        const ys = [114, 130, 146];
-        const xs = [86, 128, 66];
-        const dresses = [hex('#8ad0ff'), accent, dressB];
-        for (let i = 0; i < 3; i++) couple(g, xs[i]!, ys[i]!, t + i * 0.4, base, dresses[i]!, mode);
-        // …and their reflections, a fraction late. Sometimes one has other ideas.
-        for (let i = 0; i < 3; i++) {
-          let m: 'polka' | 'wave' | 'headstand' | 'idle' = mode;
-          if (f.rare === 0 && ev < 7 && i === 1) m = envelope(ev, 7, 0.4, 0.4) > 0.5 ? 'wave' : mode;
-          if (f.rare === 1 && ev < 7 && i === 2) m = envelope(ev, 7, 0.3, 0.3) > 0.5 ? 'headstand' : mode;
-          couple(g, 2 * MX - xs[i]!, ys[i]!, t + i * 0.4 - delay, mirrorPal, mix(dresses[i]!, tint, 0.22), m);
-        }
+        // The real room: the tuba player at the back, the couple in front.
+        tubist(g, 84, TUBA_Y, t, real, 1, playing, f.energy);
+        couple(g, 122, COUPLE_Y, t, real, mode, false);
 
-        // The tuba player at the front, and Ynnhoj in the glass.
-        tuba(g, 112, 172, playing ? t : 0, base, false, f.energy);
-        tuba(g, 2 * MX - 112, 172, playing ? t - delay : 0, mirrorPal, true, f.energy);
+        // The glass, a fraction late. Sometimes a reflection has other ideas.
+        let mm: Mode = mode;
+        if (f.rare === 0 && ev < 7 && envelope(ev, 7, 0.5, 0.5) > 0.5) mm = 'wave';
+        if (f.rare === 1 && ev < 7 && envelope(ev, 7, 0.5, 0.5) > 0.5) mm = 'twirl';
+        // Ynnhoj, the tubist's reflection, wanders off for a bit and comes back.
+        let tx = 2 * MX - 84;
+        if (f.rare === 3 && ev < 7) tx += Math.sin(clamp(ev / 7) * Math.PI) * 90;
+        g.clip(MX + 4, g.top, g.right - MX - 4, g.h);
+        tubist(g, tx, TUBA_Y, t - delay, mirror, -1, playing && !(f.rare === 3 && ev < 7), f.energy);
+        couple(g, 2 * MX - 122, COUPLE_Y, t - delay, mirror, mm, true);
+        g.noClip();
 
-        // A glint travelling down the frame.
-        const gy = g.top + ((t * 30) % (g.h + 40)) - 20;
-        g.glow(MX, gy, 5, hex('#ffffff'), 0.5);
+        // A glint travelling down the frame, dust in the lamplight.
+        const gy = g.top + ((t * 24) % (g.h + 40)) - 20;
+        g.glow(MX - 1, gy, 4, hex('#fff4d0'), 0.4);
+        if (!f.reduced) motes(g, t, 60, 20, 150, 110, 12, hex('#ffe0b0'), 0.3, 5);
       },
     };
   },

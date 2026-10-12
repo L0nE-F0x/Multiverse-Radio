@@ -596,3 +596,101 @@ stations = ["void-beats", "rainfall-fm", "neon-2087", "end-lounge", "snail-jams"
 lines = [
   { say = "linda", text = "Music may contain feelings. Feelings not included. If symptoms persist, please consult your nearest Linda." },
 ]
+
+# ══ v3: Halloween (24 to 31 October) ══════════════════════════════════════════
+#
+# Ads, a PSA and an interrupt for Halloween week, on any station. Existing clips above
+# are rendered and deployed; only add.
+
+[[clip]]
+id = "ad-halloween-01"
+category = "ad"
+title = "Grumbel's Ladders: The Attic Ladder"
+dates = ["10-24", "10-25", "10-26", "10-27", "10-28", "10-29", "10-30", "10-31"]
+lines = [
+  { sting = "halloween" },
+  { say = "grumbel", text = "It's Halloween. You've heard something in the attic. You've heard it every night this week. A sort of shuffle, and then a sigh." },
+  { say = "grumbel", text = "The Grumbel's Attic Ladder folds down quietly, takes your weight without a creak, and gets you up there in time to find out it's the water tank. It's always the water tank." },
+  { say = "grumbel", text = "My grandfather went up one Halloween and found a family of owls. He brought them down one rung at a time. Grumbel's Ladders. Up is a choice. Even in the dark." },
+]
+
+[[clip]]
+id = "ad-halloween-02"
+category = "ad"
+title = "Haunt-a-Home Lettings"
+dates = ["10-24", "10-25", "10-26", "10-27", "10-28", "10-29", "10-30", "10-31"]
+lines = [
+  { say = "announcer_warm", text = "Is your house too quiet this Halloween? Rent a ghost for the season, from Haunt-a-Home Lettings." },
+  { say = "announcer_warm", text = "Every ghost is vetted, polite, and only slightly see-through. They'll rattle a door, hum on the landing, and leave the good spoons alone." },
+  { say = "announcer_warm", text = "Haunt-a-Home. Somebody's home. Sort of." },
+  { say = "small_print", text = "Ghost may become attached. Ghost may become attached to the house. Ghost may not wish to leave in November. Ghost is lovely, though." },
+]
+
+[[clip]]
+id = "ad-halloween-03"
+category = "ad"
+title = "Someone Else's Costume"
+dates = ["10-24", "10-25", "10-26", "10-27", "10-28", "10-29", "10-30", "10-31"]
+lines = [
+  { say = "announcer", text = "Can't think of a costume? Wear Someone Else's Costume." },
+  { say = "announcer", text = "Every outfit has been pre-worn by a version of you from the next reality over, who had a brilliant idea, started early, and finished the sleeves." },
+  { say = "announcer", text = "He went as a lighthouse. Everybody said so. He is, frankly, a better you than you, and this year, you can be him." },
+  { say = "announcer", text = "Someone Else's Costume. Slightly used. By you." },
+]
+
+[[clip]]
+id = "ad-halloween-04"
+category = "ad"
+title = "The Polite Alarm Clock: Halloween Edition"
+dates = ["10-24", "10-25", "10-26", "10-27", "10-28", "10-29", "10-30", "10-31"]
+lines = [
+  { say = "announcer_warm", text = "This Halloween, wake up gently, with the Polite Alarm Clock, Halloween Edition." },
+  { say = "alarm", text = "Ahem. Sorry. Boo. It's seven." },
+  { say = "announcer_warm", text = "It's still the same clock. It still clears its throat. It's just wearing a very small sheet." },
+  { say = "announcer_warm", text = "The Polite Alarm Clock. Nobody ever got up faster for being frightened, either." },
+]
+
+[[clip]]
+id = "ad-halloween-05"
+category = "ad"
+title = "The Sock Recovery Institute: The Night They Come Back"
+dates = ["10-24", "10-25", "10-26", "10-27", "10-28", "10-29", "10-30", "10-31"]
+lines = [
+  { say = "announcer_soft", text = "Once a year, on Halloween night, they come back. Every sock you've ever lost returns to its drawer. Just for one night. To see how everyone's getting on." },
+  { say = "announcer_soft", text = "Don't be frightened. Leave the drawer open a crack. They've missed you. They've missed the other one most of all." },
+  { say = "announcer_soft", text = "The Sock Recovery Institute. We bring them back the rest of the year, too." },
+  { say = "small_print", text = "Returning socks may be slightly warm, and may smell faintly of another dimension. This is normal. Please do not wear the visiting socks." },
+]
+
+[[clip]]
+id = "ad-halloween-06"
+category = "ad"
+title = "Overlap Fog, Bottled"
+dates = ["10-24", "10-25", "10-26", "10-27", "10-28", "10-29", "10-30", "10-31"]
+lines = [
+  { say = "announcer_posh", text = "Halloween party lacking atmosphere? Uncork a bottle of genuine Overlap Fog." },
+  { say = "announcer_posh", text = "Hand-gathered at dawn from the low-lying timelines, our fog rolls in under the door, settles round the ankles, and makes every guest look mysterious, even Gerald from accounts." },
+  { say = "announcer_posh", text = "Overlap Fog. You won't see the difference. You won't see much of anything." },
+  { say = "small_print", text = "Fog may contain a bicycle. Fog may contain Skip Daley, who has been in there since Tuesday. Please send him back to the newsroom." },
+]
+
+[[clip]]
+id = "psa-halloween-01"
+category = "psa"
+title = "The Static on Halloween"
+dates = ["10-24", "10-25", "10-26", "10-27", "10-28", "10-29", "10-30", "10-31"]
+lines = [
+  { say = "authority", text = "The Multiverse Broadcast Authority reminds listeners that this week, the static between stations is a little louder than usual." },
+  { say = "authority", text = "That is everybody who used to listen, listening in. Turn it up a bit. They like the music. They always did." },
+]
+
+[[clip]]
+id = "interrupt-halloween-01"
+category = "interrupt"
+title = "Relay Four, Halloween"
+bed = "static"
+dates = ["10-24", "10-25", "10-26", "10-27", "10-28", "10-29", "10-30", "10-31"]
+lines = [
+  { say = "teodor", text = "Relay Four. Happy Halloween, whoever you are. Captain has come dressed as a ghost.", gap = 0.8 },
+  { say = "teodor", text = "He's a white gull. It's not much of a costume." },
+]

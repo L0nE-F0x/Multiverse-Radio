@@ -1,6 +1,7 @@
 import type { SceneId } from '../broadcast/types';
 import type { Color } from './kit/color';
 import type { Gfx } from './kit/gfx';
+import type { Grade } from './kit/post';
 import type { Rng } from './kit/rng';
 
 /** Per-frame inputs. One object is reused for every frame (don't keep references). */
@@ -62,5 +63,11 @@ export interface SceneDef {
   rareEvents: number;
   /** Seconds a rare event lasts (for scheduling and the lab). */
   rareDuration: number;
+  /**
+   * The lens every frame is seen through: colour grade, vignette, grain and bloom (see
+   * kit/post.ts). Omit for the house look; override single fields to tune it (e.g.
+   * `{ temperature: 0.4, bloom: 0.8 }`); `false` shows the raw raster.
+   */
+  grade?: Grade | false;
   create(ctx: SceneContext): Scene;
 }

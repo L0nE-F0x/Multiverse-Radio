@@ -2,6 +2,7 @@
 
 import { num } from '../grammar';
 import { TITLE_SHAPE } from './common';
+import { RESIDENT_SHARE } from './residents';
 import type { TrackPack } from './types';
 
 export const neon2087: TrackPack = {
@@ -112,23 +113,17 @@ export const neon2087: TrackPack = {
       'Grandma\'s, in 2087',
     ],
     suffix: ['#mix#'],
-    artist: [
+    artist: RESIDENT_SHARE,
+    residents: ['Vektor Sunset', 'Magenta Interceptor', 'Kassette Kowboy', 'The Elbow Palms', 'Laser Mom', 'Nightdriver', 'Synthia Starfield', 'The Rad Accountants'],
+    guestArtist: [
       '#neonAdj# #artistNoun#',
       '#neonAdj# #artistNoun#',
       'DJ #neonNoun#',
       'Velocity Jones',
-      'Vektor Sunset',
-      'Magenta Interceptor',
-      'Kassette Kowboy',
       'DJ Hovercraft',
-      'The Elbow Palms',
       'Gridrunner 9',
-      'Laser Mom',
-      'Nightdriver',
       'Polygon Heart',
       'Hyperdrive Kid',
-      'Synthia Starfield',
-      'The Rad Accountants',
     ],
     artistNoun: ['Kid', 'Cowboy', 'Machine', 'Romance', 'Patrol', 'Syndicate', 'Runner', 'Collective', 'Angel', 'Mainframe', 'Society', 'Lovers'],
     album: [
@@ -271,24 +266,19 @@ export const pixelAfterlife: TrackPack = {
     menu: ['Password', 'High Score', 'Title', 'Pause', 'Continue', 'Game Over', 'Character Select', 'Credits', 'Loading', 'Level Select', 'Options', 'Name Entry'],
     insert: ['Continue', 'Respawn', 'Feel Something', 'Begin Again', 'Say Goodbye', 'Press Start'],
     suffix: ['#chipVersion#'],
-    artist: [
+    artist: RESIDENT_SHARE,
+    residents: ['The Insert Coins', 'Sixteen Lives Remaining', 'Pixel Heart Club', 'Sprite Flicker', 'Lag', 'AAA (High Score)', 'The Cartridge Blowers', 'Save State'],
+    guestArtist: [
       'Player Two',
-      'The Insert Coins',
-      'Sixteen Lives Remaining',
       'The 8-Bit Ghost Choir',
-      'Pixel Heart Club',
-      'Sprite Flicker',
-      'Lag',
       'Respawn',
-      'AAA (High Score)',
-      'The Cartridge Blowers',
       'Extra Life',
-      'Save State',
       'Chiptune Ghost',
       'The Continue Screens',
       'Hitbox',
       'Sprite Rain',
       'Big Sprite Energy',
+      '#bossAdj# Boss',
       '#bossAdj# Boss',
     ],
     album: [
@@ -421,19 +411,14 @@ export const cometMarimba: TrackPack = {
     surf: ['Waves of Pure Time', 'Three to Four Minutes', 'Glassy', 'Choppy Tuesdays', 'Flat, Cosmically'],
     star: ['Distant Star', 'Friendly Sun', 'Star Going the Other Way', 'Very Small Sun'],
     suffix: ['#cometVersion#'],
-    artist: [
+    artist: RESIDENT_SHARE,
+    residents: ['Los Perihelios', 'The Marimba Meteors', 'The Hammock Syndicate', 'The Mallet Brothers', 'Perihelion Pete', 'Barefoot Astronomy', 'DJ Sunglass Crab', 'Ice Tail Island Band'],
+    guestArtist: [
       'Coco Halley & the Ice Tails',
-      'DJ Sunglass Crab',
-      'Los Perihelios',
-      'The Marimba Meteors',
       'Tropical Depression',
       'Sandy Orbit',
       'The Coconut Comets',
-      'Hammock Syndicate',
-      'The Mallet Brothers',
-      'Perihelion Pete',
-      'Ice Tail Island Band',
-      'Barefoot Astronomy',
+      'The #tropicalAdj# #tropical#s',
       'The #tropicalAdj# #tropical#s',
     ],
     album: [
@@ -572,19 +557,9 @@ export const mirrorPolka: TrackPack = {
       'Polished Tuba',
     ],
     suffix: ['#mirrorVersion#'],
-    artist: [
-      'Johnny Mirror & the Reflections',
-      'Ynnhoj & the Snoitcelfer',
-      'The Left Hand Band',
-      'Accordion Inverted',
-      'The Oom-Pah Hap-Moos',
-      'Frankie Glass & the Silver Backs',
-      'Mirror Image Brass',
-      'Ynnhoj (Solo)',
-      'The Checkerboard Six',
-      'Polka Dot Polka Tod',
-      'The #polkaNoun.mirror# Brothers',
-    ],
+    artist: RESIDENT_SHARE,
+    residents: ['Johnny Mirror & the Reflections', 'Ynnhoj & the Snoitcelfer', 'The Left Hand Band', 'Accordion Inverted', 'Frankie Glass & the Silver Backs', 'Mirror Image Brass', 'The Checkerboard Six', 'Polka Dot Polka Tod'],
+    guestArtist: ['The Oom-Pah Hap-Moos', 'Ynnhoj (Solo)', 'The #polkaNoun.mirror# Brothers', 'The #polkaNoun.mirror# Brothers'],
     album: [
       'Polka Hour, Reversed',
       '#polkaNoun.mirror# Favourites, Vol. #vol#',
@@ -700,21 +675,16 @@ export const moonDub: TrackPack = {
     ],
     crew: ['Crater Crew', 'Astronaut', 'Earth', 'Selector', 'Dust', 'Lander Massive'],
     suffix: ['#dubVersion#'],
-    artist: [
+    artist: RESIDENT_SHARE,
+    residents: ['King Regolith', 'The Dust Bouncers', 'Earthrise Hi-Fi', 'Big Bass Selene', 'Mighty Low Gravity', 'Echo Minister', 'Sister Moon Dust', 'Count Apogee'],
+    guestArtist: [
       'Selector Crater',
       'Lunar Rockers International',
-      'King Regolith',
-      'The Dust Bouncers',
       'Tranquility Sound System',
-      'Earthrise Hi-Fi',
       'Lone Astronaut',
-      'Big Bass Selene',
-      'Mighty Low Gravity',
       'The Crater Crew',
-      'Echo Minister',
-      'Sister Moon Dust',
-      'Count Apogee',
       'Satellite Sound',
+      '#lunar# Hi-Fi',
       '#lunar# Hi-Fi',
     ],
     album: [

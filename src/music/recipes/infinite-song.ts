@@ -56,7 +56,7 @@ export function composeInfiniteSong(req: TrackRequest): Score {
   const progR = parseProgression(REFRAIN, TONIC);
   const progT = parseProgression(TURN, TONIC);
 
-  const guitar = b.inst({ kind: 'sample', patch: 'folk-guitar', name: 'Acoustic guitar', gain: 0.42, pan: -0.3, reverb: 0.15, release: 0.15 });
+  const guitar = b.inst({ kind: 'sample', patch: 'acoustic-steel', name: 'Acoustic guitar', gain: 0.42, pan: -0.3, reverb: 0.15, release: 0.15 });
   const piano = b.inst({ kind: 'sample', patch: 'piano', name: 'Upright piano', gain: 0.38, pan: 0.2, reverb: 0.2, lowpass: 6000 });
   const bass = b.inst({ kind: 'sample', patch: 'bass-upright', name: 'Upright bass', gain: 0.55, pan: 0.02 });
   const singer = b.inst({ kind: 'synth', patch: 'melodica', name: 'Melodica (the verse)', gain: 0.5, pan: 0.05, reverb: 0.25 });

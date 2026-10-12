@@ -1,0 +1,353 @@
+# The Last Lighthouse — 121.5, a rock between dimensions, out on the deep band. A secret station.
+#
+# The Keeper reads the forecast for the impossible seas every night, to nobody, just in case,
+# and keeps a logbook. Ambient: voices are rare, slow and steady, over waves and the beam.
+# The sea areas are all invented and recur, so regular listeners learn them:
+#   Lesser Marrow, Greater Marrow, the Tuesday Reach, Far and Near Nonsuch, Lullaby Bank,
+#   Thimble, Gannet's Regret, Outer and Inner Soup, the Spindles, Mothering Sound, Velvet Deep,
+#   Hesitation, Saltlight, North and South Elsewhere, the Quiet Rows, Old Pardon, Biscuit
+#   Shoals, the Mirrorline, Underneath, Dimity, Wren, Candlemouth.
+# Callbacks: the Nightjar (HUSH's favourite station is this one; the Keeper has noticed the
+# ship listening), the time signal, a message in a bottle.
+station = "last-lighthouse"
+
+[voices]
+keeper = { voice = "bm_lewis", speed = 0.88, name = "The Keeper" }
+
+[[show]]
+id = "the-night-forecast"
+name = "The Night Forecast"
+blurb = "The forecast for the impossible seas, read at the usual hour for anyone who might be out there."
+start = 23
+end = 2
+
+[[show]]
+id = "the-keepers-log"
+name = "The Keeper's Log"
+blurb = "Entries from the logbook of the Last Lighthouse, read slowly, by lamplight."
+start = 2
+end = 6
+
+# ── Idents ────────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "id-001"
+category = "id"
+bed = "sea"
+lines = [
+  { say = "keeper", text = "This is the Last Lighthouse. The light is lit." },
+]
+
+[[clip]]
+id = "id-002"
+category = "id"
+bed = "sea"
+lines = [
+  { say = "keeper", text = "The Last Lighthouse, on one hundred and twenty one point five. Listening, as always." },
+]
+
+[[clip]]
+id = "id-003"
+category = "id"
+bed = "sea"
+lines = [
+  { say = "keeper", text = "The Last Lighthouse. If you can see the light, you are not lost.", gap = 0.8 },
+  { say = "keeper", text = "If you can hear this, you are not alone." },
+]
+
+[[clip]]
+id = "id-004"
+category = "id"
+bed = "sea"
+lines = [
+  { sfx = "foghorn", level = 0.6 },
+  { say = "keeper", text = "The Last Lighthouse. Keeping the light, for anyone out there." },
+]
+
+[[clip]]
+id = "id-night-forecast"
+category = "id"
+title = "The Night Forecast"
+show = "the-night-forecast"
+part = "open"
+bed = "sea"
+lines = [
+  { sfx = "bell", level = 0.6 },
+  { say = "keeper", text = "It is the usual hour. This is the Night Forecast, from the Last Lighthouse." },
+]
+
+[[clip]]
+id = "id-keepers-log"
+category = "id"
+title = "The Keeper's Log"
+show = "the-keepers-log"
+part = "open"
+bed = "sea"
+lines = [
+  { say = "keeper", text = "The Keeper's Log. Entries from the book on the desk, read by lamplight." },
+]
+
+# ── The forecast for the impossible seas ──────────────────────────────────────
+
+[[clip]]
+id = "weather-001"
+category = "weather"
+title = "The Forecast for the Impossible Seas"
+bed = "sea"
+lines = [
+  { say = "keeper", text = "And now the forecast for the impossible seas, issued from the Last Lighthouse at the usual hour.", gap = 0.8 },
+  { say = "keeper", text = "There are warnings of gales in Gannet's Regret, Outer Soup, and Inner Soup.", gap = 0.9 },
+  { say = "keeper", text = "Lesser Marrow, Greater Marrow. Southwesterly, four or five, backing sideways later. Rain, then memories. Moderate or good.", gap = 0.9 },
+  { say = "keeper", text = "The Tuesday Reach. Northerly, three, becoming Wednesday. Fair. Good, occasionally very good.", gap = 0.9 },
+  { say = "keeper", text = "Outer Soup, Inner Soup. Gale eight, stirring clockwise. Thick. Visibility, a spoon's length." },
+]
+
+[[clip]]
+id = "weather-002"
+category = "weather"
+title = "The Forecast for the Impossible Seas"
+bed = "sea"
+lines = [
+  { say = "keeper", text = "Far Nonsuch, Near Nonsuch. Variable, two, from no direction in particular. Fog patches, some of them shaped like people you used to know. Poor, becoming kind.", gap = 0.9 },
+  { say = "keeper", text = "Lullaby Bank. Westerly, one or two, humming. Showers of moths. Good.", gap = 0.9 },
+  { say = "keeper", text = "Thimble. Calm. Very small. Visibility, the whole of Thimble.", gap = 0.9 },
+  { say = "keeper", text = "Mothering Sound. Easterly, five, tucking in later. Drizzle. Moderate." },
+]
+
+[[clip]]
+id = "weather-003"
+category = "weather"
+title = "The Forecast for the Impossible Seas"
+bed = "sea"
+lines = [
+  { say = "keeper", text = "The Spindles. Northwesterly, six, spinning. Squally, with occasional wool. Moderate, occasionally tangled.", gap = 0.9 },
+  { say = "keeper", text = "Velvet Deep. Southerly, three. Dark, but in a nice way. Good.", gap = 0.9 },
+  { say = "keeper", text = "Hesitation. Wind, possibly. Weather, perhaps. Visibility, it depends.", gap = 0.9 },
+  { say = "keeper", text = "Saltlight. Easterly, four. Bright, with stars below the surface. Excellent." },
+]
+
+[[clip]]
+id = "weather-004"
+category = "weather"
+title = "The Forecast for the Impossible Seas"
+bed = "sea"
+lines = [
+  { say = "keeper", text = "North Elsewhere, South Elsewhere. Westerly, veering to somebody else's west. Rain, elsewhere. Good, here.", gap = 0.9 },
+  { say = "keeper", text = "The Quiet Rows. Calm. Silent. Visibility good, but nobody is looking.", gap = 0.9 },
+  { say = "keeper", text = "Old Pardon. Northeasterly, five, forgiving later. Showers, then clear. Good.", gap = 0.9 },
+  { say = "keeper", text = "Biscuit Shoals. Southwesterly, three. Crumbly. Moderate. Mariners are advised to dunk with care." },
+]
+
+[[clip]]
+id = "weather-005"
+category = "weather"
+title = "The Forecast for the Impossible Seas"
+bed = "sea"
+lines = [
+  { say = "keeper", text = "The Mirrorline. Wind from the left, which is also the right. Fair, reflected. Visibility, both ways.", gap = 0.9 },
+  { say = "keeper", text = "Underneath. No wind. No weather. Nobody has been. Good.", gap = 0.9 },
+  { say = "keeper", text = "Dimity. Easterly, two. Lace fog in places. Moderate or good.", gap = 0.9 },
+  { say = "keeper", text = "Wren. Westerly, one. Small and brave. Good." },
+]
+
+[[clip]]
+id = "weather-006"
+category = "weather"
+title = "The General Synopsis"
+bed = "sea"
+lines = [
+  { say = "keeper", text = "The general synopsis, at midnight.", gap = 0.9 },
+  { say = "keeper", text = "Low, Lesser Marrow, nine hundred and ninety, moving slowly toward a decision.", gap = 0.8 },
+  { say = "keeper", text = "High, Saltlight, one thousand and thirty, staying where it is, as it always does.", gap = 0.8 },
+  { say = "keeper", text = "A ridge of good intentions extends across the Quiet Rows, and is expected to hold." },
+]
+
+[[clip]]
+id = "weather-007"
+category = "weather"
+title = "Reports from the Lights"
+bed = "sea"
+lines = [
+  { say = "keeper", text = "And now the reports from the lights, at midnight.", gap = 0.9 },
+  { say = "keeper", text = "The Last Lighthouse. Southwesterly, three. Clear. One thousand and twelve, steady. One keeper, awake.", gap = 1.2 },
+  { say = "keeper", text = "The lighthouse at Candlemouth. No report.", gap = 0.8 },
+  { say = "keeper", text = "There has been no report from Candlemouth for some years. I read its name anyway. Somebody should." },
+]
+
+[[clip]]
+id = "weather-008"
+category = "weather"
+title = "Inshore Waters"
+bed = "sea"
+lines = [
+  { say = "keeper", text = "And the forecast for inshore waters, from the rock to the end of the light.", gap = 0.9 },
+  { say = "keeper", text = "Westerly, two. The waves are coming in, as they do, and going out again, as they also do. Visibility, as far as the beam.", gap = 0.9 },
+  { say = "keeper", text = "That is the forecast. Good night, to anyone out there." },
+]
+
+[[clip]]
+id = "weather-009"
+category = "weather"
+title = "The Forecast for the Impossible Seas"
+bed = "sea"
+lines = [
+  { say = "keeper", text = "Gannet's Regret. Northerly, five, apologising later. Showers. Moderate.", gap = 0.9 },
+  { say = "keeper", text = "Yarrow Gap. Southeasterly, four. Rain, with the smell of a garden somewhere. Good.", gap = 0.9 },
+  { say = "keeper", text = "Dimity. Calm. Mist, lifting by morning. Good.", gap = 0.9 },
+  { say = "keeper", text = "Starboard of Everything. Variable. Who can say. Who can say." },
+]
+
+[[clip]]
+id = "weather-h1"
+category = "weather"
+title = "The Halloween Forecast"
+bed = "sea"
+dates = ["10-31"]
+lines = [
+  { say = "keeper", text = "The forecast for the impossible seas, on the last night of October.", gap = 0.9 },
+  { say = "keeper", text = "Gannet's Regret. Northerly, five, moaning slightly. Sheets of rain, some with eyeholes. Poor, then boo.", gap = 0.9 },
+  { say = "keeper", text = "Underneath. Something knocking. Probably the sea. Good.", gap = 0.9 },
+  { say = "keeper", text = "Velvet Deep. Calm. A lantern seen at the surface, carved, smiling. Visibility, good, if you're brave." },
+]
+
+# ── The logbook ───────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "dj-001"
+category = "dj"
+title = "Logbook"
+bed = "sea"
+lines = [
+  { say = "keeper", text = "Logbook. The light was lit at dusk, as usual. No ships passed.", gap = 0.9 },
+  { say = "keeper", text = "One reflection of a ship passed, and waved. I waved back. Entered it anyway." },
+]
+
+[[clip]]
+id = "dj-002"
+category = "dj"
+title = "Logbook"
+bed = "sea"
+lines = [
+  { say = "keeper", text = "Logbook. A gull came to the window and stayed for the whole forecast.", gap = 0.9 },
+  { say = "keeper", text = "It did not leave a name. Gulls never do. It is welcome back." },
+]
+
+[[clip]]
+id = "dj-003"
+category = "dj"
+title = "Logbook"
+bed = "sea"
+lines = [
+  { say = "keeper", text = "Logbook. Received a faint signal tonight, from a relay ship. The Nightjar.", gap = 0.9 },
+  { say = "keeper", text = "Somebody up there is listening. I read the forecast a little more carefully." },
+]
+
+[[clip]]
+id = "dj-004"
+category = "dj"
+title = "Logbook"
+bed = "sea"
+show = "the-keepers-log"
+lines = [
+  { say = "keeper", text = "Logbook. Polished the lens. Wound the clock. Made the tea. Read the forecast. Nobody came.", gap = 1.0 },
+  { say = "keeper", text = "It was a good night. They are all good nights, when nobody is in trouble." },
+]
+
+[[clip]]
+id = "dj-005"
+category = "dj"
+title = "Logbook"
+bed = "sea"
+lines = [
+  { say = "keeper", text = "Logbook. The sea was very calm tonight, and very far down. I think it is shy.", gap = 0.9 },
+  { say = "keeper", text = "I have stopped looking at it directly. It seems to prefer that." },
+]
+
+[[clip]]
+id = "dj-006"
+category = "dj"
+title = "Logbook"
+bed = "sea"
+show = "the-keepers-log"
+lines = [
+  { say = "keeper", text = "Logbook. Ninety thousand nights, give or take. I have not missed one.", gap = 1.0 },
+  { say = "keeper", text = "I do not say that to boast. I say it so that someone knows." },
+]
+
+[[clip]]
+id = "dj-007"
+category = "dj"
+title = "Logbook"
+bed = "sea"
+lines = [
+  { sfx = "splash", level = 0.5 },
+  { say = "keeper", text = "Logbook. A bottle washed up with a message in it. The message said, is anyone there.", gap = 1.0 },
+  { say = "keeper", text = "I have written, yes, on the back, and put it back in the sea. It will get there." },
+]
+
+[[clip]]
+id = "dj-008"
+category = "dj"
+title = "Logbook"
+bed = "sea"
+lines = [
+  { say = "keeper", text = "Logbook. Heard the time signal through the static tonight. Set the clock by it. It was wrong.", gap = 0.9 },
+  { say = "keeper", text = "I set it anyway. It is good to agree with somebody." },
+]
+
+[[clip]]
+id = "dj-009"
+category = "dj"
+title = "Logbook"
+bed = "sea"
+show = "the-keepers-log"
+lines = [
+  { say = "keeper", text = "Logbook. The beam went round eleven thousand times tonight. I counted the first hundred, and then I just watched.", gap = 1.0 },
+  { say = "keeper", text = "Some things are better watched than counted." },
+]
+
+[[clip]]
+id = "dj-010"
+category = "dj"
+title = "Logbook"
+bed = "sea"
+lines = [
+  { say = "keeper", text = "Logbook. Something tapped at the bottom of the radio band again. A hello, I think, very slow.", gap = 1.0 },
+  { say = "keeper", text = "I tapped back on the desk. I don't know if it carries. It seemed only right." },
+]
+
+# ── Notices and a story ───────────────────────────────────────────────────────
+
+[[clip]]
+id = "psa-001"
+category = "psa"
+title = "Notice to Mariners"
+bed = "sea"
+lines = [
+  { say = "keeper", text = "Notice to mariners. The rock at the edge of Far Nonsuch has moved again. It apologises.", gap = 0.8 },
+  { say = "keeper", text = "Please give it a wide berth while it settles." },
+]
+
+[[clip]]
+id = "psa-002"
+category = "psa"
+title = "Notice to Mariners"
+bed = "sea"
+lines = [
+  { say = "keeper", text = "Notice to mariners. A small island has been reported drifting south of Thimble.", gap = 0.8 },
+  { say = "keeper", text = "It is friendly. Please do not land on it without asking." },
+]
+
+[[clip]]
+id = "story-001"
+category = "story"
+title = "The First Ship"
+bed = "sea"
+lines = [
+  { say = "keeper", text = "I am sometimes asked, by nobody, why I keep the light when no ships come.", gap = 1.2 },
+  { say = "keeper", text = "On the first night, there was a ship. One small ship, with a lantern at the bow, a long way out, in weather.", gap = 1.0 },
+  { say = "keeper", text = "It saw the light. And it turned. And it went home safely.", gap = 1.4 },
+  { say = "keeper", text = "I never saw it again. That is how you know it worked.", gap = 1.4 },
+  { say = "keeper", text = "So I keep the light. In case. Just in case.", gap = 1.0 },
+  { sfx = "foghorn", level = 0.5 },
+]

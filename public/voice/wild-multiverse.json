@@ -6,7 +6,7 @@
       "id": "id-001",
       "category": "id",
       "url": "/voice/wild-multiverse/id-001.mp3",
-      "durationMs": 9676,
+      "durationMs": 9677,
       "overMusic": true,
       "lines": [
         {
@@ -20,7 +20,7 @@
       "id": "id-002",
       "category": "id",
       "url": "/voice/wild-multiverse/id-002.mp3",
-      "durationMs": 6580,
+      "durationMs": 6571,
       "overMusic": true,
       "lines": [
         {
@@ -34,7 +34,7 @@
       "id": "id-003",
       "category": "id",
       "url": "/voice/wild-multiverse/id-003.mp3",
-      "durationMs": 6680,
+      "durationMs": 6678,
       "overMusic": true,
       "lines": [
         {
@@ -48,7 +48,7 @@
       "id": "id-004",
       "category": "id",
       "url": "/voice/wild-multiverse/id-004.mp3",
-      "durationMs": 8391,
+      "durationMs": 8382,
       "overMusic": true,
       "daypart": "morning",
       "lines": [
@@ -63,7 +63,7 @@
       "id": "id-005",
       "category": "id",
       "url": "/voice/wild-multiverse/id-005.mp3",
-      "durationMs": 7751,
+      "durationMs": 7742,
       "overMusic": true,
       "daypart": "night",
       "lines": [
@@ -78,7 +78,7 @@
       "id": "id-006",
       "category": "id",
       "url": "/voice/wild-multiverse/id-006.mp3",
-      "durationMs": 9032,
+      "durationMs": 9039,
       "overMusic": true,
       "lines": [
         {
@@ -331,7 +331,7 @@
       "id": "story-007",
       "category": "story",
       "url": "/voice/wild-multiverse/story-007.mp3",
-      "durationMs": 33693,
+      "durationMs": 33785,
       "title": "The Hat Moth",
       "overMusic": false,
       "daypart": "night",
@@ -339,27 +339,27 @@
         {
           "speaker": "Sir Reginald Thistlewood",
           "text": "As night falls, the hat moth begins its search. It is drawn not to the light, but to hats. Any hat. A bowler. A bonnet. A sun hat left on a bench.",
-          "startMs": 1942
+          "startMs": 2033
         },
         {
           "speaker": "Sir Reginald Thistlewood",
           "text": "It lands, and it stays, and that hat becomes its whole life.",
-          "startMs": 12664
+          "startMs": 12756
         },
         {
           "speaker": "Sir Reginald Thistlewood",
           "text": "Pip has been wearing a woolly hat since Tuesday. There are now, by our count, forty moths on it. He says it is very warm. He says he cannot take it off. He says they hum, at night.",
-          "startMs": 17322
+          "startMs": 17413
         },
         {
           "speaker": "Pip (Camera)",
           "text": "They do hum.",
-          "startMs": 29759
+          "startMs": 29851
         },
         {
           "speaker": "Sir Reginald Thistlewood",
           "text": "He is, I think, quite happy.",
-          "startMs": 31392
+          "startMs": 31483
         }
       ]
     },
@@ -465,17 +465,17 @@
         {
           "speaker": "Sir Reginald Thistlewood",
           "text": "Tonight, the crabs are humming something we almost recognise. Listen.",
-          "startMs": 26665
+          "startMs": 26664
         },
         {
           "speaker": "Sir Reginald Thistlewood",
           "text": "It goes... da da dum. Da da.",
-          "startMs": 32294
+          "startMs": 32293
         },
         {
           "speaker": "Sir Reginald Thistlewood",
           "text": "Someone, please. Find Bev.",
-          "startMs": 36359
+          "startMs": 36358
         }
       ]
     },
@@ -600,7 +600,7 @@
       "id": "story-014",
       "category": "story",
       "url": "/voice/wild-multiverse/story-014.mp3",
-      "durationMs": 39511,
+      "durationMs": 39510,
       "title": "The Common Sigh",
       "overMusic": false,
       "lines": [
@@ -718,6 +718,597 @@
           "speaker": "Pip (Camera)",
           "text": "I don't know any more.",
           "startMs": 41801
+        }
+      ]
+    },
+    {
+      "id": "the-dawn-chorus-open",
+      "category": "id",
+      "url": "/voice/wild-multiverse/the-dawn-chorus-open.mp3",
+      "durationMs": 8611,
+      "title": "The Dawn Chorus",
+      "overMusic": true,
+      "part": "open",
+      "show": "the-dawn-chorus",
+      "lines": [
+        {
+          "speaker": "Sir Reginald Thistlewood",
+          "text": "Good morning. This is the Dawn Chorus.",
+          "startMs": 440
+        },
+        {
+          "speaker": "Sir Reginald Thistlewood",
+          "text": "Something enormous is waking up. Very quietly now.",
+          "startMs": 3990
+        }
+      ]
+    },
+    {
+      "id": "the-dawn-chorus-01",
+      "category": "dj",
+      "url": "/voice/wild-multiverse/the-dawn-chorus-01.mp3",
+      "durationMs": 11728,
+      "overMusic": true,
+      "show": "the-dawn-chorus",
+      "lines": [
+        {
+          "speaker": "Sir Reginald Thistlewood",
+          "text": "Dawn. The first bird begins to sing. It is not very good. It is trying its best.",
+          "startMs": 37
+        },
+        {
+          "speaker": "Sir Reginald Thistlewood",
+          "text": "And here comes the second bird. It is worse. They are, I believe, in love.",
+          "startMs": 6603
+        }
+      ]
+    },
+    {
+      "id": "the-dawn-chorus-02",
+      "category": "dj",
+      "url": "/voice/wild-multiverse/the-dawn-chorus-02.mp3",
+      "durationMs": 14042,
+      "overMusic": true,
+      "show": "the-dawn-chorus",
+      "lines": [
+        {
+          "speaker": "Sir Reginald Thistlewood",
+          "text": "On the horizon, as the sun comes up, the mostly-neck giraffe is still going past. It has been going past since the series began.",
+          "startMs": 39
+        },
+        {
+          "speaker": "Pip (Camera)",
+          "text": "Still no head.",
+          "startMs": 9926
+        },
+        {
+          "speaker": "Sir Reginald Thistlewood",
+          "text": "Still no head, Pip. What a morning.",
+          "startMs": 11451
+        }
+      ]
+    },
+    {
+      "id": "the-night-shoot-open",
+      "category": "id",
+      "url": "/voice/wild-multiverse/the-night-shoot-open.mp3",
+      "durationMs": 10684,
+      "title": "The Night Shoot",
+      "overMusic": true,
+      "part": "open",
+      "show": "the-night-shoot",
+      "lines": [
+        {
+          "speaker": "Sir Reginald Thistlewood",
+          "text": "This is the Night Shoot. Keep your voice down. Keep your feet inside the tent.",
+          "startMs": 440
+        },
+        {
+          "speaker": "Pip (Camera)",
+          "text": "My feet are inside the tent.",
+          "startMs": 6320
+        },
+        {
+          "speaker": "Sir Reginald Thistlewood",
+          "text": "Keep them there, Pip.",
+          "startMs": 8379
+        }
+      ]
+    },
+    {
+      "id": "the-night-shoot-01",
+      "category": "dj",
+      "url": "/voice/wild-multiverse/the-night-shoot-01.mp3",
+      "durationMs": 16431,
+      "overMusic": true,
+      "show": "the-night-shoot",
+      "lines": [
+        {
+          "speaker": "Sir Reginald Thistlewood",
+          "text": "By night, the tall grass belongs to other creatures. Things with lanterns. Things with opinions.",
+          "startMs": 446
+        },
+        {
+          "speaker": "Sir Reginald Thistlewood",
+          "text": "Something has just walked past the tent, very slowly, humming. Pip is pretending to be asleep.",
+          "startMs": 7666
+        },
+        {
+          "speaker": "Pip (Camera)",
+          "text": "I am asleep.",
+          "startMs": 14567
+        }
+      ]
+    },
+    {
+      "id": "the-night-shoot-02",
+      "category": "dj",
+      "url": "/voice/wild-multiverse/the-night-shoot-02.mp3",
+      "durationMs": 14706,
+      "overMusic": true,
+      "show": "the-night-shoot",
+      "lines": [
+        {
+          "speaker": "Sir Reginald Thistlewood",
+          "text": "The night camera sees only warmth. Here is the crew, glowing. Here is the kettle, glowing. And here, in the corner of the frame, a creature we cannot identify.",
+          "startMs": 46
+        },
+        {
+          "speaker": "Sir Reginald Thistlewood",
+          "text": "It is holding a biscuit. It is our biscuit.",
+          "startMs": 11669
+        }
+      ]
+    },
+    {
+      "id": "nature-open-01",
+      "category": "story",
+      "url": "/voice/wild-multiverse/nature-open-01.mp3",
+      "durationMs": 4764,
+      "overMusic": false,
+      "part": "open",
+      "kit": "nature",
+      "lines": [
+        {
+          "speaker": "Sir Reginald Thistlewood",
+          "text": "Here, in the tall grass, we wait. Very quietly.",
+          "startMs": 446
+        }
+      ]
+    },
+    {
+      "id": "nature-open-02",
+      "category": "story",
+      "url": "/voice/wild-multiverse/nature-open-02.mp3",
+      "durationMs": 5119,
+      "overMusic": false,
+      "part": "open",
+      "kit": "nature",
+      "lines": [
+        {
+          "speaker": "Sir Reginald Thistlewood",
+          "text": "Wild Multiverse. Something is moving. Nobody move.",
+          "startMs": 438
+        }
+      ]
+    },
+    {
+      "id": "nature-open-03",
+      "category": "story",
+      "url": "/voice/wild-multiverse/nature-open-03.mp3",
+      "durationMs": 4149,
+      "overMusic": false,
+      "part": "open",
+      "kit": "nature",
+      "lines": [
+        {
+          "speaker": "Sir Reginald Thistlewood",
+          "text": "Something has noticed the camera. Stay very still, everyone.",
+          "startMs": 40
+        }
+      ]
+    },
+    {
+      "id": "nature-open-04",
+      "category": "story",
+      "url": "/voice/wild-multiverse/nature-open-04.mp3",
+      "durationMs": 5393,
+      "overMusic": false,
+      "daypart": "night",
+      "part": "open",
+      "kit": "nature",
+      "lines": [
+        {
+          "speaker": "Sir Reginald Thistlewood",
+          "text": "By lamplight, the grass looks different. So, I'm afraid, do we.",
+          "startMs": 440
+        }
+      ]
+    },
+    {
+      "id": "nature-body-01",
+      "category": "story",
+      "url": "/voice/wild-multiverse/nature-body-01.mp3",
+      "durationMs": 11710,
+      "overMusic": false,
+      "part": "body",
+      "kit": "nature",
+      "lines": [
+        {
+          "speaker": "Sir Reginald Thistlewood",
+          "text": "The lesser spotted umbrella opens only when it is certain nobody is looking. It has never once been seen open.",
+          "startMs": 45
+        },
+        {
+          "speaker": "Sir Reginald Thistlewood",
+          "text": "And yet every morning, the grass beneath it is dry.",
+          "startMs": 8194
+        }
+      ]
+    },
+    {
+      "id": "nature-body-02",
+      "category": "story",
+      "url": "/voice/wild-multiverse/nature-body-02.mp3",
+      "durationMs": 14442,
+      "overMusic": false,
+      "part": "body",
+      "kit": "nature",
+      "lines": [
+        {
+          "speaker": "Sir Reginald Thistlewood",
+          "text": "A herd of reluctant antelope crosses the valley. Every few steps, each one stops to ask the one in front if this is really necessary.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Sir Reginald Thistlewood",
+          "text": "It is. It's the migration. They go anyway. They always do.",
+          "startMs": 10084
+        }
+      ]
+    },
+    {
+      "id": "nature-body-03",
+      "category": "story",
+      "url": "/voice/wild-multiverse/nature-body-03.mp3",
+      "durationMs": 14323,
+      "overMusic": false,
+      "part": "body",
+      "kit": "nature",
+      "lines": [
+        {
+          "speaker": "Sir Reginald Thistlewood",
+          "text": "The apologising moose. When startled, it says sorry. When it startles you, it says sorry.",
+          "startMs": 37
+        },
+        {
+          "speaker": "Sir Reginald Thistlewood",
+          "text": "It has spent its whole life apologising, and it has never once done anything wrong. We have grown very fond of it.",
+          "startMs": 6823
+        }
+      ]
+    },
+    {
+      "id": "nature-body-04",
+      "category": "story",
+      "url": "/voice/wild-multiverse/nature-body-04.mp3",
+      "durationMs": 16686,
+      "overMusic": false,
+      "part": "body",
+      "kit": "nature",
+      "lines": [
+        {
+          "speaker": "Sir Reginald Thistlewood",
+          "text": "The library owl hunts only in silence, and insists on it from everyone else. When the crew opened a packet of crisps this evening, it turned its head all the way round and looked at us.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Sir Reginald Thistlewood",
+          "text": "We have put the crisps away. We will never take them out again.",
+          "startMs": 12903
+        }
+      ]
+    },
+    {
+      "id": "nature-body-05",
+      "category": "story",
+      "url": "/voice/wild-multiverse/nature-body-05.mp3",
+      "durationMs": 13652,
+      "overMusic": false,
+      "part": "body",
+      "kit": "nature",
+      "lines": [
+        {
+          "speaker": "Sir Reginald Thistlewood",
+          "text": "The lantern badger trots past, lit by the glowing patch on its back that it cannot see, quite certain that the world is simply brighter wherever it goes.",
+          "startMs": 45
+        },
+        {
+          "speaker": "Sir Reginald Thistlewood",
+          "text": "We still haven't told it. We never will.",
+          "startMs": 10832
+        }
+      ]
+    },
+    {
+      "id": "nature-body-06",
+      "category": "story",
+      "url": "/voice/wild-multiverse/nature-body-06.mp3",
+      "durationMs": 12682,
+      "overMusic": false,
+      "part": "body",
+      "kit": "nature",
+      "lines": [
+        {
+          "speaker": "Sir Reginald Thistlewood",
+          "text": "Overhead, the great crested doubt is circling. It has already eaten the director's plan, and most of my opening sentence.",
+          "startMs": 39
+        },
+        {
+          "speaker": "Sir Reginald Thistlewood",
+          "text": "I believe this is a documentary. I believe so.",
+          "startMs": 8807
+        }
+      ]
+    },
+    {
+      "id": "nature-body-07",
+      "category": "story",
+      "url": "/voice/wild-multiverse/nature-body-07.mp3",
+      "durationMs": 15458,
+      "overMusic": false,
+      "part": "body",
+      "kit": "nature",
+      "lines": [
+        {
+          "speaker": "Sir Reginald Thistlewood",
+          "text": "A family of hedgehogs crosses the clearing in single file, each one holding the tail of the one in front. The smallest is at the back, very proud of the job.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Sir Reginald Thistlewood",
+          "text": "Nobody has told it that hedgehogs don't have tails.",
+          "startMs": 11729
+        }
+      ]
+    },
+    {
+      "id": "nature-close-01",
+      "category": "story",
+      "url": "/voice/wild-multiverse/nature-close-01.mp3",
+      "durationMs": 5690,
+      "overMusic": false,
+      "part": "close",
+      "kit": "nature",
+      "lines": [
+        {
+          "speaker": "Pip (Camera)",
+          "text": "Sir Reginald, it's looking at us.",
+          "startMs": 33
+        },
+        {
+          "speaker": "Sir Reginald Thistlewood",
+          "text": "Then let it look, Pip. We've been looking at it all week.",
+          "startMs": 2285
+        }
+      ]
+    },
+    {
+      "id": "nature-close-02",
+      "category": "story",
+      "url": "/voice/wild-multiverse/nature-close-02.mp3",
+      "durationMs": 6223,
+      "overMusic": false,
+      "part": "close",
+      "kit": "nature",
+      "lines": [
+        {
+          "speaker": "Sir Reginald Thistlewood",
+          "text": "Magnificent. Pip, keep rolling.",
+          "startMs": 43
+        },
+        {
+          "speaker": "Pip (Camera)",
+          "text": "I'm out of film.",
+          "startMs": 2859
+        },
+        {
+          "speaker": "Sir Reginald Thistlewood",
+          "text": "Keep rolling anyway.",
+          "startMs": 4417
+        }
+      ]
+    },
+    {
+      "id": "nature-close-03",
+      "category": "story",
+      "url": "/voice/wild-multiverse/nature-close-03.mp3",
+      "durationMs": 4381,
+      "overMusic": false,
+      "part": "close",
+      "kit": "nature",
+      "lines": [
+        {
+          "speaker": "Sir Reginald Thistlewood",
+          "text": "We'll leave it there. Quietly. Backing away. Mind the kettle, Pip.",
+          "startMs": 41
+        }
+      ]
+    },
+    {
+      "id": "nature-close-04",
+      "category": "story",
+      "url": "/voice/wild-multiverse/nature-close-04.mp3",
+      "durationMs": 4826,
+      "overMusic": false,
+      "part": "close",
+      "kit": "nature",
+      "lines": [
+        {
+          "speaker": "Sir Reginald Thistlewood",
+          "text": "And so the grass closes behind it, as grass does, and it is gone.",
+          "startMs": 40
+        }
+      ]
+    },
+    {
+      "id": "teodor-is-heard-08",
+      "category": "story",
+      "url": "/voice/wild-multiverse/teodor-is-heard-08.mp3",
+      "durationMs": 87007,
+      "title": "Teodor Is Heard, Part Eight: The Relay Gull",
+      "overMusic": false,
+      "serial": {
+        "id": "teodor-is-heard",
+        "episode": 8
+      },
+      "lines": [
+        {
+          "speaker": "Sir Reginald Thistlewood",
+          "text": "Today, an expedition to the very edge of the dial, to film one of the rarest creatures in the multiverse. The relay keeper.",
+          "startMs": 436
+        },
+        {
+          "speaker": "Sir Reginald Thistlewood",
+          "text": "Note the cardigan. Note the kettle, which is always on. Each night the keeper climbs his tower and calls a single question into the dark.",
+          "startMs": 9238
+        },
+        {
+          "speaker": "Teodor, Relay Four",
+          "text": "Is anyone receiving this.",
+          "startMs": 19466
+        },
+        {
+          "speaker": "Pip (Camera)",
+          "text": "Sir Reginald. Something's coming. It's mostly beak.",
+          "startMs": 22442
+        },
+        {
+          "speaker": "Sir Reginald Thistlewood",
+          "text": "And here, at three o'clock precisely, the relay gull. Known to the keeper as Captain.",
+          "startMs": 25498
+        },
+        {
+          "speaker": "Sir Reginald Thistlewood",
+          "text": "Each afternoon the gull arrives with small rolled pieces of paper in its beak. Messages. From listeners all across the dial. Replies.",
+          "startMs": 32094
+        },
+        {
+          "speaker": "Sir Reginald Thistlewood",
+          "text": "Now, observe.",
+          "startMs": 42944
+        },
+        {
+          "speaker": "Pip (Camera)",
+          "text": "He's eating them.",
+          "startMs": 45775
+        },
+        {
+          "speaker": "Sir Reginald Thistlewood",
+          "text": "He is eating them, Pip. Every one. For eleven years, the relay gull has carried replies to the relay keeper, and eaten them on the doorstep.",
+          "startMs": 47274
+        },
+        {
+          "speaker": "Sir Reginald Thistlewood",
+          "text": "The keeper does not know. He pats the gull, and gives it a biscuit, and says, no post today, Captain.",
+          "startMs": 57702
+        },
+        {
+          "speaker": "Pip (Camera)",
+          "text": "Should we tell him?",
+          "startMs": 65839
+        },
+        {
+          "speaker": "Sir Reginald Thistlewood",
+          "text": "We are a nature documentary, Pip. We do not interfere.",
+          "startMs": 67415
+        },
+        {
+          "speaker": "Sir Reginald Thistlewood",
+          "text": "Pip has gone to tell him.",
+          "startMs": 73167
+        },
+        {
+          "speaker": "Sir Reginald Thistlewood",
+          "text": "Pip has interfered. Magnificently.",
+          "startMs": 76114
+        },
+        {
+          "speaker": "Teodor, Relay Four",
+          "text": "They're replies? All of them? For eleven years?",
+          "startMs": 80257
+        },
+        {
+          "speaker": "Teodor, Relay Four",
+          "text": "Captain. You absolute gull.",
+          "startMs": 84021
+        }
+      ]
+    },
+    {
+      "id": "halloween-01",
+      "category": "story",
+      "url": "/voice/wild-multiverse/halloween-01.mp3",
+      "durationMs": 15977,
+      "title": "The Common Pumpkin",
+      "overMusic": false,
+      "part": "body",
+      "kit": "nature",
+      "dates": [
+        "10-24",
+        "10-25",
+        "10-26",
+        "10-27",
+        "10-28",
+        "10-29",
+        "10-30",
+        "10-31"
+      ],
+      "lines": [
+        {
+          "speaker": "Sir Reginald Thistlewood",
+          "text": "The common pumpkin, in the wild, grows a face only in the last week of October. Nobody carves it. It simply decides.",
+          "startMs": 44
+        },
+        {
+          "speaker": "Sir Reginald Thistlewood",
+          "text": "By Halloween, every pumpkin on the hillside is grinning at the crew. Pip has asked to sleep in the van.",
+          "startMs": 9058
+        }
+      ]
+    },
+    {
+      "id": "halloween-02",
+      "category": "id",
+      "url": "/voice/wild-multiverse/halloween-02.mp3",
+      "durationMs": 9126,
+      "title": "Something in the Long Grass",
+      "overMusic": true,
+      "dates": [
+        "10-24",
+        "10-25",
+        "10-26",
+        "10-27",
+        "10-28",
+        "10-29",
+        "10-30",
+        "10-31"
+      ],
+      "lines": [
+        {
+          "speaker": "Sir Reginald Thistlewood",
+          "text": "Wild Multiverse, at Halloween. Something is moving in the long grass.",
+          "startMs": 39
+        },
+        {
+          "speaker": "Pip (Camera)",
+          "text": "It's me. I'm dressed as a lion.",
+          "startMs": 5616
+        },
+        {
+          "speaker": "Sir Reginald Thistlewood",
+          "text": "Magnificent.",
+          "startMs": 7806
         }
       ]
     }

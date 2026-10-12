@@ -5,6 +5,13 @@ station = "rainfall-fm"
 
 [voices]
 host = { voice = "bf_isabella", speed = 0.92, name = "Drizzle Montgomery" }
+# v3: serials.
+greg = { voice = "am_onyx", fx = "whisper", name = "Greg, a Shadow" }
+teodor = { voice = "bm_daniel", fx = "distant", name = "Teodor, Relay Four" }
+window_a = { voice = "af_river", fx = "distant", name = "Lantern Street" }
+window_b = { voice = "am_eric", fx = "distant", name = "Lantern Street" }
+window_c = { voice = "bf_lily", fx = "distant", name = "Lantern Street" }
+window_d = { voice = "am_santa", fx = "distant", name = "Ferdinand, Tram Driver" }
 
 # ── Idents ────────────────────────────────────────────────────────────────────
 
@@ -209,4 +216,290 @@ lines = [
   { say = "host", text = "And now the forecast. Tonight, rain, heavy at times, lighter at others, and at about three in the morning, a sort of thoughtful drizzle." },
   { say = "host", text = "Tomorrow, rain. The weekend, we'll see. It'll be rain." },
   { say = "host", text = "Nineteen years I've been reading this, and I still read it like it might say something else. Rainfall FM. Stay dry. Or stay damp and happy. Both count." },
+]
+
+# ══ v3: the living schedule ═══════════════════════════════════════════════════
+#
+# Shows, the dj kit (an opener, one to three bits of news from Precinct Nine, a hand-off),
+# serial episodes and Halloween. Mizzle and the Drainpipe Choir are resident artists
+# (src/content/packs/chill.ts). Existing clips above are rendered and deployed; only add.
+
+# ── Shows ─────────────────────────────────────────────────────────────────────
+
+[[show]]
+id = "the-night-tram"
+name = "The Night Tram"
+blurb = "Music for the last tram home through Precinct Nine."
+start = 0
+end = 3
+
+[[show]]
+id = "the-kettle-hour"
+name = "The Kettle Hour"
+blurb = "Tea, drizzle, and the morning rainfall totals."
+start = 6
+end = 8
+
+[[clip]]
+id = "the-night-tram-open"
+category = "id"
+show = "the-night-tram"
+part = "open"
+title = "The Night Tram"
+bed = "rain"
+lines = [
+  { say = "host", text = "This is the Night Tram, on Rainfall FM. The last tram home through Precinct Nine. Mind the gap. It's full of water." },
+]
+
+[[clip]]
+id = "the-night-tram-01"
+category = "dj"
+show = "the-night-tram"
+bed = "rain"
+lines = [
+  { say = "host", text = "The number nine is coming down Lantern Street, lit up like a fish tank. Four passengers. One asleep, one reading, one doing the crossword." },
+  { say = "host", text = "And one just looking out at the rain, the way you do on the last tram. This one's for her." },
+]
+
+[[clip]]
+id = "the-night-tram-02"
+category = "dj"
+show = "the-night-tram"
+lines = [
+  { say = "host", text = "The driver on the night route is called Ferdinand. He's driven it for thirty years, and every night, at the bottom of Gutter Hill, he rings the bell twice for no reason.", gap = 0.8 },
+  { say = "host", text = "He says it's for the puddles. Here's one for Ferdinand." },
+]
+
+[[clip]]
+id = "the-kettle-hour-open"
+category = "id"
+show = "the-kettle-hour"
+part = "open"
+title = "The Kettle Hour"
+lines = [
+  { say = "host", text = "Good morning. It's the Kettle Hour, on Rainfall FM. The kettle's on, and it's raining. Both of those are always true." },
+]
+
+[[clip]]
+id = "the-kettle-hour-01"
+category = "dj"
+show = "the-kettle-hour"
+lines = [
+  { say = "host", text = "The morning totals. Precinct One, an inch and a half. Precinct Four, an inch and a half. Another draw." },
+  { say = "host", text = "They're getting very good at draws, Precinct One and Four. I think they're friends now." },
+]
+
+[[clip]]
+id = "the-kettle-hour-02"
+category = "dj"
+show = "the-kettle-hour"
+lines = [
+  { say = "host", text = "If you've just woken up, the rain on your window is the same rain that was there when you went to sleep. It waited up for you." },
+  { say = "host", text = "Isn't that nice. Here's something to drink your tea to." },
+]
+
+# ── DJ kit ────────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "dj-open-01"
+category = "dj"
+kit = "dj"
+part = "open"
+lines = [
+  { say = "host", text = "Rainfall FM. Still raining. Still lovely. Still here." },
+]
+
+[[clip]]
+id = "dj-open-02"
+category = "dj"
+kit = "dj"
+part = "open"
+lines = [
+  { say = "host", text = "That was lovely, wasn't it. Like rain on a shed roof." },
+]
+
+[[clip]]
+id = "dj-open-03"
+category = "dj"
+kit = "dj"
+part = "open"
+daypart = "night"
+lines = [
+  { say = "host", text = "Evening, all. Or morning. It's hard to tell under this much cloud." },
+]
+
+[[clip]]
+id = "dj-open-04"
+category = "dj"
+kit = "dj"
+part = "open"
+lines = [
+  { say = "host", text = "Kettle's just boiled, so I'll keep this short." },
+]
+
+[[clip]]
+id = "dj-body-01"
+category = "dj"
+kit = "dj"
+part = "body"
+lines = [
+  { say = "host", text = "Puddle news. The big one outside the bakery has been given a lighthouse. Very small. Very bright. Several ducks have said thank you." },
+]
+
+[[clip]]
+id = "dj-body-02"
+category = "dj"
+kit = "dj"
+part = "body"
+lines = [
+  { say = "host", text = "The Drainpipe Choir were in the studio this afternoon. They don't sing, as such. They stand under the gutter and let it happen. It's beautiful. It's very damp." },
+]
+
+[[clip]]
+id = "dj-body-03"
+category = "dj"
+kit = "dj"
+part = "body"
+lines = [
+  { say = "host", text = "Umbrella news. The two umbrellas on Lantern Street, hovering since spring, have finally sorted it out. They've decided to share. They're one big umbrella now, and they seem very happy." },
+]
+
+[[clip]]
+id = "dj-body-04"
+category = "dj"
+kit = "dj"
+part = "body"
+lines = [
+  { say = "host", text = "A listener writes that she saw the sun once, through a gap in the clouds, for about a second. She says it was very bright, and she isn't sure she approves." },
+]
+
+[[clip]]
+id = "dj-body-05"
+category = "dj"
+kit = "dj"
+part = "body"
+lines = [
+  { say = "host", text = "Mizzle have a new record out. It's mostly the sound of a tin roof. If you've ever lain awake under a tin roof, you'll know why it went straight to number one." },
+]
+
+[[clip]]
+id = "dj-body-06"
+category = "dj"
+kit = "dj"
+part = "body"
+lines = [
+  { say = "host", text = "A reminder from the Precinct Nine Tidy Streets Committee. Please don't empty your wellies on the tram. Empty them into the gutter on the way home. The gutter is very grateful." },
+]
+
+[[clip]]
+id = "dj-close-01"
+category = "dj"
+kit = "dj"
+part = "close"
+lines = [
+  { say = "host", text = "Here's the next one. Stay damp, everyone." },
+]
+
+[[clip]]
+id = "dj-close-02"
+category = "dj"
+kit = "dj"
+part = "close"
+lines = [
+  { say = "host", text = "Here's some music. Put the kettle on, love." },
+]
+
+[[clip]]
+id = "dj-close-03"
+category = "dj"
+kit = "dj"
+part = "close"
+lines = [
+  { say = "host", text = "Rainfall FM. Here's another one, straight from the gutter." },
+]
+
+[[clip]]
+id = "dj-close-04"
+category = "dj"
+kit = "dj"
+part = "close"
+bed = "rain"
+lines = [
+  { say = "host", text = "Listen to that. Lovely. Here's some more." },
+]
+
+# ── Serials (one episode a day; see the other stations for the rest) ─────────
+
+[[clip]]
+id = "greg-comes-home-04"
+category = "story"
+serial = { id = "greg-comes-home", episode = 4 }
+title = "Greg Comes Home, Part Four: Nobody Here Has a Shadow"
+bed = "rain"
+lines = [
+  { say = "host", text = "We've a visitor at the studio tonight. He came down through the only gap in the clouds we've had all year, on a moonbeam, and landed in the big puddle outside the bakery. It's Greg." },
+  { say = "greg", text = "Hello. Sorry about the puddle." },
+  { say = "host", text = "The puddle's fine, love. It's had worse. How are you finding Precinct Nine?" },
+  { say = "greg", text = "Dark. Every time I go outside, I sort of disappear." },
+  { say = "host", text = "That's the clouds. Nobody here has a shadow. You're the first one most of Precinct Nine has ever met." },
+  { say = "greg", text = "People keep stopping to look at me." },
+  { say = "host", text = "They think you're beautiful. Like a sunset that walks about.", gap = 1.0 },
+  { say = "greg", text = "I need to get to the eastern Overlap. I'm going home. But I can't go anywhere without a light." },
+  { say = "host", text = "Then take the night tram. Ferdinand drives it. The number nine has big front lamps, and they'll throw you all the way to the edge of the precinct." },
+  { say = "greg", text = "Will he mind?" },
+  { say = "host", text = "Ferdinand? He rings the bell for puddles, love. He'll be thrilled." },
+  { sfx = "bell" },
+  { say = "host", text = "That's him now. Go on. Sit up at the front, in the light." },
+  { say = "greg", text = "Thank you, Drizzle." },
+  { say = "host", text = "And Greg? Your fella's porch light. Is it on?" },
+  { say = "greg", text = "Every night, they say." },
+  { say = "host", text = "Then you'll be fine. Here's one for the road. It's wet." },
+]
+
+[[clip]]
+id = "teodor-is-heard-10"
+category = "story"
+serial = { id = "teodor-is-heard", episode = 10 }
+title = "Teodor Is Heard, Part Ten: Rain at Relay Four"
+bed = "rain"
+lines = [
+  { say = "host", text = "It's nearly three in the morning, and Precinct Nine is doing something it's never done. Every window on Lantern Street is open. Every light is on." },
+  { say = "host", text = "Teodor at Relay Four has a little crystal radio now. It can just about hear, if something carries the signal all the way out to him." },
+  { say = "host", text = "And round here, love, we've got plenty of something that goes everywhere.", gap = 0.8 },
+  { say = "host", text = "Rain. So at three o'clock, we're all going to lean out of our windows, say it into the rain, and let the rain take it. Here we go. Ferdinand's ringing the bell." },
+  { sfx = "bell" },
+  { say = "host", text = "Yes." },
+  { say = "window_a", text = "Yes!" },
+  { say = "window_b", text = "Yes, Teodor." },
+  { say = "window_c", text = "Yes, love." },
+  { say = "window_d", text = "Yes!" },
+  { pause = 2.0 },
+  { say = "teodor", text = "Relay Four. Night four thousand and forty. Something odd. It's raining here.", gap = 0.8 },
+  { say = "teodor", text = "It never rains at Relay Four. And the rain is saying something. On the roof. On the window. On Captain, who is not pleased.", gap = 1.0 },
+  { say = "teodor", text = "It sounds like. It sounds a lot like yes.", gap = 1.6 },
+  { say = "host", text = "It is, love. It's from all of us. Close your windows, everybody. And Teodor? Put a towel down. It's our rain. It gets everywhere." },
+]
+
+# ── Halloween (24 to 31 October) ──────────────────────────────────────────────
+
+[[clip]]
+id = "halloween-01"
+category = "dj"
+title = "Halloween in Precinct Nine"
+dates = ["10-24", "10-25", "10-26", "10-27", "10-28", "10-29", "10-30", "10-31"]
+lines = [
+  { say = "host", text = "Halloween in Precinct Nine. The children go trick or treating in wellies. The ghosts go out in sheets, and come home in very wet sheets." },
+  { say = "host", text = "Nobody's frightened. Everybody's damp. Here's a spooky one. It's also wet." },
+]
+
+[[clip]]
+id = "halloween-02"
+category = "weather"
+title = "The Halloween Forecast"
+bed = "rain"
+dates = ["10-24", "10-25", "10-26", "10-27", "10-28", "10-29", "10-30", "10-31"]
+lines = [
+  { sting = "weather" },
+  { say = "host", text = "The Halloween forecast. Rain, heavy at times, with a ghostly mist at about midnight." },
+  { say = "host", text = "That's just the rain, standing still for a moment, thinking about its life. Leave it be. It'll start falling again when it's ready." },
 ]

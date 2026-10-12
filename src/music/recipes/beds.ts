@@ -2,7 +2,7 @@
 // busy melodies), but still pleasant on their own.
 //   news-bed       – ticking clock, pulsing synth, sub and pad; an ident sting at each end
 //   talk-bed       – a light, bouncy keys-and-rim groove
-//   sports-fanfare – brass fanfare and timpani, then a polite march under commentary
+//   sports-fanfare – brass fanfare and timpani, then a polite march under commentary (fanfare.ts)
 //   documentary    – patient piano ostinato, hushed strings, swelling horns
 
 import type { TrackRequest } from '../index';
@@ -10,7 +10,7 @@ import { rngFor } from '../rng';
 import type { SamplePatch, Score } from '../score';
 import { bassPc, chord, chordPcs, keyName, nearestInSet, parseProgression, prefersFlats, SCALES, scalePcs, voiceChord } from '../theory';
 import { bassNote, chordSpans, layout, lerp, makeMotif, pickBpm, realizeMotif, resolveTweaks, ScoreBuilder, trackFx, vel } from './common';
-import { DOCUMENTARY, FANFARE, NEWS, TALK } from './templates';
+import { DOCUMENTARY, NEWS, TALK } from './templates';
 
 export function composeNews(req: TrackRequest): Score {
   const rng = rngFor(req.seed, 'news-bed');
@@ -148,92 +148,8 @@ export function composeTalk(req: TrackRequest): Score {
   });
 }
 
-export function composeFanfare(req: TrackRequest): Score {
-  const rng = rngFor(req.seed, 'sports-fanfare');
-  const tweaks = resolveTweaks(req, { bpm: 120, density: 0.5, grit: 0.1, weirdness: 0.15, brightness: 0.6 });
-  const { density: D, weirdness: W, brightness: B } = tweaks;
-  const tonic = rng.int(0, 11);
-  const tpl = rng.pick(FANFARE);
-  const prog = parseProgression(tpl.prog, tonic);
-  const keyScale = scalePcs(tonic, SCALES[tpl.scale]);
-  const flats = prefersFlats(tonic, false);
-  const bpm = pickBpm(rng, req, [112, 132]);
-  const { fit, plan } = layout(req, bpm, 4, { unit: 8, pattern: ['A', 'B'], intro: 4, outro: 2 });
-  const b = new ScoreBuilder(req.recipe, req, fit, 4, 0.5, tweaks);
-  const beat = b.beat;
-
-  const brass = b.inst({ kind: 'synth', patch: 'brass', name: 'Brass', gain: 0.6, reverb: 0.3, pan: -0.1 });
-  const horn = b.inst({ kind: 'synth', patch: 'horn', name: 'Horns', gain: 0.25, reverb: 0.4, pan: 0.15 });
-  const tuba = b.inst({ kind: 'synth', patch: 'tuba', name: 'Low brass', gain: 0.55 });
-  const timp = b.inst({ kind: 'sample', patch: 'timpani', name: 'Timpani', gain: 0.55, reverb: 0.3 });
-  const snare = b.inst({ kind: 'sample', patch: 'snare-march', name: 'Snare', gain: 0.32, pan: 0.1, reverb: 0.15 });
-  const crash = b.inst({ kind: 'sample', patch: 'crash', name: 'Cymbals', gain: 0.25, reverb: 0.3 });
-  const glock = b.inst({ kind: 'sample', patch: 'celesta', name: 'Glockenspiel', gain: 0.22, pan: 0.3, reverb: 0.3 });
-
-  const theme = makeMotif(rng, 8, 0.45 + D * 0.2, { restTail: 2, minNotes: 2, maxNotes: 4, maxLeap: 4 });
-  let voicing: number[] | null = null;
-  const timpPitch = (pcValue: number) => bassNote(pcValue, null, 40, 52) + 19; // the sample is G2; shift to the note
-  const fanfare = (bar: number, bars: number, spans: ReturnType<typeof chordSpans>, final: boolean) => {
-    // Snare roll into the downbeat, then brass stabs: da-da-da DAAA.
-    const t0 = b.grid.bar(bar);
-    for (let j = 0; j < 8; j++) b.hit(snare, t0 - beat + j * beat * 0.125, 0.3 + j * 0.06);
-    b.hit(crash, t0, 0.8, 60, 3);
-    for (const span of spans.filter((sp) => sp.bar < bar + bars)) {
-      voicing = voiceChord(span.chord, voicing, { low: 55, high: 76, voices: 4, rootless: false });
-      const rhythm: [number, number][] = final && span === spans[spans.length - 1] ? [[0, b.end - span.t - 0.5]] : [[0, 0.6], [0.67, 0.3], [1.33, 0.3], [2, 1.8]];
-      for (const [x, len] of rhythm) {
-        for (const p of voicing) b.note(brass, span.t + x * beat, len * (x > 3 ? 1 : beat), p, vel(rng, x === 0 || x === 2 ? 0.85 : 0.65));
-      }
-      b.note(tuba, span.t, beat * 1.8, bassNote(bassPc(span.chord), null, 33, 45), 0.8);
-      b.hit(timp, span.t, 0.8, timpPitch(bassPc(span.chord)));
-      b.hit(timp, span.t + beat * 2, 0.6, timpPitch(bassPc(span.chord)));
-    }
-  };
-
-  let prevBass: number | null = null;
-  for (const s of plan) {
-    const intro = s.part === 'intro';
-    const outro = s.part === 'outro';
-    const spans = chordSpans(prog, s, b);
-    if (outro) spans.forEach((sp, k) => (sp.chord = k === spans.length - 1 ? chord(tonic, '') : chord(tonic + 7, '')));
-    b.section({ ...s, name: intro ? 'fanfare' : outro ? 'finale' : s.name }, spans.map((x) => x.chord), flats);
-    if (intro || outro) {
-      fanfare(s.startBar, s.bars, spans, outro);
-      continue;
-    }
-    // Under commentary: horns sustain, low brass on 1 and 3, a polite march on the snare.
-    spans.forEach((span) => {
-      voicing = voiceChord(span.chord, voicing, { low: 52, high: 69, voices: 3, rootless: false });
-      for (const p of voicing) b.note(horn, span.t, span.dur * 0.98, p, 0.5);
-      const root = bassNote(bassPc(span.chord), prevBass, 33, 45);
-      prevBass = root;
-      b.note(tuba, span.t, beat * 0.8, root, vel(rng, 0.7));
-      b.note(tuba, span.t + beat * 2, beat * 0.8, root + 7 <= 48 ? root + 7 : root - 5, vel(rng, 0.6));
-    });
-    for (let k = 0; k < s.bars; k++) {
-      const bar = s.startBar + k;
-      const pattern = [0, 0.5, 1, 1.5, 1.75, 2, 2.5, 3, 3.5, 3.75];
-      for (const x of pattern) b.hit(snare, b.grid.at(bar, x), vel(rng, x % 1 === 0 ? 0.4 : 0.25, 0.05));
-      if (k % 4 === 0) {
-        const here = (spans.find((sp) => sp.bar === bar) ?? spans[0]!).chord;
-        b.hit(timp, b.grid.bar(bar), 0.6, timpPitch(bassPc(here)));
-        // A brass stab accent.
-        for (const p of voiceChord(here, null, { low: 60, high: 79, voices: 4, rootless: false })) b.note(brass, b.grid.bar(bar), beat * 0.5, p, 0.6);
-      }
-    }
-    // The theme on glockenspiel in B, short and bright.
-    if (s.part === 'B') {
-      for (let ph = 0; ph + 2 <= s.bars; ph += 4) {
-        for (const n of realizeMotif(theme, 0, beat, 81, spans, keyScale, 72, 91, b.grid, s.startBar + ph)) b.note(glock, n.t, n.d, n.p, vel(rng, 0.55));
-      }
-    }
-  }
-  return b.build({
-    key: keyName(tonic, tpl.scale),
-    progression: tpl.prog,
-    fx: trackFx({ gain: 0.78, lowpass: lerp(7000, 15000, B), highpass: 35, wow: W, wowRate: 0.4, flutter: 0, drive: 0.1, reverbTone: 6500, reverbLevel: 1.2 }),
-  });
-}
+// sports-fanfare was reworked for v3 (orchestral brass instead of synth brass): see fanfare.ts.
+export { composeFanfare } from './fanfare';
 
 export function composeDocumentary(req: TrackRequest): Score {
   const rng = rngFor(req.seed, 'documentary');

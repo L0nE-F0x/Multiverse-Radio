@@ -45,7 +45,7 @@ export function composeSoftRock(req: TrackRequest): Score {
   const fadeOut = fit.bars >= 36 && style.chance(0.65);
 
   const ep = b.inst({ kind: 'sample', patch: style.weighted([['ep', 4], ['wurli', 1.5]]), name: 'Electric piano', gain: 0.5, pan: -0.18, reverb: 0.18, tremolo: { rate: style.range(3.8, 5), depth: 0.35 }, lowpass: lerp(3500, 7000, B) });
-  const acoustic = b.inst({ kind: 'sample', patch: 'folk-guitar', name: 'Acoustic guitar', gain: 0.5, pan: 0.32, reverb: 0.12, release: 0.15 });
+  const acoustic = b.inst({ kind: 'sample', patch: 'acoustic-steel', name: 'Acoustic guitar', gain: 0.5, pan: 0.32, reverb: 0.12, release: 0.15 });
   const bass = b.inst({ kind: 'sample', patch: 'bass-round', name: 'Bass', gain: 0.33, pan: 0, release: 0.08 });
   const lead = b.inst({ kind: 'synth', patch: 'lead-guitar', name: 'Lead guitar', gain: 0.85, pan: 0.12, reverb: 0.28, delay: 0.22, lowpass: lerp(2800, 4500, B) });
   const oohs = b.inst({ kind: 'synth', patch: 'pad-choir', name: 'Ooh harmonies', gain: 0.36, reverb: 0.45, pan: -0.05 });

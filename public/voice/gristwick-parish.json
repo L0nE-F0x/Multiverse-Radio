@@ -1,0 +1,894 @@
+{
+  "version": 1,
+  "station": "gristwick-parish",
+  "clips": [
+    {
+      "id": "id-001",
+      "category": "id",
+      "url": "/voice/gristwick-parish/id-001.mp3",
+      "durationMs": 10120,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Reverend Clement Ashby",
+          "text": "You're listening to Gristwick Parish Radio. Live from the village fête, now in its three hundredth consecutive year.",
+          "startMs": 38
+        }
+      ]
+    },
+    {
+      "id": "id-002",
+      "category": "id",
+      "url": "/voice/gristwick-parish/id-002.mp3",
+      "durationMs": 5642,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Reverend Clement Ashby",
+          "text": "Gristwick Parish Radio. Bunting, brass, and a marrow you can see from the next parish.",
+          "startMs": 36
+        }
+      ]
+    },
+    {
+      "id": "id-003",
+      "category": "id",
+      "url": "/voice/gristwick-parish/id-003.mp3",
+      "durationMs": 6702,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Reverend Clement Ashby",
+          "text": "This is Gristwick Parish Radio, from the tea tent, where the urn has been on since seventeen twenty six.",
+          "startMs": 39
+        }
+      ]
+    },
+    {
+      "id": "id-004",
+      "category": "id",
+      "url": "/voice/gristwick-parish/id-004.mp3",
+      "durationMs": 9610,
+      "overMusic": true,
+      "daypart": "morning",
+      "lines": [
+        {
+          "speaker": "Reverend Clement Ashby",
+          "text": "Good morning from Gristwick Parish Radio. The fête is open. The fête is, I'm afraid, still open.",
+          "startMs": 38
+        }
+      ]
+    },
+    {
+      "id": "id-005",
+      "category": "id",
+      "url": "/voice/gristwick-parish/id-005.mp3",
+      "durationMs": 6986,
+      "overMusic": true,
+      "daypart": "night",
+      "lines": [
+        {
+          "speaker": "Reverend Clement Ashby",
+          "text": "Gristwick Parish Radio. The fête doesn't close at night. We simply put the fairy lights on, and carry on.",
+          "startMs": 36
+        }
+      ]
+    },
+    {
+      "id": "dj-001",
+      "category": "dj",
+      "url": "/voice/gristwick-parish/dj-001.mp3",
+      "durationMs": 19149,
+      "title": "When Will It End?",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Reverend Clement Ashby",
+          "text": "Some people have asked when the fête will end. It's a fair question. It was a fair question in seventeen fifty. The committee's position is that the fête will close once the tombola has been drawn.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Reverend Clement Ashby",
+          "text": "The tombola has some way to go. There are a great many tickets. Some of them are in Latin.",
+          "startMs": 13231
+        }
+      ]
+    },
+    {
+      "id": "dj-002",
+      "category": "dj",
+      "url": "/voice/gristwick-parish/dj-002.mp3",
+      "durationMs": 15972,
+      "title": "The Silver Band",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Reverend Clement Ashby",
+          "text": "The Gristwick Silver Band have been playing the same march since the opening ceremony. They tell me they're nearly at the trio section.",
+          "startMs": 45
+        },
+        {
+          "speaker": "Reverend Clement Ashby",
+          "text": "The trio section is the quiet bit in the middle. They have been looking forward to it for some time. As have we all.",
+          "startMs": 8875
+        }
+      ]
+    },
+    {
+      "id": "dj-003",
+      "category": "dj",
+      "url": "/voice/gristwick-parish/dj-003.mp3",
+      "durationMs": 13388,
+      "title": "For the Night Shift",
+      "overMusic": true,
+      "daypart": "night",
+      "lines": [
+        {
+          "speaker": "Reverend Clement Ashby",
+          "text": "A good evening to the night operator on the relay ship. We see you pass over the green each night, just above the bunting.",
+          "startMs": 39
+        },
+        {
+          "speaker": "Reverend Clement Ashby",
+          "text": "Do drop in. The fête is open. It is always open. There's a raffle.",
+          "startMs": 8370
+        }
+      ]
+    },
+    {
+      "id": "dj-004",
+      "category": "dj",
+      "url": "/voice/gristwick-parish/dj-004.mp3",
+      "durationMs": 18854,
+      "title": "Bev's Song",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Reverend Clement Ashby",
+          "text": "Bev was in the tea tent again this afternoon, asking whether anyone knew a song. It goes, da da dum, da da. The Silver Band said they'd have a go. They've added it to the end of the march.",
+          "startMs": 36
+        },
+        {
+          "speaker": "Reverend Clement Ashby",
+          "text": "So, at the current rate, Bev, we'll get to it in about forty years. Do stay by the radio.",
+          "startMs": 12884
+        }
+      ]
+    },
+    {
+      "id": "dj-005",
+      "category": "dj",
+      "url": "/voice/gristwick-parish/dj-005.mp3",
+      "durationMs": 19394,
+      "title": "One Day",
+      "overMusic": true,
+      "daypart": "morning",
+      "lines": [
+        {
+          "speaker": "Reverend Clement Ashby",
+          "text": "Every morning, for three hundred years, I have stood on the steps of the tea tent and declared this fête open. And every morning I have rather hoped, just once, to declare it closed.",
+          "startMs": 41
+        },
+        {
+          "speaker": "Reverend Clement Ashby",
+          "text": "I've practised. I know exactly what I'll say. Thank you all. Go home. Mind the bunting.",
+          "startMs": 12137
+        },
+        {
+          "speaker": "Reverend Clement Ashby",
+          "text": "One day.",
+          "startMs": 18462
+        }
+      ]
+    },
+    {
+      "id": "dj-006",
+      "category": "dj",
+      "url": "/voice/gristwick-parish/dj-006.mp3",
+      "durationMs": 17459,
+      "title": "A Sudden Downpour",
+      "overMusic": true,
+      "daypart": "day",
+      "lines": [
+        {
+          "speaker": "Reverend Clement Ashby",
+          "text": "We had a sudden downpour over the green this afternoon, out of a perfectly clear sky. I'm told it came from a jazz club in a passing cloud, where somebody had applauded.",
+          "startMs": 37
+        },
+        {
+          "speaker": "Reverend Clement Ashby",
+          "text": "We carried on. We always carry on. The cakes were covered in time, and the marrow drank deeply.",
+          "startMs": 11333
+        }
+      ]
+    },
+    {
+      "id": "results-open-001",
+      "category": "sports",
+      "url": "/voice/gristwick-parish/results-open-001.mp3",
+      "durationMs": 8710,
+      "overMusic": false,
+      "part": "open",
+      "kit": "results",
+      "lines": [
+        {
+          "speaker": "Reverend Clement Ashby",
+          "text": "And now, the results from the judging marquee. A great deal of excitement in there this afternoon. Some of it from the judges.",
+          "startMs": 437
+        }
+      ]
+    },
+    {
+      "id": "results-open-002",
+      "category": "sports",
+      "url": "/voice/gristwick-parish/results-open-002.mp3",
+      "durationMs": 10322,
+      "overMusic": false,
+      "part": "open",
+      "kit": "results",
+      "lines": [
+        {
+          "speaker": "Reverend Clement Ashby",
+          "text": "Results, now, from the fête. Hush in the marquee, please. Mrs Pargeter has the envelopes.",
+          "startMs": 3599
+        }
+      ]
+    },
+    {
+      "id": "results-body-001",
+      "category": "sports",
+      "url": "/voice/gristwick-parish/results-body-001.mp3",
+      "durationMs": 22034,
+      "title": "The Giant Marrow",
+      "overMusic": false,
+      "part": "body",
+      "kit": "results",
+      "lines": [
+        {
+          "speaker": "Reverend Clement Ashby",
+          "text": "The giant marrow. Mister Hebblethwaite's marrow was once again too large to bring into the marquee, so the judges went out to it, and were gone some hours.",
+          "startMs": 445
+        },
+        {
+          "speaker": "Reverend Clement Ashby",
+          "text": "They describe it as magnificent, and slightly warm. It has been awarded second place, as ever. First place is being held back, in case it gets bigger. It will.",
+          "startMs": 10661
+        }
+      ]
+    },
+    {
+      "id": "results-body-002",
+      "category": "sports",
+      "url": "/voice/gristwick-parish/results-body-002.mp3",
+      "durationMs": 20700,
+      "title": "The Tug of War",
+      "overMusic": false,
+      "part": "body",
+      "kit": "results",
+      "lines": [
+        {
+          "speaker": "Reverend Clement Ashby",
+          "text": "The tug of war. Upper Gristwick against Lower Gristwick. The rope was taken up in seventeen eighty, and neither side has moved since.",
+          "startMs": 443
+        },
+        {
+          "speaker": "Reverend Clement Ashby",
+          "text": "The rope is very taut. Both teams are in fine spirits. The judges have declared it a draw for the two hundred and forty sixth year running, and sent sandwiches.",
+          "startMs": 9664
+        }
+      ]
+    },
+    {
+      "id": "results-body-003",
+      "category": "sports",
+      "url": "/voice/gristwick-parish/results-body-003.mp3",
+      "durationMs": 24915,
+      "title": "The Victoria Sponge",
+      "overMusic": false,
+      "part": "body",
+      "kit": "results",
+      "lines": [
+        {
+          "speaker": "Reverend Clement Ashby",
+          "text": "The Victoria sponge. A strong field this year. The judges tasted forty two sponges. Mrs Pargeter, anything to add?",
+          "startMs": 438
+        },
+        {
+          "speaker": "Mrs Pargeter, Head Judge",
+          "text": "We are full.",
+          "startMs": 9485
+        },
+        {
+          "speaker": "Reverend Clement Ashby",
+          "text": "First prize to Mrs Abernathy, for a sponge that was light, even and kind. Second, to Mrs Abernathy's sister, who has asked that her objection be noted, for the hundredth year running. It has been.",
+          "startMs": 10894
+        }
+      ]
+    },
+    {
+      "id": "results-body-004",
+      "category": "sports",
+      "url": "/voice/gristwick-parish/results-body-004.mp3",
+      "durationMs": 18266,
+      "title": "The Dog Show",
+      "overMusic": false,
+      "part": "body",
+      "kit": "results",
+      "lines": [
+        {
+          "speaker": "Reverend Clement Ashby",
+          "text": "The dog show. Dog most like its owner went to a beagle called Admiral, and his owner, also Admiral.",
+          "startMs": 438
+        },
+        {
+          "speaker": "Reverend Clement Ashby",
+          "text": "Waggiest tail went to a spaniel from Lower Hollow called Biscuit, who did not attend, as he is busy watching a hole. The judges felt it was implied.",
+          "startMs": 7754
+        }
+      ]
+    },
+    {
+      "id": "results-body-005",
+      "category": "sports",
+      "url": "/voice/gristwick-parish/results-body-005.mp3",
+      "durationMs": 16110,
+      "title": "The Welly Throwing",
+      "overMusic": false,
+      "part": "body",
+      "kit": "results",
+      "lines": [
+        {
+          "speaker": "Reverend Clement Ashby",
+          "text": "The welly throwing. A new record from young Tom Fairley, who threw his boot clean over the church tower. It hasn't come down.",
+          "startMs": 445
+        },
+        {
+          "speaker": "Reverend Clement Ashby",
+          "text": "The judges have agreed to wait for it until the end of the fête. Which may, of course, be a while.",
+          "startMs": 8920
+        }
+      ]
+    },
+    {
+      "id": "results-body-006",
+      "category": "sports",
+      "url": "/voice/gristwick-parish/results-body-006.mp3",
+      "durationMs": 19675,
+      "title": "The Tombola",
+      "overMusic": false,
+      "part": "body",
+      "kit": "results",
+      "lines": [
+        {
+          "speaker": "Reverend Clement Ashby",
+          "text": "This afternoon's tombola draw. Ticket number four thousand and twelve, sold in seventeen twenty six, to a lady in a blue bonnet.",
+          "startMs": 438
+        },
+        {
+          "speaker": "Reverend Clement Ashby",
+          "text": "She hasn't come forward. The prize, a bottle of elderflower cordial, is being held for her in the vestry. It has matured considerably.",
+          "startMs": 9954
+        }
+      ]
+    },
+    {
+      "id": "results-close-001",
+      "category": "sports",
+      "url": "/voice/gristwick-parish/results-close-001.mp3",
+      "durationMs": 10112,
+      "overMusic": false,
+      "part": "close",
+      "kit": "results",
+      "lines": [
+        {
+          "speaker": "Reverend Clement Ashby",
+          "text": "Congratulations to all our winners. And to everybody else, there's always next year.",
+          "startMs": 436
+        },
+        {
+          "speaker": "Reverend Clement Ashby",
+          "text": "There is, I'm afraid, always next year.",
+          "startMs": 6408
+        }
+      ]
+    },
+    {
+      "id": "results-close-002",
+      "category": "sports",
+      "url": "/voice/gristwick-parish/results-close-002.mp3",
+      "durationMs": 9621,
+      "overMusic": false,
+      "part": "close",
+      "kit": "results",
+      "lines": [
+        {
+          "speaker": "Reverend Clement Ashby",
+          "text": "Those are the results. Prizes may be collected from the tea tent, where some of them have been waiting since the reign of somebody or other.",
+          "startMs": 437
+        }
+      ]
+    },
+    {
+      "id": "notice-open-001",
+      "category": "psa",
+      "url": "/voice/gristwick-parish/notice-open-001.mp3",
+      "durationMs": 8421,
+      "overMusic": true,
+      "part": "open",
+      "kit": "notices",
+      "lines": [
+        {
+          "speaker": "Reverend Clement Ashby",
+          "text": "A few notices now, from the fête committee.",
+          "startMs": 39
+        }
+      ]
+    },
+    {
+      "id": "notice-open-002",
+      "category": "psa",
+      "url": "/voice/gristwick-parish/notice-open-002.mp3",
+      "durationMs": 7432,
+      "overMusic": true,
+      "part": "open",
+      "kit": "notices",
+      "lines": [
+        {
+          "speaker": "Reverend Clement Ashby",
+          "text": "Some announcements, from the steps of the tea tent. Would the band play quietly, please. Thank you. Quieter. Thank you.",
+          "startMs": 37
+        }
+      ]
+    },
+    {
+      "id": "notice-body-001",
+      "category": "psa",
+      "url": "/voice/gristwick-parish/notice-body-001.mp3",
+      "durationMs": 13858,
+      "title": "A Lost Boy",
+      "overMusic": true,
+      "part": "body",
+      "kit": "notices",
+      "lines": [
+        {
+          "speaker": "Reverend Clement Ashby",
+          "text": "Would the parents of a small boy called Thomas please come to the tea tent. Thomas has been with us since seventeen fifty.",
+          "startMs": 37
+        },
+        {
+          "speaker": "Reverend Clement Ashby",
+          "text": "He's very well. He's now running the tea tent. He asks that you bring your own cup.",
+          "startMs": 8470
+        }
+      ]
+    },
+    {
+      "id": "notice-body-002",
+      "category": "psa",
+      "url": "/voice/gristwick-parish/notice-body-002.mp3",
+      "durationMs": 13333,
+      "title": "The Maypole",
+      "overMusic": true,
+      "part": "body",
+      "kit": "notices",
+      "lines": [
+        {
+          "speaker": "Reverend Clement Ashby",
+          "text": "The maypole dancers have asked whether they may stop. The answer, as ever, is after the raffle.",
+          "startMs": 37
+        },
+        {
+          "speaker": "Reverend Clement Ashby",
+          "text": "The maypole is now more ribbon than pole, and has been reclassified by the parish as a large bobbin.",
+          "startMs": 6605
+        }
+      ]
+    },
+    {
+      "id": "notice-body-003",
+      "category": "psa",
+      "url": "/voice/gristwick-parish/notice-body-003.mp3",
+      "durationMs": 15642,
+      "title": "The Raffle",
+      "overMusic": true,
+      "part": "body",
+      "kit": "notices",
+      "lines": [
+        {
+          "speaker": "Reverend Clement Ashby",
+          "text": "Raffle tickets are still available from the trestle table by the lych gate. First prize, a hamper. Second prize, last year's hamper.",
+          "startMs": 36
+        },
+        {
+          "speaker": "Reverend Clement Ashby",
+          "text": "Third prize is the hamper from the very first fête, which is not to be opened, and which hums.",
+          "startMs": 9470
+        }
+      ]
+    },
+    {
+      "id": "notice-body-004",
+      "category": "psa",
+      "url": "/voice/gristwick-parish/notice-body-004.mp3",
+      "durationMs": 13040,
+      "title": "Lost Property",
+      "overMusic": true,
+      "part": "body",
+      "kit": "notices",
+      "lines": [
+        {
+          "speaker": "Reverend Clement Ashby",
+          "text": "Lost property. A gentleman's top hat, a lady's parasol, a set of keys to a carriage, and a carriage.",
+          "startMs": 43
+        },
+        {
+          "speaker": "Reverend Clement Ashby",
+          "text": "If any of these are yours, please collect them from the vestry. Please also collect the horse.",
+          "startMs": 7324
+        }
+      ]
+    },
+    {
+      "id": "notice-body-005",
+      "category": "psa",
+      "url": "/voice/gristwick-parish/notice-body-005.mp3",
+      "durationMs": 15881,
+      "title": "The Urn",
+      "overMusic": true,
+      "part": "body",
+      "kit": "notices",
+      "lines": [
+        {
+          "speaker": "Reverend Clement Ashby",
+          "text": "The tea tent would like to remind you that the urn has been on since the opening ceremony. The tea is very strong. It is now, I'm told, technically a soup.",
+          "startMs": 45
+        },
+        {
+          "speaker": "Reverend Clement Ashby",
+          "text": "Scones are available, with cream and jam, in whichever order keeps the peace.",
+          "startMs": 10776
+        }
+      ]
+    },
+    {
+      "id": "notice-close-001",
+      "category": "psa",
+      "url": "/voice/gristwick-parish/notice-close-001.mp3",
+      "durationMs": 5469,
+      "overMusic": true,
+      "part": "close",
+      "kit": "notices",
+      "lines": [
+        {
+          "speaker": "Reverend Clement Ashby",
+          "text": "That's all the notices. Do enjoy the fête. You've no choice, but do enjoy it.",
+          "startMs": 39
+        }
+      ]
+    },
+    {
+      "id": "notice-close-002",
+      "category": "psa",
+      "url": "/voice/gristwick-parish/notice-close-002.mp3",
+      "durationMs": 5821,
+      "overMusic": true,
+      "part": "close",
+      "kit": "notices",
+      "lines": [
+        {
+          "speaker": "Reverend Clement Ashby",
+          "text": "Those are the notices. And please, for the last time this century, keep off the marrow.",
+          "startMs": 38
+        }
+      ]
+    },
+    {
+      "id": "call-001",
+      "category": "call",
+      "url": "/voice/gristwick-parish/call-001.mp3",
+      "durationMs": 41134,
+      "title": "Mr Hebblethwaite on the Marrow",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Reverend Clement Ashby",
+          "text": "Gristwick Parish Radio. Hello?",
+          "startMs": 2850
+        },
+        {
+          "speaker": "Mr Hebblethwaite",
+          "text": "Vicar. It's Hebblethwaite.",
+          "startMs": 5616
+        },
+        {
+          "speaker": "Reverend Clement Ashby",
+          "text": "Ah, Mister Hebblethwaite. And how is the marrow?",
+          "startMs": 7859
+        },
+        {
+          "speaker": "Mr Hebblethwaite",
+          "text": "Coming along, Vicar. I've had to move the greenhouse. Well. I've had to move the greenhouse off it.",
+          "startMs": 11305
+        },
+        {
+          "speaker": "Reverend Clement Ashby",
+          "text": "Will it be ready for the judging?",
+          "startMs": 17283
+        },
+        {
+          "speaker": "Mr Hebblethwaite",
+          "text": "Nearly, Vicar. Nearly. Another season or two.",
+          "startMs": 19753
+        },
+        {
+          "speaker": "Reverend Clement Ashby",
+          "text": "You said that in seventeen ninety.",
+          "startMs": 23601
+        },
+        {
+          "speaker": "Mr Hebblethwaite",
+          "text": "And it's been true every time.",
+          "startMs": 26534
+        },
+        {
+          "speaker": "Mr Hebblethwaite",
+          "text": "Vicar. Can you hear that?",
+          "startMs": 29647
+        },
+        {
+          "speaker": "Reverend Clement Ashby",
+          "text": "Hear what?",
+          "startMs": 31956
+        },
+        {
+          "speaker": "Mr Hebblethwaite",
+          "text": "That's it growing.",
+          "startMs": 33298
+        },
+        {
+          "speaker": "Reverend Clement Ashby",
+          "text": "Lovely, Mister Hebblethwaite. Lovely.",
+          "startMs": 36097
+        }
+      ]
+    },
+    {
+      "id": "id-the-opening",
+      "category": "id",
+      "url": "/voice/gristwick-parish/id-the-opening.mp3",
+      "durationMs": 10439,
+      "overMusic": true,
+      "part": "open",
+      "show": "the-opening",
+      "lines": [
+        {
+          "speaker": "Reverend Clement Ashby",
+          "text": "Good morning. It is my great pleasure, once again, to declare this fête open.",
+          "startMs": 3199
+        },
+        {
+          "speaker": "Reverend Clement Ashby",
+          "text": "Again. Thank you.",
+          "startMs": 8993
+        }
+      ]
+    },
+    {
+      "id": "dj-the-opening-001",
+      "category": "dj",
+      "url": "/voice/gristwick-parish/dj-the-opening-001.mp3",
+      "durationMs": 17824,
+      "overMusic": true,
+      "show": "the-opening",
+      "lines": [
+        {
+          "speaker": "Reverend Clement Ashby",
+          "text": "The opening ceremony went very well this morning. The ribbon was cut, the band struck up, and a small cheer went up from the regulars, several of whom have been here since the first one.",
+          "startMs": 40
+        },
+        {
+          "speaker": "Reverend Clement Ashby",
+          "text": "I cut the same ribbon every morning. We tie it back together at night. It's very short now.",
+          "startMs": 11849
+        }
+      ]
+    },
+    {
+      "id": "dj-the-opening-002",
+      "category": "dj",
+      "url": "/voice/gristwick-parish/dj-the-opening-002.mp3",
+      "durationMs": 13062,
+      "overMusic": true,
+      "show": "the-opening",
+      "lines": [
+        {
+          "speaker": "Reverend Clement Ashby",
+          "text": "A word for anybody arriving at the fête for the first time today. Welcome. Parking is in the top field. Tea is in the tent.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Reverend Clement Ashby",
+          "text": "And the exit is... well. The exit is a matter for the committee.",
+          "startMs": 8873
+        }
+      ]
+    },
+    {
+      "id": "id-evensong-results",
+      "category": "id",
+      "url": "/voice/gristwick-parish/id-evensong-results.mp3",
+      "durationMs": 9688,
+      "overMusic": true,
+      "part": "open",
+      "show": "evensong-results",
+      "lines": [
+        {
+          "speaker": "Reverend Clement Ashby",
+          "text": "Good evening, and welcome to Evensong and Results. The bells are ringing, the band is playing, and the judges have emerged from the marquee, blinking.",
+          "startMs": 38
+        }
+      ]
+    },
+    {
+      "id": "dj-evensong-results-001",
+      "category": "dj",
+      "url": "/voice/gristwick-parish/dj-evensong-results-001.mp3",
+      "durationMs": 13540,
+      "overMusic": true,
+      "show": "evensong-results",
+      "lines": [
+        {
+          "speaker": "Reverend Clement Ashby",
+          "text": "The bells of Saint Wilfreda's are ringing for evensong, as they have every evening of the fête. The bell-ringers have asked me to say that they would quite like to go home.",
+          "startMs": 45
+        },
+        {
+          "speaker": "Reverend Clement Ashby",
+          "text": "I've told them. I know. I know.",
+          "startMs": 11095
+        }
+      ]
+    },
+    {
+      "id": "dj-evensong-results-002",
+      "category": "dj",
+      "url": "/voice/gristwick-parish/dj-evensong-results-002.mp3",
+      "durationMs": 11767,
+      "overMusic": true,
+      "show": "evensong-results",
+      "lines": [
+        {
+          "speaker": "Reverend Clement Ashby",
+          "text": "The marquee is emptying after the judging. One of our judges has been judging the jam since seventeen sixty.",
+          "startMs": 44
+        },
+        {
+          "speaker": "Reverend Clement Ashby",
+          "text": "She tells me that, if she's honest, it's all quite good.",
+          "startMs": 8100
+        }
+      ]
+    },
+    {
+      "id": "id-the-night-fete",
+      "category": "id",
+      "url": "/voice/gristwick-parish/id-the-night-fete.mp3",
+      "durationMs": 8474,
+      "overMusic": true,
+      "part": "open",
+      "show": "the-night-fete",
+      "lines": [
+        {
+          "speaker": "Reverend Clement Ashby",
+          "text": "This is the Night Fête, on Gristwick Parish Radio. The fairy lights are on, the urn is on, and the fête, bless it, is on.",
+          "startMs": 38
+        }
+      ]
+    },
+    {
+      "id": "dj-the-night-fete-001",
+      "category": "dj",
+      "url": "/voice/gristwick-parish/dj-the-night-fete-001.mp3",
+      "durationMs": 13477,
+      "overMusic": true,
+      "show": "the-night-fete",
+      "lines": [
+        {
+          "speaker": "Reverend Clement Ashby",
+          "text": "Three in the morning on the green. The band is playing very softly, the dancers are going round the bobbin very slowly, and the urn is ticking away to itself.",
+          "startMs": 42
+        },
+        {
+          "speaker": "Reverend Clement Ashby",
+          "text": "If you're up, come down. We're always up.",
+          "startMs": 10666
+        }
+      ]
+    },
+    {
+      "id": "dj-the-night-fete-002",
+      "category": "dj",
+      "url": "/voice/gristwick-parish/dj-the-night-fete-002.mp3",
+      "durationMs": 12247,
+      "overMusic": true,
+      "show": "the-night-fete",
+      "lines": [
+        {
+          "speaker": "Reverend Clement Ashby",
+          "text": "The marrow glows a little at night, I've noticed. Mister Hebblethwaite says that's quite normal, for a marrow of its age.",
+          "startMs": 45
+        },
+        {
+          "speaker": "Reverend Clement Ashby",
+          "text": "I've never met a marrow of its age. I don't believe anyone has.",
+          "startMs": 7882
+        }
+      ]
+    },
+    {
+      "id": "dj-halloween-001",
+      "category": "dj",
+      "url": "/voice/gristwick-parish/dj-halloween-001.mp3",
+      "durationMs": 16064,
+      "title": "The Marrow Lantern",
+      "overMusic": true,
+      "dates": [
+        "10-24",
+        "10-25",
+        "10-26",
+        "10-27",
+        "10-28",
+        "10-29",
+        "10-30",
+        "10-31"
+      ],
+      "lines": [
+        {
+          "speaker": "Reverend Clement Ashby",
+          "text": "For Halloween, the fête committee has carved the prize marrow into a lantern. It took three hundred volunteers and a canal boat. It's lit now. You can see it from the next county.",
+          "startMs": 41
+        },
+        {
+          "speaker": "Reverend Clement Ashby",
+          "text": "Mister Hebblethwaite has asked that nobody tell it what we've done.",
+          "startMs": 12042
+        }
+      ]
+    },
+    {
+      "id": "psa-halloween-001",
+      "category": "psa",
+      "url": "/voice/gristwick-parish/psa-halloween-001.mp3",
+      "durationMs": 21480,
+      "title": "A Ghost in the Tombola Tent",
+      "overMusic": true,
+      "dates": [
+        "10-24",
+        "10-25",
+        "10-26",
+        "10-27",
+        "10-28",
+        "10-29",
+        "10-30",
+        "10-31"
+      ],
+      "lines": [
+        {
+          "speaker": "Reverend Clement Ashby",
+          "text": "A notice. There is a ghost in the tombola tent. He's a former steward, and he only wants to know whether his ticket won.",
+          "startMs": 3100
+        },
+        {
+          "speaker": "Reverend Clement Ashby",
+          "text": "It did, in seventeen ninety. It was a tin of pears. We still have it. We've told him. He isn't convinced. He's staying for the next draw.",
+          "startMs": 11174
+        },
+        {
+          "speaker": "Reverend Clement Ashby",
+          "text": "Aren't we all.",
+          "startMs": 20435
+        }
+      ]
+    }
+  ]
+}

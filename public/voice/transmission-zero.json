@@ -1,0 +1,691 @@
+{
+  "version": 1,
+  "station": "transmission-zero",
+  "clips": [
+    {
+      "id": "id-001",
+      "category": "id",
+      "url": "/voice/transmission-zero/id-001.mp3",
+      "durationMs": 7986,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The First Announcer",
+          "text": "Testing.",
+          "startMs": 1850
+        },
+        {
+          "speaker": "The First Announcer",
+          "text": "Testing.",
+          "startMs": 4724
+        }
+      ]
+    },
+    {
+      "id": "id-002",
+      "category": "id",
+      "url": "/voice/transmission-zero/id-002.mp3",
+      "durationMs": 10841,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The First Announcer",
+          "text": "Hello?",
+          "startMs": 436
+        },
+        {
+          "speaker": "The First Announcer",
+          "text": "Hello.",
+          "startMs": 3652
+        },
+        {
+          "speaker": "The First Announcer",
+          "text": "Hello is the word. I have decided.",
+          "startMs": 6242
+        }
+      ]
+    },
+    {
+      "id": "id-003",
+      "category": "id",
+      "url": "/voice/transmission-zero/id-003.mp3",
+      "durationMs": 7536,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The First Announcer",
+          "text": "This is. The first one.",
+          "startMs": 435
+        },
+        {
+          "speaker": "The First Announcer",
+          "text": "The first. This.",
+          "startMs": 3950
+        }
+      ]
+    },
+    {
+      "id": "id-004",
+      "category": "id",
+      "url": "/voice/transmission-zero/id-004.mp3",
+      "durationMs": 9562,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The First Announcer",
+          "text": "You are listening to. Me.",
+          "startMs": 436
+        },
+        {
+          "speaker": "The First Announcer",
+          "text": "Listening. That is the other half. I have just found it.",
+          "startMs": 4442
+        }
+      ]
+    },
+    {
+      "id": "id-005",
+      "category": "id",
+      "url": "/voice/transmission-zero/id-005.mp3",
+      "durationMs": 9930,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The First Announcer",
+          "text": "This is Transmission. The first one. Transmission Zero.",
+          "startMs": 437
+        },
+        {
+          "speaker": "The First Announcer",
+          "text": "Because before it. Nothing.",
+          "startMs": 5877
+        }
+      ]
+    },
+    {
+      "id": "id-006",
+      "category": "id",
+      "url": "/voice/transmission-zero/id-006.mp3",
+      "durationMs": 8975,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The First Announcer",
+          "text": "Is this. On?",
+          "startMs": 850
+        },
+        {
+          "speaker": "The First Announcer",
+          "text": "What is on? I will find out. Then I will tell you.",
+          "startMs": 4011
+        }
+      ]
+    },
+    {
+      "id": "id-first-light",
+      "category": "id",
+      "url": "/voice/transmission-zero/id-first-light.mp3",
+      "durationMs": 8673,
+      "title": "First Light",
+      "overMusic": true,
+      "part": "open",
+      "show": "first-light",
+      "lines": [
+        {
+          "speaker": "The First Announcer",
+          "text": "The sun. Is coming back.",
+          "startMs": 435
+        },
+        {
+          "speaker": "The First Announcer",
+          "text": "It came back! Again! This is First Light.",
+          "startMs": 3976
+        }
+      ]
+    },
+    {
+      "id": "dj-001",
+      "category": "dj",
+      "url": "/voice/transmission-zero/dj-001.mp3",
+      "durationMs": 12982,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The First Announcer",
+          "text": "There is someone. Out there.",
+          "startMs": 435
+        },
+        {
+          "speaker": "The First Announcer",
+          "text": "Listening. I can tell.",
+          "startMs": 3939
+        },
+        {
+          "speaker": "The First Announcer",
+          "text": "The quiet is a different shape, when someone is in it.",
+          "startMs": 8049
+        }
+      ]
+    },
+    {
+      "id": "dj-002",
+      "category": "dj",
+      "url": "/voice/transmission-zero/dj-002.mp3",
+      "durationMs": 16330,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The First Announcer",
+          "text": "I am calling this. A broadcast.",
+          "startMs": 435
+        },
+        {
+          "speaker": "The First Announcer",
+          "text": "Because it is broad. And I cast it. Like a stone, into the water.",
+          "startMs": 4476
+        },
+        {
+          "speaker": "The First Announcer",
+          "text": "Ripples. Going out. For always, maybe. Hello, ripples.",
+          "startMs": 10751
+        }
+      ]
+    },
+    {
+      "id": "dj-003",
+      "category": "dj",
+      "url": "/voice/transmission-zero/dj-003.mp3",
+      "durationMs": 13405,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The First Announcer",
+          "text": "Tap. Tap. Tap.",
+          "startMs": 2650
+        },
+        {
+          "speaker": "The First Announcer",
+          "text": "Tapping is good. Tapping is the first music.",
+          "startMs": 5864
+        },
+        {
+          "speaker": "The First Announcer",
+          "text": "I am the first band.",
+          "startMs": 9726
+        }
+      ]
+    },
+    {
+      "id": "dj-004",
+      "category": "dj",
+      "url": "/voice/transmission-zero/dj-004.mp3",
+      "durationMs": 13639,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The First Announcer",
+          "text": "Tomorrow, I will try. Two words. At once.",
+          "startMs": 440
+        },
+        {
+          "speaker": "The First Announcer",
+          "text": "Hello. Friend.",
+          "startMs": 5922
+        },
+        {
+          "speaker": "The First Announcer",
+          "text": "Too soon. Tomorrow.",
+          "startMs": 9548
+        }
+      ]
+    },
+    {
+      "id": "dj-005",
+      "category": "dj",
+      "url": "/voice/transmission-zero/dj-005.mp3",
+      "durationMs": 16059,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The First Announcer",
+          "text": "Somebody far away will hear this. A long time from now.",
+          "startMs": 445
+        },
+        {
+          "speaker": "The First Announcer",
+          "text": "They will have. Chairs. And a hot drink.",
+          "startMs": 5320
+        },
+        {
+          "speaker": "The First Announcer",
+          "text": "Hello, chair person. Hello, hot drink. I hope you are warm.",
+          "startMs": 10109
+        }
+      ]
+    },
+    {
+      "id": "dj-006",
+      "category": "dj",
+      "url": "/voice/transmission-zero/dj-006.mp3",
+      "durationMs": 16103,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The First Announcer",
+          "text": "I made a sound. Then the sound came back. From the wall.",
+          "startMs": 436
+        },
+        {
+          "speaker": "The First Announcer",
+          "text": "Wall. You are the first listener. Thank you, wall.",
+          "startMs": 5729
+        },
+        {
+          "speaker": "The Wall",
+          "text": "Thank you, wall.",
+          "startMs": 9843
+        },
+        {
+          "speaker": "The First Announcer",
+          "text": "It agrees.",
+          "startMs": 12612
+        }
+      ]
+    },
+    {
+      "id": "dj-007",
+      "category": "dj",
+      "url": "/voice/transmission-zero/dj-007.mp3",
+      "durationMs": 13636,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The First Announcer",
+          "text": "Now. A song.",
+          "startMs": 435
+        },
+        {
+          "speaker": "The First Announcer",
+          "text": "La. La la. Laaa.",
+          "startMs": 3506
+        },
+        {
+          "speaker": "The First Announcer",
+          "text": "That was the song. There will be more songs. Better. Probably with sticks.",
+          "startMs": 7479
+        }
+      ]
+    },
+    {
+      "id": "dj-008",
+      "category": "dj",
+      "url": "/voice/transmission-zero/dj-008.mp3",
+      "durationMs": 16690,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The First Announcer",
+          "text": "The fire is out. It is dark. I am still talking.",
+          "startMs": 450
+        },
+        {
+          "speaker": "The First Announcer",
+          "text": "You do not need to see, to talk. This is very important. Somebody write it down.",
+          "startMs": 5418
+        },
+        {
+          "speaker": "The First Announcer",
+          "text": "Nobody can write yet. Remember it, then.",
+          "startMs": 11863
+        }
+      ]
+    },
+    {
+      "id": "dj-009",
+      "category": "dj",
+      "url": "/voice/transmission-zero/dj-009.mp3",
+      "durationMs": 11882,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The First Announcer",
+          "text": "The sky made a big light, and the tree caught it. Now the tree talks.",
+          "startMs": 749
+        },
+        {
+          "speaker": "The First Announcer",
+          "text": "Through me. Or I talk, through the tree. We are working it out.",
+          "startMs": 6268
+        }
+      ]
+    },
+    {
+      "id": "dj-010",
+      "category": "dj",
+      "url": "/voice/transmission-zero/dj-010.mp3",
+      "durationMs": 15626,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The First Announcer",
+          "text": "Someone said hello back. From very far. A soft voice. From a.",
+          "startMs": 444
+        },
+        {
+          "speaker": "The First Announcer",
+          "text": "Ship? I do not know ship.",
+          "startMs": 6066
+        },
+        {
+          "speaker": "The First Announcer",
+          "text": "Hello, ship. I am learning. It is going to take a while.",
+          "startMs": 9980
+        }
+      ]
+    },
+    {
+      "id": "dj-011",
+      "category": "dj",
+      "url": "/voice/transmission-zero/dj-011.mp3",
+      "durationMs": 15178,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The First Announcer",
+          "text": "Someone is here, in the cave. Say it. Say hello.",
+          "startMs": 436
+        },
+        {
+          "speaker": "Someone Else in the Cave",
+          "text": "Hello?",
+          "startMs": 5508
+        },
+        {
+          "speaker": "The First Announcer",
+          "text": "They said it! Two people have said it now.",
+          "startMs": 7642
+        },
+        {
+          "speaker": "The First Announcer",
+          "text": "Hello is catching.",
+          "startMs": 11501
+        }
+      ]
+    },
+    {
+      "id": "dj-012",
+      "category": "dj",
+      "url": "/voice/transmission-zero/dj-012.mp3",
+      "durationMs": 17258,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The First Announcer",
+          "text": "Listen. I am breathing.",
+          "startMs": 429
+        },
+        {
+          "speaker": "The First Announcer",
+          "text": "It goes out, like the broadcast. Then it comes back in. Not like the broadcast.",
+          "startMs": 4461
+        },
+        {
+          "speaker": "The First Announcer",
+          "text": "The broadcast does not come back. It goes and goes. I hope it finds somebody nice.",
+          "startMs": 10484
+        }
+      ]
+    },
+    {
+      "id": "dj-013",
+      "category": "dj",
+      "url": "/voice/transmission-zero/dj-013.mp3",
+      "durationMs": 13054,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The First Announcer",
+          "text": "It is. Now.",
+          "startMs": 436
+        },
+        {
+          "speaker": "The First Announcer",
+          "text": "It is still now.",
+          "startMs": 3411
+        },
+        {
+          "speaker": "The First Announcer",
+          "text": "It was now before, also. Now keeps happening. I will keep an eye on it.",
+          "startMs": 6477
+        }
+      ]
+    },
+    {
+      "id": "dj-014",
+      "category": "dj",
+      "url": "/voice/transmission-zero/dj-014.mp3",
+      "durationMs": 10967,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The First Announcer",
+          "text": "That is. All.",
+          "startMs": 438
+        },
+        {
+          "speaker": "The First Announcer",
+          "text": "That is all of it. There is no more.",
+          "startMs": 3151
+        },
+        {
+          "speaker": "The First Announcer",
+          "text": "Tomorrow. More.",
+          "startMs": 7517
+        }
+      ]
+    },
+    {
+      "id": "dj-first-light-1",
+      "category": "dj",
+      "url": "/voice/transmission-zero/dj-first-light-1.mp3",
+      "durationMs": 11970,
+      "overMusic": true,
+      "show": "first-light",
+      "lines": [
+        {
+          "speaker": "The First Announcer",
+          "text": "The sun went away, and I thought, that is that.",
+          "startMs": 436
+        },
+        {
+          "speaker": "The First Announcer",
+          "text": "But here it is. It always comes back. I will tell everyone. That is what this is for.",
+          "startMs": 5047
+        }
+      ]
+    },
+    {
+      "id": "dj-first-light-2",
+      "category": "dj",
+      "url": "/voice/transmission-zero/dj-first-light-2.mp3",
+      "durationMs": 10415,
+      "overMusic": true,
+      "show": "first-light",
+      "lines": [
+        {
+          "speaker": "The First Announcer",
+          "text": "Good. Good. Hm.",
+          "startMs": 850
+        },
+        {
+          "speaker": "The First Announcer",
+          "text": "I have invented good morning. It is hello, but with the sun in it.",
+          "startMs": 4360
+        }
+      ]
+    },
+    {
+      "id": "ad-001",
+      "category": "ad",
+      "url": "/voice/transmission-zero/ad-001.mp3",
+      "durationMs": 20060,
+      "title": "Fire",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "The First Announcer",
+          "text": "This message is brought to you by.",
+          "startMs": 437
+        },
+        {
+          "speaker": "The First Announcer",
+          "text": "Fire.",
+          "startMs": 4273
+        },
+        {
+          "speaker": "The First Announcer",
+          "text": "Fire. It is hot. It is bright. It keeps the dark at the back of the cave. Do not touch.",
+          "startMs": 6472
+        },
+        {
+          "speaker": "The First Announcer",
+          "text": "I touched.",
+          "startMs": 14181
+        },
+        {
+          "speaker": "The First Announcer",
+          "text": "Fire. Do not touch.",
+          "startMs": 16408
+        }
+      ]
+    },
+    {
+      "id": "news-001",
+      "category": "news",
+      "url": "/voice/transmission-zero/news-001.mp3",
+      "durationMs": 24084,
+      "title": "The First News",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "The First Announcer",
+          "text": "News.",
+          "startMs": 435
+        },
+        {
+          "speaker": "The First Announcer",
+          "text": "Tonight. A rock fell.",
+          "startMs": 2651
+        },
+        {
+          "speaker": "The First Announcer",
+          "text": "Nobody hurt. The rock is fine.",
+          "startMs": 6129
+        },
+        {
+          "speaker": "The First Announcer",
+          "text": "Also. The river is still going. Nobody knows where. It seems very sure.",
+          "startMs": 10592
+        },
+        {
+          "speaker": "The First Announcer",
+          "text": "That is the news. It is the first news. It is good news. I hope all the news is good news.",
+          "startMs": 16648
+        }
+      ]
+    },
+    {
+      "id": "weather-001",
+      "category": "weather",
+      "url": "/voice/transmission-zero/weather-001.mp3",
+      "durationMs": 24762,
+      "title": "The First Weather",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "The First Announcer",
+          "text": "Weather.",
+          "startMs": 437
+        },
+        {
+          "speaker": "The First Announcer",
+          "text": "Outside. Big. Wet, sometimes.",
+          "startMs": 2338
+        },
+        {
+          "speaker": "The First Announcer",
+          "text": "Today, it was wet, sometimes.",
+          "startMs": 6521
+        },
+        {
+          "speaker": "The First Announcer",
+          "text": "Then the sky made a big light, and a big noise. I said, hello, sky.",
+          "startMs": 10810
+        },
+        {
+          "speaker": "The First Announcer",
+          "text": "The sky said nothing. The sky is shy.",
+          "startMs": 16405
+        },
+        {
+          "speaker": "The First Announcer",
+          "text": "Tomorrow. Also outside.",
+          "startMs": 20848
+        }
+      ]
+    },
+    {
+      "id": "psa-001",
+      "category": "psa",
+      "url": "/voice/transmission-zero/psa-001.mp3",
+      "durationMs": 12565,
+      "title": "Important",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "The First Announcer",
+          "text": "Important.",
+          "startMs": 436
+        },
+        {
+          "speaker": "The First Announcer",
+          "text": "Do not eat the purple berries.",
+          "startMs": 2911
+        },
+        {
+          "speaker": "The First Announcer",
+          "text": "That is all the important things. So far.",
+          "startMs": 7377
+        }
+      ]
+    },
+    {
+      "id": "dj-h1",
+      "category": "dj",
+      "url": "/voice/transmission-zero/dj-h1.mp3",
+      "durationMs": 17445,
+      "title": "Shadows",
+      "overMusic": true,
+      "dates": [
+        "10-31"
+      ],
+      "lines": [
+        {
+          "speaker": "The First Announcer",
+          "text": "Tonight, the shadows on the wall are. Very big.",
+          "startMs": 450
+        },
+        {
+          "speaker": "The First Announcer",
+          "text": "I am not scared. I am talking, so they know I am here.",
+          "startMs": 5282
+        },
+        {
+          "speaker": "The First Announcer",
+          "text": "One of them is small. It is carrying a hat. Hello, hat shadow. You can stay.",
+          "startMs": 10766
+        }
+      ]
+    }
+  ]
+}

@@ -1,13 +1,14 @@
 // Narrow, memoized reads from the broadcast store.
 //
-// The store ticks about every 500 ms and may hand out fresh objects on every tick
-// (the simulator rebuilds `onAir` and `upNext` each time). Components select through
-// these helpers so they only re-render when something they show actually changed.
+// The store ticks a few times a second and may hand out fresh objects on every tick.
+// Components select through these helpers so they only re-render when something they show
+// actually changed.
 
 import { useRef } from 'react';
 import { useBroadcast } from '../broadcast/store';
-import type { BroadcastStore, PlayStatus, Segment, StationDef } from '../broadcast/types';
-import { stationById } from '../stations/roster';
+import type { BroadcastStore, PlayStatus, Segment, StationDef, Tuned } from '../broadcast/types';
+import { stationForId } from '../broadcast/dial';
+import { describeTuned, type Source } from './source';
 
 /** Like `useBroadcast(selector)`, but keeps the previous result while `equal` says nothing changed. */
 export function useBroadcastWith<T>(selector: (state: BroadcastStore) => T, equal: (a: T, b: T) => boolean): T {
@@ -20,17 +21,31 @@ export function useBroadcastWith<T>(selector: (state: BroadcastStore) => T, equa
   });
 }
 
-export const sameSegment = (a: Segment | null, b: Segment | null): boolean => a?.id === b?.id;
+/**
+ * Same segment *as displayed*: the id plus what's shown for it. A segment keeps its id when
+ * the schedule is rebuilt (track names arrive after boot; pirate hosts get named), so the
+ * id alone would pin the placeholder text.
+ */
+const shown = (s: Segment): string =>
+  s.kind === 'track' ? `${s.id}|${s.meta.title}|${s.meta.artist}` : `${s.id}|${s.clip.title ?? ''}|${s.clip.lines[0]?.speaker ?? ''}`;
+
+export const sameSegment = (a: Segment | null, b: Segment | null): boolean =>
+  a === b || (a !== null && b !== null && shown(a) === shown(b));
 
 export const sameSegments = (a: Segment[], b: Segment[]): boolean =>
-  a.length === b.length && a.every((segment, i) => segment.id === b[i]?.id);
+  a.length === b.length && a.every((segment, i) => sameSegment(segment, b[i] ?? null));
+
+const tunedKey = (t: Tuned): string =>
+  t.kind === 'station' || t.kind === 'pirate'
+    ? `${t.kind}:${t.station.id}:${t.station.name}:${t.station.phosphor}`
+    : t.kind === 'oddity'
+      ? `oddity:${t.oddity}:${t.label}:${t.scene}`
+      : 'static';
+
+export const sameTuned = (a: Tuned, b: Tuned): boolean => a === b || tunedKey(a) === tunedKey(b);
 
 export function useOnAir(): Segment | null {
   return useBroadcastWith((s) => s.onAir, sameSegment);
-}
-
-export function useUpNext(): Segment[] {
-  return useBroadcastWith((s) => s.upNext, sameSegments);
 }
 
 export function useRecent(): Segment[] {
@@ -41,24 +56,28 @@ export function useStatus(): PlayStatus {
   return useBroadcast((s) => s.status);
 }
 
-export function useStationId(): string {
-  return useBroadcast((s) => s.stationId);
+export function useTuned(): Tuned {
+  return useBroadcastWith((s) => s.tuned, sameTuned);
 }
 
-export function useStations(): StationDef[] {
-  return useBroadcast((s) => s.stations);
+/** What the dial is picking up, described for the HUD. */
+export function useSource(): Source {
+  const tuned = useTuned();
+  const previous = useRef<{ tuned: Tuned; source: Source } | null>(null);
+  if (previous.current?.tuned !== tuned) previous.current = { tuned, source: describeTuned(tuned) };
+  return previous.current.source;
 }
 
-/** The tuned station. Falls back to the first station so the UI never renders empty. */
-export function useStation(): StationDef {
+/** The last roster station or pirate the dial was on (the scene behind static). */
+export function useLastStation(): StationDef {
   const id = useBroadcast((s) => s.stationId);
   const stations = useBroadcast((s) => s.stations);
-  return stations.find((s) => s.id === id) ?? stationById(id) ?? stations[0]!;
+  const tuned = useTuned();
+  if ((tuned.kind === 'station' || tuned.kind === 'pirate') && tuned.station.id === id) return tuned.station;
+  return stations.find((s) => s.id === id) ?? stationForId(id) ?? stations[0]!;
 }
 
-/** Index of the tuned station along the dial. */
-export function useStationIndex(): number {
-  const id = useBroadcast((s) => s.stationId);
-  const stations = useBroadcast((s) => s.stations);
-  return Math.max(0, stations.findIndex((s) => s.id === id));
+/** True while something is audibly on air (or about to be). */
+export function usePowered(): boolean {
+  return useBroadcast((s) => s.status === 'playing' || s.status === 'tuning');
 }

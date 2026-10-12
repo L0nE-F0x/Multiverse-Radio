@@ -6,7 +6,7 @@
       "id": "id-001",
       "category": "id",
       "url": "/voice/mirror-polka/id-001.mp3",
-      "durationMs": 5479,
+      "durationMs": 5483,
       "overMusic": true,
       "lines": [
         {
@@ -25,7 +25,7 @@
       "id": "id-002",
       "category": "id",
       "url": "/voice/mirror-polka/id-002.mp3",
-      "durationMs": 7212,
+      "durationMs": 7202,
       "overMusic": true,
       "lines": [
         {
@@ -44,7 +44,7 @@
       "id": "id-003",
       "category": "id",
       "url": "/voice/mirror-polka/id-003.mp3",
-      "durationMs": 6911,
+      "durationMs": 6925,
       "overMusic": true,
       "lines": [
         {
@@ -63,7 +63,7 @@
       "id": "id-004",
       "category": "id",
       "url": "/voice/mirror-polka/id-004.mp3",
-      "durationMs": 8848,
+      "durationMs": 8858,
       "overMusic": true,
       "daypart": "morning",
       "lines": [
@@ -112,7 +112,7 @@
       "id": "id-006",
       "category": "id",
       "url": "/voice/mirror-polka/id-006.mp3",
-      "durationMs": 7374,
+      "durationMs": 7363,
       "overMusic": true,
       "daypart": "night",
       "lines": [
@@ -124,7 +124,7 @@
         {
           "speaker": "Ynnhoj",
           "text": "We'll brush ours.",
-          "startMs": 4270
+          "startMs": 4271
         }
       ]
     },
@@ -209,7 +209,7 @@
       "id": "dj-003",
       "category": "dj",
       "url": "/voice/mirror-polka/dj-003.mp3",
-      "durationMs": 12338,
+      "durationMs": 12260,
       "overMusic": true,
       "lines": [
         {
@@ -262,7 +262,7 @@
       "id": "dj-005",
       "category": "dj",
       "url": "/voice/mirror-polka/dj-005.mp3",
-      "durationMs": 9705,
+      "durationMs": 9709,
       "overMusic": true,
       "lines": [
         {
@@ -350,7 +350,7 @@
       "id": "dj-009",
       "category": "dj",
       "url": "/voice/mirror-polka/dj-009.mp3",
-      "durationMs": 12401,
+      "durationMs": 12436,
       "overMusic": true,
       "lines": [
         {
@@ -404,7 +404,7 @@
       "id": "dj-011",
       "category": "dj",
       "url": "/voice/mirror-polka/dj-011.mp3",
-      "durationMs": 11970,
+      "durationMs": 11982,
       "overMusic": true,
       "daypart": "evening",
       "lines": [
@@ -477,7 +477,7 @@
       "id": "dj-014",
       "category": "dj",
       "url": "/voice/mirror-polka/dj-014.mp3",
-      "durationMs": 11118,
+      "durationMs": 11136,
       "overMusic": true,
       "lines": [
         {
@@ -608,6 +608,651 @@
           "speaker": "Bev",
           "text": "It's ringing them in the wrong order, love.",
           "startMs": 26257
+        }
+      ]
+    },
+    {
+      "id": "ynnhojs-late-show-open",
+      "category": "id",
+      "url": "/voice/mirror-polka/ynnhojs-late-show-open.mp3",
+      "durationMs": 7019,
+      "title": "Ynnhoj's Late Show",
+      "overMusic": true,
+      "part": "open",
+      "show": "ynnhojs-late-show",
+      "lines": [
+        {
+          "speaker": "Ynnhoj",
+          "text": "This is Ynnhoj's Late Show.",
+          "startMs": 35
+        },
+        {
+          "speaker": "Ynnhoj",
+          "text": "Johnny is asleep.",
+          "startMs": 3112
+        },
+        {
+          "speaker": "Ynnhoj",
+          "text": "I am not.",
+          "startMs": 5526
+        }
+      ]
+    },
+    {
+      "id": "ynnhojs-late-show-01",
+      "category": "dj",
+      "url": "/voice/mirror-polka/ynnhojs-late-show-01.mp3",
+      "durationMs": 9256,
+      "overMusic": true,
+      "show": "ynnhojs-late-show",
+      "lines": [
+        {
+          "speaker": "Ynnhoj",
+          "text": "When Johnny sleeps, I sleep too. That's the rule.",
+          "startMs": 35
+        },
+        {
+          "speaker": "Ynnhoj",
+          "text": "I've never checked.",
+          "startMs": 4444
+        },
+        {
+          "speaker": "Ynnhoj",
+          "text": "Here is a polka. Slowly.",
+          "startMs": 6565
+        }
+      ]
+    },
+    {
+      "id": "ynnhojs-late-show-02",
+      "category": "dj",
+      "url": "/voice/mirror-polka/ynnhojs-late-show-02.mp3",
+      "durationMs": 13274,
+      "overMusic": true,
+      "show": "ynnhojs-late-show",
+      "lines": [
+        {
+          "speaker": "Ynnhoj",
+          "text": "If you're near a mirror right now, your reflection is looking back. It's had a long day too.",
+          "startMs": 35
+        },
+        {
+          "speaker": "Ynnhoj",
+          "text": "Give it a smile. It will do the same.",
+          "startMs": 6437
+        },
+        {
+          "speaker": "Ynnhoj",
+          "text": "Half a second later. That's just how we are.",
+          "startMs": 9771
+        }
+      ]
+    },
+    {
+      "id": "the-actual-polka-hour-open",
+      "category": "id",
+      "url": "/voice/mirror-polka/the-actual-polka-hour-open.mp3",
+      "durationMs": 7446,
+      "title": "The Actual Polka Hour",
+      "overMusic": true,
+      "part": "open",
+      "show": "the-actual-polka-hour",
+      "lines": [
+        {
+          "speaker": "Johnny Mirror",
+          "text": "It's the Actual Polka Hour! The one hour a day when the Polka Hour is actually an hour!",
+          "startMs": 35
+        },
+        {
+          "speaker": "Ynnhoj",
+          "text": "An hour!",
+          "startMs": 6014
+        }
+      ]
+    },
+    {
+      "id": "the-actual-polka-hour-01",
+      "category": "dj",
+      "url": "/voice/mirror-polka/the-actual-polka-hour-01.mp3",
+      "durationMs": 12434,
+      "overMusic": true,
+      "show": "the-actual-polka-hour",
+      "lines": [
+        {
+          "speaker": "Johnny Mirror",
+          "text": "For sixty glorious minutes, the clock and the station agree! Isn't that something, Ynnhoj?",
+          "startMs": 35
+        },
+        {
+          "speaker": "Ynnhoj",
+          "text": "Something!",
+          "startMs": 6175
+        },
+        {
+          "speaker": "Johnny Mirror",
+          "text": "Savour it, folks. At nine o'clock we go back to being the Polka Hour all day long.",
+          "startMs": 7386
+        }
+      ]
+    },
+    {
+      "id": "the-actual-polka-hour-02",
+      "category": "dj",
+      "url": "/voice/mirror-polka/the-actual-polka-hour-02.mp3",
+      "durationMs": 10624,
+      "overMusic": true,
+      "show": "the-actual-polka-hour",
+      "lines": [
+        {
+          "speaker": "Johnny Mirror",
+          "text": "Hands up if you're dancing! Left hands! Left hands up!",
+          "startMs": 36
+        },
+        {
+          "speaker": "Ynnhoj",
+          "text": "Right hands up!",
+          "startMs": 3835
+        },
+        {
+          "speaker": "Johnny Mirror",
+          "text": "Ynnhoj.",
+          "startMs": 5752
+        },
+        {
+          "speaker": "Ynnhoj",
+          "text": "Left hands up. Sorry. It's been a long hour.",
+          "startMs": 6852
+        }
+      ]
+    },
+    {
+      "id": "dj-open-01",
+      "category": "dj",
+      "url": "/voice/mirror-polka/dj-open-01.mp3",
+      "durationMs": 5580,
+      "overMusic": true,
+      "part": "open",
+      "kit": "dj",
+      "lines": [
+        {
+          "speaker": "Johnny Mirror",
+          "text": "Welcome back to the Polka Hour! Oom-pah, everybody!",
+          "startMs": 36
+        },
+        {
+          "speaker": "Ynnhoj",
+          "text": "Hap-moo!",
+          "startMs": 4191
+        }
+      ]
+    },
+    {
+      "id": "dj-open-02",
+      "category": "dj",
+      "url": "/voice/mirror-polka/dj-open-02.mp3",
+      "durationMs": 4590,
+      "overMusic": true,
+      "part": "open",
+      "kit": "dj",
+      "lines": [
+        {
+          "speaker": "Johnny Mirror",
+          "text": "Welcome back to the ballroom!",
+          "startMs": 40
+        },
+        {
+          "speaker": "Ynnhoj",
+          "text": "Welcome back to the moorllab!",
+          "startMs": 2333
+        }
+      ]
+    },
+    {
+      "id": "dj-open-03",
+      "category": "dj",
+      "url": "/voice/mirror-polka/dj-open-03.mp3",
+      "durationMs": 5062,
+      "overMusic": true,
+      "part": "open",
+      "kit": "dj",
+      "lines": [
+        {
+          "speaker": "Johnny Mirror",
+          "text": "Still dancing, everybody? Good! Keep going!",
+          "startMs": 35
+        },
+        {
+          "speaker": "Ynnhoj",
+          "text": "Keep going!",
+          "startMs": 3641
+        }
+      ]
+    },
+    {
+      "id": "dj-open-04",
+      "category": "dj",
+      "url": "/voice/mirror-polka/dj-open-04.mp3",
+      "durationMs": 4988,
+      "overMusic": true,
+      "daypart": "night",
+      "part": "open",
+      "kit": "dj",
+      "lines": [
+        {
+          "speaker": "Johnny Mirror",
+          "text": "Late polka, everybody. Softer oom.",
+          "startMs": 35
+        },
+        {
+          "speaker": "Ynnhoj",
+          "text": "Gentler pah.",
+          "startMs": 3345
+        }
+      ]
+    },
+    {
+      "id": "dj-body-01",
+      "category": "dj",
+      "url": "/voice/mirror-polka/dj-body-01.mp3",
+      "durationMs": 8828,
+      "overMusic": true,
+      "part": "body",
+      "kit": "dj",
+      "lines": [
+        {
+          "speaker": "Johnny Mirror",
+          "text": "The Left Hand Band have a new single out! It's played entirely with left hands, which over here is both of them!",
+          "startMs": 35
+        },
+        {
+          "speaker": "Ynnhoj",
+          "text": "Both of them!",
+          "startMs": 7212
+        }
+      ]
+    },
+    {
+      "id": "dj-body-02",
+      "category": "dj",
+      "url": "/voice/mirror-polka/dj-body-02.mp3",
+      "durationMs": 8657,
+      "overMusic": true,
+      "part": "body",
+      "kit": "dj",
+      "lines": [
+        {
+          "speaker": "Johnny Mirror",
+          "text": "A note for table nine. Your reflection has ordered dessert. You haven't. One of you is going to have to pay for that.",
+          "startMs": 35
+        },
+        {
+          "speaker": "Ynnhoj",
+          "text": "It's you.",
+          "startMs": 7311
+        }
+      ]
+    },
+    {
+      "id": "dj-body-03",
+      "category": "dj",
+      "url": "/voice/mirror-polka/dj-body-03.mp3",
+      "durationMs": 10659,
+      "overMusic": true,
+      "part": "body",
+      "kit": "dj",
+      "lines": [
+        {
+          "speaker": "Johnny Mirror",
+          "text": "Accordion Inverted are in the ballroom tonight! Their accordion breathes in when everyone else's breathes out. It makes the whole room very calm.",
+          "startMs": 35
+        },
+        {
+          "speaker": "Ynnhoj",
+          "text": "Very calm.",
+          "startMs": 9133
+        }
+      ]
+    },
+    {
+      "id": "dj-body-04",
+      "category": "dj",
+      "url": "/voice/mirror-polka/dj-body-04.mp3",
+      "durationMs": 11962,
+      "overMusic": true,
+      "part": "body",
+      "kit": "dj",
+      "lines": [
+        {
+          "speaker": "Johnny Mirror",
+          "text": "Fun fact! The tuba player has never once been in time with himself, and he's won three awards for it!",
+          "startMs": 35
+        },
+        {
+          "speaker": "Ynnhoj",
+          "text": "Four awards.",
+          "startMs": 6237
+        },
+        {
+          "speaker": "Johnny Mirror",
+          "text": "Three, Ynnhoj.",
+          "startMs": 7991
+        },
+        {
+          "speaker": "Ynnhoj",
+          "text": "One of them's on my side.",
+          "startMs": 9567
+        }
+      ]
+    },
+    {
+      "id": "dj-body-05",
+      "category": "dj",
+      "url": "/voice/mirror-polka/dj-body-05.mp3",
+      "durationMs": 9805,
+      "overMusic": true,
+      "part": "body",
+      "kit": "dj",
+      "lines": [
+        {
+          "speaker": "Johnny Mirror",
+          "text": "Somebody asked if Ynnhoj and I ever argue. Never! We agree on everything!",
+          "startMs": 35
+        },
+        {
+          "speaker": "Ynnhoj",
+          "text": "Everything.",
+          "startMs": 5464
+        },
+        {
+          "speaker": "Ynnhoj",
+          "text": "Nearly everything.",
+          "startMs": 7338
+        },
+        {
+          "speaker": "Johnny Mirror",
+          "text": "Ynnhoj.",
+          "startMs": 9011
+        }
+      ]
+    },
+    {
+      "id": "dj-body-06",
+      "category": "dj",
+      "url": "/voice/mirror-polka/dj-body-06.mp3",
+      "durationMs": 9707,
+      "overMusic": true,
+      "part": "body",
+      "kit": "dj",
+      "lines": [
+        {
+          "speaker": "Johnny Mirror",
+          "text": "Polka tip! Always polka to the left. If you get dizzy, polka to the left faster. Eventually you'll come out the other side!",
+          "startMs": 36
+        },
+        {
+          "speaker": "Ynnhoj",
+          "text": "The other side!",
+          "startMs": 8119
+        }
+      ]
+    },
+    {
+      "id": "dj-close-01",
+      "category": "dj",
+      "url": "/voice/mirror-polka/dj-close-01.mp3",
+      "durationMs": 3821,
+      "overMusic": true,
+      "part": "close",
+      "kit": "dj",
+      "lines": [
+        {
+          "speaker": "Johnny Mirror",
+          "text": "Here's another polka!",
+          "startMs": 47
+        },
+        {
+          "speaker": "Ynnhoj",
+          "text": "Aklop rehtona!",
+          "startMs": 1956
+        }
+      ]
+    },
+    {
+      "id": "dj-close-02",
+      "category": "dj",
+      "url": "/voice/mirror-polka/dj-close-02.mp3",
+      "durationMs": 3677,
+      "overMusic": true,
+      "part": "close",
+      "kit": "dj",
+      "lines": [
+        {
+          "speaker": "Johnny Mirror",
+          "text": "Strike up the band!",
+          "startMs": 44
+        },
+        {
+          "speaker": "Ynnhoj",
+          "text": "Band up the strike!",
+          "startMs": 1775
+        }
+      ]
+    },
+    {
+      "id": "dj-close-03",
+      "category": "dj",
+      "url": "/voice/mirror-polka/dj-close-03.mp3",
+      "durationMs": 3511,
+      "overMusic": true,
+      "part": "close",
+      "kit": "dj",
+      "lines": [
+        {
+          "speaker": "Johnny Mirror",
+          "text": "To the left, everybody!",
+          "startMs": 37
+        },
+        {
+          "speaker": "Ynnhoj",
+          "text": "To the left!",
+          "startMs": 2172
+        }
+      ]
+    },
+    {
+      "id": "dj-close-04",
+      "category": "dj",
+      "url": "/voice/mirror-polka/dj-close-04.mp3",
+      "durationMs": 3435,
+      "overMusic": true,
+      "part": "close",
+      "kit": "dj",
+      "lines": [
+        {
+          "speaker": "Johnny Mirror",
+          "text": "One, two, three, oom!",
+          "startMs": 36
+        },
+        {
+          "speaker": "Ynnhoj",
+          "text": "Pah.",
+          "startMs": 2271
+        }
+      ]
+    },
+    {
+      "id": "greg-comes-home-07",
+      "category": "story",
+      "url": "/voice/mirror-polka/greg-comes-home-07.mp3",
+      "durationMs": 58291,
+      "title": "Greg Comes Home, Part Seven: Going Second",
+      "overMusic": false,
+      "serial": {
+        "id": "greg-comes-home",
+        "episode": 7
+      },
+      "lines": [
+        {
+          "speaker": "Johnny Mirror",
+          "text": "Folks! Somebody's come through the back of the bathroom mirror! It's Greg!",
+          "startMs": 35
+        },
+        {
+          "speaker": "Ynnhoj",
+          "text": "Greg!",
+          "startMs": 4465
+        },
+        {
+          "speaker": "Greg, a Shadow",
+          "text": "Sorry. I came out of level nine. Is this the way to the eastern Overlap?",
+          "startMs": 5451
+        },
+        {
+          "speaker": "Johnny Mirror",
+          "text": "It's the way to everywhere, son, if you go left for long enough! Stay for one dance!",
+          "startMs": 9673
+        },
+        {
+          "speaker": "Greg, a Shadow",
+          "text": "One dance.",
+          "startMs": 14812
+        },
+        {
+          "speaker": "Johnny Mirror",
+          "text": "Look at him go! Lovely footwork, Greg! Isn't it lovely, Ynnhoj?",
+          "startMs": 16057
+        },
+        {
+          "speaker": "Ynnhoj",
+          "text": "Greg. Can I ask you something?",
+          "startMs": 21324
+        },
+        {
+          "speaker": "Greg, a Shadow",
+          "text": "Yes.",
+          "startMs": 23507
+        },
+        {
+          "speaker": "Ynnhoj",
+          "text": "You followed someone for forty one years. So do I. Every morning, every night. Always half a second behind.",
+          "startMs": 24411
+        },
+        {
+          "speaker": "Ynnhoj",
+          "text": "Do you miss going second?",
+          "startMs": 32220
+        },
+        {
+          "speaker": "Greg, a Shadow",
+          "text": "No.",
+          "startMs": 35306
+        },
+        {
+          "speaker": "Greg, a Shadow",
+          "text": "I miss him going first.",
+          "startMs": 36878
+        },
+        {
+          "speaker": "Johnny Mirror",
+          "text": "Ynnhoj? You wouldn't ever. You know. Go?",
+          "startMs": 40407
+        },
+        {
+          "speaker": "Ynnhoj",
+          "text": "And miss a shave?",
+          "startMs": 44060
+        },
+        {
+          "speaker": "Ynnhoj",
+          "text": "No. I like going second. Somebody has to see where you've been.",
+          "startMs": 46303
+        },
+        {
+          "speaker": "Johnny Mirror",
+          "text": "Greg, the door's on the left. It's always on the left.",
+          "startMs": 50557
+        },
+        {
+          "speaker": "Greg, a Shadow",
+          "text": "Thank you. Both of you.",
+          "startMs": 54192
+        },
+        {
+          "speaker": "Ynnhoj",
+          "text": "Both of you.",
+          "startMs": 56674
+        }
+      ]
+    },
+    {
+      "id": "halloween-01",
+      "category": "dj",
+      "url": "/voice/mirror-polka/halloween-01.mp3",
+      "durationMs": 12978,
+      "title": "The Mirror at Halloween",
+      "overMusic": true,
+      "part": "body",
+      "kit": "dj",
+      "dates": [
+        "10-24",
+        "10-25",
+        "10-26",
+        "10-27",
+        "10-28",
+        "10-29",
+        "10-30",
+        "10-31"
+      ],
+      "lines": [
+        {
+          "speaker": "Johnny Mirror",
+          "text": "Halloween at the Polka Hour! Your side gets dressed up and looks in the mirror to see how you look!",
+          "startMs": 35
+        },
+        {
+          "speaker": "Ynnhoj",
+          "text": "And our side looks back.",
+          "startMs": 6444
+        },
+        {
+          "speaker": "Ynnhoj",
+          "text": "Without the costume.",
+          "startMs": 8821
+        },
+        {
+          "speaker": "Johnny Mirror",
+          "text": "Ynnhoj, don't. Not this week.",
+          "startMs": 10897
+        }
+      ]
+    },
+    {
+      "id": "halloween-02",
+      "category": "id",
+      "url": "/voice/mirror-polka/halloween-02.mp3",
+      "durationMs": 5066,
+      "title": "Mirror World Polka Hour, Halloween",
+      "overMusic": true,
+      "dates": [
+        "10-24",
+        "10-25",
+        "10-26",
+        "10-27",
+        "10-28",
+        "10-29",
+        "10-30",
+        "10-31"
+      ],
+      "lines": [
+        {
+          "speaker": "Johnny Mirror",
+          "text": "Mirror World Polka Hour! Happy Halloween!",
+          "startMs": 35
+        },
+        {
+          "speaker": "Ynnhoj",
+          "text": "Neewollah yppah!",
+          "startMs": 3469
         }
       ]
     }
