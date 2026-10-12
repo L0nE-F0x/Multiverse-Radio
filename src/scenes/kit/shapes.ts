@@ -36,6 +36,17 @@ export function arc(g: Gfx, cx: number, cy: number, rx: number, ry: number, a0: 
   }
 }
 
+/** Top half of an ellipse (umbrellas, domes, mushroom caps). */
+export function dome(g: Gfx, cx: number, cy: number, rx: number, ry: number, c: Color) {
+  const r = Math.ceil(ry);
+  for (let dy = -r; dy <= 0; dy++) {
+    const t = 1 - (dy * dy) / ((ry + 0.5) * (ry + 0.5));
+    if (t <= 0) continue;
+    const hw = Math.floor(Math.sqrt(t) * (rx + 0.5));
+    g.rect(Math.floor(cx) - hw, Math.floor(cy) + dy, hw * 2 + 1, 1, c);
+  }
+}
+
 /** Shaded ball with a 1px outline. */
 export function outlinedBall(g: Gfx, cx: number, cy: number, rx: number, ry: number, ramp: readonly Color[], outline: Color, lx = -0.5, ly = -0.6) {
   g.ellipse(cx, cy, rx + 1, ry + 1, outline);
