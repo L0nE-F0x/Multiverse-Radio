@@ -45,8 +45,8 @@ export function FunctionKeys() {
           cap="⇪"
           label="Share"
           onClick={() => void act.share()}
-          disabled={tuned.kind !== 'station'}
-          title={tuned.kind === 'station' ? `Share ${tuned.station.name}` : 'Only listed stations can be shared'}
+          disabled={!act.shareable(tuned)}
+          title={act.shareable(tuned) ? `Share ${tuned.station.name}` : 'Only listed stations can be shared'}
         />
         {install.canInstall && <Key cap="⤓" label="Install" onClick={() => void onInstall()} testId="hud-install" />}
         <PanelKey id="help" cap="?" label="Manual" open={panel === 'help'} className="fkey-help" />

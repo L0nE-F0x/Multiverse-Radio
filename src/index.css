@@ -42,8 +42,11 @@
   --ph-glow: color-mix(in oklab, var(--ph) 46%, transparent);
   --ink: #040506;
   --scrim: 3 4 6;
-  --font-hud: 'Michroma', 'Eurostile', 'Microgramma', 'Square 721', 'Arial', sans-serif;
+  /* Wide 1970s instrument caps for names and readouts; a plain terminal mono for the rest. */
+  --font-head: 'Michroma', 'Eurostile', 'Microgramma', 'Square 721', 'Arial', sans-serif;
   --font-term: 'IBM Plex Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace;
+  /* The HUD's text face, as other components (the welcome card) read it. */
+  --font-hud: var(--font-term);
   --gutter: max(clamp(12px, 2.2vw, 40px), env(safe-area-inset-left, 0px), env(safe-area-inset-right, 0px));
   --safe-b: env(safe-area-inset-bottom, 0px);
   --safe-t: env(safe-area-inset-top, 0px);
@@ -275,7 +278,7 @@
     display: flex;
     align-items: center;
     gap: 10px;
-    font-family: var(--font-hud);
+    font-family: var(--font-head);
     font-size: 10.5px;
     letter-spacing: 0.22em;
     color: var(--ph-hi);
@@ -434,7 +437,7 @@
   }
 
   .event-name {
-    font-family: var(--font-hud);
+    font-family: var(--font-head);
     font-size: 12px;
     letter-spacing: 0.16em;
     color: #fff;
@@ -506,7 +509,7 @@
 
   .ident-name {
     margin: 12px 0 10px;
-    font-family: var(--font-hud);
+    font-family: var(--font-head);
     font-size: clamp(24px, 3.4vw, 54px);
     line-height: 1.08;
     letter-spacing: 0.03em;
@@ -713,7 +716,7 @@
   .source-name {
     margin: 8px 0 6px;
     overflow: hidden;
-    font-family: var(--font-hud);
+    font-family: var(--font-head);
     font-size: clamp(17px, 1.75vw, 28px);
     line-height: 1.2;
     letter-spacing: 0.04em;
@@ -852,7 +855,7 @@
   }
 
   .dial-freq {
-    font-family: var(--font-hud);
+    font-family: var(--font-head);
     font-size: clamp(21px, 1.85vw, 30px);
     line-height: 1.1;
     color: var(--ph-hi);
@@ -1361,7 +1364,7 @@
     padding: 5px 22px;
     border: 1px solid color-mix(in oklab, var(--ph) 18%, transparent);
     background: linear-gradient(100deg, rgb(255 255 255 / 0.035), transparent 60%);
-    font-family: var(--font-hud);
+    font-family: var(--font-head);
     font-size: 7.5px;
     letter-spacing: 0.24em;
     text-transform: uppercase;
@@ -1395,6 +1398,11 @@
   }
 
   /* ── Power / lost ────────────────────────────────────────────────────────── */
+
+  /* The welcome card does the cold-console greeting on a first visit. */
+  body:has([data-testid='welcome']) .power {
+    visibility: hidden;
+  }
 
   .power {
     position: absolute;
@@ -1441,7 +1449,7 @@
   }
 
   .power-kicker {
-    font-family: var(--font-hud);
+    font-family: var(--font-head);
     font-size: 9.5px;
     letter-spacing: 0.26em;
     text-transform: uppercase;
@@ -1450,7 +1458,7 @@
 
   .power-title {
     margin: 16px 0 6px;
-    font-family: var(--font-hud);
+    font-family: var(--font-head);
     font-size: clamp(20px, 2.6vw, 30px);
     letter-spacing: 0.1em;
     text-transform: uppercase;
@@ -1485,7 +1493,7 @@
     border: 1px solid var(--ph);
     background: var(--ph-faint);
     color: var(--ph-hi);
-    font-family: var(--font-hud);
+    font-family: var(--font-head);
     font-size: 12px;
     letter-spacing: 0.24em;
     text-transform: uppercase;
@@ -1590,7 +1598,7 @@
 
   .panel-title {
     margin-top: 8px;
-    font-family: var(--font-hud);
+    font-family: var(--font-head);
     font-size: clamp(17px, 1.6vw, 22px);
     letter-spacing: 0.08em;
     text-transform: uppercase;
@@ -1705,7 +1713,7 @@
     margin: 18px 0 6px;
     padding-bottom: 5px;
     border-bottom: 1px solid var(--ph-line);
-    font-family: var(--font-hud);
+    font-family: var(--font-head);
     font-size: 10px;
     letter-spacing: 0.24em;
     text-transform: uppercase;
@@ -1816,7 +1824,7 @@
 
   .log-summary dd {
     margin-top: 2px;
-    font-family: var(--font-hud);
+    font-family: var(--font-head);
     font-size: 15px;
     color: var(--ph-hi);
   }

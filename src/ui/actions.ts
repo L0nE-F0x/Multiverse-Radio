@@ -2,6 +2,7 @@
 // and shortcut goes through here so the mouse, keyboard and touch all behave the same.
 
 import { useBroadcast } from '../broadcast/store';
+import type { Tuned } from '../broadcast/types';
 import { shareStation, type ShareResult } from '../pwa/share';
 import { snapMhz } from './dial';
 import * as sfx from './sfx';
@@ -95,10 +96,13 @@ const SHARE_MESSAGES: Record<ShareResult, string | null> = {
   unavailable: 'Sharing is unavailable on this terminal.',
 };
 
-/** Share the tuned station (roster stations only: pirates and oddities have no share page). */
+/** Listed stations have share pages; secrets, pirates and oddities don't (and stay secret). */
+export const shareable = (tuned: Tuned): tuned is Extract<Tuned, { kind: 'station' }> => tuned.kind === 'station' && !tuned.station.secret;
+
+/** Share the tuned station's page (Web Share where available, else copy the link). */
 export async function share(): Promise<void> {
   const { tuned } = radio();
-  if (tuned.kind !== 'station') {
+  if (!shareable(tuned)) {
     toast('Nothing shareable on this frequency.');
     return;
   }
