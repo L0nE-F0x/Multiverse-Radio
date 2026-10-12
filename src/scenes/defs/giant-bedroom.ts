@@ -10,8 +10,8 @@ import type { SceneDef } from '../types';
 import { motes, vignette } from './lib/night';
 
 const BED_EDGE = 112;
-const BED_R = 226;
-const LAMP = { x: 270, y: 30 };
+const BED_R = 212;
+const LAMP = { x: 250, y: 30 };
 const BOOK = { x: 112, y: 132 };
 const MOUSE = { x: 128, y: 124 };
 

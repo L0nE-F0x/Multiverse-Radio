@@ -36,6 +36,9 @@ const def: SceneDef = {
     const skin = hex('#a8806a');
     const coat = [hex('#1e1a20'), hex('#2a2018'), hex('#1a2020')];
     const pts = [0, 0];
+    // Verses added by the rare stagehand moment (kept, so the count never goes backwards).
+    let extra = 0;
+    let lastFlip = -1;
 
     /** A beard's path from a chin to the door: a lazy curve across the boards. */
     const beardPath = (i: number, u: number, out: number[], taut: number) => {
@@ -171,7 +174,11 @@ const def: SceneDef = {
 
         // The sign: the verse count, painted over and over.
         const flip = f.rare === 0 && ev < 10 ? clamp((ev - 2) / 1.2) : 0;
-        const verse = VERSE0 + Math.floor(t / 47) + (flip >= 1 ? 1 : 0);
+        if (flip >= 1 && lastFlip !== f.rareSeed) {
+          extra++;
+          lastFlip = f.rareSeed;
+        }
+        const verse = VERSE0 + Math.floor(t / 47) + extra;
         const vs = String(verse);
         const pretty = vs.slice(0, vs.length - 6) + ',' + vs.slice(-6, -3) + ',' + vs.slice(-3);
         g.textCenter('VERSE ' + pretty, SIGN.x, SIGN.y + 3, hex('#5a1e18'));

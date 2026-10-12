@@ -98,6 +98,11 @@ const def: SceneDef = {
         g.rect(BACK.l, BACK.b - 3, BACK.r - BACK.l, 3, hex('#0c0e14'));
         // Picture-rail moulding on the back wall.
         g.hline(BACK.l, BACK.r - 1, BACK.t + 8, hex('#1c222c'));
+        // A ceiling rose and a bare bulb on a long flex, unlit for years.
+        g.ellipse(160, Math.min(BACK.t - 30, 0) , 8, 2, hex('#141820'));
+        g.vline(160, Math.min(BACK.t - 30, 0), BACK.t - 6, hex('#0c0e12'));
+        g.disc(160, BACK.t - 4, 2, hex('#1e242e'));
+        g.px(159, BACK.t - 5, hex('#3a4250'));
 
         // Tall windows on the left wall: night sky, mullions, a sill.
         for (const [a, b] of WINDOWS) {

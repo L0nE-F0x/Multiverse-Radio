@@ -16,7 +16,7 @@ const PLAYERS = [
   { x: 186, h: 58, guitar: false, seed: 3 },
   { x: 230, h: 55, guitar: true, seed: 4 },
 ];
-const LAMP = { x: 262, y: 176 };
+const LAMP = { x: 244, y: 176 };
 
 const def: SceneDef = {
   id: 'fog-wall',
