@@ -46,7 +46,7 @@ export interface DirectorDebug {
   stationTime: number;
   offset: number;
   music: MusicRun | null;
-  musicPending: { boundaryMs: number; run: MusicRun | null } | null;
+  musicPending: { boundaryMs: number; atCtx: number; run: MusicRun | null } | null;
   voices: string[];
   failed: string[];
   cacheBytes: number;
@@ -119,7 +119,13 @@ export class Director {
   /** Voice segments that couldn't air (id → end of slot, station ms). Music fills them. */
   private readonly failed = new Map<string, number>();
   private musicNow: MusicRun | null = null;
-  private musicPending: { boundaryMs: number; run: MusicRun | null } | null = null;
+  private musicPending: { boundaryMs: number; atCtx: number; run: MusicRun | null } | null = null;
+  /**
+   * Context time until which a command already sent to the engine may still sound after
+   * a halt (engines can't necessarily cancel a play() scheduled for the future). Joins
+   * wait it out under the static.
+   */
+  private musicQuietUntil = 0;
 
   constructor(options: DirectorOptions) {
     this.library = options.library;
@@ -383,8 +389,11 @@ export class Director {
     if (onAir.kind === 'voice' && this.cache) {
       await Promise.race([this.cache.load(resolveAsset(onAir.clip.url)), delay(4000)]);
     }
-    const left = MIN_STATIC_MS[kind] - (performance.now() - began);
-    if (left > 0) await delay(left);
+    const left = Math.max(
+      MIN_STATIC_MS[kind] - (performance.now() - began),
+      (this.musicQuietUntil - mixer.ctx.currentTime) * 1000,
+    );
+    if (left > 0) await delay(Math.min(left, 3000));
     if (generation !== this.generation) return;
 
     if (mixer.ctx.state !== 'running') {
@@ -426,6 +435,7 @@ export class Director {
     this.voices.clear();
     this.failed.clear();
     if (this.engine && (this.musicNow || this.musicPending)) this.engine.stop({ fade });
+    if (this.musicPending) this.musicQuietUntil = Math.max(this.musicQuietUntil, this.musicPending.atCtx + 0.9);
     this.musicNow = null;
     this.musicPending = null;
     mixer.setHiss(0);
@@ -481,6 +491,7 @@ export class Director {
       this.voices.clear();
       this.musicNow = null;
       this.musicPending = null;
+      this.engine?.stop({ fade: 0.1 });
       mixer.resetDuck();
       this.offsets.set(this.stationId, joinOffset(this.schedule(), wall, this.offsetOf(this.stationId)));
       this.joining = true;
@@ -579,7 +590,7 @@ export class Director {
   private scheduleMusic(schedule: StationSchedule, now: number, ctxNow: number, ctxAt: (ms: number) => number): void {
     const engine = this.engine;
     if (!engine) return;
-    if (this.musicPending && now >= this.musicPending.boundaryMs - 1) {
+    if (this.musicPending && now >= this.musicPending.boundaryMs) {
       this.musicNow = this.musicPending.run;
       this.musicPending = null;
     }
@@ -609,14 +620,15 @@ export class Director {
     const pending = this.musicPending;
     if (pending && pending.boundaryMs === boundary && pending.run?.id === after?.id) return;
     if (!pending && after?.id === this.musicNow?.id) return;
+    const atCtx = ctxAt(boundary);
     if (after) {
-      engine.play(request(after), { when: ctxAt(boundary), fade: this.musicNow ? 0.8 : 0.3 });
-      this.note(`music ${after.recipe} #${after.seed} at +${(ctxAt(boundary) - ctxNow).toFixed(2)} s`);
+      engine.play(request(after), { when: atCtx, fade: this.musicNow ? 0.8 : 0.3 });
+      this.note(`music ${after.recipe} #${after.seed} at +${(atCtx - ctxNow).toFixed(2)} s`);
     } else {
-      engine.stop({ when: Math.max(ctxNow, ctxAt(boundary) - 0.5), fade: 0.5 });
-      this.note(`music out at +${(ctxAt(boundary) - ctxNow).toFixed(2)} s`);
+      engine.stop({ when: Math.max(ctxNow, atCtx - 0.5), fade: 0.5 });
+      this.note(`music out at +${(atCtx - ctxNow).toFixed(2)} s`);
     }
-    this.musicPending = { boundaryMs: boundary, run: after };
+    this.musicPending = { boundaryMs: boundary, atCtx, run: after };
   }
 
   /** Decodes the next couple of voice clips ahead of time. */
