@@ -97,11 +97,32 @@ export class AudioBufferCache {
   }
 }
 
-/** fetch + decodeAudioData against a context. */
+/**
+ * Voice clips are decoded at this rate rather than the output rate (often 48 kHz): FM
+ * broadcast bandwidth, above Kokoro's native 24 kHz, and a third less memory per clip.
+ * Buffers play fine in any context; the browser resamples on the fly.
+ */
+const VOICE_DECODE_RATE = 32_000;
+
+/** fetch + decodeAudioData, at a voice-friendly sample rate where the browser allows it. */
 export function contextDecoder(ctx: BaseAudioContext, fetcher: (url: string) => Promise<Response> = (u) => fetch(u)): Decoder {
+  let decoder: BaseAudioContext = ctx;
+  if (ctx.sampleRate > VOICE_DECODE_RATE && typeof OfflineAudioContext !== 'undefined') {
+    try {
+      decoder = new OfflineAudioContext(1, 1, VOICE_DECODE_RATE);
+    } catch {
+      decoder = ctx;
+    }
+  }
   return async (url) => {
     const response = await fetcher(url);
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
-    return ctx.decodeAudioData(await response.arrayBuffer());
+    const data = await response.arrayBuffer();
+    try {
+      return await decoder.decodeAudioData(data.slice(0));
+    } catch (error) {
+      if (decoder === ctx) throw error;
+      return ctx.decodeAudioData(data);
+    }
   };
 }

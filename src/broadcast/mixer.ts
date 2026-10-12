@@ -111,9 +111,11 @@ export class Mixer {
     this.mix.connect(this.master);
     this.connectOutput(mode === 'auto' ? (prefersElementOutput() ? 'element' : 'destination') : mode);
 
-    // iOS interrupts the context for calls and Siri.
+    // iOS interrupts the context for calls and Siri; Safari may suspend it in the
+    // background. (The director ignores this while it's paused itself.)
     ctx.addEventListener('statechange', () => {
-      if ((ctx.state as string) === 'interrupted') this.onInterrupted?.();
+      const state = ctx.state as string;
+      if (state === 'interrupted' || state === 'suspended') this.onInterrupted?.();
     });
 
     // Lets iOS play through the silent switch, like any music app.

@@ -60,7 +60,7 @@ type StartKind = 'power' | 'channel' | 'skip' | 'resume' | 'retry';
 /** Voice clips are scheduled this far ahead (we own those nodes and can cancel them). */
 const VOICE_LOOKAHEAD_MS = 4000;
 /** Music commands go to the engine this far ahead (kept short: engines may not cancel well). */
-const MUSIC_LOOKAHEAD_MS = 1500;
+const MUSIC_LOOKAHEAD_MS = 2000;
 const PREFETCH_COUNT = 2;
 const TICK_LIVE_MS = 250;
 /** Hidden tabs don't need 4 Hz captions; the lookahead covers the slower beat. */
