@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { stationById } from '../stations/roster';
 import { AudioBufferCache, bufferBytes } from './audioCache';
+import { oddities, pirates } from './dial';
 import { VoiceLibrary } from './library';
 import type { VoiceManifest } from './types';
 
@@ -102,6 +103,54 @@ describe('VoiceLibrary', () => {
     fail = false;
     await library.load('void-beats'); // still inside the retry window: no refetch
     expect(fetches).toBe(2);
+  });
+
+  it('gives pirates the pirate pool (in their host’s name) and oddities their own clips', async () => {
+    const pool = (station: string, clips: object[]) => JSON.stringify({ version: 1, station, clips });
+    const line = (speaker: string, text: string) => ({ speaker, text, startMs: 0 });
+    const files: Record<string, string> = {
+      '_pirate.json': pool('_pirate', [
+        { id: 'id-1', category: 'id', url: '/voice/_pirate/id-1.mp3', durationMs: 4000, lines: [line('Pirate DJ', 'Hi'), line('Caller', 'Yo')] },
+        { id: 'dj-1', category: 'dj', url: '/voice/_pirate/dj-1.mp3', durationMs: 12000, lines: [line('Pirate DJ', 'Next')] },
+      ]),
+      '_oddities.json': pool('_oddities', [
+        { id: 'pips', category: 'id', url: '/voice/_oddities/pips.mp3', durationMs: 4000, stations: ['time-signal'], lines: [] },
+        { id: 'sos', category: 'id', url: '/voice/_oddities/sos.mp3', durationMs: 4000, stations: ['distress-beacon'], lines: [] },
+        { id: 'any', category: 'dj', url: '/voice/_oddities/any.mp3', durationMs: 9000, lines: [] },
+      ]),
+      '_shows.json': JSON.stringify({ version: 1, shows: { 'void-beats': [{ id: 'late', name: 'Late', blurb: '', start: 22, end: 2 }] } }),
+    };
+    const fetched: string[] = [];
+    const library = new VoiceLibrary(async (url) => {
+      const name = url.split('/').pop()!;
+      fetched.push(name);
+      return files[name] ? response(files[name]) : response('', 404);
+    });
+    const pirate = pirates()[0]!.station;
+    await library.load(pirate.id);
+    expect(fetched).toEqual(['_pirate.json']);
+    const segments = library.schedule(pirate).segmentsBetween(Date.UTC(2026, 9, 12), Date.UTC(2026, 9, 12, 2));
+    const spoken = segments.flatMap((s) => (s.kind === 'voice' ? s.clip.lines : []));
+    expect(spoken.length).toBeGreaterThan(0);
+    expect(spoken.filter((l) => l.speaker === pirate.host.name).length).toBeGreaterThan(0);
+    expect(spoken.some((l) => l.speaker === 'Pirate DJ')).toBe(false);
+    expect(spoken.some((l) => l.speaker === 'Caller')).toBe(true);
+
+    const pips = oddities().find((o) => o.oddity === 'time-signal')!.station;
+    await library.load(pips.id);
+    const heard = new Set(
+      library
+        .schedule(pips)
+        .segmentsBetween(Date.UTC(2026, 9, 12), Date.UTC(2026, 9, 12, 6))
+        .flatMap((s) => (s.kind === 'voice' ? [s.clip.id] : [])),
+    );
+    expect(heard.has('sos')).toBe(false);
+    expect(heard.has('pips') || heard.has('any')).toBe(true);
+
+    expect(library.shows('void-beats')).toEqual([]);
+    await library.loadShows();
+    expect(library.shows('void-beats').map((s) => s.id)).toEqual(['late']);
+    expect(library.schedule(station).shows.map((s) => s.id)).toEqual(['late']);
   });
 
   it('lets overrides replace manifests (the lab’s fake-voice mode)', () => {

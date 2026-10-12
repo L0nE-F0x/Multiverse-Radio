@@ -1,7 +1,14 @@
-// The director: plays the schedule. It joins a station live at the right offset, keeps
+// The director: plays the schedule. It joins a programme live at the right offset, keeps
 // voice clips, music runs and ducking scheduled a few seconds ahead on the AudioContext
 // clock, and recovers from missing clips, a missing music engine, clock jumps and OS
 // interruptions. The store (./store.ts) is its only client; the lab pokes at it directly.
+//
+// v3, the continuous dial: the director owns the dial position. Whatever transmitter the
+// receiver locks on to there (./dial.ts) is the *programme*: a roster station, a pirate or
+// an oddity, or nothing at all on bare static. Exactly one programme plays at a time, on one
+// music engine; reception (signal, bleed, dial noise) is shaped in the mixer as the dial
+// moves, and the programme changes only once the dial settles on a new transmitter. On top,
+// the overlay (./overlay.ts) airs multiverse events and HUSH on every frequency.
 //
 // Timing model: each tick maps station time to context time (`ctxAt`) and schedules
 // anything starting within the lookahead. Ticks come from a Worker, but nothing relies on
@@ -9,11 +16,15 @@
 
 import { createMusicEngine, type MusicEngine, type TrackRequest } from '../music';
 import { AudioBufferCache, contextDecoder } from './audioCache';
-import type { VoiceLibrary } from './library';
+import { bleedOf, clampFrequency, receptionAt, signalOf, stationForId, type Reception, type Transmitter } from './dial';
+import { sweep } from './eventfx';
+import { POOLS, type VoiceLibrary } from './library';
 import { resolveAsset } from './manifest';
 import { Mixer, type OutputMode, type VoiceHandle } from './mixer';
-import { joinOffset, skipOffset, type MusicRun, type StationSchedule } from './scheduler';
+import { Overlay } from './overlay';
+import { daypartForHour, joinOffset, skipOffset, type MusicRun, type StationSchedule } from './scheduler';
 import { createTicker, type Ticker } from './ticker';
+import { browserTzOffset, localTime, type TzOffset } from './time';
 import type { PlayStatus, StationDef, VoiceSegment } from './types';
 
 export interface Clock {
@@ -24,12 +35,17 @@ export const systemClock: Clock = { now: () => Date.now() };
 
 export interface DirectorOptions {
   library: VoiceLibrary;
+  /** The roster (used as a fallback for `station`). */
   stations: StationDef[];
-  stationId: string;
+  /** Initial station (ignored if `frequency` is given). */
+  stationId?: string;
+  /** Initial dial position in MHz. */
+  frequency?: number;
   clock?: Clock;
   output?: OutputMode;
   createEngine?: (ctx: AudioContext) => Promise<MusicEngine>;
   volume?: number;
+  tzOffset?: TzOffset;
 }
 
 export interface LogEntry {
@@ -52,10 +68,19 @@ export interface DirectorDebug {
   cacheBytes: number;
   cacheEntries: number;
   duck: number;
+  eventDuck: number;
   latency: number;
+  frequency: number;
+  signal: number;
+  program: string | null;
+  shiftMs: number;
+  listenMs: number;
+  hushLevel: number;
+  hushInMs: number;
+  dialNoise: boolean;
 }
 
-type StartKind = 'power' | 'channel' | 'skip' | 'resume' | 'retry';
+type StartKind = 'power' | 'channel' | 'dial' | 'skip' | 'resume' | 'retry';
 
 /** Voice clips are scheduled this far ahead (we own those nodes and can cancel them). */
 const VOICE_LOOKAHEAD_MS = 4000;
@@ -69,7 +94,9 @@ const TICK_IDLE_MS = 1000;
 /** Ducking under bed clips: about -13 dB (ambient stations: a gentler -8 dB). */
 const DUCK = { default: 10 ** (-13 / 20), ambient: 10 ** (-8 / 20) };
 const VOICE_GAIN = { default: 1, ambient: 0.75 };
-const MIN_STATIC_MS: Record<StartKind, number> = { power: 650, channel: 650, retry: 650, skip: 320, resume: 280 };
+const MIN_STATIC_MS: Record<StartKind, number> = { power: 650, channel: 650, retry: 650, dial: 150, skip: 320, resume: 280 };
+/** While dragging, the programme changes only after the dial has rested on a new transmitter this long. */
+const SETTLE_MS = 160;
 
 const delay = (ms: number) => new Promise<void>((resolve) => setTimeout(resolve, ms));
 
@@ -79,18 +106,32 @@ function request(run: MusicRun): TrackRequest {
     seed: run.seed,
     durationSeconds: (run.endMs - run.startMs) / 1000,
     ...(run.tweaks ? { tweaks: run.tweaks } : {}),
+    ...(run.artist !== undefined ? { artist: run.artist } : {}),
   };
 }
 
 export class Director {
   status: PlayStatus = 'off';
   message: string | null = null;
-  stationId: string;
+  /** Wall clock (plus any lab time warp). */
   readonly clock: Clock;
   readonly library: VoiceLibrary;
   readonly log: LogEntry[] = [];
+  readonly overlay: Overlay;
+
+  /** Dial position in MHz. */
+  frequency: number;
+  /** What the dial picks up at `frequency`. */
+  reception: Reception;
+  /** The programme being played (null on bare static). */
+  program: Transmitter | null;
+  /** The last station or pirate the programme was (stays put on oddities and static). */
+  lastStationId: string;
 
   private readonly stations: StationDef[];
+  private readonly baseClock: Clock;
+  private warpMs = 0;
+  private readonly tz: TzOffset;
   private readonly output: OutputMode;
   private createEngine: (ctx: AudioContext) => Promise<MusicEngine>;
   private readonly offsets = new Map<string, number>();
@@ -112,8 +153,11 @@ export class Director {
   private joining = false;
   private rejoin = false;
   private suspendTimer: ReturnType<typeof setTimeout> | undefined;
+  private settleTimer: ReturnType<typeof setTimeout> | undefined;
   private lastTick: { wall: number; ctx: number } | null = null;
   private lastPrefetch = 0;
+  /** The time-slip shift the programme was last joined with. */
+  private appliedShift = 0;
 
   private readonly voices = new Map<string, { handle: VoiceHandle; segment: VoiceSegment }>();
   /** Voice segments that couldn't air (id → end of slot, station ms). Music fills them. */
@@ -130,11 +174,22 @@ export class Director {
   constructor(options: DirectorOptions) {
     this.library = options.library;
     this.stations = options.stations;
-    this.stationId = options.stationId;
-    this.clock = options.clock ?? systemClock;
+    this.baseClock = options.clock ?? systemClock;
+    this.clock = { now: () => this.baseClock.now() + this.warpMs };
+    this.tz = options.tzOffset ?? browserTzOffset;
     this.output = options.output ?? 'auto';
     this.createEngine = options.createEngine ?? createMusicEngine;
     this.volume = options.volume ?? 0.8;
+    const start = stationForId(options.stationId ?? '') ?? this.stations[0]!;
+    this.frequency = clampFrequency(options.frequency ?? start.frequency);
+    this.reception = receptionAt(this.frequency);
+    this.program = this.reception.lock;
+    this.lastStationId = this.program && this.program.kind !== 'oddity' ? this.program.id : start.id;
+    this.overlay = new Overlay(
+      () => this.mixer,
+      () => this.cache,
+      this.library,
+    );
     this.ticker = createTicker(this.tick);
     this.ticker.setInterval(TICK_IDLE_MS);
     if (typeof document !== 'undefined') document.addEventListener('visibilitychange', this.updateTickRate);
@@ -149,7 +204,9 @@ export class Director {
   /** Stops everything and releases the audio graph (used on hot reload). */
   dispose(): void {
     this.generation++;
+    clearTimeout(this.settleTimer);
     this.halt(0.02);
+    this.overlay.stop(0.02);
     this.ticker.dispose();
     if (typeof document !== 'undefined') document.removeEventListener('visibilitychange', this.updateTickRate);
     this.engine?.dispose();
@@ -160,8 +217,18 @@ export class Director {
 
   // ── Queries ───────────────────────────────────────────────────────────────
 
+  /** Id of the programme (station, pirate or oddity), or the last station on bare static. */
+  get stationId(): string {
+    return this.program?.id ?? this.lastStationId;
+  }
+
+  /** The programme's station definition (synthetic for pirates and oddities). */
   get station(): StationDef {
-    return this.stations.find((s) => s.id === this.stationId) ?? this.stations[0]!;
+    return this.program?.station ?? stationForId(this.lastStationId) ?? this.stations[0]!;
+  }
+
+  get powered(): boolean {
+    return this.status === 'playing' || this.status === 'tuning';
   }
 
   schedule(station: StationDef = this.station): StationSchedule {
@@ -172,9 +239,9 @@ export class Director {
     return this.offsets.get(stationId) ?? 0;
   }
 
-  /** Broadcast time on a station (wall clock plus that station's skip offset). */
+  /** Broadcast time on a programme (wall clock plus its skip offset, minus any time slip). */
   stationNow(stationId = this.stationId): number {
-    return this.clock.now() + this.offsetOf(stationId);
+    return this.clock.now() + this.offsetOf(stationId) + (stationId === this.program?.id ? this.appliedShift : 0);
   }
 
   /** True if this voice segment couldn't be played (music is filling its slot). */
@@ -194,6 +261,11 @@ export class Director {
   /** The mixer, once powered on (the lab uses it for bus meters). */
   getMixer(): Mixer | null {
     return this.mixer;
+  }
+
+  /** Lab: how far the clock has been warped (ms). */
+  get warp(): number {
+    return this.warpMs;
   }
 
   subscribe(listener: () => void): () => void {
@@ -223,7 +295,16 @@ export class Director {
       cacheBytes: this.cache?.bytes ?? 0,
       cacheEntries: this.cache?.size ?? 0,
       duck: mixer?.duck.gain.value ?? 1,
+      eventDuck: mixer?.eventDuck.gain.value ?? 1,
       latency: mixer?.latency ?? 0,
+      frequency: this.frequency,
+      signal: this.reception.signal,
+      program: this.program?.id ?? null,
+      shiftMs: this.appliedShift,
+      listenMs: this.overlay.listenMs,
+      hushLevel: this.overlay.level(),
+      hushInMs: this.overlay.hushInMs,
+      dialNoise: mixer?.dialNoiseActive ?? false,
     };
   }
 
@@ -248,34 +329,65 @@ export class Director {
     }
   }
 
-  /** Tunes to a station (powering on if needed). Gesture. */
+  /**
+   * Moves the dial. 'drag' follows the hand: reception changes at once, and the programme
+   * changes once the dial rests on a new transmitter. 'jump' retunes straight away, with the
+   * channel-change static. Neither powers the radio on.
+   */
+  setFrequency(mhz: number, mode: 'drag' | 'jump' = 'drag'): void {
+    const frequency = Math.round(clampFrequency(mhz) * 1000) / 1000;
+    this.frequency = frequency;
+    this.reception = receptionAt(frequency);
+    this.updateReception();
+    const lock = this.reception.lock;
+    const changed = (lock?.id ?? null) !== (this.program?.id ?? null);
+    clearTimeout(this.settleTimer);
+    this.settleTimer = undefined;
+    if (!changed) return;
+    if (mode === 'jump' || !this.powered) this.retune(lock, 'channel');
+    else this.settleTimer = setTimeout(() => this.retune(this.reception.lock, 'dial'), SETTLE_MS);
+  }
+
+  /** Tunes to a station or pirate by id (powering on if needed). Gesture. */
   tune(stationId: string): void {
-    if (!this.stations.some((s) => s.id === stationId)) return;
-    const changed = stationId !== this.stationId;
-    this.stationId = stationId;
-    void this.library.load(stationId);
-    if (!changed && (this.status === 'playing' || this.status === 'tuning')) return;
-    void this.start(changed ? 'channel' : this.status === 'off' ? 'power' : 'resume');
+    const station = stationForId(stationId);
+    if (!station) return;
+    const wasPowered = this.powered || this.status === 'lost';
+    const changed = station.id !== this.program?.id;
+    this.setFrequency(station.frequency, 'jump');
+    void this.library.load(this.stationId);
+    if (!wasPowered) void this.start(changed ? 'channel' : this.status === 'off' ? 'power' : 'resume');
   }
 
-  /** Jumps this station's clock to the end of what's on air. Gesture. */
+  /** Jumps this programme's clock to the end of what's on air. Gesture. */
   skip(): void {
+    if (!this.program) return;
     const id = this.stationId;
-    this.offsets.set(id, skipOffset(this.schedule(), this.clock.now(), this.offsetOf(id)));
+    this.offsets.set(id, skipOffset(this.schedule(), this.clock.now() + this.appliedShift, this.offsetOf(id)));
     void this.start('skip');
   }
 
-  /** Lab: moves this station's clock to a broadcast time and rejoins there. */
+  /** Lab: moves this programme's clock to a broadcast time and rejoins there. */
   seek(stationMs: number): void {
-    this.offsets.set(this.stationId, stationMs - this.clock.now());
+    this.offsets.set(this.stationId, stationMs - this.clock.now() - this.appliedShift);
     void this.start('skip');
+  }
+
+  /** Lab: moves the whole clock (events, shows, every station) by `deltaMs`. */
+  warpBy(deltaMs: number): void {
+    this.warpMs += deltaMs;
+    this.note(`time warp ${deltaMs >= 0 ? '+' : ''}${Math.round(deltaMs / 1000)} s (now ${Math.round(this.warpMs / 1000)} s)`);
+    if (this.powered) this.rejoin = true;
+    this.emit();
   }
 
   pause(): void {
     if (this.status === 'off' || this.status === 'paused') return;
     this.generation++;
     this.halt(0.15);
+    this.overlay.stop(0.15);
     this.mixer?.stopStatic(0.1);
+    this.mixer?.quietDial();
     this.setStatus('paused');
     clearTimeout(this.suspendTimer);
     this.suspendTimer = setTimeout(() => {
@@ -305,9 +417,34 @@ export class Director {
     this.musicPending = null;
   }
 
-  /** Preloads a station's manifests (no audio). */
+  /** Preloads a programme's manifests (no audio). */
   prefetchStation(stationId: string): Promise<void> {
     return this.library.load(stationId);
+  }
+
+  // ── The dial ──────────────────────────────────────────────────────────────
+
+  /** Switches the programme to what the dial has locked on to. */
+  private retune(lock: Transmitter | null, kind: 'channel' | 'dial'): void {
+    this.settleTimer = undefined;
+    if ((lock?.id ?? null) === (this.program?.id ?? null)) return;
+    this.program = lock;
+    if (lock && lock.kind !== 'oddity') this.lastStationId = lock.id;
+    if (lock) void this.library.load(lock.id);
+    this.note(`dial ${this.frequency.toFixed(2)}: ${lock ? lock.id : 'static'}`);
+    if (this.powered || this.status === 'lost') void this.start(kind);
+    else this.emit();
+  }
+
+  /** Shapes reception for the programme at the dial position (signal, bleed, dial noise). */
+  private updateReception(): void {
+    const mixer = this.mixer;
+    if (!mixer || !this.powered) return;
+    const p = this.program;
+    const f = this.frequency;
+    const signal = p ? signalOf(p, f) : 0;
+    const audible = this.live && p ? signal : 0;
+    mixer.setReception({ signal, bleed: p ? bleedOf(p, f) : 0, noise: 1 - audible, detune: p ? f - p.frequency : 0.5 });
   }
 
   // ── Transport ─────────────────────────────────────────────────────────────
@@ -354,7 +491,7 @@ export class Director {
     return this.engineLoad;
   }
 
-  /** Static, load what the station needs, then join it live. */
+  /** Static, load what the programme needs, then join it live. */
   private async start(kind: StartKind): Promise<void> {
     const mixer = this.ensureAudio();
     if (!mixer) {
@@ -365,16 +502,44 @@ export class Director {
     mixer.unlock();
     const generation = ++this.generation;
     clearTimeout(this.suspendTimer);
-    this.halt(0.12);
+    this.halt(kind === 'dial' ? 0.06 : 0.12);
     this.message = null;
     this.setStatus('tuning');
-    mixer.startStatic(kind === 'skip' || kind === 'resume' ? 'short' : 'channel');
+    this.updateReception();
+    if (kind !== 'dial') mixer.startStatic(kind === 'skip' || kind === 'resume' ? 'short' : 'channel');
     if (kind === 'channel') mixer.click();
+    // The overlay's pools: HUSH and the multiverse events.
+    void this.library.loadPool(POOLS.events);
+    void this.library.loadPool(POOLS.ship);
     const began = performance.now();
+    const program = this.program;
     const stationId = this.stationId;
     const skipping = kind === 'skip';
     // A skip lands exactly on the next segment, however long the static takes.
     const skipTarget = skipping ? this.stationNow() : 0;
+
+    if (!program) {
+      // Bare static: nothing to load or join.
+      await Promise.race([mixer.whenRunning(3000), delay(3000)]);
+      if (generation !== this.generation) return;
+      const left = MIN_STATIC_MS[kind] - (performance.now() - began);
+      if (left > 0) await delay(left);
+      if (generation !== this.generation) return;
+      if (mixer.ctx.state !== 'running') {
+        mixer.stopStatic(0.1);
+        this.setStatus('paused');
+        return;
+      }
+      this.appliedShift = 0;
+      mixer.setWobble(false);
+      this.live = true;
+      this.note(`${kind}: static at ${this.frequency.toFixed(2)}`);
+      mixer.stopStatic(0.3);
+      this.setStatus('playing');
+      this.updateReception();
+      this.tick();
+      return;
+    }
 
     await Promise.race([
       Promise.all([this.library.load(stationId), this.loadEngine(), mixer.whenRunning(3000)]),
@@ -384,7 +549,8 @@ export class Director {
 
     // Make sure the clip on air (if any) is decoded before we join it.
     const wall = this.clock.now();
-    const at = skipping ? skipTarget : wall + joinOffset(this.schedule(), wall, this.offsetOf(stationId));
+    const shift = this.overlay.shiftAt(wall, stationId);
+    const at = skipping ? skipTarget : wall + shift + joinOffset(this.schedule(), wall + shift, this.offsetOf(stationId));
     const onAir = this.schedule().segmentAt(at);
     if (onAir.kind === 'voice' && this.cache) {
       await Promise.race([this.cache.load(resolveAsset(onAir.clip.url)), delay(4000)]);
@@ -399,6 +565,7 @@ export class Director {
     if (mixer.ctx.state !== 'running') {
       // Autoplay blocked: wait for another tap.
       mixer.stopStatic(0.1);
+      mixer.quietDial();
       this.setStatus('paused');
       return;
     }
@@ -406,18 +573,25 @@ export class Director {
     if (!this.engine && this.engineFailed && !schedule.hasVoice) {
       this.halt(0.1);
       mixer.stopStatic(0.3);
+      mixer.quietDial();
       this.message = 'Nothing is coming through from this dimension right now. Try again in a moment.';
       this.setStatus('lost');
       return;
     }
 
     const now = this.clock.now();
-    this.offsets.set(stationId, skipping ? skipTarget - now : joinOffset(schedule, now, this.offsetOf(stationId)));
+    this.appliedShift = this.overlay.shiftAt(now, stationId);
+    mixer.setWobble(this.appliedShift !== 0);
+    this.offsets.set(
+      stationId,
+      skipping ? skipTarget - now - this.appliedShift : joinOffset(schedule, now + this.appliedShift, this.offsetOf(stationId)),
+    );
     this.live = true;
     this.joining = true;
     this.lastTick = null;
     mixer.resetDuck();
-    mixer.fadeProgramme(1, 0.3);
+    mixer.fadeProgramme(1, kind === 'dial' ? 0.15 : 0.3);
+    this.updateReception();
     this.note(`${kind}: joined ${stationId} at ${new Date(this.stationNow()).toISOString().slice(11, 19)}`);
     this.tick();
     this.joining = false;
@@ -425,7 +599,7 @@ export class Director {
     this.setStatus('playing');
   }
 
-  /** Stops the programme (not the static) and forgets everything scheduled. */
+  /** Stops the programme (not the static or the overlay) and forgets everything scheduled. */
   private halt(fade: number): void {
     this.live = false;
     const mixer = this.mixer;
@@ -446,7 +620,9 @@ export class Director {
     this.note('interrupted by the system');
     this.generation++;
     this.halt(0.05);
+    this.overlay.stop(0.05);
     this.mixer?.stopStatic(0.05);
+    this.mixer?.quietDial();
     this.setStatus('paused');
   }
 
@@ -454,6 +630,10 @@ export class Director {
     if (status !== 'lost') this.message = null;
     this.status = status;
     this.updateTickRate();
+    this.emit();
+  }
+
+  private emit(): void {
     for (const listener of this.listeners) listener();
   }
 
@@ -465,7 +645,19 @@ export class Director {
   // ── The heartbeat ─────────────────────────────────────────────────────────
 
   private readonly tick = (): void => {
-    if (this.live) this.scheduleAudio();
+    const mixer = this.mixer;
+    if (this.powered && mixer && mixer.ctx.state === 'running') {
+      if (this.live && this.program) this.scheduleAudio();
+      const wall = this.clock.now();
+      const local = localTime(wall, this.tz);
+      this.overlay.tick(wall, {
+        schedule: this.live && this.program ? this.schedule() : null,
+        now: this.stationNow(),
+        stationId: this.program?.id ?? null,
+        daypart: daypartForHour(local.hour),
+        date: local.date,
+      });
+    }
     for (const listener of this.tickListeners) listener();
   };
 
@@ -474,6 +666,7 @@ export class Director {
     if (!mixer || mixer.ctx.state !== 'running') return;
     const wall = this.clock.now();
     const ctxNow = mixer.ctx.currentTime;
+    const stationId = this.stationId;
 
     // A frozen tab, system sleep or a stalled audio device: rejoin rather than drift.
     if (this.lastTick && !this.joining) {
@@ -484,6 +677,17 @@ export class Director {
       }
     }
     this.lastTick = { wall, ctx: ctxNow };
+
+    // Time slip: the programme drops back half a minute (and later snaps forward again).
+    const shift = this.overlay.shiftAt(wall, stationId);
+    if (shift !== this.appliedShift) {
+      this.note(shift ? 'time slip: replaying' : 'time slip: back to live');
+      sweep(mixer.ctx, mixer.overlayBus, mixer.noiseBuffer, ctxNow, shift ? 'rewind' : 'whoosh');
+      this.appliedShift = shift;
+      mixer.setWobble(shift !== 0);
+      this.rejoin = true;
+    }
+
     const rejoining = this.rejoin;
     if (rejoining) {
       this.rejoin = false;
@@ -493,12 +697,12 @@ export class Director {
       this.musicPending = null;
       this.engine?.stop({ fade: 0.1 });
       mixer.resetDuck();
-      this.offsets.set(this.stationId, joinOffset(this.schedule(), wall, this.offsetOf(this.stationId)));
+      this.offsets.set(stationId, joinOffset(this.schedule(), wall + this.appliedShift, this.offsetOf(stationId)));
       this.joining = true;
     }
 
     const schedule = this.schedule();
-    const now = wall + this.offsetOf(this.stationId);
+    const now = wall + this.offsetOf(stationId) + this.appliedShift;
     const ctxAt = (ms: number) => ctxNow + (ms - now) / 1000;
 
     this.scheduleVoices(schedule, now, ctxNow, ctxAt);
