@@ -1,0 +1,380 @@
+# Cat FM — 92.25, a warm windowsill, briefly.
+#
+# A radio station run entirely by a cat: Gloria, the station manager. Dennis (the intern)
+# is nominally in charge. He announces her programming decisions as they happen and
+# apologises for most of them. Long silences, sudden enthusiasm, things knocked off the
+# desk. The mug is always at the very edge.
+#
+# The `decision` kit chains Dennis noticing, one to three of Gloria's decisions and a
+# sheepish hand-back to the music.
+station = "cat-fm"
+
+[voices]
+dennis = { voice = "am_liam", name = "Dennis (the intern)" }
+caller = { voice = "af_alloy", fx = "phone", name = "A Listener With a Cat" }
+grumbel = { voice = "am_eric", name = "Arnold Grumbel" }
+
+[[show]]
+id = "morning-window"
+name = "The Morning Window"
+blurb = "Gloria watches the birds. Dennis does the commentary. The birds are not aware."
+start = 7
+end = 10
+
+[[show]]
+id = "sunbeam-show"
+name = "The Sunbeam Show"
+blurb = "Broadcasting live from wherever the patch of sunlight is on the carpet."
+start = 13
+end = 16
+
+[[show]]
+id = "three-am-zoomies"
+name = "The Three AM Zoomies"
+blurb = "The station manager runs from one end of the studio to the other, at full speed, for reasons."
+start = 2
+end = 4
+
+# ── Idents ────────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "id-001"
+category = "id"
+lines = [
+  { say = "dennis", text = "You're listening to Cat FM. A radio station run by a cat called Gloria. I'm Dennis. I just work here." },
+]
+
+[[clip]]
+id = "id-002"
+category = "id"
+lines = [
+  { say = "dennis", text = "Cat FM. Programming is at the cat's discretion." },
+  { sfx = "purr" },
+]
+
+[[clip]]
+id = "id-003"
+category = "id"
+lines = [
+  { sfx = "meow" },
+  { say = "dennis", text = "That was the ident. She's done the ident. Cat FM." },
+]
+
+[[clip]]
+id = "id-004"
+category = "id"
+lines = [
+  { say = "dennis", text = "Cat FM, ninety two point two five. Or whatever she's lying on." },
+]
+
+# ── Show openers and show links ───────────────────────────────────────────────
+
+[[clip]]
+id = "show-window-open"
+category = "id"
+show = "morning-window"
+part = "open"
+lines = [
+  { say = "dennis", text = "Good morning. This is The Morning Window. The station manager, Gloria, is at the window. So are the birds. So, I suppose, am I." },
+]
+
+[[clip]]
+id = "show-window-001"
+category = "dj"
+show = "morning-window"
+lines = [
+  { say = "dennis", text = "Bird report. A pigeon, on the left. She's making the noise. The clicking one.", gap = 0.6 },
+  { say = "dennis", text = "The pigeon doesn't know what's happening. Honestly, neither do I." },
+]
+
+[[clip]]
+id = "show-sunbeam-open"
+category = "id"
+show = "sunbeam-show"
+part = "open"
+lines = [
+  { say = "dennis", text = "This is The Sunbeam Show, live from a patch of carpet by the window. We'll move when it moves." },
+  { sfx = "purr" },
+]
+
+[[clip]]
+id = "show-sunbeam-001"
+category = "dj"
+show = "sunbeam-show"
+lines = [
+  { say = "dennis", text = "We've moved about a foot to the left. The sun has, I mean. So she has. So we have." },
+  { say = "dennis", text = "It's a slow show, but it is going somewhere." },
+]
+
+[[clip]]
+id = "show-zoomies-open"
+category = "id"
+show = "three-am-zoomies"
+part = "open"
+daypart = "night"
+lines = [
+  { sfx = "whoosh" },
+  { say = "dennis", text = "It's three in the morning. This is The Zoomies." },
+  { sfx = "whoosh" },
+  { say = "dennis", text = "She's gone." },
+  { sfx = "whoosh" },
+  { say = "dennis", text = "She's back." },
+]
+
+[[clip]]
+id = "show-zoomies-001"
+category = "dj"
+show = "three-am-zoomies"
+lines = [
+  { say = "dennis", text = "She's just run up the curtains. She's on the curtain rail. She's looking down at me like I put her there.", gap = 1.0 },
+  { sfx = "knock-over" },
+  { say = "dennis", text = "The curtain rail is now on the floor. She's fine. She's on the floor too. It was her idea." },
+]
+
+[[clip]]
+id = "show-zoomies-002"
+category = "dj"
+show = "three-am-zoomies"
+lines = [
+  { say = "dennis", text = "To the operator on the relay ship. If you've got a cat aboard, it's doing this as well. Right now. Up and down the corridor." },
+  { say = "dennis", text = "It isn't personal. It's three o'clock." },
+]
+
+# ── Decision kit: Dennis notices, Gloria decides, back to the music ───────────
+
+[[clip]]
+id = "decision-open-1"
+category = "dj"
+kit = "decision"
+part = "open"
+lines = [
+  { say = "dennis", text = "Hi, it's Dennis, the intern. A quick update on the schedule." },
+]
+
+[[clip]]
+id = "decision-open-2"
+category = "dj"
+kit = "decision"
+part = "open"
+lines = [
+  { say = "dennis", text = "Sorry. Just a moment. She's moving." },
+  { pause = 1.5 },
+]
+
+[[clip]]
+id = "decision-open-3"
+category = "dj"
+kit = "decision"
+part = "open"
+lines = [
+  { say = "dennis", text = "This is Dennis. The station manager has made a decision." },
+  { sfx = "meow" },
+]
+
+[[clip]]
+id = "decision-open-4"
+category = "dj"
+kit = "decision"
+part = "open"
+lines = [
+  { sfx = "meow" },
+  { say = "dennis", text = "Okay. Okay. That's the meow. Programming change." },
+]
+
+[[clip]]
+id = "decision-001"
+category = "dj"
+kit = "decision"
+part = "body"
+lines = [
+  { sfx = "knock-over" },
+  { say = "dennis", text = "That was the news. She's knocked the news off the desk. So there won't be any news this hour." },
+  { say = "dennis", text = "If anything happens, I'm afraid you'll have to find out by yourself." },
+]
+
+[[clip]]
+id = "decision-002"
+category = "dj"
+kit = "decision"
+part = "body"
+lines = [
+  { say = "dennis", text = "She's lying on the fader. So the next song is going to be very loud or very quiet, depending on how she's breathing." },
+  { say = "dennis", text = "I'd keep a hand near the volume." },
+]
+
+[[clip]]
+id = "decision-003"
+category = "dj"
+kit = "decision"
+part = "body"
+lines = [
+  { say = "dennis", text = "She's moved into the patch of sunlight on the carpet, so the programme is now coming to you from the carpet." },
+  { say = "dennis", text = "When the sun moves, we'll move. Please be patient. The sun is." },
+]
+
+[[clip]]
+id = "decision-004"
+category = "dj"
+kit = "decision"
+part = "body"
+lines = [
+  { sfx = "purr", seconds = 2.5 },
+  { say = "dennis", text = "That's the purr. The purr means we're staying on this song. Possibly for the rest of the day." },
+  { say = "dennis", text = "I've known it go on until Tuesday." },
+]
+
+[[clip]]
+id = "decision-005"
+category = "dj"
+kit = "decision"
+part = "body"
+lines = [
+  { say = "dennis", text = "She's staring at the corner of the studio. There's nothing in the corner. She's very interested in it." },
+  { say = "dennis", text = "So for the next little while, we're broadcasting nothing.", gap = 2.5 },
+  { say = "dennis", text = "She's enjoying it very much." },
+]
+
+[[clip]]
+id = "decision-006"
+category = "dj"
+kit = "decision"
+part = "body"
+lines = [
+  { say = "dennis", text = "She's brought in a sock. She's put the sock on the microphone. Apparently, this is our new presenter.", gap = 1.2 },
+  { say = "dennis", text = "It's doing quite well, honestly." },
+]
+
+[[clip]]
+id = "decision-007"
+category = "dj"
+kit = "decision"
+part = "body"
+lines = [
+  { say = "dennis", text = "She's walking across the keyboard. You'll hear that in the next song." },
+  { say = "dennis", text = "We're calling it a collaboration. Please don't write in." },
+]
+
+[[clip]]
+id = "decision-008"
+category = "dj"
+kit = "decision"
+part = "body"
+lines = [
+  { say = "dennis", text = "The mug is at the very edge of the desk. She's looking at it.", gap = 0.8 },
+  { say = "dennis", text = "Now she's looking at me.", gap = 1.5 },
+  { say = "dennis", text = "Nobody move.", gap = 1.5 },
+  { sfx = "knock-over" },
+  { say = "dennis", text = "And that was the mug." },
+]
+
+[[clip]]
+id = "decision-009"
+category = "dj"
+kit = "decision"
+part = "body"
+lines = [
+  { say = "dennis", text = "She wants to go out." },
+  { sfx = "door-creak" },
+  { pause = 1.2 },
+  { say = "dennis", text = "She does not want to go out. She wants the door open. These are different things, and she'd like you to know that." },
+]
+
+[[clip]]
+id = "decision-close-1"
+category = "dj"
+kit = "decision"
+part = "close"
+lines = [
+  { say = "dennis", text = "Sorry. Back to the music, I think." },
+]
+
+[[clip]]
+id = "decision-close-2"
+category = "dj"
+kit = "decision"
+part = "close"
+lines = [
+  { say = "dennis", text = "That's the schedule, until she changes it." },
+  { sfx = "meow" },
+  { say = "dennis", text = "Which she's doing now." },
+]
+
+[[clip]]
+id = "decision-close-3"
+category = "dj"
+kit = "decision"
+part = "close"
+lines = [
+  { say = "dennis", text = "This has been Dennis. I'm going to go and pick up the mug." },
+]
+
+# ── Links and sponsors ────────────────────────────────────────────────────────
+
+[[clip]]
+id = "dj-001"
+category = "dj"
+lines = [
+  { say = "dennis", text = "People ask me what it's like, working for a cat. Honestly? It's fine. Gloria is very clear about what she wants." },
+  { say = "dennis", text = "It's just that it's the opposite of what she wanted a minute ago." },
+]
+
+[[clip]]
+id = "dj-002"
+category = "dj"
+title = "Sponsored by Grumbel's Ladders"
+lines = [
+  { say = "dennis", text = "Cat FM is sponsored by Grumbel's Ladders. Gloria is on top of one now. She can't get down.", gap = 1.0 },
+  { say = "grumbel", text = "Grumbel's Ladders. Up is a choice." },
+  { say = "dennis", text = "Down, it turns out, is a whole separate conversation." },
+]
+
+[[clip]]
+id = "dj-003"
+category = "dj"
+title = "Dinner Time Is Now"
+lines = [
+  { sfx = "meow" },
+  { say = "dennis", text = "She says it's dinner time. It isn't dinner time. It's eleven in the morning." },
+  { sfx = "meow" },
+  { say = "dennis", text = "She's been very clear." },
+  { sfx = "meow" },
+  { say = "dennis", text = "Right. Dinner time is now. Back after dinner." },
+]
+
+[[clip]]
+id = "dj-004"
+category = "dj"
+title = "A Listener's Cat"
+lines = [
+  { say = "caller", text = "Hi, Dennis. My cat listens to your station, and ever since, she's been knocking things off my desk." },
+  { say = "dennis", text = "I'm so sorry. That isn't us. That's just cats. We're just the only ones on the radio about it." },
+  { say = "caller", text = "She's just knocked the radio off now." },
+  { sfx = "knock-over" },
+  { say = "dennis", text = "Hello?" },
+]
+
+# ── Halloween ─────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "halloween-1"
+category = "dj"
+title = "The Pumpkin Costume"
+dates = ["10-24", "10-25", "10-26", "10-27", "10-28", "10-29", "10-30", "10-31"]
+lines = [
+  { say = "dennis", text = "It's Halloween week, so I tried to put Gloria in a little pumpkin costume.", gap = 1.5 },
+  { say = "dennis", text = "I've got a plaster on now. She is not in the pumpkin costume. She's dressed as a cat, she says." },
+  { say = "dennis", text = "She'd like it noted that she always is." },
+]
+
+[[clip]]
+id = "halloween-2"
+category = "dj"
+title = "The Corner, Again"
+dates = ["10-24", "10-25", "10-26", "10-27", "10-28", "10-29", "10-30", "10-31"]
+lines = [
+  { say = "dennis", text = "She's staring at the corner again. It's Halloween. The lights are low.", gap = 2.0 },
+  { sfx = "meow" },
+  { say = "dennis", text = "She's said hello to it.", gap = 1.2 },
+  { say = "dennis", text = "That's fine. That's all fine. Here's a song. A cheerful one." },
+  { sting = "halloween" },
+]

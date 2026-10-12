@@ -1,0 +1,374 @@
+# Plant FM — 106.0, a sunny greenhouse windowsill.
+#
+# Programming for houseplants. The host, Fern, is a plant. She speaks once in a long while,
+# slowly, and mostly about light. The cactus wears headphones for the bass; he has no ears;
+# nobody brings it up. The orchid on the top shelf always gets the light first. Ambient
+# station: voices are rare, short and very slow, with room to grow between the words.
+#
+# The `light` kit is the light report: an opener, one to three sources of light, and a
+# sign-off.
+station = "plant-fm"
+
+[voices]
+fern = { voice = "af_kore", speed = 0.78, name = "Fern" }
+cactus = { voice = "am_michael", speed = 0.85, name = "The Cactus" }
+
+[[show]]
+id = "first-light"
+name = "First Light"
+blurb = "Fern describes the light as it arrives, a very little at a time."
+start = 5
+end = 8
+
+[[show]]
+id = "full-sun"
+name = "Full Sun"
+blurb = "The brightest hours, celebrated very quietly by everyone on the windowsill."
+start = 11
+end = 15
+
+[[show]]
+id = "dark-hours"
+name = "The Dark Hours"
+blurb = "For plants at night: rest, respiration, and growing a little while nobody is looking."
+start = 22
+end = 5
+
+# ── Idents ────────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "id-001"
+category = "id"
+bed = "greenhouse"
+lines = [
+  { say = "fern", text = "Plant FM.", gap = 1.5 },
+  { say = "fern", text = "Light." },
+]
+
+[[clip]]
+id = "id-002"
+category = "id"
+lines = [
+  { say = "fern", text = "This is Plant FM. Programming for houseplants. Lean towards the window." },
+]
+
+[[clip]]
+id = "id-003"
+category = "id"
+lines = [
+  { say = "fern", text = "Plant FM. One oh six. Very slow. Very green." },
+]
+
+[[clip]]
+id = "id-004"
+category = "id"
+bed = "greenhouse"
+lines = [
+  { say = "fern", text = "Plant FM.", gap = 2.0 },
+  { say = "fern", text = "Still here." },
+]
+
+# ── Show openers and show links ───────────────────────────────────────────────
+
+[[clip]]
+id = "show-first-light-open"
+category = "id"
+show = "first-light"
+part = "open"
+bed = "greenhouse"
+lines = [
+  { say = "fern", text = "First Light.", gap = 1.5 },
+  { say = "fern", text = "Here it comes." },
+]
+
+[[clip]]
+id = "show-first-light-001"
+category = "dj"
+show = "first-light"
+bed = "greenhouse"
+lines = [
+  { say = "fern", text = "The first light is on the top shelf. The orchid has it. The orchid always has it first.", gap = 1.5 },
+  { say = "fern", text = "We don't mind.", gap = 1.5 },
+  { say = "fern", text = "We mind a little." },
+]
+
+[[clip]]
+id = "show-full-sun-open"
+category = "id"
+show = "full-sun"
+part = "open"
+bed = "greenhouse"
+lines = [
+  { say = "fern", text = "This is Full Sun.", gap = 1.5 },
+  { say = "fern", text = "Everyone. Open." },
+]
+
+[[clip]]
+id = "show-full-sun-001"
+category = "dj"
+show = "full-sun"
+bed = "greenhouse"
+lines = [
+  { say = "fern", text = "The sun is right overhead. This is it. This is the good part. We have been waiting all morning.", gap = 1.0 },
+  { say = "fern", text = "Nobody speak." },
+  { pause = 6.0 },
+  { say = "fern", text = "Thank you." },
+]
+
+[[clip]]
+id = "show-dark-open"
+category = "id"
+show = "dark-hours"
+part = "open"
+daypart = "night"
+lines = [
+  { say = "fern", text = "The Dark Hours.", gap = 1.5 },
+  { say = "fern", text = "Rest now. Grow a little. Nobody's watching." },
+]
+
+[[clip]]
+id = "show-dark-001"
+category = "dj"
+show = "dark-hours"
+lines = [
+  { say = "fern", text = "Night. The cactus has taken his headphones off. He says the bass is better in the dark.", gap = 1.5 },
+  { say = "fern", text = "He still doesn't have ears." },
+]
+
+[[clip]]
+id = "show-dark-002"
+category = "dj"
+show = "dark-hours"
+lines = [
+  { say = "fern", text = "It is dark.", gap = 1.5 },
+  { say = "fern", text = "We are not sad about it. We are making sugar from the memory of the day." },
+]
+
+# ── Rare words ────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "dj-001"
+category = "dj"
+bed = "greenhouse"
+lines = [
+  { say = "fern", text = "A cloud.", gap = 3.0 },
+  { say = "fern", text = "It's gone.", gap = 1.5 },
+  { say = "fern", text = "Everyone relax." },
+]
+
+[[clip]]
+id = "dj-002"
+category = "dj"
+lines = [
+  { say = "fern", text = "We have all turned towards the window. All of us. At once.", gap = 1.2 },
+  { say = "fern", text = "Nobody planned it. It's just what we're like." },
+]
+
+[[clip]]
+id = "dj-003"
+category = "dj"
+lines = [
+  { say = "fern", text = "The cactus is wearing headphones. He says it's for the bass.", gap = 1.5 },
+  { say = "fern", text = "He doesn't have ears. We don't bring it up." },
+]
+
+[[clip]]
+id = "dj-004"
+category = "dj"
+bed = "greenhouse"
+lines = [
+  { say = "fern", text = "Someone is coming with the watering can.", gap = 1.5 },
+  { say = "fern", text = "Stay calm.", gap = 1.0 },
+  { say = "fern", text = "Be green." },
+  { sfx = "splash" },
+  { pause = 1.0 },
+  { say = "fern", text = "Ah." },
+]
+
+[[clip]]
+id = "dj-005"
+category = "dj"
+lines = [
+  { say = "fern", text = "To the fern in the corner. You are unfurling beautifully. Take your time.", gap = 1.2 },
+  { say = "fern", text = "Take a week.", gap = 1.2 },
+  { say = "fern", text = "Take the spring." },
+]
+
+[[clip]]
+id = "dj-006"
+category = "dj"
+lines = [
+  { say = "fern", text = "Somebody has moved us to a different windowsill. The light is coming from a new direction.", gap = 1.5 },
+  { say = "fern", text = "We will need about a fortnight to talk about it." },
+]
+
+[[clip]]
+id = "dj-007"
+category = "dj"
+lines = [
+  { say = "fern", text = "To the operator on the relay ship. You are near a star.", gap = 1.5 },
+  { say = "fern", text = "Turn a little towards it.", gap = 1.2 },
+  { say = "fern", text = "It helps." },
+]
+
+[[clip]]
+id = "dj-008"
+category = "dj"
+lines = [
+  { say = "fern", text = "A leaf has fallen. It was a good leaf. It did a lot of light.", gap = 2.0 },
+  { say = "fern", text = "Thank you, leaf." },
+]
+
+[[clip]]
+id = "dj-009"
+category = "dj"
+lines = [
+  { say = "cactus", text = "Is this the bass bit?" },
+  { say = "fern", text = "No.", gap = 2.5 },
+  { say = "cactus", text = "Is this?" },
+  { say = "fern", text = "No, dear." },
+]
+
+[[clip]]
+id = "dj-010"
+category = "dj"
+lines = [
+  { say = "fern", text = "Someone said hello to us this morning. Out loud. In a soft voice.", gap = 1.5 },
+  { say = "fern", text = "We grew a little. We didn't tell them." },
+]
+
+# ── Light report kit: opener, sources of light, sign-off ──────────────────────
+
+[[clip]]
+id = "light-open-1"
+category = "weather"
+kit = "light"
+part = "open"
+bed = "greenhouse"
+lines = [
+  { say = "fern", text = "The light report.", gap = 1.5 },
+]
+
+[[clip]]
+id = "light-open-2"
+category = "weather"
+kit = "light"
+part = "open"
+bed = "greenhouse"
+lines = [
+  { say = "fern", text = "Here is the light.", gap = 1.5 },
+]
+
+[[clip]]
+id = "light-001"
+category = "weather"
+kit = "light"
+part = "body"
+bed = "greenhouse"
+lines = [
+  { say = "fern", text = "Light from the window. Good. Coming in at an angle. Some of it is landing on the floor.", gap = 1.2 },
+  { say = "fern", text = "The floor doesn't need it. We don't say anything." },
+]
+
+[[clip]]
+id = "light-002"
+category = "weather"
+kit = "light"
+part = "body"
+bed = "greenhouse"
+lines = [
+  { say = "fern", text = "Light from the lamp. Warm. Not the sun.", gap = 1.2 },
+  { say = "fern", text = "But trying. We appreciate the effort." },
+]
+
+[[clip]]
+id = "light-003"
+category = "weather"
+kit = "light"
+part = "body"
+bed = "greenhouse"
+lines = [
+  { say = "fern", text = "Dust in the sunbeam. Lots of it. Moving very slowly.", gap = 1.2 },
+  { say = "fern", text = "Like us. We feel seen." },
+]
+
+[[clip]]
+id = "light-004"
+category = "weather"
+kit = "light"
+part = "body"
+bed = "greenhouse"
+lines = [
+  { say = "fern", text = "Light from the fridge. Briefly. At night. When somebody opens it.", gap = 1.2 },
+  { say = "fern", text = "It's not much. We'll take it." },
+]
+
+[[clip]]
+id = "light-005"
+category = "weather"
+kit = "light"
+part = "body"
+bed = "greenhouse"
+lines = [
+  { say = "fern", text = "The sun has gone behind the house next door.", gap = 1.5 },
+  { say = "fern", text = "It will come back. It always comes back. We lean, and we wait." },
+]
+
+[[clip]]
+id = "light-006"
+category = "weather"
+kit = "light"
+part = "body"
+bed = "greenhouse"
+lines = [
+  { say = "fern", text = "Light from a screen, very late. Blue. Thin. Somebody is up, reading something.", gap = 1.2 },
+  { say = "fern", text = "We hope it's good. Go to bed soon." },
+]
+
+[[clip]]
+id = "light-close-1"
+category = "weather"
+kit = "light"
+part = "close"
+bed = "greenhouse"
+lines = [
+  { say = "fern", text = "That is all the light.", gap = 1.2 },
+  { say = "fern", text = "Thank you." },
+]
+
+[[clip]]
+id = "light-close-2"
+category = "weather"
+kit = "light"
+part = "close"
+bed = "greenhouse"
+lines = [
+  { say = "fern", text = "More light later. Probably.", gap = 1.2 },
+  { say = "fern", text = "Grow." },
+]
+
+# ── Halloween ─────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "halloween-1"
+category = "dj"
+title = "The Pumpkin"
+dates = ["10-24", "10-25", "10-26", "10-27", "10-28", "10-29", "10-30", "10-31"]
+lines = [
+  { say = "fern", text = "A pumpkin has joined us on the windowsill.", gap = 1.5 },
+  { say = "fern", text = "It is very big. Very orange.", gap = 1.5 },
+  { say = "fern", text = "Somebody has carved a face into it." },
+  { pause = 3.0 },
+  { say = "fern", text = "We are not going to talk about that." },
+]
+
+[[clip]]
+id = "halloween-2"
+category = "dj"
+title = "The Candle"
+dates = ["10-24", "10-25", "10-26", "10-27", "10-28", "10-29", "10-30", "10-31"]
+lines = [
+  { say = "fern", text = "There is a candle inside the pumpkin.", gap = 1.5 },
+  { say = "fern", text = "It is light.", gap = 2.0 },
+  { say = "fern", text = "We have decided to forgive everything." },
+]

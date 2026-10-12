@@ -4,7 +4,7 @@
 # questions are about the contestants themselves, and the contestants get them wrong:
 # Unit Seven (a robot with no self found), Wendell (a nervous blob) and Grandma Hester
 # (whose answer to everything is nineteen fifty-two; it is finally right at Halloween).
-# The studio audience is Lorraine. She claps alone. Nobody has ever won the planet. The
+# The studio audience is Doreen. She claps alone. Nobody has ever won the planet. The
 # consolation prize is a toaster that wins you another toaster.
 #
 # The `quiz` kit chains a question, one to three attempts and the scores. Every question
@@ -16,7 +16,7 @@ chaz = { voice = "am_puck", speed = 1.12, name = "Chaz Brightley" }
 robot = { voice = "am_adam", fx = "robot", name = "Unit Seven" }
 wendell = { voice = "am_echo", speed = 1.15, name = "Wendell, a Nervous Blob" }
 hester = { voice = "bf_isabella", name = "Grandma Hester" }
-lorraine = { voice = "af_bella", name = "Lorraine, the Studio Audience" }
+doreen = { voice = "af_bella", name = "Doreen, the Studio Audience" }
 announcer = { voice = "am_fenrir", fx = "trailer", name = "The Announcer" }
 
 [[show]]
@@ -62,7 +62,7 @@ id = "id-003"
 category = "id"
 lines = [
   { say = "announcer", text = "Win This Planet! Live from Studio Infinity!" },
-  { say = "lorraine", text = "Woo." },
+  { say = "doreen", text = "Woo." },
 ]
 
 [[clip]]
@@ -85,7 +85,7 @@ lines = [
   { sting = "fanfare" },
   { say = "chaz", text = "Good evening, and welcome to Win This Planet! Live, before a studio audience of one!" },
   { sfx = "applause", seconds = 0.8, level = 0.25 },
-  { say = "chaz", text = "Thank you, Lorraine!" },
+  { say = "chaz", text = "Thank you, Doreen!" },
 ]
 
 [[clip]]
@@ -94,9 +94,9 @@ category = "dj"
 show = "primetime"
 bed = "studio"
 lines = [
-  { say = "chaz", text = "Lorraine, you've been our studio audience for four hundred episodes! What keeps you coming back?" },
-  { say = "lorraine", text = "I live here, Chaz. They built the studio around my house." },
-  { say = "chaz", text = "And we are so glad they did! Lorraine, everybody!" },
+  { say = "chaz", text = "Doreen, you've been our studio audience for four hundred episodes! What keeps you coming back?" },
+  { say = "doreen", text = "I live here, Chaz. They built the studio around my house." },
+  { say = "chaz", text = "And we are so glad they did! Doreen, everybody!" },
   { sfx = "applause", seconds = 0.8, level = 0.25 },
 ]
 
@@ -298,10 +298,10 @@ kit = "quiz"
 part = "body"
 bed = "studio"
 lines = [
-  { say = "chaz", text = "No answer from our contestants! Let's go to the studio audience! Lorraine?" },
-  { say = "lorraine", text = "Is it a goose?" },
+  { say = "chaz", text = "No answer from our contestants! Let's go to the studio audience! Doreen?" },
+  { say = "doreen", text = "Is it a goose?" },
   { sfx = "buzzer" },
-  { say = "chaz", text = "It is not a goose, Lorraine! It is never a goose! Lovely to have you, Lorraine!" },
+  { say = "chaz", text = "It is not a goose, Doreen! It is never a goose! Lovely to have you, Doreen!" },
   { sfx = "applause", seconds = 0.8, level = 0.25 },
 ]
 
@@ -361,7 +361,7 @@ kit = "quiz"
 part = "close"
 bed = "studio"
 lines = [
-  { say = "chaz", text = "Scores on the doors! Lorraine is in the lead, and she isn't even playing! Take a bow, Lorraine!" },
+  { say = "chaz", text = "Scores on the doors! Doreen is in the lead, and she isn't even playing! Take a bow, Doreen!" },
   { sfx = "applause", seconds = 0.8, level = 0.25 },
 ]
 
@@ -431,8 +431,8 @@ lines = [
   { sting = "halloween" },
   { say = "chaz", text = "It's a spooky special! Welcome to Win This Haunted Planet!" },
   { say = "announcer", text = "Tonight's prize is Varnell Nine! Fully haunted, slightly damp, and very affordable, because nobody will go there!" },
-  { say = "chaz", text = "Not even Lorraine! Lorraine?" },
-  { say = "lorraine", text = "Not even me, Chaz." },
+  { say = "chaz", text = "Not even Doreen! Doreen?" },
+  { say = "doreen", text = "Not even me, Chaz." },
   { say = "chaz", text = "Halloween round! Contestants, what have you come as?" },
   { say = "robot", text = "A robot." },
   { sfx = "buzzer" },
