@@ -1,0 +1,440 @@
+# Unsolved Dimensions — 93.95, a basement archive of cases that never quite happened.
+#
+# Inspector Delphine Gault is grave, thorough and unbearably serious about crimes such as a
+# moved teaspoon. She has never closed a case and has never wanted to. Constable Pike reads
+# the lab results, which are always inconclusive. The goose is a suspect in everything and
+# has asked for a solicitor. Rain on the blinds, a typewriter mid-sentence.
+#
+# The `case` kit chains a case opening, one to three pieces of evidence and "the case
+# remains open". Evidence is written to fit any case.
+station = "unsolved-dimensions"
+
+[voices]
+gault = { voice = "bf_alice", speed = 0.95, name = "Inspector Delphine Gault" }
+pike = { voice = "bm_daniel", name = "Constable Pike" }
+witness = { voice = "af_river", fx = "phone", name = "A Witness" }
+hollis = { voice = "am_echo", fx = "phone", name = "Hollis" }
+
+[[show]]
+id = "morning-roll-call"
+name = "Morning Roll Call"
+blurb = "Inspector Gault reviews the overnight incidents. None of them have been solved. She is relieved."
+start = 8
+end = 10
+
+[[show]]
+id = "witness-hour"
+name = "Witness Hour"
+blurb = "Listeners ring in with information. The Inspector gently talks them out of it."
+start = 19
+end = 22
+
+[[show]]
+id = "cold-cases"
+name = "Cold Cases, Warm Milk"
+blurb = "The oldest files in the basement, reopened by lamplight and carefully left open."
+start = 1
+end = 5
+
+# ── Idents ────────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "id-001"
+category = "id"
+lines = [
+  { sting = "crime" },
+  { say = "gault", text = "Unsolved Dimensions. The crimes are mild. The dimensions are suspects." },
+]
+
+[[clip]]
+id = "id-002"
+category = "id"
+lines = [
+  { say = "gault", text = "This is Inspector Delphine Gault. I have never closed a case. I have never wanted to." },
+]
+
+[[clip]]
+id = "id-003"
+category = "id"
+lines = [
+  { say = "gault", text = "Unsolved Dimensions, ninety three point nine five. Somebody did something. We may never know who." },
+]
+
+[[clip]]
+id = "id-004"
+category = "id"
+lines = [
+  { say = "gault", text = "Unsolved Dimensions. Lock your doors. And keep your teaspoons where you left them." },
+  { sting = "crime" },
+]
+
+# ── Show openers and show links ───────────────────────────────────────────────
+
+[[clip]]
+id = "show-rollcall-open"
+category = "id"
+show = "morning-roll-call"
+part = "open"
+lines = [
+  { say = "gault", text = "Good morning. Roll call. Overnight, eleven new incidents. None solved. A good night's work." },
+]
+
+[[clip]]
+id = "show-rollcall-001"
+category = "dj"
+show = "morning-roll-call"
+lines = [
+  { say = "pike", text = "Inspector, there's been a breakthrough in the case of the warm chair." },
+  { say = "gault", text = "Oh dear. How bad?" },
+  { say = "pike", text = "Someone's confessed." },
+  { say = "gault", text = "Then we'll need to interview them very carefully, Constable, until they're not sure any more." },
+]
+
+[[clip]]
+id = "show-witness-open"
+category = "id"
+show = "witness-hour"
+part = "open"
+bed = "rain"
+lines = [
+  { say = "gault", text = "This is Witness Hour. If you saw something, the lines are open. Please think very carefully before you ring." },
+]
+
+[[clip]]
+id = "show-witness-001"
+category = "call"
+show = "witness-hour"
+title = "The Moon, and a Neighbour"
+bed = "rain"
+lines = [
+  { sfx = "phone-ring" },
+  { say = "witness", text = "Inspector? I think I know who moved the moon." },
+  { say = "gault", text = "Do you." },
+  { say = "witness", text = "It was my neighbour. He's got a very long pole, and he's always looking up at it, and..." },
+  { say = "gault", text = "Madam. Have you considered that you don't?" },
+  { say = "witness", text = "Don't what?" },
+  { say = "gault", text = "Know. It's very freeing. Try it for a week." },
+  { pause = 1.0 },
+  { say = "witness", text = "...All right." },
+  { say = "gault", text = "Thank you for calling. You've been very unhelpful. It's appreciated." },
+  { sfx = "phone-hangup" },
+]
+
+[[clip]]
+id = "show-witness-002"
+category = "call"
+show = "witness-hour"
+title = "Hollis Fenn, About Greg"
+bed = "rain"
+lines = [
+  { sfx = "phone-ring" },
+  { say = "hollis", text = "Inspector, it's Hollis Fenn. I'm ringing about my shadow." },
+  { say = "gault", text = "Greg." },
+  { say = "hollis", text = "You know him?" },
+  { say = "gault", text = "Everybody knows Greg, Mister Fenn. He's been seen on the moon. On a beach. At a recital. Every time, he looks a little happier." },
+  { say = "hollis", text = "So you won't find him." },
+  { say = "gault", text = "I didn't say that. I said I won't look. He isn't missing. He's travelling. There's a difference, and I've decided to respect it." },
+  { pause = 0.8 },
+  { say = "hollis", text = "Could you ask him to send a postcard?" },
+  { say = "gault", text = "I'll put it in the file." },
+  { sfx = "phone-hangup" },
+]
+
+[[clip]]
+id = "show-cold-open"
+category = "id"
+show = "cold-cases"
+part = "open"
+daypart = "night"
+bed = "rain"
+lines = [
+  { say = "gault", text = "Cold Cases, Warm Milk. The oldest files in the basement. Pull up a chair. Not that one. It's evidence." },
+]
+
+[[clip]]
+id = "show-cold-001"
+category = "dj"
+show = "cold-cases"
+bed = "rain"
+lines = [
+  { say = "gault", text = "Some of these files are older than the dimensions they happened in. Case file one. A rock was moved. We don't know by whom. We don't know where to." },
+  { say = "gault", text = "We have the rock. We have never known where it was. I take it out sometimes, and hold it, and wonder." },
+]
+
+[[clip]]
+id = "show-cold-002"
+category = "dj"
+show = "cold-cases"
+daypart = "night"
+lines = [
+  { say = "gault", text = "To the operator on the relay ship. I'm told you keep a log of everything you hear out there. Good. So do I." },
+  { say = "gault", text = "Mine is full of questions. I hope yours is too. Don't answer any of them. Not tonight." },
+]
+
+# ── Case kit: opening, evidence, the case remains open ────────────────────────
+
+[[clip]]
+id = "case-open-1"
+category = "story"
+kit = "case"
+part = "open"
+bed = "rain"
+lines = [
+  { sting = "crime" },
+  { say = "gault", text = "Case file four four one. The Teaspoon. A teaspoon was found in a sugar bowl. Nobody put it there. Nobody who will admit it." },
+]
+
+[[clip]]
+id = "case-open-2"
+category = "story"
+kit = "case"
+part = "open"
+bed = "rain"
+lines = [
+  { say = "gault", text = "Case file nine. The fridge magnets in a house in the Overlap were rearranged, overnight, to spell hello. The family owns no letter H." },
+]
+
+[[clip]]
+id = "case-open-3"
+category = "story"
+kit = "case"
+part = "open"
+bed = "rain"
+lines = [
+  { sting = "crime" },
+  { say = "gault", text = "Case file two hundred and six. On the night of the ninth, the moon over Lower Pell was found one inch to the left." },
+]
+
+[[clip]]
+id = "case-open-4"
+category = "story"
+kit = "case"
+part = "open"
+bed = "rain"
+lines = [
+  { say = "gault", text = "Case file seventy. A ladder was borrowed in good faith. It was returned the following week. One rung taller." },
+]
+
+[[clip]]
+id = "case-open-5"
+category = "story"
+kit = "case"
+part = "open"
+bed = "rain"
+lines = [
+  { say = "gault", text = "Case file eleven twelve. The Warm Chair. Mrs Odile Fenwick came home and sat in her favourite chair, and it was warm. She lives alone. The cat was also surprised." },
+]
+
+[[clip]]
+id = "case-open-6"
+category = "story"
+kit = "case"
+part = "open"
+bed = "rain"
+lines = [
+  { sting = "crime" },
+  { say = "gault", text = "Case file one hundred. Someone finished a jigsaw in the night. The jigsaw was not ours. Neither, it turns out, was the table." },
+]
+
+[[clip]]
+id = "case-evidence-1"
+category = "story"
+kit = "case"
+part = "body"
+bed = "rain"
+lines = [
+  { say = "gault", text = "We found a single footprint at the scene. Size nine. Left foot.", gap = 0.6 },
+  { say = "gault", text = "No right foot has ever been recovered. I've stopped looking. Some things walk alone." },
+]
+
+[[clip]]
+id = "case-evidence-2"
+category = "story"
+kit = "case"
+part = "body"
+bed = "rain"
+lines = [
+  { say = "gault", text = "We spoke to the neighbours. They said it was a quiet dimension. They always say that." },
+  { say = "gault", text = "Every dimension is quiet, until somebody moves something half an inch and doesn't say sorry." },
+]
+
+[[clip]]
+id = "case-evidence-3"
+category = "story"
+kit = "case"
+part = "body"
+bed = "rain"
+lines = [
+  { say = "gault", text = "And then, of course, there is the goose. The goose was present. The goose is always present." },
+  { say = "gault", text = "I asked the goose where it was on the night in question. The goose has asked for a solicitor." },
+]
+
+[[clip]]
+id = "case-evidence-4"
+category = "story"
+kit = "case"
+part = "body"
+bed = "rain"
+lines = [
+  { say = "gault", text = "The dimension itself had no alibi. Asked where it was at the time of the incident, it said: everywhere." },
+  { sfx = "typing" },
+  { say = "gault", text = "A classic answer. Impossible to disprove. I wrote it down anyway." },
+]
+
+[[clip]]
+id = "case-evidence-5"
+category = "story"
+kit = "case"
+part = "body"
+bed = "rain"
+lines = [
+  { say = "gault", text = "Forensics found traces of a substance on the handle. Jam. Strawberry. Possibly raspberry, with ambitions." },
+  { say = "pike", text = "We sent it to the lab, Inspector." },
+  { say = "gault", text = "And?" },
+  { say = "pike", text = "The lab ate it." },
+]
+
+[[clip]]
+id = "case-evidence-6"
+category = "story"
+kit = "case"
+part = "body"
+bed = "rain"
+lines = [
+  { say = "gault", text = "Our only witness was a standard lamp in the hallway. It was switched off at the time. When we switched it on, it had nothing to add." },
+  { say = "gault", text = "Its testimony was, however, very illuminating. I won't apologise for that." },
+]
+
+[[clip]]
+id = "case-evidence-7"
+category = "story"
+kit = "case"
+part = "body"
+bed = "rain"
+lines = [
+  { say = "gault", text = "A clock in the hall had stopped at twenty past four. Forensics tell me it has always said twenty past four." },
+  { say = "gault", text = "That clock has been lying to the family for years. Separate investigation." },
+]
+
+[[clip]]
+id = "case-evidence-8"
+category = "story"
+kit = "case"
+part = "body"
+bed = "rain"
+lines = [
+  { say = "gault", text = "I connected the evidence on my board with red string. The clue to the goose. The goose to the moon. The moon, somehow, back to me." },
+  { say = "gault", text = "Then I ran out of string. That's usually when you know you're close." },
+]
+
+[[clip]]
+id = "case-evidence-9"
+category = "story"
+kit = "case"
+part = "body"
+bed = "rain"
+lines = [
+  { say = "pike", text = "Inspector, the lab results are back." },
+  { say = "gault", text = "And?" },
+  { say = "pike", text = "Inconclusive." },
+  { say = "gault", text = "Good. Put them with the others, Constable. The tall pile. Mind the goose." },
+]
+
+[[clip]]
+id = "case-close-1"
+category = "story"
+kit = "case"
+part = "close"
+bed = "rain"
+lines = [
+  { say = "gault", text = "The case remains open. So, I'm told, does the fridge." },
+  { sting = "crime" },
+]
+
+[[clip]]
+id = "case-close-2"
+category = "story"
+kit = "case"
+part = "close"
+bed = "rain"
+lines = [
+  { say = "gault", text = "The case remains open. If you have any information, please keep it to yourself. We like it like this." },
+]
+
+[[clip]]
+id = "case-close-3"
+category = "story"
+kit = "case"
+part = "close"
+bed = "rain"
+lines = [
+  { say = "gault", text = "The case remains open. Like all my cases. Like a door in a draughty house that nobody can quite bring themselves to close." },
+]
+
+[[clip]]
+id = "case-close-4"
+category = "story"
+kit = "case"
+part = "close"
+bed = "rain"
+lines = [
+  { say = "gault", text = "The case remains open. I'll be here. I'm always here.", gap = 0.6 },
+  { say = "gault", text = "Goodnight." },
+  { sting = "crime" },
+]
+
+# ── Links, appeals and sponsors ───────────────────────────────────────────────
+
+[[clip]]
+id = "dj-001"
+category = "dj"
+lines = [
+  { say = "gault", text = "I'm often asked why I've never closed a case. It's quite simple. Once a case is closed, it stops being a question and becomes a story." },
+  { say = "gault", text = "Stories end. Questions keep you company." },
+]
+
+[[clip]]
+id = "psa-001"
+category = "psa"
+title = "A Public Appeal"
+lines = [
+  { say = "gault", text = "A public appeal. If you see something unusual, say something vague. Something like: that's odd." },
+  { say = "gault", text = "Then carry on with your evening. This has been a public appeal." },
+]
+
+[[clip]]
+id = "ad-001"
+category = "ad"
+title = "Grumbel's Ladders, Under Suspicion"
+lines = [
+  { say = "gault", text = "Unsolved Dimensions is sponsored by Grumbel's Ladders." },
+  { say = "gault", text = "Eleven generations of ladders. Not one complaint. Not one incident. Not a single rung out of place." },
+  { say = "gault", text = "Which is exactly what worries me. I have a file on them. It's very thin. I check it every night." },
+  { say = "gault", text = "Grumbel's Ladders. Up is a choice. So, Mister Grumbel, is down." },
+]
+
+# ── Halloween ─────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "halloween-1"
+category = "story"
+title = "The Pumpkin Carved From Inside"
+bed = "rain"
+dates = ["10-24", "10-25", "10-26", "10-27", "10-28", "10-29", "10-30", "10-31"]
+lines = [
+  { sting = "halloween" },
+  { say = "gault", text = "Case file thirty one. A pumpkin was found on a doorstep in Gristwick. Its face had been carved from the inside, outwards. No tools were recovered." },
+  { say = "gault", text = "The candle inside was lit, and humming. Nobody owns a humming candle." },
+  { say = "gault", text = "The pumpkin has been taken into custody. It is being very good about it. It smiles at everyone." },
+  { say = "gault", text = "The case remains open. As, I'm afraid, does the pumpkin's mouth." },
+]
+
+[[clip]]
+id = "halloween-2"
+category = "dj"
+title = "The Busiest Week"
+dates = ["10-24", "10-25", "10-26", "10-27", "10-28", "10-29", "10-30", "10-31"]
+lines = [
+  { say = "gault", text = "Halloween week. The busiest week of the year for my department. Doors knock by themselves. Sheets walk about. Children demand sweets with menaces." },
+  { say = "gault", text = "Almost none of it is a crime. All of it is unsolved. I love this time of year." },
+]

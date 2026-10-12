@@ -1,0 +1,392 @@
+# Horoscopes for Other Universes — 95.65, the back room of a planetarium that isn't open.
+#
+# Madame Orrery reads for people born under stars you can't see from here. She is gentle,
+# certain and specific, and has never been wrong in any universe she has checked. The signs
+# of the other zodiac: The Teapot, The Ladder, The Single Sock, The Blinking Cat, The Spare
+# Key, The Paper Boat, The Lamp Left On (and, once a year, The Lantern). She calls people
+# "dear". Her crystal ball mostly shows static.
+#
+# The `reading` kit chains a sign, one to three readings and the lucky items. Readings are
+# written for anyone, under any sign.
+station = "other-horoscopes"
+
+[voices]
+orrery = { voice = "af_aoede", speed = 0.92, name = "Madame Orrery" }
+teapot = { voice = "am_michael", fx = "phone", name = "Caller, a Teapot" }
+sock = { voice = "af_river", fx = "phone", name = "Caller, a Single Sock" }
+
+[[show]]
+id = "morning-alignment"
+name = "The Morning Alignment"
+blurb = "Your day ahead, in every universe that has days."
+start = 7
+end = 10
+
+[[show]]
+id = "compatibility-hour"
+name = "Compatibility Hour"
+blurb = "Will a Teapot and a Ladder get along? Callers ask Madame Orrery about partners from other universes."
+start = 19
+end = 22
+
+[[show]]
+id = "night-shift-charts"
+name = "Charts for the Night Shift"
+blurb = "Readings for whoever is still awake: bakers, nurses, lighthouse keepers and relay operators."
+start = 0
+end = 4
+
+# ── Idents ────────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "id-001"
+category = "id"
+lines = [
+  { say = "orrery", text = "Horoscopes for Other Universes. The stars are different there. So are you." },
+  { sting = "mystic" },
+]
+
+[[clip]]
+id = "id-002"
+category = "id"
+lines = [
+  { say = "orrery", text = "This is Madame Orrery. I have never been wrong, in any universe I've checked." },
+]
+
+[[clip]]
+id = "id-003"
+category = "id"
+lines = [
+  { say = "orrery", text = "Horoscopes for Other Universes, on ninety five point six five. Your future, slightly to the left." },
+]
+
+[[clip]]
+id = "id-004"
+category = "id"
+lines = [
+  { say = "orrery", text = "Horoscopes for Other Universes. Whatever you were born under, dear, you're welcome here." },
+  { sting = "mystic" },
+]
+
+# ── Show openers and show links ───────────────────────────────────────────────
+
+[[clip]]
+id = "show-morning-open"
+category = "id"
+show = "morning-alignment"
+part = "open"
+lines = [
+  { sting = "mystic" },
+  { say = "orrery", text = "Good morning. This is The Morning Alignment. The stars are where I left them. A good start." },
+]
+
+[[clip]]
+id = "show-morning-001"
+category = "dj"
+show = "morning-alignment"
+lines = [
+  { say = "orrery", text = "A quick planetary update before your coffee. Mercury is in a mood. Not retrograde. Just a mood." },
+  { say = "orrery", text = "Give it some space, and don't send any important letters. Or do. Mercury can't stop you, dear. It's very far away, and sulking." },
+]
+
+[[clip]]
+id = "show-compat-open"
+category = "id"
+show = "compatibility-hour"
+part = "open"
+lines = [
+  { say = "orrery", text = "Welcome to Compatibility Hour. Tell me your sign, and theirs, and which universe they're from. Nothing surprises the stars. They're very far away." },
+]
+
+[[clip]]
+id = "show-compat-001"
+category = "call"
+show = "compatibility-hour"
+title = "A Teapot in Love"
+lines = [
+  { sfx = "phone-ring" },
+  { say = "orrery", text = "Compatibility Hour. Hello, dear." },
+  { say = "teapot", text = "Hi, Madame Orrery. I'm a Teapot, and I've met someone lovely. But she's a Ladder." },
+  { say = "orrery", text = "Oh, that's a beautiful match. A Teapot and a Ladder. That's a cup of tea, on a high shelf." },
+  { say = "orrery", text = "Someone has to climb up for it. Someone has to be worth climbing for." },
+  { say = "teapot", text = "Which one of us is which?" },
+  { say = "orrery", text = "You take turns, dear. That's the whole secret. That's every secret, really.", gap = 0.6 },
+  { sfx = "phone-hangup" },
+]
+
+[[clip]]
+id = "show-compat-002"
+category = "call"
+show = "compatibility-hour"
+title = "A Single Sock"
+lines = [
+  { sfx = "phone-ring" },
+  { say = "sock", text = "Hello? I'm a Single Sock. I've been told the other sock is in another universe." },
+  { say = "orrery", text = "It is, dear. I've seen it. It's under a radiator, in a universe very like this one. It's warm. It's thinking of you." },
+  { say = "sock", text = "Should I go and get it?" },
+  { say = "orrery", text = "No. Wear odd socks. It's how the multiverse knows you're keeping a place for someone." },
+  { say = "sock", text = "Oh. Oh, that's nice.", gap = 0.6 },
+  { sfx = "phone-hangup" },
+]
+
+[[clip]]
+id = "show-night-open"
+category = "id"
+show = "night-shift-charts"
+part = "open"
+daypart = "night"
+lines = [
+  { say = "orrery", text = "Charts for the Night Shift. For everyone working while the sky does the rest." },
+  { sting = "mystic" },
+]
+
+[[clip]]
+id = "show-night-001"
+category = "dj"
+show = "night-shift-charts"
+lines = [
+  { say = "orrery", text = "For the operator on the relay ship tonight. I did your chart, dear." },
+  { say = "orrery", text = "You were born under a star you can't see from where you are. That's all right. It can see you. It says: drink the tea while it's hot." },
+]
+
+[[clip]]
+id = "show-night-002"
+category = "dj"
+show = "night-shift-charts"
+lines = [
+  { say = "orrery", text = "A reading for the bakers, who are up now, and the night nurses, and the man who drives the empty bus. Your sign tonight is The Lamp Left On." },
+  { say = "orrery", text = "Somebody is getting home safely because of you. They'll never know your name. The stars do." },
+]
+
+# ── Reading kit: sign, readings, lucky items ──────────────────────────────────
+
+[[clip]]
+id = "reading-open-1"
+category = "story"
+kit = "reading"
+part = "open"
+lines = [
+  { sting = "mystic" },
+  { say = "orrery", text = "The Teapot. Steady, warm, and best left alone for four minutes." },
+]
+
+[[clip]]
+id = "reading-open-2"
+category = "story"
+kit = "reading"
+part = "open"
+lines = [
+  { say = "orrery", text = "The Ladder. You were born on the way up, and you've never fully settled. Hold on with both hands, dear." },
+]
+
+[[clip]]
+id = "reading-open-3"
+category = "story"
+kit = "reading"
+part = "open"
+lines = [
+  { say = "orrery", text = "The Single Sock. Born alone, in a drawer, quite sure there was another one of you somewhere. There is. Listen." },
+]
+
+[[clip]]
+id = "reading-open-4"
+category = "story"
+kit = "reading"
+part = "open"
+lines = [
+  { sting = "mystic" },
+  { say = "orrery", text = "The Blinking Cat. The only constellation that looks back. Unbothered, and right about most things." },
+]
+
+[[clip]]
+id = "reading-open-5"
+category = "story"
+kit = "reading"
+part = "open"
+lines = [
+  { say = "orrery", text = "The Spare Key. Born under a flowerpot, just in case. People rely on you more than they say." },
+]
+
+[[clip]]
+id = "reading-open-6"
+category = "story"
+kit = "reading"
+part = "open"
+lines = [
+  { say = "orrery", text = "The Paper Boat. Born in a puddle after rain. Brave, light, and slightly damp." },
+]
+
+[[clip]]
+id = "reading-001"
+category = "story"
+kit = "reading"
+part = "body"
+lines = [
+  { say = "orrery", text = "This week, a door you've been pushing will turn out to be a pull. Don't be embarrassed, dear. The door has been waiting for you to notice, and it's very pleased that you did." },
+]
+
+[[clip]]
+id = "reading-002"
+category = "story"
+kit = "reading"
+part = "body"
+lines = [
+  { say = "orrery", text = "Venus enters your fourth house. Not the Venus you're thinking of. Your universe's Venus, which is a sort of shed at the bottom of a garden." },
+  { say = "orrery", text = "Something in the shed wants to be found. Probably a bicycle pump. Go and look anyway." },
+]
+
+[[clip]]
+id = "reading-003"
+category = "story"
+kit = "reading"
+part = "body"
+lines = [
+  { say = "orrery", text = "Someone will say your name in a supermarket, and it won't be for you. Turn around anyway. It's good for the neck, and you'll see something you needed to see." },
+  { say = "orrery", text = "Probably the biscuits." },
+]
+
+[[clip]]
+id = "reading-004"
+category = "story"
+kit = "reading"
+part = "body"
+lines = [
+  { say = "orrery", text = "The stars suggest a conversation with a relative. I've checked, and yes, dear, it's that one. It goes much better than you expect. They've been rehearsing too." },
+]
+
+[[clip]]
+id = "reading-005"
+category = "story"
+kit = "reading"
+part = "body"
+lines = [
+  { say = "orrery", text = "Money. A coin you lost in another universe will turn up in this one, under a sofa, slightly warmer than it ought to be." },
+  { say = "orrery", text = "Spend it on something small and pointless. That's what it wants." },
+]
+
+[[clip]]
+id = "reading-006"
+category = "story"
+kit = "reading"
+part = "body"
+lines = [
+  { say = "orrery", text = "Love. Someone across the multiverse is thinking about you right now. They are also thinking about lunch." },
+  { say = "orrery", text = "Don't take it personally. It's a very big multiverse, and it's nearly lunchtime in most of it." },
+]
+
+[[clip]]
+id = "reading-007"
+category = "story"
+kit = "reading"
+part = "body"
+lines = [
+  { say = "orrery", text = "Health. Drink more water. I know. Everyone says it. But I'm saying it from a universe where water is rarer than gold, and here you are, with a tap." },
+  { say = "orrery", text = "Have a glass, dear. Have one for us." },
+]
+
+[[clip]]
+id = "reading-008"
+category = "story"
+kit = "reading"
+part = "body"
+lines = [
+  { say = "orrery", text = "Your ruling planet moves into the house of small mercies. Expect a lift that arrives just as you press the button, and a parking space you'll tell people about for years." },
+]
+
+[[clip]]
+id = "reading-close-1"
+category = "story"
+kit = "reading"
+part = "close"
+lines = [
+  { say = "orrery", text = "Your lucky number is eleven and a half. Your lucky colour is the green of a traffic light, just before it changes." },
+]
+
+[[clip]]
+id = "reading-close-2"
+category = "story"
+kit = "reading"
+part = "close"
+lines = [
+  { say = "orrery", text = "Lucky item: a spoon you've never used. Lucky day: the second Tuesday, if it comes." },
+  { sting = "mystic" },
+]
+
+[[clip]]
+id = "reading-close-3"
+category = "story"
+kit = "reading"
+part = "close"
+lines = [
+  { say = "orrery", text = "Your lucky direction is slightly to the left. Your lucky smell is toast. Avoid geese until Thursday." },
+]
+
+[[clip]]
+id = "reading-close-4"
+category = "story"
+kit = "reading"
+part = "close"
+lines = [
+  { say = "orrery", text = "Lucky number: four hundred and nine. Lucky stone: the one in your shoe. Take it out, dear. Luck isn't everything." },
+]
+
+# ── Links ─────────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "dj-001"
+category = "dj"
+lines = [
+  { say = "orrery", text = "My crystal ball is showing static again. It does that. It isn't broken." },
+  { say = "orrery", text = "It's showing me the space between the stations, and that, dear, is where most of you are listening from." },
+]
+
+[[clip]]
+id = "dj-002"
+category = "dj"
+lines = [
+  { say = "orrery", text = "People ask how I can be so certain. I'm not certain, dear. I'm specific. It's much more useful." },
+]
+
+[[clip]]
+id = "dj-003"
+category = "dj"
+lines = [
+  { say = "orrery", text = "The constellation shaped like a cat is blinking again. In the old charts, that means a visitor is coming." },
+  { say = "orrery", text = "In the new charts, it means the cat is tired. I prefer the old charts." },
+]
+
+[[clip]]
+id = "news-001"
+category = "news"
+title = "Planetary Movements"
+lines = [
+  { sting = "mystic" },
+  { say = "orrery", text = "This week's planetary movements. Jupiter has moved, but not far. Saturn's rings are at the cleaners and should be back by Friday." },
+  { say = "orrery", text = "A minor comet will pass very close to your house on Thursday evening. It isn't going to do anything. It's just looking. Wave, if you like." },
+  { say = "orrery", text = "And the moon is full, in most universes. In one, it's only peckish." },
+]
+
+# ── Halloween ─────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "halloween-1"
+category = "story"
+title = "The Lantern"
+dates = ["10-24", "10-25", "10-26", "10-27", "10-28", "10-29", "10-30", "10-31"]
+lines = [
+  { sting = "halloween" },
+  { say = "orrery", text = "A special reading, for those born under The Lantern. It's a rare sign. It only rises once a year, when the veil between universes is at its thinnest." },
+  { say = "orrery", text = "Please don't lean on the veil, dear. It isn't load-bearing." },
+  { say = "orrery", text = "This week, someone small will knock on your door and ask for sweets. Give them the good ones. In their universe, they're very important." },
+  { say = "orrery", text = "Lucky item: a torch. Lucky hour: just after dark. Lucky ghost: the polite one." },
+]
+
+[[clip]]
+id = "halloween-2"
+category = "dj"
+title = "Costume Astrology"
+dates = ["10-24", "10-25", "10-26", "10-27", "10-28", "10-29", "10-30", "10-31"]
+lines = [
+  { say = "orrery", text = "A note for Halloween. This week, your sign is whatever you're dressed as. The stars respect a costume." },
+  { say = "orrery", text = "If you've come as a sheet with two holes in it, your sign is The Laundry. You'll be fine, dear. You'll be folded by Sunday." },
+]
