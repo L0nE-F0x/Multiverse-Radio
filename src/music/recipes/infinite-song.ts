@@ -174,7 +174,7 @@ export function composeInfiniteSong(req: TrackRequest): Score {
     key: keyName(TONIC, 'major'),
     progression: `verse ${verseNumber(req.seed)} · verse ${VERSE} · refrain ${REFRAIN}`,
     fx: trackFx({
-      gain: 0.42,
+      gain: 0.483,
       lowpass: lerp(5000, 12000, B),
       highpass: 38,
       wow: 0.4 + G * 1.5,

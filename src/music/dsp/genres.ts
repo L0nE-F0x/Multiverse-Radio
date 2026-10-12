@@ -400,7 +400,7 @@ function renderFolkGuitar(midi: number, sr: number): Float32Array[] {
 /** Fuzz guitar into a long, dark room: strums and, played backwards, reverse swells. */
 function renderFuzzGuitar(midi: number, sr: number): Float32Array[] {
   const f = midiToFreq(midi);
-  const n = Math.floor(6.5 * sr);
+  const n = Math.floor(5.5 * sr);
   const dry = new Float32Array(n);
   const lp = new OnePole(sr, 3000);
   ksString(dry, sr, f, { t60: 6, seed: seedFor(midi, 0, 81), position: 0.16, s: 0.45, excite: (no) => lp.tick(no.next()) });
@@ -419,14 +419,10 @@ function renderFuzzGuitar(midi: number, sr: number): Float32Array[] {
     dry[i]! *= e;
     e *= sag;
   }
-  const [wl, wr] = fdn(dry, sr, 4.5, { channels: 2, damp: 3800, predelay: 0.02, size: 1.3 });
-  const L = new Float32Array(n);
-  const R = new Float32Array(n);
-  for (let i = 0; i < n; i++) {
-    L[i] = dry[i]! * 0.55 + wl![i]! * 0.9;
-    R[i] = dry[i]! * 0.55 + wr![i]! * 0.9;
-  }
-  return finishStereo([L, R], sr, 0.8);
+  // Mono (the two guitars are panned apart): half the memory and playback cost.
+  const [wet] = fdn(dry, sr, 4.5, { channels: 1, damp: 3800, predelay: 0.02, size: 1.3 });
+  for (let i = 0; i < n; i++) dry[i] = dry[i]! * 0.55 + wet![i]! * 1.3;
+  return finishMono(dry, sr, 0.8);
 }
 
 // ── Strings ───────────────────────────────────────────────────────────────────
@@ -633,7 +629,7 @@ export const GENRE_PATCHES: Record<GenreSamplePatch, PatchDef> = {
   'chorus-guitar': { roots: range(40, 88, 3), layers: 1, rate: 32000, channels: 2, render: (r, _l, sr) => renderChorusGuitar(r, sr) },
   'surf-guitar': { roots: range(40, 88, 3), layers: 1, rate: 32000, render: (r, _l, sr) => renderSurfGuitar(r, sr) },
   'folk-guitar': { roots: range(40, 84, 3), layers: 1, rate: 32000, render: (r, _l, sr) => renderFolkGuitar(r, sr) },
-  'fuzz-guitar': { roots: range(40, 84, 3), layers: 1, rate: 24000, channels: 2, render: (r, _l, sr) => renderFuzzGuitar(r, sr) },
+  'fuzz-guitar': { roots: range(40, 84, 3), layers: 1, rate: 22050, render: (r, _l, sr) => renderFuzzGuitar(r, sr) },
   'bowed-fiddle': { roots: range(55, 94, 3), layers: 1, rate: 32000, render: (r, _l, sr) => renderFiddle(r, sr) },
   stomp: oneShot(ONE_SHOTS.stomp!, 0.8),
   'frame-drum': oneShot(ONE_SHOTS['frame-drum']!, 0.75),

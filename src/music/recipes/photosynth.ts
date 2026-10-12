@@ -40,11 +40,11 @@ export function composePhotosynth(req: TrackRequest): Score {
   const warmPatch: SynthPatch = style.weighted([['pad-warm', 3], ['pad-strings', 1]]);
   const warm = b.inst({ kind: 'synth', patch: warmPatch, name: 'Warm pad', gain: 0.42, reverb: 0.5, pan: -0.1 });
   const glass = b.inst({ kind: 'synth', patch: 'pad-glass', name: 'Glass pad', gain: 0.3, reverb: 0.6, pan: 0.15, detune: weirdDetune(song, W, 12) });
-  const drone = b.inst({ kind: 'synth', patch: 'drone', name: 'Drone', gain: 0.4, reverb: 0.3 });
+  const drone = b.inst({ kind: 'synth', patch: 'drone', name: 'Drone', gain: 0.18, reverb: 0.3 });
   const pluckPatch: SamplePatch = style.weighted([['kalimba', 3], ['nylon', 2.5], ['celesta', 1.5], ['vibes', 1]]);
   const pluck = b.inst({ kind: 'sample', patch: pluckPatch, name: 'Unfurling figure', gain: 0.42, reverb: 0.5, delay: 0.4, pan: song.range(-0.3, 0.3), tremolo: pluckPatch === 'vibes' ? { rate: 3, depth: 0.25 } : undefined });
   const drop = b.inst({ kind: 'sample', patch: style.pick(['glass', 'marimba', 'kalimba'] as const), name: 'Drops', gain: 0.28, reverb: 0.6, delay: 0.5, pan: song.range(-0.5, 0.5) });
-  const birds = b.inst({ kind: 'sample', patch: 'birdsong', name: 'Birds outside', gain: 0.16, reverb: 0.4, pan: 0.35, lowpass: 6500 });
+  const birds = b.inst({ kind: 'sample', patch: 'birdsong', name: 'Birds outside', gain: 0.08, reverb: 0.4, pan: 0.35, lowpass: 6500 });
 
   // Pads: one long note per chord, crossfading into the next.
   const spansAll = plan.flatMap((s) => chordSpans(prog, s, b));
@@ -112,7 +112,7 @@ export function composePhotosynth(req: TrackRequest): Score {
     key: keyName(tonic, tpl.scale),
     progression: tpl.prog,
     fx: trackFx({
-      gain: 0.62,
+      gain: 1.456,
       lowpass: bright,
       highpass: 32,
       wow: 0.25 + G * 1.2 + W * 0.6,

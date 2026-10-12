@@ -125,7 +125,7 @@ export function composeCatPiano(req: TrackRequest): Score {
     key: keyName(tonic, minor ? 'dorian' : 'major'),
     progression: tpl,
     fx: trackFx({
-      gain: 0.42,
+      gain: 0.538,
       lowpass: cut,
       highpass: 38,
       wow: 0.5 + G * 2 + W,
@@ -160,13 +160,13 @@ function scenes(rng: Rng, bars: number, restless: number, density: number): Plan
     else {
       const catDue = sinceCat >= 3;
       scene = rng.weighted([
-        ['doze', 1.2 + density],
-        ['nap', 0.9 * (1.4 - restless)],
+        ['doze', 0.8 + density],
+        ['nap', 1.3 * (1.5 - restless)],
         ['walk', (catDue ? 1.6 : 0.6) * restless],
         ['knock', 0.25 * restless],
       ] as const);
     }
-    let n = scene === 'doze' ? rng.pick([2, 2, 4]) : scene === 'nap' ? rng.pick([1, 1, 2]) : 1;
+    let n = scene === 'doze' ? rng.pick([2, 2, 4]) : scene === 'nap' ? rng.pick([1, 2, 2]) : 1;
     n = Math.min(n, left);
     push(scene, n);
     left -= n;

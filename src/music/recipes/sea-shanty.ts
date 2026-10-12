@@ -201,7 +201,7 @@ export function composeSeaShanty(req: TrackRequest): Score {
     key: keyName(tonic, mode.scale),
     progression: `verse ${mode.verse} · chorus ${mode.chorus}`,
     fx: trackFx({
-      gain: 0.45,
+      gain: 0.473,
       lowpass: lerp(5000, 11000, B),
       highpass: 40,
       wow: 0.3 + G * 1.5 + W * 1.5,

@@ -53,8 +53,9 @@ export function composeSurfRock(req: TrackRequest): Score {
   const bass = b.inst({ kind: 'sample', patch: 'bass-round', name: 'Bass', gain: 0.55, pan: 0.02, release: 0.05 });
   const kick = b.inst({ kind: 'sample', patch: 'kick-punch', name: 'Kick', gain: 0.36 });
   const snare = b.inst({ kind: 'sample', patch: 'snare-rock', name: 'Snare', gain: 0.46, reverb: 0.25, pan: 0.04 });
-  const hat = b.inst({ kind: 'sample', patch: 'hat-closed', name: 'Hi-hat', gain: 0.26, pan: 0.25 });
-  const ride = b.inst({ kind: 'sample', patch: 'ride', name: 'Ride', gain: 0.18, pan: -0.25, lowpass: 10000 });
+  const ridePart = style.chance(0.4);
+  const hat = ridePart ? -1 : b.inst({ kind: 'sample', patch: 'hat-closed', name: 'Hi-hat', gain: 0.26, pan: 0.25 });
+  const ride = ridePart ? b.inst({ kind: 'sample', patch: 'ride', name: 'Ride', gain: 0.18, pan: -0.25, lowpass: 10000 }) : -1;
   const tom = b.inst({ kind: 'sample', patch: 'tom', name: 'Toms', gain: 0.45, reverb: 0.2 });
   const crash = b.inst({ kind: 'sample', patch: 'crash', name: 'Crash', gain: 0.18, reverb: 0.2, pan: 0.3 });
 
@@ -62,7 +63,6 @@ export function composeSurfRock(req: TrackRequest): Score {
   const melA = phrase(S, 'surf-a', 8, 0.35 + D * 0.3, { restTail: 1, maxNotes: 5, maxLeap: 4 });
   const melB = phrase(S, 'surf-b', 8, 0.3 + D * 0.3, { restTail: 1.5, maxNotes: 5, maxLeap: 3 });
   const [lo, hi] = tremoloLead ? [59, 79] : [50, 72];
-  const ridePart = style.chance(0.4);
   const bassWalk = style.chance(0.5);
   let prevBass: number | null = null;
 
@@ -83,7 +83,7 @@ export function composeSurfRock(req: TrackRequest): Score {
 
     // ── Rhythm guitar: eighth-note chops (the organ holds chords instead) ──
     spans.forEach((span, k) => {
-      const shape = guitarShape(span.chord, { low: 40 }).slice(1, 5);
+      const shape = guitarShape(span.chord, { low: 40 }).slice(1, 4);
       const lastSpan = outro && k === spans.length - 1;
       if (lastSpan) {
         shape.forEach((p, j) => b.note(rhythm, span.t + j * 0.02, b.end - span.t - 0.2, p, 0.55));
@@ -91,10 +91,11 @@ export function composeSurfRock(req: TrackRequest): Score {
         return;
       }
       if (intro && k < spans.length - 2) return;
-      for (let e = 0; e < Math.round(span.beats * 2); e++) {
-        if (toms) break;
-        const accent = e % 4 === 2;
-        shape.forEach((p, j) => b.note(rhythm, b.grid.at(span.bar, span.beat + e * 0.5) + j * 0.004, beat * (accent ? 0.42 : 0.24), p, vel(song, accent ? 0.55 : 0.42)));
+      // Chops on the beat, with a push on the "and" of two and four; the spring rings on.
+      for (const x of [0, 1, 1.5, 2, 3, 3.5]) {
+        if (toms || x >= span.beats) break;
+        const accent = x === 1 || x === 3;
+        shape.forEach((p, j) => b.note(rhythm, b.grid.at(span.bar, span.beat + x) + j * 0.004, beat * (accent ? 0.7 : 0.4), p, vel(song, accent ? 0.55 : 0.42)));
       }
       if (organ >= 0 && !toms) for (const p of shape) b.note(organ, span.t, span.dur * 0.95, p + 12, 0.45);
     });
@@ -115,7 +116,7 @@ export function composeSurfRock(req: TrackRequest): Score {
         for (let q = 0; q < Math.round(span.beats); q++) {
           const p = line[q % 4]!;
           b.note(bass, b.grid.at(span.bar, span.beat + q), beat * (bassWalk ? 0.85 : 0.45), p, vel(song, q % 2 ? 0.62 : 0.74));
-          if (!bassWalk) b.note(bass, b.grid.at(span.bar, span.beat + q + 0.5), beat * 0.4, p, vel(song, 0.5));
+          if (!bassWalk && q % 2 === 1) b.note(bass, b.grid.at(span.bar, span.beat + q + 0.5), beat * 0.4, p, vel(song, 0.5));
         }
       });
     }
@@ -152,13 +153,18 @@ export function composeSurfRock(req: TrackRequest): Score {
     // ── Lead: the tune, tremolo-picked or twanged ──
     if (s.part === 'A' || s.part === 'B') {
       const base: MotifNote[] = s.part === 'B' ? melB : melA;
+      // Second time round: the other articulation, and up the neck.
+      const later = s.part === 'A' && plan.indexOf(s) > plan.findIndex((x) => x.part === 'B') && plan.some((x) => x.part === 'B');
+      const swap = later && s.repeat % 2 === 1;
+      const trem = swap ? !tremoloLead : tremoloLead;
+      const up = swap && hi + 7 <= 88 ? 7 : 0;
       for (let ph = 0; ph + 2 <= s.bars; ph += 2) {
         const idx = ph / 2;
         const m = idx === 1 ? varyMotif(song, base, 0.5) : idx === 2 ? shiftMotif(base, mode === 'major' ? 2 : -1) : idx === 3 ? base.slice(0, Math.max(2, Math.ceil(base.length * 0.6))) : base;
-        const notes = realizeMotif(m, 0, beat, Math.round((lo + hi) / 2), spans, keyScale, lo, hi, b.grid, s.startBar + ph);
+        const notes = realizeMotif(m, 0, beat, Math.round((lo + hi) / 2) + up, spans, keyScale, lo + up, hi + up, b.grid, s.startBar + ph);
         for (const n of notes) {
-          if (tremoloLead && n.d >= beat * 0.7) tremolo(b, song, lead, n.t, n.d, n.p, 0.6);
-          else b.note(lead, n.t + song.gauss() * 0.004, Math.min(n.d, beat * 1.5), n.p, vel(song, n.strong ? 0.72 : 0.6));
+          if (trem && n.d >= beat * 0.7) tremolo(b, song, lead, n.t, n.d, n.p, 0.6);
+          else b.note(lead, n.t + song.gauss() * 0.004, Math.max(n.d, 1.4), n.p, vel(song, n.strong ? 0.72 : 0.6));
         }
       }
     }
@@ -168,7 +174,7 @@ export function composeSurfRock(req: TrackRequest): Score {
     key: mode === 'hijaz' ? `${keyName(tonic, 'major').split(' ')[0]} hijaz` : keyName(tonic, mode === 'major' ? 'mixolydian' : 'minor'),
     progression: `${tplA} / ${tplB}${tremoloLead ? ' · tremolo lead' : ''}`,
     fx: trackFx({
-      gain: 0.42,
+      gain: 0.298,
       lowpass: lerp(6000, 14000, B),
       highpass: 45,
       wow: G * 1.4 + W * 1.4,
@@ -183,9 +189,10 @@ export function composeSurfRock(req: TrackRequest): Score {
 
 /** Tremolo picking: the note re-struck as fast as the wrist allows, down and up. */
 function tremolo(b: ScoreBuilder, rng: Rng, inst: number, t: number, d: number, p: number, v: number): void {
-  const step = Math.min(0.068, b.beat / 4);
+  const step = Math.min(0.075, b.beat / 4);
   const n = Math.max(1, Math.floor(d / step));
-  for (let k = 0; k < n; k++) b.note(inst, t + k * step + rng.gauss() * 0.002, step * 1.3, p, vel(rng, v * (k % 2 ? 0.82 : 1) * (k === 0 ? 1.12 : 1), 0.03));
+  // Each stroke rings on into the spring (the polyphony cap tidies up behind it).
+  for (let k = 0; k < n; k++) b.note(inst, t + k * step + rng.gauss() * 0.002, k === n - 1 ? 1.2 : 0.6, p, vel(rng, v * (k % 2 ? 0.82 : 1) * (k === 0 ? 1.12 : 1), 0.03));
 }
 
 /** The glissando: a pick scraped down the neck. */

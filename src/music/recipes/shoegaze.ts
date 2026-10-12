@@ -51,18 +51,18 @@ export function composeShoegaze(req: TrackRequest): Score {
   const beat = b.beat;
 
   const wall = b.inst({ kind: 'synth', patch: 'fuzz-wall', name: 'Guitar wall', gain: 0.55, reverb: 0.6, pan: 0, detune: weirdDetune(song, W, 18) });
-  const fuzz = b.inst({ kind: 'sample', patch: 'fuzz-guitar', name: 'Fuzz guitar', gain: 0.48, reverb: 0.45, pan: -0.3, release: 0.4 });
-  const fuzz2 = b.inst({ kind: 'sample', patch: 'fuzz-guitar', name: 'Fuzz guitar 2', gain: 0.4, reverb: 0.45, pan: 0.32, detune: 9, release: 0.4 });
-  const swells = b.inst({ kind: 'sample', patch: 'fuzz-guitar', name: 'Reverse swells', gain: 0.5, reverb: 0.5, pan: 0.1 });
+  const fuzz = b.inst({ kind: 'sample', patch: 'fuzz-guitar', name: 'Fuzz guitar', gain: 0.36, reverb: 0.45, pan: -0.35, release: 0.25 });
+  const fuzz2 = b.inst({ kind: 'sample', patch: 'fuzz-guitar', name: 'Fuzz guitar 2', gain: 0.34, reverb: 0.45, pan: 0.38, detune: 9, release: 0.4 });
+  const swells = b.inst({ kind: 'sample', patch: 'fuzz-guitar', name: 'Reverse swells', gain: 0.38, reverb: 0.5, pan: 0.1 });
   const clean = b.inst({ kind: 'sample', patch: 'chorus-guitar', name: 'Clean guitar', gain: 0.5, reverb: 0.5, delay: 0.4, pan: 0.25 });
-  const bass = b.inst({ kind: 'sample', patch: 'bass-round', name: 'Bass', gain: 0.52, pan: 0, lowpass: 900 });
+  const bass = b.inst({ kind: 'sample', patch: 'bass-round', name: 'Bass', gain: 0.4, pan: 0, lowpass: 900 });
   const voice = b.inst({ kind: 'synth', patch: style.pick(['crew', 'soft-lead'] as const), name: 'Buried voice', gain: 0.4, reverb: 0.75, delay: 0.45, pan: -0.05, lowpass: 2600 });
   const kick = b.inst({ kind: 'sample', patch: 'kick-soft', name: 'Kick', gain: 0.5 });
-  const snare = b.inst({ kind: 'sample', patch: 'snare-rock', name: 'Snare', gain: 0.4, reverb: 0.65, pan: 0.02 });
+  const snare = b.inst({ kind: 'sample', patch: 'snare-rock', name: 'Snare', gain: 0.5, reverb: 0.65, pan: 0.02 });
   const hat = b.inst({ kind: 'sample', patch: 'hat-closed', name: 'Hi-hat', gain: 0.22, pan: 0.2, lowpass: 7000 });
   const ride = b.inst({ kind: 'sample', patch: 'ride', name: 'Ride wash', gain: 0.16, pan: -0.2, reverb: 0.4, lowpass: 7500 });
   const crash = b.inst({ kind: 'sample', patch: 'crash', name: 'Crash', gain: 0.18, reverb: 0.5, pan: 0.25, lowpass: 8000 });
-  const tom = b.inst({ kind: 'sample', patch: 'tom', name: 'Toms', gain: 0.4, reverb: 0.5 });
+  const tom = b.inst({ kind: 'sample', patch: 'tom', name: 'Toms', gain: 0.28, reverb: 0.5 });
   const noise = b.inst({ kind: 'sample', patch: 'hiss', name: 'Haze', gain: 0.1, lowpass: 6000 });
 
   const arpShape = style.pick([[0, 2, 1, 3, 2, 4, 3, 1], [0, 1, 2, 3, 4, 3, 2, 1], [0, 2, 4, 2, 1, 3, 4, 3]]);
@@ -104,8 +104,8 @@ export function composeShoegaze(req: TrackRequest): Score {
         for (let e = 0; e < Math.round(span.beats * 2); e++) {
           const at = b.grid.at(span.bar, span.beat + e * 0.5) + song.gauss() * 0.004;
           const down = e % 2 === 0;
-          strum(b, fuzz, song, at, beat * 0.55, down ? shape : shape.slice(2), down ? 0.62 : 0.45, 0.012, down);
-          if (e % 2 === 0) strum(b, fuzz2, song, at + 0.009, beat * 1.05, shape.slice(1, 5), 0.5, 0.014, true);
+          strum(b, fuzz, song, at, beat * 0.55, down ? shape.slice(0, 4) : shape.slice(2, 4), down ? 0.62 : 0.45, 0.012, down);
+          if (e % 4 === 0) strum(b, fuzz2, song, at + 0.009, beat * 1.9, shape.slice(1, 4), 0.5, 0.014, true);
         }
       }
       // Reverse swell rising into the next chord.
@@ -168,7 +168,7 @@ export function composeShoegaze(req: TrackRequest): Score {
     key: keyName(tonic, tplV.scale),
     progression: tplC.prog === tplV.prog ? tplV.prog : `${tplV.prog} / ${tplC.prog}`,
     fx: trackFx({
-      gain: 0.36,
+      gain: 0.264,
       lowpass: dark,
       highpass: 38,
       q: 0.5,

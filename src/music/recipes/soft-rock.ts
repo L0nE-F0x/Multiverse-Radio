@@ -180,7 +180,7 @@ export function composeSoftRock(req: TrackRequest): Score {
     key: keyName(tonic, 'major'),
     progression: `verse ${tplV} · chorus ${tplC}`,
     fx: trackFx({
-      gain: 0.42,
+      gain: 0.391,
       lowpass: lerp(5500, 12000, B),
       highpass: 36,
       wow: 0.3 + G * 1.5 + W,

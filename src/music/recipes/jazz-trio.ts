@@ -120,11 +120,13 @@ export function composeJazzTrio(req: TrackRequest): Score {
     if (!intro && !outro) bodyIndex++;
     const chorus = Math.floor(Math.max(0, bodyIndex) / per);
     const r: Role = intro || outro ? 'head' : role(chorus);
-    let prog: Chord[][] = s.part === 'B' ? progB : s.part === 'C' ? progC : progA;
+    // The last section of the tune always comes home on the A.
+    const part = s === body[body.length - 1] && form !== 'blues' ? 'A' : s.part;
+    let prog: Chord[][] = part === 'B' ? progB : part === 'C' ? progC : progA;
     if (intro) prog = turnaround(tonic, minor, ballad, progA);
     let spans = chordSpans(prog, s, b);
     if (outro) spans = ending(b, s, tonic, minor, song);
-    const label = intro ? 'intro' : outro ? 'ending' : r === 'head' ? (chorus === choruses - 1 && chorus > 0 ? `head out ${s.part}` : `head ${s.part}`) : r === 'bass' ? `bass solo ${s.part}` : `piano solo ${s.part}`;
+    const label = intro ? 'intro' : outro ? 'ending' : r === 'head' ? (chorus === choruses - 1 && chorus > 0 ? `head out ${part}` : `head ${part}`) : r === 'bass' ? `bass solo ${part}` : `piano solo ${part}`;
     b.section({ ...s, name: label }, spans.map((x) => x.chord), flats);
     const sT = b.grid.bar(s.startBar);
 
@@ -229,10 +231,10 @@ export function composeJazzTrio(req: TrackRequest): Score {
       for (const n of realizeMotif(m, sT, beat, 74, spans, keyScale, 66, 86)) b.note(rh, n.t + song.range(0.05, 0.2), n.d * 1.2, n.p, vel(song, 0.42));
     } else if (!intro && !outro) {
       if (r === 'head') {
-        const m = heads[s.part] ?? heads.A!;
+        const m = heads[part] ?? heads.A!;
         for (let ph = 0; ph + 2 <= s.bars; ph += 2) {
           const idx = ph / 2;
-          const cell = idx === 1 ? answer : idx === 2 ? shiftMotif(m, s.part === 'B' ? -1 : 1) : idx === 3 ? cadence(m) : m;
+          const cell = idx === 1 ? answer : idx === 2 ? shiftMotif(m, part === 'B' ? -1 : 1) : idx === 3 ? cadence(m) : m;
           playHead(b, song, rh, cell, spans, keyScale, s.startBar + ph, lo, hi, ballad);
         }
       } else if (r === 'solo') {
@@ -261,7 +263,7 @@ export function composeJazzTrio(req: TrackRequest): Score {
     key: keyName(tonic, minor ? 'minor' : 'major'),
     progression: form === 'blues' ? `${minor ? 'minor ' : ''}blues: ${tplA}` : `${form} · A: ${tplA} · ${form === 'AABA' ? `B: ${tplB}` : `B: ${tplB} · C: ${tplC}`}`,
     fx: trackFx({
-      gain: 0.5,
+      gain: 0.505,
       lowpass: lerp(6000, 15000, B),
       highpass: 35,
       wow: G * 1.0 + W * 0.6,

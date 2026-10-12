@@ -50,7 +50,7 @@ export function composeCityPop(req: TrackRequest): Score {
   const plan = planForm(
     fit.bars,
     fit.bars >= 24 ? 4 : fit.bars >= 10 ? 2 : 0,
-    fit.bars >= 40 ? 8 : fit.bars >= 14 ? 4 : fit.bars >= 6 ? 1 : 0,
+    fit.bars >= 40 ? 8 : fit.bars >= 14 ? 4 : fit.bars >= 4 ? 1 : 0,
     [{ part: 'V', bars: 8 }, { part: 'P', bars: preBars }, { part: 'C', bars: 8 }, { part: 'V', bars: 8 }, { part: 'P', bars: preBars }, { part: 'C', bars: 8 }, { part: 'S', bars: 8 }, { part: 'C', bars: 8 }, { part: 'C', bars: 8 }],
   );
   const b = new ScoreBuilder(req.recipe, req, fit, 4, swing, tweaks, 4);
@@ -101,7 +101,7 @@ export function composeCityPop(req: TrackRequest): Score {
     const key = tonic + (s.startBar >= modFrom ? modulate : 0);
     const tpl = isC ? tChorus : isP ? tPre : isS ? tChorus : tVerse;
     let prog = parseProgression(tpl, key);
-    if (outro && !fade) prog = [[chord(key + 5, 'maj7')], [chord(key + 7, '9sus')], [minor ? chord(key, 'm9') : chord(key, 'maj9')]];
+    if (outro && !fade) prog = [[chord(key + 5, 'maj7')], [chord(key + 7, '9sus')], [minor ? chord(key, 'm9') : chord(key, 'maj9')]].slice(-Math.min(3, s.bars));
     const spans = chordSpans(prog, s, b);
     if (outro && !fade) {
       // A button ending: the last chord rings to the end.
@@ -145,7 +145,7 @@ export function composeCityPop(req: TrackRequest): Score {
           if (st >= span.beats * 4) continue;
           const at = b.grid.step(span.bar, st + span.beat * 4) + song.gauss() * 0.003;
           if (full) for (const [j, p] of gtrV.entries()) b.note(gtr, at + j * 0.004, beat * 0.22, p, vel(song, 0.52));
-          else for (const p of gtrV.slice(0, 2)) b.note(gtr, at, 0.035, p, vel(song, 0.28));
+          else b.note(gtr, at, 0.035, gtrV[1] ?? gtrV[0]!, vel(song, 0.3));
         }
       }
       // Strings and brass lift the chorus.
@@ -201,7 +201,7 @@ export function composeCityPop(req: TrackRequest): Score {
           if (fillBar && st >= 12) continue;
           const open = st === 14 && (isC ? k % 2 === 1 : k % 4 === 3);
           if (open) b.hit(ohat, t, vel(song, 0.5), 60, 0.5);
-          else if (st % (D > 0.35 || isC ? 1 : 2) === 0) b.hit(hat, t, vel(song, st % 4 === 0 ? 0.55 : st % 2 === 0 ? 0.42 : 0.28), 60, 0.3);
+          else if (st % (isC && D > 0.35 ? 1 : 2) === 0) b.hit(hat, t, vel(song, st % 4 === 0 ? 0.55 : st % 2 === 0 ? 0.42 : 0.28), 60, 0.3);
         }
         if (fillBar) for (let f = 0; f < 4; f++) b.hit(tom, b.grid.step(bar, 12 + f), 0.55 + f * 0.08, 67 - f * 3);
       }
@@ -240,7 +240,7 @@ export function composeCityPop(req: TrackRequest): Score {
     key: keyName(tonic, minor ? 'dorian' : 'major'),
     progression: `verse ${tVerse} · pre ${tPre} · chorus ${tChorus}${modulate ? ` · up ${modulate === 1 ? 'a half step' : 'a whole step'} for the last choruses` : ''}`,
     fx: trackFx({
-      gain: 0.36,
+      gain: 0.31,
       lowpass: cut0,
       highpass: 34,
       q: 0.7,

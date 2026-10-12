@@ -199,7 +199,7 @@ export function composeDrumAndBass(req: TrackRequest): Score {
     key: keyName(tonic, minor ? 'minor' : 'major'),
     progression: `${tpl} · ${breakA.name} break${reeseOn ? ' · reese' : ''}`,
     fx: trackFx({
-      gain: 0.36,
+      gain: 0.331,
       lowpass: open,
       highpass: 28,
       q: 0.9,
