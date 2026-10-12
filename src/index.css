@@ -147,7 +147,7 @@
   }
 
   .viewport[data-signal='none'] .viewport-scene {
-    filter: brightness(0.32) saturate(0.25) blur(2.5px);
+    filter: brightness(0.42) saturate(0.3) blur(2px);
   }
 
   .static-noise {
@@ -475,6 +475,11 @@
     inset: -40px -120px -40px calc(var(--gutter) * -1);
     z-index: -1;
     background: radial-gradient(ellipse 60% 70% at 30% 50%, rgb(var(--scrim) / 0.66), transparent 75%);
+  }
+
+  /* Make room under the event banner. */
+  .hud:has(.event-banner) .ident {
+    top: calc(19% + 36px);
   }
 
   .ident-kicker {
@@ -1393,10 +1398,10 @@
 
   .power {
     position: absolute;
-    inset: 0;
+    inset: 0 0 calc(var(--dock-h, 260px) - 30px);
     display: grid;
     place-items: center;
-    padding: 0 16px 18vh;
+    padding: 56px 16px 0;
     background: radial-gradient(ellipse 55% 45% at 50% 42%, rgb(var(--scrim) / 0.6), transparent 80%);
     pointer-events: none;
   }
@@ -2109,6 +2114,7 @@
 
     .event-name {
       margin-top: 2px;
+      padding-left: 10px;
     }
 
     .event-notice {
@@ -2139,6 +2145,23 @@
     .ident {
       top: 13%;
       right: var(--gutter);
+    }
+
+    .hud:has(.event-banner) .ident {
+      top: calc(13% + 52px);
+    }
+
+    .event-banner {
+      letter-spacing: 0.08em;
+    }
+
+    .power-card {
+      padding: 24px 18px 22px;
+    }
+
+    .power-sub,
+    .power-hint {
+      letter-spacing: 0.08em;
     }
 
     .ident-kicker {

@@ -17,25 +17,24 @@ import { Toaster } from './Toaster';
 export function Hud() {
   const state = useHudState();
   const live = state !== 'hidden';
-  const hudRef = useRef<HTMLDivElement>(null);
   const dockRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     document.documentElement.dataset.hud = state;
   }, [state]);
 
-  // Captions float just above the dock, whatever its height at this screen size.
+  // Captions and the power card sit just above the dock, whatever its height here.
   useEffect(() => {
     const dock = dockRef.current;
-    const hud = hudRef.current;
-    if (!dock || !hud) return;
-    const observer = new ResizeObserver(() => hud.style.setProperty('--dock-h', `${dock.offsetHeight}px`));
+    if (!dock) return;
+    const root = document.documentElement;
+    const observer = new ResizeObserver(() => root.style.setProperty('--dock-h', `${dock.offsetHeight}px`));
     observer.observe(dock);
     return () => observer.disconnect();
   }, []);
 
   return (
-    <div ref={hudRef} className="hud" data-hud={state}>
+    <div className="hud" data-hud={state}>
       <header className="hud-top hud-chrome" data-keep-awake="">
         <StatusBar live={live} />
       </header>
