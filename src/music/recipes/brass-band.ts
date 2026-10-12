@@ -47,7 +47,7 @@ export function composeBrassBand(req: TrackRequest): Score {
   const sour = 0.5 + W;
   const solo = b.inst({ kind: 'synth', patch: 'band-cornet', name: 'Solo cornet', gain: 0.5, pan: -0.25, reverb: 0.3, detune: 7 * sour });
   const second = b.inst({ kind: 'synth', patch: 'band-cornet', name: 'Second cornet', gain: 0.3, pan: 0.3, reverb: 0.3, detune: -6 * sour });
-  const horns = b.inst({ kind: 'synth', patch: 'band-horn', name: 'Tenor horns', gain: 0.28, pan: 0.15, reverb: 0.3, detune: 4 * sour, lowpass: 2400 });
+  const horns = b.inst({ kind: 'synth', patch: 'band-horn', name: 'Tenor horns', gain: 0.22, pan: 0.15, reverb: 0.3, detune: 4 * sour, lowpass: 2400 });
   const euph = b.inst({ kind: 'synth', patch: 'band-horn', name: 'Euphonium', gain: 0.32, pan: -0.1, reverb: 0.3, detune: -9 * sour });
   const basses = b.inst({ kind: 'synth', patch: 'band-tuba', name: 'Basses', gain: 0.36, reverb: 0.15, detune: -11 * sour });
   const drum = b.inst({ kind: 'sample', patch: 'bass-drum', name: 'Bass drum', gain: 0.26, reverb: 0.25 });
@@ -166,9 +166,10 @@ export function composeBrassBand(req: TrackRequest): Score {
     const base = trio ? tuneT : s.part === 'B' ? tuneB : tuneA;
     const cellBars = cellBeats / meter;
     const cells = Math.floor(s.bars / cellBars);
+    const plans: MotifNote[][][] = [];
     for (let c = 0; c < cells; c++) {
       const half = Math.floor(c / 4);
-      const plan4 = sentence(rng, base, cellBeats, s.repeat + half, { open: half === 0 && cells > 4 ? 4 : 1 });
+      const plan4 = (plans[half] ??= sentence(rng, base, cellBeats, s.repeat + half, { open: half === 0 && cells > 4 ? 4 : 1 }));
       const cell = plan4[c % 4]!;
       const bar = s.startBar + c * cellBars;
       // Under the vicar: the B strain gives some cells to the euphonium alone.
@@ -197,6 +198,6 @@ export function composeBrassBand(req: TrackRequest): Score {
   return b.build({
     key: keyName(tonic, 'major'),
     progression: `${style}: ${strainA}`,
-    fx: trackFx({ gain: 0.66, lowpass: lerp(4500, 9000, B), highpass: 40, wow: 0.3 + G, wowRate: 0.4, flutter: G * 0.03, drive: 0.05 + G * 0.15, reverbTone: 4500, reverbLevel: 1 }),
+    fx: trackFx({ gain: 0.93, lowpass: lerp(4500, 9000, B), highpass: 40, wow: 0.3 + G, wowRate: 0.4, flutter: G * 0.03, drive: 0.05 + G * 0.15, reverbTone: 4500, reverbLevel: 1 }),
   });
 }

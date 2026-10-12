@@ -112,7 +112,7 @@ export function composeTestTone(req: TrackRequest): Score {
   return b.build({
     key: hz >= 1000 ? '1 kHz' : `${hz} Hz`,
     progression: stereoId ? 'line-up tone, left channel interrupted' : 'line-up tone',
-    fx: trackFx({ gain: 0.6, lowpass: 9000, highpass: 60, wow: 0, wowRate: 0.3, flutter: 0, drive: 0, reverbLevel: 0 }),
+    fx: trackFx({ gain: 0.23, lowpass: 9000, highpass: 60, wow: 0, wowRate: 0.3, flutter: 0, drive: 0, reverbLevel: 0 }),
   });
 }
 
@@ -197,7 +197,7 @@ export function composeDistressBeacon(req: TrackRequest): Score {
   return b.build({
     key: `${Math.round(440 * 2 ** ((base - 69) / 12))} Hz`,
     progression: `${call} ${call}, carrier (${Math.round(wpm)} wpm, ${pass ? 'passing' : 'orbiting'})`,
-    fx: trackFx({ gain: 0.85, lowpass: 5000, highpass: 120, wow: 0.6 + W, wowRate: 0.3, flutter: 0.05, drive: 0.1 + G * 0.2, reverbTone: 3000, reverbLevel: 0.8 }),
+    fx: trackFx({ gain: 0.69, lowpass: 5000, highpass: 120, wow: 0.6 + W, wowRate: 0.3, flutter: 0.05, drive: 0.1 + G * 0.2, reverbTone: 3000, reverbLevel: 0.8 }),
   });
 }
 
@@ -283,7 +283,7 @@ export function composeStuckLoop(req: TrackRequest): Score {
   return b.build({
     key: keyName(tonic, 'major'),
     progression: tpl,
-    fx: trackFx({ gain: 0.6, lowpass: bright, highpass: 55, wow: 1.4 + G * 2 + W, wowRate: 0.55, flutter: 0.06 + G * 0.08, drive: 0.15 + G * 0.3, reverbTone: 4000, reverbLevel: 0.9 }),
+    fx: trackFx({ gain: 0.31, lowpass: bright, highpass: 55, wow: 1.4 + G * 2 + W, wowRate: 0.55, flutter: 0.06 + G * 0.08, drive: 0.15 + G * 0.3, reverbTone: 4000, reverbLevel: 0.9 }),
   });
 }
 
@@ -325,6 +325,6 @@ export function composeTimeSignal(req: TrackRequest): Score {
   return b.build({
     key: `${hz >= 1000 ? '1 kHz' : `${hz} Hz`} pips`,
     progression: `a second here lasts ${second.toFixed(2)} s; ident ${call}`,
-    fx: trackFx({ gain: 0.6, lowpass: 7000, highpass: 80, wow: 0, wowRate: 0.3, flutter: 0, drive: 0, reverbLevel: 0 }),
+    fx: trackFx({ gain: 0.46, lowpass: 7000, highpass: 80, wow: 0, wowRate: 0.3, flutter: 0, drive: 0, reverbLevel: 0 }),
   });
 }

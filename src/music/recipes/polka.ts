@@ -139,9 +139,10 @@ export function composePolka(req: TrackRequest): Score {
     const voice = trio ? trioLead : lead;
     const base = s.part === 'B' ? (mirrored ? mirror(motifA) : motifB) : trio ? motifT : motifA;
     const cells = Math.floor(s.bars / 2);
+    const plans: MotifNote[][][] = [];
     for (let c = 0; c < cells; c++) {
       const half = Math.floor(c / 4);
-      const plan4 = sentence(rng, base, cellBeats, s.repeat * 2 + half, { open: half === 0 ? 4 : 1 });
+      const plan4 = (plans[half] ??= sentence(rng, base, cellBeats, s.repeat * 2 + half, { open: half === 0 ? 4 : 1 }));
       const bar = s.startBar + c * 2;
       if (bar === breakBar) {
         // Alone in the break: a quick run down to the next downbeat.
@@ -170,7 +171,7 @@ export function composePolka(req: TrackRequest): Score {
     key: keyName(tonic, 'major'),
     progression: `${tplA.prog} / ${tplB.prog}`,
     fx: trackFx({
-      gain: 0.56,
+      gain: 0.68,
       lowpass: lerp(5500, 12000, B) * (1 - G * 0.25),
       highpass: 45,
       wow: G * 2 + W * 1.5,

@@ -155,7 +155,7 @@ export function composeDub(req: TrackRequest): Score {
     key: keyName(tonic, tpl.scale),
     progression: tpl.prog,
     fx: trackFx({
-      gain: 0.3,
+      gain: 0.235,
       lowpass: lerp(4500, 10000, B),
       highpass: 28,
       wow: 0.6 + G * 1.8,

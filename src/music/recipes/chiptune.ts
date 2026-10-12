@@ -151,7 +151,7 @@ export function composeChiptune(req: TrackRequest): Score {
     key: keyName(tonic, tplA.scale),
     progression: `${tplA.prog} / ${tplB.prog} / bridge ${bridge}`,
     fx: trackFx({
-      gain: 0.47,
+      gain: 0.555,
       lowpass: 9000 + B * 9000,
       highpass: 40,
       wow: W * 1.2,

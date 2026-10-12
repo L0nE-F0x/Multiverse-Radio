@@ -32,9 +32,9 @@ export function composeCooking(req: TrackRequest): Score {
   const b = new ScoreBuilder(req.recipe, req, fit, 4, rng.range(0.58, 0.64), tweaks, 2);
   const beat = b.beat;
 
-  const bass = b.inst({ kind: 'sample', patch: 'pizz', name: 'Pizzicato bass', gain: 1.1, pan: -0.05, lowpass: 1800 });
-  const strings = b.inst({ kind: 'sample', patch: 'pizz', name: 'Pizzicato strings', gain: 0.42, pan: -0.3, reverb: 0.15, highpass: 220 });
-  const marimba = b.inst({ kind: 'sample', patch: 'marimba', name: 'Marimba', gain: 0.27, pan: 0.25, reverb: 0.15 });
+  const bass = b.inst({ kind: 'sample', patch: 'bass-upright', name: 'Pizzicato bass', gain: 0.75, pan: -0.05 });
+  const strings = b.inst({ kind: 'sample', patch: 'pizz', name: 'Pizzicato strings', gain: 0.32, pan: -0.3, reverb: 0.15, highpass: 220 });
+  const marimba = b.inst({ kind: 'sample', patch: 'marimba', name: 'Marimba', gain: 0.24, pan: 0.25, reverb: 0.15 });
   const kick = b.inst({ kind: 'sample', patch: 'kick-soft', name: 'Kick', gain: 0.34 });
   const brush = b.inst({ kind: 'sample', patch: 'snare-brush', name: 'Brushes', gain: 0.4, pan: 0.1, reverb: 0.1 });
   const shaker = b.inst({ kind: 'sample', patch: 'shaker', name: 'Shaker', gain: 0.2, pan: 0.35 });
@@ -129,7 +129,7 @@ export function composeCooking(req: TrackRequest): Score {
   return b.build({
     key: keyName(tonic, 'major'),
     progression: 'kitchen shuffle',
-    fx: trackFx({ gain: 0.62, lowpass: lerp(6500, 12000, B), highpass: 45, wow: 0.2 + W, wowRate: 0.5, flutter: 0, drive: 0.05, reverbTone: 5000, reverbLevel: 0.8 }),
+    fx: trackFx({ gain: 0.56, lowpass: lerp(6500, 12000, B), highpass: 45, wow: 0.2 + W, wowRate: 0.5, flutter: 0, drive: 0.05, reverbTone: 5000, reverbLevel: 0.8 }),
   });
 }
 
@@ -161,9 +161,9 @@ export function composeKids(req: TrackRequest): Score {
   const b = new ScoreBuilder(req.recipe, req, fit, 4, rng.range(0.5, 0.55), tweaks, 2);
   const beat = b.beat;
 
-  const uke = b.inst({ kind: 'sample', patch: 'ukulele', name: 'Ukulele', gain: 0.9, pan: -0.2, reverb: 0.1 });
+  const uke = b.inst({ kind: 'sample', patch: 'ukulele', name: 'Ukulele', gain: 0.75, pan: -0.2, reverb: 0.1 });
   const glock = b.inst({ kind: 'sample', patch: 'glockenspiel', name: 'Glockenspiel', gain: 0.24, pan: 0.25, reverb: 0.25, detune: weirdDetune(rng, W) });
-  const bass = b.inst({ kind: 'sample', patch: 'bass-round', name: 'Bass', gain: 0.5 });
+  const bass = b.inst({ kind: 'sample', patch: 'bass-round', name: 'Bass', gain: 0.6 });
   const clap = b.inst({ kind: 'sample', patch: 'clap', name: 'Claps', gain: 0.6, reverb: 0.15, pan: 0.05 });
   const kick = b.inst({ kind: 'sample', patch: 'kick-soft', name: 'Kick', gain: 0.36 });
   const whistle = b.inst({ kind: 'synth', patch: 'flute', name: 'Slide whistle', gain: 0.26, pan: 0.15, reverb: 0.2 });
@@ -227,7 +227,7 @@ export function composeKids(req: TrackRequest): Score {
   return b.build({
     key: keyName(tonic, 'major'),
     progression: 'ukulele and glockenspiel',
-    fx: trackFx({ gain: 0.6, lowpass: lerp(7000, 13000, B), highpass: 50, wow: W * 0.8, wowRate: 0.5, flutter: 0, drive: 0.04, reverbTone: 6000, reverbLevel: 0.7 }),
+    fx: trackFx({ gain: 0.45, lowpass: lerp(7000, 13000, B), highpass: 50, wow: W * 0.8, wowRate: 0.5, flutter: 0, drive: 0.04, reverbTone: 6000, reverbLevel: 0.7 }),
   });
 }
 
@@ -252,10 +252,10 @@ export function composeCommunity(req: TrackRequest): Score {
   const b = new ScoreBuilder(req.recipe, req, fit, 4, rng.range(0.5, 0.56), tweaks, 2);
   const beat = b.beat;
 
-  const guitar = b.inst({ kind: 'sample', patch: 'folk-guitar', name: 'Acoustic guitar', gain: 1.0, pan: -0.15, reverb: 0.12 });
+  const guitar = b.inst({ kind: 'sample', patch: 'folk-guitar', name: 'Acoustic guitar', gain: 0.85, pan: -0.15, reverb: 0.12 });
   const piano = b.inst({ kind: 'sample', patch: rng.chance(0.6) ? 'piano' : 'felt-piano', name: 'Piano', gain: 0.36, pan: 0.25, reverb: 0.25 });
   const shaker = b.inst({ kind: 'sample', patch: 'shaker', name: 'Shaker', gain: 0.22, pan: 0.3 });
-  const bass = b.inst({ kind: 'sample', patch: 'bass-upright', name: 'Bass', gain: 0.65 });
+  const bass = b.inst({ kind: 'sample', patch: 'bass-upright', name: 'Bass', gain: 0.75 });
   const pad = b.inst({ kind: 'synth', patch: 'pad-warm', name: 'Church-hall organ', gain: 0.1, reverb: 0.4, lowpass: 1400 });
 
   const lick = makeMotif(rng, 4, 0.3 + D * 0.2, { restTail: 1, minNotes: 2, maxNotes: 3, maxLeap: 3 });
@@ -315,7 +315,7 @@ export function composeCommunity(req: TrackRequest): Score {
   return b.build({
     key: keyName(tonic, 'major'),
     progression: 'fingerpicked',
-    fx: trackFx({ gain: 0.66, lowpass: lerp(6000, 11000, B), highpass: 45, wow: 0.3 + G * 1.5, wowRate: 0.45, flutter: G * 0.03, drive: 0.05 + G * 0.2, reverbTone: 5000, reverbLevel: 0.8 }),
+    fx: trackFx({ gain: 0.53, lowpass: lerp(6000, 11000, B), highpass: 45, wow: 0.3 + G * 1.5, wowRate: 0.45, flutter: G * 0.03, drive: 0.05 + G * 0.2, reverbTone: 5000, reverbLevel: 0.8 }),
   });
 }
 
@@ -431,7 +431,7 @@ export function composeQuiz(req: TrackRequest): Score {
   return b.build({
     key: keyName(tonic, tpl.scale),
     progression: tpl.prog,
-    fx: trackFx({ gain: 0.58, lowpass: lerp(6500, 12000, B), highpass: 40, wow: 0, wowRate: 0.5, flutter: 0, drive: 0.05, reverbTone: 5500, reverbLevel: 0.8 }),
+    fx: trackFx({ gain: 0.95, lowpass: lerp(6500, 12000, B), highpass: 40, wow: 0, wowRate: 0.5, flutter: 0, drive: 0.05, reverbTone: 5500, reverbLevel: 0.8 }),
   });
 }
 

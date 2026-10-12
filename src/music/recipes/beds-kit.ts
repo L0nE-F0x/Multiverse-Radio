@@ -22,7 +22,9 @@ export function bedForm(
   const pickSize = (sizes: [number, number, number]) => (bars >= 40 ? sizes[2] : bars >= 12 ? sizes[1] : bars >= 5 ? sizes[0] : 0);
   const intro = pickSize(opts.intro ?? [1, 2, 4]);
   const outro = pickSize(opts.outro ?? [1, 2, 2]);
-  const plan = planSections(bars, { intro, outro, unit: opts.unit ?? 8, pattern: opts.pattern ?? ['A', 'B'] });
+  // Short beds keep their intro and ending: the body shrinks instead (a sting is still a sting).
+  const unit = bars < 12 ? Math.max(1, bars - intro - outro) : (opts.unit ?? 8);
+  const plan = planSections(bars, { intro, outro, unit, pattern: opts.pattern ?? ['A', 'B'] });
   return { fit, plan };
 }
 

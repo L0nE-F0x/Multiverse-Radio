@@ -45,10 +45,10 @@ export function composeHoroscope(req: TrackRequest): Score {
   const b = new ScoreBuilder(req.recipe, req, fit, meter, 0.5, tweaks, 2);
   const beat = b.beat;
 
-  const harp = b.inst({ kind: 'sample', patch: 'concert-harp', name: 'Harp', gain: 0.42, pan: -0.15, reverb: 0.35 });
+  const harp = b.inst({ kind: 'sample', patch: 'concert-harp', name: 'Harp', gain: 0.36, pan: -0.15, reverb: 0.35 });
   const pad = b.inst({ kind: 'synth', patch: 'pad-glass', name: 'Glass pad', gain: 0.18, reverb: 0.5, lowpass: 2400, tremolo: { rate: 0.13, depth: 0.5 }, detune: weirdDetune(rng, W, 20) });
   const sparkle = b.inst({ kind: 'sample', patch: 'glass', name: 'Crystal', gain: 0.16, pan: 0.3, reverb: 0.6 });
-  const drone = b.inst({ kind: 'synth', patch: 'drone', name: 'Drone', gain: 0.2 });
+  const drone = b.inst({ kind: 'synth', patch: 'drone', name: 'Drone', gain: 0.26 });
 
   const sweepUp = rng.chance(0.5);
   let padVoicing: number[] | null = null;
@@ -109,7 +109,7 @@ export function composeHoroscope(req: TrackRequest): Score {
   return b.build({
     key: keyName(tonic, tpl.scale),
     progression: tpl.prog,
-    fx: trackFx({ gain: 0.85, lowpass: lerp(6000, 12000, B), highpass: 40, wow: W * 1.2, wowRate: 0.25, flutter: 0, drive: 0, reverbTone: 6000, reverbLevel: 1.4 }),
+    fx: trackFx({ gain: 1.2, lowpass: lerp(6000, 12000, B), highpass: 40, wow: W * 1.2, wowRate: 0.25, flutter: 0, drive: 0, reverbTone: 6000, reverbLevel: 1.4 }),
   });
 }
 
@@ -211,7 +211,7 @@ export function composeNoir(req: TrackRequest): Score {
   return b.build({
     key: keyName(tonic, 'minor'),
     progression: 'line cliché',
-    fx: trackFx({ gain: 0.7, lowpass: lerp(5000, 10000, B), highpass: 40, wow: 0.4 + G * 1.5, wowRate: 0.4, flutter: G * 0.04, drive: 0.06 + G * 0.2, reverbTone: 4500, reverbLevel: 1.1 }),
+    fx: trackFx({ gain: 0.59, lowpass: lerp(5000, 10000, B), highpass: 40, wow: 0.4 + G * 1.5, wowRate: 0.4, flutter: G * 0.04, drive: 0.06 + G * 0.2, reverbTone: 4500, reverbLevel: 1.1 }),
   });
 }
 
@@ -277,6 +277,6 @@ export function composeSleep(req: TrackRequest): Score {
   return b.build({
     key: keyName(tonic, 'major'),
     progression: tpl,
-    fx: trackFx({ gain: 0.95, lowpass: lerp(3000, 6000, B), highpass: 45, wow: 0.3, wowRate: 0.2, flutter: 0, drive: 0, reverbTone: 4000, reverbLevel: 1.5 }),
+    fx: trackFx({ gain: 1.37, lowpass: lerp(3000, 6000, B), highpass: 45, wow: 0.3, wowRate: 0.2, flutter: 0, drive: 0, reverbTone: 4000, reverbLevel: 1.5 }),
   });
 }

@@ -159,6 +159,6 @@ export function composeFanfare(req: TrackRequest): Score {
   return b.build({
     key: keyName(tonic, tpl.scale),
     progression: tpl.prog,
-    fx: trackFx({ gain: 0.78, lowpass: lerp(7000, 14000, B), highpass: 35, wow: 0, wowRate: 0.4, flutter: 0, drive: 0.04, reverbTone: 6000, reverbLevel: 1.3 }),
+    fx: trackFx({ gain: 1.02, lowpass: lerp(7000, 14000, B), highpass: 35, wow: 0, wowRate: 0.4, flutter: 0, drive: 0.04, reverbTone: 6000, reverbLevel: 1.3 }),
   });
 }

@@ -151,7 +151,7 @@ export function composeTruckerCountry(req: TrackRequest): Score {
     key: keyName(tonic, 'major'),
     progression: `${waltz ? 'waltz' : 'two-step'}: ${verseTpl} / ${chorusTpl}`,
     fx: trackFx({
-      gain: 0.62,
+      gain: 0.51,
       lowpass: lerp(5500, 11000, B),
       highpass: 40,
       wow: 0.4 + G * 1.6,
