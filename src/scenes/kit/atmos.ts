@@ -1,6 +1,7 @@
 // Atmosphere: haze, drifting fog banks, light pools, beams, motes and rain. These are what
 // make a flat diorama read as a place with air in it. All of them blend with dithered
-// (quantized) alpha so they stay pixel art rather than smooth airbrush.
+// (quantized) alpha so they stay pixel art rather than smooth airbrush, and all of them
+// respect g.clip() (so haze can be confined to a window, say).
 //
 // Typical moody recipe for a scene:
 //   background: draw flat → g.lighting(0.4) + g.light(lampX, lampY, 90, 0.9) → haze(…) on the far planes
@@ -30,12 +31,13 @@ export function haze(g: Gfx, c: Color, y0: number, y1: number, a0: number, a1: n
   const cg = green(c);
   const cb = blue(c);
   const b = g.buf;
-  for (let y = Math.max(from, g.top); y < Math.min(to, g.bottom); y++) {
+  const [kl, kt, kr, kb] = g.clipBounds;
+  for (let y = Math.max(Math.floor(from), g.top + kt); y < Math.min(Math.ceil(to), g.top + kb); y++) {
     const t = smooth((y - y0) / (y1 - y0 || 1));
     const a = a0 + (a1 - a0) * t;
     if (a <= 0.004) continue;
     const row = (y - g.oy) * g.w;
-    for (let bx = 0; bx < g.w; bx++) {
+    for (let bx = kl; bx < kr; bx++) {
       const q = Math.floor(a * steps + bayer8(bx + g.ox, y)) / steps;
       if (q > 0) blendAt(b, row + bx, cr, cg, cb, (q * 256) | 0);
     }
@@ -118,9 +120,10 @@ export class Fog {
     const b = g.buf;
     const off = Math.floor(t * speed);
     const h = y1 - y0 || 1;
-    const bx0 = Math.max(0, Math.floor(x0) - g.ox);
-    const bx1 = Math.min(g.w, Math.ceil(x1) - g.ox);
-    for (let y = Math.max(Math.floor(y0), g.top); y < Math.min(Math.ceil(y1), g.bottom); y++) {
+    const [kl, kt, kr, kb] = g.clipBounds;
+    const bx0 = Math.max(kl, Math.floor(x0) - g.ox);
+    const bx1 = Math.min(kr, Math.ceil(x1) - g.ox);
+    for (let y = Math.max(Math.floor(y0), g.top + kt); y < Math.min(Math.ceil(y1), g.top + kb); y++) {
       const u = (y - y0) / h;
       const prof = shape === 'band' ? Math.sin(Math.PI * u) : shape === 'ground' ? smooth(u * 1.6) : smooth((1 - u) * 1.6);
       const ra = alpha * prof;
@@ -147,10 +150,11 @@ export function lightPool(g: Gfx, cx: number, cy: number, rx: number, ry: number
   const g0 = green(c) * k;
   const b0 = blue(c) * k;
   const b = g.buf;
-  const x0 = Math.max(0, Math.floor(cx - rx) - g.ox);
-  const x1 = Math.min(g.w - 1, Math.ceil(cx + rx) - g.ox);
-  const y0 = Math.max(0, Math.floor(cy - ry) - g.oy);
-  const y1 = Math.min(g.h - 1, Math.ceil(cy + ry) - g.oy);
+  const [kl, kt, kr, kb] = g.clipBounds;
+  const x0 = Math.max(kl, Math.floor(cx - rx) - g.ox);
+  const x1 = Math.min(kr - 1, Math.ceil(cx + rx) - g.ox);
+  const y0 = Math.max(kt, Math.floor(cy - ry) - g.oy);
+  const y1 = Math.min(kb - 1, Math.ceil(cy + ry) - g.oy);
   for (let by = y0; by <= y1; by++) {
     const dy = (by + g.oy + 0.5 - cy) / ry;
     const row = by * g.w;
@@ -186,10 +190,11 @@ export function beam(g: Gfx, x0: number, y0: number, x1: number, y1: number, w0:
   const nx = -dy / len;
   const ny = dx / len;
   const hw = Math.max(w0, w1) / 2 + 1;
-  const minX = Math.max(g.left, Math.floor(Math.min(x0, x1) - hw));
-  const maxX = Math.min(g.right - 1, Math.ceil(Math.max(x0, x1) + hw));
-  const minY = Math.max(g.top, Math.floor(Math.min(y0, y1) - hw));
-  const maxY = Math.min(g.bottom - 1, Math.ceil(Math.max(y0, y1) + hw));
+  const [kl, kt, kr, kb] = g.clipBounds;
+  const minX = Math.max(g.left + kl, Math.floor(Math.min(x0, x1) - hw));
+  const maxX = Math.min(g.left + kr - 1, Math.ceil(Math.max(x0, x1) + hw));
+  const minY = Math.max(g.top + kt, Math.floor(Math.min(y0, y1) - hw));
+  const maxY = Math.min(g.top + kb - 1, Math.ceil(Math.max(y0, y1) + hw));
   const r0 = red(c) * k;
   const g0 = green(c) * k;
   const b0 = blue(c) * k;
@@ -271,9 +276,10 @@ export function flicker(t: number, seed = 0, depth = 0.12, speed = 7): number {
  */
 export function gloom(g: Gfx, x: number, y: number, w: number, h: number, k: number, fromTop = false, steps = 8) {
   const b = g.buf;
-  const bx0 = Math.max(0, Math.floor(x) - g.ox);
-  const bx1 = Math.min(g.w, Math.floor(x + w) - g.ox);
-  for (let yy = Math.max(Math.floor(y), g.top); yy < Math.min(Math.floor(y + h), g.bottom); yy++) {
+  const [kl, kt, kr, kb] = g.clipBounds;
+  const bx0 = Math.max(kl, Math.floor(x) - g.ox);
+  const bx1 = Math.min(kr, Math.floor(x + w) - g.ox);
+  for (let yy = Math.max(Math.floor(y), g.top + kt); yy < Math.min(Math.floor(y + h), g.top + kb); yy++) {
     const u = (yy - y) / (h || 1);
     const s = smooth(fromTop ? 1 - u : u) * k;
     const row = (yy - g.oy) * g.w;
@@ -290,14 +296,15 @@ export function gloom(g: Gfx, x: number, y: number, w: number, h: number, k: num
 /** Rim light: brighten the pixels of an existing silhouette along one side (additive). */
 export function rimLight(g: Gfx, x: number, y: number, w: number, h: number, isSubject: (c: Color) => boolean, c: Color, k: number, fromLeft = true) {
   const b = g.buf;
-  for (let yy = Math.max(Math.floor(y), g.top); yy < Math.min(Math.floor(y + h), g.bottom); yy++) {
+  const [kl, kt, kr, kb] = g.clipBounds;
+  for (let yy = Math.max(Math.floor(y), g.top + kt); yy < Math.min(Math.floor(y + h), g.top + kb); yy++) {
     const row = (yy - g.oy) * g.w;
     let prevIn = false;
     const xs = fromLeft ? Math.floor(x) : Math.floor(x + w) - 1;
     const step = fromLeft ? 1 : -1;
     for (let n = 0; n < w; n++) {
       const xx = xs + n * step;
-      if (xx < g.left || xx >= g.right) continue;
+      if (xx - g.ox < kl || xx - g.ox >= kr) continue;
       const i = row + (xx - g.ox);
       const inside = isSubject(b[i]!);
       if (inside && !prevIn) {
@@ -325,12 +332,13 @@ export function reflectDown(g: Gfx, x0: number, x1: number, footY: number, h: nu
   const f = g.frame;
   const bgb = g.bg;
   const b = g.buf;
+  const [kl, kt, kr, kb] = g.clipBounds;
   const bx0 = Math.max(0, Math.floor(x0) - g.ox);
   const bx1 = Math.min(g.w, Math.ceil(x1) - g.ox);
   for (let k = 0; k < h; k++) {
     const sy = Math.floor(footY) - 1 - k - g.oy;
     const dy = Math.floor(footY) + k - g.oy;
-    if (sy < 0 || dy >= g.h || dy < 0) continue;
+    if (sy < 0 || dy >= kb || dy < kt) continue;
     const q = Math.floor(alpha * (1 - k / h) * 6 + 0.5) / 6;
     if (q <= 0) continue;
     const wob = ripple ? Math.round(Math.sin(t * 3 + k * 0.9) * ripple * (k / h)) : 0;
@@ -339,7 +347,7 @@ export function reflectDown(g: Gfx, x0: number, x1: number, footY: number, h: nu
       const c = f[si]!;
       if (c === bgb[si]) continue;
       const tx = bx + wob;
-      if (tx < 0 || tx >= g.w) continue;
+      if (tx < kl || tx >= kr) continue;
       blendAt(b, dy * g.w + tx, c & 255, (c >>> 8) & 255, (c >>> 16) & 255, (q * 256) | 0);
     }
   }

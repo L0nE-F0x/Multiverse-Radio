@@ -163,6 +163,11 @@ export class Gfx {
     this.cb = this.h;
   }
 
+  /** The clip rectangle in buffer pixels, [left, top, right, bottom), for helpers that write `buf` directly. */
+  get clipBounds(): readonly [number, number, number, number] {
+    return [this.cl, this.ct, this.cr, this.cb];
+  }
+
   // World-space extents of the view.
   get left() {
     return this.ox;
