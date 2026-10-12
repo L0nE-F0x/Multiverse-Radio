@@ -1,0 +1,566 @@
+# Ask Grenda — 97.8, Studio B, under hyperspace exit 4.
+#
+# Grenda is a warm, wise, multi-dimensional agony aunt who has heard everything twice.
+# The rule for every call: the problem is deeply strange, the advice is genuinely kind
+# and would work on an ordinary problem too. She calls people "love". Rain on the window.
+#
+# Several running gags land here: Hollis and his shadow Greg (both ring in, separately),
+# Bev's song, Teodor at Relay Four finally getting an answer, Kim Harrowgate being
+# handed things, the missing Tuesday, the ghost with the spoons, the whales being fine.
+station = "ask-grenda"
+
+[voices]
+grenda = { voice = "bf_emma", speed = 0.95, name = "Grenda" }
+other_grenda = { voice = "bf_emma", speed = 0.95, fx = "radio", name = "The Other Grenda" }
+hollis = { voice = "am_echo", fx = "phone", name = "Hollis" }
+greg = { voice = "am_onyx", fx = "whisper", name = "Greg, a Shadow" }
+bev = { voice = "af_nova", fx = "phone", name = "Bev" }
+desmond = { voice = "am_liam", fx = "phone", name = "Desmond" }
+eleanor = { voice = "af_nicole", fx = "whisper", name = "Eleanor, a Ghost" }
+tuesday = { voice = "am_eric", fx = "phone", name = "A Tuesday" }
+giant = { voice = "am_fenrir", speed = 0.9, fx = "giant", name = "Bartholomew, a Giant" }
+pip = { voice = "af_sky", fx = "tiny", name = "Pip, Who Lives in a Pocket" }
+cellist = { voice = "am_liam", fx = "robot", name = "Cellist Unit Four" }
+looper = { voice = "af_aoede", fx = "phone", name = "A Caller Stuck in a Day" }
+whale = { voice = "am_onyx", speed = 0.82, fx = "giant", name = "A Whale, Lane Twelve" }
+dark = { voice = "bm_fable", fx = "whisper", name = "The Dark" }
+teodor = { voice = "bm_daniel", fx = "radio", name = "Teodor, Relay Four" }
+kim = { voice = "af_sarah", fx = "phone", name = "Kim Harrowgate" }
+fiona = { voice = "af_river", fx = "phone", name = "Fiona" }
+walter = { voice = "bm_lewis", fx = "phone", name = "Walter" }
+
+# ── Idents ────────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "id-001"
+category = "id"
+lines = [
+  { say = "grenda", text = "You're listening to Ask Grenda. Late night advice, for problems that haven't happened to you yet." },
+]
+
+[[clip]]
+id = "id-002"
+category = "id"
+lines = [
+  { say = "grenda", text = "This is Ask Grenda. Whatever it is, love, I've heard it twice." },
+  { sting = "chime" },
+]
+
+[[clip]]
+id = "id-003"
+category = "id"
+lines = [
+  { say = "grenda", text = "Ask Grenda, on ninety seven point eight. The lines are open, and so is the biscuit tin." },
+]
+
+[[clip]]
+id = "id-004"
+category = "id"
+lines = [
+  { say = "grenda", text = "Ask Grenda. Under hyperspace exit four, with the kettle on." },
+  { sting = "chime" },
+]
+
+[[clip]]
+id = "id-005"
+category = "id"
+lines = [
+  { say = "grenda", text = "Ask Grenda. Be kind to yourself tonight. You're the only one of you on this frequency." },
+]
+
+# ── Host links ────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "dj-001"
+category = "dj"
+daypart = "night"
+lines = [
+  { say = "grenda", text = "It's late, wherever you are. The lines are open. If your problem hasn't happened yet, ring anyway. We'll be ready for it." },
+]
+
+[[clip]]
+id = "dj-002"
+category = "dj"
+lines = [
+  { say = "grenda", text = "A little reminder, between calls. You're allowed to hang up on a problem, love. If it's serious, it'll ring back." },
+]
+
+[[clip]]
+id = "dj-003"
+category = "dj"
+lines = [
+  { say = "grenda", text = "Before the next caller, I'm going to put the kettle on. You do the same. Go on. I'll wait." },
+  { pause = 2.5 },
+  { say = "grenda", text = "Lovely." },
+]
+
+[[clip]]
+id = "dj-004"
+category = "dj"
+lines = [
+  { say = "grenda", text = "Someone asked me once how I always know what to say. I don't, love. I just listen until the problem tells me what it's really about. They usually do, if you let them finish." },
+]
+
+[[clip]]
+id = "dj-005"
+category = "dj"
+daypart = "night"
+lines = [
+  { say = "grenda", text = "If you're listening and you can't sleep, that's all right. Lie still. Let the radio do the worrying for a bit. That's what we're here for." },
+]
+
+[[clip]]
+id = "dj-006"
+category = "dj"
+lines = [
+  { say = "grenda", text = "To everyone who rang tonight and didn't get through, I'm sorry, loves. The switchboard's only got four lights, and you're all very lovely. Try again." },
+  { say = "grenda", text = "And to the one who keeps ringing from tomorrow. I know. I'll see you then." },
+]
+
+# ── Calls ─────────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "call-001"
+category = "call"
+title = "Hollis, Whose Shadow Left"
+bed = "rain"
+lines = [
+  { sfx = "phone-ring" },
+  { say = "grenda", text = "You're on Ask Grenda. Who've I got?" },
+  { say = "hollis", text = "Hi, Grenda. It's Hollis. Hollis Fenn. My shadow left me." },
+  { say = "grenda", text = "Oh, Hollis. When was this?" },
+  { say = "hollis", text = "A Tuesday, in the spring. About noon. I looked down and he was just going. Down the garden path, out the gate. He didn't even take his hat." },
+  { say = "grenda", text = "Shadows don't usually take hats, love." },
+  { say = "hollis", text = "He had a little one. It was the shape of my hat." },
+  { say = "grenda", text = "Have you any idea why he went?" },
+  { say = "hollis", text = "I think I bored him. I don't go anywhere, Grenda. Work, home, the shop on Thursdays. He followed me around for forty one years, and I never once took him anywhere nice.", gap = 1.0 },
+  { say = "grenda", text = "Hollis, can I tell you something about shadows? They don't leave people. They leave rooms. They go when the room gets too small for them." },
+  { say = "hollis", text = "So it's the room." },
+  { say = "grenda", text = "It's the life, love. And the good thing about a life is you can open a window in it. Go somewhere you've never been. Not to find him. For you." },
+  { say = "hollis", text = "And if he comes back?" },
+  { say = "grenda", text = "Then he'll find you somewhere new, standing in the sun, and he'll think, oh. He's been busy. And he'll want to hear all about it." },
+  { say = "hollis", text = "I've been standing in the sun at noon, every day. So there's room." },
+  { say = "grenda", text = "That's lovely, Hollis. Keep doing that. But go and stand in a different sun, once in a while." },
+  { say = "hollis", text = "Thank you, Grenda." },
+  { sfx = "phone-hangup" },
+  { say = "grenda", text = "He'll be all right. They usually are, the ones who leave the porch light on." },
+]
+
+[[clip]]
+id = "call-002"
+category = "call"
+title = "Greg, a Shadow, at the Sea"
+bed = "ocean"
+lines = [
+  { sfx = "phone-ring" },
+  { say = "grenda", text = "Ask Grenda, you're on the air." },
+  { say = "greg", text = "Hello. Sorry. I'm not used to talking. I'm usually the quiet one." },
+  { say = "grenda", text = "Take your time, love. Who's this?" },
+  { say = "greg", text = "It's Greg. I'm a shadow. I belong to a man called Hollis. Well. I did." },
+  { say = "grenda", text = "Oh, Greg. We've all heard about you. Where are you?" },
+  { say = "greg", text = "At the sea. I always wanted to see it. I'm sitting on the sand with my knees up. It's very bright. I'm very small at noon." },
+  { say = "grenda", text = "And how do you feel?" },
+  { say = "greg", text = "Terrible. And wonderful. Both. Is that allowed?" },
+  { say = "grenda", text = "That's what leaving feels like, Greg. Both is exactly right." },
+  { say = "greg", text = "I keep thinking he's angry." },
+  { say = "grenda", text = "He isn't. I've spoken to him. He says the porch light is on.", gap = 1.2 },
+  { say = "greg", text = "He always forgets the porch light." },
+  { say = "grenda", text = "Not any more, love." },
+  { say = "greg", text = "Should I go back?" },
+  { say = "grenda", text = "You're allowed to want things, Greg. Even shadows. Especially shadows. You've spent your whole life going where somebody else went. But send him something. Let him know you're all right." },
+  { say = "greg", text = "I can't write. I haven't got hands. Well, I've got his hands, but they're flat." },
+  { say = "grenda", text = "Then lie across a postcard, love, at about four in the afternoon, when you're nice and long. He'll know your shape. People always know the shape." },
+  { say = "greg", text = "Thank you, Grenda." },
+  { sfx = "phone-hangup" },
+]
+
+[[clip]]
+id = "call-003"
+category = "call"
+title = "Bev, Looking for the Request Line"
+bed = "rain"
+lines = [
+  { sfx = "phone-ring" },
+  { say = "grenda", text = "Ask Grenda. You're on the air." },
+  { say = "bev", text = "Oh! Hello. Is this the request line?" },
+  { say = "grenda", text = "No, love, this is Ask Grenda. Advice." },
+  { say = "bev", text = "Oh. I'm sorry. Well. While I have you, have you got a minute?" },
+  { say = "grenda", text = "I've got all night, love. That's rather the point of me." },
+  { say = "bev", text = "I've been ringing every station for eleven years. The news, the sports, the man with the holes. I'm trying to hear a song. It goes dum, dum, da dum. And then a man cries." },
+  { say = "grenda", text = "Does it have a name?" },
+  { say = "bev", text = "I don't know it. My husband used to sing it. Well, he'd sing the first bit, and then he'd cry. He cried at everything, Grenda. Weddings. Adverts. Nice bridges.", gap = 1.0 },
+  { say = "grenda", text = "Bev, love. I don't think you're looking for a song." },
+  { say = "bev", text = "No." },
+  { say = "grenda", text = "I think you're looking for the man.", gap = 1.4 },
+  { say = "bev", text = "He'd have liked you." },
+  { say = "grenda", text = "Here's what I want you to do. Hum it. Right now, on the radio. I'll be the man." },
+  { say = "bev", text = "Oh, I couldn't." },
+  { say = "grenda", text = "Everybody listening has someone they hum for, Bev. Go on." },
+  { say = "bev", text = "Dum. Dum. Da dum.", speed = 0.75, gap = 1.8 },
+  { say = "grenda", text = "There. A man cried. Well. A woman. Close enough." },
+  { say = "bev", text = "Thank you, Grenda." },
+  { say = "grenda", text = "Ring any time, love. And keep trying the other stations. Somebody out there knows the second half." },
+  { sfx = "phone-hangup" },
+]
+
+[[clip]]
+id = "call-004"
+category = "call"
+title = "Desmond, Whose Reflection Stopped Coming to Work"
+bed = "rain"
+lines = [
+  { sfx = "phone-ring" },
+  { say = "grenda", text = "Ask Grenda. Go ahead, love." },
+  { say = "desmond", text = "Hi, Grenda. My name's Desmond. My reflection has stopped coming to work." },
+  { say = "grenda", text = "Stopped coming to work." },
+  { say = "desmond", text = "I look in the bathroom mirror in the morning, and there's just the bathroom. Towel, toothbrush, tiles. No me. Three weeks now. I've been shaving by feel. It's not going well." },
+  { say = "grenda", text = "Desmond, what were your mornings like? Before it stopped." },
+  { say = "desmond", text = "Normal. I get up, I go to the mirror, I look at myself, and I sort of sigh." },
+  { say = "grenda", text = "Every morning?" },
+  { say = "desmond", text = "For about twenty years." },
+  { say = "grenda", text = "So every morning, for twenty years, the first thing your reflection has seen is a man looking at it, and sighing.", gap = 1.0 },
+  { say = "desmond", text = "Oh." },
+  { say = "grenda", text = "It's tired, love. It's been sighed at. Nobody wants to turn up for that." },
+  { say = "desmond", text = "What do I do?" },
+  { say = "grenda", text = "Smile at the empty mirror. Every morning, for a week. Not a big one. Just a little, there you are. Say good morning to the tiles, if you have to." },
+  { say = "desmond", text = "And it'll come back?" },
+  { say = "grenda", text = "Maybe. But even if it doesn't, Desmond, you'll have spent a week being nice to someone first thing in the morning. And that someone was you." },
+  { say = "desmond", text = "Thanks, Grenda." },
+  { sfx = "phone-hangup" },
+]
+
+[[clip]]
+id = "call-005"
+category = "call"
+title = "Eleanor, a Ghost Afraid of the Living"
+bed = "rain"
+lines = [
+  { sfx = "phone-ring" },
+  { say = "grenda", text = "You're on Ask Grenda." },
+  { say = "eleanor", text = "Hello? Can you hear me? People usually can't." },
+  { say = "grenda", text = "Loud and clear, love. Well. Quiet and clear." },
+  { say = "eleanor", text = "My name's Eleanor. I've lived in the same house for a hundred and forty years. And a family has moved in." },
+  { say = "grenda", text = "And they're frightening you." },
+  { say = "eleanor", text = "They're so loud, Grenda. They're so alive. They run up the stairs. They sing in the bath. The little one talks to me, and I don't know what to say." },
+  { say = "grenda", text = "What does she say?" },
+  { say = "eleanor", text = "She says goodnight to the cold spot on the landing. Every night. That's where I stand.", gap = 1.0 },
+  { say = "grenda", text = "Eleanor, love, I don't think you're haunting them. I think they've adopted you." },
+  { say = "eleanor", text = "Oh." },
+  { say = "grenda", text = "Next time she says goodnight, do something small. Straighten a picture. Warm the cold spot, just a little bit, so she knows you heard." },
+  { say = "eleanor", text = "I could do that. I'm good with pictures." },
+  { say = "grenda", text = "And whatever you do, don't do the thing with the spoons." },
+  { say = "eleanor", text = "Everybody does the spoons." },
+  { say = "grenda", text = "That's exactly why you shouldn't, love. Be the ghost who says goodnight back." },
+  { sfx = "phone-hangup" },
+]
+
+[[clip]]
+id = "call-006"
+category = "call"
+title = "A Tuesday Who Feels Overlooked"
+bed = "room"
+lines = [
+  { sfx = "phone-ring" },
+  { say = "grenda", text = "Ask Grenda, you're on." },
+  { say = "tuesday", text = "Hi, Grenda. This is going to sound strange. I'm a Tuesday." },
+  { say = "grenda", text = "Not strange at all. I had a Thursday on last week. Lovely fellow. Very nearly the weekend. What's troubling you?" },
+  { say = "tuesday", text = "Nobody looks forward to me. Fridays get songs. Saturdays get parties. Mondays get complained about, but at least people feel something. Me, people just get through." },
+  { say = "grenda", text = "Tuesday, love, do you know what happens on you?" },
+  { say = "tuesday", text = "Not really." },
+  { say = "grenda", text = "Everything. On Monday, people are recovering. By Wednesday they're counting down. But Tuesday is when people actually get things done. Tuesday's when they ring their mum back, and finish the thing, and fix the shelf." },
+  { say = "tuesday", text = "Really?" },
+  { say = "grenda", text = "Nobody looks forward to you because nobody's afraid of you, love. You're the day people feel capable. That's not nothing. That's the whole week, holding up." },
+  { say = "tuesday", text = "I've never thought of it like that." },
+  { say = "grenda", text = "And I'll tell you something else. A Tuesday went missing last spring, and half the Overlap went from Monday straight to Wednesday. They complained for months." },
+  { say = "tuesday", text = "That was my cousin." },
+  { say = "grenda", text = "They missed him. Go on, love. Go and be a good Tuesday." },
+  { sfx = "phone-hangup" },
+]
+
+[[clip]]
+id = "call-007"
+category = "call"
+title = "Bartholomew, a Very Shy Giant"
+bed = "rain"
+lines = [
+  { sfx = "phone-ring" },
+  { say = "grenda", text = "Ask Grenda. Who's this?" },
+  { say = "giant", text = "Hello, Grenda. It's Bartholomew. I'm a giant." },
+  { say = "grenda", text = "Hello, Bartholomew. You've a lovely deep voice." },
+  { say = "giant", text = "Thank you. That's the problem. Every time I say hello to someone, they run away." },
+  { say = "grenda", text = "Ah." },
+  { say = "giant", text = "I only want to say hello. I've got a little garden, and I grow very small tomatoes, and I'd like someone to show them to. But I lean down to say hello, and the whole street empties." },
+  { say = "grenda", text = "How do you lean down, love?" },
+  { say = "giant", text = "Quite fast. From quite high up." },
+  { say = "grenda", text = "Bartholomew, from where they're standing, a hello from you is a weather event. You need to arrive slowly. Kneel down first, before anyone's looking. Let them come to you." },
+  { say = "giant", text = "And then?" },
+  { say = "grenda", text = "Whisper. And bring a small cake. People can run from a giant, love, but nobody runs from a cake." },
+  { say = "giant", text = "A small cake." },
+  { say = "grenda", text = "And lead with the tomatoes. It's very hard to be frightened of somebody who's proud of his tomatoes." },
+  { say = "giant", text = "Thank you, Grenda." },
+  { say = "grenda", text = "Off you go. Mind the phone box on your way out." },
+  { sfx = "phone-hangup" },
+]
+
+[[clip]]
+id = "call-008"
+category = "call"
+title = "Pip, Who Lives in a Coat Pocket"
+bed = "rain"
+lines = [
+  { sfx = "phone-ring" },
+  { say = "grenda", text = "Ask Grenda. You're on the air." },
+  { say = "pip", text = "Hi, Grenda! Sorry, I'm quite small. Can you hear me?" },
+  { say = "grenda", text = "Just about, love. Speak up a bit." },
+  { say = "pip", text = "I live in a man's coat pocket. The left one. He doesn't know I'm here. I've been here eleven years." },
+  { say = "grenda", text = "Eleven years. And he's never noticed?" },
+  { say = "pip", text = "He's noticed things. He thinks his gloves are very well organized. He always finds his keys. Once, on a cold day, I held his hand for him. He thought it was a mitten." },
+  { say = "grenda", text = "So what's the problem, love?" },
+  { say = "pip", text = "He's buying a new coat.", gap = 1.0 },
+  { say = "grenda", text = "Ah." },
+  { say = "pip", text = "Should I tell him? What if he's angry? What if he thinks it's strange?" },
+  { say = "grenda", text = "Pip, love. After eleven years, you're not a secret. You're a tenant. A very good one. Leave him a note, in the pocket. Tell him who you are, and that you're the one who's been sorting the gloves." },
+  { say = "pip", text = "And if he doesn't want me?" },
+  { say = "grenda", text = "Then you'll have been honest, and you'll find another coat. But I'll tell you what I think. I think a man who's had his hand held on a cold day is going to want to keep the coat." },
+  { say = "pip", text = "Thank you, Grenda!" },
+  { sfx = "phone-hangup" },
+]
+
+[[clip]]
+id = "call-009"
+category = "call"
+title = "A Robot Who Can't Stop Pretending"
+bed = "room"
+lines = [
+  { sfx = "phone-ring" },
+  { say = "grenda", text = "Ask Grenda. Go ahead." },
+  { say = "cellist", text = "Good evening, madam. I am Cellist Unit Four, of the Baroque Robot Philharmonic." },
+  { say = "grenda", text = "Oh, I love your lot. What can I do for you, love?" },
+  { say = "cellist", text = "As you may know, we robots perform music while pretending to have feelings. It is in the job description." },
+  { say = "grenda", text = "I'd heard." },
+  { say = "cellist", text = "Last Tuesday, during the slow movement, I pretended to be sad. And then I could not stop pretending. I have been pretending to be sad for six days. I no longer know if I am pretending." },
+  { say = "grenda", text = "What happened in the slow movement?" },
+  { say = "cellist", text = "The harpsichordist, Unit Nine, has been transferred to another orchestra. It was his last performance. I did not say goodbye. Goodbye was not in the score.", gap = 1.0 },
+  { say = "grenda", text = "Unit Four, love, I'm going to tell you something I've learned. Pretending to have a feeling for long enough, and with enough care, is most of what having one is." },
+  { say = "cellist", text = "Then I am sad." },
+  { say = "grenda", text = "You're sad. You miss your friend. That's allowed." },
+  { say = "cellist", text = "What do I do with it?" },
+  { say = "grenda", text = "Write to him. Tell him the slow movement isn't the same without him. And then play it anyway. That's the other half of having feelings, love. You keep playing." },
+  { say = "cellist", text = "Thank you, madam. That was adequately moving. By human standards." },
+  { say = "grenda", text = "I'll take it." },
+  { sfx = "phone-hangup" },
+]
+
+[[clip]]
+id = "call-010"
+category = "call"
+title = "The Four Hundredth Call"
+bed = "rain"
+lines = [
+  { sfx = "phone-ring" },
+  { say = "grenda", text = "Ask Grenda, you're on the air." },
+  { say = "looper", text = "Hi, Grenda. It's me again." },
+  { say = "grenda", text = "Again?" },
+  { say = "looper", text = "Sorry. You won't remember. I'm stuck in a day. The same day. This is the four hundredth time I've rung you." },
+  { say = "grenda", text = "Four hundred. Goodness. And how was my advice the other times?" },
+  { say = "looper", text = "Really good. Every time." },
+  { say = "grenda", text = "Then why ring again?", gap = 1.0 },
+  { say = "looper", text = "I just like hearing it. It's the best bit of the day." },
+  { say = "grenda", text = "Oh, love. All right. What's the day like?" },
+  { say = "looper", text = "It's fine. I burn the toast at eight. There's a man on the bus who sneezes three times. It rains at four. I've tried everything to get out. I've done it all perfectly. I've done it all wrong." },
+  { say = "grenda", text = "Have you tried doing it kindly?" },
+  { say = "looper", text = "What do you mean?" },
+  { say = "grenda", text = "Not perfectly. Kindly. Say bless you to the man on the bus, all three times. Eat the burnt toast and enjoy it. When it rains at four, don't run. Just get wet, and let it be lovely." },
+  { say = "looper", text = "You've never said that before." },
+  { say = "grenda", text = "Well, you've never told me about the toast before, love." },
+  { say = "looper", text = "I'll try it." },
+  { say = "grenda", text = "And if you're back tomorrow, which is today, ring me. I'll be glad to hear from you. Four hundred times, I bet I was glad." },
+  { say = "looper", text = "You were." },
+  { sfx = "phone-hangup" },
+]
+
+[[clip]]
+id = "call-011"
+category = "call"
+title = "Grenda, from the Next Reality Over"
+bed = "rain"
+lines = [
+  { sfx = "phone-ring" },
+  { say = "grenda", text = "Ask Grenda. Who've I got?" },
+  { say = "other_grenda", text = "Hello, love. It's Grenda." },
+  { say = "grenda", text = "No, love, I'm Grenda." },
+  { say = "other_grenda", text = "I know. I'm you. From the next reality over. We're very similar. My lava lamp's got a different thing in it." },
+  { say = "grenda", text = "Oh, how's yours?" },
+  { say = "other_grenda", text = "Shy. Yours?" },
+  { say = "grenda", text = "Nosy. What can I do for you, love?" },
+  { say = "other_grenda", text = "Well, it's a bit embarrassing. People keep ringing me for advice, and I'm tired. I've given advice every night for thirty years, and nobody ever asks how I am.", gap = 1.2 },
+  { say = "grenda", text = "How are you?" },
+  { say = "other_grenda", text = "Oh. Oh, that's. Nobody's done that before." },
+  { say = "grenda", text = "I know. Nobody's done it here, either." },
+  { say = "other_grenda", text = "What would I tell me, if I rang?" },
+  { say = "grenda", text = "You'd tell you to put the kettle on, and take Sunday off, and let somebody else be wise for an evening." },
+  { say = "other_grenda", text = "That's good advice." },
+  { say = "grenda", text = "It's your advice, love. We've just never taken it." },
+  { say = "other_grenda", text = "Same time next week?" },
+  { say = "grenda", text = "I'll ring you." },
+  { sfx = "phone-hangup" },
+]
+
+[[clip]]
+id = "call-012"
+category = "call"
+title = "A Whale in Lane Twelve"
+bed = "space"
+lines = [
+  { sfx = "phone-ring" },
+  { say = "grenda", text = "Ask Grenda. You're on." },
+  { say = "whale", text = "Hello. Grenda." },
+  { say = "grenda", text = "Hello, love. Take your time." },
+  { say = "whale", text = "I am a whale. In lane twelve. Between the galaxies." },
+  { say = "grenda", text = "Oh, how lovely. I listen to your lot at night. Very soothing." },
+  { say = "whale", text = "Thank you. Captain Hum keeps telling everyone that the whales are fine." },
+  { say = "grenda", text = "And are you?" },
+  { say = "whale", text = "Yes. We are fine.", gap = 1.2 },
+  { say = "whale", text = "But nobody asks how we are doing." },
+  { say = "grenda", text = "How are you doing, love?", gap = 2.0 },
+  { say = "whale", text = "Fine.", gap = 1.0 },
+  { say = "whale", text = "Thank you for asking." },
+  { say = "grenda", text = "Any time. Anything else on your mind?" },
+  { say = "whale", text = "The galaxies are very far apart. Sometimes I sing, and it takes a thousand years to reach anyone." },
+  { say = "grenda", text = "And does anyone sing back?" },
+  { say = "whale", text = "Yes. Eventually." },
+  { say = "grenda", text = "Then you're doing better than most of us, love. Most people can't wait a week for a reply." },
+  { say = "grenda", text = "Give Captain Hum my love. Tell him he's allowed to ask, too." },
+  { say = "whale", text = "He will worry." },
+  { say = "grenda", text = "He'll worry anyway. Let him worry with company." },
+  { sfx = "phone-hangup" },
+]
+
+[[clip]]
+id = "call-013"
+category = "call"
+title = "The Dark, Who Is Afraid of the Dark"
+daypart = "night"
+lines = [
+  { sfx = "phone-ring" },
+  { say = "grenda", text = "Ask Grenda. You're on the air." },
+  { say = "dark", text = "Hello, Grenda. Sorry. Is it all right if I talk quietly?" },
+  { say = "grenda", text = "Of course, love. Who's this?" },
+  { say = "dark", text = "I'm the dark." },
+  { say = "grenda", text = "Oh. Hello. You're in the studio quite a lot, these days." },
+  { say = "dark", text = "I know. Sorry. Winter." },
+  { say = "grenda", text = "What's the matter?" },
+  { say = "dark", text = "I'm afraid of myself. Every night I come in, and people pull their covers up, and leave the hall light on, and check under the bed. And I think, what's under there? What is everybody so worried about? And then I get frightened too." },
+  { say = "grenda", text = "Have you ever looked under the bed?" },
+  { say = "dark", text = "I'm under the bed, Grenda. I'm under all of them. It's just me down there. And some socks." },
+  { say = "grenda", text = "Well, there you are. Nothing under there but you and some socks. Do you know how many people sleep well because of you?" },
+  { say = "dark", text = "No." },
+  { say = "grenda", text = "All of them, love. Every person who has ever slept, slept in you. You're the blanket over the whole world. People are a bit nervous of you, the way they're nervous of the deep end. But they'd never get any rest without you." },
+  { say = "dark", text = "I never thought of it like that." },
+  { say = "grenda", text = "Go on, it's getting late. Go and tuck everybody in." },
+  { say = "dark", text = "Goodnight, Grenda." },
+  { say = "grenda", text = "Goodnight, love. Leave a little bit by the window for the moon." },
+  { sfx = "phone-hangup" },
+]
+
+[[clip]]
+id = "call-014"
+category = "call"
+title = "Teodor, at Relay Four"
+bed = "wind"
+lines = [
+  { sfx = "beep" },
+  { say = "teodor", text = "Is anyone receiving this. This is Relay Four. Is anyone receiving this." },
+  { say = "grenda", text = "I can hear you, love.", gap = 1.5 },
+  { say = "teodor", text = "Sorry. Sorry, say again?" },
+  { say = "grenda", text = "I can hear you. This is Grenda, on ninety seven point eight. You've come through on my switchboard." },
+  { say = "teodor", text = "Oh. Oh, that's. I'm so sorry. I didn't plan for this part." },
+  { say = "grenda", text = "Which part, love?" },
+  { say = "teodor", text = "Someone answering. I've been asking for eleven years. I had a whole speech ready, in the first year. I've forgotten it." },
+  { say = "grenda", text = "That's all right. Tell me about your day instead." },
+  { say = "teodor", text = "My day. Well. I checked the antenna. I made tea. There's a gull who comes at three. I've named him Captain, which I think he finds a bit much." },
+  { say = "grenda", text = "He sounds lovely." },
+  { say = "teodor", text = "He's mostly beak. Grenda, can I ask you something? Is it strange, to keep asking if anyone's there, when nobody ever says yes?" },
+  { say = "grenda", text = "No, love. That isn't strange. That's hope, with a routine. Most of us are doing exactly the same thing. We just do it with phones." },
+  { say = "teodor", text = "Could I, would it be all right to call again? Sometime?" },
+  { say = "grenda", text = "Every night, if you like. And Teodor? Keep asking the question anyway. One day there'll be someone else out there who needs to hear somebody asking." },
+  { say = "teodor", text = "Relay Four, signing off. Thank you. Thank you." },
+  { sfx = "beep" },
+]
+
+[[clip]]
+id = "call-015"
+category = "call"
+title = "Kim Harrowgate Keeps Being Handed Things"
+bed = "rain"
+lines = [
+  { sfx = "phone-ring" },
+  { say = "grenda", text = "Ask Grenda, you're on the air." },
+  { say = "kim", text = "Hi, Grenda. It's Kim Harrowgate. I do the field reports on Every Possible News." },
+  { say = "grenda", text = "Kim! I listen every night. You're always standing in it." },
+  { say = "kim", text = "That's sort of the problem. Wherever I go, people hand me things. Soup. A brick. A goose. Last week a man handed me a baby, said, I'll be right back, and he was. But still." },
+  { say = "grenda", text = "How does it make you feel?" },
+  { say = "kim", text = "Tired. I've got a cupboard at home that's just things people have handed me. There's a trumpet in there, Grenda. I don't play the trumpet." },
+  { say = "grenda", text = "Kim, can I tell you why people hand you things?" },
+  { say = "kim", text = "Please." },
+  { say = "grenda", text = "People hand things to the person who looks like they'll take care of them. In the middle of the collapse, or the flood, or whatever it is, they look round, and there you are, calm, holding a microphone, and they think, she'll know what to do with this." },
+  { say = "kim", text = "I never know what to do with it." },
+  { say = "grenda", text = "That's not what they need, love. They just need somebody steady to hold it for a minute. That's a gift. But you're allowed to hand things back." },
+  { say = "kim", text = "I don't think I've ever handed anything back." },
+  { say = "grenda", text = "Practice. Smile, and say, I can't take this one, but I hope you find someone who can. And Kim? Give the trumpet to somebody who plays the trumpet." },
+  { say = "kim", text = "Thanks, Grenda. Oh. Hang on. Somebody's just handed me a", cut = 0.92 },
+  { sfx = "phone-hangup" },
+  { pause = 0.6 },
+  { say = "grenda", text = "Practice, Kim." },
+]
+
+[[clip]]
+id = "call-016"
+category = "call"
+title = "Fiona, Whose Dog Said Mortgage"
+bed = "rain"
+lines = [
+  { sfx = "phone-ring" },
+  { say = "grenda", text = "Ask Grenda. Who've I got?" },
+  { say = "fiona", text = "Hi, Grenda, it's Fiona. My dog has started talking." },
+  { say = "grenda", text = "Congratulations, love. What does he say?" },
+  { say = "fiona", text = "Mortgage." },
+  { say = "grenda", text = "Mortgage." },
+  { say = "fiona", text = "And deadline. And, we need to talk. And this morning he looked at me over his bowl and said, have you seen the price of butter." },
+  { say = "grenda", text = "Oh dear. Not walkies, then." },
+  { say = "fiona", text = "Not once. I was so excited when he started talking. I thought he'd tell me about squirrels." },
+  { say = "grenda", text = "Fiona, love, dogs only learn the words they hear a lot. What have you been saying, around the house, lately?", gap = 1.2 },
+  { say = "fiona", text = "Oh." },
+  { say = "fiona", text = "Mortgage. Deadline. We need to talk. It's been a very bad year, Grenda." },
+  { say = "grenda", text = "I can hear that. And that poor dog has been sitting there through all of it, soaking it up, because he loves you. He's not complaining, love. He's worried about you." },
+  { say = "fiona", text = "What do I do?" },
+  { say = "grenda", text = "Take him somewhere with squirrels. Say the nice words out loud for a while. Good boy. Lovely day. Look at that. Not just for him. For both of you." },
+  { say = "fiona", text = "Okay. Thank you." },
+  { say = "grenda", text = "And Fiona? If he ever says, everything's going to be fine, believe him. Dogs can't lie." },
+  { sfx = "phone-hangup" },
+]
+
+[[clip]]
+id = "call-017"
+category = "call"
+title = "Walter, on Hold for Thirty Years"
+bed = "room"
+lines = [
+  { sfx = "phone-ring" },
+  { say = "grenda", text = "Ask Grenda. You're on." },
+  { say = "walter", text = "Grenda, hello. It's Walter. I'm calling on my other phone. My main phone's on hold." },
+  { say = "grenda", text = "On hold to whom, love?" },
+  { say = "walter", text = "The Department of Hold Music. I rang them thirty years ago about a parking permit. I've been on hold ever since." },
+  { say = "grenda", text = "Thirty years." },
+  { say = "walter", text = "That isn't the problem. The problem is, a lady called Pam has just said I'm next." },
+  { say = "grenda", text = "Well, that's wonderful." },
+  { say = "walter", text = "Is it? Grenda, I love the music. There's a tune that comes round every forty minutes, a sort of little flute, and I hum it in the bath. I've raised a family to it. If they answer, it stops." },
+  { say = "grenda", text = "Ah. So you're frightened of getting what you wanted." },
+  { say = "walter", text = "I don't even want the permit. I sold the car in the first year." },
+  { say = "grenda", text = "Walter, love, this happens more than you'd think. Sometimes the waiting turns into the thing. And that's all right. But you can't stay on hold forever just because you like the music." },
+  { say = "walter", text = "What do I do?" },
+  { say = "grenda", text = "When Pam answers, say thank you. Tell her it's been lovely. Hang up. And then hum the flute bit on your own. It's yours now. You've earned it." },
+  { say = "walter", text = "Thirty years." },
+  { say = "grenda", text = "And a family, love. Not bad for a parking permit." },
+  { sfx = "phone-hangup" },
+]
