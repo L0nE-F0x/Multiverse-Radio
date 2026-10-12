@@ -1,13 +1,13 @@
-// Renders the install icons and the social card with headless Chromium:
+// Renders the install icons with headless Chromium:
 //
 //   npm run pwa:assets
 //
 // - public/icons/icon-{192,512}.png            from public/favicon.svg (transparent corners)
 // - public/icons/icon-maskable-{192,512}.png   full-bleed, artwork inside the 80% safe zone
 // - public/apple-touch-icon.png                180×180, opaque (iOS fills transparency black)
-// - public/og-image.png                        1200×630 from src/pwa/assets/og-card.html
 //
-// Re-run after changing the favicon or the card, and commit the PNGs.
+// Re-run after changing the favicon, and commit the PNGs. The social cards (og-image.png and
+// public/share/) come from `npm run share:cards` (scripts/share/).
 
 import { chromium } from '@playwright/test';
 import { mkdirSync, readFileSync } from 'node:fs';
@@ -38,19 +38,6 @@ const icons = [
   { file: 'public/apple-touch-icon.png', size: 180, scale: 0.86, background: opaque },
 ];
 
-function fontFace(family, file, weight = '400') {
-  const data = readFileSync(fromRoot('node_modules', file)).toString('base64');
-  return `@font-face { font-family: '${family}'; font-weight: ${weight}; font-style: normal;
-    src: url(data:font/woff2;base64,${data}) format('woff2'); }`;
-}
-
-const fonts = [
-  fontFace('Bebas Neue', '@fontsource/bebas-neue/files/bebas-neue-latin-400-normal.woff2'),
-  fontFace('IBM Plex Mono', '@fontsource/ibm-plex-mono/files/ibm-plex-mono-latin-400-normal.woff2'),
-  fontFace('IBM Plex Mono', '@fontsource/ibm-plex-mono/files/ibm-plex-mono-latin-600-normal.woff2', '600'),
-  fontFace('Inter Variable', '@fontsource-variable/inter/files/inter-latin-wght-normal.woff2', '100 900'),
-].join('\n');
-
 const browser = await chromium.launch();
 try {
   const page = await browser.newPage({ deviceScaleFactor: 1 });
@@ -62,13 +49,6 @@ try {
     await page.screenshot({ path: fromRoot(icon.file), omitBackground: icon.background === 'transparent' });
     console.log(`wrote ${icon.file}`);
   }
-
-  const card = readFileSync(fromRoot('src/pwa/assets/og-card.html'), 'utf8').replace('/*FONTS*/', fonts);
-  await page.setViewportSize({ width: 1200, height: 630 });
-  await page.setContent(card, { waitUntil: 'load' });
-  await page.evaluate(() => document.fonts.ready);
-  await page.screenshot({ path: fromRoot('public/og-image.png') });
-  console.log('wrote public/og-image.png');
 } finally {
   await browser.close();
 }

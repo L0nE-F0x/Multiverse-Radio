@@ -1,0 +1,246 @@
+<!doctype html>
+<!-- Share card (1200×630): a station's scene as the Nightjar's viewport under a translucent
+     "used future" HUD in the station's phosphor colour. Rendered by scripts/share/cards.mjs,
+     which injects the fonts, the scene screenshot and the station's text (see fill() there).
+     body.station = a station's card; body.site = the default og-image. -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <style>
+      /*FONTS*/
+      :root {
+        --ph: #ffb000; /* phosphor */
+        --ph-hi: color-mix(in srgb, var(--ph) 72%, #fff);
+        --ph-dim: color-mix(in srgb, var(--ph) 62%, transparent);
+        --ph-faint: color-mix(in srgb, var(--ph) 30%, transparent);
+        --glass: rgb(7 6 5 / 0.62);
+        --glow: 0 0 1px color-mix(in srgb, var(--ph) 80%, transparent),
+          0 0 14px color-mix(in srgb, var(--ph) 45%, transparent);
+        --display: 'Bebas Neue', Impact, sans-serif;
+        --mono: 'IBM Plex Mono', ui-monospace, monospace;
+        --pad: 44px;
+      }
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+      html, body { width: 1200px; height: 630px; overflow: hidden; background: #050505; }
+      body {
+        position: relative;
+        font-family: var(--mono);
+        color: var(--ph);
+        -webkit-font-smoothing: antialiased;
+        text-rendering: geometricPrecision;
+      }
+      .abs { position: absolute; }
+
+      /* ── Viewport ─────────────────────────────────────────────── */
+      .scene {
+        position: absolute;
+        left: calc((1200px - var(--scene-w, 1280px)) / 2);
+        top: var(--scene-top, -45px);
+        width: var(--scene-w, 1280px);
+        height: auto;
+        image-rendering: pixelated;
+      }
+      /* Shade the bands the HUD sits on, and the corners. */
+      .shade {
+        position: absolute;
+        inset: 0;
+        background:
+          linear-gradient(180deg, rgb(4 3 2 / 0.6) 0, rgb(4 3 2 / 0) 120px),
+          linear-gradient(0deg, rgb(4 3 2 / 0.95) 0, rgb(4 3 2 / 0.86) 130px, rgb(4 3 2 / 0.55) 230px, rgb(4 3 2 / 0) 330px),
+          radial-gradient(ellipse 60% 42% at 18% 88%, rgb(4 3 2 / 0.45), transparent),
+          radial-gradient(ellipse 75% 80% at 50% 45%, transparent 55%, rgb(0 0 0 / 0.45) 100%);
+      }
+      /* A faint phosphor wash and scanlines tie the picture to the terminal. */
+      .wash {
+        position: absolute;
+        inset: 0;
+        background: var(--ph);
+        mix-blend-mode: soft-light;
+        opacity: 0.1;
+      }
+      .scan {
+        position: absolute;
+        inset: 0;
+        background: repeating-linear-gradient(180deg, rgb(0 0 0 / 0.16) 0 1px, transparent 1px 4px);
+      }
+
+      /* ── HUD: top bar ─────────────────────────────────────────── */
+      .bar {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        height: 64px;
+        padding: 0 var(--pad);
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        background: var(--glass);
+        border-bottom: 1px solid var(--ph-faint);
+        font-size: 21px;
+        letter-spacing: 0.15em;
+        text-shadow: var(--glow);
+        white-space: nowrap;
+      }
+      .bar b { font-weight: 600; color: var(--ph-hi); }
+      .bar .dim { color: var(--ph-dim); }
+      .bar .spacer { flex: 1; }
+      .lamp {
+        width: 11px;
+        height: 11px;
+        border-radius: 50%;
+        background: var(--ph-hi);
+        box-shadow: 0 0 10px var(--ph), 0 0 3px var(--ph);
+      }
+      .bars { display: flex; align-items: flex-end; gap: 3px; height: 18px; }
+      .bars i { display: block; width: 5px; background: var(--ph); box-shadow: 0 0 6px var(--ph-faint); }
+      .bars i.off { background: var(--ph-faint); box-shadow: none; }
+
+      /* Viewport reticle corners. */
+      .corner { position: absolute; width: 26px; height: 26px; border: 0 solid var(--ph-dim); }
+      .corner.tl { left: var(--pad); top: 86px; border-width: 2px 0 0 2px; }
+      .corner.tr { right: var(--pad); top: 86px; border-width: 2px 2px 0 0; }
+
+      /* ── HUD: readout ─────────────────────────────────────────── */
+      .readout { position: absolute; left: var(--pad); right: var(--pad); bottom: 38px; }
+      .meta {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        font-size: 19px;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        white-space: nowrap;
+        text-shadow: var(--glow);
+      }
+      .freq {
+        padding: 5px 12px 4px;
+        border: 1.5px solid var(--ph);
+        background: rgb(7 6 5 / 0.5);
+        font-size: 30px;
+        font-weight: 600;
+        letter-spacing: 0.04em;
+        color: var(--ph-hi);
+        box-shadow: 0 0 14px var(--ph-faint), inset 0 0 12px var(--ph-faint);
+      }
+      .freq small { margin-left: 8px; font-size: 18px; font-weight: 400; letter-spacing: 0.12em; color: var(--ph); }
+      .rule { flex: 1; height: 1px; min-width: 40px; background: linear-gradient(90deg, var(--ph-dim), transparent); }
+      .origin {
+        color: color-mix(in srgb, var(--ph) 88%, #fff);
+        font-size: 17px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 820px;
+        padding: 4px 10px 3px;
+        background: rgb(5 4 3 / 0.55);
+        text-shadow: var(--glow), 0 1px 2px rgb(0 0 0 / 0.9);
+      }
+      .origin::before { content: 'Origin ▸ '; color: var(--ph-dim); }
+      .name {
+        margin-top: 14px;
+        font-family: var(--display);
+        font-size: 126px;
+        line-height: 0.86;
+        letter-spacing: 0.01em;
+        color: var(--ph-hi);
+        white-space: nowrap;
+        text-shadow: 0 0 2px color-mix(in srgb, var(--ph) 90%, transparent),
+          0 0 26px color-mix(in srgb, var(--ph) 45%, transparent), 0 3px 0 rgb(0 0 0 / 0.5);
+      }
+      .tagline {
+        margin-top: 12px;
+        max-width: 1060px;
+        font-size: 24px;
+        line-height: 1.36;
+        color: color-mix(in srgb, var(--ph) 55%, #fff);
+        text-shadow: 0 0 10px color-mix(in srgb, var(--ph) 30%, transparent), 0 1px 2px rgb(0 0 0 / 0.9);
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-wrap: balance;
+      }
+
+      /* ── Default card: title on top, the scene in the middle, the dial below ── */
+      body.site .shade {
+        background:
+          linear-gradient(180deg, rgb(4 3 2 / 0.86) 0, rgb(4 3 2 / 0.7) 150px, rgb(4 3 2 / 0.25) 260px, rgb(4 3 2 / 0) 330px),
+          linear-gradient(0deg, rgb(4 3 2 / 0.92) 0, rgb(4 3 2 / 0.72) 110px, rgb(4 3 2 / 0) 210px),
+          radial-gradient(ellipse 75% 80% at 50% 50%, transparent 55%, rgb(0 0 0 / 0.45) 100%);
+      }
+      body.site .corner { display: none; }
+      body.site .readout { top: 82px; bottom: 30px; display: flex; flex-direction: column; }
+      body.site .name { order: -1; margin: 0; font-size: 158px; }
+      body.site .meta { margin-top: 8px; }
+      body.site .origin::before { content: none; }
+      body.site .origin { background: none; padding: 0; }
+      body.site .tagline { margin-top: 12px; -webkit-line-clamp: 1; font-size: 22px; }
+      .dial { display: none; }
+      body.site .dial {
+        display: block;
+        position: relative;
+        height: 52px;
+        margin-top: auto;
+        border-bottom: 1px solid var(--ph-dim);
+      }
+      .dial i { position: absolute; display: block; }
+      .dial .tick { bottom: 0; width: 1px; height: 7px; background: var(--ph-faint); }
+      .dial .tick.major { height: 14px; background: var(--ph-dim); }
+      .dial .label {
+        bottom: 18px;
+        transform: translateX(-50%);
+        font-size: 14px;
+        font-style: normal;
+        letter-spacing: 0.06em;
+        color: var(--ph-dim);
+      }
+      .dial .dot {
+        bottom: 40px;
+        width: 6px;
+        height: 6px;
+        margin-left: -3px;
+        border-radius: 50%;
+        background: var(--ph);
+        box-shadow: 0 0 6px var(--ph);
+      }
+      .dial .needle {
+        bottom: -8px;
+        width: 3px;
+        height: 64px;
+        margin-left: -1.5px;
+        background: var(--ph-hi);
+        box-shadow: 0 0 12px var(--ph), 0 0 3px var(--ph);
+      }
+    </style>
+  </head>
+  <body class="station">
+    <img class="scene" alt="" />
+    <div class="shade"></div>
+    <div class="wash"></div>
+    <div class="scan"></div>
+
+    <header class="bar">
+      <span class="lamp"></span>
+      <b data-slot="brand">MULTIVERSE RADIO</b>
+      <span class="dim">·</span>
+      <span data-slot="ship">R/S NIGHTJAR</span>
+      <span class="spacer"></span>
+      <span class="dim" data-slot="status">RX LOCK</span>
+      <span class="bars"><i style="height: 6px"></i><i style="height: 9px"></i><i style="height: 12px"></i><i style="height: 15px"></i><i class="off" style="height: 18px"></i></span>
+      <span data-slot="channel">CH 02/42</span>
+    </header>
+    <span class="corner tl"></span>
+    <span class="corner tr"></span>
+
+    <section class="readout">
+      <div class="meta">
+        <span class="freq" data-slot="freq"></span>
+        <span class="origin" data-slot="origin"></span>
+        <span class="rule"></span>
+      </div>
+      <h1 class="name" data-slot="name"></h1>
+      <div class="dial" data-slot="dial"></div>
+      <p class="tagline" data-slot="tagline"></p>
+    </section>
+  </body>
+</html>

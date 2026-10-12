@@ -2,7 +2,7 @@
   "id": "/",
   "name": "Multiverse Radio",
   "short_name": "Multiverse",
-  "description": "Endless radio from other dimensions: generative music, deadpan hosts, alien adverts and news from parallel realities.",
+  "description": "Endless radio from other dimensions. You work the night shift on the relay ship Nightjar: 42 stations, generative music and deadpan hosts.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
@@ -18,5 +18,9 @@
     { "src": "/icons/icon-maskable-192.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable" },
     { "src": "/icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" },
     { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ],
+  "screenshots": [
+    { "src": "/screenshots/wide.jpg", "sizes": "1280x720", "type": "image/jpeg", "form_factor": "wide", "label": "Multiverse Radio on air: a station from another dimension, its scene and what is playing" },
+    { "src": "/screenshots/narrow.jpg", "sizes": "750x1334", "type": "image/jpeg", "form_factor": "narrow", "label": "Multiverse Radio on a phone, tuned to a station from another dimension" }
   ]
 }
