@@ -60,4 +60,12 @@ export const STATION_SCENES_V3: Partial<Record<SceneId, SceneEntry>> = {
     label: "A 1970s living room in golden afternoon light: a dog asleep on the rug, yesterday's date, a clock running backwards.",
     load: () => import('./defs/yesterday-room'),
   },
+  'black-hole-surf': {
+    label: 'Surfers ride slow swells out toward a glowing black hole from a dark beach with a leaning lifeguard tower.',
+    load: () => import('./defs/black-hole-surf'),
+  },
+  'giant-bedroom': {
+    label: "From mouse height, a giant's patchwork quilt rises like slow mountains beside a lighthouse of a bedside lamp.",
+    load: () => import('./defs/giant-bedroom'),
+  },
 };
