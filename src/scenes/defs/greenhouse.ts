@@ -115,6 +115,9 @@ const def: SceneDef = {
 
         // Pots.
         for (const p of POTS) potAt(g, p.x, p.kind === 3 ? 8 : 10, p.kind === 3 ? 10 : 14);
+        shaft(g, 40, g.top - 10, 120, 140, 20, 50, sun, 0.09, 0.4, 5);
+        shaft(g, 130, g.top - 10, 200, 140, 16, 40, sun, 0.07, 0.4, 5);
+        shaft(g, 230, g.top - 10, 300, 140, 20, 50, sun, 0.09, 0.4, 5);
         vignette(g, 0.45, 160, 80, 230, 160);
       },
 
@@ -128,10 +131,6 @@ const def: SceneDef = {
         const breeze = f.reduced ? 0 : Math.sin(t * 0.3) * 0.05;
 
         // Sunbeams through the glass.
-        const sk = 0.09 * (0.7 + 0.3 * awake);
-        shaft(g, 40, g.top - 10, 120, 140, 20, 50, sun, sk, 0.4, 5);
-        shaft(g, 130, g.top - 10, 200, 140, 16, 40, sun, sk * 0.8, 0.4, 5);
-        shaft(g, 230, g.top - 10, 300, 140, 20, 50, sun, sk, 0.4, 5);
         motes(g, t, 40, 10, 260, 110, 50, sun, 0.5, 9, 0.2);
 
         for (let i = 0; i < POTS.length; i++) {

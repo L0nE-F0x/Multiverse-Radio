@@ -83,7 +83,8 @@ const def: SceneDef = {
             }
         }
 
-        // The ship itself, baked into a layer drawn over the moving sea each frame.
+        // The ship itself: drawn into a layer, then baked into the background; the rows
+        // around the horizon are re-laid over the moving sea each frame.
         ship = g.layer();
         g.target(ship);
         // deck planks, running away from us toward the bow
@@ -127,7 +128,9 @@ const def: SceneDef = {
         // ship's bell on a post (drawn per frame)
         g.rect(278, RAIL_Y - 24, 3, 24, wood[1]!);
         g.rect(270, RAIL_Y - 25, 14, 2, wood[2]!);
-        g.target();
+        g.target(g.bg);
+        g.glow(160, 96, 120, seaGlow, 0.07, 6);
+        g.overlay(ship);
         vignette(g, 0.45, 160, 70, 230, 160);
       },
 
@@ -139,21 +142,26 @@ const def: SceneDef = {
         // The sea, rolling: the horizon lifts and tilts against the ship.
         const roll = f.reduced ? 0 : Math.sin(t * 0.45) * 3;
         const tilt = f.reduced ? 0 : Math.sin(t * 0.45 + 0.8) * 0.02;
+        const tick = Math.floor(t * 3);
         for (let x = g.left; x < g.right; x++) {
           const h = Math.round(84 + roll + tilt * (x - 160));
           for (let y = h; y < RAIL_Y; y++) {
             const d = (y - h) / 18;
-            const k = clamp(1 - d) * 0.7 + (hash3(x >> 1, y, Math.floor(t * 3)) < 0.04 ? 0.5 : 0);
+            const k = clamp(1 - d) * 0.7 + ((((x >> 1) * 7 + y * 13 + tick * 31) & 31) === 0 ? 0.5 : 0);
             const c = k > 0.55 + bayer(x, y) * 0.3 ? sea[2]! : k > 0.2 + bayer(x, y) * 0.2 ? sea[1]! : sea[0]!;
             g.px(x, y, c);
           }
           g.pxAdd(x, h, seaGlow, 0.25);
         }
-        g.glow(160, 96, 120, seaGlow, 0.07, 6);
-
-        // Far fog, then the ship over it.
+        // Far fog, then the ship's rigging back over it (the rest is baked).
         drawFog(g, fogA, t * 2, fogC, 0.5);
-        g.overlay(ship);
+        const r0 = Math.max(0, fogA.y0 - g.oy);
+        const r1 = Math.min(g.h, RAIL_Y + 8 - g.oy);
+        const b = g.buf;
+        for (let i = r0 * g.w; i < r1 * g.w; i++) {
+          const c = ship[i]!;
+          if (c !== 0) b[i] = c;
+        }
 
         // Lanterns, swinging with the roll.
         for (let i = 0; i < LANTERNS.length; i++) {

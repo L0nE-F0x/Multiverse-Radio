@@ -221,6 +221,7 @@ const def: SceneDef = {
         // Lamp light and pot glow baked onto the wall and hood.
         g.glow(POT.x, POT.y - 20, 70, glowC, 0.1, 6);
         g.glow(160, 66, 50, lamp, 0.08, 6);
+        shaft(g, 160, 62, 160, 112, 60, 110, lamp, 0.07, 0.6, 5);
         vignette(g, 0.6, 160, 86, 220, 150);
       },
 
@@ -231,7 +232,6 @@ const def: SceneDef = {
         const e = f.energy;
 
         // Lamp under the hood: a soft cone onto the stove.
-        shaft(g, 160, 62, 160, 112, 60, 110, lamp, 0.07 * (0.6 + 0.4 * awake), 0.6, 5);
         motes(g, t, 116, 64, 90, 40, 14, lamp, 0.25, 4, 0.5);
 
         // The pot's contents glow and breathe.

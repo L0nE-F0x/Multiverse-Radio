@@ -155,6 +155,7 @@ const def: SceneDef = {
         g.line(sx + 22, 10, sx + 20, sy, hex('#4a4030'));
         g.rect(sx - 34, sy, 68, 12, hex('#3a2a1a'));
         g.rect(sx - 33, sy + 1, 66, 10, hex('#c8b890'));
+        shaft(g, 160, g.top - 10, 160, STAGE_Y, 14, 130, spot, 0.07, 0.2, 5);
         vignette(g, 0.55, 160, 80, 220, 160);
       },
 
@@ -165,7 +166,7 @@ const def: SceneDef = {
         const e = f.energy;
 
         // The spotlight on the band, and dust in it.
-        shaft(g, 160, g.top - 10, 160, STAGE_Y, 14, 130, spot, (0.06 + e * 0.02) * (0.5 + 0.5 * awake), 0.2, 5);
+        g.glow(160, STAGE_Y - 20, 40, spot, (0.02 + e * 0.04) * awake);
         motes(g, t, 100, 20, 120, 80, 30, spot, 0.35, 5, 0.25);
 
         // The sign: the verse count, painted over and over.
@@ -189,8 +190,8 @@ const def: SceneDef = {
           const taut = i === 2 ? tug : 0;
           // three passes: shadow, body, then highlight and strands, so nothing striped through
           for (let pass = 0; pass < 3; pass++) {
-            for (let k = 0; k <= 480; k++) {
-              const u = k / 480;
+            for (let k = 0; k <= 320; k++) {
+              const u = k / 320;
               beardPath(i, u, pts, taut);
               const sway = f.reduced || u < 0.2 ? 0 : Math.sin(t * 0.6 + u * 8 + i) * 0.6 * (1 - u);
               const x = Math.round(pts[0]! + sway);
@@ -206,7 +207,7 @@ const def: SceneDef = {
               } else {
                 if (vert) g.px(x - (w >> 1), y, beard);
                 else g.px(x, y - 1, beard);
-                const sd = 1 + ((i + (k >> 6)) % 2);
+                const sd = 1 + ((i + (k >> 5)) % 2);
                 if (vert) g.px(x - (w >> 1) + sd + 1, y, beard);
                 else g.px(x, y + sd, beardD);
               }

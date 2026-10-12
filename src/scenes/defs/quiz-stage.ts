@@ -107,6 +107,8 @@ const def: SceneDef = {
         g.poly([WHEEL.x - 18, FLOOR_Y, WHEEL.x + 18, FLOOR_Y, WHEEL.x + 8, FLOOR_Y - 14, WHEEL.x - 8, FLOOR_Y - 14], hex('#14121a'));
         g.disc(WHEEL.x, WHEEL.y, WHEEL.r + 4, hex('#1e1a24'));
         g.ring(WHEEL.x, WHEEL.y, WHEEL.r + 4, WHEEL.r + 4, goldD);
+        for (const p of PODS) shaft(g, p.x, g.top - 10, p.x, FLOOR_Y, 6, 40, spot, 0.05, 0.2, 5);
+        shaft(g, HOST.x, g.top - 10, HOST.x, FLOOR_Y, 6, 36, spot, 0.06, 0.2, 5);
         vignette(g, 0.5, 160, 80, 220, 160);
       },
 
@@ -164,9 +166,6 @@ const def: SceneDef = {
         g.ball(mx, my, 2, 2, [hex('#5a5a60'), hex('#a8a8b0'), hex('#e8e8f0')], -0.5, -0.5);
 
         // Spotlights on the podiums.
-        const sk = 0.05 * (0.5 + 0.5 * awake);
-        for (const p of PODS) shaft(g, p.x, g.top - 10, p.x, FLOOR_Y, 6, 40, spot, sk, 0.2, 5);
-        shaft(g, HOST.x, g.top - 10, HOST.x, FLOOR_Y, 6, 36, spot, sk * 1.2, 0.2, 5);
 
         // ── contestants and podiums ──
         const buzz = f.rare === 1 && ev < 10 && ev > 1;

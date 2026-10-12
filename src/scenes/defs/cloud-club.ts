@@ -5,7 +5,7 @@
 import { type Color, hex, mix, ramp, shade } from '../kit/color';
 import { clamp, envelope, smoothstep } from '../kit/fx';
 import { type Gfx, addPx, bayer } from '../kit/gfx';
-import { fbm, hash3, noise1 } from '../kit/rng';
+import { hash3, noise1, noise2 } from '../kit/rng';
 import type { SceneDef } from '../types';
 import { bakeFog, drawFog, flicker, motes, shaft, vignette } from './lib/night';
 
@@ -183,45 +183,59 @@ const def: SceneDef = {
       background(g) {
         // The cloud: soft puffs painted as light, blurred, then dithered into a cool
         // ramp that warms toward the stage.
+        // Painted at half resolution (it's soft anyway), then sampled bilinearly.
         const W = g.w;
         const Hh = g.h;
-        const lum = new Float32Array(W * Hh).fill(0.05);
+        const W2 = (W >> 1) + 2;
+        const H2 = (Hh >> 1) + 2;
+        const lum = new Float32Array(W2 * H2).fill(0.05);
         for (const p of puffs) {
           if (p.x + p.rx < g.left || p.x - p.rx > g.right || p.y + p.ry < g.top || p.y - p.ry > g.bottom) continue;
           const lx = clamp((SPOT_X - p.x) / 110, -0.8, 0.8);
           const ly = clamp((p.y - 70) / 90, -0.75, 0.75);
           const lz = Math.sqrt(Math.max(0, 1 - lx * lx - ly * ly));
-          const x0 = Math.max(0, Math.floor(p.x - p.rx) - g.ox);
-          const x1 = Math.min(W - 1, Math.ceil(p.x + p.rx) - g.ox);
-          const y0 = Math.max(0, Math.floor(p.y - p.ry) - g.oy);
-          const y1 = Math.min(Hh - 1, Math.ceil(p.y + p.ry) - g.oy);
+          const x0 = Math.max(0, Math.floor((p.x - p.rx - g.ox) / 2));
+          const x1 = Math.min(W2 - 1, Math.ceil((p.x + p.rx - g.ox) / 2));
+          const y0 = Math.max(0, Math.floor((p.y - p.ry - g.oy) / 2));
+          const y1 = Math.min(H2 - 1, Math.ceil((p.y + p.ry - g.oy) / 2));
           for (let by = y0; by <= y1; by++) {
-            const ny = (by + g.oy - p.y) / p.ry;
+            const ny = (by * 2 + 0.5 + g.oy - p.y) / p.ry;
             for (let bx = x0; bx <= x1; bx++) {
-              const nx = (bx + g.ox - p.x) / p.rx;
+              const nx = (bx * 2 + 0.5 + g.ox - p.x) / p.rx;
               const d2 = nx * nx + ny * ny;
               if (d2 >= 1) continue;
               const nz = Math.sqrt(1 - d2);
               const l = Math.max(0, nx * lx + ny * ly + nz * lz);
-              lum[by * W + bx] = p.b * (0.22 + 0.78 * l * l);
+              lum[by * W2 + bx] = p.b * (0.22 + 0.78 * l * l);
             }
           }
         }
-        const tmp = new Float32Array(W * Hh);
-        for (let pass = 0; pass < 2; pass++) {
-          for (let by = 0; by < Hh; by++)
-            for (let bx = 0; bx < W; bx++) {
-              let s2 = 0;
-              for (let k = -1; k <= 1; k++) s2 += lum[by * W + Math.min(W - 1, Math.max(0, bx + k))]!;
-              tmp[by * W + bx] = s2 / 3;
-            }
-          for (let by = 0; by < Hh; by++)
-            for (let bx = 0; bx < W; bx++) {
-              let s2 = 0;
-              for (let k = -1; k <= 1; k++) s2 += tmp[Math.min(Hh - 1, Math.max(0, by + k)) * W + bx]!;
-              lum[by * W + bx] = s2 / 3;
-            }
-        }
+        const tmp = new Float32Array(W2 * H2);
+        for (let by = 0; by < H2; by++)
+          for (let bx = 0; bx < W2; bx++) {
+            let s2 = 0;
+            for (let k = -1; k <= 1; k++) s2 += lum[by * W2 + Math.min(W2 - 1, Math.max(0, bx + k))]!;
+            tmp[by * W2 + bx] = s2 / 3;
+          }
+        for (let by = 0; by < H2; by++)
+          for (let bx = 0; bx < W2; bx++) {
+            let s2 = 0;
+            for (let k = -1; k <= 1; k++) s2 += tmp[Math.min(H2 - 1, Math.max(0, by + k)) * W2 + bx]!;
+            lum[by * W2 + bx] = s2 / 3;
+          }
+        const sample = (bx: number, by: number) => {
+          const fx = bx / 2;
+          const fy = by / 2;
+          const ix = Math.min(W2 - 2, Math.floor(fx));
+          const iy = Math.min(H2 - 2, Math.floor(fy));
+          const ux = fx - ix;
+          const uy = fy - iy;
+          const a0 = lum[iy * W2 + ix]!;
+          const a1 = lum[iy * W2 + ix + 1]!;
+          const b0 = lum[(iy + 1) * W2 + ix]!;
+          const b1 = lum[(iy + 1) * W2 + ix + 1]!;
+          return (a0 + (a1 - a0) * ux) * (1 - uy) + (b0 + (b1 - b0) * ux) * uy;
+        };
         dens = new Uint8Array(W * Hh);
         const n = coolRamp.length - 1;
         for (let by = 0; by < Hh; by++)
@@ -229,7 +243,7 @@ const def: SceneDef = {
             const x = bx + g.ox;
             const y = by + g.oy;
             const i = by * W + bx;
-            let v = lum[i]! * (0.9 + 0.2 * fbm(x / 7, y / 5, 12, 2));
+            let v = sample(bx, by) * (0.9 + 0.2 * noise2(x / 7, y / 5, 12));
             // the alcove behind the trio sits in shadow
             const ad = ((x - STAGE.cx) / 60) ** 2 + ((y - 80) / 44) ** 2;
             if (ad < 1) v *= 0.45 + 0.55 * ad;
@@ -334,6 +348,8 @@ const def: SceneDef = {
         g.glow(50, 118, 18, warm, 0.18, 5);
         g.glow(274, 121, 18, warm, 0.16, 5);
 
+        // the spotlight, through the smoke
+        shaft(g, SPOT_X - 8, g.top - 10, SPOT_X, STAGE.y + 2, 8, 96, warm, 0.12, 0.15, 6);
         vignette(g, 0.55, SPOT_X, 96, 230, 170);
       },
 
@@ -379,8 +395,7 @@ const def: SceneDef = {
         if (flashK > 0) g.tintAll(hex('#c8d4ff'), flashK * (f.reduced ? 0.05 : 0.22));
 
         // The spotlight, breathing slightly with the music.
-        const spotK = (0.1 + e * 0.04) * (0.45 + 0.55 * awake);
-        shaft(g, SPOT_X - 8, g.top - 10, SPOT_X, STAGE.y + 2, 8, 96, warm, spotK, 0.15, 6);
+        g.glow(SPOT_X, STAGE.y - 4, 30, warm, (0.03 + e * 0.05) * awake);
         motes(g, t, SPOT_X - 36, 20, 72, 88, 26, warm, 0.35 * awake + 0.1, 2, 0.6);
 
         // ── the trio ──

@@ -35,8 +35,8 @@ const def: SceneDef = {
     const lampC = hex('#ffc890');
     const ledC: Color[] = [hex('#ff4a4a'), hex('#4aff8a'), hex('#4ab0ff'), hex('#ffc04a'), hex('#ff6ad8')];
     const fogs = [
-      bakeFog(20, 80, 41, { sx: 70, sy: 22, lo: 0.3, gain: 1.6, edge: 0.6 }),
-      bakeFog(60, 70, 43, { sx: 50, sy: 16, lo: 0.32, gain: 1.8, edge: 0.7 }),
+      bakeFog(28, 64, 41, { sx: 70, sy: 22, lo: 0.3, gain: 1.6, edge: 0.6 }),
+      bakeFog(66, 50, 43, { sx: 50, sy: 16, lo: 0.32, gain: 1.8, edge: 0.7 }),
       bakeFog(92, 60, 47, { sx: 40, sy: 12, lo: 0.34, gain: 2, edge: 0.8 }),
     ];
 
@@ -90,6 +90,10 @@ const def: SceneDef = {
         // backlights glowing through the fog
         g.glow(120, 40, 90, pink, 0.12, 6);
         g.glow(210, 36, 90, blue, 0.12, 6);
+        // beams from the back lights, through the haze
+        shaft(g, 112, g.top - 10, 70, 150, 6, 110, pink, 0.07, 0.3, 5);
+        shaft(g, 214, g.top - 10, 250, 150, 6, 110, blue, 0.07, 0.3, 5);
+        shaft(g, 164, g.top - 20, 164, 150, 4, 70, peri, 0.04, 0.4, 5);
         vignette(g, 0.5, 160, 80, 230, 160);
       },
 
@@ -101,11 +105,9 @@ const def: SceneDef = {
         const clear = f.rare === 0 && ev < 12 ? envelope(ev, 12, 3, 3) : 0;
         const thick = f.rare === 3 && ev < 12 ? envelope(ev, 12, 3, 3) : 0;
 
-        // Beams from the back lights, swelling with the music.
-        const bk = (0.05 + e * 0.05) * (0.5 + 0.5 * awake);
-        shaft(g, 112, g.top - 10, 70, 150, 6, 110, pink, bk, 0.3, 5);
-        shaft(g, 214, g.top - 10, 250, 150, 6, 110, blue, bk, 0.3, 5);
-        shaft(g, 164, g.top - 20, 164, 150, 4, 70, peri, bk * 0.6, 0.4, 5);
+        // The beams swell a little with the music (the beams themselves are baked).
+        g.glow(112, 30, 30, pink, (0.04 + e * 0.08) * awake);
+        g.glow(214, 30, 30, blue, (0.04 + e * 0.08) * awake);
 
         // ── the band ──
         for (let i = 0; i < PLAYERS.length; i++) {
