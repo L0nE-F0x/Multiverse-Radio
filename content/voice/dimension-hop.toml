@@ -56,6 +56,7 @@ category = "dj"
 lines = [
   { say = "jace", text = "That's Dimension Hop. More from both of our realities, after this." },
   { say = "mara", text = "Mine's better. You'll see. Well, I've seen. You'll see in a bit." },
+  { say = "jace", text = "She's not wrong. I've seen her side. The sandwiches are incredible." },
 ]
 
 [[clip]]
@@ -72,6 +73,7 @@ lines = [
   { say = "jace", text = "We're going to take a quick break." },
   { say = "mara", text = "I'm already back." },
   { say = "jace", text = "She's already back. Stay with us." },
+  { say = "mara", text = "You'll like what happens next. I did." },
 ]
 
 # ── Shows ─────────────────────────────────────────────────────────────────────

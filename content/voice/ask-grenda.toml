@@ -76,6 +76,7 @@ category = "dj"
 daypart = "night"
 lines = [
   { say = "grenda", text = "It's late, wherever you are. The lines are open. If your problem hasn't happened yet, ring anyway. We'll be ready for it." },
+  { say = "grenda", text = "And if it already has, love, that's all right too. Ring anyway." },
 ]
 
 [[clip]]
@@ -83,6 +84,7 @@ id = "dj-002"
 category = "dj"
 lines = [
   { say = "grenda", text = "A little reminder, between calls. You're allowed to hang up on a problem, love. If it's serious, it'll ring back." },
+  { say = "grenda", text = "And most of them aren't serious, love. Most of them are just lonely." },
 ]
 
 [[clip]]

@@ -124,6 +124,7 @@ lines = [
   { say = "announcer", text = "The Lunar Laundrette, Tranquility Base Annex." },
   { say = "announcer", text = "One wash takes twenty nine days, one full turn of the moon. Your socks come back clean, and a little bit wiser." },
   { say = "announcer", text = "Low gravity means low wrinkles. Your shirts simply float dry." },
+  { say = "announcer", text = "And while you wait, there's a cafe next door. The coffee comes with an echo." },
   { say = "announcer", text = "The Lunar Laundrette. Bring a book. Bring several." },
 ]
 
@@ -181,6 +182,7 @@ title = "Slow Mail"
 stations = ["snail-jams"]
 lines = [
   { say = "announcer_slow", text = "Slow Mail. Post, delivered by snail.", gap = 0.8 },
+  { say = "announcer_slow", text = "Every letter is carried by hand. Well. By foot. Well. By a snail, at a steady and dignified pace." },
   { say = "announcer_slow", text = "Birthday cards arrive in time for the next birthday. Love letters arrive when you've both had time to think about it." },
   { say = "announcer_slow", text = "Slow Mail. Guaranteed.", gap = 1.0 },
   { say = "announcer_slow", text = "Eventually." },
@@ -554,7 +556,7 @@ category = "interrupt"
 title = "Bleed: Numbers Station"
 stations = ["static-lullabies", "void-beats", "rainfall-fm", "every-news", "classifieds", "end-lounge", "dimension-hop", "crystal-delta", "hold-music", "ask-grenda", "moon-dub", "whalesong", "channel-surf", "wild-multiverse"]
 lines = [
-  { say = "counter", text = "Seven. Seven. Four.", gap = 0.8 },
+  { say = "counter", text = "Seven. Seven. Four. Seven. Seven. Four.", gap = 1.0 },
   { say = "counter", text = "Geese." },
 ]
 
@@ -592,5 +594,5 @@ category = "interrupt"
 title = "Bleed: The Small Print"
 stations = ["void-beats", "rainfall-fm", "neon-2087", "end-lounge", "snail-jams", "crystal-delta", "hold-music", "pixel-afterlife", "moon-dub", "baroque-bots", "comet-marimba", "mirror-polka", "wild-multiverse"]
 lines = [
-  { say = "linda", text = "Music may contain feelings. Feelings not included. Please consult your nearest Linda." },
+  { say = "linda", text = "Music may contain feelings. Feelings not included. If symptoms persist, please consult your nearest Linda." },
 ]

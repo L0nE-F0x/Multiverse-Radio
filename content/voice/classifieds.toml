@@ -65,6 +65,8 @@ id = "dj-001"
 category = "dj"
 lines = [
   { say = "rex", text = "Rex Bellows here, with more deals than you've got days! Stay tuned, folks, because Linda's got the small print, and the small print has got teeth!" },
+  { say = "rex", text = "Linda, show them the teeth!" },
+  { say = "linda", text = "No.", speed = 1.0 },
 ]
 
 [[clip]]
@@ -74,6 +76,9 @@ lines = [
   { say = "rex", text = "Linda! What time is it?" },
   { say = "linda", text = "It's sale o'clock, Rex.", speed = 1.0 },
   { say = "rex", text = "It's always sale o'clock! Stay right where you are, folks!" },
+  { say = "linda", text = "It's also my lunch, Rex.", speed = 1.0 },
+  { say = "rex", text = "Lunch is a sale, Linda!" },
+  { say = "linda", text = "It isn't.", speed = 1.0 },
 ]
 
 [[clip]]
