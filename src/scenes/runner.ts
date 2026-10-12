@@ -25,6 +25,7 @@ export interface RunnerStats {
 
 const REDUCED_TIME_SCALE = 0.2;
 const REDUCED_FPS = 8;
+const PAUSED_FPS = 12;
 const RARE_MIN_S = 30;
 const RARE_MAX_S = 120;
 
@@ -165,7 +166,9 @@ export class SceneRunner {
 
   private fps() {
     const fps = this.def.fps ?? 20;
-    return this.inputs.reducedMotion ? Math.min(fps, REDUCED_FPS) : fps;
+    if (this.inputs.reducedMotion) return Math.min(fps, REDUCED_FPS);
+    // Off air the scene dozes, so it can afford fewer frames (and less battery).
+    return this.inputs.playing ? fps : Math.min(fps, PAUSED_FPS);
   }
 
   private schedule(delay: number) {
