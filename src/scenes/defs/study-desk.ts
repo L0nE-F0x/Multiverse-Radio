@@ -1,6 +1,8 @@
-// Void Beats: a sleepy many-eyed creature studies by a window onto the purple void.
+// Void Beats: late at night, a sleepy many-eyed creature studies under a desk lamp by a
+// window onto the purple void. The rest of the room has gone dark.
 
-import { hex, mix, ramp, shade } from '../kit/color';
+import { gloom, motes } from '../kit/atmos';
+import { hex, mix, mute, ramp, shade } from '../kit/color';
 import { blinking, clamp, envelope, lightCone, smoothstep, stars, steam, TAU } from '../kit/fx';
 import { bayer } from '../kit/gfx';
 import { hash3 } from '../kit/rng';
@@ -15,24 +17,26 @@ const def: SceneDef = {
   fps: 20,
   rareEvents: 4,
   rareDuration: 7,
+  focusY: 84,
+  grade: { temperature: 0.2, contrast: 1.14, saturation: 0.82, bloom: 0.7, threshold: 0.66, vignette: 0.45 },
   create({ accent }) {
-    const ink = hex('#1f1226');
-    const wall = [hex('#2a1a2b'), hex('#3a2236'), hex('#4b2c40')];
-    const voidR = [hex('#160b2a'), hex('#28134a'), hex('#46206b'), hex('#7a3a86')];
-    const wood = { d: hex('#3e2219'), m: hex('#5e3424'), l: hex('#8a5234'), h: hex('#b0714a') };
-    const frameC = { d: hex('#2c1a1e'), m: hex('#4a2c2c'), l: hex('#6b4038') };
-    const peach = accent;
-    const peachD = shade(accent, 0.62);
-    const peachL = mix(accent, hex('#fff0d8'), 0.45);
-    const cream = hex('#f3e4c8');
-    const creamD = hex('#c9b296');
+    const ink = hex('#0e0812');
+    const wall = [hex('#130c16'), hex('#1b111e'), hex('#241628')];
+    const voidR = [hex('#0e0820'), hex('#1c0e36'), hex('#321852'), hex('#5a2e6a')];
+    const wood = { d: hex('#1e100c'), m: hex('#321c14'), l: hex('#4e2c1c'), h: hex('#6e4430') };
+    const frameC = { d: hex('#180e12'), m: hex('#2a1a1c'), l: hex('#3e2a28') };
+    const peach = mute(accent, 0.55, 0.7);
+    const peachD = shade(peach, 0.55);
+    const peachL = mix(peach, hex('#e8d8c0'), 0.35);
+    const cream = hex('#d8c8ac');
+    const creamD = hex('#a8967e');
     const warm = hex('#ffcf8a');
-    const blob = ramp([hex('#24504f'), hex('#3f8a7c'), hex('#6cc7a8'), hex('#a9efcf')], 5);
-    const pet = ramp([hex('#3d3552'), hex('#6b6188'), hex('#9b90ba'), hex('#c4bbdc')], 4);
-    const planet = ramp([hex('#4a1f3a'), hex('#a4485a'), shade(accent, 1), hex('#ffd2a6')], 5);
-    const moon = ramp([hex('#1e2f5a'), hex('#3d6db0'), hex('#8fc4ff')], 3);
-    const bookC = [hex('#3fa69a'), hex('#d96f8f'), hex('#d8a43e'), hex('#7f63c8'), hex('#5aa4d8')];
-    const leaf = [hex('#24452f'), hex('#3d7a45'), hex('#6db35a')];
+    const blob = ramp([hex('#14302e'), hex('#285650'), hex('#468a78'), hex('#7ab8a2')], 5);
+    const pet = ramp([hex('#221e2e'), hex('#433c58'), hex('#6a6286'), hex('#9088aa')], 4);
+    const planet = ramp([hex('#2e1226'), hex('#6e3040'), mute(accent, 0.7, 0.8), hex('#d8b090')], 5);
+    const moon = ramp([hex('#14203e'), hex('#2e4e80'), hex('#7aa0cc')], 3);
+    const bookC = [hex('#2e6e66'), hex('#8e4a5e'), hex('#9a7a34'), hex('#54468a'), hex('#3a6e92')];
+    const leaf = [hex('#142a1c'), hex('#24482a'), hex('#3e6e3a')];
     const bulbs = [hex('#ffcf6b'), hex('#ff8fb1'), hex('#8fe3ff'), hex('#b8ff8f'), peachL];
 
     // String-light bulb positions (along a sagging wire), computed once.
@@ -86,13 +90,13 @@ const def: SceneDef = {
         g.rect(x - 8, y + h + 3, w + 16, 1, wood.h);
         g.rect(x - 8, y + h + 7, w + 16, 1, wood.d);
         // Little cactus on the sill.
-        g.rect(x + 6, y + h - 3, 6, 6, hex('#b0583c'));
-        g.rect(x + 6, y + h - 3, 6, 1, hex('#d07a52'));
+        g.rect(x + 6, y + h - 3, 6, 6, hex('#6a3424'));
+        g.rect(x + 6, y + h - 3, 6, 1, hex('#8a4e36'));
         g.rect(x + 8, y + h - 12, 3, 9, leaf[1]!);
         g.rect(x + 8, y + h - 12, 1, 9, leaf[2]!);
         g.rect(x + 11, y + h - 9, 2, 2, leaf[1]!);
         g.rect(x + 12, y + h - 11, 1, 3, leaf[1]!);
-        g.px(x + 9, y + h - 13, hex('#ff8fb1'));
+        g.px(x + 9, y + h - 13, hex('#a86a7a'));
 
         // Curtains (gathered, with folds) and rod.
         const curtain = (cx: number, dir: 1 | -1) => {
@@ -104,7 +108,7 @@ const def: SceneDef = {
               const fold = Math.sin(i * 1.3 + (yy - y) * 0.02);
               g.px(xx, yy, fold > 0.45 ? peachL : fold > -0.3 ? peach : peachD);
             }
-            if (tie) g.px(Math.round(cx + dir * 3), yy, hex('#f6d36b'));
+            if (tie) g.px(Math.round(cx + dir * 3), yy, hex('#9a7a3a'));
           }
         };
         curtain(x - 6, -1);
@@ -121,8 +125,8 @@ const def: SceneDef = {
         g.rect(sx + 6, sy + 3, 2, 5, wood.d);
         g.rect(sx + 60, sy + 3, 2, 5, wood.d);
         // plant pot + trailing leaves
-        g.rect(sx + 4, sy - 7, 9, 7, hex('#c46a4a'));
-        g.rect(sx + 4, sy - 7, 9, 1, hex('#e08a62'));
+        g.rect(sx + 4, sy - 7, 9, 7, hex('#6a3424'));
+        g.rect(sx + 4, sy - 7, 9, 1, hex('#8a4e36'));
         for (let i = 0; i < 26; i++) {
           const lx = sx + 4 + Math.round(Math.sin(i * 0.5) * 2) - (i > 12 ? 1 : 0);
           g.px(lx, sy + 1 + i, leaf[1]!);
@@ -155,14 +159,8 @@ const def: SceneDef = {
           g.rect(dx + 36, DESK_Y + 43, 8, 2, wood.h);
         }
         // Drawer label and stickers.
-        g.rect(173, DESK_Y + 27, 34, 9, cream);
-        frameRect(g, 173, DESK_Y + 27, 34, 9, creamD);
-        g.text('VOID', 177, DESK_Y + 29, hex('#5a3a4a'));
-        g.disc(66, DESK_Y + 30, 4, hex('#5aa4d8'));
-        g.disc(66, DESK_Y + 30, 2, hex('#a9efcf'));
-        g.px(64, DESK_Y + 28, hex('#ffffff'));
-        g.rect(258, DESK_Y + 16, 9, 7, hex('#f6d36b'));
-        g.text(':)', 259, DESK_Y + 17, hex('#7a4a2a'));
+        g.rect(173, DESK_Y + 27, 34, 9, shade(cream, 0.5));
+        frameRect(g, 173, DESK_Y + 27, 34, 9, shade(creamD, 0.5));
         // Upper wall (tall views): a framed picture of a planet and a round clock.
         frameRect(g, 92, -62, 44, 34, frameC.l);
         g.rect(93, -61, 42, 32, frameC.d);
@@ -215,7 +213,7 @@ const def: SceneDef = {
         book(106, DESK_Y - 6, 26, 6, bookC[0]!);
         book(108, DESK_Y - 11, 22, 5, bookC[1]!);
         book(105, DESK_Y - 20, 25, 9, bookC[2]!);
-        g.text('?', 113, DESK_Y - 18, shade(bookC[2]!, 0.55));
+        g.hline(112, 122, DESK_Y - 16, shade(bookC[2]!, 0.6));
         book(110, DESK_Y - 24, 14, 4, bookC[4]!);
 
         // Mug.
@@ -232,10 +230,17 @@ const def: SceneDef = {
         g.rect(184, DESK_Y - 4, 1, 6, creamD);
 
         // Warm lamp light baked onto everything.
-        lightCone(g, 108, 95, 8, 80, 30, warm, 0.2);
-        g.glow(106, 98, 60, warm, 0.22);
+        lightCone(g, 108, 95, 8, 80, 30, warm, 0.22);
+        g.glow(106, 98, 60, warm, 0.2);
         // Cool void light spilling from the window.
-        g.glow(WIN.x + WIN.w / 2, WIN.y + WIN.h + 18, 70, hex('#5b2a8a'), 0.18);
+        g.glow(WIN.x + WIN.w / 2, WIN.y + WIN.h + 18, 70, hex('#5b2a8a'), 0.16);
+        gloom(g, g.left, DESK_Y + 8, g.w, g.bottom - DESK_Y - 8, 0.6);
+        gloom(g, g.left, g.top, g.w, 22 - g.top, 0.5, true);
+        g.lighting(0.4);
+        g.light(108, 104, 80, 0.85, 50);
+        g.light(WIN.x + WIN.w / 2, WIN.y + WIN.h / 2, 74, 0.4);
+        g.light(200, 100, 46, 0.3);
+        g.light(250, 40, 30, 0.2);
       },
 
       frame(g, f) {
@@ -276,19 +281,8 @@ const def: SceneDef = {
         }
         g.noClip();
 
-        // String lights across the top of the wall.
-        for (let i = 0; i < lights.length; i++) {
-          const L = lights[i]!;
-          if (L.x < g.left - 2 || L.x > g.right + 2) continue;
-          g.px(L.x, L.y - 1, ink);
-          const tw = f.reduced ? 0.8 : 0.65 + 0.35 * Math.sin(t * 0.8 + i * 1.9);
-          g.rect(L.x - 1, L.y, 2, 2, L.c);
-          g.glow(L.x, L.y + 1, 5, L.c, 0.22 * tw, 3);
-        }
-        for (let x = g.left; x < g.right; x++) {
-          const seg = ((x + 400) % 88) / 88;
-          g.px(x, Math.round(3 + Math.sin(seg * Math.PI) * 7), ink);
-        }
+        void lights;
+        if (!f.reduced) motes(g, t, 84, 70, 140, 120, 10, hex('#ffe0b0'), 0.35, 3);
 
         // Jar of stars + the eye clock looking around.
         const jarGlow = 0.35 + 0.25 * Math.sin(t * 1.3) + f.energy * 0.3;
@@ -297,9 +291,9 @@ const def: SceneDef = {
           const sy = 36 + ((hash3(i, 2) * 8 + Math.sin(t * 0.7 + i) * 1.5) | 0);
           g.px(sx, sy, hex('#fff2a8'));
         }
-        g.glow(243, 40, 10, hex('#ffe08a'), jarGlow, 3);
+        g.glow(243, 40, 10, hex('#ffe08a'), jarGlow * 0.7, 3);
         const look = Math.sin(t * 0.3) * 0.8;
-        eye(g, 262, 39, 3, hex('#f3e4c8'), ink, hex('#c9b296'), look, 0.2, blinking(t, 77) ? 1 : 0);
+        eye(g, 262, 39, 3, cream, ink, creamD, look, 0.2, blinking(t, 77) ? 1 : 0);
 
         // Lamp bulb: a soft warm flicker that leans into the music.
         g.glow(107, 95, 12, warm, 0.45 + f.energy * 0.25 + Math.sin(t * 13) * 0.02);
@@ -364,12 +358,9 @@ const def: SceneDef = {
           if (looking > 0.5 && ev > 3 + i * 0.35 && ev < 3.25 + i * 0.35) lid = 1; // blink in sequence
           const lx = looking > 0 ? 0 : -0.7;
           const ly = looking > 0 ? 0 : 0.6;
-          eye(g, cx + ex, cy + ey, er, hex('#fdf6e6'), ink, blob[1]!, lx, ly, clamp(lid, 0, 1));
+          eye(g, cx + ex, cy + ey, er, hex('#e0d8c8'), ink, blob[1]!, lx, ly, clamp(lid, 0, 1));
         }
-        // blush + mouth
-        g.pxA(cx - 15, cy + 4, hex('#ff8fa0'), 0.6);
-        g.pxA(cx - 14, cy + 4, hex('#ff8fa0'), 0.6);
-        g.pxA(cx + 13, cy + 3, hex('#ff8fa0'), 0.6);
+        // mouth
         if (sleep > 0.6) g.disc(cx, cy + 8, 1, ink);
         else g.hline(cx - 2, cx + 1, cy + 7, ink);
 
@@ -381,18 +372,11 @@ const def: SceneDef = {
         g.line(cx - 16, cy + 12, hx + 3, hy, blob[1]!);
         g.line(cx - 16, cy + 13, hx + 3, hy + 1, blob[1]!);
         g.disc(hx + 2, hy, 2, blob[2]!);
-        g.line(hx, hy - 1, hx - 4, hy - 7, hex('#f6d36b'));
-        g.px(hx - 5, hy - 8, hex('#ff8fb1'));
+        g.line(hx, hy - 1, hx - 4, hy - 7, hex('#b89a4a'));
+        g.px(hx - 5, hy - 8, hex('#a86a7a'));
         // other arm resting on the desk
         g.ellipse(cx + 14, DESK_Y - 1, 4, 2, blob[2]!);
 
-        // Zzz while dozing.
-        if (sleep > 0.4) {
-          for (let i = 0; i < 3; i++) {
-            const p = (t * 0.25 + i / 3) % 1;
-            g.text('z', cx + 18 + p * 10 + Math.sin(p * 6) * 2, cy - 22 - p * 20, mix(cream, wall[1]!, p));
-          }
-        }
 
         // ── the pet asleep on the notes ──
         const breathe = Math.sin(t * 1.2) > 0.2 ? 1 : 0;
@@ -416,7 +400,7 @@ const def: SceneDef = {
         for (let i = 0; i < 3; i++) {
           const ex = ex0 + i * 4;
           g.tri(ex - 2, pcy - 3 - breathe, ex + 2, pcy - 3 - breathe, ex, pcy - 8 - breathe - (i === 1 ? 1 : 0), pet[2]!);
-          g.px(ex, pcy - 5 - breathe, hex('#ffb3c8'));
+          g.px(ex, pcy - 5 - breathe, hex('#a87a88'));
         }
         const pupil = stretch > 0.4;
         g.hline(ex0 - 1, ex0 + 1, pcy, ink);
@@ -424,7 +408,7 @@ const def: SceneDef = {
         if (pupil) {
           g.px(ex0, pcy - 1, ink);
           g.px(ex0 + 5, pcy - 1, ink);
-          g.disc(ex0 + 2, pcy + 3, 1, hex('#ff8fa0'));
+          g.disc(ex0 + 2, pcy + 3, 1, hex('#a87a88'));
         }
         if (stretch > 0) {
           g.rect(pcx - prx - 4 * stretch, pcy + 3, 5, 2, pet[2]!);
