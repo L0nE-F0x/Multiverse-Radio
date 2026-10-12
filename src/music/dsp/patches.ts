@@ -3,6 +3,7 @@
 // buffer per zone (root note × velocity layer) on demand.
 
 import { midiToFreq } from '../theory';
+import { BEDS_PATCHES } from './beds-v3';
 import type { SamplePatch } from '../score';
 import {
   addPartials,
@@ -821,6 +822,7 @@ const malletDef = (lo: number, hi: number, dur: (m: number) => number, modes: (m
 });
 
 export const PATCHES: Record<SamplePatch, PatchDef> = {
+  ...BEDS_PATCHES,
   ep: { roots: range(33, 96, 3), layers: 2, rate: 24000, render: (r, l, sr) => renderEP(r, l === 1, sr, 'ep') },
   'ep-bright': { roots: range(33, 96, 3), layers: 2, rate: 32000, render: (r, l, sr) => renderEP(r, l === 1, sr, 'ep-bright') },
   wurli: { roots: range(33, 96, 3), layers: 2, rate: 24000, render: (r, l, sr) => renderEP(r, l === 1, sr, 'wurli') },
