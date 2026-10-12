@@ -30,7 +30,7 @@ const def: SceneDef = {
   focusY: 92,
   rareEvents: 3,
   rareDuration: 6,
-  grade: { contrast: 1.14, saturation: 0.8, bloom: 0.7, threshold: 0.66, vignette: 0.5, shadows: '#06050a' },
+  grade: { contrast: 1.14, saturation: 0.8, bloom: 0.7, threshold: 0.66, vignette: 0.36, shadows: '#06050a' },
   create({ accent }) {
     const ink = hex('#060406');
     const BARS = [hex('#e8e8e8'), hex('#e8e83a'), hex('#3ae8e8'), hex('#3ae83a'), hex('#e83ae8'), hex('#e83a3a'), hex('#3a3ae8')];

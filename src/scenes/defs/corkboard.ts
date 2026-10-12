@@ -35,7 +35,7 @@ const def: SceneDef = {
   fps: 12,
   rareEvents: 3,
   rareDuration: 7,
-  grade: { temperature: 0.3, contrast: 1.12, saturation: 0.82, bloom: 0.3, threshold: 0.8, vignette: 0.5 },
+  grade: { temperature: 0.3, contrast: 1.12, saturation: 0.82, bloom: 0.3, threshold: 0.8, vignette: 0.36 },
   create({ accent }) {
     const ink = hex('#1a1210');
     const cork = [hex('#3e2816'), hex('#52361e'), hex('#664428'), hex('#7a5432')];
@@ -43,7 +43,7 @@ const def: SceneDef = {
     const pins = [hex('#a8302e'), hex('#2e5a9a'), hex('#3a7a4a'), hex('#b8922e'), hex('#8a3a7a')];
     // Paper that has been up a while.
     const white = hex('#d6cdb8');
-    const yellow = mute(accent, 0.6, 0.85);
+    const yellow = mute(accent, 0.5, 0.74);
     const blue = hex('#9eb0b8');
     const pink = hex('#c4a0a0');
     const green = hex('#a8b48e');

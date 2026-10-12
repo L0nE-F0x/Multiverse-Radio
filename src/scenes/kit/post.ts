@@ -6,8 +6,9 @@
 //   grain      a faint, slowly crawling film grain (static under reduced motion)
 //
 // Scenes get the house grade for free; SceneDef.grade tweaks it (or `false` turns it off).
-// Cost at 320×180 is roughly 0.2 ms per frame without bloom and 0.3–0.5 ms with it: the
-// grade is a handful of integer ops and three table lookups per pixel.
+// Cost at 320×180 is well under a millisecond per frame: the grade is a handful of integer ops
+// and three table lookups per pixel, and the glow is rebuilt every third frame from a
+// quarter-resolution blur and added in the same loop.
 
 import { type Color, blue, green, hex, red } from './color';
 import { bayer } from './gfx';
@@ -27,7 +28,7 @@ export interface Grade {
   shadows?: Color | string;
   /** What pure white becomes (default '#fff5e6', a warm paper white). */
   highlights?: Color | string;
-  /** Darkening toward the corners, 0–1 (default 0.3). */
+  /** Darkening toward the corners, 0–1 (default 0.25). */
   vignette?: number;
   /** Film grain, 0–1 (default 0.25). */
   grain?: number;
@@ -46,7 +47,7 @@ export const HOUSE_GRADE: Required<Grade> = {
   temperature: 0,
   shadows: '#07080f',
   highlights: '#fff5e6',
-  vignette: 0.3,
+  vignette: 0.25,
   grain: 0.25,
   bloom: 0.45,
   threshold: 0.74,
@@ -58,6 +59,9 @@ const UNITY = 32;
 const GRAIN_SIZE = 1 << 16;
 
 const col = (c: Color | string): Color => (typeof c === 'string' ? hex(c) : c);
+
+// The 4×4 ordered-dither thresholds, inlined for the bloom's inner loop.
+const BAYER4 = new Float32Array([0, 8, 2, 10, 12, 4, 14, 6, 3, 11, 1, 9, 15, 7, 13, 5].map((v) => (v + 0.5) / 16));
 
 export class Post {
   readonly grade: Required<Grade>;
@@ -75,14 +79,22 @@ export class Post {
   private oy = 0;
   private builtFor: Float32Array | null | undefined = undefined;
   private builtVersion = -1;
-  // Bloom buffers (quarter resolution).
+  // Bloom: quarter-resolution cells, and the full-resolution glow they upsample to. The glow is
+  // recomputed every other frame and added in the grade loop.
   private qw = 0;
   private qh = 0;
   private br = new Float32Array(0);
   private bg = new Float32Array(0);
   private bb = new Float32Array(0);
+  private bm = new Float32Array(0);
   private tmp = new Float32Array(0);
-  private active = new Uint8Array(0);
+  private glowR = new Uint8Array(0);
+  private glowG = new Uint8Array(0);
+  private glowB = new Uint8Array(0);
+  private hasGlow = false;
+  /** Rows the glow reaches (1) — the rest skip the add. */
+  private glowRows = new Uint8Array(0);
+  private calls = 0;
 
   constructor(grade: Grade = {}) {
     this.grade = { ...HOUSE_GRADE, ...grade };
@@ -117,16 +129,17 @@ export class Post {
     }
   }
 
-  /**
-   * Grade `src` into `dst` (same size). `src` is scratch: bloom is added to it in place
-   * (the runner restores it from the background every frame anyway).
-   */
+  /** Grade `src` into `dst` (same size, packed 0xAABBGGRR). `src` is left untouched. */
   apply(src: Int32Array, dst: Int32Array, w: number, h: number, ox: number, oy: number, exposure: Float32Array | null, exposureVersion: number, animate: boolean) {
     if (w !== this.w || h !== this.h || ox !== this.ox || oy !== this.oy || exposure !== this.builtFor || exposureVersion !== this.builtVersion) {
       this.build(w, h, ox, oy, exposure, exposureVersion);
+      this.calls = 0;
     }
-    if (this.grade.bloom > 0) this.bloom(src);
-    if (animate) this.grainOff = (this.grainOff + 7919 + ((this.grainOff >>> 3) & 1023)) & (GRAIN_SIZE - 1);
+    // Lights rarely move fast: refreshing the glow every third frame (~7 times a second at
+    // 20 fps) is invisible and saves two thirds of its cost.
+    if (this.grade.bloom > 0 && this.calls++ % 3 === 0) this.bloom(src);
+    // Grain crawls at half the frame rate: alive, but not fizzing.
+    if (animate && this.calls & 1) this.grainOff = (this.grainOff + 7919 + ((this.grainOff >>> 3) & 1023)) & (GRAIN_SIZE - 1);
     const lr = this.lr;
     const lg = this.lg;
     const lb = this.lb;
@@ -134,32 +147,46 @@ export class Post {
     const gr = this.grain;
     const off = this.grainOff;
     const s = this.sat256;
-    const n = w * h;
-    if (s === 256) {
-      for (let i = 0; i < n; i++) {
+    const gR = this.glowR;
+    const gG = this.glowG;
+    const gB = this.glowB;
+    const rows = this.glowRows;
+    const glow = this.hasGlow;
+    for (let y = 0; y < h; y++) {
+      const i0 = y * w;
+      const i1 = i0 + w;
+      const withGlow = glow && rows[y] === 1;
+      for (let i = i0; i < i1; i++) {
         const c = src[i]!;
+        let r = c & 255;
+        let g = (c >>> 8) & 255;
+        let b = (c >>> 16) & 255;
+        if (withGlow) {
+          r += gR[i]!;
+          g += gG[i]!;
+          b += gB[i]!;
+          if (r > 255) r = 255;
+          if (g > 255) g = 255;
+          if (b > 255) b = 255;
+        }
+        if (s < 256) {
+          // Desaturating toward luma can't leave 0..255, so no clamps.
+          const L = (r * 77 + g * 150 + b * 29) >> 8;
+          r = L + (((r - L) * s) >> 8);
+          g = L + (((g - L) * s) >> 8);
+          b = L + (((b - L) * s) >> 8);
+        } else if (s > 256) {
+          const L = (r * 77 + g * 150 + b * 29) >> 8;
+          r = L + (((r - L) * s) >> 8);
+          g = L + (((g - L) * s) >> 8);
+          b = L + (((b - L) * s) >> 8);
+          r = r < 0 ? 0 : r > 255 ? 255 : r;
+          g = g < 0 ? 0 : g > 255 ? 255 : g;
+          b = b < 0 ? 0 : b > 255 ? 255 : b;
+        }
         const base = (lv[i]! + gr[(i + off) & (GRAIN_SIZE - 1)]!) << 8;
-        dst[i] = 0xff000000 | (lb[base | ((c >>> 16) & 255)]! << 16) | (lg[base | ((c >>> 8) & 255)]! << 8) | lr[base | (c & 255)]!;
+        dst[i] = 0xff000000 | (lb[base | b]! << 16) | (lg[base | g]! << 8) | lr[base | r]!;
       }
-      return;
-    }
-    for (let i = 0; i < n; i++) {
-      const c = src[i]!;
-      let r = c & 255;
-      let g = (c >>> 8) & 255;
-      let b = (c >>> 16) & 255;
-      const L = (r * 77 + g * 150 + b * 29) >> 8;
-      r = L + (((r - L) * s) >> 8);
-      g = L + (((g - L) * s) >> 8);
-      b = L + (((b - L) * s) >> 8);
-      if (r < 0) r = 0;
-      else if (r > 255) r = 255;
-      if (g < 0) g = 0;
-      else if (g > 255) g = 255;
-      if (b < 0) b = 0;
-      else if (b > 255) b = 255;
-      const base = (lv[i]! + gr[(i + off) & (GRAIN_SIZE - 1)]!) << 8;
-      dst[i] = 0xff000000 | (lb[base | b]! << 16) | (lg[base | g]! << 8) | lr[base | r]!;
     }
   }
 
@@ -171,7 +198,14 @@ export class Post {
     this.oy = oy;
     this.builtFor = exposure;
     this.builtVersion = version;
-    if (this.levels.length !== w * h) this.levels = new Uint8Array(w * h);
+    if (this.levels.length !== w * h) {
+      this.levels = new Uint8Array(w * h);
+      this.glowR = new Uint8Array(w * h);
+      this.glowG = new Uint8Array(w * h);
+      this.glowB = new Uint8Array(w * h);
+    }
+    if (this.glowRows.length !== h) this.glowRows = new Uint8Array(h);
+    this.hasGlow = false;
     const vig = this.grade.vignette;
     // The vignette is measured on the visible frame, so it hugs whatever aspect is showing.
     const cx = (w - 1) / 2;
@@ -179,11 +213,10 @@ export class Post {
     const rx = w / 2;
     const ry = h / 2;
     for (let y = 0; y < h; y++) {
-      const dy = (y - cy) / ry;
+      const dy = Math.pow(Math.abs((y - cy) / ry), 2.6);
       for (let x = 0; x < w; x++) {
-        const dx = (x - cx) / rx;
         // A soft rounded-rectangle falloff reads better on wide frames than a plain ellipse.
-        const d = Math.pow(Math.pow(Math.abs(dx), 2.6) + Math.pow(Math.abs(dy), 2.6), 1 / 2.6);
+        const d = Math.pow(Math.pow(Math.abs((x - cx) / rx), 2.6) + dy, 1 / 2.6);
         const v = 1 - vig * smooth(0.45, 1.25, d);
         const i = y * w + x;
         const e = exposure ? exposure[i]! : 1;
@@ -198,14 +231,14 @@ export class Post {
       this.br = new Float32Array(qn);
       this.bg = new Float32Array(qn);
       this.bb = new Float32Array(qn);
-      this.tmp = new Float32Array(qn);
-      this.active = new Uint8Array(qn);
+      this.bm = new Float32Array(qn);
+      this.tmp = new Float32Array(qn * 3);
     }
   }
 
-  /** Quarter-resolution bloom, added into src. */
+  /** Quarter-resolution bloom into the cached glow buffers. */
   private bloom(src: Int32Array) {
-    const { w, h, qw, qh, br, bg, bb } = this;
+    const { w, h, qw, qh, br, bg, bb, bm } = this;
     const thr = this.grade.threshold * 255 * 256;
     const span = Math.max(1, (1 - this.grade.threshold) * 255 * 256);
     br.fill(0);
@@ -230,9 +263,17 @@ export class Post {
         any = true;
       }
     }
-    if (!any) return;
+    if (!any) {
+      if (this.hasGlow) {
+        this.glowR.fill(0);
+        this.glowG.fill(0);
+        this.glowB.fill(0);
+        this.hasGlow = false;
+      }
+      return;
+    }
     // Three passes of a separable [1 2 1] blur ≈ a soft gaussian ~10 px wide.
-    for (const a of [br, bg, bb]) for (let p = 0; p < 3; p++) this.blur(a);
+    for (let p = 0; p < 3; p++) this.blur();
     // Pixel art has no HDR: a lamp and a sheet of paper are both white. Compress each cell
     // (keeping its hue) so small lights get a visible halo while big bright areas cap out.
     const cap = 64 * this.grade.bloom;
@@ -243,97 +284,102 @@ export class Post {
       const b = bb[q]! / 16;
       const m = r > g ? (r > b ? r : b) : g > b ? g : b;
       if (m < 0.05) {
-        br[q] = bg[q] = bb[q] = 0;
+        br[q] = bg[q] = bb[q] = bm[q] = 0;
         continue;
       }
       const f = (cap * (1 - Math.exp(-m / 22))) / m;
       br[q] = r * f;
       bg[q] = g * f;
       bb[q] = b * f;
+      bm[q] = m * f;
     }
-    const strength = 1;
-    // Which cells are worth upsampling.
-    const act = this.active;
-    for (let j = 0; j < qh; j++)
-      for (let i = 0; i < qw; i++) {
-        let m = 0;
-        for (let dj = -1; dj <= 1; dj++) {
-          const jj = j + dj;
-          if (jj < 0 || jj >= qh) continue;
-          for (let di = -1; di <= 1; di++) {
-            const ii = i + di;
-            if (ii < 0 || ii >= qw) continue;
-            const q = jj * qw + ii;
-            const v = br[q]! + bg[q]! + bb[q]!;
-            if (v > m) m = v;
-          }
-        }
-        act[j * qw + i] = m * strength > 0.6 ? 1 : 0;
-      }
-    // Bilinear upsample from cell centres (4i + 1.5), dithered, added to the frame.
-    for (let j = 0; j < qh; j++)
-      for (let i = 0; i < qw; i++) {
-        if (!act[j * qw + i]) continue;
-        for (let y = j * 4; y < Math.min(h, j * 4 + 4); y++) {
-          const fy = (y - 1.5) / 4;
-          let j0 = Math.floor(fy);
-          let ty = fy - j0;
-          if (j0 < 0) {
-            j0 = 0;
-            ty = 0;
-          }
-          const j1 = j0 + 1 < qh ? j0 + 1 : j0;
+    // Upsample: each 4×4 quad between four cell centres is a bilinear patch (fixed weights),
+    // dithered to whole levels. Quads that would add less than a level are skipped.
+    const gR = this.glowR;
+    const gG = this.glowG;
+    const gB = this.glowB;
+    gR.fill(0);
+    gG.fill(0);
+    gB.fill(0);
+    const rowsOn = this.glowRows;
+    rowsOn.fill(0);
+    const ox = this.ox;
+    const oy = this.oy;
+    for (let j = -1; j < qh; j++) {
+      const j0 = j < 0 ? 0 : j;
+      const j1 = j + 1 >= qh ? qh - 1 : j + 1;
+      const y0 = 4 * j + 2;
+      for (let i = -1; i < qw; i++) {
+        const i0 = i < 0 ? 0 : i;
+        const i1 = i + 1 >= qw ? qw - 1 : i + 1;
+        const a = j0 * qw + i0;
+        const b = j0 * qw + i1;
+        const c = j1 * qw + i0;
+        const d = j1 * qw + i1;
+        if (bm[a]! < 1 && bm[b]! < 1 && bm[c]! < 1 && bm[d]! < 1) continue;
+        const x0 = 4 * i + 2;
+        const ar = br[a]!, ag = bg[a]!, ab = bb[a]!;
+        const brr = br[b]!, bgg = bg[b]!, bbb = bb[b]!;
+        const cr = br[c]!, cg = bg[c]!, cb = bb[c]!;
+        const dr = br[d]!, dg = bg[d]!, db = bb[d]!;
+        for (let v = 0; v < 4; v++) {
+          const y = y0 + v;
+          if (y < 0 || y >= h) continue;
+          // Interpolate down the quad's left and right edges, then across the row.
+          const ty = (v + 0.5) * 0.25;
+          const lr = ar + (cr - ar) * ty, lg = ag + (cg - ag) * ty, lb = ab + (cb - ab) * ty;
+          const rr = brr + (dr - brr) * ty, rg = bgg + (dg - bgg) * ty, rb = bbb + (db - bbb) * ty;
           const row = y * w;
-          for (let x = i * 4; x < Math.min(w, i * 4 + 4); x++) {
-            const fx = (x - 1.5) / 4;
-            let i0 = Math.floor(fx);
-            let tx = fx - i0;
-            if (i0 < 0) {
-              i0 = 0;
-              tx = 0;
-            }
-            const i1 = i0 + 1 < qw ? i0 + 1 : i0;
-            const a = j0 * qw + i0;
-            const b = j0 * qw + i1;
-            const c2 = j1 * qw + i0;
-            const d = j1 * qw + i1;
-            const wa = (1 - tx) * (1 - ty);
-            const wb = tx * (1 - ty);
-            const wc = (1 - tx) * ty;
-            const wd = tx * ty;
-            const dith = bayer(x + this.ox, y + this.oy);
-            const ar = (br[a]! * wa + br[b]! * wb + br[c2]! * wc + br[d]! * wd) * strength + dith;
-            const ag = (bg[a]! * wa + bg[b]! * wb + bg[c2]! * wc + bg[d]! * wd) * strength + dith;
-            const ab = (bb[a]! * wa + bb[b]! * wb + bb[c2]! * wc + bb[d]! * wd) * strength + dith;
-            if (ar < 1 && ag < 1 && ab < 1) continue;
-            const p = src[row + x]!;
-            let r = (p & 255) + (ar | 0);
-            let g = ((p >>> 8) & 255) + (ag | 0);
-            let bl = ((p >>> 16) & 255) + (ab | 0);
-            if (r > 255) r = 255;
-            if (g > 255) g = 255;
-            if (bl > 255) bl = 255;
-            src[row + x] = 0xff000000 | (bl << 16) | (g << 8) | r;
+          rowsOn[y] = 1;
+          const brow = ((y + oy) & 3) << 2;
+          for (let u = 0; u < 4; u++) {
+            const x = x0 + u;
+            if (x < 0 || x >= w) continue;
+            const tx = (u + 0.5) * 0.25;
+            const dith = BAYER4[brow | ((x + ox) & 3)]!;
+            const r = lr + (rr - lr) * tx + dith;
+            const g = lg + (rg - lg) * tx + dith;
+            const bl = lb + (rb - lb) * tx + dith;
+            const p = row + x;
+            gR[p] = r > 255 ? 255 : r;
+            gG[p] = g > 255 ? 255 : g;
+            gB[p] = bl > 255 ? 255 : bl;
           }
         }
       }
+    }
+    this.hasGlow = true;
   }
 
-  private blur(a: Float32Array) {
-    const { qw, qh, tmp } = this;
+  /** One separable [1 2 1] pass over all three channels (edges leak a little so glows fade out). */
+  private blur() {
+    const { qw, qh, br, bg, bb } = this;
+    const t = this.tmp;
+    const n = qw * qh;
+    // Horizontal, into tmp (three channels interleaved).
     for (let y = 0; y < qh; y++) {
       const row = y * qw;
       for (let x = 0; x < qw; x++) {
         const i = row + x;
-        tmp[i] = (a[i]! * 2 + (x > 0 ? a[i - 1]! : a[i]!) + (x < qw - 1 ? a[i + 1]! : a[i]!)) * 0.25;
+        const l = x > 0 ? i - 1 : i;
+        const r = x < qw - 1 ? i + 1 : i;
+        t[i] = (br[i]! * 2 + br[l]! + br[r]!) * 0.25;
+        t[n + i] = (bg[i]! * 2 + bg[l]! + bg[r]!) * 0.25;
+        t[2 * n + i] = (bb[i]! * 2 + bb[l]! + bb[r]!) * 0.25;
       }
     }
+    // Vertical, back.
     for (let y = 0; y < qh; y++) {
       const row = y * qw;
+      const up = y > 0 ? -qw : 0;
+      const down = y < qh - 1 ? qw : 0;
+      const ku = y > 0 ? 1 : 0.5;
+      const kd = y < qh - 1 ? 1 : 0.5;
       for (let x = 0; x < qw; x++) {
         const i = row + x;
-        // Slightly leaky edges (×0.5 beyond the border) so glows near the frame edge fade out.
-        a[i] = (tmp[i]! * 2 + (y > 0 ? tmp[i - qw]! : tmp[i]! * 0.5) + (y < qh - 1 ? tmp[i + qw]! : tmp[i]! * 0.5)) * 0.25;
+        br[i] = (t[i]! * 2 + t[i + up]! * ku + t[i + down]! * kd) * 0.25;
+        bg[i] = (t[n + i]! * 2 + t[n + i + up]! * ku + t[n + i + down]! * kd) * 0.25;
+        bb[i] = (t[2 * n + i]! * 2 + t[2 * n + i + up]! * ku + t[2 * n + i + down]! * kd) * 0.25;
       }
     }
   }

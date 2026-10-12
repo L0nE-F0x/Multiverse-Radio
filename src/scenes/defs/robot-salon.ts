@@ -27,10 +27,10 @@ const def: SceneDef = {
   focusY: 84,
   rareEvents: 4,
   rareDuration: 6,
-  grade: { temperature: 0.35, contrast: 1.16, saturation: 0.8, shadows: '#0a0806', bloom: 0.7, threshold: 0.7, vignette: 0.4 },
+  grade: { temperature: 0.35, contrast: 1.16, saturation: 0.8, shadows: '#0a0806', bloom: 0.7, threshold: 0.7, vignette: 0.3 },
   create({ accent }) {
     const ink = hex('#0a0706');
-    const wall = [hex('#0e1c16'), hex('#13261e'), hex('#1b3328')];
+    const wall = [hex('#0e1c16'), hex('#13261e'), hex('#172c22')];
     const gold = [hex('#3a2810'), hex('#6e4e22'), hex('#a47c3c'), hex('#d8b46e')];
     const wood = [hex('#1a0d08'), hex('#2a160d'), hex('#3e2215'), hex('#58321d')];
     const wine = [hex('#1e070c'), hex('#3a0f18'), hex('#5a1a24')];

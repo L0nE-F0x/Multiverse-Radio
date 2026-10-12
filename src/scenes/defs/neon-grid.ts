@@ -25,7 +25,7 @@ const def: SceneDef = {
   rareEvents: 4,
   rareDuration: 6,
   focusY: 86,
-  grade: { contrast: 1.1, saturation: 0.78, bloom: 0.9, threshold: 0.58, vignette: 0.45, shadows: '#06020c' },
+  grade: { contrast: 1.1, saturation: 0.78, bloom: 0.9, threshold: 0.58, vignette: 0.34, shadows: '#06020c' },
   create({ accent }) {
     const ink = hex('#06000e');
     const skyC = [hex('#04010c'), hex('#0e0420'), hex('#220a36'), hex('#4a1446'), hex('#8a3450')];

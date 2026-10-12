@@ -21,7 +21,7 @@ const def: SceneDef = {
   rareEvents: 3,
   rareDuration: 8,
   focusY: 84,
-  grade: { temperature: 0.3, contrast: 1.16, saturation: 0.82, bloom: 0.8, threshold: 0.62, vignette: 0.45, shadows: '#08030a' },
+  grade: { temperature: 0.3, contrast: 1.16, saturation: 0.82, bloom: 0.8, threshold: 0.62, vignette: 0.34, shadows: '#08030a' },
   create({ accent }) {
     const ink = hex('#0a0306');
     const velvet = [hex('#14050a'), hex('#1e0810'), hex('#2a0c16')];

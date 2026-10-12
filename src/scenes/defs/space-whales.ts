@@ -36,7 +36,7 @@ const def: SceneDef = {
   focusY: 88,
   rareEvents: 4,
   rareDuration: 9,
-  grade: { contrast: 1.1, saturation: 0.82, shadows: '#04060c', highlights: '#eef6ff', bloom: 0.8, threshold: 0.62, vignette: 0.45, temperature: -0.2 },
+  grade: { contrast: 1.1, saturation: 0.82, shadows: '#04060c', highlights: '#eef6ff', bloom: 0.8, threshold: 0.62, vignette: 0.34, temperature: -0.2 },
   create({ accent }) {
     const deep = hex('#03050b');
     const indigo = hex('#1a1638');

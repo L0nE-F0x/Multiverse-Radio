@@ -22,7 +22,7 @@ const def: SceneDef = {
   rareEvents: 3,
   rareDuration: 7,
   focusY: 84,
-  grade: { contrast: 1.12, saturation: 0.8, bloom: 0.8, threshold: 0.66, vignette: 0.42, temperature: -0.1 },
+  grade: { contrast: 1.12, saturation: 0.8, bloom: 0.8, threshold: 0.66, vignette: 0.32, temperature: -0.1 },
   create({ accent }) {
     const ink = hex('#0a0814');
     const spaceC = [hex('#020309'), hex('#060818'), hex('#0c0e24')];

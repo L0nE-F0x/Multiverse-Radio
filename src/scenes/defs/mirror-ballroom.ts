@@ -35,7 +35,7 @@ const def: SceneDef = {
   focusY: 86,
   rareEvents: 4,
   rareDuration: 7,
-  grade: { temperature: 0.25, contrast: 1.15, saturation: 0.82, bloom: 0.65, vignette: 0.42 },
+  grade: { temperature: 0.25, contrast: 1.15, saturation: 0.82, bloom: 0.65, vignette: 0.32 },
   create({ accent }) {
     const ink = hex('#0b0608');
     const wall = [hex('#1c070d'), hex('#2c0d16'), hex('#3c1420')];

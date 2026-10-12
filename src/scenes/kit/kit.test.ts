@@ -1,8 +1,12 @@
 import { describe, expect, it } from 'vitest';
-import { Fog, beam, gloom, haze, lightPool, motes, rain } from './atmos';
+import { Fog, beam, gloom, haze, lightPool, motes, rain, reflectDown, rimLight } from './atmos';
 import { hex, luma, moodRamp, mute, rgb, toHsl, hsl } from './color';
 import { Gfx } from './gfx';
 import { Post, tone } from './post';
+import { Rng, hashString } from './rng';
+import { SCENE_IDS } from '../../broadcast/types';
+import { SCENES, loadScene } from '../registry';
+import { computeView } from '../viewport';
 
 const grey = (v: number) => rgb(v, v, v);
 
@@ -73,14 +77,20 @@ describe('post pass', () => {
     const h = 64;
     const src = new Int32Array(w * h).fill(grey(10));
     for (let y = 30; y < 34; y++) for (let x = 30; x < 34; x++) src[y * w + x] = grey(255);
-    const post = new Post({ vignette: 0, grain: 0, bloom: 1 });
-    const bright = src.slice();
-    post.apply(bright, new Int32Array(w * h), w, h, 0, 0, null, 1, false);
-    expect(luma(bright[32 * w + 38]!)).toBeGreaterThan(14);
+    const lit = new Int32Array(w * h);
+    const unlit = new Int32Array(w * h);
+    new Post({ vignette: 0, grain: 0, bloom: 1 }).apply(src, lit, w, h, 0, 0, null, 1, false);
+    new Post({ vignette: 0, grain: 0, bloom: 0 }).apply(src, unlit, w, h, 0, 0, null, 1, false);
+    // A halo six pixels out from the light, and the source frame is left alone.
+    expect(luma(lit[32 * w + 38]!)).toBeGreaterThan(luma(unlit[32 * w + 38]!) + 6);
+    expect(src[32 * w + 38]).toBe(grey(10));
+    // Nothing above the threshold: bloom changes nothing.
     const dim = new Int32Array(w * h).fill(grey(60));
-    const copy = dim.slice();
-    post.apply(copy, new Int32Array(w * h), w, h, 0, 0, null, 1, false);
-    expect(Array.from(copy)).toEqual(Array.from(dim));
+    const a = new Int32Array(w * h);
+    const b = new Int32Array(w * h);
+    new Post({ vignette: 0, grain: 0, bloom: 1 }).apply(dim, a, w, h, 0, 0, null, 1, false);
+    new Post({ vignette: 0, grain: 0, bloom: 0 }).apply(dim, b, w, h, 0, 0, null, 1, false);
+    expect(Array.from(a)).toEqual(Array.from(b));
   });
 });
 
@@ -101,7 +111,41 @@ describe('atmosphere helpers', () => {
       motes(g, 5, 0, 0, 320, 180, 30, hex('#ffffff'), 0.5);
       rain(g, 5, -50, -100, 400, 300, 80, hex('#aaccff'));
       gloom(g, g.left, 130, g.w, 60, 0.6);
+      g.rect(150, 80, 20, 30, hex('#406080'));
+      rimLight(g, 140, 70, 40, 50, (c) => c === hex('#406080'), hex('#ffcc88'), 0.5);
+      reflectDown(g, 140, 180, 110, 20, 0.3);
+      // Clipped: nothing outside the clip rectangle changes.
+      const before = g.get(g.left + 1, g.top + 1);
+      g.clip(150, 60, 20, 20);
+      haze(g, hex('#ff0000'), 0, 180, 1, 1);
+      fog.draw(g, 1, 0, 180, hex('#00ff00'), 1);
+      g.noClip();
+      expect(g.get(g.left + 1, g.top + 1)).toBe(before);
       expect(g.frame.every((c) => c >>> 24 === 255)).toBe(true);
+    }
+  });
+});
+
+describe('every registered scene through the lens', () => {
+  it('grades a frame with its own grade (and its exposure map) at 16:9 and 9:16', async () => {
+    for (const id of SCENE_IDS) {
+      if (!SCENES[id]) continue;
+      const def = await loadScene(id);
+      if (def.grade === false) continue;
+      for (const aspect of [16 / 9, 9 / 16]) {
+        const v = computeView(aspect, def.focusX, def.focusY);
+        const g = new Gfx(v.w, v.h, v.ox, v.oy);
+        const scene = def.create({ accent: hex('#ffb000'), rng: new Rng(hashString(id)), variant: hashString(id) });
+        g.target(g.bg);
+        scene.background(g);
+        g.target();
+        g.restore();
+        scene.frame(g, { t: 3, dt: 0.05, energy: 0.5, pulse: 0.5, beat: 3, awake: 1, playing: true, reduced: false, rareT: Infinity, rare: 0, rareSeed: 0.5, hour: 22, n: 60 });
+        const out = new Int32Array(g.frame.length);
+        new Post(def.grade).apply(g.frame, out, g.w, g.h, g.ox, g.oy, g.exposure, g.exposureVersion, true);
+        expect(out.every((c) => c >>> 24 === 255), id).toBe(true);
+        expect(new Set(out).size, id).toBeGreaterThan(16);
+      }
     }
   });
 });

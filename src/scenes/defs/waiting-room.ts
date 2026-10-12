@@ -22,7 +22,7 @@ const def: SceneDef = {
   rareEvents: 3,
   rareDuration: 7,
   focusY: 84,
-  grade: { temperature: 0.1, contrast: 1.12, saturation: 0.72, bloom: 0.5, threshold: 0.72, vignette: 0.5 },
+  grade: { temperature: 0.1, contrast: 1.12, saturation: 0.72, bloom: 0.5, threshold: 0.72, vignette: 0.36 },
   create({ accent }) {
     const ink = hex('#1a1812');
     const beige = hex('#9c9076');

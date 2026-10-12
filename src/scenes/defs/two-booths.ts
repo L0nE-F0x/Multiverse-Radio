@@ -34,7 +34,7 @@ const def: SceneDef = {
   focusY: 80,
   rareEvents: 3,
   rareDuration: 6,
-  grade: { contrast: 1.14, saturation: 0.86, bloom: 0.6, vignette: 0.38 },
+  grade: { contrast: 1.14, saturation: 0.86, bloom: 0.6, vignette: 0.3 },
   create({ accent }) {
     const ink = hex('#07070b');
     const A: Side = {

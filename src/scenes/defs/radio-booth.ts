@@ -21,7 +21,7 @@ const def: SceneDef = {
   rareEvents: 3,
   rareDuration: 7,
   focusY: 80,
-  grade: { temperature: 0.25, contrast: 1.15, saturation: 0.82, bloom: 0.8, threshold: 0.62, vignette: 0.45 },
+  grade: { temperature: 0.25, contrast: 1.15, saturation: 0.82, bloom: 0.8, threshold: 0.62, vignette: 0.34 },
   create({ accent }) {
     const ink = hex('#0a0504');
     const wood = [hex('#140a06'), hex('#1e0f09'), hex('#28150d'), hex('#331b11')];

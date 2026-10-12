@@ -31,7 +31,7 @@ const def: SceneDef = {
   rareEvents: 3,
   rareDuration: 6,
   focusY: 80,
-  grade: { contrast: 1.14, saturation: 0.82, bloom: 0.85, threshold: 0.6, vignette: 0.5, shadows: '#05030a', temperature: -0.1 },
+  grade: { contrast: 1.14, saturation: 0.82, bloom: 0.85, threshold: 0.6, vignette: 0.36, shadows: '#05030a', temperature: -0.1 },
   create({ accent, rng }) {
     const ink = hex('#06030a');
     const rock = ramp([hex('#07040c'), hex('#120a20'), hex('#1e1434'), hex('#2e2248'), hex('#3e305a')], 5);

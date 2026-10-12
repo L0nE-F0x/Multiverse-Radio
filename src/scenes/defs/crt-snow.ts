@@ -19,7 +19,7 @@ const def: SceneDef = {
   focusY: 78,
   rareEvents: 3,
   rareDuration: 7,
-  grade: { temperature: -0.25, contrast: 1.12, saturation: 0.8, bloom: 0.75, threshold: 0.62, vignette: 0.5, shadows: '#04050c' },
+  grade: { temperature: -0.25, contrast: 1.12, saturation: 0.8, bloom: 0.75, threshold: 0.62, vignette: 0.36, shadows: '#04050c' },
   create({ accent }) {
     const ink = hex('#07070f');
     const wall = [hex('#080a16'), hex('#0d1024'), hex('#11152e')];

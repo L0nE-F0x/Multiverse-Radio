@@ -20,7 +20,7 @@ const def: SceneDef = {
   focusY: 84,
   rareEvents: 4,
   rareDuration: 8,
-  grade: { contrast: 1.2, saturation: 0.78, shadows: '#030407', bloom: 0.6, vignette: 0.4, temperature: -0.15 },
+  grade: { contrast: 1.2, saturation: 0.78, shadows: '#030407', bloom: 0.6, vignette: 0.3, temperature: -0.15 },
   create({ accent }) {
     const ink = hex('#030405');
     const lime = mix(accent, hex('#a0b090'), 0.25);

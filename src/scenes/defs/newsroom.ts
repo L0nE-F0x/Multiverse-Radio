@@ -47,7 +47,7 @@ const def: SceneDef = {
   rareEvents: 4,
   rareDuration: 7,
   focusY: 80,
-  grade: { contrast: 1.15, saturation: 0.8, bloom: 0.6, threshold: 0.7, vignette: 0.45, shadows: '#05040c' },
+  grade: { contrast: 1.15, saturation: 0.8, bloom: 0.6, threshold: 0.7, vignette: 0.34, shadows: '#05040c' },
   create({ accent }) {
     const ink = hex('#04030a');
     const bg = [hex('#05050f'), hex('#0b0b20'), hex('#12102c')];
