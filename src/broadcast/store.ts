@@ -11,6 +11,7 @@
 //   - Any of these power the radio on (or resume it), like the v2 `tune`.
 
 import { create } from 'zustand';
+import { loadTrackPacks } from '../content';
 import { SHIP } from '../stations/ship';
 import { DEFAULT_STATION_ID, MAIN_STATIONS, STATIONS } from '../stations/roster';
 import { DISCOVER_MS, DISCOVER_SIGNAL, pirates, stationForId, stepFrom } from './dial';
@@ -191,6 +192,7 @@ export const useBroadcast = create<BroadcastStore>()((set, get) => {
   });
   director.onTick(refresh);
   library.subscribe(refresh);
+  void loadTrackPacks().then(refresh);
   void director.prefetchStation(director.stationId);
   void library.loadShows();
   queueMicrotask(refresh);

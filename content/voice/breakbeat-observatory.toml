@@ -1,0 +1,328 @@
+# Breakbeat Observatory — 94.8, Mount Subwoofer Observatory, where the telescopes are subwoofers.
+#
+# MC Parallax hosts: fast, cosmic, measures everything in light years, sends shout-outs to
+# galaxies by name (all invented). Doctor Ferrin is the lone astronomer in the dome: headphones
+# on, notebook out, logs every drop, has never once nodded her head.
+#
+# Running bits: the bass moves nearby stars (and apologies to their planets); listeners so far
+# away they'll hear this set in thirty thousand years; Doctor Ferrin's head, which does not nod
+# (until it does). Cross-station: Teodor at Relay Four.
+station = "breakbeat-observatory"
+
+[voices]
+host = { voice = "am_fenrir", speed = 1.1, name = "MC Parallax" }
+ferrin = { voice = "bf_alice", speed = 0.95, name = "Doctor Ferrin" }
+
+[[show]]
+id = "the-drop-zone"
+name = "The Drop Zone"
+blurb = "Peak-time drum and bass under an open dome. Expect seismic activity and minor stellar drift."
+start = 20
+end = 23
+
+[[show]]
+id = "light-cone"
+name = "Late Night Light Cone"
+blurb = "Everything played tonight leaves at the speed of light and doesn't slow down. Neither do we."
+start = 23
+end = 3
+
+[[show]]
+id = "closing-the-dome"
+name = "Closing the Dome"
+blurb = "The last tunes before sunrise, when the sun gets too loud to compete with."
+start = 4
+end = 7
+
+# ── Idents ────────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "id-001"
+category = "id"
+lines = [
+  { say = "host", text = "Breakbeat Observatory! Ninety four point eight! Drum and bass from the top of Mount Subwoofer!" },
+  { sting = "id" },
+]
+
+[[clip]]
+id = "id-002"
+category = "id"
+lines = [
+  { say = "host", text = "This is Breakbeat Observatory. A hundred and seventy two beats a minute, at the speed of light. Hold on to your stars." },
+]
+
+[[clip]]
+id = "id-003"
+category = "id"
+lines = [
+  { say = "host", text = "MC Parallax, Breakbeat Observatory. Dome open, woofer up, and every star in the sky is shivering. Lovely." },
+]
+
+[[clip]]
+id = "id-004"
+category = "id"
+daypart = "night"
+lines = [
+  { say = "host", text = "Breakbeat Observatory. Clear skies, heavy bass, perfect seeing conditions. Let's see what we can hear." },
+  { sting = "id" },
+]
+
+[[clip]]
+id = "id-005"
+category = "id"
+lines = [
+  { say = "ferrin", text = "Breakbeat Observatory. Twenty three forty. Bass detected." },
+  { say = "host", text = "She's right, you know." },
+]
+
+[[clip]]
+id = "id-006"
+category = "id"
+lines = [
+  { say = "host", text = "You're locked to Breakbeat Observatory. Signal strength, massive. Distance, a few light years, give or take a drop." },
+]
+
+[[clip]]
+id = "id-007"
+category = "id"
+lines = [
+  { say = "host", text = "Breakbeat Observatory! Big up every galaxy listening right now. All two trillion of you." },
+  { sting = "id" },
+]
+
+# ── Host links ────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "dj-001"
+category = "dj"
+lines = [
+  { say = "host", text = "That last tune was a hundred and seventy four beats a minute, and nine minutes long, which, at the speed of light, is about a hundred million miles." },
+  { say = "host", text = "So if you're listening from the sun, it just got to you. Big up the sun! Here's the next one." },
+]
+
+[[clip]]
+id = "dj-002"
+category = "dj"
+title = "Shout-Outs"
+lines = [
+  { say = "host", text = "Shout-outs! Big up the Lesser Teacup Cluster. Big up the Velvet Spiral, all two hundred billion stars, I see you." },
+  { say = "host", text = "And big up Gorbel's Nebula, who requested this one about thirty thousand years ago. Sorry for the wait, Gorbel. Worth it." },
+]
+
+[[clip]]
+id = "dj-003"
+category = "dj"
+title = "An Apology to the Brantley System"
+lines = [
+  { say = "host", text = "Quick apology to everybody in the Brantley System. That last drop moved your sun about four inches to the left. Your summers might be a bit warmer for a while. Our bad." },
+  { say = "host", text = "Here's something lighter.", gap = 0.7 },
+  { say = "host", text = "It's not lighter." },
+]
+
+[[clip]]
+id = "dj-004"
+category = "dj"
+title = "Doctor Ferrin"
+lines = [
+  { say = "host", text = "Up in the dome tonight, as always, it's Doctor Ferrin, our resident astronomer. Headphones on. Notebook out. Writing down every single drop." },
+  { say = "host", text = "Three hundred nights a year she's up there, and she has never once nodded her head. Not once. Doc, how are we doing?" },
+  { say = "ferrin", text = "Recording.", gap = 0.5 },
+  { say = "host", text = "That's the vibe." },
+]
+
+[[clip]]
+id = "dj-005"
+category = "dj"
+title = "Observation Log"
+lines = [
+  { say = "ferrin", text = "Observation log. Twenty three fifty one. The drop. Twenty three fifty one and four seconds. A star in Cassius Minor has moved." },
+  { say = "ferrin", text = "Twenty three fifty two. The star has moved back. It appears to be dancing. Noted." },
+  { say = "host", text = "Noted! She noted it! Here's another one!" },
+]
+
+[[clip]]
+id = "dj-006"
+category = "dj"
+title = "A Calibration"
+lines = [
+  { say = "host", text = "Breaking news from the dome. I think. I think I just saw Doctor Ferrin's foot tap. Once. Doc, did your foot just tap?" },
+  { say = "ferrin", text = "It was a calibration.", gap = 0.5 },
+  { say = "host", text = "It was a calibration, people! Calibrate with me!" },
+]
+
+[[clip]]
+id = "dj-007"
+category = "dj"
+daypart = "night"
+title = "The Nod"
+lines = [
+  { say = "host", text = "Okay. I need everybody to stay very calm. About thirty seconds into that last tune, Doctor Ferrin nodded her head. Once. Slowly." },
+  { say = "host", text = "And then she wrote something down, and underlined it twice. I don't know what it says. I'm not going to ask. Some things you just let be beautiful." },
+]
+
+[[clip]]
+id = "dj-008"
+category = "dj"
+lines = [
+  { say = "host", text = "If you're listening from the Andra Reach, you're hearing this set sixty thousand years from now. Hello, the future! Is the party still going?" },
+  { say = "host", text = "It is? I knew it! Tell them Parallax said hi. Here's one for the future." },
+]
+
+[[clip]]
+id = "dj-009"
+category = "dj"
+title = "The Old Cone"
+lines = [
+  { say = "host", text = "Technical note. The main woofer got a new cone this week. The old one had been pointed at the sky so long it started picking stuff up. Last night it played us a bassline from a planet that hasn't been named yet." },
+  { say = "host", text = "So we kept it. It's in the gift shop. It's still going." },
+]
+
+[[clip]]
+id = "dj-010"
+category = "dj"
+daypart = "night"
+title = "For the Night Shift"
+lines = [
+  { say = "host", text = "Big, big shout to the Nightjar! Relay Seven! The night operator! I see your running lights. You're the closest listener we've got, about one point four light seconds out. Basically next door." },
+  { say = "host", text = "Turn it up. The neighbours won't mind. You haven't got any." },
+]
+
+[[clip]]
+id = "dj-011"
+category = "dj"
+daypart = "morning"
+lines = [
+  { say = "host", text = "The sun's coming up over Mount Subwoofer, which means we have to turn down. The sun is very loud. Five thousand degrees of pure treble. We can't compete." },
+  { say = "host", text = "One more tune, then the dome closes. Make it count." },
+]
+
+[[clip]]
+id = "dj-012"
+category = "dj"
+title = "Relay Four"
+lines = [
+  { say = "host", text = "Picking something up on the big woofer. Very faint. A man called Teodor, at Relay Four, asking if anyone can hear him." },
+  { say = "host", text = "Teodor! We hear you, my friend! Here's one with extra sub, so it gets all the way out to you. Big up Relay Four!" },
+]
+
+[[clip]]
+id = "dj-013"
+category = "dj"
+daypart = "evening"
+lines = [
+  { say = "host", text = "Evening, everybody! The sky's getting dark, which in our line of work means the speakers come out. The stars are tuning up. The moon's found a spot near the front." },
+  { say = "host", text = "It's going to be a big one tonight." },
+]
+
+# ── The Drop Zone (20–23) ─────────────────────────────────────────────────────
+
+[[clip]]
+id = "id-the-drop-zone"
+category = "id"
+show = "the-drop-zone"
+part = "open"
+lines = [
+  { say = "host", text = "Breakbeat Observatory, this is the Drop Zone! Dome open, woofers armed. Nearby planets, please secure any loose moons." },
+  { sting = "id" },
+]
+
+[[clip]]
+id = "dj-the-drop-zone-001"
+category = "dj"
+show = "the-drop-zone"
+lines = [
+  { say = "host", text = "Seismic update! The Drop Zone just registered a four point two on the observatory floor, and a mild tremor in the next valley, where some goats are now facing the other way." },
+  { say = "host", text = "Sorry, goats. Here comes another one." },
+]
+
+[[clip]]
+id = "dj-the-drop-zone-002"
+category = "dj"
+show = "the-drop-zone"
+lines = [
+  { say = "host", text = "If you're in the dome tonight, watch out for the meteor shower. Those aren't meteors. Those are the stars we shook loose earlier." },
+  { say = "host", text = "They'll be fine. Probably. Doc?" },
+  { say = "ferrin", text = "Probably." },
+]
+
+# ── Late Night Light Cone (23–3) ──────────────────────────────────────────────
+
+[[clip]]
+id = "id-light-cone"
+category = "id"
+show = "light-cone"
+part = "open"
+lines = [
+  { say = "host", text = "It's late, and this is the Late Night Light Cone. Everything you hear tonight leaves here at the speed of light, and it's not slowing down." },
+]
+
+[[clip]]
+id = "dj-light-cone-001"
+category = "dj"
+show = "light-cone"
+lines = [
+  { say = "host", text = "After midnight the bass travels further. Every tune we play tonight is going to be heard, eventually, by somebody very far away and very surprised." },
+  { say = "host", text = "Let's give them something to be surprised about." },
+]
+
+[[clip]]
+id = "dj-light-cone-002"
+category = "dj"
+show = "light-cone"
+lines = [
+  { say = "ferrin", text = "Observation. Oh two hundred hours. It is very late. The music has not stopped." },
+  { say = "host", text = "It's never stopping, Doc. Write that down." },
+  { say = "ferrin", text = "Never... stopping. Noted." },
+]
+
+# ── Closing the Dome (4–7) ────────────────────────────────────────────────────
+
+[[clip]]
+id = "id-closing-the-dome"
+category = "id"
+show = "closing-the-dome"
+part = "open"
+lines = [
+  { say = "host", text = "This is Closing the Dome, on Breakbeat Observatory. Last tunes before the sun comes up and drowns us out. Doc, final observations, please." },
+]
+
+[[clip]]
+id = "dj-closing-the-dome-001"
+category = "dj"
+show = "closing-the-dome"
+lines = [
+  { say = "host", text = "Doc's packing up her notebook. She's filled another one tonight. That's three thousand notebooks, people, every page full of drops." },
+  { say = "host", text = "One day we're going to read them all out, start to finish. That'll be a long show." },
+]
+
+[[clip]]
+id = "dj-closing-the-dome-002"
+category = "dj"
+show = "closing-the-dome"
+lines = [
+  { say = "host", text = "The sky's going pale. The stars are fading out, one by one, like a crowd going home." },
+  { say = "host", text = "Thank you, stars. Get home safe. See you tonight." },
+]
+
+# ── Halloween ─────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "dj-halloween-001"
+category = "dj"
+title = "A Ghost with a Sound System"
+dates = ["10-24", "10-25", "10-26", "10-27", "10-28", "10-29", "10-30", "10-31"]
+lines = [
+  { say = "host", text = "Halloween special, people! Tonight we pointed the woofer at a star that died a million years ago. It's still sending us its light. And, it turns out, its bass." },
+  { say = "host", text = "That's a ghost, people. That's a ghost with a sound system. Doc?" },
+  { say = "ferrin", text = "Observation. Spooky.", gap = 0.6 },
+  { say = "host", text = "She's never written spooky before." },
+]
+
+[[clip]]
+id = "id-halloween-001"
+category = "id"
+dates = ["10-24", "10-25", "10-26", "10-27", "10-28", "10-29", "10-30", "10-31"]
+lines = [
+  { say = "host", text = "Breakbeat Observatory. Happy Halloween. Half the stars you can see are already gone. Dance anyway." },
+  { sting = "halloween" },
+]

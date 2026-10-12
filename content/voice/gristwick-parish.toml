@@ -1,0 +1,500 @@
+# Gristwick Parish Radio — 103.45, Gristwick-under-Gristwick.
+#
+# Live coverage of the village fête, now in its three hundredth consecutive year. The
+# Reverend Clement Ashby is vicar, commentator and tombola steward. He has declared the fête
+# open every morning for three hundred years and would very much like, one day, to close it.
+# The fête closes when the tombola has been drawn. The tombola has some way to go.
+#
+# Modular kits (the director chains open → 1–3 bodies → close):
+#   results (sports) — from the judging marquee: marrow, tug of war, sponges, dog show
+#   notices (psa)    — from the steps of the tea tent: lost children, raffle, lost property
+# Running bits: Mr Hebblethwaite's marrow (size of a motor coach, has its own postcode); the
+# Silver Band, nearly at the trio section; the tug of war, taken up in 1780; the urn.
+# Cross-station: Biscuit from Lower Hollow wins the waggiest tail in absentia; the rain from
+# Smoke Ring Trio's applause; Bev and her song.
+station = "gristwick-parish"
+
+[voices]
+host = { voice = "bm_george", speed = 0.95, name = "Reverend Clement Ashby" }
+pargeter = { voice = "bf_alice", name = "Mrs Pargeter, Head Judge" }
+hebblethwaite = { voice = "bm_fable", fx = "phone", name = "Mr Hebblethwaite" }
+
+[[show]]
+id = "the-opening"
+name = "The Opening of the Fête"
+blurb = "Every morning the Reverend Ashby declares the fête open. Again. Live from the tea tent steps."
+start = 8
+end = 10
+
+[[show]]
+id = "evensong-results"
+name = "Evensong and Results"
+blurb = "The day's results from the judging marquee, the bells, and the band, nearly at the trio section."
+start = 17
+end = 19
+
+[[show]]
+id = "the-night-fete"
+name = "The Night Fête"
+blurb = "The fête doesn't close at night. Fairy lights, a lantern on the marrow, and the urn still on."
+start = 23
+end = 3
+
+# ── Idents ────────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "id-001"
+category = "id"
+lines = [
+  { say = "host", text = "You're listening to Gristwick Parish Radio. Live from the village fête, now in its three hundredth consecutive year." },
+  { sting = "community" },
+]
+
+[[clip]]
+id = "id-002"
+category = "id"
+lines = [
+  { say = "host", text = "Gristwick Parish Radio. Bunting, brass, and a marrow you can see from the next parish." },
+]
+
+[[clip]]
+id = "id-003"
+category = "id"
+lines = [
+  { say = "host", text = "This is Gristwick Parish Radio, from the tea tent, where the urn has been on since seventeen twenty six." },
+]
+
+[[clip]]
+id = "id-004"
+category = "id"
+daypart = "morning"
+lines = [
+  { say = "host", text = "Good morning from Gristwick Parish Radio. The fête is open. The fête is, I'm afraid, still open." },
+  { sting = "community" },
+]
+
+[[clip]]
+id = "id-005"
+category = "id"
+daypart = "night"
+lines = [
+  { say = "host", text = "Gristwick Parish Radio. The fête doesn't close at night. We simply put the fairy lights on, and carry on." },
+]
+
+# ── Host links ────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "dj-001"
+category = "dj"
+title = "When Will It End?"
+lines = [
+  { say = "host", text = "Some people have asked when the fête will end. It's a fair question. It was a fair question in seventeen fifty. The committee's position is that the fête will close once the tombola has been drawn." },
+  { say = "host", text = "The tombola has some way to go. There are a great many tickets. Some of them are in Latin." },
+]
+
+[[clip]]
+id = "dj-002"
+category = "dj"
+title = "The Silver Band"
+lines = [
+  { say = "host", text = "The Gristwick Silver Band have been playing the same march since the opening ceremony. They tell me they're nearly at the trio section." },
+  { say = "host", text = "The trio section is the quiet bit in the middle. They have been looking forward to it for some time. As have we all." },
+]
+
+[[clip]]
+id = "dj-003"
+category = "dj"
+daypart = "night"
+title = "For the Night Shift"
+lines = [
+  { say = "host", text = "A good evening to the night operator on the relay ship. We see you pass over the green each night, just above the bunting." },
+  { say = "host", text = "Do drop in. The fête is open. It is always open. There's a raffle." },
+]
+
+[[clip]]
+id = "dj-004"
+category = "dj"
+title = "Bev's Song"
+lines = [
+  { say = "host", text = "Bev was in the tea tent again this afternoon, asking whether anyone knew a song. It goes, da da dum, da da. The Silver Band said they'd have a go. They've added it to the end of the march." },
+  { say = "host", text = "So, at the current rate, Bev, we'll get to it in about forty years. Do stay by the radio." },
+]
+
+[[clip]]
+id = "dj-005"
+category = "dj"
+daypart = "morning"
+title = "One Day"
+lines = [
+  { say = "host", text = "Every morning, for three hundred years, I have stood on the steps of the tea tent and declared this fête open. And every morning I have rather hoped, just once, to declare it closed." },
+  { say = "host", text = "I've practised. I know exactly what I'll say. Thank you all. Go home. Mind the bunting.", gap = 0.8 },
+  { say = "host", text = "One day." },
+]
+
+[[clip]]
+id = "dj-006"
+category = "dj"
+daypart = "day"
+title = "A Sudden Downpour"
+lines = [
+  { say = "host", text = "We had a sudden downpour over the green this afternoon, out of a perfectly clear sky. I'm told it came from a jazz club in a passing cloud, where somebody had applauded." },
+  { say = "host", text = "We carried on. We always carry on. The cakes were covered in time, and the marrow drank deeply." },
+]
+
+# ── Results kit (sports): open × 1–3 results × close ──────────────────────────
+
+[[clip]]
+id = "results-open-001"
+category = "sports"
+kit = "results"
+part = "open"
+bed = "fete"
+lines = [
+  { say = "host", text = "And now, the results from the judging marquee. A great deal of excitement in there this afternoon. Some of it from the judges." },
+]
+
+[[clip]]
+id = "results-open-002"
+category = "sports"
+kit = "results"
+part = "open"
+bed = "fete"
+lines = [
+  { sting = "fanfare" },
+  { say = "host", text = "Results, now, from the fête. Hush in the marquee, please. Mrs Pargeter has the envelopes." },
+]
+
+[[clip]]
+id = "results-body-001"
+category = "sports"
+kit = "results"
+part = "body"
+bed = "fete"
+title = "The Giant Marrow"
+lines = [
+  { say = "host", text = "The giant marrow. Mister Hebblethwaite's marrow was once again too large to bring into the marquee, so the judges went out to it, and were gone some hours." },
+  { say = "host", text = "They describe it as magnificent, and slightly warm. It has been awarded second place, as ever. First place is being held back, in case it gets bigger. It will." },
+]
+
+[[clip]]
+id = "results-body-002"
+category = "sports"
+kit = "results"
+part = "body"
+bed = "fete"
+title = "The Tug of War"
+lines = [
+  { say = "host", text = "The tug of war. Upper Gristwick against Lower Gristwick. The rope was taken up in seventeen eighty, and neither side has moved since." },
+  { say = "host", text = "The rope is very taut. Both teams are in fine spirits. The judges have declared it a draw for the two hundred and forty sixth year running, and sent sandwiches." },
+]
+
+[[clip]]
+id = "results-body-003"
+category = "sports"
+kit = "results"
+part = "body"
+bed = "fete"
+title = "The Victoria Sponge"
+lines = [
+  { say = "host", text = "The Victoria sponge. A strong field this year. The judges tasted forty two sponges. Mrs Pargeter, anything to add?" },
+  { say = "pargeter", text = "We are full." },
+  { say = "host", text = "First prize to Mrs Abernathy, for a sponge that was light, even and kind. Second, to Mrs Abernathy's sister, who has asked that her objection be noted, for the hundredth year running. It has been." },
+]
+
+[[clip]]
+id = "results-body-004"
+category = "sports"
+kit = "results"
+part = "body"
+bed = "fete"
+title = "The Dog Show"
+lines = [
+  { say = "host", text = "The dog show. Dog most like its owner went to a beagle called Admiral, and his owner, also Admiral." },
+  { say = "host", text = "Waggiest tail went to a spaniel from Lower Hollow called Biscuit, who did not attend, as he is busy watching a hole. The judges felt it was implied." },
+]
+
+[[clip]]
+id = "results-body-005"
+category = "sports"
+kit = "results"
+part = "body"
+bed = "fete"
+title = "The Welly Throwing"
+lines = [
+  { say = "host", text = "The welly throwing. A new record from young Tom Fairley, who threw his boot clean over the church tower. It hasn't come down." },
+  { say = "host", text = "The judges have agreed to wait for it until the end of the fête. Which may, of course, be a while." },
+]
+
+[[clip]]
+id = "results-body-006"
+category = "sports"
+kit = "results"
+part = "body"
+bed = "fete"
+title = "The Tombola"
+lines = [
+  { say = "host", text = "This afternoon's tombola draw. Ticket number four thousand and twelve, sold in seventeen twenty six, to a lady in a blue bonnet." },
+  { say = "host", text = "She hasn't come forward. The prize, a bottle of elderflower cordial, is being held for her in the vestry. It has matured considerably." },
+]
+
+[[clip]]
+id = "results-close-001"
+category = "sports"
+kit = "results"
+part = "close"
+bed = "fete"
+lines = [
+  { say = "host", text = "Congratulations to all our winners. And to everybody else, there's always next year.", gap = 0.6 },
+  { say = "host", text = "There is, I'm afraid, always next year." },
+]
+
+[[clip]]
+id = "results-close-002"
+category = "sports"
+kit = "results"
+part = "close"
+bed = "fete"
+lines = [
+  { say = "host", text = "Those are the results. Prizes may be collected from the tea tent, where some of them have been waiting since the reign of somebody or other." },
+]
+
+# ── Notices kit (psa): open × 1–3 notices × close ─────────────────────────────
+
+[[clip]]
+id = "notice-open-001"
+category = "psa"
+kit = "notices"
+part = "open"
+over_music = true
+lines = [
+  { say = "host", text = "A few notices now, from the fête committee." },
+  { sfx = "bell", level = 0.6 },
+]
+
+[[clip]]
+id = "notice-open-002"
+category = "psa"
+kit = "notices"
+part = "open"
+over_music = true
+lines = [
+  { say = "host", text = "Some announcements, from the steps of the tea tent. Would the band play quietly, please. Thank you. Quieter. Thank you." },
+]
+
+[[clip]]
+id = "notice-body-001"
+category = "psa"
+kit = "notices"
+part = "body"
+over_music = true
+title = "A Lost Boy"
+lines = [
+  { say = "host", text = "Would the parents of a small boy called Thomas please come to the tea tent. Thomas has been with us since seventeen fifty." },
+  { say = "host", text = "He's very well. He's now running the tea tent. He asks that you bring your own cup." },
+]
+
+[[clip]]
+id = "notice-body-002"
+category = "psa"
+kit = "notices"
+part = "body"
+over_music = true
+title = "The Maypole"
+lines = [
+  { say = "host", text = "The maypole dancers have asked whether they may stop. The answer, as ever, is after the raffle." },
+  { say = "host", text = "The maypole is now more ribbon than pole, and has been reclassified by the parish as a large bobbin." },
+]
+
+[[clip]]
+id = "notice-body-003"
+category = "psa"
+kit = "notices"
+part = "body"
+over_music = true
+title = "The Raffle"
+lines = [
+  { say = "host", text = "Raffle tickets are still available from the trestle table by the lych gate. First prize, a hamper. Second prize, last year's hamper." },
+  { say = "host", text = "Third prize is the hamper from the very first fête, which is not to be opened, and which hums." },
+]
+
+[[clip]]
+id = "notice-body-004"
+category = "psa"
+kit = "notices"
+part = "body"
+over_music = true
+title = "Lost Property"
+lines = [
+  { say = "host", text = "Lost property. A gentleman's top hat, a lady's parasol, a set of keys to a carriage, and a carriage." },
+  { say = "host", text = "If any of these are yours, please collect them from the vestry. Please also collect the horse." },
+]
+
+[[clip]]
+id = "notice-body-005"
+category = "psa"
+kit = "notices"
+part = "body"
+over_music = true
+title = "The Urn"
+lines = [
+  { say = "host", text = "The tea tent would like to remind you that the urn has been on since the opening ceremony. The tea is very strong. It is now, I'm told, technically a soup." },
+  { say = "host", text = "Scones are available, with cream and jam, in whichever order keeps the peace." },
+]
+
+[[clip]]
+id = "notice-close-001"
+category = "psa"
+kit = "notices"
+part = "close"
+over_music = true
+lines = [
+  { say = "host", text = "That's all the notices. Do enjoy the fête. You've no choice, but do enjoy it." },
+]
+
+[[clip]]
+id = "notice-close-002"
+category = "psa"
+kit = "notices"
+part = "close"
+over_music = true
+lines = [
+  { say = "host", text = "Those are the notices. And please, for the last time this century, keep off the marrow." },
+]
+
+# ── Calls ─────────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "call-001"
+category = "call"
+title = "Mr Hebblethwaite on the Marrow"
+bed = "fete"
+lines = [
+  { sfx = "phone-ring" },
+  { say = "host", text = "Gristwick Parish Radio. Hello?" },
+  { say = "hebblethwaite", text = "Vicar. It's Hebblethwaite." },
+  { say = "host", text = "Ah, Mister Hebblethwaite. And how is the marrow?" },
+  { say = "hebblethwaite", text = "Coming along, Vicar. I've had to move the greenhouse. Well. I've had to move the greenhouse off it." },
+  { say = "host", text = "Will it be ready for the judging?" },
+  { say = "hebblethwaite", text = "Nearly, Vicar. Nearly. Another season or two." },
+  { say = "host", text = "You said that in seventeen ninety." },
+  { say = "hebblethwaite", text = "And it's been true every time.", gap = 0.8 },
+  { say = "hebblethwaite", text = "Vicar. Can you hear that?" },
+  { say = "host", text = "Hear what?" },
+  { say = "hebblethwaite", text = "That's it growing.", gap = 1.2 },
+  { say = "host", text = "Lovely, Mister Hebblethwaite. Lovely." },
+  { sfx = "phone-hangup" },
+]
+
+# ── The Opening of the Fête (8–10) ────────────────────────────────────────────
+
+[[clip]]
+id = "id-the-opening"
+category = "id"
+show = "the-opening"
+part = "open"
+lines = [
+  { sting = "fanfare" },
+  { say = "host", text = "Good morning. It is my great pleasure, once again, to declare this fête open.", gap = 0.6 },
+  { say = "host", text = "Again. Thank you." },
+]
+
+[[clip]]
+id = "dj-the-opening-001"
+category = "dj"
+show = "the-opening"
+lines = [
+  { say = "host", text = "The opening ceremony went very well this morning. The ribbon was cut, the band struck up, and a small cheer went up from the regulars, several of whom have been here since the first one." },
+  { say = "host", text = "I cut the same ribbon every morning. We tie it back together at night. It's very short now." },
+]
+
+[[clip]]
+id = "dj-the-opening-002"
+category = "dj"
+show = "the-opening"
+lines = [
+  { say = "host", text = "A word for anybody arriving at the fête for the first time today. Welcome. Parking is in the top field. Tea is in the tent." },
+  { say = "host", text = "And the exit is... well. The exit is a matter for the committee." },
+]
+
+# ── Evensong and Results (17–19) ──────────────────────────────────────────────
+
+[[clip]]
+id = "id-evensong-results"
+category = "id"
+show = "evensong-results"
+part = "open"
+lines = [
+  { say = "host", text = "Good evening, and welcome to Evensong and Results. The bells are ringing, the band is playing, and the judges have emerged from the marquee, blinking." },
+]
+
+[[clip]]
+id = "dj-evensong-results-001"
+category = "dj"
+show = "evensong-results"
+lines = [
+  { say = "host", text = "The bells of Saint Wilfreda's are ringing for evensong, as they have every evening of the fête. The bell-ringers have asked me to say that they would quite like to go home." },
+  { say = "host", text = "I've told them. I know. I know." },
+]
+
+[[clip]]
+id = "dj-evensong-results-002"
+category = "dj"
+show = "evensong-results"
+lines = [
+  { say = "host", text = "The marquee is emptying after the judging. One of our judges has been judging the jam since seventeen sixty." },
+  { say = "host", text = "She tells me that, if she's honest, it's all quite good." },
+]
+
+# ── The Night Fête (23–3) ─────────────────────────────────────────────────────
+
+[[clip]]
+id = "id-the-night-fete"
+category = "id"
+show = "the-night-fete"
+part = "open"
+lines = [
+  { say = "host", text = "This is the Night Fête, on Gristwick Parish Radio. The fairy lights are on, the urn is on, and the fête, bless it, is on." },
+]
+
+[[clip]]
+id = "dj-the-night-fete-001"
+category = "dj"
+show = "the-night-fete"
+lines = [
+  { say = "host", text = "Three in the morning on the green. The band is playing very softly, the dancers are going round the bobbin very slowly, and the urn is ticking away to itself." },
+  { say = "host", text = "If you're up, come down. We're always up." },
+]
+
+[[clip]]
+id = "dj-the-night-fete-002"
+category = "dj"
+show = "the-night-fete"
+lines = [
+  { say = "host", text = "The marrow glows a little at night, I've noticed. Mister Hebblethwaite says that's quite normal, for a marrow of its age." },
+  { say = "host", text = "I've never met a marrow of its age. I don't believe anyone has." },
+]
+
+# ── Halloween ─────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "dj-halloween-001"
+category = "dj"
+title = "The Marrow Lantern"
+dates = ["10-24", "10-25", "10-26", "10-27", "10-28", "10-29", "10-30", "10-31"]
+lines = [
+  { say = "host", text = "For Halloween, the fête committee has carved the prize marrow into a lantern. It took three hundred volunteers and a canal boat. It's lit now. You can see it from the next county." },
+  { say = "host", text = "Mister Hebblethwaite has asked that nobody tell it what we've done." },
+]
+
+[[clip]]
+id = "psa-halloween-001"
+category = "psa"
+title = "A Ghost in the Tombola Tent"
+dates = ["10-24", "10-25", "10-26", "10-27", "10-28", "10-29", "10-30", "10-31"]
+over_music = true
+lines = [
+  { sting = "halloween" },
+  { say = "host", text = "A notice. There is a ghost in the tombola tent. He's a former steward, and he only wants to know whether his ticket won." },
+  { say = "host", text = "It did, in seventeen ninety. It was a tin of pears. We still have it. We've told him. He isn't convinced. He's staying for the next draw.", gap = 0.6 },
+  { say = "host", text = "Aren't we all." },
+]

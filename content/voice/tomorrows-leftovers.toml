@@ -1,0 +1,463 @@
+# Tomorrow's Leftovers — 91.45, a test kitchen four days ahead of you.
+#
+# Chef Anselm Brodequin cooks with ingredients that don't exist yet, and tastes dishes
+# before they're cooked. Pip, the sous-chef, lives in the present, which the chef finds
+# quaint, and is always holding the wrong spoon. The oven timer counts up. Every dish on
+# the programme is a leftover: they cook the leftovers first and the meal later.
+#
+# The `recipe` kit chains a recipe intro, one to three steps and a tasting. Steps never
+# number themselves, so any order works.
+station = "tomorrows-leftovers"
+
+[voices]
+chef = { voice = "bm_fable", name = "Chef Anselm Brodequin" }
+pip = { voice = "af_nova", speed = 1.1, name = "Pip, the Sous-Chef" }
+caller = { voice = "bf_lily", fx = "phone", name = "A Listener, Calling From Next Week" }
+grumbel = { voice = "am_eric", name = "Arnold Grumbel" }
+
+[[show]]
+id = "breakfast-tomorrow"
+name = "Breakfast Tomorrow"
+blurb = "The most important meal of tomorrow, cooked this morning, so tomorrow you can have a lie-in."
+start = 6
+end = 10
+
+[[show]]
+id = "pip-cooks-today"
+name = "Pip Cooks Today"
+blurb = "Pip cooks with ingredients that already exist. Chef Brodequin watches, appalled."
+start = 12
+end = 15
+host = "Pip, the Sous-Chef"
+
+[[show]]
+id = "midnight-larder"
+name = "The Midnight Larder"
+blurb = "Snacks for the small hours, prepared slightly before you get peckish."
+start = 23
+end = 3
+
+# ── Idents ────────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "id-001"
+category = "id"
+lines = [
+  { say = "chef", text = "Tomorrow's Leftovers. Cooking with ingredients that don't exist yet." },
+  { sfx = "ding" },
+]
+
+[[clip]]
+id = "id-002"
+category = "id"
+lines = [
+  { say = "chef", text = "This is Tomorrow's Leftovers. I'm Chef Anselm Brodequin, and I've already eaten." },
+]
+
+[[clip]]
+id = "id-003"
+category = "id"
+lines = [
+  { say = "chef", text = "Tomorrow's Leftovers. Best before: soon." },
+  { sting = "chime" },
+]
+
+[[clip]]
+id = "id-004"
+category = "id"
+lines = [
+  { say = "pip", text = "Tomorrow's Leftovers! Please wash your hands." },
+  { say = "chef", text = "They already have, Pip." },
+  { say = "pip", text = "Please wash them again." },
+]
+
+# ── Show openers and show links ───────────────────────────────────────────────
+
+[[clip]]
+id = "show-breakfast-open"
+category = "id"
+show = "breakfast-tomorrow"
+part = "open"
+bed = "kitchen"
+lines = [
+  { say = "chef", text = "Good morning, and welcome to Breakfast Tomorrow. Tomorrow's breakfast, made today, so that tomorrow, you can have a lie-in." },
+]
+
+[[clip]]
+id = "show-breakfast-001"
+category = "dj"
+show = "breakfast-tomorrow"
+lines = [
+  { say = "chef", text = "A word on toast. In this kitchen, we toast the bread before it's sliced, and we slice it before it's baked." },
+  { say = "pip", text = "Chef, that's backwards." },
+  { say = "chef", text = "That's breakfast, Pip." },
+  { say = "pip", text = "It's a lot of crumbs, Chef." },
+]
+
+[[clip]]
+id = "show-breakfast-002"
+category = "dj"
+show = "breakfast-tomorrow"
+lines = [
+  { say = "chef", text = "Today's breakfast forecast. Tomorrow morning, you'll say you want a fry-up. You don't. You want porridge. I've seen it." },
+  { say = "chef", text = "Make the porridge. You'll thank me around ten past eight." },
+]
+
+[[clip]]
+id = "show-pip-open"
+category = "id"
+show = "pip-cooks-today"
+part = "open"
+bed = "kitchen"
+lines = [
+  { say = "pip", text = "Hi! It's Pip Cooks Today, where I cook with things that are actually here!" },
+  { say = "chef", text = "Quaint.", fx = "distant" },
+]
+
+[[clip]]
+id = "show-pip-001"
+category = "dj"
+show = "pip-cooks-today"
+lines = [
+  { say = "pip", text = "Today I'm making a cheese sandwich. Here is the bread. It exists. Here is the cheese. It also exists." },
+  { say = "chef", text = "Remarkable. And when will you eat it?" },
+  { say = "pip", text = "Now." },
+  { say = "chef", text = "Now. Goodness. Just like that. No waiting.", gap = 0.6 },
+  { say = "pip", text = "That's how sandwiches work, Chef." },
+  { say = "chef", text = "In your day, perhaps." },
+]
+
+[[clip]]
+id = "show-pip-002"
+category = "dj"
+show = "pip-cooks-today"
+lines = [
+  { say = "pip", text = "Chef's asked me to remind everyone that this is my show, and he's only here to observe." },
+  { say = "chef", text = "I'm not observing, Pip. I'm remembering. I remember this sandwich from Friday. You drop it." },
+  { say = "pip", text = "I'm not going to drop it." },
+  { sfx = "knock-over" },
+  { pause = 0.8 },
+  { say = "pip", text = "I dropped it." },
+  { say = "chef", text = "On Friday. You're early." },
+]
+
+[[clip]]
+id = "show-larder-open"
+category = "id"
+show = "midnight-larder"
+part = "open"
+daypart = "night"
+lines = [
+  { say = "chef", text = "Good evening. This is The Midnight Larder. Somewhere, very soon, you are going to want a sandwich. We're ready." },
+]
+
+[[clip]]
+id = "show-larder-001"
+category = "dj"
+show = "midnight-larder"
+lines = [
+  { say = "chef", text = "The Midnight Larder is for the night workers. The bakers. The nurses. The person on that relay ship, with a kettle and a long shift ahead of them." },
+  { say = "chef", text = "I've made you a sandwich. It'll be ready at about four. You'll know when." },
+]
+
+[[clip]]
+id = "show-larder-002"
+category = "dj"
+show = "midnight-larder"
+lines = [
+  { say = "chef", text = "A thought for the small hours. Midnight snacking is not a weakness. It is tomorrow's lunch, arriving early, to see if you're in." },
+  { say = "pip", text = "That's beautiful, Chef." },
+  { say = "chef", text = "It's cheese, Pip." },
+]
+
+# ── Recipe kit: intro, steps, tasting ─────────────────────────────────────────
+
+[[clip]]
+id = "recipe-open-1"
+category = "show"
+kit = "recipe"
+part = "open"
+bed = "kitchen"
+lines = [
+  { say = "chef", text = "Tonight's dish is a Sunday roast. Not this Sunday. The one after, when your aunt visits. Pip, the ingredients." },
+  { say = "pip", text = "Yes, Chef." },
+]
+
+[[clip]]
+id = "recipe-open-2"
+category = "show"
+kit = "recipe"
+part = "open"
+bed = "kitchen"
+lines = [
+  { say = "chef", text = "Tonight, a soup that by next week is going to be quite famous. Get in early. Pip?" },
+  { say = "pip", text = "Ready, Chef." },
+]
+
+[[clip]]
+id = "recipe-open-3"
+category = "show"
+kit = "recipe"
+part = "open"
+bed = "kitchen"
+lines = [
+  { say = "chef", text = "Today, a fish pie, made with a fish that is, as we speak, still thinking it over. Aprons on." },
+]
+
+[[clip]]
+id = "recipe-open-4"
+category = "show"
+kit = "recipe"
+part = "open"
+bed = "kitchen"
+lines = [
+  { say = "pip", text = "Chef, what are we cooking today?" },
+  { say = "chef", text = "Leftovers, Pip. From a dinner party we're throwing on Saturday. We cook the leftovers first. It saves time." },
+]
+
+[[clip]]
+id = "recipe-step-1"
+category = "show"
+kit = "recipe"
+part = "body"
+bed = "kitchen"
+lines = [
+  { say = "chef", text = "Now, the eggs. These were laid on Thursday. It's currently Monday. The hen is still thinking about it, so we crack them gently, as a courtesy." },
+  { say = "pip", text = "There's nothing in the bowl, Chef." },
+  { say = "chef", text = "Crack them anyway, Pip. Confidence." },
+]
+
+[[clip]]
+id = "recipe-step-2"
+category = "show"
+kit = "recipe"
+part = "body"
+bed = "kitchen"
+lines = [
+  { say = "chef", text = "Chop one onion. It hasn't been grown yet, so you'll be crying in advance. Very efficient." },
+  { sfx = "chopping" },
+  { say = "chef", text = "I cried about this onion on Saturday. Twice." },
+  { say = "pip", text = "I'm not crying." },
+  { say = "chef", text = "You will be. Wednesday. Something about a film." },
+]
+
+[[clip]]
+id = "recipe-step-3"
+category = "show"
+kit = "recipe"
+part = "body"
+bed = "kitchen"
+lines = [
+  { say = "chef", text = "Season generously, with salt from the sea we'll be visiting in August." },
+  { say = "pip", text = "Can I taste it?" },
+  { say = "chef", text = "No need. I tasted it last week. A touch more pepper.", gap = 0.5 },
+  { say = "chef", text = "No. Less. There. Perfect." },
+]
+
+[[clip]]
+id = "recipe-step-4"
+category = "show"
+kit = "recipe"
+part = "body"
+bed = "kitchen"
+lines = [
+  { say = "chef", text = "Into the oven. Now, our oven timer counts up, not down. We don't take a dish out when it's done. We take it out when we remember it." },
+  { sfx = "ding" },
+  { say = "chef", text = "And there's the timer, telling us we've remembered. Lovely." },
+]
+
+[[clip]]
+id = "recipe-step-5"
+category = "show"
+kit = "recipe"
+part = "body"
+bed = "kitchen"
+lines = [
+  { say = "chef", text = "For the sauce, one cup of the rain forecast for Sunday. Reduce it over a low heat until it's only a slight chance of rain." },
+  { say = "pip", text = "How will I know when it's ready?" },
+  { say = "chef", text = "When you'd take a coat, Pip, but you wouldn't take an umbrella." },
+]
+
+[[clip]]
+id = "recipe-step-6"
+category = "show"
+kit = "recipe"
+part = "body"
+bed = "kitchen"
+lines = [
+  { say = "chef", text = "Stir clockwise, which in this kitchen is towards next week.", gap = 0.6 },
+  { say = "chef", text = "Pip. That is the wrong spoon." },
+  { say = "pip", text = "Which one's the right spoon?" },
+  { say = "chef", text = "The one you'll pick up on Friday. Until then, do your best with that one." },
+]
+
+[[clip]]
+id = "recipe-step-7"
+category = "show"
+kit = "recipe"
+part = "body"
+bed = "kitchen"
+lines = [
+  { say = "chef", text = "Fold in the butter. Ours has been softened by a compliment you haven't been paid yet. Somebody, soon, is going to tell you that you look well. That's what's in this." },
+  { say = "pip", text = "That's lovely, Chef." },
+  { say = "chef", text = "That's chemistry, Pip." },
+]
+
+[[clip]]
+id = "recipe-step-8"
+category = "show"
+kit = "recipe"
+part = "body"
+bed = "kitchen"
+lines = [
+  { say = "chef", text = "Let it rest. Everything needs a rest. The dough. The meat. You, Pip. I've seen next week, and you're going to want this ten minutes back." },
+  { pause = 1.0 },
+  { say = "pip", text = "Thank you, Chef." },
+]
+
+[[clip]]
+id = "recipe-close-1"
+category = "show"
+kit = "recipe"
+part = "close"
+bed = "kitchen"
+lines = [
+  { say = "chef", text = "And there we are. I tasted this on Friday. Magnificent. Pip, try some." },
+  { say = "pip", text = "It isn't cooked yet, Chef." },
+  { say = "chef", text = "Then you'll have to trust me." },
+]
+
+[[clip]]
+id = "recipe-close-2"
+category = "show"
+kit = "recipe"
+part = "close"
+bed = "kitchen"
+lines = [
+  { say = "chef", text = "Serve immediately. Or, as I prefer, slightly before." },
+  { sfx = "ding" },
+]
+
+[[clip]]
+id = "recipe-close-3"
+category = "show"
+kit = "recipe"
+part = "close"
+bed = "kitchen"
+lines = [
+  { say = "chef", text = "Whatever's left over, we'll eat tonight, which is how we got the leftovers in the first place. Goodnight." },
+]
+
+[[clip]]
+id = "recipe-close-4"
+category = "show"
+kit = "recipe"
+part = "close"
+bed = "kitchen"
+lines = [
+  { say = "pip", text = "Chef, how many does it serve?" },
+  { say = "chef", text = "Four. Five, if your cousin turns up. He will. Make it five." },
+]
+
+# ── Links, sponsors and calls ─────────────────────────────────────────────────
+
+[[clip]]
+id = "dj-001"
+category = "dj"
+lines = [
+  { say = "chef", text = "People ask me, Chef, how do you taste a dish before it's cooked?" },
+  { say = "chef", text = "And I tell them: the same way you miss someone before they've left. You simply know it's coming, and you make room." },
+]
+
+[[clip]]
+id = "dj-002"
+category = "dj"
+lines = [
+  { say = "pip", text = "Chef, the jar on the top shelf that says Soup, Later. Can I open it?" },
+  { say = "chef", text = "Not yet, Pip. It's labelled for a reason." },
+  { say = "pip", text = "When's later?" },
+  { say = "chef", text = "Ask me later." },
+]
+
+[[clip]]
+id = "dj-003"
+category = "dj"
+lines = [
+  { say = "chef", text = "A note on allergies. Some of tonight's dishes may contain traces of next week. If you're sensitive to next week, please, take it one day at a time." },
+]
+
+[[clip]]
+id = "dj-004"
+category = "dj"
+lines = [
+  { say = "pip", text = "A letter! Dear Chef, I followed your recipe for Wednesday's casserole, and now it's Wednesday, and I'm not hungry. What do I do?" },
+  { say = "chef", text = "Freeze it. Thursday will be very grateful. Thursday always is." },
+]
+
+[[clip]]
+id = "ad-001"
+category = "ad"
+title = "Brodequin's Pre-Burnt Toast"
+lines = [
+  { sting = "ad" },
+  { say = "chef", text = "Burnt toast is a disappointment. Unless, of course, you saw it coming." },
+  { say = "chef", text = "Introducing Brodequin's Pre-Burnt Toast. We've burnt it for you, in advance, so the disappointment is already over, and all that's left is breakfast." },
+  { say = "pip", text = "Pre-Burnt Toast may contain toast.", speed = 1.3 },
+]
+
+[[clip]]
+id = "ad-002"
+category = "ad"
+title = "Grumbel's Ladders: The Top Shelf"
+lines = [
+  { say = "chef", text = "Tonight's programme is brought to you by Grumbel's Ladders." },
+  { say = "grumbel", text = "Every kitchen has a top shelf. And on every top shelf, there's a jar of the good jam, put there by someone who didn't want you to have it." },
+  { say = "grumbel", text = "The Grumbel's Pantry Step. Three rungs. Very quiet. Nobody needs to know." },
+  { say = "chef", text = "Grumbel's Ladders. Up is a choice. Jam is a reward." },
+]
+
+[[clip]]
+id = "call-001"
+category = "call"
+title = "A Call From Next Week"
+bed = "kitchen"
+lines = [
+  { sfx = "phone-ring" },
+  { say = "chef", text = "Tomorrow's Leftovers, you're on the air." },
+  { say = "caller", text = "Hello, Chef. It's me, from next week. I'm just ringing to say the soup was lovely." },
+  { say = "chef", text = "Thank you. I know." },
+  { say = "caller", text = "I know you know. I just wanted to say it in person. Well, in advance." },
+  { say = "chef", text = "Very good of you. Any notes?" },
+  { say = "caller", text = "Only one. Tell Pip about the spoon." },
+  { say = "chef", text = "We've covered the spoon." },
+  { say = "pip", text = "We haven't, really, Chef." },
+  { say = "caller", text = "You will. Bye now." },
+  { sfx = "phone-hangup" },
+]
+
+# ── Halloween ─────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "halloween-1"
+category = "dj"
+title = "Next Year's Pumpkin"
+dates = ["10-24", "10-25", "10-26", "10-27", "10-28", "10-29", "10-30", "10-31"]
+lines = [
+  { say = "chef", text = "This week we're carving a pumpkin that will be grown in time for next year's Halloween. Pip, the pumpkin." },
+  { say = "pip", text = "There's no pumpkin, Chef." },
+  { say = "chef", text = "Then carve the space where the pumpkin will be. Bigger smile.", gap = 0.6 },
+  { say = "chef", text = "There. Terrifying." },
+  { sting = "halloween" },
+]
+
+[[clip]]
+id = "halloween-2"
+category = "dj"
+title = "Pumpkin Soup, Watching"
+dates = ["10-24", "10-25", "10-26", "10-27", "10-28", "10-29", "10-30", "10-31"]
+lines = [
+  { say = "chef", text = "Pumpkin soup, for Halloween night. I've tasted it already. Rich. Warming. A little spooky." },
+  { say = "chef", text = "Something in it was looking back at me.", gap = 0.8 },
+  { say = "chef", text = "Pip, did you carve a face in the soup?" },
+  { say = "pip", text = "Only a small one, Chef." },
+]

@@ -1,11 +1,14 @@
 // Build-time plugins for shipping Multiverse Radio: the service worker, absolute URLs for
-// social cards, and a JS size budget. Plain ESM (not TS) because it runs in Node and the app's
-// tsconfig deliberately has no Node types; see vite-plugins.d.mts for the typings.
+// social cards, per-station share pages, and a JS size budget. Plain ESM (not TS) because it
+// runs in Node and the app's tsconfig deliberately has no Node types; see vite-plugins.d.mts
+// for the typings.
 
 import { createHash } from 'node:crypto';
 import { existsSync, readFileSync } from 'node:fs';
 import path from 'node:path';
 import { gzipSync } from 'node:zlib';
+import { stationCardPath, stationPageHtml, stationPagePath } from '../../scripts/share/pages.mjs';
+import { loadShareStations } from '../../scripts/share/roster.mjs';
 
 /**
  * Public files (relative to the base URL) that are part of the offline app shell.
@@ -23,19 +26,26 @@ const SHELL_PUBLIC_FILES = [
 const FONT_OR_MEDIA = /\.(woff2?|ttf|otf|eot|mp3|wav|ogg|opus|m4a|aac|flac|mp4|webm)$/i;
 const LATIN_WOFF2 = /-latin-(?!ext)[^/]*\.woff2$/;
 
+/** Where the site is published. Social cards need absolute URLs, so local builds use it too. */
+export const DEFAULT_SITE_URL = 'https://multiverse-radio.netlify.app';
+
 /**
  * Resolve the public site URL used for canonical/Open Graph/Twitter tags.
- * Order: explicit option, SITE_URL env var, Netlify's built-in URL env var. Empty when none
- * are set (local builds), which leaves the tags relative.
+ * Order: explicit option, SITE_URL env var, Netlify's built-in URL env var (the site's main
+ * URL, also on deploy previews), then DEFAULT_SITE_URL. An explicit empty string leaves the
+ * tags relative.
  */
 function resolveSiteUrl(explicit) {
-  const raw = explicit ?? process.env.SITE_URL ?? process.env.URL ?? '';
+  const raw = explicit ?? process.env.SITE_URL ?? process.env.URL ?? DEFAULT_SITE_URL;
   return raw.trim().replace(/\/+$/, '');
 }
 
 /**
  * PWA + sharing plugin.
  * - Replaces `%SITE_URL%` in HTML with the absolute site URL (no trailing slash, base included).
+ * - Emits `station/<id>/index.html` for every main station: the built index.html with that
+ *   station's title, description and social card (`public/share/<id>.jpg`, rendered by
+ *   `npm run share:cards`). Secret stations get no page.
  * - Emits `sw.js` with a precache manifest for the main entry (labs are not precached).
  * @param {import('./vite-plugins.d.mts').PwaPluginOptions} [options]
  * @returns {import('vite').Plugin[]}
@@ -46,6 +56,8 @@ export function pwa(options = {}) {
   let publicDir = '';
   let logger;
   let siteUrl = '';
+  /** Paths of the station pages, for the service worker's offline fallback. */
+  let routes = [];
 
   /** @type {import('vite').Plugin} */
   const siteUrlPlugin = {
@@ -61,7 +73,7 @@ export function pwa(options = {}) {
         logger.info(
           siteUrl
             ? `social cards: absolute URLs use ${siteUrl}`
-            : 'social cards: SITE_URL not set, so og:image is relative and canonical/og:url are omitted (Netlify sets URL automatically)',
+            : 'social cards: SITE_URL is empty, so og:image is relative and canonical/og:url are omitted',
         );
       }
     },
@@ -75,6 +87,46 @@ export function pwa(options = {}) {
             html
               .replace(/[ \t]*<(?:link|meta)\b[^>]*="%SITE_URL%\/?"[^>]*>\n?/g, '')
               .replaceAll('%SITE_URL%', ''),
+    },
+  };
+
+  /** @type {import('vite').Plugin} */
+  const stationPagesPlugin = {
+    name: 'mvr:station-pages',
+    apply: 'build',
+    enforce: 'post',
+    async generateBundle(_outputOptions, bundle) {
+      routes = [];
+      if (options.stationPages === false) return;
+      const indexHtml = bundle['index.html'];
+      if (!indexHtml || indexHtml.type !== 'asset') return;
+      if (!base.startsWith('/')) {
+        // Nested pages need root-absolute asset URLs.
+        this.warn(`station pages need an absolute base (got "${base}"); skipping them`);
+        return;
+      }
+      const html = String(indexHtml.source);
+      const stations = await loadShareStations(root);
+      const missing = [];
+      for (const { station, sceneLabel } of stations) {
+        const card = stationCardPath(station.id);
+        const hasCard = existsSync(path.join(publicDir, card));
+        if (!hasCard) missing.push(station.id);
+        const page = stationPagePath(station.id);
+        this.emitFile({
+          type: 'asset',
+          fileName: `${page}index.html`,
+          source: stationPageHtml(html, station, { siteUrl, base, image: hasCard ? card : undefined, sceneLabel }),
+        });
+        routes.push(base + page);
+      }
+      logger.info(`station pages: ${routes.length} under ${base}station/<id>/`);
+      if (missing.length) {
+        this.warn(
+          `no share card for ${missing.join(', ')}; those pages use the default og-image.png. ` +
+            'Run `npm run share:cards` and commit public/share/.',
+        );
+      }
     },
   };
 
@@ -130,6 +182,7 @@ export function pwa(options = {}) {
       const hash = createHash('sha256');
       hash.update(template);
       hash.update(String(indexHtml.source));
+      hash.update(routes.join('\n'));
       for (const entryUrl of [...required, ...optional].sort()) {
         hash.update(entryUrl);
         // Hashed assets change name when they change; public files need their bytes hashed.
@@ -143,6 +196,8 @@ export function pwa(options = {}) {
         version: hash.digest('hex').slice(0, 12),
         base,
         shell: base,
+        // Pages that boot the app shell too (offline, they get the cached shell).
+        routes: [...routes].sort(),
         offline: url('offline.html'),
         required: [...required].sort(),
         optional: [...optional].sort(),
@@ -157,7 +212,8 @@ export function pwa(options = {}) {
     },
   };
 
-  return [siteUrlPlugin, serviceWorkerPlugin];
+  // Order matters: the service worker lists the station pages' routes.
+  return [siteUrlPlugin, stationPagesPlugin, serviceWorkerPlugin];
 }
 
 /**
