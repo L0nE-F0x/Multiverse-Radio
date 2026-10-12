@@ -22,7 +22,7 @@
 //   - Dates: clips with `dates` air only on those days and are preferred on them.
 //   - Modular parts: clips with `part` chain open → 1–3 bodies → close from one kit.
 
-import { trackMeta } from '../content';
+import { trackMeta } from '../content/tracks';
 import { createRng, hash, weightedPick, type Rng } from './random';
 import { browserTzOffset, localMinuteToMs, localTime, showAtHour, type TzOffset } from './time';
 import type {

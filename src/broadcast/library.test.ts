@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { stationById } from '../stations/roster';
 import { AudioBufferCache, bufferBytes } from './audioCache';
-import { oddities, pirates } from './dial';
+import { loadPirateNames, oddities, pirates } from './dial';
 import { VoiceLibrary } from './library';
 import type { VoiceManifest } from './types';
 
@@ -127,6 +127,7 @@ describe('VoiceLibrary', () => {
       fetched.push(name);
       return files[name] ? response(files[name]) : response('', 404);
     });
+    await loadPirateNames();
     const pirate = pirates()[0]!.station;
     await library.load(pirate.id);
     expect(fetched).toEqual(['_pirate.json']);

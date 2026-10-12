@@ -8,7 +8,8 @@
 //   HUSH, events     /voice/_ship.json, /voice/_events.json (the overlay's pools)
 //   shows            /voice/_shows.json (ShowIndex)
 
-import { trackPacksReady } from '../content';
+import { trackPacksReady } from '../content/tracks';
+import { pirateNamesReady } from './dial';
 import { manifestUrl, parseManifest, parseShowIndex } from './manifest';
 import { StationSchedule, type ScheduleOptions } from './scheduler';
 import { ODDITY_IDS, type ShowDef, type ShowIndex, type StationDef, type VoiceClip, type VoiceManifest } from './types';
@@ -153,7 +154,9 @@ export class VoiceLibrary {
   schedule(station: StationDef): StationSchedule {
     const sources = sourcesFor(station.id);
     // Track names come from lazily loaded packs: rebuild once they arrive.
-    const key = `${[...sources, POOLS.shows].map((name) => this.versions.get(name) ?? 0).join(':')}:${trackPacksReady() ? 1 : 0}`;
+    // (Pirates also rebuild once their host has a name.)
+    const named = isPirate(station.id) && pirateNamesReady() ? 1 : 0;
+    const key = `${[...sources, POOLS.shows].map((name) => this.versions.get(name) ?? 0).join(':')}:${trackPacksReady() ? 1 : 0}:${named}`;
     const cached = this.schedules.get(station.id);
     this.schedules.delete(station.id);
     if (cached && cached.key === key) {

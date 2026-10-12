@@ -13,7 +13,7 @@
 // Pure and cheap: the table is built once on first use (~1,700 hashes) and lookups are a
 // binary search.
 
-import { pirateIdentity } from '../content';
+import type { PirateIdentity } from '../content/pirates';
 import { MAIN_STATIONS, STATIONS, stationById } from '../stations/roster';
 import { createRng, hash } from './random';
 import {
@@ -106,13 +106,53 @@ const PIRATE_MOODS = ['scrappy', 'defiant', 'nocturnal', 'homemade', 'devoted', 
 
 const pirateCache = new Map<string, StationDef>();
 
+// Pirate names come from a grammar in its own chunk, loaded the first time a pirate is
+// needed. Until it arrives a pirate goes by its frequency, and nothing is cached.
+let identity: ((seed: number) => PirateIdentity) | null = null;
+let identityLoad: Promise<void> | null = null;
+const namesListeners = new Set<() => void>();
+
+/** Loads the pirate-name grammar. Never rejects. */
+export function loadPirateNames(): Promise<void> {
+  identityLoad ??= import('../content/pirates').then(
+    (m) => {
+      identity = m.pirateIdentity;
+      pirateCache.clear();
+      for (const listener of namesListeners) listener();
+    },
+    () => {
+      identityLoad = null;
+    },
+  );
+  return identityLoad;
+}
+
+/** True once pirates have their real names. */
+export const pirateNamesReady = (): boolean => identity !== null;
+
+/** Called once pirate names arrive (anything showing a pirate should look it up again). */
+export function onPirateNames(listener: () => void): () => void {
+  namesListeners.add(listener);
+  return () => namesListeners.delete(listener);
+}
+
+function provisionalIdentity(frequency: number): PirateIdentity {
+  return {
+    name: `Unlicensed ${frequency.toFixed(2)}`,
+    slogan: 'Unlicensed. Unrepentant. Mostly in tune.',
+    origin: 'Somewhere it would rather not say',
+    host: { name: 'The DJ', bio: 'Broadcasting without permission.' },
+  };
+}
+
 /** The generated station of a pirate at `frequency` (assumes one is there; see `pirateAt`). */
 export function pirateStation(frequency: number): StationDef {
   const k = key(frequency);
   const cached = pirateCache.get(k);
   if (cached) return cached;
   const seed = hash('pirate', k);
-  const who = pirateIdentity(seed);
+  if (!identity) void loadPirateNames();
+  const who = identity ? identity(seed) : provisionalIdentity(frequency);
   const rng = createRng(hash(seed, 'def'));
   const pick = <T>(list: readonly T[]) => list[rng.int(0, list.length - 1)]!;
   const scene = pick(PIRATE_SCENES);
@@ -132,7 +172,7 @@ export function pirateStation(frequency: number): StationDef {
     host: { name: who.host.name, voice: pick(PIRATE_VOICES), bio: who.host.bio },
     mood: ['unlicensed', pick(PIRATE_MOODS)],
   };
-  pirateCache.set(k, station);
+  if (identity) pirateCache.set(k, station);
   return station;
 }
 
@@ -203,6 +243,8 @@ class Tx implements Transmitter {
     readonly oddity?: OddityId,
   ) {}
   get station(): StationDef {
+    // Pirates are cached by pirateStation itself (once they have their names).
+    if (this.kind === 'pirate') return this.build();
     return (this.def ??= this.build());
   }
 }

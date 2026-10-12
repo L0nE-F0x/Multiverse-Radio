@@ -34,6 +34,9 @@ Object.assign(window, {
   },
 });
 
+/** The events/HUSH overlay (loaded before the lab renders). */
+const overlay = () => director.overlay!;
+
 const time = (ms: number) =>
   new Date(ms).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false });
 const mmss = (ms: number) => {
@@ -304,13 +307,13 @@ function LivingPanel() {
   useNow(2);
   const [force, setForce] = useState<EventId>('dimensional-storm');
   const wall = director.clock.now();
-  const upcoming = director.overlay.nextEventAfter(wall);
+  const upcoming = overlay().nextEventAfter(wall);
   const d = director.debug();
   const local = localTime(wall);
   const shows = tuned.kind === 'station' ? library.shows(tuned.station.id) : [];
   const nextHour = Math.ceil((wall + 1) / HOUR_MS) * HOUR_MS;
-  const speaking = director.overlay.speaking(wall);
-  const plan = event ? director.overlay.plan(event, director.program?.id ?? null) : null;
+  const speaking = overlay().speaking(wall);
+  const plan = event ? overlay().plan(event, director.program?.id ?? null) : null;
   return (
     <Panel title="Living schedule">
       <dl className="grid grid-cols-[6rem_minmax(0,1fr)] gap-x-2 gap-y-1" data-testid="living">
@@ -341,7 +344,7 @@ function LivingPanel() {
         <dt className="text-cream/50">HUSH</dt>
         <dd data-testid="hush">
           level {d.hushLevel}
-          {director.overlay.levelOverride !== null ? ' (pinned)' : ''} · listened {hhmm(d.listenMs)} · next in {mmss(d.hushInMs)}
+          {overlay().levelOverride !== null ? ' (pinned)' : ''} · listened {hhmm(d.listenMs)} · next in {mmss(d.hushInMs)}
           {speaking && <span className="text-teal"> · {speaking.kind === 'ship' ? 'speaking' : 'event clip'}</span>}
         </dd>
       </dl>
@@ -353,10 +356,10 @@ function LivingPanel() {
             </option>
           ))}
         </select>
-        <Button onClick={() => director.overlay.force(force, director.clock.now(), 75_000)} data-testid="force-event">
+        <Button onClick={() => overlay().force(force, director.clock.now(), 75_000)} data-testid="force-event">
           Force event
         </Button>
-        <Button onClick={() => (director.overlay.forced = null)}>End forced</Button>
+        <Button onClick={() => (overlay().forced = null)}>End forced</Button>
       </div>
       <div className="mt-2 flex flex-wrap items-center gap-2 text-cream/70">
         <span>Time warp:</span>
@@ -371,8 +374,8 @@ function LivingPanel() {
         <span>HUSH:</span>
         <select
           className="rounded border border-cream/20 bg-well px-2 py-1.5"
-          value={director.overlay.levelOverride ?? 'auto'}
-          onChange={(e) => (director.overlay.levelOverride = e.target.value === 'auto' ? null : (Number(e.target.value) as 0 | 1 | 2 | 3))}
+          value={overlay().levelOverride ?? 'auto'}
+          onChange={(e) => (overlay().levelOverride = e.target.value === 'auto' ? null : (Number(e.target.value) as 0 | 1 | 2 | 3))}
         >
           <option value="auto">level: by session</option>
           {[0, 1, 2, 3].map((l) => (
@@ -381,10 +384,10 @@ function LivingPanel() {
             </option>
           ))}
         </select>
-        <Button onClick={() => director.overlay.hushNow()} data-testid="hush-now">
+        <Button onClick={() => overlay().hushNow()} data-testid="hush-now">
           HUSH now
         </Button>
-        <Button onClick={() => (director.overlay.listenMs += 45 * 60_000)}>+45 min listening</Button>
+        <Button onClick={() => (overlay().listenMs += 45 * 60_000)}>+45 min listening</Button>
         <Button onClick={() => loadFixtures()} data-testid="fixtures">
           Load test pools
         </Button>
@@ -636,4 +639,5 @@ function Button({ children, accent, ...props }: React.ButtonHTMLAttributes<HTMLB
   );
 }
 
-createRoot(document.getElementById('root')!).render(<App />);
+// The lab always has the overlay (the app loads it on first power-on).
+void director.loadOverlay().then(() => createRoot(document.getElementById("root")!).render(<App />));

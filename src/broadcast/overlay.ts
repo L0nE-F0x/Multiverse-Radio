@@ -161,6 +161,12 @@ export class Overlay {
     return this.forced;
   }
 
+  /** The tape rewinding as a time slip begins (`back`), or a whoosh as it snaps forward. */
+  slipSound(back: boolean): void {
+    const mixer = this.mixer();
+    if (mixer) sweep(mixer.ctx, mixer.overlayBus, mixer.noiseBuffer, mixer.ctx.currentTime, back ? 'rewind' : 'whoosh');
+  }
+
   /** Lab: HUSH speaks at the next gap. */
   hushNow(): void {
     this.nextHushMs = this.listenMs;

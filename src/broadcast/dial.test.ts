@@ -1,10 +1,12 @@
-import { describe, expect, it } from 'vitest';
+import { beforeAll, describe, expect, it } from 'vitest';
+import { pirateIdentity } from '../content';
 import { MAIN_STATIONS, STATIONS } from '../stations/roster';
 import {
   BLEED_RANGE,
   DISCOVER_SIGNAL,
   REACH,
   bleedOf,
+  loadPirateNames,
   oddities,
   pirateAt,
   pirateStation,
@@ -21,6 +23,8 @@ import { DIAL, ODDITY_IDS, PHOSPHOR_IDS, RECIPE_IDS, SCENE_IDS } from './types';
 const station = { frequency: 100, width: REACH.station, peak: 1 };
 
 describe('the dial', () => {
+  beforeAll(() => loadPirateNames());
+
   it('has a smooth signal curve that peaks at the centre and fades over about ±0.15 MHz', () => {
     expect(signalOf(station, 100)).toBe(1);
     let previous = 1;
@@ -121,7 +125,9 @@ describe('the dial', () => {
       expect(s).toBe(pirateStation(p.frequency));
       expect(s.id).toBe(p.id);
       expect(s.frequency).toBe(p.frequency);
-      expect(s.name.length).toBeGreaterThan(0);
+      const who = pirateIdentity(hash('pirate', p.frequency.toFixed(2)));
+      expect(s.name).toBe(who.name);
+      expect(s.host.name).toBe(who.host.name);
       expect(['music', 'mixed']).toContain(s.format);
       expect(RECIPE_IDS).toContain(s.recipe);
       expect(SCENE_IDS).toContain(s.scene);

@@ -16,16 +16,17 @@
 
 import { createMusicEngine, type MusicEngine, type TrackRequest } from '../music';
 import { AudioBufferCache, contextDecoder } from './audioCache';
-import { bleedOf, clampFrequency, receptionAt, signalOf, stationForId, type Reception, type Transmitter } from './dial';
-import { sweep } from './eventfx';
+import { bleedOf, clampFrequency, onPirateNames, receptionAt, signalOf, stationForId, type Reception, type Transmitter } from './dial';
+import { eventAt as seededEventAt } from './events';
+import type { HushLevel } from './hush';
 import { POOLS, type VoiceLibrary } from './library';
 import { resolveAsset } from './manifest';
 import { Mixer, type OutputMode, type VoiceHandle } from './mixer';
-import { Overlay } from './overlay';
+import type { Overlay } from './overlay';
 import { daypartForHour, joinOffset, skipOffset, type MusicRun, type StationSchedule } from './scheduler';
 import { createTicker, type Ticker } from './ticker';
 import { browserTzOffset, localTime, type TzOffset } from './time';
-import type { PlayStatus, StationDef, VoiceSegment } from './types';
+import type { ActiveEvent, PlayStatus, StationDef, VoiceSegment } from './types';
 
 export interface Clock {
   now(): number;
@@ -117,7 +118,8 @@ export class Director {
   readonly clock: Clock;
   readonly library: VoiceLibrary;
   readonly log: LogEntry[] = [];
-  readonly overlay: Overlay;
+  /** Events and HUSH (loaded on first power-on: a separate chunk). */
+  overlay: Overlay | null = null;
 
   /** Dial position in MHz. */
   frequency: number;
@@ -159,6 +161,11 @@ export class Director {
   private lastPrefetch = 0;
   /** The time-slip shift the programme was last joined with. */
   private appliedShift = 0;
+  private overlayLoad: Promise<Overlay | null> | null = null;
+  /** performance.now() of the last join until the programme is actually audible (0 once it is). */
+  private awaitingSound = 0;
+  private readonly levelBuffer = new Float32Array(512);
+  private hushOverride: HushLevel | null = null;
 
   private readonly voices = new Map<string, { handle: VoiceHandle; segment: VoiceSegment }>();
   /** Voice segments that couldn't air (id → end of slot, station ms). Music fills them. */
@@ -186,11 +193,11 @@ export class Director {
     this.reception = receptionAt(this.frequency);
     this.program = this.reception.lock;
     this.lastStationId = this.program && this.program.kind !== 'oddity' ? this.program.id : start.id;
-    this.overlay = new Overlay(
-      () => this.mixer,
-      () => this.cache,
-      this.library,
-    );
+    // Pirates get their real names a moment after first being tuned: look again.
+    onPirateNames(() => {
+      this.reception = receptionAt(this.frequency);
+      this.emit();
+    });
     this.ticker = createTicker(this.tick);
     this.ticker.setInterval(TICK_IDLE_MS);
     if (typeof document !== 'undefined') document.addEventListener('visibilitychange', this.updateTickRate);
@@ -207,7 +214,7 @@ export class Director {
     this.generation++;
     clearTimeout(this.settleTimer);
     this.halt(0.02);
-    this.overlay.stop(0.02);
+    this.overlay?.stop(0.02);
     this.ticker.dispose();
     if (typeof document !== 'undefined') document.removeEventListener('visibilitychange', this.updateTickRate);
     this.engine?.dispose();
@@ -264,6 +271,42 @@ export class Director {
     return this.mixer;
   }
 
+  /** The multiverse event in progress (seeded from UTC, or forced in the lab). */
+  eventAt(wall = this.clock.now()): ActiveEvent | null {
+    return this.overlay ? this.overlay.eventAt(wall) : seededEventAt(wall);
+  }
+
+  /** Loads the overlay (events and HUSH). Resolves null if it can't load (offline). */
+  loadOverlay(): Promise<Overlay | null> {
+    this.overlayLoad ??= import('./overlay').then(
+      ({ Overlay }) => {
+        const overlay = new Overlay(
+          () => this.mixer,
+          () => this.cache,
+          this.library,
+        );
+        overlay.levelOverride = this.hushOverride;
+        this.overlay = overlay;
+        return overlay;
+      },
+      () => {
+        this.overlayLoad = null;
+        return null;
+      },
+    );
+    return this.overlayLoad;
+  }
+
+  /** Pins HUSH's strangeness (tests, `?hush=`); null follows the session. */
+  setHushLevel(level: HushLevel | null): void {
+    this.hushOverride = level;
+    if (this.overlay) this.overlay.levelOverride = level;
+  }
+
+  private shiftAt(wall: number, stationId: string): number {
+    return this.overlay?.shiftAt(wall, stationId) ?? 0;
+  }
+
   /** Lab: how far the clock has been warped (ms). */
   get warp(): number {
     return this.warpMs;
@@ -302,9 +345,9 @@ export class Director {
       signal: this.reception.signal,
       program: this.program?.id ?? null,
       shiftMs: this.appliedShift,
-      listenMs: this.overlay.listenMs,
-      hushLevel: this.overlay.level(),
-      hushInMs: this.overlay.hushInMs,
+      listenMs: this.overlay?.listenMs ?? 0,
+      hushLevel: this.overlay?.level() ?? this.hushOverride ?? 0,
+      hushInMs: this.overlay?.hushInMs ?? 0,
       dialNoise: mixer?.dialNoiseActive ?? false,
     };
   }
@@ -397,7 +440,7 @@ export class Director {
     if (this.status === 'off' || this.status === 'paused') return;
     this.generation++;
     this.halt(0.15);
-    this.overlay.stop(0.15);
+    this.overlay?.stop(0.15);
     this.mixer?.stopStatic(0.1);
     this.mixer?.quietDial();
     this.setStatus('paused');
@@ -456,7 +499,8 @@ export class Director {
     const p = this.program;
     const f = this.frequency;
     const signal = p ? signalOf(p, f) : 0;
-    const audible = this.live && p ? signal : 0;
+    // The dial noise holds until the new programme is actually sounding (a new track takes a moment).
+    const audible = this.live && p && !this.awaitingSound ? signal : 0;
     mixer.setReception({ signal, bleed: p ? bleedOf(p, f) : 0, noise: 1 - audible, detune: p ? Math.min(0.5, Math.abs(f - p.frequency)) : 0.5 });
   }
 
@@ -521,7 +565,8 @@ export class Director {
     this.updateReception();
     if (kind !== 'dial') mixer.startStatic(kind === 'skip' || kind === 'resume' ? 'short' : 'channel');
     if (kind === 'channel') mixer.click();
-    // The overlay's pools: HUSH and the multiverse events.
+    // The overlay and its pools: HUSH and the multiverse events.
+    const overlayReady = this.loadOverlay();
     void this.library.loadPool(POOLS.events);
     void this.library.loadPool(POOLS.ship);
     const began = performance.now();
@@ -555,14 +600,14 @@ export class Director {
     }
 
     await Promise.race([
-      Promise.all([this.library.load(stationId), this.loadEngine(), mixer.whenRunning(3000)]),
+      Promise.all([this.library.load(stationId), this.loadEngine(), mixer.whenRunning(3000), overlayReady]),
       delay(6000),
     ]);
     if (generation !== this.generation) return;
 
     // Make sure the clip on air (if any) is decoded before we join it.
     const wall = this.clock.now();
-    const shift = this.overlay.shiftAt(wall, stationId);
+    const shift = this.shiftAt(wall, stationId);
     const at = skipping ? skipTarget : wall + shift + joinOffset(this.schedule(), wall + shift, this.offsetOf(stationId));
     const onAir = this.schedule().segmentAt(at);
     if (onAir.kind === 'voice' && this.cache) {
@@ -593,13 +638,14 @@ export class Director {
     }
 
     const now = this.clock.now();
-    this.appliedShift = this.overlay.shiftAt(now, stationId);
+    this.appliedShift = this.shiftAt(now, stationId);
     mixer.setWobble(this.appliedShift !== 0);
     this.offsets.set(
       stationId,
       skipping ? skipTarget - now - this.appliedShift : joinOffset(schedule, now + this.appliedShift, this.offsetOf(stationId)),
     );
     this.live = true;
+    this.awaitingSound = performance.now();
     this.joining = true;
     this.lastTick = null;
     mixer.resetDuck();
@@ -633,7 +679,7 @@ export class Director {
     this.note('interrupted by the system');
     this.generation++;
     this.halt(0.05);
-    this.overlay.stop(0.05);
+    this.overlay?.stop(0.05);
     this.mixer?.stopStatic(0.05);
     this.mixer?.quietDial();
     this.setStatus('paused');
@@ -663,7 +709,7 @@ export class Director {
       if (this.live && this.program) this.scheduleAudio();
       const wall = this.clock.now();
       const local = localTime(wall, this.tz);
-      this.overlay.tick(wall, {
+      this.overlay?.tick(wall, {
         schedule: this.live && this.program ? this.schedule() : null,
         now: this.stationNow(),
         stationId: this.program?.id ?? null,
@@ -692,10 +738,10 @@ export class Director {
     this.lastTick = { wall, ctx: ctxNow };
 
     // Time slip: the programme drops back half a minute (and later snaps forward again).
-    const shift = this.overlay.shiftAt(wall, stationId);
+    const shift = this.shiftAt(wall, stationId);
     if (shift !== this.appliedShift) {
       this.note(shift ? 'time slip: replaying' : 'time slip: back to live');
-      sweep(mixer.ctx, mixer.overlayBus, mixer.noiseBuffer, ctxNow, shift ? 'rewind' : 'whoosh');
+      this.overlay?.slipSound(shift !== 0);
       this.appliedShift = shift;
       mixer.setWobble(shift !== 0);
       this.rejoin = true;
@@ -727,8 +773,23 @@ export class Director {
 
     for (const [id, { handle }] of this.voices) if (handle.ended) this.voices.delete(id);
     for (const [id, end] of this.failed) if (end < now - 60_000) this.failed.delete(id);
+    if (this.awaitingSound) this.checkSound(mixer);
     mixer.setHiss(!this.engine && this.engineFailed ? 0.035 : 0);
     if (rejoining) this.joining = false;
+  }
+
+  /** Once music or a voice is coming through after a join, the dial noise can clear. */
+  private checkSound(mixer: Mixer): void {
+    const loud = (node: AnalyserNode) => {
+      node.getFloatTimeDomainData(this.levelBuffer);
+      let sum = 0;
+      for (const v of this.levelBuffer) sum += v * v;
+      return sum / this.levelBuffer.length > 1e-7; // about -70 dBFS
+    };
+    if (performance.now() - this.awaitingSound > 2500 || loud(mixer.tap('music')) || loud(mixer.tap('voice'))) {
+      this.awaitingSound = 0;
+      this.updateReception();
+    }
   }
 
   private scheduleVoices(schedule: StationSchedule, now: number, ctxNow: number, ctxAt: (ms: number) => number): void {

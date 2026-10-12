@@ -11,7 +11,7 @@
 //   - Any of these power the radio on (or resume it), like the v2 `tune`.
 
 import { create } from 'zustand';
-import { loadTrackPacks } from '../content';
+import { loadTrackPacks } from '../content/tracks';
 import { SHIP } from '../stations/ship';
 import { DEFAULT_STATION_ID, MAIN_STATIONS, STATIONS } from '../stations/roster';
 import { DISCOVER_MS, DISCOVER_SIGNAL, pirates, stationForId, stepFrom } from './dial';
@@ -73,12 +73,13 @@ export const director = new Director({
 // `?hush=0..3` pins HUSH's strangeness (testing).
 {
   const hush = Number(searchParam('hush') ?? NaN);
-  if (Number.isInteger(hush) && hush >= 0 && hush <= 3) director.overlay.levelOverride = hush as 0 | 1 | 2 | 3;
+  if (Number.isInteger(hush) && hush >= 0 && hush <= 3) director.setHushLevel(hush as 0 | 1 | 2 | 3);
 }
 
 const sameTuned = (a: Tuned, b: Tuned): boolean => {
   if (a.kind !== b.kind) return false;
-  if (a.kind === 'station' || a.kind === 'pirate') return a.station.id === (b as typeof a).station.id;
+  // (Object identity: a pirate's definition is replaced once it gets its real name.)
+  if (a.kind === 'station' || a.kind === 'pirate') return a.station === (b as typeof a).station;
   if (a.kind === 'oddity') return a.oddity === (b as typeof a).oddity && a.label === (b as typeof a).label;
   return true;
 };
@@ -125,7 +126,7 @@ export const useBroadcast = create<BroadcastStore>()((set, get) => {
     }
 
     // HUSH and event clips speak over everything.
-    const over = playing ? director.overlay.speaking(director.clock.now(), director.latencyMs) : null;
+    const over = playing ? (director.overlay?.speaking(director.clock.now(), director.latencyMs) ?? null) : null;
     const caption = over ? { speaker: over.speaker, text: over.text } : stationCaption;
 
     let recent = state.recent;
@@ -158,7 +159,7 @@ export const useBroadcast = create<BroadcastStore>()((set, get) => {
 
     const show =
       tuned.kind === 'station' ? showAtHour(library.shows(tuned.station.id), localTime(director.stationNow(tuned.station.id)).hour) : null;
-    const event = director.overlay.eventAt(director.clock.now());
+    const event = director.eventAt();
 
     const patch: Partial<BroadcastState> = {};
     if (state.onAir !== onAir) patch.onAir = onAir;
