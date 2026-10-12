@@ -18,7 +18,8 @@ const MODIFIERS: Record<string, (s: string) => string> = {
   title: (s) => s.replace(/(^|[\s(-])([a-z])/g, (_, pre: string, c: string) => pre + c.toUpperCase()),
   lower: (s) => s.toLowerCase(),
   upper: (s) => s.toUpperCase(),
-  a: (s) => (/^[aeiou]/i.test(s) && !/^(uni|one|eu)/i.test(s) ? `an ${s}` : `a ${s}`),
+  /** Indefinite article by sound: "a used planet", "a unicorn", "an hour", "an unexpected owl". */
+  a: (s) => (anSound(s) ? `an ${s}` : `a ${s}`),
   /** Mirror-world spelling: each word reversed, capitalization kept on the first letter. */
   mirror: (s) =>
     s
@@ -117,4 +118,12 @@ export function tidy(s: string): string {
     .replace(/\s+([,.;:!?)])/g, '$1')
     .replace(/\(\s+/g, '(')
     .trim();
+}
+
+/** Vowel letters that sound like consonants ("use", "one", "euro") and silent h's. */
+const YOU_OR_WON = /^(?:uni(?!mp|nv|nt|nh|ns|nf)|u[srt][aeiu]|ur[aeio]|eu|ewe|one\b|one-|once)/i;
+const SILENT_H = /^(?:hour|honou?r|honest|heir)/i;
+
+function anSound(word: string): boolean {
+  return SILENT_H.test(word) || (/^[aeiou]/i.test(word) && !YOU_OR_WON.test(word));
 }

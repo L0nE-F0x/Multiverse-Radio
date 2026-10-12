@@ -38,6 +38,13 @@ describe('grammar', () => {
     expect(expand(g, new Rng(2), '#saved#')).toMatch(/^(moth and MOTH|owl and OWL)$/);
     expect(expand(g, new Rng(3), '#word.mirror#')).toBe('Aklop');
     expect(expand(g, new Rng(3), '#animal.a#')).toMatch(/^(a moth|an owl)$/);
+    const article = (word: string) => expand({ w: [word] }, new Rng(1), '#w.a#');
+    expect(['used planet', 'unicorn', 'one-way door', 'euphonium', 'utility moon', 'uranium tea'].map(article)).toEqual([
+      'a used planet', 'a unicorn', 'a one-way door', 'a euphonium', 'a utility moon', 'a uranium tea',
+    ]);
+    expect(['owl', 'umbrella', 'hour', 'unexpected guest', 'auction', 'inexact clock', 'uninvited moth', 'onerous task', 'urban fox'].map(article)).toEqual([
+      'an owl', 'an umbrella', 'an hour', 'an unexpected guest', 'an auction', 'an inexact clock', 'an uninvited moth', 'an onerous task', 'an urban fox',
+    ]);
   });
 
   it('throws on unknown rules and falls back when nothing fits', () => {
