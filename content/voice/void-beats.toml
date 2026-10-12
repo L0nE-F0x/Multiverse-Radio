@@ -1,0 +1,236 @@
+# Void Beats — DJ Eventually, from Room 0 (which has no door).
+# Running bits: sentences that never quite start, the void as a roommate who never does
+# the dishes, the probably-a-cat asleep on the notes. Cross-station: Greg, Bev, Grumbel's.
+station = "void-beats"
+
+[voices]
+host = { voice = "af_heart", speed = 0.92, name = "DJ Eventually" }
+void = { voice = "am_onyx", speed = 0.8, fx = "cave", name = "The Void" }
+bev = { voice = "bf_lily", fx = "phone", name = "Bev" }
+
+# ── Idents ────────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "id-001"
+category = "id"
+lines = [
+  { say = "host", text = "You're listening to Void Beats. Lo-fi for staring into the void. The void is also studying." },
+  { sting = "id" },
+]
+
+[[clip]]
+id = "id-002"
+category = "id"
+lines = [
+  { say = "host", text = "Void Beats. Eighty-eight point four. Somewhere underneath everything else." },
+  { sting = "id" },
+]
+
+[[clip]]
+id = "id-003"
+category = "id"
+lines = [
+  { say = "host", text = "This is Void Beats, from Room Zero. There's no door. So, I suppose, you're already in." },
+  { sting = "id" },
+]
+
+[[clip]]
+id = "id-004"
+category = "id"
+daypart = "night"
+lines = [
+  { say = "host", text = "Void Beats. It's late. The void's still up. So are you. Hi." },
+  { sting = "id" },
+]
+
+[[clip]]
+id = "id-005"
+category = "id"
+daypart = "morning"
+lines = [
+  { say = "host", text = "Morning. This is Void Beats. The void doesn't really do mornings. Neither do I. And yet, here we all are." },
+  { sting = "id" },
+]
+
+[[clip]]
+id = "id-006"
+category = "id"
+lines = [
+  { say = "host", text = "You're tuned to Void Beats. Please don't tap on the void. It's trying to concentrate." },
+  { sting = "id" },
+]
+
+[[clip]]
+id = "id-007"
+category = "id"
+lines = [
+  { say = "host", text = "Void Beats.", gap = 0.8 },
+  { say = "void", text = "Hm.", gap = 0.7 },
+  { say = "host", text = "That was the void. It says hi." },
+  { sting = "id" },
+]
+
+# ── Host links ────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "dj-001"
+category = "dj"
+daypart = "night"
+lines = [
+  { say = "host", text = "That was... I want to say a song. It was definitely a song. I was going to tell you what it was called, and then a planet drifted past the window, and I just..." },
+  { pause = 1.2 },
+  { say = "host", text = "...watched it. For a while. Anyway. Here's another one." },
+]
+
+[[clip]]
+id = "dj-002"
+category = "dj"
+lines = [
+  { say = "host", text = "Quick update on the void. It has not done the dishes. It has, however, borrowed my good mug, and I can see it from here, on the far side of the ceiling, being used as a small moon." },
+  { say = "host", text = "That's fine. I have other mugs. Here's something warm." },
+]
+
+[[clip]]
+id = "dj-003"
+category = "dj"
+lines = [
+  { say = "host", text = "So, I was thinking. About... you know when you... and then the..." },
+  { pause = 1.0 },
+  { say = "host", text = "Okay, it's gone. It was a really good thought. Possibly the best one I've ever had. Here's a song about it." },
+]
+
+[[clip]]
+id = "dj-004"
+category = "dj"
+daypart = "morning"
+lines = [
+  { say = "host", text = "Morning. Or the bit after night where it's still night, but with intentions. Put the kettle on." },
+  { say = "host", text = "The void put the kettle on four hours ago. It still hasn't boiled. We're starting to think the void is the kettle. Here's a song." },
+]
+
+[[clip]]
+id = "dj-005"
+category = "dj"
+lines = [
+  { say = "host", text = "Study tip from Room Zero. Read the same page eleven times. On the twelfth time, the page reads you. That's when you know you're ready." },
+  { pause = 0.6 },
+  { say = "host", text = "That's not a good tip. Please don't take tips from me. Here's a better song." },
+]
+
+[[clip]]
+id = "dj-006"
+category = "dj"
+lines = [
+  { say = "host", text = "The thing asleep on my notes is, we think, a cat. It has the general shape of a cat. It purrs at the frequency of distant stars, which I'm told is not standard." },
+  { say = "host", text = "It's very warm. I'm not moving it. I'm not moving anything, ever again. Here's the next one." },
+]
+
+[[clip]]
+id = "dj-007"
+category = "dj"
+lines = [
+  { say = "host", text = "This hour of Void Beats comes to you from Grumbel's Ladders. I asked them if they make a ladder that goes down. They said, every ladder goes down, if you believe in yourself." },
+  { say = "host", text = "Then they hung up. Grumbel's Ladders. Up is a choice. Down is, apparently, a lifestyle." },
+]
+
+[[clip]]
+id = "dj-008"
+category = "dj"
+daypart = "evening"
+lines = [
+  { say = "host", text = "Evening, everyone. The sun went down a while ago. Down where, nobody knows. Probably here. A lot of things end up here. Make yourself comfortable. Here's a slow one." },
+]
+
+[[clip]]
+id = "dj-009"
+category = "dj"
+daypart = "night"
+lines = [
+  { say = "host", text = "Can't sleep? Me neither. I asked the void earlier if it ever sleeps.", gap = 1.0 },
+  { say = "void", text = "No.", gap = 1.2 },
+  { say = "host", text = "It's never answered before. Okay. Okay. Here's a song. A loud one. No, a quiet one. Let's do a quiet one." },
+]
+
+[[clip]]
+id = "dj-010"
+category = "dj"
+lines = [
+  { say = "host", text = "Someone wrote in to ask if the void gets lonely. So I asked it. It didn't say anything. But later, I found it had made two cups of tea." },
+  { say = "host", text = "So I think it's alright. I think it's alright." },
+]
+
+[[clip]]
+id = "dj-011"
+category = "dj"
+lines = [
+  { say = "host", text = "Coming up, more beats for being a small creature in a very big room. Which is all of us. Even the void. Especially the void. It's enormous, and it still has to do the dishes. Eventually." },
+]
+
+[[clip]]
+id = "dj-012"
+category = "dj"
+daypart = "day"
+lines = [
+  { say = "host", text = "Afternoon check-in. How's the work going? Mine's going great. I've written my name at the top. In bubble letters. It took most of the morning." },
+  { say = "host", text = "Here's something to keep you company while you do yours." },
+]
+
+[[clip]]
+id = "dj-013"
+category = "dj"
+lines = [
+  { say = "host", text = "That last one was recorded in a desk drawer, by someone very small, very patiently. You could hear the drawer in the low end. Lovely drawer. Here's a song from a much bigger drawer." },
+]
+
+[[clip]]
+id = "dj-014"
+category = "dj"
+lines = [
+  { say = "host", text = "If you've lost a shadow, one went past the window about an hour ago. Smallish. Carrying a hat. Answers to Greg, apparently." },
+  { say = "host", text = "Hollis, if he's yours... he looked happy. Just so you know. Here's the next one." },
+]
+
+[[clip]]
+id = "dj-015"
+category = "dj"
+daypart = "night"
+lines = [
+  { say = "host", text = "It's very late, which is the best time to be a little bit sad and a little bit cozy at the same time. Like soup. Here's a song that's like soup." },
+]
+
+[[clip]]
+id = "dj-016"
+category = "dj"
+lines = [
+  { say = "host", text = "I was going to read out a listener message, but I've lost it. It's in the void. Everything I lose ends up in the void. My keys. My lunch. A whole Thursday, once." },
+  { pause = 0.6 },
+  { say = "host", text = "The void says hello. From Thursday." },
+]
+
+[[clip]]
+id = "dj-017"
+category = "dj"
+daypart = "day"
+lines = [
+  { say = "host", text = "Quick break. Stand up. Stretch. Drink some water. Look at something far away, to rest your eyes. If you're in Room Zero, everything is far away, so that's easy. Okay. Sit down. Here's a song." },
+]
+
+# ── Calls ─────────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "call-001"
+category = "call"
+title = "Bev is looking for a song"
+bed = "room"
+lines = [
+  { sfx = "phone-ring" },
+  { say = "host", text = "Oh. We have a caller. Hello, you're on Void Beats." },
+  { say = "bev", text = "Hello, love. It's Bev. Is this the request line?" },
+  { say = "host", text = "There's... sort of only one line. So, yes?" },
+  { say = "bev", text = "Lovely. I'm trying to find a song. I heard it once, in a lift, in a different dimension. It goes... da da dum. Da da." },
+  { say = "host", text = "Da da dum. Da da.", gap = 0.8 },
+  { say = "bev", text = "That's it! Do you know it?" },
+  { say = "host", text = "No. But I'm going to be thinking about it for the rest of my life." },
+  { say = "bev", text = "That's what happened to me, love. Thank you. I'll try the next one." },
+  { sfx = "phone-hangup" },
+]

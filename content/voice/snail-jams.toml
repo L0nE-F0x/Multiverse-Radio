@@ -1,0 +1,232 @@
+# Snail Jams — Shelley Shellbourne, from a garden where time is mostly optional.
+# She speaks extremely slowly and is very proud of it. Running bits: live traffic on a
+# single leaf, the slow-motion raindrop (a two-part story), requests from last month.
+station = "snail-jams"
+
+[voices]
+host = { voice = "af_sky", speed = 0.78, name = "Shelley Shellbourne" }
+
+# ── Idents ────────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "id-001"
+category = "id"
+lines = [
+  { say = "host", text = "Snail Jams.", gap = 0.8 },
+  { say = "host", text = "Take your time." },
+  { sting = "id" },
+]
+
+[[clip]]
+id = "id-002"
+category = "id"
+lines = [
+  { say = "host", text = "You're listening... to Snail Jams. Ninety-three point five.", gap = 0.6 },
+  { say = "host", text = "Eventually." },
+  { sting = "id" },
+]
+
+[[clip]]
+id = "id-003"
+category = "id"
+lines = [
+  { say = "host", text = "Snail Jams. Slow jams... for slow listeners." },
+  { sting = "id" },
+]
+
+[[clip]]
+id = "id-004"
+category = "id"
+daypart = "morning"
+lines = [
+  { say = "host", text = "Good morning. It's still morning. It'll be morning for a while. Snail Jams." },
+  { sting = "id" },
+]
+
+[[clip]]
+id = "id-005"
+category = "id"
+daypart = "night"
+lines = [
+  { say = "host", text = "Snail Jams. Good night.", gap = 0.6 },
+  { say = "host", text = "I started saying that at teatime." },
+  { sting = "id" },
+]
+
+[[clip]]
+id = "id-006"
+category = "id"
+lines = [
+  { say = "host", text = "This is Snail Jams. Take everyone's time. They won't mind." },
+  { sting = "id" },
+]
+
+[[clip]]
+id = "id-007"
+category = "id"
+lines = [
+  { say = "host", text = "Snail...", gap = 1.2 },
+  { say = "host", text = "Jams." },
+  { sting = "id" },
+]
+
+# ── Host links ────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "dj-001"
+category = "dj"
+lines = [
+  { say = "host", text = "Here's the traffic. On the leaf.", gap = 0.6 },
+  { say = "host", text = "Heading north, one snail. Me. Moving well.", gap = 0.6 },
+  { say = "host", text = "Expected at the edge of the leaf... by Thursday." },
+]
+
+[[clip]]
+id = "dj-002"
+category = "dj"
+lines = [
+  { say = "host", text = "That last song was three minutes long. For us, it was most of a spring.", gap = 0.6 },
+  { say = "host", text = "I cried at the chorus. It arrived in June." },
+]
+
+[[clip]]
+id = "dj-003"
+category = "dj"
+lines = [
+  { say = "host", text = "Some people say I talk too slowly.", gap = 0.8 },
+  { say = "host", text = "Those people... have already left.", gap = 0.6 },
+  { say = "host", text = "More music, for everyone who stayed." },
+]
+
+[[clip]]
+id = "dj-004"
+category = "dj"
+lines = [
+  { say = "host", text = "Live update. A raindrop is falling.", gap = 0.8 },
+  { say = "host", text = "It is about... halfway down.", gap = 0.6 },
+  { say = "host", text = "We'll keep you posted. Here's a song while we wait." },
+]
+
+[[clip]]
+id = "dj-005"
+category = "dj"
+lines = [
+  { say = "host", text = "Raindrop update. It has landed.", gap = 0.6 },
+  { say = "host", text = "On the mushroom. The mushroom is fine.", gap = 0.6 },
+  { say = "host", text = "Thank you all, for your concern." },
+]
+
+[[clip]]
+id = "dj-006"
+category = "dj"
+lines = [
+  { say = "host", text = "Snail Jams is brought to you by Grumbel's Ladders.", gap = 0.6 },
+  { say = "host", text = "I've been climbing one of their ladders since spring. I'm on the first rung.", gap = 0.6 },
+  { say = "host", text = "Lovely view. Grumbel's. Up is a choice." },
+]
+
+[[clip]]
+id = "dj-007"
+category = "dj"
+daypart = "morning"
+lines = [
+  { say = "host", text = "Morning, everyone. The dew is out. I'm going to have a little sip.", gap = 1.5 },
+  { say = "host", text = "That was the sip. Here's a song." },
+]
+
+[[clip]]
+id = "dj-008"
+category = "dj"
+daypart = "night"
+lines = [
+  { say = "host", text = "It's getting dark in the garden. The fireflies are on.", gap = 0.6 },
+  { say = "host", text = "One of them is blinking in time with the music.", gap = 0.6 },
+  { say = "host", text = "Show-off." },
+]
+
+[[clip]]
+id = "dj-009"
+category = "dj"
+lines = [
+  { say = "host", text = "A reminder to the snail on the next leaf: your headphones are on backwards.", gap = 0.6 },
+  { say = "host", text = "Don't fix it now. You'll miss the whole album." },
+]
+
+[[clip]]
+id = "dj-010"
+category = "dj"
+lines = [
+  { say = "host", text = "We've had a request. It came in last month.", gap = 0.6 },
+  { say = "host", text = "We're getting to it. We're nearly there.", gap = 0.6 },
+  { say = "host", text = "Coming up... after this one, and several others." },
+]
+
+[[clip]]
+id = "dj-011"
+category = "dj"
+daypart = "evening"
+lines = [
+  { say = "host", text = "Evening. Fast-moving weather is coming in. Very fast. A breeze.", gap = 0.6 },
+  { say = "host", text = "Hold on to something. I'm holding on to the leaf." },
+]
+
+[[clip]]
+id = "dj-012"
+category = "dj"
+daypart = "day"
+lines = [
+  { say = "host", text = "It's the afternoon. I've had a very busy day.", gap = 0.6 },
+  { say = "host", text = "I went all the way to the edge of the leaf.", gap = 0.6 },
+  { say = "host", text = "It was too much. I came back." },
+]
+
+[[clip]]
+id = "dj-013"
+category = "dj"
+lines = [
+  { say = "host", text = "A shadow went past this morning. Very quickly. Too quickly.", gap = 0.6 },
+  { say = "host", text = "We didn't get a name. We got half a hat.", gap = 0.6 },
+  { say = "host", text = "If it was Greg... Hollis says hello. Slow down, Greg." },
+]
+
+[[clip]]
+id = "dj-014"
+category = "dj"
+lines = [
+  { say = "host", text = "Big news. There is a lettuce.", gap = 0.6 },
+  { say = "host", text = "It's over there. Don't look. We're going.", gap = 0.6 },
+  { say = "host", text = "We'll be there in the autumn." },
+]
+
+[[clip]]
+id = "dj-015"
+category = "dj"
+lines = [
+  { say = "host", text = "If you're in a rush right now, this station isn't for you. But stay. Just this once. See what happens.", gap = 1.6 },
+  { say = "host", text = "Nothing. Isn't it nice." },
+]
+
+[[clip]]
+id = "dj-016"
+category = "dj"
+daypart = "night"
+lines = [
+  { say = "host", text = "Before you sleep, a tip from the garden.", gap = 0.6 },
+  { say = "host", text = "Whatever you didn't finish today, you can carry it on your back tomorrow. That's what we do.", gap = 0.6 },
+  { say = "host", text = "It's not heavy. It's home." },
+]
+
+# ── Weather ───────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "weather-001"
+category = "weather"
+title = "Garden forecast"
+lines = [
+  { sting = "weather" },
+  { say = "host", text = "The garden forecast.", gap = 0.6 },
+  { say = "host", text = "Dew. Then more dew.", gap = 0.6 },
+  { say = "host", text = "A chance of one leaf turning over, late in the afternoon.", gap = 0.6 },
+  { say = "host", text = "Wind: none, thank you.", gap = 0.6 },
+  { say = "host", text = "That's the forecast for today. And, knowing us, tomorrow." },
+]

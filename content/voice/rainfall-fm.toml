@@ -1,0 +1,212 @@
+# Rainfall FM — Drizzle Montgomery, overnight from the Damp Dimension, Precinct 9.
+# Running bits: rainfall totals read like football results, the sun as a rumour, the
+# kettle, floating-umbrella etiquette, the terrifying Dry Place.
+station = "rainfall-fm"
+
+[voices]
+host = { voice = "bf_isabella", speed = 0.92, name = "Drizzle Montgomery" }
+
+# ── Idents ────────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "id-001"
+category = "id"
+lines = [
+  { say = "host", text = "Rainfall FM. Ninety point one. It's raining. It's lovely." },
+  { sting = "id" },
+]
+
+[[clip]]
+id = "id-002"
+category = "id"
+lines = [
+  { say = "host", text = "You're listening to Rainfall FM, from the Damp Dimension. Bring a towel. Bring two." },
+  { sting = "id" },
+]
+
+[[clip]]
+id = "id-003"
+category = "id"
+daypart = "night"
+lines = [
+  { say = "host", text = "Rainfall FM, through the night and through the rain, which round here is the same thing." },
+  { sting = "id" },
+]
+
+[[clip]]
+id = "id-004"
+category = "id"
+lines = [
+  { say = "host", text = "This is Rainfall FM. Four thousand years of drizzle, and we've never once run out." },
+  { sting = "id" },
+]
+
+[[clip]]
+id = "id-005"
+category = "id"
+daypart = "morning"
+lines = [
+  { say = "host", text = "Good morning from Rainfall FM. It's raining. I only mention it so you're not surprised." },
+  { sting = "id" },
+]
+
+[[clip]]
+id = "id-006"
+category = "id"
+bed = "rain"
+lines = [
+  { say = "host", text = "Rainfall FM. The kettle's on. The kettle is always on." },
+  { sting = "id" },
+]
+
+[[clip]]
+id = "id-007"
+category = "id"
+lines = [
+  { say = "host", text = "Rainfall FM. If you can hear the rain louder than usual, your window's open. Close it, love. Or don't. It's nice." },
+  { sting = "id" },
+]
+
+# ── Host links ────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "dj-001"
+category = "dj"
+lines = [
+  { say = "host", text = "Here are tonight's rainfall totals. Precinct One, two inches. Precinct Four, two inches. That's a draw. Precinct Nine, three and a half inches, a convincing win at home." },
+  { say = "host", text = "And Precinct Twelve, nought.", gap = 0.8 },
+  { say = "host", text = "Nought? I'm being told Precinct Twelve has fallen into the canal. Recount pending." },
+]
+
+[[clip]]
+id = "dj-002"
+category = "dj"
+lines = [
+  { say = "host", text = "A listener asks what the sun is like. I've never seen it, love. From what I've read, it's a sort of very large lamp that nobody's in charge of." },
+  { say = "host", text = "Sounds stressful. I'll stick with the drizzle. Here's a song." },
+]
+
+[[clip]]
+id = "dj-003"
+category = "dj"
+lines = [
+  { say = "host", text = "Kettle's just boiled, so I'll keep this short. That last one was by a band who recorded entirely under a bus shelter. You could hear the number nine going past at the end. Lovely. Here's another." },
+]
+
+[[clip]]
+id = "dj-004"
+category = "dj"
+lines = [
+  { say = "host", text = "A reminder about umbrella etiquette. If two floating umbrellas meet on a narrow street, the smaller umbrella goes underneath." },
+  { say = "host", text = "If they're the same size, they stay where they are, hovering, until one of them apologises. There are two on Lantern Street that have been there since spring." },
+]
+
+[[clip]]
+id = "dj-005"
+category = "dj"
+daypart = "night"
+bed = "rain"
+lines = [
+  { say = "host", text = "It's half past something, the rain's doing that thing where it sounds like applause, and I've decided to take it personally." },
+  { say = "host", text = "Thank you. Thank you very much. You're too kind. Here's the next one." },
+]
+
+[[clip]]
+id = "dj-006"
+category = "dj"
+daypart = "morning"
+lines = [
+  { say = "host", text = "Morning, all. Visibility is low, spirits are fair, and the gutters on Lantern Street are singing in the key of D. Here's something to drink your tea to." },
+]
+
+[[clip]]
+id = "dj-007"
+category = "dj"
+lines = [
+  { say = "host", text = "We've had a letter from someone who lives in a place where it doesn't rain. They say the air is just... empty. Nothing in it at all." },
+  { say = "host", text = "I've read it three times. I think it's the most frightening thing anyone has ever sent me. Let's have some music." },
+]
+
+[[clip]]
+id = "dj-008"
+category = "dj"
+lines = [
+  { say = "host", text = "Rainfall FM is sponsored by Grumbel's Ladders. Non-slip rungs, tested in every weather we have, which is one weather. Grumbel's. Up is a choice. Mind the puddle at the bottom." },
+]
+
+[[clip]]
+id = "dj-009"
+category = "dj"
+lines = [
+  { say = "host", text = "Shadow owners, take note. In this light nobody's got a shadow, so if yours has gone missing, you won't notice for weeks." },
+  { say = "host", text = "But if he answers to Greg, a man in Precinct Six says one's been sheltering under his awning. Polite. Bit damp. Wouldn't say where he was headed. Hollis, the porch light's on, I take it." },
+]
+
+[[clip]]
+id = "dj-010"
+category = "dj"
+daypart = "evening"
+lines = [
+  { say = "host", text = "Evening, everyone. There's lightning very far off to the north. Not our lightning. Someone else's. We wave at it anyway. It's only neighbourly. Here's a song." },
+]
+
+[[clip]]
+id = "dj-011"
+category = "dj"
+lines = [
+  { say = "host", text = "That last song was about a dry sock. You can always tell. There's a sort of longing in the bass. Coming up, a song about a wet sock, which is all the others." },
+]
+
+[[clip]]
+id = "dj-012"
+category = "dj"
+daypart = "night"
+bed = "rain"
+lines = [
+  { say = "host", text = "If you're listening in bed, the sound on your roof right now is the same sound that's on mine. That's about the closest thing we've got to holding hands across the city. Here's a slow one." },
+]
+
+[[clip]]
+id = "dj-013"
+category = "dj"
+lines = [
+  { say = "host", text = "Puddle report. The big one outside the bakery has now been given a name, a postcode and a small boat." },
+  { say = "host", text = "Please don't fish in it. We don't know what's in there, and frankly, neither does the puddle." },
+]
+
+[[clip]]
+id = "dj-014"
+category = "dj"
+daypart = "day"
+lines = [
+  { say = "host", text = "Afternoon. Same as the morning, but wetter round the edges. If you've the day off, put a towel on the radiator and just be a person for a bit. Here's some music for that." },
+]
+
+[[clip]]
+id = "dj-015"
+category = "dj"
+lines = [
+  { say = "host", text = "Four thousand years of rain, and do you know, I've never once been bored of it. Every drop's a slightly different shape. I've been counting. I'm on eleven. Here's the next song." },
+]
+
+[[clip]]
+id = "dj-016"
+category = "dj"
+daypart = "night"
+lines = [
+  { say = "host", text = "For the night shift: the tram drivers, the bakers, the woman who wipes the condensation off the bus stop map so we can all see where we are. This one's for you. Thank you for the map." },
+]
+
+# ── Weather ───────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "weather-001"
+category = "weather"
+title = "The forecast"
+bed = "rain"
+lines = [
+  { sting = "weather" },
+  { say = "host", text = "And now the forecast. Tonight, rain, heavy at times, lighter at others, and at about three in the morning, a sort of thoughtful drizzle." },
+  { say = "host", text = "Tomorrow, rain. The weekend, we'll see. It'll be rain." },
+  { say = "host", text = "Nineteen years I've been reading this, and I still read it like it might say something else. Rainfall FM. Stay dry. Or stay damp and happy. Both count." },
+]
