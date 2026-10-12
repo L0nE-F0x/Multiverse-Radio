@@ -6,6 +6,9 @@ import { compose } from './recipes';
 import { SYNTHS } from './dsp/synths';
 import { PATCHES } from './dsp/patches';
 
+/** Recipes that keep one key by design. */
+const FIXED_KEY = new Set<RecipeId>(['infinite-song']);
+
 function fingerprint(req: TrackRequest): string {
   const s = compose(req);
   let h = 2166136261;
@@ -82,7 +85,8 @@ describe('every recipe', () => {
           tempos.add(s.bpm.toFixed(1));
         }
         expect(prints.size).toBe(8);
-        expect(keys.size).toBeGreaterThanOrEqual(3);
+        // The Infinite Song is one song: the same key on every track (genres.test.ts).
+        if (!FIXED_KEY.has(recipe)) expect(keys.size).toBeGreaterThanOrEqual(3);
         expect(tempos.size).toBeGreaterThanOrEqual(3);
       });
     });

@@ -48,15 +48,15 @@ export function composeDrumAndBass(req: TrackRequest): Score {
   const breakA = style.pick(BREAKS);
   const breakB = song.chance(0.5) ? breakA : song.pick(BREAKS);
 
-  const kick = b.inst({ kind: 'sample', patch: 'kick-dnb', name: 'Kick', gain: 0.5 });
-  const snare = b.inst({ kind: 'sample', patch: 'snare-dnb', name: 'Snare', gain: 0.46, reverb: 0.22, pan: 0.02 });
-  const hat = b.inst({ kind: 'sample', patch: 'hat-closed', name: 'Hats', gain: 0.26, pan: 0.2, lowpass: lerp(9000, 14000, B) });
+  const kick = b.inst({ kind: 'sample', patch: 'kick-dnb', name: 'Kick', gain: 0.36 });
+  const snare = b.inst({ kind: 'sample', patch: 'snare-dnb', name: 'Snare', gain: 0.5, reverb: 0.22, pan: 0.02 });
+  const hat = b.inst({ kind: 'sample', patch: 'hat-closed', name: 'Hats', gain: 0.42, pan: 0.2, lowpass: lerp(9000, 14000, B) });
   const ohat = b.inst({ kind: 'sample', patch: 'hat-open', name: 'Open hat', gain: 0.16, pan: 0.2 });
   const ride = b.inst({ kind: 'sample', patch: 'ride', name: 'Ride', gain: 0.12, pan: -0.25, reverb: 0.1 });
-  const shaker = b.inst({ kind: 'sample', patch: 'shaker', name: 'Shaker', gain: 0.14, pan: -0.3 });
+  const shaker = b.inst({ kind: 'sample', patch: 'shaker', name: 'Shaker', gain: 0.22, pan: -0.3 });
   const crash = b.inst({ kind: 'sample', patch: 'crash', name: 'Crash', gain: 0.18, reverb: 0.3, pan: 0.2 });
-  const sub = b.inst({ kind: 'synth', patch: 'sub-sine', name: 'Sub bass', gain: 0.6 });
-  const reese = b.inst({ kind: 'synth', patch: 'reese', name: 'Reese', gain: 0.32, pan: 0, highpass: 90, detune: weirdDetune(song, W, 15) });
+  const sub = b.inst({ kind: 'synth', patch: 'sub-sine', name: 'Sub bass', gain: 0.3 });
+  const reese = b.inst({ kind: 'synth', patch: 'reese', name: 'Reese', gain: 0.26, pan: 0, highpass: 90, detune: weirdDetune(song, W, 15) });
   const pad = b.inst({ kind: 'synth', patch: padPatch, name: 'Pad', gain: 0.34, reverb: 0.45, pan: 0 });
   const stab = b.inst({ kind: 'sample', patch: stabPatch, name: 'Stabs', gain: 0.4, reverb: 0.25, delay: 0.35, pan: -0.15, lowpass: lerp(4000, 9000, B), tremolo: stabPatch === 'ep' ? { rate: 4.4, depth: 0.3 } : undefined });
   const bell = b.inst({ kind: 'sample', patch: bellPatch, name: 'Bells', gain: 0.32, reverb: 0.5, delay: 0.55, pan: 0.3, detune: weirdDetune(song, W, 20) });
