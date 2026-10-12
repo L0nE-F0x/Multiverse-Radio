@@ -5,7 +5,7 @@
 import { create } from 'zustand';
 import { useBroadcast } from '../broadcast/store';
 import type { BroadcastState, Segment, StationDef } from '../broadcast/types';
-import { stationById } from '../stations/roster';
+import { stationForId } from '../broadcast/dial';
 import type { KnownPirate } from './dial';
 import { pirateFrequency } from './dial';
 import { segmentLabel } from './format';
@@ -74,12 +74,13 @@ export function clearShipLog(): void {
 
 /** Station or pirate by id, from the roster, the tuned pirate or the pirates we've met. */
 function lookup(id: string, state: BroadcastState): { name: string; frequency: number; station?: StationDef } {
-  const roster = stationById(id);
-  if (roster) return { name: roster.name, frequency: roster.frequency, station: roster };
+  // Roster stations and pirates (the director can rebuild any pirate from its id).
+  const known = stationForId(id);
+  if (known) return { name: known.name, frequency: known.frequency, station: known };
   const t = state.tuned;
   if ((t.kind === 'pirate' || t.kind === 'station') && t.station.id === id) return { name: t.station.name, frequency: t.station.frequency, station: t.station };
-  const known = useShipLog.getState().pirates[id];
-  if (known) return { name: known.name, frequency: known.frequency };
+  const met = useShipLog.getState().pirates[id];
+  if (met) return { name: met.name, frequency: met.frequency };
   return { name: 'Unidentified carrier', frequency: pirateFrequency(id) ?? state.frequency };
 }
 

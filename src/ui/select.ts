@@ -7,7 +7,7 @@
 import { useRef } from 'react';
 import { useBroadcast } from '../broadcast/store';
 import type { BroadcastStore, PlayStatus, Segment, StationDef, Tuned } from '../broadcast/types';
-import { stationById } from '../stations/roster';
+import { stationForId } from '../broadcast/dial';
 import { describeTuned, type Source } from './source';
 
 /** Like `useBroadcast(selector)`, but keeps the previous result while `equal` says nothing changed. */
@@ -21,10 +21,19 @@ export function useBroadcastWith<T>(selector: (state: BroadcastStore) => T, equa
   });
 }
 
-export const sameSegment = (a: Segment | null, b: Segment | null): boolean => a?.id === b?.id;
+/**
+ * Same segment *as displayed*: the id plus what's shown for it. A segment keeps its id when
+ * the schedule is rebuilt (track names arrive after boot; pirate hosts get named), so the
+ * id alone would pin the placeholder text.
+ */
+const shown = (s: Segment): string =>
+  s.kind === 'track' ? `${s.id}|${s.meta.title}|${s.meta.artist}` : `${s.id}|${s.clip.title ?? ''}|${s.clip.lines[0]?.speaker ?? ''}`;
+
+export const sameSegment = (a: Segment | null, b: Segment | null): boolean =>
+  a === b || (a !== null && b !== null && shown(a) === shown(b));
 
 export const sameSegments = (a: Segment[], b: Segment[]): boolean =>
-  a.length === b.length && a.every((segment, i) => segment.id === b[i]?.id);
+  a.length === b.length && a.every((segment, i) => sameSegment(segment, b[i] ?? null));
 
 const tunedKey = (t: Tuned): string =>
   t.kind === 'station' || t.kind === 'pirate'
@@ -65,7 +74,7 @@ export function useLastStation(): StationDef {
   const stations = useBroadcast((s) => s.stations);
   const tuned = useTuned();
   if ((tuned.kind === 'station' || tuned.kind === 'pirate') && tuned.station.id === id) return tuned.station;
-  return stations.find((s) => s.id === id) ?? stationById(id) ?? stations[0]!;
+  return stations.find((s) => s.id === id) ?? stationForId(id) ?? stations[0]!;
 }
 
 /** True while something is audibly on air (or about to be). */
