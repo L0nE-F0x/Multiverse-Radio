@@ -248,7 +248,8 @@ export function rain(g: Gfx, t: number, x0: number, y0: number, x1: number, y1: 
   const h = y1 - y0 + len;
   for (let i = 0; i < n; i++) {
     const sp = speed * (0.85 + hash3(i, seed, 3) * 0.3);
-    const p = (hash3(i, seed, 2) * h + t * sp) % h;
+    // Negative speed makes it fall upward (other realities).
+    const p = (((hash3(i, seed, 2) * h + t * sp) % h) + h) % h;
     const y = y0 - len + p;
     const x = x0 + ((((hash3(i, seed, 1) * w + p * slant) % w) + w) % w);
     for (let k = 0; k < len; k++) {
@@ -310,6 +311,36 @@ export function rimLight(g: Gfx, x: number, y: number, w: number, h: number, isS
         b[i] = 0xff000000 | ((bb | 0) << 16) | ((gg | 0) << 8) | (r | 0);
       }
       prevIn = inside;
+    }
+  }
+}
+
+/**
+ * Glossy-floor (or wet-street, or still-water) reflection: whatever was drawn this frame in
+ * the columns [x0, x1) above world row `footY` (pixels that differ from the background) is
+ * mirrored below it, fading out over `h` rows. Call right after drawing a figure that stands
+ * at footY. `alpha` is the reflection's strength at the feet; `ripple` wobbles it sideways.
+ */
+export function reflectDown(g: Gfx, x0: number, x1: number, footY: number, h: number, alpha: number, ripple = 0, t = 0) {
+  const f = g.frame;
+  const bgb = g.bg;
+  const b = g.buf;
+  const bx0 = Math.max(0, Math.floor(x0) - g.ox);
+  const bx1 = Math.min(g.w, Math.ceil(x1) - g.ox);
+  for (let k = 0; k < h; k++) {
+    const sy = Math.floor(footY) - 1 - k - g.oy;
+    const dy = Math.floor(footY) + k - g.oy;
+    if (sy < 0 || dy >= g.h || dy < 0) continue;
+    const q = Math.floor(alpha * (1 - k / h) * 6 + 0.5) / 6;
+    if (q <= 0) continue;
+    const wob = ripple ? Math.round(Math.sin(t * 3 + k * 0.9) * ripple * (k / h)) : 0;
+    for (let bx = bx0; bx < bx1; bx++) {
+      const si = sy * g.w + bx;
+      const c = f[si]!;
+      if (c === bgb[si]) continue;
+      const tx = bx + wob;
+      if (tx < 0 || tx >= g.w) continue;
+      blendAt(b, dy * g.w + tx, c & 255, (c >>> 8) & 255, (c >>> 16) & 255, (q * 256) | 0);
     }
   }
 }

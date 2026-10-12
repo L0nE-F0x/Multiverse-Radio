@@ -737,11 +737,14 @@ export class Gfx {
 
   /**
    * Vertical dithered gradient through `stops` from world y0 to y1, across the full view
-   * width. Rows outside [y0, y1] (within [from, to)) take the end colors.
+   * width (within the clip rectangle). Rows outside [y0, y1] (within [from, to)) take the
+   * end colors.
    */
   vgrad(stops: readonly Color[], y0: number, y1: number, from = this.top, to = this.bottom) {
     const n = stops.length - 1;
-    for (let y = Math.max(from, this.top); y < Math.min(to, this.bottom); y++) {
+    const yStart = Math.max(Math.floor(from), this.top + this.ct);
+    const yEnd = Math.min(Math.ceil(to), this.top + this.cb);
+    for (let y = yStart; y < yEnd; y++) {
       const t = Math.min(1, Math.max(0, (y - y0) / (y1 - y0 || 1))) * n;
       const i = Math.min(n - 1, Math.floor(t));
       const f = t - i;
@@ -749,7 +752,7 @@ export class Gfx {
       const cb = stops[Math.min(n, i + 1)]!;
       const by = y - this.oy;
       const row = by * this.w;
-      for (let bx = 0; bx < this.w; bx++) {
+      for (let bx = this.cl; bx < this.cr; bx++) {
         this.buf[row + bx] = f > BAYER[((y & 3) << 2) | ((bx + this.ox) & 3)]! ? cb : ca;
       }
     }
