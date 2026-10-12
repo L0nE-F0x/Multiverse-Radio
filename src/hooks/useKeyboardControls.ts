@@ -7,10 +7,19 @@ import { ui, useUi } from '../ui/store';
  * C captions · −/+ volume · ? help · Esc leaves ambient mode.
  *
  * Shortcuts stay out of the way while typing, inside open dialogs, and on sliders that
- * use the arrow keys themselves. Space on a keyboard-focused button presses the button.
+ * use the arrow keys themselves. Space on a button you reached with the keyboard presses
+ * that button; on one you last clicked with the mouse, it's play/pause as usual.
  */
 export function useKeyboardControls(): void {
   useEffect(() => {
+    // Input modality: did the focused element get focus from the keyboard? (Chrome makes
+    // any focused button :focus-visible once a key is pressed, so we can't ask CSS.)
+    let lastKeyAt = -Infinity;
+    let keyboardFocus = false;
+    const markKey = () => (lastKeyAt = performance.now());
+    const markPointer = () => (keyboardFocus = false);
+    const onFocusIn = () => (keyboardFocus = performance.now() - lastKeyAt < 150);
+
     const onKeyDown = (event: KeyboardEvent) => {
       if (event.defaultPrevented || event.metaKey || event.ctrlKey || event.altKey) return;
       const target = event.target instanceof HTMLElement ? event.target : null;
@@ -18,7 +27,7 @@ export function useKeyboardControls(): void {
       const { guideOpen, helpOpen, ambient } = ui();
       if (guideOpen || helpOpen) return;
       const onSlider = !!target?.closest('input[type="range"], [role="slider"]');
-      const onKeyboardButton = !!target?.closest('button, [role="button"], a[href]') && target.matches(':focus-visible');
+      const onKeyboardButton = keyboardFocus && !!target?.closest('button, [role="button"], a[href]');
       const once = !event.repeat;
 
       const handled = (() => {
@@ -81,15 +90,21 @@ export function useKeyboardControls(): void {
     // Buttons activate on Space keyup; when Space meant play/pause, stop the button too.
     const onKeyUp = (event: KeyboardEvent) => {
       const target = event.target instanceof HTMLElement ? event.target : null;
-      if (event.key === ' ' && target?.closest('button, [role="button"]') && !target.matches(':focus-visible')) {
+      if (event.key === ' ' && !keyboardFocus && target?.closest('button, [role="button"]')) {
         event.preventDefault();
       }
     };
 
+    window.addEventListener('keydown', markKey, true);
+    window.addEventListener('pointerdown', markPointer, true);
+    document.addEventListener('focusin', onFocusIn);
     window.addEventListener('keydown', onKeyDown);
     window.addEventListener('keyup', onKeyUp);
     document.addEventListener('fullscreenchange', act.onFullscreenChange);
     return () => {
+      window.removeEventListener('keydown', markKey, true);
+      window.removeEventListener('pointerdown', markPointer, true);
+      document.removeEventListener('focusin', onFocusIn);
       window.removeEventListener('keydown', onKeyDown);
       window.removeEventListener('keyup', onKeyUp);
       document.removeEventListener('fullscreenchange', act.onFullscreenChange);
