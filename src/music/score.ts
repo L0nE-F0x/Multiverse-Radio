@@ -2,6 +2,7 @@
 // the engine plays it. Times are seconds from the start of the track.
 
 import type { RecipeId, RecipeTweaks } from '../broadcast/types';
+import type { GenreSamplePatch, GenreSynthPatch } from './dsp/genres';
 import type { Rng } from './rng';
 import type { BedsSamplePatch, BedsSynthPatch } from './dsp/beds-v3';
 
@@ -95,7 +96,9 @@ export type SamplePatch =
   | 'static'
   | 'hiss'
   | 'shortwave'
-  | 'ocean';
+  | 'ocean'
+  // v3 genre instruments (dsp/genres.ts)
+  | GenreSamplePatch;
 
 export type SynthPatch =
   | BedsSynthPatch
@@ -125,7 +128,9 @@ export type SynthPatch =
   | 'chip-square'
   | 'chip-tri'
   | 'sine-beep'
-  | 'drone';
+  | 'drone'
+  // v3 genre instruments (dsp/genres.ts)
+  | GenreSynthPatch;
 
 interface InstrumentMix {
   /** Display name. */

@@ -16,6 +16,8 @@ import { composePolka } from './polka';
 import { composeSynthwave } from './synthwave';
 import { composeTropical } from './tropical';
 
+import { Rng } from '../rng';
+import { signatureOf, signScore } from './artist';
 import { BEDS_V3 } from './v3-beds';
 import { GENRES_V3 } from './v3-genres';
 
@@ -53,7 +55,20 @@ export function compose(req: TrackRequest): Score {
     seed: (Number.isFinite(req.seed) ? req.seed : 0) >>> 0,
     durationSeconds: Math.max(4, Math.min(3600, Number.isFinite(req.durationSeconds) ? req.durationSeconds : 180)),
   };
+  if (safe.artist !== undefined) {
+    if (Number.isFinite(safe.artist)) safe.artist = safe.artist >>> 0;
+    else delete safe.artist;
+  }
   const fn = COMPOSERS[safe.recipe];
-  if (fn) return fn(safe);
-  return { ...composeLofi({ ...safe, recipe: 'lofi-hiphop' }), recipe: safe.recipe };
+  const run = (): Score => (fn ? fn(safe) : { ...composeLofi({ ...safe, recipe: 'lofi-hiphop' }), recipe: safe.recipe });
+  if (safe.artist === undefined) return run();
+  // An artist's track: their taste steers named choices, their mix goes on top (artist.ts).
+  const sig = signatureOf(safe.artist);
+  const outer = Rng.taste;
+  Rng.taste = sig.taste;
+  try {
+    return signScore(run(), sig);
+  } finally {
+    Rng.taste = outer;
+  }
 }

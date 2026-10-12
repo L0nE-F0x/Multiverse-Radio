@@ -16,7 +16,18 @@ export function mix32(x: number): number {
   return (x ^ (x >>> 16)) >>> 0;
 }
 
+/** How often an artist's named choice is simply their favourite (see Rng.taste). */
+const FAVOURITE = 0.7;
+
 export class Rng {
+  /**
+   * Artist taste (v3, see recipes/artist.ts): while an artist's track is being composed,
+   * named choices (string items in pick/weighted) go to the artist's favourite most of
+   * the time, and are otherwise weighted by how much the artist likes them. Null the rest
+   * of the time. Draws the same numbers either way.
+   */
+  static taste: ((item: string) => number) | null = null;
+
   private a: number;
   private b: number;
   private c: number;
@@ -67,16 +78,37 @@ export class Rng {
 
   pick<T>(items: readonly T[]): T {
     if (items.length === 0) throw new Error('pick from empty list');
+    if (Rng.taste && items.length > 1 && typeof items[0] === 'string') return this.weighted(items.map((x) => [x, 1] as const));
     return items[this.u32() % items.length]!;
   }
 
   /** Weighted pick: weights need not sum to 1. */
   weighted<T>(items: readonly (readonly [T, number])[]): T {
+    const taste = Rng.taste;
+    const tasted = taste !== null && items.length > 1 && items.some(([x]) => typeof x === 'string');
+    const weight = (item: T, w: number) => (tasted && typeof item === 'string' ? Math.max(0, w) * taste!(item) : Math.max(0, w));
     let total = 0;
-    for (const [, w] of items) total += Math.max(0, w);
-    let r = this.next() * total;
+    for (const [item, w] of items) total += weight(item, w);
+    let u = this.next();
+    if (tasted) {
+      // An artist mostly reaches for their favourite (the recipe's odds times their taste).
+      if (u < FAVOURITE) {
+        let best = items[0]![0];
+        let bestW = -1;
+        for (const [item, w] of items) {
+          const x = weight(item, w);
+          if (x > bestW) {
+            bestW = x;
+            best = item;
+          }
+        }
+        return best;
+      }
+      u = (u - FAVOURITE) / (1 - FAVOURITE);
+    }
+    let r = u * total;
     for (const [item, w] of items) {
-      r -= Math.max(0, w);
+      r -= weight(item, w);
       if (r < 0) return item;
     }
     return items[items.length - 1]![0];

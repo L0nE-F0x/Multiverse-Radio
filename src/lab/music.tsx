@@ -5,7 +5,7 @@ import { StrictMode, useCallback, useEffect, useMemo, useRef, useState } from 'r
 import { createRoot } from 'react-dom/client';
 import '../index.css';
 import { RECIPE_IDS, type RecipeId, type RecipeTweaks } from '../broadcast/types';
-import { createMusicEngine, getTrackInfo, RECIPE_INFO, renderTrack, type MusicEngine, type TrackInfo, type TrackRequest } from '../music';
+import { artistSeed, createMusicEngine, getTrackInfo, RECIPE_INFO, renderTrack, type MusicEngine, type TrackInfo, type TrackRequest } from '../music';
 import type { Engine } from '../music/engine/engine';
 import { encodeWav } from '../music/wav';
 import { STATIONS } from '../stations/roster';
@@ -150,6 +150,7 @@ function Lab() {
   const [duration, setDuration] = useState(180);
   const [offset, setOffset] = useState(0);
   const [tweaks, setTweaks] = useState<Partial<RecipeTweaks>>({});
+  const [artist, setArtist] = useState('');
   const [stationId, setStationId] = useState('');
   const [info, setInfo] = useState<TrackInfo | null>(null);
   const [playing, setPlaying] = useState(false);
@@ -161,7 +162,10 @@ function Lab() {
   const [analyser, setAnalyser] = useState<AnalyserNode | null>(null);
   const levels = useMeter(analyser, playing);
 
-  const request = useMemo<TrackRequest>(() => ({ recipe, seed, durationSeconds: duration, tweaks }), [recipe, seed, duration, tweaks]);
+  const request = useMemo<TrackRequest>(
+    () => ({ recipe, seed, durationSeconds: duration, tweaks, ...(artist.trim() ? { artist: artistSeed(artist) } : {}) }),
+    [recipe, seed, duration, tweaks, artist],
+  );
 
   useEffect(() => {
     let live = true;
@@ -308,6 +312,16 @@ function Lab() {
             <button type="button" onClick={newSong} className="rounded-lg bg-teal/15 px-4 py-2 text-sm text-teal ring-1 ring-teal/40 hover:bg-teal/25">
               New song
             </button>
+            <label className="flex flex-col gap-1 font-mono text-xs text-cream/60">
+              Artist
+              <input
+                type="text"
+                className="well w-44 rounded-lg px-3 py-2 text-cream"
+                placeholder="(none)"
+                value={artist}
+                onChange={(e) => setArtist(e.target.value)}
+              />
+            </label>
             <label className="flex flex-col gap-1 font-mono text-xs text-cream/60">
               Length (s)
               <input

@@ -21,6 +21,8 @@ import type { RecipeId, RecipeTweaks } from '../broadcast/types';
 import type { TrackInfo } from './score';
 
 export type { TrackInfo } from './score';
+/** `TrackRequest.artist` for an artist's name (case and spacing don't matter). */
+export { artistSeed } from './recipes/artist';
 
 export interface TrackRequest {
   recipe: RecipeId;

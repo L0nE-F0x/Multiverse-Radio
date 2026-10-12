@@ -20,9 +20,18 @@ import {
   type TrackFx,
 } from '../score';
 import { chordPcs, chordScale, chordSymbol, nearestInSet, pc, stepInSet, type Chord } from '../theory';
+import { signatureOf } from './artist';
 
 export function resolveTweaks(req: TrackRequest, defaults: Partial<RecipeTweaks>): RecipeTweaks {
   const t = { ...DEFAULT_TWEAKS, ...defaults, ...(req.tweaks ?? {}) };
+  if (req.artist !== undefined) {
+    // An artist leans the station's sound their way (see artist.ts).
+    const sig = signatureOf(req.artist);
+    t.density += sig.density;
+    t.brightness += sig.brightness;
+    t.grit += sig.grit;
+    t.weirdness += sig.weirdness;
+  }
   return {
     bpm: clamp(t.bpm, 30, 220),
     density: clamp(t.density, 0, 1),
@@ -35,6 +44,12 @@ export function resolveTweaks(req: TrackRequest, defaults: Partial<RecipeTweaks>
 /** Tempo for this song: near the station's bpm if it set one, else within the recipe range. */
 export function pickBpm(rng: Rng, req: TrackRequest, range: [number, number]): number {
   const center = req.tweaks?.bpm;
+  if (req.artist !== undefined) {
+    // The artist's own spot in the range (or near the station's tempo), with a little play.
+    const sig = signatureOf(req.artist);
+    if (center !== undefined) return clamp(center * (1 + (sig.tempo - 0.5) * 0.08) * rng.range(0.97, 1.03), 30, 220);
+    return lerp(range[0], range[1], clamp(sig.tempo + (rng.next() - 0.5) * sig.spread, 0, 1));
+  }
   if (center !== undefined) return clamp(center * rng.range(0.94, 1.06), 30, 220);
   return rng.range(range[0], range[1]);
 }
