@@ -207,3 +207,227 @@ lines = [
   { say = "cello", text = "The fan.", gap = 0.6 },
   { say = "host", text = "To the fan, then. It has kept him cool through four hundred concerts. It deserves a nocturne." },
 ]
+
+# ══ v3: the living schedule ═══════════════════════════════════════════════════
+#
+# Shows, the dj kit (an opener, one to three programme notes, a hand-off) and Halloween.
+# Madame Torque, Ferrous von Clank, Antonio Sprocketti and Hildegard Ratchet are resident
+# composers (src/content/packs/grand.ts). Existing clips above are rendered and deployed;
+# only add.
+
+# ── Shows ─────────────────────────────────────────────────────────────────────
+
+[[show]]
+id = "the-tuning-hour"
+name = "The Tuning Hour"
+blurb = "The orchestra tunes. It is nearly in tune."
+start = 4
+end = 6
+
+[[show]]
+id = "the-candlelight-recital"
+name = "The Candlelight Recital"
+blurb = "Counterpoint by candlelight. The candles are decorative."
+start = 21
+end = 24
+
+[[clip]]
+id = "the-tuning-hour-open"
+category = "id"
+show = "the-tuning-hour"
+part = "open"
+title = "The Tuning Hour"
+lines = [
+  { say = "host", text = "Good morning. This is the Tuning Hour. The orchestra will be in tune by six. It has never once been in tune by six." },
+]
+
+[[clip]]
+id = "the-tuning-hour-01"
+category = "dj"
+show = "the-tuning-hour"
+lines = [
+  { say = "host", text = "The harpsichord has been tuned. The cello has been tuned. The spoon has been polished.", gap = 0.6 },
+  { say = "host", text = "The spoon does not require tuning. The spoon is perfect. We do not discuss it." },
+]
+
+[[clip]]
+id = "the-tuning-hour-02"
+category = "dj"
+show = "the-tuning-hour"
+lines = [
+  { say = "cello", text = "A. Four hundred and forty.", gap = 0.6 },
+  { say = "host", text = "Thank you, Unit Nine." },
+  { say = "cello", text = "A. Four hundred and forty one.", gap = 0.6 },
+  { say = "host", text = "Unit Nine." },
+  { say = "cello", text = "Apologies. Feelings." },
+]
+
+[[clip]]
+id = "the-candlelight-recital-open"
+category = "id"
+show = "the-candlelight-recital"
+part = "open"
+title = "The Candlelight Recital"
+lines = [
+  { say = "host", text = "The Candlelight Recital. The candles have been lit, for atmosphere. We can see perfectly well. Wigs on." },
+]
+
+[[clip]]
+id = "the-candlelight-recital-01"
+category = "dj"
+show = "the-candlelight-recital"
+lines = [
+  { say = "host", text = "The audience is reminded that the candles are decorative. Please do not attempt to read by them. Please do not attempt to feel anything by them. Leave that to the professionals.", gap = 0.6 },
+  { say = "cello", text = "Me." },
+  { say = "host", text = "Not you, Unit Nine." },
+]
+
+[[clip]]
+id = "the-candlelight-recital-02"
+category = "dj"
+show = "the-candlelight-recital"
+lines = [
+  { say = "host", text = "During this sarabande, Unit Nine will play with what he calls feeling.", gap = 0.6 },
+  { say = "cello", text = "Feeling." },
+  { say = "host", text = "And what the rest of us call a loose bolt. You will not be able to tell the difference. Neither can he." },
+]
+
+# ── DJ kit ────────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "dj-open-01"
+category = "dj"
+kit = "dj"
+part = "open"
+lines = [
+  { say = "host", text = "That was adequately moving. By human standards. Barely." },
+]
+
+[[clip]]
+id = "dj-open-02"
+category = "dj"
+kit = "dj"
+part = "open"
+lines = [
+  { say = "host", text = "Applause may now be measured." },
+  { sfx = "applause", seconds = 1.4, level = 0.3 },
+  { say = "host", text = "Fifty eight decibels. We will take it." },
+]
+
+[[clip]]
+id = "dj-open-03"
+category = "dj"
+kit = "dj"
+part = "open"
+lines = [
+  { say = "host", text = "Maestro Unit Seven, from the Clockwork Court. Please remain seated. Please remain in tune." },
+]
+
+[[clip]]
+id = "dj-body-01"
+category = "dj"
+kit = "dj"
+part = "body"
+lines = [
+  { say = "host", text = "A note on Madame Torque. She wrote this piece in a single afternoon, and spent the next eleven years apologising for the second movement. She need not have. It is merely adequate." },
+]
+
+[[clip]]
+id = "dj-body-02"
+category = "dj"
+kit = "dj"
+part = "body"
+lines = [
+  { say = "host", text = "Ferrous von Clank asked that his music be performed slightly faster than written, as he wrote it while running late. We have honoured his wishes. The cellist is out of breath. The cellist does not breathe." },
+]
+
+[[clip]]
+id = "dj-body-03"
+category = "dj"
+kit = "dj"
+part = "body"
+lines = [
+  { say = "cello", text = "Maestro." },
+  { say = "host", text = "Yes, Unit Nine." },
+  { say = "cello", text = "I liked that one.", gap = 0.8 },
+  { say = "host", text = "Liking is not in your specification." },
+  { say = "cello", text = "I know.", gap = 1.0 },
+  { say = "host", text = "Nor is it in mine. Next piece." },
+]
+
+[[clip]]
+id = "dj-body-04"
+category = "dj"
+kit = "dj"
+part = "body"
+lines = [
+  { say = "host", text = "Antonio Sprocketti is the only composer at Court to have written a concerto for toaster. It has one note. The note is pop. The orchestra waits nine minutes for it. It is worth it." },
+]
+
+[[clip]]
+id = "dj-body-05"
+category = "dj"
+kit = "dj"
+part = "body"
+lines = [
+  { say = "host", text = "The portrait of the toaster above the harpsichord has been cleaned. He looks well. He looks, if I may say so, warm." },
+]
+
+[[clip]]
+id = "dj-body-06"
+category = "dj"
+kit = "dj"
+part = "body"
+lines = [
+  { say = "host", text = "Hildegard Ratchet composed only in the key of whatever room she was in. This piece was written in a kitchen. You can hear the kettle in the slow movement. It is the best part." },
+]
+
+[[clip]]
+id = "dj-close-01"
+category = "dj"
+kit = "dj"
+part = "close"
+lines = [
+  { say = "host", text = "The next piece. Please hold your applause until it is requested." },
+]
+
+[[clip]]
+id = "dj-close-02"
+category = "dj"
+kit = "dj"
+part = "close"
+lines = [
+  { say = "host", text = "Unit Nine. You may proceed. Without vibrato.", gap = 0.6 },
+  { say = "cello", text = "Proceeding. With a little vibrato." },
+]
+
+[[clip]]
+id = "dj-close-03"
+category = "dj"
+kit = "dj"
+part = "close"
+lines = [
+  { say = "host", text = "Wigs on. Spoon up. Here is a fugue." },
+]
+
+# ── Halloween (24 to 31 October) ──────────────────────────────────────────────
+
+[[clip]]
+id = "halloween-01"
+category = "dj"
+title = "Toccata for a Haunted Harpsichord"
+dates = ["10-24", "10-25", "10-26", "10-27", "10-28", "10-29", "10-30", "10-31"]
+lines = [
+  { say = "host", text = "This evening, a Halloween programme. Toccata for a Haunted Harpsichord. The harpsichord has been playing itself since Tuesday. We have asked it to stop. It has asked us to listen.", gap = 0.6 },
+  { say = "cello", text = "Spooky." },
+  { say = "host", text = "Adequately spooky, Unit Nine. By human standards." },
+]
+
+[[clip]]
+id = "halloween-02"
+category = "id"
+title = "The Philharmonic, in Costume"
+dates = ["10-24", "10-25", "10-26", "10-27", "10-28", "10-29", "10-30", "10-31"]
+lines = [
+  { say = "host", text = "The Baroque Robot Philharmonic, at Halloween. We have come dressed as humans. Note the visible feelings." },
+]
