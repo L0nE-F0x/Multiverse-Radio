@@ -50,7 +50,9 @@ export function IdentCard() {
         <span className="ident-freq tabular">{formatMhz(card.frequency)} MHz</span>
         {s.format && <span className="ident-format">{FORMAT_LABEL[s.format]}</span>}
       </p>
-      <p className="ident-name">{s.name}</p>
+      <p className="ident-name" data-long={s.name.length > 20}>
+        {s.name}
+      </p>
       {s.tagline && <p className="ident-tagline">{s.tagline}</p>}
     </div>
   );

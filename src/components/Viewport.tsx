@@ -33,7 +33,8 @@ export function Viewport() {
   const clamped = Math.max(0, Math.min(1, Number.isFinite(signal) ? signal : 1));
   // How much the picture suffers: none at a station's centre, all of it on empty band.
   const distort = isStatic ? 1 : 1 - clamped;
-  let noise = status === 'off' ? 0 : isStatic ? 0.8 : Math.min(0.78, distort * 1.05);
+  // Snow rises slowly near a station's centre and quickly further out.
+  let noise = status === 'off' ? 0 : isStatic ? 0.8 : Math.min(0.78, distort ** 1.3 * 0.95);
   if (status === 'tuning') noise = Math.max(noise, 0.88);
   if (event === 'dimensional-storm' && status !== 'off') noise = Math.max(noise, 0.22);
 

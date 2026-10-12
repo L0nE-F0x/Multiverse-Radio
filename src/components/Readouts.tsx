@@ -73,6 +73,7 @@ export function NowBlock() {
   const source = useSource();
   const tuned = useTuned();
 
+  const airing = (status === 'playing' || status === 'paused' || status === 'tuning') && (tuned.kind === 'station' || tuned.kind === 'pirate');
   let code = '—';
   let title: string;
   let byline: string | null = null;
@@ -107,17 +108,13 @@ export function NowBlock() {
     <section className="readout readout-now" aria-label="Now on air">
       <header className="readout-head">
         <span className="readout-title">Now</span>
-        <span className="tag">{code}</span>
-        {segment && status !== 'off' && source.kind !== 'static' && source.kind !== 'oddity' && (
-          <span className="now-length tabular">{formatDuration(segment.durationMs)}</span>
-        )}
+        {code !== '—' && <span className="tag">{code}</span>}
+        {segment && airing && <span className="now-length tabular">{formatDuration(segment.durationMs)}</span>}
       </header>
       <p className="now-title">{title}</p>
       {byline && <p className="now-by">{byline}</p>}
       {note && <p className="now-note">{note}</p>}
-      {segment && source.kind !== 'static' && source.kind !== 'oddity' && status !== 'off' && (
-        <Progress segment={segment} running={status === 'playing'} />
-      )}
+      {segment && airing && <Progress segment={segment} running={status === 'playing'} />}
     </section>
   );
 }

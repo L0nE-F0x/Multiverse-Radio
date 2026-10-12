@@ -219,7 +219,8 @@ function installSimulatedDial(): void {
     } else if (pirateAt !== undefined) {
       const p = pirate(pirateAt);
       const discovered = state.discovered.includes(p.id) ? state.discovered : [...state.discovered, p.id];
-      patch = { frequency: f, signal: falloff(Math.abs(pirateAt - f)), tuned: { kind: 'pirate', station: p }, stationId: p.id, discovered };
+      // (stationId stays on the director's station: the stub store reverts anything else.)
+      patch = { frequency: f, signal: falloff(Math.abs(pirateAt - f)), tuned: { kind: 'pirate', station: p }, discovered };
     } else if (oddityAt !== undefined) {
       patch = { frequency: f, signal: falloff(Math.abs(oddityAt - f)), tuned: { kind: 'oddity', ...ODDITIES[oddityAt]! } as Tuned };
     } else patch = { frequency: f, signal: 0.02, tuned: { kind: 'static' } };
