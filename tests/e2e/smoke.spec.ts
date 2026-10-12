@@ -22,6 +22,8 @@ test('home page boots without errors', async ({ page }) => {
 
 test('pressing play starts the broadcast without errors', async ({ page }) => {
   const problems = await watchPage(page);
+  // A returning listener: skip the first-visit welcome card (tested in onboarding.spec.ts).
+  await page.addInitScript(() => localStorage.setItem('multiverse-radio:welcomed', 'e2e'));
   await page.goto('/');
   await expect(page.getByRole('main')).toBeVisible();
   const play = page.getByRole('button', { name: /play|tune in|listen|power|switch on|start/i }).first();

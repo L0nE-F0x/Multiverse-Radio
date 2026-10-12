@@ -1,0 +1,389 @@
+# The Infinite Song — 105.4, the stage where it started.
+#
+# One song, playing since the beginning of time. Ambrose Long has counted the verses since
+# he was six and is mostly sure of the number (verse four million, one hundred and twelve,
+# give or take). The band are very old; their beards are out of the stage door. Old
+# Wendeline keeps the beat. The chorus was last heard at verse nine hundred thousand and six
+# and is believed to be due. There is a boat in most verses. Callers ring in to say which
+# verse they're on.
+#
+# The `calls` kit chains Ambrose picking up, one to three callers and back to the song.
+station = "infinite-song"
+
+[voices]
+ambrose = { voice = "am_eric", speed = 0.95, name = "Ambrose Long" }
+marek = { voice = "am_michael", fx = "phone", name = "Marek, Catching Up" }
+gwen = { voice = "bf_lily", fx = "phone", name = "Gwendolyn, Third Generation" }
+hopeful = { voice = "af_river", fx = "phone", name = "A Caller Waiting for the Chorus" }
+drummer = { voice = "am_puck", fx = "phone", name = "A Drummer in a Young Band" }
+teodor = { voice = "bm_daniel", fx = "distant", name = "Teodor, Relay Four" }
+bev = { voice = "af_nova", fx = "phone", name = "Bev" }
+lionel = { voice = "am_santa", fx = "phone", name = "Lionel, Also Counting" }
+toby = { voice = "am_puck", fx = "kid", name = "Toby, Aged Nine" }
+shower = { voice = "af_kore", fx = "phone", name = "A Listener in the Overlap" }
+listener = { voice = "af_sarah", fx = "phone", name = "A Caller With Good Ears" }
+ephraim = { voice = "am_onyx", fx = "ghost", name = "Ephraim, Backing Vocals" }
+
+[[show]]
+id = "morning-verse"
+name = "The Morning Verse"
+blurb = "Where the song has got to, for people just waking up. You've missed a lot. It's fine."
+start = 6
+end = 9
+
+[[show]]
+id = "chorus-watch"
+name = "Chorus Watch"
+blurb = "Listeners report signs of the chorus. It's due. It has been due for some time."
+start = 15
+end = 18
+
+[[show]]
+id = "night-verses"
+name = "The Night Verses"
+blurb = "Ambrose counts the overnight verses under his breath, so as not to lose his place."
+start = 0
+end = 5
+
+# ── Idents ────────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "id-001"
+category = "id"
+lines = [
+  { say = "ambrose", text = "The Infinite Song. One song, since the beginning of time. You're just in time." },
+]
+
+[[clip]]
+id = "id-002"
+category = "id"
+lines = [
+  { say = "ambrose", text = "This is Ambrose Long, on The Infinite Song.", gap = 0.6 },
+  { say = "ambrose", text = "Still going." },
+]
+
+[[clip]]
+id = "id-003"
+category = "id"
+lines = [
+  { say = "ambrose", text = "The Infinite Song, one oh five point four. Don't worry about the start. Nobody heard the start." },
+]
+
+[[clip]]
+id = "id-004"
+category = "id"
+lines = [
+  { say = "ambrose", text = "You're listening to The Infinite Song. This is the bit you like." },
+]
+
+# ── Show openers and show links ───────────────────────────────────────────────
+
+[[clip]]
+id = "show-morning-open"
+category = "id"
+show = "morning-verse"
+part = "open"
+lines = [
+  { say = "ambrose", text = "Good morning. This is The Morning Verse. The song carried on while you slept. Here's where we've got to." },
+]
+
+[[clip]]
+id = "show-morning-001"
+category = "dj"
+show = "morning-verse"
+lines = [
+  { say = "ambrose", text = "While you were asleep: twelve verses, one key change, attempted, and a very long bit about a lighthouse." },
+  { say = "ambrose", text = "The lighthouse is fine. The boat is back. Good morning." },
+]
+
+[[clip]]
+id = "show-chorus-open"
+category = "id"
+show = "chorus-watch"
+part = "open"
+lines = [
+  { say = "ambrose", text = "This is Chorus Watch. Ears open, everyone. Today could be the day.", gap = 0.8 },
+  { say = "ambrose", text = "It won't be. But it could." },
+]
+
+[[clip]]
+id = "show-chorus-001"
+category = "dj"
+show = "chorus-watch"
+lines = [
+  { say = "shower", text = "Ambrose, I'm sure I heard the chorus. In the shower." },
+  { say = "ambrose", text = "That's a very common sighting. It's nearly always the shower. We've logged it. Thank you." },
+]
+
+[[clip]]
+id = "show-chorus-002"
+category = "dj"
+show = "chorus-watch"
+lines = [
+  { say = "ambrose", text = "A report from the Overlap. At three o'clock this afternoon, the bass player hummed something chorus-shaped." },
+  { say = "ambrose", text = "We've checked the tape. It was a yawn. We remain hopeful." },
+]
+
+[[clip]]
+id = "show-night-open"
+category = "id"
+show = "night-verses"
+part = "open"
+daypart = "night"
+lines = [
+  { say = "ambrose", text = "The Night Verses. I'll keep count.", speed = 0.88, gap = 0.8 },
+  { say = "ambrose", text = "You rest.", speed = 0.88 },
+]
+
+[[clip]]
+id = "show-night-001"
+category = "dj"
+show = "night-verses"
+lines = [
+  { say = "ambrose", text = "Verse four million, one hundred and twelve. Line six. The boat again.", speed = 0.88, gap = 0.8 },
+  { say = "ambrose", text = "It's a good boat. It's been a good boat for thousands of years.", speed = 0.88 },
+]
+
+[[clip]]
+id = "show-night-002"
+category = "dj"
+show = "night-verses"
+lines = [
+  { say = "ambrose", text = "To the operator on the relay ship. If you're keeping a log, put down verse four million, one hundred and twelve. Roughly.", speed = 0.88 },
+  { say = "ambrose", text = "Someone in the future will thank you. Or argue. Either way, it's company.", speed = 0.88 },
+]
+
+# ── Calls kit: pick up, callers, back to the song ─────────────────────────────
+
+[[clip]]
+id = "call-open-1"
+category = "call"
+kit = "calls"
+part = "open"
+lines = [
+  { say = "ambrose", text = "The lines are open. You're on The Infinite Song. Which verse are you on?" },
+]
+
+[[clip]]
+id = "call-open-2"
+category = "call"
+kit = "calls"
+part = "open"
+lines = [
+  { say = "ambrose", text = "Let's go to the phones. Quietly, now, so we don't lose the beat. Hello, you're on the air." },
+]
+
+[[clip]]
+id = "call-open-3"
+category = "call"
+kit = "calls"
+part = "open"
+lines = [
+  { sfx = "phone-ring" },
+  { say = "ambrose", text = "Hello, caller. Keep your voice down. We're in a delicate bit." },
+]
+
+[[clip]]
+id = "call-001"
+category = "call"
+kit = "calls"
+part = "body"
+lines = [
+  { say = "marek", text = "Hi, Ambrose. I'm on verse four million and ninety. I fell asleep around verse eighty, and I'm catching up." },
+  { say = "ambrose", text = "Not to worry. The song waits for no one, but it does repeat itself a bit. You'll have caught up by Thursday." },
+]
+
+[[clip]]
+id = "call-002"
+category = "call"
+kit = "calls"
+part = "body"
+lines = [
+  { say = "gwen", text = "My grandmother's grandmother's grandmother heard verse one. She always said it was about a boat." },
+  { say = "ambrose", text = "A lot of people's grandmothers say that. The archive is unclear. There's definitely a boat by verse eleven. Before that, it's mostly someone tuning up." },
+]
+
+[[clip]]
+id = "call-003"
+category = "call"
+kit = "calls"
+part = "body"
+lines = [
+  { say = "hopeful", text = "Is the chorus coming back? I've been told there's a chorus." },
+  { say = "ambrose", text = "There is a chorus. It was last heard in verse nine hundred thousand and six. Experts believe it's due.", gap = 0.6 },
+  { say = "ambrose", text = "Experts have believed that for some time." },
+]
+
+[[clip]]
+id = "call-004"
+category = "call"
+kit = "calls"
+part = "body"
+lines = [
+  { say = "drummer", text = "My band wants to cover it. How long have we got?" },
+  { say = "ambrose", text = "How long have any of us got, really? Start at the first verse. Let us know how you get on.", gap = 0.6 },
+  { say = "ambrose", text = "Or your grandchildren can." },
+]
+
+[[clip]]
+id = "call-005"
+category = "call"
+kit = "calls"
+part = "body"
+lines = [
+  { say = "teodor", text = "Can anyone hear me? This is Teodor. Relay Four." },
+  { say = "ambrose", text = "We can hear you, Teodor. Which verse are you on?" },
+  { say = "teodor", text = "Two thousand and six. The signal is very slow out here." },
+  { say = "ambrose", text = "Then you've a lovely few million ahead of you, Teodor. Don't skip anything." },
+]
+
+[[clip]]
+id = "call-006"
+category = "call"
+kit = "calls"
+part = "body"
+lines = [
+  { say = "bev", text = "Hello, love. Is this the request line?" },
+  { say = "ambrose", text = "It is, Bev. Though we only have the one song." },
+  { say = "bev", text = "Oh, that's all right. Could you play it?" },
+  { say = "ambrose", text = "We're playing it now, Bev." },
+  { say = "bev", text = "Lovely. I'll wait for my bit." },
+]
+
+[[clip]]
+id = "call-007"
+category = "call"
+kit = "calls"
+part = "body"
+lines = [
+  { say = "lionel", text = "Ambrose, I think you've miscounted. I make it verse four million, one hundred and eleven." },
+  { say = "ambrose", text = "Do you. Well. I've been counting since I was six." },
+  { say = "lionel", text = "So have I." },
+  { pause = 1.5 },
+  { say = "ambrose", text = "Let's call it a hundred and eleven and a half, Lionel." },
+]
+
+[[clip]]
+id = "call-008"
+category = "call"
+kit = "calls"
+part = "body"
+lines = [
+  { say = "toby", text = "Mister Long, what happens at the end?" },
+  { say = "ambrose", text = "Nobody knows, Toby. Some people think it never ends. Some think it ends and starts again." },
+  { say = "ambrose", text = "I think it ends when the last person stops listening. So I try never to stop." },
+]
+
+[[clip]]
+id = "call-close-1"
+category = "call"
+kit = "calls"
+part = "close"
+lines = [
+  { say = "ambrose", text = "Thank you for calling. Back to the song. It never left." },
+]
+
+[[clip]]
+id = "call-close-2"
+category = "call"
+kit = "calls"
+part = "close"
+lines = [
+  { say = "ambrose", text = "Lovely. Let's rejoin the verse. They're on the bit about the boat again." },
+]
+
+[[clip]]
+id = "call-close-3"
+category = "call"
+kit = "calls"
+part = "close"
+lines = [
+  { say = "ambrose", text = "Thanks for ringing in. Mind the beat on your way out." },
+]
+
+# ── Verse counts and links ────────────────────────────────────────────────────
+
+[[clip]]
+id = "dj-001"
+category = "dj"
+title = "Verse Count Update"
+lines = [
+  { say = "ambrose", text = "Verse count update. We are now on verse four million, one hundred and twelve.", gap = 1.0 },
+  { say = "ambrose", text = "Or thirteen. I blinked." },
+]
+
+[[clip]]
+id = "dj-002"
+category = "dj"
+title = "A New Verse"
+lines = [
+  { say = "ambrose", text = "A verse has just finished, and another has begun. Very like the last one, but with a good deal more about a goat." },
+  { say = "ambrose", text = "I don't know where the goat has come from. I'm sure it'll explain itself." },
+]
+
+[[clip]]
+id = "dj-003"
+category = "dj"
+title = "For Those Just Joining Us"
+lines = [
+  { say = "ambrose", text = "For anyone just joining us, this is verse four million, one hundred and fourteen. Welcome." },
+  { say = "ambrose", text = "You haven't missed much. Well. You've missed nearly all of it. But not much." },
+]
+
+[[clip]]
+id = "dj-004"
+category = "dj"
+title = "News From the Stage"
+lines = [
+  { say = "ambrose", text = "News from the stage. Old Wendeline, on drums, has kept the beat with her left hand since the Iron Age. Tonight she has switched to her right." },
+  { say = "ambrose", text = "The beat is exactly the same. We all felt it, though." },
+]
+
+[[clip]]
+id = "dj-005"
+category = "dj"
+title = "A Little History"
+lines = [
+  { say = "ambrose", text = "A little history. The song began before the first morning. Nobody wrote it down, because nobody had invented writing." },
+  { say = "ambrose", text = "Then somebody did invent writing, and the first thing they wrote was: how long is this going on for?" },
+]
+
+[[clip]]
+id = "dj-006"
+category = "dj"
+title = "The Beards"
+lines = [
+  { say = "ambrose", text = "The band have asked me to mention their beards. The beards are now out of the stage door and halfway down the high street." },
+  { say = "ambrose", text = "The post office has asked us to mention it too. Please step over them gently. They're very old." },
+]
+
+# ── Halloween ─────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "halloween-1"
+category = "dj"
+title = "The Spooky Verse"
+dates = ["10-24", "10-25", "10-26", "10-27", "10-28", "10-29", "10-30", "10-31"]
+lines = [
+  { say = "ambrose", text = "Verse four million, one hundred and thirteen is the spooky one. It comes round at this time every year. Nobody knows how." },
+  { say = "ambrose", text = "It's the one with the lantern, and a door that isn't there. The band always play it a little quieter." },
+  { sting = "halloween" },
+]
+
+[[clip]]
+id = "halloween-2"
+category = "call"
+title = "A Ghost on Backing Vocals"
+dates = ["10-24", "10-25", "10-26", "10-27", "10-28", "10-29", "10-30", "10-31"]
+lines = [
+  { sfx = "phone-ring" },
+  { say = "listener", text = "Ambrose, I think there's a ghost on the backing vocals." },
+  { say = "ambrose", text = "That'll be Ephraim. He was the original backing singer. He's been gone four thousand years." },
+  { say = "listener", text = "Oh." },
+  { say = "ambrose", text = "He's never missed a verse. Happy Halloween, Ephraim.", gap = 1.5 },
+  { say = "ephraim", text = "Happy Halloween, Ambrose." },
+  { pause = 1.0 },
+  { say = "listener", text = "...I'm going to go and sit with the lights on." },
+  { say = "ambrose", text = "Very sensible. Mind the beat." },
+  { sfx = "phone-hangup" },
+]

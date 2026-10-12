@@ -1,0 +1,317 @@
+# Event Horizon Surf Report — 101.75, the beach at the edge of a black hole.
+#
+# Dash Coriolis hosts: sun-bleached, sunny, reports wave heights in years, and is always about
+# to paddle out (he never does; he just likes holding the board). Bonnie is the lifeguard in
+# the leaning tower: she has never rescued anyone, but she waves goodbye beautifully.
+#
+# Running bits: nothing comes back (the tide went out in 1959); time dilation (Kai's nine
+# hundred year ride, the listener whose kids are now older than him); the four sunsets; the
+# NO RETURNS flag. Cross-station: Grumbel's Ladders ("In is a decision").
+station = "event-horizon-surf"
+
+[voices]
+host = { voice = "am_michael", speed = 1.08, name = "Dash Coriolis" }
+bonnie = { voice = "af_bella", name = "Bonnie, Lifeguard" }
+
+[[show]]
+id = "dawn-patrol"
+name = "Dawn Patrol"
+blurb = "Early sets, an empty beach, and a sunrise that takes the long way round the hole."
+start = 5
+end = 9
+
+[[show]]
+id = "the-long-sunset"
+name = "The Long Sunset"
+blurb = "All four sunsets, back to back, with spring reverb."
+start = 17
+end = 21
+
+[[show]]
+id = "night-session"
+name = "Night Session"
+blurb = "Slow waves under the glow of the ring. Leashes on."
+start = 22
+end = 2
+
+# ── Idents ────────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "id-001"
+category = "id"
+lines = [
+  { say = "host", text = "This is the Event Horizon Surf Report! Surf's up, tide's out, and it's not coming back!" },
+  { sting = "id" },
+]
+
+[[clip]]
+id = "id-002"
+category = "id"
+lines = [
+  { say = "host", text = "Event Horizon Surf Report. The sun's bent, the waves are gravitational, and the vibes are, frankly, inescapable." },
+]
+
+[[clip]]
+id = "id-003"
+category = "id"
+lines = [
+  { say = "host", text = "You're listening to the Event Horizon Surf Report. No returns. That's not a rule. That's physics." },
+  { sting = "id" },
+]
+
+[[clip]]
+id = "id-004"
+category = "id"
+lines = [
+  { say = "host", text = "Event Horizon Surf Report, one oh one point seven five! Waves rolling in at four to six years. Wax up!" },
+]
+
+[[clip]]
+id = "id-005"
+category = "id"
+daypart = "morning"
+lines = [
+  { say = "host", text = "Morning from the Event Horizon Surf Report! The sun came up hours ago. It's still coming up. It's taking the long way round the hole." },
+]
+
+[[clip]]
+id = "id-006"
+category = "id"
+lines = [
+  { say = "host", text = "Event Horizon Surf Report. Dash Coriolis, board under my arm, about to paddle out. Any minute now." },
+]
+
+[[clip]]
+id = "id-007"
+category = "id"
+lines = [
+  { say = "host", text = "Event Horizon Surf Report. If you can hear this, you're still on the right side of the line. Nice." },
+  { sting = "id" },
+]
+
+# ── Host links ────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "dj-001"
+category = "dj"
+title = "Paddling Out"
+lines = [
+  { say = "host", text = "That's it. After this one, I'm paddling out. For real this time. Board's waxed, leash is on, I've done my stretches." },
+  { say = "host", text = "I've been doing my stretches for about eleven years, which, I'm told, is thorough. Here's a song. Then I'm going." },
+]
+
+[[clip]]
+id = "dj-002"
+category = "dj"
+title = "Real Talk"
+lines = [
+  { say = "host", text = "Okay. Real talk. I'm not paddling out. I've never been paddling out. I just like holding the board. It's a really good board. It's got a little sunset on it." },
+  { say = "host", text = "Some guys surf. Some guys hold the board and talk about surfing. Both are valid. Here's a song." },
+]
+
+[[clip]]
+id = "dj-003"
+category = "dj"
+title = "Kai's Ride"
+lines = [
+  { say = "host", text = "Big shout-out to Kai, who caught a monster on Tuesday and is still on it. From here he looks totally frozen, like a photo of a guy surfing." },
+  { say = "host", text = "But from his side, he's having the ride of his life. He'll be back in about nine hundred years. We'll keep his towel warm." },
+]
+
+[[clip]]
+id = "dj-004"
+category = "dj"
+title = "Lost Property"
+lines = [
+  { say = "host", text = "Lost property! The sea took a flip-flop, a beach umbrella, a family-size cooler, and a guy called Steve. None of them are coming back. Nothing comes back here. That's sort of the vibe." },
+  { say = "host", text = "Steve's fine, by the way. Steve's just... further." },
+]
+
+[[clip]]
+id = "dj-005"
+category = "dj"
+title = "Bonnie"
+lines = [
+  { say = "host", text = "Shout-out to Bonnie, up in the lifeguard tower. Six years on duty, and she has never rescued anyone, because, you know, physics. But she's waved goodbye to loads of people. Beautifully. Both arms." },
+  { say = "host", text = "Bonnie, say hi!" },
+  { say = "bonnie", text = "Hi, Dash. You going out today?" },
+  { say = "host", text = "Totally.", gap = 0.6 },
+  { say = "bonnie", text = "Sure you are." },
+]
+
+[[clip]]
+id = "dj-006"
+category = "dj"
+lines = [
+  { say = "host", text = "Bonnie's tower is leaning a little closer to the hole than last week. She says it's fine. She's put a book under one leg." },
+  { say = "host", text = "The book is also leaning. Bonnie, buddy. Come down for a smoothie." },
+]
+
+[[clip]]
+id = "dj-007"
+category = "dj"
+lines = [
+  { say = "host", text = "Message from a listener who surfed close to the edge last summer. Says he came in, went to grab a soda, and when he got back, his kids were older than him." },
+  { say = "host", text = "He says they're all getting along great. He says the soda was still cold, so, win." },
+]
+
+[[clip]]
+id = "dj-008"
+category = "dj"
+title = "Tide Times"
+lines = [
+  { say = "host", text = "Tide report. The tide went out in nineteen fifty nine. It hasn't come back. We don't expect it to." },
+  { say = "host", text = "We've stopped printing the tide times. We just print a little picture of a wave, waving." },
+]
+
+[[clip]]
+id = "dj-009"
+category = "dj"
+daypart = "night"
+title = "For the Night Shift"
+lines = [
+  { say = "host", text = "Shout-out to the night operator on the Nightjar! Relay Seven! I see you up there, drifting nice and slow, well clear of the hole. Smart. Good lines." },
+  { say = "host", text = "Stay on that side, buddy. We'd miss you." },
+]
+
+[[clip]]
+id = "dj-010"
+category = "dj"
+title = "Sponsored by Grumbel's Ladders"
+lines = [
+  { say = "host", text = "The Event Horizon Surf Report is brought to you by Grumbel's Ladders. Every lifeguard tower on this beach is a Grumbel's. They lean, but they never fall in. Mostly." },
+  { say = "host", text = "Grumbel's Ladders. Up is a choice. In is a decision." },
+]
+
+[[clip]]
+id = "dj-011"
+category = "dj"
+daypart = "evening"
+lines = [
+  { say = "host", text = "Surf school's done for the day. Lesson one is always the same. Stand up on the board. Lesson two is, wave goodbye." },
+  { say = "host", text = "There is no lesson three. Here's a song." },
+]
+
+# ── The surf report ───────────────────────────────────────────────────────────
+
+[[clip]]
+id = "weather-001"
+category = "weather"
+title = "The Surf Report"
+bed = "ocean"
+lines = [
+  { say = "host", text = "Here's your full Event Horizon surf report.", gap = 0.6 },
+  { say = "host", text = "North beach, four to six years, clean and glassy, with a light offshore pull toward the singularity. Slight spaghettification on the inside. Experienced surfers only." },
+  { say = "host", text = "South beach, two years, choppy, with a strong time rip near the pier. If you see yourself paddling back out, don't wave. It only confuses him." },
+  { say = "host", text = "The Point is closed. The Point is now, technically, inside.", gap = 0.6 },
+  { say = "host", text = "Wind, light and leaning. Water temperature, lovely, then infinite. Have fun out there, be safe, and say your goodbyes." },
+]
+
+# ── Dawn Patrol (5–9) ─────────────────────────────────────────────────────────
+
+[[clip]]
+id = "id-dawn-patrol"
+category = "id"
+show = "dawn-patrol"
+part = "open"
+lines = [
+  { say = "host", text = "This is Dawn Patrol, on the Event Horizon Surf Report! Beach is empty, waves are perfect, coffee's on. I'm paddling out right after this. Totally." },
+]
+
+[[clip]]
+id = "dj-dawn-patrol-001"
+category = "dj"
+show = "dawn-patrol"
+lines = [
+  { say = "host", text = "The dawn patrol crew is out there already. Four boards in the lineup, waiting on the next set. They've been waiting since about two years ago." },
+  { say = "host", text = "Set's coming. You can feel it, in your bones. Your bones are getting heavier. That's the set." },
+]
+
+[[clip]]
+id = "dj-dawn-patrol-002"
+category = "dj"
+show = "dawn-patrol"
+lines = [
+  { say = "host", text = "Coffee update. I started pouring a cup when I got here. It's still pouring. Something about the gravity." },
+  { say = "host", text = "Longest pour of my life. Not complaining. It's really good coffee." },
+]
+
+# ── The Long Sunset (17–21) ───────────────────────────────────────────────────
+
+[[clip]]
+id = "id-the-long-sunset"
+category = "id"
+show = "the-long-sunset"
+part = "open"
+lines = [
+  { say = "host", text = "It's the Long Sunset, on the Event Horizon Surf Report. The sun's going down. Then down again. Grab a towel. This'll take a while." },
+]
+
+[[clip]]
+id = "dj-the-long-sunset-001"
+category = "dj"
+show = "the-long-sunset"
+lines = [
+  { say = "host", text = "Check out that sunset, everybody. Light bends round the hole, so the sun sets here, and then it sets again, and then a third time, kind of behind you, very politely." },
+  { say = "host", text = "Four sunsets for the price of one. Here's a song for number three." },
+]
+
+[[clip]]
+id = "dj-the-long-sunset-002"
+category = "dj"
+show = "the-long-sunset"
+lines = [
+  { say = "host", text = "Bonnie's lowering the flag on the tower. The flag says no returns. It's the same flag as the morning. It's the same flag as always." },
+  { say = "host", text = "She lowers it anyway. Tradition." },
+]
+
+# ── Night Session (22–2) ──────────────────────────────────────────────────────
+
+[[clip]]
+id = "id-night-session"
+category = "id"
+show = "night-session"
+part = "open"
+lines = [
+  { say = "host", text = "Night Session, on the Event Horizon Surf Report. The ring's glowing, the water's dark, and Bonnie's put her little lamp on. Leashes on, people." },
+]
+
+[[clip]]
+id = "dj-night-session-001"
+category = "dj"
+show = "night-session"
+lines = [
+  { say = "host", text = "There's a few night surfers out there with little lights on their boards, way out near the edge. From here they look like stars." },
+  { say = "host", text = "A couple of them have been out so long, they're on the charts." },
+]
+
+[[clip]]
+id = "dj-night-session-002"
+category = "dj"
+show = "night-session"
+lines = [
+  { say = "host", text = "Water's warm tonight. Warm and dark and very patient. Listen. You can hear the waves, real slow." },
+  { say = "host", text = "That's a seven-year wave, breaking. Takes a while. Worth it." },
+]
+
+# ── Halloween ─────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "dj-halloween-001"
+category = "dj"
+title = "The Ghost Surfers"
+dates = ["10-24", "10-25", "10-26", "10-27", "10-28", "10-29", "10-30", "10-31"]
+lines = [
+  { say = "host", text = "Halloween at the beach, and the ghost surfers are out. They're not really ghosts. They're a crew from nineteen fifty nine, still finishing the same wave." },
+  { say = "host", text = "They look kind of see-through from here, because of the light bending. Happy Halloween, guys. Great form." },
+]
+
+[[clip]]
+id = "dj-halloween-002"
+category = "dj"
+title = "The Bonfire"
+dates = ["10-24", "10-25", "10-26", "10-27", "10-28", "10-29", "10-30", "10-31"]
+lines = [
+  { say = "host", text = "Bonnie's running the Halloween bonfire on north beach. Bring a marshmallow on a stick. Hold it near the fire, and it toasts." },
+  { say = "host", text = "Hold it near the hole, and it toasts for about a thousand years. Perfect golden brown. You won't be there to eat it, but somebody will, and they'll be so happy." },
+]

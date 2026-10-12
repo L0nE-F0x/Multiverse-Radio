@@ -1,0 +1,310 @@
+# Bubble Economy FM — 90.55, Marina City Nine, where it is always Friday night in 1986.
+#
+# Kiko Starlight hosts: endlessly upbeat, has announced "the weekend starts now" every night
+# for forty years and been right every time. Nobody in the city has had a Monday since 1986.
+#
+# Running bits: the Marina Index only goes up; the bubble is literal, so nothing sharp near
+# the waterfront (and the pin amnesty); property costs sunsets and compliments; the man
+# taping the station since 1986; the Overtime Boys' duet that never ends. Resident artists in
+# src/content/packs/v3a.ts (Lisa Lagoon, the Overtime Boys, Sayuri Seaside...).
+station = "bubble-economy"
+
+[voices]
+host = { voice = "af_kore", speed = 1.05, name = "Kiko Starlight" }
+
+[[show]]
+id = "friday-night-drive"
+name = "Friday Night Drive"
+blurb = "Top down, tape deck up, the bay on your left forever. The weekend starts now, and keeps starting."
+start = 18
+end = 22
+
+[[show]]
+id = "after-hours-marina"
+name = "After Hours Marina"
+blurb = "Slow jams for the last train, and the one after that. Still Friday. Softer."
+start = 23
+end = 3
+
+[[show]]
+id = "saturday-never-comes"
+name = "Saturday Never Comes"
+blurb = "The breakfast show for a city with no Saturday morning. Blinds down, sunglasses on."
+start = 6
+end = 10
+
+# ── Idents ────────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "id-001"
+category = "id"
+lines = [
+  { say = "host", text = "You're tuned to Bubble Economy FM! Marina City Nine, where it's always Friday night. The weekend starts now!" },
+  { sting = "id" },
+]
+
+[[clip]]
+id = "id-002"
+category = "id"
+lines = [
+  { say = "host", text = "Bubble Economy FM. Nineteen eighty six, forever. Your hair looks amazing." },
+  { sting = "id" },
+]
+
+[[clip]]
+id = "id-003"
+category = "id"
+lines = [
+  { say = "host", text = "This is Bubble Economy FM, ninety point five five. Prices are up, the top is down, and the weekend starts... now!" },
+]
+
+[[clip]]
+id = "id-004"
+category = "id"
+lines = [
+  { say = "host", text = "Bubble Economy FM. A friendly reminder: please don't bring anything sharp to the waterfront." },
+  { sting = "id" },
+]
+
+[[clip]]
+id = "id-005"
+category = "id"
+daypart = "morning"
+lines = [
+  { say = "host", text = "Good morning, Marina City Nine! Just kidding. It's Friday night. It's always Friday night. Bubble Economy FM!" },
+]
+
+[[clip]]
+id = "id-006"
+category = "id"
+lines = [
+  { say = "host", text = "Bubble Economy FM. The sound of a city that has never, ever had a Monday." },
+  { sting = "id" },
+]
+
+[[clip]]
+id = "id-007"
+category = "id"
+daypart = "night"
+lines = [
+  { say = "host", text = "Bubble Economy FM. It's late, it's Friday, and the neon is doing that thing you like." },
+  { sting = "id" },
+]
+
+# ── Host links ────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "dj-001"
+category = "dj"
+title = "The Weekend Starts Now"
+lines = [
+  { say = "host", text = "Kiko Starlight here, with some big news. Are you ready? The weekend... starts... now!" },
+  { say = "host", text = "I've said that every night for forty years, and I have been right every single time. That's fourteen thousand six hundred Fridays in a row. Here's a song for the next one!" },
+]
+
+[[clip]]
+id = "dj-002"
+category = "dj"
+title = "The Marina Index"
+lines = [
+  { say = "host", text = "Quick look at the markets! The Marina Index is up again, just like every day since nineteen eighty six. Analysts say the bubble is completely healthy." },
+  { say = "host", text = "Analysts are holding the bubble very, very carefully, with both hands, and asking everybody to stop walking near it. Here's a song!" },
+]
+
+[[clip]]
+id = "dj-003"
+category = "dj"
+title = "The Pin Amnesty"
+lines = [
+  { say = "host", text = "A reminder from the city council! This weekend is the Marina City pin amnesty. Bring your pins, your needles, your cactuses and your pointed remarks to the drop-off on Harbour Drive. No questions asked." },
+  { say = "host", text = "Let's keep this bubble beautiful! Kiko loves you." },
+]
+
+[[clip]]
+id = "dj-004"
+category = "dj"
+lines = [
+  { say = "host", text = "Property update! A studio apartment in the Bay Tower now costs one sunset, two lifetimes of savings, and a sincere compliment to the landlord." },
+  { say = "host", text = "They're selling fast! The landlord has never felt so good about himself. Here's the next one." },
+]
+
+[[clip]]
+id = "dj-005"
+category = "dj"
+title = "What's a Monday?"
+lines = [
+  { say = "host", text = "A listener writes in. Kiko, what's a Monday? Oh, honey. I don't know. Nobody here has seen one since nineteen eighty six." },
+  { say = "host", text = "My mother says she saw a Monday once, when she was a little girl. She says it was grey, and it had a meeting in it. Let's not talk about it. Here's a song!" },
+]
+
+[[clip]]
+id = "dj-006"
+category = "dj"
+lines = [
+  { say = "host", text = "Big shout-out to everybody at the Golden Tower offices! You got your bonus today! You get your bonus every day, because every day is Friday, and Friday is payday!" },
+  { say = "host", text = "Put it in the bank. The bank will put it in a bigger bank. Everybody wins! The weekend starts now!" },
+]
+
+[[clip]]
+id = "dj-007"
+category = "dj"
+lines = [
+  { say = "host", text = "This one goes out to the man on the forty-second floor who has been taping this station since nineteen eighty six. He's on tape number fourteen thousand." },
+  { say = "host", text = "He has labelled every single one of them, Friday. And he is not wrong!" },
+]
+
+[[clip]]
+id = "dj-008"
+category = "dj"
+daypart = "night"
+lines = [
+  { say = "host", text = "It's getting late, Marina City. The neon's soft, the bay is shiny, and somewhere a saxophone is thinking about you." },
+  { say = "host", text = "Is the weekend still starting? Of course it is, baby. It's just starting... slowly." },
+]
+
+[[clip]]
+id = "dj-009"
+category = "dj"
+daypart = "night"
+title = "For the Night Shift"
+lines = [
+  { say = "host", text = "Shout-out to the night operator up on that relay ship! You look like you've been working so hard. Well, guess what? On our frequency, it's Friday." },
+  { say = "host", text = "Clock off. Loosen the tie. The weekend starts now." },
+]
+
+[[clip]]
+id = "dj-010"
+category = "dj"
+daypart = "day"
+lines = [
+  { say = "host", text = "If it's daytime where you are, don't panic! Close the blinds, push your jacket sleeves up, and put a slice of pineapple on the rim of something. Congratulations. It's Friday night." },
+  { say = "host", text = "Lisa Lagoon does this every day. She has never seen the sun, and she has never looked better." },
+]
+
+[[clip]]
+id = "dj-011"
+category = "dj"
+lines = [
+  { say = "host", text = "People ask me, Kiko, aren't you tired? Forty years of Friday nights? And I tell them, no! Every Friday is the first Friday!" },
+  { say = "host", text = "Also, yes. I'm a little tired. But in a sparkly way. Here's a song!" },
+]
+
+[[clip]]
+id = "dj-012"
+category = "dj"
+daypart = "evening"
+title = "The Duet"
+lines = [
+  { say = "host", text = "Tonight at the Lagoon Lounge it's karaoke, and the Overtime Boys are doing their duet again. They've been doing that duet since nineteen eighty six." },
+  { say = "host", text = "They have never once finished it, because somebody always shouts, one more time! And honestly? That somebody is usually me." },
+]
+
+# ── Friday Night Drive (18–22) ────────────────────────────────────────────────
+
+[[clip]]
+id = "id-friday-night-drive"
+category = "id"
+show = "friday-night-drive"
+part = "open"
+lines = [
+  { say = "host", text = "Bubble Economy FM, and this is Friday Night Drive! Hands on the wheel, the bay on your left, and the weekend starts... now!" },
+]
+
+[[clip]]
+id = "dj-friday-night-drive-001"
+category = "dj"
+show = "friday-night-drive"
+lines = [
+  { say = "host", text = "The Bay Expressway tonight is one long ribbon of tail lights, and every single one of them is singing along." },
+  { say = "host", text = "If you're stuck in traffic, that's not traffic. That's a parade. And you're in it!" },
+]
+
+[[clip]]
+id = "dj-friday-night-drive-002"
+category = "dj"
+show = "friday-night-drive"
+lines = [
+  { say = "host", text = "Drive safe out there, Marina City. Mirrors, signal, shoulder pads." },
+  { say = "host", text = "And if you see the man in the white convertible who's been circling the bay since nineteen eighty six, give him a wave. He's looking for the exit. There isn't one. He's having a wonderful time." },
+]
+
+# ── After Hours Marina (23–3) ─────────────────────────────────────────────────
+
+[[clip]]
+id = "id-after-hours-marina"
+category = "id"
+show = "after-hours-marina"
+part = "open"
+lines = [
+  { say = "host", text = "This is After Hours Marina, on Bubble Economy FM. The last train left an hour ago. Another last train leaves in an hour. Let's take it slow." },
+]
+
+[[clip]]
+id = "dj-after-hours-marina-001"
+category = "dj"
+show = "after-hours-marina"
+lines = [
+  { say = "host", text = "It's three in the morning, and the vending machines on Pier Five are glowing for nobody. That's the most romantic thing I know." },
+  { say = "host", text = "Here's a slow one, for the vending machines." },
+]
+
+[[clip]]
+id = "dj-after-hours-marina-002"
+category = "dj"
+show = "after-hours-marina"
+lines = [
+  { say = "host", text = "The waiter at the Lagoon Lounge is stacking the chairs. In an hour, he'll unstack them again." },
+  { say = "host", text = "That's the economy, honey. That's what keeps it bubbling." },
+]
+
+# ── Saturday Never Comes (6–10) ───────────────────────────────────────────────
+
+[[clip]]
+id = "id-saturday-never-comes"
+category = "id"
+show = "saturday-never-comes"
+part = "open"
+lines = [
+  { say = "host", text = "Good morn... no. No. This is Saturday Never Comes, on Bubble Economy FM. Blinds down, sunglasses on. It's still Friday night, baby." },
+]
+
+[[clip]]
+id = "dj-saturday-never-comes-001"
+category = "dj"
+show = "saturday-never-comes"
+lines = [
+  { say = "host", text = "Some of you out there may have a Saturday morning. That's okay! We don't judge." },
+  { say = "host", text = "Just keep it down, would you? People here are very sensitive about it." },
+]
+
+[[clip]]
+id = "dj-saturday-never-comes-002"
+category = "dj"
+show = "saturday-never-comes"
+lines = [
+  { say = "host", text = "A listener in the Harbour District says she woke up today, and for one second, she felt like it was Saturday." },
+  { say = "host", text = "Honey, that's just what happens when you sleep in your earrings. Put the jacket back on. Drink some water. It's Friday." },
+]
+
+# ── Halloween ─────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "dj-halloween-001"
+category = "dj"
+title = "The Scariest Costume"
+dates = ["10-24", "10-25", "10-26", "10-27", "10-28", "10-29", "10-30", "10-31"]
+lines = [
+  { say = "host", text = "Is it Halloween? Not here, honey. Here it's Friday. But it's your Halloween, so the whole city has dressed up, just for you." },
+  { say = "host", text = "The costume is Saturday. Everybody's walking round in pyjamas, reading a newspaper. It's terrifying. The weekend starts now!" },
+]
+
+[[clip]]
+id = "dj-halloween-002"
+category = "dj"
+title = "The Calendar in the Drawer"
+dates = ["10-24", "10-25", "10-26", "10-27", "10-28", "10-29", "10-30", "10-31"]
+lines = [
+  { say = "host", text = "Spooky story time. A temp in the old office district swears he found a calendar in a drawer, and on it there was a page that said..." },
+  { say = "host", text = "Monday.", gap = 0.8 },
+  { say = "host", text = "Police went in. They found nothing. Just a stapler, still warm. Stay out of the old office district, Marina City. Here's a song, with all the lights on." },
+]

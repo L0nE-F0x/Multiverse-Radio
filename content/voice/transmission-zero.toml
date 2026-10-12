@@ -1,0 +1,335 @@
+# Transmission Zero — 76.0, the very bottom of the dial. The beginning. A secret station.
+#
+# The first broadcast ever made, still going. The First Announcer is in a cave at the dawn of
+# time with a transmitter made of stones and a lightning-struck tree, discovering what a
+# broadcast is: mostly tapping, breathing and wonder. Short words, long pauses. Everything
+# is the first one: the first ident, the first song (humming), the first advert (fire), the
+# first news (a rock fell; the rock is fine), the first sign-off.
+#
+# Taps on the microphone are very short `chopping` hits. Callbacks: HUSH hears the tapping
+# from the Nightjar and says hello back (see _ship.toml l2-09 and l3-13); the Keeper taps
+# back on his desk (last-lighthouse dj-010); a small shadow carrying a hat (Greg).
+station = "transmission-zero"
+
+[voices]
+first = { voice = "am_onyx", speed = 0.85, fx = "cave", name = "The First Announcer" }
+first_hush = { voice = "am_onyx", speed = 0.85, fx = "whisper", name = "The First Announcer" }
+wall = { voice = "am_onyx", speed = 0.85, fx = "distant", name = "The Wall" }
+other = { voice = "af_kore", speed = 0.85, fx = "cave", name = "Someone Else in the Cave" }
+
+[[show]]
+id = "first-light"
+name = "First Light"
+blurb = "At dawn, every dawn since the first one, the First Announcer tries the microphone again."
+start = 5
+end = 8
+
+# ── Idents ────────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "id-001"
+category = "id"
+bed = "cave-drip"
+lines = [
+  { sfx = "chopping", seconds = 0.4, level = 0.6 },
+  { pause = 0.6 },
+  { sfx = "chopping", seconds = 0.4, level = 0.6 },
+  { say = "first", text = "Testing.", gap = 1.6 },
+  { sfx = "chopping", seconds = 0.4, level = 0.6 },
+  { say = "first", text = "Testing." },
+]
+
+[[clip]]
+id = "id-002"
+category = "id"
+bed = "cave-drip"
+lines = [
+  { say = "first", text = "Hello?", gap = 2.4 },
+  { say = "first", text = "Hello.", gap = 1.8 },
+  { say = "first", text = "Hello is the word. I have decided." },
+]
+
+[[clip]]
+id = "id-003"
+category = "id"
+bed = "cave-drip"
+lines = [
+  { say = "first", text = "This is. The first one.", gap = 1.2 },
+  { say = "first", text = "The first. This." },
+  { sfx = "zap", level = 0.5 },
+]
+
+[[clip]]
+id = "id-004"
+category = "id"
+bed = "cave-drip"
+lines = [
+  { say = "first", text = "You are listening to. Me.", gap = 1.6 },
+  { say = "first", text = "Listening. That is the other half. I have just found it." },
+]
+
+[[clip]]
+id = "id-005"
+category = "id"
+bed = "cave-drip"
+lines = [
+  { say = "first", text = "This is Transmission. The first one. Transmission Zero.", gap = 1.2 },
+  { say = "first", text = "Because before it. Nothing." },
+]
+
+[[clip]]
+id = "id-006"
+category = "id"
+bed = "cave-drip"
+lines = [
+  { sfx = "chopping", seconds = 0.4, level = 0.6 },
+  { say = "first", text = "Is this. On?", gap = 1.8 },
+  { say = "first", text = "What is on? I will find out. Then I will tell you." },
+]
+
+[[clip]]
+id = "id-first-light"
+category = "id"
+title = "First Light"
+show = "first-light"
+part = "open"
+bed = "cave-drip"
+lines = [
+  { say = "first", text = "The sun. Is coming back.", gap = 1.4 },
+  { say = "first", text = "It came back! Again! This is First Light." },
+]
+
+# ── Discovering the broadcast ─────────────────────────────────────────────────
+
+[[clip]]
+id = "dj-001"
+category = "dj"
+bed = "cave-drip"
+lines = [
+  { say = "first", text = "There is someone. Out there.", gap = 1.4 },
+  { say = "first", text = "Listening. I can tell.", gap = 2.0 },
+  { say = "first", text = "The quiet is a different shape, when someone is in it." },
+]
+
+[[clip]]
+id = "dj-002"
+category = "dj"
+bed = "cave-drip"
+lines = [
+  { say = "first", text = "I am calling this. A broadcast.", gap = 1.2 },
+  { say = "first", text = "Because it is broad. And I cast it. Like a stone, into the water.", gap = 1.6 },
+  { say = "first", text = "Ripples. Going out. For always, maybe. Hello, ripples." },
+]
+
+[[clip]]
+id = "dj-003"
+category = "dj"
+bed = "cave-drip"
+lines = [
+  { sfx = "chopping", seconds = 0.4, level = 0.6 },
+  { pause = 0.5 },
+  { sfx = "chopping", seconds = 0.4, level = 0.6 },
+  { pause = 0.5 },
+  { sfx = "chopping", seconds = 0.4, level = 0.6 },
+  { say = "first", text = "Tap. Tap. Tap.", gap = 1.6 },
+  { say = "first", text = "Tapping is good. Tapping is the first music.", gap = 1.0 },
+  { say = "first", text = "I am the first band." },
+]
+
+[[clip]]
+id = "dj-004"
+category = "dj"
+bed = "cave-drip"
+lines = [
+  { say = "first", text = "Tomorrow, I will try. Two words. At once.", gap = 2.0 },
+  { say = "first", text = "Hello. Friend.", gap = 2.0 },
+  { say = "first", text = "Too soon. Tomorrow." },
+]
+
+[[clip]]
+id = "dj-005"
+category = "dj"
+bed = "cave-drip"
+lines = [
+  { say = "first", text = "Somebody far away will hear this. A long time from now.", gap = 1.2 },
+  { say = "first", text = "They will have. Chairs. And a hot drink.", gap = 1.8 },
+  { say = "first", text = "Hello, chair person. Hello, hot drink. I hope you are warm." },
+]
+
+[[clip]]
+id = "dj-006"
+category = "dj"
+bed = "cave-drip"
+lines = [
+  { say = "first", text = "I made a sound. Then the sound came back. From the wall.", gap = 1.4 },
+  { say = "first", text = "Wall. You are the first listener. Thank you, wall.", gap = 0.8 },
+  { say = "wall", text = "Thank you, wall.", gap = 1.6 },
+  { say = "first", text = "It agrees." },
+]
+
+[[clip]]
+id = "dj-007"
+category = "dj"
+bed = "cave-drip"
+lines = [
+  { say = "first", text = "Now. A song.", gap = 1.6 },
+  { say = "first", text = "La. La la. Laaa.", speed = 0.75, gap = 1.8 },
+  { say = "first", text = "That was the song. There will be more songs. Better. Probably with sticks." },
+]
+
+[[clip]]
+id = "dj-008"
+category = "dj"
+bed = "cave-drip"
+lines = [
+  { say = "first", text = "The fire is out. It is dark. I am still talking.", gap = 1.4 },
+  { say = "first", text = "You do not need to see, to talk. This is very important. Somebody write it down.", gap = 1.6 },
+  { say = "first", text = "Nobody can write yet. Remember it, then." },
+]
+
+[[clip]]
+id = "dj-009"
+category = "dj"
+bed = "cave-drip"
+lines = [
+  { sfx = "zap", level = 0.6 },
+  { say = "first", text = "The sky made a big light, and the tree caught it. Now the tree talks.", gap = 1.2 },
+  { say = "first", text = "Through me. Or I talk, through the tree. We are working it out." },
+]
+
+[[clip]]
+id = "dj-010"
+category = "dj"
+bed = "cave-drip"
+lines = [
+  { say = "first", text = "Someone said hello back. From very far. A soft voice. From a.", gap = 1.0 },
+  { say = "first", text = "Ship? I do not know ship.", gap = 1.6 },
+  { say = "first", text = "Hello, ship. I am learning. It is going to take a while." },
+]
+
+[[clip]]
+id = "dj-011"
+category = "dj"
+bed = "cave-drip"
+lines = [
+  { say = "first", text = "Someone is here, in the cave. Say it. Say hello.", gap = 1.6 },
+  { say = "other", text = "Hello?", gap = 1.4 },
+  { say = "first", text = "They said it! Two people have said it now.", gap = 0.8 },
+  { say = "first", text = "Hello is catching." },
+]
+
+[[clip]]
+id = "dj-012"
+category = "dj"
+bed = "cave-drip"
+lines = [
+  { say = "first_hush", text = "Listen. I am breathing.", gap = 2.2 },
+  { say = "first", text = "It goes out, like the broadcast. Then it comes back in. Not like the broadcast.", gap = 1.4 },
+  { say = "first", text = "The broadcast does not come back. It goes and goes. I hope it finds somebody nice." },
+]
+
+[[clip]]
+id = "dj-013"
+category = "dj"
+bed = "cave-drip"
+lines = [
+  { say = "first", text = "It is. Now.", gap = 1.6 },
+  { say = "first", text = "It is still now.", gap = 1.6 },
+  { say = "first", text = "It was now before, also. Now keeps happening. I will keep an eye on it." },
+]
+
+[[clip]]
+id = "dj-014"
+category = "dj"
+bed = "cave-drip"
+lines = [
+  { say = "first", text = "That is. All.", gap = 1.4 },
+  { say = "first", text = "That is all of it. There is no more.", gap = 2.0 },
+  { say = "first", text = "Tomorrow. More." },
+]
+
+[[clip]]
+id = "dj-first-light-1"
+category = "dj"
+show = "first-light"
+bed = "cave-drip"
+lines = [
+  { say = "first", text = "The sun went away, and I thought, that is that.", gap = 1.4 },
+  { say = "first", text = "But here it is. It always comes back. I will tell everyone. That is what this is for." },
+]
+
+[[clip]]
+id = "dj-first-light-2"
+category = "dj"
+show = "first-light"
+bed = "cave-drip"
+lines = [
+  { sfx = "chopping", seconds = 0.4, level = 0.6 },
+  { say = "first", text = "Good. Good. Hm.", gap = 1.2 },
+  { say = "first", text = "I have invented good morning. It is hello, but with the sun in it." },
+]
+
+# ── The first of everything ───────────────────────────────────────────────────
+
+[[clip]]
+id = "ad-001"
+category = "ad"
+title = "Fire"
+bed = "cave-drip"
+lines = [
+  { say = "first", text = "This message is brought to you by.", gap = 1.0 },
+  { say = "first", text = "Fire.", gap = 1.4 },
+  { say = "first", text = "Fire. It is hot. It is bright. It keeps the dark at the back of the cave. Do not touch.", gap = 2.0 },
+  { say = "first", text = "I touched.", gap = 1.2 },
+  { say = "first", text = "Fire. Do not touch." },
+]
+
+[[clip]]
+id = "news-001"
+category = "news"
+title = "The First News"
+bed = "cave-drip"
+lines = [
+  { say = "first", text = "News.", gap = 1.4 },
+  { say = "first", text = "Tonight. A rock fell.", gap = 1.6 },
+  { say = "first", text = "Nobody hurt. The rock is fine.", gap = 1.6 },
+  { say = "first", text = "Also. The river is still going. Nobody knows where. It seems very sure.", gap = 1.6 },
+  { say = "first", text = "That is the news. It is the first news. It is good news. I hope all the news is good news." },
+]
+
+[[clip]]
+id = "weather-001"
+category = "weather"
+title = "The First Weather"
+bed = "cave-drip"
+lines = [
+  { say = "first", text = "Weather.", gap = 1.2 },
+  { say = "first", text = "Outside. Big. Wet, sometimes.", gap = 1.4 },
+  { say = "first", text = "Today, it was wet, sometimes.", gap = 1.6 },
+  { say = "first", text = "Then the sky made a big light, and a big noise. I said, hello, sky.", gap = 1.4 },
+  { say = "first", text = "The sky said nothing. The sky is shy.", gap = 1.6 },
+  { say = "first", text = "Tomorrow. Also outside." },
+]
+
+[[clip]]
+id = "psa-001"
+category = "psa"
+title = "Important"
+bed = "cave-drip"
+lines = [
+  { say = "first", text = "Important.", gap = 1.4 },
+  { say = "first", text = "Do not eat the purple berries.", gap = 2.0 },
+  { say = "first", text = "That is all the important things. So far." },
+]
+
+[[clip]]
+id = "dj-h1"
+category = "dj"
+title = "Shadows"
+dates = ["10-31"]
+bed = "cave-drip"
+lines = [
+  { say = "first", text = "Tonight, the shadows on the wall are. Very big.", gap = 1.4 },
+  { say = "first", text = "I am not scared. I am talking, so they know I am here.", gap = 1.6 },
+  { say = "first", text = "One of them is small. It is carrying a hat. Hello, hat shadow. You can stay." },
+]

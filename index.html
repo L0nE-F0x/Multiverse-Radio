@@ -6,7 +6,7 @@
     <title>Multiverse Radio</title>
     <meta
       name="description"
-      content="Endless radio from other dimensions: generative music, deadpan hosts, alien adverts and news from parallel realities. Press play. It never runs out."
+      content="Endless radio from other dimensions. You work the night shift on the relay ship Nightjar: 42 stations, and pirates, beacons and secrets between them. Press play. It never runs out."
     />
     <meta name="theme-color" content="#0a0a0c" />
     <meta name="color-scheme" content="dark" />
@@ -15,16 +15,22 @@
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/manifest.webmanifest" />
     <meta name="apple-mobile-web-app-title" content="Multiverse" />
+    <!-- Installed (standalone): full-screen on Android and iOS; on iOS the status bar floats
+         over the page (viewport-fit=cover above; the UI pads with env(safe-area-inset-*)). -->
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-    <!-- Social cards. %SITE_URL% becomes the absolute site URL at build time: the SITE_URL
-         env var, else Netlify's built-in URL (see pwa() in src/pwa/vite-plugins.mjs). -->
+    <!-- Social cards. The build makes these URLs absolute and copies this page to
+         /station/<id>/ for every main station with that station's title, description and
+         card (src/pwa/vite-plugins.mjs, scripts/share/). Cards: npm run share:cards -->
     <link rel="canonical" href="%SITE_URL%/" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Multiverse Radio" />
     <meta property="og:title" content="Multiverse Radio" />
     <meta
       property="og:description"
-      content="Endless stations broadcasting from other dimensions. Generative music, deadpan hosts, alien adverts and news from parallel realities."
+      content="You work the night shift on the relay ship Nightjar, listening in on 42 stations from other dimensions, and on the pirates, beacons and ghosts between them. Generative music, deadpan hosts. It never runs out."
     />
     <meta property="og:url" content="%SITE_URL%/" />
     <meta property="og:image" content="%SITE_URL%/og-image.png" />
@@ -33,19 +39,19 @@
     <meta property="og:image:height" content="630" />
     <meta
       property="og:image:alt"
-      content="A warm, glowing radio faceplate reading Multiverse Radio, with a tuning knob and a dial of stations from other dimensions."
+      content="The viewport of the relay ship Nightjar under an amber terminal readout: Multiverse Radio, 42 stations from other dimensions."
     />
     <meta property="og:locale" content="en_US" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Multiverse Radio" />
     <meta
       name="twitter:description"
-      content="Endless stations broadcasting from other dimensions. Press play. It never runs out."
+      content="The night shift on the relay ship Nightjar: 42 stations from other dimensions, and whatever is between them. Press play. It never runs out."
     />
     <meta name="twitter:image" content="%SITE_URL%/og-image.png" />
     <meta
       name="twitter:image:alt"
-      content="A warm, glowing radio faceplate reading Multiverse Radio, with a tuning knob and a dial of stations from other dimensions."
+      content="The viewport of the relay ship Nightjar under an amber terminal readout: Multiverse Radio, 42 stations from other dimensions."
     />
   </head>
   <body>
