@@ -25,6 +25,7 @@ const receptionGrammar: Grammar = {
     'the signal is mostly here. The rest is on its way',
     'your radio is dreaming',
     'Greg is standing in front of the dish again',
+    'Teodor at Relay Four is asking if anyone can hear him, on our frequency',
     'the antenna has been bent into a heart shape by an admirer',
     'a whale is singing on this frequency, and it was here first',
     'the signal took the scenic route',

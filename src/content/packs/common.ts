@@ -114,7 +114,7 @@ export const commonGrammar: Grammar = {
     'the night bus driver',
     'the fox',
     'the void, for the hum',
-    'Thimbleworth Ladders',
+    "Grumbel's Ladders",
   ],
   ingredient: ['sunset', 'tape hiss', 'longing', 'reverb', 'cowbell', 'distant thunder', 'soft regret', 'kettle', 'cosmic dust'],
   listening: [

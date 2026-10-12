@@ -36,6 +36,8 @@ const messageGrammar: Grammar = {
     'My nan says this is the best thing on the radio since the radio.',
     'You were playing in the shop where I met my wife. Different shop, different wife, same song.',
     'Thank you for keeping me company. The house is very big and mostly corridors.',
+    "If anyone sees a shadow called Greg, tell him Hollis isn't cross. The porch light is on.",
+    'Testing. Can anyone hear me? This is Teodor, Relay Four. If you can hear me, play something.',
   ],
   templated: [
     'Listening while #activity#. #reaction#',
