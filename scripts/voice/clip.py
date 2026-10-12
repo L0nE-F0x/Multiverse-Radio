@@ -1,0 +1,221 @@
+"""Render one clip: TTS lines, voice fx, sfx and stings on a timeline, an optional bed,
+loudness mastering and MP3 encoding. Runs inside worker processes."""
+
+from __future__ import annotations
+
+import os
+import time
+from dataclasses import dataclass, field
+from pathlib import Path
+
+import numpy as np
+
+import dsp
+import sounds
+import voicefx
+from dsp import SR, ns
+from tts import TTS
+from voicescript import LENGTH_GUIDE, STING_GAP, STING_SECONDS, Clip, Pause, Sfx, Speech, Sting
+
+TARGET_LUFS = -16.0
+LIMIT_CEILING_DB = -2.3  # limiter ceiling before encoding
+MAX_TRUE_PEAK_DB = -1.5  # verified on the decoded MP3
+EDGE = 0.05  # silence kept at each end
+BED_LEAD, BED_TAIL = 0.4, 0.6  # bed before the first and after the last sound
+BITRATE = "48k"
+CUT_FADE = 0.008
+
+# Bump to force a full re-render after changes that the source hash wouldn't catch.
+ENGINE_VERSION = 1
+ENGINE_FILES = ("dsp.py", "sounds.py", "voicefx.py", "clip.py", "tts.py")
+
+
+@dataclass
+class Job:
+    station: str
+    clip: Clip
+    out_path: str
+    seed: int
+
+
+@dataclass
+class Result:
+    station: str
+    id: str
+    duration_ms: int
+    lines: list[dict]
+    loudness: float
+    true_peak: float
+    tts_seconds: float
+    elapsed: float
+    warnings: list[str] = field(default_factory=list)
+
+
+_tts: TTS | None = None
+
+
+def init_worker(model: str, voices: str, cache_dir: str, threads: int) -> None:
+    global _tts
+    os.environ.setdefault("OMP_NUM_THREADS", str(threads))
+    _tts = TTS(Path(model), Path(voices), Path(cache_dir), threads)
+
+
+def caption_text(line: Speech) -> str:
+    if line.cut is None or line.cut >= 1:
+        return line.text
+    words = line.text.split()
+    keep = max(1, round(len(words) * line.cut))
+    return " ".join(words[:keep]).rstrip(",;:.") + "—"
+
+
+def speech(line: Speech, rng: np.random.Generator) -> tuple[np.ndarray, int]:
+    """The treated line and how far it moves the timeline (its dry length, before tails)."""
+    assert _tts is not None, "init_worker() not called"
+    raw = _tts.say(line.voice, line.text, line.speed, line.lang)
+    body, _ = dsp.trim_silence(raw, -45.0, 0.015)
+    if len(body) == 0:
+        raise RuntimeError(f"TTS produced silence for {line.text!r}")
+    body = dsp.normalize(body, voicefx.VOICE_LUFS)
+    treated = voicefx.apply(line.fx, body, rng)
+    advance = len(body)
+    if line.cut is not None and line.cut < 1:
+        advance = max(1, int(len(body) * line.cut))
+        treated = dsp.fade(treated[:advance], 0, CUT_FADE)
+    return treated, advance
+
+
+def assemble(clip: Clip, rng: np.random.Generator) -> tuple[np.ndarray, list[dict]]:
+    events: list[tuple[int, np.ndarray]] = []
+    captions: list[tuple[int, str, str]] = []
+    cursor = 0
+    for line in clip.lines:
+        if isinstance(line, Speech):
+            audio, advance = speech(line, rng)
+            events.append((cursor, audio))
+            captions.append((cursor, line.speaker, caption_text(line)))
+            cursor += advance + ns(line.gap)
+        elif isinstance(line, Pause):
+            cursor += ns(line.seconds)
+        elif isinstance(line, Sfx):
+            events.append((cursor, sounds.make_sfx(line.name, line.seconds, line.level, rng)))
+            cursor += ns(line.seconds)
+        elif isinstance(line, Sting):
+            audio = sounds.make_sting(line.name, rng)
+            events.append((cursor, audio))
+            cursor += min(len(audio), ns(STING_SECONDS[line.name])) + ns(STING_GAP)
+
+    length = max((start + len(audio) for start, audio in events), default=0)
+    mix = np.zeros(max(length, 1), np.float32)
+    for start, audio in events:
+        mix[start : start + len(audio)] += audio
+
+    # Trim to the audible region, keeping EDGE seconds of silence at each end.
+    peak = float(np.abs(mix).max())
+    loud = np.flatnonzero(np.abs(mix) > peak * dsp.db(-50)) if peak > 0 else np.array([0, len(mix) - 1])
+    first, last = int(loud[0]), int(loud[-1])
+    start = first - ns(EDGE)
+    end = last + 1 + ns(EDGE)
+    padded = np.zeros(end - start, np.float32)
+    src_from, src_to = max(0, start), min(len(mix), end)
+    padded[src_from - start : src_to - start] = mix[src_from:src_to]
+    mix = dsp.fade(padded, 0, EDGE)
+    offset = -start
+
+    if clip.bed:
+        lead, tail = ns(BED_LEAD), ns(BED_TAIL)
+        total = lead + len(mix) + tail
+        bed = sounds.make_bed(clip.bed, total / SR, rng)
+        bed = dsp.fade(bed, BED_LEAD, BED_TAIL + 0.2)
+        out = bed[:total].copy()
+        out[lead : lead + len(mix)] += mix
+        mix, offset = out, offset + lead
+
+    lines = [
+        {"speaker": speaker, "text": text, "startMs": int(round(max(0, at + offset) / SR * 1000))}
+        for at, speaker, text in captions
+    ]
+    return mix, lines
+
+
+def master(x: np.ndarray) -> np.ndarray:
+    x = dsp.band(x, lo=55)
+    for attempt in range(4):
+        level = dsp.loudness(x)
+        if level < -70:
+            return x
+        gain = float(np.clip(TARGET_LUFS - level, -30, 30))
+        if attempt and abs(gain) < 0.15:
+            break
+        x = dsp.limit(x * dsp.db(gain), LIMIT_CEILING_DB)
+    return x
+
+
+def encode(x: np.ndarray, path: Path, target: float | None = TARGET_LUFS) -> tuple[np.ndarray, float]:
+    """Encode, decode and measure: the codec shaves some loudness and can add inter-sample
+    peaks, so correct and re-encode until the decoded file is on target. Peaks win ties."""
+    path.parent.mkdir(parents=True, exist_ok=True)
+    tmp = path.with_name(f".{path.stem}.{os.getpid()}.tmp.mp3")
+    peak_bound = False
+    try:
+        for _ in range(5):
+            dsp.encode_mp3(x, str(tmp), BITRATE)
+            decoded = dsp.decode(str(tmp))
+            tp = dsp.true_peak_db(decoded)
+            if tp > MAX_TRUE_PEAK_DB:
+                x = x * dsp.db(MAX_TRUE_PEAK_DB - tp - 0.2)
+                peak_bound = True
+                continue
+            if target is None or peak_bound:
+                break
+            miss = target - dsp.loudness(decoded)
+            if abs(miss) <= 0.25 or dsp.loudness(decoded) < -70:
+                break
+            x = dsp.limit(x * dsp.db(miss), LIMIT_CEILING_DB)
+        os.replace(tmp, path)
+    finally:
+        tmp.unlink(missing_ok=True)
+    return decoded, tp
+
+
+@dataclass
+class Failure:
+    station: str
+    id: str
+    error: str
+
+
+def render_safe(job: Job) -> Result | Failure:
+    """render(), but errors come back as values so one bad clip doesn't stop the batch."""
+    try:
+        return render(job)
+    except Exception as e:  # noqa: BLE001 - reported to the user with the clip id
+        return Failure(job.station, job.clip.id, f"{type(e).__name__}: {e}")
+
+
+def render(job: Job) -> Result:
+    began = time.time()
+    assert _tts is not None, "init_worker() not called"
+    tts_before = _tts.generated_seconds
+    rng = np.random.default_rng(job.seed)
+    mix, lines = assemble(job.clip, rng)
+    mastered = master(mix)
+    decoded, tp = encode(mastered, Path(job.out_path))
+    duration_ms = int(round(len(decoded) / SR * 1000))
+    warnings = []
+    lo, hi = LENGTH_GUIDE[job.clip.category]
+    seconds = duration_ms / 1000
+    if seconds < lo * 0.8 or seconds > hi * 1.2:
+        warnings.append(f"{seconds:.1f} s is outside the {job.clip.category} guide ({lo}-{hi} s)")
+    if tp > MAX_TRUE_PEAK_DB:
+        warnings.append(f"true peak {tp:.1f} dBTP is above {MAX_TRUE_PEAK_DB} dBTP")
+    return Result(
+        station=job.station,
+        id=job.clip.id,
+        duration_ms=duration_ms,
+        lines=[{**line, "startMs": min(line["startMs"], duration_ms)} for line in lines],
+        loudness=dsp.loudness(decoded),
+        true_peak=tp,
+        tts_seconds=_tts.generated_seconds - tts_before,
+        elapsed=time.time() - began,
+        warnings=warnings,
+    )
