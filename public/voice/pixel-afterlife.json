@@ -1,0 +1,475 @@
+{
+  "version": 1,
+  "station": "pixel-afterlife",
+  "clips": [
+    {
+      "id": "id-001",
+      "category": "id",
+      "url": "/voice/pixel-afterlife/id-001.mp3",
+      "durationMs": 6376,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Player Two",
+          "text": "Eight-Bit Afterlife! Ninety-seven point oh! Insert coin! Or don't! You're already here!",
+          "startMs": 40
+        }
+      ]
+    },
+    {
+      "id": "id-002",
+      "category": "id",
+      "url": "/voice/pixel-afterlife/id-002.mp3",
+      "durationMs": 5207,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Player Two",
+          "text": "You're playing... sorry. You're listening to... Eight-Bit Afterlife!",
+          "startMs": 39
+        }
+      ]
+    },
+    {
+      "id": "id-003",
+      "category": "id",
+      "url": "/voice/pixel-afterlife/id-003.mp3",
+      "durationMs": 6215,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Player Two",
+          "text": "Eight-Bit Afterlife. The arcade where old games go to respawn. Ready? Ready!",
+          "startMs": 40
+        }
+      ]
+    },
+    {
+      "id": "id-004",
+      "category": "id",
+      "url": "/voice/pixel-afterlife/id-004.mp3",
+      "durationMs": 6132,
+      "overMusic": true,
+      "daypart": "night",
+      "lines": [
+        {
+          "speaker": "Player Two",
+          "text": "Eight-Bit Afterlife, after hours. The cabinets are glowing. So are the ghosts.",
+          "startMs": 40
+        }
+      ]
+    },
+    {
+      "id": "id-005",
+      "category": "id",
+      "url": "/voice/pixel-afterlife/id-005.mp3",
+      "durationMs": 6430,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Player Two",
+          "text": "Player Two here, on Eight-Bit Afterlife. Player One, if you're listening... press start.",
+          "startMs": 40
+        }
+      ]
+    },
+    {
+      "id": "id-006",
+      "category": "id",
+      "url": "/voice/pixel-afterlife/id-006.mp3",
+      "durationMs": 5345,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Player Two",
+          "text": "Eight-Bit Afterlife! Continue? Yes! Always yes!",
+          "startMs": 42
+        }
+      ]
+    },
+    {
+      "id": "id-007",
+      "category": "id",
+      "url": "/voice/pixel-afterlife/id-007.mp3",
+      "durationMs": 5570,
+      "overMusic": true,
+      "daypart": "morning",
+      "lines": [
+        {
+          "speaker": "Player Two",
+          "text": "Good morning, Eight-Bit Afterlife! It's a new day! New—",
+          "startMs": 40
+        },
+        {
+          "speaker": "Player Two",
+          "text": "New day!",
+          "startMs": 2889
+        }
+      ]
+    },
+    {
+      "id": "dj-001",
+      "category": "dj",
+      "url": "/voice/pixel-afterlife/dj-001.mp3",
+      "durationMs": 10721,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Player Two",
+          "text": "That was a bop! A real level-one bop! I'm still waiting for Player One, by the way. Since nineteen eighty-seven. It's fine! It's fine.",
+          "startMs": 42
+        },
+        {
+          "speaker": "Player Two",
+          "text": "Any second now. Here's another song while I wait. Forever. Happily!",
+          "startMs": 7185
+        }
+      ]
+    },
+    {
+      "id": "dj-002",
+      "category": "dj",
+      "url": "/voice/pixel-afterlife/dj-002.mp3",
+      "durationMs": 8789,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Player Two",
+          "text": "Shout-out to Lag, at the cabinet by the door, who has just lost. Again.",
+          "startMs": 40
+        },
+        {
+          "speaker": "Lag (Ghost)",
+          "text": "I had him.",
+          "startMs": 4518
+        },
+        {
+          "speaker": "Player Two",
+          "text": "He did not have him. Lag, buddy, this one's for you!",
+          "startMs": 6023
+        }
+      ]
+    },
+    {
+      "id": "dj-003",
+      "category": "dj",
+      "url": "/voice/pixel-afterlife/dj-003.mp3",
+      "durationMs": 10850,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Player Two",
+          "text": "New high score on the board tonight! Initials... A, A, A! Again! Every single high score is A, A, A.",
+          "startMs": 37
+        },
+        {
+          "speaker": "Player Two",
+          "text": "We think it's the same ghost. We think he can't work the letters. Congratulations, A, A, A!",
+          "startMs": 5885
+        }
+      ]
+    },
+    {
+      "id": "dj-004",
+      "category": "dj",
+      "url": "/voice/pixel-afterlife/dj-004.mp3",
+      "durationMs": 12731,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Player Two",
+          "text": "This level is sponsored by Grumbel's Ladders! Every good level has ladders! Climb up! Climb down! Get stuck halfway for no reason and have a little think!",
+          "startMs": 37
+        },
+        {
+          "speaker": "Player Two",
+          "text": "Grumbel's Ladders! Up is a choice! Down is also a choice! Halfway is a lifestyle!",
+          "startMs": 8172
+        }
+      ]
+    },
+    {
+      "id": "dj-005",
+      "category": "dj",
+      "url": "/voice/pixel-afterlife/dj-005.mp3",
+      "durationMs": 14293,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Player Two",
+          "text": "Reminder, everybody: in the afterlife, you have infinite lives. Infinite! So if today went badly, that's what continues are for!",
+          "startMs": 37
+        },
+        {
+          "speaker": "Player Two",
+          "text": "Unless you're Lag. Lag is on his four hundredth continue. Lag, are you okay?",
+          "startMs": 7230
+        },
+        {
+          "speaker": "Lag (Ghost)",
+          "text": "No.",
+          "startMs": 11887
+        },
+        {
+          "speaker": "Player Two",
+          "text": "He's great!",
+          "startMs": 12912
+        }
+      ]
+    },
+    {
+      "id": "dj-006",
+      "category": "dj",
+      "url": "/voice/pixel-afterlife/dj-006.mp3",
+      "durationMs": 7288,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Player Two",
+          "text": "Coming up next, a brand new track—",
+          "startMs": 42
+        },
+        {
+          "speaker": "Player Two",
+          "text": "from—",
+          "startMs": 2156
+        },
+        {
+          "speaker": "Player Two",
+          "text": "Sorry! Sorry. Little glitch. Coming up next: a song. That's all I've got. It's a good one!",
+          "startMs": 2908
+        }
+      ]
+    },
+    {
+      "id": "dj-007",
+      "category": "dj",
+      "url": "/voice/pixel-afterlife/dj-007.mp3",
+      "durationMs": 8240,
+      "overMusic": true,
+      "daypart": "morning",
+      "lines": [
+        {
+          "speaker": "Player Two",
+          "text": "Good morning, arcade! The coin slots are blinking! The carpet is buzzing! The cleaner ghost is mopping the same pixel he's been mopping since launch day! Let's go!",
+          "startMs": 40
+        }
+      ]
+    },
+    {
+      "id": "dj-008",
+      "category": "dj",
+      "url": "/voice/pixel-afterlife/dj-008.mp3",
+      "durationMs": 9608,
+      "overMusic": true,
+      "daypart": "night",
+      "lines": [
+        {
+          "speaker": "Player Two",
+          "text": "It's late in the arcade. The screens have gone to attract mode. That's when they play themselves, to remember how.",
+          "startMs": 40
+        },
+        {
+          "speaker": "Player Two",
+          "text": "It's kind of beautiful. It's kind of sad. Mostly beautiful! Here's a song.",
+          "startMs": 5825
+        }
+      ]
+    },
+    {
+      "id": "dj-009",
+      "category": "dj",
+      "url": "/voice/pixel-afterlife/dj-009.mp3",
+      "durationMs": 13619,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Player Two",
+          "text": "Weird one, folks. There's a shadow on level four with no sprite attached. Just a little shadow, jumping around. Says his name is Greg.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Player Two",
+          "text": "He's really good, actually! Better than Lag!",
+          "startMs": 7008
+        },
+        {
+          "speaker": "Lag (Ghost)",
+          "text": "Hey.",
+          "startMs": 9868
+        },
+        {
+          "speaker": "Player Two",
+          "text": "Hollis, if you're looking for him, he's on a winning streak!",
+          "startMs": 10856
+        }
+      ]
+    },
+    {
+      "id": "dj-010",
+      "category": "dj",
+      "url": "/voice/pixel-afterlife/dj-010.mp3",
+      "durationMs": 6818,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Player Two",
+          "text": "Save point! That's what this song is! Take a breath. Drink some water. Your progress has been saved. Probably. It says saved. Let's trust it!",
+          "startMs": 38
+        }
+      ]
+    },
+    {
+      "id": "dj-011",
+      "category": "dj",
+      "url": "/voice/pixel-afterlife/dj-011.mp3",
+      "durationMs": 7049,
+      "overMusic": true,
+      "daypart": "day",
+      "lines": [
+        {
+          "speaker": "Player Two",
+          "text": "Afternoon on the continue screen! Nine... eight... I always panic at seven. Don't panic at seven! Here's some music to not panic to!",
+          "startMs": 40
+        }
+      ]
+    },
+    {
+      "id": "dj-012",
+      "category": "dj",
+      "url": "/voice/pixel-afterlife/dj-012.mp3",
+      "durationMs": 6718,
+      "overMusic": true,
+      "daypart": "evening",
+      "lines": [
+        {
+          "speaker": "Player Two",
+          "text": "Evening, players! Remember: it's not about winning. It's about the friends you respawn with along the way. That's a quote. From me. Just now!",
+          "startMs": 39
+        }
+      ]
+    },
+    {
+      "id": "dj-013",
+      "category": "dj",
+      "url": "/voice/pixel-afterlife/dj-013.mp3",
+      "durationMs": 8019,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Player Two",
+          "text": "A listener wants the password for level nine. The password is... I forgot. It had a lot of letter B's in it. And a heart. Try the heart! Here's a song while you try.",
+          "startMs": 40
+        }
+      ]
+    },
+    {
+      "id": "dj-014",
+      "category": "dj",
+      "url": "/voice/pixel-afterlife/dj-014.mp3",
+      "durationMs": 8543,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Player Two",
+          "text": "That last track was composed on a cartridge that only works if you blow on it. The band blew on it for six hours. They're very lightheaded. They're doing great! Here's another one!",
+          "startMs": 38
+        }
+      ]
+    },
+    {
+      "id": "dj-015",
+      "category": "dj",
+      "url": "/voice/pixel-afterlife/dj-015.mp3",
+      "durationMs": 9726,
+      "overMusic": true,
+      "daypart": "night",
+      "lines": [
+        {
+          "speaker": "Player Two",
+          "text": "Player One, if you're out there... I'm not mad. I just want to play. I've got the controller. It's warm. I've been holding it for a while.",
+          "startMs": 40
+        },
+        {
+          "speaker": "Player Two",
+          "text": "Anyway! Here's a song!",
+          "startMs": 8287
+        }
+      ]
+    },
+    {
+      "id": "dj-016",
+      "category": "dj",
+      "url": "/voice/pixel-afterlife/dj-016.mp3",
+      "durationMs": 12832,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Player Two",
+          "text": "Ghost etiquette reminder! If you're waiting for a cabinet, please don't stand inside the person playing. It's cold, it's distracting, and Lag says it's the only reason he keeps losing.",
+          "startMs": 39
+        },
+        {
+          "speaker": "Lag (Ghost)",
+          "text": "It's one of the reasons.",
+          "startMs": 9772
+        }
+      ]
+    },
+    {
+      "id": "call-001",
+      "category": "call",
+      "url": "/voice/pixel-afterlife/call-001.mp3",
+      "durationMs": 30033,
+      "title": "Bev enters the game",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Player Two",
+          "text": "We've got a caller! Player Three has entered the game! Hello!",
+          "startMs": 2450
+        },
+        {
+          "speaker": "Bev",
+          "text": "Hello, love. It's Bev. Is this the request line? The one with the little tunes?",
+          "startMs": 5804
+        },
+        {
+          "speaker": "Player Two",
+          "text": "It's the littlest tunes! What do you need?",
+          "startMs": 10184
+        },
+        {
+          "speaker": "Bev",
+          "text": "I'm looking for a song. It goes, da da dum, da da.",
+          "startMs": 12644
+        },
+        {
+          "speaker": "Player Two",
+          "text": "Hang on! Let me try it on the arcade!",
+          "startMs": 16118
+        },
+        {
+          "speaker": "Player Two",
+          "text": "Like that?",
+          "startMs": 20158
+        },
+        {
+          "speaker": "Bev",
+          "text": "No, love. That's the noise my microwave makes.",
+          "startMs": 21247
+        },
+        {
+          "speaker": "Player Two",
+          "text": "That's my favourite song!",
+          "startMs": 24432
+        },
+        {
+          "speaker": "Bev",
+          "text": "Oh, bless you. I'll keep looking.",
+          "startMs": 26266
+        }
+      ]
+    }
+  ]
+}

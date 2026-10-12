@@ -1,0 +1,401 @@
+{
+  "version": 1,
+  "station": "rainfall-fm",
+  "clips": [
+    {
+      "id": "id-001",
+      "category": "id",
+      "url": "/voice/rainfall-fm/id-001.mp3",
+      "durationMs": 5854,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Drizzle Montgomery",
+          "text": "Rainfall FM. Ninety point one. It's raining. It's lovely.",
+          "startMs": 43
+        }
+      ]
+    },
+    {
+      "id": "id-002",
+      "category": "id",
+      "url": "/voice/rainfall-fm/id-002.mp3",
+      "durationMs": 7027,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Drizzle Montgomery",
+          "text": "You're listening to Rainfall FM, from the Damp Dimension. Bring a towel. Bring two.",
+          "startMs": 41
+        }
+      ]
+    },
+    {
+      "id": "id-003",
+      "category": "id",
+      "url": "/voice/rainfall-fm/id-003.mp3",
+      "durationMs": 6813,
+      "overMusic": true,
+      "daypart": "night",
+      "lines": [
+        {
+          "speaker": "Drizzle Montgomery",
+          "text": "Rainfall FM, through the night and through the rain, which round here is the same thing.",
+          "startMs": 37
+        }
+      ]
+    },
+    {
+      "id": "id-004",
+      "category": "id",
+      "url": "/voice/rainfall-fm/id-004.mp3",
+      "durationMs": 7003,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Drizzle Montgomery",
+          "text": "This is Rainfall FM. Four thousand years of drizzle, and we've never once run out.",
+          "startMs": 36
+        }
+      ]
+    },
+    {
+      "id": "id-005",
+      "category": "id",
+      "url": "/voice/rainfall-fm/id-005.mp3",
+      "durationMs": 7450,
+      "overMusic": true,
+      "daypart": "morning",
+      "lines": [
+        {
+          "speaker": "Drizzle Montgomery",
+          "text": "Good morning from Rainfall FM. It's raining. I only mention it so you're not surprised.",
+          "startMs": 37
+        }
+      ]
+    },
+    {
+      "id": "id-006",
+      "category": "id",
+      "url": "/voice/rainfall-fm/id-006.mp3",
+      "durationMs": 6703,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Drizzle Montgomery",
+          "text": "Rainfall FM. The kettle's on. The kettle is always on.",
+          "startMs": 442
+        }
+      ]
+    },
+    {
+      "id": "id-007",
+      "category": "id",
+      "url": "/voice/rainfall-fm/id-007.mp3",
+      "durationMs": 9062,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Drizzle Montgomery",
+          "text": "Rainfall FM. If you can hear the rain louder than usual, your window's open. Close it, love. Or don't. It's nice.",
+          "startMs": 35
+        }
+      ]
+    },
+    {
+      "id": "dj-001",
+      "category": "dj",
+      "url": "/voice/rainfall-fm/dj-001.mp3",
+      "durationMs": 18236,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Drizzle Montgomery",
+          "text": "Here are tonight's rainfall totals. Precinct One, two inches. Precinct Four, two inches. That's a draw. Precinct Nine, three and a half inches, a convincing win at home.",
+          "startMs": 46
+        },
+        {
+          "speaker": "Drizzle Montgomery",
+          "text": "And Precinct Twelve, nought.",
+          "startMs": 10924
+        },
+        {
+          "speaker": "Drizzle Montgomery",
+          "text": "Nought? I'm being told Precinct Twelve has fallen into the canal. Recount pending.",
+          "startMs": 13526
+        }
+      ]
+    },
+    {
+      "id": "dj-002",
+      "category": "dj",
+      "url": "/voice/rainfall-fm/dj-002.mp3",
+      "durationMs": 11859,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Drizzle Montgomery",
+          "text": "A listener asks what the sun is like. I've never seen it, love. From what I've read, it's a sort of very large lamp that nobody's in charge of.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Drizzle Montgomery",
+          "text": "Sounds stressful. I'll stick with the drizzle. Here's a song.",
+          "startMs": 8524
+        }
+      ]
+    },
+    {
+      "id": "dj-003",
+      "category": "dj",
+      "url": "/voice/rainfall-fm/dj-003.mp3",
+      "durationMs": 11346,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Drizzle Montgomery",
+          "text": "Kettle's just boiled, so I'll keep this short. That last one was by a band who recorded entirely under a bus shelter. You could hear the number nine going past at the end. Lovely. Here's another.",
+          "startMs": 40
+        }
+      ]
+    },
+    {
+      "id": "dj-004",
+      "category": "dj",
+      "url": "/voice/rainfall-fm/dj-004.mp3",
+      "durationMs": 16256,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Drizzle Montgomery",
+          "text": "A reminder about umbrella etiquette. If two floating umbrellas meet on a narrow street, the smaller umbrella goes underneath.",
+          "startMs": 47
+        },
+        {
+          "speaker": "Drizzle Montgomery",
+          "text": "If they're the same size, they stay where they are, hovering, until one of them apologises. There are two on Lantern Street that have been there since spring.",
+          "startMs": 7803
+        }
+      ]
+    },
+    {
+      "id": "dj-005",
+      "category": "dj",
+      "url": "/voice/rainfall-fm/dj-005.mp3",
+      "durationMs": 11812,
+      "overMusic": true,
+      "daypart": "night",
+      "lines": [
+        {
+          "speaker": "Drizzle Montgomery",
+          "text": "It's half past something, the rain's doing that thing where it sounds like applause, and I've decided to take it personally.",
+          "startMs": 436
+        },
+        {
+          "speaker": "Drizzle Montgomery",
+          "text": "Thank you. Thank you very much. You're too kind. Here's the next one.",
+          "startMs": 7568
+        }
+      ]
+    },
+    {
+      "id": "dj-006",
+      "category": "dj",
+      "url": "/voice/rainfall-fm/dj-006.mp3",
+      "durationMs": 8714,
+      "overMusic": true,
+      "daypart": "morning",
+      "lines": [
+        {
+          "speaker": "Drizzle Montgomery",
+          "text": "Morning, all. Visibility is low, spirits are fair, and the gutters on Lantern Street are singing in the key of D. Here's something to drink your tea to.",
+          "startMs": 44
+        }
+      ]
+    },
+    {
+      "id": "dj-007",
+      "category": "dj",
+      "url": "/voice/rainfall-fm/dj-007.mp3",
+      "durationMs": 14063,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Drizzle Montgomery",
+          "text": "We've had a letter from someone who lives in a place where it doesn't rain. They say the air is just... empty. Nothing in it at all.",
+          "startMs": 41
+        },
+        {
+          "speaker": "Drizzle Montgomery",
+          "text": "I've read it three times. I think it's the most frightening thing anyone has ever sent me. Let's have some music.",
+          "startMs": 7498
+        }
+      ]
+    },
+    {
+      "id": "dj-008",
+      "category": "dj",
+      "url": "/voice/rainfall-fm/dj-008.mp3",
+      "durationMs": 10580,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Drizzle Montgomery",
+          "text": "Rainfall FM is sponsored by Grumbel's Ladders. Non-slip rungs, tested in every weather we have, which is one weather. Grumbel's. Up is a choice. Mind the puddle at the bottom.",
+          "startMs": 37
+        }
+      ]
+    },
+    {
+      "id": "dj-009",
+      "category": "dj",
+      "url": "/voice/rainfall-fm/dj-009.mp3",
+      "durationMs": 17850,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Drizzle Montgomery",
+          "text": "Shadow owners, take note. In this light nobody's got a shadow, so if yours has gone missing, you won't notice for weeks.",
+          "startMs": 39
+        },
+        {
+          "speaker": "Drizzle Montgomery",
+          "text": "But if he answers to Greg, a man in Precinct Six says one's been sheltering under his awning. Polite. Bit damp. Wouldn't say where he was headed. Hollis, the porch light's on, I take it.",
+          "startMs": 7060
+        }
+      ]
+    },
+    {
+      "id": "dj-010",
+      "category": "dj",
+      "url": "/voice/rainfall-fm/dj-010.mp3",
+      "durationMs": 8561,
+      "overMusic": true,
+      "daypart": "evening",
+      "lines": [
+        {
+          "speaker": "Drizzle Montgomery",
+          "text": "Evening, everyone. There's lightning very far off to the north. Not our lightning. Someone else's. We wave at it anyway. It's only neighbourly. Here's a song.",
+          "startMs": 37
+        }
+      ]
+    },
+    {
+      "id": "dj-011",
+      "category": "dj",
+      "url": "/voice/rainfall-fm/dj-011.mp3",
+      "durationMs": 8710,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Drizzle Montgomery",
+          "text": "That last song was about a dry sock. You can always tell. There's a sort of longing in the bass. Coming up, a song about a wet sock, which is all the others.",
+          "startMs": 46
+        }
+      ]
+    },
+    {
+      "id": "dj-012",
+      "category": "dj",
+      "url": "/voice/rainfall-fm/dj-012.mp3",
+      "durationMs": 11490,
+      "overMusic": true,
+      "daypart": "night",
+      "lines": [
+        {
+          "speaker": "Drizzle Montgomery",
+          "text": "If you're listening in bed, the sound on your roof right now is the same sound that's on mine. That's about the closest thing we've got to holding hands across the city. Here's a slow one.",
+          "startMs": 439
+        }
+      ]
+    },
+    {
+      "id": "dj-013",
+      "category": "dj",
+      "url": "/voice/rainfall-fm/dj-013.mp3",
+      "durationMs": 10982,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Drizzle Montgomery",
+          "text": "Puddle report. The big one outside the bakery has now been given a name, a postcode and a small boat.",
+          "startMs": 37
+        },
+        {
+          "speaker": "Drizzle Montgomery",
+          "text": "Please don't fish in it. We don't know what's in there, and frankly, neither does the puddle.",
+          "startMs": 6558
+        }
+      ]
+    },
+    {
+      "id": "dj-014",
+      "category": "dj",
+      "url": "/voice/rainfall-fm/dj-014.mp3",
+      "durationMs": 9523,
+      "overMusic": true,
+      "daypart": "day",
+      "lines": [
+        {
+          "speaker": "Drizzle Montgomery",
+          "text": "Afternoon. Same as the morning, but wetter round the edges. If you've the day off, put a towel on the radiator and just be a person for a bit. Here's some music for that.",
+          "startMs": 47
+        }
+      ]
+    },
+    {
+      "id": "dj-015",
+      "category": "dj",
+      "url": "/voice/rainfall-fm/dj-015.mp3",
+      "durationMs": 9568,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Drizzle Montgomery",
+          "text": "Four thousand years of rain, and do you know, I've never once been bored of it. Every drop's a slightly different shape. I've been counting. I'm on eleven. Here's the next song.",
+          "startMs": 48
+        }
+      ]
+    },
+    {
+      "id": "dj-016",
+      "category": "dj",
+      "url": "/voice/rainfall-fm/dj-016.mp3",
+      "durationMs": 10226,
+      "overMusic": true,
+      "daypart": "night",
+      "lines": [
+        {
+          "speaker": "Drizzle Montgomery",
+          "text": "For the night shift: the tram drivers, the bakers, the woman who wipes the condensation off the bus stop map so we can all see where we are. This one's for you. Thank you for the map.",
+          "startMs": 49
+        }
+      ]
+    },
+    {
+      "id": "weather-001",
+      "category": "weather",
+      "url": "/voice/rainfall-fm/weather-001.mp3",
+      "durationMs": 23483,
+      "title": "The forecast",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Drizzle Montgomery",
+          "text": "And now the forecast. Tonight, rain, heavy at times, lighter at others, and at about three in the morning, a sort of thoughtful drizzle.",
+          "startMs": 2690
+        },
+        {
+          "speaker": "Drizzle Montgomery",
+          "text": "Tomorrow, rain. The weekend, we'll see. It'll be rain.",
+          "startMs": 10155
+        },
+        {
+          "speaker": "Drizzle Montgomery",
+          "text": "Nineteen years I've been reading this, and I still read it like it might say something else. Rainfall FM. Stay dry. Or stay damp and happy. Both count.",
+          "startMs": 13463
+        }
+      ]
+    }
+  ]
+}

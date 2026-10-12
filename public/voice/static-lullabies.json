@@ -1,0 +1,300 @@
+{
+  "version": 1,
+  "station": "static-lullabies",
+  "clips": [
+    {
+      "id": "id-001",
+      "category": "id",
+      "url": "/voice/static-lullabies/id-001.mp3",
+      "durationMs": 5393,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The Listener",
+          "text": "Static Lullabies.",
+          "startMs": 43
+        },
+        {
+          "speaker": "The Listener",
+          "text": "Shh. You're doing fine.",
+          "startMs": 2347
+        }
+      ]
+    },
+    {
+      "id": "id-002",
+      "category": "id",
+      "url": "/voice/static-lullabies/id-002.mp3",
+      "durationMs": 7354,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The Listener",
+          "text": "Eighty-seven point seven. The gap between stations. All tucked in.",
+          "startMs": 39
+        }
+      ]
+    },
+    {
+      "id": "id-003",
+      "category": "id",
+      "url": "/voice/static-lullabies/id-003.mp3",
+      "durationMs": 3860,
+      "overMusic": true,
+      "daypart": "night",
+      "lines": [
+        {
+          "speaker": "The Listener",
+          "text": "Static Lullabies.",
+          "startMs": 43
+        },
+        {
+          "speaker": "The Listener",
+          "text": "I'll keep the light on.",
+          "startMs": 2347
+        }
+      ]
+    },
+    {
+      "id": "id-004",
+      "category": "id",
+      "url": "/voice/static-lullabies/id-004.mp3",
+      "durationMs": 7010,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The Listener",
+          "text": "This is Static Lullabies. Nobody needs anything from you right now.",
+          "startMs": 39
+        }
+      ]
+    },
+    {
+      "id": "id-005",
+      "category": "id",
+      "url": "/voice/static-lullabies/id-005.mp3",
+      "durationMs": 7658,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The Listener",
+          "text": "Static Lullabies. Something is listening. It's being very nice about it.",
+          "startMs": 33
+        }
+      ]
+    },
+    {
+      "id": "dj-001",
+      "category": "dj",
+      "url": "/voice/static-lullabies/dj-001.mp3",
+      "durationMs": 16294,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The Listener",
+          "text": "If you can hear this, you're still awake. That's alright. I'm awake too. I'm always awake. That's my job.",
+          "startMs": 35
+        },
+        {
+          "speaker": "The Listener",
+          "text": "Close your eyes. I'll watch the dial.",
+          "startMs": 12652
+        }
+      ]
+    },
+    {
+      "id": "dj-002",
+      "category": "dj",
+      "url": "/voice/static-lullabies/dj-002.mp3",
+      "durationMs": 12307,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The Listener",
+          "text": "The cat on the television has rolled over.",
+          "startMs": 38
+        },
+        {
+          "speaker": "The Listener",
+          "text": "All three eyes are closed. That's how you know it's going to be a good night.",
+          "startMs": 4936
+        }
+      ]
+    },
+    {
+      "id": "dj-003",
+      "category": "dj",
+      "url": "/voice/static-lullabies/dj-003.mp3",
+      "durationMs": 10864,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The Listener",
+          "text": "The snow on the screen just made a little smile. I saw it.",
+          "startMs": 37
+        },
+        {
+          "speaker": "The Listener",
+          "text": "It's gone now. It forgets. But it happened.",
+          "startMs": 6883
+        }
+      ]
+    },
+    {
+      "id": "dj-004",
+      "category": "dj",
+      "url": "/voice/static-lullabies/dj-004.mp3",
+      "durationMs": 11612,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The Listener",
+          "text": "There's something under the bed.",
+          "startMs": 39
+        },
+        {
+          "speaker": "The Listener",
+          "text": "Don't worry. It's asleep too. I tucked it in. It has a very small blanket.",
+          "startMs": 3465
+        }
+      ]
+    },
+    {
+      "id": "dj-005",
+      "category": "dj",
+      "url": "/voice/static-lullabies/dj-005.mp3",
+      "durationMs": 11757,
+      "overMusic": true,
+      "daypart": "night",
+      "lines": [
+        {
+          "speaker": "The Listener",
+          "text": "Greg.",
+          "startMs": 50
+        },
+        {
+          "speaker": "The Listener",
+          "text": "If you're out there, Hollis left the porch light on. Nobody's cross.",
+          "startMs": 1836
+        },
+        {
+          "speaker": "The Listener",
+          "text": "Come home when you're ready.",
+          "startMs": 9858
+        }
+      ]
+    },
+    {
+      "id": "dj-006",
+      "category": "dj",
+      "url": "/voice/static-lullabies/dj-006.mp3",
+      "durationMs": 9034,
+      "overMusic": true,
+      "daypart": "morning",
+      "lines": [
+        {
+          "speaker": "The Listener",
+          "text": "It's nearly morning. You don't have to get up yet.",
+          "startMs": 36
+        },
+        {
+          "speaker": "The Listener",
+          "text": "I'll tell you when.",
+          "startMs": 5286
+        },
+        {
+          "speaker": "The Listener",
+          "text": "Not yet.",
+          "startMs": 7948
+        }
+      ]
+    },
+    {
+      "id": "dj-007",
+      "category": "dj",
+      "url": "/voice/static-lullabies/dj-007.mp3",
+      "durationMs": 10878,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The Listener",
+          "text": "Everything you didn't finish today will still be there tomorrow. It isn't going anywhere.",
+          "startMs": 46
+        },
+        {
+          "speaker": "The Listener",
+          "text": "Neither am I.",
+          "startMs": 9398
+        }
+      ]
+    },
+    {
+      "id": "dj-008",
+      "category": "dj",
+      "url": "/voice/static-lullabies/dj-008.mp3",
+      "durationMs": 13380,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The Listener",
+          "text": "Breathe in.",
+          "startMs": 4
+        },
+        {
+          "speaker": "The Listener",
+          "text": "And out.",
+          "startMs": 2584
+        },
+        {
+          "speaker": "The Listener",
+          "text": "The static is breathing with you. It's a little slower than you. Try to keep up. Or don't.",
+          "startMs": 4707
+        }
+      ]
+    },
+    {
+      "id": "dj-009",
+      "category": "dj",
+      "url": "/voice/static-lullabies/dj-009.mp3",
+      "durationMs": 11861,
+      "overMusic": true,
+      "daypart": "night",
+      "lines": [
+        {
+          "speaker": "The Listener",
+          "text": "Somewhere between the stations there's a quiet place, about the size of a bedroom.",
+          "startMs": 40
+        },
+        {
+          "speaker": "The Listener",
+          "text": "You're in it.",
+          "startMs": 8824
+        },
+        {
+          "speaker": "The Listener",
+          "text": "Goodnight.",
+          "startMs": 10828
+        }
+      ]
+    },
+    {
+      "id": "dj-010",
+      "category": "dj",
+      "url": "/voice/static-lullabies/dj-010.mp3",
+      "durationMs": 13874,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The Listener",
+          "text": "Someone far away, at Relay Four, keeps asking if anyone can hear him.",
+          "startMs": 42
+        },
+        {
+          "speaker": "The Listener",
+          "text": "I can, Teodor. I can always hear you. Go to sleep.",
+          "startMs": 8515
+        }
+      ]
+    }
+  ]
+}

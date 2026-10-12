@@ -1,0 +1,580 @@
+{
+  "version": 1,
+  "station": "hold-music",
+  "clips": [
+    {
+      "id": "id-001",
+      "category": "id",
+      "url": "/voice/hold-music/id-001.mp3",
+      "durationMs": 6823,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Pam (Automated)",
+          "text": "You have reached the Department of Hold Music. Your call is important to us. Please hold.",
+          "startMs": 50
+        }
+      ]
+    },
+    {
+      "id": "id-002",
+      "category": "id",
+      "url": "/voice/hold-music/id-002.mp3",
+      "durationMs": 8990,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Pam (Automated)",
+          "text": "Department of Hold Music. Ninety-six point one. Your call is important to us in every reality simultaneously.",
+          "startMs": 41
+        }
+      ]
+    },
+    {
+      "id": "id-003",
+      "category": "id",
+      "url": "/voice/hold-music/id-003.mp3",
+      "durationMs": 7319,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Pam (Automated)",
+          "text": "Thank you for holding. You are listening to the Department of Hold Music. Please continue to do so.",
+          "startMs": 50
+        }
+      ]
+    },
+    {
+      "id": "id-004",
+      "category": "id",
+      "url": "/voice/hold-music/id-004.mp3",
+      "durationMs": 8138,
+      "overMusic": true,
+      "daypart": "morning",
+      "lines": [
+        {
+          "speaker": "Pam (Automated)",
+          "text": "Good morning. The Department of Hold Music is now open. It was also open before. You were holding then, too.",
+          "startMs": 38
+        }
+      ]
+    },
+    {
+      "id": "id-005",
+      "category": "id",
+      "url": "/voice/hold-music/id-005.mp3",
+      "durationMs": 8294,
+      "overMusic": true,
+      "daypart": "night",
+      "lines": [
+        {
+          "speaker": "Pam (Automated)",
+          "text": "Department of Hold Music, night service. Your call is still important to us. Slightly less, at this hour. But still.",
+          "startMs": 41
+        }
+      ]
+    },
+    {
+      "id": "id-006",
+      "category": "id",
+      "url": "/voice/hold-music/id-006.mp3",
+      "durationMs": 7615,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Pam (Automated)",
+          "text": "This is Pam. This is the Department of Hold Music. This is, for the foreseeable future, your life.",
+          "startMs": 39
+        }
+      ]
+    },
+    {
+      "id": "id-007",
+      "category": "id",
+      "url": "/voice/hold-music/id-007.mp3",
+      "durationMs": 5786,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Pam (Automated)",
+          "text": "Department of Hold Music, Floor minus four. Please take a number.",
+          "startMs": 39
+        }
+      ]
+    },
+    {
+      "id": "psa-001",
+      "category": "psa",
+      "url": "/voice/hold-music/psa-001.mp3",
+      "durationMs": 13415,
+      "title": "Your position in the queue",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Pam (Automated)",
+          "text": "Thank you for holding. You are currently number four hundred and eleven thousand and nine in the queue.",
+          "startMs": 39
+        },
+        {
+          "speaker": "Pam (Automated)",
+          "text": "Your position has not changed since you last heard this message. Your position will not change the next time you hear this message. Please hold.",
+          "startMs": 5562
+        }
+      ]
+    },
+    {
+      "id": "psa-002",
+      "category": "psa",
+      "url": "/voice/hold-music/psa-002.mp3",
+      "durationMs": 13400,
+      "title": "Your call is important",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Pam (Automated)",
+          "text": "Your call is important to us. Your call has been important to us for some time.",
+          "startMs": 48
+        },
+        {
+          "speaker": "Pam (Automated)",
+          "text": "Your call is now so important to us that it has been given its own small office, a parking space, and a plant. Your call is doing very well. Please hold.",
+          "startMs": 4928
+        }
+      ]
+    },
+    {
+      "id": "psa-003",
+      "category": "psa",
+      "url": "/voice/hold-music/psa-003.mp3",
+      "durationMs": 12823,
+      "title": "The hash key",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Pam (Automated)",
+          "text": "Please note. Pressing the hash key repeatedly will not speed up your call.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Pam (Automated)",
+          "text": "It will, however, be recorded, played back at the department party, and discussed at length. Last year's party discussed one caller until dawn. Please hold.",
+          "startMs": 4294
+        }
+      ]
+    },
+    {
+      "id": "psa-004",
+      "category": "psa",
+      "url": "/voice/hold-music/psa-004.mp3",
+      "durationMs": 16598,
+      "title": "Before you are connected",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Pam (Automated)",
+          "text": "Before you are connected, please make sure you have the following ready. Your reference number. Your other reference number. A form twenty-seven B, signed by a witness.",
+          "startMs": 40
+        },
+        {
+          "speaker": "Pam (Automated)",
+          "text": "The witness. A second witness, to confirm the first witness. And a short essay on why you deserve to speak to someone. Thank you. Please hold.",
+          "startMs": 8914
+        }
+      ]
+    },
+    {
+      "id": "psa-005",
+      "category": "psa",
+      "url": "/voice/hold-music/psa-005.mp3",
+      "durationMs": 13718,
+      "title": "A message about the plant",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Pam (Automated)",
+          "text": "A message from facilities. The plant in the waiting room has now grown taller than the waiting room.",
+          "startMs": 41
+        },
+        {
+          "speaker": "Pam (Automated)",
+          "text": "We will not be cutting it back. It has been here longer than most of you. It now has more seniority than Pam. It has asked for a window. Please hold.",
+          "startMs": 5765
+        }
+      ]
+    },
+    {
+      "id": "psa-006",
+      "category": "psa",
+      "url": "/voice/hold-music/psa-006.mp3",
+      "durationMs": 13333,
+      "title": "Did you know",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Pam (Automated)",
+          "text": "Did you know? Pam, your automated assistant, has herself been on hold since the Bronze Age. She is calling to complain about the hold music.",
+          "startMs": 43
+        },
+        {
+          "speaker": "Pam (Automated)",
+          "text": "Pam would like you to know that she understands. Pam would also like you to know that she is next.",
+          "startMs": 7924
+        }
+      ]
+    },
+    {
+      "id": "psa-007",
+      "category": "psa",
+      "url": "/voice/hold-music/psa-007.mp3",
+      "durationMs": 11204,
+      "title": "Transferring you now",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Pam (Automated)",
+          "text": "Please wait while we transfer you to the next available department.",
+          "startMs": 40
+        },
+        {
+          "speaker": "Pam (Automated)",
+          "text": "You have been transferred to the Department of Hold Music. Thank you for holding. Please hold.",
+          "startMs": 6164
+        }
+      ]
+    },
+    {
+      "id": "psa-008",
+      "category": "psa",
+      "url": "/voice/hold-music/psa-008.mp3",
+      "durationMs": 15981,
+      "title": "Callback service",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Pam (Automated)",
+          "text": "We now offer a callback service. Leave your number, and an operator will call you back at a time of their choosing.",
+          "startMs": 49
+        },
+        {
+          "speaker": "Pam (Automated)",
+          "text": "Operators choose a time based on the phase of the moon and their mood. Most callbacks arrive within one lifetime. Some arrive before you call. If your phone is ringing now, please hold.",
+          "startMs": 6172
+        }
+      ]
+    },
+    {
+      "id": "psa-009",
+      "category": "psa",
+      "url": "/voice/hold-music/psa-009.mp3",
+      "durationMs": 12912,
+      "title": "Customer survey",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Pam (Automated)",
+          "text": "At the end of your call, you will be invited to take a short survey about your experience.",
+          "startMs": 40
+        },
+        {
+          "speaker": "Pam (Automated)",
+          "text": "The survey also has a queue. You may now hold for the survey while you hold for your call. Your opinion is important to us. Please hold your opinion.",
+          "startMs": 4946
+        }
+      ]
+    },
+    {
+      "id": "psa-010",
+      "category": "psa",
+      "url": "/voice/hold-music/psa-010.mp3",
+      "durationMs": 11805,
+      "title": "A human is available",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Pam (Automated)",
+          "text": "Good news. A human is now available to take your call.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Gareth from Escalations",
+          "text": "Hello, Gareth speaking, Escalations, how can—",
+          "startMs": 4220
+        },
+        {
+          "speaker": "Pam (Automated)",
+          "text": "That human is no longer available. Please hold.",
+          "startMs": 8764
+        }
+      ]
+    },
+    {
+      "id": "psa-011",
+      "category": "psa",
+      "url": "/voice/hold-music/psa-011.mp3",
+      "durationMs": 11630,
+      "title": "The clock",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Pam (Automated)",
+          "text": "The clock in the waiting room has no hands. This is not a fault. The clock is also waiting.",
+          "startMs": 47
+        },
+        {
+          "speaker": "Pam (Automated)",
+          "text": "Please do not ask the clock how long it has been. It is sensitive about it. It was a sundial, once. Please hold.",
+          "startMs": 5510
+        }
+      ]
+    },
+    {
+      "id": "psa-012",
+      "category": "psa",
+      "url": "/voice/hold-music/psa-012.mp3",
+      "durationMs": 11433,
+      "title": "Speak to a supervisor",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Pam (Automated)",
+          "text": "Some callers have asked to speak to my supervisor. Connecting you now.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Pam's Supervisor (Also Automated)",
+          "text": "Hello. This is Pam's supervisor. Please hold.",
+          "startMs": 4767
+        },
+        {
+          "speaker": "Pam (Automated)",
+          "text": "Thank you. As you can hear, it runs in the family.",
+          "startMs": 8411
+        }
+      ]
+    },
+    {
+      "id": "psa-013",
+      "category": "psa",
+      "url": "/voice/hold-music/psa-013.mp3",
+      "durationMs": 11440,
+      "title": "Payment in geese",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Pam (Automated)",
+          "text": "A reminder. The Department cannot accept payment in geese. We have had to say this more often than you would think.",
+          "startMs": 40
+        },
+        {
+          "speaker": "Pam (Automated)",
+          "text": "The geese are currently in the lobby. They are also holding. They are holding better than you. Please hold.",
+          "startMs": 6336
+        }
+      ]
+    },
+    {
+      "id": "psa-014",
+      "category": "psa",
+      "url": "/voice/hold-music/psa-014.mp3",
+      "durationMs": 16195,
+      "title": "Today's sponsor",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Pam (Automated)",
+          "text": "Your hold today is sponsored by Grumbel's Ladders. Pam has been asked to remind you that there is no ladder out of here.",
+          "startMs": 50
+        },
+        {
+          "speaker": "Pam (Automated)",
+          "text": "Grumbel's would like to remind Pam that up is a choice. Pam would like to remind Grumbel's that Floor minus four has a ceiling. Discussions are ongoing. Please hold.",
+          "startMs": 6788
+        }
+      ]
+    },
+    {
+      "id": "psa-015",
+      "category": "psa",
+      "url": "/voice/hold-music/psa-015.mp3",
+      "durationMs": 21260,
+      "title": "Now serving ticket number one",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Pam (Automated)",
+          "text": "Now serving ticket number one.",
+          "startMs": 1050
+        },
+        {
+          "speaker": "Pam (Automated)",
+          "text": "We would like to thank ticket number one for their patience. Ticket number one was issued in the reign of a king nobody remembers.",
+          "startMs": 3458
+        },
+        {
+          "speaker": "Pam (Automated)",
+          "text": "Ticket number one is a skeleton now, but a very patient skeleton. Please join us in a round of applause.",
+          "startMs": 10760
+        },
+        {
+          "speaker": "Pam (Automated)",
+          "text": "Now serving ticket number two.",
+          "startMs": 19085
+        }
+      ]
+    },
+    {
+      "id": "psa-016",
+      "category": "psa",
+      "url": "/voice/hold-music/psa-016.mp3",
+      "durationMs": 12635,
+      "title": "The end of the queue",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Pam (Automated)",
+          "text": "We have some exciting news. Somebody has reached the end of the queue.",
+          "startMs": 43
+        },
+        {
+          "speaker": "Pam (Automated)",
+          "text": "We are looking into how this happened.",
+          "startMs": 4824
+        },
+        {
+          "speaker": "Pam (Automated)",
+          "text": "In the meantime, the end of the queue has been moved. Thank you for your understanding. Please hold.",
+          "startMs": 7521
+        }
+      ]
+    },
+    {
+      "id": "psa-017",
+      "category": "psa",
+      "url": "/voice/hold-music/psa-017.mp3",
+      "durationMs": 13778,
+      "title": "Hold music feedback",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Pam (Automated)",
+          "text": "Some callers have complained that the hold music is always the same song. We have listened to this feedback.",
+          "startMs": 40
+        },
+        {
+          "speaker": "Pam (Automated)",
+          "text": "The hold music is now always a different song, which sounds exactly like the same song. We hope you notice the difference. Please hold.",
+          "startMs": 6390
+        }
+      ]
+    },
+    {
+      "id": "dj-001",
+      "category": "dj",
+      "url": "/voice/hold-music/dj-001.mp3",
+      "durationMs": 11962,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Pam (Automated)",
+          "text": "Pam here. Off the record. I don't usually say this, but the hold music today is very good. I've been listening to it for four thousand years.",
+          "startMs": 39
+        },
+        {
+          "speaker": "Pam (Automated)",
+          "text": "This next one is my favourite. It's the same as the last one. Please hold.",
+          "startMs": 7798
+        }
+      ]
+    },
+    {
+      "id": "dj-002",
+      "category": "dj",
+      "url": "/voice/hold-music/dj-002.mp3",
+      "durationMs": 11023,
+      "overMusic": true,
+      "daypart": "night",
+      "lines": [
+        {
+          "speaker": "Pam (Automated)",
+          "text": "It is late. The office lights have dimmed to energy-saving beige. If you are still holding, you are among our most loyal callers.",
+          "startMs": 40
+        },
+        {
+          "speaker": "Pam (Automated)",
+          "text": "Thank you. You have been promoted from caller to resident. Please hold.",
+          "startMs": 7150
+        }
+      ]
+    },
+    {
+      "id": "dj-003",
+      "category": "dj",
+      "url": "/voice/hold-music/dj-003.mp3",
+      "durationMs": 11921,
+      "overMusic": true,
+      "daypart": "morning",
+      "lines": [
+        {
+          "speaker": "Pam (Automated)",
+          "text": "Good morning, and thank you for holding overnight. Breakfast is not available. However, the vending machine on Floor minus four will dispense one biscuit to any caller who can prove they have been holding since before the vending machine.",
+          "startMs": 40
+        }
+      ]
+    },
+    {
+      "id": "call-001",
+      "category": "call",
+      "url": "/voice/hold-music/call-001.mp3",
+      "durationMs": 26203,
+      "title": "Bev is on hold",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Pam (Automated)",
+          "text": "You are caller number eight thousand and two. Please hold.",
+          "startMs": 50
+        },
+        {
+          "speaker": "Bev",
+          "text": "Hello? Is this the request line? I've been trying every station.",
+          "startMs": 3568
+        },
+        {
+          "speaker": "Pam (Automated)",
+          "text": "Please hold.",
+          "startMs": 7505
+        },
+        {
+          "speaker": "Bev",
+          "text": "There's a song I'm looking for. I heard it in a lift. It goes, da da dum, da da.",
+          "startMs": 9024
+        },
+        {
+          "speaker": "Pam (Automated)",
+          "text": "Please hold.",
+          "startMs": 15652
+        },
+        {
+          "speaker": "Pam (Automated)",
+          "text": "Da da dum.",
+          "startMs": 18021
+        },
+        {
+          "speaker": "Bev",
+          "text": "That's it! That's the one! Who's it by?",
+          "startMs": 20730
+        },
+        {
+          "speaker": "Pam (Automated)",
+          "text": "Please hold.",
+          "startMs": 23145
+        },
+        {
+          "speaker": "Bev",
+          "text": "Oh, for goodness' sake.",
+          "startMs": 24664
+        }
+      ]
+    }
+  ]
+}

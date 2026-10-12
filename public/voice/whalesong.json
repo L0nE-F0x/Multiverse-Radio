@@ -1,0 +1,295 @@
+{
+  "version": 1,
+  "station": "whalesong",
+  "clips": [
+    {
+      "id": "id-001",
+      "category": "id",
+      "url": "/voice/whalesong/id-001.mp3",
+      "durationMs": 3396,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Captain Hum",
+          "text": "Deep Space Whalesong. Lane twelve. All is well.",
+          "startMs": 38
+        }
+      ]
+    },
+    {
+      "id": "id-002",
+      "category": "id",
+      "url": "/voice/whalesong/id-002.mp3",
+      "durationMs": 3502,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Captain Hum",
+          "text": "This is Captain Hum. Deep Space Whalesong. Rest easy.",
+          "startMs": 50
+        }
+      ]
+    },
+    {
+      "id": "id-003",
+      "category": "id",
+      "url": "/voice/whalesong/id-003.mp3",
+      "durationMs": 4106,
+      "overMusic": true,
+      "daypart": "night",
+      "lines": [
+        {
+          "speaker": "Captain Hum",
+          "text": "Deep Space Whalesong, night watch. The whales are fine.",
+          "startMs": 37
+        }
+      ]
+    },
+    {
+      "id": "id-004",
+      "category": "id",
+      "url": "/voice/whalesong/id-004.mp3",
+      "durationMs": 5403,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Captain Hum",
+          "text": "Ninety-nine point six. Deep Space Whalesong. Somewhere between galaxies.",
+          "startMs": 50
+        }
+      ]
+    },
+    {
+      "id": "id-005",
+      "category": "id",
+      "url": "/voice/whalesong/id-005.mp3",
+      "durationMs": 3309,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Captain Hum",
+          "text": "Whalesong.",
+          "startMs": 50
+        },
+        {
+          "speaker": "Captain Hum",
+          "text": "Carry on.",
+          "startMs": 2267
+        }
+      ]
+    },
+    {
+      "id": "dj-001",
+      "category": "dj",
+      "url": "/voice/whalesong/dj-001.mp3",
+      "durationMs": 14577,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Captain Hum",
+          "text": "Captain's log. We are drifting at a comfortable speed. One galaxy per century. No rush.",
+          "startMs": 50
+        },
+        {
+          "speaker": "Captain Hum",
+          "text": "The whales are swimming alongside. They are fine. I asked.",
+          "startMs": 6546
+        },
+        {
+          "speaker": "Captain Hum",
+          "text": "Well. I didn't ask. You don't ask the whales.",
+          "startMs": 11570
+        }
+      ]
+    },
+    {
+      "id": "dj-002",
+      "category": "dj",
+      "url": "/voice/whalesong/dj-002.mp3",
+      "durationMs": 9871,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Captain Hum",
+          "text": "If you can't sleep, that's alright. The ship is awake. The whales are awake.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Captain Hum",
+          "text": "Someone is always awake out here. You're in good company.",
+          "startMs": 5948
+        }
+      ]
+    },
+    {
+      "id": "dj-003",
+      "category": "dj",
+      "url": "/voice/whalesong/dj-003.mp3",
+      "durationMs": 10938,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Captain Hum",
+          "text": "One of the whales turned and looked at the ship just now. For quite a long time.",
+          "startMs": 36
+        },
+        {
+          "speaker": "Captain Hum",
+          "text": "I'm sure it's nothing.",
+          "startMs": 6829
+        },
+        {
+          "speaker": "Captain Hum",
+          "text": "Carry on.",
+          "startMs": 9896
+        }
+      ]
+    },
+    {
+      "id": "dj-004",
+      "category": "dj",
+      "url": "/voice/whalesong/dj-004.mp3",
+      "durationMs": 9487,
+      "overMusic": true,
+      "daypart": "night",
+      "lines": [
+        {
+          "speaker": "Captain Hum",
+          "text": "It's very dark out here tonight. That's normal. It's always dark out here.",
+          "startMs": 50
+        },
+        {
+          "speaker": "Captain Hum",
+          "text": "I just like to mention it, so you know that I've noticed.",
+          "startMs": 6010
+        }
+      ]
+    },
+    {
+      "id": "dj-005",
+      "category": "dj",
+      "url": "/voice/whalesong/dj-005.mp3",
+      "durationMs": 13998,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Captain Hum",
+          "text": "Odd sighting off the port side. A small flock of geese. In space. Flying in formation.",
+          "startMs": 45
+        },
+        {
+          "speaker": "Captain Hum",
+          "text": "They looked at us as if we owed them something.",
+          "startMs": 7083
+        },
+        {
+          "speaker": "Captain Hum",
+          "text": "We don't. I don't think we do.",
+          "startMs": 11769
+        }
+      ]
+    },
+    {
+      "id": "dj-006",
+      "category": "dj",
+      "url": "/voice/whalesong/dj-006.mp3",
+      "durationMs": 8869,
+      "overMusic": true,
+      "daypart": "morning",
+      "lines": [
+        {
+          "speaker": "Captain Hum",
+          "text": "Good morning. There is no morning out here, of course. But I keep one for you anyway.",
+          "startMs": 50
+        },
+        {
+          "speaker": "Captain Hum",
+          "text": "Here it is. Good morning.",
+          "startMs": 6470
+        }
+      ]
+    },
+    {
+      "id": "dj-007",
+      "category": "dj",
+      "url": "/voice/whalesong/dj-007.mp3",
+      "durationMs": 10279,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Captain Hum",
+          "text": "We have a stowaway. A shadow, sitting very quietly in the observation lounge. Says his name is Greg. Says he wanted to see the whales.",
+          "startMs": 50
+        },
+        {
+          "speaker": "Captain Hum",
+          "text": "Well. Who doesn't.",
+          "startMs": 8932
+        }
+      ]
+    },
+    {
+      "id": "dj-008",
+      "category": "dj",
+      "url": "/voice/whalesong/dj-008.mp3",
+      "durationMs": 12621,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Captain Hum",
+          "text": "The whales are singing again. Long, low notes. They carry for light years.",
+          "startMs": 50
+        },
+        {
+          "speaker": "Captain Hum",
+          "text": "Somewhere a very long way from here, someone is hearing this, and they don't know why they feel better.",
+          "startMs": 5203
+        },
+        {
+          "speaker": "Captain Hum",
+          "text": "That's the whales.",
+          "startMs": 11322
+        }
+      ]
+    },
+    {
+      "id": "dj-009",
+      "category": "dj",
+      "url": "/voice/whalesong/dj-009.mp3",
+      "durationMs": 9071,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Captain Hum",
+          "text": "I'll leave you now. I'll be back in an hour or so. Maybe two.",
+          "startMs": 39
+        },
+        {
+          "speaker": "Captain Hum",
+          "text": "The whales will keep you company. Don't ask them anything. Just listen.",
+          "startMs": 5030
+        }
+      ]
+    },
+    {
+      "id": "dj-010",
+      "category": "dj",
+      "url": "/voice/whalesong/dj-010.mp3",
+      "durationMs": 12190,
+      "overMusic": true,
+      "daypart": "night",
+      "lines": [
+        {
+          "speaker": "Captain Hum",
+          "text": "Faint signal on the long-range set. A man called Teodor, at Relay Four, asking if anyone can hear him.",
+          "startMs": 50
+        },
+        {
+          "speaker": "Captain Hum",
+          "text": "We can, Teodor. So can the whales. They've started singing back.",
+          "startMs": 8064
+        }
+      ]
+    }
+  ]
+}

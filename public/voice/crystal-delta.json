@@ -1,0 +1,550 @@
+{
+  "version": 1,
+  "station": "crystal-delta",
+  "clips": [
+    {
+      "id": "id-001",
+      "category": "id",
+      "url": "/voice/crystal-delta/id-001.mp3",
+      "durationMs": 6807,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Prism",
+          "text": "You're listening to Crystal Radio Delta.",
+          "startMs": 39
+        },
+        {
+          "speaker": "Prism",
+          "text": "You're glistening to Crystal Radio Delta.",
+          "startMs": 2560
+        }
+      ]
+    },
+    {
+      "id": "id-002",
+      "category": "id",
+      "url": "/voice/crystal-delta/id-002.mp3",
+      "durationMs": 7077,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Prism",
+          "text": "Glass beats from a dimension made of chandeliers.",
+          "startMs": 37
+        },
+        {
+          "speaker": "Prism",
+          "text": "Glass beats from a chandelier made of dimensions.",
+          "startMs": 2716
+        }
+      ]
+    },
+    {
+      "id": "id-003",
+      "category": "id",
+      "url": "/voice/crystal-delta/id-003.mp3",
+      "durationMs": 7372,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Prism",
+          "text": "Crystal Radio Delta. Ninety-five point two.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Prism",
+          "text": "Ninety-five point two, and a little bit of three.",
+          "startMs": 3087
+        }
+      ]
+    },
+    {
+      "id": "id-004",
+      "category": "id",
+      "url": "/voice/crystal-delta/id-004.mp3",
+      "durationMs": 6348,
+      "overMusic": true,
+      "daypart": "night",
+      "lines": [
+        {
+          "speaker": "Prism",
+          "text": "Good night, from Crystal Radio Delta.",
+          "startMs": 35
+        },
+        {
+          "speaker": "Prism",
+          "text": "Good light, from Crystal Radio Delta.",
+          "startMs": 2390
+        }
+      ]
+    },
+    {
+      "id": "id-005",
+      "category": "id",
+      "url": "/voice/crystal-delta/id-005.mp3",
+      "durationMs": 6954,
+      "overMusic": true,
+      "daypart": "morning",
+      "lines": [
+        {
+          "speaker": "Prism",
+          "text": "Good morning, from Refraction Point Seven.",
+          "startMs": 35
+        },
+        {
+          "speaker": "Prism",
+          "text": "Good morning, from Refraction Point Seven and a half.",
+          "startMs": 2391
+        }
+      ]
+    },
+    {
+      "id": "id-006",
+      "category": "id",
+      "url": "/voice/crystal-delta/id-006.mp3",
+      "durationMs": 6456,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Prism",
+          "text": "This is Crystal Radio Delta. Everything shines.",
+          "startMs": 36
+        },
+        {
+          "speaker": "Prism",
+          "text": "Everything shines twice.",
+          "startMs": 3166
+        }
+      ]
+    },
+    {
+      "id": "id-007",
+      "category": "id",
+      "url": "/voice/crystal-delta/id-007.mp3",
+      "durationMs": 6393,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The Tiny Miner",
+          "text": "Crystal Radio Delta.",
+          "startMs": 40
+        },
+        {
+          "speaker": "Prism",
+          "text": "Thank you, tiny miner.",
+          "startMs": 1711
+        },
+        {
+          "speaker": "Prism",
+          "text": "Thank you, tinier miner.",
+          "startMs": 3217
+        }
+      ]
+    },
+    {
+      "id": "dj-001",
+      "category": "dj",
+      "url": "/voice/crystal-delta/dj-001.mp3",
+      "durationMs": 9038,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Prism",
+          "text": "That was a song about light.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Prism",
+          "text": "That was a light about song.",
+          "startMs": 1639
+        },
+        {
+          "speaker": "Prism",
+          "text": "In here, both of those are true. It's one of the nicest things about living in a chandelier. Here's another.",
+          "startMs": 3206
+        }
+      ]
+    },
+    {
+      "id": "dj-002",
+      "category": "dj",
+      "url": "/voice/crystal-delta/dj-002.mp3",
+      "durationMs": 10970,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Prism",
+          "text": "The tiny miner is on his tea break.",
+          "startMs": 36
+        },
+        {
+          "speaker": "Prism",
+          "text": "The tiny miner is on his tea break, again.",
+          "startMs": 2268
+        },
+        {
+          "speaker": "Prism",
+          "text": "He's earned it. This morning he found a crystal that hums in the key of Tuesday. Here's something to hum along with.",
+          "startMs": 4802
+        }
+      ]
+    },
+    {
+      "id": "dj-003",
+      "category": "dj",
+      "url": "/voice/crystal-delta/dj-003.mp3",
+      "durationMs": 13430,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Prism",
+          "text": "If you hold a glass of water up to your radio right now, you'll see the music.",
+          "startMs": 37
+        },
+        {
+          "speaker": "Prism",
+          "text": "If you hold a glass of music up to your radio, you'll hear the water.",
+          "startMs": 4479
+        },
+        {
+          "speaker": "Prism",
+          "text": "Please try one of those. Not both. Last time someone tried both, their kitchen sang for a week.",
+          "startMs": 8153
+        }
+      ]
+    },
+    {
+      "id": "dj-004",
+      "category": "dj",
+      "url": "/voice/crystal-delta/dj-004.mp3",
+      "durationMs": 9086,
+      "overMusic": true,
+      "daypart": "morning",
+      "lines": [
+        {
+          "speaker": "Prism",
+          "text": "Morning light is coming in through the cave roof.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Prism",
+          "text": "Morning light is going out through the cave floor.",
+          "startMs": 2494
+        },
+        {
+          "speaker": "Prism",
+          "text": "We're never quite sure which. We've stopped asking. It's very pretty either way.",
+          "startMs": 5084
+        }
+      ]
+    },
+    {
+      "id": "dj-005",
+      "category": "dj",
+      "url": "/voice/crystal-delta/dj-005.mp3",
+      "durationMs": 9012,
+      "overMusic": true,
+      "daypart": "night",
+      "lines": [
+        {
+          "speaker": "Prism",
+          "text": "It's dark outside the cave.",
+          "startMs": 36
+        },
+        {
+          "speaker": "Prism",
+          "text": "It's bright inside the cave.",
+          "startMs": 1776
+        },
+        {
+          "speaker": "Prism",
+          "text": "That's the arrangement we have with the night. It keeps the outside, we keep the in. Here's a slow one.",
+          "startMs": 3485
+        }
+      ]
+    },
+    {
+      "id": "dj-006",
+      "category": "dj",
+      "url": "/voice/crystal-delta/dj-006.mp3",
+      "durationMs": 8441,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Prism",
+          "text": "This hour is sponsored by Grumbel's Ladders.",
+          "startMs": 36
+        },
+        {
+          "speaker": "Prism",
+          "text": "This ladder is sponsored by Grumbel's Hours.",
+          "startMs": 2534
+        },
+        {
+          "speaker": "Prism",
+          "text": "Up is a choice. Please choose it carefully, around the chandeliers.",
+          "startMs": 5096
+        }
+      ]
+    },
+    {
+      "id": "dj-007",
+      "category": "dj",
+      "url": "/voice/crystal-delta/dj-007.mp3",
+      "durationMs": 8284,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Prism",
+          "text": "A gentle reminder. Please don't tap on the crystals.",
+          "startMs": 36
+        },
+        {
+          "speaker": "Prism",
+          "text": "A gentle reminder. The crystals will tap back.",
+          "startMs": 3298
+        },
+        {
+          "speaker": "Prism",
+          "text": "And they have all night, and very good rhythm.",
+          "startMs": 6149
+        }
+      ]
+    },
+    {
+      "id": "dj-008",
+      "category": "dj",
+      "url": "/voice/crystal-delta/dj-008.mp3",
+      "durationMs": 11207,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Prism",
+          "text": "That last track had seven harmonies.",
+          "startMs": 39
+        },
+        {
+          "speaker": "Prism",
+          "text": "That last track had seven colours.",
+          "startMs": 2169
+        },
+        {
+          "speaker": "Prism",
+          "text": "And one note nobody played, that turned up anyway. We've given it a little room of its own, near the back. Here's the next one.",
+          "startMs": 4201
+        }
+      ]
+    },
+    {
+      "id": "dj-009",
+      "category": "dj",
+      "url": "/voice/crystal-delta/dj-009.mp3",
+      "durationMs": 13459,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Prism",
+          "text": "A small shadow has been seen in the big chandelier.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Prism",
+          "text": "A big shadow has been seen in the small chandelier.",
+          "startMs": 2901
+        },
+        {
+          "speaker": "Prism",
+          "text": "Either way, he says his name is Greg, and he likes it up there. He says it's the first place he's ever been the light. Hollis, he's alright.",
+          "startMs": 5689
+        }
+      ]
+    },
+    {
+      "id": "dj-010",
+      "category": "dj",
+      "url": "/voice/crystal-delta/dj-010.mp3",
+      "durationMs": 10279,
+      "overMusic": true,
+      "daypart": "day",
+      "lines": [
+        {
+          "speaker": "Prism",
+          "text": "Afternoon, everyone. The sundogs are out.",
+          "startMs": 37
+        },
+        {
+          "speaker": "Prism",
+          "text": "Afternoon, everyone. The sun's dogs are out.",
+          "startMs": 2681
+        },
+        {
+          "speaker": "Prism",
+          "text": "Very good dogs, made of light. They don't fetch, but they do follow you home. Here's a song.",
+          "startMs": 5523
+        }
+      ]
+    },
+    {
+      "id": "dj-011",
+      "category": "dj",
+      "url": "/voice/crystal-delta/dj-011.mp3",
+      "durationMs": 8325,
+      "overMusic": true,
+      "daypart": "evening",
+      "lines": [
+        {
+          "speaker": "Prism",
+          "text": "The evening is refracting into night.",
+          "startMs": 36
+        },
+        {
+          "speaker": "Prism",
+          "text": "The night is reflecting on the evening.",
+          "startMs": 2274
+        },
+        {
+          "speaker": "Prism",
+          "text": "They do this every day, and every day it's new. Here's something sparkly.",
+          "startMs": 4415
+        }
+      ]
+    },
+    {
+      "id": "dj-012",
+      "category": "dj",
+      "url": "/voice/crystal-delta/dj-012.mp3",
+      "durationMs": 10204,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Prism",
+          "text": "A listener writes: I love how you say everything twice.",
+          "startMs": 36
+        },
+        {
+          "speaker": "Prism",
+          "text": "A listener writes: I love how you say everything twice, nearly.",
+          "startMs": 3055
+        },
+        {
+          "speaker": "Prism",
+          "text": "Thank you.",
+          "startMs": 6465
+        },
+        {
+          "speaker": "Prism",
+          "text": "Thank you, nearly.",
+          "startMs": 7423
+        }
+      ]
+    },
+    {
+      "id": "dj-013",
+      "category": "dj",
+      "url": "/voice/crystal-delta/dj-013.mp3",
+      "durationMs": 9149,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The Tiny Miner",
+          "text": "Found another one.",
+          "startMs": 37
+        },
+        {
+          "speaker": "Prism",
+          "text": "The tiny miner has found another crystal.",
+          "startMs": 1345
+        },
+        {
+          "speaker": "Prism",
+          "text": "The tiny crystal has found another miner.",
+          "startMs": 3831
+        },
+        {
+          "speaker": "The Tiny Miner",
+          "text": "That's also true.",
+          "startMs": 6261
+        },
+        {
+          "speaker": "Prism",
+          "text": "Here's a song for both of them.",
+          "startMs": 7614
+        }
+      ]
+    },
+    {
+      "id": "dj-014",
+      "category": "dj",
+      "url": "/voice/crystal-delta/dj-014.mp3",
+      "durationMs": 10247,
+      "overMusic": true,
+      "daypart": "night",
+      "lines": [
+        {
+          "speaker": "Prism",
+          "text": "If you're lying awake, look at your ceiling, and imagine it's made of glass.",
+          "startMs": 37
+        },
+        {
+          "speaker": "Prism",
+          "text": "If you're made of glass, look at your ceiling, and imagine you're lying awake.",
+          "startMs": 4006
+        },
+        {
+          "speaker": "Prism",
+          "text": "Hm. The first one was better. Sleep well.",
+          "startMs": 7903
+        }
+      ]
+    },
+    {
+      "id": "dj-015",
+      "category": "dj",
+      "url": "/voice/crystal-delta/dj-015.mp3",
+      "durationMs": 7741,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Prism",
+          "text": "Coming up, more glass beats.",
+          "startMs": 36
+        },
+        {
+          "speaker": "Prism",
+          "text": "Coming down, more glass beats.",
+          "startMs": 1740
+        },
+        {
+          "speaker": "Prism",
+          "text": "Coming sideways, a song so clear you can see straight through it to the next one.",
+          "startMs": 3604
+        }
+      ]
+    },
+    {
+      "id": "dj-016",
+      "category": "dj",
+      "url": "/voice/crystal-delta/dj-016.mp3",
+      "durationMs": 10992,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Prism",
+          "text": "Sometimes people ask which of my sentences is the real one.",
+          "startMs": 41
+        },
+        {
+          "speaker": "Prism",
+          "text": "Sometimes people ask which of my sentences is the real me.",
+          "startMs": 3782
+        },
+        {
+          "speaker": "Prism",
+          "text": "I tell them, it's the light in between. That's where I live. Here's a song.",
+          "startMs": 7449
+        }
+      ]
+    }
+  ]
+}

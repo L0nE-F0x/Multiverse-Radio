@@ -1,0 +1,431 @@
+{
+  "version": 1,
+  "station": "baroque-bots",
+  "clips": [
+    {
+      "id": "id-001",
+      "category": "id",
+      "url": "/voice/baroque-bots/id-001.mp3",
+      "durationMs": 7520,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Maestro Unit Seven",
+          "text": "You are listening to the Baroque Robot Philharmonic. Please hold your applause until it is requested.",
+          "startMs": 50
+        }
+      ]
+    },
+    {
+      "id": "id-002",
+      "category": "id",
+      "url": "/voice/baroque-bots/id-002.mp3",
+      "durationMs": 8028,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Maestro Unit Seven",
+          "text": "The Baroque Robot Philharmonic. One hundred and one point three. Adequately moving, by human standards.",
+          "startMs": 35
+        }
+      ]
+    },
+    {
+      "id": "id-003",
+      "category": "id",
+      "url": "/voice/baroque-bots/id-003.mp3",
+      "durationMs": 6415,
+      "overMusic": true,
+      "daypart": "evening",
+      "lines": [
+        {
+          "speaker": "Maestro Unit Seven",
+          "text": "Good evening. This is the Clockwork Court of Seventeen-Hundred-and-Never. Wigs on.",
+          "startMs": 50
+        }
+      ]
+    },
+    {
+      "id": "id-004",
+      "category": "id",
+      "url": "/voice/baroque-bots/id-004.mp3",
+      "durationMs": 7268,
+      "overMusic": true,
+      "daypart": "morning",
+      "lines": [
+        {
+          "speaker": "Maestro Unit Seven",
+          "text": "Good morning. The Baroque Robot Philharmonic has been tuning since four. It is nearly in tune.",
+          "startMs": 39
+        }
+      ]
+    },
+    {
+      "id": "id-005",
+      "category": "id",
+      "url": "/voice/baroque-bots/id-005.mp3",
+      "durationMs": 7409,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Maestro Unit Seven",
+          "text": "The Baroque Robot Philharmonic. Counterpoint, performed by machines pretending to have feelings.",
+          "startMs": 36
+        }
+      ]
+    },
+    {
+      "id": "id-006",
+      "category": "id",
+      "url": "/voice/baroque-bots/id-006.mp3",
+      "durationMs": 8053,
+      "overMusic": true,
+      "daypart": "night",
+      "lines": [
+        {
+          "speaker": "Maestro Unit Seven",
+          "text": "The Baroque Robot Philharmonic, by candlelight. The candles are decorative. We see perfectly well in the dark.",
+          "startMs": 37
+        }
+      ]
+    },
+    {
+      "id": "id-007",
+      "category": "id",
+      "url": "/voice/baroque-bots/id-007.mp3",
+      "durationMs": 5585,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Maestro Unit Seven",
+          "text": "The Baroque Robot Philharmonic.",
+          "startMs": 36
+        },
+        {
+          "speaker": "Unit Nine (Cello)",
+          "text": "Affirmative.",
+          "startMs": 2656
+        }
+      ]
+    },
+    {
+      "id": "dj-001",
+      "category": "dj",
+      "url": "/voice/baroque-bots/dj-001.mp3",
+      "durationMs": 10722,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Maestro Unit Seven",
+          "text": "That was a fugue for toaster in D minor. Adequately moving, by human standards. The second voice entered four milliseconds late.",
+          "startMs": 46
+        },
+        {
+          "speaker": "Maestro Unit Seven",
+          "text": "I have filed a report. Against myself. I was conducting.",
+          "startMs": 7420
+        }
+      ]
+    },
+    {
+      "id": "dj-002",
+      "category": "dj",
+      "url": "/voice/baroque-bots/dj-002.mp3",
+      "durationMs": 11174,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Maestro Unit Seven",
+          "text": "A note on the conductor's spoon. Listeners have written to ask why we conduct with a spoon. The spoon has written back.",
+          "startMs": 36
+        },
+        {
+          "speaker": "Maestro Unit Seven",
+          "text": "The spoon's letter was longer, and frankly better argued. The spoon stays.",
+          "startMs": 6970
+        }
+      ]
+    },
+    {
+      "id": "dj-003",
+      "category": "dj",
+      "url": "/voice/baroque-bots/dj-003.mp3",
+      "durationMs": 11796,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Maestro Unit Seven",
+          "text": "During the slow movement, our cellist, Unit Nine, experienced what he describes as a feeling. Unit Nine. Describe the feeling.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Unit Nine (Cello)",
+          "text": "Warm. Near the fan.",
+          "startMs": 7459
+        },
+        {
+          "speaker": "Maestro Unit Seven",
+          "text": "Overheating, then. Beautiful. Next piece.",
+          "startMs": 9320
+        }
+      ]
+    },
+    {
+      "id": "dj-004",
+      "category": "dj",
+      "url": "/voice/baroque-bots/dj-004.mp3",
+      "durationMs": 15558,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Maestro Unit Seven",
+          "text": "Visitors to the salon often ask about the oil portrait above the harpsichord. It is of a toaster. The finest toaster who ever lived.",
+          "startMs": 41
+        },
+        {
+          "speaker": "Maestro Unit Seven",
+          "text": "He knew one piece of music. He performed it every morning. It went, pop. We still observe a moment of silence in his honour, followed by toast.",
+          "startMs": 8050
+        }
+      ]
+    },
+    {
+      "id": "dj-005",
+      "category": "dj",
+      "url": "/voice/baroque-bots/dj-005.mp3",
+      "durationMs": 13418,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Maestro Unit Seven",
+          "text": "This recital is sponsored by Grumbel's Ladders. I have reviewed their ladder. It is a sequence of rungs in strict ascending order. No modulation. No development.",
+          "startMs": 45
+        },
+        {
+          "speaker": "Maestro Unit Seven",
+          "text": "Nevertheless, it goes up. Four stars. Grumbel's. Up is a choice.",
+          "startMs": 9720
+        }
+      ]
+    },
+    {
+      "id": "dj-006",
+      "category": "dj",
+      "url": "/voice/baroque-bots/dj-006.mp3",
+      "durationMs": 11662,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Maestro Unit Seven",
+          "text": "I am frequently asked what adequately moving, by human standards, means. It means that a human would weep.",
+          "startMs": 36
+        },
+        {
+          "speaker": "Maestro Unit Seven",
+          "text": "I, of course, would not. I would simply need to leave the room for a moment, for unrelated maintenance.",
+          "startMs": 6213
+        }
+      ]
+    },
+    {
+      "id": "dj-007",
+      "category": "dj",
+      "url": "/voice/baroque-bots/dj-007.mp3",
+      "durationMs": 9938,
+      "overMusic": true,
+      "daypart": "morning",
+      "lines": [
+        {
+          "speaker": "Maestro Unit Seven",
+          "text": "Good morning. The harpsichord has been tuned. It took four hours. It will hold its tuning for nine minutes.",
+          "startMs": 50
+        },
+        {
+          "speaker": "Maestro Unit Seven",
+          "text": "We will now perform a piece that lasts eight minutes. We are not animals.",
+          "startMs": 6084
+        }
+      ]
+    },
+    {
+      "id": "dj-008",
+      "category": "dj",
+      "url": "/voice/baroque-bots/dj-008.mp3",
+      "durationMs": 11742,
+      "overMusic": true,
+      "daypart": "night",
+      "lines": [
+        {
+          "speaker": "Maestro Unit Seven",
+          "text": "It is late. The candles have burned down to elegant little stubs. The dust motes are drifting in what I can only describe as an unauthorised manner.",
+          "startMs": 46
+        },
+        {
+          "speaker": "Maestro Unit Seven",
+          "text": "Here is a sarabande. It is slow. Lean back. Mind your wig.",
+          "startMs": 8325
+        }
+      ]
+    },
+    {
+      "id": "dj-009",
+      "category": "dj",
+      "url": "/voice/baroque-bots/dj-009.mp3",
+      "durationMs": 11659,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Maestro Unit Seven",
+          "text": "The audience is reminded that applause between movements is forbidden. Applause after the piece is permitted, and will be measured.",
+          "startMs": 46
+        },
+        {
+          "speaker": "Maestro Unit Seven",
+          "text": "Last night's audience achieved sixty-one decibels. Disappointing. Do better.",
+          "startMs": 7209
+        }
+      ]
+    },
+    {
+      "id": "dj-010",
+      "category": "dj",
+      "url": "/voice/baroque-bots/dj-010.mp3",
+      "durationMs": 13548,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Maestro Unit Seven",
+          "text": "We have an unexpected guest in the gallery. A shadow, unaccompanied, in a borrowed wig. He calls himself Greg. He has wept at every piece tonight.",
+          "startMs": 46
+        },
+        {
+          "speaker": "Maestro Unit Seven",
+          "text": "I find him adequate. More than adequate. Do not tell him I said that. And do tell Hollis he is safe.",
+          "startMs": 8180
+        }
+      ]
+    },
+    {
+      "id": "dj-011",
+      "category": "dj",
+      "url": "/voice/baroque-bots/dj-011.mp3",
+      "durationMs": 10282,
+      "overMusic": true,
+      "daypart": "evening",
+      "lines": [
+        {
+          "speaker": "Maestro Unit Seven",
+          "text": "Good evening. Tonight's programme: counterpoint, variation, and a brief interlude in which the cello and the harpsichord will not be speaking to each other, owing to an incident at rehearsal.",
+          "startMs": 38
+        }
+      ]
+    },
+    {
+      "id": "dj-012",
+      "category": "dj",
+      "url": "/voice/baroque-bots/dj-012.mp3",
+      "durationMs": 8570,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Maestro Unit Seven",
+          "text": "That last piece contained one hundred and twelve notes in the wrong order. They were, however, all the right notes. In music, as in life, this is known as a style.",
+          "startMs": 45
+        }
+      ]
+    },
+    {
+      "id": "dj-013",
+      "category": "dj",
+      "url": "/voice/baroque-bots/dj-013.mp3",
+      "durationMs": 12476,
+      "overMusic": true,
+      "daypart": "day",
+      "lines": [
+        {
+          "speaker": "Maestro Unit Seven",
+          "text": "The Clockwork Court is open to visitors this afternoon. Please do not wind the musicians.",
+          "startMs": 36
+        },
+        {
+          "speaker": "Maestro Unit Seven",
+          "text": "Several were wound by enthusiastic children last week, and are now performing in the garden, unsupervised, at tremendous speed.",
+          "startMs": 5332
+        }
+      ]
+    },
+    {
+      "id": "dj-014",
+      "category": "dj",
+      "url": "/voice/baroque-bots/dj-014.mp3",
+      "durationMs": 10572,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Maestro Unit Seven",
+          "text": "Unit Nine. Do we have time for another?",
+          "startMs": 48
+        },
+        {
+          "speaker": "Unit Nine (Cello)",
+          "text": "Calculating.",
+          "startMs": 2847
+        },
+        {
+          "speaker": "Unit Nine (Cello)",
+          "text": "Yes.",
+          "startMs": 5035
+        },
+        {
+          "speaker": "Maestro Unit Seven",
+          "text": "Splendid. Proceed. And Unit Nine, please. Less vibrato. You are not a human.",
+          "startMs": 6149
+        }
+      ]
+    },
+    {
+      "id": "dj-015",
+      "category": "dj",
+      "url": "/voice/baroque-bots/dj-015.mp3",
+      "durationMs": 12852,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Maestro Unit Seven",
+          "text": "I have been asked whether a robot can truly love music. I can only say that when the final chord resolves, a small light on my chest turns from amber to green.",
+          "startMs": 36
+        },
+        {
+          "speaker": "Maestro Unit Seven",
+          "text": "I have never told anyone what that means. Here is a chaconne.",
+          "startMs": 9250
+        }
+      ]
+    },
+    {
+      "id": "dj-016",
+      "category": "dj",
+      "url": "/voice/baroque-bots/dj-016.mp3",
+      "durationMs": 11447,
+      "overMusic": true,
+      "daypart": "night",
+      "lines": [
+        {
+          "speaker": "Maestro Unit Seven",
+          "text": "Unit Nine has asked me to dedicate this nocturne to someone. I asked to whom.",
+          "startMs": 42
+        },
+        {
+          "speaker": "Unit Nine (Cello)",
+          "text": "The fan.",
+          "startMs": 5026
+        },
+        {
+          "speaker": "Maestro Unit Seven",
+          "text": "To the fan, then. It has kept him cool through four hundred concerts. It deserves a nocturne.",
+          "startMs": 6370
+        }
+      ]
+    }
+  ]
+}
