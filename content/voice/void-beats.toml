@@ -130,7 +130,7 @@ id = "dj-007"
 category = "dj"
 lines = [
   { say = "host", text = "This hour of Void Beats comes to you from Grumbel's Ladders. I asked them if they make a ladder that goes down. They said, every ladder goes down, if you believe in yourself." },
-  { say = "host", text = "Then they hung up. Grumbel's Ladders. Up is a choice. Down is, apparently, a lifestyle." },
+  { say = "host", text = "Then they hung up. Grumbel's Ladders. Up is a choice. I'm choosing to stay down here. It's cozy." },
 ]
 
 [[clip]]
