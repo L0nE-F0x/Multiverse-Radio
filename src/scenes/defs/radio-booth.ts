@@ -232,7 +232,7 @@ const def: SceneDef = {
         g.glow(mx - 6, my - 10, 8, hex('#ffffff'), 0.12 + f.energy * 0.2);
 
         // Steam from the mug; headphones hanging off the mic arm, swaying.
-        steam(g, t, 68, DESK_Y - 11, hex('#f4ece0'), { n: 5, height: 14, spread: 2, alpha: 0.5 });
+        steam(g, t, 68, DESK_Y - 11, hex('#f4ece0'), 5, 14, 2, 0.5);
         arc(g, 88, DESK_Y - 4, 7, 6, Math.PI, Math.PI * 2, hex('#2a2a32'), 2);
         roundRect(g, 79, DESK_Y - 6, 5, 6, 2, accent);
         roundRect(g, 92, DESK_Y - 6, 5, 6, 2, accent);

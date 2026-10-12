@@ -33,9 +33,9 @@ const def: SceneDef = {
     const slime = ramp([hex('#6a7a6a'), hex('#a8b8a0'), hex('#d8e4cc')], 3);
     const fly = hex('#e8ff8a');
 
-    const drawSnail = (g: Gfx, x: number, t: number, f: { bob: number; window: number; turn: number; seed: number; phones: number }) => {
+    const drawSnail = (g: Gfx, x: number, t: number, bob: number, window: number, turn: number, seed: number) => {
       // the foot stretches and gathers as it crawls
-      const crawl = (Math.sin(t * 0.9 + f.seed) + 1) * 0.5;
+      const crawl = (Math.sin(t * 0.9 + seed) + 1) * 0.5;
       const front = Math.round(x + 9 + crawl * 2);
       const back = Math.round(x - 10);
       for (let xx = back; xx <= front; xx++) {
@@ -50,17 +50,17 @@ const def: SceneDef = {
       const hy = Math.round(leafY(hx)) - 4;
       g.ellipse(hx, hy, 3, 3, ink);
       g.ellipse(hx, hy, 2, 2, slime[1]!);
-      const look = f.turn;
-      for (const s of [0, 1]) {
+      const look = turn;
+      for (let s = 0; s < 2; s++) {
         const sx = hx - 1 + s * 3;
         const tipx = sx + 1 + s - look * 2;
-        const tipy = hy - 7 - s + Math.round(f.bob);
+        const tipy = hy - 7 - s + Math.round(bob);
         g.line(sx, hy - 2, tipx, tipy, slime[0]!);
         g.disc(tipx, tipy, 1, ink);
         g.px(tipx, tipy - 1, slime[2]!);
       }
       // tiny headphones
-      if (f.phones) {
+      {
         arc(g, hx + 1, hy - 3, 4, 3, Math.PI, Math.PI * 2, hex('#2a2a38'));
         g.rect(hx - 3, hy - 3, 2, 3, accent);
         g.rect(hx + 4, hy - 3, 2, 3, accent);
@@ -81,10 +81,10 @@ const def: SceneDef = {
         px = qx;
         py = qy;
       }
-      if (f.window > 0) {
+      if (window > 0) {
         g.rect(sx + 1, sy - 3, 4, 4, ink);
         g.rect(sx + 2, sy - 2, 2, 2, hex('#ffd88a'));
-        g.glow(sx + 3, sy - 1, 6, hex('#ffd88a'), f.window * 0.6);
+        g.glow(sx + 3, sy - 1, 6, hex('#ffd88a'), window * 0.6);
       }
     };
 
@@ -210,9 +210,9 @@ const def: SceneDef = {
         let x2 = LEAF.ax + 26 + ((t * speed + 70 + 46) % len);
         if (bump > 0) x2 = x1 + 30 - bump * 6;
         const bob = f.reduced ? 0 : f.pulse * 1.2;
-        drawSnail(g, x2, t, { bob, window: 0, turn: bump > 0.5 ? 1 : 0, seed: 2, phones: 1 });
+        drawSnail(g, x2, t, bob, 0, bump > 0.5 ? 1 : 0, 2);
         const win = f.rare === 0 && ev < 9 ? envelope(ev, 9, 1, 1.5) : 0;
-        drawSnail(g, x1, t, { bob, window: win, turn: 0, seed: 0, phones: 1 });
+        drawSnail(g, x1, t, bob, win, 0, 0);
         if (bump > 0.7) {
           const hx = (x1 + 12 + x2 - 4) / 2;
           const hy = leafY(hx) - 20 - (ev % 2) * 3;

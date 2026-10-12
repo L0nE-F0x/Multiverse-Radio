@@ -139,7 +139,7 @@ const def: SceneDef = {
     ];
 
     // Sticky note and the tab bookkeeping.
-    const torn = new Set<string>();
+    const torn = new Set<number>();
     let lastTearSlot = -1;
 
     const extras: Flyer[] = [
@@ -150,8 +150,9 @@ const def: SceneDef = {
     let extraCount = 0;
     let lastRare = -1;
 
-    const drawFlyer = (g: Gfx, fl: Flyer, t: number, wobble: number, opts: { drawPin?: boolean } = {}) => {
-      const { x, y, w, h } = fl;
+    const drawFlyer = (g: Gfx, fl: Flyer, t: number, wobble: number, drawPin = true, yOverride?: number) => {
+      const { x, w, h } = fl;
+      const y = yOverride ?? fl.y;
       g.rectA(x + 2, y + 2, w, h, ink, 0.35);
       g.rect(x, y, w, h, fl.paper);
       g.rect(x, y + h - 1, w, 1, shade(fl.paper, 0.85));
@@ -166,7 +167,7 @@ const def: SceneDef = {
       if (fl.tabs) {
         const tw = Math.floor((w - 2) / fl.tabs);
         for (let i = 0; i < fl.tabs; i++) {
-          const key = `${fl.x},${fl.y},${i}`;
+          const key = fl.x * 100000 + fl.y * 100 + i;
           const tx = x + 1 + i * tw;
           if (torn.has(key)) {
             g.rect(tx, y + h, tw - 1, 2, fl.paper);
@@ -178,7 +179,7 @@ const def: SceneDef = {
           g.rect(tx + flutter + tw - 1, y + h, 1, 12, shade(fl.paper, 0.8));
         }
       }
-      if (opts.drawPin !== false) {
+      if (drawPin) {
         const px = x + Math.floor(w / 2) + wobble;
         g.disc(px + 1, y + 2, 2, shade(ink, 1));
         g.disc(px, y + 1, 2, fl.pin);
@@ -219,7 +220,7 @@ const def: SceneDef = {
           if (slot > 0) {
             const tabbed = flyers.filter((fl) => fl.tabs);
             const fl = tabbed[Math.floor(hash3(slot, 1) * tabbed.length)]!;
-            torn.add(`${fl.x},${fl.y},${Math.floor(hash3(slot, 2) * fl.tabs!)}`);
+            torn.add(fl.x * 100000 + fl.y * 100 + Math.floor(hash3(slot, 2) * fl.tabs!));
             if (torn.size > 24) torn.clear();
           }
         }
@@ -248,7 +249,7 @@ const def: SceneDef = {
           const prev = extraCount > 1 ? extras[(extraCount - 2) % extras.length]! : null;
           if (prev) drawFlyer(g, prev, t, 0);
           const fy = placed ? ex.y : ex.y + (1 - clamp(ev / 2.4)) * 140;
-          if (placed || inK > 0) drawFlyer(g, { ...ex, y: Math.round(fy) }, t, 0, { drawPin: placed });
+          if (placed || inK > 0) drawFlyer(g, ex, t, 0, placed, Math.round(fy));
           const hx = ex.x + ex.w / 2 + 4;
           const hy = Math.round(placed ? ex.y + 4 + (1 - inK) * 150 : fy + 4);
           const skin = hex('#e8b890');

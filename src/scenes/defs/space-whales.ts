@@ -58,7 +58,7 @@ const def: SceneDef = {
       return nose * (0.9 + throat) * (1 - smoothstep(0.32, 0.88, u) * 0.82);
     };
 
-    const drawWhale = (g: Gfx, w: Whale, t: number, f: { eye: number; blink: boolean; energy: number }) => {
+    const drawWhale = (g: Gfx, w: Whale, t: number, eyeOpen: number, blink: boolean, energy: number) => {
       const hx = headX(w, t);
       const L = w.len;
       const amp = w.half * 0.35;
@@ -104,7 +104,7 @@ const def: SceneDef = {
           const spread = w.half * 0.95 * Math.sqrt(k);
           const thick = Math.max(1, (1 - k * 0.7) * w.half * 0.4);
           const flap = Math.sin(ph - 3) * w.half * 0.25;
-          for (const sgn of [-1, 1]) {
+          for (let sgn = -1; sgn <= 1; sgn += 2) {
             const yc = cy + sgn * spread + flap * k;
             for (let sy = Math.round(yc - thick / 2); sy <= Math.round(yc + thick / 2); sy++) {
               const by = sy - g.oy;
@@ -130,22 +130,22 @@ const def: SceneDef = {
         const u = 0.18 + i * 0.09;
         const sx = w.dir < 0 ? hx + u * L : hx - u * L;
         const cy = w.y + Math.sin(ph - u * 3.2) * amp * u * u + Math.sin(ph * 0.5) * 2;
-        const pulse = 0.25 + 0.25 * Math.sin(t * 1.3 - i * 0.7) + f.energy * 0.4;
+        const pulse = 0.25 + 0.25 * Math.sin(t * 1.3 - i * 0.7) + energy * 0.4;
         g.glow(sx, cy + w.half * 0.15, 3 + w.half * 0.12, glowC, pulse * w.alpha);
       }
       // Eye.
       const eu = 0.2;
       const ex = Math.round(w.dir < 0 ? hx + eu * L : hx - eu * L);
       const ey = Math.round(w.y + w.half * 0.2 + Math.sin(ph * 0.5) * 2);
-      if (f.eye > 0) {
-        const r = Math.round(1 + f.eye * Math.max(2, w.half * 0.22));
-        if (f.blink) g.hline(ex - r, ex + r, ey, hex('#0a1430'));
+      if (eyeOpen > 0) {
+        const r = Math.round(1 + eyeOpen * Math.max(2, w.half * 0.22));
+        if (blink) g.hline(ex - r, ex + r, ey, hex('#0a1430'));
         else {
           g.disc(ex, ey, r, hex('#f0faff'));
           g.disc(ex, ey + 1, Math.max(1, r - 1), hex('#0a1430'));
           g.px(ex - 1, ey - 1, hex('#ffffff'));
         }
-        g.glow(ex, ey, r * 4, glowC, f.eye * 0.3);
+        g.glow(ex, ey, r * 4, glowC, eyeOpen * 0.3);
       } else {
         g.rect(ex - 1, ey, 2, 2, hex('#0a1430'));
         g.px(ex - (w.dir < 0 ? 1 : 0), ey, w.rim);
@@ -207,7 +207,7 @@ const def: SceneDef = {
 
         for (let i = 0; i < whales.length; i++) {
           const w = whales[i]!;
-          drawWhale(g, w, t, { eye: i === star ? looking : 0, blink: i === star && blink, energy: f.energy });
+          drawWhale(g, w, t, i === star ? looking : 0, i === star && blink, f.energy);
         }
 
         // Blowhole puff of stardust.

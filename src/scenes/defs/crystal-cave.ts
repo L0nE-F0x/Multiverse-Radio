@@ -21,6 +21,7 @@ interface Crystal {
 const FLOOR_Y = 146;
 const MINER = { x: 160, y: 140 };
 const PRISM = { x: 182, y: 22 };
+const GLINTS = [0, 5, 7];
 
 const def: SceneDef = {
   id: 'crystal-cave',
@@ -156,8 +157,8 @@ const def: SceneDef = {
           g.glow(cx, cy, 6 + h * 0.35, glows[c.hue]!, p, 4);
         }
         // Glints travelling up the big shards.
-        for (const i of [0, 5, 7]) {
-          const c = crystals[i]!;
+        for (let j = 0; j < GLINTS.length; j++) {
+          const c = crystals[GLINTS[j]!]!;
           const p = (t * 0.25 + c.phase) % 1.6;
           if (p > 1) continue;
           g.pxAdd(c.x + c.lean * p + 1, c.y - c.h * p, hex('#ffffff'), Math.sin(p * Math.PI));
@@ -236,7 +237,7 @@ const def: SceneDef = {
         g.rect(cupx - 2, cupy - 2, 4, 4, hex('#f4ecdc'));
         g.rect(cupx - 2, cupy - 2, 4, 1, hex('#8a5a3a'));
         g.px(cupx + 2, cupy - 1, hex('#f4ecdc'));
-        if (!sipping) steam(g, t, cupx, cupy - 3, hex('#e8e0f0'), { n: 4, height: 10, spread: 2, alpha: 0.5 });
+        if (!sipping) steam(g, t, cupx, cupy - 3, hex('#e8e0f0'), 4, 10, 2, 0.5);
         if (dozing) {
           const zp = (t * 0.3) % 1;
           g.text('z', mx + 6 + zp * 6, hy - 10 - zp * 10, mix(hex('#d8d0ff'), rock[2]!, zp));

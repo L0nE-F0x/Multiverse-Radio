@@ -11,6 +11,10 @@ import type { SceneDef } from '../types';
 const HZ = 98; // horizon
 const VX = 160; // vanishing point x
 const SUN = { x: 160, y: 74, r: 42 };
+const CAR_BODY_O = [-34, 12, 34, 12, 32, -2, 22, -6, -22, -6, -32, -2];
+const CAR_BODY = [-32, 10, 32, 10, 30, -1, 21, -4, -21, -4, -30, -1];
+const CAB_O = [-20, -5, 20, -5, 14, -16, -14, -16];
+const CAB = [-18, -6, 18, -6, 13, -15, -13, -15];
 
 const def: SceneDef = {
   id: 'neon-grid',
@@ -205,11 +209,11 @@ const def: SceneDef = {
         }
         if (extra && ev < 3.5) g.text('+1', wx0 + total + 3, cy + 2 - Math.min(6, (ev - 1.2) * 6), hex('#fff27a'));
         // body
-        g.poly([cx - 34, cy + 12, cx + 34, cy + 12, cx + 32, cy - 2, cx + 22, cy - 6, cx - 22, cy - 6, cx - 32, cy - 2], ink);
-        g.poly([cx - 32, cy + 10, cx + 32, cy + 10, cx + 30, cy - 1, cx + 21, cy - 4, cx - 21, cy - 4, cx - 30, cy - 1], hex('#2a1450'));
+        g.poly(CAR_BODY_O, ink, 0, 1, cx, cy);
+        g.poly(CAR_BODY, hex('#2a1450'), 0, 1, cx, cy);
         // cabin
-        g.poly([cx - 20, cy - 5, cx + 20, cy - 5, cx + 14, cy - 16, cx - 14, cy - 16], ink);
-        g.poly([cx - 18, cy - 6, cx + 18, cy - 6, cx + 13, cy - 15, cx - 13, cy - 15], hex('#170a30'));
+        g.poly(CAB_O, ink, 0, 1, cx, cy);
+        g.poly(CAB, hex('#170a30'), 0, 1, cx, cy);
         g.line(cx - 10, cy - 14, cx - 4, cy - 7, cyan);
         g.line(cx - 6, cy - 14, cx, cy - 7, shade(cyan, 0.5));
         // spoiler

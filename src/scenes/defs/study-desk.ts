@@ -312,7 +312,7 @@ const def: SceneDef = {
         g.ellipseA(117, DESK_Y - 25, 7 - hb, 1, ink, 0.25);
 
         // Steam from the mug.
-        steam(g, t, 143, DESK_Y - 15, cream, { n: 7, height: 22, spread: 4, alpha: 0.6 });
+        steam(g, t, 143, DESK_Y - 15, cream, 7, 22, 4, 0.6);
 
         // Notebook scribbles accumulate, then the page turns.
         const page = t % 48;
@@ -341,7 +341,7 @@ const def: SceneDef = {
         // headphones
         arc(g, cx, cy - 1, 27, 26, Math.PI + 0.15, TAU - 0.15, ink, 4);
         arc(g, cx, cy - 1, 27, 26, Math.PI + 0.3, TAU - 0.3, hex('#5a4a6a'), 2);
-        for (const s of [-1, 1]) {
+        for (let s = -1; s <= 1; s += 2) {
           const hx = cx + s * 25 - 4;
           roundRect(g, hx, cy - 8, 9, 15, 3, ink);
           roundRect(g, hx + 1, cy - 7, 7, 13, 3, peach);

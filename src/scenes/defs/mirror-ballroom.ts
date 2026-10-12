@@ -210,7 +210,7 @@ const def: SceneDef = {
         const delay = f.rare === 2 && ev < 7 ? 0.35 + Math.sin((ev / 7) * Math.PI) * 1.4 : 0.35;
 
         // Chandeliers (and their reflections).
-        for (const cx of [96, 224]) {
+        for (let cx = 96; cx <= 224; cx += 128) {
           g.vline(cx, g.top, 12, goldD);
           arc(g, cx, 14, 12, 4, 0, Math.PI, gold, 2);
           for (let i = 0; i < 4; i++) {

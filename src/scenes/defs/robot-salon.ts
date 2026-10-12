@@ -218,8 +218,8 @@ const def: SceneDef = {
           g.px(cx, cy - 6, hex('#fff4d0'));
           g.glow(cx, cy - 7, 10, flame, 0.3 + (f.reduced ? 0 : 0.05 * Math.sin(t * 13 + i)), 4);
         }
-        for (const cx of [26, 296])
-          for (const dx of [-8, 0, 8]) {
+        for (let cx = 26; cx <= 296; cx += 270)
+          for (let dx = -8; dx <= 8; dx += 8) {
             g.px(cx + dx, 49, flame);
             g.glow(cx + dx, 49, 9, flame, 0.3, 4);
           }

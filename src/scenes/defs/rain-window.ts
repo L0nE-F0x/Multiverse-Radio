@@ -306,7 +306,7 @@ const def: SceneDef = {
         // Kettle steam (and a proper whistle during the rare event).
         const boil = f.rare === 2 && ev < 6 ? envelope(ev, 6, 1, 1.5) : 0;
         const kettleOn = 0.4 + 0.6 * f.awake;
-        steam(g, t, 61, COUNTER_Y - 25, hex('#d8e2f0'), { n: Math.round(5 + boil * 10), height: 18 + boil * 16, spread: 3 + boil * 3, speed: 0.4 + boil * 0.5, alpha: 0.5 * kettleOn + boil * 0.3 });
+        steam(g, t, 61, COUNTER_Y - 25, hex('#d8e2f0'), Math.round(5 + boil * 10), 18 + boil * 16, 3 + boil * 3, 0.5 * kettleOn + boil * 0.3, 0.4 + boil * 0.5);
         if (boil > 0.5) {
           const jig = Math.round(Math.sin(ev * 40));
           g.ellipse(82 + jig, COUNTER_Y - 25 - 1, 3, 1, hex('#ffb0a0'));

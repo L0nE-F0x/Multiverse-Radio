@@ -210,7 +210,7 @@ const def: SceneDef = {
         }
         // the decks
         const spin = t * (scratching ? 0 : 3) + (scratching ? Math.sin(ev * 25) : 0);
-        for (const dx of [-11, 11]) {
+        for (let dx = -11; dx <= 11; dx += 22) {
           const rx = ccx + dx;
           const ry = SAND_Y - 15;
           g.ellipse(rx, ry, 6, 2, ink);

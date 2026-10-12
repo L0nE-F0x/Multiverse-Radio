@@ -169,11 +169,13 @@ export class SceneRunner {
   }
 
   private schedule(delay: number) {
-    this.timer = setTimeout(() => {
-      this.timer = undefined;
-      this.raf = requestAnimationFrame(this.tick);
-    }, delay);
+    this.timer = setTimeout(this.onTimer, delay);
   }
+
+  private onTimer = () => {
+    this.timer = undefined;
+    this.raf = requestAnimationFrame(this.tick);
+  };
 
   private tick = (now: number) => {
     this.raf = 0;

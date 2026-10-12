@@ -14,6 +14,8 @@ import { SceneView } from '../scenes/SceneView';
 import { SCENES, loadScene } from '../scenes/registry';
 import type { SceneRunner } from '../scenes/runner';
 import { STATIONS } from '../stations/roster';
+import '@fontsource/bebas-neue/400.css';
+import '@fontsource/ibm-plex-mono/400.css';
 import '../index.css';
 
 type Aspect = '16:9' | '4:3' | '9:16';
@@ -91,7 +93,7 @@ function App() {
         </button>
       </header>
 
-      <div className={`grid gap-4 ${knobs.aspect === '9:16' ? 'grid-cols-2 sm:grid-cols-4 lg:grid-cols-6' : 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4'}`}>
+      <div className={`${open ? 'hidden' : 'grid'} gap-4 ${knobs.aspect === '9:16' ? 'grid-cols-2 sm:grid-cols-4 lg:grid-cols-6' : 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4'}`}>
         {ordered.map((s) => (
           <button
             key={s.id}

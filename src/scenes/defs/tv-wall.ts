@@ -30,6 +30,9 @@ const def: SceneDef = {
   rareDuration: 6,
   create({ accent }) {
     const ink = hex('#0a0606');
+    const BARS = [hex('#e8e8e8'), hex('#e8e83a'), hex('#3ae8e8'), hex('#3ae83a'), hex('#e83ae8'), hex('#e83a3a'), hex('#3a3ae8')];
+    const FISH = [hex('#ff8a3a'), hex('#ffd34f'), hex('#ff6ab0')];
+    const BUTTONS = [hex('#e8e8e8'), hex('#ffd34f'), hex('#4ac0ff')];
     const skin = hex('#f0c8a0');
     const tvs: Tv[] = [
       { x: 62, y: 104, w: 62, h: 50, body: hex('#6a4024'), knobs: true, antenna: false, ch: 0, staticUntil: 0 },
@@ -133,17 +136,16 @@ const def: SceneDef = {
         for (let k = 0; k < 3; k++) {
           const fx = x + ((t * (6 + k * 3) + k * 17) % (w + 10)) - 5;
           const fy = y + 6 + k * (h / 4);
-          g.ellipse(fx, fy, 3, 2, [hex('#ff8a3a'), hex('#ffd34f'), hex('#ff6ab0')][k]!);
-          g.px(fx - 4, fy, [hex('#ff8a3a'), hex('#ffd34f'), hex('#ff6ab0')][k]!);
+          g.ellipse(fx, fy, 3, 2, FISH[k]!);
+          g.px(fx - 4, fy, FISH[k]!);
         }
         for (let k = 0; k < 4; k++) g.px(x + 4 + k * 7, y + h - 2 - ((t * 10 + k * 5) % h), hex('#a8d8ff'));
         g.rect(x, y + h - 3, w, 3, hex('#c8a870'));
       },
       // 7 test pattern
       (g, x, y, w, h) => {
-        const cols = [hex('#e8e8e8'), hex('#e8e83a'), hex('#3ae8e8'), hex('#3ae83a'), hex('#e83ae8'), hex('#e83a3a'), hex('#3a3ae8')];
         const bw = w / 7;
-        cols.forEach((c, i) => g.rect(x + i * bw, y, Math.ceil(bw), h * 0.7, c));
+        for (let i = 0; i < 7; i++) g.rect(x + i * bw, y, Math.ceil(bw), h * 0.7, BARS[i]!);
         g.rect(x, y + h * 0.7, w, h * 0.3, hex('#1a1a1a'));
         g.ring(x + w / 2, y + h / 2 - 2, 7, 7, hex('#ffffff'));
       },
@@ -182,7 +184,8 @@ const def: SceneDef = {
         }
     };
 
-    const screenOf = (tv: Tv) => ({ x: tv.x + 5, y: tv.y + 5, w: tv.w - (tv.knobs ? 18 : 10), h: tv.h - 10 });
+    const screens = tvs.map((tv) => ({ x: tv.x + 5, y: tv.y + 5, w: tv.w - (tv.knobs ? 18 : 10), h: tv.h - 10 }));
+    const screenOf = (tv: Tv) => screens[tvs.indexOf(tv)]!;
 
     return {
       background(g) {
@@ -251,7 +254,7 @@ const def: SceneDef = {
             // one big face spread across every screen, looking at you
             g.rect(s.x, s.y, s.w, s.h, hex('#e8b890'));
             const shut = blinking(t, 40, 3);
-            for (const ex of [124, 196]) {
+            for (let ex = 124; ex <= 196; ex += 72) {
               g.disc(ex, 84, 14, hex('#ffffff'));
               if (shut) g.rect(ex - 15, 70, 30, 28, hex('#e8b890'));
               else g.disc(ex + Math.sin(t) * 3, 86, 6, ink);
@@ -282,7 +285,7 @@ const def: SceneDef = {
         roundRect(g, rx - 6, ry - 13, 12, 28, 4, hex('#2a2a32'));
         g.disc(rx, ry - 9, 2, pressed ? hex('#ff4a4a') : hex('#8a2a2a'));
         for (let r = 0; r < 3; r++)
-          for (let c = 0; c < 3; c++) g.rect(rx - 4 + c * 3, ry - 4 + r * 3 + (pressed && r === 1 && c === 1 ? 1 : 0), 2, 2, [hex('#e8e8e8'), hex('#ffd34f'), hex('#4ac0ff')][(r + c) % 3]!);
+          for (let c = 0; c < 3; c++) g.rect(rx - 4 + c * 3, ry - 4 + r * 3 + (pressed && r === 1 && c === 1 ? 1 : 0), 2, 2, BUTTONS[(r + c) % 3]!);
         g.rect(rx - 4, ry + 6, 8, 4, accent);
         // the IR beam to whichever TV it just changed
         if (pressed && clickTv >= 0 && !f.reduced) {

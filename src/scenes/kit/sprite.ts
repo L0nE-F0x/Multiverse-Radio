@@ -7,7 +7,7 @@ export interface Sprite {
   w: number;
   h: number;
   /** Row-major colors; 0 = transparent. */
-  d: Uint32Array;
+  d: Int32Array;
 }
 
 /**
@@ -22,7 +22,7 @@ export function sprite(art: string | string[], palette: Record<string, Color>): 
   rows = rows.map((r) => r.slice(indent).trimEnd());
   const w = Math.max(...rows.map((r) => r.length));
   const h = rows.length;
-  const d = new Uint32Array(w * h);
+  const d = new Int32Array(w * h);
   rows.forEach((row, y) => {
     for (let x = 0; x < row.length; x++) {
       const ch = row[x]!;
@@ -60,7 +60,7 @@ export function mapColors(s: Sprite, fn: (c: Color) => Color): Sprite {
 export function outlined(s: Sprite, color: Color): Sprite {
   const w = s.w + 2;
   const h = s.h + 2;
-  const d = new Uint32Array(w * h);
+  const d = new Int32Array(w * h);
   for (let y = 0; y < s.h; y++) {
     for (let x = 0; x < s.w; x++) {
       if (s.d[y * s.w + x] === TRANSPARENT) continue;
@@ -77,13 +77,13 @@ export function outlined(s: Sprite, color: Color): Sprite {
 }
 
 export function flipX(s: Sprite): Sprite {
-  const d = new Uint32Array(s.d.length);
+  const d = new Int32Array(s.d.length);
   for (let y = 0; y < s.h; y++) for (let x = 0; x < s.w; x++) d[y * s.w + x] = s.d[y * s.w + (s.w - 1 - x)]!;
   return { w: s.w, h: s.h, d };
 }
 
 export function flipY(s: Sprite): Sprite {
-  const d = new Uint32Array(s.d.length);
+  const d = new Int32Array(s.d.length);
   for (let y = 0; y < s.h; y++) for (let x = 0; x < s.w; x++) d[y * s.w + x] = s.d[(s.h - 1 - y) * s.w + x]!;
   return { w: s.w, h: s.h, d };
 }

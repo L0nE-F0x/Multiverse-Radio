@@ -153,7 +153,8 @@ const def: SceneDef = {
 
         // Clocks: all wrong, each in its own way.
         const knocked = f.rare === 2 && ev < 7;
-        CLOCKS.forEach((c, i) => {
+        for (let i = 0; i < CLOCKS.length; i++) {
+          const c = CLOCKS[i]!;
           let wob = 0;
           let dy = 0;
           if (knocked && i === 2) {
@@ -162,7 +163,7 @@ const def: SceneDef = {
             dy = Math.round(k * 3);
           }
           clock(g, 74 + i * 34, 30 + dy, 11, knocked && i === 2 ? t * 8 : t, c, wob);
-        });
+        }
 
         // Nested globes, each turning its own way.
         const gx = GLOBE.x;

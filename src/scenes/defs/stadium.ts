@@ -12,6 +12,7 @@ const C = { x: 160, y: 104 };
 const OUT = { rx: 128, ry: 42 };
 const FIELD = { rx: 70, ry: 21 };
 const BOARD = { x: 160, y: 26 };
+const LAMPS = [C.x - 118, C.y - 66, C.x + 118, C.y - 66, C.x - 70, C.y - 76, C.x + 70, C.y - 76];
 
 const SCORES = ['HOME 7 1/2 AWAY π', 'HOME ∞  AWAY 3', 'HOME YES  AWAY NO', 'HOME 2  AWAY 2?', 'HOME -4  AWAY OK', 'HOME 11  AWAY 11'];
 
@@ -134,12 +135,9 @@ const def: SceneDef = {
 
         // Floodlight beams onto the pitch.
         const k = (0.05 + f.energy * 0.04) * hype;
-        for (const [tx, ty] of [
-          [C.x - 118, C.y - 66],
-          [C.x + 118, C.y - 66],
-          [C.x - 70, C.y - 76],
-          [C.x + 70, C.y - 76],
-        ] as const) {
+        for (let j = 0; j < LAMPS.length; j += 2) {
+          const tx = LAMPS[j]!;
+          const ty = LAMPS[j + 1]!;
           g.tri(tx - 3, ty, tx + 3, ty, C.x + (tx < C.x ? -20 : 20), C.y + 6, lamp, 2, k);
           g.glow(tx, ty, 9, lamp, 0.5);
         }

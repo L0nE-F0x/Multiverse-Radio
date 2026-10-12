@@ -1,20 +1,30 @@
 // Packed colors for the scene framebuffer.
 //
-// A Color is a 32-bit integer laid out the way a little-endian Uint32Array view over
+// A Color is a 32-bit integer laid out the way a little-endian Int32Array view over
 // ImageData bytes expects it (0xAABBGGRR). Every opaque color has alpha 255, so 0 is
-// free to mean "transparent" in sprites and overlay layers.
+// free to mean "transparent" in sprites and overlay layers. Colors are kept as *signed*
+// int32: with alpha 255 they land in -2^24..-1, which V8 stores as small integers, so
+// color math never allocates heap numbers.
 
 export type Color = number;
 
 export const TRANSPARENT: Color = 0;
 
 export function rgb(r: number, g: number, b: number): Color {
-  return (0xff000000 | (clamp255(b) << 16) | (clamp255(g) << 8) | clamp255(r)) >>> 0;
+  return 0xff000000 | (clamp255(b) << 16) | (clamp255(g) << 8) | clamp255(r);
 }
 
+const hexCache = new Map<string, Color>();
+
+/** '#rrggbb' → Color. Memoized, so it's cheap (and allocation-free) inside frame code. */
 export function hex(value: string): Color {
-  const n = parseInt(value.replace('#', ''), 16);
-  return rgb((n >> 16) & 255, (n >> 8) & 255, n & 255);
+  let c = hexCache.get(value);
+  if (c === undefined) {
+    const n = parseInt(value.charAt(0) === '#' ? value.slice(1) : value, 16);
+    c = rgb((n >> 16) & 255, (n >> 8) & 255, n & 255);
+    hexCache.set(value, c);
+  }
+  return c;
 }
 
 export const red = (c: Color) => c & 255;

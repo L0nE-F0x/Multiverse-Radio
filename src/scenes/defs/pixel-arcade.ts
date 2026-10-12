@@ -39,6 +39,7 @@ const def: SceneDef = {
     const ghostS = hex('#b8b0e8');
     const scr = hex('#06100c');
     const green = accent;
+    const ALIENS = [hex('#ff4fd8'), hex('#4ff0ff'), hex('#ffd34f')];
 
     const drawGhost = (g: Gfx, x: number, y: number, t: number, front: boolean, alpha = 1, slump = 0, look = 0) => {
       x = Math.round(x);
@@ -191,7 +192,7 @@ const def: SceneDef = {
               if (hash3(c, r, Math.floor(t / 6)) < 0.25) continue;
               const ax = x0 + 3 + c * 5 + shift;
               const ay = SCR_Y + 3 + r * 4;
-              g.rect(ax, ay, 3, 2, [hex('#ff4fd8'), hex('#4ff0ff'), hex('#ffd34f')][r]!);
+              g.rect(ax, ay, 3, 2, ALIENS[r]!);
               if (Math.floor(t * 4) % 2) g.px(ax - 1, ay + 2, hex('#ff4fd8'));
             }
           const sx = x0 + w / 2 + Math.sin(t * 1.7) * 10;

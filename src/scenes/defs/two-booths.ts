@@ -169,7 +169,7 @@ const def: SceneDef = {
         // ── reality A (left), drawn normally ──
         g.clip(g.left, g.top, RIFT - g.left, g.h);
         mug(g, 74, A);
-        steam(g, t, 78, DESK_Y - 11, hex('#f4f0e8'), { n: 6, height: 16, spread: 3, alpha: 0.55 });
+        steam(g, t, 78, DESK_Y - 11, hex('#f4f0e8'), 6, 16, 3, 0.55);
         host(g, 112, DESK_Y, A, 1, t, talker === 0 ? f.energy + 0.2 : 0, waving || five > 0.5 ? 1 : 0, 1, false);
         mic(g, 138, DESK_Y - 34, -1);
         g.noClip();
@@ -178,7 +178,7 @@ const def: SceneDef = {
         g.clip(RIFT, g.top, g.right - RIFT, g.h);
         flipRight(g); // undo the background flip so we draw in local, upright coordinates
         mug(g, 240, B);
-        steam(g, t, 244, DESK_Y - 11, hex('#fff0c0'), { n: 6, height: 16, spread: 3, alpha: 0.55, seed: 3 });
+        steam(g, t, 244, DESK_Y - 11, hex('#fff0c0'), 6, 16, 3, 0.55, 0.35, 3);
         const roll = Math.sin(t * 0.8) * 2;
         host(g, 208 + roll, DESK_Y, B, -1, t + 0.7, talker === 1 ? f.energy + 0.2 : 0, waving || five > 0.5 ? 1 : 0, 2, true);
         mic(g, 182, DESK_Y - 34, 1);

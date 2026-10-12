@@ -1,4 +1,4 @@
-// The pixel raster every scene draws into: a small Uint32Array framebuffer that the
+// The pixel raster every scene draws into: a small Int32Array framebuffer that the
 // runner blits to a canvas once per frame and the browser upscales with nearest-neighbour.
 //
 // Scenes draw in *world* coordinates. The design area is 320×180, but the view adapts to
@@ -29,11 +29,11 @@ export class Gfx {
   ox = 0;
   oy = 0;
   /** Current draw target (frame by default). */
-  buf: Uint32Array = new Uint32Array(0);
+  buf: Int32Array = new Int32Array(0);
   /** The frame that is shown. */
-  frame: Uint32Array = new Uint32Array(0);
+  frame: Int32Array = new Int32Array(0);
   /** Static background restored at the start of every frame. */
-  bg: Uint32Array = new Uint32Array(0);
+  bg: Int32Array = new Int32Array(0);
   // Clip rectangle in buffer coordinates (left/top inclusive, right/bottom exclusive).
   private cl = 0;
   private ct = 0;
@@ -49,8 +49,8 @@ export class Gfx {
     this.h = h;
     this.ox = ox;
     this.oy = oy;
-    this.frame = new Uint32Array(w * h);
-    this.bg = new Uint32Array(w * h);
+    this.frame = new Int32Array(w * h);
+    this.bg = new Int32Array(w * h);
     this.buf = this.frame;
     this.noClip();
   }
@@ -85,12 +85,12 @@ export class Gfx {
   }
 
   /** A transparent full-view layer (for static foregrounds). */
-  layer(): Uint32Array {
-    return new Uint32Array(this.w * this.h);
+  layer(): Int32Array {
+    return new Int32Array(this.w * this.h);
   }
 
   /** Redirect drawing to another buffer of the same size (or back to the frame). */
-  target(buf?: Uint32Array) {
+  target(buf?: Int32Array) {
     this.buf = buf ?? this.frame;
   }
 
@@ -100,7 +100,7 @@ export class Gfx {
   }
 
   /** Composite a layer's opaque pixels over the current target. */
-  overlay(layer: Uint32Array) {
+  overlay(layer: Int32Array) {
     const b = this.buf;
     for (let i = 0; i < layer.length; i++) {
       const c = layer[i]!;
@@ -190,7 +190,7 @@ export class Gfx {
         const dg = (d >>> 8) & 255;
         const db = (d >>> 16) & 255;
         b[row + xx] =
-          (0xff000000 | ((db + (((cb - db) * k) >> 8)) << 16) | ((dg + (((cg - dg) * k) >> 8)) << 8) | (dr + (((cr - dr) * k) >> 8))) >>> 0;
+          (0xff000000 | ((db + (((cb - db) * k) >> 8)) << 16) | ((dg + (((cg - dg) * k) >> 8)) << 8) | (dr + (((cr - dr) * k) >> 8))) | 0;
       }
     }
   }
@@ -470,13 +470,13 @@ export class Gfx {
     }
   }
 
-  /** Filled convex/concave polygon from a flat [x0,y0,x1,y1,...] array (even-odd). */
-  poly(pts: readonly number[], c: Color, mode = 0, a = 1) {
+  /** Filled polygon from a flat [x0,y0,x1,y1,...] array (even-odd), optionally offset by (dx, dy). */
+  poly(pts: readonly number[], c: Color, mode = 0, a = 1, dx = 0, dy = 0) {
     let minY = Infinity;
     let maxY = -Infinity;
     for (let i = 1; i < pts.length; i += 2) {
-      if (pts[i]! < minY) minY = pts[i]!;
-      if (pts[i]! > maxY) maxY = pts[i]!;
+      if (pts[i]! + dy < minY) minY = pts[i]! + dy;
+      if (pts[i]! + dy > maxY) maxY = pts[i]! + dy;
     }
     const n = pts.length / 2;
     const xs = POLY_XS;
@@ -484,10 +484,10 @@ export class Gfx {
       const sy = y + 0.5;
       xs.length = 0;
       for (let i = 0; i < n; i++) {
-        const ax = pts[i * 2]!;
-        const ay = pts[i * 2 + 1]!;
-        const bx = pts[((i + 1) % n) * 2]!;
-        const by = pts[((i + 1) % n) * 2 + 1]!;
+        const ax = pts[i * 2]! + dx;
+        const ay = pts[i * 2 + 1]! + dy;
+        const bx = pts[((i + 1) % n) * 2]! + dx;
+        const by = pts[((i + 1) % n) * 2 + 1]! + dy;
         if ((ay <= sy && by > sy) || (by <= sy && ay > sy)) xs.push(ax + ((sy - ay) * (bx - ax)) / (by - ay));
       }
       xs.sort((p, q) => p - q);
@@ -673,7 +673,7 @@ export function blendPx(d: number, c: number, a: number): number {
   const r = dr + ((((c & 255) - dr) * k) >> 8);
   const g = dg + (((((c >>> 8) & 255) - dg) * k) >> 8);
   const b = db + (((((c >>> 16) & 255) - db) * k) >> 8);
-  return (0xff000000 | (b << 16) | (g << 8) | r) >>> 0;
+  return 0xff000000 | (b << 16) | (g << 8) | r;
 }
 
 export function addPx(d: number, r: number, g: number, b: number): number {
@@ -683,7 +683,7 @@ export function addPx(d: number, r: number, g: number, b: number): number {
   if (rr > 255) rr = 255;
   if (gg > 255) gg = 255;
   if (bb > 255) bb = 255;
-  return (0xff000000 | ((bb | 0) << 16) | ((gg | 0) << 8) | (rr | 0)) >>> 0;
+  return 0xff000000 | ((bb | 0) << 16) | ((gg | 0) << 8) | (rr | 0);
 }
 
 /** Multiply by m/256. */
@@ -694,5 +694,5 @@ export function mulPx(d: number, m: number): number {
   if (r > 255) r = 255;
   if (g > 255) g = 255;
   if (b > 255) b = 255;
-  return (0xff000000 | (b << 16) | (g << 8) | r) >>> 0;
+  return 0xff000000 | (b << 16) | (g << 8) | r;
 }

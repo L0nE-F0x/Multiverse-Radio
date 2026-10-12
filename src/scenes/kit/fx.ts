@@ -41,13 +41,7 @@ export function blinking(t: number, seed = 0, period = 4.5): boolean {
 }
 
 /** Steam wisps rising from (x, y). Stateless. */
-export function steam(g: Gfx, t: number, x: number, y: number, c: Color, opts: { n?: number; height?: number; spread?: number; speed?: number; alpha?: number; seed?: number } = {}) {
-  const n = opts.n ?? 6;
-  const height = opts.height ?? 18;
-  const spread = opts.spread ?? 3;
-  const speed = opts.speed ?? 0.35;
-  const alpha = opts.alpha ?? 0.55;
-  const seed = opts.seed ?? 0;
+export function steam(g: Gfx, t: number, x: number, y: number, c: Color, n = 6, height = 18, spread = 3, alpha = 0.55, speed = 0.35, seed = 0) {
   for (let i = 0; i < n; i++) {
     const p = (t * speed + i / n + hash3(i, seed) * 0.1) % 1;
     const py = y - p * height;

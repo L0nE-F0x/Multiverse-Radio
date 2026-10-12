@@ -213,7 +213,7 @@ const def: SceneDef = {
         g.ball(ox, oy, 18, 20, octo, -0.5, -0.6, 0.25);
         for (let i = 0; i < 6; i++) g.disc(ox - 10 + ((hash3(i, 1) * 20) | 0), oy - 14 + ((hash3(i, 2) * 14) | 0), 1, octo[1]!);
         // eyes: heavy-lidded, horizontal pupils; wide when a glass slips
-        for (const s of [-1, 1]) {
+        for (let s = -1; s <= 1; s += 2) {
           const ex = Math.round(ox + s * 7);
           const ey = Math.round(oy + 7);
           g.ellipse(ex, ey, 4, 3, ink);
@@ -303,7 +303,7 @@ const def: SceneDef = {
         g.ellipse(ox, oy, 19, 21, ink);
         g.ball(ox, oy, 18, 20, octo, -0.5, -0.6, 0.25);
         for (let i = 0; i < 6; i++) g.disc(ox - 10 + ((hash3(i, 1) * 20) | 0), oy - 14 + ((hash3(i, 2) * 14) | 0), 1, octo[1]!);
-        for (const s of [-1, 1]) {
+        for (let s = -1; s <= 1; s += 2) {
           const ex = Math.round(ox + s * 7);
           const ey = Math.round(oy + 7);
           g.ellipse(ex, ey, 4, 3, ink);
