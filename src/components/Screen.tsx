@@ -4,7 +4,7 @@ import type { StationDef } from '../broadcast/types';
 import { useCabinetEvent } from '../hooks/useCabinetEvent';
 import { useDocumentVisible } from '../hooks/useDocumentVisible';
 import { usePrefersReducedMotion } from '../hooks/usePrefersReducedMotion';
-import { StationScene } from '../scenes';
+import { preloadScene, StationScene } from '../scenes';
 import * as act from '../ui/actions';
 import { energy } from '../ui/energy';
 import { formatFrequency, rng } from '../ui/format';
@@ -46,6 +46,17 @@ export function SceneLayer({ className }: { className: string }) {
   const status = useStatus();
   const reducedMotion = usePrefersReducedMotion();
   const visible = useDocumentVisible();
+  const stations = useStations();
+  const index = useStationIndex();
+
+  // Fetch the neighbours' scenes in the background so turning the dial never waits.
+  useEffect(() => {
+    for (const delta of [1, -1]) {
+      const neighbour = stations[(index + delta + stations.length) % stations.length];
+      if (neighbour) preloadScene(neighbour.scene);
+    }
+  }, [stations, index]);
+
   return (
     <StationScene
       station={station}
