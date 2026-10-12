@@ -91,4 +91,4 @@ safe to use. Unknown names fail the render with a clear error.
 
 id 2–8 s · dj 8–30 s · ad 15–45 s · news 20–90 s · weather 15–60 s · psa 10–40 s ·
 call 30–120 s · sports 20–90 s · story 30–120 s · show 45–180 s · interrupt 3–12 s.
-Roughly 2.5 words per second at speed 1.0.
+Kokoro speaks roughly 3.2 words per second at speed 1.0.
