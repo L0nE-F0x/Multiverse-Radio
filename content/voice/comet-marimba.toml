@@ -7,6 +7,8 @@ station = "comet-marimba"
 host = { voice = "af_nova", speed = 1.05, name = "Coco Halley" }
 crab = { voice = "am_puck", fx = "tiny", name = "DJ Sunglass Crab" }
 bev = { voice = "af_nova", fx = "phone", name = "Bev" }
+# v3: serial.
+greg = { voice = "am_onyx", fx = "whisper", name = "Greg, a Shadow" }
 
 # ── Idents ────────────────────────────────────────────────────────────────────
 
@@ -217,4 +219,273 @@ lines = [
   { say = "bev", text = "No. But this marimba's very nice." },
   { say = "host", text = "Stay in the lift, Bev! We'll keep it nice for you!" },
   { sfx = "phone-hangup" },
+]
+
+# ══ v3: the living schedule ═══════════════════════════════════════════════════
+#
+# Shows, the dj kit (an opener, one to three bits of beach news, a hand-off), a serial
+# episode and Halloween. Los Perihelios and the Hammock Syndicate are resident artists
+# (src/content/packs/bright.ts). Existing clips above are rendered and deployed; only add.
+
+# ── Shows ─────────────────────────────────────────────────────────────────────
+
+[[show]]
+id = "hammock-hours"
+name = "Hammock Hours"
+blurb = "Late night on the comet. The stars go past like warm rain."
+start = 1
+end = 4
+
+[[show]]
+id = "sunset-on-the-tail"
+name = "Sunset on the Tail"
+blurb = "Waving goodbye to the sun, which we are leaving behind at seventy kilometres a second."
+start = 18
+end = 20
+
+[[clip]]
+id = "hammock-hours-open"
+category = "id"
+show = "hammock-hours"
+part = "open"
+title = "Hammock Hours"
+lines = [
+  { say = "host", text = "It's Hammock Hours on Comet Marimba! Lie back. The stars are going past like warm rain.", speed = 0.95 },
+]
+
+[[clip]]
+id = "hammock-hours-01"
+category = "dj"
+show = "hammock-hours"
+lines = [
+  { say = "host", text = "The crab's asleep in his sunglasses. The hammock's swaying. Somebody left a coconut in the ice tail to chill, and it's perfect now.", speed = 0.95 },
+  { say = "host", text = "I'm going to drink it. Here's a slow one.", speed = 0.95 },
+]
+
+[[clip]]
+id = "hammock-hours-02"
+category = "dj"
+show = "hammock-hours"
+lines = [
+  { say = "host", text = "Late night thought. We're going seventy kilometres a second, but if you lie very still in the hammock, it feels like we're not moving at all.", speed = 0.95 },
+  { say = "host", text = "I think that's the secret. Of comets. And of everything.", speed = 0.95 },
+]
+
+[[clip]]
+id = "sunset-on-the-tail-open"
+category = "id"
+show = "sunset-on-the-tail"
+part = "open"
+title = "Sunset on the Tail"
+lines = [
+  { say = "host", text = "It's Sunset on the Tail! Everybody turn round and wave! Bye, sun!" },
+  { sting = "id" },
+]
+
+[[clip]]
+id = "sunset-on-the-tail-01"
+category = "dj"
+show = "sunset-on-the-tail"
+lines = [
+  { say = "host", text = "Sunset report! The sun's a lovely orange tonight, and getting smaller, because we're leaving it. Honestly the most relaxing way to watch a sunset." },
+  { say = "host", text = "You don't have to do anything. It just goes." },
+]
+
+[[clip]]
+id = "sunset-on-the-tail-02"
+category = "dj"
+show = "sunset-on-the-tail"
+lines = [
+  { say = "crab", text = "Play the sunset one.", gap = 0.4 },
+  { say = "host", text = "They're all sunset ones at sunset, Crab!", gap = 0.4 },
+  { say = "crab", text = "Play it anyway.", gap = 0.4 },
+  { say = "host", text = "You heard him! The crab has spoken! Twice in one week!" },
+]
+
+# ── DJ kit ────────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "dj-open-01"
+category = "dj"
+kit = "dj"
+part = "open"
+lines = [
+  { say = "host", text = "Comet Marimba! Still on vacation! Still going very fast!" },
+]
+
+[[clip]]
+id = "dj-open-02"
+category = "dj"
+kit = "dj"
+part = "open"
+lines = [
+  { say = "host", text = "Ooh, that one had sand in it! Lovely!" },
+]
+
+[[clip]]
+id = "dj-open-03"
+category = "dj"
+kit = "dj"
+part = "open"
+lines = [
+  { say = "host", text = "Hi, beach people! Coco here, horizontal, as usual!" },
+]
+
+[[clip]]
+id = "dj-open-04"
+category = "dj"
+kit = "dj"
+part = "open"
+daypart = "morning"
+lines = [
+  { say = "host", text = "Morning on the comet! The sun's a friendly distance away!" },
+]
+
+[[clip]]
+id = "dj-body-01"
+category = "dj"
+kit = "dj"
+part = "body"
+lines = [
+  { say = "host", text = "Hat update! Fourteen hats lost since lunch. One of them came all the way back round, on a different person. They looked great. We let them keep it." },
+]
+
+[[clip]]
+id = "dj-body-02"
+category = "dj"
+kit = "dj"
+part = "body"
+lines = [
+  { say = "host", text = "Los Perihelios are playing a set at the far end of the beach tonight! They only play when we're near the sun, so this is it, folks! Next gig in seventy six years! Get there early!" },
+]
+
+[[clip]]
+id = "dj-body-03"
+category = "dj"
+kit = "dj"
+part = "body"
+lines = [
+  { say = "host", text = "The crab has refused another request.", gap = 0.4 },
+  { say = "crab", text = "Click.", gap = 0.5 },
+  { say = "host", text = "That's a no. Somebody asked for something with a saxophone. The crab doesn't believe in saxophones." },
+]
+
+[[clip]]
+id = "dj-body-04"
+category = "dj"
+kit = "dj"
+part = "body"
+lines = [
+  { say = "host", text = "Surf report! Waves of pure time, four minutes high, glassy, with the occasional Thursday. If you wipe out, you'll come out on Monday. Totally fine! Mondays are lovely here!" },
+]
+
+[[clip]]
+id = "dj-body-05"
+category = "dj"
+kit = "dj"
+part = "body"
+lines = [
+  { say = "host", text = "The Hammock Syndicate have a new album, and they recorded the whole thing lying down. You can hear it. Some of it is snoring. It's the best bit." },
+]
+
+[[clip]]
+id = "dj-body-06"
+category = "dj"
+kit = "dj"
+part = "body"
+lines = [
+  { say = "host", text = "Reminder! The tide on this beach goes out every seventy six years. So if you left a towel by the water, it's fine. It'll be fine for ages!" },
+]
+
+[[clip]]
+id = "dj-close-01"
+category = "dj"
+kit = "dj"
+part = "close"
+lines = [
+  { say = "host", text = "Here's another one! Bare feet only, please! Sandals by the door!" },
+]
+
+[[clip]]
+id = "dj-close-02"
+category = "dj"
+kit = "dj"
+part = "close"
+lines = [
+  { say = "host", text = "Here's a breezy one! Hold on to your hat! Too late!" },
+]
+
+[[clip]]
+id = "dj-close-03"
+category = "dj"
+kit = "dj"
+part = "close"
+lines = [
+  { say = "host", text = "Crab! Drop the next one!", gap = 0.4 },
+  { say = "crab", text = "Click.", gap = 0.4 },
+  { say = "host", text = "He dropped it!" },
+]
+
+[[clip]]
+id = "dj-close-04"
+category = "dj"
+kit = "dj"
+part = "close"
+lines = [
+  { say = "host", text = "Here comes the marimba! It's always the marimba!" },
+]
+
+# ── Serials (one episode a day; see the other stations for the rest) ─────────
+
+[[clip]]
+id = "greg-comes-home-02"
+category = "story"
+serial = { id = "greg-comes-home", episode = 2 }
+title = "Greg Comes Home, Part Two: Hitching a Comet"
+bed = "ocean"
+lines = [
+  { say = "host", text = "Okay, beach people! We picked up a passenger in lane twelve! He hopped across from a whale ship at four this morning! Say hi, Greg!" },
+  { say = "greg", text = "Hello. Sorry. I'm very sandy." },
+  { say = "host", text = "Everybody's sandy! That's the beach! Crab, get the man some sunglasses!" },
+  { say = "crab", text = "Click.", gap = 0.5 },
+  { say = "host", text = "The crab has given Greg sunglasses! The crab has never given anyone anything! Greg, that's huge!" },
+  { say = "greg", text = "They're very small. They fit, though. When you're a shadow, everything fits." },
+  { say = "host", text = "So where are you headed?" },
+  { say = "greg", text = "Home. The eastern Overlap. Is the comet going that way?" },
+  { say = "host", text = "Sort of! But we only come round every seventy six years, so you'll have to jump off at exactly the right moment. Too early, you're in space. Too late, you're in seventy six years.", gap = 0.8 },
+  { say = "greg", text = "When's the right moment?" },
+  { say = "host", text = "When the moon goes past on the left! Big grey one, sleepy face, speakers on it. Jump for the moon. The moon's always got room." },
+  { say = "host", text = "Hey, Greg. Why did you leave, in the first place?" },
+  { say = "greg", text = "He never went anywhere. I wanted to see things.", gap = 1.0 },
+  { say = "greg", text = "I've seen things now. I want to tell him about them." },
+  { say = "host", text = "That's the best reason to go home I've ever heard! And I've never gone home!", gap = 0.8 },
+  { say = "host", text = "There it is! The moon! Go, Greg! Jump!" },
+  { sfx = "whoosh" },
+  { say = "host", text = "He's off! He's flying! He's waving! He's still wearing the crab's sunglasses!" },
+  { say = "crab", text = "Keep them.", gap = 0.4 },
+]
+
+# ── Halloween (24 to 31 October) ──────────────────────────────────────────────
+
+[[clip]]
+id = "halloween-01"
+category = "dj"
+kit = "dj"
+part = "body"
+title = "The Crab's Costume"
+dates = ["10-24", "10-25", "10-26", "10-27", "10-28", "10-29", "10-30", "10-31"]
+lines = [
+  { say = "host", text = "It's Halloween on the beach, and the crab has dressed up! He's taken his sunglasses off!", gap = 0.4 },
+  { say = "crab", text = "Click.", gap = 0.5 },
+  { say = "host", text = "He's come as a crab without sunglasses! Nobody recognises him! It's genuinely unsettling!" },
+]
+
+[[clip]]
+id = "halloween-02"
+category = "id"
+title = "Comet Marimba, Halloween"
+dates = ["10-24", "10-25", "10-26", "10-27", "10-28", "10-29", "10-30", "10-31"]
+lines = [
+  { say = "host", text = "Comet Marimba! Halloween on the tail! Spooky, sandy, and very, very fast!" },
+  { sting = "halloween" },
 ]
