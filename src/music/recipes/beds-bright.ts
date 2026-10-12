@@ -28,7 +28,7 @@ export function composeCooking(req: TrackRequest): Score {
   const keyScale = scalePcs(tonic, SCALES.major);
   const flats = prefersFlats(tonic, false);
   const bpm = pickBpm(rng, req, [108, 126]);
-  const { fit, plan } = bedForm(req, bpm, 4, { unit: 8, pattern: ['A', 'A', 'B', 'A'], outro: [1, 1, 2] });
+  const { fit, plan } = bedForm(req, bpm, 4, { unit: 8, pattern: ['A', 'A', 'B', 'A', 'C', 'B'], outro: [1, 1, 2] });
   const b = new ScoreBuilder(req.recipe, req, fit, 4, rng.range(0.58, 0.64), tweaks, 2);
   const beat = b.beat;
 
@@ -81,15 +81,18 @@ export function composeCooking(req: TrackRequest): Score {
       b.note(bass, b.grid.at(span.bar, 2), beat * 0.9, root + 7 <= 52 ? root + 7 : root - 5, vel(rng, 0.7));
       if (!intro && D > 0.25 && rng.chance(0.65)) b.note(bass, b.grid.at(span.bar, 3.5), beat * 0.45, nextRoot + (nextRoot > root ? -1 : 1), vel(rng, 0.6));
       // Off-beat plucks: the jaunty "and".
-      if (!intro || k > 0) for (const x of [0.5, 2.5]) for (const p of voicing) b.note(strings, b.grid.at(span.bar, x), beat * 0.4, p, vel(rng, 0.55, 0.06));
+      if ((!intro || k > 0) && s.part !== 'C') for (const x of [0.5, 2.5]) for (const p of voicing) b.note(strings, b.grid.at(span.bar, x), beat * 0.4, p, vel(rng, 0.55, 0.06));
     });
     if (outro) continue;
 
     for (let k = 0; k < s.bars; k++) {
       const bar = s.startBar + k;
       if (intro && k < s.bars - 1) continue;
-      for (const x of [0, 2]) b.hit(kick, b.grid.at(bar, x), vel(rng, x ? 0.55 : 0.7));
-      for (const x of [1, 3]) b.hit(brush, b.grid.at(bar, x), vel(rng, 0.55));
+      // The C section is a breakdown: the drums step out (the cook is concentrating).
+      if (s.part !== 'C' || k === s.bars - 1) {
+        for (const x of [0, 2]) b.hit(kick, b.grid.at(bar, x), vel(rng, x ? 0.55 : 0.7));
+        for (const x of [1, 3]) b.hit(brush, b.grid.at(bar, x), vel(rng, 0.55));
+      }
       for (let e = 0; e < 8; e++) b.hit(shaker, b.grid.at(bar, e * 0.5), vel(rng, e % 2 ? 0.32 : 0.45), 60, 0.2);
       if (k % 2 === 1 && rng.chance(0.5)) b.hit(spoon, b.grid.at(bar, 3.5), vel(rng, 0.5), rng.pick([60, 63, 67]));
     }
@@ -111,6 +114,12 @@ export function composeCooking(req: TrackRequest): Score {
         const here = chordAt(spans, b.grid.bar(bar) + 0.01).chord;
         const tones = notesInRange(chordPcs(here), 72, 88);
         for (let e = 0; e < 6; e++) b.note(marimba, b.grid.at(bar, e * 0.5), beat * 0.45, tones[(e * 2) % tones.length]!, vel(rng, 0.42));
+        continue;
+      }
+      if (s.part === 'C') {
+        // Breakdown: the pizzicato strings take the tune, low and dry; the marimba answers once.
+        for (const n of realizeMotif(cells[c % 4]!, 0, beat, 67, spans, keyScale, 60, 76, b.grid, bar)) b.note(strings, n.t, Math.min(n.d, beat), n.p, vel(rng, n.strong ? 0.7 : 0.6));
+        if (c % 2 === 1) for (const n of realizeMotif(cells[3]!.slice(-2), 0, beat, 84, spans, keyScale, 79, 91, b.grid, bar)) marimbaNote(n.t, n.d, n.p, 0.45);
         continue;
       }
       if (D < 0.4 && c % 2 === 1) continue;
@@ -352,13 +361,13 @@ export function composeQuiz(req: TrackRequest): Score {
   for (const s of plan) {
     const intro = s.part === 'intro';
     const outro = s.part === 'outro';
-    if (s.part === 'B') lift = Math.min(3, lift + 1);
-    if (s.part === 'A' && s.repeat > 0) lift = 0;
+    // Each new round climbs a semitone; after three the tension resets to the home key.
+    if (s.part === 'B') lift = lift >= 3 ? 0 : lift + 1;
     const key = tonic + (outro ? 0 : lift);
     const prog = parseProgression(tpl.prog, key);
     const spans = chordSpans(prog, s, b);
     if (outro) spans.forEach((sp) => (sp.chord = chord(tonic, 'm')));
-    b.section({ ...s, name: s.part === 'B' && lift > 0 ? `${s.name} (+${lift})` : s.name }, spans.map((x) => x.chord), flats);
+    b.section({ ...s, name: lift > 0 && !outro ? `${s.name} (+${lift})` : s.name }, spans.map((x) => x.chord), flats);
     const sT = b.grid.bar(s.startBar);
     const tonicChord = chord(key, 'm');
 
