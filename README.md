@@ -1,132 +1,115 @@
 # Multiverse Radio
 
-Tune into radio stations broadcasting from other dimensions. A tactile, late-night receiver
-for pre-generated audio: five channels, a weighted tuning dial, static between stations, and
-a VFD-style spectrum meter. No accounts, no backend, just static files.
+Endless radio from other dimensions. Open the page, press play, leave it on. Twenty-two
+stations broadcast live from elsewhere: generative lo-fi, synthwave, lounge, dub, polka and
+baroque robots, threaded with deadpan hosts, alien adverts, news from parallel realities and
+call-ins. Every station is drawn as a little animated pixel-art window into its dimension.
+
+No accounts and no backend. It's a static site, and the music is generated in your browser.
 
 ```bash
 npm install
-npm run dev        # http://localhost:5173
-npm run build      # typecheck + production build into dist/
+npm run dev            # http://localhost:5173 (use --port if that's taken)
+npm run build          # typecheck + production build into dist/
+npm test               # unit tests (Vitest)
+npm run test:e2e       # build + Playwright smoke/CSP/PWA tests against dist/ with Netlify headers
 ```
+
+Pushes to `main` deploy to Netlify (`netlify.toml`); GitHub Actions runs typecheck, unit
+tests, build and the Playwright suite on every push and pull request.
 
 ## Controls
 
-| Input | Action |
+| Key | Action |
 | --- | --- |
-| Click **Tune in** / play | Power on (browsers need a gesture before audio) |
-| Drag the dial | Turn through stations; it clicks at each detent and coasts on release |
-| Tap the dial | Next station |
-| `Space` | Play / pause |
-| `←` `→` | Previous / next episode |
-| `↑` `↓` | Channel up / down |
-| `M` | Mute |
+| `Space` | Power / play / pause |
+| `←` `→` | Previous / next station |
+| `S` | Scan: hop to a random station |
+| `N` | Skip to the next segment |
+| `M` | Mute · `-` / `+` volume |
+| `G` | Channel guide |
+| `C` | Captions on/off |
+| `F` | "Leave it on" ambient mode |
+| `?` | The manual |
 
-Media keys and lock-screen controls work through the Media Session API. The last channel and
-the volume are remembered in `localStorage`.
+Media keys and lock-screen controls work through the Media Session API. `?station=<id>`
+links straight to a station; the last station and the volume are remembered.
 
-## Adding content
+## How "endless" works
 
-Content lives entirely in `public/`. No code changes needed.
-
-1. Drop an MP3 into `public/audio/<channel>/`.
-2. Add an entry to `public/episodes.json`:
-
-   ```json
-   {
-     "id": "plumbus-004",
-     "title": "Election Night, All Results",
-     "description": "Everyone won. Everyone lost. Officials are counting both.",
-     "audioUrl": "/audio/plumbus/episode-004.mp3",
-     "durationSeconds": 0,
-     "publishedAt": "2026-10-20"
-   }
-   ```
-
-3. Run `npm run content:sync` to fill in `durationSeconds` from the file (needs `ffprobe`).
-   `npm run content:check` only reports: missing files, duplicate ids, stale durations.
-
-A new channel is just another object in `channels` (`id`, `name`, `tagline`, `color` hex,
-`episodes`). The dial spreads its detents over however many channels exist.
-`"loop": true` on an episode makes it repeat forever instead of advancing (the Static channel
-uses this). Invalid entries are skipped with a console warning rather than breaking the page.
-
-If you host audio on another origin (a CDN), it must send CORS headers: the audio is routed
-through Web Audio for the visualizer and transitions.
-
-## Placeholder audio
-
-The bundled episodes were rendered locally with Kokoro TTS from original scripts in
-`scripts/generate_placeholders.py`. The script also synthesizes the stings, applause, static
-zaps, the Static channel's ambient loop, and the two sound effects in `public/sfx/`.
-Replace any of them freely. To regenerate:
-
-```bash
-pip install kokoro-onnx soundfile numpy   # plus ffmpeg on PATH
-python scripts/generate_placeholders.py --model kokoro-v1.0.onnx --voices voices-v1.0.bin
-python scripts/generate_placeholders.py --sfx-only        # sound effects only, no TTS
-npm run content:sync
+```
+ src/stations/roster.ts (22 stations)     content/voice/*.toml ──voice:render──▶ public/voice/
+            │                                                                       │
+            ▼                                                                       ▼
+ scheduler (pure): station + wall clock ──▶ segments  (tracks + voice clips, seeded per UTC hour)
+            │
+            ▼
+ mixer (Web Audio): music engine (generative, seeded) ─┐
+                    voice clips (decoded buffers) ─────┼─ ducking ─ analyser ─ volume ─ out
+                    static between stations ───────────┘
+            │
+            ▼
+ useBroadcast store ──▶ UI (receiver, scenes, captions, program log, tickers)
 ```
 
-Rendered TTS lines are cached in `scripts/.cache/`, so editing one line re-renders quickly.
+- **Music** is synthesized in the browser from a genre recipe and a seed (`src/music`). The
+  same seed gives the same song on every machine, and it never runs out.
+- **Voices** are about 600 short pre-rendered Kokoro TTS clips (3½ hours): idents, host links,
+  ads, news, weather, call-ins, sports, stories. Programme clocks per station format (music,
+  mixed, talk, ambient) weave them between tracks, ducking the music under hosts.
+- **Stations are live.** The schedule is a pure function of wall-clock time, so tuning away and
+  back means you missed things. *Skip* gives a station a private clock offset.
+- **Text is procedural too** (`src/content`): track titles and artists, ticker headlines,
+  listener messages, reception reports and dimension weather, all seeded grammars.
 
-## How it works
+## Layout
 
 ```
 src/
-├── App.tsx                  chassis, layout, boot/error screen
-├── components/
-│   ├── ChannelDial.tsx      dial + channel cards (horizontal strip on phones)
-│   ├── ChannelKnob.tsx      draggable SVG knob: detents, inertia, rubber-band stops, ARIA slider
-│   ├── NowPlaying.tsx       glass display: status, titles, progress, tune-in / signal-lost overlays
-│   ├── PlayerControls.tsx   prev / play / next, mute, volume
-│   ├── EpisodeList.tsx      "transmission log" (collapsible on phones)
-│   ├── Visualizer.tsx       canvas spectrum meter fed by an AnalyserNode
-│   └── Icons.tsx
-├── hooks/                   keyboard controls, Media Session + tab title, reduced motion
-└── lib/
-    ├── audio.ts             AudioEngine: playback, static transitions, analyser, SFX
-    ├── store.ts             Zustand store: channel/episode state and every user action
-    ├── channels.ts          types, episodes.json loading + validation
-    ├── sfx.ts               SFX loading with synthesized fallbacks
-    ├── storage.ts           safe localStorage helpers
-    └── format.ts
+├── stations/roster.ts   the 22 stations: recipe, scene, host persona, colors, art direction
+├── broadcast/           types (the shared contract), scheduler, clip library, mixer, director,
+│                        useBroadcast store, effects (media session, title, ?station=)
+├── music/               generative music engine and genre recipes
+├── content/             procedural text grammars
+├── scenes/              pixel-art scenes: shared kit, one lazily loaded module per scene
+├── components/, ui/, hooks/   the Yondertone YT-22 receiver UI
+├── pwa/                 service worker, registration, icon/social-card rendering
+└── lab/                 developer labs (below)
+content/voice/           voice scripts (TOML) + SCHEMA.md
+scripts/voice/           Kokoro renderer → public/voice/
+tests/e2e/               Playwright suite
+docs/V2-PLAN.md          the v2 architecture and how it was built
 ```
 
-**Audio engine** (`lib/audio.ts`). One `<audio>` element is reused for every episode and routed
-through Web Audio. Every tune starts a static burst: looping noise through a sweeping bandpass,
-plus a faint heterodyne whistle. The new file starts loading muted underneath it. Once the
-file is playing and a minimum burst has elapsed (650 ms for a channel, 420 ms for an episode),
-the static fades out and the episode fades in. A slow connection just means more static. Each
-tune/pause increments a generation counter, so rapid channel spinning cancels stale transitions
-cleanly. The visualizer taps the signal *before* the volume stage, so it keeps moving when
-muted.
+## Labs
 
-**Failure handling.** A missing or broken file shows *Signal lost* and auto-skips after 2 s.
-If every episode on a channel fails, it stops and offers *Try again* instead of looping
-forever. If `episodes.json` fails to load or validate, the display shows why, with a retry
-button.
+Developer pages for poking at each subsystem on its own, in dev and in production builds:
 
-**Accessibility.** The dial is a real `role="slider"` (arrows, Home/End). Every control is
-keyboard reachable with visible focus, and icon buttons have labels. A live region announces
-what's playing. `prefers-reduced-motion` removes grain, scanline roll, flicker and jitter, and
-shortens the dial glide.
+- `/lab/music.html`: audition every music recipe and seed, tweak it, export WAVs.
+- `/lab/scenes.html`: gallery of all 22 scenes, with energy, rare events and aspect ratios.
+- `/lab/director.html`: the live schedule timeline, bus meters, ducking and captions.
 
-## Notes on the spec
+## Adding content
 
-- **Tailwind v4.** Design tokens live in `src/index.css` (`@theme`), so there's no
-  `tailwind.config.js`.
-- **Zustand** for state (the spec allowed it): the audio engine and the UI share one store
-  without prop drilling.
-- **Open questions, as decided here:** the visualizer uses real Web Audio frequency analysis.
-  Channels tint the whole UI with their accent color, which transitions smoothly via a
-  registered `--accent` property. The TTS half of the generation pipeline is documented as a
-  script.
-- The channel names reference *Rick and Morty*. That's fine for a personal project, but worth
-  renaming before using it as a public portfolio piece.
+**A voice clip:** add a `[[clip]]` to `content/voice/<station>.toml` (format in
+`content/voice/SCHEMA.md`), then:
 
-## Deploying
+```bash
+npm run voice:check    # validates every script (no audio; plain Python 3.11+)
+npm run voice:render   # renders only what changed into public/voice/
+```
 
-`npm run build` produces a fully static `dist/` for any static host. To serve under a sub-path
-(e.g. GitHub Pages), set `base` in `vite.config.ts`. Paths in `episodes.json` are resolved
-against it automatically.
+Rendering needs ffmpeg and Python with `kokoro-onnx`, `numpy` and `soundfile`, plus the Kokoro
+model files. See `scripts/voice/README.md`.
+
+**A station:** add it to `src/stations/roster.ts` (with a recipe, scene and host), write its
+script file, render, and add a scene in `src/scenes/defs/` if it needs a new one. The roster
+tests check that ids, frequencies and scene ids line up.
+
+## Notes
+
+- Everything is original: stations, characters, sponsors and jokes. Generated text is checked
+  against a banned-words list in `src/content/banned.ts`.
+- The audio graph runs through Web Audio, so audio hosted on another origin would need CORS.
+- The service worker caches the app shell for offline boot and a small number of voice clips;
+  navigations are network-first, so a new deploy is picked up without stale shells.
