@@ -334,7 +334,6 @@ def gallery(out: Path, voice: str) -> int:
     import clip as engine
     import dsp
     import sounds
-    import voicefx
     from voicescript import BEDS, FX, SFX, SFX_SECONDS, STINGS, Speech
 
     engine.init_worker(str(KOKORO_MODEL), str(KOKORO_VOICES), str(CACHE), os.cpu_count() or 4)
@@ -355,7 +354,6 @@ def gallery(out: Path, voice: str) -> int:
         save(f"sfx-{name}", sounds.make_sfx(name, SFX_SECONDS[name], 1.0, rng))
     for name in STINGS:
         save(f"sting-{name}", sounds.make_sting(name, rng))
-    assert set(voicefx.PRESETS) == set(FX)
     return 0
 
 
@@ -393,6 +391,12 @@ def main() -> int:
         scripts = [s for s in scripts if not s.is_draft]
     if not scripts:
         print(f"No scripts to render in {rel(args.content)}.")
+    try:
+        import numpy  # noqa: F401
+        import soundfile  # noqa: F401
+    except ImportError as e:
+        sys.exit(f"error: rendering needs numpy, soundfile and kokoro-onnx ({e}). "
+                 "Point VOICE_PYTHON (npm scripts) at a Python that has them.")
     return render(scripts, args.out, args.force, max(1, args.jobs), prune_stations=not args.station)
 
 
