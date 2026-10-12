@@ -1,0 +1,290 @@
+# Wild Multiverse — Sir Reginald Thistlewood, a very long way from a road.
+# Hushed, reverent, deeply moved by every creature, including the ones trying to eat the
+# crew. Pip is the camera operator and is having a difficult series.
+station = "wild-multiverse"
+
+[voices]
+host = { voice = "bm_george", speed = 0.92, name = "Sir Reginald Thistlewood" }
+pip = { voice = "am_liam", fx = "whisper", name = "Pip (Camera)" }
+
+# ── Idents ────────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "id-001"
+category = "id"
+bed = "wind"
+lines = [
+  { say = "host", text = "This is Wild Multiverse. Nature documentaries about creatures that are, frankly, too much." },
+  { sting = "id" },
+]
+
+[[clip]]
+id = "id-002"
+category = "id"
+lines = [
+  { say = "host", text = "Wild Multiverse. One oh four point eight. Very quietly now." },
+  { sting = "id" },
+]
+
+[[clip]]
+id = "id-003"
+category = "id"
+lines = [
+  { say = "host", text = "Wild Multiverse. Broadcasting from a very long way from a road." },
+  { sting = "id" },
+]
+
+[[clip]]
+id = "id-004"
+category = "id"
+daypart = "morning"
+lines = [
+  { say = "host", text = "Good morning, from the tall grass. This is Wild Multiverse. Something enormous is waking up." },
+  { sting = "id" },
+]
+
+[[clip]]
+id = "id-005"
+category = "id"
+daypart = "night"
+lines = [
+  { say = "host", text = "Wild Multiverse, by night. Keep your voice down. Keep your feet inside the tent." },
+  { sting = "id" },
+]
+
+[[clip]]
+id = "id-006"
+category = "id"
+lines = [
+  { say = "host", text = "You're listening to Wild Multiverse.", gap = 0.4 },
+  { say = "pip", text = "Sir Reginald. It's behind you.", gap = 0.6 },
+  { say = "host", text = "Of course it is." },
+  { sting = "id" },
+]
+
+[[clip]]
+id = "id-007"
+category = "id"
+lines = [
+  { say = "host", text = "Wild Multiverse. Please do not feed the crew." },
+  { sting = "id" },
+]
+
+# ── Stories ───────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "story-001"
+category = "story"
+title = "The Mostly-Neck Giraffe"
+bed = "wind"
+lines = [
+  { say = "host", text = "Here, in the tall grass, we find one of the multiverse's most patient creatures. The mostly-neck giraffe." },
+  { say = "host", text = "It began walking past our camera at dawn. It is now mid-afternoon. We have seen the legs. We have seen the first eleven miles of neck. We have not yet seen the head." },
+  { say = "host", text = "Some say the head is in another weather system. Some say there is no head at all, only more neck, curving gently into the upper atmosphere, forever." },
+  { say = "host", text = "Pip, our camera operator, has asked whether we might break for lunch. We may not. The neck continues.", gap = 0.6 },
+  { say = "pip", text = "It's been nine hours.", gap = 0.6 },
+  { say = "host", text = "And what a nine hours they have been." },
+]
+
+[[clip]]
+id = "story-002"
+category = "story"
+title = "The Coiled Spring Deer"
+bed = "wind"
+lines = [
+  { say = "host", text = "At dusk, the coiled spring deer emerges to feed. Each step is a decision. Each decision is a bounce." },
+  { say = "host", text = "The herd crosses the valley in great slow arcs, never touching the ground for long, as though the ground had once said something unkind." },
+  { say = "host", text = "Here, a young buck attempts his first proper leap. He is overconfident. He has compressed much too far.", gap = 1.0 },
+  { say = "host", text = "He is gone.", gap = 0.8 },
+  { say = "host", text = "He is somewhere near the coast now, we believe. He will walk back. It will take him a week. He will have learned nothing. It is, quite simply, magnificent." },
+]
+
+[[clip]]
+id = "story-003"
+category = "story"
+title = "The Lesser Spotted Echo"
+bed = "wind"
+lines = [
+  { say = "host", text = "Listen. There. And there again. That is the call of the lesser spotted echo, a creature so shy it has never once been seen. Only heard, repeating whatever was said just before." },
+  { say = "host", text = "For three weeks we have tried to film it. For three weeks it has only repeated our arguments about where to put the camera." },
+  { say = "host", text = "We have tried playing it birdsong. It played us back our own birdsong, slightly worse. We have tried silence. It has a very good silence." },
+  { say = "host", text = "Then, last night, by the fire, Pip leaned over and whispered to me.", gap = 0.6 },
+  { say = "pip", text = "I think I've found it.", gap = 1.2 },
+  { say = "host", text = "That was not Pip." },
+]
+
+[[clip]]
+id = "story-004"
+category = "story"
+title = "The Folding Elk"
+bed = "wind"
+lines = [
+  { say = "host", text = "In autumn, the folding elk prepares for winter in the only way it knows. It folds." },
+  { say = "host", text = "First the antlers. Then the legs. Then, with a sound like someone closing a very old map, everything else. By November, a fully grown bull can be slipped into an envelope." },
+  { say = "host", text = "Many are. Some are posted to relatives. In spring, they unfold wherever they happen to have landed, blinking, in sorting offices across the continent, with no idea how to get home." },
+  { say = "host", text = "Postal workers say that an elk unfolding is the single most surprising thing that can happen in a sorting office, narrowly ahead of a letter addressed to them personally." },
+  { say = "host", text = "And so begins the great migration. On foot. With stamps on." },
+]
+
+[[clip]]
+id = "story-005"
+category = "story"
+title = "The Velvet Tortoise"
+lines = [
+  { say = "host", text = "The velvet tortoise is the slowest romantic in the animal kingdom." },
+  { say = "host", text = "This male began his courtship display in the spring of last year. He has now completed the first part. He has raised one eyebrow." },
+  { say = "host", text = "Across the clearing, the female has noticed. Within the next eighteen months, she may raise one of her own." },
+  { say = "host", text = "The crew planned to stay for it. Two of them have since married. Not each other. They met other people, in the time. Life goes on, all around the tortoise. The tortoise does not mind. The tortoise has an eyebrow to attend to." },
+]
+
+[[clip]]
+id = "story-006"
+category = "story"
+title = "The Upside-Down Heron"
+bed = "rain"
+lines = [
+  { say = "host", text = "The upside-down heron fishes not in the river, but in the sky." },
+  { say = "host", text = "Standing on the surface of the water, feet perfectly dry, head pointed down, it waits for something to swim past in the clouds below. A swallow. A kite. Very occasionally, a deeply confused aeroplane." },
+  { say = "host", text = "It is very still for very long stretches, which the crew have found inspiring, and which the heron has found mildly unsettling, as it can see us, upside down, being inspired." },
+  { say = "host", text = "Today it has been lucky. It has caught a small cumulus.", gap = 0.8 },
+  { say = "host", text = "It does not know what to do with it. Neither, frankly, do we. It is raining on the heron now. The heron looks betrayed." },
+]
+
+[[clip]]
+id = "story-007"
+category = "story"
+title = "The Hat Moth"
+daypart = "night"
+lines = [
+  { sfx = "crickets", seconds = 2.0, level = 0.4 },
+  { say = "host", text = "As night falls, the hat moth begins its search. It is drawn not to the light, but to hats. Any hat. A bowler. A bonnet. A sun hat left on a bench." },
+  { say = "host", text = "It lands, and it stays, and that hat becomes its whole life." },
+  { say = "host", text = "Pip has been wearing a woolly hat since Tuesday. There are now, by our count, forty moths on it. He says it is very warm. He says he cannot take it off. He says they hum, at night.", gap = 0.6 },
+  { say = "pip", text = "They do hum.", gap = 0.6 },
+  { say = "host", text = "He is, I think, quite happy." },
+]
+
+[[clip]]
+id = "story-008"
+category = "story"
+title = "The Bashful Leviathan"
+bed = "ocean"
+lines = [
+  { say = "host", text = "Beneath these waves lives the bashful leviathan. The largest creature ever recorded, and by some distance the most easily embarrassed." },
+  { say = "host", text = "It is the length of four cathedrals. If you look at it directly, it turns pink and swims away, causing a small tidal wave." },
+  { say = "host", text = "Its song is a long, low murmur that translates, roughly, as please stop looking. Followed by, are you still looking. Followed by, oh no." },
+  { say = "host", text = "We have been filming it through our fingers. Even so, it knows. Look.", gap = 1.0 },
+  { say = "host", text = "It's blushing.", gap = 0.8 },
+  { say = "host", text = "Everybody hold on to something. Pip, hold on to the camera. Pip, the camera is not something to hold on to. Pip." },
+]
+
+[[clip]]
+id = "story-009"
+category = "story"
+title = "The Pocket Bison"
+bed = "wind"
+lines = [
+  { say = "host", text = "Across the great plains, the herd thunders. The pocket bison." },
+  { say = "host", text = "Each one is about the size of a teacup, and roughly as calm. Seven thousand of them, stampeding at full speed, sound like somebody gently shaking a box of raisins." },
+  { say = "host", text = "They migrate twice a year. North for the summer, and then, after some discussion, slightly further north." },
+  { say = "host", text = "They have no natural predators. Nothing can bring itself to hurt them. Our sound recordist wept for an hour. I have not stopped." },
+  { say = "host", text = "They are coming this way. They are going up Pip's trouser leg. Stay very still, Pip.", gap = 0.6 },
+  { say = "pip", text = "They're so small." },
+]
+
+[[clip]]
+id = "story-010"
+category = "story"
+title = "The Humming Crab"
+bed = "ocean"
+daypart = "night"
+lines = [
+  { say = "host", text = "On the shore at low tide, the humming crabs gather to sing. Nobody knows the song. It is very long, and it changes key whenever a cloud passes over the moon." },
+  { say = "host", text = "They come in their hundreds, claws raised, eyes closed. The old ones at the front carry the tune. A young one at the back hums slightly sharp. Nobody corrects him. Nobody ever has. That, I think, is what makes it a choir." },
+  { say = "host", text = "Tonight, the crabs are humming something we almost recognise. Listen.", gap = 1.0 },
+  { say = "host", text = "It goes... da da dum. Da da.", speed = 0.85, gap = 1.2 },
+  { say = "host", text = "Someone, please. Find Bev." },
+]
+
+[[clip]]
+id = "story-011"
+category = "story"
+title = "The Lantern Badger"
+daypart = "evening"
+lines = [
+  { say = "host", text = "The lantern badger lights its own way, with a small glowing patch on its back that it cannot see, and does not know is there." },
+  { say = "host", text = "It believes the world is simply brighter wherever it happens to go. It is the most optimistic animal we have ever filmed. We did not have the heart to tell it." },
+  { say = "host", text = "It greets every tree as though the tree had personally arranged to be lit up for the occasion. The trees, to their credit, have never once corrected it." },
+  { say = "host", text = "Look at it now, trotting into the dark wood, absolutely certain that the dark wood is lovely.", gap = 1.0 },
+  { say = "host", text = "And, to be fair to the badger, wherever it goes, it is." },
+]
+
+[[clip]]
+id = "story-012"
+category = "story"
+title = "The Wandering Armchair"
+bed = "wind"
+lines = [
+  { say = "host", text = "Here, on the high moor, a rare sight. A wild armchair." },
+  { say = "host", text = "These creatures roam the uplands alone, grazing on loose change and lost remote controls. Approach slowly. And never, ever sit down. The armchair will accept you, and you will not get up again." },
+  { say = "host", text = "Here we see a mature male, a high-backed wing chair in his prime. Note the lace doily on the headrest. That is a display feature. It means he is ready to be sat in." },
+  { say = "host", text = "Pip sat down at half past two.", gap = 0.8 },
+  { say = "pip", text = "It's extraordinarily comfortable.", gap = 0.6 },
+  { say = "host", text = "He says he understands now. He has asked us to go on without him. We will send a postcard." },
+]
+
+[[clip]]
+id = "story-013"
+category = "story"
+title = "The Lone Shadow"
+bed = "wind"
+daypart = "evening"
+lines = [
+  { say = "host", text = "And now, something I never expected to film. A shadow. On its own. No owner." },
+  { say = "host", text = "It moves through the grass at sunset, stretching long, then short, then long again, as if trying on different sizes. Locals call him Greg." },
+  { say = "host", text = "He was attached, once, to someone called Hollis, in a town not far from here. One morning, when Hollis stopped walking, Greg simply kept going. Hollis still leaves the porch light on." },
+  { say = "host", text = "We followed him for three days. He never once looked back. Although on the second evening, he stopped at a gate and waited a long while, the way you wait for someone who is a little behind you. Then he went on." },
+  { say = "host", text = "He is the freest thing I have ever seen.", gap = 0.8 },
+  { say = "host", text = "Pip. Don't step on him." },
+]
+
+[[clip]]
+id = "story-014"
+category = "story"
+title = "The Common Sigh"
+lines = [
+  { say = "host", text = "The common sigh is found in every habitat on earth, from the rainforest to the waiting room. It is almost invisible." },
+  { say = "host", text = "It feeds on Tuesday afternoons, long queues, and the last biscuit going to someone else. When disturbed, it escapes through the nearest person's nose." },
+  { say = "host", text = "There are more common sighs in a single office building than there are stars in the sky, and on a Monday morning, the numbers are frankly alarming." },
+  { say = "host", text = "There.", gap = 1.0 },
+  { say = "host", text = "Just then. You heard it. We all heard it.", gap = 0.8 },
+  { say = "host", text = "A perfect specimen. Possibly the finest we have recorded. I may have to sit down." },
+]
+
+[[clip]]
+id = "story-015"
+category = "story"
+title = "The Ladder Crane"
+bed = "rain"
+lines = [
+  { say = "host", text = "In the wetlands lives the ladder crane, a bird so tall that it nests on the heads of other birds." },
+  { say = "host", text = "Each spring, the young must make their first descent. It is a long way down, and there are no rungs." },
+  { say = "host", text = "The parents do not help. They stand on the heads of other birds, looking down, the way all parents look down, hoping, and pretending they are not holding their breath." },
+  { say = "host", text = "The ladder crane is the only creature in nature ever to be offered a sponsorship deal by Grumbel's Ladders. It declined. It said that up was a choice, and so was falling gracefully." },
+  { say = "host", text = "And there it goes.", gap = 1.0 },
+  { say = "host", text = "Gracefully." },
+]
+
+[[clip]]
+id = "story-016"
+category = "story"
+title = "The Great Crested Doubt"
+lines = [
+  { say = "host", text = "Today, a rare encounter with the great crested doubt, a large and pensive bird that feeds on certainty." },
+  { say = "host", text = "It has been circling our camp since dawn. It has already eaten Pip's confidence, and most of the director's plan." },
+  { say = "host", text = "This morning it landed on the sound recordist's shoulder, and she spent forty minutes wondering whether she had left the oven on. She has never owned an oven." },
+  { say = "host", text = "I myself am no longer entirely sure this is a documentary.", gap = 1.0 },
+  { say = "host", text = "I'm sure it is.", gap = 0.8 },
+  { say = "host", text = "I think it is. Remarkable creature. Possibly. I'd like to say remarkable. Pip, is it remarkable?", gap = 0.6 },
+  { say = "pip", text = "I don't know any more." },
+]

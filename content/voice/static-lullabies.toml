@@ -1,0 +1,138 @@
+# Static Lullabies — The Listener, from the gap between stations.
+# Ambient: voices are rare, hushed and kind. The Listener may be the static itself.
+# Bits: the three-eyed cat on the television, the snow that briefly smiles, the thing
+# under the bed (also asleep). Light callbacks: Greg and Hollis's porch light, Teodor.
+station = "static-lullabies"
+
+[voices]
+host = { voice = "af_nicole", speed = 0.85, name = "The Listener" }
+hush = { voice = "af_nicole", speed = 0.85, fx = "whisper", name = "The Listener" }
+
+# ── Idents ────────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "id-001"
+category = "id"
+lines = [
+  { say = "host", text = "Static Lullabies.", gap = 0.8 },
+  { say = "hush", text = "Shh. You're doing fine." },
+]
+
+[[clip]]
+id = "id-002"
+category = "id"
+lines = [
+  { say = "host", text = "Eighty-seven point seven. The gap between stations. All tucked in." },
+]
+
+[[clip]]
+id = "id-003"
+category = "id"
+daypart = "night"
+lines = [
+  { say = "host", text = "Static Lullabies.", gap = 0.8 },
+  { say = "host", text = "I'll keep the light on." },
+]
+
+[[clip]]
+id = "id-004"
+category = "id"
+lines = [
+  { say = "host", text = "This is Static Lullabies. Nobody needs anything from you right now." },
+]
+
+[[clip]]
+id = "id-005"
+category = "id"
+lines = [
+  { say = "hush", text = "Static Lullabies. Something is listening. It's being very nice about it." },
+]
+
+# ── Quiet clips ───────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "dj-001"
+category = "dj"
+lines = [
+  { say = "host", text = "If you can hear this, you're still awake. That's alright. I'm awake too. I'm always awake. That's my job.", gap = 1.0 },
+  { say = "hush", text = "Close your eyes. I'll watch the dial." },
+]
+
+[[clip]]
+id = "dj-002"
+category = "dj"
+lines = [
+  { say = "host", text = "The cat on the television has rolled over.", gap = 1.0 },
+  { say = "host", text = "All three eyes are closed. That's how you know it's going to be a good night." },
+]
+
+[[clip]]
+id = "dj-003"
+category = "dj"
+lines = [
+  { say = "host", text = "The snow on the screen just made a little smile. I saw it.", gap = 1.2 },
+  { say = "host", text = "It's gone now. It forgets. But it happened." },
+]
+
+[[clip]]
+id = "dj-004"
+category = "dj"
+lines = [
+  { say = "host", text = "There's something under the bed.", gap = 1.4 },
+  { say = "hush", text = "Don't worry. It's asleep too. I tucked it in. It has a very small blanket." },
+]
+
+[[clip]]
+id = "dj-005"
+category = "dj"
+daypart = "night"
+lines = [
+  { say = "host", text = "Greg.", gap = 1.0 },
+  { say = "host", text = "If you're out there, Hollis left the porch light on. Nobody's cross.", gap = 1.0 },
+  { say = "hush", text = "Come home when you're ready." },
+]
+
+[[clip]]
+id = "dj-006"
+category = "dj"
+daypart = "morning"
+lines = [
+  { say = "host", text = "It's nearly morning. You don't have to get up yet.", gap = 1.0 },
+  { say = "host", text = "I'll tell you when.", gap = 1.4 },
+  { say = "hush", text = "Not yet." },
+]
+
+[[clip]]
+id = "dj-007"
+category = "dj"
+lines = [
+  { say = "host", text = "Everything you didn't finish today will still be there tomorrow. It isn't going anywhere.", gap = 1.0 },
+  { say = "host", text = "Neither am I." },
+]
+
+[[clip]]
+id = "dj-008"
+category = "dj"
+lines = [
+  { say = "hush", text = "Breathe in.", gap = 1.6 },
+  { say = "hush", text = "And out.", gap = 1.2 },
+  { say = "host", text = "The static is breathing with you. It's a little slower than you. Try to keep up. Or don't." },
+]
+
+[[clip]]
+id = "dj-009"
+category = "dj"
+daypart = "night"
+lines = [
+  { say = "host", text = "Somewhere between the stations there's a quiet place, about the size of a bedroom.", gap = 1.0 },
+  { say = "host", text = "You're in it.", gap = 1.0 },
+  { say = "hush", text = "Goodnight." },
+]
+
+[[clip]]
+id = "dj-010"
+category = "dj"
+lines = [
+  { say = "host", text = "Someone far away, at Relay Four, keeps asking if anyone can hear him.", gap = 1.0 },
+  { say = "hush", text = "I can, Teodor. I can always hear you. Go to sleep." },
+]

@@ -1,0 +1,225 @@
+# The Lounge at the End of Time — Barnaby Velvet, last booth, Heat Death Boulevard.
+# Running bits: every song is "a real heartbreaker" (and he means it), last call for
+# eleven billion years, the open tab, stars going out through the big window, the empty
+# microphone, Gilbert the octopus bartender. Greg drinks here.
+station = "end-lounge"
+
+[voices]
+host = { voice = "bm_fable", speed = 0.88, name = "Barnaby Velvet" }
+gilbert = { voice = "bm_lewis", speed = 0.95, name = "Gilbert (Bartender)" }
+bev = { voice = "bf_lily", fx = "phone", name = "Bev" }
+
+# ── Idents ────────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "id-001"
+category = "id"
+lines = [
+  { say = "host", text = "You're in the Lounge at the End of Time. Pull up a booth. There's no hurry. There's no anything." },
+  { sting = "id" },
+]
+
+[[clip]]
+id = "id-002"
+category = "id"
+lines = [
+  { say = "host", text = "The Lounge at the End of Time. Ninety-two point six. Last call has been going on for eleven billion years." },
+  { sting = "id" },
+]
+
+[[clip]]
+id = "id-003"
+category = "id"
+daypart = "evening"
+lines = [
+  { say = "host", text = "Good evening. This is the Lounge at the End of Time. It's always evening here. We arranged it." },
+  { sting = "id" },
+]
+
+[[clip]]
+id = "id-004"
+category = "id"
+lines = [
+  { say = "host", text = "The Lounge at the End of Time. Where everything ends... beautifully." },
+  { sting = "id" },
+]
+
+[[clip]]
+id = "id-005"
+category = "id"
+lines = [
+  { say = "host", text = "You're listening to the Lounge at the End of Time. Gilbert, another round for the listener." },
+  { say = "gilbert", text = "On it." },
+  { sting = "id" },
+]
+
+[[clip]]
+id = "id-006"
+category = "id"
+daypart = "morning"
+lines = [
+  { say = "host", text = "Good morning, if you'll allow it. The Lounge at the End of Time is still open. We never really closed." },
+  { sting = "id" },
+]
+
+[[clip]]
+id = "id-007"
+category = "id"
+lines = [
+  { say = "host", text = "The Lounge at the End of Time. Heat Death Boulevard. Mind the step. It's the last one." },
+  { sting = "id" },
+]
+
+# ── Host links ────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "dj-001"
+category = "dj"
+lines = [
+  { say = "host", text = "That was a real heartbreaker. I don't say that lightly. I've said it about every song I've ever played, and I have meant it, every single time. Here's another." },
+]
+
+[[clip]]
+id = "dj-002"
+category = "dj"
+lines = [
+  { say = "host", text = "If you're seated by the big window, you'll have noticed another star went out just then, over to the left. Lovely little thing. Burned for nine billion years. Never once complained." },
+  { say = "host", text = "Let's raise a glass to her. And now, a real heartbreaker." },
+]
+
+[[clip]]
+id = "dj-003"
+category = "dj"
+lines = [
+  { say = "host", text = "Gilbert tells me it's last call. Gilbert has been telling me it's last call for eleven billion years. I've never once taken him up on it, and I think, deep down, he's grateful.", gap = 0.6 },
+  { say = "gilbert", text = "I am not.", gap = 0.6 },
+  { say = "host", text = "He is." },
+]
+
+[[clip]]
+id = "dj-004"
+category = "dj"
+lines = [
+  { say = "host", text = "To the gentleman in booth four: your tab is still open. It has been open since the formation of the first galaxies. We don't mind in the least." },
+  { say = "host", text = "We simply think it's worth mentioning, as the galaxies are now leaving." },
+]
+
+[[clip]]
+id = "dj-005"
+category = "dj"
+lines = [
+  { say = "host", text = "The microphone on our little stage is empty tonight, as it is every night. We keep the spotlight on, just in case. Someone might come. Someone always might come." },
+  { say = "host", text = "Until then, here's a real heartbreaker." },
+]
+
+[[clip]]
+id = "dj-006"
+category = "dj"
+lines = [
+  { say = "host", text = "There's a shadow at the end of the bar. No one attached. Orders a dry ginger, tips well, says his name is Greg. Barely speaks." },
+  { say = "host", text = "I think he's waiting for somebody, or hiding from somebody, which at this hour is the same thing. Somebody called Hollis, I gather. Greg, darling. Call home." },
+]
+
+[[clip]]
+id = "dj-007"
+category = "dj"
+lines = [
+  { say = "host", text = "This evening's music comes to you courtesy of Grumbel's Ladders. At the end of time, darling, everyone wants to see just a little bit further. Grumbel's. Up is a choice. While there's still an up." },
+]
+
+[[clip]]
+id = "dj-008"
+category = "dj"
+daypart = "night"
+lines = [
+  { say = "host", text = "It's late. Later than it's ever been, if we're honest, and getting later all the time. Let's not worry about that. Let's worry about whether you've got enough ice. Gilbert?", gap = 0.6 },
+  { say = "gilbert", text = "They've got enough ice.", gap = 0.5 },
+  { say = "host", text = "There we are. Here's a song." },
+]
+
+[[clip]]
+id = "dj-009"
+category = "dj"
+daypart = "evening"
+lines = [
+  { say = "host", text = "Good evening. The universe is cooling nicely tonight, a gentle three degrees above nothing at all. Perfect weather for a slow dance." },
+  { say = "host", text = "Find someone. If there's no one left, find a coat stand. Coat stands are wonderful listeners." },
+]
+
+[[clip]]
+id = "dj-010"
+category = "dj"
+lines = [
+  { say = "host", text = "Somebody asked me once if I ever tire of calling a song a real heartbreaker. And I said, darling, the day I stop meaning it is the day I close the lid on the piano." },
+  { say = "host", text = "The lid is open. Here's a real heartbreaker." },
+]
+
+[[clip]]
+id = "dj-011"
+category = "dj"
+lines = [
+  { say = "host", text = "A word of thanks to Gilbert, our bartender, who is polishing eight glasses at once again tonight. I asked him why. He said, Barnaby, because I can." },
+  { say = "host", text = "Which is the most beautiful answer I have ever heard to anything." },
+]
+
+[[clip]]
+id = "dj-012"
+category = "dj"
+daypart = "morning"
+lines = [
+  { say = "host", text = "If you're joining us in the morning, wherever mornings still happen, welcome. We don't serve breakfast. We serve the last of the olives. Which is breakfast, eventually." },
+]
+
+[[clip]]
+id = "dj-013"
+category = "dj"
+daypart = "night"
+lines = [
+  { say = "host", text = "To everyone listening alone tonight. You're not. There's me. There's Gilbert. There's the shadow at the end of the bar." },
+  { say = "host", text = "And there's the whole slow, golden end of everything, just out the big window, putting on a show for you. Here's a real heartbreaker." },
+]
+
+[[clip]]
+id = "dj-014"
+category = "dj"
+daypart = "day"
+lines = [
+  { say = "host", text = "Afternoon, at the end of time. The light through the big window is the colour of a peach that's been thinking about things. Here's something to sip." },
+]
+
+[[clip]]
+id = "dj-015"
+category = "dj"
+lines = [
+  { say = "host", text = "That last number was recorded in this very room, the night the final supernova went off. You can hear the whole audience gasp at the bridge." },
+  { say = "host", text = "That's the supernova. It was gorgeous. Here's another." },
+]
+
+[[clip]]
+id = "dj-016"
+category = "dj"
+lines = [
+  { say = "host", text = "Gilbert, what's the most anyone's ever ordered at last call?", gap = 0.6 },
+  { say = "gilbert", text = "Eleven billion years of last calls. One at a time.", gap = 0.6 },
+  { say = "host", text = "Pacing, darling. It's all about pacing. Here's a slow one." },
+]
+
+# ── Calls ─────────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "call-001"
+category = "call"
+title = "Bev, in the last booth"
+bed = "room"
+lines = [
+  { sfx = "phone-ring" },
+  { say = "host", text = "We have a call in the last booth. Hello, you're at the Lounge." },
+  { say = "bev", text = "Hello, love. It's Bev. I'm still looking for the request line." },
+  { say = "host", text = "Bev. We've been expecting you. You may request anything. Sing it for me." },
+  { say = "bev", text = "Da da dum. Da da.", gap = 1.0 },
+  { say = "host", text = "Gilbert. Did you hear that?", gap = 0.5 },
+  { say = "gilbert", text = "I did.", gap = 0.6 },
+  { say = "host", text = "Bev, I don't know it. But I want you to know. It's a real heartbreaker." },
+  { say = "bev", text = "That's what I keep saying, love!" },
+  { sfx = "phone-hangup" },
+]

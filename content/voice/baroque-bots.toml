@@ -1,0 +1,209 @@
+# Baroque Robot Philharmonic — Maestro Unit Seven, the Clockwork Court of
+# Seventeen-Hundred-and-Never. Pompous robotic critic: everything is "adequately moving,
+# by human standards". Running bits: the conductor's spoon, Unit Nine the cellist (who
+# keeps having what he calls feelings and the Maestro calls overheating), the portrait of
+# the toaster, measured applause.
+station = "baroque-bots"
+
+[voices]
+host = { voice = "bm_daniel", speed = 0.98, name = "Maestro Unit Seven" }
+cello = { voice = "am_adam", speed = 0.9, fx = "robot", name = "Unit Nine (Cello)" }
+
+# ── Idents ────────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "id-001"
+category = "id"
+lines = [
+  { say = "host", text = "You are listening to the Baroque Robot Philharmonic. Please hold your applause until it is requested." },
+  { sting = "id" },
+]
+
+[[clip]]
+id = "id-002"
+category = "id"
+lines = [
+  { say = "host", text = "The Baroque Robot Philharmonic. One hundred and one point three. Adequately moving, by human standards." },
+  { sting = "id" },
+]
+
+[[clip]]
+id = "id-003"
+category = "id"
+daypart = "evening"
+lines = [
+  { say = "host", text = "Good evening. This is the Clockwork Court of Seventeen-Hundred-and-Never. Wigs on." },
+  { sting = "id" },
+]
+
+[[clip]]
+id = "id-004"
+category = "id"
+daypart = "morning"
+lines = [
+  { say = "host", text = "Good morning. The Baroque Robot Philharmonic has been tuning since four. It is nearly in tune." },
+  { sting = "id" },
+]
+
+[[clip]]
+id = "id-005"
+category = "id"
+lines = [
+  { say = "host", text = "The Baroque Robot Philharmonic. Counterpoint, performed by machines pretending to have feelings." },
+  { sting = "id" },
+]
+
+[[clip]]
+id = "id-006"
+category = "id"
+daypart = "night"
+lines = [
+  { say = "host", text = "The Baroque Robot Philharmonic, by candlelight. The candles are decorative. We see perfectly well in the dark." },
+  { sting = "id" },
+]
+
+[[clip]]
+id = "id-007"
+category = "id"
+lines = [
+  { say = "host", text = "The Baroque Robot Philharmonic.", gap = 0.5 },
+  { say = "cello", text = "Affirmative." },
+  { sting = "id" },
+]
+
+# ── Host links ────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "dj-001"
+category = "dj"
+lines = [
+  { say = "host", text = "That was a fugue for toaster in D minor. Adequately moving, by human standards. The second voice entered four milliseconds late." },
+  { say = "host", text = "I have filed a report. Against myself. I was conducting." },
+]
+
+[[clip]]
+id = "dj-002"
+category = "dj"
+lines = [
+  { say = "host", text = "A note on the conductor's spoon. Listeners have written to ask why we conduct with a spoon. The spoon has written back." },
+  { say = "host", text = "The spoon's letter was longer, and frankly better argued. The spoon stays." },
+]
+
+[[clip]]
+id = "dj-003"
+category = "dj"
+lines = [
+  { say = "host", text = "During the slow movement, our cellist, Unit Nine, experienced what he describes as a feeling. Unit Nine. Describe the feeling.", gap = 0.6 },
+  { say = "cello", text = "Warm. Near the fan.", gap = 0.6 },
+  { say = "host", text = "Overheating, then. Beautiful. Next piece." },
+]
+
+[[clip]]
+id = "dj-004"
+category = "dj"
+lines = [
+  { say = "host", text = "Visitors to the salon often ask about the oil portrait above the harpsichord. It is of a toaster. The finest toaster who ever lived." },
+  { say = "host", text = "He knew one piece of music. He performed it every morning. It went, pop. We still observe a moment of silence in his honour, followed by toast." },
+]
+
+[[clip]]
+id = "dj-005"
+category = "dj"
+lines = [
+  { say = "host", text = "This recital is sponsored by Grumbel's Ladders. I have reviewed their ladder. It is a sequence of rungs in strict ascending order. No modulation. No development." },
+  { say = "host", text = "Nevertheless, it goes up. Four stars. Grumbel's. Up is a choice." },
+]
+
+[[clip]]
+id = "dj-006"
+category = "dj"
+lines = [
+  { say = "host", text = "I am frequently asked what adequately moving, by human standards, means. It means that a human would weep." },
+  { say = "host", text = "I, of course, would not. I would simply need to leave the room for a moment, for unrelated maintenance." },
+]
+
+[[clip]]
+id = "dj-007"
+category = "dj"
+daypart = "morning"
+lines = [
+  { say = "host", text = "Good morning. The harpsichord has been tuned. It took four hours. It will hold its tuning for nine minutes." },
+  { say = "host", text = "We will now perform a piece that lasts eight minutes. We are not animals." },
+]
+
+[[clip]]
+id = "dj-008"
+category = "dj"
+daypart = "night"
+lines = [
+  { say = "host", text = "It is late. The candles have burned down to elegant little stubs. The dust motes are drifting in what I can only describe as an unauthorised manner." },
+  { say = "host", text = "Here is a sarabande. It is slow. Lean back. Mind your wig." },
+]
+
+[[clip]]
+id = "dj-009"
+category = "dj"
+lines = [
+  { say = "host", text = "The audience is reminded that applause between movements is forbidden. Applause after the piece is permitted, and will be measured." },
+  { say = "host", text = "Last night's audience achieved sixty-one decibels. Disappointing. Do better." },
+]
+
+[[clip]]
+id = "dj-010"
+category = "dj"
+lines = [
+  { say = "host", text = "We have an unexpected guest in the gallery. A shadow, unaccompanied, in a borrowed wig. He calls himself Greg. He has wept at every piece tonight." },
+  { say = "host", text = "I find him adequate. More than adequate. Do not tell him I said that. And do tell Hollis he is safe." },
+]
+
+[[clip]]
+id = "dj-011"
+category = "dj"
+daypart = "evening"
+lines = [
+  { say = "host", text = "Good evening. Tonight's programme: counterpoint, variation, and a brief interlude in which the cello and the harpsichord will not be speaking to each other, owing to an incident at rehearsal." },
+]
+
+[[clip]]
+id = "dj-012"
+category = "dj"
+lines = [
+  { say = "host", text = "That last piece contained one hundred and twelve notes in the wrong order. They were, however, all the right notes. In music, as in life, this is known as a style." },
+]
+
+[[clip]]
+id = "dj-013"
+category = "dj"
+daypart = "day"
+lines = [
+  { say = "host", text = "The Clockwork Court is open to visitors this afternoon. Please do not wind the musicians." },
+  { say = "host", text = "Several were wound by enthusiastic children last week, and are now performing in the garden, unsupervised, at tremendous speed." },
+]
+
+[[clip]]
+id = "dj-014"
+category = "dj"
+lines = [
+  { say = "host", text = "Unit Nine. Do we have time for another?", gap = 0.6 },
+  { say = "cello", text = "Calculating.", gap = 1.2 },
+  { say = "cello", text = "Yes.", gap = 0.5 },
+  { say = "host", text = "Splendid. Proceed. And Unit Nine, please. Less vibrato. You are not a human." },
+]
+
+[[clip]]
+id = "dj-015"
+category = "dj"
+lines = [
+  { say = "host", text = "I have been asked whether a robot can truly love music. I can only say that when the final chord resolves, a small light on my chest turns from amber to green." },
+  { say = "host", text = "I have never told anyone what that means. Here is a chaconne." },
+]
+
+[[clip]]
+id = "dj-016"
+category = "dj"
+daypart = "night"
+lines = [
+  { say = "host", text = "Unit Nine has asked me to dedicate this nocturne to someone. I asked to whom.", gap = 0.6 },
+  { say = "cello", text = "The fan.", gap = 0.6 },
+  { say = "host", text = "To the fan, then. It has kept him cool through four hundred concerts. It deserves a nocturne." },
+]

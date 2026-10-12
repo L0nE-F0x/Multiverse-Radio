@@ -1,0 +1,215 @@
+# Neon 2087 — Velocity Jones, Timeline 2087-B (the cool one).
+# Running bits: total sincerity about mundane things being rad, the car with too many
+# wheels that never reaches the horizon, palm trees with elbows, the future that already
+# happened.
+station = "neon-2087"
+
+[voices]
+host = { voice = "am_michael", speed = 1.08, name = "Velocity Jones" }
+bev = { voice = "bf_lily", fx = "phone", name = "Bev" }
+
+# ── Idents ────────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "id-001"
+category = "id"
+lines = [
+  { say = "host", text = "Neon twenty eighty-seven! Synthwave from the future that already happened!" },
+  { sting = "id" },
+]
+
+[[clip]]
+id = "id-002"
+category = "id"
+lines = [
+  { say = "host", text = "You're cruising Neon twenty eighty-seven. Seatbelts are optional. Sunglasses are not." },
+  { sting = "id" },
+]
+
+[[clip]]
+id = "id-003"
+category = "id"
+lines = [
+  { say = "host", text = "Neon twenty eighty-seven. Timeline B. The cool one." },
+  { sting = "id" },
+]
+
+[[clip]]
+id = "id-004"
+category = "id"
+daypart = "night"
+lines = [
+  { say = "host", text = "It's midnight on Neon twenty eighty-seven. It's always midnight. That's the deal we made." },
+  { sting = "id" },
+]
+
+[[clip]]
+id = "id-005"
+category = "id"
+lines = [
+  { say = "host", text = "Neon twenty eighty-seven! Ninety-one point oh! Totally, legally, radically licensed!" },
+  { sting = "id" },
+]
+
+[[clip]]
+id = "id-006"
+category = "id"
+daypart = "morning"
+lines = [
+  { say = "host", text = "Good morning, future! It's Neon twenty eighty-seven, and the sunset is right on schedule!" },
+  { sting = "id" },
+]
+
+[[clip]]
+id = "id-007"
+category = "id"
+lines = [
+  { say = "host", text = "Neon twenty eighty-seven. The horizon is ahead. It's always ahead. Let's go." },
+  { sting = "id" },
+]
+
+# ── Host links ────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "dj-001"
+category = "dj"
+lines = [
+  { say = "host", text = "That was rad. You know what else is rad? Filing your taxes early. I did mine this morning. Every box. Ticked. Some of them twice." },
+  { say = "host", text = "Felt like flying. If you haven't done yours, do them now, to this. Let's go." },
+]
+
+[[clip]]
+id = "dj-002"
+category = "dj"
+lines = [
+  { say = "host", text = "Update from the highway. The car with too many wheels is still driving toward the horizon. Day four hundred. It hasn't arrived. It's not going to arrive." },
+  { say = "host", text = "And honestly? That's the most twenty eighty-seven thing I have ever seen. Keep driving, buddy." },
+]
+
+[[clip]]
+id = "dj-003"
+category = "dj"
+lines = [
+  { say = "host", text = "Shout-out to the palm trees on the boulevard, who have elbows now. Nobody knows why. They just showed up with elbows one morning." },
+  { say = "host", text = "One of them waved at me. I waved back. We're friends now. This one's for the trees." },
+]
+
+[[clip]]
+id = "dj-004"
+category = "dj"
+lines = [
+  { say = "host", text = "People ask me, Velocity, what's the future like? And I tell them: it already happened. You missed it. It was amazing. There were lasers. Somebody's aunt cried. Here's a song from it." },
+]
+
+[[clip]]
+id = "dj-005"
+category = "dj"
+lines = [
+  { say = "host", text = "This hour of neon is brought to you by Grumbel's Ladders. I've got one. It's chrome. Thirty rungs. I climb it at sunset and I just... look at things." },
+  { say = "host", text = "That's it. That's the whole ad. Grumbel's Ladders. Up is a choice. Choose up." },
+]
+
+[[clip]]
+id = "dj-006"
+category = "dj"
+daypart = "night"
+lines = [
+  { say = "host", text = "It's late, it's neon, it's twenty eighty-seven. If you're driving, keep it at a safe and stylish speed. If you're not driving, pretend. Hands at ten and two. Feel that? That's the future, baby." },
+]
+
+[[clip]]
+id = "dj-007"
+category = "dj"
+daypart = "morning"
+lines = [
+  { say = "host", text = "Good morning! Did you brush your teeth? Rad. Did you make your bed? Extremely rad. Did you eat breakfast?" },
+  { say = "host", text = "Okay, I don't want to overstate this, but you might be the most rad person currently alive. Here's a song for you." },
+]
+
+[[clip]]
+id = "dj-008"
+category = "dj"
+lines = [
+  { say = "host", text = "Shout-out to everyone doing laundry tonight. Separating the darks from the lights. That's a choice. That's a philosophy. That's basically a light show. This one's for the spin cycle." },
+]
+
+[[clip]]
+id = "dj-009"
+category = "dj"
+lines = [
+  { say = "host", text = "That last track had a synth solo so hot they had to put it in the fridge afterwards. It's still in there. We open the door sometimes, just to feel it." },
+  { say = "host", text = "Coming up, a song about a dentist appointment. It absolutely slaps." },
+]
+
+[[clip]]
+id = "dj-010"
+category = "dj"
+daypart = "evening"
+lines = [
+  { say = "host", text = "The sun's going down on the grid. Correction: the sun has been going down on the grid for six years. It never quite gets there. Like me with my emails. Here's another one." },
+]
+
+[[clip]]
+id = "dj-011"
+category = "dj"
+lines = [
+  { say = "host", text = "Somebody just texted the studio, quote, is everything rad to you, Velocity? And the answer is no. Mildew is not rad. Losing a sock is not rad." },
+  { say = "host", text = "But almost everything else? Come on. Look around. This one's for the sock." },
+]
+
+[[clip]]
+id = "dj-012"
+category = "dj"
+lines = [
+  { say = "host", text = "Spotted on the grid tonight: a shadow, riding solo. No car, no driver, doing about sixty. Answers to Greg, apparently." },
+  { say = "host", text = "Greg, buddy, I don't know where you're going, but you look incredible. Call Hollis. The porch light is on." },
+]
+
+[[clip]]
+id = "dj-013"
+category = "dj"
+daypart = "day"
+lines = [
+  { say = "host", text = "Middle of the day in twenty eighty-seven, and I just want to say: whatever you're doing right now, a spreadsheet, a sandwich, a spreadsheet about sandwiches, it deserves a soundtrack. Here it is." },
+]
+
+[[clip]]
+id = "dj-014"
+category = "dj"
+daypart = "night"
+lines = [
+  { say = "host", text = "Midnight drive check-in. Window down. Wind in your hair. Hair in your face. Face in the future. Future in the rear-view mirror, somehow. Song in the speakers. Here it comes." },
+]
+
+[[clip]]
+id = "dj-015"
+category = "dj"
+lines = [
+  { say = "host", text = "Some people say synthwave is nostalgia for a past that never existed. I say, why stop there? Let's be nostalgic for next Thursday. Thursday's gonna be great. I miss it already." },
+]
+
+[[clip]]
+id = "dj-016"
+category = "dj"
+lines = [
+  { say = "host", text = "Real talk for a second. If today was hard, that's okay. Even the sunset here has off days. Yesterday it was mostly beige. Nobody said anything. We just let it be beige. Here's something bright." },
+]
+
+# ── Calls ─────────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "call-001"
+category = "call"
+title = "Bev, in the future"
+lines = [
+  { sfx = "phone-ring" },
+  { say = "host", text = "Caller, you're on Neon twenty eighty-seven. What's up?" },
+  { say = "bev", text = "Hello, love. It's Bev. Is this the request line?" },
+  { say = "host", text = "Bev! It's whatever line you need it to be! Hit me." },
+  { say = "bev", text = "There's a song. I heard it once, in a lift. It goes, da da dum, da da." },
+  { say = "host", text = "Okay. Okay. Was there a saxophone?" },
+  { say = "bev", text = "There might have been. There was definitely a lift." },
+  { say = "host", text = "A lift. A saxophone. Da da dum, da da. Bev, I don't know it. But that is the most twenty eighty-seven sentence anyone has ever said to me." },
+  { say = "bev", text = "Oh, that's nice. I'll try the next station, love." },
+  { sfx = "phone-hangup" },
+]
