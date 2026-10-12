@@ -1,9 +1,16 @@
 # Multiverse Radio
 
-Endless radio from other dimensions. Open the page, press play, leave it on. Twenty-two
-stations broadcast live from elsewhere: generative lo-fi, synthwave, lounge, dub, polka and
-baroque robots, threaded with deadpan hosts, alien adverts, news from parallel realities and
-call-ins. Every station is drawn as a little animated pixel-art window into its dimension.
+Endless radio from other dimensions, heard from the night shift aboard the relay ship
+*Nightjar*. Open the page, press play, leave it on. Forty-two stations broadcast live from
+elsewhere (generative lo-fi, jazz trios, city pop, drum and bass, shanties, dub, polka,
+baroque robots) threaded with deadpan hosts, alien adverts, news from parallel realities,
+call-ins and named shows that follow your local time. Each station's world fills the ship's
+viewport as an animated pixel-art scene; an amber terminal glows over it. HUSH, the ship's
+computer, keeps the log, and gets a little stranger the longer your shift runs.
+
+The dial never ends. Between and beyond the stations: pirate stations, odd signals, and a few
+secret stations at exact frequencies. Now and then something happens across the whole
+multiverse at once, and every listener hears it at the same moment.
 
 No accounts and no backend. It's a static site, and the music is generated in your browser.
 
@@ -23,22 +30,25 @@ tests, build and the Playwright suite on every push and pull request.
 | Key | Action |
 | --- | --- |
 | `Space` | Power / play / pause |
-| `←` `→` | Previous / next station |
+| `←` `→` | Fine-tune (0.05 MHz) |
+| `Shift` + `←` `→`, or `↑` `↓` | Previous / next station |
 | `S` | Scan: hop to a random station |
 | `N` | Skip to the next segment |
 | `M` | Mute · `-` / `+` volume |
-| `G` | Channel guide |
+| `G` | Station guide |
+| `L` | Ship's log |
 | `C` | Captions on/off |
-| `F` | "Leave it on" ambient mode |
+| `H` | Hide / show the HUD (it also withdraws on its own when idle) |
 | `?` | The manual |
 
-Media keys and lock-screen controls work through the Media Session API. `?station=<id>`
-links straight to a station; the last station and the volume are remembered.
+Media keys and lock-screen controls work through the Media Session API. Every main station has
+a share page at `/station/<id>/`; `?station=<id>` and `?f=<MHz>` also work. First-time visitors
+get a welcome card that offers to install the app (Android/desktop prompt, iOS steps).
 
 ## How "endless" works
 
 ```
- src/stations/roster.ts (22 stations)     content/voice/*.toml ──voice:render──▶ public/voice/
+ src/stations/roster.ts (45 stations)     content/voice/*.toml ──voice:render──▶ public/voice/
             │                                                                       │
             ▼                                                                       ▼
  scheduler (pure): station + wall clock ──▶ segments  (tracks + voice clips, seeded per UTC hour)
@@ -54,9 +64,16 @@ links straight to a station; the last station and the volume are remembered.
 
 - **Music** is synthesized in the browser from a genre recipe and a seed (`src/music`). The
   same seed gives the same song on every machine, and it never runs out.
-- **Voices** are about 600 short pre-rendered Kokoro TTS clips (3½ hours): idents, host links,
-  ads, news, weather, call-ins, sports, stories. Programme clocks per station format (music,
-  mixed, talk, ambient) weave them between tracks, ducking the music under hosts.
+- **Voices** are about 2,300 short pre-rendered Kokoro TTS clips (nearly 9 hours): idents, host
+  links, ads, news, call-ins, sports, stories, HUSH, pirate DJs and multiverse events. Many are
+  modular parts (open × body × close) that the scheduler recombines, so segments rarely repeat.
+  Programme clocks per station format weave them between tracks, ducking the music under hosts.
+- **The living schedule:** named shows follow the listener's local time (`/voice/_shows.json`),
+  serials advance one episode per day, holiday clips air on their dates, and multiverse events
+  are seeded from UTC so every listener hears them at the same instant.
+- **The infinite dial** (`src/broadcast/dial.ts`): reception falls off around each station, with
+  faint bleed between them; pirate stations and oddities are generated deterministically per
+  frequency, densest in the deep band beyond 108 MHz; secret stations sit at exact frequencies.
 - **Stations are live.** The schedule is a pure function of wall-clock time, so tuning away and
   back means you missed things. *Skip* gives a station a private clock offset.
 - **Text is procedural too** (`src/content`): track titles and artists, ticker headlines,
@@ -66,7 +83,7 @@ links straight to a station; the last station and the volume are remembered.
 
 ```
 src/
-├── stations/roster.ts   the 22 stations: recipe, scene, host persona, colors, art direction
+├── stations/            roster (45 stations: recipe, scene, host, phosphor, art direction), ship.ts (the Nightjar, HUSH)
 ├── broadcast/           types (the shared contract), scheduler, clip library, mixer, director,
 │                        useBroadcast store, effects (media session, title, ?station=)
 ├── music/               generative music engine and genre recipes
@@ -78,7 +95,7 @@ src/
 content/voice/           voice scripts (TOML) + SCHEMA.md
 scripts/voice/           Kokoro renderer → public/voice/
 tests/e2e/               Playwright suite
-docs/V2-PLAN.md          the v2 architecture and how it was built
+docs/V2-PLAN.md, V3-PLAN.md   architecture, decisions and how each version was built
 ```
 
 ## Labs
