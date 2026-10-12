@@ -77,7 +77,7 @@ interface Wobble {
 
 const STATIC_LEVEL = 0.6;
 /** Dial noise at no signal (the tuning burst is STATIC_LEVEL). */
-const NOISE_LEVEL = 0.34;
+const NOISE_LEVEL = 0.8;
 /** Programme level of a distant station's bleed at the edge of its reach. */
 const BLEED_LEVEL = 0.075;
 const WHISTLE_LEVEL = 0.012;
@@ -495,7 +495,7 @@ export class Mixer {
     setGain(ctx, dial.gain.gain, noiseLevel, DIAL_TAU * tauScale);
     setGain(ctx, dial.filter.frequency, 1300 + Math.min(1, Math.abs(detune) * 3) * 2600, FILTER_TAU);
     setGain(ctx, dial.whistleGain.gain, whistleLevel, DIAL_TAU);
-    setGain(ctx, dial.whistle.frequency, 180 + Math.abs(detune) * 7000, FILTER_TAU);
+    setGain(ctx, dial.whistle.frequency, 180 + Math.min(0.5, Math.abs(detune)) * 7000, FILTER_TAU);
   }
 
   private ensureDialNoise(): DialNoise {

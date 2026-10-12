@@ -114,8 +114,9 @@ describe('VoiceLibrary', () => {
         { id: 'dj-1', category: 'dj', url: '/voice/_pirate/dj-1.mp3', durationMs: 12000, lines: [line('Pirate DJ', 'Next')] },
       ]),
       '_oddities.json': pool('_oddities', [
-        { id: 'pips', category: 'id', url: '/voice/_oddities/pips.mp3', durationMs: 4000, stations: ['time-signal'], lines: [] },
-        { id: 'sos', category: 'id', url: '/voice/_oddities/sos.mp3', durationMs: 4000, stations: ['distress-beacon'], lines: [] },
+        { id: 'time-signal-001', category: 'id', url: '/voice/_oddities/time-signal-001.mp3', durationMs: 4000, lines: [] },
+        { id: 'time-signal-002', category: 'dj', url: '/voice/_oddities/time-signal-002.mp3', durationMs: 6000, lines: [] },
+        { id: 'distress-beacon-001', category: 'id', url: '/voice/_oddities/distress-beacon-001.mp3', durationMs: 4000, lines: [] },
         { id: 'any', category: 'dj', url: '/voice/_oddities/any.mp3', durationMs: 9000, lines: [] },
       ]),
       '_shows.json': JSON.stringify({ version: 1, shows: { 'void-beats': [{ id: 'late', name: 'Late', blurb: '', start: 22, end: 2 }] } }),
@@ -144,8 +145,8 @@ describe('VoiceLibrary', () => {
         .segmentsBetween(Date.UTC(2026, 9, 12), Date.UTC(2026, 9, 12, 6))
         .flatMap((s) => (s.kind === 'voice' ? [s.clip.id] : [])),
     );
-    expect(heard.has('sos')).toBe(false);
-    expect(heard.has('pips') || heard.has('any')).toBe(true);
+    expect(heard.has('distress-beacon-001')).toBe(false);
+    expect(heard.has('time-signal-001') || heard.has('time-signal-002')).toBe(true);
 
     expect(library.shows('void-beats')).toEqual([]);
     await library.loadShows();

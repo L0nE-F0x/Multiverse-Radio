@@ -154,6 +154,7 @@ export class Director {
   private rejoin = false;
   private suspendTimer: ReturnType<typeof setTimeout> | undefined;
   private settleTimer: ReturnType<typeof setTimeout> | undefined;
+  private settleTarget: string | null | undefined;
   private lastTick: { wall: number; ctx: number } | null = null;
   private lastPrefetch = 0;
   /** The time-slip shift the programme was last joined with. */
@@ -340,12 +341,23 @@ export class Director {
     this.reception = receptionAt(frequency);
     this.updateReception();
     const lock = this.reception.lock;
-    const changed = (lock?.id ?? null) !== (this.program?.id ?? null);
+    const target = lock?.id ?? null;
+    if (target === (this.program?.id ?? null) || mode === 'jump' || !this.powered) {
+      this.cancelSettle();
+      if (target !== (this.program?.id ?? null)) this.retune(lock, 'channel');
+      return;
+    }
+    // Keep the countdown running while the dial stays on the same new transmitter.
+    if (this.settleTimer !== undefined && this.settleTarget === target) return;
+    this.cancelSettle();
+    this.settleTarget = target;
+    this.settleTimer = setTimeout(() => this.retune(this.reception.lock, 'dial'), SETTLE_MS);
+  }
+
+  private cancelSettle(): void {
     clearTimeout(this.settleTimer);
     this.settleTimer = undefined;
-    if (!changed) return;
-    if (mode === 'jump' || !this.powered) this.retune(lock, 'channel');
-    else this.settleTimer = setTimeout(() => this.retune(this.reception.lock, 'dial'), SETTLE_MS);
+    this.settleTarget = undefined;
   }
 
   /** Tunes to a station or pirate by id (powering on if needed). Gesture. */
@@ -427,6 +439,7 @@ export class Director {
   /** Switches the programme to what the dial has locked on to. */
   private retune(lock: Transmitter | null, kind: 'channel' | 'dial'): void {
     this.settleTimer = undefined;
+    this.settleTarget = undefined;
     if ((lock?.id ?? null) === (this.program?.id ?? null)) return;
     this.program = lock;
     if (lock && lock.kind !== 'oddity') this.lastStationId = lock.id;
@@ -444,7 +457,7 @@ export class Director {
     const f = this.frequency;
     const signal = p ? signalOf(p, f) : 0;
     const audible = this.live && p ? signal : 0;
-    mixer.setReception({ signal, bleed: p ? bleedOf(p, f) : 0, noise: 1 - audible, detune: p ? f - p.frequency : 0.5 });
+    mixer.setReception({ signal, bleed: p ? bleedOf(p, f) : 0, noise: 1 - audible, detune: p ? Math.min(0.5, Math.abs(f - p.frequency)) : 0.5 });
   }
 
   // ── Transport ─────────────────────────────────────────────────────────────

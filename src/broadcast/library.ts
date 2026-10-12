@@ -10,7 +10,7 @@
 
 import { manifestUrl, parseManifest, parseShowIndex } from './manifest';
 import { StationSchedule, type ScheduleOptions } from './scheduler';
-import type { ShowDef, ShowIndex, StationDef, VoiceClip, VoiceManifest } from './types';
+import { ODDITY_IDS, type ShowDef, type ShowIndex, type StationDef, type VoiceClip, type VoiceManifest } from './types';
 
 export type Fetcher = (url: string) => Promise<Response>;
 
@@ -45,21 +45,30 @@ export function sourcesFor(stationId: string): string[] {
   return [stationId, POOLS.shared];
 }
 
-/** Pool clips speak for whichever pirate airs them: the main voice takes the pirate host's name. */
+/** How the pirate pool captions its DJ; each pirate airs those lines under its own host's name. */
+export const PIRATE_DJ = 'Pirate DJ';
+
+/** Pool clips speak for whichever pirate airs them: the DJ takes the pirate host's name. */
 function asPirate(clips: readonly VoiceClip[], host: string): VoiceClip[] {
   return clips
     .filter((c) => c.category !== 'ship' && c.category !== 'event')
     .map((c) => {
-      const main = c.lines[0]?.speaker;
-      return main ? { ...c, lines: c.lines.map((l) => (l.speaker === main ? { ...l, speaker: host } : l)) } : c;
+      // The pool's DJ (or, failing that, whoever speaks first).
+      const dj = c.lines.some((l) => l.speaker === PIRATE_DJ) ? PIRATE_DJ : c.lines[0]?.speaker;
+      return dj ? { ...c, lines: c.lines.map((l) => (l.speaker === dj ? { ...l, speaker: host } : l)) } : c;
     });
 }
 
-/** Oddity clips tagged (by `stations`, `kit` or `show`) for one kind of oddity, plus untagged ones. */
+/**
+ * Oddity clips for one kind of oddity: ids prefixed with its kind (`time-signal-003`), or
+ * tagged by `stations`/`kit`; clips that name no oddity at all may air on any.
+ */
 function forOddity(clips: readonly VoiceClip[], oddity: string): VoiceClip[] {
   return clips.filter((c) => {
-    const tags = [...(c.stations ?? []), ...(c.kit ? [c.kit] : []), ...(c.show ? [c.show] : [])];
-    return tags.length === 0 || tags.includes(oddity);
+    if (c.id.startsWith(`${oddity}-`)) return true;
+    const tags = [...(c.stations ?? []), ...(c.kit ? [c.kit] : [])];
+    if (tags.length > 0) return tags.includes(oddity);
+    return !ODDITY_IDS.some((o) => c.id.startsWith(`${o}-`));
   });
 }
 

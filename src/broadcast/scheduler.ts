@@ -266,7 +266,8 @@ function sortClips(list: readonly VoiceClip[], owner: string, pools: Pick<Pools,
       clips.push(c);
       clips.sort((a, b) => (a.id < b.id ? -1 : a.id > b.id ? 1 : 0));
       episodes.set(c.serial.episode, clips);
-    } else if (c.show && c.part === 'open' && !c.kit) {
+    } else if (c.show && c.part === 'open') {
+      // A show's opener airs at the show's start, never inside a chain.
       const openers = pools.showOpeners.get(c.show) ?? [];
       openers.push(c);
       pools.showOpeners.set(c.show, openers);
