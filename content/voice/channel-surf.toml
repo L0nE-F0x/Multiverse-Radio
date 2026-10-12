@@ -654,3 +654,616 @@ lines = [
   { say = "trent", text = "Except this stair!", cut = 0.95 },
   { sfx = "zap" },
 ]
+
+# ══ v3: the living schedule ═══════════════════════════════════════════════════
+#
+# Shows, the surf kit (somebody picks up the remote, then one to three zap fragments that
+# chain into a collage, each starting and ending on a zap, then somebody puts it down),
+# a serial episode and Halloween. Existing clips above are rendered and deployed; only add.
+
+# ── Shows ─────────────────────────────────────────────────────────────────────
+
+[[show]]
+id = "the-late-late-late-show"
+name = "The Late Late Late Show"
+blurb = "Infomercials, closedowns, and whatever is still on at this hour."
+start = 1
+end = 4
+
+[[show]]
+id = "cartoon-breakfast"
+name = "Cartoon Breakfast"
+blurb = "Professor Pockets, Little Nothing and breakfast television, flipped every four seconds."
+start = 7
+end = 9
+
+[[show]]
+id = "tidewater-manor-omnibus"
+name = "Tidewater Manor Omnibus"
+blurb = "The soap in which Vincent went to get milk. Every episode, all at once."
+start = 14
+end = 16
+
+[[clip]]
+id = "the-late-late-late-show-open"
+category = "id"
+show = "the-late-late-late-show"
+part = "open"
+title = "The Late Late Late Show"
+lines = [
+  { sfx = "zap" },
+  { say = "closedown", text = "This station has now closed down." },
+  { sfx = "zap" },
+  { say = "surf", text = "Channel Surf. The Late Late Late Show." },
+  { sfx = "zap" },
+]
+
+[[clip]]
+id = "the-late-late-late-show-01"
+category = "dj"
+show = "the-late-late-late-show"
+lines = [
+  { sfx = "zap" },
+  { say = "infomercial", text = "It's three in the morning! Are you awake? Of course you are! You're watching this!" },
+  { sfx = "zap" },
+  { say = "couch", text = "I'm not watching it. I'm just looking at it." },
+  { sfx = "zap" },
+]
+
+[[clip]]
+id = "the-late-late-late-show-02"
+category = "dj"
+show = "the-late-late-late-show"
+lines = [
+  { sfx = "zap" },
+  { say = "poet", text = "At this hour, the television is the only window that looks back." },
+  { sfx = "zap" },
+  { say = "darlene", text = "And it comes in oak, pine, or regret." },
+  { sfx = "zap" },
+  { say = "couch", text = "Bed." },
+  { sfx = "zap" },
+  { say = "couch", text = "One more." },
+  { sfx = "zap" },
+]
+
+[[clip]]
+id = "the-late-late-late-show-03"
+category = "dj"
+show = "the-late-late-late-show"
+lines = [
+  { sfx = "zap" },
+  { say = "closedown", text = "This station is now closing down. Please put the night back where you found it." },
+  { sfx = "zap" },
+  { say = "closedown", text = "This station is also closing down." },
+  { sfx = "zap" },
+  { say = "closedown", text = "We all are, dear. Goodnight." },
+  { sfx = "zap" },
+]
+
+[[clip]]
+id = "cartoon-breakfast-open"
+category = "id"
+show = "cartoon-breakfast"
+part = "open"
+title = "Cartoon Breakfast"
+lines = [
+  { sfx = "zap" },
+  { say = "pockets", text = "Hello, friends!" },
+  { sfx = "zap" },
+  { say = "surf", text = "Channel Surf. Cartoon Breakfast." },
+  { sfx = "zap" },
+  { say = "nothing", text = "Is it soon yet?" },
+  { sfx = "zap" },
+]
+
+[[clip]]
+id = "cartoon-breakfast-01"
+category = "dj"
+show = "cartoon-breakfast"
+lines = [
+  { sfx = "zap" },
+  { say = "pockets", text = "Hello, friends! Today's word is breakfast! Can you say breakfast?" },
+  { say = "nothing", text = "Breakfast!" },
+  { sfx = "zap" },
+  { say = "chef", text = "Breakfast today is an egg that has been told it's a good egg." },
+  { sfx = "zap" },
+  { say = "nothing", text = "Is it a good egg?" },
+  { sfx = "zap" },
+  { say = "chef", text = "The best egg." },
+  { sfx = "zap" },
+]
+
+[[clip]]
+id = "cartoon-breakfast-02"
+category = "dj"
+show = "cartoon-breakfast"
+lines = [
+  { sfx = "zap" },
+  { say = "pockets", text = "Little Nothing, what do we do when we feel sad?" },
+  { say = "nothing", text = "We have a little sit down!" },
+  { sfx = "zap" },
+  { say = "nature", text = "And here, in the wild, a toddler has a little sit down, in the middle of the supermarket. It is magnificent. Nobody can move it." },
+  { sfx = "zap" },
+]
+
+[[clip]]
+id = "tidewater-manor-omnibus-open"
+category = "id"
+show = "tidewater-manor-omnibus"
+part = "open"
+title = "Tidewater Manor Omnibus"
+lines = [
+  { sfx = "zap" },
+  { say = "announcer", text = "Previously, on Tidewater Manor." },
+  { sfx = "zap" },
+  { say = "surf", text = "Channel Surf presents the Tidewater Manor Omnibus. All of it. At once." },
+  { sfx = "zap" },
+]
+
+[[clip]]
+id = "tidewater-manor-omnibus-01"
+category = "dj"
+show = "tidewater-manor-omnibus"
+lines = [
+  { sfx = "zap" },
+  { say = "lorraine", text = "Vincent, it's been seven years." },
+  { say = "vincent", text = "I went to get milk.", cut = 0.92 },
+  { sfx = "zap" },
+  { say = "lorraine", text = "Vincent, it's been eight years." },
+  { say = "vincent", text = "There was a queue.", cut = 0.92 },
+  { sfx = "zap" },
+  { say = "lorraine", text = "Vincent, it's been nine years." },
+  { say = "vincent", text = "I've brought you some milk, Lorraine." },
+  { say = "lorraine", text = "Oh, Vincent." },
+  { sfx = "zap" },
+  { say = "couch", text = "Finally." },
+  { sfx = "zap" },
+]
+
+[[clip]]
+id = "tidewater-manor-omnibus-02"
+category = "dj"
+show = "tidewater-manor-omnibus"
+lines = [
+  { sfx = "zap" },
+  { say = "announcer", text = "Previously, on Tidewater Manor." },
+  { sfx = "zap" },
+  { say = "announcer", text = "Also previously, on Tidewater Manor." },
+  { sfx = "zap" },
+  { say = "announcer", text = "A very long time ago, on Tidewater Manor." },
+  { sfx = "zap" },
+  { say = "vincent", text = "Lorraine, who are all these people?" },
+  { say = "lorraine", text = "They're previously, Vincent. They never leave.", cut = 0.94 },
+  { sfx = "zap" },
+]
+
+# ── Surf kit: somebody picks up the remote ────────────────────────────────────
+
+[[clip]]
+id = "surf-open-01"
+category = "show"
+kit = "surf"
+part = "open"
+lines = [
+  { sfx = "zap" },
+  { say = "surf", text = "Channel Surf. Somebody's got the remote." },
+  { sfx = "zap" },
+]
+
+[[clip]]
+id = "surf-open-02"
+category = "show"
+kit = "surf"
+part = "open"
+lines = [
+  { sfx = "zap" },
+  { say = "couch", text = "Right. Budge up. What's on?" },
+  { sfx = "zap" },
+  { say = "trent", text = "Everything!", cut = 0.9 },
+  { sfx = "zap" },
+]
+
+[[clip]]
+id = "surf-open-03"
+category = "show"
+kit = "surf"
+part = "open"
+lines = [
+  { sfx = "zap" },
+  { say = "surf", text = "One oh three point oh. Infinite channels. One thumb." },
+  { sfx = "zap" },
+]
+
+[[clip]]
+id = "surf-open-04"
+category = "show"
+kit = "surf"
+part = "open"
+lines = [
+  { sfx = "zap" },
+  { say = "couch", text = "Where's the remote?", gap = 0.8 },
+  { say = "couch", text = "Oh. I'm holding it." },
+  { sfx = "zap" },
+]
+
+[[clip]]
+id = "surf-open-05"
+category = "show"
+kit = "surf"
+part = "open"
+lines = [
+  { sfx = "zap" },
+  { say = "trent", text = "Don't touch that dial!" },
+  { sfx = "zap" },
+  { say = "surf", text = "Too late. Channel Surf." },
+  { sfx = "zap" },
+]
+
+# ── Surf kit: zap fragments (each one chains into the next) ───────────────────
+
+[[clip]]
+id = "surf-body-01"
+category = "show"
+kit = "surf"
+part = "body"
+lines = [
+  { say = "quiz", text = "For the car! What is the capital of Tuesday?", cut = 0.95 },
+  { sfx = "zap" },
+  { say = "history", text = "Lunchtime. It has been lunchtime since the long Tuesday, and historians see no reason to change it." },
+  { sfx = "zap" },
+]
+
+[[clip]]
+id = "surf-body-02"
+category = "show"
+kit = "surf"
+part = "body"
+lines = [
+  { say = "judge", text = "The defendant is charged with eating the last biscuit. How do you plead?", cut = 0.95 },
+  { sfx = "zap" },
+  { say = "nature", text = "The last biscuit, once alone in the tin, rarely survives the night. Nobody is ever charged." },
+  { sfx = "zap" },
+]
+
+[[clip]]
+id = "surf-body-03"
+category = "show"
+kit = "surf"
+part = "body"
+lines = [
+  { say = "lieutenant", text = "Captain, we're picking up a transmission from the edge of the dial." },
+  { say = "captain", text = "Put it through." },
+  { sfx = "zap" },
+  { say = "trent", text = "Hi! Are you tired of living at the edge of the dial? Move to the middle! There's parking!", cut = 0.94 },
+  { sfx = "zap" },
+]
+
+[[clip]]
+id = "surf-body-04"
+category = "show"
+kit = "surf"
+part = "body"
+lines = [
+  { say = "weather", text = "Tonight, a cold front moves in from the kitchen, where somebody has left the fridge open." },
+  { sfx = "zap" },
+  { say = "detective", text = "Somebody left the fridge open. We're looking for a man with a sandwich, and no regrets.", cut = 0.95 },
+  { sfx = "zap" },
+]
+
+[[clip]]
+id = "surf-body-05"
+category = "show"
+kit = "surf"
+part = "body"
+lines = [
+  { say = "lorraine", text = "Vincent. Are you seeing someone else?", cut = 0.95 },
+  { sfx = "zap" },
+  { say = "nature", text = "The owl sees everyone else. It is one of the owl's very few talents, and it is not discreet about it." },
+  { sfx = "zap" },
+]
+
+[[clip]]
+id = "surf-body-06"
+category = "show"
+kit = "surf"
+part = "body"
+lines = [
+  { say = "chef", text = "Now, how will you know when it's ready?", cut = 0.95 },
+  { sfx = "zap" },
+  { say = "sports", text = "And it's ready! It's ready! Nobody saw it coming! The crowd is on its feet!", cut = 0.93 },
+  { sfx = "zap" },
+]
+
+[[clip]]
+id = "surf-body-07"
+category = "show"
+kit = "surf"
+part = "body"
+lines = [
+  { say = "pockets", text = "Hello, friends! Where do lost things go?", cut = 0.95 },
+  { sfx = "zap" },
+  { say = "auction", text = "Sold! To the man under the sofa! He's had his eye on it for years!", cut = 0.94 },
+  { sfx = "zap" },
+  { say = "nature", text = "Beneath the sofa, the lost things have built a small, warm town. They have a mayor. He is a button." },
+  { sfx = "zap" },
+]
+
+[[clip]]
+id = "surf-body-08"
+category = "show"
+kit = "surf"
+part = "body"
+lines = [
+  { say = "dating", text = "Contestant number one, describe yourself in three words." },
+  { say = "suitor_one", text = "Punctual. Damp. Hopeful." },
+  { sfx = "zap" },
+  { say = "weather", text = "Punctual, damp and hopeful, clearing by the afternoon." },
+  { sfx = "zap" },
+]
+
+[[clip]]
+id = "surf-body-09"
+category = "show"
+kit = "surf"
+part = "body"
+lines = [
+  { say = "infomercial", text = "Do you have trouble sleeping?", cut = 0.95 },
+  { sfx = "zap" },
+  { say = "gerald", text = "This rock has never once had trouble sleeping. It's a rock. I admire it very much." },
+  { sfx = "zap" },
+]
+
+[[clip]]
+id = "surf-body-10"
+category = "show"
+kit = "surf"
+part = "body"
+lines = [
+  { say = "antiques", text = "And what would you say it's worth?" },
+  { say = "owner", text = "To me? Everything. It was my nan's. She used to keep the good spoons in it." },
+  { sfx = "zap" },
+  { say = "auction", text = "Four pounds! Going once!", cut = 0.92 },
+  { sfx = "zap" },
+  { say = "couch", text = "Bargain." },
+  { sfx = "zap" },
+]
+
+[[clip]]
+id = "surf-body-11"
+category = "show"
+kit = "surf"
+part = "body"
+lines = [
+  { say = "renovation", text = "So we've opened up the wall, and we've found, oh. We've found a man.", cut = 0.97 },
+  { sfx = "zap" },
+  { say = "vincent", text = "Hello, Lorraine. I'm back. I've got the milk.", cut = 0.94 },
+  { sfx = "zap" },
+]
+
+[[clip]]
+id = "surf-body-12"
+category = "show"
+kit = "surf"
+part = "body"
+lines = [
+  { say = "captain", text = "Ship's diary, day four hundred and one. We have found the good biscuits." },
+  { sfx = "zap" },
+  { say = "dale", text = "And the good biscuits have been found. More at eleven." },
+  { sfx = "zap" },
+]
+
+[[clip]]
+id = "surf-body-13"
+category = "show"
+kit = "surf"
+part = "body"
+lines = [
+  { say = "fitness", text = "And hold that pose! Hold it! Hold it for as long as you can!", cut = 0.95 },
+  { sfx = "zap" },
+  { say = "quiz", text = "Contestant, you have been holding that pose for nine years! Would you like to phone a friend?", cut = 0.94 },
+  { sfx = "zap" },
+]
+
+[[clip]]
+id = "surf-body-14"
+category = "show"
+kit = "surf"
+part = "body"
+lines = [
+  { say = "vj", text = "That was a song about rain. Here's a song about rain, from the rain's point of view.", cut = 0.96 },
+  { sfx = "zap" },
+  { say = "weather", text = "The rain's point of view, tonight: it's going down, and it's fine with that." },
+  { sfx = "zap" },
+]
+
+[[clip]]
+id = "surf-body-15"
+category = "show"
+kit = "surf"
+part = "body"
+lines = [
+  { say = "esteban", text = "Ramona, tell me the truth. Do you love me?" },
+  { say = "ramona", text = "Esteban, I", cut = 0.8 },
+  { sfx = "zap" },
+  { say = "quiz", text = "Yes or no?", cut = 0.95 },
+  { sfx = "zap" },
+  { say = "couch", text = "Yes. Obviously yes." },
+  { sfx = "zap" },
+]
+
+[[clip]]
+id = "surf-body-16"
+category = "show"
+kit = "surf"
+part = "body"
+lines = [
+  { say = "history", text = "In the year of the great sofa, every family in the Overlap sat down at once." },
+  { sfx = "zap" },
+  { say = "nature", text = "They have not, as yet, got up." },
+  { sfx = "zap" },
+]
+
+[[clip]]
+id = "surf-body-17"
+category = "show"
+kit = "surf"
+part = "body"
+lines = [
+  { say = "doctor", text = "Nurse, what's his name?" },
+  { say = "nurse", text = "He won't say, doctor. He just keeps asking if this is the request line.", cut = 0.95 },
+  { sfx = "zap" },
+  { say = "bev", text = "Hello? Is this the request line?", cut = 0.9 },
+  { sfx = "zap" },
+]
+
+[[clip]]
+id = "surf-body-18"
+category = "show"
+kit = "surf"
+part = "body"
+lines = [
+  { say = "trailer", text = "This winter. One remote. One couch. One very, very long night. Rated P, for pyjamas." },
+  { sfx = "zap" },
+  { say = "couch", text = "That's us. That's about us." },
+  { sfx = "zap" },
+]
+
+# ── Surf kit: somebody puts the remote down ───────────────────────────────────
+
+[[clip]]
+id = "surf-close-01"
+category = "show"
+kit = "surf"
+part = "close"
+lines = [
+  { sfx = "zap" },
+  { say = "couch", text = "Nothing on." },
+  { sfx = "zap" },
+  { say = "couch", text = "Nothing on that one, either." },
+  { sfx = "zap" },
+]
+
+[[clip]]
+id = "surf-close-02"
+category = "show"
+kit = "surf"
+part = "close"
+lines = [
+  { say = "couch", text = "Ooh. No. Go back.", gap = 0.6 },
+  { sfx = "zap" },
+  { say = "couch", text = "Further." },
+  { sfx = "zap" },
+]
+
+[[clip]]
+id = "surf-close-03"
+category = "show"
+kit = "surf"
+part = "close"
+lines = [
+  { say = "closedown", text = "And that concludes this part of the evening. Please put the sofa back where you found it." },
+  { sfx = "zap" },
+]
+
+[[clip]]
+id = "surf-close-04"
+category = "show"
+kit = "surf"
+part = "close"
+lines = [
+  { say = "couch", text = "Where's the remote?", gap = 1.0 },
+  { say = "couch", text = "Oh. I'm sitting on it." },
+  { sfx = "zap" },
+]
+
+[[clip]]
+id = "surf-close-05"
+category = "show"
+kit = "surf"
+part = "close"
+lines = [
+  { say = "surf", text = "Channel Surf. Somebody, please, take the remote off them." },
+  { sfx = "zap" },
+]
+
+# ── Serials (one episode a day; see the other stations for the rest) ─────────
+
+[[clip]]
+id = "bev-gets-her-song-10"
+category = "show"
+serial = { id = "bev-gets-her-song", episode = 10 }
+title = "Bev Gets Her Song, Part Ten: For the Car"
+lines = [
+  { sfx = "zap" },
+  { say = "quiz", text = "Welcome back to For the Car! Our returning champion, for the eleventh year running, Bev!" },
+  { sfx = "applause", seconds = 1.6 },
+  { say = "quiz", text = "Bev, for the car. Who is the song for?" },
+  { say = "bev", text = "Stan." },
+  { say = "quiz", text = "Stan is correct!" },
+  { sfx = "zap" },
+  { say = "dale", text = "And the request line at Relay Four has reportedly been heard tonight, for the first time in eleven years." },
+  { sfx = "zap" },
+  { say = "nature", text = "The request, in the wild, will travel enormous distances to reach the one it is meant for. It does not stop. It does not ask for directions. It simply hums." },
+  { sfx = "zap" },
+  { say = "lorraine", text = "Vincent, what's that tune you're humming?" },
+  { say = "vincent", text = "I don't know, Lorraine. I heard it in a lift.", cut = 0.95 },
+  { sfx = "zap" },
+  { say = "trent", text = "Want to make a request? It's the Request Line Extension Cord! Reach Relay Four from the comfort of your sofa!" },
+  { say = "darlene", text = "It's eleven years long, Trent." },
+  { say = "trent", text = "And worth every inch, Darlene!", cut = 0.95 },
+  { sfx = "zap" },
+  { say = "pockets", text = "Hello, friends! Today's word is dedication! It means a song that's for somebody." },
+  { say = "nothing", text = "Who's it for?" },
+  { say = "pockets", text = "Somebody who isn't here any more, Little Nothing. That's what makes it special." },
+  { sfx = "zap" },
+  { say = "weather", text = "And tonight, over the eastern Overlap, a single song, moving slowly east, with a strong chance of crying." },
+  { sfx = "zap" },
+  { say = "quiz", text = "Bev, you've won the car!" },
+  { say = "bev", text = "I don't want the car, love. Give it to somebody who'll drive it somewhere nice." },
+  { sfx = "zap" },
+  { say = "couch", text = "Aw, Bev." },
+  { sfx = "zap" },
+]
+
+# ── Halloween (24 to 31 October) ──────────────────────────────────────────────
+
+[[clip]]
+id = "halloween-01"
+category = "show"
+title = "The Late Late Horror Double Bill"
+dates = ["10-24", "10-25", "10-26", "10-27", "10-28", "10-29", "10-30", "10-31"]
+lines = [
+  { sfx = "zap" },
+  { say = "trailer", text = "This Halloween. The call is coming from inside the house." },
+  { sfx = "zap" },
+  { say = "sitcom_her", text = "It's your mother. She's in the kitchen. She wants to know if you've eaten." },
+  { sfx = "applause", seconds = 1.2 },
+  { sfx = "zap" },
+  { say = "nature", text = "The vampire, in the wild, is mostly nocturnal, mostly polite, and mostly asleep in a cupboard." },
+  { sfx = "zap" },
+  { say = "chef", text = "Tonight, a pumpkin soup, made with a pumpkin that has seen things." },
+  { sfx = "zap" },
+  { say = "lorraine", text = "Vincent! You've come back from the dead!" },
+  { say = "vincent", text = "No, Lorraine. Just from the shop. They'd run out of milk.", cut = 0.95 },
+  { sfx = "zap" },
+  { say = "pockets", text = "Hello, friends! Today's word is boo! Can you say boo? Not too loud! Grandma's asleep!" },
+  { sfx = "zap" },
+  { say = "detective", text = "We've got a sheet with two holes in it, and nobody inside. Either it's a ghost, or somebody's very cold." },
+  { sfx = "zap" },
+  { say = "couch", text = "Leave the light on." },
+  { sfx = "zap" },
+]
+
+[[clip]]
+id = "halloween-02"
+category = "show"
+kit = "surf"
+part = "body"
+title = "The Halloween Forecast, and the Cat"
+dates = ["10-24", "10-25", "10-26", "10-27", "10-28", "10-29", "10-30", "10-31"]
+lines = [
+  { say = "weather", text = "Tonight's Halloween forecast. A full moon, light fog, and a ninety percent chance of somebody dressed as a ghost tripping over the cat." },
+  { sfx = "zap" },
+  { say = "nature", text = "The cat, sensing its moment, does absolutely nothing." },
+  { sfx = "zap" },
+]

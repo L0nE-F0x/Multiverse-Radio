@@ -4,8 +4,35 @@ import type { RecipeId, StationDef, TrackMeta } from '../broadcast/types';
 import { expandRule, expandUntil, merge, type Grammar } from './grammar';
 import { LIMITS } from './limits';
 import { commonGrammar } from './packs/common';
-import { RECIPE_PACKS, STATION_PACKS, type TrackPack } from './packs';
+import type { TrackPack } from './packs/types';
 import { hashSeed, rngFor } from './rng';
+
+// The naming packs are the biggest thing in the content module (tens of kB), so they load on
+// demand. Until they arrive, tracks get a plain placeholder name; the broadcast library keys
+// its schedule cache on `trackPacksReady()`, so names fill in as soon as the packs land.
+type PackTables = typeof import('./packs');
+let tables: PackTables | null = null;
+let loading: Promise<void> | null = null;
+
+/** Start loading the track-naming packs (safe to call repeatedly). */
+export function loadTrackPacks(): Promise<void> {
+  loading ??= import('./packs').then((m) => {
+    tables = m;
+  });
+  return loading;
+}
+
+export function trackPacksReady(): boolean {
+  return tables !== null;
+}
+
+const PLACEHOLDER_PACK: TrackPack = {
+  grammar: { title: ['Incoming Transmission'], artist: ['Signal Acquiring'] },
+  albumChance: 0,
+  noteChance: 0,
+  suffixChance: 0,
+  fallbackTitle: 'Incoming Transmission',
+};
 
 /**
  * Which naming pack a track uses. An explicit `recipe` that differs from the station's main
@@ -13,6 +40,8 @@ import { hashSeed, rngFor } from './rng';
  * recipe pool (picked by seed) or main recipe.
  */
 export function packFor(station: StationDef, seed: number, recipe?: RecipeId): TrackPack {
+  if (!tables) return PLACEHOLDER_PACK;
+  const { RECIPE_PACKS, STATION_PACKS } = tables;
   const forRecipe = recipe && recipe !== station.recipe ? RECIPE_PACKS[recipe] : undefined;
   if (forRecipe) return forRecipe;
   const own = STATION_PACKS[station.id];

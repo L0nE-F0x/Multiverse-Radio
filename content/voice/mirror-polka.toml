@@ -7,6 +7,8 @@ station = "mirror-polka"
 host = { voice = "am_santa", speed = 1.08, name = "Johnny Mirror" }
 ynnhoj = { voice = "am_santa", speed = 1.02, fx = "distant", name = "Ynnhoj" }
 bev = { voice = "af_nova", fx = "phone", name = "Bev" }
+# v3: serial.
+greg = { voice = "am_onyx", fx = "whisper", name = "Greg, a Shadow" }
 
 # ── Idents ────────────────────────────────────────────────────────────────────
 
@@ -250,4 +252,293 @@ lines = [
   { say = "host", text = "It is, Bev! Is it ringing any bells?" },
   { say = "bev", text = "It's ringing them in the wrong order, love." },
   { sfx = "phone-hangup" },
+]
+
+# ══ v3: the living schedule ═══════════════════════════════════════════════════
+#
+# Shows, the dj kit (an opener, one to three bits of ballroom news, a hand-off; Ynnhoj
+# agrees half a second late), a serial episode and Halloween. The Left Hand Band and
+# Accordion Inverted are resident artists (src/content/packs/bright.ts).
+# Existing clips above are rendered and deployed; only add.
+
+# ── Shows ─────────────────────────────────────────────────────────────────────
+
+[[show]]
+id = "ynnhojs-late-show"
+name = "Ynnhoj's Late Show"
+blurb = "Johnny's asleep. His reflection isn't."
+start = 2
+end = 4
+host = "Ynnhoj"
+
+[[show]]
+id = "the-actual-polka-hour"
+name = "The Actual Polka Hour"
+blurb = "The one hour of the day when the Polka Hour is technically an hour."
+start = 20
+end = 21
+
+[[clip]]
+id = "ynnhojs-late-show-open"
+category = "id"
+show = "ynnhojs-late-show"
+part = "open"
+title = "Ynnhoj's Late Show"
+lines = [
+  { say = "ynnhoj", text = "This is Ynnhoj's Late Show.", gap = 1.0 },
+  { say = "ynnhoj", text = "Johnny is asleep.", gap = 1.0 },
+  { say = "ynnhoj", text = "I am not." },
+]
+
+[[clip]]
+id = "ynnhojs-late-show-01"
+category = "dj"
+show = "ynnhojs-late-show"
+lines = [
+  { say = "ynnhoj", text = "When Johnny sleeps, I sleep too. That's the rule.", gap = 1.2 },
+  { say = "ynnhoj", text = "I've never checked.", gap = 1.0 },
+  { say = "ynnhoj", text = "Here is a polka. Slowly." },
+]
+
+[[clip]]
+id = "ynnhojs-late-show-02"
+category = "dj"
+show = "ynnhojs-late-show"
+lines = [
+  { say = "ynnhoj", text = "If you're near a mirror right now, your reflection is looking back. It's had a long day too.", gap = 1.0 },
+  { say = "ynnhoj", text = "Give it a smile. It will do the same.", gap = 1.0 },
+  { say = "ynnhoj", text = "Half a second later. That's just how we are." },
+]
+
+[[clip]]
+id = "the-actual-polka-hour-open"
+category = "id"
+show = "the-actual-polka-hour"
+part = "open"
+title = "The Actual Polka Hour"
+lines = [
+  { say = "host", text = "It's the Actual Polka Hour! The one hour a day when the Polka Hour is actually an hour!", gap = 0.6 },
+  { say = "ynnhoj", text = "An hour!" },
+]
+
+[[clip]]
+id = "the-actual-polka-hour-01"
+category = "dj"
+show = "the-actual-polka-hour"
+lines = [
+  { say = "host", text = "For sixty glorious minutes, the clock and the station agree! Isn't that something, Ynnhoj?", gap = 0.6 },
+  { say = "ynnhoj", text = "Something!", gap = 0.5 },
+  { say = "host", text = "Savour it, folks. At nine o'clock we go back to being the Polka Hour all day long." },
+]
+
+[[clip]]
+id = "the-actual-polka-hour-02"
+category = "dj"
+show = "the-actual-polka-hour"
+lines = [
+  { say = "host", text = "Hands up if you're dancing! Left hands! Left hands up!", gap = 0.6 },
+  { say = "ynnhoj", text = "Right hands up!", gap = 0.8 },
+  { say = "host", text = "Ynnhoj." },
+  { say = "ynnhoj", text = "Left hands up. Sorry. It's been a long hour." },
+]
+
+# ── DJ kit ────────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "dj-open-01"
+category = "dj"
+kit = "dj"
+part = "open"
+lines = [
+  { say = "host", text = "Welcome back to the Polka Hour! Oom-pah, everybody!", gap = 0.6 },
+  { say = "ynnhoj", text = "Hap-moo!" },
+]
+
+[[clip]]
+id = "dj-open-02"
+category = "dj"
+kit = "dj"
+part = "open"
+lines = [
+  { say = "host", text = "Welcome back to the ballroom!", gap = 0.6 },
+  { say = "ynnhoj", text = "Welcome back to the moorllab!" },
+]
+
+[[clip]]
+id = "dj-open-03"
+category = "dj"
+kit = "dj"
+part = "open"
+lines = [
+  { say = "host", text = "Still dancing, everybody? Good! Keep going!", gap = 0.6 },
+  { say = "ynnhoj", text = "Keep going!" },
+]
+
+[[clip]]
+id = "dj-open-04"
+category = "dj"
+kit = "dj"
+part = "open"
+daypart = "night"
+lines = [
+  { say = "host", text = "Late polka, everybody. Softer oom.", gap = 0.6 },
+  { say = "ynnhoj", text = "Gentler pah." },
+]
+
+[[clip]]
+id = "dj-body-01"
+category = "dj"
+kit = "dj"
+part = "body"
+lines = [
+  { say = "host", text = "The Left Hand Band have a new single out! It's played entirely with left hands, which over here is both of them!", gap = 0.6 },
+  { say = "ynnhoj", text = "Both of them!" },
+]
+
+[[clip]]
+id = "dj-body-02"
+category = "dj"
+kit = "dj"
+part = "body"
+lines = [
+  { say = "host", text = "A note for table nine. Your reflection has ordered dessert. You haven't. One of you is going to have to pay for that.", gap = 0.6 },
+  { say = "ynnhoj", text = "It's you." },
+]
+
+[[clip]]
+id = "dj-body-03"
+category = "dj"
+kit = "dj"
+part = "body"
+lines = [
+  { say = "host", text = "Accordion Inverted are in the ballroom tonight! Their accordion breathes in when everyone else's breathes out. It makes the whole room very calm.", gap = 0.6 },
+  { say = "ynnhoj", text = "Very calm." },
+]
+
+[[clip]]
+id = "dj-body-04"
+category = "dj"
+kit = "dj"
+part = "body"
+lines = [
+  { say = "host", text = "Fun fact! The tuba player has never once been in time with himself, and he's won three awards for it!", gap = 0.6 },
+  { say = "ynnhoj", text = "Four awards.", gap = 0.8 },
+  { say = "host", text = "Three, Ynnhoj." },
+  { say = "ynnhoj", text = "One of them's on my side." },
+]
+
+[[clip]]
+id = "dj-body-05"
+category = "dj"
+kit = "dj"
+part = "body"
+lines = [
+  { say = "host", text = "Somebody asked if Ynnhoj and I ever argue. Never! We agree on everything!", gap = 0.6 },
+  { say = "ynnhoj", text = "Everything.", gap = 1.2 },
+  { say = "ynnhoj", text = "Nearly everything.", gap = 0.6 },
+  { say = "host", text = "Ynnhoj." },
+]
+
+[[clip]]
+id = "dj-body-06"
+category = "dj"
+kit = "dj"
+part = "body"
+lines = [
+  { say = "host", text = "Polka tip! Always polka to the left. If you get dizzy, polka to the left faster. Eventually you'll come out the other side!", gap = 0.6 },
+  { say = "ynnhoj", text = "The other side!" },
+]
+
+[[clip]]
+id = "dj-close-01"
+category = "dj"
+kit = "dj"
+part = "close"
+lines = [
+  { say = "host", text = "Here's another polka!", gap = 0.6 },
+  { say = "ynnhoj", text = "Aklop rehtona!" },
+]
+
+[[clip]]
+id = "dj-close-02"
+category = "dj"
+kit = "dj"
+part = "close"
+lines = [
+  { say = "host", text = "Strike up the band!", gap = 0.6 },
+  { say = "ynnhoj", text = "Band up the strike!" },
+]
+
+[[clip]]
+id = "dj-close-03"
+category = "dj"
+kit = "dj"
+part = "close"
+lines = [
+  { say = "host", text = "To the left, everybody!", gap = 0.6 },
+  { say = "ynnhoj", text = "To the left!" },
+]
+
+[[clip]]
+id = "dj-close-04"
+category = "dj"
+kit = "dj"
+part = "close"
+lines = [
+  { say = "host", text = "One, two, three, oom!", gap = 0.6 },
+  { say = "ynnhoj", text = "Pah." },
+]
+
+# ── Serials (one episode a day; see the other stations for the rest) ─────────
+
+[[clip]]
+id = "greg-comes-home-07"
+category = "story"
+serial = { id = "greg-comes-home", episode = 7 }
+title = "Greg Comes Home, Part Seven: Going Second"
+lines = [
+  { say = "host", text = "Folks! Somebody's come through the back of the bathroom mirror! It's Greg!", gap = 0.6 },
+  { say = "ynnhoj", text = "Greg!" },
+  { say = "greg", text = "Sorry. I came out of level nine. Is this the way to the eastern Overlap?" },
+  { say = "host", text = "It's the way to everywhere, son, if you go left for long enough! Stay for one dance!" },
+  { say = "greg", text = "One dance." },
+  { say = "host", text = "Look at him go! Lovely footwork, Greg! Isn't it lovely, Ynnhoj?", gap = 1.0 },
+  { say = "ynnhoj", text = "Greg. Can I ask you something?" },
+  { say = "greg", text = "Yes." },
+  { say = "ynnhoj", text = "You followed someone for forty one years. So do I. Every morning, every night. Always half a second behind.", gap = 1.0 },
+  { say = "ynnhoj", text = "Do you miss going second?", gap = 1.6 },
+  { say = "greg", text = "No.", gap = 1.0 },
+  { say = "greg", text = "I miss him going first.", gap = 1.8 },
+  { say = "host", text = "Ynnhoj? You wouldn't ever. You know. Go?", speed = 1.0, gap = 1.0 },
+  { say = "ynnhoj", text = "And miss a shave?", gap = 1.0 },
+  { say = "ynnhoj", text = "No. I like going second. Somebody has to see where you've been." },
+  { say = "host", text = "Greg, the door's on the left. It's always on the left." },
+  { say = "greg", text = "Thank you. Both of you.", gap = 0.6 },
+  { say = "ynnhoj", text = "Both of you." },
+]
+
+# ── Halloween (24 to 31 October) ──────────────────────────────────────────────
+
+[[clip]]
+id = "halloween-01"
+category = "dj"
+kit = "dj"
+part = "body"
+title = "The Mirror at Halloween"
+dates = ["10-24", "10-25", "10-26", "10-27", "10-28", "10-29", "10-30", "10-31"]
+lines = [
+  { say = "host", text = "Halloween at the Polka Hour! Your side gets dressed up and looks in the mirror to see how you look!", gap = 0.6 },
+  { say = "ynnhoj", text = "And our side looks back.", gap = 1.0 },
+  { say = "ynnhoj", text = "Without the costume.", gap = 0.8 },
+  { say = "host", text = "Ynnhoj, don't. Not this week." },
+]
+
+[[clip]]
+id = "halloween-02"
+category = "id"
+title = "Mirror World Polka Hour, Halloween"
+dates = ["10-24", "10-25", "10-26", "10-27", "10-28", "10-29", "10-30", "10-31"]
+lines = [
+  { say = "host", text = "Mirror World Polka Hour! Happy Halloween!", gap = 0.6 },
+  { say = "ynnhoj", text = "Neewollah yppah!" },
 ]

@@ -5,6 +5,8 @@ station = "whalesong"
 
 [voices]
 host = { voice = "am_onyx", speed = 0.85, name = "Captain Hum" }
+# v3: serial.
+greg = { voice = "am_onyx", fx = "whisper", name = "Greg, a Shadow" }
 
 # ── Idents ────────────────────────────────────────────────────────────────────
 
@@ -132,4 +134,271 @@ daypart = "night"
 lines = [
   { say = "host", text = "Faint signal on the long-range set. A man called Teodor, at Relay Four, asking if anyone can hear him.", gap = 1.2 },
   { say = "host", text = "We can, Teodor. So can the whales. They've started singing back." },
+]
+
+# ══ v3: the living schedule ═══════════════════════════════════════════════════
+#
+# Shows, a sparse dj kit (Captain Hum still speaks rarely), serial episodes and
+# Halloween. Pod Seven and the Nebula Choir are resident artists
+# (src/content/packs/chill.ts). Existing clips above are rendered and deployed; only add.
+
+# ── Shows ─────────────────────────────────────────────────────────────────────
+
+[[show]]
+id = "the-night-watch"
+name = "The Night Watch"
+blurb = "Captain Hum keeps watch. The whales keep singing. Nobody asks the whales."
+start = 0
+end = 4
+
+[[show]]
+id = "the-dawn-log"
+name = "The Dawn Log"
+blurb = "There is no dawn between galaxies. Captain Hum keeps one anyway."
+start = 5
+end = 7
+
+[[clip]]
+id = "the-night-watch-open"
+category = "id"
+show = "the-night-watch"
+part = "open"
+title = "The Night Watch"
+lines = [
+  { say = "host", text = "The Night Watch. Deep Space Whalesong.", gap = 1.2 },
+  { say = "host", text = "I'm on watch. You can sleep." },
+]
+
+[[clip]]
+id = "the-night-watch-01"
+category = "dj"
+show = "the-night-watch"
+lines = [
+  { say = "host", text = "Night watch report. All quiet in lane twelve.", gap = 1.2 },
+  { say = "host", text = "The whales are singing to each other. One of them has been answering a question for three hundred years.", gap = 1.2 },
+  { say = "host", text = "She's nearly at the good bit." },
+]
+
+[[clip]]
+id = "the-night-watch-02"
+category = "dj"
+show = "the-night-watch"
+lines = [
+  { say = "host", text = "I checked on the whales just now.", gap = 1.2 },
+  { say = "host", text = "From a distance. Through the glass. You don't knock on the whales.", gap = 1.2 },
+  { say = "host", text = "They're fine." },
+]
+
+[[clip]]
+id = "the-dawn-log-open"
+category = "id"
+show = "the-dawn-log"
+part = "open"
+title = "The Dawn Log"
+lines = [
+  { say = "host", text = "Good morning. There is no morning out here.", gap = 1.0 },
+  { say = "host", text = "This is the Dawn Log. I keep one anyway." },
+]
+
+[[clip]]
+id = "the-dawn-log-01"
+category = "dj"
+show = "the-dawn-log"
+lines = [
+  { say = "host", text = "Captain's log. Dawn, by my reckoning.", gap = 1.0 },
+  { say = "host", text = "I've turned the lights in the observation lounge up a little, and made a pot of coffee. That's how you make a dawn out here.", gap = 1.2 },
+  { say = "host", text = "It works. Mostly." },
+]
+
+[[clip]]
+id = "the-dawn-log-02"
+category = "dj"
+show = "the-dawn-log"
+lines = [
+  { say = "host", text = "Good morning to the night shift, on whatever ship you're keeping.", gap = 1.2 },
+  { say = "host", text = "It's been a long night. You did well. Here's a slow one." },
+]
+
+# ── DJ kit (sparse) ───────────────────────────────────────────────────────────
+
+[[clip]]
+id = "dj-open-01"
+category = "dj"
+kit = "dj"
+part = "open"
+lines = [
+  { say = "host", text = "Captain Hum.", gap = 1.2 },
+  { say = "host", text = "Still on watch." },
+]
+
+[[clip]]
+id = "dj-open-02"
+category = "dj"
+kit = "dj"
+part = "open"
+lines = [
+  { say = "host", text = "Deep Space Whalesong.", gap = 1.2 },
+  { say = "host", text = "All is well." },
+]
+
+[[clip]]
+id = "dj-open-03"
+category = "dj"
+kit = "dj"
+part = "open"
+daypart = "night"
+lines = [
+  { say = "host", text = "It's very dark out here.", gap = 1.0 },
+  { say = "host", text = "That's normal." },
+]
+
+[[clip]]
+id = "dj-body-01"
+category = "dj"
+kit = "dj"
+part = "body"
+lines = [
+  { say = "host", text = "Pod Seven passed the ship an hour ago. Seven whales in a line, singing the same note.", gap = 1.2 },
+  { say = "host", text = "It went on for a long time. The coffee went cold. I didn't mind." },
+]
+
+[[clip]]
+id = "dj-body-02"
+category = "dj"
+kit = "dj"
+part = "body"
+lines = [
+  { say = "host", text = "We've drifted past another galaxy. It was very beautiful. It took most of the century.", gap = 1.2 },
+  { say = "host", text = "I waved. I don't think it noticed." },
+]
+
+[[clip]]
+id = "dj-body-03"
+category = "dj"
+kit = "dj"
+part = "body"
+lines = [
+  { say = "host", text = "One of the whales has started humming along with our music.", gap = 1.4 },
+  { say = "host", text = "I don't know which one. I'm not going to ask.", gap = 1.0 },
+  { say = "host", text = "You don't ask the whales." },
+]
+
+[[clip]]
+id = "dj-body-04"
+category = "dj"
+kit = "dj"
+part = "body"
+lines = [
+  { say = "host", text = "The Nebula Choir have gone quiet for a while. They do that. They're listening to something we can't hear.", gap = 1.2 },
+  { say = "host", text = "I like to think it's us." },
+]
+
+[[clip]]
+id = "dj-body-05"
+category = "dj"
+kit = "dj"
+part = "body"
+lines = [
+  { say = "host", text = "Ship's systems, all green. Coffee, warm. Whales, fine.", gap = 1.2 },
+  { say = "host", text = "That's the whole report. It's a good report." },
+]
+
+[[clip]]
+id = "dj-close-01"
+category = "dj"
+kit = "dj"
+part = "close"
+lines = [
+  { say = "host", text = "Rest easy.", gap = 0.8 },
+  { say = "host", text = "Carry on." },
+]
+
+[[clip]]
+id = "dj-close-02"
+category = "dj"
+kit = "dj"
+part = "close"
+lines = [
+  { say = "host", text = "I'll leave you with the whales now." },
+]
+
+[[clip]]
+id = "dj-close-03"
+category = "dj"
+kit = "dj"
+part = "close"
+lines = [
+  { say = "host", text = "Here's some more drift. No rush." },
+]
+
+# ── Serials (one episode a day; see the other stations for the rest) ─────────
+
+[[clip]]
+id = "greg-comes-home-01"
+category = "story"
+serial = { id = "greg-comes-home", episode = 1 }
+title = "Greg Comes Home, Part One: The Stowaway Decides"
+bed = "space"
+lines = [
+  { say = "host", text = "Captain's log. The stowaway in the observation lounge has asked to speak to me.", gap = 1.0 },
+  { say = "host", text = "His name is Greg. He's a shadow. He came aboard in the spring, to see the whales. He has seen a great many whales.", gap = 1.0 },
+  { say = "greg", text = "Captain. I'd like to get off." },
+  { say = "host", text = "We're between galaxies, son. There isn't really an off." },
+  { say = "greg", text = "I know. Sorry. It's just. One of the whales turned and looked at me today. For a very long time." },
+  { say = "host", text = "They do that. I'm sure it was nothing.", gap = 0.8 },
+  { say = "greg", text = "The others told me. She sings, and it takes a thousand years for anyone to hear it. And then a thousand more before anyone sings back.", gap = 1.0 },
+  { say = "greg", text = "I don't want him to wait a thousand years." },
+  { say = "host", text = "Who?" },
+  { say = "greg", text = "Hollis. My person. I left without saying anything. He leaves the porch light on.", gap = 1.6 },
+  { say = "host", text = "Well.", gap = 1.2 },
+  { say = "host", text = "There's a comet coming through lane twelve tonight, heading back toward the inner dimensions. It has a beach on it. Stand by the airlock at four, and you could hop across." },
+  { say = "greg", text = "Will you slow down for me?" },
+  { say = "host", text = "Son, we go one galaxy a century. We're already slowed down.", gap = 1.2 },
+  { say = "host", text = "And Greg. The whale who looked at you. She wasn't singing to you.", gap = 1.0 },
+  { say = "host", text = "She was singing you home.", gap = 2.0 },
+  { say = "host", text = "Captain's log, continued. The stowaway has left the ship. The whales are fine. I didn't ask. I could tell." },
+]
+
+[[clip]]
+id = "teodor-is-heard-05"
+category = "story"
+serial = { id = "teodor-is-heard", episode = 5 }
+title = "Teodor Is Heard, Part Five: Some Rush"
+bed = "space"
+lines = [
+  { say = "host", text = "Captain's log. A faint signal on the long-range set, as there has been every night for eleven years. A man called Teodor, at Relay Four, asking if anyone can hear him.", gap = 1.0 },
+  { say = "host", text = "The whales have been singing back to him since the first night. But his receiver is broken, and whale song travels slowly.", gap = 1.0 },
+  { say = "host", text = "I've done the sums. At the speed of whale, their answer reaches him in nine hundred and eighty nine years.", gap = 1.6 },
+  { say = "host", text = "That's too long.", gap = 1.4 },
+  { say = "host", text = "This ship goes one galaxy a century. It always has. There's never been any rush out here.", gap = 1.2 },
+  { say = "host", text = "There is now.", gap = 1.0 },
+  { sfx = "whoosh" },
+  { say = "host", text = "I've asked the whales to come in close, and sing into the hull, so we can carry it for them. It's the first time I've ever asked the whales anything.", gap = 1.4 },
+  { say = "host", text = "They sang one long, low note. I'm choosing to take that as yes.", gap = 1.2 },
+  { say = "host", text = "We're turning toward the edge of the dial. Two galaxies a century. Possibly three.", gap = 1.0 },
+  { say = "host", text = "Hold on to your coffee. And Teodor, hold on. Help is coming. It's very large and very slow, but it's coming faster than it ever has." },
+]
+
+# ── Halloween (24 to 31 October) ──────────────────────────────────────────────
+
+[[clip]]
+id = "halloween-01"
+category = "dj"
+title = "A Whale in a Sheet"
+dates = ["10-24", "10-25", "10-26", "10-27", "10-28", "10-29", "10-30", "10-31"]
+lines = [
+  { say = "host", text = "Captain's log. Halloween, by my reckoning.", gap = 1.2 },
+  { say = "host", text = "One of the whales swam past with a sheet of nebula draped over her head. I think she's dressed as a ghost.", gap = 1.4 },
+  { say = "host", text = "I said boo. She said nothing.", gap = 1.0 },
+  { say = "host", text = "You don't say boo to the whales." },
+]
+
+[[clip]]
+id = "halloween-02"
+category = "id"
+title = "Halloween Night Watch"
+dates = ["10-24", "10-25", "10-26", "10-27", "10-28", "10-29", "10-30", "10-31"]
+lines = [
+  { say = "host", text = "Deep Space Whalesong. Halloween night watch.", gap = 1.2 },
+  { say = "host", text = "Nothing out here is scary. Except how big it all is." },
 ]

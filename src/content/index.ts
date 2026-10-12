@@ -2,7 +2,7 @@
 // weather. Every function is pure and deterministic for a given seed (seeded PRNG, no
 // Math.random), built from Tracery-style grammars in this folder.
 
-export { trackMeta } from './tracks';
+export { loadTrackPacks, trackMeta, trackPacksReady } from './tracks';
 export { tickerLines } from './ticker';
 export { listenerMessage, type ListenerMessage } from './listeners';
 export { receptionReport } from './reception';

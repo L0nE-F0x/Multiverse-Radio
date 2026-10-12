@@ -2,6 +2,7 @@
 
 import { num } from '../grammar';
 import { TITLE_SHAPE } from './common';
+import { RESIDENT_SHARE } from './residents';
 import type { TrackPack } from './types';
 
 export const baroqueBots: TrackPack = {
@@ -88,13 +89,28 @@ export const baroqueBots: TrackPack = {
     nickname: ['Overheating', 'Sentimental', 'Loose Screw', 'Cog', 'Melancholy Toaster', 'Simulated Tears', 'Clockwork', 'Spoon', 'Unfinished Calculation', 'Polite'],
     themeBy: ['Lesser Toaster', 'Disgraced Abacus', 'Retired Metronome', 'Better Robot', 'Human (Allegedly)'],
     suffix: ['Live', 'Unfinished', 'Revised', 'With Feelings', 'Simulated Tears Edition', 'Restored', 'Original Instruments', 'Played Slightly Too Fast', 'Reconstructed From a Diagram'],
-    artist: [
+    artist: RESIDENT_SHARE,
+    residents: [
       'The Baroque Robot Philharmonic',
-      'The Baroque Robot Philharmonic',
-      '#composer#',
-      '#composer#',
-      '#composer#, performed by #ensemble#',
-      '#ensemble#',
+      'Ferrous von Clank',
+      'Madame Torque',
+      'Antonio Sprocketti',
+      'Hildegard Ratchet',
+      'Gottfried Rivet',
+      'Unit Nine (Cello)',
+      'The Powdered Wig Quartet',
+    ],
+    guestArtist: ['#guestComposer#', '#guestComposer#', '#composer#, performed by #ensemble#', '#ensemble#'],
+    guestComposer: [
+      'Bolt the Elder',
+      'Bolt the Younger',
+      'Ludovico Lubricant',
+      'Maestro Unit Seven',
+      'Wilhelmina Gearwright',
+      'Fortunato Flywheel',
+      'Ignaz Escapement',
+      'Barbara Ballbearing',
+      'Count Oscillo',
     ],
     composer: [
       'Ferrous von Clank',
@@ -295,20 +311,18 @@ export const endLounge: TrackPack = {
       'Light Candles for',
       'Write to',
     ],
-    artist: [
+    artist: RESIDENT_SHARE,
+    residents: [
       'Barnaby Velvet & His Dimming Stars',
-      'The Last Quartet (Now a Trio)',
       'Lady Entropy',
       'The Proton Decay Four',
       'Octavia and the Eight Arms',
       'The Redshift Swingers',
-      'The Event Horizons',
       'Smooth Harold Oblivion',
-      '#first# #surname#',
-      '#first# #surname#',
-      '#first# #surname# & the #band#',
-      'The #cosmic# #band#',
+      'The Last Quartet (Now a Trio)',
+      'The Event Horizons',
     ],
+    guestArtist: ['#first# #surname#', '#first# #surname#', '#first# #surname# & the #band#', 'The #cosmic# #band#'],
     first: ['Dorothea', 'Harold', 'Vivienne', 'Monty', 'Lorelei', 'Sal', 'Ruby', 'Clement', 'Odile', 'Felix', 'Marguerite', 'Augustin', 'Della', 'Rex', 'Ines', 'Bertram'],
     surname: ['Twilight', 'Dusk', 'Velour', 'Nocturne', 'Lamplight', 'Ember', 'Silk', 'Afterglow', 'Cinders', 'Redshift', 'Mulberry', 'Moonhaven'],
     band: ['Quartet', 'Orchestra', 'Swingers', 'Trio', 'Players', 'Dimming Stars', 'Nightcaps', 'Torches', 'Last Rounds'],
@@ -369,20 +383,27 @@ export const holdMusic: TrackPack = {
     queue: (rng) => rng.int(1000, 9_999_999).toLocaleString('en-US'),
     estimate: ['Soon', 'An Epoch', 'Eleven Minutes (Approx.)', 'Not Long Now', 'Pending', 'Unknown'],
     suffix: ['#holdVersion#'],
-    artist: [
+    // Bev's song (see the bev-gets-her-song serial in content/voice). Light rotation only.
+    fixed: ['Pleasant Interval', 'Pleasant Interval (Reference 2-2-1)', 'The Long One (Lift Two)', 'Floor Five, Doors Opening'],
+    artist: RESIDENT_SHARE,
+    residents: [
       'The Departmental Strings',
       'Pam and the Extensions',
-      'Light Listening Ensemble of Floor −4',
-      'The Escalators',
-      'Bureau Pops Orchestra',
       'The Queue Tones',
       'Pleasant Interlude',
+      'The Pending Quartet',
+      'Floor −4 Easy Orchestra',
+      'The Escalators',
       'The Transfer Strings',
+    ],
+    guestArtist: [
+      'Light Listening Ensemble of Floor −4',
+      'Bureau Pops Orchestra',
       'Extension 4400',
       'The Rubber Stamps',
       'Elevator Music for Officials',
-      'Floor −4 Easy Orchestra',
-      'The Pending Quartet',
+      'The #ordinal# #bureau# Ensemble',
+      'The #bureau# Strings',
     ],
     album: [
       'Music to Wait Forever To, Vol. #n#',
@@ -531,16 +552,17 @@ export const wildMultiverse: TrackPack = {
       'Wetlands',
     ],
     suffix: ['#cue#'],
-    artist: [
+    artist: RESIDENT_SHARE,
+    residents: [
       'The Field Recording Orchestra',
       "Sir Reginald's String Section",
-      'The Crew (Hiding)',
       'Tall Grass Philharmonic',
       'The Long Lens Ensemble',
-      'The Sunset Over Something Orchestra',
       'The Hide Quartet',
       'Thistlewood & the Telephotos',
+      'The Crew (Hiding)',
     ],
+    guestArtist: ['The Sunset Over Something Orchestra', 'Pip and the Spare Batteries', 'The Night Camera Quintet', 'The Folding Elk Brass', 'The Upside-Down Heron Trio'],
     album: ['Wild Multiverse: Original Score', 'Music From the Tall Grass', 'Too Much: A Nature Soundtrack', 'Field Notes, Vol. #vol#'],
     vol: num(1, 9),
     note: [
@@ -628,17 +650,9 @@ export const numbersOmega: TrackPack = {
     ],
     standby: ['Geese', 'Numbers', 'Further Numbers', 'the Fox', 'You'],
     suffix: ['Music Box', 'Repeat', 'Second Reading', 'Fog Version', 'For You'],
-    artist: [
-      'The Counter',
-      'The Counter',
-      'Station Omega House Music Box',
-      'Unknown Sender',
-      'The Fox at the Mast',
-      'Music Box No. 7',
-      'Coordinates Withheld',
-      'The Red Light',
-      'Fog Signal',
-    ],
+    artist: RESIDENT_SHARE,
+    residents: ['The Counter', 'Station Omega House Music Box', 'The Fox at the Mast', 'Music Box No. 7', 'Unknown Sender', 'Fog Signal', 'The Red Light'],
+    guestArtist: ['Coordinates Withheld', 'Sender Unknown (Second Sender)', 'The Night Frequency', 'Repeat, Repeat', 'The Geese (Ensemble)'],
     album: ['Numbers for Someone', 'Seven Seven Four', 'Readings, Vol. #d#', 'You Owe It Geese'],
     note: [
       '#sharedNote#',

@@ -7,6 +7,9 @@ station = "moon-dub"
 host = { voice = "am_fenrir", speed = 0.92, name = "Selector Crater" }
 echo = { voice = "am_fenrir", speed = 0.92, fx = "cave", name = "Echo" }
 teodor = { voice = "am_eric", speed = 0.9, fx = "radio", name = "Faint voice" }
+# v3: serials. (relay4 matches Teodor's voice on the other stations.)
+greg = { voice = "am_onyx", fx = "whisper", name = "Greg, a Shadow" }
+relay4 = { voice = "bm_daniel", fx = "distant", name = "Teodor, Relay Four" }
 
 # ── Idents ────────────────────────────────────────────────────────────────────
 
@@ -219,4 +222,280 @@ lines = [
   { say = "host", text = "Big up everyone on the late shift.", gap = 1.4 },
   { say = "echo", text = "Big up the crater crew.", gap = 0.8 },
   { say = "host", text = "That's an old one. Still counts. Big up everyone." },
+]
+
+# ══ v3: the living schedule ═══════════════════════════════════════════════════
+#
+# Shows, a terse dj kit (an opener, one to three observations, "run it"), serial
+# episodes and Halloween. King Regolith and Big Bass Selene are resident artists
+# (src/content/packs/bright.ts). Existing clips above are rendered and deployed; only add.
+
+# ── Shows ─────────────────────────────────────────────────────────────────────
+
+[[show]]
+id = "earthrise-session"
+name = "Earthrise Session"
+blurb = "Bass for the Earth, coming up over the ridge with a big blue yawn."
+start = 5
+end = 7
+
+[[show]]
+id = "low-gravity-session"
+name = "Low Gravity Session"
+blurb = "Heavy bass, light gravity, late."
+start = 22
+end = 2
+
+[[clip]]
+id = "earthrise-session-open"
+category = "id"
+show = "earthrise-session"
+part = "open"
+title = "Earthrise Session"
+lines = [
+  { say = "host", text = "Earthrise Session. She's coming up over the ridge now.", gap = 1.2 },
+  { say = "host", text = "Morning, Earth." },
+]
+
+[[clip]]
+id = "earthrise-session-01"
+category = "dj"
+show = "earthrise-session"
+lines = [
+  { say = "host", text = "Earth's up. Big blue yawn. She's had a long night too.", gap = 1.0 },
+  { say = "host", text = "This one's soft. For her." },
+]
+
+[[clip]]
+id = "earthrise-session-02"
+category = "dj"
+show = "earthrise-session"
+lines = [
+  { say = "host", text = "Every morning, somebody down there looks up and sees us.", gap = 1.0 },
+  { say = "host", text = "They don't know there's a sound system. They just think the moon looks happy.", gap = 1.2 },
+  { say = "host", text = "It is." },
+]
+
+[[clip]]
+id = "low-gravity-session-open"
+category = "id"
+show = "low-gravity-session"
+part = "open"
+title = "Low Gravity Session"
+lines = [
+  { say = "host", text = "Low Gravity Session.", gap = 1.4 },
+  { say = "echo", text = "Session.", gap = 0.6 },
+  { say = "host", text = "Moon Dub. Hold tight." },
+]
+
+[[clip]]
+id = "low-gravity-session-01"
+category = "dj"
+show = "low-gravity-session"
+lines = [
+  { say = "host", text = "Late on the moon. Gravity's down to sixteen percent. Bass is up to the ceiling.", gap = 1.0 },
+  { say = "host", text = "There is no ceiling. Let it go up." },
+]
+
+[[clip]]
+id = "low-gravity-session-02"
+category = "dj"
+show = "low-gravity-session"
+lines = [
+  { say = "host", text = "Shout-out to the lone astronaut. Still nodding. Day nine.", gap = 1.2 },
+  { say = "host", text = "Somebody bring that man a sandwich.", gap = 1.4 },
+  { say = "echo", text = "Bring that man a sandwich." },
+]
+
+# ── DJ kit ────────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "dj-open-01"
+category = "dj"
+kit = "dj"
+part = "open"
+lines = [
+  { say = "host", text = "Selector Crater. Still here.", gap = 1.0 },
+  { say = "host", text = "Run it." },
+]
+
+[[clip]]
+id = "dj-open-02"
+category = "dj"
+kit = "dj"
+part = "open"
+lines = [
+  { say = "host", text = "Big tune.", gap = 1.4 },
+  { say = "echo", text = "Big tune." },
+]
+
+[[clip]]
+id = "dj-open-03"
+category = "dj"
+kit = "dj"
+part = "open"
+lines = [
+  { say = "host", text = "Tranquility Base Annex. Hold tight. Bass coming." },
+]
+
+[[clip]]
+id = "dj-body-01"
+category = "dj"
+kit = "dj"
+part = "body"
+lines = [
+  { say = "host", text = "King Regolith sent a dubplate up from the crater floor. Took him three days to carry it. Low gravity. He kept floating off.", gap = 1.0 },
+  { say = "host", text = "Worth it." },
+]
+
+[[clip]]
+id = "dj-body-02"
+category = "dj"
+kit = "dj"
+part = "body"
+lines = [
+  { say = "host", text = "Dust from last week's big tune is still coming down. Slowly. Like snow that's thinking about it.", gap = 1.0 },
+  { say = "host", text = "Leave it. It's part of the mix." },
+]
+
+[[clip]]
+id = "dj-body-03"
+category = "dj"
+kit = "dj"
+part = "body"
+lines = [
+  { say = "echo", text = "Big up Earth.", gap = 1.0 },
+  { say = "host", text = "That's from Tuesday.", gap = 0.8 },
+  { say = "host", text = "Still true. Big up Earth.", gap = 1.0 },
+  { say = "host", text = "Some things don't need to come back on time." },
+]
+
+[[clip]]
+id = "dj-body-04"
+category = "dj"
+kit = "dj"
+part = "body"
+lines = [
+  { say = "host", text = "Big Bass Selene on the stack tonight. Every time the bass drops, the lander bounces.", gap = 1.0 },
+  { say = "host", text = "Insurance is not happy." },
+]
+
+[[clip]]
+id = "dj-body-05"
+category = "dj"
+kit = "dj"
+part = "body"
+lines = [
+  { say = "host", text = "People ask what I do between tunes.", gap = 1.6 },
+  { say = "host", text = "I look at the Earth.", gap = 1.2 },
+  { say = "host", text = "That's it. That's the job." },
+]
+
+[[clip]]
+id = "dj-close-01"
+category = "dj"
+kit = "dj"
+part = "close"
+lines = [
+  { say = "host", text = "Run it.", gap = 1.4 },
+  { say = "echo", text = "Run it." },
+]
+
+[[clip]]
+id = "dj-close-02"
+category = "dj"
+kit = "dj"
+part = "close"
+lines = [
+  { say = "host", text = "Bass.", gap = 1.0 },
+  { say = "host", text = "Here. Hold tight." },
+]
+
+[[clip]]
+id = "dj-close-03"
+category = "dj"
+kit = "dj"
+part = "close"
+lines = [
+  { say = "host", text = "Next tune. Heavy one. Mind the dust." },
+]
+
+# ── Serials (one episode a day; see the other stations for the rest) ─────────
+
+[[clip]]
+id = "greg-comes-home-03"
+category = "story"
+serial = { id = "greg-comes-home", episode = 3 }
+title = "Greg Comes Home, Part Three: A Ride on the Moonlight"
+bed = "space"
+lines = [
+  { say = "host", text = "Shadow came down off a comet this morning. Landed soft. Low gravity.", gap = 1.0 },
+  { say = "host", text = "Greg. Back again. Sound guy.", gap = 0.8 },
+  { say = "greg", text = "Just passing through. I'm going home." },
+  { say = "host", text = "Respect.", gap = 1.2 },
+  { say = "greg", text = "I'm very sharp up here." },
+  { say = "host", text = "No air. Nothing to blur you. Sharpest you'll ever be.", gap = 1.0 },
+  { say = "greg", text = "Can I send a message? To Hollis? On the echo?" },
+  { say = "host", text = "Say it into the stack. It'll go down to Earth, and come back. Eleven seconds.", gap = 0.8 },
+  { say = "greg", text = "Hollis. It's me. I'm coming home.", gap = 1.2 },
+  { say = "greg", text = "How do I get down from here? There's no ladder long enough." },
+  { say = "host", text = "Grumbel's would disagree.", gap = 1.0 },
+  { say = "host", text = "No. You go the old way. Moonlight. Every night the moon throws light down to Earth. Shadows have been riding it forever. Nobody checks tickets.", gap = 1.0 },
+  { say = "greg", text = "Where does it land?" },
+  { say = "host", text = "Tonight? Precinct Nine. One gap in the clouds all year, and it's tonight. That's luck.", gap = 1.2 },
+  { say = "greg", text = "Coming home.", fx = "cave", name = "Echo", gap = 1.0 },
+  { say = "host", text = "There it is. Echo came back.", gap = 0.8 },
+  { say = "host", text = "Earth heard you, Greg." },
+  { say = "greg", text = "One more tune before I go?" },
+  { say = "host", text = "One more tune.", gap = 1.4 },
+  { say = "echo", text = "One more tune." },
+]
+
+[[clip]]
+id = "teodor-is-heard-03"
+category = "story"
+serial = { id = "teodor-is-heard", episode = 3 }
+title = "Teodor Is Heard, Part Three: The Moon Says Yes"
+bed = "space"
+lines = [
+  { say = "host", text = "Long-range set. Faint.", gap = 1.0 },
+  { say = "relay4", text = "Is anyone receiving this. This is Relay Four.", gap = 1.2 },
+  { say = "host", text = "Moon hears you, Teodor. Always has.", gap = 1.0 },
+  { say = "host", text = "But his receiver's broke. News said so. He talks out. Nothing comes in.", gap = 1.2 },
+  { say = "host", text = "So. Turn the stack round. Point it at the edge of the dial. All of it.", gap = 1.0 },
+  { say = "host", text = "Bass travels. Bass goes through walls. Bass goes through broken things.", gap = 1.0 },
+  { say = "host", text = "Everybody on the crater. On three. One. Two.", gap = 0.8 },
+  { say = "host", text = "Yes.", speed = 0.75, gap = 2.0 },
+  { say = "host", text = "Eleven seconds. Wait for it.", gap = 3.0 },
+  { say = "relay4", text = "Relay Four. Night four thousand and nine. Something strange. Just now I heard a voice. Very deep. Very far away.", gap = 1.0 },
+  { say = "relay4", text = "It said yes.", gap = 1.2 },
+  { say = "relay4", text = "Either that was the moon, or I'm coming down with something.", gap = 1.2 },
+  { say = "host", text = "That was the moon, Teodor.", gap = 1.4 },
+  { say = "echo", text = "The moon." },
+]
+
+# ── Halloween (24 to 31 October) ──────────────────────────────────────────────
+
+[[clip]]
+id = "halloween-01"
+category = "dj"
+kit = "dj"
+part = "body"
+title = "An Echo from Last Halloween"
+dates = ["10-24", "10-25", "10-26", "10-27", "10-28", "10-29", "10-30", "10-31"]
+lines = [
+  { say = "echo", text = "Boo.", gap = 1.4 },
+  { say = "host", text = "That's from last Halloween.", gap = 1.0 },
+  { say = "host", text = "Took the long way round. Still works." },
+]
+
+[[clip]]
+id = "halloween-02"
+category = "id"
+title = "Moon Dub, Halloween"
+dates = ["10-24", "10-25", "10-26", "10-27", "10-28", "10-29", "10-30", "10-31"]
+lines = [
+  { say = "host", text = "Moon Dub. Full moon. Halloween.", gap = 1.0 },
+  { say = "host", text = "Big night for us." },
+  { sting = "halloween" },
 ]
