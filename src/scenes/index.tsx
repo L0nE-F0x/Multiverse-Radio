@@ -24,6 +24,7 @@ export function StationScene({ station, playing, energy, reducedMotion, classNam
   return (
     <SceneView
       sceneId={station.scene}
+      variantKey={station.id}
       accent={station.color}
       playing={playing}
       energy={energy}

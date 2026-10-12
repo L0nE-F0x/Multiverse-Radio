@@ -29,6 +29,11 @@ export interface TrackRequest {
   /** The engine shapes an intro and an ending to fit this length. */
   durationSeconds: number;
   tweaks?: Partial<RecipeTweaks>;
+  /**
+   * Artist signature seed (v3): a hash of the artist's name. Tracks by the same artist share
+   * a sound (palette, tempo range, a motif) while `seed` still makes each song different.
+   */
+  artist?: number;
 }
 
 export interface PlayOptions {

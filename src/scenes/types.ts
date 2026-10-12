@@ -44,6 +44,11 @@ export interface SceneContext {
   accent: Color;
   /** Seeded from the scene id: layouts are stable across visits. */
   rng: Rng;
+  /**
+   * Per-station variation, 0 to 2^32−1: a hash of the station id. Scenes shared by many
+   * stations (pirates) use it to vary layout, props and colours; others can ignore it.
+   */
+  variant: number;
 }
 
 export interface SceneDef {

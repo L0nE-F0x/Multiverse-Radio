@@ -81,10 +81,11 @@ export class SceneRunner {
     private def: SceneDef,
     accent: string,
     private inputs: RunnerInputs,
+    variant = 0,
   ) {
     this.ctx = canvas.getContext('2d', { alpha: false })!;
     this.rng = new Rng(hashString(def.id) ^ 0x9e3779b9);
-    this.scene = def.create({ accent: hex(accent), rng: new Rng(hashString(def.id)) });
+    this.scene = def.create({ accent: hex(accent), rng: new Rng(hashString(def.id)), variant });
     this.frame.hour = localHour();
     this.frame.awake = inputs.playing ? 1 : 0;
     this.nextRare = this.rng.range(RARE_MIN_S * 0.5, RARE_MAX_S * 0.6);

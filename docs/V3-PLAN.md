@@ -111,6 +111,9 @@ grows stranger over a long session: `level` 0 at first, 1 after ~45 min, 2 after
 | `src/content/index.ts` | `pirateIdentity(seed)`, `shipLogNote(seed)` (stubs) |
 | `src/onboarding/index.tsx` | `<Welcome onTuneIn />`, `useInstall()` (stubs) |
 | `src/pwa/install.ts` | `captureInstallPrompt()` (stub, already called in `main.tsx`) |
+| `src/pwa/share.ts` | `shareStation(station)`, `stationShareUrl(station)` (stub) |
+| `src/scenes/types.ts` | `SceneContext.variant` (hash of the station id, so pirate scenes vary per pirate) |
+| `src/music/index.ts` | `TrackRequest.artist` (artist signature seed; the director passes a hash of `meta.artist`) |
 
 `main` builds and tests pass with stubs and fallbacks: unknown recipes play lo-fi, unknown scenes
 show a TV full of snow, recipes without a name pack borrow the station's. Some completeness tests
@@ -122,7 +125,7 @@ are relaxed with `TODO(v3 integration)`; the integrator re-tightens them.
 | --- | --- | --- |
 | **ui** | `src/App.tsx`, `src/main.tsx`, `src/components/**`, `src/hooks/**`, `src/ui/**`, `src/index.css`, `public/favicon.svg`, `<body>` of `index.html` | 5421 |
 | **onboarding** | `src/onboarding/**`, `src/pwa/install.ts`, `tests/e2e/onboarding.spec.ts` | 5422 |
-| **share** | `scripts/share/**`, `public/share/**`, `public/og-image.png`, `src/pwa/vite-plugins.mjs`, `<head>` of `index.html`, `netlify.toml`, `tests/e2e/share.spec.ts` | 5423 |
+| **share** | `scripts/share/**`, `public/share/**`, `public/og-image.png`, `src/pwa/share.ts`, `src/pwa/vite-plugins.mjs`, `<head>` of `index.html`, `netlify.toml`, `tests/e2e/share.spec.ts` | 5423 |
 | **director** | `src/broadcast/**` except `types.ts`, `src/lab/director.tsx` | 5424 |
 | **scenes-kit** | `src/scenes/kit/**`, `runner.ts`, `SceneView.tsx`, `viewport.ts`, the 22 v2 scene defs and their entries in `registry.ts`, `src/lab/scenes.tsx` | 5425 |
 | **scenes-new** | the 20 v3 station scene defs, `src/scenes/registry-stations.ts` | 5426 |
@@ -132,7 +135,7 @@ are relaxed with `TODO(v3 integration)`; the integrator re-tightens them.
 | **writers-new-a** | scripts for smoke-ring-trio, lower-hollow, bubble-economy, breakbeat-observatory, piano-empty-rooms, wall-of-fog, drowned-shanty-hour, event-horizon-surf, gristwick-parish, waystation-9; `src/content/packs/v3a.ts` | — |
 | **writers-new-b** | scripts for tomorrows-leftovers, other-horoscopes, unsolved-dimensions, win-this-planet, bedtime-for-giants, tiny-hour, infinite-song, cat-fm, yesterday-fm, plant-fm; `src/content/packs/v3b.ts` | — |
 | **writers-deep** | `_ship`, `_pirate`, `_oddities`, `_events`, the 3 secret stations' scripts; `src/content/packs/deep.ts`; `pirateIdentity`/`shipLogNote` (new files under `src/content/`, wired in `index.ts`) | — |
-| **writers-depth** | the 22 existing station scripts + `_shared.toml`: shows, modular parts, serials, Halloween | — |
+| **writers-depth** | the 22 existing station scripts + `_shared.toml`: shows, modular parts, serials, Halloween; resident artists in the v2 packs (`src/content/packs/{bright,chill,grand,talk}.ts`) | — |
 | **voice** | `scripts/voice/**`, `public/voice/**` | — |
 
 `src/music/index.ts` (RECIPE_INFO) and `package.json`: small additive edits are fine; the

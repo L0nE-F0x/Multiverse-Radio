@@ -3,6 +3,7 @@
 
 import { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import type { SceneId } from '../broadcast/types';
+import { hashString } from './kit/rng';
 import { loadScene, sceneEntry } from './registry';
 import { type RunnerInputs, SceneRunner } from './runner';
 
@@ -10,6 +11,8 @@ export interface SceneViewProps {
   sceneId: SceneId;
   /** Station accent (hex). Used by scene palettes and the loading placeholder. */
   accent: string;
+  /** Per-station variation key (the station id): scenes shared by many stations vary by it. */
+  variantKey?: string;
   playing: boolean;
   energy?: () => number;
   reducedMotion?: boolean;
@@ -27,6 +30,7 @@ export interface SceneViewProps {
 export function SceneView({
   sceneId,
   accent,
+  variantKey,
   playing,
   energy,
   reducedMotion = false,
@@ -62,7 +66,7 @@ export function SceneView({
     loadScene(sceneId)
       .then((def) => {
         if (cancelled) return;
-        const runner = new SceneRunner(container, canvas, def, accent, inputs.current);
+        const runner = new SceneRunner(container, canvas, def, accent, inputs.current, variantKey ? hashString(variantKey) : 0);
         runnerRef.current = runner;
         onRunnerRef.current?.(runner);
         setReady(true);
