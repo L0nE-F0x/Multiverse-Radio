@@ -1,0 +1,481 @@
+# Waystation 9 CB — 97.4, the truck stop at the crossroads of several realities.
+#
+# Big Rosalind runs dispatch from the diner: knows every driver's handle and every road's
+# mood, and does not trust the sideways road. On the channel (CB fx): Midnight Mongoose, who
+# has driven this stretch since it was a river, and Grandma Diesel, eighty-four, fastest on
+# the network, hauls weather. Dolores pours the coffee. The roads go up, down and sideways.
+#
+# Modular kit: roads (weather) — the road report: open × 1–3 roads × close.
+# Serial: "the-new-guy", three episodes — a rookie without a handle until the road picks one.
+# Cross-station: compost for the Gristwick marrow; a load of fog for Wall of Fog; Teodor at
+# Relay Four on the long range.
+station = "waystation-9"
+
+[voices]
+host = { voice = "bf_lily", name = "Big Rosalind" }
+mongoose = { voice = "am_echo", fx = "cb", name = "Midnight Mongoose" }
+diesel = { voice = "af_alloy", fx = "cb", name = "Grandma Diesel" }
+rookie = { voice = "am_puck", fx = "cb", name = "The New Guy" }
+
+[[show]]
+id = "graveyard-shift"
+name = "The Graveyard Shift"
+blurb = "Long-haul chatter through the dead hours. Big Rosalind on the coffee, Midnight Mongoose on the old river road."
+start = 0
+end = 4
+
+[[show]]
+id = "dawn-run"
+name = "The Dawn Run"
+blurb = "Night convoy in, day convoy out, and bacon for everyone."
+start = 5
+end = 8
+
+[[show]]
+id = "supper-at-the-crossroads"
+name = "Supper at the Crossroads"
+blurb = "Drivers pull in, swap stories and argue about the sideways road."
+start = 18
+end = 21
+
+# ── Idents ────────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "id-001"
+category = "id"
+lines = [
+  { say = "host", text = "This is Waystation Nine CB, ninety seven point four. Channel's open, coffee's hot, and the roads go every which way." },
+]
+
+[[clip]]
+id = "id-002"
+category = "id"
+lines = [
+  { say = "host", text = "Waystation Nine. The truck stop at the crossroads of everywhere. Big Rosalind on dispatch." },
+  { sting = "id" },
+]
+
+[[clip]]
+id = "id-003"
+category = "id"
+lines = [
+  { say = "host", text = "Waystation Nine CB. Up, down or sideways, somebody's driving it tonight." },
+  { sting = "id" },
+]
+
+[[clip]]
+id = "id-004"
+category = "id"
+daypart = "night"
+lines = [
+  { sfx = "squelch" },
+  { say = "mongoose", text = "Breaker, breaker. You're listening to Waystation Nine." },
+  { say = "host", text = "That's right, Mongoose. They are." },
+]
+
+[[clip]]
+id = "id-005"
+category = "id"
+lines = [
+  { say = "host", text = "Waystation Nine CB. Fragile loads, long hauls, and strong opinions about the sideways road." },
+]
+
+[[clip]]
+id = "id-006"
+category = "id"
+daypart = "morning"
+lines = [
+  { say = "host", text = "Morning, drivers. Waystation Nine. Coffee's on, the Up Road's awake, and the sideways road is pretending not to be." },
+]
+
+# ── Chatter ───────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "chat-001"
+category = "dj"
+title = "Forty Tonne of Tuesday"
+lines = [
+  { say = "host", text = "Mongoose, what are you hauling tonight?" },
+  { sfx = "squelch" },
+  { say = "mongoose", text = "Same as always, Rosalind. Forty tonne of Tuesday, northbound." },
+  { say = "host", text = "Fragile?" },
+  { say = "mongoose", text = "Says so on the side. Hit a pothole on the Down Road last month, and a whole town got two Tuesdays. Nobody was happy." },
+  { say = "host", text = "Drive careful, Mongoose." },
+]
+
+[[clip]]
+id = "chat-002"
+category = "dj"
+title = "Grandma Diesel Passes"
+lines = [
+  { sfx = "squelch" },
+  { say = "mongoose", text = "Rosalind, you seen Grandma Diesel tonight?" },
+  { say = "host", text = "Seen her? She came through here four minutes ago doing a hundred and ten. Knitting." },
+  { sfx = "squelch" },
+  { say = "diesel", text = "Hundred and twelve, dear. And it's a cardigan." },
+  { say = "mongoose", text = "She's... she's behind me, Rosalind." },
+  { say = "diesel", text = "Not any more, pet." },
+]
+
+[[clip]]
+id = "chat-003"
+category = "dj"
+title = "Weather in the Back"
+lines = [
+  { sfx = "squelch" },
+  { say = "diesel", text = "Rosalind, I'll need a wide berth on the Up Road. I've got a thunderstorm in the back, and it's getting restless." },
+  { say = "host", text = "How restless?" },
+  { say = "diesel", text = "Rattling the doors since the county line. I've put the radio on for it. It likes the slow ones." },
+  { say = "host", text = "Copy that. All drivers, Grandma Diesel's coming through with weather. Pull over and put your hoods up." },
+]
+
+[[clip]]
+id = "chat-004"
+category = "dj"
+title = "Since It Was a River"
+lines = [
+  { sfx = "squelch" },
+  { say = "mongoose", text = "You know, Rosalind, I been driving this stretch since it was a river." },
+  { say = "host", text = "I know, Mongoose." },
+  { say = "mongoose", text = "Used to row it. Had a little boat. Then one spring the water just got up and left, and they paved it over, and I thought, well. I know the way." },
+  { say = "host", text = "You still steer round the rocks." },
+  { say = "mongoose", text = "Rocks are still there, Rosalind. You just can't see them." },
+  { sfx = "squelch" },
+]
+
+[[clip]]
+id = "chat-005"
+category = "dj"
+title = "The Sideways Road"
+lines = [
+  { say = "host", text = "A word about the sideways road. I don't trust it. It knows where you're going before you do, and it gets there first, and it waits for you." },
+  { say = "host", text = "Drivers, if you must take the sideways road: eyes front, doors locked, and don't, whatever you do, let it choose the radio station." },
+]
+
+[[clip]]
+id = "chat-006"
+category = "dj"
+title = "Compost for Gristwick"
+lines = [
+  { say = "host", text = "All drivers, oversized load on the Down Road tonight. Forty tonne of compost, bound for Gristwick. For one marrow." },
+  { sfx = "squelch" },
+  { say = "mongoose", text = "One marrow, Rosalind?" },
+  { say = "host", text = "One marrow. Second load this week. It's got its own postcode, Mongoose. It eats well." },
+  { say = "mongoose", text = "Copy. I'll pull in and let it by." },
+]
+
+[[clip]]
+id = "chat-007"
+category = "dj"
+title = "The Fog Delivery"
+lines = [
+  { sfx = "squelch" },
+  { say = "diesel", text = "Rosalind, I've dropped that load of fog off at the shoegaze place." },
+  { say = "host", text = "How'd it go?" },
+  { say = "diesel", text = "Lovely boy on the stage. Mumbled at me for ten minutes. I agreed with everything." },
+  { say = "host", text = "Everybody does, Grandma." },
+]
+
+[[clip]]
+id = "chat-008"
+category = "dj"
+daypart = "night"
+title = "For the Night Shift"
+lines = [
+  { say = "host", text = "And the Nightjar's on the channel again. Night operator, we can see your running lights over the crossroads." },
+  { say = "host", text = "You want coffee, you'll have to come down. We don't deliver up. Well. Grandma Diesel does. But she charges." },
+]
+
+[[clip]]
+id = "chat-009"
+category = "dj"
+title = "Relay Four on the Long Range"
+lines = [
+  { sfx = "squelch" },
+  { say = "mongoose", text = "Rosalind, I keep picking up a fella on the long range. Teodor. Relay Four. Asking if anybody can hear him." },
+  { say = "host", text = "We hear him, Mongoose. Everybody does. Say hello." },
+  { say = "mongoose", text = "Teodor, this is Midnight Mongoose, on the old river road. We hear you, friend. Ten four." },
+  { sfx = "squelch" },
+]
+
+# ── Serial: the new guy (one episode a day) ───────────────────────────────────
+
+[[clip]]
+id = "serial-new-guy-001"
+category = "dj"
+title = "The New Guy"
+serial = { id = "the-new-guy", episode = 1 }
+lines = [
+  { sfx = "squelch" },
+  { say = "rookie", text = "Uh. Waystation Nine, this is... um. This is the new guy." },
+  { say = "host", text = "Evening, new guy. Got a handle yet?" },
+  { say = "rookie", text = "Not yet. I was thinking... Thunder Hawk?" },
+  { say = "host", text = "No." },
+  { say = "rookie", text = "Night Wolf?" },
+  { say = "host", text = "No." },
+  { say = "rookie", text = "What about..." },
+  { say = "host", text = "You don't pick your handle, sweetheart. The road picks it. Just drive." },
+]
+
+[[clip]]
+id = "serial-new-guy-002"
+category = "dj"
+title = "The New Guy Takes the Sideways Road"
+serial = { id = "the-new-guy", episode = 2 }
+lines = [
+  { say = "host", text = "New guy, what's your twenty?" },
+  { sfx = "squelch" },
+  { say = "rookie", text = "I took the sideways road, Rosalind. I think... I think I'm in last Thursday." },
+  { say = "host", text = "I told you about the sideways road." },
+  { say = "rookie", text = "You did." },
+  { sfx = "squelch" },
+  { say = "diesel", text = "Welcome to the network, Thursday." },
+  { say = "host", text = "There it is. The road's picked it. That's your handle now. Thursday." },
+  { say = "rookie", text = "...Copy that.", name = "Thursday" },
+]
+
+[[clip]]
+id = "serial-new-guy-003"
+category = "dj"
+title = "Thursday's First Fragile Load"
+serial = { id = "the-new-guy", episode = 3 }
+lines = [
+  { say = "host", text = "Thursday, what are you hauling?" },
+  { sfx = "squelch" },
+  { say = "rookie", text = "First fragile load, Rosalind. A whole crate of first impressions.", name = "Thursday" },
+  { say = "host", text = "Steady with those. You only get the one go." },
+  { say = "rookie", text = "Copy that. Thursday out.", name = "Thursday" },
+  { sfx = "squelch" },
+  { say = "host", text = "Listen to him. Thursday out. Proud of you, kid." },
+]
+
+# ── Road report kit (weather): open × 1–3 roads × close ───────────────────────
+
+[[clip]]
+id = "roads-open-001"
+category = "weather"
+kit = "roads"
+part = "open"
+bed = "truckstop"
+lines = [
+  { say = "host", text = "Road report, from Waystation Nine dispatch. Here's how the roads are feeling." },
+]
+
+[[clip]]
+id = "roads-open-002"
+category = "weather"
+kit = "roads"
+part = "open"
+bed = "truckstop"
+lines = [
+  { say = "host", text = "Time for the road report. Pens out, drivers. Big Rosalind, on the map." },
+]
+
+[[clip]]
+id = "roads-body-001"
+category = "weather"
+kit = "roads"
+part = "body"
+bed = "truckstop"
+title = "The Up Road"
+lines = [
+  { say = "host", text = "The Up Road. Steady climb, good surface, light traffic. Some icing near the top, where it's never once been warm." },
+  { say = "host", text = "Keep it under fifty, and say something nice to it as you pass. It's been a bit low lately." },
+]
+
+[[clip]]
+id = "roads-body-002"
+category = "weather"
+kit = "roads"
+part = "body"
+bed = "truckstop"
+title = "The Down Road"
+lines = [
+  { say = "host", text = "The Down Road is moving well, southbound. Northbound is also moving well, but it's also going down." },
+  { say = "host", text = "Don't ask. Just enjoy it." },
+]
+
+[[clip]]
+id = "roads-body-003"
+category = "weather"
+kit = "roads"
+part = "body"
+bed = "truckstop"
+title = "The Sideways Road"
+lines = [
+  { say = "host", text = "The sideways road. I won't tell you how it's doing, because it'll hear me, and it'll take it personally." },
+  { say = "host", text = "I will say there's a three mile tailback of drivers who took it to save time, and are now in last week. Take the long way." },
+]
+
+[[clip]]
+id = "roads-body-004"
+category = "weather"
+kit = "roads"
+part = "body"
+bed = "truckstop"
+title = "The Loop"
+lines = [
+  { say = "host", text = "The Loop is running smooth, clockwise. If you've been on the Loop more than a day, you'll be passing the diner every forty minutes." },
+  { say = "host", text = "Wave at Dolores. She'll wave back. She always does." },
+]
+
+[[clip]]
+id = "roads-body-005"
+category = "weather"
+kit = "roads"
+part = "body"
+bed = "truckstop"
+title = "The Old River Road"
+lines = [
+  { say = "host", text = "The old river road. Dry, as it has been for a hundred years, but drivers report the feeling of a current near the old bridge." },
+  { say = "host", text = "Midnight Mongoose says steer left of the middle. Do as Mongoose says." },
+]
+
+[[clip]]
+id = "roads-body-006"
+category = "weather"
+kit = "roads"
+part = "body"
+bed = "truckstop"
+title = "Weather on the Network"
+lines = [
+  { say = "host", text = "Weather on the network. Grandma Diesel was hauling a thunderstorm eastbound, and it's got loose." },
+  { say = "host", text = "Expect rain on the Up Road, a short hailstorm at the junction, and one very confused rainbow on the sideways road, pointing the wrong way." },
+]
+
+[[clip]]
+id = "roads-close-001"
+category = "weather"
+kit = "roads"
+part = "close"
+bed = "truckstop"
+lines = [
+  { say = "host", text = "That's the road report. Drive careful, drink your coffee, and if the road talks back, don't argue." },
+]
+
+[[clip]]
+id = "roads-close-002"
+category = "weather"
+kit = "roads"
+part = "close"
+bed = "truckstop"
+lines = [
+  { say = "host", text = "That's your roads. Waystation Nine dispatch, standing by. Keep the shiny side up." },
+]
+
+# ── The Graveyard Shift (0–4) ─────────────────────────────────────────────────
+
+[[clip]]
+id = "id-graveyard-shift"
+category = "id"
+show = "graveyard-shift"
+part = "open"
+lines = [
+  { say = "host", text = "This is the Graveyard Shift, on Waystation Nine CB. Coffee's black, the roads are dark, and every driver out there is wide awake. Talk to me." },
+]
+
+[[clip]]
+id = "dj-graveyard-shift-001"
+category = "dj"
+show = "graveyard-shift"
+lines = [
+  { sfx = "squelch" },
+  { say = "mongoose", text = "Rosalind, you still up?" },
+  { say = "host", text = "I'm always up, Mongoose." },
+  { say = "mongoose", text = "Me too. Road's real quiet. Just me, the headlights, and a fox that's been running alongside me for ten miles." },
+  { say = "host", text = "Is he keeping up?" },
+  { say = "mongoose", text = "He's winning." },
+]
+
+[[clip]]
+id = "dj-graveyard-shift-002"
+category = "dj"
+show = "graveyard-shift"
+lines = [
+  { say = "host", text = "Three in the morning on the network. Long stretches, no lights, and the radio for company." },
+  { say = "host", text = "If you're out there and you're tired, pull in. I'll leave the light on. I always do." },
+]
+
+# ── The Dawn Run (5–8) ────────────────────────────────────────────────────────
+
+[[clip]]
+id = "id-dawn-run"
+category = "id"
+show = "dawn-run"
+part = "open"
+lines = [
+  { say = "host", text = "Morning, drivers. This is the Dawn Run. Night convoy's pulling in, day convoy's heading out. Mind the lot. Bacon's on." },
+]
+
+[[clip]]
+id = "dj-dawn-run-001"
+category = "dj"
+show = "dawn-run"
+lines = [
+  { sfx = "squelch" },
+  { say = "diesel", text = "Morning, Rosalind. Coming in off the Up Road. Delivered a sunrise to the eastern counties." },
+  { say = "host", text = "How'd it go?" },
+  { say = "diesel", text = "Bit pink. They liked it." },
+]
+
+[[clip]]
+id = "dj-dawn-run-002"
+category = "dj"
+show = "dawn-run"
+lines = [
+  { say = "host", text = "Bacon report. Dolores has done four hundred rashers this morning, and they're all gone. Grandma Diesel had a hundred of them." },
+  { say = "host", text = "She says it's for the drive. She's eighty four. I'm not arguing." },
+]
+
+# ── Supper at the Crossroads (18–21) ──────────────────────────────────────────
+
+[[clip]]
+id = "id-supper-at-the-crossroads"
+category = "id"
+show = "supper-at-the-crossroads"
+part = "open"
+lines = [
+  { say = "host", text = "Evening, all. This is Supper at the Crossroads. Pull in, pull up a stool, and let's talk about anything but the sideways road." },
+]
+
+[[clip]]
+id = "dj-supper-at-the-crossroads-001"
+category = "dj"
+show = "supper-at-the-crossroads"
+lines = [
+  { say = "host", text = "Dolores says the coffee's fresh. Dolores has said the coffee's fresh every night since this place opened, and Dolores has never once lied to a driver." },
+  { say = "host", text = "So either the coffee's fresh, or time works different in that pot. Either way, it's very good coffee. Pull in." },
+]
+
+[[clip]]
+id = "dj-supper-at-the-crossroads-002"
+category = "dj"
+show = "supper-at-the-crossroads"
+lines = [
+  { say = "host", text = "Supper chatter. Somebody at the counter says the sideways road took him past his own house, and his own self was in the window, waving." },
+  { say = "host", text = "I don't want to hear it. Nobody wants to hear it. Eat your pie." },
+]
+
+# ── Halloween ─────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "dj-halloween-001"
+category = "dj"
+title = "The Hitchhiker"
+dates = ["10-24", "10-25", "10-26", "10-27", "10-28", "10-29", "10-30", "10-31"]
+lines = [
+  { say = "host", text = "Halloween on the network. Drivers, if you pick up a hitchhiker on the Down Road, and they tell you they've been waiting since nineteen fifty eight, give them a lift." },
+  { say = "host", text = "They're harmless. Very polite. They tip in old coins. Just don't take the sideways road with them in the cab. They don't like it either." },
+]
+
+[[clip]]
+id = "dj-halloween-002"
+category = "dj"
+title = "Wide Load"
+dates = ["10-24", "10-25", "10-26", "10-27", "10-28", "10-29", "10-30", "10-31"]
+lines = [
+  { sfx = "squelch" },
+  { say = "diesel", text = "Rosalind, I'm running a full moon out to the hill country for the thirty first." },
+  { say = "host", text = "Wide load?" },
+  { say = "diesel", text = "Widest there is, dear. Tell the drivers, if they see a big orange light coming up behind them, that's just me and the moon. Don't howl. It only encourages it." },
+]
