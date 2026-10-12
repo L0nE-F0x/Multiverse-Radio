@@ -3,6 +3,7 @@
 // the scheduler (what's on air). Audio starts only from a user gesture (togglePlay/tune).
 
 import { create } from 'zustand';
+import { loadTrackPacks } from '../content';
 import { DIAL } from './types';
 import { DEFAULT_STATION_ID, MAIN_STATIONS, STATIONS } from '../stations/roster';
 import { Director } from './director';
@@ -109,6 +110,7 @@ export const useBroadcast = create<BroadcastStore>()((set, get) => {
   director.subscribe(refresh);
   director.onTick(refresh);
   library.subscribe(refresh);
+  void loadTrackPacks().then(refresh);
   void director.prefetchStation(director.stationId);
   queueMicrotask(refresh);
   // Hot reload would otherwise leave the old director playing underneath the new one.
