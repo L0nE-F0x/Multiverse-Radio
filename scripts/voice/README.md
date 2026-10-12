@@ -47,9 +47,10 @@ then `python3`.
 
 - **TTS:** each unique (voice, speed, text, model) line is cached as a WAV in
   `scripts/voice/.cache/tts/`. Override the location with `VOICE_CACHE`.
-- **Clips:** each clip's hash covers its resolved script, the model and the source of the
-  audio engine. A re-run with no changes renders nothing and takes well under a second.
-  Editing DSP code re-renders everything, but TTS comes from the cache.
+- **Clips:** each clip's hash covers its resolved `bed` and `lines`, the model and the
+  source of the audio engine. A re-run with no changes renders nothing and takes well
+  under a second. Metadata edits (title, category, daypart, over_music, stations) only
+  rewrite the manifest. Editing DSP code re-renders everything, but TTS comes from the cache.
 - Clips and stations that no longer exist in the scripts are removed from the output.
   A full run (no `--station`) also removes the manifests of deleted stations and drafts.
 - If a clip fails, the others still render. That station's manifest is left untouched
@@ -76,7 +77,7 @@ then `python3`.
 | `sounds.py` | Synthesized beds, sfx and stings (no samples) |
 | `dsp.py` | Filters, BS.1770 loudness, true-peak limiter, reverb, ffmpeg I/O |
 | `tts.py` | Kokoro wrapper with the line cache |
-| `manifest.test.ts` | Vitest: manifests in `public/voice` match `VoiceManifest`, and their files exist |
+| `manifest.test.ts` | Vitest: manifests in `public/voice` match `VoiceManifest`, their files exist and no MP3s are orphaned (`VOICE_DIR=/tmp/voice npx vitest run scripts/voice` checks a `--out` render) |
 
 Adding a name (fx, bed, sfx, sting) takes three steps. Add it to the catalog in
 `voicescript.py`, implement it in `voicefx.py` or `sounds.py`, and list it in
