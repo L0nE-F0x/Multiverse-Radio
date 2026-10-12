@@ -1,19 +1,21 @@
 import { useEffect } from 'react';
+import { DIAL } from '../broadcast/types';
 import * as act from '../ui/actions';
-import { ui, useUi } from '../ui/store';
+import { togglePanel, ui } from '../ui/store';
+import { nudgeDial } from '../ui/tuning';
 
 /**
- * Space play/pause · ←/→ station · S scan · N skip · M mute · F ambient · G guide ·
- * C captions · −/+ volume · ? help · Esc leaves ambient mode.
+ * Space play/pause · ←/→ fine-tune · Shift+←/→ or ↑/↓ station step · S scan · N skip ·
+ * M mute · −/+ volume · G guide · L log · C captions · H HUD · ? manual.
  *
- * Shortcuts stay out of the way while typing, inside open dialogs, and on sliders that
- * use the arrow keys themselves. Space on a button you reached with the keyboard presses
- * that button; on one you last clicked with the mouse, it's play/pause as usual.
+ * Shortcuts stay out of the way while typing, inside open panels (except the key that
+ * toggles that panel), and on sliders that use the arrow keys themselves. Space on a button
+ * reached with the keyboard presses that button; on one last clicked with the mouse, it's
+ * play/pause as usual.
  */
 export function useKeyboardControls(): void {
   useEffect(() => {
-    // Input modality: did the focused element get focus from the keyboard? (Chrome makes
-    // any focused button :focus-visible once a key is pressed, so we can't ask CSS.)
+    // Input modality: did the focused element get focus from the keyboard?
     let lastKeyAt = -Infinity;
     let keyboardFocus = false;
     const markKey = () => (lastKeyAt = performance.now());
@@ -24,46 +26,63 @@ export function useKeyboardControls(): void {
       if (event.defaultPrevented || event.metaKey || event.ctrlKey || event.altKey) return;
       const target = event.target instanceof HTMLElement ? event.target : null;
       if (target?.closest('input:not([type="range"]), textarea, select, [contenteditable="true"]')) return;
-      const { guideOpen, helpOpen, ambient } = ui();
-      if (guideOpen || helpOpen) return;
-      const onSlider = !!target?.closest('input[type="range"], [role="slider"]');
-      const onKeyboardButton = keyboardFocus && !!target?.closest('button, [role="button"], a[href]');
+      const { panel } = ui();
+      const key = event.key.length === 1 ? event.key.toLowerCase() : event.key;
       const once = !event.repeat;
 
+      if (panel) {
+        // Inside a panel only its own toggle key closes it; Esc is the dialog's.
+        const toggles: Record<string, string> = { g: 'guide', l: 'log', '?': 'help' };
+        if (toggles[key] === panel && once) {
+          togglePanel(panel);
+          event.preventDefault();
+        }
+        return;
+      }
+
+      const onSlider = !!target?.closest('input[type="range"], [role="slider"]');
+      const onKeyboardButton = keyboardFocus && !!target?.closest('button, [role="button"], a[href]');
+
       const handled = (() => {
-        switch (event.key) {
+        switch (key) {
           case ' ':
             if (onKeyboardButton) return false;
             if (once) act.togglePlay();
             return true;
           case 'ArrowRight':
-          case 'ArrowLeft':
+          case 'ArrowLeft': {
             if (onSlider) return false;
-            if (once) act.step(event.key === 'ArrowRight' ? 1 : -1);
+            const dir = key === 'ArrowRight' ? 1 : -1;
+            if (event.shiftKey) {
+              if (once) act.step(dir);
+            } else nudgeDial(dir * DIAL.step);
+            return true;
+          }
+          case 'ArrowUp':
+          case 'ArrowDown':
+            if (onSlider) return false;
+            if (once) act.step(key === 'ArrowUp' ? 1 : -1);
             return true;
           case 's':
-          case 'S':
             if (once) act.scan();
             return true;
           case 'n':
-          case 'N':
             if (once) act.skip();
             return true;
           case 'm':
-          case 'M':
             if (once) act.toggleMute();
             return true;
-          case 'f':
-          case 'F':
-            if (once) act.toggleAmbient();
-            return true;
           case 'g':
-          case 'G':
-            if (once) useUi.setState({ guideOpen: true });
+            if (once) togglePanel('guide');
+            return true;
+          case 'l':
+            if (once) togglePanel('log');
             return true;
           case 'c':
-          case 'C':
             if (once) act.toggleCaptions();
+            return true;
+          case 'h':
+            if (once) act.toggleHud();
             return true;
           case '-':
           case '_':
@@ -74,11 +93,7 @@ export function useKeyboardControls(): void {
             act.nudgeVolume(0.05);
             return true;
           case '?':
-            if (once) useUi.setState({ helpOpen: true });
-            return true;
-          case 'Escape':
-            if (!ambient) return false;
-            act.setAmbient(false);
+            if (once) togglePanel('help');
             return true;
           default:
             return false;
@@ -90,9 +105,7 @@ export function useKeyboardControls(): void {
     // Buttons activate on Space keyup; when Space meant play/pause, stop the button too.
     const onKeyUp = (event: KeyboardEvent) => {
       const target = event.target instanceof HTMLElement ? event.target : null;
-      if (event.key === ' ' && !keyboardFocus && target?.closest('button, [role="button"]')) {
-        event.preventDefault();
-      }
+      if (event.key === ' ' && !keyboardFocus && target?.closest('button, [role="button"]')) event.preventDefault();
     };
 
     window.addEventListener('keydown', markKey, true);
@@ -100,14 +113,12 @@ export function useKeyboardControls(): void {
     document.addEventListener('focusin', onFocusIn);
     window.addEventListener('keydown', onKeyDown);
     window.addEventListener('keyup', onKeyUp);
-    document.addEventListener('fullscreenchange', act.onFullscreenChange);
     return () => {
       window.removeEventListener('keydown', markKey, true);
       window.removeEventListener('pointerdown', markPointer, true);
       document.removeEventListener('focusin', onFocusIn);
       window.removeEventListener('keydown', onKeyDown);
       window.removeEventListener('keyup', onKeyUp);
-      document.removeEventListener('fullscreenchange', act.onFullscreenChange);
     };
   }, []);
 }
