@@ -20,6 +20,7 @@ import {
   TAU,
   type Partial,
 } from './core';
+import { GENRE_PATCHES } from './genres';
 
 export interface PatchDef {
   /** Zone root notes (MIDI). One-shots use [60]. */
@@ -943,6 +944,7 @@ export const PATCHES: Record<SamplePatch, PatchDef> = {
   hiss: texture(hiss),
   shortwave: texture(shortwave),
   ocean: { ...texture(ocean), level: 0.8 },
+  ...GENRE_PATCHES,
 };
 
 /** Pitch of an unpitched one-shot, so the player can transpose it relative to 60. */

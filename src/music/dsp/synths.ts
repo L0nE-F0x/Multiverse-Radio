@@ -6,6 +6,7 @@
 import type { SynthPatch } from '../score';
 import { midiToFreq } from '../theory';
 import { Biquad, Noise, sinc, TAU } from './core';
+import { GENRE_SYNTHS } from './genres';
 
 export type Wave =
   | 'sine'
@@ -250,6 +251,7 @@ export const SYNTHS: Record<SynthPatch, SynthDef> = {
     amp: { a: 3, d: 2, s: 1, r: 4 },
     gain: 0.47,
   },
+  ...GENRE_SYNTHS,
 };
 
 // ── Waves ─────────────────────────────────────────────────────────────────────
