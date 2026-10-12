@@ -32,4 +32,16 @@ export const STATION_SCENES_V3: Partial<Record<SceneId, SceneEntry>> = {
     label: "A dim detective's office: red string joins a teaspoon, the moon and a confused goose while rain runs down the blinds.",
     load: () => import('./defs/evidence-board'),
   },
+  observatory: {
+    label: 'A mountaintop observatory aims a giant speaker cone at the night sky, and the stars shiver on every bass hit.',
+    load: () => import('./defs/observatory'),
+  },
+  'star-chart': {
+    label: 'A hooded reader waits at a candlelit table with a crystal ball of static, under a dome of unfamiliar constellations.',
+    load: () => import('./defs/star-chart'),
+  },
+  'ghost-ship': {
+    label: 'A translucent crew stamps around an accordion player on a foggy ship deck above a faintly glowing green sea.',
+    load: () => import('./defs/ghost-ship'),
+  },
 };
