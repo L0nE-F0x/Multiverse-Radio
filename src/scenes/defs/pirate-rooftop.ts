@@ -21,6 +21,7 @@ import {
   pirateLook,
   pirateSky,
   pirateWeather,
+  snowGround,
   stringLights,
   vignette,
 } from './deep-kit';
@@ -158,7 +159,7 @@ const def: SceneDef = {
         }
         // tar seams in perspective
         for (let i = -8; i < 16; i++) g.lineA(i * 30, ROOF, 160 + (i * 30 - 160) * 2.2, g.bottom + 40, hex('#08090b'), 0.6);
-        if (L.weather === 'snow') for (let y = ROOF; y < g.bottom; y++) g.rectD(g.left, y, g.w, 1, mix(hex('#4a5260'), L.sky[1]!, 0.4), 0.3);
+        if (L.weather === 'snow') snowGround(g, ROOF, mix(hex('#5a6270'), L.sky[1]!, 0.35), 0.28);
         if (L.weather === 'rain') for (let i = 0; i < 6; i++) g.ellipseA(g.left + hash3(i, variant, 30) * g.w, FLOOR + 4 + hash3(i, variant, 31) * 40, 12 + hash3(i, 2) * 18, 2, mix(horizonC, hex(cityHue), 0.3), 0.25);
 
         // ── things on the roof ──

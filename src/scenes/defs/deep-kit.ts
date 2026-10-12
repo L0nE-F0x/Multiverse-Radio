@@ -295,6 +295,16 @@ export function pirateSky(g: Gfx, L: PirateLook, horizon: number) {
   if (L.tod === 'dusk' || L.tod === 'dawn') g.glow(L.rng.range(60, 260), horizon + 6, 120, L.tod === 'dusk' ? hex('#a05a40') : hex('#7a8090'), 0.22, 6);
 }
 
+/** A soft settled-snow tint over the ground from row y0 down (background use), with sparse glints. */
+export function snowGround(g: Gfx, y0: number, c: Color, a: number) {
+  for (let y = Math.max(y0, g.top); y < g.bottom; y++) g.rectA(g.left, y, g.w, 1, c, a * (0.7 + 0.3 * clamp((y - y0) / 40)));
+  for (let i = 0; i < 160; i++) {
+    const x = g.left + hash3(i, 5, 61) * g.w;
+    const y = y0 + hash3(i, 5, 62) * (g.bottom - y0);
+    g.pxA(x, y, hex('#e8ecf4'), 0.35);
+  }
+}
+
 /** Weather overlay for pirates (per frame). */
 export function pirateWeather(g: Gfx, L: PirateLook, t: number, fogs: Haze[] | null, ground: number) {
   if (L.weather === 'rain') rain(g, t, g.left, g.top, g.right, g.bottom, 160, hex('#9aa8c0'), 0.35, 0.18, 230, 7, 4);

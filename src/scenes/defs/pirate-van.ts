@@ -23,6 +23,7 @@ import {
   pirateLook,
   pirateSky,
   pirateWeather,
+  snowGround,
   stringLights,
   treeLine,
   vignette,
@@ -158,7 +159,7 @@ const def: SceneDef = {
           const y = HZN + 4 + hash3(i, variant, 18) * (g.bottom - HZN);
           g.pxA(x, y, hex('#3a3a3a'), 0.4);
         }
-        if (L.weather === 'snow') for (let y = HZN + 3; y < g.bottom; y++) g.rectD(g.left, y, g.w, 1, mix(hex('#5a6270'), L.sky[1]!, 0.3), 0.4);
+        if (L.weather === 'snow') snowGround(g, HZN + 3, mix(hex('#6a7280'), L.sky[1]!, 0.3), 0.3);
         if (L.weather === 'rain') for (let i = 0; i < 6; i++) g.ellipseA(g.left + hash3(i, variant, 30) * g.w, GROUND + 6 + hash3(i, variant, 31) * 40, 10 + hash3(i, 2) * 16, 1.5, horizonC, 0.25); // puddles
 
         // overhead deck for the underpass (in front of the sky, behind the van)

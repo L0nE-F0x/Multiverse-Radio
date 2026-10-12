@@ -21,6 +21,7 @@ import {
   pirateLook,
   pirateSky,
   pirateWeather,
+  snowGround,
   stringLights,
   treeLine,
   vignette,
@@ -171,7 +172,7 @@ const def: SceneDef = {
           const y = GROUND + hash3(i, variant, 8) * (g.bottom - GROUND);
           g.vline(x, y - 1 - (i % 2), y, mix(lawn, hex('#26321f'), 0.45));
         }
-        if (L.weather === 'snow') for (let y = GROUND; y < g.bottom; y++) g.rectD(g.left, y, g.w, 1, hex('#7a8290'), 0.5 - (y - GROUND) * 0.003);
+        if (L.weather === 'snow') snowGround(g, GROUND, mix(hex('#7a8290'), L.sky[1]!, 0.3), 0.35);
         for (let k = 0; k < 7; k++) g.ellipse(doorX + doorW / 2 + (k - 2) * 3, GROUND + 6 + k * 9, 5 + k, 1.5 + k * 0.4, mix(lawn, hex('#3a3a3a'), 0.45));
 
         // ── the shed ──
