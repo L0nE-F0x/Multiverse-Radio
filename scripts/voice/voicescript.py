@@ -156,21 +156,13 @@ class Clip:
                 total += STING_SECONDS[line.name] + STING_GAP
         return total
 
-    def to_canonical(self) -> dict:
-        """Everything that affects the rendered audio or the manifest entry."""
-
-        def line_dict(line: Line) -> dict:
-            return {"type": type(line).__name__, **line.__dict__}
-
+    def audio_canonical(self) -> dict:
+        """Everything that affects the rendered audio and captions. Metadata (title,
+        category, daypart, over_music, stations) is left out: editing it only rewrites
+        the manifest."""
         return {
-            "id": self.id,
-            "category": self.category,
-            "title": self.title,
-            "over_music": self.over_music,
-            "daypart": self.daypart,
             "bed": self.bed,
-            "stations": self.stations,
-            "lines": [line_dict(line) for line in self.lines],
+            "lines": [{"type": type(line).__name__, **line.__dict__} for line in self.lines],
         }
 
 

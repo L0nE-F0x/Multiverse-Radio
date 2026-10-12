@@ -116,7 +116,7 @@ def engine_hash() -> str:
 
 
 def clip_hash(engine: str, model: str, station: str, clip) -> str:
-    payload = json.dumps({"engine": engine, "model": model, "station": station, "clip": clip.to_canonical()},
+    payload = json.dumps({"engine": engine, "model": model, "station": station, "clip": clip.audio_canonical()},
                          sort_keys=True)
     return hashlib.sha256(payload.encode()).hexdigest()
 

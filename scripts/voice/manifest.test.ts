@@ -1,6 +1,7 @@
 // Checks the rendered voice library in public/voice against the VoiceManifest contract:
 // shape, unique ids, URLs that point at files that exist, and no orphaned MP3s.
-// Passes trivially until the library has been rendered.
+// Passes trivially until the library has been rendered. Point VOICE_DIR at another
+// render (e.g. one made with `--out`) to check that instead.
 import { existsSync, readdirSync, readFileSync, statSync } from 'node:fs';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -8,8 +9,7 @@ import { describe, expect, it } from 'vitest';
 import { VOICE_CATEGORIES } from '../../src/broadcast/types';
 import { STATIONS } from '../../src/stations/roster';
 
-const PUBLIC = fileURLToPath(new URL('../../public/', import.meta.url));
-const VOICE = join(PUBLIC, 'voice');
+const VOICE = process.env.VOICE_DIR ?? fileURLToPath(new URL('../../public/voice/', import.meta.url));
 const SHARED = '_shared';
 const STATION_IDS = new Set(STATIONS.map((s) => s.id));
 const DAYPARTS = ['morning', 'day', 'evening', 'night'];
@@ -102,7 +102,7 @@ describe('voice manifests (public/voice)', () => {
         const missing = clips
           .map((c) => String(c.url))
           .filter((url) => {
-            const path = join(PUBLIC, url.replace(/^\//, ''));
+            const path = join(VOICE, url.replace(/^\/voice\//, ''));
             return !existsSync(path) || statSync(path).size === 0;
           });
         expect(missing).toEqual([]);
