@@ -66,3 +66,17 @@
   for = "/sfx/*"
   [headers.values]
     Cache-Control = "public, max-age=86400"
+
+# Social cards (npm run share:cards): /share/<station>.jpg and the default /og-image.png.
+# They are re-rendered under the same names, so a day in caches, then revalidate in the
+# background. The /station/<id>/ share pages are HTML and keep Netlify's default (revalidate
+# every time), like the home page. Netlify serves /station/<id> as a 301 to /station/<id>/.
+[[headers]]
+  for = "/share/*"
+  [headers.values]
+    Cache-Control = "public, max-age=86400, stale-while-revalidate=604800"
+
+[[headers]]
+  for = "/og-image.png"
+  [headers.values]
+    Cache-Control = "public, max-age=86400, stale-while-revalidate=604800"
