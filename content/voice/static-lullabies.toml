@@ -7,6 +7,10 @@ station = "static-lullabies"
 [voices]
 host = { voice = "af_nicole", speed = 0.85, name = "The Listener" }
 hush = { voice = "af_nicole", speed = 0.85, fx = "whisper", name = "The Listener" }
+# v3: serials.
+hollis = { voice = "am_echo", speed = 0.9, name = "Hollis" }
+greg = { voice = "am_onyx", speed = 0.9, fx = "whisper", name = "Greg, a Shadow" }
+teodor = { voice = "bm_daniel", fx = "distant", name = "Teodor, Relay Four" }
 
 # ── Idents ────────────────────────────────────────────────────────────────────
 
@@ -135,4 +139,263 @@ category = "dj"
 lines = [
   { say = "host", text = "Someone far away, at Relay Four, keeps asking if anyone can hear him.", gap = 1.0 },
   { say = "hush", text = "I can, Teodor. I can always hear you. Go to sleep." },
+]
+
+# ══ v3: the living schedule ═══════════════════════════════════════════════════
+#
+# Shows, a hushed dj kit (opener, one to three small observations, back to the static),
+# serial episodes and Halloween. Voices stay rare and quiet here.
+# Existing clips above are rendered and deployed; only add.
+
+# ── Shows ─────────────────────────────────────────────────────────────────────
+
+[[show]]
+id = "after-the-anthem"
+name = "After the Anthem"
+blurb = "The broadcast day is over. The static takes the late shift."
+start = 23
+end = 2
+
+[[show]]
+id = "the-small-hours"
+name = "The Small Hours"
+blurb = "For whoever is still awake. Nobody needs anything from you until morning."
+start = 2
+end = 6
+
+[[clip]]
+id = "after-the-anthem-open"
+category = "id"
+show = "after-the-anthem"
+part = "open"
+title = "After the Anthem"
+lines = [
+  { say = "host", text = "The anthem has finished.", gap = 1.2 },
+  { say = "hush", text = "This is After the Anthem. You can lie down now." },
+]
+
+[[clip]]
+id = "after-the-anthem-01"
+category = "dj"
+show = "after-the-anthem"
+lines = [
+  { say = "host", text = "When the anthem finishes, the television thinks it's done for the night. It isn't. It's just quieter now.", gap = 1.4 },
+  { say = "hush", text = "This is my favourite part." },
+]
+
+[[clip]]
+id = "after-the-anthem-02"
+category = "dj"
+show = "after-the-anthem"
+lines = [
+  { say = "host", text = "The test card is up. The little girl in the picture is asleep. She's been asleep since the anthem.", gap = 1.4 },
+  { say = "hush", text = "Everyone is. Nearly everyone." },
+]
+
+[[clip]]
+id = "the-small-hours-open"
+category = "id"
+show = "the-small-hours"
+part = "open"
+title = "The Small Hours"
+lines = [
+  { say = "host", text = "The small hours.", gap = 1.2 },
+  { say = "hush", text = "Static Lullabies. Nobody needs anything from you until morning." },
+]
+
+[[clip]]
+id = "the-small-hours-01"
+category = "dj"
+show = "the-small-hours"
+lines = [
+  { say = "host", text = "It's the small hours. They're called that because they're small enough to hold.", gap = 1.4 },
+  { say = "hush", text = "Hold one. It's warm." },
+]
+
+[[clip]]
+id = "the-small-hours-02"
+category = "dj"
+show = "the-small-hours"
+lines = [
+  { say = "host", text = "The cat on the television has opened one of its three eyes.", gap = 1.2 },
+  { say = "host", text = "Just checking you're still here.", gap = 1.4 },
+  { say = "hush", text = "You are. Good." },
+]
+
+# ── DJ kit (hushed) ───────────────────────────────────────────────────────────
+
+[[clip]]
+id = "dj-open-01"
+category = "dj"
+kit = "dj"
+part = "open"
+lines = [
+  { say = "hush", text = "Shh. I'm still here.", gap = 1.0 },
+]
+
+[[clip]]
+id = "dj-open-02"
+category = "dj"
+kit = "dj"
+part = "open"
+lines = [
+  { say = "host", text = "Static Lullabies.", gap = 1.0 },
+  { say = "host", text = "Hello again." },
+]
+
+[[clip]]
+id = "dj-open-03"
+category = "dj"
+kit = "dj"
+part = "open"
+daypart = "night"
+lines = [
+  { say = "hush", text = "You're still awake. That's all right.", gap = 1.0 },
+]
+
+[[clip]]
+id = "dj-body-01"
+category = "dj"
+kit = "dj"
+part = "body"
+lines = [
+  { say = "host", text = "The snow on the screen is drifting to the left tonight. That means it's calm. When it drifts to the right, it's thinking.", gap = 1.4 },
+  { say = "hush", text = "It's calm." },
+]
+
+[[clip]]
+id = "dj-body-02"
+category = "dj"
+kit = "dj"
+part = "body"
+lines = [
+  { say = "host", text = "Mothlight have been playing to the window again. Every night, one moth comes to listen.", gap = 1.4 },
+  { say = "hush", text = "Just the one. It's enough." },
+]
+
+[[clip]]
+id = "dj-body-03"
+category = "dj"
+kit = "dj"
+part = "body"
+lines = [
+  { say = "host", text = "The radiator has started ticking along with the music.", gap = 1.2 },
+  { say = "host", text = "We've given it a credit. The Radiator Club. It's very pleased with itself." },
+]
+
+[[clip]]
+id = "dj-body-04"
+category = "dj"
+kit = "dj"
+part = "body"
+lines = [
+  { say = "host", text = "Somewhere, a fridge has just switched itself off, and the whole house got quieter.", gap = 1.4 },
+  { say = "hush", text = "Did you hear it? That was for you." },
+]
+
+[[clip]]
+id = "dj-body-05"
+category = "dj"
+kit = "dj"
+part = "body"
+lines = [
+  { say = "host", text = "The thing under the bed has turned over in its sleep.", gap = 1.4 },
+  { say = "hush", text = "It's dreaming about you. Nice dreams. You were doing a little dance." },
+]
+
+[[clip]]
+id = "dj-close-01"
+category = "dj"
+kit = "dj"
+part = "close"
+lines = [
+  { say = "hush", text = "Here's some more quiet. Take as much as you like." },
+]
+
+[[clip]]
+id = "dj-close-02"
+category = "dj"
+kit = "dj"
+part = "close"
+lines = [
+  { say = "host", text = "Back to the static.", gap = 1.0 },
+  { say = "hush", text = "Goodnight." },
+]
+
+[[clip]]
+id = "dj-close-03"
+category = "dj"
+kit = "dj"
+part = "close"
+lines = [
+  { say = "hush", text = "Close your eyes. I'll keep the dial." },
+]
+
+# ── Serials (one episode a day; see the other stations for the rest) ─────────
+
+[[clip]]
+id = "teodor-is-heard-02"
+category = "story"
+serial = { id = "teodor-is-heard", episode = 2 }
+title = "Teodor Is Heard, Part Two: The Static Says Yes"
+bed = "static"
+lines = [
+  { say = "host", text = "Someone far away is asking if anyone can hear him.", gap = 1.2 },
+  { say = "teodor", text = "Is anyone receiving this. This is Relay Four.", gap = 1.4 },
+  { say = "hush", text = "I can, Teodor. I always could.", gap = 1.2 },
+  { say = "host", text = "But he can't hear me. His receiver is broken. All he hears is the static.", gap = 1.0 },
+  { say = "host", text = "And I am the static.", gap = 1.6 },
+  { say = "hush", text = "So I'm going to try something. I'm going to be very, very quiet. Quieter than I've ever been. So that, just for a second, the static says something.", gap = 2.4 },
+  { say = "teodor", text = "Night four thousand and two. Captain came at three. Mostly beak. Made tea.", gap = 1.0 },
+  { say = "teodor", text = "The static was very soft tonight. Softer than usual. For a moment, I thought it said,", gap = 1.6 },
+  { say = "hush", text = "Yes.", gap = 1.8 },
+  { say = "teodor", text = "Probably the kettle.", gap = 1.8 },
+  { say = "host", text = "It wasn't the kettle.", gap = 1.0 },
+  { say = "hush", text = "Goodnight, Teodor. Go to sleep. I'll keep the line warm." },
+]
+
+[[clip]]
+id = "greg-comes-home-12"
+category = "story"
+serial = { id = "greg-comes-home", episode = 12 }
+title = "Greg Comes Home, Part Twelve: The Porch Light"
+bed = "night"
+lines = [
+  { say = "host", text = "It's four in the morning.", gap = 1.2 },
+  { say = "host", text = "In a small house in the eastern Overlap, the porch light is on. It has been on every night since spring. The bulb has been changed twice.", gap = 1.0 },
+  { say = "host", text = "Hollis is asleep in the chair by the window. He meant to stay up. He always means to.", gap = 1.4 },
+  { say = "hush", text = "Shh. There's someone at the gate.", gap = 1.4 },
+  { say = "host", text = "There's nobody there. That's how you know.", gap = 1.4 },
+  { say = "host", text = "He comes up the path very slowly, into the porch light. And because the light is on, he's there. Long, and thin, and a little bit tired.", gap = 1.0 },
+  { say = "host", text = "He doesn't knock. Shadows can't. He lies down on the boards by the door, the way he used to, and waits for somebody to move.", gap = 2.0 },
+  { say = "hollis", text = "Oh.", gap = 1.2 },
+  { say = "hollis", text = "There you are.", gap = 1.2 },
+  { say = "greg", text = "Sorry I'm late.", gap = 1.4 },
+  { say = "hollis", text = "You're not late. I left the light on.", gap = 1.8 },
+  { say = "host", text = "Hollis takes the hat down from the hook by the door, and puts it on. And there on the porch boards, so does Greg.", gap = 1.8 },
+  { say = "hush", text = "He's home.", gap = 1.4 },
+  { say = "host", text = "They'll leave the light on anyway. For the next one." },
+]
+
+# ── Halloween (24 to 31 October) ──────────────────────────────────────────────
+
+[[clip]]
+id = "halloween-01"
+category = "dj"
+title = "The Thing Under the Bed Goes Out"
+dates = ["10-24", "10-25", "10-26", "10-27", "10-28", "10-29", "10-30", "10-31"]
+lines = [
+  { say = "host", text = "It's nearly Halloween.", gap = 1.2 },
+  { say = "host", text = "The thing under the bed has asked if it can come out, just for one night, to go trick or treating.", gap = 1.4 },
+  { say = "hush", text = "I said yes. I gave it a blanket to wear. It's going as a bed." },
+]
+
+[[clip]]
+id = "halloween-02"
+category = "id"
+title = "Static Lullabies, Halloween"
+dates = ["10-24", "10-25", "10-26", "10-27", "10-28", "10-29", "10-30", "10-31"]
+lines = [
+  { say = "hush", text = "Static Lullabies. Something is listening.", gap = 1.0 },
+  { say = "hush", text = "This week, it's wearing a little hat." },
 ]
