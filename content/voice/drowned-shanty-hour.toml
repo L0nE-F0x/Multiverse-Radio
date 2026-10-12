@@ -1,0 +1,327 @@
+# The Drowned Shanty Hour — 96.55, the good ship Damp Regret, below the waterline.
+#
+# Captain Ezra Wetherell leads a translucent crew in shanties about events that haven't
+# happened yet. They have been at sea since before there was water. The ship is fine. (The
+# ship is not fine.) Old Pettibone plays accordion on a barrel; young Tobias, the cabin boy,
+# is four hundred and twelve; the lookout went to look out in 1840.
+#
+# Running bits: "the ship is fine"; shanties about future wrecks; the cook's sea soup; the sea
+# area forecast (Regret, Dismay, Lower Dismay, the Bottom). Cross-station: Greg the shadow
+# seen at sea, Hollis.
+station = "drowned-shanty-hour"
+
+[voices]
+host = { voice = "bm_daniel", speed = 0.95, name = "Captain Ezra Wetherell" }
+crew = { voice = "bm_fable", speed = 0.95, fx = "ghost", name = "The Crew" }
+
+[[show]]
+id = "the-dog-watch"
+name = "The Dog Watch"
+blurb = "The short evening watches: working songs, mended nets and the cook's sea soup."
+start = 16
+end = 20
+
+[[show]]
+id = "low-tide"
+name = "Low Tide"
+blurb = "The quiet watch. Slow shanties, lanterns low, and a crew that can't remember its last dry sock."
+start = 1
+end = 5
+
+[[show]]
+id = "forenoon-watch"
+name = "The Forenoon Watch"
+blurb = "Morning songs to stamp the damp out of the deck. Breakfast is ship's biscuit. It's soft."
+start = 8
+end = 12
+
+# ── Idents ────────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "id-001"
+category = "id"
+lines = [
+  { say = "host", text = "You're listening to the Drowned Shanty Hour, from the good ship Damp Regret. The ship is fine." },
+  { sting = "id" },
+]
+
+[[clip]]
+id = "id-002"
+category = "id"
+lines = [
+  { say = "host", text = "The Drowned Shanty Hour. Ninety six point five five. Mind the deck. Mind the sea. Mind the other sea, under that one." },
+]
+
+[[clip]]
+id = "id-003"
+category = "id"
+lines = [
+  { say = "host", text = "Who's listening to the Drowned Shanty Hour?" },
+  { say = "crew", text = "We are, Captain!" },
+  { say = "host", text = "Good lads. So's somebody else. Look lively." },
+]
+
+[[clip]]
+id = "id-004"
+category = "id"
+lines = [
+  { say = "host", text = "The Drowned Shanty Hour. At sea since before there was a sea. We were early. We're often early." },
+]
+
+[[clip]]
+id = "id-005"
+category = "id"
+daypart = "night"
+lines = [
+  { say = "host", text = "The Drowned Shanty Hour. Lanterns lit, fog in, and the crew in fine voice, for men this damp." },
+  { sting = "id" },
+]
+
+[[clip]]
+id = "id-006"
+category = "id"
+lines = [
+  { say = "host", text = "This is the Drowned Shanty Hour. If you hear bubbles, that's applause. Thank you. Thank you." },
+]
+
+[[clip]]
+id = "id-007"
+category = "id"
+lines = [
+  { say = "host", text = "The Drowned Shanty Hour, aboard the Damp Regret. She's taken on a little water. She's taken on, in fairness, all of it." },
+]
+
+# ── Host links ────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "dj-001"
+category = "dj"
+title = "Before the Water"
+lines = [
+  { say = "host", text = "When we set sail, there was no sea. People forget that. We had the ship, we had the crew, we had the songs. We just didn't have anywhere to put them." },
+  { say = "host", text = "So we sailed anyway, across nothing, singing. Water turned up about a week later. Wonderful timing. We were very pleased." },
+]
+
+[[clip]]
+id = "dj-002"
+category = "dj"
+title = "The Wreck of the Margaret Ann"
+lines = [
+  { say = "host", text = "This next shanty is about the wreck of the Margaret Ann, which will happen in the year two thousand and ninety one. Terrible business. Lovely tune." },
+  { say = "host", text = "If you're on the Margaret Ann, or know anyone who will be, maybe sing along. It might help. It won't. But it might." },
+]
+
+[[clip]]
+id = "dj-003"
+category = "dj"
+title = "The Ship Is Fine"
+lines = [
+  { say = "host", text = "A word from the bridge. Some of you have written in with concerns about the ship. Let me reassure you. The ship is fine." },
+  { say = "host", text = "She's lower in the water than she was. She's lower than the water, technically. But she's fine. Bail if you like. It's soothing." },
+]
+
+[[clip]]
+id = "dj-004"
+category = "dj"
+title = "Old Pettibone"
+lines = [
+  { say = "host", text = "That was Old Pettibone on the accordion. He's sat on that barrel since the Long Calm. The squeezebox has a leak, but then, so does everything." },
+  { say = "host", text = "Nobody's asked him what's in the barrel. Nobody wants to know. It's the only dry thing on the ship." },
+]
+
+[[clip]]
+id = "dj-005"
+category = "dj"
+title = "Roll Call"
+lines = [
+  { say = "host", text = "Roll call, for the listeners. Bosun?" },
+  { say = "crew", text = "Aye!" },
+  { say = "host", text = "Cook?" },
+  { say = "crew", text = "Aye!" },
+  { say = "host", text = "Lookout?", gap = 1.4 },
+  { say = "host", text = "The lookout went to look out in eighteen forty, and we haven't seen him since. Which, in fairness, means he's doing it properly." },
+]
+
+[[clip]]
+id = "dj-006"
+category = "dj"
+daypart = "evening"
+title = "Sea Soup"
+lines = [
+  { say = "host", text = "Supper tonight is the cook's sea soup. It's made of the sea. We have a great deal of sea, and the cook is nothing if not resourceful." },
+  { say = "host", text = "Seconds are available. Seconds are always available. Seconds are, in a sense, all around us." },
+]
+
+[[clip]]
+id = "dj-007"
+category = "dj"
+lines = [
+  { say = "host", text = "Our cabin boy, young Tobias, turns four hundred and twelve next week. He's still the cabin boy. Promotion's slow at sea." },
+  { say = "host", text = "I've told him. Keep your head down, sing your heart out, and in another couple of centuries you'll make deckhand." },
+]
+
+[[clip]]
+id = "dj-008"
+category = "dj"
+daypart = "night"
+title = "Ahoy, the Nightjar"
+lines = [
+  { say = "host", text = "Ahoy, the Nightjar. Relay Seven. We see your lamp up there above the fog, on the night watch, same as us. Long watches, empty seas, and a radio for company." },
+  { say = "host", text = "Different ship. Same job. This one's for you." },
+]
+
+[[clip]]
+id = "dj-009"
+category = "dj"
+daypart = "morning"
+lines = [
+  { say = "host", text = "Morning, all. The sun's up, somewhere above us. We can see it through the water, a little wobbling coin." },
+  { say = "host", text = "Crew's on deck, stamping out the damp. Let's have a working song to get the blood going. Not that there's much of it left." },
+]
+
+[[clip]]
+id = "dj-010"
+category = "dj"
+title = "A Shadow on the Water"
+lines = [
+  { say = "host", text = "The watch reported a shadow on the water last night, with no ship above it, moving east. Small fellow. Wearing a hat. I hailed him. He said his name was Greg, and he was seeing the world." },
+  { say = "host", text = "Fair enough. That's what the sea's for. Hollis, if you're listening, he looked well. Sunburnt, for a shadow." },
+]
+
+[[clip]]
+id = "dj-011"
+category = "dj"
+title = "Haul Away"
+lines = [
+  { say = "host", text = "When I say haul, you say away. Haul!" },
+  { say = "crew", text = "Away!" },
+  { say = "host", text = "Haul!" },
+  { say = "crew", text = "Away!" },
+  { say = "host", text = "Lovely. We're not hauling anything. We've nothing to haul. But it does the lungs good. Next song." },
+]
+
+# ── Weather ───────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "weather-001"
+category = "weather"
+title = "The Sea Area Forecast"
+bed = "sea"
+lines = [
+  { say = "host", text = "And now the sea area forecast, issued by the Damp Regret at an hour nobody asked for.", gap = 0.7 },
+  { say = "host", text = "Regret. Damp, becoming damper. Moderate, occasionally good, then poor.", gap = 0.6 },
+  { say = "host", text = "Dismay. Fog. Fog later. Then more fog, from the earlier fog.", gap = 0.6 },
+  { say = "host", text = "Lower Dismay. Wet. Very wet. Sea state, everywhere.", gap = 0.6 },
+  { say = "host", text = "The Bottom. Calm. Quite calm. Visibility, none, but there's nothing to see.", gap = 0.8 },
+  { say = "host", text = "That's the forecast. Mind the wet." },
+]
+
+# ── The Dog Watch (16–20) ─────────────────────────────────────────────────────
+
+[[clip]]
+id = "id-the-dog-watch"
+category = "id"
+show = "the-dog-watch"
+part = "open"
+lines = [
+  { say = "host", text = "This is the Dog Watch, on the Drowned Shanty Hour. Short watch, long songs. All hands on deck. And under it." },
+  { sting = "id" },
+]
+
+[[clip]]
+id = "dj-the-dog-watch-001"
+category = "dj"
+show = "the-dog-watch"
+lines = [
+  { say = "host", text = "Why is it called the Dog Watch? Nobody knows. We had a dog aboard once. He went over the side after a stick, in seventeen ninety." },
+  { say = "host", text = "Still swimming, I'm told. Still after the stick. You have to admire the commitment." },
+]
+
+[[clip]]
+id = "dj-the-dog-watch-002"
+category = "dj"
+show = "the-dog-watch"
+lines = [
+  { say = "host", text = "Evening on the Damp Regret. The lanterns are lit, the fog's come up thick, and the crew are mending the nets." },
+  { say = "host", text = "We've no fish to catch. The nets just like being mended. Here's a slow one." },
+]
+
+# ── Low Tide (1–5) ────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "id-low-tide"
+category = "id"
+show = "low-tide"
+part = "open"
+lines = [
+  { say = "host", text = "This is Low Tide, on the Drowned Shanty Hour. The sea's gone out a little. Not far. It never goes far. It likes us." },
+]
+
+[[clip]]
+id = "dj-low-tide-001"
+category = "dj"
+show = "low-tide"
+lines = [
+  { say = "host", text = "Low Tide, and the crew are singing low. Old Pettibone's playing so soft you can hear the hull." },
+  { say = "host", text = "She's humming along. She does that when she's happy, or when she's sinking. Hard to tell." },
+]
+
+[[clip]]
+id = "dj-low-tide-002"
+category = "dj"
+show = "low-tide"
+lines = [
+  { say = "host", text = "Three in the morning on the Damp Regret. The fog's so thick, the lantern's only a rumour." },
+  { say = "host", text = "If you're up too, out there on a ship of your own, sing along under your breath. Shanties work best with more ghosts." },
+]
+
+# ── The Forenoon Watch (8–12) ─────────────────────────────────────────────────
+
+[[clip]]
+id = "id-forenoon-watch"
+category = "id"
+show = "forenoon-watch"
+part = "open"
+lines = [
+  { say = "host", text = "Morning, all. This is the Forenoon Watch, on the Drowned Shanty Hour. Up and singing, crew. And sweep the fish off the bunks." },
+]
+
+[[clip]]
+id = "dj-forenoon-watch-001"
+category = "dj"
+show = "forenoon-watch"
+lines = [
+  { say = "host", text = "Morning reports. Hull, wet. Sails, wet. Rigging, wet. Crew, wet, but cheerful. Captain, also wet, also cheerful, but in a more senior way.", gap = 0.6 },
+  { say = "host", text = "Morale, high, given everything." },
+]
+
+[[clip]]
+id = "dj-forenoon-watch-002"
+category = "dj"
+show = "forenoon-watch"
+lines = [
+  { say = "host", text = "Breakfast is ship's biscuit. It's soft. Everything's soft. We dip it in the sea to firm it up." },
+  { say = "host", text = "Don't try that at home. Unless home is a ship. Then, honestly, you'll have worked it out." },
+]
+
+# ── Halloween ─────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "dj-halloween-001"
+category = "dj"
+title = "Not a Ghost Ship"
+dates = ["10-24", "10-25", "10-26", "10-27", "10-28", "10-29", "10-30", "10-31"]
+lines = [
+  { say = "host", text = "Every year about this time, people ask if we're a ghost ship. We are not a ghost ship." },
+  { say = "host", text = "We are a ship, with a great many ghosts on it. There's a difference, and the difference is paperwork." },
+]
+
+[[clip]]
+id = "dj-halloween-002"
+category = "dj"
+title = "The Turnip Lantern"
+dates = ["10-24", "10-25", "10-26", "10-27", "10-28", "10-29", "10-30", "10-31"]
+lines = [
+  { say = "host", text = "The crew have carved a turnip lantern for the bow, as is tradition. It's lit. Underwater. Don't ask me how." },
+  { say = "host", text = "Old Pettibone says it's the most cheerful thing he's seen since the Long Calm. Then he played a very, very sad song about it." },
+]
