@@ -1,0 +1,560 @@
+# Multiverse-wide events (EVENT_IDS in src/broadcast/types.ts). Seeded from UTC, so every
+# listener on every station hears the same event at the same instant. Clips are written to
+# work on any station: hosts from all over the dial (cameos from the roster) are caught up
+# in it wherever you happen to be tuned.
+#
+#   dimensional-storm   hosts struggle on through a storm that blows them across the band
+#   emergency-broadcast the Emergency Multiverse Broadcast System test (or not a test)
+#   the-hum             the hum, and the polite non-mention afterwards
+#   station-swap        hosts wake up on the wrong station and carry on regardless
+#   signal-from-beyond  an unknown voice on every frequency at once
+#   time-slip           the last minute replays, slightly wrong
+station = "_events"
+
+[voices]
+authority = { voice = "bm_fable", speed = 0.95, name = "Multiverse Broadcast Authority" }
+embs = { voice = "am_onyx", fx = "robot", name = "Emergency Multiverse Broadcast System" }
+dale = { voice = "bm_george", name = "Dale Quarterly" }
+kim = { voice = "af_sarah", fx = "phone", name = "Kim Harrowgate" }
+skip = { voice = "am_puck", speed = 1.08, name = "Skip Daley" }
+barnaby = { voice = "bm_fable", speed = 0.88, name = "Barnaby Velvet" }
+chip = { voice = "am_fenrir", speed = 1.15, name = "Chip Thunderbuckle" }
+doug = { voice = "bm_lewis", name = "Doug Steadman" }
+pam = { voice = "af_alloy", name = "Pam (Automated)" }
+grenda = { voice = "bf_emma", speed = 0.95, name = "Grenda" }
+reginald = { voice = "bm_george", speed = 0.92, name = "Sir Reginald Thistlewood" }
+counter = { voice = "af_kore", speed = 0.9, fx = "radio", name = "The Counter" }
+rosalind = { voice = "bf_lily", fx = "cb", name = "Big Rosalind" }
+mongoose = { voice = "am_echo", fx = "cb", name = "Midnight Mongoose" }
+captain_hum = { voice = "am_onyx", speed = 0.85, fx = "distant", name = "Captain Hum" }
+maureen = { voice = "af_river", name = "Maureen Pettigrew" }
+gault = { voice = "bf_alice", speed = 0.95, name = "Inspector Delphine Gault" }
+velocity = { voice = "am_michael", speed = 1.08, name = "Velocity Jones" }
+gordon = { voice = "am_onyx", speed = 0.92, name = "Gordon Ago" }
+johnny = { voice = "am_santa", speed = 1.08, name = "Johnny Mirror" }
+ynnhoj = { voice = "am_santa", speed = 1.02, fx = "distant", name = "Ynnhoj" }
+shelley = { voice = "af_sky", speed = 0.78, name = "Shelley Shellbourne" }
+eventually = { voice = "af_heart", speed = 0.92, name = "DJ Eventually" }
+octavia = { voice = "bf_isabella", speed = 0.9, name = "Octavia Lowe" }
+chaz = { voice = "am_puck", speed = 1.12, name = "Chaz Brightley" }
+visitor = { voice = "ff_siwis", speed = 0.85, fx = "ghost", name = "Unknown Signal" }
+visitors = { voice = "am_onyx", speed = 0.8, fx = "alien", name = "Unknown Signal" }
+
+# ── Dimensional storm ─────────────────────────────────────────────────────────
+
+[[clip]]
+id = "storm-001"
+category = "event"
+event = "dimensional-storm"
+title = "Storm Warning"
+bed = "storm"
+lines = [
+  { say = "authority", text = "This is the Multiverse Broadcast Authority. A dimensional storm is crossing the band." },
+  { say = "authority", text = "Listeners may experience static, crosstalk, and brief exposure to other people's Tuesdays." },
+  { say = "authority", text = "Please stay tuned. Please hold on to something. A chair is fine." },
+]
+
+[[clip]]
+id = "storm-002"
+category = "event"
+event = "dimensional-storm"
+title = "Kim Is Standing In It"
+bed = "storm"
+lines = [
+  { sfx = "zap" },
+  { say = "dale", text = "This is Dale Quarterly, with a storm bulletin, on whatever station this is. Winds are gusting at forty realities an hour. Kim is standing in it." },
+  { say = "kim", text = "I'm standing in it, Dale! Somebody's just handed me a kite!" },
+  { sfx = "whoosh" },
+  { say = "kim", text = "It isn't my kite, Dale! It isn't my", cut = 0.8 },
+  { sfx = "zap" },
+  { say = "dale", text = "Thank you, Kim. That was Kim. More at eleven." },
+]
+
+[[clip]]
+id = "storm-003"
+category = "event"
+event = "dimensional-storm"
+title = "Drive Sideways"
+bed = "storm"
+lines = [
+  { sfx = "squelch" },
+  { say = "rosalind", text = "All drivers, all drivers. Storm's coming through the crossroads. Pull over, put the kettle on, and wait it out." },
+  { sfx = "squelch" },
+  { say = "mongoose", text = "Rosalind, the road's gone sideways again." },
+  { sfx = "squelch" },
+  { say = "rosalind", text = "Then drive sideways, love. Slowly. Ten and two." },
+  { sfx = "squelch" },
+]
+
+[[clip]]
+id = "storm-004"
+category = "event"
+event = "dimensional-storm"
+title = "Crosstalk"
+bed = "storm"
+lines = [
+  { say = "barnaby", text = "And this next one, my friends, is a real heart", cut = 0.85 },
+  { sfx = "zap" },
+  { say = "chip", text = "He's run out of the stadium and into a completely different sport", cut = 0.85 },
+  { sfx = "zap" },
+  { say = "pam", text = "Your call is important to us in every reality simultaneous", cut = 0.85 },
+  { sfx = "zap" },
+  { say = "counter", text = "Seven. Seven.", cut = 0.9 },
+  { sfx = "zap" },
+  { say = "barnaby", text = "I'm told we're back. Where was I. Ah, yes. A real heartbreaker." },
+]
+
+[[clip]]
+id = "storm-005"
+category = "event"
+event = "dimensional-storm"
+title = "Storm Update"
+bed = "storm"
+lines = [
+  { say = "skip", text = "Skip Daley here, blown onto your station with a storm update, and folks, it's a big one!" },
+  { say = "skip", text = "Scattered Tuesdays, heavy static, and a ninety percent chance of hearing somebody else's radio show! Isn't it great!" },
+  { sfx = "zap" },
+  { say = "captain_hum", text = "This is Captain Hum. Passing through. The whales are fine.", gap = 0.7 },
+  { say = "skip", text = "Thanks, Captain! The whales are fine, everybody!" },
+]
+
+[[clip]]
+id = "storm-006"
+category = "event"
+event = "dimensional-storm"
+title = "Grenda in the Storm"
+bed = "storm"
+lines = [
+  { say = "grenda", text = "Hello, love. I'm not sure whose station this is. The storm's blown me in. It happens." },
+  { say = "grenda", text = "While I'm here. Whatever's rattling tonight, it'll settle. Storms always think they're the whole sky.", gap = 0.6 },
+  { say = "grenda", text = "They never are." },
+  { sfx = "zap" },
+]
+
+[[clip]]
+id = "storm-007"
+category = "event"
+event = "dimensional-storm"
+title = "Weather Like a Solo"
+bed = "storm"
+lines = [
+  { say = "octavia", text = "Octavia Lowe, a long way from the club. The storm has carried me off, piano stool and all." },
+  { say = "octavia", text = "Listen to it, though. All that thunder and nobody keeping time. It's the best solo I've heard in years.", gap = 0.6 },
+  { say = "octavia", text = "Hold on to your hats, darlings. Not mine. Mine's gone." },
+]
+
+# ── Emergency broadcast ───────────────────────────────────────────────────────
+
+[[clip]]
+id = "emergency-001"
+category = "event"
+event = "emergency-broadcast"
+title = "Emergency Multiverse Broadcast System Test"
+lines = [
+  { sfx = "alarm" },
+  { say = "embs", text = "This is a test of the Emergency Multiverse Broadcast System. Every station in every reality is broadcasting this message, at the same time." },
+  { sfx = "alarm" },
+  { say = "embs", text = "This has been a test. In an actual emergency, you would have been told what to do. It would have been, stay calm, and put the kettle on." },
+  { sfx = "beep" },
+]
+
+[[clip]]
+id = "emergency-002"
+category = "event"
+event = "emergency-broadcast"
+title = "Test of the Test"
+lines = [
+  { sfx = "beep" },
+  { say = "embs", text = "This is a test of the system that tests the Emergency Multiverse Broadcast System." },
+  { say = "embs", text = "If you can hear this, the test is working. If you cannot hear this, please let us know." },
+  { sfx = "beep" },
+]
+
+[[clip]]
+id = "emergency-003"
+category = "event"
+event = "emergency-broadcast"
+title = "Not a Test"
+lines = [
+  { sfx = "alarm" },
+  { say = "embs", text = "This is not a test.", gap = 1.4 },
+  { say = "authority", text = "This is an actual emergency. Somebody has left a very large casserole on the steps of the Multiverse Broadcast Authority, with no note." },
+  { say = "authority", text = "If this is your casserole, please collect it. It's lovely. We've had some." },
+  { sfx = "beep" },
+]
+
+[[clip]]
+id = "emergency-004"
+category = "event"
+event = "emergency-broadcast"
+title = "Emergency Advice"
+lines = [
+  { sfx = "alarm" },
+  { say = "authority", text = "In the event of an actual multiverse emergency, listeners are advised to stay where they are, and who they are." },
+  { say = "authority", text = "Avoid meeting yourself. If you do meet yourself, be polite, and do not both reach for the door at once." },
+  { sfx = "beep" },
+]
+
+[[clip]]
+id = "emergency-005"
+category = "event"
+event = "emergency-broadcast"
+title = "Please Hold"
+lines = [
+  { sfx = "alarm" },
+  { say = "pam", text = "You have reached the Emergency Multiverse Broadcast System. Your emergency is important to us." },
+  { say = "pam", text = "You are currently number four billion in the queue. Please stay on the line. An emergency will be with you shortly.", gap = 0.7 },
+  { say = "pam", text = "Thank you for your patience." },
+  { sfx = "beep" },
+]
+
+[[clip]]
+id = "emergency-006"
+category = "event"
+event = "emergency-broadcast"
+title = "We Interrupt This Programme"
+lines = [
+  { sfx = "alarm" },
+  { say = "dale", text = "We interrupt this programme, wherever you are, for the Emergency Multiverse Broadcast System test." },
+  { say = "dale", text = "Which is, for the record, the most exciting thing to happen in my studio since eleven o'clock.", gap = 0.6 },
+  { say = "dale", text = "Which was a moment ago. It is always eleven." },
+  { sfx = "beep" },
+]
+
+# ── The hum ───────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "hum-001"
+category = "event"
+event = "the-hum"
+title = "The Hum"
+bed = "room"
+lines = [
+  { say = "eventually", text = "So, the next one is", cut = 0.9 },
+  { pause = 5.0 },
+  { say = "eventually", text = "Do you hear that?", fx = "whisper", gap = 5.0 },
+  { say = "eventually", text = "No. Me neither.", fx = "whisper" },
+]
+
+[[clip]]
+id = "hum-002"
+category = "event"
+event = "the-hum"
+title = "Nothing Happened"
+lines = [
+  { say = "dale", text = "Good evening. Before we continue, I have been asked to say that nothing happened just now.", gap = 0.7 },
+  { say = "dale", text = "I was asked by myself. Nothing happened. Here is the news." },
+  { sting = "news" },
+]
+
+[[clip]]
+id = "hum-003"
+category = "event"
+event = "the-hum"
+title = "A Real Heartbreaker"
+lines = [
+  { say = "barnaby", text = "Well.", gap = 1.2 },
+  { say = "barnaby", text = "That was a real heartbreaker, wasn't it.", gap = 1.4 },
+  { say = "barnaby", text = "I don't know what that was. Let's not. Here's a song." },
+]
+
+[[clip]]
+id = "hum-004"
+category = "event"
+event = "the-hum"
+title = "Doug Heard It"
+lines = [
+  { say = "chip", text = "And we're back, folks! Nothing happened! Absolutely nothing happened, and nobody heard anything!" },
+  { say = "doug", text = "I heard it." },
+  { say = "chip", text = "Doug.", gap = 0.6 },
+  { say = "doug", text = "I'm just saying. I heard it." },
+  { say = "chip", text = "We don't, Doug. We don't." },
+]
+
+[[clip]]
+id = "hum-005"
+category = "event"
+event = "the-hum"
+title = "Not the Hole"
+lines = [
+  { sting = "community" },
+  { say = "maureen", text = "A short notice from the Hole Committee. The sound you may have heard just now was not the hole. The hole does not make sounds." },
+  { say = "maureen", text = "Councillor Dibbs has asked me to stress this. He stressed it very hard. Thank you." },
+]
+
+[[clip]]
+id = "hum-006"
+category = "event"
+event = "the-hum"
+title = "Let's Not, Love"
+lines = [
+  { say = "grenda", text = "Right. Let's.", gap = 0.6 },
+  { say = "grenda", text = "Let's not, love.", gap = 1.0 },
+  { say = "grenda", text = "Let's just have the next call. Who've we got? Lovely. Go on." },
+]
+
+[[clip]]
+id = "hum-007"
+category = "event"
+event = "the-hum"
+title = "Case Closed"
+lines = [
+  { sting = "crime" },
+  { say = "gault", text = "Case file. Earlier tonight, every frequency fell silent, and a low hum was heard in all known dimensions." },
+  { say = "gault", text = "No suspects. No motive. Nobody will discuss it. Case closed.", gap = 1.0 },
+  { say = "gault", text = "It is the first case I have ever closed. I would rather not talk about why." },
+]
+
+# ── Station swap ──────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "swap-001"
+category = "event"
+event = "station-swap"
+title = "Not My Newsroom"
+lines = [
+  { say = "dale", text = "Good evening. This is Dale Quarterly, and this is not my newsroom." },
+  { say = "dale", text = "There is no desk. There is a great deal of music. Very well. I shall read the news over it.", gap = 0.6 },
+  { say = "dale", text = "The news is, I appear to be somewhere else. More at eleven." },
+]
+
+[[clip]]
+id = "swap-002"
+category = "event"
+event = "station-swap"
+title = "It's Just a Song"
+lines = [
+  { say = "chip", text = "Chip Thunderbuckle here, folks, and I have woken up on a completely different station, and I do not know the rules!" },
+  { say = "chip", text = "Here comes a song now! It's moving left! It's moving right! It's going for the chorus!", gap = 0.6 },
+  { say = "chip", text = "I'm told it's just a song. Folks, it's just a song! What a game!" },
+]
+
+[[clip]]
+id = "swap-003"
+category = "event"
+event = "station-swap"
+title = "The Lines Are Open"
+lines = [
+  { say = "grenda", text = "Hello, love. Grenda here. I don't know how I've ended up on this station, but the lines appear to be open, so." },
+  { say = "grenda", text = "If you're listening, and you've been meaning to ring someone, ring them. That's the advice.", gap = 0.6 },
+  { say = "grenda", text = "That's the whole show, really. Back to whoever lives here." },
+]
+
+[[clip]]
+id = "swap-004"
+category = "event"
+event = "station-swap"
+title = "Caller Number One"
+lines = [
+  { say = "pam", text = "Thank you for listening to this station, which is not my station. Your listening is important to us." },
+  { say = "pam", text = "You are caller number one. You are the only caller.", gap = 0.6 },
+  { say = "pam", text = "Please hold." },
+]
+
+[[clip]]
+id = "swap-005"
+category = "event"
+event = "station-swap"
+title = "The Night-Shift Operator"
+lines = [
+  { say = "reginald", text = "I have no idea where I am. But hush, now. Look." },
+  { say = "reginald", text = "Here, in the dim glow of a console, we find one of the rarest creatures in the multiverse. The night shift operator.", gap = 0.7 },
+  { say = "reginald", text = "It is holding a mug with both hands. Remarkable. Let us not startle it." },
+]
+
+[[clip]]
+id = "swap-006"
+category = "event"
+event = "station-swap"
+title = "Not Numbers Station Omega"
+lines = [
+  { say = "counter", text = "This is not Numbers Station Omega. Stand by.", gap = 1.0 },
+  { say = "counter", text = "Song. Song. Advert. Song.", gap = 1.0 },
+  { say = "counter", text = "We are doing our best. You still owe us geese." },
+]
+
+[[clip]]
+id = "swap-007"
+category = "event"
+event = "station-swap"
+title = "Sharing"
+lines = [
+  { say = "chaz", text = "Hello and welcome to, oh! This isn't my studio! Where's my podium? Who's this?" },
+  { say = "shelley", text = "Hello. This is. Shelley.", gap = 0.6 },
+  { say = "chaz", text = "Shelley! Lovely! Quick question, Shelley, for ten points! Where are we?" },
+  { say = "shelley", text = "I'll get back to you.", gap = 0.8 },
+  { say = "chaz", text = "Take all the time you need! Folks, she's taking all the time she needs!" },
+]
+
+# ── Signal from beyond ────────────────────────────────────────────────────────
+
+[[clip]]
+id = "beyond-001"
+category = "event"
+event = "signal-from-beyond"
+title = "We Do Not Have Up"
+bed = "space"
+lines = [
+  { say = "visitor", text = "Hello. Hello. We have been listening to you for a very long time.", gap = 0.8 },
+  { say = "visitor", text = "Your programmes are very good. We especially like the adverts for ladders.", gap = 0.8 },
+  { say = "visitor", text = "We do not have ladders here. We do not have up." },
+]
+
+[[clip]]
+id = "beyond-002"
+category = "event"
+event = "signal-from-beyond"
+title = "Please Keep Going"
+bed = "space"
+lines = [
+  { say = "visitor", text = "This is a message for every frequency at once. Do not be alarmed.", gap = 0.8 },
+  { say = "visitor", text = "We are only calling to say, we can hear you. All of you, at the same time.", gap = 0.8 },
+  { say = "visitor", text = "It is very loud. It is wonderful. Please keep going." },
+]
+
+[[clip]]
+id = "beyond-003"
+category = "event"
+event = "signal-from-beyond"
+title = "What Is a Tuesday"
+bed = "space"
+lines = [
+  { say = "visitors", text = "Greetings from beyond the dial. We have received your signal, and we have a question.", gap = 1.0 },
+  { say = "visitors", text = "What is a Tuesday? Many of your stations mention it. Some of them seem worried.", gap = 0.8 },
+  { say = "visitors", text = "Reply at your convenience." },
+]
+
+[[clip]]
+id = "beyond-004"
+category = "event"
+event = "signal-from-beyond"
+title = "Is It Ever Not Eleven"
+bed = "space"
+lines = [
+  { say = "visitors", text = "Attention. We are the listeners on the far side. We have listened to your news since it began.", gap = 1.0 },
+  { say = "visitors", text = "We have one question. Is it ever not eleven.", gap = 1.6 },
+  { say = "visitors", text = "Thank you. That is all." },
+]
+
+[[clip]]
+id = "beyond-005"
+category = "event"
+event = "signal-from-beyond"
+title = "A Message for Bev"
+bed = "space"
+lines = [
+  { say = "visitor", text = "This message is for Bev. Bev. We have found your song.", gap = 1.2 },
+  { say = "visitor", text = "It goes. Da. Da. Dum. Da. Da.", gap = 1.0 },
+  { say = "visitor", text = "It is called", cut = 0.7 },
+  { sfx = "zap" },
+]
+
+[[clip]]
+id = "beyond-006"
+category = "event"
+event = "signal-from-beyond"
+title = "Hello, Small Ship"
+bed = "space"
+lines = [
+  { say = "visitor", text = "Hello, small ship. Yes. You. The one with the amber light, and the kettle.", gap = 1.0 },
+  { say = "visitor", text = "We see you there, listening to the gaps. Nobody listens to the gaps.", gap = 1.0 },
+  { say = "visitor", text = "Thank you. Goodnight." },
+]
+
+[[clip]]
+id = "beyond-007"
+category = "event"
+event = "signal-from-beyond"
+title = "We Are the Static"
+bed = "space"
+lines = [
+  { say = "visitors", text = "Hello. We are the static. We are every voice that ever went out on the radio and was not heard.", gap = 1.0 },
+  { say = "visitors", text = "We are fine. We are having a nice time. We only wanted you to know." },
+]
+
+# ── Time slip ─────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "slip-001"
+category = "event"
+event = "time-slip"
+title = "The Moon Is Near"
+lines = [
+  { say = "dale", text = "Good evening. Here is the news. The moon is near." },
+  { sfx = "tape-rewind" },
+  { say = "dale", text = "Good evening. Here is the news. The moon is nearer.", gap = 1.0 },
+  { say = "dale", text = "I have the strangest feeling I've said that. It doesn't matter. More at eleven." },
+]
+
+[[clip]]
+id = "slip-002"
+category = "event"
+event = "time-slip"
+title = "Time Is Rad"
+lines = [
+  { say = "velocity", text = "This next track is totally rad, and it's from the", cut = 0.9 },
+  { sfx = "tape-rewind" },
+  { say = "velocity", text = "This next track is totally rad, and it's from the future, which is now the past, which is also rad." },
+  { say = "velocity", text = "Everything's rad. Time is rad. Hi again!" },
+]
+
+[[clip]]
+id = "slip-003"
+category = "event"
+event = "time-slip"
+title = "I've Been Here Before"
+lines = [
+  { sfx = "tape-rewind" },
+  { say = "gordon", text = "Ah. We seem to have slipped. Don't worry. I've been here before." },
+  { say = "gordon", text = "Everything that happens in the next minute turns out fine. I know. I was there.", gap = 0.6 },
+  { say = "gordon", text = "Well. Here." },
+]
+
+[[clip]]
+id = "slip-004"
+category = "event"
+event = "time-slip"
+title = "You Went First"
+lines = [
+  { say = "johnny", text = "And a one, and a two, and a" },
+  { sfx = "tape-rewind" },
+  { say = "ynnhoj", text = "And a one, and a two, and a" },
+  { say = "johnny", text = "Ynnhoj. You went first." },
+  { say = "ynnhoj", text = "You went first.", gap = 0.8 },
+  { say = "johnny", text = "Did I?" },
+  { say = "ynnhoj", text = "Did I?" },
+]
+
+[[clip]]
+id = "slip-005"
+category = "event"
+event = "time-slip"
+title = "Enjoy It More This Time"
+lines = [
+  { say = "authority", text = "You are experiencing a time slip. The last minute will now be repeated. Please enjoy it more this time." },
+  { sfx = "tape-rewind" },
+  { say = "authority", text = "You are experiencing a time slip. The last minute will now be repeated. Please enjoy it even more this time." },
+]
+
+[[clip]]
+id = "slip-006"
+category = "event"
+event = "time-slip"
+title = "Same Word"
+lines = [
+  { sfx = "tape-rewind" },
+  { say = "shelley", text = "Oh. A time slip. Don't worry, everyone.", gap = 1.4 },
+  { say = "shelley", text = "I'm still on the same word as before." },
+]
+
+[[clip]]
+id = "slip-007"
+category = "event"
+event = "time-slip"
+title = "Gone Again"
+lines = [
+  { say = "eventually", text = "So I was going to say something really important, and", gap = 0.3 },
+  { sfx = "tape-rewind" },
+  { say = "eventually", text = "So I was going to say something really important, and", gap = 1.2 },
+  { say = "eventually", text = "Nope. Gone again. Twice now. That's a record." },
+]
