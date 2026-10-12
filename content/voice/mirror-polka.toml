@@ -1,0 +1,253 @@
+# Mirror World Polka Hour — Johnny Mirror and his reflection Ynnhoj, from the other side
+# of your bathroom mirror. Ynnhoj agrees with everything, half a second too late.
+# Occasionally he disagrees, which is alarming. Everyone here is left-handed.
+station = "mirror-polka"
+
+[voices]
+host = { voice = "am_santa", speed = 1.08, name = "Johnny Mirror" }
+ynnhoj = { voice = "am_santa", speed = 1.02, fx = "distant", name = "Ynnhoj" }
+bev = { voice = "bf_lily", fx = "phone", name = "Bev" }
+
+# ── Idents ────────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "id-001"
+category = "id"
+lines = [
+  { say = "host", text = "Mirror World Polka Hour!", gap = 0.6 },
+  { say = "ynnhoj", text = "Polka Hour!" },
+  { sting = "id" },
+]
+
+[[clip]]
+id = "id-002"
+category = "id"
+lines = [
+  { say = "host", text = "One oh three point nine, from the other side of your bathroom mirror!", gap = 0.6 },
+  { say = "ynnhoj", text = "Mirror!" },
+  { sting = "id" },
+]
+
+[[clip]]
+id = "id-003"
+category = "id"
+lines = [
+  { say = "host", text = "Oom-pah, reversed! It's the Mirror World Polka Hour!", gap = 0.6 },
+  { say = "ynnhoj", text = "Hap-moo!" },
+  { sting = "id" },
+]
+
+[[clip]]
+id = "id-004"
+category = "id"
+daypart = "morning"
+lines = [
+  { say = "host", text = "Good morning! It's the Mirror World Polka Hour!", gap = 0.6 },
+  { say = "ynnhoj", text = "Good night!", gap = 0.5 },
+  { say = "host", text = "Ynnhoj.", gap = 0.5 },
+  { say = "ynnhoj", text = "Good morning." },
+  { sting = "id" },
+]
+
+[[clip]]
+id = "id-005"
+category = "id"
+lines = [
+  { say = "host", text = "Everyone here is left-handed! Even the accordion!", gap = 0.6 },
+  { say = "ynnhoj", text = "Even the accordion!" },
+  { sting = "id" },
+]
+
+[[clip]]
+id = "id-006"
+category = "id"
+daypart = "night"
+lines = [
+  { say = "host", text = "Mirror World Polka Hour, the late show. Brush your teeth.", gap = 0.6 },
+  { say = "ynnhoj", text = "We'll brush ours." },
+  { sting = "id" },
+]
+
+[[clip]]
+id = "id-007"
+category = "id"
+lines = [
+  { say = "ynnhoj", text = "Ruoh Aklop Dlrow Rorrim.", gap = 0.5 },
+  { say = "host", text = "He's reading the sign from the back again. Mirror World Polka Hour!" },
+  { sting = "id" },
+]
+
+# ── Host links ────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "dj-001"
+category = "dj"
+lines = [
+  { say = "host", text = "What a polka! Wasn't that a polka, Ynnhoj?", gap = 0.7 },
+  { say = "ynnhoj", text = "What a polka!", gap = 0.4 },
+  { say = "host", text = "He agrees. He always agrees. Just a little bit after. Here's another one!" },
+]
+
+[[clip]]
+id = "dj-002"
+category = "dj"
+lines = [
+  { say = "host", text = "That was the finest accordion work this side of the mirror!", gap = 0.7 },
+  { say = "ynnhoj", text = "No it wasn't.", gap = 1.4 },
+  { say = "host", text = "Ynnhoj?", gap = 0.8 },
+  { say = "ynnhoj", text = "Yes it was. Sorry. Yes it was.", gap = 0.5 },
+  { say = "host", text = "Never do that again." },
+]
+
+[[clip]]
+id = "dj-003"
+category = "dj"
+lines = [
+  { say = "host", text = "A reminder to our dancers: we polka to the left here. Always to the left. If you go to the right, you'll end up dancing with someone's reflection, and they will not let go.", gap = 0.6 },
+  { say = "ynnhoj", text = "We will not let go." },
+]
+
+[[clip]]
+id = "dj-004"
+category = "dj"
+lines = [
+  { say = "host", text = "The Mirror World Polka Hour is brought to you by Grumbel's Ladders!", gap = 0.6 },
+  { say = "ynnhoj", text = "Sreddal Slebmurg!", gap = 0.4 },
+  { say = "host", text = "Up is a choice!", gap = 0.6 },
+  { say = "ynnhoj", text = "Down is a choice!", gap = 0.5 },
+  { say = "host", text = "He means up. On this side, he means up." },
+]
+
+[[clip]]
+id = "dj-005"
+category = "dj"
+lines = [
+  { say = "host", text = "Table six, your reflection is doing a waltz. You are doing a polka. One of you is wrong, and I'm afraid it's you, because your reflection is having a much better time." },
+]
+
+[[clip]]
+id = "dj-006"
+category = "dj"
+daypart = "morning"
+lines = [
+  { say = "host", text = "Good morning, ballroom! Toothbrushes in your left hands! Lean in close to the glass! Big smile!", gap = 0.6 },
+  { say = "ynnhoj", text = "Big smile!", gap = 0.4 },
+  { say = "host", text = "Now smile at the same time as each other. Close enough!" },
+]
+
+[[clip]]
+id = "dj-007"
+category = "dj"
+daypart = "night"
+lines = [
+  { say = "host", text = "Late night polka. Softer oom, gentler pah. If you can see us in your mirror right now, give us a little wave.", gap = 0.6 },
+  { say = "ynnhoj", text = "We see you.", gap = 0.6 },
+  { say = "host", text = "We do. Wave back. It's polite." },
+]
+
+[[clip]]
+id = "dj-008"
+category = "dj"
+lines = [
+  { say = "host", text = "We've got a shadow on the dance floor with no dancer! Answers to Greg! Lovely footwork, Greg!", gap = 0.6 },
+  { say = "ynnhoj", text = "Lovely footwork, Greg!", gap = 0.4 },
+  { say = "host", text = "His person, Hollis, has written in. Wants him home. Greg, finish the dance. Then call home." },
+]
+
+[[clip]]
+id = "dj-009"
+category = "dj"
+lines = [
+  { say = "host", text = "A big hand for the tuba! He plays on both sides of the mirror at once, and he has never once been in time with himself.", gap = 0.6 },
+  { say = "ynnhoj", text = "A big hand.", gap = 0.4 },
+  { say = "host", text = "Left hand, Ynnhoj.", gap = 0.6 },
+  { say = "ynnhoj", text = "Left hand." },
+]
+
+[[clip]]
+id = "dj-010"
+category = "dj"
+daypart = "day"
+lines = [
+  { say = "host", text = "Afternoon, everybody! Somebody's reflection has gone to lunch without them. If you look in a mirror and see an empty room, don't panic. They'll be back by two.", gap = 0.6 },
+  { say = "ynnhoj", text = "By three.", gap = 0.5 },
+  { say = "host", text = "By two." },
+]
+
+[[clip]]
+id = "dj-011"
+category = "dj"
+daypart = "evening"
+lines = [
+  { say = "host", text = "Evening polka! This next one's a request from the couple who fell in love through a shop window. She was inside the shop. He was in the reflection. They're very happy.", gap = 0.6 },
+  { say = "ynnhoj", text = "Very happy." },
+]
+
+[[clip]]
+id = "dj-012"
+category = "dj"
+lines = [
+  { say = "host", text = "What's the secret to a long life, Ynnhoj?", gap = 0.7 },
+  { say = "ynnhoj", text = "Polka.", gap = 0.4 },
+  { say = "host", text = "Polka! And?", gap = 0.7 },
+  { say = "ynnhoj", text = "Polka.", gap = 0.4 },
+  { say = "host", text = "He's not wrong. Here's another one!" },
+]
+
+[[clip]]
+id = "dj-013"
+category = "dj"
+lines = [
+  { say = "host", text = "Fun fact! If you play that last song backwards, it's a completely different polka. Also a banger." },
+  { say = "host", text = "Over here it's the other way round, so we've only ever heard it backwards, and frankly, you got the good one." },
+]
+
+[[clip]]
+id = "dj-014"
+category = "dj"
+lines = [
+  { say = "ynnhoj", text = "Hello. It's just me. Johnny's gone to get a drink.", gap = 1.2 },
+  { say = "ynnhoj", text = "I could say anything.", gap = 1.4 },
+  { say = "ynnhoj", text = "Polka.", gap = 0.6 },
+  { say = "host", text = "I'm back!", gap = 0.6 },
+  { say = "ynnhoj", text = "I'm back!" },
+]
+
+[[clip]]
+id = "dj-015"
+category = "dj"
+lines = [
+  { say = "host", text = "When you leave tonight, remember: you came in through the mirror, so you go out through the mirror. Don't use the door. The door goes somewhere else.", gap = 0.6 },
+  { say = "ynnhoj", text = "Somewhere else.", gap = 0.5 },
+  { say = "host", text = "We don't talk about where." },
+]
+
+[[clip]]
+id = "dj-016"
+category = "dj"
+daypart = "night"
+lines = [
+  { say = "host", text = "Ynnhoj and I have been together a long time. Every morning, there he is. Every night, there he is. He's never once missed a shave.", gap = 0.6 },
+  { say = "ynnhoj", text = "You missed one.", gap = 0.8 },
+  { say = "host", text = "Nobody needs to know that, Ynnhoj." },
+]
+
+# ── Calls ─────────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "call-001"
+category = "call"
+title = "Bev, reversed"
+lines = [
+  { sfx = "phone-ring" },
+  { say = "host", text = "We've got a caller! Hello, you're on the Polka Hour!" },
+  { say = "bev", text = "Hello, love. It's Bev. Is this the request line?", gap = 0.5 },
+  { say = "ynnhoj", text = "Veb!", gap = 0.4 },
+  { say = "host", text = "Ynnhoj, don't. It's the request line, Bev. Go on." },
+  { say = "bev", text = "There's a song I heard once, in a lift. It goes, da da dum, da da.", gap = 0.6 },
+  { say = "ynnhoj", text = "Ad ad, mud ad ad.", gap = 0.8 },
+  { say = "bev", text = "That's it backwards, isn't it." },
+  { say = "host", text = "It is, Bev! Is it ringing any bells?" },
+  { say = "bev", text = "It's ringing them in the wrong order, love." },
+  { sfx = "phone-hangup" },
+]

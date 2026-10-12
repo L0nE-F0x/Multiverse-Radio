@@ -117,7 +117,7 @@ id = "dj-006"
 category = "dj"
 lines = [
   { say = "host", text = "There's a shadow at the end of the bar. No one attached. Orders a dry ginger, tips well, says his name is Greg. Barely speaks." },
-  { say = "host", text = "I think he's waiting for somebody, or hiding from somebody, which at this hour is the same thing. Somebody called Hollis, I gather. Greg, darling. Call him." },
+  { say = "host", text = "I think he's waiting for somebody, or hiding from somebody, which at this hour is the same thing. Somebody called Hollis, I gather. Greg, darling. Call home." },
 ]
 
 [[clip]]

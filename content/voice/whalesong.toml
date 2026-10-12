@@ -1,0 +1,135 @@
+# Deep Space Whalesong — Captain Hum, between galaxies, lane 12.
+# Ambient: the Captain speaks maybe once an hour. Deep, slow, reassuring, and a little
+# worried about the whales. Do not ask the whales.
+station = "whalesong"
+
+[voices]
+host = { voice = "am_onyx", speed = 0.85, name = "Captain Hum" }
+
+# ── Idents ────────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "id-001"
+category = "id"
+lines = [
+  { say = "host", text = "Deep Space Whalesong. Lane twelve. All is well." },
+]
+
+[[clip]]
+id = "id-002"
+category = "id"
+lines = [
+  { say = "host", text = "This is Captain Hum. Deep Space Whalesong. Rest easy." },
+]
+
+[[clip]]
+id = "id-003"
+category = "id"
+daypart = "night"
+lines = [
+  { say = "host", text = "Deep Space Whalesong, night watch. The whales are fine." },
+]
+
+[[clip]]
+id = "id-004"
+category = "id"
+lines = [
+  { say = "host", text = "Ninety-nine point six. Deep Space Whalesong. Somewhere between galaxies." },
+]
+
+[[clip]]
+id = "id-005"
+category = "id"
+lines = [
+  { say = "host", text = "Whalesong.", gap = 1.2 },
+  { say = "host", text = "Carry on." },
+]
+
+# ── Captain's log ─────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "dj-001"
+category = "dj"
+lines = [
+  { say = "host", text = "Captain's log. We are drifting at a comfortable speed. One galaxy per century. No rush.", gap = 1.0 },
+  { say = "host", text = "The whales are swimming alongside. They are fine. I asked.", gap = 1.0 },
+  { say = "host", text = "Well. I didn't ask. You don't ask the whales." },
+]
+
+[[clip]]
+id = "dj-002"
+category = "dj"
+lines = [
+  { say = "host", text = "If you can't sleep, that's alright. The ship is awake. The whales are awake.", gap = 1.0 },
+  { say = "host", text = "Someone is always awake out here. You're in good company." },
+]
+
+[[clip]]
+id = "dj-003"
+category = "dj"
+lines = [
+  { say = "host", text = "One of the whales turned and looked at the ship just now. For quite a long time.", gap = 1.6 },
+  { say = "host", text = "I'm sure it's nothing.", gap = 1.2 },
+  { say = "host", text = "Carry on." },
+]
+
+[[clip]]
+id = "dj-004"
+category = "dj"
+daypart = "night"
+lines = [
+  { say = "host", text = "It's very dark out here tonight. That's normal. It's always dark out here.", gap = 1.0 },
+  { say = "host", text = "I just like to mention it, so you know that I've noticed." },
+]
+
+[[clip]]
+id = "dj-005"
+category = "dj"
+lines = [
+  { say = "host", text = "Odd sighting off the port side. A small flock of geese. In space. Flying in formation.", gap = 1.0 },
+  { say = "host", text = "They looked at us as if we owed them something.", gap = 1.4 },
+  { say = "host", text = "We don't. I don't think we do." },
+]
+
+[[clip]]
+id = "dj-006"
+category = "dj"
+daypart = "morning"
+lines = [
+  { say = "host", text = "Good morning. There is no morning out here, of course. But I keep one for you anyway.", gap = 1.2 },
+  { say = "host", text = "Here it is. Good morning." },
+]
+
+[[clip]]
+id = "dj-007"
+category = "dj"
+lines = [
+  { say = "host", text = "We have a stowaway. A shadow, sitting very quietly in the observation lounge. Says his name is Greg. Says he wanted to see the whales.", gap = 1.2 },
+  { say = "host", text = "Well. Who doesn't." },
+]
+
+[[clip]]
+id = "dj-008"
+category = "dj"
+lines = [
+  { say = "host", text = "The whales are singing again. Long, low notes. They carry for light years.", gap = 1.0 },
+  { say = "host", text = "Somewhere a very long way from here, someone is hearing this, and they don't know why they feel better.", gap = 1.0 },
+  { say = "host", text = "That's the whales." },
+]
+
+[[clip]]
+id = "dj-009"
+category = "dj"
+lines = [
+  { say = "host", text = "I'll leave you now. I'll be back in an hour or so. Maybe two.", gap = 1.0 },
+  { say = "host", text = "The whales will keep you company. Don't ask them anything. Just listen." },
+]
+
+[[clip]]
+id = "dj-010"
+category = "dj"
+daypart = "night"
+lines = [
+  { say = "host", text = "Faint signal on the long-range set. A man called Teodor, at Relay Four, asking if anyone can hear him.", gap = 1.2 },
+  { say = "host", text = "We can, Teodor. So can the whales. They've started singing back." },
+]

@@ -162,7 +162,7 @@ id = "dj-012"
 category = "dj"
 lines = [
   { say = "host", text = "Spotted on the grid tonight: a shadow, riding solo. No car, no driver, doing about sixty. Answers to Greg, apparently." },
-  { say = "host", text = "Greg, buddy, I don't know where you're going, but you look incredible. Call Hollis. He left the porch light on." },
+  { say = "host", text = "Greg, buddy, I don't know where you're going, but you look incredible. Call Hollis. The porch light is on." },
 ]
 
 [[clip]]
