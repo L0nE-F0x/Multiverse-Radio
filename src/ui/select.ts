@@ -62,9 +62,3 @@ export function useStationIndex(): number {
   const stations = useBroadcast((s) => s.stations);
   return Math.max(0, stations.findIndex((s) => s.id === id));
 }
-
-/** Imperative access to the actions (stable; no re-render). */
-export const radio = (): BroadcastStore => useBroadcast.getState();
-
-export const isAudible = (status: PlayStatus): boolean => status === 'playing';
-export const isPowered = (status: PlayStatus): boolean => status !== 'off';

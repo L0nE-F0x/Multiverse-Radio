@@ -192,6 +192,13 @@
     padding: 0;
   }
 
+  @media (pointer: coarse) {
+    .topbar-button {
+      height: 44px;
+      min-width: 44px;
+    }
+  }
+
   @media (max-width: 639px) {
     .topbar-label {
       display: none;
@@ -1233,7 +1240,6 @@
 
   .clamp-1,
   .clamp-2,
-  .clamp-3,
   .clamp-5 {
     display: -webkit-box;
     overflow: hidden;
@@ -1246,10 +1252,6 @@
 
   .clamp-2 {
     -webkit-line-clamp: 2;
-  }
-
-  .clamp-3 {
-    -webkit-line-clamp: 3;
   }
 
   .clamp-5 {

@@ -124,13 +124,13 @@ function LogRow({
           {label.title}
         </span>
         <span className="log-byline clamp-1">
-          {segment.kind === 'track' ? label.byline : `${label.kind} · ${label.byline}`}
           {elsewhere && (
             <>
-              {' · '}
               <span className="log-station">{station.name}</span>
+              {' · '}
             </>
           )}
+          {segment.kind === 'track' ? label.byline : `${label.kind} · ${label.byline}`}
         </span>
       </span>
       <span className="log-duration tabular-nums">{formatDuration(segment.durationMs)}</span>

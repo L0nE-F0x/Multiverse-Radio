@@ -13,17 +13,6 @@ export function formatDuration(ms: number): string {
   return hours > 0 ? `${hours}:${String(minutes).padStart(2, '0')}:${seconds}` : `${minutes}:${seconds}`;
 }
 
-/** Spoken form for screen readers: "2 minutes 30 seconds". */
-export function spokenDuration(ms: number): string {
-  const total = Math.max(0, Math.round(ms / 1000));
-  const minutes = Math.floor(total / 60);
-  const seconds = total % 60;
-  const parts = [];
-  if (minutes) parts.push(`${minutes} minute${minutes === 1 ? '' : 's'}`);
-  if (seconds || !minutes) parts.push(`${seconds} second${seconds === 1 ? '' : 's'}`);
-  return parts.join(' ');
-}
-
 /** FNV-1a, for picking deterministic-but-varied things from strings. */
 export function hash(text: string): number {
   let h = 2166136261;
@@ -42,8 +31,6 @@ export function rng(seed: number): () => number {
     return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
   };
 }
-
-export const pick = <T,>(items: readonly T[], seed: number): T => items[seed % items.length]!;
 
 export const FORMAT_LABEL: Record<StationFormat, string> = {
   music: 'Music',
