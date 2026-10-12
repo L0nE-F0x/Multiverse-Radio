@@ -1,0 +1,492 @@
+# Dimension Hop — 94.4, a rift between two garages.
+#
+# Jace is from a reality much like ours and tries to explain normal things; it never goes
+# well. Mara is from a reality where everyone rolls instead of walking, everything on her
+# side of the rift is gently upside-down, and she lives four seconds in the future.
+# The engine of most bits: Jace describes something ordinary, Mara reframes it as either
+# terrifying or beautiful.
+#
+# Recurring segments: Listener Mail, Normal or Not Normal. Running gags from other
+# stations: Greg the shadow, Bev's song, Grenda, the deer on Interstate Zero.
+station = "dimension-hop"
+
+[voices]
+jace = { voice = "am_michael", name = "Jace" }
+mara = { voice = "af_bella", name = "Mara" }
+
+# ── Idents ────────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "id-001"
+category = "id"
+lines = [
+  { say = "jace", text = "This is Dimension Hop. Two hosts, two realities." },
+  { say = "mara", text = "Zero preparation." },
+  { sting = "id" },
+]
+
+[[clip]]
+id = "id-002"
+category = "id"
+lines = [
+  { say = "mara", text = "You're listening to Dimension Hop!" },
+  { say = "jace", text = "She said that before I pressed the button." },
+]
+
+[[clip]]
+id = "id-003"
+category = "id"
+lines = [
+  { say = "jace", text = "Dimension Hop. If you can hear both of us, your radio's working. If you hear three, call us." },
+]
+
+[[clip]]
+id = "id-004"
+category = "id"
+lines = [
+  { say = "mara", text = "Dimension Hop! Rolling to you live, from four seconds from now!" },
+  { sting = "id" },
+]
+
+# ── Host links ────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "dj-001"
+category = "dj"
+lines = [
+  { say = "jace", text = "That's Dimension Hop. More from both of our realities, after this." },
+  { say = "mara", text = "Mine's better. You'll see. Well, I've seen. You'll see in a bit." },
+  { say = "jace", text = "She's not wrong. I've seen her side. The sandwiches are incredible." },
+]
+
+[[clip]]
+id = "dj-002"
+category = "dj"
+lines = [
+  { say = "mara", text = "Quick reminder, everyone. If you can hear me before you hear Jace, your radio's working. If you hear Jace before me, check your radio. If you can hear yourself, call us, we'd love to talk to you." },
+]
+
+[[clip]]
+id = "dj-003"
+category = "dj"
+lines = [
+  { say = "jace", text = "We're going to take a quick break." },
+  { say = "mara", text = "I'm already back." },
+  { say = "jace", text = "She's already back. Stay with us." },
+  { say = "mara", text = "You'll like what happens next. I did." },
+]
+
+# ── Shows ─────────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "show-001"
+category = "show"
+title = "Legs?"
+lines = [
+  { sting = "id" },
+  { say = "jace", text = "Welcome back to Dimension Hop, the show where two people from two different realities talk about it. I'm Jace." },
+  { say = "mara", text = "And I'm Mara, coming to you from a reality where this microphone is upside down, and so am I, and so, frankly, is my coffee." },
+  { say = "jace", text = "How do you drink it?" },
+  { say = "mara", text = "Carefully, Jace. From underneath.", gap = 0.6 },
+  { say = "jace", text = "Okay. So, Mara, I wanted to ask you. In your reality, how do people get places?" },
+  { say = "mara", text = "We roll. Mostly downhill. Uphill is for emergencies." },
+  { say = "jace", text = "See, here, we just walk. With legs." },
+  { say = "mara", text = "With your legs? Both of them? At the same time?" },
+  { say = "jace", text = "No, one after the other." },
+  { say = "mara", text = "That's so brave.", gap = 0.5 },
+  { say = "jace", text = "It's not brave, it's walking. Babies do it." },
+  { say = "mara", text = "You make the babies do it? Jace." },
+  { say = "jace", text = "Nobody makes them. They just sort of figure it out. They fall over a lot at first." },
+  { say = "mara", text = "And then they stop falling over?" },
+  { say = "jace", text = "Mostly." },
+  { say = "mara", text = "Mostly. So your whole reality is people who are mostly not falling over. That explains a lot about your music.", gap = 0.6 },
+  { say = "jace", text = "What happens if you need to go uphill, and it's not an emergency?" },
+  { say = "mara", text = "Then you live there now. That's just the rules.", gap = 0.9 },
+  { say = "jace", text = "Okay. We're going to take a quick break." },
+  { say = "mara", text = "Don't go anywhere. Or do. Roll, if you have to." },
+]
+
+[[clip]]
+id = "show-002"
+category = "show"
+title = "Four Seconds Ahead"
+lines = [
+  { sting = "id" },
+  { say = "jace", text = "Welcome back to Dimension Hop. Mara, I think something's wrong with the line. I can hear you before you talk." },
+  { say = "mara", text = "Oh, yeah. That's the time zone. I'm about four seconds ahead of you." },
+  { say = "jace", text = "That's not how time zones work." },
+  { say = "mara", text = "It's how mine works. Your next question's about breakfast.", gap = 0.9 },
+  { say = "jace", text = "What do you guys eat for breakfast?" },
+  { say = "mara", text = "See? Anyway. We eat the evening before. It saves time." },
+  { say = "jace", text = "That doesn't", cut = 0.9 },
+  { say = "mara", text = "Yes it does, Jace. You were going to say that.", gap = 0.5 },
+  { say = "jace", text = "So what's it like? Being four seconds ahead?" },
+  { say = "mara", text = "Honestly? Lonely. I laugh at every joke before it's told, so people think I'm laughing at them.", gap = 0.7 },
+  { say = "jace", text = "I'm sorry." },
+  { say = "mara", text = "I know. You said that four seconds ago.", gap = 0.6 },
+  { say = "jace", text = "Is there anything good about it?" },
+  { say = "mara", text = "Oh, loads. I always know when the phone's about to ring. Like, now." },
+  { pause = 1.2 },
+  { sfx = "phone-ring" },
+  { say = "jace", text = "Who is it?" },
+  { say = "mara", text = "It's me, from four seconds ago. She's fine. Don't answer it, she'll only want to talk about breakfast.", gap = 0.6 },
+  { say = "jace", text = "We'll be right back." },
+  { say = "mara", text = "You already are." },
+]
+
+[[clip]]
+id = "show-003"
+category = "show"
+title = "Listener Mail: Murray, Priya and the Same Letter"
+lines = [
+  { sting = "id" },
+  { say = "mara", text = "It's time for listener mail! Jace, read the first one." },
+  { say = "jace", text = "This one's from Murray, who writes: Dear Dimension Hop. In my reality, the dogs own the people. Is that normal?" },
+  { say = "mara", text = "Totally normal. In mine, the dogs own the dogs. It's a whole pyramid thing." },
+  { say = "jace", text = "Murray goes on. My dog says I'm a good boy, but I don't think he means it." },
+  { say = "mara", text = "Murray. He means it. Dogs can't lie. That's why they never run for office.", gap = 0.7 },
+  { say = "jace", text = "Next. From Priya, in the Damp Dimension. She writes: Dear Dimension Hop, what's the sun like?" },
+  { say = "mara", text = "You take this one, Jace. We don't really have one. It's more of a rumor." },
+  { say = "jace", text = "It's warm. It's very bright. You can't look straight at it." },
+  { say = "mara", text = "So it's shy." },
+  { say = "jace", text = "No. Sort of. It comes up every single morning." },
+  { say = "mara", text = "Every morning? It must be exhausted." },
+  { say = "jace", text = "I've honestly never thought about that." },
+  { say = "mara", text = "Somebody should.", gap = 0.7 },
+  { say = "jace", text = "Last letter. From someone who signs it, The Same Letter. It says: Dear Dimension Hop. This is the same letter." },
+  { say = "mara", text = "Oh, that's the same letter." },
+  { say = "jace", text = "Mara, it's a different letter." },
+  { say = "mara", text = "Is it, Jace? Is it?", gap = 0.9 },
+  { say = "jace", text = "We're out of time." },
+  { say = "mara", text = "We're always out of time. Some of us are just further out than others. Bye, Murray!" },
+]
+
+[[clip]]
+id = "show-004"
+category = "show"
+title = "Listener Mail: A Letter from a Shadow"
+lines = [
+  { sting = "id" },
+  { say = "jace", text = "Listener mail. And Mara, this one's unusual. The envelope's empty." },
+  { say = "mara", text = "Hold it up to the light." },
+  { say = "jace", text = "Oh. Oh, there's a shape on it. It's somebody lying across the paper." },
+  { say = "mara", text = "That's a letter from a shadow, Jace. That's how they write. You read the shape." },
+  { say = "jace", text = "How do you read a shape?" },
+  { say = "mara", text = "With your feelings. Go on." },
+  { say = "jace", text = "Okay. It's a man, sort of sitting, with his knees up. And there's a wave, along the bottom. I think he's at the sea." },
+  { say = "mara", text = "That's Greg." },
+  { say = "jace", text = "Who's Greg?" },
+  { say = "mara", text = "Greg's the shadow that left that man, Hollis. It's been on the news. It's been on every station, Jace, where have you been?" },
+  { say = "jace", text = "On this station. With you." },
+  { say = "mara", text = "Fair. So what's Greg saying?" },
+  { say = "jace", text = "I think he's saying, I'm okay. I think he's saying, I always wanted to see the sea, and Hollis never went anywhere, so I went.", gap = 0.7 },
+  { say = "mara", text = "In my reality, shadows roll alongside you. They're like a friend whose face you never quite see. When one goes off on its own, we say it's gone to find its edges." },
+  { say = "jace", text = "That's lovely." },
+  { say = "mara", text = "It's a bit sad too. But mostly lovely.", gap = 0.7 },
+  { say = "jace", text = "Greg, if you're listening, send this to Hollis. Not to us. He'd love it." },
+  { say = "mara", text = "He'll know your shape, Greg. People always know the shape." },
+]
+
+[[clip]]
+id = "show-005"
+category = "show"
+title = "Breakfast"
+lines = [
+  { sting = "id" },
+  { say = "jace", text = "Mara, tonight I want to talk about breakfast." },
+  { say = "mara", text = "You already did, four seconds from now. Go on, though, I liked it." },
+  { say = "jace", text = "So in my reality, a lot of people have cereal." },
+  { say = "mara", text = "What's cereal?" },
+  { say = "jace", text = "It's little crunchy pieces of grain, in a box. You pour them into a bowl, and then you pour milk on them." },
+  { say = "mara", text = "Why?" },
+  { say = "jace", text = "To make them soft." },
+  { say = "mara", text = "So you buy them crunchy, so that you can make them soft." },
+  { say = "jace", text = "Yes. But not too soft. You have to eat them before they get too soft." },
+  { say = "mara", text = "Oh, so it's a race." },
+  { say = "jace", text = "It's not a race." },
+  { say = "mara", text = "Jace. You're racing milk. Every morning. Against your own breakfast. And you're losing." },
+  { say = "jace", text = "I'm not losing." },
+  { say = "mara", text = "Have you ever got to the bottom of a bowl of cereal and found it still crunchy?" },
+  { pause = 1.0 },
+  { say = "jace", text = "No." },
+  { say = "mara", text = "You've never won, Jace. Not once. Not in your whole life.", gap = 0.7 },
+  { say = "jace", text = "Fine. What do you have for breakfast, then?" },
+  { say = "mara", text = "The evening before. We eat yesterday's dinner, backwards, so it tastes like it's getting fresher. By the end, it's a shopping list." },
+  { say = "jace", text = "That's not", cut = 0.85 },
+  { say = "mara", text = "It is." },
+  { say = "jace", text = "Okay." },
+]
+
+[[clip]]
+id = "show-006"
+category = "show"
+title = "Sleep"
+daypart = "night"
+lines = [
+  { sting = "id" },
+  { say = "jace", text = "Okay, Mara. Tonight, I'm going to explain sleep." },
+  { say = "mara", text = "Oh, I love this. Go." },
+  { say = "jace", text = "So, every night, we get into bed, we lie down, we close our eyes, and for about eight hours, we're just not here." },
+  { say = "mara", text = "Where are you?" },
+  { say = "jace", text = "Asleep." },
+  { say = "mara", text = "Yes, but where?" },
+  { say = "jace", text = "Nowhere. Here. In the bed. But our brains go off and have dreams. You see things. Sometimes you're back at school. Sometimes you're late for something and you can't find your shoes." },
+  { say = "mara", text = "And this is supposed to be restful." },
+  { say = "jace", text = "It is restful." },
+  { say = "mara", text = "Jace, every night you lie down in the dark, on purpose, for a third of your life, and your brain goes off without you to look for your shoes. And you all just agree that's fine." },
+  { say = "jace", text = "When you put it like that." },
+  { say = "mara", text = "Who's guarding you?" },
+  { say = "jace", text = "Nobody. We lock the door." },
+  { say = "mara", text = "You lock the door, and then you leave your body in the room, alone, with your brain out, and you call it a night.", gap = 0.7 },
+  { say = "jace", text = "What do you do, then?" },
+  { say = "mara", text = "We roll a bit slower after dark. And we hold hands with whoever's nearest, so nobody drifts off on their own. In the morning, you say thank you. Sometimes you've never met them." },
+  { say = "jace", text = "That's actually really nice." },
+  { say = "mara", text = "Yours is nice too. Weird, but nice. Sweet dreams about your shoes, Jace." },
+]
+
+[[clip]]
+id = "show-007"
+category = "show"
+title = "Normal or Not Normal: Elevators"
+lines = [
+  { sting = "fanfare" },
+  { say = "mara", text = "It's time for Normal, or Not Normal! The game where Jace describes something from his reality, and I decide if it's normal." },
+  { say = "jace", text = "Okay. Number one. Elevators." },
+  { say = "mara", text = "Describe." },
+  { say = "jace", text = "It's a little room. You get in, the doors close, and it takes you up or down, to another floor." },
+  { say = "mara", text = "With strangers?" },
+  { say = "jace", text = "Sometimes, yeah." },
+  { say = "mara", text = "And what do you all do, in the little room, with the strangers?" },
+  { say = "jace", text = "Nothing. We face the doors. We don't talk. We watch the numbers go up." },
+  { say = "mara", text = "In silence." },
+  { say = "jace", text = "Mostly. Sometimes there's music." },
+  { say = "mara", text = "Jace, that's a ritual. That's a ceremony. You're all standing together, facing the same way, watching numbers, with music. Not normal." },
+  { sfx = "beep" },
+  { say = "jace", text = "Number two. Umbrellas. When it rains, you hold a little roof over your head, on a stick." },
+  { say = "mara", text = "Oh, that's normal. We do that. We just hold it underneath." },
+  { say = "jace", text = "Why underneath?" },
+  { say = "mara", text = "The rain goes up here, Jace. Keep up." },
+  { sfx = "ding" },
+  { say = "jace", text = "Number three. Shaking hands. When you meet someone, you hold their hand, and move it up and down." },
+  { say = "mara", text = "How many times?" },
+  { say = "jace", text = "Two. Maybe three." },
+  { say = "mara", text = "And who decides when it stops?" },
+  { pause = 1.0 },
+  { say = "jace", text = "Nobody knows." },
+  { say = "mara", text = "Not normal. Terrifying. That's two not normals and one normal. Better luck next time, Jace's entire reality." },
+  { sfx = "beep" },
+]
+
+[[clip]]
+id = "show-008"
+category = "show"
+title = "Rolling Etiquette"
+lines = [
+  { sting = "id" },
+  { say = "jace", text = "Mara, people keep writing in to ask about rolling. How does it actually work, day to day?" },
+  { say = "mara", text = "Oh, it's very simple. You tuck in, you lean, and off you go. Downhill is free. Flat is fine. Uphill is for emergencies." },
+  { say = "jace", text = "And if it's not an emergency?" },
+  { say = "mara", text = "Then you live there now. My aunt went up a hill once because she thought she'd left the oven on. That was nineteen years ago. She's got a lovely house up there. The oven was off." },
+  { say = "jace", text = "Can't she just roll back down?" },
+  { say = "mara", text = "Jace, you can't roll down a hill you rolled up in a panic. Everyone would know." },
+  { say = "jace", text = "What are the other rules?" },
+  { say = "mara", text = "You give way to anyone rolling with shopping. You never roll in a straight line past a bakery, it's showing off. And if you meet someone rolling the other way, you both stop, and say, after you." },
+  { say = "jace", text = "And then who goes?" },
+  { say = "mara", text = "Nobody, Jace. That's why there's a deer on Interstate Zero.", gap = 0.7 },
+  { say = "jace", text = "Do you think I could roll?" },
+  { say = "mara", text = "Try it. Tuck your chin in. Lean forward." },
+  { say = "jace", text = "Okay. Okay, here goes." },
+  { sfx = "boing" },
+  { pause = 0.8 },
+  { say = "mara", text = "How was that?" },
+  { say = "jace", text = "I've hit the desk. I'm under the desk now." },
+  { say = "mara", text = "Then you live there now, Jace." },
+  { say = "jace", text = "That's not uphill!" },
+  { say = "mara", text = "It's not about the hill, Jace. It's about the commitment." },
+]
+
+[[clip]]
+id = "show-009"
+category = "show"
+title = "Money"
+lines = [
+  { sting = "id" },
+  { say = "jace", text = "Mara, tonight, money. In my reality, we use money to buy things." },
+  { say = "mara", text = "What's money?" },
+  { say = "jace", text = "It's little pieces of paper, and some metal circles. You give them to people, and they give you things." },
+  { say = "mara", text = "Is the paper special?" },
+  { say = "jace", text = "Not really. It's just paper. With pictures on." },
+  { say = "mara", text = "So why do people take it?" },
+  { say = "jace", text = "Because everybody agrees it's worth something." },
+  { say = "mara", text = "That's it? Everybody just agrees?" },
+  { say = "jace", text = "Yeah. And as long as everyone keeps agreeing, it works." },
+  { pause = 1.0 },
+  { say = "mara", text = "Jace, that's the most romantic thing I've ever heard." },
+  { say = "jace", text = "It's not romantic, it's money." },
+  { say = "mara", text = "Your whole reality runs on everybody quietly agreeing to believe in the same little bits of paper, at the same time, every single day. Nobody's checking. Everybody's just trusting each other. That's beautiful." },
+  { say = "jace", text = "I mean, sometimes it goes wrong." },
+  { say = "mara", text = "Of course it does. That's how you know it's love.", gap = 0.7 },
+  { say = "jace", text = "What do you use, then?" },
+  { say = "mara", text = "Compliments. A loaf of bread is two compliments, but they have to be about the baker's hair." },
+  { say = "jace", text = "What if the baker's bald?" },
+  { say = "mara", text = "Then it's about the shine, Jace. Honestly. Have you ever even bought bread?" },
+]
+
+[[clip]]
+id = "show-010"
+category = "show"
+title = "Listener Mail: Bev's Song"
+lines = [
+  { sting = "id" },
+  { say = "mara", text = "Listener mail! Jace, there's one here in very careful handwriting." },
+  { say = "jace", text = "It's from Bev. She writes: Dear Dimension Hop. Is this the request line?" },
+  { say = "mara", text = "Oh, Bev." },
+  { say = "jace", text = "She goes on. I have been trying to hear a song for eleven years. It goes dum, dum, da dum, and then a man cries. I have tried the news, the sports, the advice lady, and a man selling holes. Nobody has played it. Yours sincerely, Bev." },
+  { say = "mara", text = "Jace, we should play it." },
+  { say = "jace", text = "We don't have it. Nobody has it. I'm not sure it exists." },
+  { say = "mara", text = "Then we'll make it. Go on. Dum, dum, da dum." },
+  { say = "jace", text = "I'm not doing that." },
+  { say = "mara", text = "Jace. Bev has been looking for eleven years.", gap = 1.0 },
+  { say = "jace", text = "Fine. Dum. Dum. Da dum.", speed = 0.8, gap = 0.8 },
+  { say = "mara", text = "And then a man cries." },
+  { say = "jace", text = "I'm not going to cry." },
+  { say = "mara", text = "You're going to cry in about four seconds, Jace." },
+  { pause = 1.8 },
+  { say = "jace", text = "Why is it so sad? It's three notes.", speed = 0.92 },
+  { say = "mara", text = "It's the space after the third one. That's where the man is.", gap = 0.8 },
+  { say = "jace", text = "Bev, I hope that was close.", speed = 0.92 },
+  { say = "mara", text = "It was close, Bev. I heard it first." },
+]
+
+[[clip]]
+id = "show-011"
+category = "show"
+title = "Through the Rift"
+lines = [
+  { sting = "id" },
+  { say = "jace", text = "Mara, I've got a question. The rift. The glowing crack down the middle of the studio." },
+  { say = "mara", text = "My favorite crack." },
+  { say = "jace", text = "Can we pass things through it?" },
+  { say = "mara", text = "Let's find out. Here, have a biscuit." },
+  { sfx = "whoosh" },
+  { say = "jace", text = "Okay, it's come through. It's upside down." },
+  { say = "mara", text = "Well, it was the right way up when it left." },
+  { say = "jace", text = "No, I mean it's stuck to the ceiling." },
+  { say = "mara", text = "Oh, sorry, I gave you one of ours. You'll have to eat it from underneath." },
+  { say = "jace", text = "Okay, my turn. Here's a pen." },
+  { sfx = "whoosh" },
+  { say = "mara", text = "Ooh. Jace, it's arrived, but it's arrived four seconds before you sent it." },
+  { say = "jace", text = "So where is it now?" },
+  { say = "mara", text = "It's in both places, and they're both a bit embarrassed. Let's not do pens.", gap = 0.6 },
+  { say = "jace", text = "Can I put my hand through?" },
+  { say = "mara", text = "Absolutely not. Well. Maybe. Do you want to?" },
+  { say = "jace", text = "Kind of." },
+  { say = "mara", text = "Okay, but if your hand comes back holding a different coffee, that's not my fault." },
+  { sfx = "whoosh" },
+  { pause = 1.0 },
+  { say = "jace", text = "Mara. I'm holding a different coffee." },
+  { say = "mara", text = "Is it nice?" },
+  { say = "jace", text = "It's really nice, actually." },
+  { say = "mara", text = "That's mine. Give it back." },
+]
+
+[[clip]]
+id = "show-012"
+category = "show"
+title = "Birthdays"
+lines = [
+  { sting = "id" },
+  { say = "jace", text = "Okay, Mara. In my reality, once a year, we celebrate the day we were born." },
+  { say = "mara", text = "Why?" },
+  { say = "jace", text = "Because it's the day you arrived. We have cake, and candles, and everyone sings to you." },
+  { say = "mara", text = "Every year?" },
+  { say = "jace", text = "Every year." },
+  { say = "mara", text = "But you've already arrived. You're here. We can see you. Why do you keep celebrating it?" },
+  { say = "jace", text = "Because it's nice to be glad someone's here." },
+  { say = "mara", text = "Okay. That's actually nice. What about the candles?" },
+  { say = "jace", text = "You put one candle on the cake for every year you've been alive, you make a wish, and you blow them all out." },
+  { say = "mara", text = "Hang on. So the older you get, the more fire there is on the cake." },
+  { say = "jace", text = "I guess so." },
+  { say = "mara", text = "So at the end, when you're very old, it's just a cake that's on fire, and everybody stands around it, singing." },
+  { say = "jace", text = "It's not, okay, it's a little bit like that.", gap = 0.6 },
+  { say = "mara", text = "We celebrate the day you leave a room. Any room. Once a year, you pick a door, and you walk out of it, and everybody cheers, and someone shouts, look at them go!" },
+  { say = "jace", text = "Why?" },
+  { say = "mara", text = "Because you never know which door is the important one, Jace. So we cheer all of them." },
+]
+
+[[clip]]
+id = "show-013"
+category = "show"
+title = "Normal or Not Normal: Small Talk"
+lines = [
+  { sting = "fanfare" },
+  { say = "mara", text = "Normal, or Not Normal, round two! Jace, your reality's been losing. Bring me something good." },
+  { say = "jace", text = "Okay. Talking about the weather. When you meet someone and you don't know what to say, you say, nice day, isn't it? And they say, yes, lovely." },
+  { say = "mara", text = "Even if it isn't a nice day?" },
+  { say = "jace", text = "Especially then. Then you say, bit grim today, isn't it? And they say, isn't it." },
+  { say = "mara", text = "So you're not really talking about the weather." },
+  { say = "jace", text = "No. You're just saying, I see you, we're both here, and we're both in this weather.", gap = 0.8 },
+  { say = "mara", text = "Normal. Very normal. That's the most normal thing you've ever told me. Point to Jace." },
+  { sfx = "ding" },
+  { say = "jace", text = "Number two. Pockets. Little bags sewn into your clothes, where you keep things." },
+  { say = "mara", text = "Normal, as long as you don't check them. Do you check them?" },
+  { say = "jace", text = "Constantly. I pat them, to make sure my keys are still there. Every few minutes." },
+  { say = "mara", text = "Not normal. Those keys aren't going anywhere, Jace. Have some faith." },
+  { sfx = "beep" },
+  { say = "jace", text = "Number three. Waving at boats. When a boat goes past, you wave at the people on it, and they wave back. And you'll never see them again." },
+  { pause = 0.8 },
+  { say = "mara", text = "Normal. Beautiful. Two points to Jace's reality. You're catching up." },
+  { sfx = "ding" },
+]
+
+[[clip]]
+id = "show-014"
+category = "show"
+title = "Advice Corner"
+lines = [
+  { sting = "id" },
+  { say = "jace", text = "Mara, we've had a lot of letters lately asking for advice." },
+  { say = "mara", text = "We're very wise." },
+  { say = "jace", text = "We are not." },
+  { say = "mara", text = "I'm a bit wise. I'm four seconds wise." },
+  { say = "jace", text = "Okay. This one says: My upstairs neighbor practices the tuba at midnight. What should I do?" },
+  { say = "mara", text = "Move upstairs." },
+  { say = "jace", text = "That's above the neighbor." },
+  { say = "mara", text = "Exactly. Then you're the upstairs neighbor. You hold all the power. Get a tuba." },
+  { say = "jace", text = "That's terrible advice. Next one. My best friend has started living four seconds in the future, and I can't keep up." },
+  { say = "mara", text = "Oh, that's easy. Start your sentences early. Talk to the space where she's going to be." },
+  { say = "jace", text = "That's actually reasonable." },
+  { say = "mara", text = "I'm always reasonable four seconds from now. Next." },
+  { say = "jace", text = "My shadow left me, and I don't know how to be on my own.", gap = 1.0 },
+  { say = "mara", text = "Jace, this one's above our pay grade." },
+  { say = "jace", text = "We don't get paid." },
+  { say = "mara", text = "Exactly. Hollis, love, call Grenda. Ninety seven point eight. She's good with shadows." },
+  { say = "jace", text = "She's good with everything." },
+  { say = "mara", text = "She's the only person I know who's never once been surprised by me." },
+]
+
+[[clip]]
+id = "show-015"
+category = "show"
+title = "Mara's Pet Hill"
+lines = [
+  { sting = "id" },
+  { say = "jace", text = "Mara, do you have any pets?" },
+  { say = "mara", text = "I have a hill." },
+  { say = "jace", text = "A pet hill." },
+  { say = "mara", text = "His name is Gerald. He's a lovely hill. Very gentle slope." },
+  { say = "jace", text = "How do you walk a hill?" },
+  { say = "mara", text = "You don't walk him, Jace. He walks you. Well, you roll down him, and that counts." },
+  { say = "jace", text = "Does he do tricks?" },
+  { say = "mara", text = "He sits." },
+  { say = "jace", text = "Hills always sit." },
+  { say = "mara", text = "Yes, but he does it when I ask.", gap = 0.6 },
+  { say = "jace", text = "What does he eat?" },
+  { say = "mara", text = "Weather. Mostly rain. He gets a bit muddy, and then I have to brush him, which takes a weekend." },
+  { say = "jace", text = "And does he love you?" },
+  { say = "mara", text = "He lets me sit on top of him to watch the sunset, and he has never once rolled me off. If that's not love, Jace, I don't know what is.", gap = 0.7 },
+  { say = "jace", text = "I had a goldfish, when I was a kid." },
+  { say = "mara", text = "What did it do?" },
+  { say = "jace", text = "It went round." },
+  { say = "mara", text = "Oh, Jace. Did it ever get there?" },
+]

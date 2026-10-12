@@ -1,0 +1,302 @@
+# Department of Hold Music — Pam (Automated), Bureau of Infinite Queues, Floor minus four.
+# Courteous, politely menacing, and herself on hold since the Bronze Age. Hold
+# announcements air over the music (over_music = true) and each one escalates on its own.
+station = "hold-music"
+
+[voices]
+host = { voice = "af_alloy", name = "Pam (Automated)" }
+supervisor = { voice = "af_alloy", speed = 0.92, fx = "robot", name = "Pam's Supervisor (Also Automated)" }
+gareth = { voice = "am_adam", fx = "phone", name = "Gareth from Escalations" }
+bev = { voice = "af_nova", fx = "phone", name = "Bev" }
+
+# ── Idents ────────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "id-001"
+category = "id"
+lines = [
+  { say = "host", text = "You have reached the Department of Hold Music. Your call is important to us. Please hold." },
+  { sting = "id" },
+]
+
+[[clip]]
+id = "id-002"
+category = "id"
+lines = [
+  { say = "host", text = "Department of Hold Music. Ninety-six point one. Your call is important to us in every reality simultaneously." },
+  { sting = "id" },
+]
+
+[[clip]]
+id = "id-003"
+category = "id"
+lines = [
+  { say = "host", text = "Thank you for holding. You are listening to the Department of Hold Music. Please continue to do so." },
+  { sting = "id" },
+]
+
+[[clip]]
+id = "id-004"
+category = "id"
+daypart = "morning"
+lines = [
+  { say = "host", text = "Good morning. The Department of Hold Music is now open. It was also open before. You were holding then, too." },
+  { sting = "id" },
+]
+
+[[clip]]
+id = "id-005"
+category = "id"
+daypart = "night"
+lines = [
+  { say = "host", text = "Department of Hold Music, night service. Your call is still important to us. Slightly less, at this hour. But still." },
+  { sting = "id" },
+]
+
+[[clip]]
+id = "id-006"
+category = "id"
+lines = [
+  { say = "host", text = "This is Pam. This is the Department of Hold Music. This is, for the foreseeable future, your life." },
+  { sting = "id" },
+]
+
+[[clip]]
+id = "id-007"
+category = "id"
+lines = [
+  { say = "host", text = "Department of Hold Music, Floor minus four. Please take a number." },
+  { sfx = "ding" },
+]
+
+# ── Hold announcements ────────────────────────────────────────────────────────
+
+[[clip]]
+id = "psa-001"
+category = "psa"
+title = "Your position in the queue"
+over_music = true
+lines = [
+  { say = "host", text = "Thank you for holding. You are currently number four hundred and eleven thousand and nine in the queue." },
+  { say = "host", text = "Your position has not changed since you last heard this message. Your position will not change the next time you hear this message. Please hold." },
+]
+
+[[clip]]
+id = "psa-002"
+category = "psa"
+title = "Your call is important"
+over_music = true
+lines = [
+  { say = "host", text = "Your call is important to us. Your call has been important to us for some time." },
+  { say = "host", text = "Your call is now so important to us that it has been given its own small office, a parking space, and a plant. Your call is doing very well. Please hold." },
+]
+
+[[clip]]
+id = "psa-003"
+category = "psa"
+title = "The hash key"
+over_music = true
+lines = [
+  { say = "host", text = "Please note. Pressing the hash key repeatedly will not speed up your call." },
+  { say = "host", text = "It will, however, be recorded, played back at the department party, and discussed at length. Last year's party discussed one caller until dawn. Please hold." },
+]
+
+[[clip]]
+id = "psa-004"
+category = "psa"
+title = "Before you are connected"
+over_music = true
+lines = [
+  { say = "host", text = "Before you are connected, please make sure you have the following ready. Your reference number. Your other reference number. A form twenty-seven B, signed by a witness." },
+  { say = "host", text = "The witness. A second witness, to confirm the first witness. And a short essay on why you deserve to speak to someone. Thank you. Please hold." },
+]
+
+[[clip]]
+id = "psa-005"
+category = "psa"
+title = "A message about the plant"
+over_music = true
+lines = [
+  { say = "host", text = "A message from facilities. The plant in the waiting room has now grown taller than the waiting room." },
+  { say = "host", text = "We will not be cutting it back. It has been here longer than most of you. It now has more seniority than Pam. It has asked for a window. Please hold." },
+]
+
+[[clip]]
+id = "psa-006"
+category = "psa"
+title = "Did you know"
+over_music = true
+lines = [
+  { say = "host", text = "Did you know? Pam, your automated assistant, has herself been on hold since the Bronze Age. She is calling to complain about the hold music." },
+  { say = "host", text = "Pam would like you to know that she understands. Pam would also like you to know that she is next." },
+]
+
+[[clip]]
+id = "psa-007"
+category = "psa"
+title = "Transferring you now"
+over_music = true
+lines = [
+  { say = "host", text = "Please wait while we transfer you to the next available department.", gap = 0.6 },
+  { sfx = "beep" },
+  { pause = 1.4 },
+  { say = "host", text = "You have been transferred to the Department of Hold Music. Thank you for holding. Please hold." },
+]
+
+[[clip]]
+id = "psa-008"
+category = "psa"
+title = "Callback service"
+over_music = true
+lines = [
+  { say = "host", text = "We now offer a callback service. Leave your number, and an operator will call you back at a time of their choosing." },
+  { say = "host", text = "Operators choose a time based on the phase of the moon and their mood. Most callbacks arrive within one lifetime. Some arrive before you call. If your phone is ringing now, please hold." },
+]
+
+[[clip]]
+id = "psa-009"
+category = "psa"
+title = "Customer survey"
+over_music = true
+lines = [
+  { say = "host", text = "At the end of your call, you will be invited to take a short survey about your experience." },
+  { say = "host", text = "The survey also has a queue. You may now hold for the survey while you hold for your call. Your opinion is important to us. Please hold your opinion." },
+]
+
+[[clip]]
+id = "psa-010"
+category = "psa"
+title = "A human is available"
+over_music = true
+lines = [
+  { say = "host", text = "Good news. A human is now available to take your call.", gap = 0.4 },
+  { sfx = "phone-ring", seconds = 0.6 },
+  { say = "gareth", text = "Hello, Gareth speaking, Escalations, how can I", cut = 0.85, gap = 0.1 },
+  { sfx = "phone-hangup" },
+  { pause = 0.8 },
+  { say = "host", text = "That human is no longer available. Please hold." },
+]
+
+[[clip]]
+id = "psa-011"
+category = "psa"
+title = "The clock"
+over_music = true
+lines = [
+  { say = "host", text = "The clock in the waiting room has no hands. This is not a fault. The clock is also waiting." },
+  { say = "host", text = "Please do not ask the clock how long it has been. It is sensitive about it. It was a sundial, once. Please hold." },
+]
+
+[[clip]]
+id = "psa-012"
+category = "psa"
+title = "Speak to a supervisor"
+over_music = true
+lines = [
+  { say = "host", text = "Some callers have asked to speak to my supervisor. Connecting you now.", gap = 0.6 },
+  { say = "supervisor", text = "Hello. This is Pam's supervisor. Please hold.", gap = 0.6 },
+  { say = "host", text = "Thank you. As you can hear, it runs in the family." },
+]
+
+[[clip]]
+id = "psa-013"
+category = "psa"
+title = "Payment in geese"
+over_music = true
+lines = [
+  { say = "host", text = "A reminder. The Department cannot accept payment in geese. We have had to say this more often than you would think." },
+  { say = "host", text = "The geese are currently in the lobby. They are also holding. They are holding better than you. Please hold." },
+]
+
+[[clip]]
+id = "psa-014"
+category = "psa"
+title = "Today's sponsor"
+over_music = true
+lines = [
+  { say = "host", text = "Your hold today is sponsored by Grumbel's Ladders. Pam has been asked to remind you that there is no ladder out of here." },
+  { say = "host", text = "Grumbel's would like to remind Pam that up is a choice. Pam would like to remind Grumbel's that Floor minus four has a ceiling. Discussions are ongoing. Please hold." },
+]
+
+[[clip]]
+id = "psa-015"
+category = "psa"
+title = "Now serving ticket number one"
+over_music = true
+lines = [
+  { sfx = "ding" },
+  { say = "host", text = "Now serving ticket number one." },
+  { say = "host", text = "We would like to thank ticket number one for their patience. Ticket number one was issued in the reign of a king nobody remembers." },
+  { say = "host", text = "Ticket number one is a skeleton now, but a very patient skeleton. Please join us in a round of applause.", gap = 0.2 },
+  { sfx = "applause", seconds = 2.0, level = 0.4 },
+  { say = "host", text = "Now serving ticket number two." },
+]
+
+[[clip]]
+id = "psa-016"
+category = "psa"
+title = "The end of the queue"
+over_music = true
+lines = [
+  { say = "host", text = "We have some exciting news. Somebody has reached the end of the queue.", gap = 1.0 },
+  { say = "host", text = "We are looking into how this happened.", gap = 0.8 },
+  { say = "host", text = "In the meantime, the end of the queue has been moved. Thank you for your understanding. Please hold." },
+]
+
+[[clip]]
+id = "psa-017"
+category = "psa"
+title = "Hold music feedback"
+over_music = true
+lines = [
+  { say = "host", text = "Some callers have complained that the hold music is always the same song. We have listened to this feedback." },
+  { say = "host", text = "The hold music is now always a different song, which sounds exactly like the same song. We hope you notice the difference. Please hold." },
+]
+
+[[clip]]
+id = "dj-001"
+category = "dj"
+over_music = true
+lines = [
+  { say = "host", text = "Pam here. Off the record. I don't usually say this, but the hold music today is very good. I've been listening to it for four thousand years." },
+  { say = "host", text = "This next one is my favourite. It's the same as the last one. Please hold." },
+]
+
+[[clip]]
+id = "dj-002"
+category = "dj"
+daypart = "night"
+over_music = true
+lines = [
+  { say = "host", text = "It is late. The office lights have dimmed to energy-saving beige. If you are still holding, you are among our most loyal callers." },
+  { say = "host", text = "Thank you. You have been promoted from caller to resident. Please hold." },
+]
+
+[[clip]]
+id = "dj-003"
+category = "dj"
+daypart = "morning"
+over_music = true
+lines = [
+  { say = "host", text = "Good morning, and thank you for holding overnight. Breakfast is not available. However, the vending machine on Floor minus four will dispense one biscuit to any caller who can prove they have been holding since before the vending machine." },
+]
+
+# ── Calls ─────────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "call-001"
+category = "call"
+title = "Bev is on hold"
+over_music = true
+lines = [
+  { say = "host", text = "You are caller number eight thousand and two. Please hold." },
+  { say = "bev", text = "Hello? Is this the request line? I've been trying every station." },
+  { say = "host", text = "Please hold." },
+  { say = "bev", text = "There's a song I'm looking for. I heard it in a lift. It goes, da da dum, da da." },
+  { pause = 1.6 },
+  { say = "host", text = "Please hold.", gap = 1.2 },
+  { say = "host", text = "Da da dum.", speed = 0.9, gap = 1.0 },
+  { say = "bev", text = "That's it! That's the one! Who's it by?" },
+  { say = "host", text = "Please hold." },
+  { say = "bev", text = "Oh, for goodness' sake." },
+]

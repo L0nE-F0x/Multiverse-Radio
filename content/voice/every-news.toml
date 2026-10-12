@@ -1,0 +1,641 @@
+# Every Possible News — 89.3, the newsroom at the intersection of all timelines.
+#
+# Dale Quarterly anchors: unflappable to the point of concern. Kim Harrowgate is in the
+# field, always standing in it, and people keep handing her things. Skip Daley does weather
+# and traffic across all timelines and is far too cheerful about it.
+#
+# Running gags (shared with other stations): "It is always eleven." The polite deer on
+# Interstate Zero. Greg, the shadow who left Hollis Fenn. Bev, looking for the request
+# line. Teodor at Relay Four. The Numbers Station is owed geese. Sponsor: Grumbel's
+# Ladders ("Up is a choice").
+station = "every-news"
+
+[voices]
+dale = { voice = "bm_george", name = "Dale Quarterly" }
+kim = { voice = "af_sarah", fx = "phone", name = "Kim Harrowgate" }
+skip = { voice = "am_puck", speed = 1.08, name = "Skip Daley" }
+# Guests and people on the street. Most come down Kim's line, so they get the phone too.
+street_m = { voice = "am_eric", fx = "phone", name = "Passer-by" }
+street_kid = { voice = "af_kore", fx = "kid", name = "Young Man" }
+bev = { voice = "af_nova", fx = "phone", name = "Bev" }
+old_man = { voice = "am_santa", fx = "phone", name = "Man in the Queue" }
+moon = { voice = "bm_daniel", fx = "phone", name = "Spokesperson for the Moon" }
+expert = { voice = "bf_alice", fx = "phone", name = "Debt Counselor" }
+doctor = { voice = "bf_emma", fx = "phone", name = "A Doctor" }
+employee = { voice = "am_onyx", name = "Employee of the Month" }
+ghost = { voice = "af_nicole", fx = "whisper", name = "A Ghost" }
+grumbel = { voice = "am_eric", name = "Arnold Grumbel" }
+librarian = { voice = "bf_lily", fx = "phone", name = "A Librarian" }
+candidate = { voice = "am_michael", name = "The Candidate" }
+teodor = { voice = "bm_daniel", fx = "distant", name = "Teodor, Relay Four" }
+
+# ── Idents ────────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "id-001"
+category = "id"
+lines = [
+  { say = "dale", text = "This is Every Possible News. Deadpan news, from every possible tonight." },
+  { sting = "news" },
+]
+
+[[clip]]
+id = "id-002"
+category = "id"
+lines = [
+  { say = "dale", text = "Every Possible News. If it happened anywhere, it happened here. Probably to you." },
+]
+
+[[clip]]
+id = "id-003"
+category = "id"
+lines = [
+  { say = "skip", text = "You're listening to Every Possible News! Weather, traffic and the news, in that order, or any other order!" },
+  { sting = "id" },
+]
+
+[[clip]]
+id = "id-004"
+category = "id"
+lines = [
+  { say = "kim", text = "This is Kim Harrowgate, standing in it, for Every Possible News." },
+  { sting = "news" },
+]
+
+[[clip]]
+id = "id-005"
+category = "id"
+title = "Sponsored by Grumbel's Ladders"
+lines = [
+  { say = "dale", text = "Every Possible News is brought to you by Grumbel's Ladders." },
+  { say = "dale", text = "Up is a choice." },
+]
+
+[[clip]]
+id = "id-006"
+category = "id"
+lines = [
+  { say = "dale", text = "Every Possible News. Unflappable, since the very first flap." },
+  { sting = "id" },
+]
+
+[[clip]]
+id = "id-007"
+category = "id"
+lines = [
+  { say = "dale", text = "You're listening to Every Possible News. All of it is true somewhere. Some of it is true here." },
+]
+
+[[clip]]
+id = "id-008"
+category = "id"
+lines = [
+  { say = "dale", text = "Every Possible News. It is eleven o'clock.", gap = 0.6 },
+  { say = "dale", text = "It is always eleven o'clock." },
+  { sting = "news" },
+]
+
+# ── News ──────────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "news-001"
+category = "news"
+title = "The Thing in Your Attic"
+lines = [
+  { sting = "news" },
+  { say = "dale", text = "Good evening, or whatever it is where you are. This is Every Possible News. I'm Dale Quarterly, and this is the news, from wherever you are.", gap = 0.7 },
+  { say = "dale", text = "Our top story. Scientists in Dimension Four B have confirmed that the thing in your attic is, in fact, you, from next Tuesday." },
+  { say = "dale", text = "Officials say there is no cause for alarm, and ask that you stop going up there, because you are making yourself uncomfortable.", gap = 0.7 },
+  { say = "dale", text = "In economic news, the price of gravity rose sharply this afternoon, before falling, as is its nature.", gap = 0.7 },
+  { say = "dale", text = "Residents across the eastern Overlap report that the moon has been looking at them. A spokesperson for the moon declined to comment, but continued looking.", gap = 0.7 },
+  { say = "dale", text = "And finally. A man has been named employee of the month for the four hundredth consecutive month. He does not work here. We are looking into it.", gap = 0.8 },
+  { say = "dale", text = "That's the news. More at eleven. It is always eleven." },
+]
+
+[[clip]]
+id = "news-002"
+category = "news"
+title = "Live from the Collapse"
+lines = [
+  { sting = "news" },
+  { say = "dale", text = "Our top story tonight: the collapse. For more, we go live to Kim Harrowgate, who is standing in it. Kim?", gap = 0.5 },
+  { say = "kim", text = "Thanks, Dale. I'm here at the scene, which is also, technically, every scene." },
+  { say = "kim", text = "Authorities tell me the collapse began at approximately four in the afternoon, and has since begun at several other times as well. Residents are being told to remain calm, or, failing that, to remain." },
+  { say = "dale", text = "Kim, is anyone hurt?", gap = 0.4 },
+  { say = "kim", text = "Dale, nobody here has the concept of hurt. It's actually very nice. A man just handed me a soup. I don't know why. I'm going to eat it." },
+  { say = "dale", text = "Kim, please don't eat the soup.", gap = 0.3 },
+  { say = "kim", text = "Back to you, Dale.", cut = 0.8 },
+  { sfx = "zap", seconds = 0.5 },
+  { pause = 0.6 },
+  { say = "dale", text = "We appear to have lost Kim. Our thoughts are with the soup." },
+]
+
+[[clip]]
+id = "news-003"
+category = "news"
+title = "Shadow Seen in Founders Park"
+lines = [
+  { sting = "news" },
+  { say = "dale", text = "A shadow has been seen in Founders Park without a person attached. Kim Harrowgate is there now. Kim?" },
+  { say = "kim", text = "Dale, I'm standing next to the bench where the shadow was last seen. It sat here most of the afternoon, feeding pigeons that weren't there." },
+  { say = "kim", text = "Witnesses say it seemed calm, and a little taller than when it left home." },
+  { say = "dale", text = "Do we know whose shadow it is?" },
+  { say = "kim", text = "We do, Dale. It answers to Greg. It belongs to a Mister Hollis Fenn of the eastern Overlap, who has been without a shadow since a Tuesday in the spring." },
+  { say = "kim", text = "Mister Fenn has asked me to say, on air, that he isn't angry. And that the porch light is on." },
+  { say = "dale", text = "Has anyone tried to approach it?" },
+  { say = "kim", text = "A park keeper tried, Dale. Greg simply stepped into the shade of an oak tree and was, for all practical purposes, the oak tree." },
+  { say = "kim", text = "Oh. Someone has just handed me a flashlight. I don't think I should use it. Back to you." },
+  { say = "dale", text = "Thank you, Kim. We've been asked to repeat that. The porch light is on." },
+]
+
+[[clip]]
+id = "news-004"
+category = "news"
+title = "The Numbers Station Is Owed Geese"
+lines = [
+  { sting = "news" },
+  { say = "dale", text = "The Numbers Station at one hundred and six point six has announced, once again, that it is owed geese." },
+  { say = "dale", text = "It has not said by whom. It has not said how many. It has said seven, seven, four, which experts believe is either the amount, the deadline, or simply something it likes to say." },
+  { say = "dale", text = "Goose farmers report record demand. Geese themselves report feeling watched." },
+  { say = "dale", text = "We reached a debt counselor in the eastern Overlap." },
+  { say = "expert", text = "My advice is, if you think you might owe the Numbers Station geese, you probably do. Don't send ducks. It knows the difference. It always knows the difference." },
+  { say = "dale", text = "Listeners who believe they may owe geese are asked to have them ready, and to keep them calm." },
+]
+
+[[clip]]
+id = "news-005"
+category = "news"
+title = "The Markets"
+lines = [
+  { sting = "news" },
+  { say = "dale", text = "And now, the markets." },
+  { say = "dale", text = "Tuesday futures closed slightly up, on rumors that Tuesday might actually happen this week." },
+  { say = "dale", text = "The exchange rate between today and tomorrow is holding steady at one to one, though analysts warn that tomorrow is starting to look expensive." },
+  { say = "dale", text = "Gravity rose, then fell. Gravity always does that. We have asked it to stop." },
+  { say = "dale", text = "Shares in Grumbel's Ladders climbed. It's what they're for." },
+  { say = "dale", text = "And the central bank of the Overlap has cut interest in everything to zero. The bank says it is not worried. The bank says it is mostly just bored.", gap = 0.6 },
+  { say = "dale", text = "That's the markets. Hold on to something." },
+]
+
+[[clip]]
+id = "news-006"
+category = "news"
+title = "A Word from the Moon"
+lines = [
+  { sting = "news" },
+  { say = "dale", text = "Residents across all timelines continue to report that the moon is looking at them. Tonight, for the first time, the moon has sent a spokesperson. He joins us by phone." },
+  { say = "moon", text = "Thank you, Dale. I'd like to begin by saying that the moon is not looking at you." },
+  { say = "dale", text = "Then what is it doing?" },
+  { say = "moon", text = "The moon is looking near you. There's a difference." },
+  { say = "dale", text = "Many listeners say they can feel it." },
+  { say = "moon", text = "The moon has a lot of feelings, Dale. Some of them land on people. It isn't personal. It's tidal." },
+  { say = "dale", text = "Does the moon have a message for our listeners?" },
+  { say = "moon", text = "It does. The moon says, sleep well. The moon says, you look nice from up here. The moon says, close your curtains if you'd like, but it will know.", gap = 0.8 },
+  { say = "dale", text = "That was a spokesperson for the moon. The moon continues to look near you." },
+]
+
+[[clip]]
+id = "news-007"
+category = "news"
+title = "Election Night in the Overlap"
+lines = [
+  { sting = "news" },
+  { say = "dale", text = "Polls have closed in the Overlap, where voters chose between two candidates who are, by every available measure, the same man." },
+  { say = "dale", text = "He has won. He has also lost. Both of him gave speeches at the same time, from the same podium, and agreed on almost everything." },
+  { say = "candidate", name = "The Winner", text = "My friends. Tonight, we won." },
+  { say = "candidate", name = "The Loser", text = "My friends. Tonight, we lost." },
+  { say = "candidate", name = "The Winner", text = "I want to thank my opponent, who ran a clean and honest campaign." },
+  { say = "candidate", name = "The Loser", text = "I want to thank my opponent, who has my exact mother.", gap = 0.7 },
+  { say = "dale", text = "Turnout was one hundred percent, as both candidates voted for each other. The new term begins on Monday, or, for the losing candidate, doesn't." },
+]
+
+[[clip]]
+id = "news-008"
+category = "news"
+title = "The Queue Reaches the Sea"
+lines = [
+  { sting = "news" },
+  { say = "dale", text = "The queue at the Bureau of Infinite Queues has today reached the sea. Kim Harrowgate is at the back of it. Kim?" },
+  { say = "kim", text = "Dale, I'm at the very end of the queue, which as of this morning is standing in about four inches of water. The queue began, as far as anyone knows, before chairs." },
+  { say = "kim", text = "With me is a gentleman who has been waiting longer than most. Sir, what are you queueing for?" },
+  { say = "old_man", text = "I don't remember. But I'm close. I can feel it." },
+  { say = "kim", text = "How long have you been here?" },
+  { say = "old_man", text = "My grandfather held my place, and his mother held his. We take turns sitting down. It's very organized." },
+  { say = "kim", text = "And how's morale?" },
+  { say = "old_man", text = "Oh, wonderful. You meet people. My wife was standing in front of me for thirty years before I said hello." },
+  { say = "kim", text = "Dale, someone has just handed me a ticket. It says, number nine billion and four." },
+  { say = "dale", text = "Hold on to that, Kim. It's a good number." },
+]
+
+[[clip]]
+id = "news-009"
+category = "news"
+title = "Scientists Discover New Color"
+lines = [
+  { sting = "news" },
+  { say = "dale", text = "Science now. Researchers at the Institute for Looking Closely say they have discovered a brand new color, never before seen by any eye in any timeline." },
+  { say = "dale", text = "The color is beige.", gap = 0.8 },
+  { say = "dale", text = "It is a second beige." },
+  { say = "dale", text = "Researchers describe it as slightly warmer than beige, slightly sadder than beige, and impossible to tell apart from beige by anyone who has not trained for eleven years." },
+  { say = "dale", text = "It has been named Beige Two. Paint companies are said to be very excited. Nobody else is. Scientists have asked the public to remain calm, which the public says will not be a problem." },
+]
+
+[[clip]]
+id = "news-010"
+category = "news"
+title = "Relay Four, Night Four Thousand"
+lines = [
+  { sting = "news" },
+  { say = "dale", text = "For the four thousandth night in a row, the relay station at the far edge of the dial has broadcast a single question. Is anyone receiving this." },
+  { say = "dale", text = "The Multiverse Broadcast Authority confirms the station is operated by one man, Teodor, who is in good health, in good spirits, and has a kettle." },
+  { say = "dale", text = "The Authority reminds listeners that if you happen to hear him between stations, it is polite to say yes." },
+  { say = "dale", text = "We tried to reach Relay Four ourselves this evening." },
+  { sfx = "beep" },
+  { say = "teodor", text = "Is anyone receiving this. Hello. This is Relay Four, is anyone", cut = 0.85 },
+  { pause = 0.8 },
+  { say = "dale", text = "We'll keep trying. Teodor, if you're listening. Yes." },
+]
+
+[[clip]]
+id = "news-011"
+category = "news"
+title = "Missing Tuesday Found"
+lines = [
+  { sting = "news" },
+  { say = "dale", text = "A Tuesday has been found in a drainage ditch outside Precinct Nine of the Damp Dimension. It is mostly intact, with some damage to the afternoon." },
+  { say = "dale", text = "Police believe it is the same Tuesday reported missing last spring, after which most of the eastern Overlap went straight from Monday to Wednesday, and complained about it for months." },
+  { say = "dale", text = "The morning is in good condition. The lunch hour is waterlogged. The afternoon appears to have been chewed." },
+  { say = "dale", text = "If this is your Tuesday, please claim it at the Lost and Found desk. Please bring proof of the Monday before it." },
+]
+
+[[clip]]
+id = "news-012"
+category = "news"
+title = "Vox Pop: The End of the World"
+lines = [
+  { sting = "news" },
+  { say = "dale", text = "With the end of the world scheduled, once again, for later this week, we sent Kim Harrowgate out to ask people how they feel about it. Kim?" },
+  { say = "kim", text = "Thanks, Dale. I'm on the high street. Sir, how do you feel about the end of the world?" },
+  { say = "street_m", text = "Which one?" },
+  { say = "kim", text = "The one on Thursday." },
+  { say = "street_m", text = "Oh, that one. I'm against it. I've got a dentist appointment on Friday and I'd like to cancel it myself." },
+  { say = "kim", text = "Thank you. Ma'am? How do you feel about the end of the world?" },
+  { say = "bev", text = "Is this the request line?" },
+  { say = "kim", text = "No, ma'am, it's the news." },
+  { say = "bev", text = "Oh. Well, while I have you. It goes dum, dum, da dum. And then a man cries." },
+  { say = "kim", text = "I don't think I know that one." },
+  { say = "bev", text = "Nobody does, dear. That's the problem." },
+  { say = "kim", text = "And you, young man?" },
+  { say = "street_kid", text = "I think it'll be fine. It always ends on a Thursday, and then on Friday it's still there." },
+  { say = "kim", text = "There you have it, Dale. Cautious optimism, and a song." },
+]
+
+[[clip]]
+id = "news-013"
+category = "news"
+title = "The Universe Continues to End"
+lines = [
+  { sting = "news" },
+  { say = "dale", text = "An update on the end of the universe. The universe continues to end at its current rate, which experts describe as leisurely." },
+  { say = "dale", text = "The Lounge at the End of Time reports that last orders have now been called for the eleven billionth consecutive year. Patrons are said to be unconcerned, and a little sleepy." },
+  { say = "dale", text = "Scientists estimate the universe will end completely in roughly a very long time. Asked to be more specific, they said a very, very long time, and then asked if we'd like a drink." },
+  { say = "dale", text = "The universe itself was unavailable for comment. It is, however, looking lovely this evening. Warm colors. Very flattering." },
+]
+
+[[clip]]
+id = "news-014"
+category = "news"
+title = "Doctors Agree"
+lines = [
+  { sting = "news" },
+  { say = "dale", text = "Health news. For the first time in recorded history, doctors in four separate realities have agreed on something." },
+  { say = "dale", text = "They will not say what. At a joint press conference, they declined all questions, shook hands for a very long time, and seemed, to observers, enormously relieved." },
+  { say = "doctor", text = "We just think it's nice. That's all. We'd like to enjoy it for a little while before we say." },
+  { say = "dale", text = "In other health news, a new study confirms that people who drink eight glasses of water a day are mostly water. More on that as it develops." },
+]
+
+[[clip]]
+id = "news-015"
+category = "news"
+title = "Employee of the Month, Again"
+lines = [
+  { sting = "news" },
+  { say = "dale", text = "Earlier this month we reported that a man has been named employee of the month here at Every Possible News for the four hundredth consecutive month, despite not working here. He joins me now in the studio." },
+  { say = "employee", text = "Thank you, Dale. It's an honor." },
+  { say = "dale", text = "You don't work here." },
+  { say = "employee", text = "No." },
+  { say = "dale", text = "Then how do you keep winning?" },
+  { say = "employee", text = "I come in on the first of the month. I stand near the wall by the water cooler. I nod at people. People assume." },
+  { say = "dale", text = "That's all?" },
+  { say = "employee", text = "Sometimes I carry a folder." },
+  { say = "dale", text = "What's in the folder?" },
+  { say = "employee", text = "Another, smaller folder, Dale. You never let them see the folder." },
+  { say = "dale", text = "You have a parking space." },
+  { say = "employee", text = "I don't drive. I just like knowing it's there.", gap = 0.8 },
+  { say = "dale", text = "He will be back on the first." },
+]
+
+[[clip]]
+id = "news-016"
+category = "news"
+title = "Gravity Leak in Lower Stilt"
+lines = [
+  { sting = "news" },
+  { say = "dale", text = "In the hill town of Lower Stilt, gravity has been leaking upward since the early hours. Kim Harrowgate is there. Kim, what can you see?" },
+  { say = "kim", text = "Dale, I can see everything. I'm about forty feet up. Most of the town is up here with me. The clock on the clock tower is now a little higher than the clock tower, and the clock tower is being very good about it." },
+  { say = "kim", text = "Engineers believe the leak started at a bakery, where someone left the gravity on overnight." },
+  { say = "dale", text = "Kim, are you safe?" },
+  { say = "kim", text = "Dale, a man floating past has just handed me a brick. I'm holding the brick. I feel wonderful. I feel like a person who is holding a brick." },
+  { say = "dale", text = "Don't let go of the brick, Kim." },
+  { say = "kim", text = "I won't, Dale. It's all I have." },
+  { say = "dale", text = "Residents of Lower Stilt are advised to hold on to something heavy, or someone sensible." },
+]
+
+[[clip]]
+id = "news-017"
+category = "news"
+title = "Mirror Talks Collapse"
+lines = [
+  { sting = "news" },
+  { say = "dale", text = "Diplomatic talks between our world and the Mirror World broke down this afternoon, when both delegations reached for the same pen." },
+  { say = "dale", text = "Each side accuses the other of copying.", gap = 0.5 },
+  { say = "dale", text = "Each side accuses the other of copying.", gap = 0.7 },
+  { say = "dale", text = "Observers say the talks had been going well, with both parties agreeing on everything at exactly the same moment, until a junior delegate on the Mirror side was seen, very briefly, scratching his nose with the wrong hand." },
+  { say = "dale", text = "Talks resume on Thursday, which in the Mirror World is called Yadsruht, and is considered unlucky." },
+]
+
+[[clip]]
+id = "news-018"
+category = "news"
+title = "Obituary: Whom"
+lines = [
+  { sting = "news" },
+  { say = "dale", text = "We have sad news tonight. The word whom has died, peacefully, in its sleep, at the age of nine hundred and twelve.", gap = 0.7 },
+  { say = "dale", text = "Whom was a quiet word. It never pushed itself forward. Most people, if we're honest, were never quite sure when to use it, and so, eventually, they didn't." },
+  { say = "dale", text = "It is survived by who, which never really understood it, and by a small number of very careful letters to the editor." },
+  { say = "dale", text = "Whom will be missed. By whom, we're not sure.", gap = 0.6 },
+  { say = "dale", text = "The funeral is on Friday. Please don't bring flowers. Bring a semicolon, if you still have one. It's what whom would have wanted." },
+]
+
+[[clip]]
+id = "news-019"
+category = "news"
+title = "Live from Tomorrow"
+lines = [
+  { sting = "news" },
+  { say = "dale", text = "Tonight, for the first time, we go live to tomorrow, where Kim Harrowgate has been standing since this morning. Kim, what's it like?" },
+  { say = "kim", text = "Dale, it's a lot like today. Everyone looks a little more tired. The coffee is the same coffee." },
+  { say = "dale", text = "Is there any news?" },
+  { say = "kim", text = "Dale, you're going to want to sit down for this." },
+  { say = "dale", text = "I am sitting down, Kim." },
+  { say = "kim", text = "Then you'll be fine.", gap = 0.8 },
+  { say = "dale", text = "Kim. What is the news?" },
+  { say = "kim", text = "I can't tell you, Dale. It would spoil it. But wear a coat." },
+  { say = "kim", text = "Oh. Somebody's handed me a newspaper. It's tomorrow's. Oh. Oh, that's nice. Back to you, Dale." },
+  { say = "dale", text = "We'll find out what's nice tomorrow. At eleven." },
+]
+
+[[clip]]
+id = "news-020"
+category = "news"
+title = "News from Around the Dial"
+lines = [
+  { sting = "news" },
+  { say = "dale", text = "And now, news from around the dial." },
+  { say = "dale", text = "On Deep Space Whalesong, Captain Hum has issued a statement that the whales are fine. Nobody had asked. Captain Hum asks that nobody ask." },
+  { say = "dale", text = "At Snail Jams, traffic on the leaf has been stationary for four days. Shelley Shellbourne describes conditions as brisk." },
+  { say = "dale", text = "The Moon Dub Sound System reports that a shout out sent last Tuesday has still not come back. Selector Crater says he'll give it another eleven seconds." },
+  { say = "dale", text = "And the Department of Hold Music says your call is important to it. It has asked us to tell you that. We have now told you that." },
+]
+
+[[clip]]
+id = "news-021"
+category = "news"
+title = "Haunted Houses Now Worth More"
+lines = [
+  { sting = "news" },
+  { say = "dale", text = "Property news. Haunted houses are now selling for more than unhaunted ones, as buyers increasingly seek what estate agents are calling, company." },
+  { say = "dale", text = "We spoke to a ghost who has lived in the same house since before the street had a name." },
+  { say = "ghost", text = "We're very quiet. We mostly rearrange the spoons. People find it comforting, knowing somebody's home." },
+  { say = "dale", text = "Is there anything you'd like buyers to know?" },
+  { say = "ghost", text = "We don't do the chains anymore. That was a different generation. And please stop painting over the cold spot. We like the cold spot." },
+  { say = "dale", text = "Asking prices for a three bedroom with a cold spot now start at four hundred thousand. Spoons included." },
+]
+
+[[clip]]
+id = "news-022"
+category = "news"
+title = "The Ladder with No Top"
+lines = [
+  { sting = "news" },
+  { say = "dale", text = "Business news. The Grumbel family, makers of fine ladders for eleven generations, today unveiled a ladder with no top." },
+  { say = "dale", text = "Company chairman Arnold Grumbel says the new ladder, called the Ambition, has been in testing for three years, and that the test climber is still going, and sends postcards." },
+  { say = "grumbel", text = "We get a postcard every month. The last one just said, nice view, still going. That's all you want from a ladder, really." },
+  { say = "dale", text = "Asked what happens when a customer reaches the top, Mister Grumbel said, there isn't one, and smiled for a while." },
+  { say = "dale", text = "Grumbel's Ladders sponsor this program. We have been asked to say, up is a choice." },
+]
+
+[[clip]]
+id = "news-023"
+category = "news"
+title = "Sports in Brief"
+lines = [
+  { sting = "news" },
+  { say = "dale", text = "In sports. At Coliseum Zero tonight, the final score was a color. Fans of the losing side say it was more of a mood." },
+  { say = "dale", text = "The Sunball season continues, with the ball, a small and polite sun, said to be in good form and apologizing less." },
+  { say = "dale", text = "And the world hide and seek championship has entered its forty first year, with the defending champion still not found. Officials say they are not worried. Officials say she is very good." },
+  { say = "dale", text = "For full results, ask Chip Thunderbuckle on the Impossible Sports Network. And then ask somebody else." },
+]
+
+[[clip]]
+id = "news-024"
+category = "news"
+title = "Library Book Returned Early"
+lines = [
+  { sting = "news" },
+  { say = "dale", text = "A man in the eastern Overlap has been fined for returning a library book that has not yet been written." },
+  { say = "dale", text = "The library says the book is overdue, in the sense that the author is." },
+  { say = "dale", text = "The man, who asked not to be named, says he enjoyed the book, but found the ending rushed, and has left a note in the margin asking the author to take her time." },
+  { say = "librarian", text = "We don't mind early returns, as such. We mind that he's folded the corner of page two hundred, and she hasn't got there yet. It'll be a shock for her." },
+  { say = "dale", text = "The author has been informed, and says she will take it under advisement. Eventually." },
+]
+
+# ── Weather and traffic ───────────────────────────────────────────────────────
+
+[[clip]]
+id = "weather-001"
+category = "weather"
+title = "Weather and Traffic Across All Timelines"
+over_music = true
+lines = [
+  { say = "dale", text = "Time now for weather and traffic, across all timelines. Here's Skip Daley. Skip?" },
+  { say = "skip", text = "Thanks, Dale! Well, it's a beautiful night across most of the timelines. In the northern realities, clear skies and a light breeze. In the southern realities, the sky is looking back at you, so give it a wave!" },
+  { say = "skip", text = "Out west, expect scattered Tuesdays, mostly in the afternoon." },
+  { say = "skip", text = "And a heads up for commuters. There's a ten mile backup on Interstate Zero, where traffic is being held up by a single, very polite deer. Nobody wants to go first!" },
+  { say = "dale", text = "Skip. What about the weekend?" },
+  { say = "skip", text = "The weekend has been cancelled, Dale! But the weekday is being extended, so that's nice!", gap = 0.8 },
+  { say = "dale", text = "Thank you, Skip." },
+]
+
+[[clip]]
+id = "weather-002"
+category = "weather"
+title = "Morning Commute"
+daypart = "morning"
+over_music = true
+lines = [
+  { say = "skip", text = "Good morning, commuters! Traffic and travel across all timelines, brought to you by Grumbel's Ladders. When the road won't go, go up!" },
+  { say = "skip", text = "On Interstate Zero, the polite deer is still there, and it's now been joined by a second, equally polite deer. They've both been saying after you since about four this morning. Expect delays!" },
+  { say = "skip", text = "The hour between nine and ten is jammed solid, so if you can, skip it entirely and take ten fifteen instead. It's lovely. It's practically empty." },
+  { say = "skip", text = "And if you're traveling backward today, please allow extra time. You'll need it. You'll have already needed it!" },
+]
+
+[[clip]]
+id = "weather-003"
+category = "weather"
+title = "A Warm Front of Nostalgia"
+over_music = true
+lines = [
+  { say = "skip", text = "Weather time! A warm front of nostalgia is moving in from the west tonight, bringing light reminiscing, scattered photo albums, and in some areas, the smell of a house you lived in as a kid." },
+  { say = "skip", text = "That should clear by morning, leaving mild regret, with patches of feeling fine about it, actually." },
+  { say = "skip", text = "Further north, a cold snap of common sense. Bundle up! Make good choices!" },
+  { say = "skip", text = "Overnight lows of around minus one feeling. Highs tomorrow, a pleasant seven or eight out of ten." },
+  { say = "dale", text = "Thank you, Skip. I'll be wearing a coat." },
+  { say = "skip", text = "Good call, Dale!" },
+]
+
+[[clip]]
+id = "weather-004"
+category = "weather"
+title = "Outlook for the Damp Dimension"
+over_music = true
+lines = [
+  { say = "dale", text = "Skip, what's the outlook for the Damp Dimension?" },
+  { say = "skip", text = "Dale, it's going to rain! That's not a forecast. That's a culture!" },
+  { say = "skip", text = "Rain has been falling over Precinct Nine for about four thousand years, and our models show it continuing for at least the next four thousand. After that, the models get a bit sad and stop." },
+  { say = "skip", text = "Look out for rain coming up from the puddles late tonight. That's normal there. The locals call it giving back." },
+  { say = "skip", text = "And my friend Drizzle over at Rainfall FM tells me she's got a new umbrella. Her first one in eleven years. It's yellow!" },
+  { say = "dale", text = "Good for Drizzle." },
+]
+
+[[clip]]
+id = "weather-005"
+category = "weather"
+title = "The Pollen Count"
+daypart = "day"
+over_music = true
+lines = [
+  { say = "skip", text = "Allergy sufferers, I'm sorry to say the pollen count is high today. The pollen count is very high. The pollen count has taken the high ground and is refusing to negotiate!" },
+  { say = "skip", text = "Experts say the pollen isn't hostile. It's just very, very committed to the idea of more flowers." },
+  { say = "skip", text = "The ultraviolet index is a four. Ultraviolet is optional this week, so wear it if you like." },
+  { say = "dale", text = "Skip, did you say the pollen is negotiating?" },
+  { say = "skip", text = "No, Dale. It's refusing to. It's got a list of demands. It's mostly bees." },
+]
+
+[[clip]]
+id = "weather-006"
+category = "weather"
+title = "Tides and Space Weather"
+daypart = "night"
+over_music = true
+lines = [
+  { say = "skip", text = "Your late night tide report! High tide tonight at about eleven. It'll go out at four, and come back at six, with a friend." },
+  { say = "skip", text = "Space weather now. The sun is having a big week, folks. Some flares, some moods. Give it space. It'll come around. It always comes around, that's kind of its whole thing!" },
+  { say = "skip", text = "And on the comet beach, surf's up! Waves of pure time, three to four minutes high. If you wipe out, you'll be fine, you'll just be a little bit earlier." },
+  { say = "dale", text = "Thank you, Skip. Somebody tell the sun we're thinking of it." },
+]
+
+[[clip]]
+id = "weather-007"
+category = "weather"
+title = "Fog"
+over_music = true
+lines = [
+  { say = "dale", text = "Skip, what's the weather doing?" },
+  { say = "skip", text = "Dale, I honestly don't know. The forecast is fog, so I can't see it." },
+  { say = "dale", text = "Is there anything you can tell us?" },
+  { say = "skip", text = "I can tell you it's very nice in here! It's soft, it's quiet, and somebody's left a bicycle. I think it's my bicycle. I think I've been in here since Tuesday." },
+  { say = "skip", text = "The fog should lift by morning, at which point I'll be able to tell you what the weather was." },
+  { say = "dale", text = "Skip, are you broadcasting from inside the fog?" },
+  { say = "skip", text = "I'm broadcasting from the fog, Dale, or the fog is broadcasting from me. Honestly, it's hard to say. Back to you!" },
+]
+
+[[clip]]
+id = "weather-008"
+category = "weather"
+title = "The Deer Has Gone First"
+over_music = true
+lines = [
+  { say = "skip", text = "Traffic update! The deer on Interstate Zero has finally gone first!" },
+  { say = "skip", text = "Repeat, the deer has gone first! After nine days of saying after you, it simply looked both ways, nodded to the traffic, and stepped off the road." },
+  { say = "skip", text = "Unfortunately, everyone was so moved that nobody has moved. Traffic is now held up by about four thousand people being very proud of a deer." },
+  { say = "dale", text = "Skip, is the deer all right?" },
+  { say = "skip", text = "The deer is great, Dale! It's in a field! It's having the best day of its life!" },
+]
+
+[[clip]]
+id = "weather-009"
+category = "weather"
+title = "Evening Drive Time"
+daypart = "evening"
+over_music = true
+lines = [
+  { say = "skip", text = "Evening drive time! Traffic across all timelines is brought to you by Grumbel's Ladders. Up is a choice!" },
+  { say = "skip", text = "Westbound lanes on the Overlap Bypass are moving well, and so, unusually, is the road. It's drifted about forty feet to the left, so steer to match!" },
+  { say = "skip", text = "There's a slowdown on the bridge to yesterday. Everyone wants to go back. Nobody's allowed. Please turn around safely." },
+  { say = "skip", text = "And there's a stalled moment at the junction of Fourth and Forever. Crews are on the scene, trying to get it going again with a gentle cough." },
+  { say = "skip", text = "Otherwise, a smooth ride home, folks. Wave at the other versions of you in the next lane!" },
+]
+
+[[clip]]
+id = "weather-010"
+category = "weather"
+title = "The Long Range Forecast"
+over_music = true
+lines = [
+  { say = "dale", text = "Skip. The long range forecast." },
+  { say = "skip", text = "Sure thing, Dale! Next week, mild. The week after, mild, with some feelings. The month after that, honestly, Dale, a lot can happen." },
+  { say = "skip", text = "Next year looks lovely. There's a stretch in the spring where it's warm and nobody's in a hurry. Mark your calendars." },
+  { say = "skip", text = "And in about forty years there's a really nice Thursday. I won't tell you why. You'll know it when you're in it.", gap = 0.8 },
+  { say = "dale", text = "Thank you, Skip. I'll look forward to that Thursday." },
+]
+
+# ── Breaking news ─────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "interrupt-001"
+category = "interrupt"
+title = "Breaking: Something Has Happened"
+lines = [
+  { sting = "news" },
+  { say = "dale", text = "This just in. Something has happened. We'll tell you what, as soon as it stops." },
+]
+
+[[clip]]
+id = "interrupt-002"
+category = "interrupt"
+title = "Breaking: Tuesday Arrives Early"
+lines = [
+  { sting = "news" },
+  { say = "dale", text = "Breaking news. Tuesday has arrived early in the eastern Overlap. Please be ready. Please look busy." },
+]
+
+[[clip]]
+id = "interrupt-003"
+category = "interrupt"
+title = "A Correction"
+lines = [
+  { sting = "news" },
+  { say = "dale", text = "We interrupt this program to correct an earlier report. The moon is looking at you. We regret the error." },
+]
+
+[[clip]]
+id = "interrupt-004"
+category = "interrupt"
+title = "Breaking: Kim Has Been Handed Something"
+lines = [
+  { sting = "news" },
+  { say = "dale", text = "Breaking news. Kim has been handed something. Kim?" },
+  { say = "kim", text = "It's a goose, Dale." },
+  { say = "dale", text = "Do not give it to the Numbers Station." },
+]

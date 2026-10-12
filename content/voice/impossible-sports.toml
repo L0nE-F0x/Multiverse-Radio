@@ -1,0 +1,447 @@
+# Impossible Sports Network — 100.4, Coliseum Zero, upper atmosphere.
+#
+# Chip Thunderbuckle does play-by-play: has never understood the rules, has never let that
+# slow him down. Doug Steadman does color: a former professional at Cloudball, a sport
+# that no longer exists. Bitter, precise, oddly moving.
+#
+# The sports: Sunball (the ball is a small, polite sun), Gravity Polo, the Backwards
+# Marathon, Competitive Waiting, Mirror Tennis, Synchronized Existing, the Long Jump
+# (still airborne), Hide and Seek (year forty one), Tug of War Against Time, Extreme
+# Staring. Running gags: Greg the shadow plays a blinder, Bev rings the phone-in,
+# the Grumbel's Ladders Halftime Report.
+station = "impossible-sports"
+
+[voices]
+chip = { voice = "am_fenrir", speed = 1.15, name = "Chip Thunderbuckle" }
+doug = { voice = "bm_lewis", name = "Doug Steadman" }
+sun = { voice = "af_sky", fx = "tiny", name = "The Ball, a Small Sun" }
+greg = { voice = "am_onyx", fx = "whisper", name = "Greg, Number Zero" }
+bev = { voice = "af_nova", fx = "phone", name = "Bev" }
+grumbel = { voice = "am_eric", name = "Arnold Grumbel" }
+
+# ── Idents ────────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "id-001"
+category = "id"
+lines = [
+  { say = "chip", text = "This is the Impossible Sports Network! Live coverage of sports that should not be legal, or possible!" },
+  { sting = "sports" },
+]
+
+[[clip]]
+id = "id-002"
+category = "id"
+lines = [
+  { say = "chip", text = "Impossible Sports Network! If it can't be done, we've got the highlights!" },
+]
+
+[[clip]]
+id = "id-003"
+category = "id"
+lines = [
+  { say = "doug", text = "Impossible Sports Network. I used to play a sport. It's gone now. Anyway. Here's Chip." },
+]
+
+[[clip]]
+id = "id-004"
+category = "id"
+bed = "stadium"
+lines = [
+  { say = "chip", text = "You're tuned to the Impossible Sports Network, live from Coliseum Zero, in the upper atmosphere! Mind the edge!" },
+  { sting = "sports" },
+]
+
+[[clip]]
+id = "id-005"
+category = "id"
+lines = [
+  { say = "chip", text = "Impossible Sports Network! Nobody knows the rules! Everybody knows the score! The score is a color!" },
+]
+
+# ── Sports ────────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "sports-001"
+category = "sports"
+title = "Sunball: Kickoff at Coliseum Zero"
+bed = "stadium"
+lines = [
+  { sting = "sports" },
+  { say = "chip", text = "Good evening, sports fans, and welcome to Coliseum Zero for tonight's Sunball! I'm Chip Thunderbuckle, alongside the great Doug Steadman. Doug, what a night!" },
+  { say = "doug", text = "It's a night, Chip." },
+  { say = "chip", text = "And here comes the ball! The ball tonight is a small, polite sun, roughly the size of a melon, and it is glowing beautifully!" },
+  { say = "doug", text = "The sun's in good form this season. It's apologizing less." },
+  { say = "chip", text = "The referee places it on the center spot! The players are in their oven mitts! And there's the whistle!" },
+  { sfx = "beep" },
+  { say = "chip", text = "And it's kicked! Oh! Oh, the sun says sorry! The sun has apologized to the boot! What a gesture!" },
+  { say = "doug", text = "Old habit, that. They train it out of them in the junior leagues, but some suns just can't help it." },
+  { say = "chip", text = "The Glow Wardens have it now, up the left wing, he's running, he's sweating, everybody's sweating, Doug, it's a sun!" },
+  { say = "doug", text = "It's a hot sport, Chip. Always has been." },
+  { say = "chip", text = "He shoots! It's in! It's a goal! The net is on fire! The net is always on fire! The groundskeeper is already bringing out a new one!" },
+  { sfx = "applause", seconds = 2.5 },
+  { say = "doug", text = "Lovely finish. Low, warm, right in the corner." },
+]
+
+[[clip]]
+id = "sports-002"
+category = "sports"
+title = "Sunball: The Ball Sets"
+bed = "stadium"
+daypart = "evening"
+lines = [
+  { say = "chip", text = "We're into the second half here at Coliseum Zero, and Doug, something's happening to the ball!" },
+  { say = "doug", text = "It's going down, Chip." },
+  { say = "chip", text = "It's going down! The ball is sinking slowly toward the western goal line, and it's turning a gorgeous orange!" },
+  { say = "doug", text = "That's a sunset. It does it every evening. Nobody ever schedules around it." },
+  { say = "chip", text = "Can the players do anything?" },
+  { say = "doug", text = "No. You can't kick a sun while it's setting, Chip. It's in the rulebook. It's the only thing in the rulebook." },
+  { say = "chip", text = "Both teams are just standing there now! They're watching it! Some of them have taken their mitts off! A defender has put his arm round a striker!" },
+  { say = "doug", text = "Gets everyone, a good sunset." },
+  { say = "chip", text = "And it's gone. The ball has set. The stadium is dark. Ninety thousand fans, just sitting quietly in the dark.", speed = 1.0, gap = 1.6 },
+  { say = "chip", text = "Doug, this is the best match I've ever seen.", speed = 1.0 },
+  { say = "doug", text = "Play resumes at sunrise. Bring a coat." },
+]
+
+[[clip]]
+id = "sports-003"
+category = "sports"
+title = "Tonight's Results"
+lines = [
+  { sting = "sports" },
+  { say = "chip", text = "Time for tonight's results from around the multiverse! Doug, I'll read them, you explain them!" },
+  { say = "doug", text = "I won't." },
+  { say = "chip", text = "Sunball! Glow Wardens three, Eclipse United, a warm feeling!" },
+  { say = "chip", text = "Gravity Polo! The Upward Falcons twelve, the Downward Wolves, yes!" },
+  { say = "chip", text = "Competitive Waiting! Still waiting! Result expected next spring!" },
+  { say = "chip", text = "The Backwards Marathon! The winner finished yesterday, and started this morning!" },
+  { say = "chip", text = "And in Mirror Tennis, it's a draw. It's always a draw. It's been a draw for three hundred years!" },
+  { say = "chip", text = "Doug, care to explain any of that?" },
+  { say = "doug", text = "The Wolves got yes because they asked nicely." },
+  { say = "chip", text = "And the final score here at Coliseum Zero tonight was a color! Doug, what color?" },
+  { say = "doug", text = "A sort of teal. Fans of the losing side say it was more of a mood." },
+]
+
+[[clip]]
+id = "sports-004"
+category = "sports"
+title = "The Backwards Marathon"
+bed = "crowd"
+lines = [
+  { sting = "sports" },
+  { say = "chip", text = "We're live at the finish line for the annual Backwards Marathon, where the runners start at the finish and run the course in reverse, until they've un-run it!" },
+  { say = "doug", text = "Beautiful event, Chip. Very hard on the knees. Backwards." },
+  { say = "chip", text = "The runners are lining up at the finish now, wearing their medals, which they'll be handing back at the start! Doug, what makes a great backwards marathoner?" },
+  { say = "doug", text = "Regret, mostly. You've got to want to go back. And you can't see where you're going. You can only see where you've been." },
+  { say = "chip", text = "That's beautiful, Doug." },
+  { say = "doug", text = "It's a hamstring injury, Chip, is what it is." },
+  { say = "chip", text = "The favorite today is Pelham Ostrander, last year's winner, who finished so far behind everyone that he was back at the start before they began!" },
+  { say = "doug", text = "Great sense of where he came from, Pelham." },
+  { say = "chip", text = "The starter raises the pistol, which fires inward! And they're un-off!" },
+  { sfx = "whoosh" },
+  { say = "chip", text = "Look at them go! Look at them come back! I honestly don't know which it is!" },
+]
+
+[[clip]]
+id = "sports-005"
+category = "sports"
+title = "The Grand Slow Prix, Live from the Leaf"
+bed = "crowd"
+lines = [
+  { sting = "sports" },
+  { say = "chip", text = "We're live on the leaf at Snail Jams for the Grand Slow Prix, and Doug, the tension is unbelievable!" },
+  { say = "doug", text = "They've been on the start line since Tuesday, Chip." },
+  { say = "chip", text = "In lane one, Thistle! In lane two, Old Margaret! And in lane three, the young sensation, Barry, who is wearing tiny headphones and has a very determined look on his face!" },
+  { say = "doug", text = "Nice shell on Barry." },
+  { say = "chip", text = "And they're off!", gap = 2.0 },
+  { say = "chip", text = "Thistle is, Thistle is thinking about it! Old Margaret has extended one eye! The crowd can barely breathe!" },
+  { say = "doug", text = "Tactical race, this. Nobody wants to commit too early.", gap = 1.6 },
+  { say = "chip", text = "Barry has moved! Barry has moved approximately one millimeter, and the crowd is losing its mind!" },
+  { sfx = "applause", seconds = 2.5 },
+  { say = "doug", text = "He's left a lot of trail out there. Too much trail. He'll pay for that in the fourth week." },
+  { say = "chip", text = "We'll be back with more from the leaf next month! Don't go anywhere! Nobody here is!" },
+]
+
+[[clip]]
+id = "sports-006"
+category = "sports"
+title = "Competitive Waiting: The Bureau Open, Day Nine Thousand"
+bed = "fluorescent"
+lines = [
+  { sting = "sports" },
+  { say = "chip", text = "We're live at the Bureau of Infinite Queues for day nine thousand of the Bureau Open, the most grueling event in Competitive Waiting!" },
+  { say = "doug", text = "It's a mental game, Chip. Always has been." },
+  { say = "chip", text = "Two competitors remain! In the blue chair, Agatha Venn, who has been waiting since she was eleven! In the orange chair, the challenger, a man named Clive, who came in to ask for directions!" },
+  { say = "doug", text = "Clive's got no business being here, Chip. And yet." },
+  { say = "chip", text = "And the take a number display has changed! It now reads four billion and six!", gap = 1.0 },
+  { say = "chip", text = "Neither competitor has reacted! Neither competitor has reacted! What composure!" },
+  { say = "doug", text = "Look at Agatha's hands. Folded. Still. She's not even holding a magazine. That's thirty years of discipline, that is." },
+  { say = "chip", text = "Clive has picked up a magazine! It's from eleven years ago! He's reading about a holiday he will never take!" },
+  { say = "doug", text = "Rookie error. Once you're reading, you're waiting for the magazine to end. Different event entirely." },
+  { say = "chip", text = "We'll be back with more waiting in about four years!" },
+]
+
+[[clip]]
+id = "sports-007"
+category = "sports"
+title = "Post-Match Interview: The Ball"
+bed = "crowd"
+lines = [
+  { say = "chip", text = "I'm down on the pitch with tonight's ball, the small, polite sun. Sun, congratulations on a terrific match!" },
+  { say = "sun", text = "Thank you, Chip. I'd just like to thank both teams for kicking me so gently." },
+  { say = "chip", text = "How did it feel out there?" },
+  { say = "sun", text = "Warm." },
+  { say = "chip", text = "There was that moment in the second half, when you went into the net, and the net caught fire! Talk us through that!" },
+  { say = "sun", text = "I felt terrible. I always feel terrible about the net. I've sent it a card." },
+  { say = "chip", text = "Any message for the fans?" },
+  { say = "sun", text = "Please wear sun cream, and drink some water. And if anybody's thinking about me, at sunset, I'm fine. I'm just going round." },
+  { say = "chip", text = "The sun, everybody! What a professional!" },
+  { sfx = "applause", seconds = 2.5 },
+]
+
+[[clip]]
+id = "sports-008"
+category = "sports"
+title = "Post-Match Interview: Number Zero"
+bed = "stadium"
+lines = [
+  { sting = "sports" },
+  { say = "chip", text = "Doug, what a debut! The late substitute, a shadow wearing number zero, no person attached, came on in the eightieth minute and changed the game!" },
+  { say = "doug", text = "He played in the gaps, Chip. Went everywhere the light wasn't. I've never seen positioning like it." },
+  { say = "chip", text = "I'm joined now by the player himself. Great game! What's your name?" },
+  { say = "greg", text = "Greg." },
+  { say = "chip", text = "Greg! Where did you learn to play like that?" },
+  { say = "greg", text = "Under people. You learn a lot, under people." },
+  { say = "chip", text = "That winning goal! You were behind the goalkeeper the whole time! He never saw you!" },
+  { say = "greg", text = "Nobody ever looks behind them. I was behind someone for forty one years." },
+  { say = "chip", text = "Any message for the fans?", gap = 1.0 },
+  { say = "greg", text = "Tell Hollis I'm okay. Tell him I scored." },
+  { say = "chip", text = "Who's Hollis?" },
+  { say = "greg", text = "He'd know." },
+  { say = "doug", text = "Chip, I think that's the shadow off the news." },
+  { say = "chip", text = "Greg, everybody! A real shadow of a player! In a good way!" },
+]
+
+[[clip]]
+id = "sports-009"
+category = "sports"
+title = "World Hide and Seek, Year Forty One"
+bed = "crowd"
+lines = [
+  { sting = "sports" },
+  { say = "chip", text = "We're back at the World Hide and Seek Championship, which has now entered its forty first year! Doug, bring us up to speed!" },
+  { say = "doug", text = "The defending champion, Imelda Crane, has not been found. She went to hide in the first year. The seeker counted to a hundred. That was forty one years ago." },
+  { say = "chip", text = "And the seeker is still looking!" },
+  { say = "doug", text = "He's checked everywhere, Chip. Every cupboard. Every curtain. Under every bed in the Overlap. Very thorough man." },
+  { say = "chip", text = "Has anyone considered that she might have simply gone home?" },
+  { say = "doug", text = "Chip, that is the single most disrespectful thing anyone has ever said on this network.", gap = 0.8 },
+  { say = "chip", text = "I apologize to Imelda, wherever she is!" },
+  { say = "doug", text = "She's very good, Chip. That's all you need to know. She's the best there's ever been." },
+  { say = "chip", text = "And there's movement! The seeker has just shouted, coming, ready or not! He shouts it every hour! The crowd goes wild every time!" },
+  { sfx = "applause", seconds = 2.0 },
+]
+
+[[clip]]
+id = "sports-010"
+category = "sports"
+title = "The Long Jump, Four Hundred Years In"
+bed = "stadium"
+lines = [
+  { sting = "sports" },
+  { say = "chip", text = "Folks, breaking news in the long jump! Ottoline Brisk, who took off in the qualifying round four hundred years ago, is about to pass directly over Coliseum Zero!" },
+  { say = "doug", text = "Still airborne. Beautiful form. She's barely lost any height." },
+  { say = "chip", text = "Everybody look up! There she is! She's waving! Ottoline Brisk is waving to the crowd!" },
+  { sfx = "applause", seconds = 2.0 },
+  { say = "doug", text = "She's got a sandwich, Chip. Somebody's thrown her a sandwich. That's within the rules." },
+  { say = "chip", text = "Doug, when will she land?" },
+  { say = "doug", text = "Nobody knows. That's the beauty of the long jump. You go as far as you go." },
+  { say = "chip", text = "And if she does land, what will her distance be?" },
+  { say = "doug", text = "Most of the way round, Chip. The judges have had to measure it with the sea." },
+  { say = "chip", text = "There she goes, over the far stand, and out toward the horizon! Ottoline Brisk, everybody! See you next century!" },
+]
+
+[[clip]]
+id = "sports-011"
+category = "sports"
+title = "Mirror Tennis: The Reflection Takes a Point"
+bed = "crowd"
+lines = [
+  { sting = "sports" },
+  { say = "chip", text = "Folks, something historic is happening at the Mirror Tennis Open! For three hundred years, every match in this sport has been a draw, because you play against your own reflection!" },
+  { say = "doug", text = "Same shots. Same speed. Same score. Purest sport there is, Chip." },
+  { say = "chip", text = "But tonight Vivian Hale is serving for the match, and Doug, her reflection is not serving!" },
+  { say = "doug", text = "Her reflection is tying its shoelace." },
+  { say = "chip", text = "Vivian serves! The reflection isn't even looking! It's in! It's an ace! Vivian Hale has beaten her own reflection!" },
+  { say = "doug", text = "No, Chip. Look at the scoreboard." },
+  { say = "chip", text = "The scoreboard says, the reflection, one! The reflection has won the point! The reflection was tying its shoelace, and won the point!" },
+  { say = "doug", text = "Because it didn't care, Chip. First time in three hundred years someone on that court didn't care. Vivian cared too much. She always has." },
+  { say = "chip", text = "That's very deep, Doug." },
+  { say = "doug", text = "I've been there. Not in tennis. But I've been there." },
+  { say = "chip", text = "The reflection is leaving the court! It's going for a sandwich! Vivian is still standing there! Vivian is reflecting!" },
+]
+
+[[clip]]
+id = "sports-012"
+category = "sports"
+title = "Doug's Corner: The Last Game of Cloudball"
+bed = "wind"
+lines = [
+  { say = "doug", text = "This is Doug's Corner. Chip's getting a sandwich.", gap = 0.8 },
+  { say = "doug", text = "People ask me what Cloudball was. It's hard to explain, now. You'd need a sky like the ones we used to have." },
+  { say = "doug", text = "The goals were clouds. They drifted. You'd get the ball, look up, and the goal would be over the next valley, so you'd run. Whole games happened miles from where they started." },
+  { say = "doug", text = "I played centre half for the Lowland Mists for eleven seasons. Never won a thing. Didn't matter. You were up in the hills with your mates, chasing weather.", gap = 0.8 },
+  { say = "doug", text = "The last game was in the summer of the long drought. We kicked off under one cloud. By half time it was getting thin. By the eightieth minute, you could see through it." },
+  { say = "doug", text = "And then it was gone. The sky went clear, and stayed clear. Nowhere to score.", gap = 1.6 },
+  { say = "doug", text = "We stood there for a bit. Nobody blew the whistle. Somebody's dad brought out oranges.", gap = 1.0 },
+  { say = "doug", text = "Anyway. It's a sun for a ball now. Fine. Good sport. Very bright." },
+  { say = "doug", text = "But if you ever see a big, slow cloud going over a field, and you feel like running after it, for no reason. That's Cloudball. You're playing. Go on.", gap = 0.8 },
+  { say = "doug", text = "Back to Chip." },
+]
+
+[[clip]]
+id = "sports-013"
+category = "sports"
+title = "Synchronized Existing: The Final"
+bed = "crowd"
+lines = [
+  { sting = "sports" },
+  { say = "chip", text = "It's the final of Synchronized Existing, folks, and the pair from the Overlap are on the mat!" },
+  { say = "doug", text = "Lovely pair. Twins. Well. The same person, twice. Which helps." },
+  { say = "chip", text = "And they're existing! Look at them exist! Total commitment! They are both, very clearly, here!" },
+  { say = "doug", text = "Bit of a wobble in the second minute there, Chip. One of them thought about lunch." },
+  { say = "chip", text = "Is that a deduction?" },
+  { say = "doug", text = "Half a point. You can't be thinking about lunch while existing at this level. It's just the existing. Nothing else." },
+  { say = "chip", text = "The routine's over! The judges are scoring! Nine point five! Nine point five! And a seven, from the judge who also thought about lunch!" },
+  { say = "doug", text = "Hypocritical. But that's judging." },
+  { say = "chip", text = "What a performance! Doug, could you do that?" },
+  { say = "doug", text = "Chip, I've been existing for fifty eight years. Never once been scored. That's the difference between amateurs and professionals." },
+]
+
+[[clip]]
+id = "sports-014"
+category = "sports"
+title = "The Sports Phone-In: Bev"
+bed = "stadium"
+lines = [
+  { sting = "sports" },
+  { say = "chip", text = "It's the Sports Phone-In! Lines are open! Caller, you're on the Impossible Sports Network!" },
+  { say = "bev", text = "Hello? Is this the request line?" },
+  { say = "chip", text = "This is the Sports Phone-In! Do you have a sports question?" },
+  { say = "bev", text = "Well, I'm looking for a song. It goes dum, dum, da dum. And then a man cries." },
+  { say = "chip", text = "Bev, is that a chant? Doug, is that a terrace chant?" },
+  { say = "doug", text = "Sing it again, Bev." },
+  { say = "bev", text = "Dum. Dum. Da dum.", speed = 0.8, gap = 1.0 },
+  { say = "doug", text = "That's every final I ever played in, Bev. That's not a song. That's the sound of the last whistle." },
+  { say = "bev", text = "Oh. Well, can you play it?" },
+  { say = "chip", text = "Bev, I'll do you one better! Ninety thousand fans, are you ready? On three! Dum, dum, da dum!" },
+  { sfx = "applause", seconds = 3.0 },
+  { say = "bev", text = "Oh, that's lovely. That's not it. But that's lovely." },
+]
+
+[[clip]]
+id = "sports-015"
+category = "sports"
+title = "Gravity Polo: The Flip"
+bed = "stadium"
+lines = [
+  { sting = "sports" },
+  { say = "chip", text = "Gravity Polo, folks, third chukka, and the Upward Falcons are pressing!" },
+  { say = "doug", text = "Gravity flips every chukka in this sport, Chip. Any minute now." },
+  { say = "chip", text = "Falcons on the attack, the rider's lining up the shot, he swings, and", cut = 0.92 },
+  { sfx = "whoosh" },
+  { say = "chip", text = "And gravity's flipped! Gravity has flipped! The horses are on the ceiling! The players are on the ceiling! The crowd is on the ceiling, and the crowd is loving it!" },
+  { say = "doug", text = "Well, the crowd hasn't got a choice, Chip." },
+  { say = "chip", text = "The ball is falling upward toward the Wolves' goal, it's going in, it's going in, oh, it's stuck in the floodlights!" },
+  { say = "doug", text = "That happens. The lights are the floor now." },
+  { say = "chip", text = "Doug, as a former professional, what's the trick to Gravity Polo?" },
+  { say = "doug", text = "Same as any sport, Chip. Keep your hat on, and know which way is down. And if you don't know, ask the horse. The horse always knows." },
+]
+
+[[clip]]
+id = "sports-016"
+category = "sports"
+title = "The Grumbel's Ladders Halftime Report"
+bed = "stadium"
+lines = [
+  { sting = "fanfare" },
+  { say = "chip", text = "It's halftime! And that means it's time for the Grumbel's Ladders Halftime Report! Up is a choice!" },
+  { say = "chip", text = "Doug, the stats!" },
+  { say = "doug", text = "Possession, fifty fifty. Shots on target, four each. Shots at the sun, which is the ball, nine, and the sun has asked everyone to calm down." },
+  { say = "chip", text = "And this halftime, a very special guest, the chairman of Grumbel's Ladders himself, Arnold Grumbel! Arnold, what's the halftime entertainment?" },
+  { say = "grumbel", text = "Thanks, Chip. We've put a ladder in the center circle. The tallest one we make. Anyone in the crowd can climb it." },
+  { say = "chip", text = "And what's at the top?" },
+  { say = "grumbel", text = "A view, Chip. Just a nice view. It's a good ladder." },
+  { say = "chip", text = "I see people climbing! There's a lot of them! There's a whole family! They're sitting on the top rung, eating sandwiches!" },
+  { say = "grumbel", text = "That's all we want, really." },
+  { say = "chip", text = "Grumbel's Ladders, everybody! The second half is up next!" },
+]
+
+[[clip]]
+id = "sports-017"
+category = "sports"
+title = "Tug of War Against Time"
+bed = "stadium"
+lines = [
+  { sting = "sports" },
+  { say = "chip", text = "The Tug of War Against Time, folks! Team Present, eight strong lads and lasses, versus next Thursday!" },
+  { say = "doug", text = "Rope's tied to next Thursday, Chip. Team Present has to pull it closer. Next Thursday pulls the other way, as it always does." },
+  { say = "chip", text = "And they're heaving! Team Present is heaving! They've pulled next Thursday to Wednesday! They've got it to Wednesday!" },
+  { say = "doug", text = "Good technique. Low center of gravity. Don't look at the calendar." },
+  { say = "chip", text = "But oh! Next Thursday's pulling back! It's slipping away! It's next Thursday again! The crowd groans!" },
+  { say = "doug", text = "It always gets away, Thursday. You can't rush it." },
+  { say = "chip", text = "Doug, has anyone ever actually won this?" },
+  { say = "doug", text = "Once. A team pulled the holidays all the way into October. Nobody's been happy since." },
+]
+
+[[clip]]
+id = "sports-018"
+category = "sports"
+title = "Transfer News"
+lines = [
+  { sting = "sports" },
+  { say = "chip", text = "Transfer news! Big transfer news, folks! The Glow Wardens' star striker, Dex Morrow, has been transferred to a parallel universe!" },
+  { say = "doug", text = "For an undisclosed fee, Chip. And a slightly better version of himself." },
+  { say = "chip", text = "That's right! In exchange, the Wardens receive the other Dex Morrow, who is the same in every way, except he passes more, and calls his mother!" },
+  { say = "doug", text = "Fans are split. Some say it's the same player. Some say the new one's too nice. One man has written a very long letter." },
+  { say = "chip", text = "Also in transfer news, the left winger for Eclipse United has become a bird, and is out for the season!" },
+  { say = "doug", text = "He'll be missed. He'll also be up there, Chip. Watching." },
+  { say = "chip", text = "And the Lowland Pumas' goalkeeper has been transferred to the past, where he'll be playing for a team that won't exist for another three hundred years! Good luck, son!" },
+  { say = "doug", text = "He'll be early for training. That's something." },
+]
+
+[[clip]]
+id = "sports-019"
+category = "sports"
+title = "Pre-Match: The Coin Toss"
+bed = "stadium"
+lines = [
+  { sting = "sports" },
+  { say = "chip", text = "Before tonight's match, folks, the coin toss! Doug, this coin was tossed at the start of the season!" },
+  { say = "doug", text = "Still up there, Chip. Tossed it in the spring. Very high flip. Nobody's seen it since." },
+  { say = "chip", text = "Both captains are standing in the center circle, looking up!" },
+  { say = "doug", text = "They've been there since spring. The home captain has grown a beard. The away captain has had a baby. Lovely baby." },
+  { say = "chip", text = "The referee's calling it! Heads or tails!" },
+  { say = "doug", text = "He's been calling it every day. We'll know when it lands.", gap = 1.6 },
+  { say = "chip", text = "Something's coming down! Something is coming down! It's, it's a pigeon. It's a pigeon." },
+  { say = "doug", text = "Pigeon's not a result, Chip." },
+  { say = "chip", text = "Kickoff is postponed again, folks! But what an atmosphere!" },
+]
+
+[[clip]]
+id = "sports-020"
+category = "sports"
+title = "Extreme Staring: Rosalind Teague versus the Void"
+bed = "space"
+lines = [
+  { sting = "sports" },
+  { say = "chip", text = "Extreme Staring, folks! The champion, Rosalind Teague, against the void!" },
+  { say = "doug", text = "The void is undefeated, Chip. Eleven thousand matches. Never blinked once. Hasn't got eyes, to be fair." },
+  { say = "chip", text = "Rosalind's at the edge, she's leaning in, she's staring into the void! And the void, Doug!" },
+  { say = "doug", text = "The void is staring back, Chip. It always does. That's the problem with the void." },
+  { say = "chip", text = "Four minutes! Five minutes! Rosalind is holding steady! Her eyes are watering! And the void is, the void is studying, apparently! The void has got headphones on!" },
+  { say = "doug", text = "It's got exams, Chip. Leave it alone." },
+  { say = "chip", text = "And Rosalind blinks! Rosalind blinks! The void wins again!" },
+  { say = "doug", text = "Gracious in defeat, though. Look. She's left it a biscuit." },
+  { say = "chip", text = "The void has taken the biscuit! First time in history! Doug, what does it mean?" },
+  { say = "doug", text = "It means it was hungry, Chip. Studying's hard work." },
+]

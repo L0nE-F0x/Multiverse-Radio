@@ -1,0 +1,232 @@
+# 8-Bit Afterlife — Player Two, from the continue screen, level infinity.
+# Excitable and slightly glitchy; has been waiting for Player One to press start since
+# 1987. Running bits: Lag, the ghost who keeps losing; AAA, who holds every high score.
+station = "pixel-afterlife"
+
+[voices]
+host = { voice = "am_echo", speed = 1.12, name = "Player Two" }
+lag = { voice = "bm_lewis", speed = 0.9, fx = "cave", name = "Lag (Ghost)" }
+bev = { voice = "af_nova", fx = "phone", name = "Bev" }
+
+# ── Idents ────────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "id-001"
+category = "id"
+lines = [
+  { say = "host", text = "Eight-Bit Afterlife! Ninety-seven point oh! Insert coin! Or don't! You're already here!" },
+  { sting = "id" },
+]
+
+[[clip]]
+id = "id-002"
+category = "id"
+lines = [
+  { say = "host", text = "You're playing... sorry. You're listening to... Eight-Bit Afterlife!" },
+  { sting = "id" },
+]
+
+[[clip]]
+id = "id-003"
+category = "id"
+lines = [
+  { say = "host", text = "Eight-Bit Afterlife. The arcade where old games go to respawn. Ready? Ready!" },
+  { sting = "id" },
+]
+
+[[clip]]
+id = "id-004"
+category = "id"
+daypart = "night"
+lines = [
+  { say = "host", text = "Eight-Bit Afterlife, after hours. The cabinets are glowing. So are the ghosts." },
+  { sting = "id" },
+]
+
+[[clip]]
+id = "id-005"
+category = "id"
+lines = [
+  { say = "host", text = "Player Two here, on Eight-Bit Afterlife. Player One, if you're listening... press start." },
+  { sting = "id" },
+]
+
+[[clip]]
+id = "id-006"
+category = "id"
+lines = [
+  { say = "host", text = "Eight-Bit Afterlife! Continue? Yes! Always yes!" },
+  { sfx = "beep" },
+  { sting = "id" },
+]
+
+[[clip]]
+id = "id-007"
+category = "id"
+daypart = "morning"
+lines = [
+  { say = "host", text = "Good morning, Eight-Bit Afterlife! It's a new day! New day! New", cut = 0.85, gap = 0.1 },
+  { say = "host", text = "New day!" },
+  { sting = "id" },
+]
+
+# ── Host links ────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "dj-001"
+category = "dj"
+lines = [
+  { say = "host", text = "That was a bop! A real level-one bop! I'm still waiting for Player One, by the way. Since nineteen eighty-seven. It's fine! It's fine." },
+  { say = "host", text = "Any second now. Here's another song while I wait. Forever. Happily!" },
+]
+
+[[clip]]
+id = "dj-002"
+category = "dj"
+lines = [
+  { say = "host", text = "Shout-out to Lag, at the cabinet by the door, who has just lost. Again.", gap = 0.5 },
+  { say = "lag", text = "I had him.", gap = 0.5 },
+  { say = "host", text = "He did not have him. Lag, buddy, this one's for you!" },
+]
+
+[[clip]]
+id = "dj-003"
+category = "dj"
+lines = [
+  { say = "host", text = "New high score on the board tonight! Initials... A, A, A! Again! Every single high score is A, A, A." },
+  { say = "host", text = "We think it's the same ghost. We think he can't work the letters. Congratulations, A, A, A!" },
+]
+
+[[clip]]
+id = "dj-004"
+category = "dj"
+lines = [
+  { say = "host", text = "This level is sponsored by Grumbel's Ladders! Every good level has ladders! Climb up! Climb down! Get stuck halfway for no reason and have a little think!" },
+  { say = "host", text = "Grumbel's Ladders! Up is a choice! Down is also a choice! Halfway is a lifestyle!" },
+]
+
+[[clip]]
+id = "dj-005"
+category = "dj"
+lines = [
+  { say = "host", text = "Reminder, everybody: in the afterlife, you have infinite lives. Infinite! So if today went badly, that's what continues are for!" },
+  { say = "host", text = "Unless you're Lag. Lag is on his four hundredth continue. Lag, are you okay?", gap = 0.5 },
+  { say = "lag", text = "No.", gap = 0.4 },
+  { say = "host", text = "He's great!" },
+]
+
+[[clip]]
+id = "dj-006"
+category = "dj"
+lines = [
+  { say = "host", text = "Coming up next, a brand new track from the", cut = 0.8, gap = 0.05 },
+  { sfx = "zap", seconds = 0.3 },
+  { say = "host", text = "from the", cut = 0.7, gap = 0.05 },
+  { sfx = "zap", seconds = 0.3 },
+  { say = "host", text = "Sorry! Sorry. Little glitch. Coming up next: a song. That's all I've got. It's a good one!" },
+]
+
+[[clip]]
+id = "dj-007"
+category = "dj"
+daypart = "morning"
+lines = [
+  { say = "host", text = "Good morning, arcade! The coin slots are blinking! The carpet is buzzing! The cleaner ghost is mopping the same pixel he's been mopping since launch day! Let's go!" },
+]
+
+[[clip]]
+id = "dj-008"
+category = "dj"
+daypart = "night"
+lines = [
+  { say = "host", text = "It's late in the arcade. The screens have gone to attract mode. That's when they play themselves, to remember how." },
+  { say = "host", text = "It's kind of beautiful. It's kind of sad. Mostly beautiful! Here's a song." },
+]
+
+[[clip]]
+id = "dj-009"
+category = "dj"
+lines = [
+  { say = "host", text = "Weird one, folks. There's a shadow on level four with no sprite attached. Just a little shadow, jumping around. Says his name is Greg." },
+  { say = "host", text = "He's really good, actually! Better than Lag!", gap = 0.4 },
+  { say = "lag", text = "Hey.", gap = 0.4 },
+  { say = "host", text = "Hollis, if you're looking for him, he's on a winning streak!" },
+]
+
+[[clip]]
+id = "dj-010"
+category = "dj"
+lines = [
+  { say = "host", text = "Save point! That's what this song is! Take a breath. Drink some water. Your progress has been saved. Probably. It says saved. Let's trust it!" },
+]
+
+[[clip]]
+id = "dj-011"
+category = "dj"
+daypart = "day"
+lines = [
+  { say = "host", text = "Afternoon on the continue screen! Nine... eight... I always panic at seven. Don't panic at seven! Here's some music to not panic to!" },
+]
+
+[[clip]]
+id = "dj-012"
+category = "dj"
+daypart = "evening"
+lines = [
+  { say = "host", text = "Evening, players! Remember: it's not about winning. It's about the friends you respawn with along the way. That's a quote. From me. Just now!" },
+]
+
+[[clip]]
+id = "dj-013"
+category = "dj"
+lines = [
+  { say = "host", text = "A listener wants the password for level nine. The password is... I forgot. It had a lot of letter B's in it. And a heart. Try the heart! Here's a song while you try." },
+]
+
+[[clip]]
+id = "dj-014"
+category = "dj"
+lines = [
+  { say = "host", text = "That last track was composed on a cartridge that only works if you blow on it. The band blew on it for six hours. They're very lightheaded. They're doing great! Here's another one!" },
+]
+
+[[clip]]
+id = "dj-015"
+category = "dj"
+daypart = "night"
+lines = [
+  { say = "host", text = "Player One, if you're out there... I'm not mad. I just want to play. I've got the controller. It's warm. I've been holding it for a while.", speed = 1.0 },
+  { pause = 1.0 },
+  { say = "host", text = "Anyway! Here's a song!" },
+]
+
+[[clip]]
+id = "dj-016"
+category = "dj"
+lines = [
+  { say = "host", text = "Ghost etiquette reminder! If you're waiting for a cabinet, please don't stand inside the person playing. It's cold, it's distracting, and Lag says it's the only reason he keeps losing.", gap = 0.4 },
+  { say = "lag", text = "It's one of the reasons." },
+]
+
+# ── Calls ─────────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "call-001"
+category = "call"
+title = "Bev enters the game"
+lines = [
+  { sfx = "phone-ring" },
+  { say = "host", text = "We've got a caller! Player Three has entered the game! Hello!" },
+  { say = "bev", text = "Hello, love. It's Bev. Is this the request line? The one with the little tunes?" },
+  { say = "host", text = "It's the littlest tunes! What do you need?" },
+  { say = "bev", text = "I'm looking for a song. It goes, da da dum, da da." },
+  { say = "host", text = "Hang on! Let me try it on the arcade!" },
+  { sfx = "beep", seconds = 0.4 },
+  { sfx = "beep", seconds = 0.4 },
+  { sfx = "beep", seconds = 0.8 },
+  { say = "host", text = "Like that?" },
+  { say = "bev", text = "No, love. That's the noise my microwave makes." },
+  { say = "host", text = "That's my favourite song!" },
+  { say = "bev", text = "Oh, bless you. I'll keep looking." },
+  { sfx = "phone-hangup" },
+]

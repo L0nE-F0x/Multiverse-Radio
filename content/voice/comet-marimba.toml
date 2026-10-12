@@ -1,0 +1,220 @@
+# Comet Marimba — Coco Halley, from a beach on the tail of a comet.
+# Sunny, breezy, permanently on vacation. Running bits: surf reports for waves of pure
+# time, hats lost to orbit, the crab with sunglasses who refuses every request.
+station = "comet-marimba"
+
+[voices]
+host = { voice = "af_nova", speed = 1.05, name = "Coco Halley" }
+crab = { voice = "am_puck", fx = "tiny", name = "DJ Sunglass Crab" }
+bev = { voice = "af_nova", fx = "phone", name = "Bev" }
+
+# ── Idents ────────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "id-001"
+category = "id"
+lines = [
+  { say = "host", text = "Comet Marimba! One oh two point two! Hold on to your hat!" },
+  { sting = "id" },
+]
+
+[[clip]]
+id = "id-002"
+category = "id"
+lines = [
+  { say = "host", text = "You're catching rays on Comet Marimba. Tropical grooves at seventy kilometres a second!" },
+  { sting = "id" },
+]
+
+[[clip]]
+id = "id-003"
+category = "id"
+daypart = "morning"
+lines = [
+  { say = "host", text = "Good morning from the beach on the tail of a comet! This is Comet Marimba!" },
+  { sting = "id" },
+]
+
+[[clip]]
+id = "id-004"
+category = "id"
+daypart = "night"
+lines = [
+  { say = "host", text = "Comet Marimba, under a sky full of stars all going the other way." },
+  { sting = "id" },
+]
+
+[[clip]]
+id = "id-005"
+category = "id"
+lines = [
+  { say = "host", text = "Comet Marimba. Out of office. Permanently." },
+  { sting = "id" },
+]
+
+[[clip]]
+id = "id-006"
+category = "id"
+lines = [
+  { say = "crab", text = "Comet Marimba.", gap = 0.4 },
+  { say = "host", text = "Thank you, Crab! He's so cool." },
+  { sting = "id" },
+]
+
+[[clip]]
+id = "id-007"
+category = "id"
+lines = [
+  { say = "host", text = "Sun, sand, and a very fast tail. You're on Comet Marimba." },
+  { sting = "id" },
+]
+
+# ── Host links ────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "dj-001"
+category = "dj"
+lines = [
+  { sting = "weather" },
+  { say = "host", text = "Surf report! Waves of pure time rolling in at three to four minutes, nice and glassy, with the occasional Tuesday breaking on the left." },
+  { say = "host", text = "If you get caught in one, just relax. You'll come out last week. Totally fine." },
+]
+
+[[clip]]
+id = "dj-002"
+category = "dj"
+lines = [
+  { say = "host", text = "Hat update! We have lost eleven hats since breakfast. They're somewhere behind us now, in orbit." },
+  { say = "host", text = "If you're further back on the comet and a sun hat hits you, that's ours. Keep it. Wear it with love." },
+]
+
+[[clip]]
+id = "dj-003"
+category = "dj"
+lines = [
+  { say = "host", text = "Big shout-out to the crab on the decks, who has refused every single request today.", gap = 0.4 },
+  { say = "crab", text = "Click.", gap = 0.5 },
+  { say = "host", text = "That's a no. He's an artist. Here's what he wants to play." },
+]
+
+[[clip]]
+id = "dj-004"
+category = "dj"
+lines = [
+  { say = "host", text = "This beach is sponsored by Grumbel's Ladders! Want to see over the tail? Grumbel's! Want to touch a passing star? Grumbel's!" },
+  { say = "host", text = "Want to get back down safely? Grumbel's, probably! Up is a choice, everyone! Down is a vacation!" },
+]
+
+[[clip]]
+id = "dj-005"
+category = "dj"
+daypart = "morning"
+lines = [
+  { say = "host", text = "Good morning, beach people! The sun's a friendly distance away, the hammock is stable, and someone has left a coconut in the ice tail to chill. It's going to be a great day! It's always a great day!" },
+]
+
+[[clip]]
+id = "dj-006"
+category = "dj"
+daypart = "evening"
+lines = [
+  { say = "host", text = "The sun is setting! Well. We're leaving it behind. Same effect! Everybody turn around and wave goodbye to the sun! Bye, sun! See you in seventy-six years!" },
+]
+
+[[clip]]
+id = "dj-007"
+category = "dj"
+daypart = "night"
+lines = [
+  { say = "host", text = "Night on the comet. The stars are streaking past so fast they look like rain. Warm rain. Lie back in the hammock and let it fall on you. Here's a slow one." },
+]
+
+[[clip]]
+id = "dj-008"
+category = "dj"
+lines = [
+  { say = "host", text = "Someone asked me how long I've been on vacation. You know when you go away, and you forget what day it is? I forgot what year it is. I forgot when I forgot." },
+  { say = "host", text = "Best decision I ever made. I think. Here's a song!" },
+]
+
+[[clip]]
+id = "dj-009"
+category = "dj"
+lines = [
+  { say = "host", text = "Sunscreen reminder! Factor four thousand on the face, factor nine thousand on the tail side. Reapply every time we go round the sun. That's about every seventy-six years, so set a reminder!" },
+]
+
+[[clip]]
+id = "dj-010"
+category = "dj"
+lines = [
+  { say = "host", text = "Lovely surprise on the beach today: a shadow, all on his own, lying on a towel. Name's Greg! He's working on his tan, which for a shadow means getting lighter." },
+  { say = "host", text = "Go on, Greg! Hollis says send a postcard!" },
+]
+
+[[clip]]
+id = "dj-011"
+category = "dj"
+daypart = "day"
+lines = [
+  { say = "host", text = "Midday on the comet! Everybody grab a drink with a tiny umbrella in it. If you don't have a drink, just hold the tiny umbrella. It's the umbrella that matters." },
+]
+
+[[clip]]
+id = "dj-012"
+category = "dj"
+lines = [
+  { say = "host", text = "Fun fact! The beach is moving at seventy kilometres a second, but the sand doesn't care, and neither should you. That's the whole secret to vacation. Here's another one!" },
+]
+
+[[clip]]
+id = "dj-013"
+category = "dj"
+lines = [
+  { say = "host", text = "That last track had a marimba carved from driftwood that drifted four billion miles to get here. Talk about commitment! Talk about a commute! Here's another." },
+]
+
+[[clip]]
+id = "dj-014"
+category = "dj"
+lines = [
+  { say = "host", text = "Okay! For the first time ever, the crab has a request.", gap = 0.4 },
+  { say = "crab", text = "Play the marimba one.", gap = 0.4 },
+  { say = "host", text = "They're all marimba ones, Crab.", gap = 0.4 },
+  { say = "crab", text = "Play it anyway.", gap = 0.4 },
+  { say = "host", text = "You heard him!" },
+]
+
+[[clip]]
+id = "dj-015"
+category = "dj"
+lines = [
+  { say = "host", text = "If you're stuck in an office listening to this, hello! This one's for you. Close your eyes. Feel the sand. Feel the speed." },
+  { say = "host", text = "Ignore the email. The email can wait. The email is in another galaxy." },
+]
+
+[[clip]]
+id = "dj-016"
+category = "dj"
+daypart = "night"
+lines = [
+  { say = "host", text = "Late night beach check. Hammock: swaying. Crab: asleep in his sunglasses. Me: thinking about how lucky we are to be going this fast, together, somewhere nobody's ever been. Night, everyone." },
+]
+
+# ── Calls ─────────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "call-001"
+category = "call"
+title = "Bev calls from a lift"
+lines = [
+  { sfx = "phone-ring" },
+  { say = "host", text = "We've got a call from, it says here, a lift? Hello!" },
+  { say = "bev", text = "Hello, love. It's Bev. I'm in a lift. Is this the request line?" },
+  { say = "host", text = "It sure is! Why are you in a lift?" },
+  { say = "bev", text = "It's where I heard my song. It goes, da da dum, da da. I thought, if I get back in a lift, it might come on again." },
+  { say = "host", text = "Has it?" },
+  { say = "bev", text = "No. But this marimba's very nice." },
+  { say = "host", text = "Stay in the lift, Bev! We'll keep it nice for you!" },
+  { sfx = "phone-hangup" },
+]

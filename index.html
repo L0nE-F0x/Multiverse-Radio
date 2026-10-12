@@ -3,15 +3,50 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-    <meta name="theme-color" content="#0a0a0c" />
-    <meta name="color-scheme" content="dark" />
+    <title>Multiverse Radio</title>
     <meta
       name="description"
-      content="Tune into radio stations broadcasting from other dimensions: alien advertisements, news from parallel realities, and shows that shouldn't exist."
+      content="Endless radio from other dimensions: generative music, deadpan hosts, alien adverts and news from parallel realities. Press play. It never runs out."
     />
+    <meta name="theme-color" content="#0a0a0c" />
+    <meta name="color-scheme" content="dark" />
+
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="preload" href="/episodes.json" as="fetch" crossorigin="anonymous" />
-    <title>Multiverse Radio</title>
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <meta name="apple-mobile-web-app-title" content="Multiverse" />
+
+    <!-- Social cards. %SITE_URL% becomes the absolute site URL at build time: the SITE_URL
+         env var, else Netlify's built-in URL (see pwa() in src/pwa/vite-plugins.mjs). -->
+    <link rel="canonical" href="%SITE_URL%/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Multiverse Radio" />
+    <meta property="og:title" content="Multiverse Radio" />
+    <meta
+      property="og:description"
+      content="Endless stations broadcasting from other dimensions. Generative music, deadpan hosts, alien adverts and news from parallel realities."
+    />
+    <meta property="og:url" content="%SITE_URL%/" />
+    <meta property="og:image" content="%SITE_URL%/og-image.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="A warm, glowing radio faceplate reading Multiverse Radio, with a tuning knob and a dial of stations from other dimensions."
+    />
+    <meta property="og:locale" content="en_US" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Multiverse Radio" />
+    <meta
+      name="twitter:description"
+      content="Endless stations broadcasting from other dimensions. Press play. It never runs out."
+    />
+    <meta name="twitter:image" content="%SITE_URL%/og-image.png" />
+    <meta
+      name="twitter:image:alt"
+      content="A warm, glowing radio faceplate reading Multiverse Radio, with a tuning knob and a dial of stations from other dimensions."
+    />
   </head>
   <body>
     <div id="root"></div>

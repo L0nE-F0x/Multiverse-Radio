@@ -1,0 +1,656 @@
+# Channel Surf — 103.0, the couch at the center of everything.
+#
+# There is no host. Somebody is holding the remote, and they will not stop pressing it.
+# Every clip is a channel-flipping collage: { sfx = "zap" } between fragments, and `cut`
+# to chop a line off mid-sentence. The main joke engine is juxtaposition: one channel
+# asks, the next channel accidentally answers.
+#
+# Recurring channels: Tidewater Manor (soap: Lorraine and Vincent, who went to get milk),
+# the Everything Channel (shopping: Trent and Darlene, currently selling a single stair),
+# Chef Ingrid (recipes that take centuries), a nature narrator, Professor Pockets and
+# Little Nothing (kids' TV), Judge Wexley, the For the Car game show (Bev is the
+# returning champion). Someone on the Couch occasionally says something.
+station = "channel-surf"
+
+[voices]
+surf = { voice = "am_michael", name = "Channel Surf" }
+couch = { voice = "am_echo", speed = 0.95, name = "Someone on the Couch" }
+trailer = { voice = "am_onyx", speed = 0.9, fx = "trailer", name = "Movie Trailer" }
+announcer = { voice = "am_onyx", name = "Announcer" }
+chef = { voice = "af_bella", name = "Cooking: Chef Ingrid" }
+lorraine = { voice = "af_nicole", name = "Tidewater Manor: Lorraine" }
+vincent = { voice = "bm_daniel", name = "Tidewater Manor: Vincent" }
+trent = { voice = "am_puck", speed = 1.12, name = "Shopping: Trent" }
+darlene = { voice = "af_alloy", name = "Shopping: Darlene" }
+late = { voice = "am_liam", speed = 1.05, name = "Late Night" }
+pockets = { voice = "af_heart", speed = 1.1, name = "Kids' TV: Professor Pockets" }
+nothing = { voice = "af_sky", fx = "tiny", name = "Kids' TV: Little Nothing" }
+nature = { voice = "bm_fable", speed = 0.86, name = "Nature Channel" }
+judge = { voice = "am_santa", name = "Courtroom: Judge Wexley" }
+defendant = { voice = "am_liam", name = "Courtroom: Defendant" }
+witness = { voice = "af_river", name = "Courtroom: Witness" }
+quiz = { voice = "am_fenrir", speed = 1.15, name = "Game Show" }
+bev = { voice = "af_nova", name = "Game Show: Bev" }
+contestant = { voice = "af_river", name = "Game Show: Contestant" }
+fitness = { voice = "af_jessica", speed = 1.2, name = "Fitness Channel" }
+weather = { voice = "bf_isabella", name = "Weather Channel" }
+sports = { voice = "bm_lewis", speed = 1.2, name = "Sports Channel" }
+vj = { voice = "af_aoede", speed = 1.1, name = "Music Channel" }
+closedown = { voice = "bf_alice", speed = 0.9, name = "Closedown" }
+dale = { voice = "bm_george", name = "Every Possible News" }
+doctor = { voice = "af_river", name = "Medical Drama: Doctor" }
+nurse = { voice = "am_liam", name = "Medical Drama: Nurse" }
+captain = { voice = "bm_lewis", name = "Space Opera: Captain" }
+lieutenant = { voice = "bf_alice", name = "Space Opera: Lieutenant" }
+alien = { voice = "jm_kumo", fx = "alien", name = "Space Opera: Alien Captain" }
+history = { voice = "bm_george", speed = 0.95, name = "History Channel" }
+antiques = { voice = "bf_lily", name = "Antiques Show" }
+owner = { voice = "am_santa", name = "Antiques Show: Owner" }
+gerald = { voice = "am_eric", speed = 0.9, name = "Public Access: Gerald" }
+poet = { voice = "bf_isabella", speed = 0.85, name = "Late Night Poetry" }
+esteban = { voice = "em_alex", name = "Telenovela: Esteban" }
+ramona = { voice = "ef_dora", name = "Telenovela: Ramona" }
+infomercial = { voice = "am_eric", speed = 1.1, name = "Infomercial" }
+dating = { voice = "af_heart", name = "Dating Show" }
+suitor_one = { voice = "am_puck", name = "Dating Show: Contestant One" }
+suitor_two = { voice = "am_liam", fx = "robot", name = "Dating Show: Contestant Two" }
+greg = { voice = "am_onyx", fx = "whisper", name = "Dating Show: Contestant Three" }
+bachelorette = { voice = "bf_lily", name = "Dating Show: Bachelorette" }
+renovation = { voice = "am_eric", name = "Home Renovation" }
+auction = { voice = "am_puck", speed = 1.3, name = "Auction Channel" }
+breakfast = { voice = "af_aoede", name = "Breakfast Television" }
+johnny = { voice = "am_santa", speed = 1.08, name = "Mirror World Polka Hour" }
+ynnhoj = { voice = "am_santa", speed = 1.02, name = "Ynnhoj" }
+sitcom_him = { voice = "am_michael", name = "Sitcom" }
+sitcom_her = { voice = "af_bella", name = "Sitcom" }
+detective = { voice = "bm_daniel", name = "Crime Drama: Detective" }
+
+# ── Idents ────────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "id-001"
+category = "id"
+lines = [
+  { sfx = "zap" },
+  { say = "chef", text = "Now fold it in gently, and whatever you do, don't", cut = 0.9 },
+  { sfx = "zap" },
+  { say = "surf", text = "Channel Surf. Infinite channels." },
+  { sfx = "zap" },
+  { say = "trent", text = "Zero attention span! Call now!" },
+  { sfx = "zap" },
+]
+
+[[clip]]
+id = "id-002"
+category = "id"
+lines = [
+  { sfx = "zap" },
+  { say = "surf", text = "You're watching Channel Surf." },
+  { sfx = "zap" },
+  { say = "nature", text = "Listening, technically." },
+  { sfx = "zap" },
+]
+
+[[clip]]
+id = "id-003"
+category = "id"
+lines = [
+  { say = "surf", text = "Channel Surf. Somebody is holding the remote. They will not stop pressing it." },
+  { sfx = "zap" },
+]
+
+[[clip]]
+id = "id-004"
+category = "id"
+lines = [
+  { sfx = "zap" },
+  { say = "dale", text = "This is Every Possible", cut = 0.85 },
+  { sfx = "zap" },
+  { say = "surf", text = "No it isn't. This is Channel Surf." },
+  { sfx = "zap" },
+]
+
+[[clip]]
+id = "id-005"
+category = "id"
+lines = [
+  { sfx = "zap" },
+  { say = "quiz", text = "For the car! Where are you right now?" },
+  { sfx = "zap" },
+  { say = "surf", text = "Channel Surf. One oh three point oh." },
+  { sfx = "zap" },
+]
+
+# ── Shows ─────────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "show-001"
+category = "show"
+title = "Prime Time"
+lines = [
+  { sfx = "zap" },
+  { say = "lorraine", text = "Vincent, I have to know. Who is the father?" },
+  { sfx = "zap" },
+  { say = "nature", text = "The seahorse. Who carries the young himself, and is, frankly, exhausted." },
+  { sfx = "zap" },
+  { say = "trent", text = "It's the Unpeeler! Ever peeled a banana and immediately regretted it? The Unpeeler puts the peel back on! Banana not ready? Unpeel it!" },
+  { sfx = "zap" },
+  { say = "quiz", text = "For the car! Name one thing you would save from a burning house!" },
+  { sfx = "zap" },
+  { say = "chef", text = "The soup. Always the soup. A good soup has been through more than you have." },
+  { sfx = "zap" },
+  { say = "trailer", text = "This summer. One man. One spoon. One very, very large pudding." },
+  { sfx = "zap" },
+  { say = "sports", text = "And it's a photo finish! We'll have to wait for the photo! The photo is being developed! It's in a little tray of liquid! Here it comes!", cut = 0.93 },
+  { sfx = "zap" },
+  { say = "nature", text = "The photograph develops slowly, as all photographs do, revealing at last what everyone already knew. It was a tie. It is always a tie." },
+  { sfx = "zap" },
+  { say = "pockets", text = "Hello, friends! Today's word is elsewhere! Can you say elsewhere? Good! Now go there!" },
+  { sfx = "zap" },
+  { say = "weather", text = "And the outlook for the rest of the week. Scattered feelings, with a strong chance of", cut = 0.9 },
+  { sfx = "zap" },
+  { say = "couch", text = "Nothing on." },
+  { sfx = "zap" },
+]
+
+[[clip]]
+id = "show-002"
+category = "show"
+title = "Late Night"
+daypart = "night"
+lines = [
+  { sfx = "zap" },
+  { say = "late", text = "My next guest is a closed door. He's been in a lot of houses, he's very hard to get through. Please welcome, the door!" },
+  { sfx = "applause", seconds = 1.8 },
+  { say = "late", text = "So. Door. Big year." },
+  { sfx = "door-creak" },
+  { say = "late", text = "Ha! That's what I said! That's exactly what I", cut = 0.88 },
+  { sfx = "zap" },
+  { say = "poet", text = "The moon is a coin that nobody spent. I kept it in my pocket. It wore a hole in the night." },
+  { sfx = "zap" },
+  { say = "esteban", text = "Ramona, you cannot leave me. You are the moon." },
+  { say = "ramona", text = "And you, Esteban, are only a tide.", cut = 0.92 },
+  { sfx = "zap" },
+  { say = "trent", text = "Only nine minutes left to buy this minute! Once it's gone, it's gone! It's going! It's gone. Okay. Next minute", cut = 0.9 },
+  { sfx = "zap" },
+  { say = "gerald", text = "And this one is also a rock. I found it next to the other rock. They were together. I think they were happy." },
+  { sfx = "zap" },
+  { say = "closedown", text = "This station is now closing down for the night. Please put the dark back where you found it. Goodnight." },
+  { sfx = "zap" },
+]
+
+[[clip]]
+id = "show-003"
+category = "show"
+title = "Daytime"
+daypart = "day"
+lines = [
+  { sfx = "zap" },
+  { say = "judge", text = "The defendant is charged with three counts of being emotionally unavailable to a houseplant. How do you plead?" },
+  { say = "defendant", text = "It's a fern, your honor. It never asked.", cut = 0.93 },
+  { sfx = "zap" },
+  { say = "fitness", text = "And reach! Reach up! Reach for a shelf in a different reality! Grab whatever's on it! Don't look at it! Put it in your pocket! And breathe!" },
+  { sfx = "zap" },
+  { say = "sports", text = "Live from the national ironing championships, and she's pressed the collar! She's pressed the collar! Nobody presses the collar first!", cut = 0.94 },
+  { sfx = "zap" },
+  { say = "chef", text = "Now pop that in the oven at a low heat, for about four hundred years, or until golden. And here's one I made earlier. Much earlier." },
+  { sfx = "zap" },
+  { say = "lorraine", text = "Vincent. You've been gone for seven years." },
+  { say = "vincent", text = "I went to get milk." },
+  { say = "lorraine", text = "We have milk, Vincent." },
+  { say = "vincent", text = "Not this milk.", cut = 0.9 },
+  { sfx = "zap" },
+  { say = "quiz", text = "Contestant number two, for five hundred points. Spell Wednesday." },
+  { say = "contestant", text = "Is there a D in it?", cut = 0.9 },
+  { sfx = "zap" },
+  { say = "nature", text = "And here, at the back of the fridge, a jar of something, untouched for many years. It has developed its own customs." },
+  { sfx = "zap" },
+]
+
+[[clip]]
+id = "show-004"
+category = "show"
+title = "The Everything Channel"
+lines = [
+  { sfx = "zap" },
+  { say = "trent", text = "Welcome back to the Everything Channel! Darlene, what have we got?" },
+  { say = "darlene", text = "Trent, it's a single stair." },
+  { say = "trent", text = "Just the one?" },
+  { say = "darlene", text = "Just the one, Trent. For when you only need to go up a tiny bit." },
+  { say = "trent", text = "I love that. I love that so much.", cut = 0.9 },
+  { sfx = "zap" },
+  { say = "vincent", text = "Lorraine. I'm not who you think I am." },
+  { say = "lorraine", text = "Then who are you?" },
+  { say = "vincent", text = "I'm also not who I think I am.", cut = 0.92 },
+  { sfx = "zap" },
+  { say = "darlene", text = "And it comes in oak, pine, or regret." },
+  { say = "trent", text = "Is regret a wood?" },
+  { say = "darlene", text = "It is now, Trent.", cut = 0.9 },
+  { sfx = "zap" },
+  { say = "judge", text = "The defendant is charged with selling a single stair under false pretenses. The pretense was that it was a staircase." },
+  { say = "defendant", text = "It's a first step, your honor.", cut = 0.92 },
+  { sfx = "zap" },
+  { say = "trailer", text = "This winter. One step. Just the one." },
+  { sfx = "zap" },
+  { say = "nature", text = "The stair, in the wild, is a solitary creature. It does not gather into staircases until the mating season." },
+  { sfx = "zap" },
+  { say = "trent", text = "Lines are open! Operators are standing by! One operator is sitting down, and we've spoken to him!" },
+  { sfx = "zap" },
+  { say = "couch", text = "Do we need a stair?" },
+  { sfx = "zap" },
+]
+
+[[clip]]
+id = "show-005"
+category = "show"
+title = "Kids' TV"
+daypart = "morning"
+lines = [
+  { sfx = "zap" },
+  { say = "pockets", text = "Hello, friends! It's me, Professor Pockets! And it's my best friend, Little Nothing!" },
+  { say = "nothing", text = "Hello!" },
+  { say = "pockets", text = "Little Nothing, what did we learn today?" },
+  { say = "nothing", text = "That the floor is lava, but only emotionally!", cut = 0.93 },
+  { sfx = "zap" },
+  { say = "captain", text = "Lieutenant. Report." },
+  { say = "lieutenant", text = "Captain, the nebula. It's looking at us." },
+  { say = "captain", text = "Hail it." },
+  { say = "lieutenant", text = "It says hi." },
+  { say = "captain", text = "Say hi back. Keep it casual.", cut = 0.92 },
+  { sfx = "zap" },
+  { say = "pockets", text = "Now let's all count backwards from a big number! Ready? A big number! A slightly smaller big number! A medium number!", cut = 0.93 },
+  { sfx = "zap" },
+  { say = "trailer", text = "This winter. They said it couldn't be done. They were right. It wasn't done. Coming soon, to a cinema near enough." },
+  { sfx = "zap" },
+  { say = "nothing", text = "Professor Pockets, where do people go when they go to sleep?" },
+  { say = "pockets", text = "Elsewhere, Little Nothing! That's why it's our word of the day!", cut = 0.93 },
+  { sfx = "zap" },
+  { say = "weather", text = "Bedtime forecast for the under sevens. Tonight, the monster under your bed is expected to be clear and dry. He is just a coat. He was always a coat." },
+  { sfx = "zap" },
+]
+
+[[clip]]
+id = "show-006"
+category = "show"
+title = "Medical Drama and Other Emergencies"
+lines = [
+  { sfx = "zap" },
+  { say = "doctor", text = "Nurse, his heart's in the wrong place!" },
+  { say = "nurse", text = "Then he's a good man, doctor." },
+  { say = "doctor", text = "Close him up. We're done here.", cut = 0.92 },
+  { sfx = "zap" },
+  { say = "auction", text = "Going once! Going twice! Gone! It's gone! Nobody knows where! Can anyone see it?", cut = 0.93 },
+  { sfx = "zap" },
+  { say = "dale", text = "And doctors in four realities have agreed on something. They will not say what." },
+  { sfx = "zap" },
+  { say = "lorraine", text = "Doctor, will he live?" },
+  { say = "vincent", text = "I'm not a doctor, Lorraine. I only came in for the milk.", cut = 0.93 },
+  { sfx = "zap" },
+  { say = "weather", text = "Tomorrow, mostly fine, with a few small complaints, clearing by lunchtime." },
+  { sfx = "zap" },
+  { say = "renovation", text = "So we knocked through the kitchen wall, and we found another kitchen. With another family in it. And honestly, they'd done a lovely job.", cut = 0.95 },
+  { sfx = "zap" },
+  { say = "fitness", text = "And now your cool down. Lie flat. Close your eyes. Imagine you are a pancake. A pancake has no worries. A pancake is", cut = 0.92 },
+  { sfx = "zap" },
+  { say = "chef", text = "And the secret to a good pancake? Patience. And eggs. And not imagining you are one." },
+  { sfx = "zap" },
+  { say = "doctor", text = "Nurse, the patient is dreaming in the wrong language!" },
+  { say = "nurse", text = "What do we do?" },
+  { say = "doctor", text = "Nod, nurse. Just nod. Nobody can tell.", cut = 0.93 },
+  { sfx = "zap" },
+]
+
+[[clip]]
+id = "show-007"
+category = "show"
+title = "Pick a Partner"
+lines = [
+  { sfx = "zap" },
+  { say = "dating", text = "Welcome back to Pick a Partner! Our bachelorette has three contestants behind the screen. Contestant number one, tell us about yourself!" },
+  { say = "suitor_one", text = "Hi. I'm a dentist. I have never once looked away during a sad film." },
+  { say = "dating", text = "Contestant number two!" },
+  { say = "suitor_two", text = "I am a toaster. I will always pop up for you." },
+  { say = "dating", text = "And contestant number three!" },
+  { say = "greg", text = "I'm a shadow. I used to belong to a man called Hollis. I'm really just here for the sea view.", cut = 0.95 },
+  { sfx = "zap" },
+  { say = "nature", text = "The shadow, once separated from its owner, may wander great distances, seeking the edges of things." },
+  { sfx = "zap" },
+  { say = "lorraine", text = "Vincent, I've been in a coma." },
+  { say = "vincent", text = "Since when?" },
+  { say = "lorraine", text = "Since the start of this scene. I'm feeling much better, thank you.", cut = 0.93 },
+  { sfx = "zap" },
+  { say = "dating", text = "Bachelorette, the moment of truth! Number one, number two, or number three?" },
+  { say = "bachelorette", text = "Number two. I've always wanted to be toast.", cut = 0.94 },
+  { sfx = "zap" },
+  { say = "couch", text = "Should've picked the shadow." },
+  { sfx = "zap" },
+]
+
+[[clip]]
+id = "show-008"
+category = "show"
+title = "For the Car"
+lines = [
+  { sfx = "zap" },
+  { say = "quiz", text = "Welcome back to For the Car! Our returning champion is Bev, from the Overlap! Bev, for the car, name this tune!" },
+  { say = "bev", text = "Is this the request line?" },
+  { say = "quiz", text = "Bev, it's a game show! Name the tune!" },
+  { say = "bev", text = "Dum, dum, da dum. And then a man cries." },
+  { say = "quiz", text = "Is that your final answer?", cut = 0.9 },
+  { sfx = "zap" },
+  { say = "weather", text = "And in the eastern Overlap, a man is crying. That's not weather. That's just a man. Give him a minute." },
+  { sfx = "zap" },
+  { say = "trent", text = "Song stuck in your head, and you can't remember the name? Introducing the Tune Finder! Hum into the funnel, and it hums back! It doesn't know either! But now there's two of you!" },
+  { sfx = "zap" },
+  { say = "vj", text = "That was a song that sounds like the one you're thinking of, but isn't. Up next, the one you're thinking of. Just kidding. Nobody has that one.", cut = 0.95 },
+  { sfx = "zap" },
+  { say = "lorraine", text = "Vincent, play it again. The song. Our song." },
+  { say = "vincent", text = "I can't, Lorraine. I only know the first three notes.", cut = 0.93 },
+  { sfx = "zap" },
+  { say = "quiz", text = "Bev, I'm so sorry, that is not the", cut = 0.88 },
+  { sfx = "zap" },
+  { say = "couch", text = "Aw, Bev." },
+  { sfx = "zap" },
+]
+
+[[clip]]
+id = "show-009"
+category = "show"
+title = "History and Mystery"
+lines = [
+  { sfx = "zap" },
+  { say = "history", text = "In the year of the long Tuesday, the spoon had not yet been invented. People ate soup by looking at it very hard." },
+  { sfx = "zap" },
+  { say = "lieutenant", text = "Captain, we've found a planet made entirely of spoons." },
+  { say = "captain", text = "Is it inhabited?" },
+  { say = "lieutenant", text = "Only by soup, sir.", cut = 0.9 },
+  { sfx = "zap" },
+  { say = "antiques", text = "Now, this vase is quite remarkable. Where did you get it?" },
+  { say = "owner", text = "From my grandfather's grandson." },
+  { say = "antiques", text = "That's you." },
+  { say = "owner", text = "It is me, yes. I bought it on Tuesday.", cut = 0.93 },
+  { sfx = "zap" },
+  { say = "trailer", text = "This autumn. A detective. A missing sock. And a dryer that knows too much." },
+  { sfx = "zap" },
+  { say = "detective", text = "The sock was last seen entering the dryer at four in the afternoon. It never came out. Neither did its alibi.", cut = 0.95 },
+  { sfx = "zap" },
+  { say = "nature", text = "The sock, during its great migration, leaves its partner behind and travels alone to a warmer dimension. Nobody knows why. The sock does not look back." },
+  { sfx = "zap" },
+  { say = "history", text = "And that is why, to this day, nobody in the Overlap fully trusts a dryer." },
+  { sfx = "zap" },
+]
+
+[[clip]]
+id = "show-010"
+category = "show"
+title = "Breakfast Television"
+daypart = "morning"
+lines = [
+  { sfx = "zap" },
+  { say = "breakfast", text = "Good morning! Coming up on the sofa, a man who has been awake since Tuesday, and he's here to tell us how!" },
+  { sfx = "zap" },
+  { say = "fitness", text = "Morning stretch! Arms up! Reach for the ceiling! Reach for somebody else's ceiling! Now find a sock! Any sock! That's your sock now!" },
+  { sfx = "zap" },
+  { say = "weather", text = "This morning, sunny spells, followed by the sudden memory of something embarrassing you said at school.", cut = 0.95 },
+  { sfx = "zap" },
+  { say = "chef", text = "Breakfast today is an egg that has been told it's a good egg. Look at it glow. That's encouragement." },
+  { sfx = "zap" },
+  { say = "pockets", text = "Hello, friends! Today's word is soon! Is it soon yet? Not yet! Is it soon now?", cut = 0.93 },
+  { sfx = "zap" },
+  { say = "dale", text = "The exchange rate between today and tomorrow is holding steady at one to one." },
+  { sfx = "zap" },
+  { say = "trent", text = "Good morning, early shoppers! Today only, a sunrise, slightly used, only watched once by a man who was facing the wrong way!" },
+  { sfx = "zap" },
+  { say = "nature", text = "At dawn, the commuter gathers at the watering hole, which is a bus stop, and does not speak." },
+  { sfx = "zap" },
+  { say = "breakfast", text = "And our guest, who has been awake since Tuesday, has fallen asleep on the sofa. We'll let him have this one.", cut = 0.95 },
+  { sfx = "zap" },
+  { say = "couch", text = "Five more minutes." },
+  { sfx = "zap" },
+]
+
+[[clip]]
+id = "show-011"
+category = "show"
+title = "Tidewater Manor Marathon"
+lines = [
+  { sfx = "zap" },
+  { say = "announcer", text = "Previously, on Tidewater Manor." },
+  { say = "lorraine", text = "Vincent, you've been gone for seven years." },
+  { say = "vincent", text = "I went to get milk.", cut = 0.88 },
+  { sfx = "zap" },
+  { say = "vincent", text = "Lorraine, I have an evil twin." },
+  { say = "lorraine", text = "Vincent, you don't have a twin." },
+  { say = "vincent", text = "Then I'm just evil, Lorraine. That's so much worse.", cut = 0.93 },
+  { sfx = "zap" },
+  { say = "nature", text = "The twin, in the wild, is rarely evil. It is usually just tired of being mistaken for someone else." },
+  { sfx = "zap" },
+  { say = "quiz", text = "For the car! Who went out for milk seven years ago, and never came back?" },
+  { say = "contestant", text = "Vincent?" },
+  { say = "quiz", text = "Vincent is correct!" },
+  { sfx = "applause", seconds = 1.5 },
+  { sfx = "zap" },
+  { say = "lorraine", text = "Vincent, who is that at the door?" },
+  { say = "vincent", text = "It's the milk, Lorraine. It followed me home.", cut = 0.92 },
+  { sfx = "zap" },
+  { say = "announcer", text = "Tidewater Manor will return, after these messages." },
+  { sfx = "zap" },
+  { say = "trent", text = "Is your milk following you? Try the Milk Leash! Keep your dairy close!", cut = 0.92 },
+  { sfx = "zap" },
+  { say = "lorraine", text = "Vincent, I can't do this anymore." },
+  { say = "vincent", text = "Do what?" },
+  { say = "lorraine", text = "The milk, Vincent. It's always the milk.", cut = 0.9 },
+  { sfx = "zap" },
+  { say = "announcer", text = "Next week, on Tidewater Manor." },
+  { say = "lorraine", text = "Vincent, what is that?" },
+  { say = "vincent", text = "Cheese, Lorraine. I've moved on.", cut = 0.93 },
+  { sfx = "zap" },
+]
+
+[[clip]]
+id = "show-012"
+category = "show"
+title = "The Music Channel"
+lines = [
+  { sfx = "zap" },
+  { say = "vj", text = "And at number four this week, it's a song that's just a man saying yeah, for eleven minutes! Take it away, man saying yeah!" },
+  { sfx = "zap" },
+  { say = "trailer", text = "This spring. One man. One tambourine. No sense of timing whatsoever." },
+  { sfx = "zap" },
+  { say = "sports", text = "And the conductor's gone for the downbeat, he's gone early, he's gone very early, the orchestra hasn't even sat down!", cut = 0.93 },
+  { sfx = "zap" },
+  { say = "vj", text = "That was the orchestra, sitting down. Lovely stuff. Very moving." },
+  { sfx = "zap" },
+  { say = "johnny", text = "Oom pah, everybody! Ynnhoj, give me an oom pah!" },
+  { say = "ynnhoj", text = "Oom pah.", gap = 0.6 },
+  { say = "johnny", text = "A bit late there, Ynnhoj.", cut = 0.9 },
+  { sfx = "zap" },
+  { say = "vj", text = "Up next, a power ballad sung entirely by a lighthouse. Hold on to something.", cut = 0.95 },
+  { sfx = "zap" },
+  { say = "nature", text = "High in the canopy, a songbird rehearses its one song. It has been working on the bridge for nine years." },
+  { sfx = "zap" },
+  { say = "gerald", text = "This next rock is called Gentle Thunder. It doesn't make a sound. That's the thunder." },
+  { sfx = "zap" },
+  { say = "couch", text = "Ooh, I like this one." },
+  { sfx = "zap" },
+  { say = "couch", text = "Why did I do that." },
+  { sfx = "zap" },
+]
+
+[[clip]]
+id = "show-013"
+category = "show"
+title = "Judge Wexley Presides"
+lines = [
+  { sfx = "zap" },
+  { say = "judge", text = "Order! Order in the court! The defendant is charged with arriving early to his own surprise party. How do you plead?" },
+  { say = "defendant", text = "I knew, your honor. I always know. I'm so sorry.", cut = 0.93 },
+  { sfx = "zap" },
+  { say = "quiz", text = "And that's the wrong answer! The correct answer was, always act surprised!" },
+  { sfx = "zap" },
+  { say = "judge", text = "The witness will describe the man she saw." },
+  { say = "witness", text = "He was average height, average build, and he had the face of somebody who'd just remembered he left the oven on." },
+  { say = "judge", text = "That's everyone, madam.", cut = 0.9 },
+  { sfx = "zap" },
+  { say = "nature", text = "The common oven, left on, will wait for its owner for many hours, quietly, warmly, and without resentment." },
+  { sfx = "zap" },
+  { say = "detective", text = "We've got a body. Rectangular. Chrome. Four slots. Somebody unplugged it." },
+  { sfx = "zap" },
+  { say = "chef", text = "Now, the secret to perfect toast is to never, ever take your eyes off it." },
+  { sfx = "zap" },
+  { say = "judge", text = "Does the defense have anything to add?" },
+  { say = "defendant", text = "Only that I love surprises, your honor. I just always know about them.", cut = 0.94 },
+  { sfx = "zap" },
+  { say = "judge", text = "This court finds the defendant not guilty, but a little bit weird. Case dismissed." },
+  { sfx = "gong" },
+  { sfx = "zap" },
+]
+
+[[clip]]
+id = "show-014"
+category = "show"
+title = "The Nature Hour"
+lines = [
+  { sfx = "zap" },
+  { say = "nature", text = "Here, beneath the sofa, a colony of lost coins has formed its own small economy. They have a currency. It is themselves." },
+  { sfx = "zap" },
+  { say = "trent", text = "Money lost down the back of the sofa? Open an account with the Sofa Bank! Earn interest on everything you've ever dropped!" },
+  { sfx = "zap" },
+  { say = "nature", text = "The houseplant stalks its prey, sunlight, with terrible patience. It moves only when no one is watching. Look away. Now look back. It has moved." },
+  { sfx = "zap" },
+  { say = "trailer", text = "This October. It moves when you're not looking. The Fern." },
+  { sfx = "zap" },
+  { say = "nature", text = "And here, on the windowsill, the most fearsome predator in the household. The cat. Watch as it pushes a glass off the edge for no reason at all, and then looks directly at us." },
+  { sfx = "tiny-explosion" },
+  { sfx = "zap" },
+  { say = "renovation", text = "And for the finishing touch, a brand new glass shelf, right here, by the cat.", cut = 0.93 },
+  { sfx = "zap" },
+  { say = "couch", text = "Did you move the plant?" },
+  { sfx = "zap" },
+]
+
+[[clip]]
+id = "show-015"
+category = "show"
+title = "Space Opera"
+lines = [
+  { sfx = "zap" },
+  { say = "captain", text = "Ship's diary, day four hundred. We are lost in space. Morale is low. We have run out of the good biscuits." },
+  { sfx = "zap" },
+  { say = "chef", text = "And that is how you make the good biscuits." },
+  { sfx = "zap" },
+  { say = "lieutenant", text = "Captain! An alien vessel is hailing us!" },
+  { say = "captain", text = "Put them through." },
+  { say = "alien", text = "Greetings. We come in peace. Do you have the good biscuits?", cut = 0.93 },
+  { sfx = "zap" },
+  { say = "infomercial", text = "Lost in space? Can't find the way home? Try Space Map! It's a map of space with a little sticker that says, you are here! You'll always be here! You can't argue with the sticker!" },
+  { sfx = "zap" },
+  { say = "captain", text = "Lieutenant, set a course for home." },
+  { say = "lieutenant", text = "Which one, sir?" },
+  { say = "captain", text = "The one with the biscuits.", cut = 0.9 },
+  { sfx = "zap" },
+  { say = "pockets", text = "Hello, friends! Today, Little Nothing and I are going to space!" },
+  { say = "nothing", text = "Are there biscuits?" },
+  { say = "pockets", text = "Nobody knows, Little Nothing! That's why we're going!", cut = 0.93 },
+  { sfx = "zap" },
+  { say = "history", text = "In the year of the great biscuit shortage, entire fleets were lost, looking for the good ones." },
+  { sfx = "zap" },
+  { say = "weather", text = "Tonight, scattered stars, with a chance of meteors. If you see one, make a wish. If you see two, they're probably arguing." },
+  { sfx = "zap" },
+]
+
+[[clip]]
+id = "show-016"
+category = "show"
+title = "Three in the Morning"
+daypart = "night"
+lines = [
+  { sfx = "zap" },
+  { say = "infomercial", text = "Are you tired of being tired? Have you tried being something else? Try Something Else! It's not a pill. It's not a program. It's just something else." },
+  { sfx = "zap" },
+  { say = "poet", text = "I lay awake, and the ceiling lay awake above me. Neither of us said anything. It was the best conversation I'd had all year." },
+  { sfx = "zap" },
+  { say = "darlene", text = "A blanket with the weight of a small, reassuring dog. And it comes with a small, reassuring dog!", cut = 0.95 },
+  { sfx = "zap" },
+  { say = "dale", text = "And in the overnight news, nothing has happened. We'll keep you updated." },
+  { sfx = "zap" },
+  { say = "infomercial", text = "Can't sleep? Count sheep! Can't count? Our sheep count themselves! Call now, and we'll throw in a goat who is very good at fractions!" },
+  { sfx = "zap" },
+  { say = "esteban", text = "Ramona. It is three in the morning. Why are you still awake?" },
+  { say = "ramona", text = "Because you are, Esteban. Because you are.", cut = 0.93 },
+  { sfx = "zap" },
+  { say = "closedown", text = "This station is now closing down. Please put the night back where you found it." },
+  { sfx = "zap" },
+  { say = "couch", text = "One more." },
+  { sfx = "zap" },
+]
+
+[[clip]]
+id = "show-017"
+category = "show"
+title = "Prime Time, Part Two"
+daypart = "evening"
+lines = [
+  { sfx = "zap" },
+  { say = "sitcom_him", text = "Honey, I'm home!" },
+  { say = "sitcom_her", text = "Which one?" },
+  { sfx = "applause", seconds = 1.6 },
+  { sfx = "zap" },
+  { say = "detective", text = "The victim was a cake. Somebody ate it. Three slices, no fork. We're looking for an animal.", cut = 0.95 },
+  { sfx = "zap" },
+  { say = "chef", text = "And there you have it, a beautiful cake. Leave it on the side to cool, and whatever you do, don't leave the room." },
+  { sfx = "zap" },
+  { say = "antiques", text = "And what would you say this cake is worth?" },
+  { say = "owner", text = "Well, it's a family heirloom. It was my grandmother's. She never let anyone eat it.", cut = 0.94 },
+  { sfx = "zap" },
+  { say = "sports", text = "And he's rounding the corner, he's rounding another corner, the track is just corners now, nobody knows where the straight bit went!", cut = 0.93 },
+  { sfx = "zap" },
+  { say = "nature", text = "The egg, alone in the nest, contemplates the great question. It decides that it came first, and feels very pleased with itself." },
+  { sfx = "zap" },
+  { say = "quiz", text = "Next question! Which came first?", cut = 0.9 },
+  { sfx = "zap" },
+  { say = "trailer", text = "From the people who brought you Tuesday. Comes Wednesday." },
+  { sfx = "zap" },
+  { say = "sitcom_him", text = "Honey, have you seen the cake?" },
+  { say = "sitcom_her", text = "Which one?" },
+  { sfx = "applause", seconds = 1.6 },
+  { sfx = "zap" },
+]
+
+[[clip]]
+id = "show-018"
+category = "show"
+title = "Every Channel Is Darlene"
+lines = [
+  { sfx = "zap" },
+  { say = "darlene", text = "And it comes in oak, pine, or regret." },
+  { sfx = "zap" },
+  { say = "darlene", text = "Or regret." },
+  { sfx = "zap" },
+  { say = "darlene", name = "Weather Channel", text = "And the forecast for tonight. Oak, pine, or regret." },
+  { sfx = "zap" },
+  { say = "darlene", name = "Every Possible News", text = "In the news tonight. A stair." },
+  { sfx = "zap" },
+  { say = "darlene", name = "Nature Channel", text = "And here, in its natural habitat, the stair. Available in oak, pine, or regret." },
+  { sfx = "zap" },
+  { say = "darlene", name = "Kids' TV", text = "Hello, friends! Today's word is stair! Can you say stair? Now ask a grown up to buy it!" },
+  { sfx = "zap" },
+  { say = "darlene", text = "Trent, I think they're trying to change the channel." },
+  { say = "trent", text = "They can't, Darlene! We're on every channel now! We bought them!" },
+  { sfx = "zap" },
+  { say = "darlene", text = "Hello, viewer. You've got crumbs on your jumper. It's all right. We all do." },
+  { sfx = "zap" },
+  { say = "trent", text = "Hi again!" },
+  { sfx = "zap" },
+  { say = "couch", text = "Oh no." },
+  { sfx = "zap" },
+  { say = "darlene", text = "Remember, there's only one stair, and there's only one you. Coincidence? Trent?" },
+  { say = "trent", text = "No such thing, Darlene!" },
+  { sfx = "zap" },
+  { sfx = "zap" },
+  { sfx = "zap" },
+  { say = "nature", text = "And the viewer, at last, escapes into the wild, where nothing is for sale." },
+  { sfx = "zap" },
+  { say = "trent", text = "Except this stair!", cut = 0.95 },
+  { sfx = "zap" },
+]

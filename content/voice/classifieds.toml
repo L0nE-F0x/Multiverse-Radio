@@ -1,0 +1,571 @@
+# Alien Classifieds — 91.9, a strip mall at the edge of the map.
+#
+# Rex Bellows pitches everything like it's the last used planet on the lot. Linda from
+# Accounts reads the small print, very fast, and has seen things in it. Linda reads the
+# personals and the lost and found slowly, at her own speed, because she says they
+# deserve it.
+#
+# Ads are category "ad"; personals, lost and found and private sales are "story" segments.
+# Running gags: Greg the shadow and Hollis, Bev's song, Teodor at Relay Four, the geese
+# owed to the Numbers Station, Grumbel's Ladders (and the Ambition, the one with no top).
+station = "classifieds"
+
+[voices]
+rex = { voice = "am_puck", speed = 1.15, name = "Rex Bellows" }
+linda = { voice = "af_jessica", speed = 1.35, name = "Linda from Accounts" }
+road_man = { voice = "am_santa", name = "A Man Explaining a Road" }
+grandparent = { voice = "bf_lily", fx = "phone", name = "A Grandparent" }
+
+# ── Idents ────────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "id-001"
+category = "id"
+lines = [
+  { say = "rex", text = "Alien Classifieds! Products you can't afford, from places you can't reach!" },
+  { sting = "ad" },
+]
+
+[[clip]]
+id = "id-002"
+category = "id"
+lines = [
+  { say = "rex", text = "You're listening to Alien Classifieds, where every deal is final, and every final is a deal!" },
+]
+
+[[clip]]
+id = "id-003"
+category = "id"
+lines = [
+  { say = "linda", text = "Alien Classifieds. Prices subject to reality. Reality subject to change." },
+  { sting = "ad" },
+]
+
+[[clip]]
+id = "id-004"
+category = "id"
+lines = [
+  { say = "rex", text = "Alien Classifieds! Don't touch that dial! Buy that dial!" },
+  { sfx = "cash-register" },
+]
+
+[[clip]]
+id = "id-005"
+category = "id"
+lines = [
+  { say = "rex", text = "Alien Classifieds!" },
+  { say = "linda", text = "Not affiliated with any actual aliens." },
+  { say = "rex", text = "Yet!" },
+]
+
+# ── Host links ────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "dj-001"
+category = "dj"
+lines = [
+  { say = "rex", text = "Rex Bellows here, with more deals than you've got days! Stay tuned, folks, because Linda's got the small print, and the small print has got teeth!" },
+  { say = "rex", text = "Linda, show them the teeth!" },
+  { say = "linda", text = "No.", speed = 1.0 },
+]
+
+[[clip]]
+id = "dj-002"
+category = "dj"
+lines = [
+  { say = "rex", text = "Linda! What time is it?" },
+  { say = "linda", text = "It's sale o'clock, Rex.", speed = 1.0 },
+  { say = "rex", text = "It's always sale o'clock! Stay right where you are, folks!" },
+  { say = "linda", text = "It's also my lunch, Rex.", speed = 1.0 },
+  { say = "rex", text = "Lunch is a sale, Linda!" },
+  { say = "linda", text = "It isn't.", speed = 1.0 },
+]
+
+[[clip]]
+id = "dj-003"
+category = "dj"
+lines = [
+  { say = "rex", text = "Folks, I've just had word from Accounts. Linda?" },
+  { say = "linda", text = "Every price you hear this hour is final, unless it isn't, in which case it is." },
+  { say = "rex", text = "That's Linda, folks! Give her a hand!" },
+  { sfx = "applause", seconds = 1.2, level = 0.4 },
+]
+
+[[clip]]
+id = "dj-004"
+category = "dj"
+lines = [
+  { say = "rex", text = "You're listening to Alien Classifieds, folks! If you don't need it, we've got it! If you need it, we can probably get it! And if you can't afford it, have you considered a hole? Mortimer's got holes!" },
+]
+
+[[clip]]
+id = "dj-005"
+category = "dj"
+daypart = "night"
+lines = [
+  { say = "rex", text = "It's late, folks. The lot's closed. The lights are off. But the deals, the deals are still on. The deals never sleep. And neither do I. Linda?" },
+  { say = "linda", text = "Rex sleeps nine hours a night. He sleeps on the cold side." },
+]
+
+[[clip]]
+id = "dj-006"
+category = "dj"
+lines = [
+  { say = "rex", text = "And now, a quick word from Linda's corner!" },
+  { say = "linda", text = "Hello. Alien Classifieds would like to remind listeners that nothing advertised on this station has ever been approved by anyone. Thank you." },
+  { say = "rex", text = "And that's a guarantee!" },
+]
+
+# ── Ads ───────────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "ad-001"
+category = "ad"
+title = "Bellows Pre-Owned Planets"
+lines = [
+  { sting = "ad" },
+  { say = "rex", text = "Bellows Pre-Owned Planets is having a blowout sale! Everything must go, because the sun is going!" },
+  { say = "rex", text = "Look at this one! Barely used! One previous owner, a very quiet civilization that kept to itself! Two moons! Comes with an ocean, and the ocean comes with a guy. Don't worry about the guy. He's fine." },
+  { say = "rex", text = "And for you young families, a starter asteroid! No atmosphere, no problem! Hold your breath, save some money!" },
+  { say = "rex", text = "Financing available for any species with a concept of money! No credit? No body? No problem!" },
+  { say = "rex", text = "Bellows Pre-Owned Planets. Our prices are astronomical. So are our planets." },
+  { say = "linda", text = "Planets sold as is. Gravity sold separately. The guy is not included. We asked the guy. The guy said no." },
+]
+
+[[clip]]
+id = "ad-002"
+category = "ad"
+title = "Mortimer's Holes"
+lines = [
+  { sting = "ad" },
+  { say = "rex", text = "Hey! You! With the face! Are you tired of holes that are the wrong size? Come on down to Mortimer's Holes!" },
+  { say = "rex", text = "We got big holes! Small holes! Holes you can fold up and put in your pocket! Need to get somewhere? Throw down a hole! Need to get out of somewhere? Also a hole!" },
+  { say = "rex", text = "Look at this one! Look at it! You can't! Because it's a hole!" },
+  { say = "rex", text = "Mortimer's Holes. Located wherever you fall." },
+  { say = "linda", text = "Holes are non refundable. Holes may contain other holes. Mortimer is not responsible for where you end up. Mortimer is not responsible. Mortimer has never been responsible." },
+]
+
+[[clip]]
+id = "ad-003"
+category = "ad"
+title = "Pre-Owned Grumbel's Ladder"
+lines = [
+  { say = "rex", text = "Folks, I've got something special on the lot today. A genuine, pre-owned, Grumbel's Ladder!" },
+  { say = "rex", text = "One previous climber! He went up on a Tuesday and he never came down! That's how good this ladder is! He's still up there! He waves!" },
+  { say = "rex", text = "Twelve rungs! Every one of them a step up! Climb it! Lean it! Lean on it emotionally! It can take it! It's a Grumbel!" },
+  { say = "rex", text = "And if you buy today, I'll throw in the bottom rung, absolutely free!" },
+  { say = "linda", text = "Bottom rung is part of the ladder. Previous climber is not included and may not be disturbed. Up is a choice. Down is extra." },
+]
+
+[[clip]]
+id = "ad-004"
+category = "ad"
+title = "Bellows Discount Gravity"
+lines = [
+  { sting = "ad" },
+  { say = "rex", text = "Do you float? Do your kids float? Is your grandmother currently somewhere above the house? You need Bellows Discount Gravity!" },
+  { say = "rex", text = "This is overstock gravity, folks, from a planet that turned out not to need it! Strap it on, and stay put!" },
+  { say = "rex", text = "Comes in light, medium, and Tuesday! Tuesday is the heavy one!" },
+  { say = "linda", text = "Gravity may pool in the ankles. Do not apply gravity near birds. Gravity is not a gift and should not be wrapped. Rex cannot get your grandmother down. Rex has tried." },
+]
+
+[[clip]]
+id = "ad-005"
+category = "ad"
+title = "The Box"
+lines = [
+  { say = "rex", text = "Folks, I'm going to be honest with you. I don't know what's in this box." },
+  { say = "rex", text = "You don't know what's in this box! Nobody knows what's in this box! But something in this box knows what's in this box, and it seems very happy about it!" },
+  { say = "rex", text = "Is it a toaster? Is it a better life? Is it slightly warm? It is slightly warm!" },
+  { say = "rex", text = "One box. Thirty dollars. Take it home, put it on a shelf, and feel watched, in a good way!" },
+  { say = "linda", text = "Do not open the box. The box will open when it is ready. The box is not a pet. The box is not, technically, a box." },
+]
+
+[[clip]]
+id = "ad-006"
+category = "ad"
+title = "Refurbished Sunrises"
+lines = [
+  { sting = "ad" },
+  { say = "rex", text = "Tired of the same old sunrise every single morning? Treat yourself to a Bellows Refurbished Sunrise!" },
+  { say = "rex", text = "Every one of these sunrises has only been watched once, by a man who was facing the wrong way! They're practically brand new!" },
+  { say = "rex", text = "Pinks! Golds! A sort of orange that makes you want to call your mother! Hang it in your window, and it rises every morning, at whatever time you like!" },
+  { say = "linda", text = "Sunrise may set unexpectedly. Sunrise not for indoor use. Do not look directly at the sunrise. The man who was facing the wrong way is fine, and has asked us to stop mentioning him." },
+]
+
+[[clip]]
+id = "ad-007"
+category = "ad"
+title = "Pre-Loved Memories"
+lines = [
+  { say = "rex", text = "Ever wanted to remember a really lovely wedding? A summer by a lake? A dog called Biscuit? Now you can, with Bellows Pre-Loved Memories!" },
+  { say = "rex", text = "These are genuine memories, gently used, from people who had more than they needed! You weren't there, but you'll swear you were!" },
+  { say = "rex", text = "This week only, buy any two childhood birthdays, and get a first kiss at half price! It's on a ferris wheel! It's raining! It's perfect!" },
+  { say = "linda", text = "Memories are non transferable after transfer. You may not return a memory once you have had it. If you begin to remember a man named Kevin, stop. Kevin was not part of the sale." },
+]
+
+[[clip]]
+id = "ad-008"
+category = "ad"
+title = "Spare Hours"
+lines = [
+  { sting = "ad" },
+  { say = "rex", text = "Too much to do? Not enough day? Come on down and buy an hour!" },
+  { say = "rex", text = "These are top quality hours, folks, left over from a nap that ended early. Never been used! Still got that new hour smell!" },
+  { say = "rex", text = "Use one to finish your work! Use one to start your work! Use one to stare out of the window like somebody in a film! It's your hour!" },
+  { say = "rex", text = "Hours from just nine ninety nine. Minutes sold loose at the register." },
+  { say = "linda", text = "Hours must be spent within the hour. Hours may not be used on Tuesdays, as Tuesday is already full. Rex is not responsible for any hour that turns out to be a Monday." },
+]
+
+[[clip]]
+id = "ad-009"
+category = "ad"
+title = "The Bellows Living Rock"
+lines = [
+  { say = "rex", text = "Kids want a pet? Landlord says no pets? Say hello to the Bellows Living Rock!" },
+  { say = "rex", text = "That's right! It's a rock, and it's alive! It's slow, it's loyal, and it loves you very, very much, on a geological timeframe!" },
+  { say = "rex", text = "Feed it once a century! Walk it never! It'll greet you at the door in about four hundred years, and boy, will it be excited!" },
+  { say = "linda", text = "The Living Rock may outlive you, your children, and the house. Please include the Living Rock in your will. The Living Rock has already included you in its will." },
+]
+
+[[clip]]
+id = "ad-010"
+category = "ad"
+title = "Doors to Nowhere"
+lines = [
+  { sfx = "door-creak" },
+  { say = "rex", text = "Want to get away from it all? Really, really away? Come on down for a Bellows Door to Nowhere!" },
+  { say = "rex", text = "Hang it in any wall! Open it up, and you're nowhere! It's peaceful! It's quiet! There's no phone signal!" },
+  { say = "rex", text = "Customers tell me, Rex, nowhere is the nicest place I've ever been! And then they go back! And I never see them again! That's a satisfied customer!" },
+  { say = "linda", text = "Nowhere is not a place. Do not move to nowhere. Do not let children play in nowhere. If you are hearing this from nowhere, please knock twice, and we will come and get you." },
+]
+
+[[clip]]
+id = "ad-011"
+category = "ad"
+title = "Gently Used Wishes"
+lines = [
+  { sting = "ad" },
+  { say = "rex", text = "Folks! Wishes! Gently used wishes! Get them while they're wishy!" },
+  { say = "rex", text = "This one here, one previous owner, wished for a slightly better sandwich and got it! The rest of the wish is good as new! That's ninety five percent of a wish, for half the price!" },
+  { say = "rex", text = "This one's a birthday wish, only blown out once! And this one, ooh, this one was made on a shooting star, folks. It's still a little bit warm!" },
+  { say = "linda", text = "Wishes sold as is. Wishes may be partially used. Bellows is not responsible for irony, technicalities or sandwiches. Please do not wish for more wishes. It makes the other wishes nervous." },
+]
+
+[[clip]]
+id = "ad-012"
+category = "ad"
+title = "Weather in a Jar"
+lines = [
+  { say = "rex", text = "Dry spell? Bad summer? Uncork a jar of genuine Damp Dimension rain!" },
+  { say = "rex", text = "This rain is four thousand years old, folks! Aged in clouds! Hand bottled by the people of Precinct Nine, who have, frankly, got plenty!" },
+  { say = "rex", text = "One jar waters a garden! Two jars waters a neighbor! Three jars, and you're a lake!" },
+  { say = "linda", text = "Do not uncork indoors. Jar may contain lightning. Jar does contain lightning. Jar is not to be used for jam." },
+]
+
+[[clip]]
+id = "ad-013"
+category = "ad"
+title = "Personal Theme Music"
+lines = [
+  { sting = "fanfare" },
+  { say = "rex", text = "Walk into a room, and bam! Your own theme music! Played live, by a tiny orchestra that follows you everywhere!" },
+  { say = "rex", text = "Walking into a meeting? Trumpets! Leaving a party? Sad violins! Making a sandwich? A little bit of harp!" },
+  { say = "rex", text = "Twelve tiny musicians, fully trained, extremely loyal, and small enough to fit in a coat pocket!" },
+  { say = "linda", text = "Orchestra must be fed. Orchestra may unionize. Orchestra cannot be dismissed, only outrun. Rex is not responsible if the orchestra plays at your wedding without being asked. It will." },
+]
+
+[[clip]]
+id = "ad-014"
+category = "ad"
+title = "Silence, in Bulk"
+lines = [
+  { say = "rex", text = "Noisy neighbors? Loud kids? Loud you? Bellows has silence, folks. In bulk!" },
+  { say = "rex", text = "Industrial quantities of pure, premium silence, from the overstock warehouse at Static Lullabies! You've never heard quiet like this! Because you can't!" },
+  { say = "rex", text = "Sold by the yard! Spread it on a room! Hang it over a crib! Lay a little strip in the hallway so you can sneak in late!" },
+  { pause = 1.2 },
+  { say = "linda", text = "Silence may contain listening. If the silence says hello, do not answer it. It's just being polite." },
+]
+
+[[clip]]
+id = "ad-015"
+category = "ad"
+title = "Bellows Time Shares"
+lines = [
+  { say = "rex", text = "Folks, you've heard of a timeshare. But have you heard of a time share?" },
+  { say = "rex", text = "That's right! You own a share of time! Every Thursday afternoon, two till three, forever! It's yours! Nobody can take it!" },
+  { say = "rex", text = "Spend it on a hobby! Spend it with the kids! Spend it sitting in a chair, looking at your hour, saying, this is mine!" },
+  { say = "linda", text = "Time share does not include time. Other owners may be present. Owners must vacate the hour by three. If you are still in the hour at three, you are in the next hour, which belongs to a Mister Pellow, who would like you to leave." },
+]
+
+[[clip]]
+id = "ad-016"
+category = "ad"
+title = "Mirror World Imports"
+lines = [
+  { sting = "ad" },
+  { say = "rex", text = "Mirror World Imports! Everything you know, but the other way round!" },
+  { say = "rex", text = "Left handed scissors that are right handed over here! Gloves for your other hands! Clocks that run backward, so you've always got time!" },
+  { say = "rex", text = "And this week, direct from the other side of your bathroom mirror, a reversible jacket that's only reversible in one direction!" },
+  { say = "linda", text = "Imports may revert on contact with mirrors. Customers may revert on contact with mirrors. Do not buy a pair of anything. They will only agree with each other." },
+]
+
+[[clip]]
+id = "ad-017"
+category = "ad"
+title = "Replacement Shadows"
+lines = [
+  { say = "rex", text = "Lost your shadow? It happens to the best of us! Don't walk around flat, folks. Rex has replacement shadows!" },
+  { say = "rex", text = "Look at this one! Belonged to a ballroom dancer! It'll take you places! This one's from a basketball player, it's very tall, you'll look great at four in the afternoon!" },
+  { say = "rex", text = "And for the kids, a little dinosaur! Just the shadow of one! Nobody's getting hurt!" },
+  { say = "linda", text = "Replacement shadows may not match the body. Shadow may lead. If your original shadow returns, Rex is not responsible for the fight. If your original shadow is called Greg, please call Hollis. He would like to know." },
+]
+
+[[clip]]
+id = "ad-018"
+category = "ad"
+title = "Rex's Goose Barn"
+lines = [
+  { say = "rex", text = "Do you owe the Numbers Station geese? Don't panic! We've all been there!" },
+  { say = "rex", text = "Come on down to Rex's Goose Barn, where the geese are plentiful, and the prices are seven, seven, four!" },
+  { say = "rex", text = "Big geese! Little geese! Geese that look like they know something! Load up the car, settle your account, and sleep at night again!" },
+  { say = "linda", text = "Geese are not ducks. Rex does not accept ducks. Neither does the Numbers Station. Rex is not affiliated with the Numbers Station. The Numbers Station is affiliated with Rex. Rex does not want to talk about it." },
+]
+
+[[clip]]
+id = "ad-019"
+category = "ad"
+title = "Silence-Cancelling Headphones"
+lines = [
+  { say = "rex", text = "Can't stand the quiet? Hate it when everybody stops talking? Introducing silence cancelling headphones!" },
+  { say = "rex", text = "The moment it gets quiet, these babies fill the gap with the comforting sound of a man you don't know, explaining which road he took!" },
+  { say = "road_man", text = "So I came off at the roundabout, and I thought, no, I'll take the long way, because of the bridge, and you know what the bridge is like on a Thursday." },
+  { say = "rex", text = "Never sit in silence again! He's got directions for days!" },
+  { say = "linda", text = "The man cannot be turned off. The man is not a real man. The man has never arrived." },
+]
+
+[[clip]]
+id = "ad-020"
+category = "ad"
+title = "Previously Haunted Furniture"
+lines = [
+  { sting = "ad" },
+  { say = "rex", text = "Folks, I've got a showroom full of previously haunted furniture, and every single piece has been personally un-haunted by me!" },
+  { say = "rex", text = "This wardrobe? Had a ghost! The ghost moved out! The ghost left a note, saying, thanks for having me, the light switch in the hall is temperamental! That's a considerate ghost!" },
+  { say = "rex", text = "And this rocking chair rocks all by itself! No more rocking! Let the chair do the work!" },
+  { say = "linda", text = "Ghost may visit on weekends. Ghost has been told about the sale and is fine with it. Chair rocks at night. Chair has always rocked at night." },
+]
+
+[[clip]]
+id = "ad-021"
+category = "ad"
+title = "Bottled Applause"
+lines = [
+  { say = "rex", text = "Feeling unappreciated? Did you do the dishes and nobody noticed? Uncork a bottle of Bellows Genuine Applause!" },
+  { sfx = "applause", seconds = 2.2 },
+  { say = "rex", text = "That's real applause, folks, harvested from a standing ovation in a dimension where everyone is very supportive!" },
+  { say = "rex", text = "Use it when you finish a crossword! Use it when you get out of bed! Use it for no reason at all! You deserve it!" },
+  { say = "linda", text = "Applause may not correspond to any achievement. Applause may continue after the cork is replaced. If applause follows you to bed, please let it finish." },
+]
+
+[[clip]]
+id = "ad-022"
+category = "ad"
+title = "A Quiet Room (Not for Sale)"
+lines = [
+  { say = "rex", text = "And now, folks, a very special message, from Linda!" },
+  { pause = 0.6 },
+  { say = "linda", text = "Hello. I'd like to tell you about a room.", speed = 0.95, gap = 0.6 },
+  { say = "linda", text = "It's a small room. It has one chair, and a window, and a lamp that's always on, a little bit low.", speed = 0.95, gap = 0.6 },
+  { say = "linda", text = "Nobody shouts in it. Nobody sells anything in it. There is no small print in it, at all.", speed = 0.95, gap = 0.6 },
+  { say = "linda", text = "It isn't for sale. I just wanted you to know that it exists.", speed = 0.95, gap = 1.0 },
+  { say = "rex", text = "Room may contain Rex!", speed = 1.4 },
+  { say = "linda", text = "It may not.", speed = 0.95 },
+]
+
+[[clip]]
+id = "ad-023"
+category = "ad"
+title = "The Elsewhere Alarm Clock"
+lines = [
+  { sfx = "beep" },
+  { say = "rex", text = "Hate mornings? Wake up somewhere better, with the Bellows Elsewhere Alarm Clock!" },
+  { say = "rex", text = "Set the alarm, go to sleep, and when it rings, you wake up in a different reality, one where you're already showered and the coffee's made!" },
+  { say = "rex", text = "Snooze sends you back! Snooze twice, and you wake up on a beach! Snooze three times, and, well, folks, we've never pressed it three times!" },
+  { say = "linda", text = "Pick up from other realities not included. Your pillow may not follow you. Rex is not responsible for the version of you who wakes up in your bed and is also running late." },
+]
+
+[[clip]]
+id = "ad-024"
+category = "ad"
+title = "Fine Aged Thunder"
+lines = [
+  { say = "rex", text = "Thunder! Fine, aged thunder! Bottled in the year of the big storm, and aged in oak barrels!" },
+  { say = "rex", text = "Want to make an entrance? Uncork some thunder! Want to end an argument? Thunder! Want the dog to come out from under the bed? Wait, no. Don't do that one." },
+  { say = "rex", text = "Rolling thunder, clapping thunder, and a distant rumble for the mantelpiece!" },
+  { say = "linda", text = "Do not uncork thunder near lightning. They will reunite. It will be very emotional. Your windows will not survive." },
+]
+
+[[clip]]
+id = "ad-025"
+category = "ad"
+title = "Discount Deja Vu"
+lines = [
+  { say = "rex", text = "Folks, have I got a deal for you! Discount deja vu!" },
+  { say = "rex", text = "You've seen this deal before! You know you have! That feeling? That's value!", gap = 0.6 },
+  { say = "rex", text = "Folks, have I got a deal for you! Discount deja vu!", gap = 0.8 },
+  { say = "rex", text = "See? Wait. Did I say that already?" },
+  { say = "linda", text = "You have heard this disclaimer before." },
+]
+
+[[clip]]
+id = "ad-026"
+category = "ad"
+title = "Rent an Echo"
+lines = [
+  { say = "rex", text = "Small apartment? Feeling a bit cramped? Rent an echo!" },
+  { say = "rex", text = "Genuine lunar echoes, imported direct from the Moon Dub Sound System! Shout hello in your kitchen, and eleven seconds later, hello comes back! Like a canyon! Like a cathedral! Like a friend!" },
+  { say = "rex", text = "Watch this. Hello!" },
+  { say = "linda", text = "Echo arrives eleven seconds after the original. Echo cannot be rushed. Echo is not a substitute for company. Echo is a little bit of company." },
+  { pause = 0.5 },
+  { say = "rex", text = "Hello!", fx = "cave", speed = 0.9 },
+]
+
+[[clip]]
+id = "ad-027"
+category = "ad"
+title = "Pre-Owned Moons"
+lines = [
+  { sting = "ad" },
+  { say = "rex", text = "Folks, everybody wants a moon! But a brand new moon? Ha! Pricey! Why not a pre-owned moon?" },
+  { say = "rex", text = "This one's shy! Never been looked at! Perfect for a quiet planet that doesn't like attention!" },
+  { say = "rex", text = "And this one here's a harvest moon, slightly used, only had the one harvest! Lots of harvest left in her!" },
+  { say = "linda", text = "Moons sold without tides. Tides available as an add on. Moon may continue looking near you after purchase. That's just what moons do." },
+]
+
+[[clip]]
+id = "ad-028"
+category = "ad"
+title = "Dial a Grandparent"
+lines = [
+  { say = "rex", text = "Nobody asking if you're eating properly? Nobody telling you you look thin? Sign up for Dial a Grandparent!" },
+  { say = "rex", text = "Once a week, a lovely grandparent from a nearby reality gives you a ring, asks how you're doing, and tells you to wear a vest!" },
+  { sfx = "phone-ring" },
+  { say = "grandparent", text = "Hello, love. Are you eating? You sound thin. Wear a vest." },
+  { say = "rex", text = "That's love, folks! Twelve ninety five a month!" },
+  { say = "linda", text = "Grandparent may not be your grandparent. Grandparent will not stop asking about your teeth. Grandparent may send a cake. You must eat the cake." },
+]
+
+[[clip]]
+id = "ad-029"
+category = "ad"
+title = "The Cold Side of the Pillow"
+daypart = "night"
+lines = [
+  { say = "rex", text = "Hot pillow? Cranky sleeper? Rex has the cold side of the pillow, sold separately!" },
+  { say = "rex", text = "That's right, just the cold side! Harvested fresh every night from the pillows of people who never turn them over!" },
+  { say = "rex", text = "Flip it, slip it, and drift off like a happy little iceberg!" },
+  { say = "linda", text = "Cold side will warm up. That is what cold sides do. Please do not ask for a refund at three in the morning. Rex is asleep. Rex sleeps on the cold side." },
+]
+
+[[clip]]
+id = "ad-030"
+category = "ad"
+title = "The Last Chair"
+lines = [
+  { sting = "ad" },
+  { say = "rex", text = "Musical chairs got you anxious? Never be left standing again, with the Bellows Last Chair!" },
+  { say = "rex", text = "This chair is always there, folks! When everyone else has sat down, look behind you! It's the last chair! It's for you! It's always been for you!" },
+  { say = "linda", text = "The Last Chair cannot be sat in by anyone else. The Last Chair will find you. The Last Chair has been known to appear at weddings, in lifts, and once, at sea." },
+]
+
+# ── Personals, lost and found, private sales ──────────────────────────────────
+
+[[clip]]
+id = "story-001"
+category = "story"
+title = "Personals, Lost and Found"
+lines = [
+  { sting = "chime" },
+  { say = "rex", text = "And now, the personals, and the lost and found, read by Linda, who reads them slowly, because she says they deserve it. Linda?" },
+  { say = "linda", text = "Thank you, Rex.", speed = 0.95, gap = 0.8 },
+  { say = "linda", text = "Lost. One shadow. Answers to Greg. Last seen leaving without me. If found, please do not approach. Greg has made his choice.", speed = 0.95, gap = 0.9 },
+  { say = "linda", text = "For sale. Haunted mirror. Shows you exactly as you are. Very upsetting. Make an offer.", speed = 0.95, gap = 0.9 },
+  { say = "linda", text = "Seeking. A tall, dark stranger to stand at the end of my garden. Must be patient. Must be quiet. I already have one. Looking for a second.", speed = 0.95, gap = 0.9 },
+  { say = "linda", text = "Found. A Tuesday. Mostly intact. Some damage to the afternoon. Claim at the front desk.", speed = 0.95, gap = 0.9 },
+  { say = "linda", text = "Free to a good home. My thoughts. Please take them. They are not house trained.", speed = 0.95, gap = 1.0 },
+  { say = "rex", text = "Remember, folks. If you can't find it, it's probably in another reality. If you can find it, it probably isn't yours!" },
+  { sting = "chime" },
+]
+
+[[clip]]
+id = "story-002"
+category = "story"
+title = "The Personals"
+lines = [
+  { sting = "chime" },
+  { say = "rex", text = "Personals time, folks! Linda?" },
+  { say = "linda", text = "Seeking. A song. It goes dum, dum, da dum, and then a man cries. If you are this song, or know where it is, please call Bev. Bev has been looking for a long time.", speed = 0.95, gap = 0.9 },
+  { say = "linda", text = "Man, four seconds behind, seeks woman, four seconds ahead. Let's meet in the middle. I'll be there in a minute. You already are.", speed = 0.95, gap = 0.9 },
+  { say = "linda", text = "Lighthouse keeper at Relay Four seeks anyone. Anyone at all. Good listener. Has kettle.", speed = 0.95, gap = 0.9 },
+  { say = "linda", text = "Retired giant, gentle, seeks small friend for long walks. Will walk slowly. Will look where he's going. Has never once stepped on anybody, and would like that on the record.", speed = 0.95, gap = 0.9 },
+  { say = "linda", text = "Reflection, thirties, left handed, seeks a person who smiles first. Tired of always going second.", speed = 0.95, gap = 1.0 },
+  { say = "rex", text = "Beautiful, Linda. Just beautiful.", speed = 1.0 },
+  { say = "linda", text = "Thank you, Rex.", speed = 0.95 },
+]
+
+[[clip]]
+id = "story-003"
+category = "story"
+title = "Lost and Found"
+lines = [
+  { sting = "chime" },
+  { say = "rex", text = "Lost and found! Linda, what have we got?" },
+  { say = "linda", text = "Lost. The thread. Of a conversation. Last seen at a dinner party, around the time somebody said, anyway. If found, please return it. We were getting somewhere.", speed = 0.95, gap = 0.9 },
+  { say = "linda", text = "Found. A key. It opens something. We have tried everything. It is not this. It is not that. It is possibly you.", speed = 0.95, gap = 0.9 },
+  { say = "linda", text = "Lost. My sense of direction. If found, please don't tell me where it is. I won't be able to get there.", speed = 0.95, gap = 0.9 },
+  { say = "linda", text = "Found. Half a Wednesday, in the back of a taxi. The driver says it was very quiet the whole way, and tipped well.", speed = 0.95, gap = 0.9 },
+  { say = "linda", text = "Lost. A small dog, in a large reality. Answers to Pickle. Pickle does not know he is lost. Pickle thinks this is a walk. Pickle is having a lovely time.", speed = 0.95, gap = 1.0 },
+  { say = "rex", text = "If you've lost it, folks, Alien Classifieds has probably found it! Or sold it. Probably sold it." },
+]
+
+[[clip]]
+id = "story-004"
+category = "story"
+title = "Missed Connections"
+lines = [
+  { sting = "chime" },
+  { say = "rex", text = "Missed connections, folks. Get your hankies out. Linda?" },
+  { say = "linda", text = "You, on the bus that goes through every reality. Me, also on the bus, in seven of them. You smiled in three. Let's talk about the other four.", speed = 0.95, gap = 0.9 },
+  { say = "linda", text = "You, standing in the rain in Precinct Nine with no umbrella, looking like you'd been doing it for years. Me, the umbrella. I'd like to try again.", speed = 0.95, gap = 0.9 },
+  { say = "linda", text = "You, the man in the queue at the Bureau of Infinite Queues. Me, the woman standing in front of you, for thirty years. I'm so glad you finally said hello.", speed = 0.95, gap = 0.9 },
+  { say = "linda", text = "You, a moon. Me, a man on a porch. You looked near me. I looked near you. Same time next month?", speed = 0.95, gap = 1.0 },
+  { say = "rex", text = "Love, folks! It's out there! Possibly in a queue!" },
+]
+
+[[clip]]
+id = "story-005"
+category = "story"
+title = "Still Lost: Greg"
+lines = [
+  { sting = "chime" },
+  { say = "rex", text = "A quick one from the lost and found, folks, and it's an update.", speed = 1.05 },
+  { say = "linda", text = "Still lost. One shadow. Answers to Greg. Last seen at the sea, sitting on the sand with his knees up, looking at the water.", speed = 0.95, gap = 0.8 },
+  { say = "linda", text = "His person, Hollis, would like Greg to know that he isn't angry, that the porch light is on, and that he has been standing in the sun at noon every day, so there's room.", speed = 0.95, gap = 0.8 },
+  { say = "linda", text = "Greg, if you're listening, you don't have to come back. But send a postcard. Hollis would like a postcard.", speed = 0.95, gap = 1.2 },
+  { say = "rex", text = "Come on, Greg. Send the man a postcard.", speed = 1.0 },
+]
+
+[[clip]]
+id = "story-006"
+category = "story"
+title = "Private Sales"
+lines = [
+  { sting = "chime" },
+  { say = "rex", text = "Private sales, folks! No dealers! No Rex! Just honest people selling honest things! Linda?" },
+  { say = "linda", text = "For sale. One staircase, slightly too long. Takes you one floor further than you need. You will not be told what's on that floor.", speed = 0.95, gap = 0.9 },
+  { say = "linda", text = "For sale. Hot air balloon. Only flown once. Still flying. Please collect.", speed = 0.95, gap = 0.9 },
+  { say = "linda", text = "Free. One kitten, three eyes, very good at noticing things. Will notice things about you. Will be kind about it.", speed = 0.95, gap = 0.9 },
+  { say = "linda", text = "For sale. A Grumbel's Ladder, the Ambition model. Selling because I would like to come down now. Please send help. Please send a ladder.", speed = 0.95, gap = 1.0 },
+  { say = "rex", text = "Ooh. I'll take the ladder. Linda, put me down for the ladder." },
+]
