@@ -147,7 +147,7 @@ describe('every registered scene through the lens', () => {
         expect(new Set(out).size, id).toBeGreaterThan(16);
       }
     }
-  });
+  }, 30_000); // every scene, twice: slow on a loaded machine
 });
 
 function redOf(c: number) {

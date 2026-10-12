@@ -210,14 +210,14 @@
     filter: sepia(0.45) saturate(0.8);
   }
 
-  /* Scanlines and the curve of the glass. */
+  /* Scanlines and the curve of the glass. Scenes grade their own vignette, so this one is light. */
   .viewport-glass {
     position: absolute;
     inset: 0;
     pointer-events: none;
     background:
       repeating-linear-gradient(to bottom, rgb(0 0 0 / 0.2) 0 1px, transparent 1px 3px),
-      radial-gradient(ellipse 130% 110% at 50% 48%, transparent 52%, rgb(0 0 0 / 0.62) 100%);
+      radial-gradient(ellipse 130% 110% at 50% 48%, transparent 60%, rgb(0 0 0 / 0.32) 100%);
   }
 
   /* ── HUD frame ───────────────────────────────────────────────────────────── */
