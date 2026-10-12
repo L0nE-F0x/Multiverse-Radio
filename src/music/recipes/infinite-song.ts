@@ -57,16 +57,16 @@ export function composeInfiniteSong(req: TrackRequest): Score {
   const progT = parseProgression(TURN, TONIC);
 
   const guitar = b.inst({ kind: 'sample', patch: 'folk-guitar', name: 'Acoustic guitar', gain: 0.42, pan: -0.3, reverb: 0.15, release: 0.15 });
-  const piano = b.inst({ kind: 'sample', patch: 'piano', name: 'Upright piano', gain: 0.42, pan: 0.2, reverb: 0.2, lowpass: 6000 });
+  const piano = b.inst({ kind: 'sample', patch: 'piano', name: 'Upright piano', gain: 0.38, pan: 0.2, reverb: 0.2, lowpass: 6000 });
   const bass = b.inst({ kind: 'sample', patch: 'bass-upright', name: 'Upright bass', gain: 0.55, pan: 0.02 });
   const singer = b.inst({ kind: 'synth', patch: 'melodica', name: 'Melodica (the verse)', gain: 0.5, pan: 0.05, reverb: 0.25 });
   const fiddle = b.inst({ kind: 'sample', patch: 'bowed-fiddle', name: 'Fiddle', gain: 0.5, pan: 0.15, reverb: 0.28, release: 0.12 });
-  const room = b.inst({ kind: 'synth', patch: 'crew', name: 'Everyone (the refrain)', gain: 0.42, pan: -0.08, reverb: 0.45, lowpass: 3000 });
+  const room = b.inst({ kind: 'synth', patch: 'crew', name: 'Everyone (the refrain)', gain: 0.55, pan: -0.08, reverb: 0.45, lowpass: 3000 });
   const kick = b.inst({ kind: 'sample', patch: 'kick-soft', name: 'Kick', gain: 0.4 });
   const tap = b.inst({ kind: 'sample', patch: 'snare-brush', name: 'Brushes', gain: 0.45, pan: -0.05, reverb: 0.1 });
   const stir = b.inst({ kind: 'sample', patch: 'brush-stir', name: 'Brush sweeps', gain: 0.25, pan: -0.05 });
-  const hat = b.inst({ kind: 'sample', patch: 'hat-closed', name: 'Hi-hat', gain: 0.16, pan: 0.2, lowpass: 7000 });
-  const tamb = b.inst({ kind: 'sample', patch: 'jingle-tamb', name: 'Tambourine', gain: 0.15, pan: 0.35 });
+  const hat = b.inst({ kind: 'sample', patch: 'hat-closed', name: 'Hi-hat', gain: 0.25, pan: 0.2, lowpass: 7000 });
+  const tamb = b.inst({ kind: 'sample', patch: 'jingle-tamb', name: 'Tambourine', gain: 0.25, pan: 0.35 });
 
   let pianoV: number[] | null = null;
   let prevBass: number | null = null;

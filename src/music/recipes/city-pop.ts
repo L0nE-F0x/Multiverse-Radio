@@ -61,21 +61,21 @@ export function composeCityPop(req: TrackRequest): Score {
   const fade = fit.bars >= 12 && style.chance(0.7);
 
   // ── The band ──
-  const ep = b.inst({ kind: 'sample', patch: 'dx-ep', name: 'FM electric piano', gain: 0.42, reverb: 0.2, pan: -0.1, lowpass: lerp(6000, 12000, B) });
-  const gtr = b.inst({ kind: 'sample', patch: 'chorus-guitar', name: 'Chorus guitar', gain: 0.42, pan: 0.38, reverb: 0.12, release: 0.05 });
-  const bass = b.inst({ kind: 'sample', patch: 'slap-bass', name: 'Slap bass', gain: 0.5, pan: 0, release: 0.06 });
+  const ep = b.inst({ kind: 'sample', patch: 'dx-ep', name: 'FM electric piano', gain: 0.53, reverb: 0.2, pan: -0.1, lowpass: lerp(6000, 12000, B) });
+  const gtr = b.inst({ kind: 'sample', patch: 'chorus-guitar', name: 'Chorus guitar', gain: 0.5, pan: 0.38, reverb: 0.12, release: 0.05 });
+  const bass = b.inst({ kind: 'sample', patch: 'slap-bass', name: 'Slap bass', gain: 0.7, pan: 0, release: 0.06 });
   const kick = b.inst({ kind: 'sample', patch: 'kick-punch', name: 'Kick', gain: 0.32 });
-  const snare = b.inst({ kind: 'sample', patch: 'snare-gated', name: 'Gated snare', gain: 0.42, reverb: 0.45, pan: 0.03 });
-  const clap = b.inst({ kind: 'sample', patch: 'clap', name: 'Claps', gain: 0.28, reverb: 0.3, pan: -0.06 });
-  const hat = b.inst({ kind: 'sample', patch: 'hat-closed', name: 'Hi-hat', gain: 0.28, pan: 0.22, lowpass: lerp(8000, 13000, B) });
+  const snare = b.inst({ kind: 'sample', patch: 'snare-gated', name: 'Gated snare', gain: 0.5, reverb: 0.45, pan: 0.03 });
+  const clap = b.inst({ kind: 'sample', patch: 'clap', name: 'Claps', gain: 0.4, reverb: 0.3, pan: -0.06 });
+  const hat = b.inst({ kind: 'sample', patch: 'hat-closed', name: 'Hi-hat', gain: 0.45, pan: 0.22, lowpass: lerp(8000, 13000, B) });
   const ohat = b.inst({ kind: 'sample', patch: 'hat-open', name: 'Open hat', gain: 0.18, pan: 0.22 });
   const tom = b.inst({ kind: 'sample', patch: 'tom', name: 'Toms', gain: 0.28, reverb: 0.35 });
   const crash = b.inst({ kind: 'sample', patch: 'crash', name: 'Crash', gain: 0.17, reverb: 0.25, pan: -0.25 });
-  const brass = b.inst({ kind: 'synth', patch: 'brass', name: 'Synth brass', gain: 0.42, reverb: 0.25, pan: 0.12 });
-  const strings = b.inst({ kind: 'synth', patch: 'pad-strings', name: 'Strings', gain: 0.32, reverb: 0.35, pan: -0.05 });
+  const brass = b.inst({ kind: 'synth', patch: 'brass', name: 'Synth brass', gain: 0.55, reverb: 0.25, pan: 0.12 });
+  const strings = b.inst({ kind: 'synth', patch: 'pad-strings', name: 'Strings', gain: 0.45, reverb: 0.35, pan: -0.05 });
   const leadPatch: SynthPatch = style.weighted([['square-lead', 3], ['saw-lead', 2], ['flute', 1.5], ['soft-lead', 1.5]]);
-  const lead = b.inst({ kind: 'synth', patch: leadPatch, name: leadPatch === 'flute' ? 'Pan flute' : 'Synth lead', gain: leadPatch === 'saw-lead' ? 0.75 : 0.85, reverb: 0.28, delay: 0.25, pan: 0.05, detune: weirdDetune(song, W, 15) });
-  const bells = b.inst({ kind: 'sample', patch: style.pick(['celesta', 'glass', 'vibes'] as const), name: 'Bells', gain: 0.3, reverb: 0.35, pan: -0.2 });
+  const lead = b.inst({ kind: 'synth', patch: leadPatch, name: leadPatch === 'flute' ? 'Pan flute' : 'Synth lead', gain: leadPatch === 'saw-lead' ? 0.47 : 0.54, reverb: 0.28, delay: 0.25, pan: 0.05, detune: weirdDetune(song, W, 15) });
+  const bells = b.inst({ kind: 'sample', patch: style.pick(['celesta', 'glass', 'vibes'] as const), name: 'Bells', gain: 0.4, reverb: 0.35, pan: -0.2 });
 
   const slap = song.pick(SLAP);
   const slapC = song.chance(0.5) ? SLAP[1]! : slap;

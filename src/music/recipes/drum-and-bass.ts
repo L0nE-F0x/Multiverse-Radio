@@ -52,7 +52,7 @@ export function composeDrumAndBass(req: TrackRequest): Score {
   const snare = b.inst({ kind: 'sample', patch: 'snare-dnb', name: 'Snare', gain: 0.5, reverb: 0.22, pan: 0.02 });
   const hat = b.inst({ kind: 'sample', patch: 'hat-closed', name: 'Hats', gain: 0.42, pan: 0.2, lowpass: lerp(9000, 14000, B) });
   const ohat = b.inst({ kind: 'sample', patch: 'hat-open', name: 'Open hat', gain: 0.16, pan: 0.2 });
-  const ride = b.inst({ kind: 'sample', patch: 'ride', name: 'Ride', gain: 0.12, pan: -0.25, reverb: 0.1 });
+  const ride = b.inst({ kind: 'sample', patch: 'ride', name: 'Ride', gain: 0.25, pan: -0.25, reverb: 0.1 });
   const shaker = b.inst({ kind: 'sample', patch: 'shaker', name: 'Shaker', gain: 0.22, pan: -0.3 });
   const crash = b.inst({ kind: 'sample', patch: 'crash', name: 'Crash', gain: 0.18, reverb: 0.3, pan: 0.2 });
   const sub = b.inst({ kind: 'synth', patch: 'sub-sine', name: 'Sub bass', gain: 0.3 });
@@ -199,7 +199,7 @@ export function composeDrumAndBass(req: TrackRequest): Score {
     key: keyName(tonic, minor ? 'minor' : 'major'),
     progression: `${tpl} · ${breakA.name} break${reeseOn ? ' · reese' : ''}`,
     fx: trackFx({
-      gain: 0.331,
+      gain: 0.305,
       lowpass: open,
       highpass: 28,
       q: 0.9,

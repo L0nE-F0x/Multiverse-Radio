@@ -47,16 +47,16 @@ export function composeSurfRock(req: TrackRequest): Score {
   const b = new ScoreBuilder(req.recipe, req, fit, 4, 0.5, tweaks, 2);
   const beat = b.beat;
 
-  const lead = b.inst({ kind: 'sample', patch: 'surf-guitar', name: 'Lead guitar', gain: 0.62, pan: 0.18, reverb: 0.12, release: 0.12 });
+  const lead = b.inst({ kind: 'sample', patch: 'surf-guitar', name: 'Lead guitar', gain: 0.85, pan: 0.18, reverb: 0.12, release: 0.12 });
   const rhythm = b.inst({ kind: 'sample', patch: 'surf-guitar', name: 'Rhythm guitar', gain: 0.4, pan: -0.32, reverb: 0.08, release: 0.06, lowpass: 4500 });
   const organ = style.chance(0.3) ? b.inst({ kind: 'synth', patch: 'organ', name: 'Combo organ', gain: 0.24, pan: -0.15, reverb: 0.2, tremolo: { rate: 6, depth: 0.3 } }) : -1;
   const bass = b.inst({ kind: 'sample', patch: 'bass-round', name: 'Bass', gain: 0.55, pan: 0.02, release: 0.05 });
-  const kick = b.inst({ kind: 'sample', patch: 'kick-punch', name: 'Kick', gain: 0.36 });
+  const kick = b.inst({ kind: 'sample', patch: 'kick-punch', name: 'Kick', gain: 0.26 });
   const snare = b.inst({ kind: 'sample', patch: 'snare-rock', name: 'Snare', gain: 0.46, reverb: 0.25, pan: 0.04 });
   const ridePart = style.chance(0.4);
   const hat = ridePart ? -1 : b.inst({ kind: 'sample', patch: 'hat-closed', name: 'Hi-hat', gain: 0.26, pan: 0.25 });
-  const ride = ridePart ? b.inst({ kind: 'sample', patch: 'ride', name: 'Ride', gain: 0.18, pan: -0.25, lowpass: 10000 }) : -1;
-  const tom = b.inst({ kind: 'sample', patch: 'tom', name: 'Toms', gain: 0.45, reverb: 0.2 });
+  const ride = ridePart ? b.inst({ kind: 'sample', patch: 'ride', name: 'Ride', gain: 0.3, pan: -0.25, lowpass: 10000 }) : -1;
+  const tom = b.inst({ kind: 'sample', patch: 'tom', name: 'Toms', gain: 0.3, reverb: 0.2 });
   const crash = b.inst({ kind: 'sample', patch: 'crash', name: 'Crash', gain: 0.18, reverb: 0.2, pan: 0.3 });
 
   const tremoloLead = style.chance(mode === 'major' ? 0.45 : 0.75);
@@ -174,7 +174,7 @@ export function composeSurfRock(req: TrackRequest): Score {
     key: mode === 'hijaz' ? `${keyName(tonic, 'major').split(' ')[0]} hijaz` : keyName(tonic, mode === 'major' ? 'mixolydian' : 'minor'),
     progression: `${tplA} / ${tplB}${tremoloLead ? ' · tremolo lead' : ''}`,
     fx: trackFx({
-      gain: 0.298,
+      gain: 0.271,
       lowpass: lerp(6000, 14000, B),
       highpass: 45,
       wow: G * 1.4 + W * 1.4,

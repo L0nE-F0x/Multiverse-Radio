@@ -45,15 +45,15 @@ export function composeSoftRock(req: TrackRequest): Score {
   const fadeOut = fit.bars >= 36 && style.chance(0.65);
 
   const ep = b.inst({ kind: 'sample', patch: style.weighted([['ep', 4], ['wurli', 1.5]]), name: 'Electric piano', gain: 0.5, pan: -0.18, reverb: 0.18, tremolo: { rate: style.range(3.8, 5), depth: 0.35 }, lowpass: lerp(3500, 7000, B) });
-  const acoustic = b.inst({ kind: 'sample', patch: 'folk-guitar', name: 'Acoustic guitar', gain: 0.4, pan: 0.32, reverb: 0.12, release: 0.15 });
-  const bass = b.inst({ kind: 'sample', patch: 'bass-round', name: 'Bass', gain: 0.52, pan: 0, release: 0.08 });
-  const lead = b.inst({ kind: 'synth', patch: 'lead-guitar', name: 'Lead guitar', gain: 0.5, pan: 0.12, reverb: 0.28, delay: 0.22, lowpass: lerp(2800, 4500, B) });
-  const oohs = b.inst({ kind: 'synth', patch: 'pad-choir', name: 'Ooh harmonies', gain: 0.3, reverb: 0.45, pan: -0.05 });
-  const kick = b.inst({ kind: 'sample', patch: 'kick-soft', name: 'Kick', gain: 0.5 });
-  const snare = b.inst({ kind: 'sample', patch: 'snare-rock', name: 'Snare', gain: 0.36, reverb: 0.22, pan: 0.03, lowpass: 7000 });
-  const hat = b.inst({ kind: 'sample', patch: 'hat-closed', name: 'Hi-hat', gain: 0.22, pan: 0.22, lowpass: 8000 });
-  const tamb = b.inst({ kind: 'sample', patch: 'jingle-tamb', name: 'Tambourine', gain: 0.18, pan: -0.35, reverb: 0.1 });
-  const tom = b.inst({ kind: 'sample', patch: 'tom', name: 'Toms', gain: 0.32, reverb: 0.25 });
+  const acoustic = b.inst({ kind: 'sample', patch: 'folk-guitar', name: 'Acoustic guitar', gain: 0.5, pan: 0.32, reverb: 0.12, release: 0.15 });
+  const bass = b.inst({ kind: 'sample', patch: 'bass-round', name: 'Bass', gain: 0.33, pan: 0, release: 0.08 });
+  const lead = b.inst({ kind: 'synth', patch: 'lead-guitar', name: 'Lead guitar', gain: 0.85, pan: 0.12, reverb: 0.28, delay: 0.22, lowpass: lerp(2800, 4500, B) });
+  const oohs = b.inst({ kind: 'synth', patch: 'pad-choir', name: 'Ooh harmonies', gain: 0.36, reverb: 0.45, pan: -0.05 });
+  const kick = b.inst({ kind: 'sample', patch: 'kick-soft', name: 'Kick', gain: 0.36 });
+  const snare = b.inst({ kind: 'sample', patch: 'snare-rock', name: 'Snare', gain: 0.45, reverb: 0.22, pan: 0.03, lowpass: 7000 });
+  const hat = b.inst({ kind: 'sample', patch: 'hat-closed', name: 'Hi-hat', gain: 0.3, pan: 0.22, lowpass: 8000 });
+  const tamb = b.inst({ kind: 'sample', patch: 'jingle-tamb', name: 'Tambourine', gain: 0.3, pan: -0.35, reverb: 0.1 });
+  const tom = b.inst({ kind: 'sample', patch: 'tom', name: 'Toms', gain: 0.25, reverb: 0.25 });
   const crash = b.inst({ kind: 'sample', patch: 'crash', name: 'Cymbal', gain: 0.13, reverb: 0.25, pan: 0.25, lowpass: 9000 });
 
   const strumPat = style.pick(STRUMS);
@@ -180,7 +180,7 @@ export function composeSoftRock(req: TrackRequest): Score {
     key: keyName(tonic, 'major'),
     progression: `verse ${tplV} · chorus ${tplC}`,
     fx: trackFx({
-      gain: 0.391,
+      gain: 0.43,
       lowpass: lerp(5500, 12000, B),
       highpass: 36,
       wow: 0.3 + G * 1.5 + W,

@@ -77,10 +77,10 @@ export function composeSeaShanty(req: TrackRequest): Score {
   const fiddle = whistle ? b.inst({ kind: 'sample', patch: 'bowed-fiddle', name: 'Fiddle', gain: 0.45, reverb: 0.3, pan: 0.25, release: 0.1 }) : callInst;
   const crew = b.inst({ kind: 'synth', patch: 'crew', name: 'The crew', gain: 0.55, reverb: 0.4, pan: -0.05, detune: weirdDetune(song, W, 25), lowpass: 3200 });
   const crewLow = b.inst({ kind: 'synth', patch: 'crew', name: 'The crew, low', gain: 0.42, reverb: 0.4, pan: -0.2, detune: -7, lowpass: 2600 });
-  const box = b.inst({ kind: 'synth', patch: 'accordion', name: 'Accordion', gain: 0.4, reverb: 0.2, pan: -0.25, lowpass: lerp(2500, 5000, B) });
-  const boxBass = b.inst({ kind: 'synth', patch: 'accordion', name: 'Accordion bass', gain: 0.38, pan: -0.15, lowpass: 1200 });
-  const stomp = b.inst({ kind: 'sample', patch: 'stomp', name: 'Stamping boots', gain: 0.55, reverb: 0.2 });
-  const drum = b.inst({ kind: 'sample', patch: 'frame-drum', name: 'Frame drum', gain: 0.42, reverb: 0.2, pan: 0.1 });
+  const box = b.inst({ kind: 'synth', patch: 'accordion', name: 'Accordion', gain: 0.5, reverb: 0.2, pan: -0.25, lowpass: lerp(2500, 5000, B) });
+  const boxBass = b.inst({ kind: 'synth', patch: 'accordion', name: 'Accordion bass', gain: 0.48, pan: -0.15, lowpass: 1200 });
+  const stomp = b.inst({ kind: 'sample', patch: 'stomp', name: 'Stamping boots', gain: 0.3, reverb: 0.2 });
+  const drum = b.inst({ kind: 'sample', patch: 'frame-drum', name: 'Frame drum', gain: 0.32, reverb: 0.2, pan: 0.1 });
   const clap = b.inst({ kind: 'sample', patch: 'clap', name: 'Claps', gain: 0.22, reverb: 0.25, pan: 0.2 });
   const bell = b.inst({ kind: 'sample', patch: 'glass', name: "Ship's bell", gain: 0.3, reverb: 0.5 });
   const sea = b.inst({ kind: 'sample', patch: 'ocean', name: 'The sea', gain: 0.18 });
@@ -201,7 +201,7 @@ export function composeSeaShanty(req: TrackRequest): Score {
     key: keyName(tonic, mode.scale),
     progression: `verse ${mode.verse} · chorus ${mode.chorus}`,
     fx: trackFx({
-      gain: 0.473,
+      gain: 0.549,
       lowpass: lerp(5000, 11000, B),
       highpass: 40,
       wow: 0.3 + G * 1.5 + W * 1.5,

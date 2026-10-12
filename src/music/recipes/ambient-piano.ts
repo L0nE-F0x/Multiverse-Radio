@@ -122,7 +122,7 @@ export function composeAmbientPiano(req: TrackRequest): Score {
     key: keyName(tonic, tpl.scale),
     progression: tpl.prog,
     fx: trackFx({
-      gain: 1.16,
+      gain: 1.253,
       lowpass: cut,
       highpass: 30,
       wow: 0.2 + G * 1.2 + W * 0.8,

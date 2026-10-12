@@ -42,10 +42,10 @@ export function composeCatPiano(req: TrackRequest): Score {
   const keysPatch: SamplePatch = style.weighted([['felt-piano', 3], ['ep', 2], ['piano', 1.5]]);
   const keys = b.inst({ kind: 'sample', patch: keysPatch, name: 'Sleepy keys', gain: 0.62, reverb: 0.25, pan: -0.08, lowpass: lerp(3000, 7000, B), tremolo: keysPatch === 'ep' ? { rate: 4, depth: 0.3 } : undefined });
   const cat = b.inst({ kind: 'sample', patch: keysPatch, name: 'The cat (on the keys)', gain: 0.5, reverb: 0.22, pan: 0.1, lowpass: lerp(5000, 10000, B) });
-  const bass = b.inst({ kind: 'sample', patch: 'bass-round', name: 'Bass', gain: 0.4, lowpass: 1200 });
-  const kick = b.inst({ kind: 'sample', patch: 'kick-soft', name: 'Kick', gain: 0.42 });
+  const bass = b.inst({ kind: 'sample', patch: 'bass-round', name: 'Bass', gain: 0.26, lowpass: 1200 });
+  const kick = b.inst({ kind: 'sample', patch: 'kick-soft', name: 'Kick', gain: 0.28 });
   const rim = b.inst({ kind: 'sample', patch: style.pick(['rim', 'snare-brush'] as const), name: 'Snare', gain: 0.5, reverb: 0.15, pan: 0.05 });
-  const hat = b.inst({ kind: 'sample', patch: 'hat-closed', name: 'Hi-hat', gain: 0.22, pan: 0.2, lowpass: 7000 });
+  const hat = b.inst({ kind: 'sample', patch: 'hat-closed', name: 'Hi-hat', gain: 0.3, pan: 0.2, lowpass: 7000 });
   const purr = b.inst({ kind: 'sample', patch: 'purr', name: 'Purring', gain: 0.6, pan: 0.15, lowpass: 1500 });
   const desk = b.inst({ kind: 'sample', patch: 'clatter', name: 'Something on the desk', gain: 0.32, reverb: 0.25, pan: song.range(-0.5, 0.5) });
   const vinyl = b.inst({ kind: 'sample', patch: 'vinyl', name: 'Vinyl', gain: 0.12 + 0.2 * G });
@@ -125,7 +125,7 @@ export function composeCatPiano(req: TrackRequest): Score {
     key: keyName(tonic, minor ? 'dorian' : 'major'),
     progression: tpl,
     fx: trackFx({
-      gain: 0.538,
+      gain: 0.603,
       lowpass: cut,
       highpass: 38,
       wow: 0.5 + G * 2 + W,

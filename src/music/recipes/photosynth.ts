@@ -112,7 +112,7 @@ export function composePhotosynth(req: TrackRequest): Score {
     key: keyName(tonic, tpl.scale),
     progression: tpl.prog,
     fx: trackFx({
-      gain: 1.456,
+      gain: 1.558,
       lowpass: bright,
       highpass: 32,
       wow: 0.25 + G * 1.2 + W * 0.6,

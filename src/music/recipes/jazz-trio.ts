@@ -50,7 +50,7 @@ export function composeJazzTrio(req: TrackRequest): Score {
   // ── The tune ──
   const hint = req.tweaks?.bpm;
   const ballad = hint !== undefined ? hint < 92 : song.chance(style.range(0.3, 0.65));
-  const bpm = bpmFor(S, req, ballad ? [56, 74] : [116, 168]);
+  const bpm = bpmFor(S, req, ballad ? [56, 74] : [108, 152]);
   const minor = minorFor(S, 0.28);
   const tonic = tonicFor(S, [5, 10, 3, 8, 0, 7, 1]);
   const form = ballad ? style.weighted([['AABA', 3], ['ABAC', 2]] as const) : style.weighted([['AABA', 3], ['ABAC', 1.5], ['blues', 1.5]] as const);
@@ -263,7 +263,7 @@ export function composeJazzTrio(req: TrackRequest): Score {
     key: keyName(tonic, minor ? 'minor' : 'major'),
     progression: form === 'blues' ? `${minor ? 'minor ' : ''}blues: ${tplA}` : `${form} · A: ${tplA} · ${form === 'AABA' ? `B: ${tplB}` : `B: ${tplB} · C: ${tplC}`}`,
     fx: trackFx({
-      gain: 0.505,
+      gain: 0.46,
       lowpass: lerp(6000, 15000, B),
       highpass: 35,
       wow: G * 1.0 + W * 0.6,
