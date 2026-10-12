@@ -22,6 +22,7 @@ export default defineConfig({
         'lab-music': 'lab/music.html',
         'lab-director': 'lab/director.html',
         'lab-scenes': 'lab/scenes.html',
+        'lab-onboarding': 'lab/onboarding.html',
       },
     },
   },
