@@ -32,4 +32,8 @@ export const DEEP_SCENES: Partial<Record<SceneId, SceneEntry>> = {
     label: 'A makeshift studio on a tower-block roof above the city at night, under a mast of mismatched aerials.',
     load: () => import('./defs/pirate-rooftop'),
   },
+  'pirate-boat': {
+    label: 'A small boat at anchor at night, egg boxes in its lit windows and a long-wire aerial strung from the mast.',
+    load: () => import('./defs/pirate-boat'),
+  },
 };
