@@ -417,13 +417,20 @@ def ffmpeg_filter(x: np.ndarray, chain: str, sr: int = SR) -> np.ndarray:
     return out
 
 
+def mp3_rate_args(bitrate: str) -> list[str]:
+    """"48k" is constant bitrate; "v8" is LAME VBR quality 8 (0 best .. 9 smallest)."""
+    if bitrate.startswith("v") and bitrate[1:].isdigit():
+        return ["-q:a", bitrate[1:]]
+    return ["-b:a", bitrate]
+
+
 def encode_mp3(x: np.ndarray, path: str, bitrate: str = "48k", sr: int = SR) -> None:
     if not np.all(np.isfinite(x)):
         raise RuntimeError(f"refusing to encode NaN/inf samples into {path}")
     proc = subprocess.run(
         [
             "ffmpeg", "-v", "error", "-nostdin", "-y", "-f", "f32le", "-ar", str(sr), "-ac", "1", "-i", "pipe:0",
-            "-c:a", "libmp3lame", "-b:a", bitrate, "-ar", str(sr), "-ac", "1",
+            "-c:a", "libmp3lame", *mp3_rate_args(bitrate), "-ar", str(sr), "-ac", "1",
             "-map_metadata", "-1", "-id3v2_version", "0", "-write_id3v1", "0", "-f", "mp3", path,
         ],
         input=f32(x).astype("<f4").tobytes(),
