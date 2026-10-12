@@ -1,0 +1,596 @@
+# Shared pool: clips any station may air. Ads for ad breaks on music stations (15-35 s),
+# public service announcements, and interrupts (3-12 s): bleed from other stations,
+# emergency broadcast tests, and a faint voice at Relay Four asking if anyone can hear him.
+#
+# `stations` restricts a clip to the listed stations. Bleed from a station never airs on
+# that station; loud bleeds stay off the ambient stations.
+#
+# Running gags shared with the talk stations: Grumbel's Ladders ("Up is a choice"),
+# Greg the shadow and Hollis, Bev and the request line, Teodor at Relay Four, the geese
+# owed to the Numbers Station, "more at eleven".
+station = "_shared"
+
+[voices]
+grumbel = { voice = "am_eric", name = "Arnold Grumbel" }
+announcer = { voice = "am_michael", name = "Announcer" }
+announcer_warm = { voice = "af_heart", speed = 0.95, name = "Announcer" }
+announcer_posh = { voice = "bm_fable", name = "Announcer" }
+announcer_bright = { voice = "af_bella", speed = 1.05, name = "Announcer" }
+announcer_fast = { voice = "am_puck", speed = 1.12, name = "Announcer" }
+announcer_soft = { voice = "bf_isabella", speed = 0.92, name = "Announcer" }
+announcer_slow = { voice = "af_sky", speed = 0.8, name = "Announcer" }
+small_print = { voice = "af_kore", speed = 1.4, name = "Small Print" }
+authority = { voice = "bm_fable", speed = 0.95, name = "Multiverse Broadcast Authority" }
+future_self = { voice = "af_heart", name = "Your Future Self" }
+operator = { voice = "af_alloy", fx = "phone", name = "Second Opinion Hotline" }
+alarm = { voice = "af_sky", fx = "tiny", name = "The Polite Alarm Clock" }
+ebs = { voice = "am_onyx", fx = "robot", name = "Emergency Broadcast System" }
+teodor = { voice = "bm_daniel", fx = "distant", name = "Teodor, Relay Four" }
+bev = { voice = "af_nova", fx = "phone", name = "Bev" }
+hollis = { voice = "am_echo", fx = "radio", name = "Hollis" }
+dale = { voice = "bm_george", name = "Dale Quarterly" }
+chip = { voice = "am_fenrir", speed = 1.15, name = "Chip Thunderbuckle" }
+grenda = { voice = "bf_emma", speed = 0.95, name = "Grenda" }
+darlene = { voice = "af_alloy", name = "Darlene, the Everything Channel" }
+linda = { voice = "af_jessica", speed = 1.35, name = "Linda from Accounts" }
+counter = { voice = "af_kore", speed = 0.9, fx = "radio", name = "Numbers Station" }
+faint = { voice = "af_nicole", fx = "whisper", name = "A Faint Voice" }
+
+# ── Ads ───────────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "ad-001"
+category = "ad"
+title = "Grumbel's Ladders: The Lateral"
+lines = [
+  { say = "grumbel", text = "Hi. I'm Arnold Grumbel, of Grumbel's Ladders. For eleven generations, my family has made ladders that go up." },
+  { say = "grumbel", text = "But not every move in life is up. Sometimes you need to go sideways. A new job, at the same level. A new flat, on the same floor. Next door, but nicer." },
+  { say = "grumbel", text = "So we made the Lateral. It's a ladder, on its side. You walk across it." },
+  { say = "grumbel", text = "Grumbel's Ladders. Up is a choice. So is sideways." },
+]
+
+[[clip]]
+id = "ad-002"
+category = "ad"
+title = "Grumbel's Ladders: The Down Ladder"
+lines = [
+  { say = "grumbel", text = "Have you climbed too high? Said yes to everything, and now you're up there, and it's windy?" },
+  { say = "grumbel", text = "The Grumbel's Down Ladder only goes one way, and it goes gently. One rung at a time, back to where your feet are." },
+  { say = "grumbel", text = "There's no shame in coming down. My grandfather came down from the very top at ninety. He said the view from the bottom was better, because it had his family in it." },
+  { say = "grumbel", text = "Grumbel's Ladders. Up is a choice." },
+]
+
+[[clip]]
+id = "ad-003"
+category = "ad"
+title = "Grumbel's Ladders: The Step Stool"
+lines = [
+  { say = "grumbel", text = "Not every dream is a big dream. Some dreams are the top shelf.", gap = 0.6 },
+  { say = "grumbel", text = "For those, there's the Grumbel's Step Stool. Two rungs. Very stable. It gets you to the biscuits and back, and it never once asks you why." },
+  { say = "grumbel", text = "Grumbel's Ladders. Up is a choice. A little bit up is still up." },
+]
+
+[[clip]]
+id = "ad-004"
+category = "ad"
+title = "Grumbel's Ladders: The Ambition"
+lines = [
+  { say = "announcer", text = "Introducing the Ambition, from Grumbel's Ladders. The ladder with no top." },
+  { say = "grumbel", text = "Our test climber has been going for three years. Last month's postcard said, nice view, still going. This month's said, I can see everyone's house. Please tell my mother." },
+  { say = "announcer", text = "The Ambition. For people who don't want to arrive. Grumbel's Ladders. Up is a choice." },
+  { say = "small_print", text = "Grumbel's Ladders cannot guarantee a top, a bottom, or your mother." },
+]
+
+[[clip]]
+id = "ad-005"
+category = "ad"
+title = "Someone Else's Shoes"
+lines = [
+  { say = "announcer", text = "Breaking in new shoes? Don't. Wear Someone Else's Shoes." },
+  { say = "announcer", text = "Every pair is pre-worn by a version of you from the next reality over. He walked the dog. He took the long way home. He never once stepped in anything. He is, frankly, a better you than you." },
+  { say = "announcer", text = "Walk a mile in his shoes. It's easier than you'd think. He's already done it." },
+  { say = "announcer", text = "Someone Else's Shoes. Slightly used. By you." },
+]
+
+[[clip]]
+id = "ad-006"
+category = "ad"
+title = "Yesterday Night"
+daypart = "night"
+stations = ["static-lullabies", "void-beats", "rainfall-fm", "end-lounge", "snail-jams", "crystal-delta", "whalesong"]
+lines = [
+  { say = "announcer_soft", text = "Can't sleep? Try Yesterday Night. The sleep aid you take today, so that you slept well last night." },
+  { say = "announcer_soft", text = "Wake up rested, refreshed, and with a faint memory of a lovely dream about a boat." },
+  { say = "small_print", text = "Do not operate heavy machinery yesterday. Yesterday Night may cause drowsiness last week. If you have already slept, please consult your past." },
+]
+
+[[clip]]
+id = "ad-007"
+category = "ad"
+title = "Gilroy's Double Umbrellas"
+stations = ["rainfall-fm"]
+lines = [
+  { say = "announcer_posh", text = "In the Damp Dimension, the rain falls down. And on Thursdays, it falls up." },
+  { say = "announcer_posh", text = "You need a Gilroy's Double Umbrella. One on top, one underneath, and you in the middle, perfectly dry, like the filling in a very sensible sandwich." },
+  { say = "announcer_posh", text = "Gilroy's Umbrellas. Four thousand years of keeping Precinct Nine dry. Well. Drier." },
+]
+
+[[clip]]
+id = "ad-008"
+category = "ad"
+title = "The Lunar Laundrette"
+stations = ["moon-dub"]
+lines = [
+  { say = "announcer", text = "The Lunar Laundrette, Tranquility Base Annex." },
+  { say = "announcer", text = "One wash takes twenty nine days, one full turn of the moon. Your socks come back clean, and a little bit wiser." },
+  { say = "announcer", text = "Low gravity means low wrinkles. Your shirts simply float dry." },
+  { say = "announcer", text = "The Lunar Laundrette. Bring a book. Bring several." },
+]
+
+[[clip]]
+id = "ad-009"
+category = "ad"
+title = "Fennimore's Fine Oils"
+stations = ["baroque-bots"]
+lines = [
+  { say = "announcer_posh", text = "For the discerning robot. Fennimore's Fine Oils." },
+  { say = "announcer_posh", text = "Our oils will not give you feelings. Nothing can. But they will make the absence of feelings squeak considerably less." },
+  { say = "announcer_posh", text = "Lavender, for the joints. Sandalwood, for the servos. And for the harpsichordist who has everything, a lightly scented valve oil, with notes of regret." },
+  { say = "announcer_posh", text = "Fennimore's. Adequately moving." },
+]
+
+[[clip]]
+id = "ad-010"
+category = "ad"
+title = "Spare Continue Insurance"
+stations = ["pixel-afterlife", "neon-2087"]
+lines = [
+  { say = "announcer_fast", text = "Game over? Not with Spare Continue Insurance!" },
+  { say = "announcer_fast", text = "For a low monthly fee, we'll keep a spare continue in our vault, just for you. Run out of lives? Call us. We'll put the coin in." },
+  { say = "announcer_fast", text = "Spare Continue Insurance. Because everybody deserves one more go." },
+  { say = "small_print", text = "Continues do not include extra lives. Extra lives sold separately. Player Two is still waiting, and has asked us to say, any time now." },
+]
+
+[[clip]]
+id = "ad-011"
+category = "ad"
+title = "Perihelion Point Resort"
+stations = ["comet-marimba"]
+lines = [
+  { say = "announcer_bright", text = "Need a holiday that comes back around? Book a week at Perihelion Point, the only resort on the tail of a comet!" },
+  { say = "announcer_bright", text = "White sands! Warm stars! A pool with no water in it, because it's in space, but a lovely view of the pool!" },
+  { say = "announcer_bright", text = "And because we pass the sun every seventy six years, your holiday comes around again, whether you like it or not!" },
+  { say = "small_print", text = "The return journey is the same journey. Pack light. Pack for seventy six years." },
+]
+
+[[clip]]
+id = "ad-012"
+category = "ad"
+title = "Reflection Repair"
+stations = ["mirror-polka"]
+lines = [
+  { say = "announcer", text = "Is your reflection doing its own thing? Waving when you're not? Leaving the room before you do? Call Reflection Repair." },
+  { say = "announcer", text = "Our trained technicians will have a quiet word with it. Most reflections just want to be listened to." },
+  { say = "announcer", text = "Reflection Repair. We'll get you back in step. Or at least, in the same step, half a second apart." },
+]
+
+[[clip]]
+id = "ad-013"
+category = "ad"
+title = "Slow Mail"
+stations = ["snail-jams"]
+lines = [
+  { say = "announcer_slow", text = "Slow Mail. Post, delivered by snail.", gap = 0.8 },
+  { say = "announcer_slow", text = "Birthday cards arrive in time for the next birthday. Love letters arrive when you've both had time to think about it." },
+  { say = "announcer_slow", text = "Slow Mail. Guaranteed.", gap = 1.0 },
+  { say = "announcer_slow", text = "Eventually." },
+]
+
+[[clip]]
+id = "ad-014"
+category = "ad"
+title = "The Distant Dishwasher"
+lines = [
+  { say = "announcer_soft", text = "Can't relax? Try the Distant Dishwasher. The sleep machine that plays the reassuring sound of someone else, somewhere in the house, doing the chores." },
+  { say = "announcer_soft", text = "Choose from a dishwasher, a washing machine on its final spin, or somebody's dad, quietly drying up, and humming." },
+  { say = "announcer_soft", text = "The Distant Dishwasher. Somebody's taking care of it. Go to sleep." },
+]
+
+[[clip]]
+id = "ad-015"
+category = "ad"
+title = "The Spare Tuesday"
+lines = [
+  { say = "announcer", text = "Running out of week? Keep a Spare Tuesday in the glovebox." },
+  { say = "announcer", text = "It fits most weeks. Pops in between Monday and Wednesday, and nobody notices. Use it to catch up, or to lie down, or to finally ring your sister back." },
+  { say = "announcer", text = "The Spare Tuesday. For emergencies, and for Tuesdays." },
+  { say = "small_print", text = "The Spare Tuesday is temporary and should not be used as a regular day. Do not use the Spare Tuesday on a Tuesday." },
+]
+
+[[clip]]
+id = "ad-016"
+category = "ad"
+title = "The Second Opinion Hotline"
+lines = [
+  { say = "announcer_warm", text = "Not sure about something? Call the Second Opinion Hotline. Whatever you've decided, a friendly voice will gently disagree." },
+  { sfx = "phone-ring" },
+  { say = "operator", text = "Hello, second opinion. Mm. Have you thought about the blue one?" },
+  { say = "announcer_warm", text = "Press one to be told you're probably right. Press two to be told you should sleep on it. Press three to be told there's no rush. There's never a rush." },
+]
+
+[[clip]]
+id = "ad-017"
+category = "ad"
+title = "The Pocket Horizon"
+lines = [
+  { say = "announcer_posh", text = "Stuck indoors? Nowhere to stare? Carry a Pocket Horizon." },
+  { say = "announcer_posh", text = "Unfold it on any desk, and there it is. A long, flat, distant line between the sky and everything else. Gaze at it. Think about your life. Feel like somebody in a film." },
+  { say = "announcer_posh", text = "The Pocket Horizon. Now available in sunset. Sunrise has sold out. People get up early for sunrise." },
+]
+
+[[clip]]
+id = "ad-018"
+category = "ad"
+title = "Nobody's Bakery"
+lines = [
+  { say = "announcer_warm", text = "Nobody's Bakery. Bread that nobody made.", gap = 0.6 },
+  { say = "announcer_warm", text = "We don't know where it comes from. Every morning, there it is, on the shelves. Warm. Perfect. With a little crust that sings when you squeeze it." },
+  { say = "announcer_warm", text = "We've stopped asking. You should too." },
+  { say = "announcer_warm", text = "Nobody's Bakery. Open from whenever, until it's gone." },
+]
+
+[[clip]]
+id = "ad-019"
+category = "ad"
+title = "The Sock Recovery Institute"
+lines = [
+  { say = "announcer_soft", text = "They're all in the same place, you know. Every odd sock you've ever lost is in the same dimension. A warm, quiet one. Honestly, they're very happy there." },
+  { say = "announcer_soft", text = "We go and get them anyway. The Sock Recovery Institute. We bring them back washed, paired, and only a little bit homesick." },
+  { say = "small_print", text = "Socks may not wish to return. Socks may return with a new partner. Please be supportive." },
+]
+
+[[clip]]
+id = "ad-020"
+category = "ad"
+title = "Quiet Neighbor Service"
+lines = [
+  { say = "announcer", text = "Tired of noisy neighbors? Hire a Quiet Neighbor." },
+  { say = "announcer", text = "We'll move in next door, and you will never hear a single sound from us. Not a footstep. Not a cough. Not a door. Ever.", gap = 0.6 },
+  { say = "announcer", text = "You'll wonder about us. You'll lie awake wondering. And that's a kind of company, isn't it?" },
+  { say = "announcer", text = "Quiet Neighbor Service. We're here. Probably." },
+]
+
+[[clip]]
+id = "ad-021"
+category = "ad"
+title = "Gravity Lite"
+lines = [
+  { say = "announcer_bright", text = "Feeling heavy? Some days are like that. Try Gravity Lite." },
+  { say = "announcer_bright", text = "All of the down, about half of the pull. Your shopping feels lighter. Your stairs feel shorter. Your worries, technically, weigh less." },
+  { say = "announcer_bright", text = "Gravity Lite. For days when you need the ground, but not quite so much of it." },
+  { say = "small_print", text = "Gravity Lite is not suitable for birds, balloons or anyone under four foot. Please keep one foot on the floor at all times." },
+]
+
+[[clip]]
+id = "ad-022"
+category = "ad"
+title = "The Polite Alarm Clock"
+daypart = "morning"
+lines = [
+  { say = "announcer_warm", text = "Mornings too loud? Try the Polite Alarm Clock. It doesn't ring. It doesn't buzz. At the time you've chosen, it simply clears its throat." },
+  { say = "alarm", text = "Ahem. Sorry. It's seven." },
+  { say = "announcer_warm", text = "And if you don't get up, it says, no, you're right, five more minutes, and lets you be." },
+  { say = "announcer_warm", text = "The Polite Alarm Clock. Nobody ever got up faster for being shouted at." },
+]
+
+[[clip]]
+id = "ad-023"
+category = "ad"
+title = "The Overlap Tourist Board"
+lines = [
+  { say = "announcer_bright", text = "Visit the Overlap! Where two realities meet, and both of them are lovely!" },
+  { say = "announcer_bright", text = "Have breakfast in one world, and lunch in the other! See the famous Double Bridge, built by two engineers who never met, and agree on almost everything!" },
+  { say = "announcer_bright", text = "Meet yourself at the market, and buy each other a coffee!" },
+  { say = "announcer_bright", text = "The Overlap. You'll want to come back. You may already be here." },
+]
+
+[[clip]]
+id = "ad-024"
+category = "ad"
+title = "Queue Ahead"
+lines = [
+  { say = "announcer_fast", text = "No time to wait? Hire a professional! At Queue Ahead, our trained waiters will stand in any queue, on your behalf, for as long as it takes." },
+  { say = "announcer_fast", text = "Our senior waiter, Agatha, has been waiting since she was eleven. She is very, very good." },
+  { say = "announcer_fast", text = "Queue Ahead. We wait, so you don't have to. Call now!" },
+  { say = "small_print", text = "You will be put on hold." },
+]
+
+[[clip]]
+id = "ad-025"
+category = "ad"
+title = "Lost Hour Recovery"
+lines = [
+  { say = "announcer", text = "Every year, when the clocks go forward, an hour goes missing. Where does it go? We know." },
+  { say = "announcer", text = "Lost Hour Recovery will track down your missing hour and return it to you, in a plain envelope, for use at your convenience." },
+  { say = "announcer", text = "Spend it on a walk. Spend it asleep. Spend it doing absolutely nothing, which, let's be honest, is what you'd have done with it anyway." },
+  { say = "small_print", text = "Recovered hours may be slightly used. Hours lost before the age of ten cannot be recovered. They were well spent." },
+]
+
+[[clip]]
+id = "ad-026"
+category = "ad"
+title = "The Unsend Button"
+lines = [
+  { say = "announcer_posh", text = "Said something you regret? Press the Unsend Button." },
+  { say = "announcer_posh", text = "Your words come back out of the air, fold themselves up, and go quietly back into your mouth, as though nothing had happened." },
+  { say = "announcer_posh", text = "Perfect for meetings, dinners, and the end of long phone calls with your brother." },
+  { say = "small_print", text = "The Unsend Button does not work on things you meant." },
+]
+
+[[clip]]
+id = "ad-027"
+category = "ad"
+title = "Geese Express"
+stations = ["numbers-omega"]
+lines = [
+  { say = "announcer", text = "Owe geese? Of course you do. Geese Express delivers." },
+  { say = "announcer", text = "Seven, seven, four geese, to any radio mast, by morning. Calm, counted, and wearing a little bow." },
+  { say = "announcer", text = "Settle your account, and sleep at night again. Geese Express." },
+  { say = "small_print", text = "Geese Express does not deliver ducks. If you were asked for ducks, please listen again." },
+]
+
+# ── Public service announcements ──────────────────────────────────────────────
+
+[[clip]]
+id = "psa-001"
+category = "psa"
+title = "If You Find a Shadow"
+lines = [
+  { say = "authority", text = "A message from the Multiverse Broadcast Authority." },
+  { say = "authority", text = "If you find a shadow without a person, please do not step on it. Do not fold it. Do not try it on. Shadows are not lost property. They are on a journey. Leave a light on, and let it decide." },
+  { say = "authority", text = "If the shadow answers to Greg, his person, Hollis, would like you to know the porch light is on." },
+]
+
+[[clip]]
+id = "psa-002"
+category = "psa"
+title = "Between Stations"
+lines = [
+  { say = "authority", text = "The Multiverse Broadcast Authority reminds listeners that if you hear a voice between stations, asking whether anyone can hear them, it is polite to say yes.", gap = 0.7 },
+  { say = "authority", text = "You don't have to say anything else. Yes is plenty." },
+]
+
+[[clip]]
+id = "psa-003"
+category = "psa"
+title = "The Office of Fair Geese"
+lines = [
+  { say = "announcer_posh", text = "If you believe you may owe the Numbers Station geese, please don't panic. Have your geese ready, and calm." },
+  { say = "announcer_posh", text = "Do not send ducks. Do not send swans. It isn't the same, and the swans don't like it." },
+  { say = "announcer_posh", text = "This has been a message from the Office of Fair Geese." },
+]
+
+[[clip]]
+id = "psa-004"
+category = "psa"
+title = "The Clocks Go Back"
+lines = [
+  { say = "authority", text = "Tonight, all clocks in the Overlap go back one hour. Please do not go back with them." },
+  { say = "authority", text = "Last year, several people did. They're having a lovely time, but they've missed a lot." },
+]
+
+[[clip]]
+id = "psa-005"
+category = "psa"
+title = "A Message from Your Future Self"
+lines = [
+  { say = "future_self", text = "Hi. This message is brought to you by your future self." },
+  { say = "future_self", text = "We'd like you to drink a glass of water. We're very busy and don't have time to explain. Just the water, please.", gap = 0.6 },
+  { say = "future_self", text = "Thank you. You'll thank us. Well. You'll thank you." },
+]
+
+[[clip]]
+id = "psa-006"
+category = "psa"
+title = "Please Do Not Feed the Void"
+lines = [
+  { say = "announcer_soft", text = "Please do not feed the void. It doesn't need it, and it only encourages it." },
+  { say = "announcer_soft", text = "If the void follows you home, do not make eye contact. Let it study. It has exams." },
+]
+
+[[clip]]
+id = "psa-007"
+category = "psa"
+title = "About the Static"
+lines = [
+  { say = "authority", text = "A reminder from the Multiverse Broadcast Authority. The static between stations is not dangerous." },
+  { say = "authority", text = "It is just everybody else, talking at once. If you listen carefully, some of it is about you. Most of it is nice." },
+]
+
+[[clip]]
+id = "psa-008"
+category = "psa"
+title = "Check On Your Neighbors"
+lines = [
+  { say = "announcer_warm", text = "Check on your neighbors this winter. The ones upstairs, the ones downstairs, and the ones in the walls." },
+  { say = "announcer_warm", text = "Especially the ones in the walls. Nobody ever checks on them. A small knock is fine. They'll knock back." },
+]
+
+[[clip]]
+id = "psa-009"
+category = "psa"
+title = "Lost Something?"
+lines = [
+  { say = "authority", text = "Lost something? Before contacting the authorities, please check under the sofa, then the other dimension, then under the sofa again." },
+  { say = "authority", text = "Ninety percent of lost items are found under the sofa. The rest are having a nice time elsewhere." },
+]
+
+[[clip]]
+id = "psa-010"
+category = "psa"
+title = "Be Nice to the Sun"
+daypart = "day"
+lines = [
+  { say = "announcer_bright", text = "The sun has been working very hard this week. It comes up every single morning, and nobody ever asks how it's doing." },
+  { say = "announcer_bright", text = "If you see it today, give it a wave. It can't wave back. It hasn't got hands. But it'll know." },
+]
+
+[[clip]]
+id = "psa-011"
+category = "psa"
+title = "You Are Allowed to Hang Up"
+daypart = "night"
+lines = [
+  { say = "grenda", text = "Hello, love. Grenda here, from ninety seven point eight, with a little reminder." },
+  { say = "grenda", text = "You're allowed to hang up on a problem. If it's serious, it'll ring back. And if you need someone to talk to in the meantime, the kettle's on." },
+]
+
+# ── Interrupts ────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "interrupt-001"
+category = "interrupt"
+title = "Relay Four"
+bed = "static"
+lines = [
+  { say = "teodor", text = "Is anyone receiving this. This is Relay Four.", gap = 0.8 },
+  { say = "teodor", text = "If you can hear me, the kettle's on." },
+]
+
+[[clip]]
+id = "interrupt-002"
+category = "interrupt"
+title = "Relay Four, Still Here"
+bed = "static"
+lines = [
+  { say = "teodor", text = "Relay Four. Still here. Still listening. Hello to whoever has the volume up." },
+]
+
+[[clip]]
+id = "interrupt-003"
+category = "interrupt"
+title = "Relay Four, Answered"
+bed = "static"
+lines = [
+  { say = "teodor", text = "This is Relay Four. Is anyone receiving", cut = 0.95 },
+  { say = "bev", text = "Hello? Is this the request line?", gap = 1.4 },
+  { say = "teodor", text = "Yes. Yes it is." },
+]
+
+[[clip]]
+id = "interrupt-004"
+category = "interrupt"
+title = "Crossed Line"
+lines = [
+  { sfx = "zap" },
+  { say = "bev", text = "Hello? Is this the request line? It goes dum, dum, da", cut = 0.9 },
+  { sfx = "zap" },
+]
+
+[[clip]]
+id = "interrupt-005"
+category = "interrupt"
+title = "Emergency Broadcast Test"
+lines = [
+  { sfx = "beep" },
+  { say = "ebs", text = "This is a test of the Interdimensional Emergency Broadcast System. If this had been an actual emergency, you would have heard about it yesterday." },
+  { sfx = "beep" },
+]
+
+[[clip]]
+id = "interrupt-006"
+category = "interrupt"
+title = "Emergency Broadcast Test: Results"
+lines = [
+  { sfx = "beep" },
+  { say = "ebs", text = "This has been a test. You passed. Barely. We are very proud of you." },
+  { sfx = "beep" },
+]
+
+[[clip]]
+id = "interrupt-007"
+category = "interrupt"
+title = "Bleed: Every Possible News"
+stations = ["void-beats", "rainfall-fm", "neon-2087", "classifieds", "end-lounge", "snail-jams", "dimension-hop", "crystal-delta", "hold-music", "pixel-afterlife", "ask-grenda", "moon-dub", "impossible-sports", "baroque-bots", "comet-marimba", "channel-surf", "mirror-polka", "wild-multiverse", "numbers-omega"]
+lines = [
+  { sfx = "zap" },
+  { say = "dale", text = "And the moon continues to look near you. More at eleven. It is always eleven.", fx = "radio" },
+  { sfx = "zap" },
+]
+
+[[clip]]
+id = "interrupt-008"
+category = "interrupt"
+title = "Bleed: Impossible Sports Network"
+stations = ["void-beats", "rainfall-fm", "neon-2087", "classifieds", "end-lounge", "every-news", "dimension-hop", "crystal-delta", "hold-music", "pixel-afterlife", "moon-dub", "baroque-bots", "comet-marimba", "channel-surf", "mirror-polka", "wild-multiverse"]
+lines = [
+  { sfx = "zap" },
+  { say = "chip", text = "And he's scored into last season! Last season is furious!", fx = "radio" },
+  { sfx = "zap" },
+]
+
+[[clip]]
+id = "interrupt-009"
+category = "interrupt"
+title = "Bleed: Ask Grenda"
+stations = ["static-lullabies", "void-beats", "rainfall-fm", "end-lounge", "snail-jams", "crystal-delta", "hold-music", "moon-dub", "whalesong", "comet-marimba", "channel-surf", "wild-multiverse"]
+lines = [
+  { sfx = "zap" },
+  { say = "grenda", text = "That's what leaving feels like, love. Both is exactly right.", fx = "radio" },
+  { sfx = "zap" },
+]
+
+[[clip]]
+id = "interrupt-010"
+category = "interrupt"
+title = "A Message for Greg"
+lines = [
+  { say = "hollis", text = "Greg, if you're listening. You don't have to come back. But the porch light's on." },
+]
+
+[[clip]]
+id = "interrupt-011"
+category = "interrupt"
+title = "Bleed: Numbers Station"
+stations = ["static-lullabies", "void-beats", "rainfall-fm", "every-news", "classifieds", "end-lounge", "dimension-hop", "crystal-delta", "hold-music", "ask-grenda", "moon-dub", "whalesong", "channel-surf", "wild-multiverse"]
+lines = [
+  { say = "counter", text = "Seven. Seven. Four.", gap = 0.8 },
+  { say = "counter", text = "Geese." },
+]
+
+[[clip]]
+id = "interrupt-012"
+category = "interrupt"
+title = "A Faint Voice"
+lines = [
+  { say = "faint", text = "Is anyone else hearing this? Or is it just me?", gap = 1.6 },
+  { say = "faint", text = "Oh, good." },
+]
+
+[[clip]]
+id = "interrupt-013"
+category = "interrupt"
+title = "We Interrupt This Broadcast"
+lines = [
+  { say = "announcer_warm", text = "We interrupt this broadcast to say, you're doing fine. That's all. Back to the music." },
+]
+
+[[clip]]
+id = "interrupt-014"
+category = "interrupt"
+title = "Bleed: The Everything Channel"
+stations = ["void-beats", "rainfall-fm", "neon-2087", "classifieds", "end-lounge", "snail-jams", "every-news", "dimension-hop", "crystal-delta", "hold-music", "pixel-afterlife", "moon-dub", "impossible-sports", "baroque-bots", "comet-marimba", "mirror-polka", "wild-multiverse"]
+lines = [
+  { sfx = "zap" },
+  { say = "darlene", text = "And it comes in oak, pine, or regret.", fx = "radio" },
+  { sfx = "zap" },
+]
+
+[[clip]]
+id = "interrupt-015"
+category = "interrupt"
+title = "Bleed: The Small Print"
+stations = ["void-beats", "rainfall-fm", "neon-2087", "end-lounge", "snail-jams", "crystal-delta", "hold-music", "pixel-afterlife", "moon-dub", "baroque-bots", "comet-marimba", "mirror-polka", "wild-multiverse"]
+lines = [
+  { say = "linda", text = "Music may contain feelings. Feelings not included. Please consult your nearest Linda." },
+]
