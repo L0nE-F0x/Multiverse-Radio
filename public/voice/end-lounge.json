@@ -6,7 +6,7 @@
       "id": "id-001",
       "category": "id",
       "url": "/voice/end-lounge/id-001.mp3",
-      "durationMs": 7552,
+      "durationMs": 7550,
       "overMusic": true,
       "lines": [
         {
@@ -20,7 +20,7 @@
       "id": "id-002",
       "category": "id",
       "url": "/voice/end-lounge/id-002.mp3",
-      "durationMs": 9070,
+      "durationMs": 9067,
       "overMusic": true,
       "lines": [
         {
@@ -34,7 +34,7 @@
       "id": "id-003",
       "category": "id",
       "url": "/voice/end-lounge/id-003.mp3",
-      "durationMs": 7889,
+      "durationMs": 7898,
       "overMusic": true,
       "daypart": "evening",
       "lines": [
@@ -63,7 +63,7 @@
       "id": "id-005",
       "category": "id",
       "url": "/voice/end-lounge/id-005.mp3",
-      "durationMs": 8454,
+      "durationMs": 8450,
       "overMusic": true,
       "lines": [
         {
@@ -82,7 +82,7 @@
       "id": "id-006",
       "category": "id",
       "url": "/voice/end-lounge/id-006.mp3",
-      "durationMs": 8358,
+      "durationMs": 8363,
       "overMusic": true,
       "daypart": "morning",
       "lines": [
@@ -187,18 +187,18 @@
       "id": "dj-005",
       "category": "dj",
       "url": "/voice/end-lounge/dj-005.mp3",
-      "durationMs": 13562,
+      "durationMs": 13565,
       "overMusic": true,
       "lines": [
         {
           "speaker": "Barnaby Velvet",
           "text": "The microphone on our little stage is empty tonight, as it is every night. We keep the spotlight on, just in case. Someone might come. Someone always might come.",
-          "startMs": 35
+          "startMs": 38
         },
         {
           "speaker": "Barnaby Velvet",
           "text": "Until then, here's a real heartbreaker.",
-          "startMs": 10306
+          "startMs": 10310
         }
       ]
     },
@@ -206,18 +206,18 @@
       "id": "dj-006",
       "category": "dj",
       "url": "/voice/end-lounge/dj-006.mp3",
-      "durationMs": 18129,
+      "durationMs": 18125,
       "overMusic": true,
       "lines": [
         {
           "speaker": "Barnaby Velvet",
           "text": "There's a shadow at the end of the bar. No one attached. Orders a dry ginger, tips well, says his name is Greg. Barely speaks.",
-          "startMs": 38
+          "startMs": 35
         },
         {
           "speaker": "Barnaby Velvet",
           "text": "I think he's waiting for somebody, or hiding from somebody, which at this hour is the same thing. Somebody called Hollis, I gather. Greg, darling. Call home.",
-          "startMs": 8644
+          "startMs": 8641
         }
       ]
     },
@@ -284,7 +284,7 @@
       "id": "dj-010",
       "category": "dj",
       "url": "/voice/end-lounge/dj-010.mp3",
-      "durationMs": 14069,
+      "durationMs": 14070,
       "overMusic": true,
       "lines": [
         {
@@ -357,7 +357,7 @@
       "id": "dj-014",
       "category": "dj",
       "url": "/voice/end-lounge/dj-014.mp3",
-      "durationMs": 8112,
+      "durationMs": 8164,
       "overMusic": true,
       "daypart": "day",
       "lines": [
@@ -437,7 +437,7 @@
         {
           "speaker": "Bev",
           "text": "Da da dum. Da da.",
-          "startMs": 16013
+          "startMs": 16014
         },
         {
           "speaker": "Barnaby Velvet",
@@ -458,6 +458,637 @@
           "speaker": "Bev",
           "text": "That's what I keep saying, love!",
           "startMs": 27414
+        }
+      ]
+    },
+    {
+      "id": "last-call-open",
+      "category": "id",
+      "url": "/voice/end-lounge/last-call-open.mp3",
+      "durationMs": 8874,
+      "title": "Last Call",
+      "overMusic": true,
+      "part": "open",
+      "show": "last-call",
+      "lines": [
+        {
+          "speaker": "Barnaby Velvet",
+          "text": "This is Last Call, at the Lounge at the End of Time.",
+          "startMs": 35
+        },
+        {
+          "speaker": "Gilbert (Bartender)",
+          "text": "Last call.",
+          "startMs": 4253
+        },
+        {
+          "speaker": "Barnaby Velvet",
+          "text": "He says that every night. Pull up a booth.",
+          "startMs": 5713
+        }
+      ]
+    },
+    {
+      "id": "last-call-01",
+      "category": "dj",
+      "url": "/voice/end-lounge/last-call-01.mp3",
+      "durationMs": 12414,
+      "overMusic": true,
+      "show": "last-call",
+      "lines": [
+        {
+          "speaker": "Barnaby Velvet",
+          "text": "This is the good part of last call. The part where nobody leaves. Gilbert has put the chairs up on two of the tables, purely for show.",
+          "startMs": 50
+        },
+        {
+          "speaker": "Gilbert (Bartender)",
+          "text": "I'm going somewhere.",
+          "startMs": 8778
+        },
+        {
+          "speaker": "Barnaby Velvet",
+          "text": "You're not, darling.",
+          "startMs": 10413
+        }
+      ]
+    },
+    {
+      "id": "last-call-02",
+      "category": "dj",
+      "url": "/voice/end-lounge/last-call-02.mp3",
+      "durationMs": 11564,
+      "overMusic": true,
+      "show": "last-call",
+      "lines": [
+        {
+          "speaker": "Barnaby Velvet",
+          "text": "A star just went out over the left side of the big window. If you saw it, make a wish.",
+          "startMs": 40
+        },
+        {
+          "speaker": "Barnaby Velvet",
+          "text": "If you didn't, make one anyway. It won't mind. It was very generous all its life.",
+          "startMs": 5811
+        }
+      ]
+    },
+    {
+      "id": "the-cocktail-hour-open",
+      "category": "id",
+      "url": "/voice/end-lounge/the-cocktail-hour-open.mp3",
+      "durationMs": 7835,
+      "title": "The Cocktail Hour",
+      "overMusic": true,
+      "part": "open",
+      "show": "the-cocktail-hour",
+      "lines": [
+        {
+          "speaker": "Barnaby Velvet",
+          "text": "Good evening. It's the Cocktail Hour. Gilbert has eight shakers going, and the universe has dimmed the lights for us. Wasn't that kind.",
+          "startMs": 50
+        }
+      ]
+    },
+    {
+      "id": "the-cocktail-hour-01",
+      "category": "dj",
+      "url": "/voice/end-lounge/the-cocktail-hour-01.mp3",
+      "durationMs": 10922,
+      "overMusic": true,
+      "show": "the-cocktail-hour",
+      "lines": [
+        {
+          "speaker": "Barnaby Velvet",
+          "text": "Gilbert, what are you mixing?",
+          "startMs": 10
+        },
+        {
+          "speaker": "Gilbert (Bartender)",
+          "text": "A Slow Collapse.",
+          "startMs": 2598
+        },
+        {
+          "speaker": "Barnaby Velvet",
+          "text": "And what's in a Slow Collapse?",
+          "startMs": 4233
+        },
+        {
+          "speaker": "Gilbert (Bartender)",
+          "text": "Everything. Gradually.",
+          "startMs": 6965
+        },
+        {
+          "speaker": "Barnaby Velvet",
+          "text": "Two, please.",
+          "startMs": 9109
+        }
+      ]
+    },
+    {
+      "id": "the-cocktail-hour-02",
+      "category": "dj",
+      "url": "/voice/end-lounge/the-cocktail-hour-02.mp3",
+      "durationMs": 11762,
+      "overMusic": true,
+      "show": "the-cocktail-hour",
+      "lines": [
+        {
+          "speaker": "Barnaby Velvet",
+          "text": "The Cocktail Hour is the only hour in which I introduce a song before it's played, so you have time to prepare your heart.",
+          "startMs": 41
+        },
+        {
+          "speaker": "Barnaby Velvet",
+          "text": "This next one is a real heartbreaker. You have been warned.",
+          "startMs": 7924
+        }
+      ]
+    },
+    {
+      "id": "dj-open-01",
+      "category": "dj",
+      "url": "/voice/end-lounge/dj-open-01.mp3",
+      "durationMs": 3944,
+      "overMusic": true,
+      "part": "open",
+      "kit": "dj",
+      "lines": [
+        {
+          "speaker": "Barnaby Velvet",
+          "text": "Oh, that was a real heartbreaker. I mean it, darling.",
+          "startMs": 40
+        }
+      ]
+    },
+    {
+      "id": "dj-open-02",
+      "category": "dj",
+      "url": "/voice/end-lounge/dj-open-02.mp3",
+      "durationMs": 3890,
+      "overMusic": true,
+      "part": "open",
+      "kit": "dj",
+      "lines": [
+        {
+          "speaker": "Barnaby Velvet",
+          "text": "Good evening, from the last booth, at the end of everything.",
+          "startMs": 37
+        }
+      ]
+    },
+    {
+      "id": "dj-open-03",
+      "category": "dj",
+      "url": "/voice/end-lounge/dj-open-03.mp3",
+      "durationMs": 4229,
+      "overMusic": true,
+      "part": "open",
+      "kit": "dj",
+      "lines": [
+        {
+          "speaker": "Gilbert (Bartender)",
+          "text": "Another round?",
+          "startMs": 36
+        },
+        {
+          "speaker": "Barnaby Velvet",
+          "text": "Always, Gilbert. Always.",
+          "startMs": 1454
+        }
+      ]
+    },
+    {
+      "id": "dj-body-01",
+      "category": "dj",
+      "url": "/voice/end-lounge/dj-body-01.mp3",
+      "durationMs": 8915,
+      "overMusic": true,
+      "part": "body",
+      "kit": "dj",
+      "lines": [
+        {
+          "speaker": "Barnaby Velvet",
+          "text": "Lady Entropy is in the far booth tonight, in a dress made of the last light from a dying galaxy. She's ordered a mineral water. She's driving.",
+          "startMs": 36
+        }
+      ]
+    },
+    {
+      "id": "dj-body-02",
+      "category": "dj",
+      "url": "/voice/end-lounge/dj-body-02.mp3",
+      "durationMs": 13154,
+      "overMusic": true,
+      "part": "body",
+      "kit": "dj",
+      "lines": [
+        {
+          "speaker": "Barnaby Velvet",
+          "text": "The Proton Decay Four are now the Proton Decay Three. Nobody's quite sure what happened to the fourth. One moment he was there, and then he was simply, slowly, less there.",
+          "startMs": 50
+        },
+        {
+          "speaker": "Barnaby Velvet",
+          "text": "They play on. They always will.",
+          "startMs": 10560
+        }
+      ]
+    },
+    {
+      "id": "dj-body-03",
+      "category": "dj",
+      "url": "/voice/end-lounge/dj-body-03.mp3",
+      "durationMs": 12582,
+      "overMusic": true,
+      "part": "body",
+      "kit": "dj",
+      "lines": [
+        {
+          "speaker": "Barnaby Velvet",
+          "text": "The gentleman in booth four has asked for the bill.",
+          "startMs": 35
+        },
+        {
+          "speaker": "Gilbert (Bartender)",
+          "text": "He's what?",
+          "startMs": 4374
+        },
+        {
+          "speaker": "Barnaby Velvet",
+          "text": "Gilbert has dropped six of his eight glasses. Eleven billion years, darling. We'd stopped printing bills.",
+          "startMs": 5796
+        }
+      ]
+    },
+    {
+      "id": "dj-body-04",
+      "category": "dj",
+      "url": "/voice/end-lounge/dj-body-04.mp3",
+      "durationMs": 10725,
+      "overMusic": true,
+      "part": "body",
+      "kit": "dj",
+      "lines": [
+        {
+          "speaker": "Barnaby Velvet",
+          "text": "Smooth Harold Oblivion is at the piano tonight. He plays everything at half speed, so it lasts twice as long. At the end of time, darling, that isn't indulgence. That's manners.",
+          "startMs": 37
+        }
+      ]
+    },
+    {
+      "id": "dj-body-05",
+      "category": "dj",
+      "url": "/voice/end-lounge/dj-body-05.mp3",
+      "durationMs": 11272,
+      "overMusic": true,
+      "part": "body",
+      "kit": "dj",
+      "lines": [
+        {
+          "speaker": "Barnaby Velvet",
+          "text": "The microphone on our little stage is still empty, and the spotlight is still on. Someone might come. Someone always might.",
+          "startMs": 50
+        },
+        {
+          "speaker": "Barnaby Velvet",
+          "text": "That's the whole point of a spotlight.",
+          "startMs": 8401
+        }
+      ]
+    },
+    {
+      "id": "dj-body-06",
+      "category": "dj",
+      "url": "/voice/end-lounge/dj-body-06.mp3",
+      "durationMs": 9674,
+      "overMusic": true,
+      "part": "body",
+      "kit": "dj",
+      "lines": [
+        {
+          "speaker": "Barnaby Velvet",
+          "text": "Gilbert has been polishing the same glass for an hour.",
+          "startMs": 37
+        },
+        {
+          "speaker": "Gilbert (Bartender)",
+          "text": "It's a nice glass.",
+          "startMs": 4473
+        },
+        {
+          "speaker": "Barnaby Velvet",
+          "text": "It is a nice glass, darling. Carry on.",
+          "startMs": 6344
+        }
+      ]
+    },
+    {
+      "id": "dj-close-01",
+      "category": "dj",
+      "url": "/voice/end-lounge/dj-close-01.mp3",
+      "durationMs": 3355,
+      "overMusic": true,
+      "part": "close",
+      "kit": "dj",
+      "lines": [
+        {
+          "speaker": "Barnaby Velvet",
+          "text": "And now, darling. A real heartbreaker.",
+          "startMs": 35
+        }
+      ]
+    },
+    {
+      "id": "dj-close-02",
+      "category": "dj",
+      "url": "/voice/end-lounge/dj-close-02.mp3",
+      "durationMs": 4510,
+      "overMusic": true,
+      "part": "close",
+      "kit": "dj",
+      "lines": [
+        {
+          "speaker": "Barnaby Velvet",
+          "text": "Here's another one. Hold somebody's hand. Or a coat stand's.",
+          "startMs": 40
+        }
+      ]
+    },
+    {
+      "id": "dj-close-03",
+      "category": "dj",
+      "url": "/voice/end-lounge/dj-close-03.mp3",
+      "durationMs": 3956,
+      "overMusic": true,
+      "part": "close",
+      "kit": "dj",
+      "lines": [
+        {
+          "speaker": "Barnaby Velvet",
+          "text": "Something slow, now. There's no hurry. There's no anything.",
+          "startMs": 39
+        }
+      ]
+    },
+    {
+      "id": "greg-comes-home-08",
+      "category": "story",
+      "url": "/voice/end-lounge/greg-comes-home-08.mp3",
+      "durationMs": 80383,
+      "title": "Greg Comes Home, Part Eight: Last Call",
+      "overMusic": false,
+      "serial": {
+        "id": "greg-comes-home",
+        "episode": 8
+      },
+      "lines": [
+        {
+          "speaker": "Barnaby Velvet",
+          "text": "The shadow at the end of the bar is back. Greg. A dry ginger, Gilbert.",
+          "startMs": 450
+        },
+        {
+          "speaker": "Gilbert (Bartender)",
+          "text": "Already poured.",
+          "startMs": 5733
+        },
+        {
+          "speaker": "Barnaby Velvet",
+          "text": "You're on your way home, I'm told. The whole dial's talking about it.",
+          "startMs": 7230
+        },
+        {
+          "speaker": "Greg, a Shadow",
+          "text": "I'm losing my nerve, Barnaby.",
+          "startMs": 12316
+        },
+        {
+          "speaker": "Barnaby Velvet",
+          "text": "Well, you've come to the right place. Everybody here lost theirs eons ago. We keep them behind the bar.",
+          "startMs": 15127
+        },
+        {
+          "speaker": "Greg, a Shadow",
+          "text": "What if he's got a new one? There's a man on the radio who sells replacement shadows. A ballroom dancer. A basketball player.",
+          "startMs": 22242
+        },
+        {
+          "speaker": "Barnaby Velvet",
+          "text": "Darling. A man doesn't leave the porch light on for a basketball player.",
+          "startMs": 29182
+        },
+        {
+          "speaker": "Greg, a Shadow",
+          "text": "What if I've been gone too long?",
+          "startMs": 35101
+        },
+        {
+          "speaker": "Gilbert (Bartender)",
+          "text": "Eleven billion years of last calls. Nobody has ever regretted going home.",
+          "startMs": 37535
+        },
+        {
+          "speaker": "Barnaby Velvet",
+          "text": "That's the most Gilbert has said in a century. I'd listen to him.",
+          "startMs": 43732
+        },
+        {
+          "speaker": "Greg, a Shadow",
+          "text": "Can I pay my tab?",
+          "startMs": 48556
+        },
+        {
+          "speaker": "Gilbert (Bartender)",
+          "text": "Paid.",
+          "startMs": 50454
+        },
+        {
+          "speaker": "Barnaby Velvet",
+          "text": "Paid? By whom?",
+          "startMs": 51361
+        },
+        {
+          "speaker": "Gilbert (Bartender)",
+          "text": "The gentleman in booth four.",
+          "startMs": 53663
+        },
+        {
+          "speaker": "Barnaby Velvet",
+          "text": "Booth four has never paid for anything. Not since the first galaxies.",
+          "startMs": 55929
+        },
+        {
+          "speaker": "Gilbert (Bartender)",
+          "text": "He says, for the lad going home.",
+          "startMs": 61167
+        },
+        {
+          "speaker": "Barnaby Velvet",
+          "text": "Then go, darling. Go before the next song. It's a real heartbreaker, and you'll only stay to hear it.",
+          "startMs": 64476
+        },
+        {
+          "speaker": "Greg, a Shadow",
+          "text": "Thank you, Barnaby. Thank you, Gilbert.",
+          "startMs": 70931
+        },
+        {
+          "speaker": "Barnaby Velvet",
+          "text": "Goodnight, Greg. Here's a real heartbreaker. For everyone who's still deciding.",
+          "startMs": 74633
+        }
+      ]
+    },
+    {
+      "id": "bev-gets-her-song-08",
+      "category": "story",
+      "url": "/voice/end-lounge/bev-gets-her-song-08.mp3",
+      "durationMs": 65876,
+      "title": "Bev Gets Her Song, Part Eight: The Space After the Third Note",
+      "overMusic": false,
+      "serial": {
+        "id": "bev-gets-her-song",
+        "episode": 8
+      },
+      "lines": [
+        {
+          "speaker": "Barnaby Velvet",
+          "text": "A call in the last booth. Bev, darling. I hear you've got the whole tune now.",
+          "startMs": 2850
+        },
+        {
+          "speaker": "Bev",
+          "text": "Both halves, love. The void gave me the second bit. But it still hasn't got a name, and nobody can play it for me.",
+          "startMs": 8385
+        },
+        {
+          "speaker": "Barnaby Velvet",
+          "text": "Bev, the microphone on our little stage has been empty for eleven billion years. The spotlight's always on. It's been waiting for someone.",
+          "startMs": 14432
+        },
+        {
+          "speaker": "Barnaby Velvet",
+          "text": "Would you sing it for us?",
+          "startMs": 23829
+        },
+        {
+          "speaker": "Bev",
+          "text": "Oh, I couldn't.",
+          "startMs": 26432
+        },
+        {
+          "speaker": "Gilbert (Bartender)",
+          "text": "You could.",
+          "startMs": 28022
+        },
+        {
+          "speaker": "Barnaby Velvet",
+          "text": "Gilbert has spoken. Go on, darling.",
+          "startMs": 29106
+        },
+        {
+          "speaker": "Bev",
+          "text": "Dum. Dum. Da dum.",
+          "startMs": 32593
+        },
+        {
+          "speaker": "Bev",
+          "text": "I'm sorry. I'm sorry, love. I can't do the next bit. I've gone.",
+          "startMs": 37267
+        },
+        {
+          "speaker": "Bev",
+          "text": "Oh.",
+          "startMs": 42014
+        },
+        {
+          "speaker": "Bev",
+          "text": "Oh, that's why he cried. It isn't the song. It's the gap. There's a little gap after the third note, and you have to wait in it, and you don't know what's coming next.",
+          "startMs": 43760
+        },
+        {
+          "speaker": "Barnaby Velvet",
+          "text": "And that's where he was.",
+          "startMs": 52118
+        },
+        {
+          "speaker": "Bev",
+          "text": "That's where he was. Every time.",
+          "startMs": 54641
+        },
+        {
+          "speaker": "Barnaby Velvet",
+          "text": "Bev. That is a real heartbreaker. And I have never meant it more.",
+          "startMs": 58175
+        },
+        {
+          "speaker": "Gilbert (Bartender)",
+          "text": "Ice?",
+          "startMs": 62824
+        },
+        {
+          "speaker": "Bev",
+          "text": "Go on, then, love.",
+          "startMs": 63786
+        }
+      ]
+    },
+    {
+      "id": "halloween-01",
+      "category": "dj",
+      "url": "/voice/end-lounge/halloween-01.mp3",
+      "durationMs": 15242,
+      "title": "Ghosts at the Bar",
+      "overMusic": true,
+      "part": "body",
+      "kit": "dj",
+      "dates": [
+        "10-24",
+        "10-25",
+        "10-26",
+        "10-27",
+        "10-28",
+        "10-29",
+        "10-30",
+        "10-31"
+      ],
+      "lines": [
+        {
+          "speaker": "Barnaby Velvet",
+          "text": "It's Halloween at the end of time, darling, which means very little changes. Most of our regulars have been ghosts for millennia.",
+          "startMs": 50
+        },
+        {
+          "speaker": "Barnaby Velvet",
+          "text": "Tonight, one of them has come dressed as a man who's alive. Gilbert asked for proof of age. It took a while.",
+          "startMs": 8445
+        }
+      ]
+    },
+    {
+      "id": "halloween-02",
+      "category": "id",
+      "url": "/voice/end-lounge/halloween-02.mp3",
+      "durationMs": 6079,
+      "title": "The Lounge, Halloween",
+      "overMusic": true,
+      "dates": [
+        "10-24",
+        "10-25",
+        "10-26",
+        "10-27",
+        "10-28",
+        "10-29",
+        "10-30",
+        "10-31"
+      ],
+      "lines": [
+        {
+          "speaker": "Barnaby Velvet",
+          "text": "The Lounge at the End of Time. Halloween. Everything ends here, darling. Beautifully. Boo.",
+          "startMs": 50
         }
       ]
     }

@@ -1,0 +1,745 @@
+{
+  "version": 1,
+  "station": "infinite-song",
+  "clips": [
+    {
+      "id": "id-001",
+      "category": "id",
+      "url": "/voice/infinite-song/id-001.mp3",
+      "durationMs": 3798,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Ambrose Long",
+          "text": "The Infinite Song. One song, since the beginning of time. You're just in time.",
+          "startMs": 41
+        }
+      ]
+    },
+    {
+      "id": "id-002",
+      "category": "id",
+      "url": "/voice/infinite-song/id-002.mp3",
+      "durationMs": 4064,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Ambrose Long",
+          "text": "This is Ambrose Long, on The Infinite Song.",
+          "startMs": 41
+        },
+        {
+          "speaker": "Ambrose Long",
+          "text": "Still going.",
+          "startMs": 3087
+        }
+      ]
+    },
+    {
+      "id": "id-003",
+      "category": "id",
+      "url": "/voice/infinite-song/id-003.mp3",
+      "durationMs": 4922,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Ambrose Long",
+          "text": "The Infinite Song, one oh five point four. Don't worry about the start. Nobody heard the start.",
+          "startMs": 42
+        }
+      ]
+    },
+    {
+      "id": "id-004",
+      "category": "id",
+      "url": "/voice/infinite-song/id-004.mp3",
+      "durationMs": 3133,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Ambrose Long",
+          "text": "You're listening to The Infinite Song. This is the bit you like.",
+          "startMs": 36
+        }
+      ]
+    },
+    {
+      "id": "show-morning-open",
+      "category": "id",
+      "url": "/voice/infinite-song/show-morning-open.mp3",
+      "durationMs": 4995,
+      "overMusic": true,
+      "part": "open",
+      "show": "morning-verse",
+      "lines": [
+        {
+          "speaker": "Ambrose Long",
+          "text": "Good morning. This is The Morning Verse. The song carried on while you slept. Here's where we've got to.",
+          "startMs": 38
+        }
+      ]
+    },
+    {
+      "id": "show-morning-001",
+      "category": "dj",
+      "url": "/voice/infinite-song/show-morning-001.mp3",
+      "durationMs": 8337,
+      "overMusic": true,
+      "show": "morning-verse",
+      "lines": [
+        {
+          "speaker": "Ambrose Long",
+          "text": "While you were asleep: twelve verses, one key change, attempted, and a very long bit about a lighthouse.",
+          "startMs": 43
+        },
+        {
+          "speaker": "Ambrose Long",
+          "text": "The lighthouse is fine. The boat is back. Good morning.",
+          "startMs": 5517
+        }
+      ]
+    },
+    {
+      "id": "show-chorus-open",
+      "category": "id",
+      "url": "/voice/infinite-song/show-chorus-open.mp3",
+      "durationMs": 5829,
+      "overMusic": true,
+      "part": "open",
+      "show": "chorus-watch",
+      "lines": [
+        {
+          "speaker": "Ambrose Long",
+          "text": "This is Chorus Watch. Ears open, everyone. Today could be the day.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Ambrose Long",
+          "text": "It won't be. But it could.",
+          "startMs": 4362
+        }
+      ]
+    },
+    {
+      "id": "show-chorus-001",
+      "category": "dj",
+      "url": "/voice/infinite-song/show-chorus-001.mp3",
+      "durationMs": 7317,
+      "overMusic": true,
+      "show": "chorus-watch",
+      "lines": [
+        {
+          "speaker": "A Listener in the Overlap",
+          "text": "Ambrose, I'm sure I heard the chorus. In the shower.",
+          "startMs": 47
+        },
+        {
+          "speaker": "Ambrose Long",
+          "text": "That's a very common sighting. It's nearly always the shower. We've logged it. Thank you.",
+          "startMs": 3089
+        }
+      ]
+    },
+    {
+      "id": "show-chorus-002",
+      "category": "dj",
+      "url": "/voice/infinite-song/show-chorus-002.mp3",
+      "durationMs": 8347,
+      "overMusic": true,
+      "show": "chorus-watch",
+      "lines": [
+        {
+          "speaker": "Ambrose Long",
+          "text": "A report from the Overlap. At three o'clock this afternoon, the bass player hummed something chorus-shaped.",
+          "startMs": 50
+        },
+        {
+          "speaker": "Ambrose Long",
+          "text": "We've checked the tape. It was a yawn. We remain hopeful.",
+          "startMs": 5735
+        }
+      ]
+    },
+    {
+      "id": "show-night-open",
+      "category": "id",
+      "url": "/voice/infinite-song/show-night-open.mp3",
+      "durationMs": 3718,
+      "overMusic": true,
+      "daypart": "night",
+      "part": "open",
+      "show": "night-verses",
+      "lines": [
+        {
+          "speaker": "Ambrose Long",
+          "text": "The Night Verses. I'll keep count.",
+          "startMs": 41
+        },
+        {
+          "speaker": "Ambrose Long",
+          "text": "You rest.",
+          "startMs": 2838
+        }
+      ]
+    },
+    {
+      "id": "show-night-001",
+      "category": "dj",
+      "url": "/voice/infinite-song/show-night-001.mp3",
+      "durationMs": 7759,
+      "overMusic": true,
+      "show": "night-verses",
+      "lines": [
+        {
+          "speaker": "Ambrose Long",
+          "text": "Verse four million, one hundred and twelve. Line six. The boat again.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Ambrose Long",
+          "text": "It's a good boat. It's been a good boat for thousands of years.",
+          "startMs": 4557
+        }
+      ]
+    },
+    {
+      "id": "show-night-002",
+      "category": "dj",
+      "url": "/voice/infinite-song/show-night-002.mp3",
+      "durationMs": 10380,
+      "overMusic": true,
+      "show": "night-verses",
+      "lines": [
+        {
+          "speaker": "Ambrose Long",
+          "text": "To the operator on the relay ship. If you're keeping a log, put down verse four million, one hundred and twelve. Roughly.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Ambrose Long",
+          "text": "Someone in the future will thank you. Or argue. Either way, it's company.",
+          "startMs": 6735
+        }
+      ]
+    },
+    {
+      "id": "call-open-1",
+      "category": "call",
+      "url": "/voice/infinite-song/call-open-1.mp3",
+      "durationMs": 3390,
+      "overMusic": false,
+      "part": "open",
+      "kit": "calls",
+      "lines": [
+        {
+          "speaker": "Ambrose Long",
+          "text": "The lines are open. You're on The Infinite Song. Which verse are you on?",
+          "startMs": 40
+        }
+      ]
+    },
+    {
+      "id": "call-open-2",
+      "category": "call",
+      "url": "/voice/infinite-song/call-open-2.mp3",
+      "durationMs": 4076,
+      "overMusic": false,
+      "part": "open",
+      "kit": "calls",
+      "lines": [
+        {
+          "speaker": "Ambrose Long",
+          "text": "Let's go to the phones. Quietly, now, so we don't lose the beat. Hello, you're on the air.",
+          "startMs": 42
+        }
+      ]
+    },
+    {
+      "id": "call-open-3",
+      "category": "call",
+      "url": "/voice/infinite-song/call-open-3.mp3",
+      "durationMs": 5359,
+      "overMusic": false,
+      "part": "open",
+      "kit": "calls",
+      "lines": [
+        {
+          "speaker": "Ambrose Long",
+          "text": "Hello, caller. Keep your voice down. We're in a delicate bit.",
+          "startMs": 2450
+        }
+      ]
+    },
+    {
+      "id": "call-001",
+      "category": "call",
+      "url": "/voice/infinite-song/call-001.mp3",
+      "durationMs": 12940,
+      "overMusic": false,
+      "part": "body",
+      "kit": "calls",
+      "lines": [
+        {
+          "speaker": "Marek, Catching Up",
+          "text": "Hi, Ambrose. I'm on verse four million and ninety. I fell asleep around verse eighty, and I'm catching up.",
+          "startMs": 50
+        },
+        {
+          "speaker": "Ambrose Long",
+          "text": "Not to worry. The song waits for no one, but it does repeat itself a bit. You'll have caught up by Thursday.",
+          "startMs": 7634
+        }
+      ]
+    },
+    {
+      "id": "call-002",
+      "category": "call",
+      "url": "/voice/infinite-song/call-002.mp3",
+      "durationMs": 13755,
+      "overMusic": false,
+      "part": "body",
+      "kit": "calls",
+      "lines": [
+        {
+          "speaker": "Gwendolyn, Third Generation",
+          "text": "My grandmother's grandmother's grandmother heard verse one. She always said it was about a boat.",
+          "startMs": 50
+        },
+        {
+          "speaker": "Ambrose Long",
+          "text": "A lot of people's grandmothers say that. The archive is unclear. There's definitely a boat by verse eleven. Before that, it's mostly someone tuning up.",
+          "startMs": 5863
+        }
+      ]
+    },
+    {
+      "id": "call-003",
+      "category": "call",
+      "url": "/voice/infinite-song/call-003.mp3",
+      "durationMs": 11645,
+      "overMusic": false,
+      "part": "body",
+      "kit": "calls",
+      "lines": [
+        {
+          "speaker": "A Caller Waiting for the Chorus",
+          "text": "Is the chorus coming back? I've been told there's a chorus.",
+          "startMs": 49
+        },
+        {
+          "speaker": "Ambrose Long",
+          "text": "There is a chorus. It was last heard in verse nine hundred thousand and six. Experts believe it's due.",
+          "startMs": 3191
+        },
+        {
+          "speaker": "Ambrose Long",
+          "text": "Experts have believed that for some time.",
+          "startMs": 9373
+        }
+      ]
+    },
+    {
+      "id": "call-004",
+      "category": "call",
+      "url": "/voice/infinite-song/call-004.mp3",
+      "durationMs": 9631,
+      "overMusic": false,
+      "part": "body",
+      "kit": "calls",
+      "lines": [
+        {
+          "speaker": "A Drummer in a Young Band",
+          "text": "My band wants to cover it. How long have we got?",
+          "startMs": 39
+        },
+        {
+          "speaker": "Ambrose Long",
+          "text": "How long have any of us got, really? Start at the first verse. Let us know how you get on.",
+          "startMs": 2832
+        },
+        {
+          "speaker": "Ambrose Long",
+          "text": "Or your grandchildren can.",
+          "startMs": 7973
+        }
+      ]
+    },
+    {
+      "id": "call-005",
+      "category": "call",
+      "url": "/voice/infinite-song/call-005.mp3",
+      "durationMs": 12996,
+      "overMusic": false,
+      "part": "body",
+      "kit": "calls",
+      "lines": [
+        {
+          "speaker": "Teodor, Relay Four",
+          "text": "Can anyone hear me? This is Teodor. Relay Four.",
+          "startMs": 35
+        },
+        {
+          "speaker": "Ambrose Long",
+          "text": "We can hear you, Teodor. Which verse are you on?",
+          "startMs": 3161
+        },
+        {
+          "speaker": "Teodor, Relay Four",
+          "text": "Two thousand and six. The signal is very slow out here.",
+          "startMs": 5842
+        },
+        {
+          "speaker": "Ambrose Long",
+          "text": "Then you've a lovely few million ahead of you, Teodor. Don't skip anything.",
+          "startMs": 9592
+        }
+      ]
+    },
+    {
+      "id": "call-006",
+      "category": "call",
+      "url": "/voice/infinite-song/call-006.mp3",
+      "durationMs": 11417,
+      "overMusic": false,
+      "part": "body",
+      "kit": "calls",
+      "lines": [
+        {
+          "speaker": "Bev",
+          "text": "Hello, love. Is this the request line?",
+          "startMs": 49
+        },
+        {
+          "speaker": "Ambrose Long",
+          "text": "It is, Bev. Though we only have the one song.",
+          "startMs": 2692
+        },
+        {
+          "speaker": "Bev",
+          "text": "Oh, that's all right. Could you play it?",
+          "startMs": 5346
+        },
+        {
+          "speaker": "Ambrose Long",
+          "text": "We're playing it now, Bev.",
+          "startMs": 7637
+        },
+        {
+          "speaker": "Bev",
+          "text": "Lovely. I'll wait for my bit.",
+          "startMs": 9551
+        }
+      ]
+    },
+    {
+      "id": "call-007",
+      "category": "call",
+      "url": "/voice/infinite-song/call-007.mp3",
+      "durationMs": 14231,
+      "overMusic": false,
+      "part": "body",
+      "kit": "calls",
+      "lines": [
+        {
+          "speaker": "Lionel, Also Counting",
+          "text": "Ambrose, I think you've miscounted. I make it verse four million, one hundred and eleven.",
+          "startMs": 49
+        },
+        {
+          "speaker": "Ambrose Long",
+          "text": "Do you. Well. I've been counting since I was six.",
+          "startMs": 6003
+        },
+        {
+          "speaker": "Lionel, Also Counting",
+          "text": "So have I.",
+          "startMs": 8703
+        },
+        {
+          "speaker": "Ambrose Long",
+          "text": "Let's call it a hundred and eleven and a half, Lionel.",
+          "startMs": 11544
+        }
+      ]
+    },
+    {
+      "id": "call-008",
+      "category": "call",
+      "url": "/voice/infinite-song/call-008.mp3",
+      "durationMs": 11272,
+      "overMusic": false,
+      "part": "body",
+      "kit": "calls",
+      "lines": [
+        {
+          "speaker": "Toby, Aged Nine",
+          "text": "Mister Long, what happens at the end?",
+          "startMs": 38
+        },
+        {
+          "speaker": "Ambrose Long",
+          "text": "Nobody knows, Toby. Some people think it never ends. Some think it ends and starts again.",
+          "startMs": 2064
+        },
+        {
+          "speaker": "Ambrose Long",
+          "text": "I think it ends when the last person stops listening. So I try never to stop.",
+          "startMs": 6939
+        }
+      ]
+    },
+    {
+      "id": "call-close-1",
+      "category": "call",
+      "url": "/voice/infinite-song/call-close-1.mp3",
+      "durationMs": 2721,
+      "overMusic": false,
+      "part": "close",
+      "kit": "calls",
+      "lines": [
+        {
+          "speaker": "Ambrose Long",
+          "text": "Thank you for calling. Back to the song. It never left.",
+          "startMs": 43
+        }
+      ]
+    },
+    {
+      "id": "call-close-2",
+      "category": "call",
+      "url": "/voice/infinite-song/call-close-2.mp3",
+      "durationMs": 3514,
+      "overMusic": false,
+      "part": "close",
+      "kit": "calls",
+      "lines": [
+        {
+          "speaker": "Ambrose Long",
+          "text": "Lovely. Let's rejoin the verse. They're on the bit about the boat again.",
+          "startMs": 46
+        }
+      ]
+    },
+    {
+      "id": "call-close-3",
+      "category": "call",
+      "url": "/voice/infinite-song/call-close-3.mp3",
+      "durationMs": 2685,
+      "overMusic": false,
+      "part": "close",
+      "kit": "calls",
+      "lines": [
+        {
+          "speaker": "Ambrose Long",
+          "text": "Thanks for ringing in. Mind the beat on your way out.",
+          "startMs": 38
+        }
+      ]
+    },
+    {
+      "id": "dj-001",
+      "category": "dj",
+      "url": "/voice/infinite-song/dj-001.mp3",
+      "durationMs": 6510,
+      "title": "Verse Count Update",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Ambrose Long",
+          "text": "Verse count update. We are now on verse four million, one hundred and twelve.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Ambrose Long",
+          "text": "Or thirteen. I blinked.",
+          "startMs": 4950
+        }
+      ]
+    },
+    {
+      "id": "dj-002",
+      "category": "dj",
+      "url": "/voice/infinite-song/dj-002.mp3",
+      "durationMs": 9506,
+      "title": "A New Verse",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Ambrose Long",
+          "text": "A verse has just finished, and another has begun. Very like the last one, but with a good deal more about a goat.",
+          "startMs": 48
+        },
+        {
+          "speaker": "Ambrose Long",
+          "text": "I don't know where the goat has come from. I'm sure it'll explain itself.",
+          "startMs": 6114
+        }
+      ]
+    },
+    {
+      "id": "dj-003",
+      "category": "dj",
+      "url": "/voice/infinite-song/dj-003.mp3",
+      "durationMs": 8220,
+      "title": "For Those Just Joining Us",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Ambrose Long",
+          "text": "For anyone just joining us, this is verse four million, one hundred and fourteen. Welcome.",
+          "startMs": 43
+        },
+        {
+          "speaker": "Ambrose Long",
+          "text": "You haven't missed much. Well. You've missed nearly all of it. But not much.",
+          "startMs": 4866
+        }
+      ]
+    },
+    {
+      "id": "dj-004",
+      "category": "dj",
+      "url": "/voice/infinite-song/dj-004.mp3",
+      "durationMs": 10442,
+      "title": "News From the Stage",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Ambrose Long",
+          "text": "News from the stage. Old Wendeline, on drums, has kept the beat with her left hand since the Iron Age. Tonight she has switched to her right.",
+          "startMs": 43
+        },
+        {
+          "speaker": "Ambrose Long",
+          "text": "The beat is exactly the same. We all felt it, though.",
+          "startMs": 7727
+        }
+      ]
+    },
+    {
+      "id": "dj-005",
+      "category": "dj",
+      "url": "/voice/infinite-song/dj-005.mp3",
+      "durationMs": 11864,
+      "title": "A Little History",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Ambrose Long",
+          "text": "A little history. The song began before the first morning. Nobody wrote it down, because nobody had invented writing.",
+          "startMs": 44
+        },
+        {
+          "speaker": "Ambrose Long",
+          "text": "Then somebody did invent writing, and the first thing they wrote was: how long is this going on for?",
+          "startMs": 6670
+        }
+      ]
+    },
+    {
+      "id": "dj-006",
+      "category": "dj",
+      "url": "/voice/infinite-song/dj-006.mp3",
+      "durationMs": 10979,
+      "title": "The Beards",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Ambrose Long",
+          "text": "The band have asked me to mention their beards. The beards are now out of the stage door and halfway down the high street.",
+          "startMs": 39
+        },
+        {
+          "speaker": "Ambrose Long",
+          "text": "The post office has asked us to mention it too. Please step over them gently. They're very old.",
+          "startMs": 6138
+        }
+      ]
+    },
+    {
+      "id": "halloween-1",
+      "category": "dj",
+      "url": "/voice/infinite-song/halloween-1.mp3",
+      "durationMs": 16020,
+      "title": "The Spooky Verse",
+      "overMusic": true,
+      "dates": [
+        "10-24",
+        "10-25",
+        "10-26",
+        "10-27",
+        "10-28",
+        "10-29",
+        "10-30",
+        "10-31"
+      ],
+      "lines": [
+        {
+          "speaker": "Ambrose Long",
+          "text": "Verse four million, one hundred and thirteen is the spooky one. It comes round at this time every year. Nobody knows how.",
+          "startMs": 41
+        },
+        {
+          "speaker": "Ambrose Long",
+          "text": "It's the one with the lantern, and a door that isn't there. The band always play it a little quieter.",
+          "startMs": 6747
+        }
+      ]
+    },
+    {
+      "id": "halloween-2",
+      "category": "call",
+      "url": "/voice/infinite-song/halloween-2.mp3",
+      "durationMs": 24918,
+      "title": "A Ghost on Backing Vocals",
+      "overMusic": false,
+      "dates": [
+        "10-24",
+        "10-25",
+        "10-26",
+        "10-27",
+        "10-28",
+        "10-29",
+        "10-30",
+        "10-31"
+      ],
+      "lines": [
+        {
+          "speaker": "A Caller With Good Ears",
+          "text": "Ambrose, I think there's a ghost on the backing vocals.",
+          "startMs": 2450
+        },
+        {
+          "speaker": "Ambrose Long",
+          "text": "That'll be Ephraim. He was the original backing singer. He's been gone four thousand years.",
+          "startMs": 5612
+        },
+        {
+          "speaker": "A Caller With Good Ears",
+          "text": "Oh.",
+          "startMs": 10500
+        },
+        {
+          "speaker": "Ambrose Long",
+          "text": "He's never missed a verse. Happy Halloween, Ephraim.",
+          "startMs": 11373
+        },
+        {
+          "speaker": "Ephraim, Backing Vocals",
+          "text": "Happy Halloween, Ambrose.",
+          "startMs": 15571
+        },
+        {
+          "speaker": "A Caller With Good Ears",
+          "text": "...I'm going to go and sit with the lights on.",
+          "startMs": 19040
+        },
+        {
+          "speaker": "Ambrose Long",
+          "text": "Very sensible. Mind the beat.",
+          "startMs": 21325
+        }
+      ]
+    }
+  ]
+}

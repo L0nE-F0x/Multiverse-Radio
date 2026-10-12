@@ -1,0 +1,910 @@
+{
+  "version": 1,
+  "shows": {
+    "ask-grenda": [
+      {
+        "id": "grenda-after-dark",
+        "name": "Grenda After Dark",
+        "blurb": "The lines stay open late, for the problems that only come out at night.",
+        "start": 0,
+        "end": 3
+      },
+      {
+        "id": "the-kitchen-table",
+        "name": "Grenda's Kitchen Table",
+        "blurb": "A pot of tea and the morning's problems, before they've had a chance to get big.",
+        "start": 10,
+        "end": 12
+      }
+    ],
+    "baroque-bots": [
+      {
+        "id": "the-tuning-hour",
+        "name": "The Tuning Hour",
+        "blurb": "The orchestra tunes. It is nearly in tune.",
+        "start": 4,
+        "end": 6
+      },
+      {
+        "id": "the-candlelight-recital",
+        "name": "The Candlelight Recital",
+        "blurb": "Counterpoint by candlelight. The candles are decorative.",
+        "start": 21,
+        "end": 24
+      }
+    ],
+    "bedtime-for-giants": [
+      {
+        "id": "long-lullaby",
+        "name": "The Long Lullaby",
+        "blurb": "Slow stories for very large listeners, read until the last one drops off.",
+        "start": 21,
+        "end": 1
+      },
+      {
+        "id": "very-early-stories",
+        "name": "Very Early Stories",
+        "blurb": "For giants who wake before the sun. It isn't morning yet. Roll over.",
+        "start": 3,
+        "end": 6
+      },
+      {
+        "id": "afternoon-nap",
+        "name": "The Afternoon Nap",
+        "blurb": "A short story for a long nap. Giants nap for about a fortnight.",
+        "start": 13,
+        "end": 16
+      }
+    ],
+    "breakbeat-observatory": [
+      {
+        "id": "the-drop-zone",
+        "name": "The Drop Zone",
+        "blurb": "Peak-time drum and bass under an open dome. Expect seismic activity and minor stellar drift.",
+        "start": 20,
+        "end": 23
+      },
+      {
+        "id": "light-cone",
+        "name": "Late Night Light Cone",
+        "blurb": "Everything played tonight leaves at the speed of light and doesn't slow down. Neither do we.",
+        "start": 23,
+        "end": 3
+      },
+      {
+        "id": "closing-the-dome",
+        "name": "Closing the Dome",
+        "blurb": "The last tunes before sunrise, when the sun gets too loud to compete with.",
+        "start": 4,
+        "end": 7
+      }
+    ],
+    "bubble-economy": [
+      {
+        "id": "friday-night-drive",
+        "name": "Friday Night Drive",
+        "blurb": "Top down, tape deck up, the bay on your left forever. The weekend starts now, and keeps starting.",
+        "start": 18,
+        "end": 22
+      },
+      {
+        "id": "after-hours-marina",
+        "name": "After Hours Marina",
+        "blurb": "Slow jams for the last train, and the one after that. Still Friday. Softer.",
+        "start": 23,
+        "end": 3
+      },
+      {
+        "id": "saturday-never-comes",
+        "name": "Saturday Never Comes",
+        "blurb": "The breakfast show for a city with no Saturday morning. Blinds down, sunglasses on.",
+        "start": 6,
+        "end": 10
+      }
+    ],
+    "cat-fm": [
+      {
+        "id": "morning-window",
+        "name": "The Morning Window",
+        "blurb": "Gloria watches the birds. Dennis does the commentary. The birds are not aware.",
+        "start": 7,
+        "end": 10
+      },
+      {
+        "id": "sunbeam-show",
+        "name": "The Sunbeam Show",
+        "blurb": "Broadcasting live from wherever the patch of sunlight is on the carpet.",
+        "start": 13,
+        "end": 16
+      },
+      {
+        "id": "three-am-zoomies",
+        "name": "The Three AM Zoomies",
+        "blurb": "The station manager runs from one end of the studio to the other, at full speed, for reasons.",
+        "start": 2,
+        "end": 4
+      }
+    ],
+    "channel-surf": [
+      {
+        "id": "the-late-late-late-show",
+        "name": "The Late Late Late Show",
+        "blurb": "Infomercials, closedowns, and whatever is still on at this hour.",
+        "start": 1,
+        "end": 4
+      },
+      {
+        "id": "cartoon-breakfast",
+        "name": "Cartoon Breakfast",
+        "blurb": "Professor Pockets, Little Nothing and breakfast television, flipped every four seconds.",
+        "start": 7,
+        "end": 9
+      },
+      {
+        "id": "tidewater-manor-omnibus",
+        "name": "Tidewater Manor Omnibus",
+        "blurb": "The soap in which Vincent went to get milk. Every episode, all at once.",
+        "start": 14,
+        "end": 16
+      }
+    ],
+    "classifieds": [
+      {
+        "id": "the-late-lot",
+        "name": "The Late Lot",
+        "blurb": "The lot's closed and the lights are off. The deals are still on. Rex, whispering.",
+        "start": 0,
+        "end": 3
+      },
+      {
+        "id": "the-early-bird-specials",
+        "name": "The Early Bird Specials",
+        "blurb": "Bargains for early birds, and for the one actual bird who keeps ringing in.",
+        "start": 6,
+        "end": 9
+      },
+      {
+        "id": "lindas-hour",
+        "name": "Linda's Hour",
+        "blurb": "Sixty minutes of small print, read at Linda's own speed.",
+        "start": 15,
+        "end": 16,
+        "host": "Linda from Accounts"
+      }
+    ],
+    "comet-marimba": [
+      {
+        "id": "hammock-hours",
+        "name": "Hammock Hours",
+        "blurb": "Late night on the comet. The stars go past like warm rain.",
+        "start": 1,
+        "end": 4
+      },
+      {
+        "id": "sunset-on-the-tail",
+        "name": "Sunset on the Tail",
+        "blurb": "Waving goodbye to the sun, which we are leaving behind at seventy kilometres a second.",
+        "start": 18,
+        "end": 20
+      }
+    ],
+    "crystal-delta": [
+      {
+        "id": "the-refraction-hour",
+        "name": "The Refraction Hour",
+        "blurb": "Everything said twice, nearly, in the small hours.",
+        "start": 1,
+        "end": 3
+      },
+      {
+        "id": "the-tiny-miners-tea-break",
+        "name": "The Tiny Miner's Tea Break",
+        "blurb": "The tiny miner puts the kettle on and shows you what he found.",
+        "start": 15,
+        "end": 17,
+        "host": "The Tiny Miner"
+      }
+    ],
+    "dimension-hop": [
+      {
+        "id": "four-seconds-early",
+        "name": "Four Seconds Early",
+        "blurb": "The breakfast show that started four seconds before you woke up.",
+        "start": 6,
+        "end": 8,
+        "host": "Mara"
+      },
+      {
+        "id": "normal-or-not-normal-live",
+        "name": "Normal or Not Normal: Live",
+        "blurb": "The game where Jace's entire reality is on trial, and losing.",
+        "start": 19,
+        "end": 21
+      },
+      {
+        "id": "the-late-hop",
+        "name": "The Late Hop",
+        "blurb": "Jace and Mara after dark, when both realities are a bit sleepy.",
+        "start": 22,
+        "end": 1
+      }
+    ],
+    "drowned-shanty-hour": [
+      {
+        "id": "the-dog-watch",
+        "name": "The Dog Watch",
+        "blurb": "The short evening watches: working songs, mended nets and the cook's sea soup.",
+        "start": 16,
+        "end": 20
+      },
+      {
+        "id": "low-tide",
+        "name": "Low Tide",
+        "blurb": "The quiet watch. Slow shanties, lanterns low, and a crew that can't remember its last dry sock.",
+        "start": 1,
+        "end": 5
+      },
+      {
+        "id": "forenoon-watch",
+        "name": "The Forenoon Watch",
+        "blurb": "Morning songs to stamp the damp out of the deck. Breakfast is ship's biscuit. It's soft.",
+        "start": 8,
+        "end": 12
+      }
+    ],
+    "end-lounge": [
+      {
+        "id": "last-call",
+        "name": "Last Call",
+        "blurb": "Last call has been going on for eleven billion years. This is the good part.",
+        "start": 0,
+        "end": 3
+      },
+      {
+        "id": "the-cocktail-hour",
+        "name": "The Cocktail Hour",
+        "blurb": "Gilbert mixes, Barnaby introduces heartbreakers, and the universe dims the lights.",
+        "start": 18,
+        "end": 20
+      }
+    ],
+    "event-horizon-surf": [
+      {
+        "id": "dawn-patrol",
+        "name": "Dawn Patrol",
+        "blurb": "Early sets, an empty beach, and a sunrise that takes the long way round the hole.",
+        "start": 5,
+        "end": 9
+      },
+      {
+        "id": "the-long-sunset",
+        "name": "The Long Sunset",
+        "blurb": "All four sunsets, back to back, with spring reverb.",
+        "start": 17,
+        "end": 21
+      },
+      {
+        "id": "night-session",
+        "name": "Night Session",
+        "blurb": "Slow waves under the glow of the ring. Leashes on.",
+        "start": 22,
+        "end": 2
+      }
+    ],
+    "every-news": [
+      {
+        "id": "the-midnight-edition",
+        "name": "The Midnight Edition",
+        "blurb": "The day's news from every possible day, read slowly, so it sinks in.",
+        "start": 23,
+        "end": 2
+      },
+      {
+        "id": "overnight-with-kim",
+        "name": "Overnight with Kim",
+        "blurb": "Kim Harrowgate, still standing in it at three in the morning, holding whatever she's been handed.",
+        "start": 2,
+        "end": 5,
+        "host": "Kim Harrowgate"
+      },
+      {
+        "id": "good-morning-every-timeline",
+        "name": "Good Morning, Every Timeline",
+        "blurb": "Breakfast news, the polite deer on Interstate Zero, and Skip, who has been up since four.",
+        "start": 6,
+        "end": 9,
+        "host": "Skip Daley"
+      }
+    ],
+    "gristwick-parish": [
+      {
+        "id": "the-opening",
+        "name": "The Opening of the Fête",
+        "blurb": "Every morning the Reverend Ashby declares the fête open. Again. Live from the tea tent steps.",
+        "start": 8,
+        "end": 10
+      },
+      {
+        "id": "evensong-results",
+        "name": "Evensong and Results",
+        "blurb": "The day's results from the judging marquee, the bells, and the band, nearly at the trio section.",
+        "start": 17,
+        "end": 19
+      },
+      {
+        "id": "the-night-fete",
+        "name": "The Night Fête",
+        "blurb": "The fête doesn't close at night. Fairy lights, a lantern on the marrow, and the urn still on.",
+        "start": 23,
+        "end": 3
+      }
+    ],
+    "hold-music": [
+      {
+        "id": "the-night-queue",
+        "name": "The Night Queue",
+        "blurb": "Overnight holding for the dedicated caller. Your call is still important. Slightly less, at this hour.",
+        "start": 0,
+        "end": 4
+      },
+      {
+        "id": "opening-hours",
+        "name": "Opening Hours",
+        "blurb": "The Department is now open. It was also open before.",
+        "start": 9,
+        "end": 11
+      }
+    ],
+    "hush-after-hours": [
+      {
+        "id": "lights-down",
+        "name": "Lights Down",
+        "blurb": "Quiet records for a sleeping ship. Please don't wake the operator.",
+        "start": 0,
+        "end": 4
+      },
+      {
+        "id": "the-dawn-watch",
+        "name": "The Dawn Watch",
+        "blurb": "HUSH keeps the heading and reads the morning to you, very softly, before you're up.",
+        "start": 4,
+        "end": 7
+      }
+    ],
+    "impossible-sports": [
+      {
+        "id": "the-overnight-results",
+        "name": "The Overnight Results",
+        "blurb": "Chip's asleep. Doug reads the scores from the sports that are still going. Most of them are still going.",
+        "start": 1,
+        "end": 4,
+        "host": "Doug Steadman"
+      },
+      {
+        "id": "the-warm-up",
+        "name": "The Warm-Up",
+        "blurb": "Chip does his morning stretches, live, with full commentary.",
+        "start": 7,
+        "end": 9
+      },
+      {
+        "id": "sunball-tonight",
+        "name": "Sunball Tonight",
+        "blurb": "Live from Coliseum Zero, where the ball is a small, polite sun.",
+        "start": 19,
+        "end": 22
+      }
+    ],
+    "infinite-song": [
+      {
+        "id": "morning-verse",
+        "name": "The Morning Verse",
+        "blurb": "Where the song has got to, for people just waking up. You've missed a lot. It's fine.",
+        "start": 6,
+        "end": 9
+      },
+      {
+        "id": "chorus-watch",
+        "name": "Chorus Watch",
+        "blurb": "Listeners report signs of the chorus. It's due. It has been due for some time.",
+        "start": 15,
+        "end": 18
+      },
+      {
+        "id": "night-verses",
+        "name": "The Night Verses",
+        "blurb": "Ambrose counts the overnight verses under his breath, so as not to lose his place.",
+        "start": 0,
+        "end": 5
+      }
+    ],
+    "last-lighthouse": [
+      {
+        "id": "the-night-forecast",
+        "name": "The Night Forecast",
+        "blurb": "The forecast for the impossible seas, read at the usual hour for anyone who might be out there.",
+        "start": 23,
+        "end": 2
+      },
+      {
+        "id": "the-keepers-log",
+        "name": "The Keeper's Log",
+        "blurb": "Entries from the logbook of the Last Lighthouse, read slowly, by lamplight.",
+        "start": 2,
+        "end": 6
+      }
+    ],
+    "lower-hollow": [
+      {
+        "id": "morning-notices",
+        "name": "Morning Notices",
+        "blurb": "Maureen with the noticeboard, the birthdays and the overnight hole report.",
+        "start": 7,
+        "end": 10
+      },
+      {
+        "id": "committee-hour",
+        "name": "The Committee Hour",
+        "blurb": "Councillor Dibbs and the week's business. The hole remains.",
+        "start": 18,
+        "end": 20,
+        "host": "Councillor Dibbs"
+      },
+      {
+        "id": "rim-watch",
+        "name": "Rim Watch",
+        "blurb": "Overnight with Maureen, a flask and the binoculars, keeping an eye on the hole so you don't have to.",
+        "start": 0,
+        "end": 4
+      }
+    ],
+    "mirror-polka": [
+      {
+        "id": "ynnhojs-late-show",
+        "name": "Ynnhoj's Late Show",
+        "blurb": "Johnny's asleep. His reflection isn't.",
+        "start": 2,
+        "end": 4,
+        "host": "Ynnhoj"
+      },
+      {
+        "id": "the-actual-polka-hour",
+        "name": "The Actual Polka Hour",
+        "blurb": "The one hour of the day when the Polka Hour is technically an hour.",
+        "start": 20,
+        "end": 21
+      }
+    ],
+    "moon-dub": [
+      {
+        "id": "earthrise-session",
+        "name": "Earthrise Session",
+        "blurb": "Bass for the Earth, coming up over the ridge with a big blue yawn.",
+        "start": 5,
+        "end": 7
+      },
+      {
+        "id": "low-gravity-session",
+        "name": "Low Gravity Session",
+        "blurb": "Heavy bass, light gravity, late.",
+        "start": 22,
+        "end": 2
+      }
+    ],
+    "neon-2087": [
+      {
+        "id": "the-rad-hour",
+        "name": "The Rad Hour",
+        "blurb": "Velocity counts down the most rad ordinary things of the day.",
+        "start": 17,
+        "end": 19
+      },
+      {
+        "id": "midnight-drive",
+        "name": "Midnight Drive",
+        "blurb": "Windows down on the endless grid. It's always midnight here, but this is the real one.",
+        "start": 23,
+        "end": 3
+      }
+    ],
+    "numbers-omega": [
+      {
+        "id": "the-late-sequence",
+        "name": "The Late Sequence",
+        "blurb": "Numbers for the small hours. Some of them are for you.",
+        "start": 0,
+        "end": 4
+      },
+      {
+        "id": "the-morning-sequence",
+        "name": "The Morning Sequence",
+        "blurb": "Please have a pencil ready.",
+        "start": 6,
+        "end": 8
+      }
+    ],
+    "other-horoscopes": [
+      {
+        "id": "morning-alignment",
+        "name": "The Morning Alignment",
+        "blurb": "Your day ahead, in every universe that has days.",
+        "start": 7,
+        "end": 10
+      },
+      {
+        "id": "compatibility-hour",
+        "name": "Compatibility Hour",
+        "blurb": "Will a Teapot and a Ladder get along? Callers ask Madame Orrery about partners from other universes.",
+        "start": 19,
+        "end": 22
+      },
+      {
+        "id": "night-shift-charts",
+        "name": "Charts for the Night Shift",
+        "blurb": "Readings for whoever is still awake: bakers, nurses, lighthouse keepers and relay operators.",
+        "start": 0,
+        "end": 4
+      }
+    ],
+    "piano-empty-rooms": [
+      {
+        "id": "dust-sheets",
+        "name": "Dust Sheets",
+        "blurb": "The furniture is covered for the night. Slow piano for the drawing room, the hall and the chairs.",
+        "start": 20,
+        "end": 23
+      },
+      {
+        "id": "unvisited-hours",
+        "name": "The Unvisited Hours",
+        "blurb": "The quietest hours, in the quietest rooms. Nobody comes. Everything is ready.",
+        "start": 1,
+        "end": 5
+      },
+      {
+        "id": "first-light",
+        "name": "First Light in the East Wing",
+        "blurb": "Morning sun across bare floorboards, and the piano a little brighter for it.",
+        "start": 6,
+        "end": 9
+      }
+    ],
+    "pixel-afterlife": [
+      {
+        "id": "attract-mode",
+        "name": "Attract Mode",
+        "blurb": "After hours, when the cabinets play themselves to remember how.",
+        "start": 1,
+        "end": 4
+      },
+      {
+        "id": "after-school-special",
+        "name": "After School Special",
+        "blurb": "Two-player tunes for the busiest hour in the arcade. Player One, this could be it.",
+        "start": 15,
+        "end": 18
+      }
+    ],
+    "plant-fm": [
+      {
+        "id": "first-light",
+        "name": "First Light",
+        "blurb": "Fern describes the light as it arrives, a very little at a time.",
+        "start": 5,
+        "end": 8
+      },
+      {
+        "id": "full-sun",
+        "name": "Full Sun",
+        "blurb": "The brightest hours, celebrated very quietly by everyone on the windowsill.",
+        "start": 11,
+        "end": 15
+      },
+      {
+        "id": "dark-hours",
+        "name": "The Dark Hours",
+        "blurb": "For plants at night: rest, respiration, and growing a little while nobody is looking.",
+        "start": 22,
+        "end": 5
+      }
+    ],
+    "rainfall-fm": [
+      {
+        "id": "the-night-tram",
+        "name": "The Night Tram",
+        "blurb": "Music for the last tram home through Precinct Nine.",
+        "start": 0,
+        "end": 3
+      },
+      {
+        "id": "the-kettle-hour",
+        "name": "The Kettle Hour",
+        "blurb": "Tea, drizzle, and the morning rainfall totals.",
+        "start": 6,
+        "end": 8
+      }
+    ],
+    "smoke-ring-trio": [
+      {
+        "id": "supper-club",
+        "name": "The Supper Club Forecast",
+        "blurb": "Dinner, candlelight and a light drizzle of piano. The early set, for people who still have plans.",
+        "start": 19,
+        "end": 22
+      },
+      {
+        "id": "the-3am-set",
+        "name": "The 3 AM Set",
+        "blurb": "The diners have gone. The trio plays for each other now. You're welcome to listen, quietly.",
+        "start": 2,
+        "end": 5
+      },
+      {
+        "id": "the-morning-after",
+        "name": "The Morning After",
+        "blurb": "Chairs on the tables, coffee on, and the trio still playing. Nobody has had the heart to tell them.",
+        "start": 6,
+        "end": 9
+      }
+    ],
+    "snail-jams": [
+      {
+        "id": "dew-patrol",
+        "name": "Dew Patrol",
+        "blurb": "Live traffic on the leaf, and the first sip of the morning.",
+        "start": 5,
+        "end": 8
+      },
+      {
+        "id": "the-slow-hour",
+        "name": "The Slow Hour",
+        "blurb": "It lasts three hours. We're working on it.",
+        "start": 21,
+        "end": 24
+      }
+    ],
+    "static-lullabies": [
+      {
+        "id": "after-the-anthem",
+        "name": "After the Anthem",
+        "blurb": "The broadcast day is over. The static takes the late shift.",
+        "start": 23,
+        "end": 2
+      },
+      {
+        "id": "the-small-hours",
+        "name": "The Small Hours",
+        "blurb": "For whoever is still awake. Nobody needs anything from you until morning.",
+        "start": 2,
+        "end": 6
+      }
+    ],
+    "tiny-hour": [
+      {
+        "id": "good-morning-small-ones",
+        "name": "Good Morning, Small Ones",
+        "blurb": "Breakfast with Auntie Pim: one oat each, a song, and the day's safety tip.",
+        "start": 7,
+        "end": 9
+      },
+      {
+        "id": "crafternoon",
+        "name": "Crafternoon",
+        "blurb": "Crafts for very small hands, made from things the big people dropped.",
+        "start": 14,
+        "end": 17
+      },
+      {
+        "id": "very-small-hours",
+        "name": "The Very Small Hours",
+        "blurb": "For very small listeners who can't sleep. The clock is very loud from down here.",
+        "start": 1,
+        "end": 5
+      }
+    ],
+    "tomorrows-leftovers": [
+      {
+        "id": "breakfast-tomorrow",
+        "name": "Breakfast Tomorrow",
+        "blurb": "The most important meal of tomorrow, cooked this morning, so tomorrow you can have a lie-in.",
+        "start": 6,
+        "end": 10
+      },
+      {
+        "id": "pip-cooks-today",
+        "name": "Pip Cooks Today",
+        "blurb": "Pip cooks with ingredients that already exist. Chef Brodequin watches, appalled.",
+        "start": 12,
+        "end": 15,
+        "host": "Pip, the Sous-Chef"
+      },
+      {
+        "id": "midnight-larder",
+        "name": "The Midnight Larder",
+        "blurb": "Snacks for the small hours, prepared slightly before you get peckish.",
+        "start": 23,
+        "end": 3
+      }
+    ],
+    "transmission-zero": [
+      {
+        "id": "first-light",
+        "name": "First Light",
+        "blurb": "At dawn, every dawn since the first one, the First Announcer tries the microphone again.",
+        "start": 5,
+        "end": 8
+      }
+    ],
+    "unsolved-dimensions": [
+      {
+        "id": "morning-roll-call",
+        "name": "Morning Roll Call",
+        "blurb": "Inspector Gault reviews the overnight incidents. None of them have been solved. She is relieved.",
+        "start": 8,
+        "end": 10
+      },
+      {
+        "id": "witness-hour",
+        "name": "Witness Hour",
+        "blurb": "Listeners ring in with information. The Inspector gently talks them out of it.",
+        "start": 19,
+        "end": 22
+      },
+      {
+        "id": "cold-cases",
+        "name": "Cold Cases, Warm Milk",
+        "blurb": "The oldest files in the basement, reopened by lamplight and carefully left open.",
+        "start": 1,
+        "end": 5
+      }
+    ],
+    "void-beats": [
+      {
+        "id": "the-3am-hour",
+        "name": "The 3 AM Hour",
+        "blurb": "For the ones still awake, and the ones who never sleep.",
+        "start": 2,
+        "end": 5
+      },
+      {
+        "id": "the-void-takes-over",
+        "name": "The Void Takes Over",
+        "blurb": "DJ Eventually has fallen asleep at the desk. The void is minding the station.",
+        "start": 5,
+        "end": 6,
+        "host": "The Void"
+      },
+      {
+        "id": "study-hall",
+        "name": "Study Hall",
+        "blurb": "Beats to finish the thing to. The void is also behind on its reading.",
+        "start": 14,
+        "end": 17
+      }
+    ],
+    "wall-of-fog": [
+      {
+        "id": "soundcheck",
+        "name": "Soundcheck",
+        "blurb": "The soundcheck began in 1991. Some of it is still going. Join it.",
+        "start": 16,
+        "end": 19
+      },
+      {
+        "id": "the-loud-quiet",
+        "name": "The Loud Quiet",
+        "blurb": "Very loud, then very, very quiet, then very loud. Ellis has notes. Nobody can read them.",
+        "start": 22,
+        "end": 2
+      },
+      {
+        "id": "fogbound",
+        "name": "Fogbound",
+        "blurb": "The small hours, where the reverb is deepest and the lamp keeps watch.",
+        "start": 2,
+        "end": 6
+      }
+    ],
+    "waystation-9": [
+      {
+        "id": "graveyard-shift",
+        "name": "The Graveyard Shift",
+        "blurb": "Long-haul chatter through the dead hours. Big Rosalind on the coffee, Midnight Mongoose on the old river road.",
+        "start": 0,
+        "end": 4
+      },
+      {
+        "id": "dawn-run",
+        "name": "The Dawn Run",
+        "blurb": "Night convoy in, day convoy out, and bacon for everyone.",
+        "start": 5,
+        "end": 8
+      },
+      {
+        "id": "supper-at-the-crossroads",
+        "name": "Supper at the Crossroads",
+        "blurb": "Drivers pull in, swap stories and argue about the sideways road.",
+        "start": 18,
+        "end": 21
+      }
+    ],
+    "whalesong": [
+      {
+        "id": "the-night-watch",
+        "name": "The Night Watch",
+        "blurb": "Captain Hum keeps watch. The whales keep singing. Nobody asks the whales.",
+        "start": 0,
+        "end": 4
+      },
+      {
+        "id": "the-dawn-log",
+        "name": "The Dawn Log",
+        "blurb": "There is no dawn between galaxies. Captain Hum keeps one anyway.",
+        "start": 5,
+        "end": 7
+      }
+    ],
+    "wild-multiverse": [
+      {
+        "id": "the-dawn-chorus",
+        "name": "The Dawn Chorus",
+        "blurb": "Something enormous is waking up. Sir Reginald narrates it, very quietly.",
+        "start": 5,
+        "end": 7
+      },
+      {
+        "id": "the-night-shoot",
+        "name": "The Night Shoot",
+        "blurb": "Hushed footage from the tall grass after dark. Keep your feet inside the tent.",
+        "start": 22,
+        "end": 2
+      }
+    ],
+    "win-this-planet": [
+      {
+        "id": "primetime",
+        "name": "Win This Planet!",
+        "blurb": "The quiz where the questions are about you, and the answers are wrong. Live, before a studio audience of one.",
+        "start": 19,
+        "end": 22
+      },
+      {
+        "id": "win-this-moon",
+        "name": "Win This Moon!",
+        "blurb": "The daytime spin-off. Smaller prizes, smaller stakes, the same three contestants.",
+        "start": 12,
+        "end": 15
+      },
+      {
+        "id": "graveyard-round",
+        "name": "The Graveyard Round",
+        "blurb": "Late-night quizzing with the lights down and the buzzer muffled. The planet is asleep. Don't wake it.",
+        "start": 1,
+        "end": 4
+      }
+    ],
+    "yesterday-fm": [
+      {
+        "id": "yesterday-morning",
+        "name": "Yesterday Morning",
+        "blurb": "The breakfast show from yesterday. The toast is already eaten. It was lovely.",
+        "start": 6,
+        "end": 10
+      },
+      {
+        "id": "afternoon-before",
+        "name": "The Afternoon Before",
+        "blurb": "Gentle songs and reassuring news from a long, golden afternoon that has already ended well.",
+        "start": 14,
+        "end": 17
+      },
+      {
+        "id": "last-night-tonight",
+        "name": "Last Night, Tonight",
+        "blurb": "Gordon goes through last night, hour by hour. Nothing bad happened in any of them.",
+        "start": 22,
+        "end": 2
+      }
+    ]
+  }
+}

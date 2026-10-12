@@ -295,6 +295,570 @@
           "startMs": 8515
         }
       ]
+    },
+    {
+      "id": "after-the-anthem-open",
+      "category": "id",
+      "url": "/voice/static-lullabies/after-the-anthem-open.mp3",
+      "durationMs": 7812,
+      "title": "After the Anthem",
+      "overMusic": true,
+      "part": "open",
+      "show": "after-the-anthem",
+      "lines": [
+        {
+          "speaker": "The Listener",
+          "text": "The anthem has finished.",
+          "startMs": 49
+        },
+        {
+          "speaker": "The Listener",
+          "text": "This is After the Anthem. You can lie down now.",
+          "startMs": 3122
+        }
+      ]
+    },
+    {
+      "id": "after-the-anthem-01",
+      "category": "dj",
+      "url": "/voice/static-lullabies/after-the-anthem-01.mp3",
+      "durationMs": 14315,
+      "overMusic": true,
+      "show": "after-the-anthem",
+      "lines": [
+        {
+          "speaker": "The Listener",
+          "text": "When the anthem finishes, the television thinks it's done for the night. It isn't. It's just quieter now.",
+          "startMs": 50
+        },
+        {
+          "speaker": "The Listener",
+          "text": "This is my favourite part.",
+          "startMs": 12117
+        }
+      ]
+    },
+    {
+      "id": "after-the-anthem-02",
+      "category": "dj",
+      "url": "/voice/static-lullabies/after-the-anthem-02.mp3",
+      "durationMs": 14327,
+      "overMusic": true,
+      "show": "after-the-anthem",
+      "lines": [
+        {
+          "speaker": "The Listener",
+          "text": "The test card is up. The little girl in the picture is asleep. She's been asleep since the anthem.",
+          "startMs": 40
+        },
+        {
+          "speaker": "The Listener",
+          "text": "Everyone is. Nearly everyone.",
+          "startMs": 11279
+        }
+      ]
+    },
+    {
+      "id": "the-small-hours-open",
+      "category": "id",
+      "url": "/voice/static-lullabies/the-small-hours-open.mp3",
+      "durationMs": 9492,
+      "title": "The Small Hours",
+      "overMusic": true,
+      "part": "open",
+      "show": "the-small-hours",
+      "lines": [
+        {
+          "speaker": "The Listener",
+          "text": "The small hours.",
+          "startMs": 49
+        },
+        {
+          "speaker": "The Listener",
+          "text": "Static Lullabies. Nobody needs anything from you until morning.",
+          "startMs": 2740
+        }
+      ]
+    },
+    {
+      "id": "the-small-hours-01",
+      "category": "dj",
+      "url": "/voice/static-lullabies/the-small-hours-01.mp3",
+      "durationMs": 10067,
+      "overMusic": true,
+      "show": "the-small-hours",
+      "lines": [
+        {
+          "speaker": "The Listener",
+          "text": "It's the small hours. They're called that because they're small enough to hold.",
+          "startMs": 36
+        },
+        {
+          "speaker": "The Listener",
+          "text": "Hold one. It's warm.",
+          "startMs": 8156
+        }
+      ]
+    },
+    {
+      "id": "the-small-hours-02",
+      "category": "dj",
+      "url": "/voice/static-lullabies/the-small-hours-02.mp3",
+      "durationMs": 11370,
+      "overMusic": true,
+      "show": "the-small-hours",
+      "lines": [
+        {
+          "speaker": "The Listener",
+          "text": "The cat on the television has opened one of its three eyes.",
+          "startMs": 36
+        },
+        {
+          "speaker": "The Listener",
+          "text": "Just checking you're still here.",
+          "startMs": 6865
+        },
+        {
+          "speaker": "The Listener",
+          "text": "You are. Good.",
+          "startMs": 10163
+        }
+      ]
+    },
+    {
+      "id": "dj-open-01",
+      "category": "dj",
+      "url": "/voice/static-lullabies/dj-open-01.mp3",
+      "durationMs": 2952,
+      "overMusic": true,
+      "part": "open",
+      "kit": "dj",
+      "lines": [
+        {
+          "speaker": "The Listener",
+          "text": "Shh. I'm still here.",
+          "startMs": 32
+        }
+      ]
+    },
+    {
+      "id": "dj-open-02",
+      "category": "dj",
+      "url": "/voice/static-lullabies/dj-open-02.mp3",
+      "durationMs": 3751,
+      "overMusic": true,
+      "part": "open",
+      "kit": "dj",
+      "lines": [
+        {
+          "speaker": "The Listener",
+          "text": "Static Lullabies.",
+          "startMs": 43
+        },
+        {
+          "speaker": "The Listener",
+          "text": "Hello again.",
+          "startMs": 2547
+        }
+      ]
+    },
+    {
+      "id": "dj-open-03",
+      "category": "dj",
+      "url": "/voice/static-lullabies/dj-open-03.mp3",
+      "durationMs": 3238,
+      "overMusic": true,
+      "daypart": "night",
+      "part": "open",
+      "kit": "dj",
+      "lines": [
+        {
+          "speaker": "The Listener",
+          "text": "You're still awake. That's all right.",
+          "startMs": 33
+        }
+      ]
+    },
+    {
+      "id": "dj-body-01",
+      "category": "dj",
+      "url": "/voice/static-lullabies/dj-body-01.mp3",
+      "durationMs": 14451,
+      "overMusic": true,
+      "part": "body",
+      "kit": "dj",
+      "lines": [
+        {
+          "speaker": "The Listener",
+          "text": "The snow on the screen is drifting to the left tonight. That means it's calm. When it drifts to the right, it's thinking.",
+          "startMs": 38
+        },
+        {
+          "speaker": "The Listener",
+          "text": "It's calm.",
+          "startMs": 13400
+        }
+      ]
+    },
+    {
+      "id": "dj-body-02",
+      "category": "dj",
+      "url": "/voice/static-lullabies/dj-body-02.mp3",
+      "durationMs": 12176,
+      "overMusic": true,
+      "part": "body",
+      "kit": "dj",
+      "lines": [
+        {
+          "speaker": "The Listener",
+          "text": "Mothlight have been playing to the window again. Every night, one moth comes to listen.",
+          "startMs": 50
+        },
+        {
+          "speaker": "The Listener",
+          "text": "Just the one. It's enough.",
+          "startMs": 9767
+        }
+      ]
+    },
+    {
+      "id": "dj-body-03",
+      "category": "dj",
+      "url": "/voice/static-lullabies/dj-body-03.mp3",
+      "durationMs": 13005,
+      "overMusic": true,
+      "part": "body",
+      "kit": "dj",
+      "lines": [
+        {
+          "speaker": "The Listener",
+          "text": "The radiator has started ticking along with the music.",
+          "startMs": 46
+        },
+        {
+          "speaker": "The Listener",
+          "text": "We've given it a credit. The Radiator Club. It's very pleased with itself.",
+          "startMs": 5406
+        }
+      ]
+    },
+    {
+      "id": "dj-body-04",
+      "category": "dj",
+      "url": "/voice/static-lullabies/dj-body-04.mp3",
+      "durationMs": 11753,
+      "overMusic": true,
+      "part": "body",
+      "kit": "dj",
+      "lines": [
+        {
+          "speaker": "The Listener",
+          "text": "Somewhere, a fridge has just switched itself off, and the whole house got quieter.",
+          "startMs": 44
+        },
+        {
+          "speaker": "The Listener",
+          "text": "Did you hear it? That was for you.",
+          "startMs": 8657
+        }
+      ]
+    },
+    {
+      "id": "dj-body-05",
+      "category": "dj",
+      "url": "/voice/static-lullabies/dj-body-05.mp3",
+      "durationMs": 11978,
+      "overMusic": true,
+      "part": "body",
+      "kit": "dj",
+      "lines": [
+        {
+          "speaker": "The Listener",
+          "text": "The thing under the bed has turned over in its sleep.",
+          "startMs": 42
+        },
+        {
+          "speaker": "The Listener",
+          "text": "It's dreaming about you. Nice dreams. You were doing a little dance.",
+          "startMs": 5763
+        }
+      ]
+    },
+    {
+      "id": "dj-close-01",
+      "category": "dj",
+      "url": "/voice/static-lullabies/dj-close-01.mp3",
+      "durationMs": 4346,
+      "overMusic": true,
+      "part": "close",
+      "kit": "dj",
+      "lines": [
+        {
+          "speaker": "The Listener",
+          "text": "Here's some more quiet. Take as much as you like.",
+          "startMs": 31
+        }
+      ]
+    },
+    {
+      "id": "dj-close-02",
+      "category": "dj",
+      "url": "/voice/static-lullabies/dj-close-02.mp3",
+      "durationMs": 3554,
+      "overMusic": true,
+      "part": "close",
+      "kit": "dj",
+      "lines": [
+        {
+          "speaker": "The Listener",
+          "text": "Back to the static.",
+          "startMs": 41
+        },
+        {
+          "speaker": "The Listener",
+          "text": "Goodnight.",
+          "startMs": 2517
+        }
+      ]
+    },
+    {
+      "id": "dj-close-03",
+      "category": "dj",
+      "url": "/voice/static-lullabies/dj-close-03.mp3",
+      "durationMs": 3564,
+      "overMusic": true,
+      "part": "close",
+      "kit": "dj",
+      "lines": [
+        {
+          "speaker": "The Listener",
+          "text": "Close your eyes. I'll keep the dial.",
+          "startMs": 29
+        }
+      ]
+    },
+    {
+      "id": "teodor-is-heard-02",
+      "category": "story",
+      "url": "/voice/static-lullabies/teodor-is-heard-02.mp3",
+      "durationMs": 71949,
+      "title": "Teodor Is Heard, Part Two: The Static Says Yes",
+      "overMusic": false,
+      "serial": {
+        "id": "teodor-is-heard",
+        "episode": 2
+      },
+      "lines": [
+        {
+          "speaker": "The Listener",
+          "text": "Someone far away is asking if anyone can hear him.",
+          "startMs": 440
+        },
+        {
+          "speaker": "Teodor, Relay Four",
+          "text": "Is anyone receiving this. This is Relay Four.",
+          "startMs": 6894
+        },
+        {
+          "speaker": "The Listener",
+          "text": "I can, Teodor. I always could.",
+          "startMs": 11152
+        },
+        {
+          "speaker": "The Listener",
+          "text": "But he can't hear me. His receiver is broken. All he hears is the static.",
+          "startMs": 15775
+        },
+        {
+          "speaker": "The Listener",
+          "text": "And I am the static.",
+          "startMs": 24614
+        },
+        {
+          "speaker": "The Listener",
+          "text": "So I'm going to try something. I'm going to be very, very quiet. Quieter than I've ever been. So that, just for a second, the static says something.",
+          "startMs": 27925
+        },
+        {
+          "speaker": "Teodor, Relay Four",
+          "text": "Night four thousand and two. Captain came at three. Mostly beak. Made tea.",
+          "startMs": 46140
+        },
+        {
+          "speaker": "Teodor, Relay Four",
+          "text": "The static was very soft tonight. Softer than usual. For a moment, I thought it said,",
+          "startMs": 51189
+        },
+        {
+          "speaker": "The Listener",
+          "text": "Yes.",
+          "startMs": 57311
+        },
+        {
+          "speaker": "Teodor, Relay Four",
+          "text": "Probably the kettle.",
+          "startMs": 59906
+        },
+        {
+          "speaker": "The Listener",
+          "text": "It wasn't the kettle.",
+          "startMs": 63035
+        },
+        {
+          "speaker": "The Listener",
+          "text": "Goodnight, Teodor. Go to sleep. I'll keep the line warm.",
+          "startMs": 65658
+        }
+      ]
+    },
+    {
+      "id": "greg-comes-home-12",
+      "category": "story",
+      "url": "/voice/static-lullabies/greg-comes-home-12.mp3",
+      "durationMs": 102703,
+      "title": "Greg Comes Home, Part Twelve: The Porch Light",
+      "overMusic": false,
+      "serial": {
+        "id": "greg-comes-home",
+        "episode": 12
+      },
+      "lines": [
+        {
+          "speaker": "The Listener",
+          "text": "It's four in the morning.",
+          "startMs": 436
+        },
+        {
+          "speaker": "The Listener",
+          "text": "In a small house in the eastern Overlap, the porch light is on. It has been on every night since spring. The bulb has been changed twice.",
+          "startMs": 3366
+        },
+        {
+          "speaker": "The Listener",
+          "text": "Hollis is asleep in the chair by the window. He meant to stay up. He always means to.",
+          "startMs": 19712
+        },
+        {
+          "speaker": "The Listener",
+          "text": "Shh. There's someone at the gate.",
+          "startMs": 29948
+        },
+        {
+          "speaker": "The Listener",
+          "text": "There's nobody there. That's how you know.",
+          "startMs": 35076
+        },
+        {
+          "speaker": "The Listener",
+          "text": "He comes up the path very slowly, into the porch light. And because the light is on, he's there. Long, and thin, and a little bit tired.",
+          "startMs": 40100
+        },
+        {
+          "speaker": "The Listener",
+          "text": "He doesn't knock. Shadows can't. He lies down on the boards by the door, the way he used to, and waits for somebody to move.",
+          "startMs": 55813
+        },
+        {
+          "speaker": "Hollis",
+          "text": "Oh.",
+          "startMs": 70811
+        },
+        {
+          "speaker": "Hollis",
+          "text": "There you are.",
+          "startMs": 72703
+        },
+        {
+          "speaker": "Greg, a Shadow",
+          "text": "Sorry I'm late.",
+          "startMs": 75082
+        },
+        {
+          "speaker": "Hollis",
+          "text": "You're not late. I left the light on.",
+          "startMs": 77760
+        },
+        {
+          "speaker": "The Listener",
+          "text": "Hollis takes the hat down from the hook by the door, and puts it on. And there on the porch boards, so does Greg.",
+          "startMs": 81852
+        },
+        {
+          "speaker": "The Listener",
+          "text": "He's home.",
+          "startMs": 94918
+        },
+        {
+          "speaker": "The Listener",
+          "text": "They'll leave the light on anyway. For the next one.",
+          "startMs": 97317
+        }
+      ]
+    },
+    {
+      "id": "halloween-01",
+      "category": "dj",
+      "url": "/voice/static-lullabies/halloween-01.mp3",
+      "durationMs": 20938,
+      "title": "The Thing Under the Bed Goes Out",
+      "overMusic": true,
+      "dates": [
+        "10-24",
+        "10-25",
+        "10-26",
+        "10-27",
+        "10-28",
+        "10-29",
+        "10-30",
+        "10-31"
+      ],
+      "lines": [
+        {
+          "speaker": "The Listener",
+          "text": "It's nearly Halloween.",
+          "startMs": 35
+        },
+        {
+          "speaker": "The Listener",
+          "text": "The thing under the bed has asked if it can come out, just for one night, to go trick or treating.",
+          "startMs": 2915
+        },
+        {
+          "speaker": "The Listener",
+          "text": "I said yes. I gave it a blanket to wear. It's going as a bed.",
+          "startMs": 14202
+        }
+      ]
+    },
+    {
+      "id": "halloween-02",
+      "category": "id",
+      "url": "/voice/static-lullabies/halloween-02.mp3",
+      "durationMs": 8050,
+      "title": "Static Lullabies, Halloween",
+      "overMusic": true,
+      "dates": [
+        "10-24",
+        "10-25",
+        "10-26",
+        "10-27",
+        "10-28",
+        "10-29",
+        "10-30",
+        "10-31"
+      ],
+      "lines": [
+        {
+          "speaker": "The Listener",
+          "text": "Static Lullabies. Something is listening.",
+          "startMs": 31
+        },
+        {
+          "speaker": "The Listener",
+          "text": "This week, it's wearing a little hat.",
+          "startMs": 5305
+        }
+      ]
     }
   ]
 }

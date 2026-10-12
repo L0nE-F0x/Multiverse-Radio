@@ -1,0 +1,639 @@
+{
+  "version": 1,
+  "station": "drowned-shanty-hour",
+  "clips": [
+    {
+      "id": "id-001",
+      "category": "id",
+      "url": "/voice/drowned-shanty-hour/id-001.mp3",
+      "durationMs": 6900,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Captain Ezra Wetherell",
+          "text": "You're listening to the Drowned Shanty Hour, from the good ship Damp Regret. The ship is fine.",
+          "startMs": 48
+        }
+      ]
+    },
+    {
+      "id": "id-002",
+      "category": "id",
+      "url": "/voice/drowned-shanty-hour/id-002.mp3",
+      "durationMs": 6362,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Captain Ezra Wetherell",
+          "text": "The Drowned Shanty Hour. Ninety six point five five. Mind the deck. Mind the sea. Mind the other sea, under that one.",
+          "startMs": 41
+        }
+      ]
+    },
+    {
+      "id": "id-003",
+      "category": "id",
+      "url": "/voice/drowned-shanty-hour/id-003.mp3",
+      "durationMs": 7703,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Captain Ezra Wetherell",
+          "text": "Who's listening to the Drowned Shanty Hour?",
+          "startMs": 39
+        },
+        {
+          "speaker": "The Crew",
+          "text": "We are, Captain!",
+          "startMs": 2850
+        },
+        {
+          "speaker": "Captain Ezra Wetherell",
+          "text": "Good lads. So's somebody else. Look lively.",
+          "startMs": 4920
+        }
+      ]
+    },
+    {
+      "id": "id-004",
+      "category": "id",
+      "url": "/voice/drowned-shanty-hour/id-004.mp3",
+      "durationMs": 4981,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Captain Ezra Wetherell",
+          "text": "The Drowned Shanty Hour. At sea since before there was a sea. We were early. We're often early.",
+          "startMs": 40
+        }
+      ]
+    },
+    {
+      "id": "id-005",
+      "category": "id",
+      "url": "/voice/drowned-shanty-hour/id-005.mp3",
+      "durationMs": 7173,
+      "overMusic": true,
+      "daypart": "night",
+      "lines": [
+        {
+          "speaker": "Captain Ezra Wetherell",
+          "text": "The Drowned Shanty Hour. Lanterns lit, fog in, and the crew in fine voice, for men this damp.",
+          "startMs": 40
+        }
+      ]
+    },
+    {
+      "id": "id-006",
+      "category": "id",
+      "url": "/voice/drowned-shanty-hour/id-006.mp3",
+      "durationMs": 4696,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Captain Ezra Wetherell",
+          "text": "This is the Drowned Shanty Hour. If you hear bubbles, that's applause. Thank you. Thank you.",
+          "startMs": 45
+        }
+      ]
+    },
+    {
+      "id": "id-007",
+      "category": "id",
+      "url": "/voice/drowned-shanty-hour/id-007.mp3",
+      "durationMs": 6706,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Captain Ezra Wetherell",
+          "text": "The Drowned Shanty Hour, aboard the Damp Regret. She's taken on a little water. She's taken on, in fairness, all of it.",
+          "startMs": 47
+        }
+      ]
+    },
+    {
+      "id": "dj-001",
+      "category": "dj",
+      "url": "/voice/drowned-shanty-hour/dj-001.mp3",
+      "durationMs": 14743,
+      "title": "Before the Water",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Captain Ezra Wetherell",
+          "text": "When we set sail, there was no sea. People forget that. We had the ship, we had the crew, we had the songs. We just didn't have anywhere to put them.",
+          "startMs": 48
+        },
+        {
+          "speaker": "Captain Ezra Wetherell",
+          "text": "So we sailed anyway, across nothing, singing. Water turned up about a week later. Wonderful timing. We were very pleased.",
+          "startMs": 7843
+        }
+      ]
+    },
+    {
+      "id": "dj-002",
+      "category": "dj",
+      "url": "/voice/drowned-shanty-hour/dj-002.mp3",
+      "durationMs": 14054,
+      "title": "The Wreck of the Margaret Ann",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Captain Ezra Wetherell",
+          "text": "This next shanty is about the wreck of the Margaret Ann, which will happen in the year two thousand and ninety one. Terrible business. Lovely tune.",
+          "startMs": 46
+        },
+        {
+          "speaker": "Captain Ezra Wetherell",
+          "text": "If you're on the Margaret Ann, or know anyone who will be, maybe sing along. It might help. It won't. But it might.",
+          "startMs": 8086
+        }
+      ]
+    },
+    {
+      "id": "dj-003",
+      "category": "dj",
+      "url": "/voice/drowned-shanty-hour/dj-003.mp3",
+      "durationMs": 12784,
+      "title": "The Ship Is Fine",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Captain Ezra Wetherell",
+          "text": "A word from the bridge. Some of you have written in with concerns about the ship. Let me reassure you. The ship is fine.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Captain Ezra Wetherell",
+          "text": "She's lower in the water than she was. She's lower than the water, technically. But she's fine. Bail if you like. It's soothing.",
+          "startMs": 6302
+        }
+      ]
+    },
+    {
+      "id": "dj-004",
+      "category": "dj",
+      "url": "/voice/drowned-shanty-hour/dj-004.mp3",
+      "durationMs": 13466,
+      "title": "Old Pettibone",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Captain Ezra Wetherell",
+          "text": "That was Old Pettibone on the accordion. He's sat on that barrel since the Long Calm. The squeezebox has a leak, but then, so does everything.",
+          "startMs": 45
+        },
+        {
+          "speaker": "Captain Ezra Wetherell",
+          "text": "Nobody's asked him what's in the barrel. Nobody wants to know. It's the only dry thing on the ship.",
+          "startMs": 8011
+        }
+      ]
+    },
+    {
+      "id": "dj-005",
+      "category": "dj",
+      "url": "/voice/drowned-shanty-hour/dj-005.mp3",
+      "durationMs": 14884,
+      "title": "Roll Call",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Captain Ezra Wetherell",
+          "text": "Roll call, for the listeners. Bosun?",
+          "startMs": 47
+        },
+        {
+          "speaker": "The Crew",
+          "text": "Aye!",
+          "startMs": 2775
+        },
+        {
+          "speaker": "Captain Ezra Wetherell",
+          "text": "Cook?",
+          "startMs": 3938
+        },
+        {
+          "speaker": "The Crew",
+          "text": "Aye!",
+          "startMs": 4972
+        },
+        {
+          "speaker": "Captain Ezra Wetherell",
+          "text": "Lookout?",
+          "startMs": 6135
+        },
+        {
+          "speaker": "Captain Ezra Wetherell",
+          "text": "The lookout went to look out in eighteen forty, and we haven't seen him since. Which, in fairness, means he's doing it properly.",
+          "startMs": 8409
+        }
+      ]
+    },
+    {
+      "id": "dj-006",
+      "category": "dj",
+      "url": "/voice/drowned-shanty-hour/dj-006.mp3",
+      "durationMs": 12421,
+      "title": "Sea Soup",
+      "overMusic": true,
+      "daypart": "evening",
+      "lines": [
+        {
+          "speaker": "Captain Ezra Wetherell",
+          "text": "Supper tonight is the cook's sea soup. It's made of the sea. We have a great deal of sea, and the cook is nothing if not resourceful.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Captain Ezra Wetherell",
+          "text": "Seconds are available. Seconds are always available. Seconds are, in a sense, all around us.",
+          "startMs": 7216
+        }
+      ]
+    },
+    {
+      "id": "dj-007",
+      "category": "dj",
+      "url": "/voice/drowned-shanty-hour/dj-007.mp3",
+      "durationMs": 12610,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Captain Ezra Wetherell",
+          "text": "Our cabin boy, young Tobias, turns four hundred and twelve next week. He's still the cabin boy. Promotion's slow at sea.",
+          "startMs": 40
+        },
+        {
+          "speaker": "Captain Ezra Wetherell",
+          "text": "I've told him. Keep your head down, sing your heart out, and in another couple of centuries you'll make deckhand.",
+          "startMs": 7074
+        }
+      ]
+    },
+    {
+      "id": "dj-008",
+      "category": "dj",
+      "url": "/voice/drowned-shanty-hour/dj-008.mp3",
+      "durationMs": 11711,
+      "title": "Ahoy, the Nightjar",
+      "overMusic": true,
+      "daypart": "night",
+      "lines": [
+        {
+          "speaker": "Captain Ezra Wetherell",
+          "text": "Ahoy, the Nightjar. Relay Seven. We see your lamp up there above the fog, on the night watch, same as us. Long watches, empty seas, and a radio for company.",
+          "startMs": 48
+        },
+        {
+          "speaker": "Captain Ezra Wetherell",
+          "text": "Different ship. Same job. This one's for you.",
+          "startMs": 9074
+        }
+      ]
+    },
+    {
+      "id": "dj-009",
+      "category": "dj",
+      "url": "/voice/drowned-shanty-hour/dj-009.mp3",
+      "durationMs": 11911,
+      "overMusic": true,
+      "daypart": "morning",
+      "lines": [
+        {
+          "speaker": "Captain Ezra Wetherell",
+          "text": "Morning, all. The sun's up, somewhere above us. We can see it through the water, a little wobbling coin.",
+          "startMs": 41
+        },
+        {
+          "speaker": "Captain Ezra Wetherell",
+          "text": "Crew's on deck, stamping out the damp. Let's have a working song to get the blood going. Not that there's much of it left.",
+          "startMs": 5663
+        }
+      ]
+    },
+    {
+      "id": "dj-010",
+      "category": "dj",
+      "url": "/voice/drowned-shanty-hour/dj-010.mp3",
+      "durationMs": 15478,
+      "title": "A Shadow on the Water",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Captain Ezra Wetherell",
+          "text": "The watch reported a shadow on the water last night, with no ship above it, moving east. Small fellow. Wearing a hat. I hailed him. He said his name was Greg, and he was seeing the world.",
+          "startMs": 46
+        },
+        {
+          "speaker": "Captain Ezra Wetherell",
+          "text": "Fair enough. That's what the sea's for. Hollis, if you're listening, he looked well. Sunburnt, for a shadow.",
+          "startMs": 10151
+        }
+      ]
+    },
+    {
+      "id": "dj-011",
+      "category": "dj",
+      "url": "/voice/drowned-shanty-hour/dj-011.mp3",
+      "durationMs": 11359,
+      "title": "Haul Away",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Captain Ezra Wetherell",
+          "text": "When I say haul, you say away. Haul!",
+          "startMs": 39
+        },
+        {
+          "speaker": "The Crew",
+          "text": "Away!",
+          "startMs": 2764
+        },
+        {
+          "speaker": "Captain Ezra Wetherell",
+          "text": "Haul!",
+          "startMs": 4097
+        },
+        {
+          "speaker": "The Crew",
+          "text": "Away!",
+          "startMs": 5218
+        },
+        {
+          "speaker": "Captain Ezra Wetherell",
+          "text": "Lovely. We're not hauling anything. We've nothing to haul. But it does the lungs good. Next song.",
+          "startMs": 6551
+        }
+      ]
+    },
+    {
+      "id": "weather-001",
+      "category": "weather",
+      "url": "/voice/drowned-shanty-hour/weather-001.mp3",
+      "durationMs": 26348,
+      "title": "The Sea Area Forecast",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Captain Ezra Wetherell",
+          "text": "And now the sea area forecast, issued by the Damp Regret at an hour nobody asked for.",
+          "startMs": 436
+        },
+        {
+          "speaker": "Captain Ezra Wetherell",
+          "text": "Regret. Damp, becoming damper. Moderate, occasionally good, then poor.",
+          "startMs": 6152
+        },
+        {
+          "speaker": "Captain Ezra Wetherell",
+          "text": "Dismay. Fog. Fog later. Then more fog, from the earlier fog.",
+          "startMs": 10803
+        },
+        {
+          "speaker": "Captain Ezra Wetherell",
+          "text": "Lower Dismay. Wet. Very wet. Sea state, everywhere.",
+          "startMs": 15060
+        },
+        {
+          "speaker": "Captain Ezra Wetherell",
+          "text": "The Bottom. Calm. Quite calm. Visibility, none, but there's nothing to see.",
+          "startMs": 18682
+        },
+        {
+          "speaker": "Captain Ezra Wetherell",
+          "text": "That's the forecast. Mind the wet.",
+          "startMs": 23624
+        }
+      ]
+    },
+    {
+      "id": "id-the-dog-watch",
+      "category": "id",
+      "url": "/voice/drowned-shanty-hour/id-the-dog-watch.mp3",
+      "durationMs": 7946,
+      "overMusic": true,
+      "part": "open",
+      "show": "the-dog-watch",
+      "lines": [
+        {
+          "speaker": "Captain Ezra Wetherell",
+          "text": "This is the Dog Watch, on the Drowned Shanty Hour. Short watch, long songs. All hands on deck. And under it.",
+          "startMs": 47
+        }
+      ]
+    },
+    {
+      "id": "dj-the-dog-watch-001",
+      "category": "dj",
+      "url": "/voice/drowned-shanty-hour/dj-the-dog-watch-001.mp3",
+      "durationMs": 12082,
+      "overMusic": true,
+      "show": "the-dog-watch",
+      "lines": [
+        {
+          "speaker": "Captain Ezra Wetherell",
+          "text": "Why is it called the Dog Watch? Nobody knows. We had a dog aboard once. He went over the side after a stick, in seventeen ninety.",
+          "startMs": 46
+        },
+        {
+          "speaker": "Captain Ezra Wetherell",
+          "text": "Still swimming, I'm told. Still after the stick. You have to admire the commitment.",
+          "startMs": 7615
+        }
+      ]
+    },
+    {
+      "id": "dj-the-dog-watch-002",
+      "category": "dj",
+      "url": "/voice/drowned-shanty-hour/dj-the-dog-watch-002.mp3",
+      "durationMs": 10312,
+      "overMusic": true,
+      "show": "the-dog-watch",
+      "lines": [
+        {
+          "speaker": "Captain Ezra Wetherell",
+          "text": "Evening on the Damp Regret. The lanterns are lit, the fog's come up thick, and the crew are mending the nets.",
+          "startMs": 45
+        },
+        {
+          "speaker": "Captain Ezra Wetherell",
+          "text": "We've no fish to catch. The nets just like being mended. Here's a slow one.",
+          "startMs": 6046
+        }
+      ]
+    },
+    {
+      "id": "id-low-tide",
+      "category": "id",
+      "url": "/voice/drowned-shanty-hour/id-low-tide.mp3",
+      "durationMs": 6255,
+      "overMusic": true,
+      "part": "open",
+      "show": "low-tide",
+      "lines": [
+        {
+          "speaker": "Captain Ezra Wetherell",
+          "text": "This is Low Tide, on the Drowned Shanty Hour. The sea's gone out a little. Not far. It never goes far. It likes us.",
+          "startMs": 46
+        }
+      ]
+    },
+    {
+      "id": "dj-low-tide-001",
+      "category": "dj",
+      "url": "/voice/drowned-shanty-hour/dj-low-tide-001.mp3",
+      "durationMs": 10024,
+      "overMusic": true,
+      "show": "low-tide",
+      "lines": [
+        {
+          "speaker": "Captain Ezra Wetherell",
+          "text": "Low Tide, and the crew are singing low. Old Pettibone's playing so soft you can hear the hull.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Captain Ezra Wetherell",
+          "text": "She's humming along. She does that when she's happy, or when she's sinking. Hard to tell.",
+          "startMs": 5496
+        }
+      ]
+    },
+    {
+      "id": "dj-low-tide-002",
+      "category": "dj",
+      "url": "/voice/drowned-shanty-hour/dj-low-tide-002.mp3",
+      "durationMs": 11530,
+      "overMusic": true,
+      "show": "low-tide",
+      "lines": [
+        {
+          "speaker": "Captain Ezra Wetherell",
+          "text": "Three in the morning on the Damp Regret. The fog's so thick, the lantern's only a rumour.",
+          "startMs": 46
+        },
+        {
+          "speaker": "Captain Ezra Wetherell",
+          "text": "If you're up too, out there on a ship of your own, sing along under your breath. Shanties work best with more ghosts.",
+          "startMs": 5385
+        }
+      ]
+    },
+    {
+      "id": "id-forenoon-watch",
+      "category": "id",
+      "url": "/voice/drowned-shanty-hour/id-forenoon-watch.mp3",
+      "durationMs": 6223,
+      "overMusic": true,
+      "part": "open",
+      "show": "forenoon-watch",
+      "lines": [
+        {
+          "speaker": "Captain Ezra Wetherell",
+          "text": "Morning, all. This is the Forenoon Watch, on the Drowned Shanty Hour. Up and singing, crew. And sweep the fish off the bunks.",
+          "startMs": 47
+        }
+      ]
+    },
+    {
+      "id": "dj-forenoon-watch-001",
+      "category": "dj",
+      "url": "/voice/drowned-shanty-hour/dj-forenoon-watch-001.mp3",
+      "durationMs": 10235,
+      "overMusic": true,
+      "show": "forenoon-watch",
+      "lines": [
+        {
+          "speaker": "Captain Ezra Wetherell",
+          "text": "Morning reports. Hull, wet. Sails, wet. Rigging, wet. Crew, wet, but cheerful. Captain, also wet, also cheerful, but in a more senior way.",
+          "startMs": 46
+        },
+        {
+          "speaker": "Captain Ezra Wetherell",
+          "text": "Morale, high, given everything.",
+          "startMs": 8150
+        }
+      ]
+    },
+    {
+      "id": "dj-forenoon-watch-002",
+      "category": "dj",
+      "url": "/voice/drowned-shanty-hour/dj-forenoon-watch-002.mp3",
+      "durationMs": 9974,
+      "overMusic": true,
+      "show": "forenoon-watch",
+      "lines": [
+        {
+          "speaker": "Captain Ezra Wetherell",
+          "text": "Breakfast is ship's biscuit. It's soft. Everything's soft. We dip it in the sea to firm it up.",
+          "startMs": 37
+        },
+        {
+          "speaker": "Captain Ezra Wetherell",
+          "text": "Don't try that at home. Unless home is a ship. Then, honestly, you'll have worked it out.",
+          "startMs": 5381
+        }
+      ]
+    },
+    {
+      "id": "dj-halloween-001",
+      "category": "dj",
+      "url": "/voice/drowned-shanty-hour/dj-halloween-001.mp3",
+      "durationMs": 10111,
+      "title": "Not a Ghost Ship",
+      "overMusic": true,
+      "dates": [
+        "10-24",
+        "10-25",
+        "10-26",
+        "10-27",
+        "10-28",
+        "10-29",
+        "10-30",
+        "10-31"
+      ],
+      "lines": [
+        {
+          "speaker": "Captain Ezra Wetherell",
+          "text": "Every year about this time, people ask if we're a ghost ship. We are not a ghost ship.",
+          "startMs": 36
+        },
+        {
+          "speaker": "Captain Ezra Wetherell",
+          "text": "We are a ship, with a great many ghosts on it. There's a difference, and the difference is paperwork.",
+          "startMs": 5127
+        }
+      ]
+    },
+    {
+      "id": "dj-halloween-002",
+      "category": "dj",
+      "url": "/voice/drowned-shanty-hour/dj-halloween-002.mp3",
+      "durationMs": 13319,
+      "title": "The Turnip Lantern",
+      "overMusic": true,
+      "dates": [
+        "10-24",
+        "10-25",
+        "10-26",
+        "10-27",
+        "10-28",
+        "10-29",
+        "10-30",
+        "10-31"
+      ],
+      "lines": [
+        {
+          "speaker": "Captain Ezra Wetherell",
+          "text": "The crew have carved a turnip lantern for the bow, as is tradition. It's lit. Underwater. Don't ask me how.",
+          "startMs": 49
+        },
+        {
+          "speaker": "Captain Ezra Wetherell",
+          "text": "Old Pettibone says it's the most cheerful thing he's seen since the Long Calm. Then he played a very, very sad song about it.",
+          "startMs": 6530
+        }
+      ]
+    }
+  ]
+}

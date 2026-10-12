@@ -1,0 +1,682 @@
+{
+  "version": 1,
+  "station": "last-lighthouse",
+  "clips": [
+    {
+      "id": "id-001",
+      "category": "id",
+      "url": "/voice/last-lighthouse/id-001.mp3",
+      "durationMs": 4435,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The Keeper",
+          "text": "This is the Last Lighthouse. The light is lit.",
+          "startMs": 439
+        }
+      ]
+    },
+    {
+      "id": "id-002",
+      "category": "id",
+      "url": "/voice/last-lighthouse/id-002.mp3",
+      "durationMs": 7198,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The Keeper",
+          "text": "The Last Lighthouse, on one hundred and twenty one point five. Listening, as always.",
+          "startMs": 446
+        }
+      ]
+    },
+    {
+      "id": "id-003",
+      "category": "id",
+      "url": "/voice/last-lighthouse/id-003.mp3",
+      "durationMs": 8275,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The Keeper",
+          "text": "The Last Lighthouse. If you can see the light, you are not lost.",
+          "startMs": 437
+        },
+        {
+          "speaker": "The Keeper",
+          "text": "If you can hear this, you are not alone.",
+          "startMs": 5119
+        }
+      ]
+    },
+    {
+      "id": "id-004",
+      "category": "id",
+      "url": "/voice/last-lighthouse/id-004.mp3",
+      "durationMs": 8231,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The Keeper",
+          "text": "The Last Lighthouse. Keeping the light, for anyone out there.",
+          "startMs": 3439
+        }
+      ]
+    },
+    {
+      "id": "id-night-forecast",
+      "category": "id",
+      "url": "/voice/last-lighthouse/id-night-forecast.mp3",
+      "durationMs": 8398,
+      "title": "The Night Forecast",
+      "overMusic": true,
+      "part": "open",
+      "show": "the-night-forecast",
+      "lines": [
+        {
+          "speaker": "The Keeper",
+          "text": "It is the usual hour. This is the Night Forecast, from the Last Lighthouse.",
+          "startMs": 2450
+        }
+      ]
+    },
+    {
+      "id": "id-keepers-log",
+      "category": "id",
+      "url": "/voice/last-lighthouse/id-keepers-log.mp3",
+      "durationMs": 5895,
+      "title": "The Keeper's Log",
+      "overMusic": true,
+      "part": "open",
+      "show": "the-keepers-log",
+      "lines": [
+        {
+          "speaker": "The Keeper",
+          "text": "The Keeper's Log. Entries from the book on the desk, read by lamplight.",
+          "startMs": 438
+        }
+      ]
+    },
+    {
+      "id": "weather-001",
+      "category": "weather",
+      "url": "/voice/last-lighthouse/weather-001.mp3",
+      "durationMs": 38763,
+      "title": "The Forecast for the Impossible Seas",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "The Keeper",
+          "text": "And now the forecast for the impossible seas, issued from the Last Lighthouse at the usual hour.",
+          "startMs": 446
+        },
+        {
+          "speaker": "The Keeper",
+          "text": "There are warnings of gales in Gannet's Regret, Outer Soup, and Inner Soup.",
+          "startMs": 7849
+        },
+        {
+          "speaker": "The Keeper",
+          "text": "Lesser Marrow, Greater Marrow. Southwesterly, four or five, backing sideways later. Rain, then memories. Moderate or good.",
+          "startMs": 13719
+        },
+        {
+          "speaker": "The Keeper",
+          "text": "The Tuesday Reach. Northerly, three, becoming Wednesday. Fair. Good, occasionally very good.",
+          "startMs": 23697
+        },
+        {
+          "speaker": "The Keeper",
+          "text": "Outer Soup, Inner Soup. Gale eight, stirring clockwise. Thick. Visibility, a spoon's length.",
+          "startMs": 31404
+        }
+      ]
+    },
+    {
+      "id": "weather-002",
+      "category": "weather",
+      "url": "/voice/last-lighthouse/weather-002.mp3",
+      "durationMs": 30372,
+      "title": "The Forecast for the Impossible Seas",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "The Keeper",
+          "text": "Far Nonsuch, Near Nonsuch. Variable, two, from no direction in particular. Fog patches, some of them shaped like people you used to know. Poor, becoming kind.",
+          "startMs": 450
+        },
+        {
+          "speaker": "The Keeper",
+          "text": "Lullaby Bank. Westerly, one or two, humming. Showers of moths. Good.",
+          "startMs": 13231
+        },
+        {
+          "speaker": "The Keeper",
+          "text": "Thimble. Calm. Very small. Visibility, the whole of Thimble.",
+          "startMs": 19166
+        },
+        {
+          "speaker": "The Keeper",
+          "text": "Mothering Sound. Easterly, five, tucking in later. Drizzle. Moderate.",
+          "startMs": 24499
+        }
+      ]
+    },
+    {
+      "id": "weather-003",
+      "category": "weather",
+      "url": "/voice/last-lighthouse/weather-003.mp3",
+      "durationMs": 27057,
+      "title": "The Forecast for the Impossible Seas",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "The Keeper",
+          "text": "The Spindles. Northwesterly, six, spinning. Squally, with occasional wool. Moderate, occasionally tangled.",
+          "startMs": 436
+        },
+        {
+          "speaker": "The Keeper",
+          "text": "Velvet Deep. Southerly, three. Dark, but in a nice way. Good.",
+          "startMs": 9018
+        },
+        {
+          "speaker": "The Keeper",
+          "text": "Hesitation. Wind, possibly. Weather, perhaps. Visibility, it depends.",
+          "startMs": 14485
+        },
+        {
+          "speaker": "The Keeper",
+          "text": "Saltlight. Easterly, four. Bright, with stars below the surface. Excellent.",
+          "startMs": 20850
+        }
+      ]
+    },
+    {
+      "id": "weather-004",
+      "category": "weather",
+      "url": "/voice/last-lighthouse/weather-004.mp3",
+      "durationMs": 29978,
+      "title": "The Forecast for the Impossible Seas",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "The Keeper",
+          "text": "North Elsewhere, South Elsewhere. Westerly, veering to somebody else's west. Rain, elsewhere. Good, here.",
+          "startMs": 439
+        },
+        {
+          "speaker": "The Keeper",
+          "text": "The Quiet Rows. Calm. Silent. Visibility good, but nobody is looking.",
+          "startMs": 8711
+        },
+        {
+          "speaker": "The Keeper",
+          "text": "Old Pardon. Northeasterly, five, forgiving later. Showers, then clear. Good.",
+          "startMs": 15377
+        },
+        {
+          "speaker": "The Keeper",
+          "text": "Biscuit Shoals. Southwesterly, three. Crumbly. Moderate. Mariners are advised to dunk with care.",
+          "startMs": 22168
+        }
+      ]
+    },
+    {
+      "id": "weather-005",
+      "category": "weather",
+      "url": "/voice/last-lighthouse/weather-005.mp3",
+      "durationMs": 23614,
+      "title": "The Forecast for the Impossible Seas",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "The Keeper",
+          "text": "The Mirrorline. Wind from the left, which is also the right. Fair, reflected. Visibility, both ways.",
+          "startMs": 436
+        },
+        {
+          "speaker": "The Keeper",
+          "text": "Underneath. No wind. No weather. Nobody has been. Good.",
+          "startMs": 8885
+        },
+        {
+          "speaker": "The Keeper",
+          "text": "Dimity. Easterly, two. Lace fog in places. Moderate or good.",
+          "startMs": 13933
+        },
+        {
+          "speaker": "The Keeper",
+          "text": "Wren. Westerly, one. Small and brave. Good.",
+          "startMs": 19593
+        }
+      ]
+    },
+    {
+      "id": "weather-006",
+      "category": "weather",
+      "url": "/voice/last-lighthouse/weather-006.mp3",
+      "durationMs": 23381,
+      "title": "The General Synopsis",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "The Keeper",
+          "text": "The general synopsis, at midnight.",
+          "startMs": 440
+        },
+        {
+          "speaker": "The Keeper",
+          "text": "Low, Lesser Marrow, nine hundred and ninety, moving slowly toward a decision.",
+          "startMs": 3858
+        },
+        {
+          "speaker": "The Keeper",
+          "text": "High, Saltlight, one thousand and thirty, staying where it is, as it always does.",
+          "startMs": 10315
+        },
+        {
+          "speaker": "The Keeper",
+          "text": "A ridge of good intentions extends across the Quiet Rows, and is expected to hold.",
+          "startMs": 16546
+        }
+      ]
+    },
+    {
+      "id": "weather-007",
+      "category": "weather",
+      "url": "/voice/last-lighthouse/weather-007.mp3",
+      "durationMs": 24043,
+      "title": "Reports from the Lights",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "The Keeper",
+          "text": "And now the reports from the lights, at midnight.",
+          "startMs": 436
+        },
+        {
+          "speaker": "The Keeper",
+          "text": "The Last Lighthouse. Southwesterly, three. Clear. One thousand and twelve, steady. One keeper, awake.",
+          "startMs": 4259
+        },
+        {
+          "speaker": "The Keeper",
+          "text": "The lighthouse at Candlemouth. No report.",
+          "startMs": 13180
+        },
+        {
+          "speaker": "The Keeper",
+          "text": "There has been no report from Candlemouth for some years. I read its name anyway. Somebody should.",
+          "startMs": 16976
+        }
+      ]
+    },
+    {
+      "id": "weather-008",
+      "category": "weather",
+      "url": "/voice/last-lighthouse/weather-008.mp3",
+      "durationMs": 20320,
+      "title": "Inshore Waters",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "The Keeper",
+          "text": "And the forecast for inshore waters, from the rock to the end of the light.",
+          "startMs": 436
+        },
+        {
+          "speaker": "The Keeper",
+          "text": "Westerly, two. The waves are coming in, as they do, and going out again, as they also do. Visibility, as far as the beam.",
+          "startMs": 5796
+        },
+        {
+          "speaker": "The Keeper",
+          "text": "That is the forecast. Good night, to anyone out there.",
+          "startMs": 15802
+        }
+      ]
+    },
+    {
+      "id": "weather-009",
+      "category": "weather",
+      "url": "/voice/last-lighthouse/weather-009.mp3",
+      "durationMs": 23592,
+      "title": "The Forecast for the Impossible Seas",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "The Keeper",
+          "text": "Gannet's Regret. Northerly, five, apologising later. Showers. Moderate.",
+          "startMs": 436
+        },
+        {
+          "speaker": "The Keeper",
+          "text": "Yarrow Gap. Southeasterly, four. Rain, with the smell of a garden somewhere. Good.",
+          "startMs": 6902
+        },
+        {
+          "speaker": "The Keeper",
+          "text": "Dimity. Calm. Mist, lifting by morning. Good.",
+          "startMs": 13916
+        },
+        {
+          "speaker": "The Keeper",
+          "text": "Starboard of Everything. Variable. Who can say. Who can say.",
+          "startMs": 18675
+        }
+      ]
+    },
+    {
+      "id": "weather-h1",
+      "category": "weather",
+      "url": "/voice/last-lighthouse/weather-h1.mp3",
+      "durationMs": 27326,
+      "title": "The Halloween Forecast",
+      "overMusic": false,
+      "dates": [
+        "10-31"
+      ],
+      "lines": [
+        {
+          "speaker": "The Keeper",
+          "text": "The forecast for the impossible seas, on the last night of October.",
+          "startMs": 443
+        },
+        {
+          "speaker": "The Keeper",
+          "text": "Gannet's Regret. Northerly, five, moaning slightly. Sheets of rain, some with eyeholes. Poor, then boo.",
+          "startMs": 5827
+        },
+        {
+          "speaker": "The Keeper",
+          "text": "Underneath. Something knocking. Probably the sea. Good.",
+          "startMs": 14128
+        },
+        {
+          "speaker": "The Keeper",
+          "text": "Velvet Deep. Calm. A lantern seen at the surface, carved, smiling. Visibility, good, if you're brave.",
+          "startMs": 18839
+        }
+      ]
+    },
+    {
+      "id": "dj-001",
+      "category": "dj",
+      "url": "/voice/last-lighthouse/dj-001.mp3",
+      "durationMs": 12269,
+      "title": "Logbook",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The Keeper",
+          "text": "Logbook. The light was lit at dusk, as usual. No ships passed.",
+          "startMs": 437
+        },
+        {
+          "speaker": "The Keeper",
+          "text": "One reflection of a ship passed, and waved. I waved back. Entered it anyway.",
+          "startMs": 5934
+        }
+      ]
+    },
+    {
+      "id": "dj-002",
+      "category": "dj",
+      "url": "/voice/last-lighthouse/dj-002.mp3",
+      "durationMs": 10933,
+      "title": "Logbook",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The Keeper",
+          "text": "Logbook. A gull came to the window and stayed for the whole forecast.",
+          "startMs": 448
+        },
+        {
+          "speaker": "The Keeper",
+          "text": "It did not leave a name. Gulls never do. It is welcome back.",
+          "startMs": 5908
+        }
+      ]
+    },
+    {
+      "id": "dj-003",
+      "category": "dj",
+      "url": "/voice/last-lighthouse/dj-003.mp3",
+      "durationMs": 12171,
+      "title": "Logbook",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The Keeper",
+          "text": "Logbook. Received a faint signal tonight, from a relay ship. The Nightjar.",
+          "startMs": 436
+        },
+        {
+          "speaker": "The Keeper",
+          "text": "Somebody up there is listening. I read the forecast a little more carefully.",
+          "startMs": 6619
+        }
+      ]
+    },
+    {
+      "id": "dj-004",
+      "category": "dj",
+      "url": "/voice/last-lighthouse/dj-004.mp3",
+      "durationMs": 13220,
+      "title": "Logbook",
+      "overMusic": true,
+      "show": "the-keepers-log",
+      "lines": [
+        {
+          "speaker": "The Keeper",
+          "text": "Logbook. Polished the lens. Wound the clock. Made the tea. Read the forecast. Nobody came.",
+          "startMs": 449
+        },
+        {
+          "speaker": "The Keeper",
+          "text": "It was a good night. They are all good nights, when nobody is in trouble.",
+          "startMs": 7996
+        }
+      ]
+    },
+    {
+      "id": "dj-005",
+      "category": "dj",
+      "url": "/voice/last-lighthouse/dj-005.mp3",
+      "durationMs": 11441,
+      "title": "Logbook",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The Keeper",
+          "text": "Logbook. The sea was very calm tonight, and very far down. I think it is shy.",
+          "startMs": 450
+        },
+        {
+          "speaker": "The Keeper",
+          "text": "I have stopped looking at it directly. It seems to prefer that.",
+          "startMs": 6797
+        }
+      ]
+    },
+    {
+      "id": "dj-006",
+      "category": "dj",
+      "url": "/voice/last-lighthouse/dj-006.mp3",
+      "durationMs": 10652,
+      "title": "Logbook",
+      "overMusic": true,
+      "show": "the-keepers-log",
+      "lines": [
+        {
+          "speaker": "The Keeper",
+          "text": "Logbook. Ninety thousand nights, give or take. I have not missed one.",
+          "startMs": 436
+        },
+        {
+          "speaker": "The Keeper",
+          "text": "I do not say that to boast. I say it so that someone knows.",
+          "startMs": 6004
+        }
+      ]
+    },
+    {
+      "id": "dj-007",
+      "category": "dj",
+      "url": "/voice/last-lighthouse/dj-007.mp3",
+      "durationMs": 14306,
+      "title": "Logbook",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The Keeper",
+          "text": "Logbook. A bottle washed up with a message in it. The message said, is anyone there.",
+          "startMs": 1650
+        },
+        {
+          "speaker": "The Keeper",
+          "text": "I have written, yes, on the back, and put it back in the sea. It will get there.",
+          "startMs": 8559
+        }
+      ]
+    },
+    {
+      "id": "dj-008",
+      "category": "dj",
+      "url": "/voice/last-lighthouse/dj-008.mp3",
+      "durationMs": 11896,
+      "title": "Logbook",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The Keeper",
+          "text": "Logbook. Heard the time signal through the static tonight. Set the clock by it. It was wrong.",
+          "startMs": 436
+        },
+        {
+          "speaker": "The Keeper",
+          "text": "I set it anyway. It is good to agree with somebody.",
+          "startMs": 7641
+        }
+      ]
+    },
+    {
+      "id": "dj-009",
+      "category": "dj",
+      "url": "/voice/last-lighthouse/dj-009.mp3",
+      "durationMs": 12219,
+      "title": "Logbook",
+      "overMusic": true,
+      "show": "the-keepers-log",
+      "lines": [
+        {
+          "speaker": "The Keeper",
+          "text": "Logbook. The beam went round eleven thousand times tonight. I counted the first hundred, and then I just watched.",
+          "startMs": 450
+        },
+        {
+          "speaker": "The Keeper",
+          "text": "Some things are better watched than counted.",
+          "startMs": 8961
+        }
+      ]
+    },
+    {
+      "id": "dj-010",
+      "category": "dj",
+      "url": "/voice/last-lighthouse/dj-010.mp3",
+      "durationMs": 13418,
+      "title": "Logbook",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The Keeper",
+          "text": "Logbook. Something tapped at the bottom of the radio band again. A hello, I think, very slow.",
+          "startMs": 447
+        },
+        {
+          "speaker": "The Keeper",
+          "text": "I tapped back on the desk. I don't know if it carries. It seemed only right.",
+          "startMs": 7820
+        }
+      ]
+    },
+    {
+      "id": "psa-001",
+      "category": "psa",
+      "url": "/voice/last-lighthouse/psa-001.mp3",
+      "durationMs": 11306,
+      "title": "Notice to Mariners",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "The Keeper",
+          "text": "Notice to mariners. The rock at the edge of Far Nonsuch has moved again. It apologises.",
+          "startMs": 447
+        },
+        {
+          "speaker": "The Keeper",
+          "text": "Please give it a wide berth while it settles.",
+          "startMs": 7881
+        }
+      ]
+    },
+    {
+      "id": "psa-002",
+      "category": "psa",
+      "url": "/voice/last-lighthouse/psa-002.mp3",
+      "durationMs": 11220,
+      "title": "Notice to Mariners",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "The Keeper",
+          "text": "Notice to mariners. A small island has been reported drifting south of Thimble.",
+          "startMs": 447
+        },
+        {
+          "speaker": "The Keeper",
+          "text": "It is friendly. Please do not land on it without asking.",
+          "startMs": 6905
+        }
+      ]
+    },
+    {
+      "id": "story-001",
+      "category": "story",
+      "url": "/voice/last-lighthouse/story-001.mp3",
+      "durationMs": 34618,
+      "title": "The First Ship",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "The Keeper",
+          "text": "I am sometimes asked, by nobody, why I keep the light when no ships come.",
+          "startMs": 447
+        },
+        {
+          "speaker": "The Keeper",
+          "text": "On the first night, there was a ship. One small ship, with a lantern at the bow, a long way out, in weather.",
+          "startMs": 6722
+        },
+        {
+          "speaker": "The Keeper",
+          "text": "It saw the light. And it turned. And it went home safely.",
+          "startMs": 14793
+        },
+        {
+          "speaker": "The Keeper",
+          "text": "I never saw it again. That is how you know it worked.",
+          "startMs": 20212
+        },
+        {
+          "speaker": "The Keeper",
+          "text": "So I keep the light. In case. Just in case.",
+          "startMs": 25083
+        }
+      ]
+    }
+  ]
+}

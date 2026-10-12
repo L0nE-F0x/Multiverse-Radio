@@ -1,0 +1,938 @@
+{
+  "version": 1,
+  "station": "tomorrows-leftovers",
+  "clips": [
+    {
+      "id": "id-001",
+      "category": "id",
+      "url": "/voice/tomorrows-leftovers/id-001.mp3",
+      "durationMs": 6374,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Chef Anselm Brodequin",
+          "text": "Tomorrow's Leftovers. Cooking with ingredients that don't exist yet.",
+          "startMs": 35
+        }
+      ]
+    },
+    {
+      "id": "id-002",
+      "category": "id",
+      "url": "/voice/tomorrows-leftovers/id-002.mp3",
+      "durationMs": 5112,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Chef Anselm Brodequin",
+          "text": "This is Tomorrow's Leftovers. I'm Chef Anselm Brodequin, and I've already eaten.",
+          "startMs": 36
+        }
+      ]
+    },
+    {
+      "id": "id-003",
+      "category": "id",
+      "url": "/voice/tomorrows-leftovers/id-003.mp3",
+      "durationMs": 6015,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Chef Anselm Brodequin",
+          "text": "Tomorrow's Leftovers. Best before: soon.",
+          "startMs": 36
+        }
+      ]
+    },
+    {
+      "id": "id-004",
+      "category": "id",
+      "url": "/voice/tomorrows-leftovers/id-004.mp3",
+      "durationMs": 6614,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Pip, the Sous-Chef",
+          "text": "Tomorrow's Leftovers! Please wash your hands.",
+          "startMs": 43
+        },
+        {
+          "speaker": "Chef Anselm Brodequin",
+          "text": "They already have, Pip.",
+          "startMs": 2879
+        },
+        {
+          "speaker": "Pip, the Sous-Chef",
+          "text": "Please wash them again.",
+          "startMs": 5137
+        }
+      ]
+    },
+    {
+      "id": "show-breakfast-open",
+      "category": "id",
+      "url": "/voice/tomorrows-leftovers/show-breakfast-open.mp3",
+      "durationMs": 7908,
+      "overMusic": true,
+      "part": "open",
+      "show": "breakfast-tomorrow",
+      "lines": [
+        {
+          "speaker": "Chef Anselm Brodequin",
+          "text": "Good morning, and welcome to Breakfast Tomorrow. Tomorrow's breakfast, made today, so that tomorrow, you can have a lie-in.",
+          "startMs": 450
+        }
+      ]
+    },
+    {
+      "id": "show-breakfast-001",
+      "category": "dj",
+      "url": "/voice/tomorrows-leftovers/show-breakfast-001.mp3",
+      "durationMs": 12312,
+      "overMusic": true,
+      "show": "breakfast-tomorrow",
+      "lines": [
+        {
+          "speaker": "Chef Anselm Brodequin",
+          "text": "A word on toast. In this kitchen, we toast the bread before it's sliced, and we slice it before it's baked.",
+          "startMs": 37
+        },
+        {
+          "speaker": "Pip, the Sous-Chef",
+          "text": "Chef, that's backwards.",
+          "startMs": 6756
+        },
+        {
+          "speaker": "Chef Anselm Brodequin",
+          "text": "That's breakfast, Pip.",
+          "startMs": 8494
+        },
+        {
+          "speaker": "Pip, the Sous-Chef",
+          "text": "It's a lot of crumbs, Chef.",
+          "startMs": 10602
+        }
+      ]
+    },
+    {
+      "id": "show-breakfast-002",
+      "category": "dj",
+      "url": "/voice/tomorrows-leftovers/show-breakfast-002.mp3",
+      "durationMs": 10308,
+      "overMusic": true,
+      "show": "breakfast-tomorrow",
+      "lines": [
+        {
+          "speaker": "Chef Anselm Brodequin",
+          "text": "Today's breakfast forecast. Tomorrow morning, you'll say you want a fry-up. You don't. You want porridge. I've seen it.",
+          "startMs": 36
+        },
+        {
+          "speaker": "Chef Anselm Brodequin",
+          "text": "Make the porridge. You'll thank me around ten past eight.",
+          "startMs": 6812
+        }
+      ]
+    },
+    {
+      "id": "show-pip-open",
+      "category": "id",
+      "url": "/voice/tomorrows-leftovers/show-pip-open.mp3",
+      "durationMs": 6002,
+      "overMusic": true,
+      "part": "open",
+      "show": "pip-cooks-today",
+      "lines": [
+        {
+          "speaker": "Pip, the Sous-Chef",
+          "text": "Hi! It's Pip Cooks Today, where I cook with things that are actually here!",
+          "startMs": 441
+        },
+        {
+          "speaker": "Chef Anselm Brodequin",
+          "text": "Quaint.",
+          "startMs": 4176
+        }
+      ]
+    },
+    {
+      "id": "show-pip-001",
+      "category": "dj",
+      "url": "/voice/tomorrows-leftovers/show-pip-001.mp3",
+      "durationMs": 17470,
+      "overMusic": true,
+      "show": "pip-cooks-today",
+      "lines": [
+        {
+          "speaker": "Pip, the Sous-Chef",
+          "text": "Today I'm making a cheese sandwich. Here is the bread. It exists. Here is the cheese. It also exists.",
+          "startMs": 39
+        },
+        {
+          "speaker": "Chef Anselm Brodequin",
+          "text": "Remarkable. And when will you eat it?",
+          "startMs": 5712
+        },
+        {
+          "speaker": "Pip, the Sous-Chef",
+          "text": "Now.",
+          "startMs": 8450
+        },
+        {
+          "speaker": "Chef Anselm Brodequin",
+          "text": "Now. Goodness. Just like that. No waiting.",
+          "startMs": 9543
+        },
+        {
+          "speaker": "Pip, the Sous-Chef",
+          "text": "That's how sandwiches work, Chef.",
+          "startMs": 13280
+        },
+        {
+          "speaker": "Chef Anselm Brodequin",
+          "text": "In your day, perhaps.",
+          "startMs": 15466
+        }
+      ]
+    },
+    {
+      "id": "show-pip-002",
+      "category": "dj",
+      "url": "/voice/tomorrows-leftovers/show-pip-002.mp3",
+      "durationMs": 19008,
+      "overMusic": true,
+      "show": "pip-cooks-today",
+      "lines": [
+        {
+          "speaker": "Pip, the Sous-Chef",
+          "text": "Chef's asked me to remind everyone that this is my show, and he's only here to observe.",
+          "startMs": 39
+        },
+        {
+          "speaker": "Chef Anselm Brodequin",
+          "text": "I'm not observing, Pip. I'm remembering. I remember this sandwich from Friday. You drop it.",
+          "startMs": 5090
+        },
+        {
+          "speaker": "Pip, the Sous-Chef",
+          "text": "I'm not going to drop it.",
+          "startMs": 11113
+        },
+        {
+          "speaker": "Pip, the Sous-Chef",
+          "text": "I dropped it.",
+          "startMs": 15468
+        },
+        {
+          "speaker": "Chef Anselm Brodequin",
+          "text": "On Friday. You're early.",
+          "startMs": 16872
+        }
+      ]
+    },
+    {
+      "id": "show-larder-open",
+      "category": "id",
+      "url": "/voice/tomorrows-leftovers/show-larder-open.mp3",
+      "durationMs": 6278,
+      "overMusic": true,
+      "daypart": "night",
+      "part": "open",
+      "show": "midnight-larder",
+      "lines": [
+        {
+          "speaker": "Chef Anselm Brodequin",
+          "text": "Good evening. This is The Midnight Larder. Somewhere, very soon, you are going to want a sandwich. We're ready.",
+          "startMs": 50
+        }
+      ]
+    },
+    {
+      "id": "show-larder-001",
+      "category": "dj",
+      "url": "/voice/tomorrows-leftovers/show-larder-001.mp3",
+      "durationMs": 12830,
+      "overMusic": true,
+      "show": "midnight-larder",
+      "lines": [
+        {
+          "speaker": "Chef Anselm Brodequin",
+          "text": "The Midnight Larder is for the night workers. The bakers. The nurses. The person on that relay ship, with a kettle and a long shift ahead of them.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Chef Anselm Brodequin",
+          "text": "I've made you a sandwich. It'll be ready at about four. You'll know when.",
+          "startMs": 8585
+        }
+      ]
+    },
+    {
+      "id": "show-larder-002",
+      "category": "dj",
+      "url": "/voice/tomorrows-leftovers/show-larder-002.mp3",
+      "durationMs": 11273,
+      "overMusic": true,
+      "show": "midnight-larder",
+      "lines": [
+        {
+          "speaker": "Chef Anselm Brodequin",
+          "text": "A thought for the small hours. Midnight snacking is not a weakness. It is tomorrow's lunch, arriving early, to see if you're in.",
+          "startMs": 37
+        },
+        {
+          "speaker": "Pip, the Sous-Chef",
+          "text": "That's beautiful, Chef.",
+          "startMs": 7737
+        },
+        {
+          "speaker": "Chef Anselm Brodequin",
+          "text": "It's cheese, Pip.",
+          "startMs": 9530
+        }
+      ]
+    },
+    {
+      "id": "recipe-open-1",
+      "category": "show",
+      "url": "/voice/tomorrows-leftovers/recipe-open-1.mp3",
+      "durationMs": 8955,
+      "overMusic": false,
+      "part": "open",
+      "kit": "recipe",
+      "lines": [
+        {
+          "speaker": "Chef Anselm Brodequin",
+          "text": "Tonight's dish is a Sunday roast. Not this Sunday. The one after, when your aunt visits. Pip, the ingredients.",
+          "startMs": 438
+        },
+        {
+          "speaker": "Pip, the Sous-Chef",
+          "text": "Yes, Chef.",
+          "startMs": 7262
+        }
+      ]
+    },
+    {
+      "id": "recipe-open-2",
+      "category": "show",
+      "url": "/voice/tomorrows-leftovers/recipe-open-2.mp3",
+      "durationMs": 7522,
+      "overMusic": false,
+      "part": "open",
+      "kit": "recipe",
+      "lines": [
+        {
+          "speaker": "Chef Anselm Brodequin",
+          "text": "Tonight, a soup that by next week is going to be quite famous. Get in early. Pip?",
+          "startMs": 438
+        },
+        {
+          "speaker": "Pip, the Sous-Chef",
+          "text": "Ready, Chef.",
+          "startMs": 5803
+        }
+      ]
+    },
+    {
+      "id": "recipe-open-3",
+      "category": "show",
+      "url": "/voice/tomorrows-leftovers/recipe-open-3.mp3",
+      "durationMs": 6928,
+      "overMusic": false,
+      "part": "open",
+      "kit": "recipe",
+      "lines": [
+        {
+          "speaker": "Chef Anselm Brodequin",
+          "text": "Today, a fish pie, made with a fish that is, as we speak, still thinking it over. Aprons on.",
+          "startMs": 438
+        }
+      ]
+    },
+    {
+      "id": "recipe-open-4",
+      "category": "show",
+      "url": "/voice/tomorrows-leftovers/recipe-open-4.mp3",
+      "durationMs": 9458,
+      "overMusic": false,
+      "part": "open",
+      "kit": "recipe",
+      "lines": [
+        {
+          "speaker": "Pip, the Sous-Chef",
+          "text": "Chef, what are we cooking today?",
+          "startMs": 436
+        },
+        {
+          "speaker": "Chef Anselm Brodequin",
+          "text": "Leftovers, Pip. From a dinner party we're throwing on Saturday. We cook the leftovers first. It saves time.",
+          "startMs": 2329
+        }
+      ]
+    },
+    {
+      "id": "recipe-step-1",
+      "category": "show",
+      "url": "/voice/tomorrows-leftovers/recipe-step-1.mp3",
+      "durationMs": 14138,
+      "overMusic": false,
+      "part": "body",
+      "kit": "recipe",
+      "lines": [
+        {
+          "speaker": "Chef Anselm Brodequin",
+          "text": "Now, the eggs. These were laid on Thursday. It's currently Monday. The hen is still thinking about it, so we crack them gently, as a courtesy.",
+          "startMs": 436
+        },
+        {
+          "speaker": "Pip, the Sous-Chef",
+          "text": "There's nothing in the bowl, Chef.",
+          "startMs": 8611
+        },
+        {
+          "speaker": "Chef Anselm Brodequin",
+          "text": "Crack them anyway, Pip. Confidence.",
+          "startMs": 10782
+        }
+      ]
+    },
+    {
+      "id": "recipe-step-2",
+      "category": "show",
+      "url": "/voice/tomorrows-leftovers/recipe-step-2.mp3",
+      "durationMs": 16934,
+      "overMusic": false,
+      "part": "body",
+      "kit": "recipe",
+      "lines": [
+        {
+          "speaker": "Chef Anselm Brodequin",
+          "text": "Chop one onion. It hasn't been grown yet, so you'll be crying in advance. Very efficient.",
+          "startMs": 437
+        },
+        {
+          "speaker": "Chef Anselm Brodequin",
+          "text": "I cried about this onion on Saturday. Twice.",
+          "startMs": 8026
+        },
+        {
+          "speaker": "Pip, the Sous-Chef",
+          "text": "I'm not crying.",
+          "startMs": 11721
+        },
+        {
+          "speaker": "Chef Anselm Brodequin",
+          "text": "You will be. Wednesday. Something about a film.",
+          "startMs": 13215
+        }
+      ]
+    },
+    {
+      "id": "recipe-step-3",
+      "category": "show",
+      "url": "/voice/tomorrows-leftovers/recipe-step-3.mp3",
+      "durationMs": 13640,
+      "overMusic": false,
+      "part": "body",
+      "kit": "recipe",
+      "lines": [
+        {
+          "speaker": "Chef Anselm Brodequin",
+          "text": "Season generously, with salt from the sea we'll be visiting in August.",
+          "startMs": 437
+        },
+        {
+          "speaker": "Pip, the Sous-Chef",
+          "text": "Can I taste it?",
+          "startMs": 4887
+        },
+        {
+          "speaker": "Chef Anselm Brodequin",
+          "text": "No need. I tasted it last week. A touch more pepper.",
+          "startMs": 6512
+        },
+        {
+          "speaker": "Chef Anselm Brodequin",
+          "text": "No. Less. There. Perfect.",
+          "startMs": 10735
+        }
+      ]
+    },
+    {
+      "id": "recipe-step-4",
+      "category": "show",
+      "url": "/voice/tomorrows-leftovers/recipe-step-4.mp3",
+      "durationMs": 13563,
+      "overMusic": false,
+      "part": "body",
+      "kit": "recipe",
+      "lines": [
+        {
+          "speaker": "Chef Anselm Brodequin",
+          "text": "Into the oven. Now, our oven timer counts up, not down. We don't take a dish out when it's done. We take it out when we remember it.",
+          "startMs": 437
+        },
+        {
+          "speaker": "Chef Anselm Brodequin",
+          "text": "And there's the timer, telling us we've remembered. Lovely.",
+          "startMs": 9156
+        }
+      ]
+    },
+    {
+      "id": "recipe-step-5",
+      "category": "show",
+      "url": "/voice/tomorrows-leftovers/recipe-step-5.mp3",
+      "durationMs": 13918,
+      "overMusic": false,
+      "part": "body",
+      "kit": "recipe",
+      "lines": [
+        {
+          "speaker": "Chef Anselm Brodequin",
+          "text": "For the sauce, one cup of the rain forecast for Sunday. Reduce it over a low heat until it's only a slight chance of rain.",
+          "startMs": 435
+        },
+        {
+          "speaker": "Pip, the Sous-Chef",
+          "text": "How will I know when it's ready?",
+          "startMs": 7788
+        },
+        {
+          "speaker": "Chef Anselm Brodequin",
+          "text": "When you'd take a coat, Pip, but you wouldn't take an umbrella.",
+          "startMs": 9810
+        }
+      ]
+    },
+    {
+      "id": "recipe-step-6",
+      "category": "show",
+      "url": "/voice/tomorrows-leftovers/recipe-step-6.mp3",
+      "durationMs": 14156,
+      "overMusic": false,
+      "part": "body",
+      "kit": "recipe",
+      "lines": [
+        {
+          "speaker": "Chef Anselm Brodequin",
+          "text": "Stir clockwise, which in this kitchen is towards next week.",
+          "startMs": 439
+        },
+        {
+          "speaker": "Chef Anselm Brodequin",
+          "text": "Pip. That is the wrong spoon.",
+          "startMs": 4695
+        },
+        {
+          "speaker": "Pip, the Sous-Chef",
+          "text": "Which one's the right spoon?",
+          "startMs": 7370
+        },
+        {
+          "speaker": "Chef Anselm Brodequin",
+          "text": "The one you'll pick up on Friday. Until then, do your best with that one.",
+          "startMs": 9276
+        }
+      ]
+    },
+    {
+      "id": "recipe-step-7",
+      "category": "show",
+      "url": "/voice/tomorrows-leftovers/recipe-step-7.mp3",
+      "durationMs": 13682,
+      "overMusic": false,
+      "part": "body",
+      "kit": "recipe",
+      "lines": [
+        {
+          "speaker": "Chef Anselm Brodequin",
+          "text": "Fold in the butter. Ours has been softened by a compliment you haven't been paid yet. Somebody, soon, is going to tell you that you look well. That's what's in this.",
+          "startMs": 450
+        },
+        {
+          "speaker": "Pip, the Sous-Chef",
+          "text": "That's lovely, Chef.",
+          "startMs": 9382
+        },
+        {
+          "speaker": "Chef Anselm Brodequin",
+          "text": "That's chemistry, Pip.",
+          "startMs": 11050
+        }
+      ]
+    },
+    {
+      "id": "recipe-step-8",
+      "category": "show",
+      "url": "/voice/tomorrows-leftovers/recipe-step-8.mp3",
+      "durationMs": 10556,
+      "overMusic": false,
+      "part": "body",
+      "kit": "recipe",
+      "lines": [
+        {
+          "speaker": "Chef Anselm Brodequin",
+          "text": "Let it rest. Everything needs a rest. The dough. The meat. You, Pip. I've seen next week, and you're going to want this ten minutes back.",
+          "startMs": 438
+        },
+        {
+          "speaker": "Pip, the Sous-Chef",
+          "text": "Thank you, Chef.",
+          "startMs": 8724
+        }
+      ]
+    },
+    {
+      "id": "recipe-close-1",
+      "category": "show",
+      "url": "/voice/tomorrows-leftovers/recipe-close-1.mp3",
+      "durationMs": 10385,
+      "overMusic": false,
+      "part": "close",
+      "kit": "recipe",
+      "lines": [
+        {
+          "speaker": "Chef Anselm Brodequin",
+          "text": "And there we are. I tasted this on Friday. Magnificent. Pip, try some.",
+          "startMs": 449
+        },
+        {
+          "speaker": "Pip, the Sous-Chef",
+          "text": "It isn't cooked yet, Chef.",
+          "startMs": 5718
+        },
+        {
+          "speaker": "Chef Anselm Brodequin",
+          "text": "Then you'll have to trust me.",
+          "startMs": 7664
+        }
+      ]
+    },
+    {
+      "id": "recipe-close-2",
+      "category": "show",
+      "url": "/voice/tomorrows-leftovers/recipe-close-2.mp3",
+      "durationMs": 6731,
+      "overMusic": false,
+      "part": "close",
+      "kit": "recipe",
+      "lines": [
+        {
+          "speaker": "Chef Anselm Brodequin",
+          "text": "Serve immediately. Or, as I prefer, slightly before.",
+          "startMs": 438
+        }
+      ]
+    },
+    {
+      "id": "recipe-close-3",
+      "category": "show",
+      "url": "/voice/tomorrows-leftovers/recipe-close-3.mp3",
+      "durationMs": 6847,
+      "overMusic": false,
+      "part": "close",
+      "kit": "recipe",
+      "lines": [
+        {
+          "speaker": "Chef Anselm Brodequin",
+          "text": "Whatever's left over, we'll eat tonight, which is how we got the leftovers in the first place. Goodnight.",
+          "startMs": 450
+        }
+      ]
+    },
+    {
+      "id": "recipe-close-4",
+      "category": "show",
+      "url": "/voice/tomorrows-leftovers/recipe-close-4.mp3",
+      "durationMs": 7112,
+      "overMusic": false,
+      "part": "close",
+      "kit": "recipe",
+      "lines": [
+        {
+          "speaker": "Pip, the Sous-Chef",
+          "text": "Chef, how many does it serve?",
+          "startMs": 443
+        },
+        {
+          "speaker": "Chef Anselm Brodequin",
+          "text": "Four. Five, if your cousin turns up. He will. Make it five.",
+          "startMs": 2421
+        }
+      ]
+    },
+    {
+      "id": "dj-001",
+      "category": "dj",
+      "url": "/voice/tomorrows-leftovers/dj-001.mp3",
+      "durationMs": 10191,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Chef Anselm Brodequin",
+          "text": "People ask me, Chef, how do you taste a dish before it's cooked?",
+          "startMs": 50
+        },
+        {
+          "speaker": "Chef Anselm Brodequin",
+          "text": "And I tell them: the same way you miss someone before they've left. You simply know it's coming, and you make room.",
+          "startMs": 4255
+        }
+      ]
+    },
+    {
+      "id": "dj-002",
+      "category": "dj",
+      "url": "/voice/tomorrows-leftovers/dj-002.mp3",
+      "durationMs": 9932,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Pip, the Sous-Chef",
+          "text": "Chef, the jar on the top shelf that says Soup, Later. Can I open it?",
+          "startMs": 43
+        },
+        {
+          "speaker": "Chef Anselm Brodequin",
+          "text": "Not yet, Pip. It's labelled for a reason.",
+          "startMs": 4072
+        },
+        {
+          "speaker": "Pip, the Sous-Chef",
+          "text": "When's later?",
+          "startMs": 7338
+        },
+        {
+          "speaker": "Chef Anselm Brodequin",
+          "text": "Ask me later.",
+          "startMs": 8596
+        }
+      ]
+    },
+    {
+      "id": "dj-003",
+      "category": "dj",
+      "url": "/voice/tomorrows-leftovers/dj-003.mp3",
+      "durationMs": 8462,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Chef Anselm Brodequin",
+          "text": "A note on allergies. Some of tonight's dishes may contain traces of next week. If you're sensitive to next week, please, take it one day at a time.",
+          "startMs": 36
+        }
+      ]
+    },
+    {
+      "id": "dj-004",
+      "category": "dj",
+      "url": "/voice/tomorrows-leftovers/dj-004.mp3",
+      "durationMs": 10714,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Pip, the Sous-Chef",
+          "text": "A letter! Dear Chef, I followed your recipe for Wednesday's casserole, and now it's Wednesday, and I'm not hungry. What do I do?",
+          "startMs": 43
+        },
+        {
+          "speaker": "Chef Anselm Brodequin",
+          "text": "Freeze it. Thursday will be very grateful. Thursday always is.",
+          "startMs": 6490
+        }
+      ]
+    },
+    {
+      "id": "ad-001",
+      "category": "ad",
+      "url": "/voice/tomorrows-leftovers/ad-001.mp3",
+      "durationMs": 16541,
+      "title": "Brodequin's Pre-Burnt Toast",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Chef Anselm Brodequin",
+          "text": "Burnt toast is a disappointment. Unless, of course, you saw it coming.",
+          "startMs": 1582
+        },
+        {
+          "speaker": "Chef Anselm Brodequin",
+          "text": "Introducing Brodequin's Pre-Burnt Toast. We've burnt it for you, in advance, so the disappointment is already over, and all that's left is breakfast.",
+          "startMs": 6249
+        },
+        {
+          "speaker": "Pip, the Sous-Chef",
+          "text": "Pre-Burnt Toast may contain toast.",
+          "startMs": 14725
+        }
+      ]
+    },
+    {
+      "id": "ad-002",
+      "category": "ad",
+      "url": "/voice/tomorrows-leftovers/ad-002.mp3",
+      "durationMs": 18806,
+      "title": "Grumbel's Ladders: The Top Shelf",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Chef Anselm Brodequin",
+          "text": "Tonight's programme is brought to you by Grumbel's Ladders.",
+          "startMs": 50
+        },
+        {
+          "speaker": "Arnold Grumbel",
+          "text": "Every kitchen has a top shelf. And on every top shelf, there's a jar of the good jam, put there by someone who didn't want you to have it.",
+          "startMs": 4006
+        },
+        {
+          "speaker": "Arnold Grumbel",
+          "text": "The Grumbel's Pantry Step. Three rungs. Very quiet. Nobody needs to know.",
+          "startMs": 10924
+        },
+        {
+          "speaker": "Chef Anselm Brodequin",
+          "text": "Grumbel's Ladders. Up is a choice. Jam is a reward.",
+          "startMs": 15089
+        }
+      ]
+    },
+    {
+      "id": "call-001",
+      "category": "call",
+      "url": "/voice/tomorrows-leftovers/call-001.mp3",
+      "durationMs": 30802,
+      "title": "A Call From Next Week",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Chef Anselm Brodequin",
+          "text": "Tomorrow's Leftovers, you're on the air.",
+          "startMs": 2849
+        },
+        {
+          "speaker": "A Listener, Calling From Next Week",
+          "text": "Hello, Chef. It's me, from next week. I'm just ringing to say the soup was lovely.",
+          "startMs": 5997
+        },
+        {
+          "speaker": "Chef Anselm Brodequin",
+          "text": "Thank you. I know.",
+          "startMs": 11006
+        },
+        {
+          "speaker": "A Listener, Calling From Next Week",
+          "text": "I know you know. I just wanted to say it in person. Well, in advance.",
+          "startMs": 13072
+        },
+        {
+          "speaker": "Chef Anselm Brodequin",
+          "text": "Very good of you. Any notes?",
+          "startMs": 17511
+        },
+        {
+          "speaker": "A Listener, Calling From Next Week",
+          "text": "Only one. Tell Pip about the spoon.",
+          "startMs": 19979
+        },
+        {
+          "speaker": "Chef Anselm Brodequin",
+          "text": "We've covered the spoon.",
+          "startMs": 22520
+        },
+        {
+          "speaker": "Pip, the Sous-Chef",
+          "text": "We haven't, really, Chef.",
+          "startMs": 24805
+        },
+        {
+          "speaker": "A Listener, Calling From Next Week",
+          "text": "You will. Bye now.",
+          "startMs": 26807
+        }
+      ]
+    },
+    {
+      "id": "halloween-1",
+      "category": "dj",
+      "url": "/voice/tomorrows-leftovers/halloween-1.mp3",
+      "durationMs": 18088,
+      "title": "Next Year's Pumpkin",
+      "overMusic": true,
+      "dates": [
+        "10-24",
+        "10-25",
+        "10-26",
+        "10-27",
+        "10-28",
+        "10-29",
+        "10-30",
+        "10-31"
+      ],
+      "lines": [
+        {
+          "speaker": "Chef Anselm Brodequin",
+          "text": "This week we're carving a pumpkin that will be grown in time for next year's Halloween. Pip, the pumpkin.",
+          "startMs": 50
+        },
+        {
+          "speaker": "Pip, the Sous-Chef",
+          "text": "There's no pumpkin, Chef.",
+          "startMs": 5828
+        },
+        {
+          "speaker": "Chef Anselm Brodequin",
+          "text": "Then carve the space where the pumpkin will be. Bigger smile.",
+          "startMs": 7829
+        },
+        {
+          "speaker": "Chef Anselm Brodequin",
+          "text": "There. Terrifying.",
+          "startMs": 12087
+        }
+      ]
+    },
+    {
+      "id": "halloween-2",
+      "category": "dj",
+      "url": "/voice/tomorrows-leftovers/halloween-2.mp3",
+      "durationMs": 14054,
+      "title": "Pumpkin Soup, Watching",
+      "overMusic": true,
+      "dates": [
+        "10-24",
+        "10-25",
+        "10-26",
+        "10-27",
+        "10-28",
+        "10-29",
+        "10-30",
+        "10-31"
+      ],
+      "lines": [
+        {
+          "speaker": "Chef Anselm Brodequin",
+          "text": "Pumpkin soup, for Halloween night. I've tasted it already. Rich. Warming. A little spooky.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Chef Anselm Brodequin",
+          "text": "Something in it was looking back at me.",
+          "startMs": 6226
+        },
+        {
+          "speaker": "Chef Anselm Brodequin",
+          "text": "Pip, did you carve a face in the soup?",
+          "startMs": 9555
+        },
+        {
+          "speaker": "Pip, the Sous-Chef",
+          "text": "Only a small one, Chef.",
+          "startMs": 12481
+        }
+      ]
+    }
+  ]
+}

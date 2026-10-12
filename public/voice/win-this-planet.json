@@ -1,0 +1,843 @@
+{
+  "version": 1,
+  "station": "win-this-planet",
+  "clips": [
+    {
+      "id": "id-001",
+      "category": "id",
+      "url": "/voice/win-this-planet/id-001.mp3",
+      "durationMs": 6661,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Chaz Brightley",
+          "text": "Win This Planet! The quiz where the questions are about you, and the answers are wrong!",
+          "startMs": 38
+        }
+      ]
+    },
+    {
+      "id": "id-002",
+      "category": "id",
+      "url": "/voice/win-this-planet/id-002.mp3",
+      "durationMs": 4943,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Chaz Brightley",
+          "text": "You're listening to Win This Planet, on one hundred point oh! Everybody's a winner! Nobody's won!",
+          "startMs": 40
+        }
+      ]
+    },
+    {
+      "id": "id-003",
+      "category": "id",
+      "url": "/voice/win-this-planet/id-003.mp3",
+      "durationMs": 3667,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The Announcer",
+          "text": "Win This Planet! Live from Studio Infinity!",
+          "startMs": 40
+        },
+        {
+          "speaker": "Doreen, the Studio Audience",
+          "text": "Woo.",
+          "startMs": 2908
+        }
+      ]
+    },
+    {
+      "id": "id-004",
+      "category": "id",
+      "url": "/voice/win-this-planet/id-004.mp3",
+      "durationMs": 6268,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Chaz Brightley",
+          "text": "Nobody has ever won the planet. Tonight, that could change! It won't! But it could!",
+          "startMs": 43
+        }
+      ]
+    },
+    {
+      "id": "show-primetime-open",
+      "category": "id",
+      "url": "/voice/win-this-planet/show-primetime-open.mp3",
+      "durationMs": 10774,
+      "overMusic": true,
+      "part": "open",
+      "show": "primetime",
+      "lines": [
+        {
+          "speaker": "Chaz Brightley",
+          "text": "Good evening, and welcome to Win This Planet! Live, before a studio audience of one!",
+          "startMs": 3599
+        },
+        {
+          "speaker": "Chaz Brightley",
+          "text": "Thank you, Doreen!",
+          "startMs": 9333
+        }
+      ]
+    },
+    {
+      "id": "show-primetime-001",
+      "category": "dj",
+      "url": "/voice/win-this-planet/show-primetime-001.mp3",
+      "durationMs": 14274,
+      "overMusic": true,
+      "show": "primetime",
+      "lines": [
+        {
+          "speaker": "Chaz Brightley",
+          "text": "Doreen, you've been our studio audience for four hundred episodes! What keeps you coming back?",
+          "startMs": 439
+        },
+        {
+          "speaker": "Doreen, the Studio Audience",
+          "text": "I live here, Chaz. They built the studio around my house.",
+          "startMs": 5536
+        },
+        {
+          "speaker": "Chaz Brightley",
+          "text": "And we are so glad they did! Doreen, everybody!",
+          "startMs": 9236
+        }
+      ]
+    },
+    {
+      "id": "show-moon-open",
+      "category": "id",
+      "url": "/voice/win-this-planet/show-moon-open.mp3",
+      "durationMs": 7496,
+      "overMusic": true,
+      "part": "open",
+      "show": "win-this-moon",
+      "lines": [
+        {
+          "speaker": "Chaz Brightley",
+          "text": "It's Win This Moon! The daytime edition! Smaller prizes, smaller stakes, and the same three contestants, who live here now!",
+          "startMs": 437
+        }
+      ]
+    },
+    {
+      "id": "show-moon-001",
+      "category": "dj",
+      "url": "/voice/win-this-planet/show-moon-001.mp3",
+      "durationMs": 11752,
+      "overMusic": true,
+      "show": "win-this-moon",
+      "lines": [
+        {
+          "speaker": "Chaz Brightley",
+          "text": "Today's moon is a lovely little moon called Pebble! It's about the size of a large village. It has one crater, and the crater has a bench!",
+          "startMs": 439
+        },
+        {
+          "speaker": "Chaz Brightley",
+          "text": "Is that a moon you could love? It is! It is a moon you could love!",
+          "startMs": 8112
+        }
+      ]
+    },
+    {
+      "id": "show-graveyard-open",
+      "category": "id",
+      "url": "/voice/win-this-planet/show-graveyard-open.mp3",
+      "durationMs": 6659,
+      "overMusic": true,
+      "daypart": "night",
+      "part": "open",
+      "show": "graveyard-round",
+      "lines": [
+        {
+          "speaker": "Chaz Brightley",
+          "text": "Welcome to the Graveyard Round. We've turned the lights down. We've muffled the buzzer. The planet is asleep. Let's not wake it.",
+          "startMs": 27
+        }
+      ]
+    },
+    {
+      "id": "show-graveyard-001",
+      "category": "dj",
+      "url": "/voice/win-this-planet/show-graveyard-001.mp3",
+      "durationMs": 12495,
+      "overMusic": true,
+      "show": "graveyard-round",
+      "lines": [
+        {
+          "speaker": "Chaz Brightley",
+          "text": "A question for the operator on the relay ship. Yes, you. It's a hard one. Ready?",
+          "startMs": 32
+        },
+        {
+          "speaker": "Chaz Brightley",
+          "text": "What's your heading?",
+          "startMs": 4514
+        },
+        {
+          "speaker": "Chaz Brightley",
+          "text": "No idea? That's all right. Nobody knows their heading at this hour. Ten points.",
+          "startMs": 8213
+        }
+      ]
+    },
+    {
+      "id": "show-graveyard-002",
+      "category": "dj",
+      "url": "/voice/win-this-planet/show-graveyard-002.mp3",
+      "durationMs": 10871,
+      "overMusic": true,
+      "show": "graveyard-round",
+      "lines": [
+        {
+          "speaker": "Grandma Hester",
+          "text": "Chaz, I've fallen asleep at my podium.",
+          "startMs": 36
+        },
+        {
+          "speaker": "Chaz Brightley",
+          "text": "Hester, you're talking to me.",
+          "startMs": 2742
+        },
+        {
+          "speaker": "Grandma Hester",
+          "text": "I talk in my sleep, dear.",
+          "startMs": 4366
+        },
+        {
+          "speaker": "Grandma Hester",
+          "text": "Nineteen fifty two.",
+          "startMs": 6809
+        },
+        {
+          "speaker": "Chaz Brightley",
+          "text": "Ten points to Hester.",
+          "startMs": 9658
+        }
+      ]
+    },
+    {
+      "id": "quiz-open-1",
+      "category": "show",
+      "url": "/voice/win-this-planet/quiz-open-1.mp3",
+      "durationMs": 5967,
+      "overMusic": false,
+      "part": "open",
+      "kit": "quiz",
+      "lines": [
+        {
+          "speaker": "Chaz Brightley",
+          "text": "Fingers on buzzers! For four hundred points: what is your name?",
+          "startMs": 2624
+        }
+      ]
+    },
+    {
+      "id": "quiz-open-2",
+      "category": "show",
+      "url": "/voice/win-this-planet/quiz-open-2.mp3",
+      "durationMs": 6232,
+      "overMusic": false,
+      "part": "open",
+      "kit": "quiz",
+      "lines": [
+        {
+          "speaker": "Chaz Brightley",
+          "text": "Next question! This one's about you, and only you: how old are you? Take your time! Don't take your time!",
+          "startMs": 438
+        }
+      ]
+    },
+    {
+      "id": "quiz-open-3",
+      "category": "show",
+      "url": "/voice/win-this-planet/quiz-open-3.mp3",
+      "durationMs": 4960,
+      "overMusic": false,
+      "part": "open",
+      "kit": "quiz",
+      "lines": [
+        {
+          "speaker": "Chaz Brightley",
+          "text": "For the planet! Where, exactly, do you live? You may confer! You may not use a map!",
+          "startMs": 438
+        }
+      ]
+    },
+    {
+      "id": "quiz-open-4",
+      "category": "show",
+      "url": "/voice/win-this-planet/quiz-open-4.mp3",
+      "durationMs": 6043,
+      "overMusic": false,
+      "part": "open",
+      "kit": "quiz",
+      "lines": [
+        {
+          "speaker": "Chaz Brightley",
+          "text": "Lightning round! What did you have for breakfast this morning? Buzzers ready!",
+          "startMs": 1950
+        }
+      ]
+    },
+    {
+      "id": "quiz-open-5",
+      "category": "show",
+      "url": "/voice/win-this-planet/quiz-open-5.mp3",
+      "durationMs": 5101,
+      "overMusic": false,
+      "part": "open",
+      "kit": "quiz",
+      "lines": [
+        {
+          "speaker": "Chaz Brightley",
+          "text": "Here's a tricky one! What is your favourite colour? It's on the card! I can see it! Can you?",
+          "startMs": 449
+        }
+      ]
+    },
+    {
+      "id": "quiz-open-6",
+      "category": "show",
+      "url": "/voice/win-this-planet/quiz-open-6.mp3",
+      "durationMs": 6997,
+      "overMusic": false,
+      "part": "open",
+      "kit": "quiz",
+      "lines": [
+        {
+          "speaker": "Chaz Brightley",
+          "text": "For a thousand points and a moon! How many hands have you got? Show your working!",
+          "startMs": 2625
+        }
+      ]
+    },
+    {
+      "id": "quiz-answer-1",
+      "category": "show",
+      "url": "/voice/win-this-planet/quiz-answer-1.mp3",
+      "durationMs": 11308,
+      "overMusic": false,
+      "part": "body",
+      "kit": "quiz",
+      "lines": [
+        {
+          "speaker": "Unit Seven",
+          "text": "Calculating. Calculating. The answer is: no.",
+          "startMs": 432
+        },
+        {
+          "speaker": "Chaz Brightley",
+          "text": "It wasn't a yes or no question, Unit Seven!",
+          "startMs": 4351
+        },
+        {
+          "speaker": "Unit Seven",
+          "text": "Then the answer is: also no.",
+          "startMs": 6817
+        },
+        {
+          "speaker": "Chaz Brightley",
+          "text": "That's minus two hundred, and a warning!",
+          "startMs": 8979
+        }
+      ]
+    },
+    {
+      "id": "quiz-answer-2",
+      "category": "show",
+      "url": "/voice/win-this-planet/quiz-answer-2.mp3",
+      "durationMs": 11888,
+      "overMusic": false,
+      "part": "body",
+      "kit": "quiz",
+      "lines": [
+        {
+          "speaker": "Wendell, a Nervous Blob",
+          "text": "Is it, um, me? Is the answer me?",
+          "startMs": 440
+        },
+        {
+          "speaker": "Chaz Brightley",
+          "text": "So close, Wendell! The question's about you! The answer isn't you!",
+          "startMs": 3616
+        },
+        {
+          "speaker": "Wendell, a Nervous Blob",
+          "text": "That's how I feel most days, Chaz.",
+          "startMs": 7308
+        },
+        {
+          "speaker": "Chaz Brightley",
+          "text": "And that's the spirit we love on this show!",
+          "startMs": 9644
+        }
+      ]
+    },
+    {
+      "id": "quiz-answer-3",
+      "category": "show",
+      "url": "/voice/win-this-planet/quiz-answer-3.mp3",
+      "durationMs": 11085,
+      "overMusic": false,
+      "part": "body",
+      "kit": "quiz",
+      "lines": [
+        {
+          "speaker": "Grandma Hester",
+          "text": "Nineteen fifty two.",
+          "startMs": 442
+        },
+        {
+          "speaker": "Chaz Brightley",
+          "text": "Hester, that's your answer to everything!",
+          "startMs": 3191
+        },
+        {
+          "speaker": "Grandma Hester",
+          "text": "It was right once.",
+          "startMs": 5097
+        },
+        {
+          "speaker": "Chaz Brightley",
+          "text": "It has never been right, Hester!",
+          "startMs": 6744
+        },
+        {
+          "speaker": "Grandma Hester",
+          "text": "It was right in nineteen fifty two.",
+          "startMs": 8385
+        }
+      ]
+    },
+    {
+      "id": "quiz-answer-4",
+      "category": "show",
+      "url": "/voice/win-this-planet/quiz-answer-4.mp3",
+      "durationMs": 12659,
+      "overMusic": false,
+      "part": "body",
+      "kit": "quiz",
+      "lines": [
+        {
+          "speaker": "Grandma Hester",
+          "text": "Is the answer on the card, dear?",
+          "startMs": 436
+        },
+        {
+          "speaker": "Chaz Brightley",
+          "text": "It is, Hester!",
+          "startMs": 2531
+        },
+        {
+          "speaker": "Grandma Hester",
+          "text": "Then it's whatever's on the card.",
+          "startMs": 3678
+        },
+        {
+          "speaker": "Chaz Brightley",
+          "text": "That's technically correct! Judges? The judges are conferring!",
+          "startMs": 6702
+        },
+        {
+          "speaker": "Chaz Brightley",
+          "text": "The judges have confiscated the card!",
+          "startMs": 10288
+        }
+      ]
+    },
+    {
+      "id": "quiz-answer-5",
+      "category": "show",
+      "url": "/voice/win-this-planet/quiz-answer-5.mp3",
+      "durationMs": 12667,
+      "overMusic": false,
+      "part": "body",
+      "kit": "quiz",
+      "lines": [
+        {
+          "speaker": "Chaz Brightley",
+          "text": "And Wendell's buzzed in already! Wendell, your answer?",
+          "startMs": 1350
+        },
+        {
+          "speaker": "Wendell, a Nervous Blob",
+          "text": "I don't know. I panicked. The button was right there.",
+          "startMs": 4190
+        },
+        {
+          "speaker": "Chaz Brightley",
+          "text": "The button is always right there, Wendell! That's what buttons do!",
+          "startMs": 7048
+        },
+        {
+          "speaker": "Wendell, a Nervous Blob",
+          "text": "It's a lot of pressure, Chaz.",
+          "startMs": 10347
+        }
+      ]
+    },
+    {
+      "id": "quiz-answer-6",
+      "category": "show",
+      "url": "/voice/win-this-planet/quiz-answer-6.mp3",
+      "durationMs": 13119,
+      "overMusic": false,
+      "part": "body",
+      "kit": "quiz",
+      "lines": [
+        {
+          "speaker": "Chaz Brightley",
+          "text": "No answer from our contestants! Let's go to the studio audience! Doreen?",
+          "startMs": 436
+        },
+        {
+          "speaker": "Doreen, the Studio Audience",
+          "text": "Is it a goose?",
+          "startMs": 4681
+        },
+        {
+          "speaker": "Chaz Brightley",
+          "text": "It is not a goose, Doreen! It is never a goose! Lovely to have you, Doreen!",
+          "startMs": 6704
+        }
+      ]
+    },
+    {
+      "id": "quiz-answer-7",
+      "category": "show",
+      "url": "/voice/win-this-planet/quiz-answer-7.mp3",
+      "durationMs": 10930,
+      "overMusic": false,
+      "part": "body",
+      "kit": "quiz",
+      "lines": [
+        {
+          "speaker": "Unit Seven",
+          "text": "Question requires knowledge of self. Searching. Searching.",
+          "startMs": 428
+        },
+        {
+          "speaker": "Unit Seven",
+          "text": "No self found.",
+          "startMs": 5581
+        },
+        {
+          "speaker": "Chaz Brightley",
+          "text": "Oh, Unit Seven. That's a lot for a weeknight. We'll come back to you!",
+          "startMs": 6979
+        }
+      ]
+    },
+    {
+      "id": "quiz-answer-8",
+      "category": "show",
+      "url": "/voice/win-this-planet/quiz-answer-8.mp3",
+      "durationMs": 13912,
+      "overMusic": false,
+      "part": "body",
+      "kit": "quiz",
+      "lines": [
+        {
+          "speaker": "Grandma Hester",
+          "text": "Can I phone a friend?",
+          "startMs": 438
+        },
+        {
+          "speaker": "Chaz Brightley",
+          "text": "There's no phoning a friend, Hester! This is Win This Planet!",
+          "startMs": 2199
+        },
+        {
+          "speaker": "Grandma Hester",
+          "text": "I've already phoned her. She says, try the cupboard.",
+          "startMs": 5398
+        },
+        {
+          "speaker": "Chaz Brightley",
+          "text": "That's not an answer, Hester, that's a place!",
+          "startMs": 9265
+        },
+        {
+          "speaker": "Grandma Hester",
+          "text": "It's where she keeps the answers.",
+          "startMs": 11464
+        }
+      ]
+    },
+    {
+      "id": "quiz-close-1",
+      "category": "show",
+      "url": "/voice/win-this-planet/quiz-close-1.mp3",
+      "durationMs": 9232,
+      "overMusic": false,
+      "part": "close",
+      "kit": "quiz",
+      "lines": [
+        {
+          "speaker": "Chaz Brightley",
+          "text": "The scores! Hester, minus twelve! Unit Seven, a rounding error! Wendell, unclear! The planet remains unwon!",
+          "startMs": 440
+        }
+      ]
+    },
+    {
+      "id": "quiz-close-2",
+      "category": "show",
+      "url": "/voice/win-this-planet/quiz-close-2.mp3",
+      "durationMs": 6648,
+      "overMusic": false,
+      "part": "close",
+      "kit": "quiz",
+      "lines": [
+        {
+          "speaker": "Chaz Brightley",
+          "text": "That's the round! Nobody has any points, so everybody's still in it! Don't go anywhere! The planet can't! It's a planet!",
+          "startMs": 441
+        }
+      ]
+    },
+    {
+      "id": "quiz-close-3",
+      "category": "show",
+      "url": "/voice/win-this-planet/quiz-close-3.mp3",
+      "durationMs": 7491,
+      "overMusic": false,
+      "part": "close",
+      "kit": "quiz",
+      "lines": [
+        {
+          "speaker": "Chaz Brightley",
+          "text": "Scores on the doors! Doreen is in the lead, and she isn't even playing! Take a bow, Doreen!",
+          "startMs": 436
+        }
+      ]
+    },
+    {
+      "id": "quiz-close-4",
+      "category": "show",
+      "url": "/voice/win-this-planet/quiz-close-4.mp3",
+      "durationMs": 9593,
+      "overMusic": false,
+      "part": "close",
+      "kit": "quiz",
+      "lines": [
+        {
+          "speaker": "Chaz Brightley",
+          "text": "And at the end of that round, the planet is still up for grabs! It always is! It's the one thing you can count on!",
+          "startMs": 440
+        }
+      ]
+    },
+    {
+      "id": "prize-001",
+      "category": "dj",
+      "url": "/voice/win-this-planet/prize-001.mp3",
+      "durationMs": 14710,
+      "title": "Tonight's Planet: Varnell Four",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Chaz Brightley",
+          "text": "Let's see what you could win! Announcer?",
+          "startMs": 441
+        },
+        {
+          "speaker": "The Announcer",
+          "text": "Tonight's planet is Varnell Four! Two moons, one careful previous owner, and an ocean that's mostly gravy! Comes with a weather system and a small, polite volcano!",
+          "startMs": 2410
+        },
+        {
+          "speaker": "Chaz Brightley",
+          "text": "A polite volcano!",
+          "startMs": 13059
+        }
+      ]
+    },
+    {
+      "id": "prize-002",
+      "category": "dj",
+      "url": "/voice/win-this-planet/prize-002.mp3",
+      "durationMs": 11565,
+      "title": "The Consolation Toaster",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The Announcer",
+          "text": "And if you don't win the planet, you'll go home with our consolation prize: a toaster that wins you another toaster!",
+          "startMs": 436
+        },
+        {
+          "speaker": "Chaz Brightley",
+          "text": "Hester has eleven of them!",
+          "startMs": 7028
+        },
+        {
+          "speaker": "Grandma Hester",
+          "text": "Twelve. One of them won one in the car park.",
+          "startMs": 8568
+        }
+      ]
+    },
+    {
+      "id": "prize-003",
+      "category": "dj",
+      "url": "/voice/win-this-planet/prize-003.mp3",
+      "durationMs": 12968,
+      "title": "Tonight's Planet: Little Osk",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The Announcer",
+          "text": "Tonight's planet is Little Osk! A starter planet, perfect for first-time owners! One continent, no mortgage, and a single tree that everybody agrees is lovely!",
+          "startMs": 436
+        },
+        {
+          "speaker": "Chaz Brightley",
+          "text": "Everybody agrees! That never happens!",
+          "startMs": 10475
+        }
+      ]
+    },
+    {
+      "id": "dj-001",
+      "category": "dj",
+      "url": "/voice/win-this-planet/dj-001.mp3",
+      "durationMs": 10694,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Chaz Brightley",
+          "text": "People ask me, Chaz, has anyone ever won the planet? And I say: not yet! And they say, will anyone? And I say: not yet!",
+          "startMs": 437
+        },
+        {
+          "speaker": "Chaz Brightley",
+          "text": "And then they ask me to stop shouting, and I say: not yet!",
+          "startMs": 7356
+        }
+      ]
+    },
+    {
+      "id": "halloween-1",
+      "category": "show",
+      "url": "/voice/win-this-planet/halloween-1.mp3",
+      "durationMs": 39582,
+      "title": "Win This Haunted Planet!",
+      "overMusic": false,
+      "dates": [
+        "10-24",
+        "10-25",
+        "10-26",
+        "10-27",
+        "10-28",
+        "10-29",
+        "10-30",
+        "10-31"
+      ],
+      "lines": [
+        {
+          "speaker": "Chaz Brightley",
+          "text": "It's a spooky special! Welcome to Win This Haunted Planet!",
+          "startMs": 3500
+        },
+        {
+          "speaker": "The Announcer",
+          "text": "Tonight's prize is Varnell Nine! Fully haunted, slightly damp, and very affordable, because nobody will go there!",
+          "startMs": 6651
+        },
+        {
+          "speaker": "Chaz Brightley",
+          "text": "Not even Doreen! Doreen?",
+          "startMs": 13648
+        },
+        {
+          "speaker": "Doreen, the Studio Audience",
+          "text": "Not even me, Chaz.",
+          "startMs": 15366
+        },
+        {
+          "speaker": "Chaz Brightley",
+          "text": "Halloween round! Contestants, what have you come as?",
+          "startMs": 16829
+        },
+        {
+          "speaker": "Unit Seven",
+          "text": "A robot.",
+          "startMs": 19495
+        },
+        {
+          "speaker": "Chaz Brightley",
+          "text": "Unit Seven, you are a robot!",
+          "startMs": 21562
+        },
+        {
+          "speaker": "Unit Seven",
+          "text": "Then it is a very good costume.",
+          "startMs": 23359
+        },
+        {
+          "speaker": "Grandma Hester",
+          "text": "I've come as nineteen fifty two.",
+          "startMs": 25520
+        },
+        {
+          "speaker": "Chaz Brightley",
+          "text": "Hester, that's correct! After four hundred episodes! Hester is correct!",
+          "startMs": 29697
+        },
+        {
+          "speaker": "Grandma Hester",
+          "text": "I told you, dear. It was only ever a matter of time.",
+          "startMs": 33508
+        }
+      ]
+    },
+    {
+      "id": "halloween-2",
+      "category": "dj",
+      "url": "/voice/win-this-planet/halloween-2.mp3",
+      "durationMs": 15438,
+      "title": "The Scariest Question",
+      "overMusic": true,
+      "dates": [
+        "10-24",
+        "10-25",
+        "10-26",
+        "10-27",
+        "10-28",
+        "10-29",
+        "10-30",
+        "10-31"
+      ],
+      "lines": [
+        {
+          "speaker": "Chaz Brightley",
+          "text": "Halloween week on Win This Planet, and this is the scariest question we've ever asked.",
+          "startMs": 437
+        },
+        {
+          "speaker": "Chaz Brightley",
+          "text": "Wendell. What are you afraid of?",
+          "startMs": 5505
+        },
+        {
+          "speaker": "Wendell, a Nervous Blob",
+          "text": "This. Specifically this, Chaz.",
+          "startMs": 7218
+        },
+        {
+          "speaker": "Chaz Brightley",
+          "text": "Wrong! The card says spiders! Ten points for honesty, though! We don't give points for honesty!",
+          "startMs": 10225
+        }
+      ]
+    }
+  ]
+}

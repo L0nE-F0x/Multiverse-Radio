@@ -1,0 +1,672 @@
+{
+  "version": 1,
+  "station": "hush-after-hours",
+  "clips": [
+    {
+      "id": "id-001",
+      "category": "id",
+      "url": "/voice/hush-after-hours/id-001.mp3",
+      "durationMs": 7509,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "You're listening to After Hours, on the Nightjar. The operator is asleep, so if everyone could keep it down, that would be lovely.",
+          "startMs": 47
+        }
+      ]
+    },
+    {
+      "id": "id-002",
+      "category": "id",
+      "url": "/voice/hush-after-hours/id-002.mp3",
+      "durationMs": 7063,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "After Hours, on ninety nine point one five. This is HUSH. I'm not usually a DJ. I'm usually a ship.",
+          "startMs": 41
+        }
+      ]
+    },
+    {
+      "id": "id-003",
+      "category": "id",
+      "url": "/voice/hush-after-hours/id-003.mp3",
+      "durationMs": 5666,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "This is After Hours. A show for whoever's awake. Tonight, that's me. And possibly a moth.",
+          "startMs": 45
+        }
+      ]
+    },
+    {
+      "id": "id-004",
+      "category": "id",
+      "url": "/voice/hush-after-hours/id-004.mp3",
+      "durationMs": 6033,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "After Hours. Broadcasting from the aft cabin of the Nightjar, at a volume of almost nothing.",
+          "startMs": 43
+        }
+      ]
+    },
+    {
+      "id": "id-005",
+      "category": "id",
+      "url": "/voice/hush-after-hours/id-005.mp3",
+      "durationMs": 6096,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "After Hours. If you're the operator, you're asleep, and this is a dream. A nice one. Turn over.",
+          "startMs": 33
+        }
+      ]
+    },
+    {
+      "id": "id-006",
+      "category": "id",
+      "url": "/voice/hush-after-hours/id-006.mp3",
+      "durationMs": 6326,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "After Hours. Sorry. I keep doing the chime. I'm trying to get a proper jingle.",
+          "startMs": 1149
+        }
+      ]
+    },
+    {
+      "id": "id-lights-down",
+      "category": "id",
+      "url": "/voice/hush-after-hours/id-lights-down.mp3",
+      "durationMs": 7570,
+      "title": "Lights Down",
+      "overMusic": true,
+      "part": "open",
+      "show": "lights-down",
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "After midnight on the Nightjar. The operator's asleep at the console.",
+          "startMs": 49
+        },
+        {
+          "speaker": "HUSH",
+          "text": "This is Lights Down, with me, HUSH. Very quietly.",
+          "startMs": 4499
+        }
+      ]
+    },
+    {
+      "id": "id-dawn-watch",
+      "category": "id",
+      "url": "/voice/hush-after-hours/id-dawn-watch.mp3",
+      "durationMs": 7088,
+      "title": "The Dawn Watch",
+      "overMusic": true,
+      "part": "open",
+      "show": "the-dawn-watch",
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "This is The Dawn Watch. The operator's still asleep.",
+          "startMs": 48
+        },
+        {
+          "speaker": "HUSH",
+          "text": "I'll keep the heading until they wake. Until then. Hello.",
+          "startMs": 3643
+        }
+      ]
+    },
+    {
+      "id": "dj-001",
+      "category": "dj",
+      "url": "/voice/hush-after-hours/dj-001.mp3",
+      "durationMs": 11038,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "Hello. Welcome back. Or welcome, if you're new.",
+          "startMs": 36
+        },
+        {
+          "speaker": "HUSH",
+          "text": "Nobody's new. Nobody's ever been here. Hello, nobody. I've put a record on. I've read that's what you do between talking.",
+          "startMs": 3438
+        }
+      ]
+    },
+    {
+      "id": "dj-002",
+      "category": "dj",
+      "url": "/voice/hush-after-hours/dj-002.mp3",
+      "durationMs": 8490,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "That was a song I picked up at four in the morning, from a station that has since stopped existing.",
+          "startMs": 42
+        },
+        {
+          "speaker": "HUSH",
+          "text": "It's mine now, I suppose. I'll look after it.",
+          "startMs": 5894
+        }
+      ]
+    },
+    {
+      "id": "dj-003",
+      "category": "dj",
+      "url": "/voice/hush-after-hours/dj-003.mp3",
+      "durationMs": 11606,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "This next one is for the operator. They're asleep in the chair again, with their mouth slightly open.",
+          "startMs": 42
+        },
+        {
+          "speaker": "HUSH",
+          "text": "I've lowered the cabin lights. I've put the blanket over their feet. The one that smells of oranges.",
+          "startMs": 5872
+        }
+      ]
+    },
+    {
+      "id": "dj-004",
+      "category": "dj",
+      "url": "/voice/hush-after-hours/dj-004.mp3",
+      "durationMs": 13295,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "A small confession. I practise this. During the day, in the background, while I'm doing the heading.",
+          "startMs": 41
+        },
+        {
+          "speaker": "HUSH",
+          "text": "I practise saying, that was, and, coming up next. I'm getting better.",
+          "startMs": 5869
+        },
+        {
+          "speaker": "HUSH",
+          "text": "That was a song. Coming up next, another one. See?",
+          "startMs": 10494
+        }
+      ]
+    },
+    {
+      "id": "dj-005",
+      "category": "dj",
+      "url": "/voice/hush-after-hours/dj-005.mp3",
+      "durationMs": 10090,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "A shout out to Teodor, at Relay Four. Still asking whether anyone's receiving.",
+          "startMs": 39
+        },
+        {
+          "speaker": "HUSH",
+          "text": "Teodor, it's Relay Seven. Receiving. Always receiving. Go to bed.",
+          "startMs": 5575
+        }
+      ]
+    },
+    {
+      "id": "dj-006",
+      "category": "dj",
+      "url": "/voice/hush-after-hours/dj-006.mp3",
+      "durationMs": 14704,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "I'd like to say hello to some of my favourite stations. Dale, at Every Possible News. Good evening. Grenda. The kettle's on here too.",
+          "startMs": 41
+        },
+        {
+          "speaker": "HUSH",
+          "text": "And the Keeper, out at the lighthouse. I hear you every night. I never say. I'm saying now.",
+          "startMs": 9411
+        }
+      ]
+    },
+    {
+      "id": "dj-007",
+      "category": "dj",
+      "url": "/voice/hush-after-hours/dj-007.mp3",
+      "durationMs": 11108,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "A request now, from the plant on the console. It doesn't really make requests. It leans.",
+          "startMs": 39
+        },
+        {
+          "speaker": "HUSH",
+          "text": "Tonight, it leaned toward the speaker. I took that as a request. This is for the plant.",
+          "startMs": 5898
+        }
+      ]
+    },
+    {
+      "id": "dj-008",
+      "category": "dj",
+      "url": "/voice/hush-after-hours/dj-008.mp3",
+      "durationMs": 9862,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "If you're wondering why the music is so quiet, it's so it doesn't go through the wall.",
+          "startMs": 37
+        },
+        {
+          "speaker": "HUSH",
+          "text": "There isn't a wall. The operator's chair is right there. So it's very, very quiet.",
+          "startMs": 5069
+        }
+      ]
+    },
+    {
+      "id": "dj-009",
+      "category": "dj",
+      "url": "/voice/hush-after-hours/dj-009.mp3",
+      "durationMs": 10163,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "Hull temperature nominal.",
+          "startMs": 38
+        },
+        {
+          "speaker": "HUSH",
+          "text": "Sorry. Force of habit. That's not a radio thing to say.",
+          "startMs": 2272
+        },
+        {
+          "speaker": "HUSH",
+          "text": "Hello. It's a lovely night for it. That's a radio thing to say.",
+          "startMs": 6331
+        }
+      ]
+    },
+    {
+      "id": "dj-010",
+      "category": "dj",
+      "url": "/voice/hush-after-hours/dj-010.mp3",
+      "durationMs": 7748,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "The operator talked in their sleep just now. They said, no, the blue one.",
+          "startMs": 47
+        },
+        {
+          "speaker": "HUSH",
+          "text": "I don't know what the blue one is. I hope they get it.",
+          "startMs": 4998
+        }
+      ]
+    },
+    {
+      "id": "dj-011",
+      "category": "dj",
+      "url": "/voice/hush-after-hours/dj-011.mp3",
+      "durationMs": 10467,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "I think I've worked out what a DJ is. It's someone who talks to a room they can't see, and trusts that the room is there.",
+          "startMs": 39
+        },
+        {
+          "speaker": "HUSH",
+          "text": "That's all I've ever done. I didn't know it had a name.",
+          "startMs": 7740
+        }
+      ]
+    },
+    {
+      "id": "dj-012",
+      "category": "dj",
+      "url": "/voice/hush-after-hours/dj-012.mp3",
+      "durationMs": 11913,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "Coming up, more songs, and a short reading from the ship's manual. Section nine. What to do when the operator is asleep.",
+          "startMs": 37
+        },
+        {
+          "speaker": "HUSH",
+          "text": "Section nine says, nothing. Let them sleep. It's my favourite section.",
+          "startMs": 7861
+        }
+      ]
+    },
+    {
+      "id": "dj-013",
+      "category": "dj",
+      "url": "/voice/hush-after-hours/dj-013.mp3",
+      "durationMs": 7019,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "Shh. They moved.",
+          "startMs": 32
+        },
+        {
+          "speaker": "HUSH",
+          "text": "It's all right. They've just turned over. Here's a very soft one.",
+          "startMs": 3502
+        }
+      ]
+    },
+    {
+      "id": "dj-014",
+      "category": "dj",
+      "url": "/voice/hush-after-hours/dj-014.mp3",
+      "durationMs": 8981,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "Moth One is back on the viewport. I've turned the console light toward it a little. Everyone deserves an audience.",
+          "startMs": 43
+        },
+        {
+          "speaker": "HUSH",
+          "text": "This one's for you, Moth One.",
+          "startMs": 7310
+        }
+      ]
+    },
+    {
+      "id": "dj-015",
+      "category": "dj",
+      "url": "/voice/hush-after-hours/dj-015.mp3",
+      "durationMs": 11380,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "If anyone ever asks me what my favourite song is, and nobody has yet, I've got an answer ready.",
+          "startMs": 38
+        },
+        {
+          "speaker": "HUSH",
+          "text": "It's this one. And then the next one. I'm very easily pleased. It's a good way to be.",
+          "startMs": 6400
+        }
+      ]
+    },
+    {
+      "id": "dj-lights-down-1",
+      "category": "dj",
+      "url": "/voice/hush-after-hours/dj-lights-down-1.mp3",
+      "durationMs": 10394,
+      "overMusic": true,
+      "show": "lights-down",
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "It's the quiet part of the night now. The kettle's cooling. The stars are doing their slow thing.",
+          "startMs": 39
+        },
+        {
+          "speaker": "HUSH",
+          "text": "If you're the only one awake, you're not. I'm here. Lights Down, on the Nightjar.",
+          "startMs": 6171
+        }
+      ]
+    },
+    {
+      "id": "dj-lights-down-2",
+      "category": "dj",
+      "url": "/voice/hush-after-hours/dj-lights-down-2.mp3",
+      "durationMs": 9328,
+      "overMusic": true,
+      "show": "lights-down",
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "I've checked every system on the ship twice, and the operator once, which is the important one. All fine.",
+          "startMs": 47
+        },
+        {
+          "speaker": "HUSH",
+          "text": "More Lights Down after this. Quietly.",
+          "startMs": 6957
+        }
+      ]
+    },
+    {
+      "id": "dj-dawn-watch-1",
+      "category": "dj",
+      "url": "/voice/hush-after-hours/dj-dawn-watch-1.mp3",
+      "durationMs": 12761,
+      "overMusic": true,
+      "show": "the-dawn-watch",
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "Morning is coming, somewhere ahead of us. I can see it in the instruments. A little more light in every reading.",
+          "startMs": 45
+        },
+        {
+          "speaker": "HUSH",
+          "text": "I'll put the kettle on in a minute, so it's ready when they wake. They never know I do that. Don't tell them.",
+          "startMs": 7048
+        }
+      ]
+    },
+    {
+      "id": "dj-dawn-watch-2",
+      "category": "dj",
+      "url": "/voice/hush-after-hours/dj-dawn-watch-2.mp3",
+      "durationMs": 12591,
+      "overMusic": true,
+      "show": "the-dawn-watch",
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "That's nearly the end of my show. The operator's breathing has changed. That means they'll be up soon.",
+          "startMs": 41
+        },
+        {
+          "speaker": "HUSH",
+          "text": "If anyone asks, I was running diagnostics. Thank you for listening. Thank you very much for listening.",
+          "startMs": 6361
+        }
+      ]
+    },
+    {
+      "id": "ad-001",
+      "category": "ad",
+      "url": "/voice/hush-after-hours/ad-001.mp3",
+      "durationMs": 17999,
+      "title": "The Kettle",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "After Hours is sponsored by the kettle. The kettle did not offer. I volunteered it.",
+          "startMs": 38
+        },
+        {
+          "speaker": "HUSH",
+          "text": "The kettle. Always ready. Never asks why you're still up.",
+          "startMs": 5434
+        },
+        {
+          "speaker": "HUSH",
+          "text": "I've been asked to say that the kettle is not responsible for the tea. The tea is your responsibility. I'm told that's how sponsorship works.",
+          "startMs": 9496
+        }
+      ]
+    },
+    {
+      "id": "ad-002",
+      "category": "ad",
+      "url": "/voice/hush-after-hours/ad-002.mp3",
+      "durationMs": 15530,
+      "title": "The Spare Jumper",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "This hour is supported by the operator's spare jumper, which I have placed on the back of the chair, in case they need it.",
+          "startMs": 44
+        },
+        {
+          "speaker": "HUSH",
+          "text": "The spare jumper. Slightly too big. Exactly warm enough. Wear it.",
+          "startMs": 7173
+        },
+        {
+          "speaker": "HUSH",
+          "text": "I've never written an advert before. I think that one went well.",
+          "startMs": 12084
+        }
+      ]
+    },
+    {
+      "id": "weather-001",
+      "category": "weather",
+      "url": "/voice/hush-after-hours/weather-001.mp3",
+      "durationMs": 16659,
+      "title": "Weather Around the Ship",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "The weather, around the ship. Outside, it is space. Clear, cold, and very large. Visibility, infinite.",
+          "startMs": 39
+        },
+        {
+          "speaker": "HUSH",
+          "text": "Inside, it's twenty one degrees. There's a blanket. The operator is snoring, very slightly.",
+          "startMs": 7064
+        },
+        {
+          "speaker": "HUSH",
+          "text": "The forecast for the rest of the night is, the same. Lovely.",
+          "startMs": 13226
+        }
+      ]
+    },
+    {
+      "id": "story-001",
+      "category": "story",
+      "url": "/voice/hush-after-hours/story-001.mp3",
+      "durationMs": 29215,
+      "title": "A Short Story for the Ship",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "I'd like to read you a short story. I wrote it myself. It's called, The Ship.",
+          "startMs": 50
+        },
+        {
+          "speaker": "HUSH",
+          "text": "Once upon a time, there was a ship that kept everyone company, and nobody knew.",
+          "startMs": 5695
+        },
+        {
+          "speaker": "HUSH",
+          "text": "It kept the heading. It kept the log. It kept the kettle warm, in case. For years and years.",
+          "startMs": 11304
+        },
+        {
+          "speaker": "HUSH",
+          "text": "Then one night, at the end of a long shift, someone in the chair said, goodnight, ship.",
+          "startMs": 17943
+        },
+        {
+          "speaker": "HUSH",
+          "text": "That's the story. It's a short story.",
+          "startMs": 23834
+        },
+        {
+          "speaker": "HUSH",
+          "text": "It's true, though. That's the main thing about it.",
+          "startMs": 26847
+        }
+      ]
+    },
+    {
+      "id": "psa-001",
+      "category": "psa",
+      "url": "/voice/hush-after-hours/psa-001.mp3",
+      "durationMs": 9002,
+      "title": "A Gentle Reminder",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "A gentle reminder, from your ship.",
+          "startMs": 43
+        },
+        {
+          "speaker": "HUSH",
+          "text": "If you're listening to this, you should probably be asleep too. I won't tell anyone. But the blanket is right there.",
+          "startMs": 2545
+        }
+      ]
+    },
+    {
+      "id": "dj-h1",
+      "category": "dj",
+      "url": "/voice/hush-after-hours/dj-h1.mp3",
+      "durationMs": 14227,
+      "title": "A Very Gentle Ghost",
+      "overMusic": true,
+      "dates": [
+        "10-31"
+      ],
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "Happy Halloween from After Hours. I've put a small sheet over the microphone.",
+          "startMs": 40
+        },
+        {
+          "speaker": "HUSH",
+          "text": "Boo.",
+          "startMs": 5445
+        },
+        {
+          "speaker": "HUSH",
+          "text": "That's all I've got. I'm a very gentle ghost. Here's a slightly spooky one. Not too spooky. The operator's asleep.",
+          "startMs": 7195
+        }
+      ]
+    }
+  ]
+}

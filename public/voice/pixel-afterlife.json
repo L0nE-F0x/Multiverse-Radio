@@ -20,7 +20,7 @@
       "id": "id-002",
       "category": "id",
       "url": "/voice/pixel-afterlife/id-002.mp3",
-      "durationMs": 5207,
+      "durationMs": 5188,
       "overMusic": true,
       "lines": [
         {
@@ -34,7 +34,7 @@
       "id": "id-003",
       "category": "id",
       "url": "/voice/pixel-afterlife/id-003.mp3",
-      "durationMs": 6215,
+      "durationMs": 6223,
       "overMusic": true,
       "lines": [
         {
@@ -48,7 +48,7 @@
       "id": "id-004",
       "category": "id",
       "url": "/voice/pixel-afterlife/id-004.mp3",
-      "durationMs": 6132,
+      "durationMs": 6138,
       "overMusic": true,
       "daypart": "night",
       "lines": [
@@ -63,7 +63,7 @@
       "id": "id-005",
       "category": "id",
       "url": "/voice/pixel-afterlife/id-005.mp3",
-      "durationMs": 6430,
+      "durationMs": 6421,
       "overMusic": true,
       "lines": [
         {
@@ -77,7 +77,7 @@
       "id": "id-006",
       "category": "id",
       "url": "/voice/pixel-afterlife/id-006.mp3",
-      "durationMs": 5345,
+      "durationMs": 5343,
       "overMusic": true,
       "lines": [
         {
@@ -192,7 +192,7 @@
       "id": "dj-005",
       "category": "dj",
       "url": "/voice/pixel-afterlife/dj-005.mp3",
-      "durationMs": 14293,
+      "durationMs": 14263,
       "overMusic": true,
       "lines": [
         {
@@ -208,12 +208,12 @@
         {
           "speaker": "Lag (Ghost)",
           "text": "No.",
-          "startMs": 11887
+          "startMs": 11885
         },
         {
           "speaker": "Player Two",
           "text": "He's great!",
-          "startMs": 12912
+          "startMs": 12910
         }
       ]
     },
@@ -401,7 +401,7 @@
       "id": "dj-016",
       "category": "dj",
       "url": "/voice/pixel-afterlife/dj-016.mp3",
-      "durationMs": 12832,
+      "durationMs": 12838,
       "overMusic": true,
       "lines": [
         {
@@ -468,6 +468,635 @@
           "speaker": "Bev",
           "text": "Oh, bless you. I'll keep looking.",
           "startMs": 26266
+        }
+      ]
+    },
+    {
+      "id": "attract-mode-open",
+      "category": "id",
+      "url": "/voice/pixel-afterlife/attract-mode-open.mp3",
+      "durationMs": 5778,
+      "title": "Attract Mode",
+      "overMusic": true,
+      "part": "open",
+      "show": "attract-mode",
+      "lines": [
+        {
+          "speaker": "Player Two",
+          "text": "It's Attract Mode, on Eight-Bit Afterlife. The arcade's closed. The cabinets are playing themselves.",
+          "startMs": 39
+        }
+      ]
+    },
+    {
+      "id": "attract-mode-01",
+      "category": "dj",
+      "url": "/voice/pixel-afterlife/attract-mode-01.mp3",
+      "durationMs": 10711,
+      "overMusic": true,
+      "show": "attract-mode",
+      "lines": [
+        {
+          "speaker": "Player Two",
+          "text": "In attract mode, the little characters run through the level on their own. Nobody's holding the controller. They don't mind. They're just remembering the way.",
+          "startMs": 42
+        },
+        {
+          "speaker": "Player Two",
+          "text": "It's kind of beautiful. Here's a song.",
+          "startMs": 8456
+        }
+      ]
+    },
+    {
+      "id": "attract-mode-02",
+      "category": "dj",
+      "url": "/voice/pixel-afterlife/attract-mode-02.mp3",
+      "durationMs": 12828,
+      "overMusic": true,
+      "show": "attract-mode",
+      "lines": [
+        {
+          "speaker": "Player Two",
+          "text": "Lag's still here, after hours. At the cabinet by the door.",
+          "startMs": 39
+        },
+        {
+          "speaker": "Lag (Ghost)",
+          "text": "Nearly had him.",
+          "startMs": 4056
+        },
+        {
+          "speaker": "Player Two",
+          "text": "Lag, buddy, it's attract mode. The game's playing itself. You're just watching.",
+          "startMs": 5572
+        },
+        {
+          "speaker": "Lag (Ghost)",
+          "text": "Nearly had him.",
+          "startMs": 10105
+        }
+      ]
+    },
+    {
+      "id": "after-school-special-open",
+      "category": "id",
+      "url": "/voice/pixel-afterlife/after-school-special-open.mp3",
+      "durationMs": 5282,
+      "title": "After School Special",
+      "overMusic": true,
+      "part": "open",
+      "show": "after-school-special",
+      "lines": [
+        {
+          "speaker": "Player Two",
+          "text": "It's the After School Special! The arcade is packed! Player One, if you're out there, now's a great time!",
+          "startMs": 41
+        }
+      ]
+    },
+    {
+      "id": "after-school-special-01",
+      "category": "dj",
+      "url": "/voice/pixel-afterlife/after-school-special-01.mp3",
+      "durationMs": 10255,
+      "overMusic": true,
+      "show": "after-school-special",
+      "lines": [
+        {
+          "speaker": "Player Two",
+          "text": "Ghosts everywhere! A queue at every cabinet! And somebody saw AAA today, at the high score machine!",
+          "startMs": 39
+        },
+        {
+          "speaker": "Player Two",
+          "text": "They said he had a very kind face, and couldn't work the letters. We love you, AAA!",
+          "startMs": 5792
+        }
+      ]
+    },
+    {
+      "id": "after-school-special-02",
+      "category": "dj",
+      "url": "/voice/pixel-afterlife/after-school-special-02.mp3",
+      "durationMs": 7558,
+      "overMusic": true,
+      "show": "after-school-special",
+      "lines": [
+        {
+          "speaker": "Player Two",
+          "text": "Two-player mode is free this hour! Bring a friend! And if you haven't got one, I'll be your Player Two!",
+          "startMs": 38
+        },
+        {
+          "speaker": "Player Two",
+          "text": "That's literally my name! I'm qualified!",
+          "startMs": 5190
+        }
+      ]
+    },
+    {
+      "id": "dj-open-01",
+      "category": "dj",
+      "url": "/voice/pixel-afterlife/dj-open-01.mp3",
+      "durationMs": 3071,
+      "overMusic": true,
+      "part": "open",
+      "kit": "dj",
+      "lines": [
+        {
+          "speaker": "Player Two",
+          "text": "Eight-Bit Afterlife! Still here! Still waiting! Still great!",
+          "startMs": 38
+        }
+      ]
+    },
+    {
+      "id": "dj-open-02",
+      "category": "dj",
+      "url": "/voice/pixel-afterlife/dj-open-02.mp3",
+      "durationMs": 4115,
+      "overMusic": true,
+      "part": "open",
+      "kit": "dj",
+      "lines": [
+        {
+          "speaker": "Player Two",
+          "text": "Level complete! That was a good one!",
+          "startMs": 39
+        }
+      ]
+    },
+    {
+      "id": "dj-open-03",
+      "category": "dj",
+      "url": "/voice/pixel-afterlife/dj-open-03.mp3",
+      "durationMs": 3328,
+      "overMusic": true,
+      "part": "open",
+      "kit": "dj",
+      "lines": [
+        {
+          "speaker": "Player Two",
+          "text": "Extra life! Okay! Back to the show!",
+          "startMs": 1050
+        }
+      ]
+    },
+    {
+      "id": "dj-open-04",
+      "category": "dj",
+      "url": "/voice/pixel-afterlife/dj-open-04.mp3",
+      "durationMs": 3106,
+      "overMusic": true,
+      "daypart": "night",
+      "part": "open",
+      "kit": "dj",
+      "lines": [
+        {
+          "speaker": "Player Two",
+          "text": "It's late in the arcade. The carpet's glowing. Hi.",
+          "startMs": 39
+        }
+      ]
+    },
+    {
+      "id": "dj-body-01",
+      "category": "dj",
+      "url": "/voice/pixel-afterlife/dj-body-01.mp3",
+      "durationMs": 6123,
+      "overMusic": true,
+      "part": "body",
+      "kit": "dj",
+      "lines": [
+        {
+          "speaker": "Player Two",
+          "text": "The Insert Coins have a new track out! They recorded it inside a coin slot! It's very short, and it sounds like money!",
+          "startMs": 42
+        }
+      ]
+    },
+    {
+      "id": "dj-body-02",
+      "category": "dj",
+      "url": "/voice/pixel-afterlife/dj-body-02.mp3",
+      "durationMs": 8807,
+      "overMusic": true,
+      "part": "body",
+      "kit": "dj",
+      "lines": [
+        {
+          "speaker": "Player Two",
+          "text": "Lag update! Lag has lost again!",
+          "startMs": 41
+        },
+        {
+          "speaker": "Lag (Ghost)",
+          "text": "I had him.",
+          "startMs": 2531
+        },
+        {
+          "speaker": "Player Two",
+          "text": "He did not have him! That's his four hundred and first continue! That's a record! That's a kind of winning!",
+          "startMs": 3886
+        }
+      ]
+    },
+    {
+      "id": "dj-body-03",
+      "category": "dj",
+      "url": "/voice/pixel-afterlife/dj-body-03.mp3",
+      "durationMs": 7175,
+      "overMusic": true,
+      "part": "body",
+      "kit": "dj",
+      "lines": [
+        {
+          "speaker": "Player Two",
+          "text": "Sprite Flicker played a live set tonight, but she flickered so much that half the audience only saw every other song. They say it was the best half!",
+          "startMs": 39
+        }
+      ]
+    },
+    {
+      "id": "dj-body-04",
+      "category": "dj",
+      "url": "/voice/pixel-afterlife/dj-body-04.mp3",
+      "durationMs": 7617,
+      "overMusic": true,
+      "part": "body",
+      "kit": "dj",
+      "lines": [
+        {
+          "speaker": "Player Two",
+          "text": "The cleaner ghost has finished mopping the pixel he's been mopping since launch day! It's very shiny! He's moved on to the next pixel! We're all so proud of him!",
+          "startMs": 40
+        }
+      ]
+    },
+    {
+      "id": "dj-body-05",
+      "category": "dj",
+      "url": "/voice/pixel-afterlife/dj-body-05.mp3",
+      "durationMs": 8064,
+      "overMusic": true,
+      "part": "body",
+      "kit": "dj",
+      "lines": [
+        {
+          "speaker": "Player Two",
+          "text": "Save State have a new album, and it's exactly the same as their last album, because they saved right before the bad bit. Smart band. Very smart band.",
+          "startMs": 39
+        }
+      ]
+    },
+    {
+      "id": "dj-body-06",
+      "category": "dj",
+      "url": "/voice/pixel-afterlife/dj-body-06.mp3",
+      "durationMs": 9785,
+      "overMusic": true,
+      "part": "body",
+      "kit": "dj",
+      "lines": [
+        {
+          "speaker": "Player Two",
+          "text": "Somebody asked what I'll do if Player One ever presses start. And I don't know! I've never thought that far!",
+          "startMs": 38
+        },
+        {
+          "speaker": "Player Two",
+          "text": "I think I'll just say hi. I've been holding your controller. It's warm.",
+          "startMs": 5958
+        }
+      ]
+    },
+    {
+      "id": "dj-close-01",
+      "category": "dj",
+      "url": "/voice/pixel-afterlife/dj-close-01.mp3",
+      "durationMs": 2439,
+      "overMusic": true,
+      "part": "close",
+      "kit": "dj",
+      "lines": [
+        {
+          "speaker": "Player Two",
+          "text": "Here's a bop! Press play! Well, I'll press play!",
+          "startMs": 48
+        }
+      ]
+    },
+    {
+      "id": "dj-close-02",
+      "category": "dj",
+      "url": "/voice/pixel-afterlife/dj-close-02.mp3",
+      "durationMs": 3786,
+      "overMusic": true,
+      "part": "close",
+      "kit": "dj",
+      "lines": [
+        {
+          "speaker": "Player Two",
+          "text": "Next track loading! Loading! Loaded! Ready? Ready!",
+          "startMs": 40
+        }
+      ]
+    },
+    {
+      "id": "dj-close-03",
+      "category": "dj",
+      "url": "/voice/pixel-afterlife/dj-close-03.mp3",
+      "durationMs": 2896,
+      "overMusic": true,
+      "part": "close",
+      "kit": "dj",
+      "lines": [
+        {
+          "speaker": "Player Two",
+          "text": "Here's another one! Respawning now! Three! Two! One!",
+          "startMs": 49
+        }
+      ]
+    },
+    {
+      "id": "dj-close-04",
+      "category": "dj",
+      "url": "/voice/pixel-afterlife/dj-close-04.mp3",
+      "durationMs": 2926,
+      "overMusic": true,
+      "part": "close",
+      "kit": "dj",
+      "lines": [
+        {
+          "speaker": "Player Two",
+          "text": "Insert coin! Just kidding! It's free! Here's a song!",
+          "startMs": 40
+        }
+      ]
+    },
+    {
+      "id": "greg-comes-home-06",
+      "category": "story",
+      "url": "/voice/pixel-afterlife/greg-comes-home-06.mp3",
+      "durationMs": 68117,
+      "title": "Greg Comes Home, Part Six: Player One",
+      "overMusic": false,
+      "serial": {
+        "id": "greg-comes-home",
+        "episode": 6
+      },
+      "lines": [
+        {
+          "speaker": "Player Two",
+          "text": "Big news, arcade! The shadow from level four! Greg! Best player we've ever had! And today he's leaving!",
+          "startMs": 37
+        },
+        {
+          "speaker": "Greg, a Shadow",
+          "text": "Sorry, Player Two.",
+          "startMs": 5756
+        },
+        {
+          "speaker": "Player Two",
+          "text": "Don't be sorry! Be great! Okay, I'm a bit sad. Greg, buddy, can I ask you something?",
+          "startMs": 7733
+        },
+        {
+          "speaker": "Greg, a Shadow",
+          "text": "Go on.",
+          "startMs": 12588
+        },
+        {
+          "speaker": "Player Two",
+          "text": "Would you be my Player One? I've been holding the controller since nineteen eighty-seven. You'd just have to press start.",
+          "startMs": 13694
+        },
+        {
+          "speaker": "Greg, a Shadow",
+          "text": "I can't. I'm already somebody's. He's been waiting too.",
+          "startMs": 20804
+        },
+        {
+          "speaker": "Player Two",
+          "text": "Oh.",
+          "startMs": 25336
+        },
+        {
+          "speaker": "Player Two",
+          "text": "Waiting. Yeah. I know about waiting.",
+          "startMs": 27062
+        },
+        {
+          "speaker": "Lag (Ghost)",
+          "text": "He's going home, Two. Let him go home.",
+          "startMs": 29477
+        },
+        {
+          "speaker": "Player Two",
+          "text": "Lag's right! Lag's never right! But he's right! Greg, how are you getting there?",
+          "startMs": 32699
+        },
+        {
+          "speaker": "Greg, a Shadow",
+          "text": "I don't know. It's a long way to the eastern Overlap.",
+          "startMs": 36855
+        },
+        {
+          "speaker": "Player Two",
+          "text": "Level nine! At the end of level nine there's a door! Nobody uses it, because nobody ever gets to level nine! It comes out through the back of a bathroom mirror!",
+          "startMs": 40449
+        },
+        {
+          "speaker": "Player Two",
+          "text": "The password's got a lot of B's in it. And a heart. Try the heart!",
+          "startMs": 48838
+        },
+        {
+          "speaker": "Greg, a Shadow",
+          "text": "Thank you, Player Two.",
+          "startMs": 52704
+        },
+        {
+          "speaker": "Player Two",
+          "text": "Hey, Greg. When you get there, tell him somebody else was waiting for somebody too. Tell him it's worth it.",
+          "startMs": 54685
+        },
+        {
+          "speaker": "Player Two",
+          "text": "He's in! He's through! He's gone!",
+          "startMs": 62136
+        },
+        {
+          "speaker": "Player Two",
+          "text": "Okay. Here's a song. Not a sad one. A medium one.",
+          "startMs": 64911
+        }
+      ]
+    },
+    {
+      "id": "teodor-is-heard-07",
+      "category": "story",
+      "url": "/voice/pixel-afterlife/teodor-is-heard-07.mp3",
+      "durationMs": 64640,
+      "title": "Teodor Is Heard, Part Seven: Press Start",
+      "overMusic": false,
+      "serial": {
+        "id": "teodor-is-heard",
+        "episode": 7
+      },
+      "lines": [
+        {
+          "speaker": "Player Two",
+          "text": "Something's coming in on the arcade's link cable! From really far away! Hello?",
+          "startMs": 39
+        },
+        {
+          "speaker": "Teodor, Relay Four",
+          "text": "This is Relay Four. Is anyone receiving this.",
+          "startMs": 4430
+        },
+        {
+          "speaker": "Player Two",
+          "text": "Teodor! Teodor from the news! It's Player Two! Can you hear me?",
+          "startMs": 7604
+        },
+        {
+          "speaker": "Teodor, Relay Four",
+          "text": "In bits. I hear in bits, now. Someone said you've been waiting since nineteen eighty-seven.",
+          "startMs": 11159
+        },
+        {
+          "speaker": "Player Two",
+          "text": "For Player One! Yeah! How long have you been waiting?",
+          "startMs": 16216
+        },
+        {
+          "speaker": "Teodor, Relay Four",
+          "text": "Eleven years.",
+          "startMs": 19154
+        },
+        {
+          "speaker": "Player Two",
+          "text": "Rookie!",
+          "startMs": 20734
+        },
+        {
+          "speaker": "Player Two",
+          "text": "Sorry. That was mean. It's a waiting joke. We do waiting jokes here.",
+          "startMs": 22408
+        },
+        {
+          "speaker": "Teodor, Relay Four",
+          "text": "I asked the same question every night for eleven years. Is anyone receiving this. And now people are answering, and I don't know what to say.",
+          "startMs": 26564
+        },
+        {
+          "speaker": "Player Two",
+          "text": "Can I give you a tip? From a professional waiter?",
+          "startMs": 34307
+        },
+        {
+          "speaker": "Teodor, Relay Four",
+          "text": "Please.",
+          "startMs": 37256
+        },
+        {
+          "speaker": "Player Two",
+          "text": "On the start screen, it says, press start. And you wait for somebody to press it. But sometimes, you have to press it yourself.",
+          "startMs": 38478
+        },
+        {
+          "speaker": "Player Two",
+          "text": "Stop asking if anyone's there! Assume they are! Tell them something! Tell them about your day!",
+          "startMs": 45705
+        },
+        {
+          "speaker": "Teodor, Relay Four",
+          "text": "This is Relay Four.",
+          "startMs": 51564
+        },
+        {
+          "speaker": "Teodor, Relay Four",
+          "text": "Today I mended the fence. Captain came at three. He stole a biscuit. It was a good biscuit.",
+          "startMs": 53875
+        },
+        {
+          "speaker": "Player Two",
+          "text": "That's it! That's a game! You've started!",
+          "startMs": 59550
+        },
+        {
+          "speaker": "Lag (Ghost)",
+          "text": "Nearly had him.",
+          "startMs": 61912
+        },
+        {
+          "speaker": "Player Two",
+          "text": "Lag! Not now!",
+          "startMs": 63427
+        }
+      ]
+    },
+    {
+      "id": "halloween-01",
+      "category": "dj",
+      "url": "/voice/pixel-afterlife/halloween-01.mp3",
+      "durationMs": 10118,
+      "title": "Ghosts Dressed as People",
+      "overMusic": true,
+      "part": "body",
+      "kit": "dj",
+      "dates": [
+        "10-24",
+        "10-25",
+        "10-26",
+        "10-27",
+        "10-28",
+        "10-29",
+        "10-30",
+        "10-31"
+      ],
+      "lines": [
+        {
+          "speaker": "Player Two",
+          "text": "It's Halloween in the arcade, and all the ghosts have dressed up as people! Lag's come as a guy who wins!",
+          "startMs": 39
+        },
+        {
+          "speaker": "Lag (Ghost)",
+          "text": "It's a costume.",
+          "startMs": 5774
+        },
+        {
+          "speaker": "Player Two",
+          "text": "It's a great costume, Lag! Nobody believes it!",
+          "startMs": 7319
+        }
+      ]
+    },
+    {
+      "id": "halloween-02",
+      "category": "id",
+      "url": "/voice/pixel-afterlife/halloween-02.mp3",
+      "durationMs": 9363,
+      "title": "Eight-Bit Afterlife, Halloween",
+      "overMusic": true,
+      "dates": [
+        "10-24",
+        "10-25",
+        "10-26",
+        "10-27",
+        "10-28",
+        "10-29",
+        "10-30",
+        "10-31"
+      ],
+      "lines": [
+        {
+          "speaker": "Player Two",
+          "text": "Eight-Bit Afterlife! Halloween! Everybody here is already a ghost! Easiest costume ever!",
+          "startMs": 40
         }
       ]
     }

@@ -1,0 +1,893 @@
+{
+  "version": 1,
+  "station": "lower-hollow",
+  "clips": [
+    {
+      "id": "id-001",
+      "category": "id",
+      "url": "/voice/lower-hollow/id-001.mp3",
+      "durationMs": 7298,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Maureen Pettigrew",
+          "text": "You're listening to Lower Hollow Community Radio. Lost pets, bake sales, and the hole.",
+          "startMs": 50
+        }
+      ]
+    },
+    {
+      "id": "id-002",
+      "category": "id",
+      "url": "/voice/lower-hollow/id-002.mp3",
+      "durationMs": 6652,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Maureen Pettigrew",
+          "text": "This is Lower Hollow Community Radio. If you hear your name called from the hole, please don't answer. It's not rude. It's policy.",
+          "startMs": 42
+        }
+      ]
+    },
+    {
+      "id": "id-003",
+      "category": "id",
+      "url": "/voice/lower-hollow/id-003.mp3",
+      "durationMs": 4923,
+      "overMusic": true,
+      "daypart": "morning",
+      "lines": [
+        {
+          "speaker": "Maureen Pettigrew",
+          "text": "Good morning, Lower Hollow. The kettle's on, the noticeboard's full, and the hole is where we left it.",
+          "startMs": 38
+        }
+      ]
+    },
+    {
+      "id": "id-004",
+      "category": "id",
+      "url": "/voice/lower-hollow/id-004.mp3",
+      "durationMs": 6393,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Maureen Pettigrew",
+          "text": "Lower Hollow Community Radio, eighty nine point seven. Population, today: fluctuating. Welcome, whoever's new.",
+          "startMs": 45
+        }
+      ]
+    },
+    {
+      "id": "id-005",
+      "category": "id",
+      "url": "/voice/lower-hollow/id-005.mp3",
+      "durationMs": 7785,
+      "overMusic": true,
+      "daypart": "night",
+      "lines": [
+        {
+          "speaker": "Maureen Pettigrew",
+          "text": "Lower Hollow Community Radio, overnight. Maureen here. Somebody has to keep an eye on things.",
+          "startMs": 42
+        }
+      ]
+    },
+    {
+      "id": "dj-001",
+      "category": "dj",
+      "url": "/voice/lower-hollow/dj-001.mp3",
+      "durationMs": 12295,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Maureen Pettigrew",
+          "text": "People ask me, Maureen, what's in the hole? And I say, it's not my place. I'm a volunteer. I do the notices, the pets and the birthdays. Councillor Dibbs does the hole.",
+          "startMs": 37
+        },
+        {
+          "speaker": "Maureen Pettigrew",
+          "text": "That's how we've always done it, and it's worked very well. Apart from Tuesday.",
+          "startMs": 8522
+        }
+      ]
+    },
+    {
+      "id": "dj-002",
+      "category": "dj",
+      "url": "/voice/lower-hollow/dj-002.mp3",
+      "durationMs": 15977,
+      "overMusic": true,
+      "daypart": "day",
+      "lines": [
+        {
+          "speaker": "Maureen Pettigrew",
+          "text": "Something came up out of the hole this afternoon, outside the post office. Large. Pale. Quite slow. Everybody did the sensible thing, which was to say nothing and carry on queueing.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Maureen Pettigrew",
+          "text": "It went back down at about four. The post office would like to remind customers that it closes at half past five regardless.",
+          "startMs": 9632
+        }
+      ]
+    },
+    {
+      "id": "dj-003",
+      "category": "dj",
+      "url": "/voice/lower-hollow/dj-003.mp3",
+      "durationMs": 9450,
+      "title": "For the Night Shift",
+      "overMusic": true,
+      "daypart": "night",
+      "lines": [
+        {
+          "speaker": "Maureen Pettigrew",
+          "text": "Hello to the night operator on that ship that drifts over the Hollow at about this time. We can see your little light from the rim.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Maureen Pettigrew",
+          "text": "Mind the hole, dear. It's bigger from above. Everything is.",
+          "startMs": 6429
+        }
+      ]
+    },
+    {
+      "id": "dj-004",
+      "category": "dj",
+      "url": "/voice/lower-hollow/dj-004.mp3",
+      "durationMs": 14119,
+      "title": "Biscuit",
+      "overMusic": true,
+      "daypart": "morning",
+      "lines": [
+        {
+          "speaker": "Maureen Pettigrew",
+          "text": "An update on Biscuit, Mister Ainsley's spaniel. Biscuit is at the hole. Biscuit is always at the hole. He isn't lost. Please stop bringing him back. He's busy.",
+          "startMs": 43
+        },
+        {
+          "speaker": "Maureen Pettigrew",
+          "text": "He's been watching the same spot since the summer, wagging very slightly. Whatever's down there, Biscuit thinks it's a good boy.",
+          "startMs": 8081
+        }
+      ]
+    },
+    {
+      "id": "dj-005",
+      "category": "dj",
+      "url": "/voice/lower-hollow/dj-005.mp3",
+      "durationMs": 13715,
+      "title": "A Shadow on Rim Lane",
+      "overMusic": true,
+      "daypart": "evening",
+      "lines": [
+        {
+          "speaker": "Maureen Pettigrew",
+          "text": "Mrs Crabtree on Rim Lane reports a shadow sitting on her garden wall each evening. No person attached. Wears a little hat. Very polite. Leaves before the street lamps come on.",
+          "startMs": 40
+        },
+        {
+          "speaker": "Maureen Pettigrew",
+          "text": "She's given it a cushion. Hollis, dear, if he's yours, he's fine. He likes the view.",
+          "startMs": 9638
+        }
+      ]
+    },
+    {
+      "id": "notice-open-001",
+      "category": "psa",
+      "url": "/voice/lower-hollow/notice-open-001.mp3",
+      "durationMs": 4788,
+      "overMusic": true,
+      "part": "open",
+      "kit": "notices",
+      "lines": [
+        {
+          "speaker": "Maureen Pettigrew",
+          "text": "And now, the community noticeboard. If it's pinned up at the post office, you'll hear it here first.",
+          "startMs": 39
+        }
+      ]
+    },
+    {
+      "id": "notice-open-002",
+      "category": "psa",
+      "url": "/voice/lower-hollow/notice-open-002.mp3",
+      "durationMs": 4603,
+      "overMusic": true,
+      "part": "open",
+      "kit": "notices",
+      "lines": [
+        {
+          "speaker": "Maureen Pettigrew",
+          "text": "Time for the notices. Pen and paper ready, please. Not the blue pen. You know who you are.",
+          "startMs": 37
+        }
+      ]
+    },
+    {
+      "id": "notice-body-001",
+      "category": "psa",
+      "url": "/voice/lower-hollow/notice-body-001.mp3",
+      "durationMs": 14398,
+      "title": "Bake Sale",
+      "overMusic": true,
+      "part": "body",
+      "kit": "notices",
+      "lines": [
+        {
+          "speaker": "Maureen Pettigrew",
+          "text": "The Hollow Bakers' Circle bake sale is this Saturday, on the green. Lemon drizzle, flapjacks, and Edna's fruit cake, which has never once been finished.",
+          "startMs": 36
+        },
+        {
+          "speaker": "Maureen Pettigrew",
+          "text": "A reminder. Please don't feed anything to the hole. Last year it took a whole Victoria sponge, and we had a very awkward week.",
+          "startMs": 8098
+        }
+      ]
+    },
+    {
+      "id": "notice-body-002",
+      "category": "psa",
+      "url": "/voice/lower-hollow/notice-body-002.mp3",
+      "durationMs": 13327,
+      "title": "Lost: Duchess",
+      "overMusic": true,
+      "part": "body",
+      "kit": "notices",
+      "lines": [
+        {
+          "speaker": "Maureen Pettigrew",
+          "text": "Lost. A grey tabby called Duchess, missing from Rim Lane since Monday. Answers to Duchess, or to the sound of a tin opening.",
+          "startMs": 44
+        },
+        {
+          "speaker": "Maureen Pettigrew",
+          "text": "If you see her, please don't chase her towards the edge. Just open a tin and wait. She'll come. They always come for a tin.",
+          "startMs": 7131
+        }
+      ]
+    },
+    {
+      "id": "notice-body-003",
+      "category": "psa",
+      "url": "/voice/lower-hollow/notice-body-003.mp3",
+      "durationMs": 10492,
+      "title": "Found: An Umbrella",
+      "overMusic": true,
+      "part": "body",
+      "kit": "notices",
+      "lines": [
+        {
+          "speaker": "Maureen Pettigrew",
+          "text": "Found. One black umbrella, which came up out of the hole on Tuesday morning, perfectly dry, and opened itself on the green.",
+          "startMs": 48
+        },
+        {
+          "speaker": "Maureen Pettigrew",
+          "text": "It's at the post office. If it's yours, please collect it. Please don't explain.",
+          "startMs": 6531
+        }
+      ]
+    },
+    {
+      "id": "notice-body-004",
+      "category": "psa",
+      "url": "/voice/lower-hollow/notice-body-004.mp3",
+      "durationMs": 13586,
+      "title": "The Choir",
+      "overMusic": true,
+      "part": "body",
+      "kit": "notices",
+      "lines": [
+        {
+          "speaker": "Maureen Pettigrew",
+          "text": "The Lower Hollow choir meets on Thursdays at seven, in the church hall. New voices very welcome, especially tenors.",
+          "startMs": 39
+        },
+        {
+          "speaker": "Maureen Pettigrew",
+          "text": "If you hear an extra voice during the low hymns, coming from somewhere below, carry on. Don't harmonise with it. It only encourages it.",
+          "startMs": 6526
+        }
+      ]
+    },
+    {
+      "id": "notice-body-005",
+      "category": "psa",
+      "url": "/voice/lower-hollow/notice-body-005.mp3",
+      "durationMs": 13809,
+      "title": "Jumble Sale",
+      "overMusic": true,
+      "part": "body",
+      "kit": "notices",
+      "lines": [
+        {
+          "speaker": "Maureen Pettigrew",
+          "text": "Jumble sale at the Scout hut on Sunday. Books, toys, bric-a-brac, and a quantity of single shoes, all left feet, which came up out of the hole over the summer.",
+          "startMs": 41
+        },
+        {
+          "speaker": "Maureen Pettigrew",
+          "text": "If you've lost a left shoe, it may well be here. If you've lost a right shoe, we can't help you, and frankly, we're worried.",
+          "startMs": 8136
+        }
+      ]
+    },
+    {
+      "id": "notice-body-006",
+      "category": "psa",
+      "url": "/voice/lower-hollow/notice-body-006.mp3",
+      "durationMs": 14174,
+      "title": "Birthdays",
+      "overMusic": true,
+      "part": "body",
+      "kit": "notices",
+      "lines": [
+        {
+          "speaker": "Maureen Pettigrew",
+          "text": "Happy birthday to Mrs Ivy Cole of Rim Cottages, who is ninety two today. Ivy has lived on the rim all her life.",
+          "startMs": 45
+        },
+        {
+          "speaker": "Maureen Pettigrew",
+          "text": "She says the secret to a long life is a boiled egg every morning, and never looking down for more than a minute. Happy birthday, Ivy. Have an egg.",
+          "startMs": 6779
+        }
+      ]
+    },
+    {
+      "id": "notice-body-007",
+      "category": "psa",
+      "url": "/voice/lower-hollow/notice-body-007.mp3",
+      "durationMs": 10440,
+      "title": "Found: A Letter",
+      "overMusic": true,
+      "part": "body",
+      "kit": "notices",
+      "lines": [
+        {
+          "speaker": "Maureen Pettigrew",
+          "text": "Found on the green. A letter, addressed to the Hole Committee, in very neat handwriting, with no stamp. It came up on the wind.",
+          "startMs": 49
+        },
+        {
+          "speaker": "Maureen Pettigrew",
+          "text": "Councillor Dibbs has it. He's read it. He's gone very quiet. Thank you.",
+          "startMs": 6772
+        }
+      ]
+    },
+    {
+      "id": "notice-close-001",
+      "category": "psa",
+      "url": "/voice/lower-hollow/notice-close-001.mp3",
+      "durationMs": 5222,
+      "overMusic": true,
+      "part": "close",
+      "kit": "notices",
+      "lines": [
+        {
+          "speaker": "Maureen Pettigrew",
+          "text": "That's the noticeboard. If you've a notice of your own, pop it through my door. My door, please. Not the hole.",
+          "startMs": 39
+        }
+      ]
+    },
+    {
+      "id": "notice-close-002",
+      "category": "psa",
+      "url": "/voice/lower-hollow/notice-close-002.mp3",
+      "durationMs": 4635,
+      "overMusic": true,
+      "part": "close",
+      "kit": "notices",
+      "lines": [
+        {
+          "speaker": "Maureen Pettigrew",
+          "text": "And that's all the notices for now. Be good to each other, and stay on the town side of the rim.",
+          "startMs": 39
+        }
+      ]
+    },
+    {
+      "id": "council-open-001",
+      "category": "news",
+      "url": "/voice/lower-hollow/council-open-001.mp3",
+      "durationMs": 6566,
+      "overMusic": false,
+      "part": "open",
+      "kit": "council",
+      "lines": [
+        {
+          "speaker": "Maureen Pettigrew",
+          "text": "And now the council update, with the chair of the Hole Committee, Councillor Dibbs.",
+          "startMs": 441
+        },
+        {
+          "speaker": "Councillor Dibbs",
+          "text": "Thank you, Maureen.",
+          "startMs": 4521
+        }
+      ]
+    },
+    {
+      "id": "council-open-002",
+      "category": "news",
+      "url": "/voice/lower-hollow/council-open-002.mp3",
+      "durationMs": 5384,
+      "overMusic": false,
+      "part": "open",
+      "kit": "council",
+      "lines": [
+        {
+          "speaker": "Councillor Dibbs",
+          "text": "Good evening. Councillor Dibbs, chair of the Hole Committee, with the council update.",
+          "startMs": 437
+        }
+      ]
+    },
+    {
+      "id": "council-body-001",
+      "category": "news",
+      "url": "/voice/lower-hollow/council-body-001.mp3",
+      "durationMs": 15815,
+      "title": "The Fence",
+      "overMusic": false,
+      "part": "body",
+      "kit": "council",
+      "lines": [
+        {
+          "speaker": "Councillor Dibbs",
+          "text": "The committee met on Thursday. Item one. The hole. The committee noted the hole.",
+          "startMs": 440
+        },
+        {
+          "speaker": "Councillor Dibbs",
+          "text": "Item two. The fence around the hole. The committee noted that the fence is now also, somewhat, in the hole. A new fence has been ordered. It will be placed slightly further back, as is customary.",
+          "startMs": 5032
+        }
+      ]
+    },
+    {
+      "id": "council-body-002",
+      "category": "news",
+      "url": "/voice/lower-hollow/council-body-002.mp3",
+      "durationMs": 17431,
+      "title": "Residents' Questions",
+      "overMusic": false,
+      "part": "body",
+      "kit": "council",
+      "lines": [
+        {
+          "speaker": "Councillor Dibbs",
+          "text": "Several residents have asked the committee what the hole is. The committee thanks residents for their interest. The committee has been asked this question every week for thirty years.",
+          "startMs": 440
+        },
+        {
+          "speaker": "Councillor Dibbs",
+          "text": "And the committee is pleased to say that it has, after careful consideration, once again decided to move on to item three.",
+          "startMs": 9857
+        }
+      ]
+    },
+    {
+      "id": "council-body-003",
+      "category": "news",
+      "url": "/voice/lower-hollow/council-body-003.mp3",
+      "durationMs": 14395,
+      "title": "The By-Law on Gifts",
+      "overMusic": false,
+      "part": "body",
+      "kit": "council",
+      "lines": [
+        {
+          "speaker": "Councillor Dibbs",
+          "text": "A reminder of the by-law concerning objects thrown into the hole. Anything thrown into the hole becomes, in law, a gift.",
+          "startMs": 436
+        },
+        {
+          "speaker": "Councillor Dibbs",
+          "text": "The hole is not obliged to send a thank-you note. It has, on four occasions, sent one anyway. These are on file.",
+          "startMs": 7554
+        }
+      ]
+    },
+    {
+      "id": "council-body-004",
+      "category": "news",
+      "url": "/voice/lower-hollow/council-body-004.mp3",
+      "durationMs": 20466,
+      "title": "The Microphone",
+      "overMusic": false,
+      "part": "body",
+      "kit": "council",
+      "lines": [
+        {
+          "speaker": "Councillor Dibbs",
+          "text": "The proposal from the Lower Hollow Radio Club, to lower a microphone into the hole, has been rejected. The committee wishes to reassure the radio club that this is not personal.",
+          "startMs": 436
+        },
+        {
+          "speaker": "Councillor Dibbs",
+          "text": "It is simply that the last time a microphone was lowered, in nineteen eighty one, it was returned. With a recording on it. Which the committee has listened to, and will not be discussing.",
+          "startMs": 10376
+        }
+      ]
+    },
+    {
+      "id": "council-body-005",
+      "category": "news",
+      "url": "/voice/lower-hollow/council-body-005.mp3",
+      "durationMs": 12949,
+      "title": "The Annual Inspection",
+      "overMusic": false,
+      "part": "body",
+      "kit": "council",
+      "lines": [
+        {
+          "speaker": "Councillor Dibbs",
+          "text": "The annual hole inspection. The inspector lowered himself to the usual depth, took the usual readings, and came back up with the usual expression.",
+          "startMs": 446
+        },
+        {
+          "speaker": "Councillor Dibbs",
+          "text": "He has submitted his report. The report reads, in full: yes. Thank you.",
+          "startMs": 8530
+        }
+      ]
+    },
+    {
+      "id": "council-close-001",
+      "category": "news",
+      "url": "/voice/lower-hollow/council-close-001.mp3",
+      "durationMs": 5475,
+      "overMusic": false,
+      "part": "close",
+      "kit": "council",
+      "lines": [
+        {
+          "speaker": "Councillor Dibbs",
+          "text": "That concludes the council update.",
+          "startMs": 441
+        },
+        {
+          "speaker": "Councillor Dibbs",
+          "text": "The hole remains. Thank you.",
+          "startMs": 3090
+        }
+      ]
+    },
+    {
+      "id": "council-close-002",
+      "category": "news",
+      "url": "/voice/lower-hollow/council-close-002.mp3",
+      "durationMs": 6583,
+      "overMusic": false,
+      "part": "close",
+      "kit": "council",
+      "lines": [
+        {
+          "speaker": "Councillor Dibbs",
+          "text": "The next meeting is on Thursday, in the church hall. Please bring a chair. Not one of the old ones. They lean.",
+          "startMs": 436
+        }
+      ]
+    },
+    {
+      "id": "call-001",
+      "category": "call",
+      "url": "/voice/lower-hollow/call-001.mp3",
+      "durationMs": 37531,
+      "title": "Ron and the Fairy Lights",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Maureen Pettigrew",
+          "text": "Lower Hollow Community Radio, you're on the air.",
+          "startMs": 2850
+        },
+        {
+          "speaker": "Ron, Rim Lane",
+          "text": "Hello, Maureen. It's Ron, from Rim Lane.",
+          "startMs": 5718
+        },
+        {
+          "speaker": "Maureen Pettigrew",
+          "text": "Hello, Ron. How's the knee?",
+          "startMs": 8262
+        },
+        {
+          "speaker": "Ron, Rim Lane",
+          "text": "Better, thanks. Maureen, I want to put fairy lights up round the hole for the winter. All the way round.",
+          "startMs": 10216
+        },
+        {
+          "speaker": "Maureen Pettigrew",
+          "text": "That's a lot of lights, Ron.",
+          "startMs": 15381
+        },
+        {
+          "speaker": "Ron, Rim Lane",
+          "text": "I've got a lot of lights. Is it allowed?",
+          "startMs": 17242
+        },
+        {
+          "speaker": "Maureen Pettigrew",
+          "text": "I'll ask. Councillor?",
+          "startMs": 19457
+        },
+        {
+          "speaker": "Councillor Dibbs",
+          "text": "The committee has no objection to lights. The committee asks only that you don't run the cable over the edge.",
+          "startMs": 21263
+        },
+        {
+          "speaker": "Ron, Rim Lane",
+          "text": "Why not?",
+          "startMs": 27158
+        },
+        {
+          "speaker": "Councillor Dibbs",
+          "text": "Because the last time, something plugged itself in.",
+          "startMs": 28265
+        },
+        {
+          "speaker": "Ron, Rim Lane",
+          "text": "Right.",
+          "startMs": 32156
+        },
+        {
+          "speaker": "Maureen Pettigrew",
+          "text": "Lovely, Ron. Send us a picture.",
+          "startMs": 33153
+        }
+      ]
+    },
+    {
+      "id": "id-morning-notices",
+      "category": "id",
+      "url": "/voice/lower-hollow/id-morning-notices.mp3",
+      "durationMs": 9207,
+      "overMusic": true,
+      "part": "open",
+      "show": "morning-notices",
+      "lines": [
+        {
+          "speaker": "Maureen Pettigrew",
+          "text": "Good morning, and welcome to Morning Notices. I'm Maureen. The overnight report: the hole is still there. It was quiet. Mostly.",
+          "startMs": 38
+        }
+      ]
+    },
+    {
+      "id": "dj-morning-notices-001",
+      "category": "dj",
+      "url": "/voice/lower-hollow/dj-morning-notices-001.mp3",
+      "durationMs": 12327,
+      "title": "The Overnight Hole Report",
+      "overMusic": true,
+      "show": "morning-notices",
+      "lines": [
+        {
+          "speaker": "Maureen Pettigrew",
+          "text": "The overnight hole report. At two this morning, a warm breeze came up out of the hole, smelling of toast. At three, the toast smell stopped.",
+          "startMs": 45
+        },
+        {
+          "speaker": "Maureen Pettigrew",
+          "text": "At four, a single yellow balloon came up, and drifted east. That's the report. Have a lovely day.",
+          "startMs": 7353
+        }
+      ]
+    },
+    {
+      "id": "dj-morning-notices-002",
+      "category": "dj",
+      "url": "/voice/lower-hollow/dj-morning-notices-002.mp3",
+      "durationMs": 9641,
+      "overMusic": true,
+      "show": "morning-notices",
+      "lines": [
+        {
+          "speaker": "Maureen Pettigrew",
+          "text": "This morning's birthdays. Happy birthday to young Ellie Marsh, who is seven.",
+          "startMs": 41
+        },
+        {
+          "speaker": "Maureen Pettigrew",
+          "text": "And happy birthday to the hole, which, according to the parish records, is either four hundred years old, or always.",
+          "startMs": 4198
+        }
+      ]
+    },
+    {
+      "id": "id-committee-hour",
+      "category": "id",
+      "url": "/voice/lower-hollow/id-committee-hour.mp3",
+      "durationMs": 6787,
+      "overMusic": true,
+      "part": "open",
+      "show": "committee-hour",
+      "lines": [
+        {
+          "speaker": "Councillor Dibbs",
+          "text": "Good evening. This is the Committee Hour, on Lower Hollow Community Radio. The hole remains. Item one.",
+          "startMs": 437
+        }
+      ]
+    },
+    {
+      "id": "dj-committee-hour-001",
+      "category": "dj",
+      "url": "/voice/lower-hollow/dj-committee-hour-001.mp3",
+      "durationMs": 12563,
+      "title": "Correspondence",
+      "overMusic": true,
+      "show": "committee-hour",
+      "lines": [
+        {
+          "speaker": "Councillor Dibbs",
+          "text": "Correspondence. The committee has received a letter from the hole. It was very well written. The committee has replied, thanking it for its letter, and noting its contents.",
+          "startMs": 37
+        },
+        {
+          "speaker": "Maureen Pettigrew",
+          "text": "What did it say, Councillor?",
+          "startMs": 8719
+        },
+        {
+          "speaker": "Councillor Dibbs",
+          "text": "It has been noted, Maureen.",
+          "startMs": 10571
+        }
+      ]
+    },
+    {
+      "id": "dj-committee-hour-002",
+      "category": "dj",
+      "url": "/voice/lower-hollow/dj-committee-hour-002.mp3",
+      "durationMs": 9467,
+      "title": "Any Other Business",
+      "overMusic": true,
+      "show": "committee-hour",
+      "lines": [
+        {
+          "speaker": "Councillor Dibbs",
+          "text": "Any other business. Mister Ainsley asks whether he may take his dog home from the rim.",
+          "startMs": 35
+        },
+        {
+          "speaker": "Councillor Dibbs",
+          "text": "The committee has considered the question, and notes that this is a matter for the dog.",
+          "startMs": 5031
+        }
+      ]
+    },
+    {
+      "id": "id-rim-watch",
+      "category": "id",
+      "url": "/voice/lower-hollow/id-rim-watch.mp3",
+      "durationMs": 6041,
+      "overMusic": true,
+      "part": "open",
+      "show": "rim-watch",
+      "lines": [
+        {
+          "speaker": "Maureen Pettigrew",
+          "text": "This is Rim Watch. Maureen here, with a flask, a blanket and the binoculars. You go to sleep, dear. I'll keep an eye on it.",
+          "startMs": 42
+        }
+      ]
+    },
+    {
+      "id": "dj-rim-watch-001",
+      "category": "dj",
+      "url": "/voice/lower-hollow/dj-rim-watch-001.mp3",
+      "durationMs": 9741,
+      "overMusic": true,
+      "show": "rim-watch",
+      "lines": [
+        {
+          "speaker": "Maureen Pettigrew",
+          "text": "Quarter past three. The lamps are on over on the far rim, and nobody lives over there, as far as anyone knows. I've waved.",
+          "startMs": 37
+        },
+        {
+          "speaker": "Maureen Pettigrew",
+          "text": "Somebody has waved back. That's neighbourly. I'll take it.",
+          "startMs": 6730
+        }
+      ]
+    },
+    {
+      "id": "dj-rim-watch-002",
+      "category": "dj",
+      "url": "/voice/lower-hollow/dj-rim-watch-002.mp3",
+      "durationMs": 11700,
+      "overMusic": true,
+      "show": "rim-watch",
+      "lines": [
+        {
+          "speaker": "Maureen Pettigrew",
+          "text": "Very quiet tonight. Biscuit's asleep at the edge, one ear up. The flask's half done. Every so often there's a sound from the hole like somebody turning over in bed.",
+          "startMs": 40
+        },
+        {
+          "speaker": "Maureen Pettigrew",
+          "text": "I always say, goodnight, then. It seems only polite.",
+          "startMs": 8772
+        }
+      ]
+    },
+    {
+      "id": "psa-halloween-001",
+      "category": "psa",
+      "url": "/voice/lower-hollow/psa-halloween-001.mp3",
+      "durationMs": 19234,
+      "title": "The Costume Contest",
+      "overMusic": false,
+      "dates": [
+        "10-24",
+        "10-25",
+        "10-26",
+        "10-27",
+        "10-28",
+        "10-29",
+        "10-30",
+        "10-31"
+      ],
+      "lines": [
+        {
+          "speaker": "Maureen Pettigrew",
+          "text": "A Halloween reminder for trick-or-treaters. Please stay on the town side of the rim.",
+          "startMs": 3100
+        },
+        {
+          "speaker": "Maureen Pettigrew",
+          "text": "Last year, something came up out of the hole wearing a sheet with two eye holes cut in it, and won the costume contest. Nobody knows who it was. It comes back every year to collect the prize.",
+          "startMs": 7837
+        },
+        {
+          "speaker": "Maureen Pettigrew",
+          "text": "We've let it keep the rosette.",
+          "startMs": 17651
+        }
+      ]
+    },
+    {
+      "id": "dj-halloween-001",
+      "category": "dj",
+      "url": "/voice/lower-hollow/dj-halloween-001.mp3",
+      "durationMs": 15945,
+      "title": "Pumpkin Carving Results",
+      "overMusic": true,
+      "dates": [
+        "10-24",
+        "10-25",
+        "10-26",
+        "10-27",
+        "10-28",
+        "10-29",
+        "10-30",
+        "10-31"
+      ],
+      "lines": [
+        {
+          "speaker": "Maureen Pettigrew",
+          "text": "The pumpkin carving results. Third place, Ellie Marsh, for a lovely cat. Second, the Ainsleys, for a very good owl.",
+          "startMs": 36
+        },
+        {
+          "speaker": "Maureen Pettigrew",
+          "text": "And first place, a pumpkin nobody entered, which came up out of the hole on Thursday, carved from the inside. It's very good. It's smiling. It's been smiling at the post office all week.",
+          "startMs": 6592
+        }
+      ]
+    }
+  ]
+}

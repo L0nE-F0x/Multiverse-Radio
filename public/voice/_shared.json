@@ -6,7 +6,7 @@
       "id": "ad-001",
       "category": "ad",
       "url": "/voice/_shared/ad-001.mp3",
-      "durationMs": 20452,
+      "durationMs": 20453,
       "title": "Grumbel's Ladders: The Lateral",
       "overMusic": false,
       "lines": [
@@ -151,7 +151,7 @@
       "id": "ad-006",
       "category": "ad",
       "url": "/voice/_shared/ad-006.mp3",
-      "durationMs": 16730,
+      "durationMs": 16731,
       "title": "Yesterday Night",
       "overMusic": false,
       "daypart": "night",
@@ -206,7 +206,7 @@
         {
           "speaker": "Announcer",
           "text": "Gilroy's Umbrellas. Four thousand years of keeping Precinct Nine dry. Well. Drier.",
-          "startMs": 13664
+          "startMs": 13663
         }
       ]
     },
@@ -252,7 +252,7 @@
       "id": "ad-009",
       "category": "ad",
       "url": "/voice/_shared/ad-009.mp3",
-      "durationMs": 22014,
+      "durationMs": 22015,
       "title": "Fennimore's Fine Oils",
       "overMusic": false,
       "stations": [
@@ -306,7 +306,7 @@
         {
           "speaker": "Announcer",
           "text": "Spare Continue Insurance. Because everybody deserves one more go.",
-          "startMs": 9976
+          "startMs": 9975
         },
         {
           "speaker": "Small Print",
@@ -523,7 +523,7 @@
       "id": "ad-018",
       "category": "ad",
       "url": "/voice/_shared/ad-018.mp3",
-      "durationMs": 17710,
+      "durationMs": 17708,
       "title": "Nobody's Bakery",
       "overMusic": false,
       "lines": [
@@ -669,29 +669,29 @@
       "id": "ad-023",
       "category": "ad",
       "url": "/voice/_shared/ad-023.mp3",
-      "durationMs": 20141,
+      "durationMs": 20147,
       "title": "The Overlap Tourist Board",
       "overMusic": false,
       "lines": [
         {
           "speaker": "Announcer",
           "text": "Visit the Overlap! Where two realities meet, and both of them are lovely!",
-          "startMs": 40
+          "startMs": 42
         },
         {
           "speaker": "Announcer",
           "text": "Have breakfast in one world, and lunch in the other! See the famous Double Bridge, built by two engineers who never met, and agree on almost everything!",
-          "startMs": 4300
+          "startMs": 4302
         },
         {
           "speaker": "Announcer",
           "text": "Meet yourself at the market, and buy each other a coffee!",
-          "startMs": 13731
+          "startMs": 13734
         },
         {
           "speaker": "Announcer",
           "text": "The Overlap. You'll want to come back. You may already be here.",
-          "startMs": 17000
+          "startMs": 17005
         }
       ]
     },
@@ -699,7 +699,7 @@
       "id": "ad-024",
       "category": "ad",
       "url": "/voice/_shared/ad-024.mp3",
-      "durationMs": 16461,
+      "durationMs": 16463,
       "title": "Queue Ahead",
       "overMusic": false,
       "lines": [
@@ -716,12 +716,12 @@
         {
           "speaker": "Announcer",
           "text": "Queue Ahead. We wait, so you don't have to. Call now!",
-          "startMs": 12722
+          "startMs": 12723
         },
         {
           "speaker": "Small Print",
           "text": "You will be put on hold.",
-          "startMs": 15523
+          "startMs": 15524
         }
       ]
     },
@@ -729,29 +729,29 @@
       "id": "ad-025",
       "category": "ad",
       "url": "/voice/_shared/ad-025.mp3",
-      "durationMs": 27547,
+      "durationMs": 27520,
       "title": "Lost Hour Recovery",
       "overMusic": false,
       "lines": [
         {
           "speaker": "Announcer",
           "text": "Every year, when the clocks go forward, an hour goes missing. Where does it go? We know.",
-          "startMs": 41
+          "startMs": 38
         },
         {
           "speaker": "Announcer",
           "text": "Lost Hour Recovery will track down your missing hour and return it to you, in a plain envelope, for use at your convenience.",
-          "startMs": 5901
+          "startMs": 5874
         },
         {
           "speaker": "Announcer",
           "text": "Spend it on a walk. Spend it asleep. Spend it doing absolutely nothing, which, let's be honest, is what you'd have done with it anyway.",
-          "startMs": 14427
+          "startMs": 14400
         },
         {
           "speaker": "Small Print",
           "text": "Recovered hours may be slightly used. Hours lost before the age of ten cannot be recovered. They were well spent.",
-          "startMs": 22960
+          "startMs": 22933
         }
       ]
     },
@@ -859,7 +859,7 @@
         {
           "speaker": "Multiverse Broadcast Authority",
           "text": "You don't have to say anything else. Yes is plenty.",
-          "startMs": 10075
+          "startMs": 10074
         }
       ]
     },
@@ -1059,7 +1059,7 @@
       "id": "interrupt-001",
       "category": "interrupt",
       "url": "/voice/_shared/interrupt-001.mp3",
-      "durationMs": 7327,
+      "durationMs": 7323,
       "title": "Relay Four",
       "overMusic": true,
       "lines": [
@@ -1071,7 +1071,7 @@
         {
           "speaker": "Teodor, Relay Four",
           "text": "If you can hear me, the kettle's on.",
-          "startMs": 4092
+          "startMs": 4093
         }
       ]
     },
@@ -1079,7 +1079,7 @@
       "id": "interrupt-002",
       "category": "interrupt",
       "url": "/voice/_shared/interrupt-002.mp3",
-      "durationMs": 5845,
+      "durationMs": 5792,
       "title": "Relay Four, Still Here",
       "overMusic": true,
       "lines": [
@@ -1094,14 +1094,14 @@
       "id": "interrupt-003",
       "category": "interrupt",
       "url": "/voice/_shared/interrupt-003.mp3",
-      "durationMs": 8818,
+      "durationMs": 8895,
       "title": "Relay Four, Answered",
       "overMusic": true,
       "lines": [
         {
           "speaker": "Teodor, Relay Four",
           "text": "This is Relay Four. Is anyone receiving—",
-          "startMs": 432
+          "startMs": 433
         },
         {
           "speaker": "Bev",
@@ -1111,7 +1111,7 @@
         {
           "speaker": "Teodor, Relay Four",
           "text": "Yes. Yes it is.",
-          "startMs": 6285
+          "startMs": 6286
         }
       ]
     },
@@ -1119,7 +1119,7 @@
       "id": "interrupt-004",
       "category": "interrupt",
       "url": "/voice/_shared/interrupt-004.mp3",
-      "durationMs": 3503,
+      "durationMs": 3504,
       "title": "Crossed Line",
       "overMusic": true,
       "lines": [
@@ -1164,7 +1164,7 @@
       "id": "interrupt-007",
       "category": "interrupt",
       "url": "/voice/_shared/interrupt-007.mp3",
-      "durationMs": 6072,
+      "durationMs": 6071,
       "title": "Bleed: Every Possible News",
       "overMusic": true,
       "stations": [
@@ -1262,7 +1262,7 @@
       "id": "interrupt-010",
       "category": "interrupt",
       "url": "/voice/_shared/interrupt-010.mp3",
-      "durationMs": 4035,
+      "durationMs": 4034,
       "title": "A Message for Greg",
       "overMusic": true,
       "lines": [
@@ -1405,6 +1405,301 @@
           "speaker": "Linda from Accounts",
           "text": "Music may contain feelings. Feelings not included. If symptoms persist, please consult your nearest Linda.",
           "startMs": 39
+        }
+      ]
+    },
+    {
+      "id": "ad-halloween-01",
+      "category": "ad",
+      "url": "/voice/_shared/ad-halloween-01.mp3",
+      "durationMs": 25832,
+      "title": "Grumbel's Ladders: The Attic Ladder",
+      "overMusic": false,
+      "dates": [
+        "10-24",
+        "10-25",
+        "10-26",
+        "10-27",
+        "10-28",
+        "10-29",
+        "10-30",
+        "10-31"
+      ],
+      "lines": [
+        {
+          "speaker": "Arnold Grumbel",
+          "text": "It's Halloween. You've heard something in the attic. You've heard it every night this week. A sort of shuffle, and then a sigh.",
+          "startMs": 3100
+        },
+        {
+          "speaker": "Arnold Grumbel",
+          "text": "The Grumbel's Attic Ladder folds down quietly, takes your weight without a creak, and gets you up there in time to find out it's the water tank. It's always the water tank.",
+          "startMs": 8879
+        },
+        {
+          "speaker": "Arnold Grumbel",
+          "text": "My grandfather went up one Halloween and found a family of owls. He brought them down one rung at a time. Grumbel's Ladders. Up is a choice. Even in the dark.",
+          "startMs": 17703
+        }
+      ]
+    },
+    {
+      "id": "ad-halloween-02",
+      "category": "ad",
+      "url": "/voice/_shared/ad-halloween-02.mp3",
+      "durationMs": 21685,
+      "title": "Haunt-a-Home Lettings",
+      "overMusic": false,
+      "dates": [
+        "10-24",
+        "10-25",
+        "10-26",
+        "10-27",
+        "10-28",
+        "10-29",
+        "10-30",
+        "10-31"
+      ],
+      "lines": [
+        {
+          "speaker": "Announcer",
+          "text": "Is your house too quiet this Halloween? Rent a ghost for the season, from Haunt-a-Home Lettings.",
+          "startMs": 37
+        },
+        {
+          "speaker": "Announcer",
+          "text": "Every ghost is vetted, polite, and only slightly see-through. They'll rattle a door, hum on the landing, and leave the good spoons alone.",
+          "startMs": 5557
+        },
+        {
+          "speaker": "Announcer",
+          "text": "Haunt-a-Home. Somebody's home. Sort of.",
+          "startMs": 13799
+        },
+        {
+          "speaker": "Small Print",
+          "text": "Ghost may become attached. Ghost may become attached to the house. Ghost may not wish to leave in November. Ghost is lovely, though.",
+          "startMs": 16501
+        }
+      ]
+    },
+    {
+      "id": "ad-halloween-03",
+      "category": "ad",
+      "url": "/voice/_shared/ad-halloween-03.mp3",
+      "durationMs": 23535,
+      "title": "Someone Else's Costume",
+      "overMusic": false,
+      "dates": [
+        "10-24",
+        "10-25",
+        "10-26",
+        "10-27",
+        "10-28",
+        "10-29",
+        "10-30",
+        "10-31"
+      ],
+      "lines": [
+        {
+          "speaker": "Announcer",
+          "text": "Can't think of a costume? Wear Someone Else's Costume.",
+          "startMs": 36
+        },
+        {
+          "speaker": "Announcer",
+          "text": "Every outfit has been pre-worn by a version of you from the next reality over, who had a brilliant idea, started early, and finished the sleeves.",
+          "startMs": 3725
+        },
+        {
+          "speaker": "Announcer",
+          "text": "He went as a lighthouse. Everybody said so. He is, frankly, a better you than you, and this year, you can be him.",
+          "startMs": 12977
+        },
+        {
+          "speaker": "Announcer",
+          "text": "Someone Else's Costume. Slightly used. By you.",
+          "startMs": 20357
+        }
+      ]
+    },
+    {
+      "id": "ad-halloween-04",
+      "category": "ad",
+      "url": "/voice/_shared/ad-halloween-04.mp3",
+      "durationMs": 17780,
+      "title": "The Polite Alarm Clock: Halloween Edition",
+      "overMusic": false,
+      "dates": [
+        "10-24",
+        "10-25",
+        "10-26",
+        "10-27",
+        "10-28",
+        "10-29",
+        "10-30",
+        "10-31"
+      ],
+      "lines": [
+        {
+          "speaker": "Announcer",
+          "text": "This Halloween, wake up gently, with the Polite Alarm Clock, Halloween Edition.",
+          "startMs": 41
+        },
+        {
+          "speaker": "The Polite Alarm Clock",
+          "text": "Ahem. Sorry. Boo. It's seven.",
+          "startMs": 5082
+        },
+        {
+          "speaker": "Announcer",
+          "text": "It's still the same clock. It still clears its throat. It's just wearing a very small sheet.",
+          "startMs": 7297
+        },
+        {
+          "speaker": "Announcer",
+          "text": "The Polite Alarm Clock. Nobody ever got up faster for being frightened, either.",
+          "startMs": 12943
+        }
+      ]
+    },
+    {
+      "id": "ad-halloween-05",
+      "category": "ad",
+      "url": "/voice/_shared/ad-halloween-05.mp3",
+      "durationMs": 25311,
+      "title": "The Sock Recovery Institute: The Night They Come Back",
+      "overMusic": false,
+      "dates": [
+        "10-24",
+        "10-25",
+        "10-26",
+        "10-27",
+        "10-28",
+        "10-29",
+        "10-30",
+        "10-31"
+      ],
+      "lines": [
+        {
+          "speaker": "Announcer",
+          "text": "Once a year, on Halloween night, they come back. Every sock you've ever lost returns to its drawer. Just for one night. To see how everyone's getting on.",
+          "startMs": 39
+        },
+        {
+          "speaker": "Announcer",
+          "text": "Don't be frightened. Leave the drawer open a crack. They've missed you. They've missed the other one most of all.",
+          "startMs": 9212
+        },
+        {
+          "speaker": "Announcer",
+          "text": "The Sock Recovery Institute. We bring them back the rest of the year, too.",
+          "startMs": 15287
+        },
+        {
+          "speaker": "Small Print",
+          "text": "Returning socks may be slightly warm, and may smell faintly of another dimension. This is normal. Please do not wear the visiting socks.",
+          "startMs": 19737
+        }
+      ]
+    },
+    {
+      "id": "ad-halloween-06",
+      "category": "ad",
+      "url": "/voice/_shared/ad-halloween-06.mp3",
+      "durationMs": 26039,
+      "title": "Overlap Fog, Bottled",
+      "overMusic": false,
+      "dates": [
+        "10-24",
+        "10-25",
+        "10-26",
+        "10-27",
+        "10-28",
+        "10-29",
+        "10-30",
+        "10-31"
+      ],
+      "lines": [
+        {
+          "speaker": "Announcer",
+          "text": "Halloween party lacking atmosphere? Uncork a bottle of genuine Overlap Fog.",
+          "startMs": 36
+        },
+        {
+          "speaker": "Announcer",
+          "text": "Hand-gathered at dawn from the low-lying timelines, our fog rolls in under the door, settles round the ankles, and makes every guest look mysterious, even Gerald from accounts.",
+          "startMs": 5709
+        },
+        {
+          "speaker": "Announcer",
+          "text": "Overlap Fog. You won't see the difference. You won't see much of anything.",
+          "startMs": 15946
+        },
+        {
+          "speaker": "Small Print",
+          "text": "Fog may contain a bicycle. Fog may contain Skip Daley, who has been in there since Tuesday. Please send him back to the newsroom.",
+          "startMs": 20708
+        }
+      ]
+    },
+    {
+      "id": "psa-halloween-01",
+      "category": "psa",
+      "url": "/voice/_shared/psa-halloween-01.mp3",
+      "durationMs": 14685,
+      "title": "The Static on Halloween",
+      "overMusic": false,
+      "dates": [
+        "10-24",
+        "10-25",
+        "10-26",
+        "10-27",
+        "10-28",
+        "10-29",
+        "10-30",
+        "10-31"
+      ],
+      "lines": [
+        {
+          "speaker": "Multiverse Broadcast Authority",
+          "text": "The Multiverse Broadcast Authority reminds listeners that this week, the static between stations is a little louder than usual.",
+          "startMs": 50
+        },
+        {
+          "speaker": "Multiverse Broadcast Authority",
+          "text": "That is everybody who used to listen, listening in. Turn it up a bit. They like the music. They always did.",
+          "startMs": 8146
+        }
+      ]
+    },
+    {
+      "id": "interrupt-halloween-01",
+      "category": "interrupt",
+      "url": "/voice/_shared/interrupt-halloween-01.mp3",
+      "durationMs": 9477,
+      "title": "Relay Four, Halloween",
+      "overMusic": true,
+      "dates": [
+        "10-24",
+        "10-25",
+        "10-26",
+        "10-27",
+        "10-28",
+        "10-29",
+        "10-30",
+        "10-31"
+      ],
+      "lines": [
+        {
+          "speaker": "Teodor, Relay Four",
+          "text": "Relay Four. Happy Halloween, whoever you are. Captain has come dressed as a ghost.",
+          "startMs": 435
+        },
+        {
+          "speaker": "Teodor, Relay Four",
+          "text": "He's a white gull. It's not much of a costume.",
+          "startMs": 5787
         }
       ]
     }

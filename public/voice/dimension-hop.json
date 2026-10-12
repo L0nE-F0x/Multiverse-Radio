@@ -6,7 +6,7 @@
       "id": "id-001",
       "category": "id",
       "url": "/voice/dimension-hop/id-001.mp3",
-      "durationMs": 6784,
+      "durationMs": 6790,
       "overMusic": true,
       "lines": [
         {
@@ -72,7 +72,7 @@
       "id": "dj-001",
       "category": "dj",
       "url": "/voice/dimension-hop/dj-001.mp3",
-      "durationMs": 12631,
+      "durationMs": 12630,
       "overMusic": true,
       "lines": [
         {
@@ -311,7 +311,7 @@
         {
           "speaker": "Mara",
           "text": "I know. You said that four seconds ago.",
-          "startMs": 40430
+          "startMs": 40431
         },
         {
           "speaker": "Jace",
@@ -336,7 +336,7 @@
         {
           "speaker": "Jace",
           "text": "We'll be right back.",
-          "startMs": 61006
+          "startMs": 61007
         },
         {
           "speaker": "Mara",
@@ -349,7 +349,7 @@
       "id": "show-003",
       "category": "show",
       "url": "/voice/dimension-hop/show-003.mp3",
-      "durationMs": 72932,
+      "durationMs": 72933,
       "title": "Listener Mail: Murray, Priya and the Same Letter",
       "overMusic": false,
       "lines": [
@@ -361,92 +361,92 @@
         {
           "speaker": "Jace",
           "text": "This one's from Murray, who writes: Dear Dimension Hop. In my reality, the dogs own the people. Is that normal?",
-          "startMs": 5573
+          "startMs": 5575
         },
         {
           "speaker": "Mara",
           "text": "Totally normal. In mine, the dogs own the dogs. It's a whole pyramid thing.",
-          "startMs": 13263
+          "startMs": 13265
         },
         {
           "speaker": "Jace",
           "text": "Murray goes on. My dog says I'm a good boy, but I don't think he means it.",
-          "startMs": 18416
+          "startMs": 18418
         },
         {
           "speaker": "Mara",
           "text": "Murray. He means it. Dogs can't lie. That's why they never run for office.",
-          "startMs": 23133
+          "startMs": 23134
         },
         {
           "speaker": "Jace",
           "text": "Next. From Priya, in the Damp Dimension. She writes: Dear Dimension Hop, what's the sun like?",
-          "startMs": 28613
+          "startMs": 28615
         },
         {
           "speaker": "Mara",
           "text": "You take this one, Jace. We don't really have one. It's more of a rumor.",
-          "startMs": 34679
+          "startMs": 34681
         },
         {
           "speaker": "Jace",
           "text": "It's warm. It's very bright. You can't look straight at it.",
-          "startMs": 39021
+          "startMs": 39023
         },
         {
           "speaker": "Mara",
           "text": "So it's shy.",
-          "startMs": 42623
+          "startMs": 42625
         },
         {
           "speaker": "Jace",
           "text": "No. Sort of. It comes up every single morning.",
-          "startMs": 43759
+          "startMs": 43761
         },
         {
           "speaker": "Mara",
           "text": "Every morning? It must be exhausted.",
-          "startMs": 47099
+          "startMs": 47101
         },
         {
           "speaker": "Jace",
           "text": "I've honestly never thought about that.",
-          "startMs": 49610
+          "startMs": 49611
         },
         {
           "speaker": "Mara",
           "text": "Somebody should.",
-          "startMs": 52140
+          "startMs": 52142
         },
         {
           "speaker": "Jace",
           "text": "Last letter. From someone who signs it, The Same Letter. It says: Dear Dimension Hop. This is the same letter.",
-          "startMs": 53657
+          "startMs": 53659
         },
         {
           "speaker": "Mara",
           "text": "Oh, that's the same letter.",
-          "startMs": 60956
+          "startMs": 60958
         },
         {
           "speaker": "Jace",
           "text": "Mara, it's a different letter.",
-          "startMs": 62767
+          "startMs": 62768
         },
         {
           "speaker": "Mara",
           "text": "Is it, Jace? Is it?",
-          "startMs": 64649
+          "startMs": 64651
         },
         {
           "speaker": "Jace",
           "text": "We're out of time.",
-          "startMs": 67001
+          "startMs": 67002
         },
         {
           "speaker": "Mara",
           "text": "We're always out of time. Some of us are just further out than others. Bye, Murray!",
-          "startMs": 68431
+          "startMs": 68433
         }
       ]
     },
@@ -1085,7 +1085,7 @@
       "id": "show-010",
       "category": "show",
       "url": "/voice/dimension-hop/show-010.mp3",
-      "durationMs": 65052,
+      "durationMs": 65048,
       "title": "Listener Mail: Bev's Song",
       "overMusic": false,
       "lines": [
@@ -1117,62 +1117,62 @@
         {
           "speaker": "Jace",
           "text": "We don't have it. Nobody has it. I'm not sure it exists.",
-          "startMs": 30279
+          "startMs": 30280
         },
         {
           "speaker": "Mara",
           "text": "Then we'll make it. Go on. Dum, dum, da dum.",
-          "startMs": 34069
+          "startMs": 34070
         },
         {
           "speaker": "Jace",
           "text": "I'm not doing that.",
-          "startMs": 37549
+          "startMs": 37545
         },
         {
           "speaker": "Mara",
           "text": "Jace. Bev has been looking for eleven years.",
-          "startMs": 39207
+          "startMs": 39203
         },
         {
           "speaker": "Jace",
           "text": "Fine. Dum. Dum. Da dum.",
-          "startMs": 42899
+          "startMs": 42895
         },
         {
           "speaker": "Mara",
           "text": "And then a man cries.",
-          "startMs": 46176
+          "startMs": 46172
         },
         {
           "speaker": "Jace",
           "text": "I'm not going to cry.",
-          "startMs": 47662
+          "startMs": 47658
         },
         {
           "speaker": "Mara",
           "text": "You're going to cry in about four seconds, Jace.",
-          "startMs": 49498
+          "startMs": 49494
         },
         {
           "speaker": "Jace",
           "text": "Why is it so sad? It's three notes.",
-          "startMs": 53974
+          "startMs": 53970
         },
         {
           "speaker": "Mara",
           "text": "It's the space after the third one. That's where the man is.",
-          "startMs": 56783
+          "startMs": 56779
         },
         {
           "speaker": "Jace",
           "text": "Bev, I hope that was close.",
-          "startMs": 60749
+          "startMs": 60745
         },
         {
           "speaker": "Mara",
           "text": "It was close, Bev. I heard it first.",
-          "startMs": 62934
+          "startMs": 62930
         }
       ]
     },
@@ -1247,7 +1247,7 @@
         {
           "speaker": "Jace",
           "text": "Can I put my hand through?",
-          "startMs": 40887
+          "startMs": 40888
         },
         {
           "speaker": "Mara",
@@ -1262,12 +1262,12 @@
         {
           "speaker": "Mara",
           "text": "Okay, but if your hand comes back holding a different coffee, that's not my fault.",
-          "startMs": 46760
+          "startMs": 46761
         },
         {
           "speaker": "Jace",
           "text": "Mara. I'm holding a different coffee.",
-          "startMs": 53760
+          "startMs": 53761
         },
         {
           "speaker": "Mara",
@@ -1282,7 +1282,7 @@
         {
           "speaker": "Mara",
           "text": "That's mine. Give it back.",
-          "startMs": 59190
+          "startMs": 59191
         }
       ]
     },
@@ -1290,7 +1290,7 @@
       "id": "show-012",
       "category": "show",
       "url": "/voice/dimension-hop/show-012.mp3",
-      "durationMs": 63957,
+      "durationMs": 63956,
       "title": "Birthdays",
       "overMusic": false,
       "lines": [
@@ -1322,12 +1322,12 @@
         {
           "speaker": "Mara",
           "text": "But you've already arrived. You're here. We can see you. Why do you keep celebrating it?",
-          "startMs": 15701
+          "startMs": 15700
         },
         {
           "speaker": "Jace",
           "text": "Because it's nice to be glad someone's here.",
-          "startMs": 21084
+          "startMs": 21083
         },
         {
           "speaker": "Mara",
@@ -1352,7 +1352,7 @@
         {
           "speaker": "Mara",
           "text": "So at the end, when you're very old, it's just a cake that's on fire, and everybody stands around it, singing.",
-          "startMs": 39078
+          "startMs": 39077
         },
         {
           "speaker": "Jace",
@@ -1455,7 +1455,7 @@
       "id": "show-014",
       "category": "show",
       "url": "/voice/dimension-hop/show-014.mp3",
-      "durationMs": 64038,
+      "durationMs": 64042,
       "title": "Advice Corner",
       "overMusic": false,
       "lines": [
@@ -1648,6 +1648,1276 @@
           "speaker": "Mara",
           "text": "Oh, Jace. Did it ever get there?",
           "startMs": 45152
+        }
+      ]
+    },
+    {
+      "id": "four-seconds-early-open",
+      "category": "id",
+      "url": "/voice/dimension-hop/four-seconds-early-open.mp3",
+      "durationMs": 7634,
+      "title": "Four Seconds Early",
+      "overMusic": true,
+      "part": "open",
+      "show": "four-seconds-early",
+      "lines": [
+        {
+          "speaker": "Mara",
+          "text": "Good morning! This is Four Seconds Early! I've already had breakfast!",
+          "startMs": 38
+        },
+        {
+          "speaker": "Jace",
+          "text": "I'm still in bed, Mara.",
+          "startMs": 3943
+        },
+        {
+          "speaker": "Mara",
+          "text": "I know. You'll be up in a minute.",
+          "startMs": 5954
+        }
+      ]
+    },
+    {
+      "id": "four-seconds-early-01",
+      "category": "dj",
+      "url": "/voice/dimension-hop/four-seconds-early-01.mp3",
+      "durationMs": 17102,
+      "overMusic": true,
+      "show": "four-seconds-early",
+      "lines": [
+        {
+          "speaker": "Mara",
+          "text": "Morning traffic on my side! Downhill is clear, uphill is closed for emergencies, and my aunt is still up the hill with the oven.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Jace",
+          "text": "Is the oven still off?",
+          "startMs": 8227
+        },
+        {
+          "speaker": "Mara",
+          "text": "Nineteen years, Jace. Still off. She checks it every morning. It's the most reassuring thing on my side of the rift.",
+          "startMs": 9916
+        }
+      ]
+    },
+    {
+      "id": "four-seconds-early-02",
+      "category": "dj",
+      "url": "/voice/dimension-hop/four-seconds-early-02.mp3",
+      "durationMs": 12111,
+      "overMusic": true,
+      "show": "four-seconds-early",
+      "lines": [
+        {
+          "speaker": "Jace",
+          "text": "Mara, I've got a question about breakfast.",
+          "startMs": 50
+        },
+        {
+          "speaker": "Mara",
+          "text": "Toast.",
+          "startMs": 2780
+        },
+        {
+          "speaker": "Jace",
+          "text": "I haven't asked yet.",
+          "startMs": 3643
+        },
+        {
+          "speaker": "Mara",
+          "text": "You were going to ask what I'm having. Toast. Backwards. It turns back into bread at the end. It's very relaxing.",
+          "startMs": 5192
+        }
+      ]
+    },
+    {
+      "id": "normal-or-not-normal-live-open",
+      "category": "id",
+      "url": "/voice/dimension-hop/normal-or-not-normal-live-open.mp3",
+      "durationMs": 10664,
+      "title": "Normal or Not Normal: Live",
+      "overMusic": true,
+      "part": "open",
+      "show": "normal-or-not-normal-live",
+      "lines": [
+        {
+          "speaker": "Mara",
+          "text": "It's Normal or Not Normal, live! Jace's reality is on trial, and it's not looking good!",
+          "startMs": 3199
+        },
+        {
+          "speaker": "Jace",
+          "text": "It's looking fine.",
+          "startMs": 9498
+        }
+      ]
+    },
+    {
+      "id": "normal-or-not-normal-live-01",
+      "category": "dj",
+      "url": "/voice/dimension-hop/normal-or-not-normal-live-01.mp3",
+      "durationMs": 13179,
+      "overMusic": true,
+      "show": "normal-or-not-normal-live",
+      "lines": [
+        {
+          "speaker": "Mara",
+          "text": "Live audience tonight, Jace! They can see you!",
+          "startMs": 38
+        },
+        {
+          "speaker": "Jace",
+          "text": "There's no audience, Mara. It's a radio show.",
+          "startMs": 2877
+        },
+        {
+          "speaker": "Mara",
+          "text": "On my side there's a live audience. They're upside down. They're waving.",
+          "startMs": 6269
+        },
+        {
+          "speaker": "Jace",
+          "text": "Hi.",
+          "startMs": 12420
+        }
+      ]
+    },
+    {
+      "id": "normal-or-not-normal-live-02",
+      "category": "dj",
+      "url": "/voice/dimension-hop/normal-or-not-normal-live-02.mp3",
+      "durationMs": 11755,
+      "overMusic": true,
+      "show": "normal-or-not-normal-live",
+      "lines": [
+        {
+          "speaker": "Jace",
+          "text": "Before we start, I'd like to say that my reality is fine, and most of the things in it are normal.",
+          "startMs": 39
+        },
+        {
+          "speaker": "Mara",
+          "text": "Noted. Not normal.",
+          "startMs": 6697
+        },
+        {
+          "speaker": "Jace",
+          "text": "That wasn't a round!",
+          "startMs": 8761
+        },
+        {
+          "speaker": "Mara",
+          "text": "Everything's a round, Jace.",
+          "startMs": 10356
+        }
+      ]
+    },
+    {
+      "id": "the-late-hop-open",
+      "category": "id",
+      "url": "/voice/dimension-hop/the-late-hop-open.mp3",
+      "durationMs": 7987,
+      "title": "The Late Hop",
+      "overMusic": true,
+      "part": "open",
+      "show": "the-late-hop",
+      "lines": [
+        {
+          "speaker": "Jace",
+          "text": "This is the Late Hop. It's late on my side.",
+          "startMs": 43
+        },
+        {
+          "speaker": "Mara",
+          "text": "It's later on mine. About four seconds later.",
+          "startMs": 3284
+        }
+      ]
+    },
+    {
+      "id": "the-late-hop-01",
+      "category": "dj",
+      "url": "/voice/dimension-hop/the-late-hop-01.mp3",
+      "durationMs": 12584,
+      "overMusic": true,
+      "show": "the-late-hop",
+      "lines": [
+        {
+          "speaker": "Jace",
+          "text": "Mara, what do people do at night, on your side?",
+          "startMs": 50
+        },
+        {
+          "speaker": "Mara",
+          "text": "We roll slower. And we tell the hill a story, so it doesn't worry about the dark.",
+          "startMs": 3123
+        },
+        {
+          "speaker": "Jace",
+          "text": "Hills worry?",
+          "startMs": 7987
+        },
+        {
+          "speaker": "Mara",
+          "text": "Gerald does. He's very sensitive about being a silhouette.",
+          "startMs": 9227
+        }
+      ]
+    },
+    {
+      "id": "the-late-hop-02",
+      "category": "dj",
+      "url": "/voice/dimension-hop/the-late-hop-02.mp3",
+      "durationMs": 10415,
+      "overMusic": true,
+      "show": "the-late-hop",
+      "lines": [
+        {
+          "speaker": "Mara",
+          "text": "It's past midnight on your side, Jace, which means it's tomorrow. Happy tomorrow.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Jace",
+          "text": "Thanks. Is it nice?",
+          "startMs": 5176
+        },
+        {
+          "speaker": "Mara",
+          "text": "It's the same as today, but you're more tired. Sorry. I've seen it.",
+          "startMs": 6679
+        }
+      ]
+    },
+    {
+      "id": "banter-open-01",
+      "category": "show",
+      "url": "/voice/dimension-hop/banter-open-01.mp3",
+      "durationMs": 8227,
+      "overMusic": false,
+      "part": "open",
+      "kit": "banter",
+      "lines": [
+        {
+          "speaker": "Jace",
+          "text": "Welcome back to Dimension Hop. I'm Jace.",
+          "startMs": 1928
+        },
+        {
+          "speaker": "Mara",
+          "text": "And I'm Mara. I welcomed you back four seconds ago.",
+          "startMs": 5020
+        }
+      ]
+    },
+    {
+      "id": "banter-open-02",
+      "category": "show",
+      "url": "/voice/dimension-hop/banter-open-02.mp3",
+      "durationMs": 5099,
+      "overMusic": false,
+      "part": "open",
+      "kit": "banter",
+      "lines": [
+        {
+          "speaker": "Mara",
+          "text": "We're back! Jace, tell me something normal from your side.",
+          "startMs": 36
+        },
+        {
+          "speaker": "Jace",
+          "text": "Okay. Here goes.",
+          "startMs": 3747
+        }
+      ]
+    },
+    {
+      "id": "banter-open-03",
+      "category": "show",
+      "url": "/voice/dimension-hop/banter-open-03.mp3",
+      "durationMs": 9411,
+      "overMusic": false,
+      "part": "open",
+      "kit": "banter",
+      "lines": [
+        {
+          "speaker": "Mara",
+          "text": "It's time for Normal, or Not Normal! Jace describes a thing, and I judge his entire reality!",
+          "startMs": 3199
+        }
+      ]
+    },
+    {
+      "id": "banter-open-04",
+      "category": "show",
+      "url": "/voice/dimension-hop/banter-open-04.mp3",
+      "durationMs": 4566,
+      "overMusic": false,
+      "part": "open",
+      "kit": "banter",
+      "lines": [
+        {
+          "speaker": "Jace",
+          "text": "Mara, I want to explain something from my side.",
+          "startMs": 48
+        },
+        {
+          "speaker": "Mara",
+          "text": "Oh no. Go on.",
+          "startMs": 3346
+        }
+      ]
+    },
+    {
+      "id": "banter-open-05",
+      "category": "show",
+      "url": "/voice/dimension-hop/banter-open-05.mp3",
+      "durationMs": 6155,
+      "overMusic": false,
+      "part": "open",
+      "kit": "banter",
+      "lines": [
+        {
+          "speaker": "Mara",
+          "text": "Jace has brought in some listener questions. He's holding them upside down. On my side, that's correct.",
+          "startMs": 36
+        }
+      ]
+    },
+    {
+      "id": "banter-open-06",
+      "category": "show",
+      "url": "/voice/dimension-hop/banter-open-06.mp3",
+      "durationMs": 6081,
+      "overMusic": false,
+      "daypart": "night",
+      "part": "open",
+      "kit": "banter",
+      "lines": [
+        {
+          "speaker": "Jace",
+          "text": "It's the late bit of the show, where we're both tired and say true things.",
+          "startMs": 40
+        },
+        {
+          "speaker": "Mara",
+          "text": "Or I do. You'll catch up.",
+          "startMs": 4476
+        }
+      ]
+    },
+    {
+      "id": "banter-body-01",
+      "category": "show",
+      "url": "/voice/dimension-hop/banter-body-01.mp3",
+      "durationMs": 15573,
+      "title": "Socks",
+      "overMusic": false,
+      "part": "body",
+      "kit": "banter",
+      "lines": [
+        {
+          "speaker": "Jace",
+          "text": "Socks. You wear one on each foot, and they have to match.",
+          "startMs": 49
+        },
+        {
+          "speaker": "Mara",
+          "text": "Who checks?",
+          "startMs": 3498
+        },
+        {
+          "speaker": "Jace",
+          "text": "Nobody checks.",
+          "startMs": 4508
+        },
+        {
+          "speaker": "Mara",
+          "text": "So you've all agreed to match, in secret, under your trousers, where nobody can see.",
+          "startMs": 5891
+        },
+        {
+          "speaker": "Jace",
+          "text": "Yes.",
+          "startMs": 10922
+        },
+        {
+          "speaker": "Mara",
+          "text": "Normal. Romantic. Normal.",
+          "startMs": 11852
+        }
+      ]
+    },
+    {
+      "id": "banter-body-02",
+      "category": "show",
+      "url": "/voice/dimension-hop/banter-body-02.mp3",
+      "durationMs": 16766,
+      "title": "Queueing",
+      "overMusic": false,
+      "part": "body",
+      "kit": "banter",
+      "lines": [
+        {
+          "speaker": "Jace",
+          "text": "Queueing. When lots of people are waiting, we stand in a line, in the order we arrived.",
+          "startMs": 48
+        },
+        {
+          "speaker": "Mara",
+          "text": "Who's in charge?",
+          "startMs": 5419
+        },
+        {
+          "speaker": "Jace",
+          "text": "Nobody.",
+          "startMs": 6706
+        },
+        {
+          "speaker": "Mara",
+          "text": "And if somebody pushes in?",
+          "startMs": 7812
+        },
+        {
+          "speaker": "Jace",
+          "text": "Everyone sighs. Quite loudly.",
+          "startMs": 9483
+        },
+        {
+          "speaker": "Mara",
+          "text": "Not normal. That's a choir, Jace. You're all in a choir and you don't know it.",
+          "startMs": 11800
+        }
+      ]
+    },
+    {
+      "id": "banter-body-03",
+      "category": "show",
+      "url": "/voice/dimension-hop/banter-body-03.mp3",
+      "durationMs": 18233,
+      "title": "Sorry",
+      "overMusic": false,
+      "part": "body",
+      "kit": "banter",
+      "lines": [
+        {
+          "speaker": "Jace",
+          "text": "Saying sorry when someone else bumps into you.",
+          "startMs": 50
+        },
+        {
+          "speaker": "Mara",
+          "text": "Why would you say sorry?",
+          "startMs": 3059
+        },
+        {
+          "speaker": "Jace",
+          "text": "I don't know. It just comes out.",
+          "startMs": 4556
+        },
+        {
+          "speaker": "Mara",
+          "text": "So when you get hurt, you apologise to the thing that hurt you.",
+          "startMs": 6717
+        },
+        {
+          "speaker": "Jace",
+          "text": "Mostly.",
+          "startMs": 10268
+        },
+        {
+          "speaker": "Mara",
+          "text": "Jace. That's the kindest, saddest thing your reality does. Normal. Sorry. Normal.",
+          "startMs": 11349
+        }
+      ]
+    },
+    {
+      "id": "banter-body-04",
+      "category": "show",
+      "url": "/voice/dimension-hop/banter-body-04.mp3",
+      "durationMs": 14949,
+      "title": "Cake at Work",
+      "overMusic": false,
+      "part": "body",
+      "kit": "banter",
+      "lines": [
+        {
+          "speaker": "Jace",
+          "text": "Birthdays at work. Somebody brings in a cake, and everybody stands round it, and sings, and then goes back to their desk.",
+          "startMs": 47
+        },
+        {
+          "speaker": "Mara",
+          "text": "How long do you all stand there?",
+          "startMs": 7829
+        },
+        {
+          "speaker": "Jace",
+          "text": "Exactly as long as the song.",
+          "startMs": 9656
+        },
+        {
+          "speaker": "Mara",
+          "text": "Not normal. Totally normal. I'm going to need a minute.",
+          "startMs": 11784
+        }
+      ]
+    },
+    {
+      "id": "banter-body-05",
+      "category": "show",
+      "url": "/voice/dimension-hop/banter-body-05.mp3",
+      "durationMs": 16764,
+      "title": "Voicemail",
+      "overMusic": false,
+      "part": "body",
+      "kit": "banter",
+      "lines": [
+        {
+          "speaker": "Jace",
+          "text": "Voicemail. You ring someone, they don't answer, so you talk to a little machine, and they listen to it later.",
+          "startMs": 43
+        },
+        {
+          "speaker": "Mara",
+          "text": "So you talk to their future, from your past.",
+          "startMs": 6414
+        },
+        {
+          "speaker": "Jace",
+          "text": "No, I just leave a message.",
+          "startMs": 9060
+        },
+        {
+          "speaker": "Mara",
+          "text": "Jace, that's what I do all day. Welcome to my life. Normal.",
+          "startMs": 11123
+        }
+      ]
+    },
+    {
+      "id": "banter-body-06",
+      "category": "show",
+      "url": "/voice/dimension-hop/banter-body-06.mp3",
+      "durationMs": 18022,
+      "title": "The Cold Side of the Pillow",
+      "overMusic": false,
+      "part": "body",
+      "kit": "banter",
+      "lines": [
+        {
+          "speaker": "Jace",
+          "text": "Pillows. You put your head on a soft thing, and in the night you turn it over, to the cold side.",
+          "startMs": 42
+        },
+        {
+          "speaker": "Mara",
+          "text": "Who keeps the cold side cold?",
+          "startMs": 5663
+        },
+        {
+          "speaker": "Jace",
+          "text": "Nobody. It just is.",
+          "startMs": 7629
+        },
+        {
+          "speaker": "Mara",
+          "text": "A free supply of coldness, every night, and nobody's in charge of it? Not normal. Suspicious. Somebody's selling that.",
+          "startMs": 9579
+        }
+      ]
+    },
+    {
+      "id": "banter-body-07",
+      "category": "show",
+      "url": "/voice/dimension-hop/banter-body-07.mp3",
+      "durationMs": 15788,
+      "title": "Stairs",
+      "overMusic": false,
+      "part": "body",
+      "kit": "banter",
+      "lines": [
+        {
+          "speaker": "Mara",
+          "text": "A listener wants to know what stairs are.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Jace",
+          "text": "It's a lot of little floors, stacked up at an angle, so you can walk up them.",
+          "startMs": 2328
+        },
+        {
+          "speaker": "Mara",
+          "text": "Uphill. On purpose. Every day.",
+          "startMs": 6988
+        },
+        {
+          "speaker": "Jace",
+          "text": "I've been up and down about four times today.",
+          "startMs": 9244
+        },
+        {
+          "speaker": "Mara",
+          "text": "Jace. On my side you'd be a hero. They'd put you on a stamp.",
+          "startMs": 12204
+        }
+      ]
+    },
+    {
+      "id": "banter-body-08",
+      "category": "show",
+      "url": "/voice/dimension-hop/banter-body-08.mp3",
+      "durationMs": 20067,
+      "title": "Bless You",
+      "overMusic": false,
+      "part": "body",
+      "kit": "banter",
+      "lines": [
+        {
+          "speaker": "Jace",
+          "text": "Sneezing. Your nose just goes, and you say, achoo, and everyone nearby says bless you.",
+          "startMs": 46
+        },
+        {
+          "speaker": "Mara",
+          "text": "Everyone?",
+          "startMs": 6077
+        },
+        {
+          "speaker": "Jace",
+          "text": "Strangers. On the bus. Anyone.",
+          "startMs": 7048
+        },
+        {
+          "speaker": "Mara",
+          "text": "So your nose does a tiny explosion, and the whole bus blesses you. Jace, that's the nicest thing I've ever heard. Normal. Lovely. Normal.",
+          "startMs": 9549
+        }
+      ]
+    },
+    {
+      "id": "banter-body-09",
+      "category": "show",
+      "url": "/voice/dimension-hop/banter-body-09.mp3",
+      "durationMs": 16067,
+      "title": "Holding the Door",
+      "overMusic": false,
+      "part": "body",
+      "kit": "banter",
+      "lines": [
+        {
+          "speaker": "Jace",
+          "text": "Holding the door. If somebody's behind you, you hold it open for them.",
+          "startMs": 42
+        },
+        {
+          "speaker": "Mara",
+          "text": "How far behind?",
+          "startMs": 4617
+        },
+        {
+          "speaker": "Jace",
+          "text": "That's the thing. If they're too far back, they have to do a little run.",
+          "startMs": 5947
+        },
+        {
+          "speaker": "Mara",
+          "text": "So your kindness makes people jog.",
+          "startMs": 10144
+        },
+        {
+          "speaker": "Jace",
+          "text": "A bit.",
+          "startMs": 12497
+        },
+        {
+          "speaker": "Mara",
+          "text": "Not normal. But I'll allow it.",
+          "startMs": 13540
+        }
+      ]
+    },
+    {
+      "id": "banter-body-10",
+      "category": "show",
+      "url": "/voice/dimension-hop/banter-body-10.mp3",
+      "durationMs": 13976,
+      "title": "The Key Bowl",
+      "overMusic": false,
+      "part": "body",
+      "kit": "banter",
+      "lines": [
+        {
+          "speaker": "Mara",
+          "text": "Jace, why do you keep your keys in a bowl by the door?",
+          "startMs": 38
+        },
+        {
+          "speaker": "Jace",
+          "text": "So I know where they are.",
+          "startMs": 3324
+        },
+        {
+          "speaker": "Mara",
+          "text": "And do you always know where they are?",
+          "startMs": 5042
+        },
+        {
+          "speaker": "Jace",
+          "text": "Never.",
+          "startMs": 7002
+        },
+        {
+          "speaker": "Mara",
+          "text": "So the bowl isn't working.",
+          "startMs": 7934
+        },
+        {
+          "speaker": "Jace",
+          "text": "The bowl is a hope, Mara.",
+          "startMs": 9561
+        },
+        {
+          "speaker": "Mara",
+          "text": "Oh. That's beautiful. Get a bigger bowl.",
+          "startMs": 11798
+        }
+      ]
+    },
+    {
+      "id": "banter-body-11",
+      "category": "show",
+      "url": "/voice/dimension-hop/banter-body-11.mp3",
+      "durationMs": 15422,
+      "title": "Weekends",
+      "overMusic": false,
+      "part": "body",
+      "kit": "banter",
+      "lines": [
+        {
+          "speaker": "Jace",
+          "text": "Weekends. Five days of work, then two days off.",
+          "startMs": 47
+        },
+        {
+          "speaker": "Mara",
+          "text": "Who decided five?",
+          "startMs": 3443
+        },
+        {
+          "speaker": "Jace",
+          "text": "Somebody. Ages ago.",
+          "startMs": 4870
+        },
+        {
+          "speaker": "Mara",
+          "text": "And nobody's ever asked for three off?",
+          "startMs": 6806
+        },
+        {
+          "speaker": "Jace",
+          "text": "Nobody's ever asked.",
+          "startMs": 9305
+        },
+        {
+          "speaker": "Mara",
+          "text": "Jace, ask. Ask tomorrow. I'll be listening, four seconds before.",
+          "startMs": 11082
+        }
+      ]
+    },
+    {
+      "id": "banter-body-12",
+      "category": "show",
+      "url": "/voice/dimension-hop/banter-body-12.mp3",
+      "durationMs": 16029,
+      "title": "Lullabies",
+      "overMusic": false,
+      "part": "body",
+      "kit": "banter",
+      "lines": [
+        {
+          "speaker": "Jace",
+          "text": "Lullabies. When a baby can't sleep, you sing it a very slow song about a cradle in a tree, and the wind, and the cradle falling.",
+          "startMs": 46
+        },
+        {
+          "speaker": "Mara",
+          "text": "And the baby goes to sleep?",
+          "startMs": 8712
+        },
+        {
+          "speaker": "Jace",
+          "text": "Every time.",
+          "startMs": 10395
+        },
+        {
+          "speaker": "Mara",
+          "text": "Your babies are tougher than you, Jace. Not normal. Respect.",
+          "startMs": 11651
+        }
+      ]
+    },
+    {
+      "id": "banter-close-01",
+      "category": "show",
+      "url": "/voice/dimension-hop/banter-close-01.mp3",
+      "durationMs": 3365,
+      "overMusic": false,
+      "part": "close",
+      "kit": "banter",
+      "lines": [
+        {
+          "speaker": "Jace",
+          "text": "We'll be right back.",
+          "startMs": 44
+        },
+        {
+          "speaker": "Mara",
+          "text": "I'm back already. You'll catch up.",
+          "startMs": 1514
+        }
+      ]
+    },
+    {
+      "id": "banter-close-02",
+      "category": "show",
+      "url": "/voice/dimension-hop/banter-close-02.mp3",
+      "durationMs": 3806,
+      "overMusic": false,
+      "part": "close",
+      "kit": "banter",
+      "lines": [
+        {
+          "speaker": "Mara",
+          "text": "That's the score! Jace's reality, still losing! Stay with us!",
+          "startMs": 40
+        }
+      ]
+    },
+    {
+      "id": "banter-close-03",
+      "category": "show",
+      "url": "/voice/dimension-hop/banter-close-03.mp3",
+      "durationMs": 3463,
+      "overMusic": false,
+      "part": "close",
+      "kit": "banter",
+      "lines": [
+        {
+          "speaker": "Jace",
+          "text": "More Dimension Hop after this.",
+          "startMs": 43
+        },
+        {
+          "speaker": "Mara",
+          "text": "I liked it. You'll see.",
+          "startMs": 2175
+        }
+      ]
+    },
+    {
+      "id": "banter-close-04",
+      "category": "show",
+      "url": "/voice/dimension-hop/banter-close-04.mp3",
+      "durationMs": 3545,
+      "overMusic": false,
+      "part": "close",
+      "kit": "banter",
+      "lines": [
+        {
+          "speaker": "Mara",
+          "text": "Quick break. Don't go anywhere. Or roll somewhere. Either's fine.",
+          "startMs": 38
+        }
+      ]
+    },
+    {
+      "id": "banter-close-05",
+      "category": "show",
+      "url": "/voice/dimension-hop/banter-close-05.mp3",
+      "durationMs": 4276,
+      "overMusic": false,
+      "part": "close",
+      "kit": "banter",
+      "lines": [
+        {
+          "speaker": "Jace",
+          "text": "That's all for this bit.",
+          "startMs": 50
+        },
+        {
+          "speaker": "Mara",
+          "text": "That was all for this bit four seconds ago, Jace.",
+          "startMs": 1668
+        }
+      ]
+    },
+    {
+      "id": "banter-close-06",
+      "category": "show",
+      "url": "/voice/dimension-hop/banter-close-06.mp3",
+      "durationMs": 3797,
+      "overMusic": false,
+      "daypart": "night",
+      "part": "close",
+      "kit": "banter",
+      "lines": [
+        {
+          "speaker": "Mara",
+          "text": "Night night, Jace's reality. You're very strange, and we love you.",
+          "startMs": 39
+        }
+      ]
+    },
+    {
+      "id": "bev-gets-her-song-09",
+      "category": "show",
+      "url": "/voice/dimension-hop/bev-gets-her-song-09.mp3",
+      "durationMs": 59026,
+      "title": "Bev Gets Her Song, Part Nine: Hello, Night Shift",
+      "overMusic": false,
+      "serial": {
+        "id": "bev-gets-her-song",
+        "episode": 9
+      },
+      "lines": [
+        {
+          "speaker": "Jace",
+          "text": "Mara, the phone's ringing.",
+          "startMs": 1928
+        },
+        {
+          "speaker": "Mara",
+          "text": "I know. I answered it four seconds ago. It's Bev.",
+          "startMs": 3771
+        },
+        {
+          "speaker": "Bev",
+          "text": "Hello, loves. Is this the request line?",
+          "startMs": 7175
+        },
+        {
+          "speaker": "Jace",
+          "text": "It's still Dimension Hop, Bev. But we've been following. The lift, the numbers, Doug. Everyone's been following.",
+          "startMs": 9837
+        },
+        {
+          "speaker": "Bev",
+          "text": "They all say the request line is a man at Relay Four. But his line's broken. He can talk, but he can't hear.",
+          "startMs": 16854
+        },
+        {
+          "speaker": "Mara",
+          "text": "Then you need a relay. Something in between, to carry it both ways.",
+          "startMs": 23179
+        },
+        {
+          "speaker": "Jace",
+          "text": "Like what?",
+          "startMs": 27320
+        },
+        {
+          "speaker": "Mara",
+          "text": "Like a ship. A relay ship, out past the edge of the dial, listening to all of us. With someone on the night shift.",
+          "startMs": 28477
+        },
+        {
+          "speaker": "Jace",
+          "text": "Is there one?",
+          "startMs": 35595
+        },
+        {
+          "speaker": "Mara",
+          "text": "There's one listening right now, Jace. I can see it four seconds from now. It's called the Nightjar.",
+          "startMs": 36861
+        },
+        {
+          "speaker": "Mara",
+          "text": "Hello, night shift.",
+          "startMs": 43711
+        },
+        {
+          "speaker": "Jace",
+          "text": "Mara, who are you talking to?",
+          "startMs": 45103
+        },
+        {
+          "speaker": "Mara",
+          "text": "The person with their hand on the dial. Hi. Don't touch it for a bit. Bev needs you.",
+          "startMs": 47117
+        },
+        {
+          "speaker": "Bev",
+          "text": "Hello, night shift. If you can, love, put me through to Relay Four. I'll wait. I'm very good at waiting.",
+          "startMs": 52466
+        },
+        {
+          "speaker": "Jace",
+          "text": "She really is.",
+          "startMs": 57961
+        }
+      ]
+    },
+    {
+      "id": "teodor-is-heard-11",
+      "category": "show",
+      "url": "/voice/dimension-hop/teodor-is-heard-11.mp3",
+      "durationMs": 62549,
+      "title": "Teodor Is Heard, Part Eleven: Relay Seven",
+      "overMusic": false,
+      "serial": {
+        "id": "teodor-is-heard",
+        "episode": 11
+      },
+      "lines": [
+        {
+          "speaker": "Jace",
+          "text": "Mara, there's something on the line. It's very faint.",
+          "startMs": 1928
+        },
+        {
+          "speaker": "Teodor, Relay Four",
+          "text": "This is Relay Four. I can hear you. A little. I've got a crystal now.",
+          "startMs": 5251
+        },
+        {
+          "speaker": "Mara",
+          "text": "Teodor! Hi! You sound like you're in a biscuit tin.",
+          "startMs": 9262
+        },
+        {
+          "speaker": "Teodor, Relay Four",
+          "text": "I can hear the stations in bits now. But I need a relay, to reach everyone at once. There used to be seven of us.",
+          "startMs": 12607
+        },
+        {
+          "speaker": "Jace",
+          "text": "What happened to the others?",
+          "startMs": 19042
+        },
+        {
+          "speaker": "Teodor, Relay Four",
+          "text": "One, Two and Three were switched off. Five fell in the sea. Six is a cafe now. And Seven just went. Nobody knows where.",
+          "startMs": 20711
+        },
+        {
+          "speaker": "Mara",
+          "text": "I know where. Seven's a ship. It drifts about past the edge of the dial, listening to everybody. It's got someone on the night shift and everything.",
+          "startMs": 27625
+        },
+        {
+          "speaker": "Teodor, Relay Four",
+          "text": "Relay Seven is still running?",
+          "startMs": 36927
+        },
+        {
+          "speaker": "Mara",
+          "text": "Point your antenna up and to the left. Bit more. Bit more.",
+          "startMs": 39151
+        },
+        {
+          "speaker": "Jace",
+          "text": "Mara, how do you know which way is left from Relay Four?",
+          "startMs": 42964
+        },
+        {
+          "speaker": "Mara",
+          "text": "I don't, Jace. But he's going to try it, and in four seconds, it's going to work.",
+          "startMs": 46397
+        },
+        {
+          "speaker": "Teodor, Relay Four",
+          "text": "There's a light on my board. The Relay Seven light. It hasn't been on in eleven years.",
+          "startMs": 52669
+        },
+        {
+          "speaker": "Mara",
+          "text": "Told you. Not tonight, Teodor. Tomorrow. Put the kettle on, and get some sleep.",
+          "startMs": 57658
+        }
+      ]
+    },
+    {
+      "id": "greg-comes-home-13",
+      "category": "show",
+      "url": "/voice/dimension-hop/greg-comes-home-13.mp3",
+      "durationMs": 54344,
+      "title": "Greg Comes Home, Part Thirteen: Two Shapes",
+      "overMusic": false,
+      "serial": {
+        "id": "greg-comes-home",
+        "episode": 13
+      },
+      "lines": [
+        {
+          "speaker": "Mara",
+          "text": "Listener mail, Jace. And look. It's a postcard. From the sea.",
+          "startMs": 1928
+        },
+        {
+          "speaker": "Jace",
+          "text": "There's no writing on it.",
+          "startMs": 5738
+        },
+        {
+          "speaker": "Mara",
+          "text": "Hold it up to the light.",
+          "startMs": 7568
+        },
+        {
+          "speaker": "Jace",
+          "text": "Oh. There's two shapes. A man, sitting on the sand with his knees up. And right next to him, a bit to the left, the same shape again. Flat.",
+          "startMs": 9049
+        },
+        {
+          "speaker": "Mara",
+          "text": "That's Hollis and Greg.",
+          "startMs": 17966
+        },
+        {
+          "speaker": "Jace",
+          "text": "They went to the sea? Together?",
+          "startMs": 19425
+        },
+        {
+          "speaker": "Mara",
+          "text": "He took him somewhere nice, Jace. First time in forty one years.",
+          "startMs": 21490
+        },
+        {
+          "speaker": "Jace",
+          "text": "There's something written at the bottom, really small. Hollis must have done it.",
+          "startMs": 25478
+        },
+        {
+          "speaker": "Mara",
+          "text": "Read it.",
+          "startMs": 30016
+        },
+        {
+          "speaker": "Jace",
+          "text": "Having a lovely time. He was very small at noon. We stayed till four, so he could stretch out. Leaving the porch light on anyway. For the next one.",
+          "startMs": 30897
+        },
+        {
+          "speaker": "Mara",
+          "text": "Jace, you're going to cry in about four seconds.",
+          "startMs": 42090
+        },
+        {
+          "speaker": "Jace",
+          "text": "I'm not going to cry.",
+          "startMs": 45061
+        },
+        {
+          "speaker": "Jace",
+          "text": "Why is it so nice? It's two shapes.",
+          "startMs": 48897
+        },
+        {
+          "speaker": "Mara",
+          "text": "It's the space between them, Jace. There isn't any.",
+          "startMs": 51654
+        }
+      ]
+    },
+    {
+      "id": "halloween-01",
+      "category": "show",
+      "url": "/voice/dimension-hop/halloween-01.mp3",
+      "durationMs": 17810,
+      "title": "Trick or Treat",
+      "overMusic": false,
+      "part": "body",
+      "kit": "banter",
+      "dates": [
+        "10-24",
+        "10-25",
+        "10-26",
+        "10-27",
+        "10-28",
+        "10-29",
+        "10-30",
+        "10-31"
+      ],
+      "lines": [
+        {
+          "speaker": "Jace",
+          "text": "Halloween. Children dress up as monsters, knock on strangers' doors, and ask for sweets.",
+          "startMs": 47
+        },
+        {
+          "speaker": "Mara",
+          "text": "And the strangers give them sweets?",
+          "startMs": 6442
+        },
+        {
+          "speaker": "Jace",
+          "text": "Usually.",
+          "startMs": 8605
+        },
+        {
+          "speaker": "Mara",
+          "text": "And if they don't?",
+          "startMs": 9710
+        },
+        {
+          "speaker": "Jace",
+          "text": "Then it's a trick.",
+          "startMs": 10919
+        },
+        {
+          "speaker": "Mara",
+          "text": "So it's a tiny, adorable protection racket. Not normal. Do it every week.",
+          "startMs": 12407
+        }
+      ]
+    },
+    {
+      "id": "halloween-02",
+      "category": "show",
+      "url": "/voice/dimension-hop/halloween-02.mp3",
+      "durationMs": 19972,
+      "title": "Pumpkins",
+      "overMusic": false,
+      "part": "body",
+      "kit": "banter",
+      "dates": [
+        "10-24",
+        "10-25",
+        "10-26",
+        "10-27",
+        "10-28",
+        "10-29",
+        "10-30",
+        "10-31"
+      ],
+      "lines": [
+        {
+          "speaker": "Jace",
+          "text": "Pumpkins. You take a big orange vegetable, scoop out its insides, carve a face into it, and put a candle inside so the face glows.",
+          "startMs": 40
+        },
+        {
+          "speaker": "Mara",
+          "text": "And then?",
+          "startMs": 9634
+        },
+        {
+          "speaker": "Jace",
+          "text": "You put it on the doorstep to look at people.",
+          "startMs": 10509
+        },
+        {
+          "speaker": "Mara",
+          "text": "Jace. That's the most frightening thing you've ever told me. Not normal. Keep it away from Gerald.",
+          "startMs": 13198
         }
       ]
     }

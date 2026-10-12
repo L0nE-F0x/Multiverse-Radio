@@ -1,0 +1,722 @@
+{
+  "version": 1,
+  "station": "yesterday-fm",
+  "clips": [
+    {
+      "id": "id-001",
+      "category": "id",
+      "url": "/voice/yesterday-fm/id-001.mp3",
+      "durationMs": 3325,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Gordon Ago",
+          "text": "Yesterday FM. The news is reassuringly over.",
+          "startMs": 50
+        }
+      ]
+    },
+    {
+      "id": "id-002",
+      "category": "id",
+      "url": "/voice/yesterday-fm/id-002.mp3",
+      "durationMs": 6200,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Gordon Ago",
+          "text": "You're listening to Yesterday FM, broadcasting from twenty four hours ago. Nothing left to worry about.",
+          "startMs": 50
+        }
+      ]
+    },
+    {
+      "id": "id-003",
+      "category": "id",
+      "url": "/voice/yesterday-fm/id-003.mp3",
+      "durationMs": 5474,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Gordon Ago",
+          "text": "Yesterday FM. It's already happened. You liked it.",
+          "startMs": 1850
+        }
+      ]
+    },
+    {
+      "id": "id-004",
+      "category": "id",
+      "url": "/voice/yesterday-fm/id-004.mp3",
+      "durationMs": 6164,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Gordon Ago",
+          "text": "Yesterday FM, one hundred point eight five. Everything turned out fine.",
+          "startMs": 44
+        },
+        {
+          "speaker": "Gordon Ago",
+          "text": "More or less.",
+          "startMs": 5059
+        }
+      ]
+    },
+    {
+      "id": "show-morning-open",
+      "category": "id",
+      "url": "/voice/yesterday-fm/show-morning-open.mp3",
+      "durationMs": 5405,
+      "overMusic": true,
+      "part": "open",
+      "show": "yesterday-morning",
+      "lines": [
+        {
+          "speaker": "Gordon Ago",
+          "text": "Good morning, yesterday. This is Yesterday Morning. Breakfast has been eaten. The dishes are done.",
+          "startMs": 50
+        }
+      ]
+    },
+    {
+      "id": "show-morning-001",
+      "category": "dj",
+      "url": "/voice/yesterday-fm/show-morning-001.mp3",
+      "durationMs": 7097,
+      "overMusic": true,
+      "show": "yesterday-morning",
+      "lines": [
+        {
+          "speaker": "Gordon Ago",
+          "text": "Yesterday morning's top story: you woke up.",
+          "startMs": 39
+        },
+        {
+          "speaker": "Gordon Ago",
+          "text": "Well done. Everything after that was a bonus.",
+          "startMs": 3979
+        }
+      ]
+    },
+    {
+      "id": "show-afternoon-open",
+      "category": "id",
+      "url": "/voice/yesterday-fm/show-afternoon-open.mp3",
+      "durationMs": 6218,
+      "overMusic": true,
+      "part": "open",
+      "show": "afternoon-before",
+      "lines": [
+        {
+          "speaker": "Gordon Ago",
+          "text": "This is The Afternoon Before. The light's gone gold. It stays gold. It's already stayed gold. Put your feet up.",
+          "startMs": 50
+        }
+      ]
+    },
+    {
+      "id": "show-afternoon-001",
+      "category": "dj",
+      "url": "/voice/yesterday-fm/show-afternoon-001.mp3",
+      "durationMs": 11430,
+      "overMusic": true,
+      "show": "afternoon-before",
+      "lines": [
+        {
+          "speaker": "Gordon Ago",
+          "text": "A little traffic from yesterday afternoon. The school run went well. Everybody had their bag. One child had two bags.",
+          "startMs": 46
+        },
+        {
+          "speaker": "Gordon Ago",
+          "text": "We don't know whose the other bag was. It's being looked into. Gently.",
+          "startMs": 7184
+        }
+      ]
+    },
+    {
+      "id": "show-lastnight-open",
+      "category": "id",
+      "url": "/voice/yesterday-fm/show-lastnight-open.mp3",
+      "durationMs": 5107,
+      "overMusic": true,
+      "daypart": "night",
+      "part": "open",
+      "show": "last-night-tonight",
+      "lines": [
+        {
+          "speaker": "Gordon Ago",
+          "text": "Good evening. This is Last Night, Tonight. We'll go through it together. Don't worry. I know how it ends.",
+          "startMs": 50
+        }
+      ]
+    },
+    {
+      "id": "show-lastnight-001",
+      "category": "dj",
+      "url": "/voice/yesterday-fm/show-lastnight-001.mp3",
+      "durationMs": 11121,
+      "overMusic": true,
+      "show": "last-night-tonight",
+      "lines": [
+        {
+          "speaker": "Gordon Ago",
+          "text": "Last night, at about two in the morning, the operator on the relay ship Nightjar was still at the console, with the kettle on.",
+          "startMs": 47
+        },
+        {
+          "speaker": "Gordon Ago",
+          "text": "They made it through the shift. I know. I've read the log. Well done, you.",
+          "startMs": 6903
+        }
+      ]
+    },
+    {
+      "id": "show-lastnight-002",
+      "category": "dj",
+      "url": "/voice/yesterday-fm/show-lastnight-002.mp3",
+      "durationMs": 10279,
+      "overMusic": true,
+      "show": "last-night-tonight",
+      "lines": [
+        {
+          "speaker": "Gordon Ago",
+          "text": "Four in the morning, last night. Everything very still. Somebody, somewhere, couldn't sleep.",
+          "startMs": 36
+        },
+        {
+          "speaker": "Gordon Ago",
+          "text": "Then, at about half past, they could. That might have been you. It went fine.",
+          "startMs": 5823
+        }
+      ]
+    },
+    {
+      "id": "news-open-1",
+      "category": "news",
+      "url": "/voice/yesterday-fm/news-open-1.mp3",
+      "durationMs": 6168,
+      "overMusic": false,
+      "part": "open",
+      "kit": "news",
+      "lines": [
+        {
+          "speaker": "Gordon Ago",
+          "text": "Here's the news. It's yesterday's. Don't worry. It's over.",
+          "startMs": 2444
+        }
+      ]
+    },
+    {
+      "id": "news-open-2",
+      "category": "news",
+      "url": "/voice/yesterday-fm/news-open-2.mp3",
+      "durationMs": 4743,
+      "overMusic": false,
+      "part": "open",
+      "kit": "news",
+      "lines": [
+        {
+          "speaker": "Gordon Ago",
+          "text": "The headlines, from yesterday. Settle in. Everything turned out fine, more or less.",
+          "startMs": 50
+        }
+      ]
+    },
+    {
+      "id": "news-open-3",
+      "category": "news",
+      "url": "/voice/yesterday-fm/news-open-3.mp3",
+      "durationMs": 9018,
+      "overMusic": false,
+      "part": "open",
+      "kit": "news",
+      "lines": [
+        {
+          "speaker": "Gordon Ago",
+          "text": "At the third pip, it was yesterday. Here's the news.",
+          "startMs": 5650
+        }
+      ]
+    },
+    {
+      "id": "news-001",
+      "category": "news",
+      "url": "/voice/yesterday-fm/news-001.mp3",
+      "durationMs": 11739,
+      "overMusic": false,
+      "part": "body",
+      "kit": "news",
+      "lines": [
+        {
+          "speaker": "Gordon Ago",
+          "text": "A man on Pell Street was worried about a meeting yesterday. The meeting happened. It was eleven minutes long. Nobody mentioned the thing he was worried about.",
+          "startMs": 49
+        },
+        {
+          "speaker": "Gordon Ago",
+          "text": "He's forgotten it already. So, in a way, have we.",
+          "startMs": 8686
+        }
+      ]
+    },
+    {
+      "id": "news-002",
+      "category": "news",
+      "url": "/voice/yesterday-fm/news-002.mp3",
+      "durationMs": 9467,
+      "overMusic": false,
+      "part": "body",
+      "kit": "news",
+      "lines": [
+        {
+          "speaker": "Gordon Ago",
+          "text": "It nearly rained yesterday. It looked like it was going to, all afternoon. Several people took coats.",
+          "startMs": 50
+        },
+        {
+          "speaker": "Gordon Ago",
+          "text": "In the end, it didn't. The coats have been informed.",
+          "startMs": 6113
+        }
+      ]
+    },
+    {
+      "id": "news-003",
+      "category": "news",
+      "url": "/voice/yesterday-fm/news-003.mp3",
+      "durationMs": 13624,
+      "overMusic": false,
+      "part": "body",
+      "kit": "news",
+      "lines": [
+        {
+          "speaker": "Gordon Ago",
+          "text": "Yesterday's big story: a missing Tuesday was found in a ditch outside Precinct Nine. That's old news now, which is the best kind of news.",
+          "startMs": 45
+        },
+        {
+          "speaker": "Gordon Ago",
+          "text": "The Tuesday is recovering at home, and is expected to go ahead next week as planned.",
+          "startMs": 8369
+        }
+      ]
+    },
+    {
+      "id": "news-004",
+      "category": "news",
+      "url": "/voice/yesterday-fm/news-004.mp3",
+      "durationMs": 11963,
+      "overMusic": false,
+      "part": "body",
+      "kit": "news",
+      "lines": [
+        {
+          "speaker": "Gordon Ago",
+          "text": "A cat got stuck up a tree yesterday afternoon. A crowd gathered. The fire brigade was called.",
+          "startMs": 42
+        },
+        {
+          "speaker": "Gordon Ago",
+          "text": "Then the cat came down by itself, as cats do, and walked off as though nothing had happened. Nothing had.",
+          "startMs": 5921
+        }
+      ]
+    },
+    {
+      "id": "news-005",
+      "category": "news",
+      "url": "/voice/yesterday-fm/news-005.mp3",
+      "durationMs": 9102,
+      "overMusic": false,
+      "part": "body",
+      "kit": "news",
+      "lines": [
+        {
+          "speaker": "Gordon Ago",
+          "text": "Sport. There was a match yesterday. Somebody won.",
+          "startMs": 39
+        },
+        {
+          "speaker": "Gordon Ago",
+          "text": "The other side played very well, considering, and everybody shook hands and went home for their tea.",
+          "startMs": 3736
+        }
+      ]
+    },
+    {
+      "id": "news-006",
+      "category": "news",
+      "url": "/voice/yesterday-fm/news-006.mp3",
+      "durationMs": 10554,
+      "overMusic": false,
+      "part": "body",
+      "kit": "news",
+      "lines": [
+        {
+          "speaker": "Gordon Ago",
+          "text": "A letter was posted yesterday that someone had been putting off for months. It said what it needed to say.",
+          "startMs": 50
+        },
+        {
+          "speaker": "Gordon Ago",
+          "text": "The reply came this morning. It said: thank you for writing. That was all. That was enough.",
+          "startMs": 6058
+        }
+      ]
+    },
+    {
+      "id": "news-007",
+      "category": "news",
+      "url": "/voice/yesterday-fm/news-007.mp3",
+      "durationMs": 8312,
+      "overMusic": false,
+      "part": "body",
+      "kit": "news",
+      "lines": [
+        {
+          "speaker": "Gordon Ago",
+          "text": "The markets went up yesterday, and then down, and then closed, as they do.",
+          "startMs": 50
+        },
+        {
+          "speaker": "Gordon Ago",
+          "text": "Nobody lost anything they haven't since found down the back of a sofa.",
+          "startMs": 4548
+        }
+      ]
+    },
+    {
+      "id": "news-008",
+      "category": "news",
+      "url": "/voice/yesterday-fm/news-008.mp3",
+      "durationMs": 11078,
+      "overMusic": false,
+      "part": "body",
+      "kit": "news",
+      "lines": [
+        {
+          "speaker": "Gordon Ago",
+          "text": "A kettle was put on yesterday at four, and again at half past, and once more just after six. All three cups of tea were drunk.",
+          "startMs": 50
+        },
+        {
+          "speaker": "Gordon Ago",
+          "text": "One of them went cold first. It has been forgiven.",
+          "startMs": 7707
+        }
+      ]
+    },
+    {
+      "id": "news-close-1",
+      "category": "news",
+      "url": "/voice/yesterday-fm/news-close-1.mp3",
+      "durationMs": 3960,
+      "overMusic": false,
+      "part": "close",
+      "kit": "news",
+      "lines": [
+        {
+          "speaker": "Gordon Ago",
+          "text": "And yesterday's weather: mild, then evening. You were there for most of it.",
+          "startMs": 50
+        }
+      ]
+    },
+    {
+      "id": "news-close-2",
+      "category": "news",
+      "url": "/voice/yesterday-fm/news-close-2.mp3",
+      "durationMs": 4390,
+      "overMusic": false,
+      "part": "close",
+      "kit": "news",
+      "lines": [
+        {
+          "speaker": "Gordon Ago",
+          "text": "That was the news. All of it has happened. None of it can happen again. Rest easy.",
+          "startMs": 50
+        }
+      ]
+    },
+    {
+      "id": "news-close-3",
+      "category": "news",
+      "url": "/voice/yesterday-fm/news-close-3.mp3",
+      "durationMs": 8148,
+      "overMusic": false,
+      "part": "close",
+      "kit": "news",
+      "lines": [
+        {
+          "speaker": "Gordon Ago",
+          "text": "Yesterday's weather: a bright start, some cloud after lunch, and a lovely sunset nobody quite stopped to look at. It's on again tonight. Do stop.",
+          "startMs": 44
+        }
+      ]
+    },
+    {
+      "id": "news-close-4",
+      "category": "news",
+      "url": "/voice/yesterday-fm/news-close-4.mp3",
+      "durationMs": 5895,
+      "overMusic": false,
+      "part": "close",
+      "kit": "news",
+      "lines": [
+        {
+          "speaker": "Gordon Ago",
+          "text": "That was yesterday. It went fine. Most days do, in the end.",
+          "startMs": 33
+        }
+      ]
+    },
+    {
+      "id": "weather-001",
+      "category": "weather",
+      "url": "/voice/yesterday-fm/weather-001.mp3",
+      "durationMs": 19702,
+      "title": "Yesterday's Weather, in Full",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Gordon Ago",
+          "text": "Yesterday's weather, in full. The morning was grey, and then it made up its mind. Light winds from the west, which is where they'd been heading all along.",
+          "startMs": 2290
+        },
+        {
+          "speaker": "Gordon Ago",
+          "text": "In the afternoon, a cloud shaped like a dog went over Pell Street. Then it was evening, and then it was night, and then it was today.",
+          "startMs": 10598
+        },
+        {
+          "speaker": "Gordon Ago",
+          "text": "And here we are.",
+          "startMs": 18526
+        }
+      ]
+    },
+    {
+      "id": "weather-002",
+      "category": "weather",
+      "url": "/voice/yesterday-fm/weather-002.mp3",
+      "durationMs": 12245,
+      "title": "Yesterday's Traffic",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Gordon Ago",
+          "text": "Yesterday's traffic and travel. All the roads went where they were going. There was a hold-up on the ring road at about five, and then there wasn't.",
+          "startMs": 50
+        },
+        {
+          "speaker": "Gordon Ago",
+          "text": "Everyone got home. Some of them stopped for chips on the way. Good for them.",
+          "startMs": 7788
+        }
+      ]
+    },
+    {
+      "id": "dj-001",
+      "category": "dj",
+      "url": "/voice/yesterday-fm/dj-001.mp3",
+      "durationMs": 8255,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Gordon Ago",
+          "text": "That was a song from yesterday. You liked it then. You'll like it now.",
+          "startMs": 50
+        },
+        {
+          "speaker": "Gordon Ago",
+          "text": "It isn't going anywhere. That's the lovely thing about yesterday.",
+          "startMs": 4624
+        }
+      ]
+    },
+    {
+      "id": "dj-002",
+      "category": "dj",
+      "url": "/voice/yesterday-fm/dj-002.mp3",
+      "durationMs": 9268,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Gordon Ago",
+          "text": "The calendar on the wall still says yesterday. Somebody asked if I'd like to tear the page off.",
+          "startMs": 50
+        },
+        {
+          "speaker": "Gordon Ago",
+          "text": "I said, what for? It was a good day. Let's leave it up a bit.",
+          "startMs": 5450
+        }
+      ]
+    },
+    {
+      "id": "dj-003",
+      "category": "dj",
+      "url": "/voice/yesterday-fm/dj-003.mp3",
+      "durationMs": 9188,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Gordon Ago",
+          "text": "My tea's gone cold. It went cold yesterday. That's the kind of tea it is.",
+          "startMs": 50
+        },
+        {
+          "speaker": "Gordon Ago",
+          "text": "I drink it anyway. Cold tea is only tea that waited for you.",
+          "startMs": 5257
+        }
+      ]
+    },
+    {
+      "id": "dj-004",
+      "category": "dj",
+      "url": "/voice/yesterday-fm/dj-004.mp3",
+      "durationMs": 8757,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Gordon Ago",
+          "text": "The clock on the wall runs gently backwards. Some people find that upsetting.",
+          "startMs": 50
+        },
+        {
+          "speaker": "Gordon Ago",
+          "text": "I find it reassuring. Every tick, there's a little less to worry about.",
+          "startMs": 4870
+        }
+      ]
+    },
+    {
+      "id": "call-001",
+      "category": "call",
+      "url": "/voice/yesterday-fm/call-001.mp3",
+      "durationMs": 32035,
+      "title": "Maggie, Worried About Tomorrow",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Gordon Ago",
+          "text": "Yesterday FM. You're on the air.",
+          "startMs": 2450
+        },
+        {
+          "speaker": "Maggie, Worried About Tomorrow",
+          "text": "Gordon, I've got a big day tomorrow, and I'm worried.",
+          "startMs": 5460
+        },
+        {
+          "speaker": "Gordon Ago",
+          "text": "I can't tell you about tomorrow, I'm afraid. I'm only licensed for yesterday.",
+          "startMs": 8542
+        },
+        {
+          "speaker": "Maggie, Worried About Tomorrow",
+          "text": "Oh.",
+          "startMs": 14025
+        },
+        {
+          "speaker": "Gordon Ago",
+          "text": "But I can tell you about yesterday. Yesterday, you were worried about today. And here you are, today, on the phone to the radio, making plans. You got through it.",
+          "startMs": 14898
+        },
+        {
+          "speaker": "Maggie, Worried About Tomorrow",
+          "text": "I suppose I did.",
+          "startMs": 23670
+        },
+        {
+          "speaker": "Gordon Ago",
+          "text": "Ring me the day after tomorrow. I'll tell you how it went.",
+          "startMs": 25103
+        },
+        {
+          "speaker": "Maggie, Worried About Tomorrow",
+          "text": "All right, Gordon. Thank you.",
+          "startMs": 28698
+        }
+      ]
+    },
+    {
+      "id": "halloween-1",
+      "category": "dj",
+      "url": "/voice/yesterday-fm/halloween-1.mp3",
+      "durationMs": 13348,
+      "title": "Halloween Is Coming, Apparently",
+      "overMusic": true,
+      "dates": [
+        "10-24",
+        "10-25",
+        "10-26",
+        "10-27",
+        "10-28",
+        "10-29",
+        "10-30"
+      ],
+      "lines": [
+        {
+          "speaker": "Gordon Ago",
+          "text": "A note from yesterday. Halloween is coming, I'm told. I can't see it from here.",
+          "startMs": 50
+        },
+        {
+          "speaker": "Gordon Ago",
+          "text": "But I can tell you about last year's. Everyone got home. All the sweets were eaten. The ghosts were mostly children, and the one that wasn't was very polite.",
+          "startMs": 4858
+        }
+      ]
+    },
+    {
+      "id": "halloween-2",
+      "category": "dj",
+      "url": "/voice/yesterday-fm/halloween-2.mp3",
+      "durationMs": 15453,
+      "title": "Still the Thirtieth Here",
+      "overMusic": true,
+      "dates": [
+        "10-31"
+      ],
+      "lines": [
+        {
+          "speaker": "Gordon Ago",
+          "text": "It's Halloween for you today. Here, it's still the thirtieth. Everyone's carving pumpkins. Somebody lost a cat costume, and found it again, on the cat.",
+          "startMs": 50
+        },
+        {
+          "speaker": "Gordon Ago",
+          "text": "It's all going to be fine. I'll tell you tomorrow.",
+          "startMs": 8290
+        }
+      ]
+    },
+    {
+      "id": "halloween-3",
+      "category": "dj",
+      "url": "/voice/yesterday-fm/halloween-3.mp3",
+      "durationMs": 16182,
+      "title": "Yesterday Was Halloween",
+      "overMusic": true,
+      "dates": [
+        "11-01"
+      ],
+      "lines": [
+        {
+          "speaker": "Gordon Ago",
+          "text": "Yesterday was Halloween. It went fine. Every pumpkin was carved, and every door was knocked.",
+          "startMs": 3100
+        },
+        {
+          "speaker": "Gordon Ago",
+          "text": "The sweets ran out at nine, as they always do, and everybody pretended they were all right about it. Nobody was frightened for long.",
+          "startMs": 8771
+        }
+      ]
+    }
+  ]
+}

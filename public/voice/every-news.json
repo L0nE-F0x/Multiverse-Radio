@@ -6,7 +6,7 @@
       "id": "id-001",
       "category": "id",
       "url": "/voice/every-news/id-001.mp3",
-      "durationMs": 7487,
+      "durationMs": 7488,
       "overMusic": true,
       "lines": [
         {
@@ -34,7 +34,7 @@
       "id": "id-003",
       "category": "id",
       "url": "/voice/every-news/id-003.mp3",
-      "durationMs": 7244,
+      "durationMs": 7253,
       "overMusic": true,
       "lines": [
         {
@@ -48,13 +48,13 @@
       "id": "id-004",
       "category": "id",
       "url": "/voice/every-news/id-004.mp3",
-      "durationMs": 6153,
+      "durationMs": 6158,
       "overMusic": true,
       "lines": [
         {
           "speaker": "Kim Harrowgate",
           "text": "This is Kim Harrowgate, standing in it, for Every Possible News.",
-          "startMs": 40
+          "startMs": 46
         }
       ]
     },
@@ -62,19 +62,19 @@
       "id": "id-005",
       "category": "id",
       "url": "/voice/every-news/id-005.mp3",
-      "durationMs": 5673,
+      "durationMs": 5672,
       "title": "Sponsored by Grumbel's Ladders",
       "overMusic": true,
       "lines": [
         {
           "speaker": "Dale Quarterly",
           "text": "Every Possible News is brought to you by Grumbel's Ladders.",
-          "startMs": 41
+          "startMs": 40
         },
         {
           "speaker": "Dale Quarterly",
           "text": "Up is a choice.",
-          "startMs": 4211
+          "startMs": 4210
         }
       ]
     },
@@ -82,7 +82,7 @@
       "id": "id-006",
       "category": "id",
       "url": "/voice/every-news/id-006.mp3",
-      "durationMs": 6219,
+      "durationMs": 6204,
       "overMusic": true,
       "lines": [
         {
@@ -110,7 +110,7 @@
       "id": "id-008",
       "category": "id",
       "url": "/voice/every-news/id-008.mp3",
-      "durationMs": 8421,
+      "durationMs": 8420,
       "overMusic": true,
       "lines": [
         {
@@ -129,19 +129,19 @@
       "id": "news-001",
       "category": "news",
       "url": "/voice/every-news/news-001.mp3",
-      "durationMs": 60022,
+      "durationMs": 60023,
       "title": "The Thing in Your Attic",
       "overMusic": false,
       "lines": [
         {
           "speaker": "Dale Quarterly",
           "text": "Good evening, or whatever it is where you are. This is Every Possible News. I'm Dale Quarterly, and this is the news, from wherever you are.",
-          "startMs": 2444
+          "startMs": 2445
         },
         {
           "speaker": "Dale Quarterly",
           "text": "Our top story. Scientists in Dimension Four B have confirmed that the thing in your attic is, in fact, you, from next Tuesday.",
-          "startMs": 12005
+          "startMs": 12006
         },
         {
           "speaker": "Dale Quarterly",
@@ -161,12 +161,12 @@
         {
           "speaker": "Dale Quarterly",
           "text": "And finally. A man has been named employee of the month for the four hundredth consecutive month. He does not work here. We are looking into it.",
-          "startMs": 46689
+          "startMs": 46690
         },
         {
           "speaker": "Dale Quarterly",
           "text": "That's the news. More at eleven. It is always eleven.",
-          "startMs": 56443
+          "startMs": 56444
         }
       ]
     },
@@ -186,7 +186,7 @@
         {
           "speaker": "Kim Harrowgate",
           "text": "Thanks, Dale. I'm here at the scene, which is also, technically, every scene.",
-          "startMs": 9497
+          "startMs": 9496
         },
         {
           "speaker": "Kim Harrowgate",
@@ -196,12 +196,12 @@
         {
           "speaker": "Dale Quarterly",
           "text": "Kim, is anyone hurt?",
-          "startMs": 26063
+          "startMs": 26062
         },
         {
           "speaker": "Kim Harrowgate",
           "text": "Dale, nobody here has the concept of hurt. It's actually very nice. A man just handed me a soup. I don't know why. I'm going to eat it.",
-          "startMs": 28225
+          "startMs": 28224
         },
         {
           "speaker": "Dale Quarterly",
@@ -246,7 +246,7 @@
         {
           "speaker": "Dale Quarterly",
           "text": "Do we know whose shadow it is?",
-          "startMs": 21648
+          "startMs": 21647
         },
         {
           "speaker": "Kim Harrowgate",
@@ -291,7 +291,7 @@
         {
           "speaker": "Dale Quarterly",
           "text": "The Numbers Station at one hundred and six point six has announced, once again, that it is owed geese.",
-          "startMs": 2445
+          "startMs": 2444
         },
         {
           "speaker": "Dale Quarterly",
@@ -306,7 +306,7 @@
         {
           "speaker": "Dale Quarterly",
           "text": "We reached a debt counselor in the eastern Overlap.",
-          "startMs": 26589
+          "startMs": 26588
         },
         {
           "speaker": "Debt Counselor",
@@ -331,12 +331,12 @@
         {
           "speaker": "Dale Quarterly",
           "text": "And now, the markets.",
-          "startMs": 2445
+          "startMs": 2444
         },
         {
           "speaker": "Dale Quarterly",
           "text": "Tuesday futures closed slightly up, on rumors that Tuesday might actually happen this week.",
-          "startMs": 4380
+          "startMs": 4379
         },
         {
           "speaker": "Dale Quarterly",
@@ -346,7 +346,7 @@
         {
           "speaker": "Dale Quarterly",
           "text": "Gravity rose, then fell. Gravity always does that. We have asked it to stop.",
-          "startMs": 19975
+          "startMs": 19974
         },
         {
           "speaker": "Dale Quarterly",
@@ -356,12 +356,12 @@
         {
           "speaker": "Dale Quarterly",
           "text": "And the central bank of the Overlap has cut interest in everything to zero. The bank says it is not worried. The bank says it is mostly just bored.",
-          "startMs": 29336
+          "startMs": 29335
         },
         {
           "speaker": "Dale Quarterly",
           "text": "That's the markets. Hold on to something.",
-          "startMs": 39272
+          "startMs": 39271
         }
       ]
     },
@@ -369,7 +369,7 @@
       "id": "news-006",
       "category": "news",
       "url": "/voice/every-news/news-006.mp3",
-      "durationMs": 46374,
+      "durationMs": 46375,
       "title": "A Word from the Moon",
       "overMusic": false,
       "lines": [
@@ -401,7 +401,7 @@
         {
           "speaker": "Spokesperson for the Moon",
           "text": "The moon has a lot of feelings, Dale. Some of them land on people. It isn't personal. It's tidal.",
-          "startMs": 25685
+          "startMs": 25686
         },
         {
           "speaker": "Dale Quarterly",
@@ -411,7 +411,7 @@
         {
           "speaker": "Spokesperson for the Moon",
           "text": "It does. The moon says, sleep well. The moon says, you look nice from up here. The moon says, close your curtains if you'd like, but it will know.",
-          "startMs": 34328
+          "startMs": 34329
         },
         {
           "speaker": "Dale Quarterly",
@@ -424,44 +424,44 @@
       "id": "news-007",
       "category": "news",
       "url": "/voice/every-news/news-007.mp3",
-      "durationMs": 42075,
+      "durationMs": 42076,
       "title": "Election Night in the Overlap",
       "overMusic": false,
       "lines": [
         {
           "speaker": "Dale Quarterly",
           "text": "Polls have closed in the Overlap, where voters chose between two candidates who are, by every available measure, the same man.",
-          "startMs": 2444
+          "startMs": 2445
         },
         {
           "speaker": "Dale Quarterly",
           "text": "He has won. He has also lost. Both of him gave speeches at the same time, from the same podium, and agreed on almost everything.",
-          "startMs": 11092
+          "startMs": 11093
         },
         {
           "speaker": "The Winner",
           "text": "My friends. Tonight, we won.",
-          "startMs": 19891
+          "startMs": 19892
         },
         {
           "speaker": "The Loser",
           "text": "My friends. Tonight, we lost.",
-          "startMs": 21941
+          "startMs": 21942
         },
         {
           "speaker": "The Winner",
           "text": "I want to thank my opponent, who ran a clean and honest campaign.",
-          "startMs": 24036
+          "startMs": 24037
         },
         {
           "speaker": "The Loser",
           "text": "I want to thank my opponent, who has my exact mother.",
-          "startMs": 28579
+          "startMs": 28580
         },
         {
           "speaker": "Dale Quarterly",
           "text": "Turnout was one hundred percent, as both candidates voted for each other. The new term begins on Monday, or, for the losing candidate, doesn't.",
-          "startMs": 32727
+          "startMs": 32728
         }
       ]
     },
@@ -476,12 +476,12 @@
         {
           "speaker": "Dale Quarterly",
           "text": "The queue at the Bureau of Infinite Queues has today reached the sea. Kim Harrowgate is at the back of it. Kim?",
-          "startMs": 2444
+          "startMs": 2445
         },
         {
           "speaker": "Kim Harrowgate",
           "text": "Dale, I'm at the very end of the queue, which as of this morning is standing in about four inches of water. The queue began, as far as anyone knows, before chairs.",
-          "startMs": 9542
+          "startMs": 9543
         },
         {
           "speaker": "Kim Harrowgate",
@@ -491,7 +491,7 @@
         {
           "speaker": "Man in the Queue",
           "text": "I don't remember. But I'm close. I can feel it.",
-          "startMs": 24325
+          "startMs": 24326
         },
         {
           "speaker": "Kim Harrowgate",
@@ -501,12 +501,12 @@
         {
           "speaker": "Man in the Queue",
           "text": "My grandfather held my place, and his mother held his. We take turns sitting down. It's very organized.",
-          "startMs": 29349
+          "startMs": 29350
         },
         {
           "speaker": "Kim Harrowgate",
           "text": "And how's morale?",
-          "startMs": 36459
+          "startMs": 36460
         },
         {
           "speaker": "Man in the Queue",
@@ -529,19 +529,19 @@
       "id": "news-009",
       "category": "news",
       "url": "/voice/every-news/news-009.mp3",
-      "durationMs": 40613,
+      "durationMs": 40614,
       "title": "Scientists Discover New Color",
       "overMusic": false,
       "lines": [
         {
           "speaker": "Dale Quarterly",
           "text": "Science now. Researchers at the Institute for Looking Closely say they have discovered a brand new color, never before seen by any eye in any timeline.",
-          "startMs": 2444
+          "startMs": 2445
         },
         {
           "speaker": "Dale Quarterly",
           "text": "The color is beige.",
-          "startMs": 12757
+          "startMs": 12758
         },
         {
           "speaker": "Dale Quarterly",
@@ -551,7 +551,7 @@
         {
           "speaker": "Dale Quarterly",
           "text": "Researchers describe it as slightly warmer than beige, slightly sadder than beige, and impossible to tell apart from beige by anyone who has not trained for eleven years.",
-          "startMs": 17213
+          "startMs": 17214
         },
         {
           "speaker": "Dale Quarterly",
@@ -564,14 +564,14 @@
       "id": "news-010",
       "category": "news",
       "url": "/voice/every-news/news-010.mp3",
-      "durationMs": 40516,
+      "durationMs": 40515,
       "title": "Relay Four, Night Four Thousand",
       "overMusic": false,
       "lines": [
         {
           "speaker": "Dale Quarterly",
           "text": "For the four thousandth night in a row, the relay station at the far edge of the dial has broadcast a single question. Is anyone receiving this.",
-          "startMs": 2445
+          "startMs": 2444
         },
         {
           "speaker": "Dale Quarterly",
@@ -586,17 +586,17 @@
         {
           "speaker": "Dale Quarterly",
           "text": "We tried to reach Relay Four ourselves this evening.",
-          "startMs": 28987
+          "startMs": 28986
         },
         {
           "speaker": "Teodor, Relay Four",
           "text": "Is anyone receiving this. Hello. This is Relay Four—",
-          "startMs": 33046
+          "startMs": 33045
         },
         {
           "speaker": "Dale Quarterly",
           "text": "We'll keep trying. Teodor, if you're listening. Yes.",
-          "startMs": 37065
+          "startMs": 37064
         }
       ]
     },
@@ -621,7 +621,7 @@
         {
           "speaker": "Dale Quarterly",
           "text": "The morning is in good condition. The lunch hour is waterlogged. The afternoon appears to have been chewed.",
-          "startMs": 24594
+          "startMs": 24595
         },
         {
           "speaker": "Dale Quarterly",
@@ -641,22 +641,22 @@
         {
           "speaker": "Dale Quarterly",
           "text": "With the end of the world scheduled, once again, for later this week, we sent Kim Harrowgate out to ask people how they feel about it. Kim?",
-          "startMs": 2444
+          "startMs": 2445
         },
         {
           "speaker": "Kim Harrowgate",
           "text": "Thanks, Dale. I'm on the high street. Sir, how do you feel about the end of the world?",
-          "startMs": 11615
+          "startMs": 11616
         },
         {
           "speaker": "Passer-by",
           "text": "Which one?",
-          "startMs": 16337
+          "startMs": 16338
         },
         {
           "speaker": "Kim Harrowgate",
           "text": "The one on Thursday.",
-          "startMs": 17470
+          "startMs": 17471
         },
         {
           "speaker": "Passer-by",
@@ -666,7 +666,7 @@
         {
           "speaker": "Kim Harrowgate",
           "text": "Thank you. Ma'am? How do you feel about the end of the world?",
-          "startMs": 24746
+          "startMs": 24747
         },
         {
           "speaker": "Bev",
@@ -676,7 +676,7 @@
         {
           "speaker": "Kim Harrowgate",
           "text": "No, ma'am, it's the news.",
-          "startMs": 30089
+          "startMs": 30090
         },
         {
           "speaker": "Bev",
@@ -691,7 +691,7 @@
         {
           "speaker": "Bev",
           "text": "Nobody does, dear. That's the problem.",
-          "startMs": 38244
+          "startMs": 38245
         },
         {
           "speaker": "Kim Harrowgate",
@@ -701,12 +701,12 @@
         {
           "speaker": "Young Man",
           "text": "I think it'll be fine. It always ends on a Thursday, and then on Friday it's still there.",
-          "startMs": 42219
+          "startMs": 42220
         },
         {
           "speaker": "Kim Harrowgate",
           "text": "There you have it, Dale. Cautious optimism, and a song.",
-          "startMs": 47520
+          "startMs": 47521
         }
       ]
     },
@@ -714,29 +714,29 @@
       "id": "news-013",
       "category": "news",
       "url": "/voice/every-news/news-013.mp3",
-      "durationMs": 43473,
+      "durationMs": 43474,
       "title": "The Universe Continues to End",
       "overMusic": false,
       "lines": [
         {
           "speaker": "Dale Quarterly",
           "text": "An update on the end of the universe. The universe continues to end at its current rate, which experts describe as leisurely.",
-          "startMs": 2444
+          "startMs": 2445
         },
         {
           "speaker": "Dale Quarterly",
           "text": "The Lounge at the End of Time reports that last orders have now been called for the eleven billionth consecutive year. Patrons are said to be unconcerned, and a little sleepy.",
-          "startMs": 10895
+          "startMs": 10896
         },
         {
           "speaker": "Dale Quarterly",
           "text": "Scientists estimate the universe will end completely in roughly a very long time. Asked to be more specific, they said a very, very long time, and then asked if we'd like a drink.",
-          "startMs": 22699
+          "startMs": 22700
         },
         {
           "speaker": "Dale Quarterly",
           "text": "The universe itself was unavailable for comment. It is, however, looking lovely this evening. Warm colors. Very flattering.",
-          "startMs": 35046
+          "startMs": 35047
         }
       ]
     },
@@ -751,22 +751,22 @@
         {
           "speaker": "Dale Quarterly",
           "text": "Health news. For the first time in recorded history, doctors in four separate realities have agreed on something.",
-          "startMs": 2444
+          "startMs": 2445
         },
         {
           "speaker": "Dale Quarterly",
           "text": "They will not say what. At a joint press conference, they declined all questions, shook hands for a very long time, and seemed, to observers, enormously relieved.",
-          "startMs": 10110
+          "startMs": 10111
         },
         {
           "speaker": "A Doctor",
           "text": "We just think it's nice. That's all. We'd like to enjoy it for a little while before we say.",
-          "startMs": 20806
+          "startMs": 20807
         },
         {
           "speaker": "Dale Quarterly",
           "text": "In other health news, a new study confirms that people who drink eight glasses of water a day are mostly water. More on that as it develops.",
-          "startMs": 25913
+          "startMs": 25914
         }
       ]
     },
@@ -774,29 +774,29 @@
       "id": "news-015",
       "category": "news",
       "url": "/voice/every-news/news-015.mp3",
-      "durationMs": 47153,
+      "durationMs": 47152,
       "title": "Employee of the Month, Again",
       "overMusic": false,
       "lines": [
         {
           "speaker": "Dale Quarterly",
           "text": "Earlier this month we reported that a man has been named employee of the month here at Every Possible News for the four hundredth consecutive month, despite not working here. He joins me now in the studio.",
-          "startMs": 2445
+          "startMs": 2444
         },
         {
           "speaker": "Employee of the Month",
           "text": "Thank you, Dale. It's an honor.",
-          "startMs": 16436
+          "startMs": 16435
         },
         {
           "speaker": "Dale Quarterly",
           "text": "You don't work here.",
-          "startMs": 18947
+          "startMs": 18946
         },
         {
           "speaker": "Employee of the Month",
           "text": "No.",
-          "startMs": 20457
+          "startMs": 20456
         },
         {
           "speaker": "Dale Quarterly",
@@ -806,7 +806,7 @@
         {
           "speaker": "Employee of the Month",
           "text": "I come in on the first of the month. I stand near the wall by the water cooler. I nod at people. People assume.",
-          "startMs": 23428
+          "startMs": 23427
         },
         {
           "speaker": "Dale Quarterly",
@@ -826,7 +826,7 @@
         {
           "speaker": "Employee of the Month",
           "text": "Another, smaller folder, Dale. You never let them see the folder.",
-          "startMs": 35293
+          "startMs": 35292
         },
         {
           "speaker": "Dale Quarterly",
@@ -841,7 +841,7 @@
         {
           "speaker": "Dale Quarterly",
           "text": "He will be back on the first.",
-          "startMs": 45140
+          "startMs": 45139
         }
       ]
     },
@@ -849,7 +849,7 @@
       "id": "news-016",
       "category": "news",
       "url": "/voice/every-news/news-016.mp3",
-      "durationMs": 49690,
+      "durationMs": 49692,
       "title": "Gravity Leak in Lower Stilt",
       "overMusic": false,
       "lines": [
@@ -876,7 +876,7 @@
         {
           "speaker": "Kim Harrowgate",
           "text": "Dale, a man floating past has just handed me a brick. I'm holding the brick. I feel wonderful. I feel like a person who is holding a brick.",
-          "startMs": 31176
+          "startMs": 31177
         },
         {
           "speaker": "Dale Quarterly",
@@ -886,12 +886,12 @@
         {
           "speaker": "Kim Harrowgate",
           "text": "I won't, Dale. It's all I have.",
-          "startMs": 41757
+          "startMs": 41758
         },
         {
           "speaker": "Dale Quarterly",
           "text": "Residents of Lower Stilt are advised to hold on to something heavy, or someone sensible.",
-          "startMs": 43906
+          "startMs": 43907
         }
       ]
     },
@@ -899,7 +899,7 @@
       "id": "news-017",
       "category": "news",
       "url": "/voice/every-news/news-017.mp3",
-      "durationMs": 37836,
+      "durationMs": 37837,
       "title": "Mirror Talks Collapse",
       "overMusic": false,
       "lines": [
@@ -911,7 +911,7 @@
         {
           "speaker": "Dale Quarterly",
           "text": "Each side accuses the other of copying.",
-          "startMs": 10689
+          "startMs": 10690
         },
         {
           "speaker": "Dale Quarterly",
@@ -921,7 +921,7 @@
         {
           "speaker": "Dale Quarterly",
           "text": "Observers say the talks had been going well, with both parties agreeing on everything at exactly the same moment, until a junior delegate on the Mirror side was seen, very briefly, scratching his nose with the wrong hand.",
-          "startMs": 17386
+          "startMs": 17387
         },
         {
           "speaker": "Dale Quarterly",
@@ -969,7 +969,7 @@
       "id": "news-019",
       "category": "news",
       "url": "/voice/every-news/news-019.mp3",
-      "durationMs": 39060,
+      "durationMs": 39059,
       "title": "Live from Tomorrow",
       "overMusic": false,
       "lines": [
@@ -1006,17 +1006,17 @@
         {
           "speaker": "Dale Quarterly",
           "text": "Kim. What is the news?",
-          "startMs": 25031
+          "startMs": 25030
         },
         {
           "speaker": "Kim Harrowgate",
           "text": "I can't tell you, Dale. It would spoil it. But wear a coat.",
-          "startMs": 26961
+          "startMs": 26960
         },
         {
           "speaker": "Kim Harrowgate",
           "text": "Oh. Somebody's handed me a newspaper. It's tomorrow's. Oh. Oh, that's nice. Back to you, Dale.",
-          "startMs": 30315
+          "startMs": 30314
         },
         {
           "speaker": "Dale Quarterly",
@@ -1029,7 +1029,7 @@
       "id": "news-020",
       "category": "news",
       "url": "/voice/every-news/news-020.mp3",
-      "durationMs": 41227,
+      "durationMs": 41226,
       "title": "News from Around the Dial",
       "overMusic": false,
       "lines": [
@@ -1046,17 +1046,17 @@
         {
           "speaker": "Dale Quarterly",
           "text": "At Snail Jams, traffic on the leaf has been stationary for four days. Shelley Shellbourne describes conditions as brisk.",
-          "startMs": 14638
+          "startMs": 14637
         },
         {
           "speaker": "Dale Quarterly",
           "text": "The Moon Dub Sound System reports that a shout out sent last Tuesday has still not come back. Selector Crater says he'll give it another eleven seconds.",
-          "startMs": 22982
+          "startMs": 22981
         },
         {
           "speaker": "Dale Quarterly",
           "text": "And the Department of Hold Music says your call is important to it. It has asked us to tell you that. We have now told you that.",
-          "startMs": 33513
+          "startMs": 33512
         }
       ]
     },
@@ -1104,7 +1104,7 @@
       "id": "news-022",
       "category": "news",
       "url": "/voice/every-news/news-022.mp3",
-      "durationMs": 40581,
+      "durationMs": 40580,
       "title": "The Ladder with No Top",
       "overMusic": false,
       "lines": [
@@ -1121,17 +1121,17 @@
         {
           "speaker": "Arnold Grumbel",
           "text": "We get a postcard every month. The last one just said, nice view, still going. That's all you want from a ladder, really.",
-          "startMs": 22054
+          "startMs": 22053
         },
         {
           "speaker": "Dale Quarterly",
           "text": "Asked what happens when a customer reaches the top, Mister Grumbel said, there isn't one, and smiled for a while.",
-          "startMs": 27907
+          "startMs": 27906
         },
         {
           "speaker": "Dale Quarterly",
           "text": "Grumbel's Ladders sponsor this program. We have been asked to say, up is a choice.",
-          "startMs": 35484
+          "startMs": 35483
         }
       ]
     },
@@ -1139,14 +1139,14 @@
       "id": "news-023",
       "category": "news",
       "url": "/voice/every-news/news-023.mp3",
-      "durationMs": 37628,
+      "durationMs": 37627,
       "title": "Sports in Brief",
       "overMusic": false,
       "lines": [
         {
           "speaker": "Dale Quarterly",
           "text": "In sports. At Coliseum Zero tonight, the final score was a color. Fans of the losing side say it was more of a mood.",
-          "startMs": 2445
+          "startMs": 2444
         },
         {
           "speaker": "Dale Quarterly",
@@ -1161,7 +1161,7 @@
         {
           "speaker": "Dale Quarterly",
           "text": "For full results, ask Chip Thunderbuckle on the Impossible Sports Network. And then ask somebody else.",
-          "startMs": 31079
+          "startMs": 31078
         }
       ]
     },
@@ -1191,7 +1191,7 @@
         {
           "speaker": "A Librarian",
           "text": "We don't mind early returns, as such. We mind that he's folded the corner of page two hundred, and she hasn't got there yet. It'll be a shock for her.",
-          "startMs": 24605
+          "startMs": 24604
         },
         {
           "speaker": "Dale Quarterly",
@@ -1204,7 +1204,7 @@
       "id": "weather-001",
       "category": "weather",
       "url": "/voice/every-news/weather-001.mp3",
-      "durationMs": 39573,
+      "durationMs": 39569,
       "title": "Weather and Traffic Across All Timelines",
       "overMusic": true,
       "lines": [
@@ -1221,27 +1221,27 @@
         {
           "speaker": "Skip Daley",
           "text": "Out west, expect scattered Tuesdays, mostly in the afternoon.",
-          "startMs": 17386
+          "startMs": 17384
         },
         {
           "speaker": "Skip Daley",
           "text": "And a heads up for commuters. There's a ten mile backup on Interstate Zero, where traffic is being held up by a single, very polite deer. Nobody wants to go first!",
-          "startMs": 20845
+          "startMs": 20843
         },
         {
           "speaker": "Dale Quarterly",
           "text": "Skip. What about the weekend?",
-          "startMs": 30508
+          "startMs": 30506
         },
         {
           "speaker": "Skip Daley",
           "text": "The weekend has been cancelled, Dale! But the weekday is being extended, so that's nice!",
-          "startMs": 32734
+          "startMs": 32732
         },
         {
           "speaker": "Dale Quarterly",
           "text": "Thank you, Skip.",
-          "startMs": 38271
+          "startMs": 38267
         }
       ]
     },
@@ -1280,7 +1280,7 @@
       "id": "weather-003",
       "category": "weather",
       "url": "/voice/every-news/weather-003.mp3",
-      "durationMs": 30220,
+      "durationMs": 30226,
       "title": "A Warm Front of Nostalgia",
       "overMusic": true,
       "lines": [
@@ -1297,22 +1297,22 @@
         {
           "speaker": "Skip Daley",
           "text": "Further north, a cold snap of common sense. Bundle up! Make good choices!",
-          "startMs": 15773
+          "startMs": 15779
         },
         {
           "speaker": "Skip Daley",
           "text": "Overnight lows of around minus one feeling. Highs tomorrow, a pleasant seven or eight out of ten.",
-          "startMs": 20408
+          "startMs": 20414
         },
         {
           "speaker": "Dale Quarterly",
           "text": "Thank you, Skip. I'll be wearing a coat.",
-          "startMs": 26553
+          "startMs": 26559
         },
         {
           "speaker": "Skip Daley",
           "text": "Good call, Dale!",
-          "startMs": 29354
+          "startMs": 29360
         }
       ]
     },
@@ -1352,7 +1352,7 @@
         {
           "speaker": "Dale Quarterly",
           "text": "Good for Drizzle.",
-          "startMs": 31028
+          "startMs": 31027
         }
       ]
     },
@@ -1578,14 +1578,14 @@
       "id": "interrupt-001",
       "category": "interrupt",
       "url": "/voice/every-news/interrupt-001.mp3",
-      "durationMs": 7212,
+      "durationMs": 7211,
       "title": "Breaking: Something Has Happened",
       "overMusic": true,
       "lines": [
         {
           "speaker": "Dale Quarterly",
           "text": "This just in. Something has happened. We'll tell you what, as soon as it stops.",
-          "startMs": 2445
+          "startMs": 2444
         }
       ]
     },
@@ -1608,14 +1608,14 @@
       "id": "interrupt-003",
       "category": "interrupt",
       "url": "/voice/every-news/interrupt-003.mp3",
-      "durationMs": 8874,
+      "durationMs": 8876,
       "title": "A Correction",
       "overMusic": true,
       "lines": [
         {
           "speaker": "Dale Quarterly",
           "text": "We interrupt this program to correct an earlier report. The moon is looking at you. We regret the error.",
-          "startMs": 2444
+          "startMs": 2445
         }
       ]
     },
@@ -1630,7 +1630,7 @@
         {
           "speaker": "Dale Quarterly",
           "text": "Breaking news. Kim has been handed something. Kim?",
-          "startMs": 2444
+          "startMs": 2445
         },
         {
           "speaker": "Kim Harrowgate",
@@ -1641,6 +1641,1895 @@
           "speaker": "Dale Quarterly",
           "text": "Do not give it to the Numbers Station.",
           "startMs": 7587
+        }
+      ]
+    },
+    {
+      "id": "the-midnight-edition-open",
+      "category": "id",
+      "url": "/voice/every-news/the-midnight-edition-open.mp3",
+      "durationMs": 10981,
+      "title": "The Midnight Edition",
+      "overMusic": true,
+      "part": "open",
+      "show": "the-midnight-edition",
+      "lines": [
+        {
+          "speaker": "Dale Quarterly",
+          "text": "This is the Midnight Edition, on Every Possible News. It is eleven o'clock.",
+          "startMs": 2444
+        },
+        {
+          "speaker": "Dale Quarterly",
+          "text": "It is still eleven o'clock. We checked.",
+          "startMs": 8223
+        }
+      ]
+    },
+    {
+      "id": "the-midnight-edition-01",
+      "category": "dj",
+      "url": "/voice/every-news/the-midnight-edition-01.mp3",
+      "durationMs": 15618,
+      "overMusic": true,
+      "show": "the-midnight-edition",
+      "lines": [
+        {
+          "speaker": "Dale Quarterly",
+          "text": "A reminder, at this late hour, that the Midnight Edition is not a different programme. It is the same news, read more slowly, in case you were tired the first time.",
+          "startMs": 37
+        },
+        {
+          "speaker": "Dale Quarterly",
+          "text": "We find it sinks in better. Some of it sinks in further than we would like.",
+          "startMs": 10706
+        }
+      ]
+    },
+    {
+      "id": "the-midnight-edition-02",
+      "category": "dj",
+      "url": "/voice/every-news/the-midnight-edition-02.mp3",
+      "durationMs": 16093,
+      "overMusic": true,
+      "show": "the-midnight-edition",
+      "lines": [
+        {
+          "speaker": "Dale Quarterly",
+          "text": "Several listeners have written to ask why the Midnight Edition begins at eleven. It doesn't. It begins at midnight. It is simply always eleven.",
+          "startMs": 40
+        },
+        {
+          "speaker": "Dale Quarterly",
+          "text": "We have asked the clock to explain itself. The clock has asked for privacy at this difficult time.",
+          "startMs": 10072
+        }
+      ]
+    },
+    {
+      "id": "the-midnight-edition-03",
+      "category": "dj",
+      "url": "/voice/every-news/the-midnight-edition-03.mp3",
+      "durationMs": 15016,
+      "overMusic": true,
+      "show": "the-midnight-edition",
+      "lines": [
+        {
+          "speaker": "Dale Quarterly",
+          "text": "Kim. It's nearly midnight. Where are you?",
+          "startMs": 37
+        },
+        {
+          "speaker": "Kim Harrowgate",
+          "text": "I'm at home, Dale. In my dressing gown. Someone's just handed me a cup of cocoa.",
+          "startMs": 2898
+        },
+        {
+          "speaker": "Dale Quarterly",
+          "text": "Who?",
+          "startMs": 8134
+        },
+        {
+          "speaker": "Kim Harrowgate",
+          "text": "My mum, Dale. That one I'm keeping.",
+          "startMs": 9173
+        },
+        {
+          "speaker": "Dale Quarterly",
+          "text": "Good night, Kim. The Midnight Edition continues.",
+          "startMs": 11884
+        }
+      ]
+    },
+    {
+      "id": "overnight-with-kim-open",
+      "category": "id",
+      "url": "/voice/every-news/overnight-with-kim-open.mp3",
+      "durationMs": 8662,
+      "title": "Overnight with Kim",
+      "overMusic": true,
+      "part": "open",
+      "show": "overnight-with-kim",
+      "lines": [
+        {
+          "speaker": "Kim Harrowgate",
+          "text": "This is Overnight with Kim. It's three in the morning, I'm standing in it, and somebody has just handed me a lamp.",
+          "startMs": 2445
+        }
+      ]
+    },
+    {
+      "id": "overnight-with-kim-01",
+      "category": "dj",
+      "url": "/voice/every-news/overnight-with-kim-01.mp3",
+      "durationMs": 14810,
+      "overMusic": true,
+      "show": "overnight-with-kim",
+      "lines": [
+        {
+          "speaker": "Kim Harrowgate",
+          "text": "On the overnight it's just me and the night desk. The night desk is a desk. It's very supportive. It has held everything I've ever been handed.",
+          "startMs": 37
+        },
+        {
+          "speaker": "Kim Harrowgate",
+          "text": "Tonight that's a lamp, a small accordion and a sleeping cat. The cat has been very good about the accordion.",
+          "startMs": 8666
+        }
+      ]
+    },
+    {
+      "id": "overnight-with-kim-02",
+      "category": "dj",
+      "url": "/voice/every-news/overnight-with-kim-02.mp3",
+      "durationMs": 15663,
+      "overMusic": true,
+      "show": "overnight-with-kim",
+      "lines": [
+        {
+          "speaker": "Kim Harrowgate",
+          "text": "People ask what it's like, reporting at three in the morning. Mostly, Dale's asleep. So when I say back to you, Dale, it goes to a little answering machine.",
+          "startMs": 35
+        },
+        {
+          "speaker": "Kim Harrowgate",
+          "text": "In the morning he listens to all of them, with a coffee. Back to you, Dale.",
+          "startMs": 9180
+        },
+        {
+          "speaker": "Kim Harrowgate",
+          "text": "He'll get that one at seven.",
+          "startMs": 14216
+        }
+      ]
+    },
+    {
+      "id": "overnight-with-kim-03",
+      "category": "dj",
+      "url": "/voice/every-news/overnight-with-kim-03.mp3",
+      "durationMs": 14090,
+      "overMusic": true,
+      "show": "overnight-with-kim",
+      "lines": [
+        {
+          "speaker": "Kim Harrowgate",
+          "text": "A man just stopped to ask if I was all right, standing out here in the dark with a microphone. I said I was fine.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Kim Harrowgate",
+          "text": "He handed me a scarf. It is the first thing anyone has ever handed me that I actually needed.",
+          "startMs": 6686
+        },
+        {
+          "speaker": "Kim Harrowgate",
+          "text": "Thank you, sir. Back to me.",
+          "startMs": 12600
+        }
+      ]
+    },
+    {
+      "id": "good-morning-every-timeline-open",
+      "category": "id",
+      "url": "/voice/every-news/good-morning-every-timeline-open.mp3",
+      "durationMs": 7722,
+      "title": "Good Morning, Every Timeline",
+      "overMusic": true,
+      "part": "open",
+      "show": "good-morning-every-timeline",
+      "lines": [
+        {
+          "speaker": "Skip Daley",
+          "text": "Good morning, every timeline! I'm Skip Daley, I've been up since four, and the deer is already on the road!",
+          "startMs": 37
+        }
+      ]
+    },
+    {
+      "id": "good-morning-every-timeline-01",
+      "category": "dj",
+      "url": "/voice/every-news/good-morning-every-timeline-01.mp3",
+      "durationMs": 12458,
+      "overMusic": true,
+      "show": "good-morning-every-timeline",
+      "lines": [
+        {
+          "speaker": "Skip Daley",
+          "text": "Here's your breakfast checklist, folks! Kettle on? Keys found? Shoes on? Are both of the shoes yours? Check that one. We've had reports!",
+          "startMs": 50
+        },
+        {
+          "speaker": "Skip Daley",
+          "text": "And if you're having breakfast in more than one timeline, chew in all of them. It's only polite!",
+          "startMs": 7497
+        }
+      ]
+    },
+    {
+      "id": "good-morning-every-timeline-02",
+      "category": "dj",
+      "url": "/voice/every-news/good-morning-every-timeline-02.mp3",
+      "durationMs": 10019,
+      "overMusic": true,
+      "show": "good-morning-every-timeline",
+      "lines": [
+        {
+          "speaker": "Skip Daley",
+          "text": "Quick one from Interstate Zero. The polite deer is back on the road, and this morning he's brought his mum!",
+          "startMs": 38
+        },
+        {
+          "speaker": "Skip Daley",
+          "text": "They're both saying after you. To each other. It's lovely. It's a lot. Leave early!",
+          "startMs": 5942
+        }
+      ]
+    },
+    {
+      "id": "good-morning-every-timeline-03",
+      "category": "dj",
+      "url": "/voice/every-news/good-morning-every-timeline-03.mp3",
+      "durationMs": 14698,
+      "overMusic": true,
+      "show": "good-morning-every-timeline",
+      "lines": [
+        {
+          "speaker": "Dale Quarterly",
+          "text": "Skip. It's six in the morning.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Skip Daley",
+          "text": "Isn't it great, Dale?",
+          "startMs": 2422
+        },
+        {
+          "speaker": "Dale Quarterly",
+          "text": "It is always eleven, Skip.",
+          "startMs": 3772
+        },
+        {
+          "speaker": "Skip Daley",
+          "text": "Not for the next three hours, Dale! I asked the clock nicely, and it said I could have the morning!",
+          "startMs": 6129
+        },
+        {
+          "speaker": "Dale Quarterly",
+          "text": "I'll be in my office. Where it is eleven.",
+          "startMs": 11806
+        }
+      ]
+    },
+    {
+      "id": "news-open-01",
+      "category": "news",
+      "url": "/voice/every-news/news-open-01.mp3",
+      "durationMs": 8280,
+      "overMusic": false,
+      "part": "open",
+      "kit": "news",
+      "lines": [
+        {
+          "speaker": "Dale Quarterly",
+          "text": "Good evening. This is Every Possible News. Here is the news, from every possible tonight.",
+          "startMs": 2445
+        }
+      ]
+    },
+    {
+      "id": "news-open-02",
+      "category": "news",
+      "url": "/voice/every-news/news-open-02.mp3",
+      "durationMs": 9003,
+      "overMusic": false,
+      "part": "open",
+      "kit": "news",
+      "lines": [
+        {
+          "speaker": "Dale Quarterly",
+          "text": "This is Every Possible News. I'm Dale Quarterly, and these are the headlines. Some of them are true here.",
+          "startMs": 2445
+        }
+      ]
+    },
+    {
+      "id": "news-open-03",
+      "category": "news",
+      "url": "/voice/every-news/news-open-03.mp3",
+      "durationMs": 7492,
+      "overMusic": false,
+      "part": "open",
+      "kit": "news",
+      "lines": [
+        {
+          "speaker": "Dale Quarterly",
+          "text": "The news now. Please remain seated. Please remain calm. Please remain.",
+          "startMs": 2444
+        }
+      ]
+    },
+    {
+      "id": "news-open-04",
+      "category": "news",
+      "url": "/voice/every-news/news-open-04.mp3",
+      "durationMs": 8255,
+      "overMusic": false,
+      "part": "open",
+      "kit": "news",
+      "lines": [
+        {
+          "speaker": "Dale Quarterly",
+          "text": "Good evening. Something has happened in every timeline tonight. Here are some of the somethings.",
+          "startMs": 2444
+        }
+      ]
+    },
+    {
+      "id": "news-open-05",
+      "category": "news",
+      "url": "/voice/every-news/news-open-05.mp3",
+      "durationMs": 8681,
+      "overMusic": false,
+      "daypart": "morning",
+      "part": "open",
+      "kit": "news",
+      "lines": [
+        {
+          "speaker": "Dale Quarterly",
+          "text": "Good morning. It is eleven o'clock. Here is the morning news, which is the evening news, earlier.",
+          "startMs": 2444
+        }
+      ]
+    },
+    {
+      "id": "news-open-06",
+      "category": "news",
+      "url": "/voice/every-news/news-open-06.mp3",
+      "durationMs": 9171,
+      "overMusic": false,
+      "part": "open",
+      "kit": "news",
+      "lines": [
+        {
+          "speaker": "Dale Quarterly",
+          "text": "This is Every Possible News. I'm Dale Quarterly. I have been handed some papers. Let's see what they say.",
+          "startMs": 2444
+        }
+      ]
+    },
+    {
+      "id": "news-open-07",
+      "category": "news",
+      "url": "/voice/every-news/news-open-07.mp3",
+      "durationMs": 7774,
+      "overMusic": false,
+      "part": "open",
+      "kit": "news",
+      "show": "the-midnight-edition",
+      "lines": [
+        {
+          "speaker": "Dale Quarterly",
+          "text": "This is the Midnight Edition. Here is tonight's news.",
+          "startMs": 2445
+        },
+        {
+          "speaker": "Dale Quarterly",
+          "text": "Slowly.",
+          "startMs": 6723
+        }
+      ]
+    },
+    {
+      "id": "news-open-08",
+      "category": "news",
+      "url": "/voice/every-news/news-open-08.mp3",
+      "durationMs": 9175,
+      "overMusic": false,
+      "part": "open",
+      "kit": "news",
+      "lines": [
+        {
+          "speaker": "Dale Quarterly",
+          "text": "And now, the news, brought to you by Grumbel's Ladders. Up is a choice. So, it turns out, is the news.",
+          "startMs": 38
+        }
+      ]
+    },
+    {
+      "id": "news-open-09",
+      "category": "news",
+      "url": "/voice/every-news/news-open-09.mp3",
+      "durationMs": 7900,
+      "overMusic": false,
+      "daypart": "night",
+      "part": "open",
+      "kit": "news",
+      "lines": [
+        {
+          "speaker": "Dale Quarterly",
+          "text": "Good evening, or good night, or whatever you've decided it is. Here is the news.",
+          "startMs": 2444
+        }
+      ]
+    },
+    {
+      "id": "news-body-01",
+      "category": "news",
+      "url": "/voice/every-news/news-body-01.mp3",
+      "durationMs": 15262,
+      "title": "The Man Who Lives in His Door",
+      "overMusic": false,
+      "part": "body",
+      "kit": "news",
+      "lines": [
+        {
+          "speaker": "Dale Quarterly",
+          "text": "In the eastern Overlap, a man has been found living inside his own front door. He says it started as a draught excluder, and things got out of hand.",
+          "startMs": 37
+        },
+        {
+          "speaker": "Dale Quarterly",
+          "text": "He is in good health. He asks that visitors knock gently, as it is also his ceiling.",
+          "startMs": 9798
+        }
+      ]
+    },
+    {
+      "id": "news-body-02",
+      "category": "news",
+      "url": "/voice/every-news/news-body-02.mp3",
+      "durationMs": 16704,
+      "title": "Time Flies, Measured",
+      "overMusic": false,
+      "part": "body",
+      "kit": "news",
+      "lines": [
+        {
+          "speaker": "Dale Quarterly",
+          "text": "Science. Researchers have confirmed that time flies when you're having fun, and have measured it. The figure is about eleven percent.",
+          "startMs": 40
+        },
+        {
+          "speaker": "Dale Quarterly",
+          "text": "When you're not having fun, time walks. It stops to look in shop windows. Researchers say there is very little to be done about this.",
+          "startMs": 8702
+        }
+      ]
+    },
+    {
+      "id": "news-body-03",
+      "category": "news",
+      "url": "/voice/every-news/news-body-03.mp3",
+      "durationMs": 26846,
+      "title": "A Very Quiet Riot",
+      "overMusic": false,
+      "part": "body",
+      "kit": "news",
+      "lines": [
+        {
+          "speaker": "Dale Quarterly",
+          "text": "Reports of a riot in the hill town of Lower Stilt. Kim Harrowgate is there. Kim?",
+          "startMs": 37
+        },
+        {
+          "speaker": "Kim Harrowgate",
+          "text": "Dale, I'm in the town square, where about four hundred people are rioting very quietly. Their signs say, sorry to be a bother.",
+          "startMs": 5736
+        },
+        {
+          "speaker": "Kim Harrowgate",
+          "text": "Someone has just handed me a sign. It says, only if it's not too much trouble.",
+          "startMs": 13379
+        },
+        {
+          "speaker": "Dale Quarterly",
+          "text": "What are their demands?",
+          "startMs": 18310
+        },
+        {
+          "speaker": "Kim Harrowgate",
+          "text": "A second bench, Dale. Near the fountain. For the afternoons.",
+          "startMs": 20051
+        },
+        {
+          "speaker": "Dale Quarterly",
+          "text": "Thank you, Kim. We wish them well with the bench.",
+          "startMs": 23987
+        }
+      ]
+    },
+    {
+      "id": "news-body-04",
+      "category": "news",
+      "url": "/voice/every-news/news-body-04.mp3",
+      "durationMs": 15307,
+      "title": "Somebody Else's Memories, Included",
+      "overMusic": false,
+      "part": "body",
+      "kit": "news",
+      "lines": [
+        {
+          "speaker": "Dale Quarterly",
+          "text": "Property. A house in Precinct Nine has been sold with somebody else's memories still in the attic.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Dale Quarterly",
+          "text": "The new owners say they don't mind. Overnight, they attended a wedding they don't remember going to, and say the speeches were lovely.",
+          "startMs": 7019
+        }
+      ]
+    },
+    {
+      "id": "news-body-05",
+      "category": "news",
+      "url": "/voice/every-news/news-body-05.mp3",
+      "durationMs": 13584,
+      "title": "Wednesday Missing",
+      "overMusic": false,
+      "part": "body",
+      "kit": "news",
+      "lines": [
+        {
+          "speaker": "Dale Quarterly",
+          "text": "The Overlap Weather Office says it has lost track of Wednesday. It was last seen leaving Tuesday at the usual time.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Dale Quarterly",
+          "text": "If you see Wednesday, please do not approach it. Simply let it pass, as you normally would.",
+          "startMs": 7929
+        }
+      ]
+    },
+    {
+      "id": "news-body-06",
+      "category": "news",
+      "url": "/voice/every-news/news-body-06.mp3",
+      "durationMs": 25552,
+      "title": "Kim Has Been Handed In",
+      "overMusic": false,
+      "part": "body",
+      "kit": "news",
+      "lines": [
+        {
+          "speaker": "Dale Quarterly",
+          "text": "Kim Harrowgate is at the Overlap Lost Property Office, where something important has been handed in. Kim?",
+          "startMs": 38
+        },
+        {
+          "speaker": "Kim Harrowgate",
+          "text": "Dale, it's me. Someone found me standing outside and handed me in. I've been given a ticket. I'm on a shelf, between an umbrella and a trombone.",
+          "startMs": 7418
+        },
+        {
+          "speaker": "Dale Quarterly",
+          "text": "Are you all right?",
+          "startMs": 15960
+        },
+        {
+          "speaker": "Kim Harrowgate",
+          "text": "I'm fine, Dale. It's very peaceful. Nobody's handing me anything. I'm the thing.",
+          "startMs": 17443
+        },
+        {
+          "speaker": "Dale Quarterly",
+          "text": "We'll come and collect you, Kim.",
+          "startMs": 22202
+        },
+        {
+          "speaker": "Kim Harrowgate",
+          "text": "Bring the ticket, Dale.",
+          "startMs": 24338
+        }
+      ]
+    },
+    {
+      "id": "news-body-07",
+      "category": "news",
+      "url": "/voice/every-news/news-body-07.mp3",
+      "durationMs": 13564,
+      "title": "The Night Bus Stops for Tea",
+      "overMusic": false,
+      "part": "body",
+      "kit": "news",
+      "lines": [
+        {
+          "speaker": "Dale Quarterly",
+          "text": "Transport. The night bus that goes through every reality has been delayed, after stopping in one of them for a cup of tea.",
+          "startMs": 36
+        },
+        {
+          "speaker": "Dale Quarterly",
+          "text": "Passengers say they understand. Several have stayed for a second cup. One has got married.",
+          "startMs": 7810
+        }
+      ]
+    },
+    {
+      "id": "news-body-08",
+      "category": "news",
+      "url": "/voice/every-news/news-body-08.mp3",
+      "durationMs": 21137,
+      "title": "Kim Under the Moon",
+      "overMusic": false,
+      "part": "body",
+      "kit": "news",
+      "lines": [
+        {
+          "speaker": "Dale Quarterly",
+          "text": "The moon has been seen lower than usual this week. Kim Harrowgate is underneath it. Kim?",
+          "startMs": 35
+        },
+        {
+          "speaker": "Kim Harrowgate",
+          "text": "Dale, it's very big from here. It's looking near me. It's looking very near me. It looks tired, Dale.",
+          "startMs": 5995
+        },
+        {
+          "speaker": "Dale Quarterly",
+          "text": "Has the moon said anything?",
+          "startMs": 12016
+        },
+        {
+          "speaker": "Kim Harrowgate",
+          "text": "No. But it's handed me a little bit of light. I'm going to keep it in my pocket.",
+          "startMs": 14246
+        },
+        {
+          "speaker": "Dale Quarterly",
+          "text": "Thank you, Kim. Do bring it back.",
+          "startMs": 18949
+        }
+      ]
+    },
+    {
+      "id": "news-body-09",
+      "category": "news",
+      "url": "/voice/every-news/news-body-09.mp3",
+      "durationMs": 13234,
+      "title": "Doctors Disagree",
+      "overMusic": false,
+      "part": "body",
+      "kit": "news",
+      "lines": [
+        {
+          "speaker": "Dale Quarterly",
+          "text": "Health. Doctors in four realities, who agreed on something last month for the first time in history, now disagree about what it was.",
+          "startMs": 44
+        },
+        {
+          "speaker": "Dale Quarterly",
+          "text": "They describe the experience as healthy. They describe each other as wrong.",
+          "startMs": 8676
+        }
+      ]
+    },
+    {
+      "id": "news-body-10",
+      "category": "news",
+      "url": "/voice/every-news/news-body-10.mp3",
+      "durationMs": 14629,
+      "title": "Geese, to Be Safe",
+      "overMusic": false,
+      "part": "body",
+      "kit": "news",
+      "lines": [
+        {
+          "speaker": "Dale Quarterly",
+          "text": "The Office of Fair Geese reports that the Numbers Station received four geese this week, all from one woman, who says she doesn't think she owed any, but wanted to be on the safe side.",
+          "startMs": 44
+        },
+        {
+          "speaker": "Dale Quarterly",
+          "text": "The Numbers Station has thanked her. In numbers.",
+          "startMs": 11617
+        }
+      ]
+    },
+    {
+      "id": "news-body-11",
+      "category": "news",
+      "url": "/voice/every-news/news-body-11.mp3",
+      "durationMs": 24163,
+      "title": "The Deer Watches the Traffic",
+      "overMusic": false,
+      "part": "body",
+      "kit": "news",
+      "lines": [
+        {
+          "speaker": "Dale Quarterly",
+          "text": "Traffic is moving on Interstate Zero for the first time in nine days. Kim is at the roadside. Kim?",
+          "startMs": 38
+        },
+        {
+          "speaker": "Kim Harrowgate",
+          "text": "Dale, the cars are going past slowly, and the polite deer is standing on the verge, watching them go. It looks very proud of everyone.",
+          "startMs": 7315
+        },
+        {
+          "speaker": "Kim Harrowgate",
+          "text": "A driver has just handed me a sandwich out of his window. He said, for the deer. The deer doesn't want it. I'm eating it, Dale.",
+          "startMs": 15370
+        },
+        {
+          "speaker": "Dale Quarterly",
+          "text": "Thank you, Kim.",
+          "startMs": 22986
+        }
+      ]
+    },
+    {
+      "id": "news-body-12",
+      "category": "news",
+      "url": "/voice/every-news/news-body-12.mp3",
+      "durationMs": 15071,
+      "title": "Silence Rallies",
+      "overMusic": false,
+      "part": "body",
+      "kit": "news",
+      "lines": [
+        {
+          "speaker": "Dale Quarterly",
+          "text": "Business. Shares in silence rose sharply this afternoon, after a long period of saying nothing.",
+          "startMs": 37
+        },
+        {
+          "speaker": "Dale Quarterly",
+          "text": "Analysts say silence remains undervalued. Silence declined to comment, which analysts describe as very much its strength.",
+          "startMs": 6643
+        }
+      ]
+    },
+    {
+      "id": "news-body-13",
+      "category": "news",
+      "url": "/voice/every-news/news-body-13.mp3",
+      "durationMs": 15343,
+      "title": "A Bench, Early",
+      "overMusic": false,
+      "part": "body",
+      "kit": "news",
+      "lines": [
+        {
+          "speaker": "Dale Quarterly",
+          "text": "A bench in Founders Park has been dedicated to a man who is still very much alive. He says he is touched, and comes to sit on it every afternoon, to see how it's doing.",
+          "startMs": 37
+        },
+        {
+          "speaker": "Dale Quarterly",
+          "text": "The plaque reads, he liked this bench. He says it's accurate.",
+          "startMs": 11469
+        }
+      ]
+    },
+    {
+      "id": "news-body-14",
+      "category": "news",
+      "url": "/voice/every-news/news-body-14.mp3",
+      "durationMs": 21055,
+      "title": "The Tuesday Goes Home",
+      "overMusic": false,
+      "part": "body",
+      "kit": "news",
+      "lines": [
+        {
+          "speaker": "Dale Quarterly",
+          "text": "The Tuesday found in a drainage ditch last spring has been claimed. Kim Harrowgate is with its owners. Kim?",
+          "startMs": 38
+        },
+        {
+          "speaker": "Kim Harrowgate",
+          "text": "Dale, I'm with a family in the eastern Overlap who have finally got their Tuesday back. They're having it now. It's a little damp. The afternoon still has bite marks.",
+          "startMs": 7316
+        },
+        {
+          "speaker": "Kim Harrowgate",
+          "text": "They've handed me a piece of it. It's about twenty past two. It's lovely, Dale.",
+          "startMs": 16976
+        }
+      ]
+    },
+    {
+      "id": "news-body-15",
+      "category": "news",
+      "url": "/voice/every-news/news-body-15.mp3",
+      "durationMs": 16866,
+      "title": "The Sun, as an Exam Subject",
+      "overMusic": false,
+      "part": "body",
+      "kit": "news",
+      "lines": [
+        {
+          "speaker": "Dale Quarterly",
+          "text": "Education. Schools in the Damp Dimension have added a new subject, the sun, which most pupils have never seen.",
+          "startMs": 37
+        },
+        {
+          "speaker": "Dale Quarterly",
+          "text": "The first exam was this morning. Most pupils drew a lamp. One drew a very confident orange. He has been given top marks, and a hat.",
+          "startMs": 8131
+        }
+      ]
+    },
+    {
+      "id": "news-body-16",
+      "category": "news",
+      "url": "/voice/every-news/news-body-16.mp3",
+      "durationMs": 16748,
+      "title": "Cat Elected",
+      "overMusic": false,
+      "part": "body",
+      "kit": "news",
+      "lines": [
+        {
+          "speaker": "Dale Quarterly",
+          "text": "Local government. A cat in the eastern Overlap has been elected to the parish council, after nobody else stood.",
+          "startMs": 41
+        },
+        {
+          "speaker": "Dale Quarterly",
+          "text": "In his first meeting he knocked the agenda off the table and slept through the budget. Colleagues describe it as the most productive session in years.",
+          "startMs": 7531
+        }
+      ]
+    },
+    {
+      "id": "news-body-17",
+      "category": "news",
+      "url": "/voice/every-news/news-body-17.mp3",
+      "durationMs": 22094,
+      "title": "The Landing on the Ambition",
+      "overMusic": false,
+      "part": "body",
+      "kit": "news",
+      "lines": [
+        {
+          "speaker": "Dale Quarterly",
+          "text": "In Lower Stilt, a man has spent the week climbing a Grumbel's Ambition, the ladder with no top. Kim?",
+          "startMs": 38
+        },
+        {
+          "speaker": "Kim Harrowgate",
+          "text": "Dale, he's shouted down that there isn't a top, which we knew. But he says there's a very nice landing about halfway up, with a chair. He's having a sit down.",
+          "startMs": 6963
+        },
+        {
+          "speaker": "Kim Harrowgate",
+          "text": "He's lowered a basket. Someone has put a sandwich in it. Up is a choice, he says. So is staying where you are.",
+          "startMs": 16162
+        }
+      ]
+    },
+    {
+      "id": "news-body-18",
+      "category": "news",
+      "url": "/voice/every-news/news-body-18.mp3",
+      "durationMs": 12603,
+      "title": "A New Star",
+      "overMusic": false,
+      "part": "body",
+      "kit": "news",
+      "lines": [
+        {
+          "speaker": "Dale Quarterly",
+          "text": "Astronomy. A new star has been reported, low in the sky over the eastern Overlap.",
+          "startMs": 36
+        },
+        {
+          "speaker": "Dale Quarterly",
+          "text": "On closer inspection it is a porch light. Astronomers say they have decided to count it anyway.",
+          "startMs": 6103
+        }
+      ]
+    },
+    {
+      "id": "news-body-19",
+      "category": "news",
+      "url": "/voice/every-news/news-body-19.mp3",
+      "durationMs": 16324,
+      "title": "Backwards, Both Ways",
+      "overMusic": false,
+      "part": "body",
+      "kit": "news",
+      "lines": [
+        {
+          "speaker": "Dale Quarterly",
+          "text": "The arts. The Mirror World's national gallery has opened an exhibition of paintings of our world. Critics there describe our world as charming, but backwards.",
+          "startMs": 40
+        },
+        {
+          "speaker": "Dale Quarterly",
+          "text": "Critics here have described the exhibition as charming, but backwards. Both sides are delighted.",
+          "startMs": 10293
+        }
+      ]
+    },
+    {
+      "id": "news-body-20",
+      "category": "news",
+      "url": "/voice/every-news/news-body-20.mp3",
+      "durationMs": 23423,
+      "title": "Somebody at Nobody's Bakery",
+      "overMusic": false,
+      "part": "body",
+      "kit": "news",
+      "lines": [
+        {
+          "speaker": "Dale Quarterly",
+          "text": "Nobody's Bakery, which sells bread that nobody made, has been found to have somebody in it. Kim?",
+          "startMs": 39
+        },
+        {
+          "speaker": "Kim Harrowgate",
+          "text": "Dale, I'm in the bakery with a woman in an apron, covered in flour. She says she's been doing it every night for thirty years.",
+          "startMs": 6889
+        },
+        {
+          "speaker": "Maureen, a Baker",
+          "text": "I don't mind the name. I'd just like someone to say thank you, now and then.",
+          "startMs": 14386
+        },
+        {
+          "speaker": "Kim Harrowgate",
+          "text": "She's handed me a loaf. It's warm, and it sings when you squeeze it. Thank you, Maureen.",
+          "startMs": 18621
+        }
+      ]
+    },
+    {
+      "id": "news-body-21",
+      "category": "news",
+      "url": "/voice/every-news/news-body-21.mp3",
+      "durationMs": 17034,
+      "title": "A Man Who Likes It at Lost and Found",
+      "overMusic": false,
+      "part": "body",
+      "kit": "news",
+      "lines": [
+        {
+          "speaker": "Dale Quarterly",
+          "text": "The Overlap Lost and Found desk reports a record week. Nine hundred umbrellas, four hundred gloves, and a man who says he isn't lost, he just likes it there.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Dale Quarterly",
+          "text": "He has been given a chair and a ticket. Staff say he's no trouble, and very good at finding things.",
+          "startMs": 10779
+        }
+      ]
+    },
+    {
+      "id": "news-close-01",
+      "category": "news",
+      "url": "/voice/every-news/news-close-01.mp3",
+      "durationMs": 3615,
+      "overMusic": false,
+      "part": "close",
+      "kit": "news",
+      "lines": [
+        {
+          "speaker": "Dale Quarterly",
+          "text": "That's the news. More at eleven. It is always eleven.",
+          "startMs": 36
+        }
+      ]
+    },
+    {
+      "id": "news-close-02",
+      "category": "news",
+      "url": "/voice/every-news/news-close-02.mp3",
+      "durationMs": 7298,
+      "overMusic": false,
+      "part": "close",
+      "kit": "news",
+      "lines": [
+        {
+          "speaker": "Dale Quarterly",
+          "text": "That's the news, from every possible tonight. Some of it may even be yours.",
+          "startMs": 36
+        }
+      ]
+    },
+    {
+      "id": "news-close-03",
+      "category": "news",
+      "url": "/voice/every-news/news-close-03.mp3",
+      "durationMs": 4089,
+      "overMusic": false,
+      "part": "close",
+      "kit": "news",
+      "lines": [
+        {
+          "speaker": "Dale Quarterly",
+          "text": "That is the news. Hold on to something. Or someone sensible.",
+          "startMs": 36
+        }
+      ]
+    },
+    {
+      "id": "news-close-04",
+      "category": "news",
+      "url": "/voice/every-news/news-close-04.mp3",
+      "durationMs": 4975,
+      "overMusic": false,
+      "part": "close",
+      "kit": "news",
+      "lines": [
+        {
+          "speaker": "Dale Quarterly",
+          "text": "That's all from the newsroom. Please return to whatever you were doing. It's still there.",
+          "startMs": 44
+        }
+      ]
+    },
+    {
+      "id": "news-close-05",
+      "category": "news",
+      "url": "/voice/every-news/news-close-05.mp3",
+      "durationMs": 7654,
+      "overMusic": false,
+      "part": "close",
+      "kit": "news",
+      "lines": [
+        {
+          "speaker": "Dale Quarterly",
+          "text": "Nothing else has happened. If anything does, we'll let you know. Probably at eleven.",
+          "startMs": 37
+        }
+      ]
+    },
+    {
+      "id": "news-close-06",
+      "category": "news",
+      "url": "/voice/every-news/news-close-06.mp3",
+      "durationMs": 5115,
+      "overMusic": false,
+      "part": "close",
+      "kit": "news",
+      "show": "the-midnight-edition",
+      "lines": [
+        {
+          "speaker": "Dale Quarterly",
+          "text": "That was the Midnight Edition. Go to bed. The news will keep. It always has.",
+          "startMs": 36
+        }
+      ]
+    },
+    {
+      "id": "news-close-07",
+      "category": "news",
+      "url": "/voice/every-news/news-close-07.mp3",
+      "durationMs": 5263,
+      "overMusic": false,
+      "part": "close",
+      "kit": "news",
+      "lines": [
+        {
+          "speaker": "Dale Quarterly",
+          "text": "Every Possible News. Up is a choice. So is the news. Thank you for choosing it.",
+          "startMs": 38
+        }
+      ]
+    },
+    {
+      "id": "news-close-08",
+      "category": "news",
+      "url": "/voice/every-news/news-close-08.mp3",
+      "durationMs": 5431,
+      "overMusic": false,
+      "daypart": "morning",
+      "part": "close",
+      "kit": "news",
+      "lines": [
+        {
+          "speaker": "Dale Quarterly",
+          "text": "That's the morning news. Have some breakfast. And somebody tell the sun we're thinking of it.",
+          "startMs": 39
+        }
+      ]
+    },
+    {
+      "id": "weather-open-01",
+      "category": "weather",
+      "url": "/voice/every-news/weather-open-01.mp3",
+      "durationMs": 4906,
+      "overMusic": true,
+      "part": "open",
+      "kit": "weather",
+      "lines": [
+        {
+          "speaker": "Dale Quarterly",
+          "text": "Weather and traffic now, across all timelines. Skip?",
+          "startMs": 38
+        },
+        {
+          "speaker": "Skip Daley",
+          "text": "Thanks, Dale!",
+          "startMs": 4105
+        }
+      ]
+    },
+    {
+      "id": "weather-open-02",
+      "category": "weather",
+      "url": "/voice/every-news/weather-open-02.mp3",
+      "durationMs": 6099,
+      "overMusic": true,
+      "part": "open",
+      "kit": "weather",
+      "lines": [
+        {
+          "speaker": "Skip Daley",
+          "text": "It's weather time, folks, in every timeline at once! Let's see what's falling!",
+          "startMs": 2290
+        }
+      ]
+    },
+    {
+      "id": "weather-open-03",
+      "category": "weather",
+      "url": "/voice/every-news/weather-open-03.mp3",
+      "durationMs": 5516,
+      "overMusic": true,
+      "part": "open",
+      "kit": "weather",
+      "lines": [
+        {
+          "speaker": "Skip Daley",
+          "text": "Skip Daley with your weather and travel, brought to you by Grumbel's Ladders! When the road won't go, go up!",
+          "startMs": 36
+        }
+      ]
+    },
+    {
+      "id": "weather-open-04",
+      "category": "weather",
+      "url": "/voice/every-news/weather-open-04.mp3",
+      "durationMs": 3746,
+      "overMusic": true,
+      "daypart": "morning",
+      "part": "open",
+      "kit": "weather",
+      "lines": [
+        {
+          "speaker": "Skip Daley",
+          "text": "Good morning, commuters! Here's what's happening out there, and in there, and over there!",
+          "startMs": 36
+        }
+      ]
+    },
+    {
+      "id": "weather-open-05",
+      "category": "weather",
+      "url": "/voice/every-news/weather-open-05.mp3",
+      "durationMs": 4428,
+      "overMusic": true,
+      "daypart": "night",
+      "part": "open",
+      "kit": "weather",
+      "lines": [
+        {
+          "speaker": "Skip Daley",
+          "text": "Your late night weather, folks! Grab a blanket! And maybe a second, smaller blanket!",
+          "startMs": 40
+        }
+      ]
+    },
+    {
+      "id": "weather-body-01",
+      "category": "weather",
+      "url": "/voice/every-news/weather-body-01.mp3",
+      "durationMs": 7156,
+      "overMusic": true,
+      "part": "body",
+      "kit": "weather",
+      "lines": [
+        {
+          "speaker": "Skip Daley",
+          "text": "Out west, scattered Tuesdays, heavier in the afternoon. If you get caught in one, just keep going! You'll come out into Wednesday eventually!",
+          "startMs": 39
+        }
+      ]
+    },
+    {
+      "id": "weather-body-02",
+      "category": "weather",
+      "url": "/voice/every-news/weather-body-02.mp3",
+      "durationMs": 6977,
+      "overMusic": true,
+      "part": "body",
+      "kit": "weather",
+      "lines": [
+        {
+          "speaker": "Skip Daley",
+          "text": "On Interstate Zero, the polite deer is back on the road, and nobody wants to go first. Expect delays of about one deer!",
+          "startMs": 39
+        }
+      ]
+    },
+    {
+      "id": "weather-body-03",
+      "category": "weather",
+      "url": "/voice/every-news/weather-body-03.mp3",
+      "durationMs": 9866,
+      "overMusic": true,
+      "part": "body",
+      "kit": "weather",
+      "lines": [
+        {
+          "speaker": "Skip Daley",
+          "text": "A warm front of nostalgia is drifting in from the east, bringing scattered photo albums and the smell of a school hall. It'll clear by morning. But you'll ring your mum, so that's nice!",
+          "startMs": 48
+        }
+      ]
+    },
+    {
+      "id": "weather-body-04",
+      "category": "weather",
+      "url": "/voice/every-news/weather-body-04.mp3",
+      "durationMs": 7412,
+      "overMusic": true,
+      "part": "body",
+      "kit": "weather",
+      "lines": [
+        {
+          "speaker": "Skip Daley",
+          "text": "Fog in the low-lying timelines tonight! If you can't see your hand in front of your face, don't worry. It's still there! It's probably holding something!",
+          "startMs": 46
+        }
+      ]
+    },
+    {
+      "id": "weather-body-05",
+      "category": "weather",
+      "url": "/voice/every-news/weather-body-05.mp3",
+      "durationMs": 7031,
+      "overMusic": true,
+      "part": "body",
+      "kit": "weather",
+      "lines": [
+        {
+          "speaker": "Skip Daley",
+          "text": "In the Damp Dimension, rain! I'll say that again for the folks at the back. Rain! Four thousand years and counting! Drizzle says hi!",
+          "startMs": 37
+        }
+      ]
+    },
+    {
+      "id": "weather-body-06",
+      "category": "weather",
+      "url": "/voice/every-news/weather-body-06.mp3",
+      "durationMs": 8042,
+      "overMusic": true,
+      "part": "body",
+      "kit": "weather",
+      "lines": [
+        {
+          "speaker": "Skip Daley",
+          "text": "Over on the comet beach, waves of pure time, three to four minutes high, with a strong undertow toward last week. Swim between the flags, folks!",
+          "startMs": 44
+        }
+      ]
+    },
+    {
+      "id": "weather-body-07",
+      "category": "weather",
+      "url": "/voice/every-news/weather-body-07.mp3",
+      "durationMs": 5512,
+      "overMusic": true,
+      "part": "body",
+      "kit": "weather",
+      "lines": [
+        {
+          "speaker": "Skip Daley",
+          "text": "The moon is looking near you tonight. So if you feel watched, that's just the moon! Give it a wave! It loves that!",
+          "startMs": 36
+        }
+      ]
+    },
+    {
+      "id": "weather-body-08",
+      "category": "weather",
+      "url": "/voice/every-news/weather-body-08.mp3",
+      "durationMs": 9226,
+      "overMusic": true,
+      "part": "body",
+      "kit": "weather",
+      "lines": [
+        {
+          "speaker": "Skip Daley",
+          "text": "There's a stalled moment at the junction of Fourth and Forever. Crews are on the scene. Please be patient! It's a lovely moment, and nobody's in any hurry to leave it!",
+          "startMs": 43
+        }
+      ]
+    },
+    {
+      "id": "weather-body-09",
+      "category": "weather",
+      "url": "/voice/every-news/weather-body-09.mp3",
+      "durationMs": 8725,
+      "overMusic": true,
+      "part": "body",
+      "kit": "weather",
+      "lines": [
+        {
+          "speaker": "Skip Daley",
+          "text": "The long range forecast! Next week, mild. The week after, mild, with feelings. After that, folks, honestly, a lot can happen. That's what's so great about weeks!",
+          "startMs": 50
+        }
+      ]
+    },
+    {
+      "id": "weather-body-10",
+      "category": "weather",
+      "url": "/voice/every-news/weather-body-10.mp3",
+      "durationMs": 7365,
+      "overMusic": true,
+      "part": "body",
+      "kit": "weather",
+      "lines": [
+        {
+          "speaker": "Skip Daley",
+          "text": "Space weather! The sun has had a big week. Some flares. Some moods. Give it room, folks. It'll come round. That's literally its whole job!",
+          "startMs": 36
+        }
+      ]
+    },
+    {
+      "id": "weather-body-11",
+      "category": "weather",
+      "url": "/voice/every-news/weather-body-11.mp3",
+      "durationMs": 6810,
+      "overMusic": true,
+      "part": "body",
+      "kit": "weather",
+      "lines": [
+        {
+          "speaker": "Skip Daley",
+          "text": "The pollen count is high, and the pollen count knows it. Sneeze responsibly, folks! Into your elbow! Bless you! Bless all of you!",
+          "startMs": 38
+        }
+      ]
+    },
+    {
+      "id": "weather-close-01",
+      "category": "weather",
+      "url": "/voice/every-news/weather-close-01.mp3",
+      "durationMs": 3172,
+      "overMusic": true,
+      "part": "close",
+      "kit": "weather",
+      "lines": [
+        {
+          "speaker": "Skip Daley",
+          "text": "That's your weather! Back to you, Dale!",
+          "startMs": 40
+        },
+        {
+          "speaker": "Dale Quarterly",
+          "text": "Thank you, Skip.",
+          "startMs": 1869
+        }
+      ]
+    },
+    {
+      "id": "weather-close-02",
+      "category": "weather",
+      "url": "/voice/every-news/weather-close-02.mp3",
+      "durationMs": 4716,
+      "overMusic": true,
+      "part": "close",
+      "kit": "weather",
+      "lines": [
+        {
+          "speaker": "Skip Daley",
+          "text": "Stay dry, stay warm, and if you're traveling backward, leave early! You'll already have left!",
+          "startMs": 36
+        }
+      ]
+    },
+    {
+      "id": "weather-close-03",
+      "category": "weather",
+      "url": "/voice/every-news/weather-close-03.mp3",
+      "durationMs": 4102,
+      "overMusic": true,
+      "part": "close",
+      "kit": "weather",
+      "lines": [
+        {
+          "speaker": "Skip Daley",
+          "text": "That's weather and traffic, folks! Drive safe, and wave at the other versions of you!",
+          "startMs": 38
+        }
+      ]
+    },
+    {
+      "id": "weather-close-04",
+      "category": "weather",
+      "url": "/voice/every-news/weather-close-04.mp3",
+      "durationMs": 3660,
+      "overMusic": true,
+      "part": "close",
+      "kit": "weather",
+      "lines": [
+        {
+          "speaker": "Dale Quarterly",
+          "text": "Thank you, Skip. I'll take an umbrella.",
+          "startMs": 42
+        },
+        {
+          "speaker": "Skip Daley",
+          "text": "Take two, Dale!",
+          "startMs": 2805
+        }
+      ]
+    },
+    {
+      "id": "teodor-is-heard-01",
+      "category": "story",
+      "url": "/voice/every-news/teodor-is-heard-01.mp3",
+      "durationMs": 74854,
+      "title": "Teodor Is Heard, Part One: The Receiver",
+      "overMusic": false,
+      "serial": {
+        "id": "teodor-is-heard",
+        "episode": 1
+      },
+      "lines": [
+        {
+          "speaker": "Dale Quarterly",
+          "text": "Night four thousand and one at Relay Four, and tonight, at last, an explanation.",
+          "startMs": 2444
+        },
+        {
+          "speaker": "Dale Quarterly",
+          "text": "Engineers at the Multiverse Broadcast Authority have examined the signal from the relay at the far edge of the dial. Teodor's transmitter is in perfect working order. It is his receiver that is broken.",
+          "startMs": 8301
+        },
+        {
+          "speaker": "Dale Quarterly",
+          "text": "It failed in a storm, eleven years ago. Since then, Teodor has been able to ask, but not to hear. Every yes said to him in eleven years has gone nowhere.",
+          "startMs": 21961
+        },
+        {
+          "speaker": "Dale Quarterly",
+          "text": "Kim Harrowgate is at the Authority. Kim?",
+          "startMs": 33180
+        },
+        {
+          "speaker": "Kim Harrowgate",
+          "text": "Dale, I'm with an engineer who has listened to Relay Four every night for a decade.",
+          "startMs": 36529
+        },
+        {
+          "speaker": "Broadcast Engineer",
+          "text": "The signal's beautiful. You can hear his kettle. He puts it on every time he asks, in case somebody comes round.",
+          "startMs": 41427
+        },
+        {
+          "speaker": "Kim Harrowgate",
+          "text": "Can his receiver be fixed?",
+          "startMs": 47405
+        },
+        {
+          "speaker": "Broadcast Engineer",
+          "text": "Not from here. Somebody would have to get a yes through the hard way. Louder, or closer, or stranger.",
+          "startMs": 49194
+        },
+        {
+          "speaker": "Kim Harrowgate",
+          "text": "Dale, someone's just handed me a piece of paper. It just says, yes. People have been leaving them on the doorstep here for years. There are thousands.",
+          "startMs": 54604
+        },
+        {
+          "speaker": "Dale Quarterly",
+          "text": "We'll keep trying, then. Teodor, if you're listening, and you are. Yes.",
+          "startMs": 63945
+        },
+        {
+          "speaker": "Teodor, Relay Four",
+          "text": "Is anyone receiving this. This is Relay Four. The kettle's on.",
+          "startMs": 69008
+        },
+        {
+          "speaker": "Dale Quarterly",
+          "text": "We know, Teodor. We know.",
+          "startMs": 72823
+        }
+      ]
+    },
+    {
+      "id": "bev-gets-her-song-02",
+      "category": "story",
+      "url": "/voice/every-news/bev-gets-her-song-02.mp3",
+      "durationMs": 72980,
+      "title": "Bev Gets Her Song, Part Two: Lift Number Two",
+      "overMusic": false,
+      "serial": {
+        "id": "bev-gets-her-song",
+        "episode": 2
+      },
+      "lines": [
+        {
+          "speaker": "Dale Quarterly",
+          "text": "A woman who has spent eleven years looking for a song has asked us for help. Her name is Bev. She heard it once, in a lift. Kim Harrowgate is in the lift. Kim?",
+          "startMs": 2444
+        },
+        {
+          "speaker": "Kim Harrowgate",
+          "text": "Dale, I'm in lift number two at the Grand Overlap Hotel, which has been out of order for eleven years. Someone has just handed me the out of order sign. With me is the manager.",
+          "startMs": 12639
+        },
+        {
+          "speaker": "Hotel Manager",
+          "text": "It was a lovely lift. It had carpet. It had a little seat. It had the music.",
+          "startMs": 23652
+        },
+        {
+          "speaker": "Kim Harrowgate",
+          "text": "Where did the music come from?",
+          "startMs": 28958
+        },
+        {
+          "speaker": "Hotel Manager",
+          "text": "Down the line from Relay Four, like every lift in the Overlap. Requests, birthdays, a little flute in the afternoons. Then one spring night the line went quiet, and every lift went silent at once.",
+          "startMs": 30677
+        },
+        {
+          "speaker": "Kim Harrowgate",
+          "text": "Eleven years ago?",
+          "startMs": 43680
+        },
+        {
+          "speaker": "Hotel Manager",
+          "text": "Eleven years ago.",
+          "startMs": 45184
+        },
+        {
+          "speaker": "Dale Quarterly",
+          "text": "Kim, is Bev there?",
+          "startMs": 46948
+        },
+        {
+          "speaker": "Bev",
+          "text": "I'm here, love. In the corner. This is the one. Between floors four and five. Three hours we were stuck in here, me and my Stan.",
+          "startMs": 48865
+        },
+        {
+          "speaker": "Kim Harrowgate",
+          "text": "Bev, did you know the music came from Relay Four?",
+          "startMs": 55799
+        },
+        {
+          "speaker": "Bev",
+          "text": "Relay Four? Isn't that the man who keeps asking if anyone can hear him?",
+          "startMs": 58707
+        },
+        {
+          "speaker": "Dale Quarterly",
+          "text": "It is. Teodor, if you're listening, a lady would like a word. Back to you, Kim.",
+          "startMs": 63136
+        },
+        {
+          "speaker": "Kim Harrowgate",
+          "text": "I'm handing this sign back, Dale. Out of order. Hopefully not for much longer.",
+          "startMs": 68629
+        }
+      ]
+    },
+    {
+      "id": "greg-comes-home-10",
+      "category": "story",
+      "url": "/voice/every-news/greg-comes-home-10.mp3",
+      "durationMs": 75914,
+      "title": "Greg Comes Home, Part Ten: The Long Bridge",
+      "overMusic": false,
+      "serial": {
+        "id": "greg-comes-home",
+        "episode": 10
+      },
+      "lines": [
+        {
+          "speaker": "Dale Quarterly",
+          "text": "A shadow has been sighted on the long bridge into the eastern Overlap, heading east at about four in the afternoon. Kim Harrowgate is on the bridge. Kim?",
+          "startMs": 2845
+        },
+        {
+          "speaker": "Kim Harrowgate",
+          "text": "Dale, I'm halfway across, and so is he. At this time of day he's about forty feet long, so he's technically on both banks at once.",
+          "startMs": 12785
+        },
+        {
+          "speaker": "Dale Quarterly",
+          "text": "Is it Greg?",
+          "startMs": 20950
+        },
+        {
+          "speaker": "Kim Harrowgate",
+          "text": "It's Greg. He's let me walk beside him, as long as I don't stand in his light. Greg, why so slowly?",
+          "startMs": 22281
+        },
+        {
+          "speaker": "Greg, a Shadow",
+          "text": "I want to get there at noon. He stands in the sun at noon. So there's room.",
+          "startMs": 28317
+        },
+        {
+          "speaker": "Kim Harrowgate",
+          "text": "Greg, it's four o'clock. That's twenty hours.",
+          "startMs": 32288
+        },
+        {
+          "speaker": "Greg, a Shadow",
+          "text": "I was behind him for forty one years. I can wait twenty hours in front.",
+          "startMs": 35105
+        },
+        {
+          "speaker": "Kim Harrowgate",
+          "text": "Dale, the sun's going down. He's getting thinner. I can barely see him.",
+          "startMs": 40545
+        },
+        {
+          "speaker": "Greg, a Shadow",
+          "text": "I can't walk in the dark. Nobody tells you that, about being a shadow.",
+          "startMs": 44609
+        },
+        {
+          "speaker": "Kim Harrowgate",
+          "text": "Somebody has just handed me a flashlight. Dale, the last time I was handed a flashlight near Greg, I didn't use it.",
+          "startMs": 49118
+        },
+        {
+          "speaker": "Dale Quarterly",
+          "text": "Use it, Kim.",
+          "startMs": 56156
+        },
+        {
+          "speaker": "Kim Harrowgate",
+          "text": "He's back. He's very long. He's pointing straight down the road into the eastern Overlap.",
+          "startMs": 58225
+        },
+        {
+          "speaker": "Greg, a Shadow",
+          "text": "Could you walk with me? Just to the end of the bridge?",
+          "startMs": 63436
+        },
+        {
+          "speaker": "Kim Harrowgate",
+          "text": "Dale, I'm going to walk a shadow home.",
+          "startMs": 66615
+        },
+        {
+          "speaker": "Dale Quarterly",
+          "text": "Take as long as you need, Kim. The porch light is on. And for the next mile or so, so is Kim.",
+          "startMs": 69480
+        }
+      ]
+    },
+    {
+      "id": "teodor-is-heard-12",
+      "category": "story",
+      "url": "/voice/every-news/teodor-is-heard-12.mp3",
+      "durationMs": 68120,
+      "title": "Teodor Is Heard, Part Twelve: Relay Seven",
+      "overMusic": false,
+      "serial": {
+        "id": "teodor-is-heard",
+        "episode": 12
+      },
+      "lines": [
+        {
+          "speaker": "Dale Quarterly",
+          "text": "We interrupt this bulletin, which had not yet started. We go live to Relay Four.",
+          "startMs": 2445
+        },
+        {
+          "speaker": "Teodor, Relay Four",
+          "text": "This is Relay Four. Relay Seven, the relay ship Nightjar, I'm told you're out there. I'm told there's somebody on the night shift.",
+          "startMs": 8476
+        },
+        {
+          "speaker": "Teodor, Relay Four",
+          "text": "There's a light on my board that hasn't been on for eleven years. It's on now.",
+          "startMs": 16498
+        },
+        {
+          "speaker": "Teodor, Relay Four",
+          "text": "If that's you, I'm going to open the line all the way. People have been saying it for eleven years. Let's hear them.",
+          "startMs": 21516
+        },
+        {
+          "speaker": "Grenda",
+          "text": "I can hear you, love.",
+          "startMs": 28081
+        },
+        {
+          "speaker": "Selector Crater",
+          "text": "Moon hears you, Teodor.",
+          "startMs": 29858
+        },
+        {
+          "speaker": "Numbers Station",
+          "text": "Four. Four. Four.",
+          "startMs": 31414
+        },
+        {
+          "speaker": "Captain Hum",
+          "text": "The whales say yes. The whales are fine.",
+          "startMs": 33035
+        },
+        {
+          "speaker": "Mara, Dimension Hop",
+          "text": "We said it four seconds ago, Teodor. Keep up.",
+          "startMs": 36560
+        },
+        {
+          "speaker": "The Listener",
+          "text": "I could always hear you. Go to sleep.",
+          "startMs": 39727
+        },
+        {
+          "speaker": "Bev",
+          "text": "Hello? Is this the request line?",
+          "startMs": 43493
+        },
+        {
+          "speaker": "Teodor, Relay Four",
+          "text": "Yes. Yes it is. Hold on, Bev.",
+          "startMs": 47343
+        },
+        {
+          "speaker": "Teodor, Relay Four",
+          "text": "I heard all of that. Every one of you.",
+          "startMs": 50546
+        },
+        {
+          "speaker": "Teodor, Relay Four",
+          "text": "I had a speech, the first year. I've forgotten it. So, just this. Thank you. The kettle's on. It has always been on. Come round.",
+          "startMs": 53674
+        },
+        {
+          "speaker": "Dale Quarterly",
+          "text": "Teodor. From all of us at Every Possible News. Yes.",
+          "startMs": 60273
+        },
+        {
+          "speaker": "Teodor, Relay Four",
+          "text": "I heard that, Dale.",
+          "startMs": 64425
+        },
+        {
+          "speaker": "Teodor, Relay Four",
+          "text": "I heard that.",
+          "startMs": 66564
+        }
+      ]
+    },
+    {
+      "id": "halloween-01",
+      "category": "news",
+      "url": "/voice/every-news/halloween-01.mp3",
+      "durationMs": 11042,
+      "title": "Every Possible News, in Costume",
+      "overMusic": false,
+      "part": "open",
+      "kit": "news",
+      "dates": [
+        "10-24",
+        "10-25",
+        "10-26",
+        "10-27",
+        "10-28",
+        "10-29",
+        "10-30",
+        "10-31"
+      ],
+      "lines": [
+        {
+          "speaker": "Dale Quarterly",
+          "text": "Good evening. This is Every Possible News, in costume. I have come as a man who is not frightened. It's a very good costume.",
+          "startMs": 3100
+        }
+      ]
+    },
+    {
+      "id": "halloween-02",
+      "category": "news",
+      "url": "/voice/every-news/halloween-02.mp3",
+      "durationMs": 25586,
+      "title": "A Night in the Most Haunted House",
+      "overMusic": false,
+      "part": "body",
+      "kit": "news",
+      "dates": [
+        "10-24",
+        "10-25",
+        "10-26",
+        "10-27",
+        "10-28",
+        "10-29",
+        "10-30",
+        "10-31"
+      ],
+      "lines": [
+        {
+          "speaker": "Dale Quarterly",
+          "text": "Halloween. Kim Harrowgate is spending the night in the most haunted house in the eastern Overlap. Kim?",
+          "startMs": 43
+        },
+        {
+          "speaker": "Kim Harrowgate",
+          "text": "Dale, it's two in the morning, and nothing has happened. A ghost has just handed me a cup of tea and asked if I'm warm enough. She's put the heating on.",
+          "startMs": 6978
+        },
+        {
+          "speaker": "A Ghost",
+          "text": "We don't do the chains any more. That was a different generation.",
+          "startMs": 15597
+        },
+        {
+          "speaker": "Dale Quarterly",
+          "text": "Are you frightened, Kim?",
+          "startMs": 20967
+        },
+        {
+          "speaker": "Kim Harrowgate",
+          "text": "Only of how nice it is, Dale. I may not leave.",
+          "startMs": 22813
+        }
+      ]
+    },
+    {
+      "id": "halloween-03",
+      "category": "weather",
+      "url": "/voice/every-news/halloween-03.mp3",
+      "durationMs": 11853,
+      "title": "The Halloween Forecast",
+      "overMusic": true,
+      "part": "body",
+      "kit": "weather",
+      "dates": [
+        "10-24",
+        "10-25",
+        "10-26",
+        "10-27",
+        "10-28",
+        "10-29",
+        "10-30",
+        "10-31"
+      ],
+      "lines": [
+        {
+          "speaker": "Skip Daley",
+          "text": "The Halloween forecast! A big full moon, light fog, and scattered howling, mostly from people stepping on plugs in the dark!",
+          "startMs": 38
+        },
+        {
+          "speaker": "Skip Daley",
+          "text": "And if a bedsheet comes down your street and says boo, say boo back, folks. It's only polite!",
+          "startMs": 7019
         }
       ]
     }

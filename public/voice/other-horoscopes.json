@@ -1,0 +1,708 @@
+{
+  "version": 1,
+  "station": "other-horoscopes",
+  "clips": [
+    {
+      "id": "id-001",
+      "category": "id",
+      "url": "/voice/other-horoscopes/id-001.mp3",
+      "durationMs": 8869,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Madame Orrery",
+          "text": "Horoscopes for Other Universes. The stars are different there. So are you.",
+          "startMs": 49
+        }
+      ]
+    },
+    {
+      "id": "id-002",
+      "category": "id",
+      "url": "/voice/other-horoscopes/id-002.mp3",
+      "durationMs": 4409,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Madame Orrery",
+          "text": "This is Madame Orrery. I have never been wrong, in any universe I've checked.",
+          "startMs": 38
+        }
+      ]
+    },
+    {
+      "id": "id-003",
+      "category": "id",
+      "url": "/voice/other-horoscopes/id-003.mp3",
+      "durationMs": 6508,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Madame Orrery",
+          "text": "Horoscopes for Other Universes, on ninety five point six five. Your future, slightly to the left.",
+          "startMs": 40
+        }
+      ]
+    },
+    {
+      "id": "id-004",
+      "category": "id",
+      "url": "/voice/other-horoscopes/id-004.mp3",
+      "durationMs": 9255,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Madame Orrery",
+          "text": "Horoscopes for Other Universes. Whatever you were born under, dear, you're welcome here.",
+          "startMs": 40
+        }
+      ]
+    },
+    {
+      "id": "show-morning-open",
+      "category": "id",
+      "url": "/voice/other-horoscopes/show-morning-open.mp3",
+      "durationMs": 8042,
+      "overMusic": true,
+      "part": "open",
+      "show": "morning-alignment",
+      "lines": [
+        {
+          "speaker": "Madame Orrery",
+          "text": "Good morning. This is The Morning Alignment. The stars are where I left them. A good start.",
+          "startMs": 2900
+        }
+      ]
+    },
+    {
+      "id": "show-morning-001",
+      "category": "dj",
+      "url": "/voice/other-horoscopes/show-morning-001.mp3",
+      "durationMs": 14348,
+      "overMusic": true,
+      "show": "morning-alignment",
+      "lines": [
+        {
+          "speaker": "Madame Orrery",
+          "text": "A quick planetary update before your coffee. Mercury is in a mood. Not retrograde. Just a mood.",
+          "startMs": 36
+        },
+        {
+          "speaker": "Madame Orrery",
+          "text": "Give it some space, and don't send any important letters. Or do. Mercury can't stop you, dear. It's very far away, and sulking.",
+          "startMs": 6799
+        }
+      ]
+    },
+    {
+      "id": "show-compat-open",
+      "category": "id",
+      "url": "/voice/other-horoscopes/show-compat-open.mp3",
+      "durationMs": 9167,
+      "overMusic": true,
+      "part": "open",
+      "show": "compatibility-hour",
+      "lines": [
+        {
+          "speaker": "Madame Orrery",
+          "text": "Welcome to Compatibility Hour. Tell me your sign, and theirs, and which universe they're from. Nothing surprises the stars. They're very far away.",
+          "startMs": 40
+        }
+      ]
+    },
+    {
+      "id": "show-compat-001",
+      "category": "call",
+      "url": "/voice/other-horoscopes/show-compat-001.mp3",
+      "durationMs": 27944,
+      "title": "A Teapot in Love",
+      "overMusic": false,
+      "show": "compatibility-hour",
+      "lines": [
+        {
+          "speaker": "Madame Orrery",
+          "text": "Compatibility Hour. Hello, dear.",
+          "startMs": 2450
+        },
+        {
+          "speaker": "Caller, a Teapot",
+          "text": "Hi, Madame Orrery. I'm a Teapot, and I've met someone lovely. But she's a Ladder.",
+          "startMs": 4920
+        },
+        {
+          "speaker": "Madame Orrery",
+          "text": "Oh, that's a beautiful match. A Teapot and a Ladder. That's a cup of tea, on a high shelf.",
+          "startMs": 10548
+        },
+        {
+          "speaker": "Madame Orrery",
+          "text": "Someone has to climb up for it. Someone has to be worth climbing for.",
+          "startMs": 15900
+        },
+        {
+          "speaker": "Caller, a Teapot",
+          "text": "Which one of us is which?",
+          "startMs": 20101
+        },
+        {
+          "speaker": "Madame Orrery",
+          "text": "You take turns, dear. That's the whole secret. That's every secret, really.",
+          "startMs": 21832
+        }
+      ]
+    },
+    {
+      "id": "show-compat-002",
+      "category": "call",
+      "url": "/voice/other-horoscopes/show-compat-002.mp3",
+      "durationMs": 24331,
+      "title": "A Single Sock",
+      "overMusic": false,
+      "show": "compatibility-hour",
+      "lines": [
+        {
+          "speaker": "Caller, a Single Sock",
+          "text": "Hello? I'm a Single Sock. I've been told the other sock is in another universe.",
+          "startMs": 2450
+        },
+        {
+          "speaker": "Madame Orrery",
+          "text": "It is, dear. I've seen it. It's under a radiator, in a universe very like this one. It's warm. It's thinking of you.",
+          "startMs": 6825
+        },
+        {
+          "speaker": "Caller, a Single Sock",
+          "text": "Should I go and get it?",
+          "startMs": 14150
+        },
+        {
+          "speaker": "Madame Orrery",
+          "text": "No. Wear odd socks. It's how the multiverse knows you're keeping a place for someone.",
+          "startMs": 15788
+        },
+        {
+          "speaker": "Caller, a Single Sock",
+          "text": "Oh. Oh, that's nice.",
+          "startMs": 20791
+        }
+      ]
+    },
+    {
+      "id": "show-night-open",
+      "category": "id",
+      "url": "/voice/other-horoscopes/show-night-open.mp3",
+      "durationMs": 8684,
+      "overMusic": true,
+      "daypart": "night",
+      "part": "open",
+      "show": "night-shift-charts",
+      "lines": [
+        {
+          "speaker": "Madame Orrery",
+          "text": "Charts for the Night Shift. For everyone working while the sky does the rest.",
+          "startMs": 36
+        }
+      ]
+    },
+    {
+      "id": "show-night-001",
+      "category": "dj",
+      "url": "/voice/other-horoscopes/show-night-001.mp3",
+      "durationMs": 11830,
+      "overMusic": true,
+      "show": "night-shift-charts",
+      "lines": [
+        {
+          "speaker": "Madame Orrery",
+          "text": "For the operator on the relay ship tonight. I did your chart, dear.",
+          "startMs": 46
+        },
+        {
+          "speaker": "Madame Orrery",
+          "text": "You were born under a star you can't see from where you are. That's all right. It can see you. It says: drink the tea while it's hot.",
+          "startMs": 4052
+        }
+      ]
+    },
+    {
+      "id": "show-night-002",
+      "category": "dj",
+      "url": "/voice/other-horoscopes/show-night-002.mp3",
+      "durationMs": 14184,
+      "overMusic": true,
+      "show": "night-shift-charts",
+      "lines": [
+        {
+          "speaker": "Madame Orrery",
+          "text": "A reading for the bakers, who are up now, and the night nurses, and the man who drives the empty bus. Your sign tonight is The Lamp Left On.",
+          "startMs": 37
+        },
+        {
+          "speaker": "Madame Orrery",
+          "text": "Somebody is getting home safely because of you. They'll never know your name. The stars do.",
+          "startMs": 8865
+        }
+      ]
+    },
+    {
+      "id": "reading-open-1",
+      "category": "story",
+      "url": "/voice/other-horoscopes/reading-open-1.mp3",
+      "durationMs": 6574,
+      "overMusic": false,
+      "part": "open",
+      "kit": "reading",
+      "lines": [
+        {
+          "speaker": "Madame Orrery",
+          "text": "The Teapot. Steady, warm, and best left alone for four minutes.",
+          "startMs": 2900
+        }
+      ]
+    },
+    {
+      "id": "reading-open-2",
+      "category": "story",
+      "url": "/voice/other-horoscopes/reading-open-2.mp3",
+      "durationMs": 5681,
+      "overMusic": false,
+      "part": "open",
+      "kit": "reading",
+      "lines": [
+        {
+          "speaker": "Madame Orrery",
+          "text": "The Ladder. You were born on the way up, and you've never fully settled. Hold on with both hands, dear.",
+          "startMs": 40
+        }
+      ]
+    },
+    {
+      "id": "reading-open-3",
+      "category": "story",
+      "url": "/voice/other-horoscopes/reading-open-3.mp3",
+      "durationMs": 6424,
+      "overMusic": false,
+      "part": "open",
+      "kit": "reading",
+      "lines": [
+        {
+          "speaker": "Madame Orrery",
+          "text": "The Single Sock. Born alone, in a drawer, quite sure there was another one of you somewhere. There is. Listen.",
+          "startMs": 41
+        }
+      ]
+    },
+    {
+      "id": "reading-open-4",
+      "category": "story",
+      "url": "/voice/other-horoscopes/reading-open-4.mp3",
+      "durationMs": 8542,
+      "overMusic": false,
+      "part": "open",
+      "kit": "reading",
+      "lines": [
+        {
+          "speaker": "Madame Orrery",
+          "text": "The Blinking Cat. The only constellation that looks back. Unbothered, and right about most things.",
+          "startMs": 2900
+        }
+      ]
+    },
+    {
+      "id": "reading-open-5",
+      "category": "story",
+      "url": "/voice/other-horoscopes/reading-open-5.mp3",
+      "durationMs": 5715,
+      "overMusic": false,
+      "part": "open",
+      "kit": "reading",
+      "lines": [
+        {
+          "speaker": "Madame Orrery",
+          "text": "The Spare Key. Born under a flowerpot, just in case. People rely on you more than they say.",
+          "startMs": 38
+        }
+      ]
+    },
+    {
+      "id": "reading-open-6",
+      "category": "story",
+      "url": "/voice/other-horoscopes/reading-open-6.mp3",
+      "durationMs": 4704,
+      "overMusic": false,
+      "part": "open",
+      "kit": "reading",
+      "lines": [
+        {
+          "speaker": "Madame Orrery",
+          "text": "The Paper Boat. Born in a puddle after rain. Brave, light, and slightly damp.",
+          "startMs": 42
+        }
+      ]
+    },
+    {
+      "id": "reading-001",
+      "category": "story",
+      "url": "/voice/other-horoscopes/reading-001.mp3",
+      "durationMs": 9782,
+      "overMusic": false,
+      "part": "body",
+      "kit": "reading",
+      "lines": [
+        {
+          "speaker": "Madame Orrery",
+          "text": "This week, a door you've been pushing will turn out to be a pull. Don't be embarrassed, dear. The door has been waiting for you to notice, and it's very pleased that you did.",
+          "startMs": 37
+        }
+      ]
+    },
+    {
+      "id": "reading-002",
+      "category": "story",
+      "url": "/voice/other-horoscopes/reading-002.mp3",
+      "durationMs": 13592,
+      "overMusic": false,
+      "part": "body",
+      "kit": "reading",
+      "lines": [
+        {
+          "speaker": "Madame Orrery",
+          "text": "Venus enters your fourth house. Not the Venus you're thinking of. Your universe's Venus, which is a sort of shed at the bottom of a garden.",
+          "startMs": 39
+        },
+        {
+          "speaker": "Madame Orrery",
+          "text": "Something in the shed wants to be found. Probably a bicycle pump. Go and look anyway.",
+          "startMs": 8368
+        }
+      ]
+    },
+    {
+      "id": "reading-003",
+      "category": "story",
+      "url": "/voice/other-horoscopes/reading-003.mp3",
+      "durationMs": 10376,
+      "overMusic": false,
+      "part": "body",
+      "kit": "reading",
+      "lines": [
+        {
+          "speaker": "Madame Orrery",
+          "text": "Someone will say your name in a supermarket, and it won't be for you. Turn around anyway. It's good for the neck, and you'll see something you needed to see.",
+          "startMs": 39
+        },
+        {
+          "speaker": "Madame Orrery",
+          "text": "Probably the biscuits.",
+          "startMs": 9071
+        }
+      ]
+    },
+    {
+      "id": "reading-004",
+      "category": "story",
+      "url": "/voice/other-horoscopes/reading-004.mp3",
+      "durationMs": 9491,
+      "overMusic": false,
+      "part": "body",
+      "kit": "reading",
+      "lines": [
+        {
+          "speaker": "Madame Orrery",
+          "text": "The stars suggest a conversation with a relative. I've checked, and yes, dear, it's that one. It goes much better than you expect. They've been rehearsing too.",
+          "startMs": 41
+        }
+      ]
+    },
+    {
+      "id": "reading-005",
+      "category": "story",
+      "url": "/voice/other-horoscopes/reading-005.mp3",
+      "durationMs": 11189,
+      "overMusic": false,
+      "part": "body",
+      "kit": "reading",
+      "lines": [
+        {
+          "speaker": "Madame Orrery",
+          "text": "Money. A coin you lost in another universe will turn up in this one, under a sofa, slightly warmer than it ought to be.",
+          "startMs": 40
+        },
+        {
+          "speaker": "Madame Orrery",
+          "text": "Spend it on something small and pointless. That's what it wants.",
+          "startMs": 7680
+        }
+      ]
+    },
+    {
+      "id": "reading-006",
+      "category": "story",
+      "url": "/voice/other-horoscopes/reading-006.mp3",
+      "durationMs": 11717,
+      "overMusic": false,
+      "part": "body",
+      "kit": "reading",
+      "lines": [
+        {
+          "speaker": "Madame Orrery",
+          "text": "Love. Someone across the multiverse is thinking about you right now. They are also thinking about lunch.",
+          "startMs": 41
+        },
+        {
+          "speaker": "Madame Orrery",
+          "text": "Don't take it personally. It's a very big multiverse, and it's nearly lunchtime in most of it.",
+          "startMs": 6234
+        }
+      ]
+    },
+    {
+      "id": "reading-007",
+      "category": "story",
+      "url": "/voice/other-horoscopes/reading-007.mp3",
+      "durationMs": 11044,
+      "overMusic": false,
+      "part": "body",
+      "kit": "reading",
+      "lines": [
+        {
+          "speaker": "Madame Orrery",
+          "text": "Health. Drink more water. I know. Everyone says it. But I'm saying it from a universe where water is rarer than gold, and here you are, with a tap.",
+          "startMs": 42
+        },
+        {
+          "speaker": "Madame Orrery",
+          "text": "Have a glass, dear. Have one for us.",
+          "startMs": 9233
+        }
+      ]
+    },
+    {
+      "id": "reading-008",
+      "category": "story",
+      "url": "/voice/other-horoscopes/reading-008.mp3",
+      "durationMs": 10270,
+      "overMusic": false,
+      "part": "body",
+      "kit": "reading",
+      "lines": [
+        {
+          "speaker": "Madame Orrery",
+          "text": "Your ruling planet moves into the house of small mercies. Expect a lift that arrives just as you press the button, and a parking space you'll tell people about for years.",
+          "startMs": 45
+        }
+      ]
+    },
+    {
+      "id": "reading-close-1",
+      "category": "story",
+      "url": "/voice/other-horoscopes/reading-close-1.mp3",
+      "durationMs": 6853,
+      "overMusic": false,
+      "part": "close",
+      "kit": "reading",
+      "lines": [
+        {
+          "speaker": "Madame Orrery",
+          "text": "Your lucky number is eleven and a half. Your lucky colour is the green of a traffic light, just before it changes.",
+          "startMs": 40
+        }
+      ]
+    },
+    {
+      "id": "reading-close-2",
+      "category": "story",
+      "url": "/voice/other-horoscopes/reading-close-2.mp3",
+      "durationMs": 9442,
+      "overMusic": false,
+      "part": "close",
+      "kit": "reading",
+      "lines": [
+        {
+          "speaker": "Madame Orrery",
+          "text": "Lucky item: a spoon you've never used. Lucky day: the second Tuesday, if it comes.",
+          "startMs": 41
+        }
+      ]
+    },
+    {
+      "id": "reading-close-3",
+      "category": "story",
+      "url": "/voice/other-horoscopes/reading-close-3.mp3",
+      "durationMs": 6417,
+      "overMusic": false,
+      "part": "close",
+      "kit": "reading",
+      "lines": [
+        {
+          "speaker": "Madame Orrery",
+          "text": "Your lucky direction is slightly to the left. Your lucky smell is toast. Avoid geese until Thursday.",
+          "startMs": 38
+        }
+      ]
+    },
+    {
+      "id": "reading-close-4",
+      "category": "story",
+      "url": "/voice/other-horoscopes/reading-close-4.mp3",
+      "durationMs": 6545,
+      "overMusic": false,
+      "part": "close",
+      "kit": "reading",
+      "lines": [
+        {
+          "speaker": "Madame Orrery",
+          "text": "Lucky number: four hundred and nine. Lucky stone: the one in your shoe. Take it out, dear. Luck isn't everything.",
+          "startMs": 39
+        }
+      ]
+    },
+    {
+      "id": "dj-001",
+      "category": "dj",
+      "url": "/voice/other-horoscopes/dj-001.mp3",
+      "durationMs": 10019,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Madame Orrery",
+          "text": "My crystal ball is showing static again. It does that. It isn't broken.",
+          "startMs": 39
+        },
+        {
+          "speaker": "Madame Orrery",
+          "text": "It's showing me the space between the stations, and that, dear, is where most of you are listening from.",
+          "startMs": 4659
+        }
+      ]
+    },
+    {
+      "id": "dj-002",
+      "category": "dj",
+      "url": "/voice/other-horoscopes/dj-002.mp3",
+      "durationMs": 5896,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Madame Orrery",
+          "text": "People ask how I can be so certain. I'm not certain, dear. I'm specific. It's much more useful.",
+          "startMs": 37
+        }
+      ]
+    },
+    {
+      "id": "dj-003",
+      "category": "dj",
+      "url": "/voice/other-horoscopes/dj-003.mp3",
+      "durationMs": 10810,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Madame Orrery",
+          "text": "The constellation shaped like a cat is blinking again. In the old charts, that means a visitor is coming.",
+          "startMs": 45
+        },
+        {
+          "speaker": "Madame Orrery",
+          "text": "In the new charts, it means the cat is tired. I prefer the old charts.",
+          "startMs": 6516
+        }
+      ]
+    },
+    {
+      "id": "news-001",
+      "category": "news",
+      "url": "/voice/other-horoscopes/news-001.mp3",
+      "durationMs": 24890,
+      "title": "Planetary Movements",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Madame Orrery",
+          "text": "This week's planetary movements. Jupiter has moved, but not far. Saturn's rings are at the cleaners and should be back by Friday.",
+          "startMs": 2900
+        },
+        {
+          "speaker": "Madame Orrery",
+          "text": "A minor comet will pass very close to your house on Thursday evening. It isn't going to do anything. It's just looking. Wave, if you like.",
+          "startMs": 11320
+        },
+        {
+          "speaker": "Madame Orrery",
+          "text": "And the moon is full, in most universes. In one, it's only peckish.",
+          "startMs": 20603
+        }
+      ]
+    },
+    {
+      "id": "halloween-1",
+      "category": "story",
+      "url": "/voice/other-horoscopes/halloween-1.mp3",
+      "durationMs": 29875,
+      "title": "The Lantern",
+      "overMusic": false,
+      "dates": [
+        "10-24",
+        "10-25",
+        "10-26",
+        "10-27",
+        "10-28",
+        "10-29",
+        "10-30",
+        "10-31"
+      ],
+      "lines": [
+        {
+          "speaker": "Madame Orrery",
+          "text": "A special reading, for those born under The Lantern. It's a rare sign. It only rises once a year, when the veil between universes is at its thinnest.",
+          "startMs": 3100
+        },
+        {
+          "speaker": "Madame Orrery",
+          "text": "Please don't lean on the veil, dear. It isn't load-bearing.",
+          "startMs": 13080
+        },
+        {
+          "speaker": "Madame Orrery",
+          "text": "This week, someone small will knock on your door and ask for sweets. Give them the good ones. In their universe, they're very important.",
+          "startMs": 16633
+        },
+        {
+          "speaker": "Madame Orrery",
+          "text": "Lucky item: a torch. Lucky hour: just after dark. Lucky ghost: the polite one.",
+          "startMs": 24863
+        }
+      ]
+    },
+    {
+      "id": "halloween-2",
+      "category": "dj",
+      "url": "/voice/other-horoscopes/halloween-2.mp3",
+      "durationMs": 13434,
+      "title": "Costume Astrology",
+      "overMusic": true,
+      "dates": [
+        "10-24",
+        "10-25",
+        "10-26",
+        "10-27",
+        "10-28",
+        "10-29",
+        "10-30",
+        "10-31"
+      ],
+      "lines": [
+        {
+          "speaker": "Madame Orrery",
+          "text": "A note for Halloween. This week, your sign is whatever you're dressed as. The stars respect a costume.",
+          "startMs": 37
+        },
+        {
+          "speaker": "Madame Orrery",
+          "text": "If you've come as a sheet with two holes in it, your sign is The Laundry. You'll be fine, dear. You'll be folded by Sunday.",
+          "startMs": 6486
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,609 @@
+{
+  "version": 1,
+  "station": "wall-of-fog",
+  "clips": [
+    {
+      "id": "id-001",
+      "category": "id",
+      "url": "/voice/wall-of-fog/id-001.mp3",
+      "durationMs": 4138,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Ellis",
+          "text": "...this is Wall of Fog... ninety eight point... something... yeah.",
+          "startMs": 39
+        }
+      ]
+    },
+    {
+      "id": "id-002",
+      "category": "id",
+      "url": "/voice/wall-of-fog/id-002.mp3",
+      "durationMs": 8008,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Ellis",
+          "text": "...you're listening to... Wall of Fog... it's... all of it, really... yeah.",
+          "startMs": 39
+        },
+        {
+          "speaker": "The Reverb",
+          "text": "...yeah...",
+          "startMs": 5235
+        }
+      ]
+    },
+    {
+      "id": "id-003",
+      "category": "id",
+      "url": "/voice/wall-of-fog/id-003.mp3",
+      "durationMs": 7765,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Ellis",
+          "text": "This is Wall of Fog.",
+          "startMs": 42
+        },
+        {
+          "speaker": "The Reverb",
+          "text": "...of Fog...",
+          "startMs": 2782
+        },
+        {
+          "speaker": "The Reverb",
+          "text": "...Fog...",
+          "startMs": 4911
+        }
+      ]
+    },
+    {
+      "id": "id-004",
+      "category": "id",
+      "url": "/voice/wall-of-fog/id-004.mp3",
+      "durationMs": 4322,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Ellis",
+          "text": "...hey... it's Ellis... Wall of Fog... don't... no, it's fine... yeah.",
+          "startMs": 37
+        }
+      ]
+    },
+    {
+      "id": "id-005",
+      "category": "id",
+      "url": "/voice/wall-of-fog/id-005.mp3",
+      "durationMs": 4305,
+      "overMusic": true,
+      "daypart": "night",
+      "lines": [
+        {
+          "speaker": "Ellis",
+          "text": "...it's late... Wall of Fog... turn it up... no, more... no... yeah. That.",
+          "startMs": 37
+        }
+      ]
+    },
+    {
+      "id": "id-006",
+      "category": "id",
+      "url": "/voice/wall-of-fog/id-006.mp3",
+      "durationMs": 4756,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Ellis",
+          "text": "Wall of Fog. Every sound you make here... lasts forever... so... be nice.",
+          "startMs": 46
+        }
+      ]
+    },
+    {
+      "id": "id-007",
+      "category": "id",
+      "url": "/voice/wall-of-fog/id-007.mp3",
+      "durationMs": 5069,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Ellis",
+          "text": "...Wall of Fog... sorry... is this... on?",
+          "startMs": 41
+        }
+      ]
+    },
+    {
+      "id": "dj-001",
+      "category": "dj",
+      "url": "/voice/wall-of-fog/dj-001.mp3",
+      "durationMs": 10178,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Ellis",
+          "text": "...that was... them... the ones with the... you know... the pedals... seventeen pedals... no, more...",
+          "startMs": 40
+        },
+        {
+          "speaker": "Ellis",
+          "text": "...it's about a... a feeling... that you had once... near a lamp... yeah.",
+          "startMs": 5817
+        }
+      ]
+    },
+    {
+      "id": "dj-002",
+      "category": "dj",
+      "url": "/voice/wall-of-fog/dj-002.mp3",
+      "durationMs": 8332,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Ellis",
+          "text": "...quick thing... some of you are still hearing... last Tuesday's set... that's normal... that's the room...",
+          "startMs": 40
+        },
+        {
+          "speaker": "Ellis",
+          "text": "...it'll pass... it won't... but... yeah.",
+          "startMs": 5767
+        }
+      ]
+    },
+    {
+      "id": "dj-003",
+      "category": "dj",
+      "url": "/voice/wall-of-fog/dj-003.mp3",
+      "durationMs": 11541,
+      "title": "The Full Sentence",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Ellis",
+          "text": "...okay... so...",
+          "startMs": 38
+        },
+        {
+          "speaker": "Ellis",
+          "text": "Please remember to drink some water, call the people you love, and back up your files.",
+          "startMs": 2779
+        },
+        {
+          "speaker": "Ellis",
+          "text": "...sorry... that was... a lot... here's a song.",
+          "startMs": 8517
+        }
+      ]
+    },
+    {
+      "id": "dj-004",
+      "category": "dj",
+      "url": "/voice/wall-of-fog/dj-004.mp3",
+      "durationMs": 8599,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Ellis",
+          "text": "...got a new pedal... it doesn't... do anything... it just makes the other pedals... further away...",
+          "startMs": 44
+        },
+        {
+          "speaker": "Ellis",
+          "text": "...I love it... here's a song... I can't hear.",
+          "startMs": 5668
+        }
+      ]
+    },
+    {
+      "id": "dj-005",
+      "category": "dj",
+      "url": "/voice/wall-of-fog/dj-005.mp3",
+      "durationMs": 10596,
+      "title": "Hello, Lamp",
+      "overMusic": true,
+      "daypart": "evening",
+      "lines": [
+        {
+          "speaker": "Ellis",
+          "text": "...the lamp's on... so it's evening... or the lamp just... felt like it...",
+          "startMs": 40
+        },
+        {
+          "speaker": "Ellis",
+          "text": "...hello to the audience... all three of you... and the lamp... hi, lamp... this one's for you... and the lamp.",
+          "startMs": 4581
+        }
+      ]
+    },
+    {
+      "id": "dj-006",
+      "category": "dj",
+      "url": "/voice/wall-of-fog/dj-006.mp3",
+      "durationMs": 12595,
+      "title": "First Gig",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Ellis",
+          "text": "...it's quiet tonight... you can hear the old stuff... coming round the back...",
+          "startMs": 40
+        },
+        {
+          "speaker": "The Reverb",
+          "text": "...is this thing on...",
+          "startMs": 5106
+        },
+        {
+          "speaker": "Ellis",
+          "text": "...that's me... first gig... nineteen ninety one... I still don't know... if it was on.",
+          "startMs": 7848
+        }
+      ]
+    },
+    {
+      "id": "dj-007",
+      "category": "dj",
+      "url": "/voice/wall-of-fog/dj-007.mp3",
+      "durationMs": 9899,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Ellis",
+          "text": "...people ask... what the words are... nobody knows... the singer doesn't know... I asked her...",
+          "startMs": 39
+        },
+        {
+          "speaker": "Ellis",
+          "text": "...she said... something... and it was beautiful... and I agreed... yeah.",
+          "startMs": 5697
+        }
+      ]
+    },
+    {
+      "id": "dj-008",
+      "category": "dj",
+      "url": "/voice/wall-of-fog/dj-008.mp3",
+      "durationMs": 9089,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Ellis",
+          "text": "...anyway... I think the thing is... you know... with the... when you're... and it's... yeah?",
+          "startMs": 42
+        },
+        {
+          "speaker": "Ellis",
+          "text": "...yeah. Exactly... I knew you'd get it.",
+          "startMs": 6393
+        }
+      ]
+    },
+    {
+      "id": "dj-009",
+      "category": "dj",
+      "url": "/voice/wall-of-fog/dj-009.mp3",
+      "durationMs": 9502,
+      "title": "For the Night Shift",
+      "overMusic": true,
+      "daypart": "night",
+      "lines": [
+        {
+          "speaker": "Ellis",
+          "text": "...hey... the person... on the ship... the night... you... yeah... hi...",
+          "startMs": 36
+        },
+        {
+          "speaker": "Ellis",
+          "text": "...the fog's coming up... to your window... it's fine... it's friendly... it's mostly us.",
+          "startMs": 4527
+        }
+      ]
+    },
+    {
+      "id": "dj-010",
+      "category": "dj",
+      "url": "/voice/wall-of-fog/dj-010.mp3",
+      "durationMs": 12086,
+      "title": "The Spoon",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Ellis",
+          "text": "...if you're new... everything here echoes... forever... so if you dropped something... in like... nineteen ninety three... you can still hear it... landing...",
+          "startMs": 37
+        },
+        {
+          "speaker": "Ellis",
+          "text": "...that one... yeah... that's a spoon.",
+          "startMs": 9719
+        }
+      ]
+    },
+    {
+      "id": "dj-011",
+      "category": "dj",
+      "url": "/voice/wall-of-fog/dj-011.mp3",
+      "durationMs": 9818,
+      "overMusic": true,
+      "daypart": "morning",
+      "lines": [
+        {
+          "speaker": "Ellis",
+          "text": "...is it morning... hard to tell... the fog's... lighter... pinker... yeah... morning, I think...",
+          "startMs": 38
+        },
+        {
+          "speaker": "Ellis",
+          "text": "...don't open the curtains... it's just more fog... I checked.",
+          "startMs": 5990
+        }
+      ]
+    },
+    {
+      "id": "dj-012",
+      "category": "dj",
+      "url": "/voice/wall-of-fog/dj-012.mp3",
+      "durationMs": 15641,
+      "title": "The Delivery",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Ellis",
+          "text": "...big delivery today... a truck came... with more fog... from the crossroads... a lady called... Grandma... something...",
+          "startMs": 39
+        },
+        {
+          "speaker": "Ellis",
+          "text": "...she reversed it right up to the stage... and just... let it go... and talked to me for ages... I agreed with everything... so... that's why it's... like this.",
+          "startMs": 7105
+        }
+      ]
+    },
+    {
+      "id": "id-soundcheck",
+      "category": "id",
+      "url": "/voice/wall-of-fog/id-soundcheck.mp3",
+      "durationMs": 10418,
+      "overMusic": true,
+      "part": "open",
+      "show": "soundcheck",
+      "lines": [
+        {
+          "speaker": "Ellis",
+          "text": "...this is Soundcheck... on Wall of Fog... one... two...",
+          "startMs": 41
+        },
+        {
+          "speaker": "The Reverb",
+          "text": "...two...",
+          "startMs": 4480
+        },
+        {
+          "speaker": "Ellis",
+          "text": "...the one's gone home... the two's still out there... looking for it.",
+          "startMs": 6485
+        }
+      ]
+    },
+    {
+      "id": "dj-soundcheck-001",
+      "category": "dj",
+      "url": "/voice/wall-of-fog/dj-soundcheck-001.mp3",
+      "durationMs": 9277,
+      "overMusic": true,
+      "show": "soundcheck",
+      "lines": [
+        {
+          "speaker": "Ellis",
+          "text": "...could I get... a little more... of everything... in the monitors... more... no, more...",
+          "startMs": 40
+        },
+        {
+          "speaker": "Ellis",
+          "text": "...yeah... perfect... I can't hear anything at all... that's perfect.",
+          "startMs": 5202
+        }
+      ]
+    },
+    {
+      "id": "dj-soundcheck-002",
+      "category": "dj",
+      "url": "/voice/wall-of-fog/dj-soundcheck-002.mp3",
+      "durationMs": 8444,
+      "overMusic": true,
+      "show": "soundcheck",
+      "lines": [
+        {
+          "speaker": "Ellis",
+          "text": "...the drummer's checking the snare... she's been checking it since about three... it's a really good snare...",
+          "startMs": 42
+        },
+        {
+          "speaker": "Ellis",
+          "text": "...she says... it's nearly... right.",
+          "startMs": 6028
+        }
+      ]
+    },
+    {
+      "id": "id-the-loud-quiet",
+      "category": "id",
+      "url": "/voice/wall-of-fog/id-the-loud-quiet.mp3",
+      "durationMs": 5363,
+      "overMusic": true,
+      "part": "open",
+      "show": "the-loud-quiet",
+      "lines": [
+        {
+          "speaker": "Ellis",
+          "text": "...this is... The Loud Quiet... on Wall of Fog... it's gonna be loud... and then... yeah.",
+          "startMs": 40
+        }
+      ]
+    },
+    {
+      "id": "dj-the-loud-quiet-001",
+      "category": "dj",
+      "url": "/voice/wall-of-fog/dj-the-loud-quiet-001.mp3",
+      "durationMs": 8523,
+      "overMusic": true,
+      "show": "the-loud-quiet",
+      "lines": [
+        {
+          "speaker": "Ellis",
+          "text": "...this next one gets... really loud... at the end... like... really...",
+          "startMs": 40
+        },
+        {
+          "speaker": "Ellis",
+          "text": "...you might want to... no... don't turn it down... turn it... sideways.",
+          "startMs": 4472
+        }
+      ]
+    },
+    {
+      "id": "dj-the-loud-quiet-002",
+      "category": "dj",
+      "url": "/voice/wall-of-fog/dj-the-loud-quiet-002.mp3",
+      "durationMs": 8164,
+      "overMusic": true,
+      "show": "the-loud-quiet",
+      "lines": [
+        {
+          "speaker": "Ellis",
+          "text": "...that was the quiet bit... I know... it's hard to tell... the loud bit's coming...",
+          "startMs": 36
+        },
+        {
+          "speaker": "Ellis",
+          "text": "...it's always coming... like weather... like... yeah.",
+          "startMs": 5062
+        }
+      ]
+    },
+    {
+      "id": "id-fogbound",
+      "category": "id",
+      "url": "/voice/wall-of-fog/id-fogbound.mp3",
+      "durationMs": 4935,
+      "overMusic": true,
+      "part": "open",
+      "show": "fogbound",
+      "lines": [
+        {
+          "speaker": "Ellis",
+          "text": "...Fogbound... it's really late... the fog's all the way in... stay close... yeah.",
+          "startMs": 40
+        }
+      ]
+    },
+    {
+      "id": "dj-fogbound-001",
+      "category": "dj",
+      "url": "/voice/wall-of-fog/dj-fogbound-001.mp3",
+      "durationMs": 7911,
+      "overMusic": true,
+      "show": "fogbound",
+      "lines": [
+        {
+          "speaker": "Ellis",
+          "text": "...it's four... ish... the audience went home... the lamp stayed...",
+          "startMs": 41
+        },
+        {
+          "speaker": "Ellis",
+          "text": "...the lamp always stays... I think the lamp's... my best friend.",
+          "startMs": 4107
+        }
+      ]
+    },
+    {
+      "id": "dj-fogbound-002",
+      "category": "dj",
+      "url": "/voice/wall-of-fog/dj-fogbound-002.mp3",
+      "durationMs": 8858,
+      "overMusic": true,
+      "show": "fogbound",
+      "lines": [
+        {
+          "speaker": "Ellis",
+          "text": "...if you can't sleep... that's okay... lie down... let the fog... do the thinking...",
+          "startMs": 42
+        },
+        {
+          "speaker": "Ellis",
+          "text": "...it's really good at it... it's had... a lot of practice.",
+          "startMs": 5190
+        }
+      ]
+    },
+    {
+      "id": "dj-halloween-001",
+      "category": "dj",
+      "url": "/voice/wall-of-fog/dj-halloween-001.mp3",
+      "durationMs": 6947,
+      "overMusic": true,
+      "dates": [
+        "10-24",
+        "10-25",
+        "10-26",
+        "10-27",
+        "10-28",
+        "10-29",
+        "10-30",
+        "10-31"
+      ],
+      "lines": [
+        {
+          "speaker": "Ellis",
+          "text": "...it's that time... the fog's... spookier... no... it's the same fog...",
+          "startMs": 38
+        },
+        {
+          "speaker": "Ellis",
+          "text": "...it just knows... what day it is.",
+          "startMs": 4703
+        }
+      ]
+    },
+    {
+      "id": "dj-halloween-002",
+      "category": "dj",
+      "url": "/voice/wall-of-fog/dj-halloween-002.mp3",
+      "durationMs": 12427,
+      "title": "Boo",
+      "overMusic": true,
+      "dates": [
+        "10-24",
+        "10-25",
+        "10-26",
+        "10-27",
+        "10-28",
+        "10-29",
+        "10-30",
+        "10-31"
+      ],
+      "lines": [
+        {
+          "speaker": "Ellis",
+          "text": "...there's a voice... in the reverb... it's been going boo... since nineteen ninety four...",
+          "startMs": 40
+        },
+        {
+          "speaker": "The Reverb",
+          "text": "...boo...",
+          "startMs": 5697
+        },
+        {
+          "speaker": "Ellis",
+          "text": "...we said boo back... it was us... it was always us... happy Halloween.",
+          "startMs": 7855
+        }
+      ]
+    }
+  ]
+}
