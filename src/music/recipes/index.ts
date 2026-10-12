@@ -3,22 +3,48 @@
 import type { RecipeId } from '../../broadcast/types';
 import type { TrackRequest } from '../index';
 import type { Score } from '../score';
+import { composeAmbient } from './ambient';
+import { composeBaroque } from './baroque';
+import { composeDocumentary, composeFanfare, composeNews, composeTalk } from './beds';
+import { composeChiptune } from './chiptune';
+import { composeDub } from './dub';
+import { composeJazz } from './jazz';
 import { composeLofi } from './lofi';
+import { composeLullaby, composeNumbers } from './lullaby';
+import { composeMuzak } from './muzak';
+import { composePolka } from './polka';
+import { composeSynthwave } from './synthwave';
+import { composeTropical } from './tropical';
 
 type Composer = (req: TrackRequest) => Score;
 
-const COMPOSERS: Partial<Record<RecipeId, Composer>> = {
+const COMPOSERS: Record<RecipeId, Composer> = {
   'lofi-hiphop': composeLofi,
   'lofi-rain': composeLofi,
   'lofi-slow': composeLofi,
   'lofi-glass': composeLofi,
+  synthwave: composeSynthwave,
+  'lounge-jazz': composeJazz,
+  muzak: composeMuzak,
+  'ambient-drift': composeAmbient,
+  chiptune: composeChiptune,
+  baroque: composeBaroque,
+  dub: composeDub,
+  polka: composePolka,
+  'tropical-marimba': composeTropical,
+  'static-lullaby': composeLullaby,
+  'news-bed': composeNews,
+  'talk-bed': composeTalk,
+  'sports-fanfare': composeFanfare,
+  'numbers-musicbox': composeNumbers,
+  documentary: composeDocumentary,
 };
 
 /** Composes a full track. Unknown recipes fall back to lo-fi so something always plays. */
 export function compose(req: TrackRequest): Score {
   const safe: TrackRequest = {
     ...req,
-    seed: req.seed >>> 0,
+    seed: (Number.isFinite(req.seed) ? req.seed : 0) >>> 0,
     durationSeconds: Math.max(4, Math.min(3600, Number.isFinite(req.durationSeconds) ? req.durationSeconds : 180)),
   };
   const fn = COMPOSERS[safe.recipe];

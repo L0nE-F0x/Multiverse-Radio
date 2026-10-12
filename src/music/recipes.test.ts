@@ -3,7 +3,7 @@ import { RECIPE_IDS, type RecipeId } from '../broadcast/types';
 import { STATIONS } from '../stations/roster';
 import { RECIPE_INFO, type TrackRequest } from './index';
 import { compose } from './recipes';
-import { SYNTHS } from './engine/synths';
+import { SYNTHS } from './dsp/synths';
 import { PATCHES } from './dsp/patches';
 
 function fingerprint(req: TrackRequest): string {

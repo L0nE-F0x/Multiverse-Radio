@@ -2,13 +2,17 @@
 // bounded by memory), so long sessions across many recipes don't grow without limit.
 
 import { PATCHES, zoneRoot } from '../dsp/patches';
-import type { SamplePatch } from '../score';
+import { renderSynthZone, SYNTH_ROOTS, SYNTHS, synthLayers } from '../dsp/synths';
+import type { SamplePatch, SynthPatch } from '../score';
 
 export interface Zone {
   buffer: AudioBuffer;
   /** MIDI root of the zone. */
   root: number;
   loop: boolean;
+  /** Sustain loop region (seconds), for synth zones. */
+  loopStart?: number;
+  loopEnd?: number;
 }
 
 /** ~48 MB of float samples. */
@@ -49,6 +53,30 @@ export class SampleBank {
     const zone: Zone = { buffer, root: def.roots.length === 1 ? 60 : root, loop: !!def.loop };
     this.cache.set(key, zone);
     this.samples += buffer.length * buffer.numberOfChannels;
+    this.evict();
+    return zone;
+  }
+
+  /** A rendered synth zone (looping sustain) for `midi` at `velocity`. */
+  synthZone(patch: SynthPatch, midi: number, velocity: number): Zone {
+    const def = SYNTHS[patch];
+    let root = SYNTH_ROOTS[0]!;
+    for (const r of SYNTH_ROOTS) if (Math.abs(r - midi) < Math.abs(root - midi)) root = r;
+    const layer = synthLayers(def) === 2 && velocity >= 0.6 ? 1 : 0;
+    const key = `synth:${patch}:${root}:${layer}`;
+    const hit = this.cache.get(key);
+    if (hit) {
+      this.cache.delete(key);
+      this.cache.set(key, hit);
+      return hit;
+    }
+    const rate = Math.min(this.sampleRate, 32000);
+    const z = renderSynthZone(def, root, layer ? 0.85 : 0.45, rate);
+    const buffer = new AudioBuffer({ length: z.data.length, numberOfChannels: 1, sampleRate: rate });
+    buffer.copyToChannel(z.data as Float32Array<ArrayBuffer>, 0);
+    const zone: Zone = { buffer, root, loop: true, loopStart: z.loopStart, loopEnd: z.loopEnd };
+    this.cache.set(key, zone);
+    this.samples += buffer.length;
     this.evict();
     return zone;
   }

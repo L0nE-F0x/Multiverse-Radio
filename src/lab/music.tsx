@@ -34,6 +34,8 @@ function base64(buf: ArrayBuffer): string {
 }
 
 // Automation hook for headless measurements.
+let labCtx: AudioContext | null = null;
+let labEngine: Engine | null = null;
 declare global {
   interface Window {
     __musicLab?: unknown;
@@ -46,6 +48,42 @@ window.__musicLab = {
     return { wav: base64(encodeWav(buf)), ms: performance.now() - t0 };
   },
   info: (req: TrackRequest) => getTrackInfo(req),
+  async play(req: TrackRequest, opts: { offset?: number; fade?: number } = {}, solo?: number[]) {
+    const ctx = (labCtx ??= new AudioContext({ latencyHint: 'playback' }));
+    if (!labEngine) {
+      labEngine = (await createMusicEngine(ctx)) as MusicEngine as Engine;
+      labEngine.output.connect(ctx.destination);
+    }
+    await ctx.resume();
+    labEngine.solo = solo ?? null;
+    labEngine.play(req, opts);
+    return { state: ctx.state, sampleRate: ctx.sampleRate };
+  },
+  stop: () => labEngine?.stop({ fade: 0.3 }),
+  stats: () => ({
+    time: labCtx?.currentTime ?? 0,
+    state: labCtx?.state,
+    engine: labEngine ? { ...labEngine.stats } : null,
+    now: labEngine?.nowPlaying() ? { position: labEngine.nowPlaying()!.position, section: labEngine.nowPlaying()!.section?.name } : null,
+  }),
+  /** Offline render of a timed sequence of play/stop calls (tests crossfades and cancels). */
+  async script(steps: { at: number; play?: TrackRequest; opts?: { when?: number; offset?: number; fade?: number }; stop?: { when?: number; fade?: number } }[], seconds: number) {
+    const { Engine: EngineClass } = await import('../music/engine/engine');
+    const sr = 48000;
+    const ctx = new OfflineAudioContext(2, Math.ceil(seconds * sr), sr);
+    const engine = new EngineClass(ctx, true);
+    engine.horizon = seconds + 1;
+    engine.output.connect(ctx.destination);
+    for (const step of steps) {
+      void ctx.suspend(step.at).then(() => {
+        if (step.play) engine.play(step.play, step.opts ?? {});
+        if (step.stop) engine.stop(step.stop);
+        void ctx.resume();
+      });
+    }
+    const buf = await ctx.startRendering();
+    return base64(encodeWav(buf));
+  },
   async score(req: TrackRequest) {
     const { compose } = await import('../music/recipes');
     return compose(req);

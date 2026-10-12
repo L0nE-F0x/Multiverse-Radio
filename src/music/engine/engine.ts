@@ -4,7 +4,6 @@
 import type { MusicEngine, PlayOptions, TrackRequest } from '../index';
 import { compose } from '../recipes';
 import { sectionAt, type Score, type Section } from '../score';
-import { Noise } from '../dsp/core';
 import { SampleBank } from './bank';
 import { Ticker } from './clock';
 import { reverbImpulse, softClipCurve } from './fx';
@@ -64,8 +63,12 @@ export class Engine implements MusicEngine {
 
     const dryIn = g(1);
     dryIn.connect(master);
+    // One shared reverb: a mono convolution (cheap), widened by sending the return to the
+    // left as-is and to the right a few milliseconds later through an all-pass.
     const reverbIn = g(1);
     const verb = ctx.createConvolver();
+    verb.channelCount = 1;
+    verb.channelCountMode = 'explicit';
     verb.normalize = false;
     verb.buffer = reverbImpulse(ctx.sampleRate);
     this.nodes.push(verb);
@@ -75,17 +78,27 @@ export class Engine implements MusicEngine {
     this.nodes.push(verbHp);
     reverbIn.connect(verbHp);
     verbHp.connect(verb);
-    const verbOut = g(0.5);
-    verb.connect(verbOut);
-    verbOut.connect(master);
+    const merger = ctx.createChannelMerger(2);
+    this.nodes.push(merger);
+    const left = g(0.55);
+    verb.connect(left);
+    left.connect(merger, 0, 0);
+    const haas = ctx.createDelay(0.05);
+    haas.delayTime.value = 0.013;
+    this.nodes.push(haas);
+    const allpass = ctx.createBiquadFilter();
+    allpass.type = 'allpass';
+    allpass.frequency.value = 700;
+    allpass.Q.value = 0.5;
+    this.nodes.push(allpass);
+    const right = g(0.55);
+    verb.connect(haas);
+    haas.connect(allpass);
+    allpass.connect(right);
+    right.connect(merger, 0, 1);
+    merger.connect(master);
 
-    const noise = new AudioBuffer({ length: Math.floor(ctx.sampleRate * 2), numberOfChannels: 1, sampleRate: ctx.sampleRate });
-    const data = new Float32Array(noise.length);
-    const rng = new Noise(12345);
-    for (let i = 0; i < data.length; i++) data[i] = rng.next();
-    noise.copyToChannel(data, 0);
-
-    this.buses = { ctx, dryIn, reverbIn, bank: new SampleBank(ctx.sampleRate), noise, offline };
+    this.buses = { ctx, dryIn, reverbIn, bank: new SampleBank(ctx.sampleRate), offline };
     this.ticker = offline ? null : new Ticker(() => this.tick(), TICK_MS);
   }
 
@@ -101,7 +114,12 @@ export class Engine implements MusicEngine {
     }
     const fade = options.fade ?? 0.5;
     const score = compose(track);
-    for (const t of this.tracks) t.stop(when, fade);
+    // The new track supersedes everything: tracks still waiting for their start time are
+    // cancelled outright (never heard); the one on air crossfades out from `when`.
+    for (const t of this.tracks) {
+      if (t.when > now + 0.005) t.stop(now, 0.02);
+      else t.stop(when, fade);
+    }
     const fadeIn = offset > 0 ? Math.max(0.35, fade) : Math.max(0.02, fade);
     const player = new TrackPlayer(score, this.buses, { when, offset, fadeIn });
     if (this.solo) player.solo(this.solo);
@@ -110,8 +128,13 @@ export class Engine implements MusicEngine {
     this.ticker?.start();
   }
 
-  stop({ when = this.ctx.currentTime, fade = 0.5 }: { when?: number; fade?: number } = {}): void {
-    for (const t of this.tracks) t.stop(Math.max(when, this.ctx.currentTime), fade);
+  stop({ when, fade = 0.5 }: { when?: number; fade?: number } = {}): void {
+    const now = this.ctx.currentTime;
+    for (const t of this.tracks) {
+      // A pending play is cancelled; what's on air fades from `when` (default: now).
+      if (t.when > now + 0.005) t.stop(now, 0.02);
+      else t.stop(Math.max(when ?? now, now), fade);
+    }
   }
 
   /** What's playing now (the most recent unstopped track), for displays. */
@@ -122,8 +145,16 @@ export class Engine implements MusicEngine {
     return { score: t.score, position, section: sectionAt(t.score, position) };
   }
 
+  /** Scheduler health, for the lab and diagnostics. */
+  readonly stats = { ticks: 0, busyMs: 0, maxTickMs: 0, lateTicks: 0, lastTickAt: 0 };
+
   private tick(): void {
+    const t0 = performance.now();
     const now = this.ctx.currentTime;
+    const st = this.stats;
+    // A tick arriving later than half the lookahead means the clock was throttled.
+    if (st.lastTickAt && now - st.lastTickAt > LOOKAHEAD / 2) st.lateTicks++;
+    st.lastTickAt = now;
     for (const t of this.tracks) t.schedule(now + LOOKAHEAD);
     const alive: TrackPlayer[] = [];
     for (const t of this.tracks) {
@@ -132,6 +163,10 @@ export class Engine implements MusicEngine {
     }
     this.tracks = alive;
     if (!alive.length) this.ticker?.stop();
+    const ms = performance.now() - t0;
+    st.ticks++;
+    st.busyMs += ms;
+    st.maxTickMs = Math.max(st.maxTickMs, ms);
   }
 
   dispose(): void {
