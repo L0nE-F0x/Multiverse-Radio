@@ -5,7 +5,7 @@ import type { TrackRequest } from '../index';
 import { rngFor } from '../rng';
 import type { Score } from '../score';
 import { bassPc, chordPcs, keyName, parseProgression, pc, prefersFlats, SCALES, scalePcs } from '../theory';
-import { bassNote, chordSpans, layout, makeMotif, pickBpm, realizeMotif, resolveTweaks, ScoreBuilder, trackFx, varyMotif, vel } from './common';
+import { bassNote, chordSpans, layout, makeMotif, pickBpm, realizeMotif, resolveTweaks, ScoreBuilder, shiftMotif, trackFx, varyMotif, vel } from './common';
 import { CHIPTUNE } from './templates';
 
 export function composeChiptune(req: TrackRequest): Score {
@@ -41,6 +41,7 @@ export function composeChiptune(req: TrackRequest): Score {
   const motifB = makeMotif(rng, 8, 0.5 + D * 0.4, { restTail: 1, maxNotes: 7 });
   const motifC = makeMotif(rng, 8, 0.35 + D * 0.3, { restTail: 2, maxNotes: 5, grid: 0.5 });
   const arpRate = rng.pick([1 / 30, 1 / 20, 1 / 24]);
+  const seqStep = rng.pick([1, 2, -1, -2]);
   const bassStyle = rng.int(0, 2);
   let prevBass: number | null = null;
 
@@ -95,7 +96,8 @@ export function composeChiptune(req: TrackRequest): Score {
       const m = s.repeat > 0 && s.part !== 'C' ? varyMotif(rng, base, 0.25) : base;
       for (let ph = 0; ph + 2 <= s.bars; ph += 2) {
         const phrase = ph / 2;
-        const use = phrase === 2 ? varyMotif(rng, m, 0.6) : phrase === 3 ? varyMotif(rng, m, 0.35) : m;
+        // Statement, sequence (same shape a step or two away), variation, cadence.
+        const use = phrase === 1 ? shiftMotif(m, seqStep) : phrase === 2 ? varyMotif(rng, m, 0.6) : phrase === 3 ? varyMotif(rng, m, 0.35) : m;
         const notes = realizeMotif(use, 0, beat, 76, spans, keyScale, 67, 88, b.grid, s.startBar + ph);
         for (const n of notes) {
           const p = n.p + (W > 0.5 && rng.chance((W - 0.5) * 0.3) ? 12 : 0);

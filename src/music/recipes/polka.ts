@@ -6,7 +6,7 @@ import type { TrackRequest } from '../index';
 import { rngFor } from '../rng';
 import type { Score } from '../score';
 import { bassPc, chord, keyName, parseProgression, prefersFlats, SCALES, scalePcs, voiceChord } from '../theory';
-import { bassNote, chordSpans, layout, lerp, makeMotif, pickBpm, realizeMotif, resolveTweaks, ScoreBuilder, trackFx, varyMotif, vel, type MotifNote } from './common';
+import { bassNote, chordSpans, layout, lerp, makeMotif, pickBpm, realizeMotif, resolveTweaks, ScoreBuilder, shiftMotif, trackFx, varyMotif, vel, type MotifNote } from './common';
 import { POLKA } from './templates';
 
 export function composePolka(req: TrackRequest): Score {
@@ -41,6 +41,7 @@ export function composePolka(req: TrackRequest): Score {
   const motifT = makeMotif(rng, 4, 0.3 + D * 0.3, { grid: 0.5, restTail: 0.5, minNotes: 2, maxNotes: 4 });
   const mirror = (m: MotifNote[]): MotifNote[] => m.map((n) => ({ ...n, step: -n.step }));
   const mirrored = W > 0.15 && rng.chance(0.4 + W);
+  const seqStep = rng.pick([1, -1, 2]);
   let voicing: number[] | null = null;
   let prevBass: number | null = null;
 
@@ -91,7 +92,7 @@ export function composePolka(req: TrackRequest): Score {
       if (s.repeat > 0) base = varyMotif(rng, base, 0.3);
       for (let ph = 0; ph + 2 <= s.bars; ph += 2) {
         const phrase = (ph / 2) % 4;
-        const m = phrase === 2 ? varyMotif(rng, base, 0.5) : phrase === 3 ? base.slice(0, Math.max(2, Math.ceil(base.length / 2))) : base;
+        const m = phrase === 1 ? shiftMotif(base, seqStep) : phrase === 2 ? varyMotif(rng, base, 0.5) : phrase === 3 ? base.slice(0, Math.max(2, Math.ceil(base.length / 2))) : base;
         for (const n of realizeMotif(m, 0, beat, 79, spans, keyScale, 67, 89, b.grid, s.startBar + ph)) {
           b.note(lead, n.t, Math.min(n.d, beat * (trio ? 1.5 : 0.6)), n.p, vel(rng, n.strong ? 0.75 : 0.62, 0.04));
         }

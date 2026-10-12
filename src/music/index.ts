@@ -1,9 +1,21 @@
 // Generative music engine — public API.
 //
 // Tracks are composed from a recipe (genre) + seed, entirely in the browser: the same
-// TrackRequest gives the same notes on every machine. The heavy code (composition,
-// synthesis, scheduling) is lazy-loaded by createMusicEngine so the main bundle stays
-// small. Signal flow: see engine/engine.ts (master) and engine/track.ts (per track).
+// TrackRequest gives the same notes on every machine. The heavy code is lazy-loaded by
+// createMusicEngine so the main bundle stays small.
+//
+//   recipes/*.ts   pure, seeded composers: TrackRequest → Score (notes + automation)
+//   theory.ts      scales, roman-numeral progressions, voice leading
+//   dsp/*.ts       instruments synthesized into AudioBuffers on demand (no samples,
+//                  no network): keys, plucks, mallets, basses, drums, textures, and
+//                  synth patches pre-rendered as looping wavetable zones
+//   engine/*.ts    plays a Score on the AudioContext clock: worker-ticked lookahead
+//                  scheduling, crossfades, one shared reverb, glue compressor and a
+//                  −1 dBFS soft ceiling. Output sits around −18 LUFS (beds −19).
+//
+// Semantics the director relies on: play() may be given a future `when`; a later
+// play()/stop() cancels any play that hasn't started yet; stop() without `when` fades
+// immediately; every track (and its reverb) ends inside durationSeconds.
 
 import type { RecipeId, RecipeTweaks } from '../broadcast/types';
 import type { TrackInfo } from './score';

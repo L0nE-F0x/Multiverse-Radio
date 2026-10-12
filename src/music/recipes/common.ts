@@ -360,6 +360,11 @@ export function varyMotif(rng: Rng, motif: readonly MotifNote[], amount = 0.5): 
   });
 }
 
+/** A melodic sequence: the same shape, moved up or down the scale. */
+export function shiftMotif(motif: readonly MotifNote[], steps: number): MotifNote[] {
+  return motif.map((n) => ({ ...n, step: n.step + steps }));
+}
+
 // ── Misc ──────────────────────────────────────────────────────────────────────
 
 export function vel(rng: Rng, base: number, spread = 0.06): number {
