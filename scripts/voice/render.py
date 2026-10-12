@@ -346,21 +346,83 @@ def default_jobs() -> int:
     return max(1, min(8, workers))
 
 
-def run_jobs(jobs: list, workers: int, threads: int, nice: int, on_done) -> None:
+# Kokoro's phonemizer copies libespeak-ng.so into a fresh temp dir for every line it speaks
+# and never removes it: a full render left 4,000+ dirs (2.8 GB) in /tmp and ran it out of
+# quota. Each worker gets its own temp dir under the cache instead, emptied after every clip.
+TMP = CACHE / "tmp"
+
+
+def _pid_alive(pid: int) -> bool:
+    try:
+        os.kill(pid, 0)
+    except ProcessLookupError:
+        return False
+    except PermissionError:
+        return True
+    return True
+
+
+def clear_stale_tmp() -> None:
+    """Remove the temp dirs of render processes that have exited."""
+    import shutil
+
+    if TMP.is_dir():
+        for folder in TMP.iterdir():
+            if not folder.name.isdigit() or not _pid_alive(int(folder.name)):
+                shutil.rmtree(folder, ignore_errors=True)
+
+
+def use_private_tmp() -> None:
+    import tempfile
+
+    folder = TMP / str(os.getpid())
+    folder.mkdir(parents=True, exist_ok=True)
+    os.environ["TMPDIR"] = str(folder)
+    tempfile.tempdir = str(folder)
+
+
+def clear_private_tmp() -> None:
+    """Drop the leaked library copies (directories only: loose temp files may still be open)."""
+    import shutil
+    import tempfile
+
+    folder = Path(tempfile.gettempdir())
+    if folder.parent == TMP:
+        for entry in folder.iterdir():
+            if entry.is_dir():
+                shutil.rmtree(entry, ignore_errors=True)
+
+
+def worker_init(*init) -> None:
     import clip as engine
 
+    use_private_tmp()
+    engine.init_worker(*init)
+
+
+def render_job(job):
+    import clip as engine
+
+    try:
+        return engine.render_safe(job)
+    finally:
+        clear_private_tmp()
+
+
+def run_jobs(jobs: list, workers: int, threads: int, nice: int, on_done) -> None:
     init = (str(KOKORO_MODEL), str(KOKORO_VOICES), str(CACHE), threads, nice)
+    clear_stale_tmp()
     if workers <= 1 or len(jobs) <= 1:
-        engine.init_worker(*init)
+        worker_init(*init)
         for job in jobs:
-            on_done(job, engine.render_safe(job))
+            on_done(job, render_job(job))
         return
     import multiprocessing
     from concurrent.futures import ProcessPoolExecutor, as_completed
 
     ctx = multiprocessing.get_context("forkserver" if sys.platform != "win32" else "spawn")
-    pool = ProcessPoolExecutor(max_workers=workers, mp_context=ctx, initializer=engine.init_worker, initargs=init)
-    futures = {pool.submit(engine.render_safe, job): job for job in jobs}
+    pool = ProcessPoolExecutor(max_workers=workers, mp_context=ctx, initializer=worker_init, initargs=init)
+    futures = {pool.submit(render_job, job): job for job in jobs}
     try:
         for future in as_completed(futures):
             on_done(futures[future], future.result())
@@ -538,6 +600,8 @@ def render(scripts: list[Script], out: Path, force: bool, workers: int, threads:
         if write_shows(out, scripts, full):
             print(f"  updated {rel(out / SHOWS)}")
         lock.save()
+        clear_private_tmp()
+        clear_stale_tmp()
 
     for w in warnings:
         print(f"warning: {w}")
@@ -577,6 +641,7 @@ def gallery(out: Path, voice: str, only: list[str]) -> int:
     import sounds
     from voicescript import BEDS, FX, SFX, SFX_SECONDS, STINGS, Speech
 
+    use_private_tmp()
     engine.init_worker(str(KOKORO_MODEL), str(KOKORO_VOICES), str(CACHE), max(1, (os.cpu_count() or 4) // 2))
     folder = out / "_gallery"
     rng = np.random.default_rng(7)
@@ -624,6 +689,8 @@ def gallery(out: Path, voice: str, only: list[str]) -> int:
         encoding="utf-8",
     )
     print(f"Open {rel(folder / 'index.html')} to audition {len(rows)} sounds.")
+    clear_private_tmp()
+    clear_stale_tmp()
     return 0
 
 
