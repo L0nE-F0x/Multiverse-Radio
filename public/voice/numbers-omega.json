@@ -6,7 +6,7 @@
       "id": "id-001",
       "category": "id",
       "url": "/voice/numbers-omega/id-001.mp3",
-      "durationMs": 6466,
+      "durationMs": 6465,
       "overMusic": true,
       "lines": [
         {
@@ -25,7 +25,7 @@
       "id": "id-002",
       "category": "id",
       "url": "/voice/numbers-omega/id-002.mp3",
-      "durationMs": 5436,
+      "durationMs": 5437,
       "overMusic": true,
       "lines": [
         {
@@ -53,7 +53,7 @@
       "id": "id-004",
       "category": "id",
       "url": "/voice/numbers-omega/id-004.mp3",
-      "durationMs": 6412,
+      "durationMs": 6411,
       "overMusic": true,
       "daypart": "night",
       "lines": [
@@ -68,7 +68,7 @@
       "id": "id-005",
       "category": "id",
       "url": "/voice/numbers-omega/id-005.mp3",
-      "durationMs": 7624,
+      "durationMs": 7625,
       "overMusic": true,
       "lines": [
         {
@@ -87,14 +87,14 @@
       "id": "id-006",
       "category": "id",
       "url": "/voice/numbers-omega/id-006.mp3",
-      "durationMs": 7263,
+      "durationMs": 7262,
       "overMusic": true,
       "daypart": "morning",
       "lines": [
         {
           "speaker": "The Counter",
           "text": "Numbers Station Omega. Morning sequence. Please have a pencil ready.",
-          "startMs": 50
+          "startMs": 49
         }
       ]
     },
@@ -578,7 +578,7 @@
       "id": "story-009",
       "category": "story",
       "url": "/voice/numbers-omega/story-009.mp3",
-      "durationMs": 29286,
+      "durationMs": 29290,
       "title": "This sequence is sponsored",
       "overMusic": true,
       "lines": [
@@ -620,7 +620,7 @@
         {
           "speaker": "The Counter",
           "text": "End of message.",
-          "startMs": 25101
+          "startMs": 25106
         }
       ]
     },
@@ -734,7 +734,7 @@
       "id": "story-012",
       "category": "story",
       "url": "/voice/numbers-omega/story-012.mp3",
-      "durationMs": 33343,
+      "durationMs": 33342,
       "title": "What seven seven four means",
       "overMusic": true,
       "lines": [
@@ -1084,6 +1084,708 @@
           "speaker": "The Counter",
           "text": "End of message.",
           "startMs": 27075
+        }
+      ]
+    },
+    {
+      "id": "the-late-sequence-open",
+      "category": "id",
+      "url": "/voice/numbers-omega/the-late-sequence-open.mp3",
+      "durationMs": 6698,
+      "title": "The Late Sequence",
+      "overMusic": true,
+      "part": "open",
+      "show": "the-late-sequence",
+      "lines": [
+        {
+          "speaker": "The Counter",
+          "text": "Numbers Station Omega. The Late Sequence.",
+          "startMs": 1900
+        },
+        {
+          "speaker": "The Counter",
+          "text": "You know who you are.",
+          "startMs": 5579
+        }
+      ]
+    },
+    {
+      "id": "the-late-sequence-01",
+      "category": "dj",
+      "url": "/voice/numbers-omega/the-late-sequence-01.mp3",
+      "durationMs": 7106,
+      "overMusic": true,
+      "show": "the-late-sequence",
+      "lines": [
+        {
+          "speaker": "The Counter",
+          "text": "Two. Five. Nine.",
+          "startMs": 50
+        },
+        {
+          "speaker": "The Counter",
+          "text": "That is not a code. It is the time, near enough.",
+          "startMs": 2417
+        },
+        {
+          "speaker": "The Counter",
+          "text": "Go to sleep.",
+          "startMs": 6140
+        }
+      ]
+    },
+    {
+      "id": "the-late-sequence-02",
+      "category": "dj",
+      "url": "/voice/numbers-omega/the-late-sequence-02.mp3",
+      "durationMs": 9082,
+      "overMusic": true,
+      "show": "the-late-sequence",
+      "lines": [
+        {
+          "speaker": "The Counter",
+          "text": "The fox at the bottom of the mast has curled up for the night.",
+          "startMs": 50
+        },
+        {
+          "speaker": "The Counter",
+          "text": "Transmissions will continue at a lower volume.",
+          "startMs": 4245
+        },
+        {
+          "speaker": "The Counter",
+          "text": "Good fox.",
+          "startMs": 8214
+        }
+      ]
+    },
+    {
+      "id": "the-morning-sequence-open",
+      "category": "id",
+      "url": "/voice/numbers-omega/the-morning-sequence-open.mp3",
+      "durationMs": 7056,
+      "title": "The Morning Sequence",
+      "overMusic": true,
+      "part": "open",
+      "show": "the-morning-sequence",
+      "lines": [
+        {
+          "speaker": "The Counter",
+          "text": "The Morning Sequence. Please have a pencil ready.",
+          "startMs": 1900
+        },
+        {
+          "speaker": "The Counter",
+          "text": "A pen is acceptable.",
+          "startMs": 5708
+        }
+      ]
+    },
+    {
+      "id": "the-morning-sequence-01",
+      "category": "dj",
+      "url": "/voice/numbers-omega/the-morning-sequence-01.mp3",
+      "durationMs": 6655,
+      "overMusic": true,
+      "show": "the-morning-sequence",
+      "lines": [
+        {
+          "speaker": "The Counter",
+          "text": "Morning sequence. One. Two. Three.",
+          "startMs": 50
+        },
+        {
+          "speaker": "The Counter",
+          "text": "Get up. Two. Three.",
+          "startMs": 3120
+        },
+        {
+          "speaker": "The Counter",
+          "text": "Kettle. Two. Three.",
+          "startMs": 5361
+        }
+      ]
+    },
+    {
+      "id": "the-morning-sequence-02",
+      "category": "dj",
+      "url": "/voice/numbers-omega/the-morning-sequence-02.mp3",
+      "durationMs": 7159,
+      "overMusic": true,
+      "show": "the-morning-sequence",
+      "lines": [
+        {
+          "speaker": "The Counter",
+          "text": "Attention. The geese are awake.",
+          "startMs": 50
+        },
+        {
+          "speaker": "The Counter",
+          "text": "They are counting you. Please hold still.",
+          "startMs": 2726
+        },
+        {
+          "speaker": "The Counter",
+          "text": "Please be countable.",
+          "startMs": 5882
+        }
+      ]
+    },
+    {
+      "id": "reading-open-01",
+      "category": "story",
+      "url": "/voice/numbers-omega/reading-open-01.mp3",
+      "durationMs": 4989,
+      "overMusic": true,
+      "part": "open",
+      "kit": "reading",
+      "lines": [
+        {
+          "speaker": "The Counter",
+          "text": "Attention.",
+          "startMs": 1900
+        },
+        {
+          "speaker": "The Counter",
+          "text": "Five. Two. Five.",
+          "startMs": 3703
+        }
+      ]
+    },
+    {
+      "id": "reading-open-02",
+      "category": "story",
+      "url": "/voice/numbers-omega/reading-open-02.mp3",
+      "durationMs": 5261,
+      "overMusic": true,
+      "part": "open",
+      "kit": "reading",
+      "lines": [
+        {
+          "speaker": "The Counter",
+          "text": "Stand by for sequence.",
+          "startMs": 1900
+        },
+        {
+          "speaker": "The Counter",
+          "text": "Eight. Eight. One.",
+          "startMs": 4258
+        }
+      ]
+    },
+    {
+      "id": "reading-open-03",
+      "category": "story",
+      "url": "/voice/numbers-omega/reading-open-03.mp3",
+      "durationMs": 5248,
+      "overMusic": true,
+      "part": "open",
+      "kit": "reading",
+      "lines": [
+        {
+          "speaker": "The Counter",
+          "text": "Attention. Attention.",
+          "startMs": 1900
+        },
+        {
+          "speaker": "The Counter",
+          "text": "Zero. Four.",
+          "startMs": 4183
+        }
+      ]
+    },
+    {
+      "id": "reading-open-04",
+      "category": "story",
+      "url": "/voice/numbers-omega/reading-open-04.mp3",
+      "durationMs": 5608,
+      "overMusic": true,
+      "part": "open",
+      "kit": "reading",
+      "lines": [
+        {
+          "speaker": "The Counter",
+          "text": "Omega. Stand by.",
+          "startMs": 1900
+        },
+        {
+          "speaker": "The Counter",
+          "text": "Seven. Seven. Four.",
+          "startMs": 4228
+        }
+      ]
+    },
+    {
+      "id": "reading-body-01",
+      "category": "story",
+      "url": "/voice/numbers-omega/reading-body-01.mp3",
+      "durationMs": 8183,
+      "overMusic": true,
+      "part": "body",
+      "kit": "reading",
+      "lines": [
+        {
+          "speaker": "The Counter",
+          "text": "Message for the listener at the kitchen table.",
+          "startMs": 50
+        },
+        {
+          "speaker": "The Counter",
+          "text": "The letter can wait until morning. It has waited this long. It is not angry.",
+          "startMs": 3346
+        }
+      ]
+    },
+    {
+      "id": "reading-body-02",
+      "category": "story",
+      "url": "/voice/numbers-omega/reading-body-02.mp3",
+      "durationMs": 9252,
+      "overMusic": true,
+      "part": "body",
+      "kit": "reading",
+      "lines": [
+        {
+          "speaker": "The Counter",
+          "text": "Message for the person who cannot find their glasses.",
+          "startMs": 50
+        },
+        {
+          "speaker": "The Counter",
+          "text": "They are on your head. They have been on your head the whole time. They did not want to interrupt.",
+          "startMs": 3948
+        }
+      ]
+    },
+    {
+      "id": "reading-body-03",
+      "category": "story",
+      "url": "/voice/numbers-omega/reading-body-03.mp3",
+      "durationMs": 10006,
+      "overMusic": true,
+      "part": "body",
+      "kit": "reading",
+      "lines": [
+        {
+          "speaker": "The Counter",
+          "text": "Message for the listener who is worried about tomorrow.",
+          "startMs": 50
+        },
+        {
+          "speaker": "The Counter",
+          "text": "We have seen tomorrow. It is mostly fine. There is a nice moment at about four. Look out for it.",
+          "startMs": 3985
+        }
+      ]
+    },
+    {
+      "id": "reading-body-04",
+      "category": "story",
+      "url": "/voice/numbers-omega/reading-body-04.mp3",
+      "durationMs": 7651,
+      "overMusic": true,
+      "part": "body",
+      "kit": "reading",
+      "lines": [
+        {
+          "speaker": "The Counter",
+          "text": "Message for the geese.",
+          "startMs": 50
+        },
+        {
+          "speaker": "The Counter",
+          "text": "You are doing very well. Keep counting. Do not count the ducks. The ducks know what they did.",
+          "startMs": 2131
+        }
+      ]
+    },
+    {
+      "id": "reading-body-05",
+      "category": "story",
+      "url": "/voice/numbers-omega/reading-body-05.mp3",
+      "durationMs": 8923,
+      "overMusic": true,
+      "part": "body",
+      "kit": "reading",
+      "lines": [
+        {
+          "speaker": "The Counter",
+          "text": "Message for the person who has not replied to a message.",
+          "startMs": 50
+        },
+        {
+          "speaker": "The Counter",
+          "text": "They are not cross. They are only waiting. Two words would do. Hello. Sorry. Either.",
+          "startMs": 4146
+        }
+      ]
+    },
+    {
+      "id": "reading-body-06",
+      "category": "story",
+      "url": "/voice/numbers-omega/reading-body-06.mp3",
+      "durationMs": 10172,
+      "overMusic": true,
+      "part": "body",
+      "kit": "reading",
+      "lines": [
+        {
+          "speaker": "The Counter",
+          "text": "Message for the night shift.",
+          "startMs": 50
+        },
+        {
+          "speaker": "The Counter",
+          "text": "You are not alone on the dial. Somebody else is listening to these same numbers. They are also tired. They also have tea.",
+          "startMs": 2366
+        }
+      ]
+    },
+    {
+      "id": "reading-body-07",
+      "category": "story",
+      "url": "/voice/numbers-omega/reading-body-07.mp3",
+      "durationMs": 7625,
+      "overMusic": true,
+      "part": "body",
+      "kit": "reading",
+      "lines": [
+        {
+          "speaker": "The Counter",
+          "text": "Message for the fox.",
+          "startMs": 50
+        },
+        {
+          "speaker": "The Counter",
+          "text": "You may come in from the fog now. The kettle is on. Do not tell anyone we have a kettle.",
+          "startMs": 2180
+        }
+      ]
+    },
+    {
+      "id": "reading-close-01",
+      "category": "story",
+      "url": "/voice/numbers-omega/reading-close-01.mp3",
+      "durationMs": 4234,
+      "overMusic": true,
+      "part": "close",
+      "kit": "reading",
+      "lines": [
+        {
+          "speaker": "The Counter",
+          "text": "End of message.",
+          "startMs": 50
+        }
+      ]
+    },
+    {
+      "id": "reading-close-02",
+      "category": "story",
+      "url": "/voice/numbers-omega/reading-close-02.mp3",
+      "durationMs": 6046,
+      "overMusic": true,
+      "part": "close",
+      "kit": "reading",
+      "lines": [
+        {
+          "speaker": "The Counter",
+          "text": "That is all.",
+          "startMs": 50
+        },
+        {
+          "speaker": "The Counter",
+          "text": "End of message.",
+          "startMs": 1861
+        }
+      ]
+    },
+    {
+      "id": "reading-close-03",
+      "category": "story",
+      "url": "/voice/numbers-omega/reading-close-03.mp3",
+      "durationMs": 7847,
+      "overMusic": true,
+      "part": "close",
+      "kit": "reading",
+      "lines": [
+        {
+          "speaker": "The Counter",
+          "text": "Disregard the last part. Do not disregard the rest.",
+          "startMs": 50
+        },
+        {
+          "speaker": "The Counter",
+          "text": "End of message.",
+          "startMs": 4112
+        }
+      ]
+    },
+    {
+      "id": "reading-close-04",
+      "category": "story",
+      "url": "/voice/numbers-omega/reading-close-04.mp3",
+      "durationMs": 6834,
+      "overMusic": true,
+      "part": "close",
+      "kit": "reading",
+      "lines": [
+        {
+          "speaker": "The Counter",
+          "text": "Repeat. Repeat.",
+          "startMs": 50
+        },
+        {
+          "speaker": "The Counter",
+          "text": "No. That was enough. End of message.",
+          "startMs": 2112
+        }
+      ]
+    },
+    {
+      "id": "teodor-is-heard-04",
+      "category": "story",
+      "url": "/voice/numbers-omega/teodor-is-heard-04.mp3",
+      "durationMs": 57971,
+      "title": "Teodor Is Heard, Part Four: Four. Four. Four.",
+      "overMusic": true,
+      "serial": {
+        "id": "teodor-is-heard",
+        "episode": 4
+      },
+      "lines": [
+        {
+          "speaker": "The Counter",
+          "text": "Attention.",
+          "startMs": 1900
+        },
+        {
+          "speaker": "The Counter",
+          "text": "Four. Four. Four.",
+          "startMs": 3903
+        },
+        {
+          "speaker": "The Counter",
+          "text": "Relay Four. Relay Four.",
+          "startMs": 6374
+        },
+        {
+          "speaker": "The Counter",
+          "text": "Teodor. We are only allowed to say numbers. We have found a way.",
+          "startMs": 8962
+        },
+        {
+          "speaker": "The Counter",
+          "text": "The following are numbers. They are also instructions. Nobody has said we cannot do both.",
+          "startMs": 13745
+        },
+        {
+          "speaker": "The Counter",
+          "text": "Open the panel at the back of your receiver. Four screws.",
+          "startMs": 20629
+        },
+        {
+          "speaker": "The Counter",
+          "text": "Find the small glass valve, third from the left. It is loose. It has been loose for eleven years.",
+          "startMs": 24959
+        },
+        {
+          "speaker": "The Counter",
+          "text": "Tap it. Twice. Two.",
+          "startMs": 31911
+        },
+        {
+          "speaker": "Teodor, Relay Four",
+          "text": "Is somebody counting?",
+          "startMs": 35676
+        },
+        {
+          "speaker": "The Counter",
+          "text": "Yes.",
+          "startMs": 38477
+        },
+        {
+          "speaker": "The Counter",
+          "text": "That is also a number. It means yes.",
+          "startMs": 40044
+        },
+        {
+          "speaker": "Teodor, Relay Four",
+          "text": "I heard a number. I heard a number. I haven't heard anything in eleven years.",
+          "startMs": 43251
+        },
+        {
+          "speaker": "The Counter",
+          "text": "It will not last. The valve is old. But it is a start.",
+          "startMs": 48617
+        },
+        {
+          "speaker": "The Counter",
+          "text": "Four. Four. Four. End of message.",
+          "startMs": 52733
+        }
+      ]
+    },
+    {
+      "id": "bev-gets-her-song-04",
+      "category": "story",
+      "url": "/voice/numbers-omega/bev-gets-her-song-04.mp3",
+      "durationMs": 57674,
+      "title": "Bev Gets Her Song, Part Four: Two. Two. One.",
+      "overMusic": true,
+      "serial": {
+        "id": "bev-gets-her-song",
+        "episode": 4
+      },
+      "lines": [
+        {
+          "speaker": "The Counter",
+          "text": "Attention.",
+          "startMs": 1900
+        },
+        {
+          "speaker": "The Counter",
+          "text": "Two. Two. One.",
+          "startMs": 3903
+        },
+        {
+          "speaker": "The Counter",
+          "text": "Message for Bev.",
+          "startMs": 6145
+        },
+        {
+          "speaker": "The Counter",
+          "text": "Bev. We have located reference two, two, one. A song. Retired eleven years ago, from the line at Relay Four.",
+          "startMs": 8223
+        },
+        {
+          "speaker": "The Counter",
+          "text": "We are not allowed to sing. We are only allowed to say numbers. So here are the numbers.",
+          "startMs": 16985
+        },
+        {
+          "speaker": "The Counter",
+          "text": "One. One. Two. One.",
+          "startMs": 23656
+        },
+        {
+          "speaker": "The Counter",
+          "text": "That is the part you know. Here is the part after the man cries.",
+          "startMs": 26355
+        },
+        {
+          "speaker": "The Counter",
+          "text": "Three. Three. Five.",
+          "startMs": 31576
+        },
+        {
+          "speaker": "The Counter",
+          "text": "Three. Three.",
+          "startMs": 33622
+        },
+        {
+          "speaker": "The Counter",
+          "text": "Count it slowly. It is the tune.",
+          "startMs": 36159
+        },
+        {
+          "speaker": "The Counter",
+          "text": "We have been humming it in the mast, when nobody is listening. The fox likes it.",
+          "startMs": 39287
+        },
+        {
+          "speaker": "The Counter",
+          "text": "This is still not the request line, Bev. The request line is a person. He cannot hear you yet. He will.",
+          "startMs": 45051
+        },
+        {
+          "speaker": "The Counter",
+          "text": "Two. Two. One. End of message.",
+          "startMs": 52775
+        }
+      ]
+    },
+    {
+      "id": "halloween-01",
+      "category": "story",
+      "url": "/voice/numbers-omega/halloween-01.mp3",
+      "durationMs": 32303,
+      "title": "Thirteen. Thirteen.",
+      "overMusic": true,
+      "dates": [
+        "10-24",
+        "10-25",
+        "10-26",
+        "10-27",
+        "10-28",
+        "10-29",
+        "10-30",
+        "10-31"
+      ],
+      "lines": [
+        {
+          "speaker": "The Counter",
+          "text": "Attention.",
+          "startMs": 3100
+        },
+        {
+          "speaker": "The Counter",
+          "text": "Thirteen. Thirteen.",
+          "startMs": 5103
+        },
+        {
+          "speaker": "The Counter",
+          "text": "Message for the listener who has heard a noise downstairs.",
+          "startMs": 7572
+        },
+        {
+          "speaker": "The Counter",
+          "text": "It is the boiler. It is always the boiler.",
+          "startMs": 11730
+        },
+        {
+          "speaker": "The Counter",
+          "text": "Tonight, it is wearing a sheet.",
+          "startMs": 15296
+        },
+        {
+          "speaker": "The Counter",
+          "text": "It would like you to know that it has only ever been the boiler. It is a little hurt that you thought otherwise. Go down and say goodnight to it.",
+          "startMs": 18145
+        },
+        {
+          "speaker": "The Counter",
+          "text": "Thirteen. End of message.",
+          "startMs": 27622
+        }
+      ]
+    },
+    {
+      "id": "halloween-02",
+      "category": "id",
+      "url": "/voice/numbers-omega/halloween-02.mp3",
+      "durationMs": 7085,
+      "title": "Boo. Boo. Four.",
+      "overMusic": true,
+      "dates": [
+        "10-24",
+        "10-25",
+        "10-26",
+        "10-27",
+        "10-28",
+        "10-29",
+        "10-30",
+        "10-31"
+      ],
+      "lines": [
+        {
+          "speaker": "The Counter",
+          "text": "Numbers Station Omega. Halloween.",
+          "startMs": 50
+        },
+        {
+          "speaker": "The Counter",
+          "text": "Boo. Boo. Four.",
+          "startMs": 3236
         }
       ]
     }

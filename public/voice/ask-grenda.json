@@ -96,7 +96,7 @@
       "id": "dj-002",
       "category": "dj",
       "url": "/voice/ask-grenda/dj-002.mp3",
-      "durationMs": 10282,
+      "durationMs": 10283,
       "overMusic": true,
       "lines": [
         {
@@ -163,7 +163,7 @@
       "id": "dj-006",
       "category": "dj",
       "url": "/voice/ask-grenda/dj-006.mp3",
-      "durationMs": 11648,
+      "durationMs": 11647,
       "overMusic": true,
       "lines": [
         {
@@ -277,7 +277,7 @@
       "id": "call-002",
       "category": "call",
       "url": "/voice/ask-grenda/call-002.mp3",
-      "durationMs": 74574,
+      "durationMs": 74587,
       "title": "Greg, a Shadow, at the Sea",
       "overMusic": false,
       "lines": [
@@ -314,62 +314,62 @@
         {
           "speaker": "Grenda",
           "text": "And how do you feel?",
-          "startMs": 26260
+          "startMs": 26261
         },
         {
           "speaker": "Greg, a Shadow",
           "text": "Terrible. And wonderful. Both. Is that allowed?",
-          "startMs": 27849
+          "startMs": 27850
         },
         {
           "speaker": "Grenda",
           "text": "That's what leaving feels like, Greg. Both is exactly right.",
-          "startMs": 31247
+          "startMs": 31248
         },
         {
           "speaker": "Greg, a Shadow",
           "text": "I keep thinking he's angry.",
-          "startMs": 35152
+          "startMs": 35153
         },
         {
           "speaker": "Grenda",
           "text": "He isn't. I've spoken to him. He says the porch light is on.",
-          "startMs": 37596
+          "startMs": 37597
         },
         {
           "speaker": "Greg, a Shadow",
           "text": "He always forgets the porch light.",
-          "startMs": 42183
+          "startMs": 42184
         },
         {
           "speaker": "Grenda",
           "text": "Not any more, love.",
-          "startMs": 44822
+          "startMs": 44823
         },
         {
           "speaker": "Greg, a Shadow",
           "text": "Should I go back?",
-          "startMs": 46483
+          "startMs": 46484
         },
         {
           "speaker": "Grenda",
           "text": "You're allowed to want things, Greg. Even shadows. Especially shadows. You've spent your whole life going where somebody else went. But send him something. Let him know you're all right.",
-          "startMs": 47952
+          "startMs": 47953
         },
         {
           "speaker": "Greg, a Shadow",
           "text": "I can't write. I haven't got hands. Well, I've got his hands, but they're flat.",
-          "startMs": 58150
+          "startMs": 58151
         },
         {
           "speaker": "Grenda",
           "text": "Then lie across a postcard, love, at about four in the afternoon, when you're nice and long. He'll know your shape. People always know the shape.",
-          "startMs": 62765
+          "startMs": 62766
         },
         {
           "speaker": "Greg, a Shadow",
           "text": "Thank you, Grenda.",
-          "startMs": 70837
+          "startMs": 70850
         }
       ]
     },
@@ -482,7 +482,7 @@
       "id": "call-004",
       "category": "call",
       "url": "/voice/ask-grenda/call-004.mp3",
-      "durationMs": 64731,
+      "durationMs": 64730,
       "title": "Desmond, Whose Reflection Stopped Coming to Work",
       "overMusic": false,
       "lines": [
@@ -514,57 +514,57 @@
         {
           "speaker": "Desmond",
           "text": "Normal. I get up, I go to the mirror, I look at myself, and I sort of sigh.",
-          "startMs": 23240
+          "startMs": 23238
         },
         {
           "speaker": "Grenda",
           "text": "Every morning?",
-          "startMs": 27298
+          "startMs": 27296
         },
         {
           "speaker": "Desmond",
           "text": "For about twenty years.",
-          "startMs": 28702
+          "startMs": 28700
         },
         {
           "speaker": "Grenda",
           "text": "So every morning, for twenty years, the first thing your reflection has seen is a man looking at it, and sighing.",
-          "startMs": 30514
+          "startMs": 30512
         },
         {
           "speaker": "Desmond",
           "text": "Oh.",
-          "startMs": 37310
+          "startMs": 37308
         },
         {
           "speaker": "Grenda",
           "text": "It's tired, love. It's been sighed at. Nobody wants to turn up for that.",
-          "startMs": 38239
+          "startMs": 38237
         },
         {
           "speaker": "Desmond",
           "text": "What do I do?",
-          "startMs": 42678
+          "startMs": 42676
         },
         {
           "speaker": "Grenda",
           "text": "Smile at the empty mirror. Every morning, for a week. Not a big one. Just a little, there you are. Say good morning to the tiles, if you have to.",
-          "startMs": 44121
+          "startMs": 44119
         },
         {
           "speaker": "Desmond",
           "text": "And it'll come back?",
-          "startMs": 52162
+          "startMs": 52160
         },
         {
           "speaker": "Grenda",
           "text": "Maybe. But even if it doesn't, Desmond, you'll have spent a week being nice to someone first thing in the morning. And that someone was you.",
-          "startMs": 53681
+          "startMs": 53679
         },
         {
           "speaker": "Desmond",
           "text": "Thanks, Grenda.",
-          "startMs": 61060
+          "startMs": 61058
         }
       ]
     },
@@ -657,7 +657,7 @@
       "id": "call-006",
       "category": "call",
       "url": "/voice/ask-grenda/call-006.mp3",
-      "durationMs": 66702,
+      "durationMs": 66708,
       "title": "A Tuesday Who Feels Overlooked",
       "overMusic": false,
       "lines": [
@@ -689,7 +689,7 @@
         {
           "speaker": "A Tuesday",
           "text": "Not really.",
-          "startMs": 25769
+          "startMs": 25768
         },
         {
           "speaker": "Grenda",
@@ -732,7 +732,7 @@
       "id": "call-007",
       "category": "call",
       "url": "/voice/ask-grenda/call-007.mp3",
-      "durationMs": 62201,
+      "durationMs": 62204,
       "title": "Bartholomew, a Very Shy Giant",
       "overMusic": false,
       "lines": [
@@ -744,72 +744,72 @@
         {
           "speaker": "Bartholomew, a Giant",
           "text": "Hello, Grenda. It's Bartholomew. I'm a giant.",
-          "startMs": 4685
+          "startMs": 4684
         },
         {
           "speaker": "Grenda",
           "text": "Hello, Bartholomew. You've a lovely deep voice.",
-          "startMs": 7763
+          "startMs": 7766
         },
         {
           "speaker": "Bartholomew, a Giant",
           "text": "Thank you. That's the problem. Every time I say hello to someone, they run away.",
-          "startMs": 10795
+          "startMs": 10797
         },
         {
           "speaker": "Grenda",
           "text": "Ah.",
-          "startMs": 15839
+          "startMs": 15842
         },
         {
           "speaker": "Bartholomew, a Giant",
           "text": "I only want to say hello. I've got a little garden, and I grow very small tomatoes, and I'd like someone to show them to. But I lean down to say hello, and the whole street empties.",
-          "startMs": 16750
+          "startMs": 16752
         },
         {
           "speaker": "Grenda",
           "text": "How do you lean down, love?",
-          "startMs": 28269
+          "startMs": 28272
         },
         {
           "speaker": "Bartholomew, a Giant",
           "text": "Quite fast. From quite high up.",
-          "startMs": 30194
+          "startMs": 30196
         },
         {
           "speaker": "Grenda",
           "text": "Bartholomew, from where they're standing, a hello from you is a weather event. You need to arrive slowly. Kneel down first, before anyone's looking. Let them come to you.",
-          "startMs": 32112
+          "startMs": 32114
         },
         {
           "speaker": "Bartholomew, a Giant",
           "text": "And then?",
-          "startMs": 41731
+          "startMs": 41734
         },
         {
           "speaker": "Grenda",
           "text": "Whisper. And bring a small cake. People can run from a giant, love, but nobody runs from a cake.",
-          "startMs": 42745
+          "startMs": 42748
         },
         {
           "speaker": "Bartholomew, a Giant",
           "text": "A small cake.",
-          "startMs": 48428
+          "startMs": 48431
         },
         {
           "speaker": "Grenda",
           "text": "And lead with the tomatoes. It's very hard to be frightened of somebody who's proud of his tomatoes.",
-          "startMs": 49711
+          "startMs": 49714
         },
         {
           "speaker": "Bartholomew, a Giant",
           "text": "Thank you, Grenda.",
-          "startMs": 55682
+          "startMs": 55685
         },
         {
           "speaker": "Grenda",
           "text": "Off you go. Mind the phone box on your way out.",
-          "startMs": 57028
+          "startMs": 57030
         }
       ]
     },
@@ -959,7 +959,7 @@
         {
           "speaker": "Cellist Unit Four",
           "text": "What do I do with it?",
-          "startMs": 54202
+          "startMs": 54201
         },
         {
           "speaker": "Grenda",
@@ -974,7 +974,7 @@
         {
           "speaker": "Grenda",
           "text": "I'll take it.",
-          "startMs": 68610
+          "startMs": 68609
         }
       ]
     },
@@ -1082,7 +1082,7 @@
       "id": "call-011",
       "category": "call",
       "url": "/voice/ask-grenda/call-011.mp3",
-      "durationMs": 54647,
+      "durationMs": 54648,
       "title": "Grenda, from the Next Reality Over",
       "overMusic": false,
       "lines": [
@@ -1154,17 +1154,17 @@
         {
           "speaker": "The Other Grenda",
           "text": "That's good advice.",
-          "startMs": 44606
+          "startMs": 44607
         },
         {
           "speaker": "Grenda",
           "text": "It's your advice, love. We've just never taken it.",
-          "startMs": 46199
+          "startMs": 46200
         },
         {
           "speaker": "The Other Grenda",
           "text": "Same time next week?",
-          "startMs": 49259
+          "startMs": 49260
         },
         {
           "speaker": "Grenda",
@@ -1204,12 +1204,12 @@
         {
           "speaker": "Grenda",
           "text": "Oh, how lovely. I listen to your lot at night. Very soothing.",
-          "startMs": 13417
+          "startMs": 13416
         },
         {
           "speaker": "A Whale, Lane Twelve",
           "text": "Thank you. Captain Hum keeps telling everyone that the whales are fine.",
-          "startMs": 17163
+          "startMs": 17162
         },
         {
           "speaker": "Grenda",
@@ -1259,7 +1259,7 @@
         {
           "speaker": "A Whale, Lane Twelve",
           "text": "Yes. Eventually.",
-          "startMs": 48159
+          "startMs": 48158
         },
         {
           "speaker": "Grenda",
@@ -1274,7 +1274,7 @@
         {
           "speaker": "A Whale, Lane Twelve",
           "text": "He will worry.",
-          "startMs": 59587
+          "startMs": 59586
         },
         {
           "speaker": "Grenda",
@@ -1295,7 +1295,7 @@
         {
           "speaker": "Grenda",
           "text": "Ask Grenda. You're on the air.",
-          "startMs": 2449
+          "startMs": 2450
         },
         {
           "speaker": "The Dark",
@@ -1468,7 +1468,7 @@
       "id": "call-015",
       "category": "call",
       "url": "/voice/ask-grenda/call-015.mp3",
-      "durationMs": 77397,
+      "durationMs": 77402,
       "title": "Kim Harrowgate Keeps Being Handed Things",
       "overMusic": false,
       "lines": [
@@ -1490,62 +1490,62 @@
         {
           "speaker": "Kim Harrowgate",
           "text": "That's sort of the problem. Wherever I go, people hand me things. Soup. A brick. A goose. Last week a man handed me a baby, said, I'll be right back, and he was. But still.",
-          "startMs": 13820
+          "startMs": 13824
         },
         {
           "speaker": "Grenda",
           "text": "How does it make you feel?",
-          "startMs": 24090
+          "startMs": 24094
         },
         {
           "speaker": "Kim Harrowgate",
           "text": "Tired. I've got a cupboard at home that's just things people have handed me. There's a trumpet in there, Grenda. I don't play the trumpet.",
-          "startMs": 25901
+          "startMs": 25905
         },
         {
           "speaker": "Grenda",
           "text": "Kim, can I tell you why people hand you things?",
-          "startMs": 33364
+          "startMs": 33367
         },
         {
           "speaker": "Kim Harrowgate",
           "text": "Please.",
-          "startMs": 36213
+          "startMs": 36217
         },
         {
           "speaker": "Grenda",
           "text": "People hand things to the person who looks like they'll take care of them. In the middle of the collapse, or the flood, or whatever it is, they look round, and there you are, calm, holding a microphone, and they think, she'll know what to do with this.",
-          "startMs": 37214
+          "startMs": 37218
         },
         {
           "speaker": "Kim Harrowgate",
           "text": "I never know what to do with it.",
-          "startMs": 49787
+          "startMs": 49791
         },
         {
           "speaker": "Grenda",
           "text": "That's not what they need, love. They just need somebody steady to hold it for a minute. That's a gift. But you're allowed to hand things back.",
-          "startMs": 51645
+          "startMs": 51648
         },
         {
           "speaker": "Kim Harrowgate",
           "text": "I don't think I've ever handed anything back.",
-          "startMs": 59437
+          "startMs": 59441
         },
         {
           "speaker": "Grenda",
           "text": "Practice. Smile, and say, I can't take this one, but I hope you find someone who can. And Kim? Give the trumpet to somebody who plays the trumpet.",
-          "startMs": 62050
+          "startMs": 62053
         },
         {
           "speaker": "Kim Harrowgate",
           "text": "Thanks, Grenda. Oh. Hang on. Somebody's just handed me—",
-          "startMs": 70535
+          "startMs": 70538
         },
         {
           "speaker": "Grenda",
           "text": "Practice, Kim.",
-          "startMs": 75659
+          "startMs": 75663
         }
       ]
     },
@@ -1560,7 +1560,7 @@
         {
           "speaker": "Grenda",
           "text": "Ask Grenda. Who've I got?",
-          "startMs": 2849
+          "startMs": 2850
         },
         {
           "speaker": "Fiona",
@@ -1570,7 +1570,7 @@
         {
           "speaker": "Grenda",
           "text": "Congratulations, love. What does he say?",
-          "startMs": 8248
+          "startMs": 8249
         },
         {
           "speaker": "Fiona",
@@ -1625,7 +1625,7 @@
         {
           "speaker": "Grenda",
           "text": "Take him somewhere with squirrels. Say the nice words out loud for a while. Good boy. Lovely day. Look at that. Not just for him. For both of you.",
-          "startMs": 48590
+          "startMs": 48591
         },
         {
           "speaker": "Fiona",
@@ -1721,6 +1721,1239 @@
           "speaker": "Grenda",
           "text": "And a family, love. Not bad for a parking permit.",
           "startMs": 68192
+        }
+      ]
+    },
+    {
+      "id": "grenda-after-dark-open",
+      "category": "id",
+      "url": "/voice/ask-grenda/grenda-after-dark-open.mp3",
+      "durationMs": 10575,
+      "title": "Grenda After Dark",
+      "overMusic": true,
+      "part": "open",
+      "show": "grenda-after-dark",
+      "lines": [
+        {
+          "speaker": "Grenda",
+          "text": "This is Grenda After Dark. The rain's on the window, the kettle's on, and the lava lamp is wide awake. Ring in, love.",
+          "startMs": 448
+        }
+      ]
+    },
+    {
+      "id": "grenda-after-dark-01",
+      "category": "dj",
+      "url": "/voice/ask-grenda/grenda-after-dark-01.mp3",
+      "durationMs": 11763,
+      "overMusic": true,
+      "show": "grenda-after-dark",
+      "lines": [
+        {
+          "speaker": "Grenda",
+          "text": "This is the hour when little problems get big. They haven't, love. It's just dark. Everything looks bigger in the dark, the way a coat on a chair looks like a man.",
+          "startMs": 42
+        },
+        {
+          "speaker": "Grenda",
+          "text": "Put the light on. It's a coat. It was always a coat.",
+          "startMs": 8903
+        }
+      ]
+    },
+    {
+      "id": "grenda-after-dark-02",
+      "category": "dj",
+      "url": "/voice/ask-grenda/grenda-after-dark-02.mp3",
+      "durationMs": 11969,
+      "overMusic": true,
+      "show": "grenda-after-dark",
+      "lines": [
+        {
+          "speaker": "Grenda",
+          "text": "Someone asked me why I do the late shift. It's because at three in the morning, nobody rings about the bins. They ring because something matters.",
+          "startMs": 46
+        },
+        {
+          "speaker": "Grenda",
+          "text": "I like being here for the bit that matters. The bins can ring in the day.",
+          "startMs": 8030
+        }
+      ]
+    },
+    {
+      "id": "grenda-after-dark-03",
+      "category": "dj",
+      "url": "/voice/ask-grenda/grenda-after-dark-03.mp3",
+      "durationMs": 11346,
+      "overMusic": true,
+      "show": "grenda-after-dark",
+      "lines": [
+        {
+          "speaker": "Grenda",
+          "text": "The thing in my lava lamp is very active tonight. It's pressed itself right up against the glass, listening to the callers.",
+          "startMs": 41
+        },
+        {
+          "speaker": "Grenda",
+          "text": "I think it's lonely too. Hello, love. Yes, you. Back to sleep now.",
+          "startMs": 7550
+        }
+      ]
+    },
+    {
+      "id": "the-kitchen-table-open",
+      "category": "id",
+      "url": "/voice/ask-grenda/the-kitchen-table-open.mp3",
+      "durationMs": 6090,
+      "title": "Grenda's Kitchen Table",
+      "overMusic": true,
+      "part": "open",
+      "show": "the-kitchen-table",
+      "lines": [
+        {
+          "speaker": "Grenda",
+          "text": "Good morning. This is Grenda's Kitchen Table. Pull up a chair, mind the cat, and bring your problem while it's still small.",
+          "startMs": 36
+        }
+      ]
+    },
+    {
+      "id": "the-kitchen-table-01",
+      "category": "dj",
+      "url": "/voice/ask-grenda/the-kitchen-table-01.mp3",
+      "durationMs": 10770,
+      "overMusic": true,
+      "show": "the-kitchen-table",
+      "lines": [
+        {
+          "speaker": "Grenda",
+          "text": "Morning problems are lovely, love. They're small, and they've only just woken up, and they don't know yet what they want to be.",
+          "startMs": 39
+        },
+        {
+          "speaker": "Grenda",
+          "text": "Catch them early, with a bit of toast, and most of them turn into nothing at all.",
+          "startMs": 6646
+        }
+      ]
+    },
+    {
+      "id": "the-kitchen-table-02",
+      "category": "dj",
+      "url": "/voice/ask-grenda/the-kitchen-table-02.mp3",
+      "durationMs": 15372,
+      "overMusic": true,
+      "show": "the-kitchen-table",
+      "lines": [
+        {
+          "speaker": "Grenda",
+          "text": "A little tip for the day. If you're dreading something, do it before lunch. If you're looking forward to something, save it for after.",
+          "startMs": 44
+        },
+        {
+          "speaker": "Grenda",
+          "text": "That's the whole secret of a good day. I've been giving that advice for thirty years. It still works. Nobody ever believes me until they try it.",
+          "startMs": 7062
+        }
+      ]
+    },
+    {
+      "id": "call-open-01",
+      "category": "call",
+      "url": "/voice/ask-grenda/call-open-01.mp3",
+      "durationMs": 10391,
+      "title": "A Lighthouse",
+      "overMusic": false,
+      "part": "open",
+      "kit": "calls",
+      "lines": [
+        {
+          "speaker": "Grenda",
+          "text": "Ask Grenda, you're on.",
+          "startMs": 1650
+        },
+        {
+          "speaker": "A Lighthouse",
+          "text": "Hello, Grenda. I'm a lighthouse. Ships keep coming in close to say thank you, and I never know what to say. I just sort of flash.",
+          "startMs": 3474
+        }
+      ]
+    },
+    {
+      "id": "call-open-02",
+      "category": "call",
+      "url": "/voice/ask-grenda/call-open-02.mp3",
+      "durationMs": 11534,
+      "title": "Clive, a Garden Gnome",
+      "overMusic": false,
+      "part": "open",
+      "kit": "calls",
+      "lines": [
+        {
+          "speaker": "Grenda",
+          "text": "Ask Grenda. Who've I got?",
+          "startMs": 1650
+        },
+        {
+          "speaker": "Clive, a Garden Gnome",
+          "text": "It's Clive. I'm a garden gnome. I've watched the same front door for thirty years, and lately, at night, I've started to wander.",
+          "startMs": 3698
+        }
+      ]
+    },
+    {
+      "id": "call-open-03",
+      "category": "call",
+      "url": "/voice/ask-grenda/call-open-03.mp3",
+      "durationMs": 8101,
+      "title": "The Last Sock in the Drawer",
+      "overMusic": false,
+      "part": "open",
+      "kit": "calls",
+      "lines": [
+        {
+          "speaker": "The Last Sock in the Drawer",
+          "text": "Hello? I'm the last sock in the drawer. All the others have gone to the warm dimension. They send postcards. Should I go?",
+          "startMs": 1650
+        }
+      ]
+    },
+    {
+      "id": "call-open-04",
+      "category": "call",
+      "url": "/voice/ask-grenda/call-open-04.mp3",
+      "durationMs": 10148,
+      "title": "A Staircase",
+      "overMusic": false,
+      "part": "open",
+      "kit": "calls",
+      "lines": [
+        {
+          "speaker": "Grenda",
+          "text": "You're on Ask Grenda.",
+          "startMs": 1650
+        },
+        {
+          "speaker": "A Staircase",
+          "text": "Grenda, I'm a staircase. I've got one more step than everyone remembers, and people keep tripping on me in the dark. I feel awful.",
+          "startMs": 3431
+        }
+      ]
+    },
+    {
+      "id": "call-open-05",
+      "category": "call",
+      "url": "/voice/ask-grenda/call-open-05.mp3",
+      "durationMs": 10972,
+      "title": "Nell, Who Has a Cloud",
+      "overMusic": false,
+      "part": "open",
+      "kit": "calls",
+      "lines": [
+        {
+          "speaker": "Grenda",
+          "text": "Ask Grenda, go ahead.",
+          "startMs": 1650
+        },
+        {
+          "speaker": "Nell",
+          "text": "Hi, Grenda, it's Nell. A little cloud has started following me everywhere. It rains on me a bit. I think it means well.",
+          "startMs": 3631
+        }
+      ]
+    },
+    {
+      "id": "call-open-06",
+      "category": "call",
+      "url": "/voice/ask-grenda/call-open-06.mp3",
+      "durationMs": 7876,
+      "title": "The Monster Under the Bed",
+      "overMusic": false,
+      "daypart": "night",
+      "part": "open",
+      "kit": "calls",
+      "lines": [
+        {
+          "speaker": "The Monster Under the Bed",
+          "text": "Grenda, I'm the monster under a little boy's bed, and he isn't scared of me. He just says goodnight. I don't know what I'm for.",
+          "startMs": 1650
+        }
+      ]
+    },
+    {
+      "id": "call-open-07",
+      "category": "call",
+      "url": "/voice/ask-grenda/call-open-07.mp3",
+      "durationMs": 9650,
+      "title": "Doreen, Whose Echo Answers First",
+      "overMusic": false,
+      "part": "open",
+      "kit": "calls",
+      "lines": [
+        {
+          "speaker": "Grenda",
+          "text": "Ask Grenda. Who's this?",
+          "startMs": 1650
+        },
+        {
+          "speaker": "Doreen",
+          "text": "It's Doreen. My echo has started answering before I've said anything. It's always right. I can't stand it.",
+          "startMs": 3485
+        }
+      ]
+    },
+    {
+      "id": "call-open-08",
+      "category": "call",
+      "url": "/voice/ask-grenda/call-open-08.mp3",
+      "durationMs": 9839,
+      "title": "Simon, Invited to His Own Party",
+      "overMusic": false,
+      "part": "open",
+      "kit": "calls",
+      "lines": [
+        {
+          "speaker": "Grenda",
+          "text": "You're on the air, love.",
+          "startMs": 1650
+        },
+        {
+          "speaker": "Simon",
+          "text": "Hi, Grenda. I've been invited to my own surprise party, in the next reality over. I'm not sure I'll like me.",
+          "startMs": 3430
+        }
+      ]
+    },
+    {
+      "id": "call-open-09",
+      "category": "call",
+      "url": "/voice/ask-grenda/call-open-09.mp3",
+      "durationMs": 8546,
+      "title": "An Umbrella That Opened Up",
+      "overMusic": false,
+      "part": "open",
+      "kit": "calls",
+      "lines": [
+        {
+          "speaker": "A Caller from Precinct Nine",
+          "text": "Grenda, I'm ringing from the Damp Dimension. My umbrella has started opening up to me. Emotionally. It's quite a lot.",
+          "startMs": 1650
+        }
+      ]
+    },
+    {
+      "id": "call-open-10",
+      "category": "call",
+      "url": "/voice/ask-grenda/call-open-10.mp3",
+      "durationMs": 11126,
+      "title": "A Caller from Next Week",
+      "overMusic": false,
+      "part": "open",
+      "kit": "calls",
+      "lines": [
+        {
+          "speaker": "Grenda",
+          "text": "Ask Grenda, you're on.",
+          "startMs": 1650
+        },
+        {
+          "speaker": "A Caller from Next Week",
+          "text": "Grenda, I've come back from next week to warn myself about something. But I've forgotten what. I'm just standing in my kitchen.",
+          "startMs": 3474
+        }
+      ]
+    },
+    {
+      "id": "call-open-11",
+      "category": "call",
+      "url": "/voice/ask-grenda/call-open-11.mp3",
+      "durationMs": 9228,
+      "title": "Agnes, Whose House Keeps Growing",
+      "overMusic": false,
+      "part": "open",
+      "kit": "calls",
+      "lines": [
+        {
+          "speaker": "Agnes",
+          "text": "Hello, Grenda. It's Agnes. My house gets a little bigger on the inside every night. There's a hallway now I've never been down.",
+          "startMs": 1650
+        }
+      ]
+    },
+    {
+      "id": "call-open-12",
+      "category": "call",
+      "url": "/voice/ask-grenda/call-open-12.mp3",
+      "durationMs": 11323,
+      "title": "A Retired Storm",
+      "overMusic": false,
+      "part": "open",
+      "kit": "calls",
+      "lines": [
+        {
+          "speaker": "Grenda",
+          "text": "Ask Grenda. Go ahead, love.",
+          "startMs": 1650
+        },
+        {
+          "speaker": "A Retired Storm",
+          "text": "I used to be a hurricane, Grenda. Now I'm just a breeze in a garden in Lower Stilt. Nobody's afraid of me. I miss it.",
+          "startMs": 3748
+        }
+      ]
+    },
+    {
+      "id": "call-body-01",
+      "category": "call",
+      "url": "/voice/ask-grenda/call-body-01.mp3",
+      "durationMs": 12727,
+      "overMusic": false,
+      "part": "body",
+      "kit": "calls",
+      "lines": [
+        {
+          "speaker": "Grenda",
+          "text": "Oh, love. Here's the first thing. You rang. That's the hard part done.",
+          "startMs": 445
+        },
+        {
+          "speaker": "Grenda",
+          "text": "Most people carry a thing like that around for years before they say it out loud, and you've just said it to the whole multiverse. I'm proud of you.",
+          "startMs": 4112
+        }
+      ]
+    },
+    {
+      "id": "call-body-02",
+      "category": "call",
+      "url": "/voice/ask-grenda/call-body-02.mp3",
+      "durationMs": 13960,
+      "overMusic": false,
+      "part": "body",
+      "kit": "calls",
+      "lines": [
+        {
+          "speaker": "Grenda",
+          "text": "Can I tell you something I've learned, sitting in this chair? The strange part of a problem is never the problem. It's just the wrapping.",
+          "startMs": 437
+        },
+        {
+          "speaker": "Grenda",
+          "text": "Underneath, it's nearly always the same thing. Somebody wants to be noticed, and doesn't know how to ask.",
+          "startMs": 7842
+        }
+      ]
+    },
+    {
+      "id": "call-body-03",
+      "category": "call",
+      "url": "/voice/ask-grenda/call-body-03.mp3",
+      "durationMs": 13424,
+      "overMusic": false,
+      "part": "body",
+      "kit": "calls",
+      "lines": [
+        {
+          "speaker": "Grenda",
+          "text": "Here's what I want you to do tonight. Put the kettle on. Make two cups, even if it's only you.",
+          "startMs": 443
+        },
+        {
+          "speaker": "Grenda",
+          "text": "Drink one, and let the other go cold beside you, like company. Then go to bed. It'll be smaller in the morning. They always are.",
+          "startMs": 5874
+        }
+      ]
+    },
+    {
+      "id": "call-body-04",
+      "category": "call",
+      "url": "/voice/ask-grenda/call-body-04.mp3",
+      "durationMs": 14622,
+      "overMusic": false,
+      "part": "body",
+      "kit": "calls",
+      "lines": [
+        {
+          "speaker": "Grenda",
+          "text": "Now, I'm not going to tell you it's normal, love. It isn't. But you're not the first, and you won't be the last.",
+          "startMs": 440
+        },
+        {
+          "speaker": "Grenda",
+          "text": "Somewhere, in some reality, there's somebody with exactly your problem, ringing a lady exactly like me. We're all doing our best.",
+          "startMs": 6649
+        }
+      ]
+    },
+    {
+      "id": "call-body-05",
+      "category": "call",
+      "url": "/voice/ask-grenda/call-body-05.mp3",
+      "durationMs": 12833,
+      "overMusic": false,
+      "part": "body",
+      "kit": "calls",
+      "lines": [
+        {
+          "speaker": "Grenda",
+          "text": "Be kind to it, whatever it is. I know that sounds daft. But most things that make a fuss are frightened, and most frightened things calm down when they're spoken to nicely.",
+          "startMs": 438
+        },
+        {
+          "speaker": "Grenda",
+          "text": "Try it for a week. Then ring me back.",
+          "startMs": 10153
+        }
+      ]
+    },
+    {
+      "id": "call-body-06",
+      "category": "call",
+      "url": "/voice/ask-grenda/call-body-06.mp3",
+      "durationMs": 13283,
+      "overMusic": false,
+      "part": "body",
+      "kit": "calls",
+      "lines": [
+        {
+          "speaker": "Grenda",
+          "text": "Write it down, love. All of it. Then read it back in the morning, out loud, to the kettle.",
+          "startMs": 441
+        },
+        {
+          "speaker": "Grenda",
+          "text": "If it still sounds bad, ring me. If it sounds a bit silly, then it was a three in the morning problem, and you've already solved it, by sleeping.",
+          "startMs": 5538
+        }
+      ]
+    },
+    {
+      "id": "call-body-07",
+      "category": "call",
+      "url": "/voice/ask-grenda/call-body-07.mp3",
+      "durationMs": 13010,
+      "overMusic": false,
+      "part": "body",
+      "kit": "calls",
+      "lines": [
+        {
+          "speaker": "Grenda",
+          "text": "Here's a question. If your best friend rang and told you this, what would you say to them? Go on. You'd be lovely about it, wouldn't you.",
+          "startMs": 444
+        },
+        {
+          "speaker": "Grenda",
+          "text": "You'd say, oh, that's hard, and you'd put the kettle on. Say that to yourself, love. You're allowed.",
+          "startMs": 7532
+        }
+      ]
+    },
+    {
+      "id": "call-body-08",
+      "category": "call",
+      "url": "/voice/ask-grenda/call-body-08.mp3",
+      "durationMs": 14485,
+      "overMusic": false,
+      "part": "body",
+      "kit": "calls",
+      "lines": [
+        {
+          "speaker": "Grenda",
+          "text": "You don't have to fix it tonight. That's the thing nobody tells you. Some problems aren't for fixing. They're for living next to.",
+          "startMs": 449
+        },
+        {
+          "speaker": "Grenda",
+          "text": "Like a noisy neighbour, or a tree that blocks the light. You find out what time it goes quiet, and you sit in the garden then.",
+          "startMs": 7335
+        }
+      ]
+    },
+    {
+      "id": "call-body-09",
+      "category": "call",
+      "url": "/voice/ask-grenda/call-body-09.mp3",
+      "durationMs": 11191,
+      "overMusic": false,
+      "part": "body",
+      "kit": "calls",
+      "lines": [
+        {
+          "speaker": "Grenda",
+          "text": "Have you told anyone? Not me. Someone who'll see your face. Tell them tomorrow over a cup of tea, the way you'd mention the weather.",
+          "startMs": 442
+        },
+        {
+          "speaker": "Grenda",
+          "text": "You'll be amazed how many people say, oh. Me too.",
+          "startMs": 7909
+        }
+      ]
+    },
+    {
+      "id": "call-body-10",
+      "category": "call",
+      "url": "/voice/ask-grenda/call-body-10.mp3",
+      "durationMs": 12407,
+      "overMusic": false,
+      "part": "body",
+      "kit": "calls",
+      "lines": [
+        {
+          "speaker": "Grenda",
+          "text": "Now, the practical bit. Leave a light on. Eat something warm. Open a window, even just a crack, so the room can breathe.",
+          "startMs": 446
+        },
+        {
+          "speaker": "Grenda",
+          "text": "Most of the time, love, a problem is just a room that hasn't been aired.",
+          "startMs": 7890
+        }
+      ]
+    },
+    {
+      "id": "call-body-11",
+      "category": "call",
+      "url": "/voice/ask-grenda/call-body-11.mp3",
+      "durationMs": 11680,
+      "overMusic": false,
+      "part": "body",
+      "kit": "calls",
+      "lines": [
+        {
+          "speaker": "Grenda",
+          "text": "I'll tell you what my mother told me. She said, Grenda, there's nothing so strange it can't be helped by a walk, a bath, or a biscuit.",
+          "startMs": 443
+        },
+        {
+          "speaker": "Grenda",
+          "text": "And if it's very strange, all three. In that order.",
+          "startMs": 8095
+        }
+      ]
+    },
+    {
+      "id": "call-body-12",
+      "category": "call",
+      "url": "/voice/ask-grenda/call-body-12.mp3",
+      "durationMs": 14249,
+      "overMusic": false,
+      "part": "body",
+      "kit": "calls",
+      "lines": [
+        {
+          "speaker": "Grenda",
+          "text": "It sounds to me like you've been very patient for a very long time. You're allowed to stop being patient for a bit, and say, actually, this is hard.",
+          "startMs": 437
+        },
+        {
+          "speaker": "Grenda",
+          "text": "Saying it doesn't make it worse, love. It just makes it true. And true is easier to carry.",
+          "startMs": 8614
+        }
+      ]
+    },
+    {
+      "id": "call-body-13",
+      "category": "call",
+      "url": "/voice/ask-grenda/call-body-13.mp3",
+      "durationMs": 12990,
+      "overMusic": false,
+      "part": "body",
+      "kit": "calls",
+      "lines": [
+        {
+          "speaker": "Grenda",
+          "text": "And try not to be cross with it. Whatever it is, it's part of your life now, and life's too short to be cross with the furniture.",
+          "startMs": 443
+        },
+        {
+          "speaker": "Grenda",
+          "text": "Give it a name, if it hasn't got one. It's very hard to be frightened of something called Colin.",
+          "startMs": 7358
+        }
+      ]
+    },
+    {
+      "id": "call-body-14",
+      "category": "call",
+      "url": "/voice/ask-grenda/call-body-14.mp3",
+      "durationMs": 10899,
+      "overMusic": false,
+      "part": "body",
+      "kit": "calls",
+      "lines": [
+        {
+          "speaker": "Grenda",
+          "text": "Remember, love, the night always feels like it's going to last forever. And then it's Tuesday.",
+          "startMs": 440
+        },
+        {
+          "speaker": "Grenda",
+          "text": "You don't have to know what to do. You just have to get to Tuesday. I'll be here till then.",
+          "startMs": 5559
+        }
+      ]
+    },
+    {
+      "id": "call-close-01",
+      "category": "call",
+      "url": "/voice/ask-grenda/call-close-01.mp3",
+      "durationMs": 5495,
+      "overMusic": false,
+      "part": "close",
+      "kit": "calls",
+      "lines": [
+        {
+          "speaker": "Grenda",
+          "text": "Ring me back and tell me how it goes, love.",
+          "startMs": 45
+        },
+        {
+          "speaker": "Grenda",
+          "text": "They usually do.",
+          "startMs": 4213
+        }
+      ]
+    },
+    {
+      "id": "call-close-02",
+      "category": "call",
+      "url": "/voice/ask-grenda/call-close-02.mp3",
+      "durationMs": 3917,
+      "overMusic": false,
+      "part": "close",
+      "kit": "calls",
+      "lines": [
+        {
+          "speaker": "Grenda",
+          "text": "Off you go, then. Mind how you go.",
+          "startMs": 43
+        }
+      ]
+    },
+    {
+      "id": "call-close-03",
+      "category": "call",
+      "url": "/voice/ask-grenda/call-close-03.mp3",
+      "durationMs": 4538,
+      "overMusic": false,
+      "part": "close",
+      "kit": "calls",
+      "lines": [
+        {
+          "speaker": "Grenda",
+          "text": "Thank you for ringing, love. That was very brave.",
+          "startMs": 38
+        }
+      ]
+    },
+    {
+      "id": "call-close-04",
+      "category": "call",
+      "url": "/voice/ask-grenda/call-close-04.mp3",
+      "durationMs": 5061,
+      "overMusic": false,
+      "part": "close",
+      "kit": "calls",
+      "lines": [
+        {
+          "speaker": "Grenda",
+          "text": "Go on. Kettle. Bed. In that order.",
+          "startMs": 36
+        },
+        {
+          "speaker": "Grenda",
+          "text": "Lovely.",
+          "startMs": 3969
+        }
+      ]
+    },
+    {
+      "id": "call-close-05",
+      "category": "call",
+      "url": "/voice/ask-grenda/call-close-05.mp3",
+      "durationMs": 5969,
+      "overMusic": false,
+      "part": "close",
+      "kit": "calls",
+      "lines": [
+        {
+          "speaker": "Grenda",
+          "text": "Take care of yourself, love. Somebody has to, and it might as well be you.",
+          "startMs": 36
+        }
+      ]
+    },
+    {
+      "id": "call-close-06",
+      "category": "call",
+      "url": "/voice/ask-grenda/call-close-06.mp3",
+      "durationMs": 5193,
+      "overMusic": false,
+      "part": "close",
+      "kit": "calls",
+      "lines": [
+        {
+          "speaker": "Grenda",
+          "text": "And if it's still there in the morning, ring me. I'll still be here.",
+          "startMs": 50
+        }
+      ]
+    },
+    {
+      "id": "call-close-07",
+      "category": "call",
+      "url": "/voice/ask-grenda/call-close-07.mp3",
+      "durationMs": 5985,
+      "overMusic": false,
+      "daypart": "night",
+      "part": "close",
+      "kit": "calls",
+      "lines": [
+        {
+          "speaker": "Grenda",
+          "text": "Night night, love.",
+          "startMs": 48
+        },
+        {
+          "speaker": "Grenda",
+          "text": "Lines are still open. I'm not going anywhere.",
+          "startMs": 3209
+        }
+      ]
+    },
+    {
+      "id": "bev-gets-her-song-01",
+      "category": "story",
+      "url": "/voice/ask-grenda/bev-gets-her-song-01.mp3",
+      "durationMs": 64952,
+      "title": "Bev Gets Her Song, Part One: Eleven Years",
+      "overMusic": false,
+      "serial": {
+        "id": "bev-gets-her-song",
+        "episode": 1
+      },
+      "lines": [
+        {
+          "speaker": "Grenda",
+          "text": "Ask Grenda. You're on the air.",
+          "startMs": 2850
+        },
+        {
+          "speaker": "Bev",
+          "text": "Hello, Grenda. It's Bev. You'll remember me. The song.",
+          "startMs": 4960
+        },
+        {
+          "speaker": "Grenda",
+          "text": "Dum, dum, da dum. Of course I remember, love. How are you?",
+          "startMs": 8212
+        },
+        {
+          "speaker": "Bev",
+          "text": "It's eleven years this week, Grenda. Eleven years of ringing. I think I'm going to stop. Maybe it was never a song. Maybe it was just Stan.",
+          "startMs": 12030
+        },
+        {
+          "speaker": "Grenda",
+          "text": "Tell me where you first heard it. You've never told me that.",
+          "startMs": 19267
+        },
+        {
+          "speaker": "Bev",
+          "text": "In a lift. The Grand Overlap Hotel, lift number two. It got stuck between floors four and five, with me and a man I'd never met, for three hours.",
+          "startMs": 22611
+        },
+        {
+          "speaker": "Bev",
+          "text": "There was one song going round and round on the little speaker. By the second hour we were singing along. By the third, he'd asked me to dinner.",
+          "startMs": 31084
+        },
+        {
+          "speaker": "Bev",
+          "text": "And when the doors finally opened, he cried. Stan cried at everything. Lifts. Bridges. Me.",
+          "startMs": 38701
+        },
+        {
+          "speaker": "Grenda",
+          "text": "Bev, love. That's not a lost song. That's a lift. Lifts don't go anywhere. Well. Up and down. But they stay in the building.",
+          "startMs": 44545
+        },
+        {
+          "speaker": "Bev",
+          "text": "I never thought of that.",
+          "startMs": 51263
+        },
+        {
+          "speaker": "Grenda",
+          "text": "So don't stop ringing. Ring differently. Go and find the lift.",
+          "startMs": 53162
+        },
+        {
+          "speaker": "Bev",
+          "text": "At my age?",
+          "startMs": 56971
+        },
+        {
+          "speaker": "Grenda",
+          "text": "Especially at your age. Take a sandwich. And Bev? Ring me from the lift.",
+          "startMs": 58514
+        }
+      ]
+    },
+    {
+      "id": "teodor-is-heard-06",
+      "category": "story",
+      "url": "/voice/ask-grenda/teodor-is-heard-06.mp3",
+      "durationMs": 62394,
+      "title": "Teodor Is Heard, Part Six: The Request Line Was Mine",
+      "overMusic": false,
+      "serial": {
+        "id": "teodor-is-heard",
+        "episode": 6
+      },
+      "lines": [
+        {
+          "speaker": "Teodor, Relay Four",
+          "text": "Is anyone receiving this. This is Relay Four. Grenda? Is that Grenda?",
+          "startMs": 850
+        },
+        {
+          "speaker": "Grenda",
+          "text": "It's me, love. You've come through again.",
+          "startMs": 5158
+        },
+        {
+          "speaker": "Teodor, Relay Four",
+          "text": "Only in bits. But something's changed. This week I heard a moon, some numbers, and a whale. Or a very large door.",
+          "startMs": 7457
+        },
+        {
+          "speaker": "Grenda",
+          "text": "That'll be the whale. How does it feel?",
+          "startMs": 13768
+        },
+        {
+          "speaker": "Teodor, Relay Four",
+          "text": "Frightening. When nobody answered, it was sad, but it was simple. Now people are answering, and I don't know what to say back.",
+          "startMs": 16025
+        },
+        {
+          "speaker": "Grenda",
+          "text": "Teodor, there's a lady called Bev who's been looking for the request line for eleven years. The news says the lift music used to come from you.",
+          "startMs": 22437
+        },
+        {
+          "speaker": "Teodor, Relay Four",
+          "text": "The request line. That was mine. That was my whole job, Grenda. People rang in, and I put their songs through. To lifts, and kitchens, and hospitals. Birthdays. Weddings. A lot of flute.",
+          "startMs": 31421
+        },
+        {
+          "speaker": "Teodor, Relay Four",
+          "text": "Then the storm took the receiver, and I couldn't hear the requests any more. So I started asking if anyone was there.",
+          "startMs": 41034
+        },
+        {
+          "speaker": "Grenda",
+          "text": "Eleven years.",
+          "startMs": 47349
+        },
+        {
+          "speaker": "Teodor, Relay Four",
+          "text": "Has she really been ringing all that time?",
+          "startMs": 48822
+        },
+        {
+          "speaker": "Grenda",
+          "text": "Every station, love. Every night. Same as you.",
+          "startMs": 51519
+        },
+        {
+          "speaker": "Teodor, Relay Four",
+          "text": "Then I'd better get this fixed. Somebody's been waiting on me.",
+          "startMs": 55174
+        },
+        {
+          "speaker": "Grenda",
+          "text": "Somebody's been waiting on both of you.",
+          "startMs": 58931
+        }
+      ]
+    },
+    {
+      "id": "greg-comes-home-11",
+      "category": "story",
+      "url": "/voice/ask-grenda/greg-comes-home-11.mp3",
+      "durationMs": 58042,
+      "title": "Greg Comes Home, Part Eleven: The Phone Box",
+      "overMusic": false,
+      "serial": {
+        "id": "greg-comes-home",
+        "episode": 11
+      },
+      "lines": [
+        {
+          "speaker": "Grenda",
+          "text": "Ask Grenda, you're on the air.",
+          "startMs": 2850
+        },
+        {
+          "speaker": "Greg, a Shadow",
+          "text": "Grenda. It's Greg. I'm in the phone box at the end of his road. I can see the porch light. I've been in here an hour.",
+          "startMs": 4914
+        },
+        {
+          "speaker": "Grenda",
+          "text": "Oh, love. You're nearly there. What's stopping you?",
+          "startMs": 11228
+        },
+        {
+          "speaker": "Greg, a Shadow",
+          "text": "I've been to the sea. The moon. I played Sunball. I danced a polka. What if I'm not the same shape any more?",
+          "startMs": 13728
+        },
+        {
+          "speaker": "Grenda",
+          "text": "Nobody's the same shape after a year, Greg. That's what a year is for.",
+          "startMs": 19734
+        },
+        {
+          "speaker": "Greg, a Shadow",
+          "text": "What if he doesn't fit me?",
+          "startMs": 24175
+        },
+        {
+          "speaker": "Grenda",
+          "text": "Then you'll both stretch a bit. That's what people do. Shadows too, I should think.",
+          "startMs": 26413
+        },
+        {
+          "speaker": "Greg, a Shadow",
+          "text": "And I was going to wait for noon. He stands in the sun at noon. But it's four in the morning.",
+          "startMs": 31267
+        },
+        {
+          "speaker": "Grenda",
+          "text": "And what's on, love?",
+          "startMs": 36187
+        },
+        {
+          "speaker": "Greg, a Shadow",
+          "text": "The porch light.",
+          "startMs": 37937
+        },
+        {
+          "speaker": "Grenda",
+          "text": "Then you don't have to wait for noon. He's left you a sun. He's left it on every night since spring. Go and stand in it.",
+          "startMs": 40262
+        },
+        {
+          "speaker": "Greg, a Shadow",
+          "text": "Will you stay on the line?",
+          "startMs": 46977
+        },
+        {
+          "speaker": "Grenda",
+          "text": "Till you're through the gate.",
+          "startMs": 48945
+        },
+        {
+          "speaker": "Greg, a Shadow",
+          "text": "I'm through the gate.",
+          "startMs": 52735
+        },
+        {
+          "speaker": "Grenda",
+          "text": "Go on, then.",
+          "startMs": 54452
+        }
+      ]
+    },
+    {
+      "id": "bev-gets-her-song-11",
+      "category": "story",
+      "url": "/voice/ask-grenda/bev-gets-her-song-11.mp3",
+      "durationMs": 64503,
+      "title": "Bev Gets Her Song, Part Eleven: Is This the Request Line?",
+      "overMusic": false,
+      "serial": {
+        "id": "bev-gets-her-song",
+        "episode": 11
+      },
+      "lines": [
+        {
+          "speaker": "Grenda",
+          "text": "Ask Grenda. Bev? Is that you?",
+          "startMs": 2850
+        },
+        {
+          "speaker": "Bev",
+          "text": "It's me, love. You said to ring. Is it working?",
+          "startMs": 5110
+        },
+        {
+          "speaker": "Grenda",
+          "text": "I've got a gentleman on my other line. He's coming through a relay ship, a long way out, so he'll sound far away. Putting you through.",
+          "startMs": 7938
+        },
+        {
+          "speaker": "Teodor, Relay Four",
+          "text": "This is Relay Four. Is anyone receiving this.",
+          "startMs": 15973
+        },
+        {
+          "speaker": "Bev",
+          "text": "Hello? Is this the request line?",
+          "startMs": 19797
+        },
+        {
+          "speaker": "Teodor, Relay Four",
+          "text": "Yes. Yes it is. I'm sorry it took so long. What can I play for you?",
+          "startMs": 23398
+        },
+        {
+          "speaker": "Bev",
+          "text": "It goes, dum, dum, da dum. And then, da da dum, da da. I heard it in a lift, a long time ago.",
+          "startMs": 27395
+        },
+        {
+          "speaker": "Teodor, Relay Four",
+          "text": "Grand Overlap Hotel. Lift two. I remember putting it through. Hold on. Reel four. Track two, two, one.",
+          "startMs": 33155
+        },
+        {
+          "speaker": "Teodor, Relay Four",
+          "text": "It's called Pleasant Interval.",
+          "startMs": 40683
+        },
+        {
+          "speaker": "Bev",
+          "text": "Oh.",
+          "startMs": 43730
+        },
+        {
+          "speaker": "Bev",
+          "text": "It was. It was a very pleasant interval.",
+          "startMs": 45276
+        },
+        {
+          "speaker": "Teodor, Relay Four",
+          "text": "Would you like to make a dedication?",
+          "startMs": 48030
+        },
+        {
+          "speaker": "Bev",
+          "text": "For Stan. He's gone now. But he'd want to hear it. He'd want to cry at it.",
+          "startMs": 50360
+        },
+        {
+          "speaker": "Teodor, Relay Four",
+          "text": "For Stan. I'll put it through at the top of the hour, to every station that'll take it. And every lift.",
+          "startMs": 54416
+        },
+        {
+          "speaker": "Grenda",
+          "text": "Bev, love. You found it.",
+          "startMs": 59720
+        },
+        {
+          "speaker": "Bev",
+          "text": "I didn't, Grenda. Everybody did.",
+          "startMs": 61652
+        }
+      ]
+    },
+    {
+      "id": "halloween-01",
+      "category": "call",
+      "url": "/voice/ask-grenda/halloween-01.mp3",
+      "durationMs": 47921,
+      "title": "Bones, a Skeleton, at Halloween",
+      "overMusic": false,
+      "dates": [
+        "10-24",
+        "10-25",
+        "10-26",
+        "10-27",
+        "10-28",
+        "10-29",
+        "10-30",
+        "10-31"
+      ],
+      "lines": [
+        {
+          "speaker": "Grenda",
+          "text": "Ask Grenda. You're on.",
+          "startMs": 2850
+        },
+        {
+          "speaker": "Bones, a Skeleton",
+          "text": "Hello, Grenda. I'm a skeleton. Bones, my friends call me. It's that time of year again, and everybody's dressing up as me.",
+          "startMs": 4696
+        },
+        {
+          "speaker": "Grenda",
+          "text": "And how does that make you feel, love?",
+          "startMs": 12898
+        },
+        {
+          "speaker": "Bones, a Skeleton",
+          "text": "Seen, Grenda. Too seen. I'm usually inside somebody. Now I'm on every door in the street, with a little hat on.",
+          "startMs": 15344
+        },
+        {
+          "speaker": "Grenda",
+          "text": "Bones, love, can I tell you why they dress up as you? Because you're the bit everybody's got in common. Underneath the hair and the hats and the worrying, everyone's a little bit you.",
+          "startMs": 22664
+        },
+        {
+          "speaker": "Grenda",
+          "text": "That isn't people making fun. That's family. Once a year, the whole street comes out dressed as its relatives.",
+          "startMs": 32779
+        },
+        {
+          "speaker": "Bones, a Skeleton",
+          "text": "I never thought of it like that.",
+          "startMs": 39389
+        },
+        {
+          "speaker": "Grenda",
+          "text": "Go out tonight. Knock on a door. When they say what are you meant to be, say, yours.",
+          "startMs": 41293
+        }
+      ]
+    },
+    {
+      "id": "halloween-02",
+      "category": "dj",
+      "url": "/voice/ask-grenda/halloween-02.mp3",
+      "durationMs": 14080,
+      "title": "The Lava Lamp in Costume",
+      "overMusic": true,
+      "show": "grenda-after-dark",
+      "dates": [
+        "10-24",
+        "10-25",
+        "10-26",
+        "10-27",
+        "10-28",
+        "10-29",
+        "10-30",
+        "10-31"
+      ],
+      "lines": [
+        {
+          "speaker": "Grenda",
+          "text": "It's nearly Halloween, and the thing in my lava lamp has dressed up for it. It's draped a tiny bit of tissue over itself, with two holes cut out.",
+          "startMs": 37
+        },
+        {
+          "speaker": "Grenda",
+          "text": "It's a ghost, love. Very good. Very frightening. Now back in your lamp. Some of us are taking calls.",
+          "startMs": 8714
         }
       ]
     }

@@ -1,0 +1,1087 @@
+{
+  "version": 1,
+  "station": "_events",
+  "clips": [
+    {
+      "id": "storm-001",
+      "category": "event",
+      "url": "/voice/_events/storm-001.mp3",
+      "durationMs": 17669,
+      "title": "Storm Warning",
+      "overMusic": false,
+      "event": "dimensional-storm",
+      "lines": [
+        {
+          "speaker": "Multiverse Broadcast Authority",
+          "text": "This is the Multiverse Broadcast Authority. A dimensional storm is crossing the band.",
+          "startMs": 435
+        },
+        {
+          "speaker": "Multiverse Broadcast Authority",
+          "text": "Listeners may experience static, crosstalk, and brief exposure to other people's Tuesdays.",
+          "startMs": 6309
+        },
+        {
+          "speaker": "Multiverse Broadcast Authority",
+          "text": "Please stay tuned. Please hold on to something. A chair is fine.",
+          "startMs": 12514
+        }
+      ]
+    },
+    {
+      "id": "storm-002",
+      "category": "event",
+      "url": "/voice/_events/storm-002.mp3",
+      "durationMs": 20697,
+      "title": "Kim Is Standing In It",
+      "overMusic": false,
+      "event": "dimensional-storm",
+      "lines": [
+        {
+          "speaker": "Dale Quarterly",
+          "text": "This is Dale Quarterly, with a storm bulletin, on whatever station this is. Winds are gusting at forty realities an hour. Kim is standing in it.",
+          "startMs": 750
+        },
+        {
+          "speaker": "Kim Harrowgate",
+          "text": "I'm standing in it, Dale! Somebody's just handed me a kite!",
+          "startMs": 10485
+        },
+        {
+          "speaker": "Kim Harrowgate",
+          "text": "It isn't my kite, Dale! It—",
+          "startMs": 15064
+        },
+        {
+          "speaker": "Dale Quarterly",
+          "text": "Thank you, Kim. That was Kim. More at eleven.",
+          "startMs": 17018
+        }
+      ]
+    },
+    {
+      "id": "storm-003",
+      "category": "event",
+      "url": "/voice/_events/storm-003.mp3",
+      "durationMs": 15272,
+      "title": "Drive Sideways",
+      "overMusic": false,
+      "event": "dimensional-storm",
+      "lines": [
+        {
+          "speaker": "Big Rosalind",
+          "text": "All drivers, all drivers. Storm's coming through the crossroads. Pull over, put the kettle on, and wait it out.",
+          "startMs": 800
+        },
+        {
+          "speaker": "Midnight Mongoose",
+          "text": "Rosalind, the road's gone sideways again.",
+          "startMs": 7613
+        },
+        {
+          "speaker": "Big Rosalind",
+          "text": "Then drive sideways, love. Slowly. Ten and two.",
+          "startMs": 10888
+        }
+      ]
+    },
+    {
+      "id": "storm-004",
+      "category": "event",
+      "url": "/voice/_events/storm-004.mp3",
+      "durationMs": 16860,
+      "title": "Crosstalk",
+      "overMusic": false,
+      "event": "dimensional-storm",
+      "lines": [
+        {
+          "speaker": "Barnaby Velvet",
+          "text": "And this next one, my friends, is a—",
+          "startMs": 435
+        },
+        {
+          "speaker": "Chip Thunderbuckle",
+          "text": "He's run out of the stadium and into a completely—",
+          "startMs": 3721
+        },
+        {
+          "speaker": "Pam (Automated)",
+          "text": "Your call is important to us in every—",
+          "startMs": 6702
+        },
+        {
+          "speaker": "The Counter",
+          "text": "Seven. Seven—",
+          "startMs": 10359
+        },
+        {
+          "speaker": "Barnaby Velvet",
+          "text": "I'm told we're back. Where was I. Ah, yes. A real heartbreaker.",
+          "startMs": 11549
+        }
+      ]
+    },
+    {
+      "id": "storm-005",
+      "category": "event",
+      "url": "/voice/_events/storm-005.mp3",
+      "durationMs": 19283,
+      "title": "Storm Update",
+      "overMusic": false,
+      "event": "dimensional-storm",
+      "lines": [
+        {
+          "speaker": "Skip Daley",
+          "text": "Skip Daley here, blown onto your station with a storm update, and folks, it's a big one!",
+          "startMs": 437
+        },
+        {
+          "speaker": "Skip Daley",
+          "text": "Scattered Tuesdays, heavy static, and a ninety percent chance of hearing somebody else's radio show! Isn't it great!",
+          "startMs": 5410
+        },
+        {
+          "speaker": "Captain Hum",
+          "text": "This is Captain Hum. Passing through. The whales are fine.",
+          "startMs": 12291
+        },
+        {
+          "speaker": "Skip Daley",
+          "text": "Thanks, Captain! The whales are fine, everybody!",
+          "startMs": 16510
+        }
+      ]
+    },
+    {
+      "id": "storm-006",
+      "category": "event",
+      "url": "/voice/_events/storm-006.mp3",
+      "durationMs": 13836,
+      "title": "Grenda in the Storm",
+      "overMusic": false,
+      "event": "dimensional-storm",
+      "lines": [
+        {
+          "speaker": "Grenda",
+          "text": "Hello, love. I'm not sure whose station this is. The storm's blown me in. It happens.",
+          "startMs": 437
+        },
+        {
+          "speaker": "Grenda",
+          "text": "While I'm here. Whatever's rattling tonight, it'll settle. Storms always think they're the whole sky.",
+          "startMs": 5582
+        },
+        {
+          "speaker": "Grenda",
+          "text": "They never are.",
+          "startMs": 11452
+        }
+      ]
+    },
+    {
+      "id": "storm-007",
+      "category": "event",
+      "url": "/voice/_events/storm-007.mp3",
+      "durationMs": 16752,
+      "title": "Weather Like a Solo",
+      "overMusic": false,
+      "event": "dimensional-storm",
+      "lines": [
+        {
+          "speaker": "Octavia Lowe",
+          "text": "Octavia Lowe, a long way from the club. The storm has carried me off, piano stool and all.",
+          "startMs": 436
+        },
+        {
+          "speaker": "Octavia Lowe",
+          "text": "Listen to it, though. All that thunder and nobody keeping time. It's the best solo I've heard in years.",
+          "startMs": 6022
+        },
+        {
+          "speaker": "Octavia Lowe",
+          "text": "Hold on to your hats, darlings. Not mine. Mine's gone.",
+          "startMs": 12688
+        }
+      ]
+    },
+    {
+      "id": "emergency-001",
+      "category": "event",
+      "url": "/voice/_events/emergency-001.mp3",
+      "durationMs": 20608,
+      "title": "Emergency Multiverse Broadcast System Test",
+      "overMusic": false,
+      "event": "emergency-broadcast",
+      "lines": [
+        {
+          "speaker": "Emergency Multiverse Broadcast System",
+          "text": "This is a test of the Emergency Multiverse Broadcast System. Every station in every reality is broadcasting this message, at the same time.",
+          "startMs": 2449
+        },
+        {
+          "speaker": "Emergency Multiverse Broadcast System",
+          "text": "This has been a test. In an actual emergency, you would have been told what to do. It would have been, stay calm, and put the kettle on.",
+          "startMs": 13416
+        }
+      ]
+    },
+    {
+      "id": "emergency-002",
+      "category": "event",
+      "url": "/voice/_events/emergency-002.mp3",
+      "durationMs": 10947,
+      "title": "Test of the Test",
+      "overMusic": false,
+      "event": "emergency-broadcast",
+      "lines": [
+        {
+          "speaker": "Emergency Multiverse Broadcast System",
+          "text": "This is a test of the system that tests the Emergency Multiverse Broadcast System.",
+          "startMs": 449
+        },
+        {
+          "speaker": "Emergency Multiverse Broadcast System",
+          "text": "If you can hear this, the test is working. If you cannot hear this, please let us know.",
+          "startMs": 5360
+        }
+      ]
+    },
+    {
+      "id": "emergency-003",
+      "category": "event",
+      "url": "/voice/_events/emergency-003.mp3",
+      "durationMs": 19461,
+      "title": "Not a Test",
+      "overMusic": false,
+      "event": "emergency-broadcast",
+      "lines": [
+        {
+          "speaker": "Emergency Multiverse Broadcast System",
+          "text": "This is not a test.",
+          "startMs": 2449
+        },
+        {
+          "speaker": "Multiverse Broadcast Authority",
+          "text": "This is an actual emergency. Somebody has left a very large casserole on the steps of the Multiverse Broadcast Authority, with no note.",
+          "startMs": 5388
+        },
+        {
+          "speaker": "Multiverse Broadcast Authority",
+          "text": "If this is your casserole, please collect it. It's lovely. We've had some.",
+          "startMs": 14000
+        }
+      ]
+    },
+    {
+      "id": "emergency-004",
+      "category": "event",
+      "url": "/voice/_events/emergency-004.mp3",
+      "durationMs": 16222,
+      "title": "Emergency Advice",
+      "overMusic": false,
+      "event": "emergency-broadcast",
+      "lines": [
+        {
+          "speaker": "Multiverse Broadcast Authority",
+          "text": "In the event of an actual multiverse emergency, listeners are advised to stay where they are, and who they are.",
+          "startMs": 2449
+        },
+        {
+          "speaker": "Multiverse Broadcast Authority",
+          "text": "Avoid meeting yourself. If you do meet yourself, be polite, and do not both reach for the door at once.",
+          "startMs": 9501
+        }
+      ]
+    },
+    {
+      "id": "emergency-005",
+      "category": "event",
+      "url": "/voice/_events/emergency-005.mp3",
+      "durationMs": 17434,
+      "title": "Please Hold",
+      "overMusic": false,
+      "event": "emergency-broadcast",
+      "lines": [
+        {
+          "speaker": "Pam (Automated)",
+          "text": "You have reached the Emergency Multiverse Broadcast System. Your emergency is important to us.",
+          "startMs": 2449
+        },
+        {
+          "speaker": "Pam (Automated)",
+          "text": "You are currently number four billion in the queue. Please stay on the line. An emergency will be with you shortly.",
+          "startMs": 8463
+        },
+        {
+          "speaker": "Pam (Automated)",
+          "text": "Thank you for your patience.",
+          "startMs": 15017
+        }
+      ]
+    },
+    {
+      "id": "emergency-006",
+      "category": "event",
+      "url": "/voice/_events/emergency-006.mp3",
+      "durationMs": 19398,
+      "title": "We Interrupt This Programme",
+      "overMusic": false,
+      "event": "emergency-broadcast",
+      "lines": [
+        {
+          "speaker": "Dale Quarterly",
+          "text": "We interrupt this programme, wherever you are, for the Emergency Multiverse Broadcast System test.",
+          "startMs": 2449
+        },
+        {
+          "speaker": "Dale Quarterly",
+          "text": "Which is, for the record, the most exciting thing to happen in my studio since eleven o'clock.",
+          "startMs": 9080
+        },
+        {
+          "speaker": "Dale Quarterly",
+          "text": "Which was a moment ago. It is always eleven.",
+          "startMs": 15555
+        }
+      ]
+    },
+    {
+      "id": "hum-001",
+      "category": "event",
+      "url": "/voice/_events/hum-001.mp3",
+      "durationMs": 14177,
+      "title": "The Hum",
+      "overMusic": false,
+      "event": "the-hum",
+      "lines": [
+        {
+          "speaker": "DJ Eventually",
+          "text": "So, the next one—",
+          "startMs": 445
+        },
+        {
+          "speaker": "DJ Eventually",
+          "text": "Do you hear that?",
+          "startMs": 6552
+        },
+        {
+          "speaker": "DJ Eventually",
+          "text": "No. Me neither.",
+          "startMs": 12471
+        }
+      ]
+    },
+    {
+      "id": "hum-002",
+      "category": "event",
+      "url": "/voice/_events/hum-002.mp3",
+      "durationMs": 12803,
+      "title": "Nothing Happened",
+      "overMusic": false,
+      "event": "the-hum",
+      "lines": [
+        {
+          "speaker": "Dale Quarterly",
+          "text": "Good evening. Before we continue, I have been asked to say that nothing happened just now.",
+          "startMs": 36
+        },
+        {
+          "speaker": "Dale Quarterly",
+          "text": "I was asked by myself. Nothing happened. Here is the news.",
+          "startMs": 6192
+        }
+      ]
+    },
+    {
+      "id": "hum-003",
+      "category": "event",
+      "url": "/voice/_events/hum-003.mp3",
+      "durationMs": 10316,
+      "title": "A Real Heartbreaker",
+      "overMusic": false,
+      "event": "the-hum",
+      "lines": [
+        {
+          "speaker": "Barnaby Velvet",
+          "text": "Well.",
+          "startMs": 35
+        },
+        {
+          "speaker": "Barnaby Velvet",
+          "text": "That was a real heartbreaker, wasn't it.",
+          "startMs": 2120
+        },
+        {
+          "speaker": "Barnaby Velvet",
+          "text": "I don't know what that was. Let's not. Here's a song.",
+          "startMs": 6490
+        }
+      ]
+    },
+    {
+      "id": "hum-004",
+      "category": "event",
+      "url": "/voice/_events/hum-004.mp3",
+      "durationMs": 10275,
+      "title": "Doug Heard It",
+      "overMusic": false,
+      "event": "the-hum",
+      "lines": [
+        {
+          "speaker": "Chip Thunderbuckle",
+          "text": "And we're back, folks! Nothing happened! Absolutely nothing happened, and nobody heard anything!",
+          "startMs": 37
+        },
+        {
+          "speaker": "Doug Steadman",
+          "text": "I heard it.",
+          "startMs": 4919
+        },
+        {
+          "speaker": "Chip Thunderbuckle",
+          "text": "Doug.",
+          "startMs": 6080
+        },
+        {
+          "speaker": "Doug Steadman",
+          "text": "I'm just saying. I heard it.",
+          "startMs": 7109
+        },
+        {
+          "speaker": "Chip Thunderbuckle",
+          "text": "We don't, Doug. We don't.",
+          "startMs": 9193
+        }
+      ]
+    },
+    {
+      "id": "hum-005",
+      "category": "event",
+      "url": "/voice/_events/hum-005.mp3",
+      "durationMs": 12858,
+      "title": "Not the Hole",
+      "overMusic": false,
+      "event": "the-hum",
+      "lines": [
+        {
+          "speaker": "Maureen Pettigrew",
+          "text": "A short notice from the Hole Committee. The sound you may have heard just now was not the hole. The hole does not make sounds.",
+          "startMs": 2290
+        },
+        {
+          "speaker": "Maureen Pettigrew",
+          "text": "Councillor Dibbs has asked me to stress this. He stressed it very hard. Thank you.",
+          "startMs": 8695
+        }
+      ]
+    },
+    {
+      "id": "hum-006",
+      "category": "event",
+      "url": "/voice/_events/hum-006.mp3",
+      "durationMs": 7305,
+      "title": "Let's Not, Love",
+      "overMusic": false,
+      "event": "the-hum",
+      "lines": [
+        {
+          "speaker": "Grenda",
+          "text": "Right. Let's.",
+          "startMs": 44
+        },
+        {
+          "speaker": "Grenda",
+          "text": "Let's not, love.",
+          "startMs": 1641
+        },
+        {
+          "speaker": "Grenda",
+          "text": "Let's just have the next call. Who've we got? Lovely. Go on.",
+          "startMs": 3900
+        }
+      ]
+    },
+    {
+      "id": "hum-007",
+      "category": "event",
+      "url": "/voice/_events/hum-007.mp3",
+      "durationMs": 19788,
+      "title": "Case Closed",
+      "overMusic": false,
+      "event": "the-hum",
+      "lines": [
+        {
+          "speaker": "Inspector Delphine Gault",
+          "text": "Case file. Earlier tonight, every frequency fell silent, and a low hum was heard in all known dimensions.",
+          "startMs": 2900
+        },
+        {
+          "speaker": "Inspector Delphine Gault",
+          "text": "No suspects. No motive. Nobody will discuss it. Case closed.",
+          "startMs": 9982
+        },
+        {
+          "speaker": "Inspector Delphine Gault",
+          "text": "It is the first case I have ever closed. I would rather not talk about why.",
+          "startMs": 15040
+        }
+      ]
+    },
+    {
+      "id": "swap-001",
+      "category": "event",
+      "url": "/voice/_events/swap-001.mp3",
+      "durationMs": 15176,
+      "title": "Not My Newsroom",
+      "overMusic": false,
+      "event": "station-swap",
+      "lines": [
+        {
+          "speaker": "Dale Quarterly",
+          "text": "Good evening. This is Dale Quarterly, and this is not my newsroom.",
+          "startMs": 37
+        },
+        {
+          "speaker": "Dale Quarterly",
+          "text": "There is no desk. There is a great deal of music. Very well. I shall read the news over it.",
+          "startMs": 4804
+        },
+        {
+          "speaker": "Dale Quarterly",
+          "text": "The news is, I appear to be somewhere else. More at eleven.",
+          "startMs": 11106
+        }
+      ]
+    },
+    {
+      "id": "swap-002",
+      "category": "event",
+      "url": "/voice/_events/swap-002.mp3",
+      "durationMs": 14045,
+      "title": "It's Just a Song",
+      "overMusic": false,
+      "event": "station-swap",
+      "lines": [
+        {
+          "speaker": "Chip Thunderbuckle",
+          "text": "Chip Thunderbuckle here, folks, and I have woken up on a completely different station, and I do not know the rules!",
+          "startMs": 37
+        },
+        {
+          "speaker": "Chip Thunderbuckle",
+          "text": "Here comes a song now! It's moving left! It's moving right! It's going for the chorus!",
+          "startMs": 6207
+        },
+        {
+          "speaker": "Chip Thunderbuckle",
+          "text": "I'm told it's just a song. Folks, it's just a song! What a game!",
+          "startMs": 10932
+        }
+      ]
+    },
+    {
+      "id": "swap-003",
+      "category": "event",
+      "url": "/voice/_events/swap-003.mp3",
+      "durationMs": 14395,
+      "title": "The Lines Are Open",
+      "overMusic": false,
+      "event": "station-swap",
+      "lines": [
+        {
+          "speaker": "Grenda",
+          "text": "Hello, love. Grenda here. I don't know how I've ended up on this station, but the lines appear to be open, so.",
+          "startMs": 44
+        },
+        {
+          "speaker": "Grenda",
+          "text": "If you're listening, and you've been meaning to ring someone, ring them. That's the advice.",
+          "startMs": 6470
+        },
+        {
+          "speaker": "Grenda",
+          "text": "That's the whole show, really. Back to whoever lives here.",
+          "startMs": 11398
+        }
+      ]
+    },
+    {
+      "id": "swap-004",
+      "category": "event",
+      "url": "/voice/_events/swap-004.mp3",
+      "durationMs": 10543,
+      "title": "Caller Number One",
+      "overMusic": false,
+      "event": "station-swap",
+      "lines": [
+        {
+          "speaker": "Pam (Automated)",
+          "text": "Thank you for listening to this station, which is not my station. Your listening is important to us.",
+          "startMs": 50
+        },
+        {
+          "speaker": "Pam (Automated)",
+          "text": "You are caller number one. You are the only caller.",
+          "startMs": 6000
+        },
+        {
+          "speaker": "Pam (Automated)",
+          "text": "Please hold.",
+          "startMs": 9327
+        }
+      ]
+    },
+    {
+      "id": "swap-005",
+      "category": "event",
+      "url": "/voice/_events/swap-005.mp3",
+      "durationMs": 17784,
+      "title": "The Night-Shift Operator",
+      "overMusic": false,
+      "event": "station-swap",
+      "lines": [
+        {
+          "speaker": "Sir Reginald Thistlewood",
+          "text": "I have no idea where I am. But hush, now. Look.",
+          "startMs": 39
+        },
+        {
+          "speaker": "Sir Reginald Thistlewood",
+          "text": "Here, in the dim glow of a console, we find one of the rarest creatures in the multiverse. The night shift operator.",
+          "startMs": 4043
+        },
+        {
+          "speaker": "Sir Reginald Thistlewood",
+          "text": "It is holding a mug with both hands. Remarkable. Let us not startle it.",
+          "startMs": 12711
+        }
+      ]
+    },
+    {
+      "id": "swap-006",
+      "category": "event",
+      "url": "/voice/_events/swap-006.mp3",
+      "durationMs": 9191,
+      "title": "Not Numbers Station Omega",
+      "overMusic": false,
+      "event": "station-swap",
+      "lines": [
+        {
+          "speaker": "The Counter",
+          "text": "This is not Numbers Station Omega. Stand by.",
+          "startMs": 50
+        },
+        {
+          "speaker": "The Counter",
+          "text": "Song. Song. Advert. Song.",
+          "startMs": 4123
+        },
+        {
+          "speaker": "The Counter",
+          "text": "We are doing our best. You still owe us geese.",
+          "startMs": 6678
+        }
+      ]
+    },
+    {
+      "id": "swap-007",
+      "category": "event",
+      "url": "/voice/_events/swap-007.mp3",
+      "durationMs": 16474,
+      "title": "Sharing",
+      "overMusic": false,
+      "event": "station-swap",
+      "lines": [
+        {
+          "speaker": "Chaz Brightley",
+          "text": "Hello and welcome to, oh! This isn't my studio! Where's my podium? Who's this?",
+          "startMs": 37
+        },
+        {
+          "speaker": "Shelley Shellbourne",
+          "text": "Hello. This is. Shelley.",
+          "startMs": 4414
+        },
+        {
+          "speaker": "Chaz Brightley",
+          "text": "Shelley! Lovely! Quick question, Shelley, for ten points! Where are we?",
+          "startMs": 7084
+        },
+        {
+          "speaker": "Shelley Shellbourne",
+          "text": "I'll get back to you.",
+          "startMs": 10571
+        },
+        {
+          "speaker": "Chaz Brightley",
+          "text": "Take all the time you need! Folks, she's taking all the time she needs!",
+          "startMs": 13126
+        }
+      ]
+    },
+    {
+      "id": "beyond-001",
+      "category": "event",
+      "url": "/voice/_events/beyond-001.mp3",
+      "durationMs": 21286,
+      "title": "We Do Not Have Up",
+      "overMusic": false,
+      "event": "signal-from-beyond",
+      "lines": [
+        {
+          "speaker": "Unknown Signal",
+          "text": "Hello. Hello. We have been listening to you for a very long time.",
+          "startMs": 437
+        },
+        {
+          "speaker": "Unknown Signal",
+          "text": "Your programmes are very good. We especially like the adverts for ladders.",
+          "startMs": 7292
+        },
+        {
+          "speaker": "Unknown Signal",
+          "text": "We do not have ladders here. We do not have up.",
+          "startMs": 15130
+        }
+      ]
+    },
+    {
+      "id": "beyond-002",
+      "category": "event",
+      "url": "/voice/_events/beyond-002.mp3",
+      "durationMs": 23307,
+      "title": "Please Keep Going",
+      "overMusic": false,
+      "event": "signal-from-beyond",
+      "lines": [
+        {
+          "speaker": "Unknown Signal",
+          "text": "This is a message for every frequency at once. Do not be alarmed.",
+          "startMs": 417
+        },
+        {
+          "speaker": "Unknown Signal",
+          "text": "We are only calling to say, we can hear you. All of you, at the same time.",
+          "startMs": 8178
+        },
+        {
+          "speaker": "Unknown Signal",
+          "text": "It is very loud. It is wonderful. Please keep going.",
+          "startMs": 16247
+        }
+      ]
+    },
+    {
+      "id": "beyond-003",
+      "category": "event",
+      "url": "/voice/_events/beyond-003.mp3",
+      "durationMs": 16015,
+      "title": "What Is a Tuesday",
+      "overMusic": false,
+      "event": "signal-from-beyond",
+      "lines": [
+        {
+          "speaker": "Unknown Signal",
+          "text": "Greetings from beyond the dial. We have received your signal, and we have a question.",
+          "startMs": 429
+        },
+        {
+          "speaker": "Unknown Signal",
+          "text": "What is a Tuesday? Many of your stations mention it. Some of them seem worried.",
+          "startMs": 6542
+        },
+        {
+          "speaker": "Unknown Signal",
+          "text": "Reply at your convenience.",
+          "startMs": 12444
+        }
+      ]
+    },
+    {
+      "id": "beyond-004",
+      "category": "event",
+      "url": "/voice/_events/beyond-004.mp3",
+      "durationMs": 14944,
+      "title": "Is It Ever Not Eleven",
+      "overMusic": false,
+      "event": "signal-from-beyond",
+      "lines": [
+        {
+          "speaker": "Unknown Signal",
+          "text": "Attention. We are the listeners on the far side. We have listened to your news since it began.",
+          "startMs": 429
+        },
+        {
+          "speaker": "Unknown Signal",
+          "text": "We have one question. Is it ever not eleven.",
+          "startMs": 7324
+        },
+        {
+          "speaker": "Unknown Signal",
+          "text": "Thank you. That is all.",
+          "startMs": 12343
+        }
+      ]
+    },
+    {
+      "id": "beyond-005",
+      "category": "event",
+      "url": "/voice/_events/beyond-005.mp3",
+      "durationMs": 13625,
+      "title": "A Message for Bev",
+      "overMusic": false,
+      "event": "signal-from-beyond",
+      "lines": [
+        {
+          "speaker": "Unknown Signal",
+          "text": "This message is for Bev. Bev. We have found your song.",
+          "startMs": 401
+        },
+        {
+          "speaker": "Unknown Signal",
+          "text": "It goes. Da. Da. Dum. Da. Da.",
+          "startMs": 7416
+        },
+        {
+          "speaker": "Unknown Signal",
+          "text": "It is—",
+          "startMs": 11854
+        }
+      ]
+    },
+    {
+      "id": "beyond-006",
+      "category": "event",
+      "url": "/voice/_events/beyond-006.mp3",
+      "durationMs": 20357,
+      "title": "Hello, Small Ship",
+      "overMusic": false,
+      "event": "signal-from-beyond",
+      "lines": [
+        {
+          "speaker": "Unknown Signal",
+          "text": "Hello, small ship. Yes. You. The one with the amber light, and the kettle.",
+          "startMs": 440
+        },
+        {
+          "speaker": "Unknown Signal",
+          "text": "We see you there, listening to the gaps. Nobody listens to the gaps.",
+          "startMs": 9051
+        },
+        {
+          "speaker": "Unknown Signal",
+          "text": "Thank you. Goodnight.",
+          "startMs": 17020
+        }
+      ]
+    },
+    {
+      "id": "beyond-007",
+      "category": "event",
+      "url": "/voice/_events/beyond-007.mp3",
+      "durationMs": 12198,
+      "title": "We Are the Static",
+      "overMusic": false,
+      "event": "signal-from-beyond",
+      "lines": [
+        {
+          "speaker": "Unknown Signal",
+          "text": "Hello. We are the static. We are every voice that ever went out on the radio and was not heard.",
+          "startMs": 428
+        },
+        {
+          "speaker": "Unknown Signal",
+          "text": "We are fine. We are having a nice time. We only wanted you to know.",
+          "startMs": 7515
+        }
+      ]
+    },
+    {
+      "id": "slip-001",
+      "category": "event",
+      "url": "/voice/_events/slip-001.mp3",
+      "durationMs": 15046,
+      "title": "The Moon Is Near",
+      "overMusic": false,
+      "event": "time-slip",
+      "lines": [
+        {
+          "speaker": "Dale Quarterly",
+          "text": "Good evening. Here is the news. The moon is near.",
+          "startMs": 36
+        },
+        {
+          "speaker": "Dale Quarterly",
+          "text": "Good evening. Here is the news. The moon is nearer.",
+          "startMs": 5597
+        },
+        {
+          "speaker": "Dale Quarterly",
+          "text": "I have the strangest feeling I've said that. It doesn't matter. More at eleven.",
+          "startMs": 10077
+        }
+      ]
+    },
+    {
+      "id": "slip-002",
+      "category": "event",
+      "url": "/voice/_events/slip-002.mp3",
+      "durationMs": 13010,
+      "title": "Time Is Rad",
+      "overMusic": false,
+      "event": "time-slip",
+      "lines": [
+        {
+          "speaker": "Velocity Jones",
+          "text": "This next track is totally rad, and it's from—",
+          "startMs": 40
+        },
+        {
+          "speaker": "Velocity Jones",
+          "text": "This next track is totally rad, and it's from the future, which is now the past, which is also rad.",
+          "startMs": 4222
+        },
+        {
+          "speaker": "Velocity Jones",
+          "text": "Everything's rad. Time is rad. Hi again!",
+          "startMs": 10296
+        }
+      ]
+    },
+    {
+      "id": "slip-003",
+      "category": "event",
+      "url": "/voice/_events/slip-003.mp3",
+      "durationMs": 11317,
+      "title": "I've Been Here Before",
+      "overMusic": false,
+      "event": "time-slip",
+      "lines": [
+        {
+          "speaker": "Gordon Ago",
+          "text": "Ah. We seem to have slipped. Don't worry. I've been here before.",
+          "startMs": 1850
+        },
+        {
+          "speaker": "Gordon Ago",
+          "text": "Everything that happens in the next minute turns out fine. I know. I was there.",
+          "startMs": 5286
+        },
+        {
+          "speaker": "Gordon Ago",
+          "text": "Well. Here.",
+          "startMs": 10369
+        }
+      ]
+    },
+    {
+      "id": "slip-004",
+      "category": "event",
+      "url": "/voice/_events/slip-004.mp3",
+      "durationMs": 12699,
+      "title": "You Went First",
+      "overMusic": false,
+      "event": "time-slip",
+      "lines": [
+        {
+          "speaker": "Johnny Mirror",
+          "text": "And a one, and a two, and a",
+          "startMs": 35
+        },
+        {
+          "speaker": "Ynnhoj",
+          "text": "And a one, and a two, and a",
+          "startMs": 4167
+        },
+        {
+          "speaker": "Johnny Mirror",
+          "text": "Ynnhoj. You went first.",
+          "startMs": 6596
+        },
+        {
+          "speaker": "Ynnhoj",
+          "text": "You went first.",
+          "startMs": 8613
+        },
+        {
+          "speaker": "Johnny Mirror",
+          "text": "Did I?",
+          "startMs": 10444
+        },
+        {
+          "speaker": "Ynnhoj",
+          "text": "Did I?",
+          "startMs": 11442
+        }
+      ]
+    },
+    {
+      "id": "slip-005",
+      "category": "event",
+      "url": "/voice/_events/slip-005.mp3",
+      "durationMs": 15253,
+      "title": "Enjoy It More This Time",
+      "overMusic": false,
+      "event": "time-slip",
+      "lines": [
+        {
+          "speaker": "Multiverse Broadcast Authority",
+          "text": "You are experiencing a time slip. The last minute will now be repeated. Please enjoy it more this time.",
+          "startMs": 50
+        },
+        {
+          "speaker": "Multiverse Broadcast Authority",
+          "text": "You are experiencing a time slip. The last minute will now be repeated. Please enjoy it even more this time.",
+          "startMs": 8476
+        }
+      ]
+    },
+    {
+      "id": "slip-006",
+      "category": "event",
+      "url": "/voice/_events/slip-006.mp3",
+      "durationMs": 9506,
+      "title": "Same Word",
+      "overMusic": false,
+      "event": "time-slip",
+      "lines": [
+        {
+          "speaker": "Shelley Shellbourne",
+          "text": "Oh. A time slip. Don't worry, everyone.",
+          "startMs": 1850
+        },
+        {
+          "speaker": "Shelley Shellbourne",
+          "text": "I'm still on the same word as before.",
+          "startMs": 6459
+        }
+      ]
+    },
+    {
+      "id": "slip-007",
+      "category": "event",
+      "url": "/voice/_events/slip-007.mp3",
+      "durationMs": 11799,
+      "title": "Gone Again",
+      "overMusic": false,
+      "event": "time-slip",
+      "lines": [
+        {
+          "speaker": "DJ Eventually",
+          "text": "So I was going to say something really important, and",
+          "startMs": 48
+        },
+        {
+          "speaker": "DJ Eventually",
+          "text": "So I was going to say something really important, and",
+          "startMs": 5062
+        },
+        {
+          "speaker": "DJ Eventually",
+          "text": "Nope. Gone again. Twice now. That's a record.",
+          "startMs": 9176
+        }
+      ]
+    }
+  ]
+}

@@ -16,7 +16,7 @@ import voicefx
 from dsp import SR, ns
 import voicescript
 from tts import TTS
-from voicescript import LENGTH_GUIDE, STING_GAP, STING_SECONDS, Clip, Pause, Sfx, Speech, Sting
+from voicescript import STING_GAP, STING_SECONDS, Clip, Pause, Sfx, Speech, Sting
 
 # The validator's catalog and the engine must agree on every name.
 for _kind, _catalog, _engine in (
@@ -36,12 +36,12 @@ TARGET_TRUE_PEAK_DB = -1.8  # aimed for on the decoded MP3 (4x oversampled; marg
 MAX_TRUE_PEAK_DB = -1.5  # never exceeded
 EDGE = 0.05  # silence kept at each end
 BED_LEAD, BED_TAIL = 0.4, 0.6  # bed before the first and after the last sound
-BITRATE = "48k"
+BITRATE = voicescript.BITRATE  # default; render.py picks per clip (voicescript.bitrate_for)
 CUT_FADE = 0.008
 
-# Bump to force a full re-render after changes that the source hash wouldn't catch.
+# Bump to force a full re-render after changes that the source fingerprints wouldn't catch
+# (see fingerprint.py: each clip's hash covers the engine code it actually uses).
 ENGINE_VERSION = 1
-ENGINE_FILES = ("dsp.py", "sounds.py", "voicefx.py", "clip.py", "tts.py")
 
 
 @dataclass
@@ -50,6 +50,7 @@ class Job:
     clip: Clip
     out_path: str
     seed: int
+    bitrate: str = BITRATE
 
 
 @dataclass
@@ -68,9 +69,14 @@ class Result:
 _tts: TTS | None = None
 
 
-def init_worker(model: str, voices: str, cache_dir: str, threads: int) -> None:
+def init_worker(model: str, voices: str, cache_dir: str, threads: int, nice: int = 0) -> None:
     global _tts
     os.environ.setdefault("OMP_NUM_THREADS", str(threads))
+    if nice > 0 and hasattr(os, "nice"):
+        try:
+            os.nice(nice)  # a long render shouldn't crowd out interactive work on a busy machine
+        except OSError:
+            pass
     _tts = TTS(Path(model), Path(voices), Path(cache_dir), threads)
 
 
@@ -164,7 +170,7 @@ def master(x: np.ndarray) -> np.ndarray:
     return x
 
 
-def encode(x: np.ndarray, path: Path, target: float | None = TARGET_LUFS) -> tuple[np.ndarray, float]:
+def encode(x: np.ndarray, path: Path, target: float | None = TARGET_LUFS, bitrate: str = BITRATE) -> tuple[np.ndarray, float]:
     """Encode, decode and measure: the codec shaves some loudness and can add inter-sample
     peaks, so correct and re-encode until the decoded file is on target. Peaks win ties."""
     path.parent.mkdir(parents=True, exist_ok=True)
@@ -173,7 +179,7 @@ def encode(x: np.ndarray, path: Path, target: float | None = TARGET_LUFS) -> tup
     try:
         attempts = 5
         for attempt in range(attempts):
-            dsp.encode_mp3(x, str(tmp), BITRATE)
+            dsp.encode_mp3(x, str(tmp), bitrate)
             decoded = dsp.decode(str(tmp))
             tp = dsp.true_peak_db(decoded)
             level = dsp.loudness(decoded)
@@ -189,7 +195,7 @@ def encode(x: np.ndarray, path: Path, target: float | None = TARGET_LUFS) -> tup
             if tp <= MAX_TRUE_PEAK_DB:
                 break
             x = x * dsp.db(TARGET_TRUE_PEAK_DB - tp)
-            dsp.encode_mp3(x, str(tmp), BITRATE)
+            dsp.encode_mp3(x, str(tmp), bitrate)
             decoded = dsp.decode(str(tmp))
             tp = dsp.true_peak_db(decoded)
         os.replace(tmp, path)
@@ -220,13 +226,14 @@ def render(job: Job) -> Result:
     rng = np.random.default_rng(job.seed)
     mix, lines = assemble(job.clip, rng)
     mastered = master(mix)
-    decoded, tp = encode(mastered, Path(job.out_path))
+    decoded, tp = encode(mastered, Path(job.out_path), bitrate=job.bitrate)
     duration_ms = int(round(len(decoded) / SR * 1000))
     warnings = []
-    lo, hi = LENGTH_GUIDE[job.clip.category]
+    lo, hi = job.clip.length_guide()
     seconds = duration_ms / 1000
     if seconds < lo * 0.8 or seconds > hi * 1.2:
-        warnings.append(f"{seconds:.1f} s is outside the {job.clip.category} guide ({lo}-{hi} s)")
+        what = f"{job.clip.part} part" if job.clip.part else job.clip.category
+        warnings.append(f"{seconds:.1f} s is outside the {what} guide ({lo}-{hi} s)")
     if tp > MAX_TRUE_PEAK_DB:
         warnings.append(f"true peak {tp:.1f} dBTP is above {MAX_TRUE_PEAK_DB} dBTP")
     return Result(

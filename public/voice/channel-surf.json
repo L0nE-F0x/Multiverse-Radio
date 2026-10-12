@@ -6,7 +6,7 @@
       "id": "id-001",
       "category": "id",
       "url": "/voice/channel-surf/id-001.mp3",
-      "durationMs": 8093,
+      "durationMs": 8094,
       "overMusic": true,
       "lines": [
         {
@@ -49,7 +49,7 @@
       "id": "id-003",
       "category": "id",
       "url": "/voice/channel-surf/id-003.mp3",
-      "durationMs": 5346,
+      "durationMs": 5344,
       "overMusic": true,
       "lines": [
         {
@@ -101,7 +101,7 @@
       "id": "show-001",
       "category": "show",
       "url": "/voice/channel-surf/show-001.mp3",
-      "durationMs": 58625,
+      "durationMs": 58629,
       "title": "Prime Time",
       "overMusic": false,
       "lines": [
@@ -128,37 +128,37 @@
         {
           "speaker": "Cooking: Chef Ingrid",
           "text": "The soup. Always the soup. A good soup has been through more than you have.",
-          "startMs": 21963
+          "startMs": 21966
         },
         {
           "speaker": "Movie Trailer",
           "text": "This summer. One man. One spoon. One very, very large pudding.",
-          "startMs": 26763
+          "startMs": 26765
         },
         {
           "speaker": "Sports Channel",
           "text": "And it's a photo finish! We'll have to wait for the photo! The photo is being developed! It's in a little tray of liquid! Here—",
-          "startMs": 31259
+          "startMs": 31262
         },
         {
           "speaker": "Nature Channel",
           "text": "The photograph develops slowly, as all photographs do, revealing at last what everyone already knew. It was a tie. It is always a tie.",
-          "startMs": 38175
+          "startMs": 38178
         },
         {
           "speaker": "Kids' TV: Professor Pockets",
           "text": "Hello, friends! Today's word is elsewhere! Can you say elsewhere? Good! Now go there!",
-          "startMs": 47832
+          "startMs": 47834
         },
         {
           "speaker": "Weather Channel",
           "text": "And the outlook for the rest of the week. Scattered feelings, with a strong—",
-          "startMs": 52892
+          "startMs": 52895
         },
         {
           "speaker": "Someone on the Couch",
           "text": "Nothing on.",
-          "startMs": 56829
+          "startMs": 56832
         }
       ]
     },
@@ -230,7 +230,7 @@
         {
           "speaker": "Courtroom: Judge Wexley",
           "text": "The defendant is charged with three counts of being emotionally unavailable to a houseplant. How do you plead?",
-          "startMs": 349
+          "startMs": 350
         },
         {
           "speaker": "Courtroom: Defendant",
@@ -270,7 +270,7 @@
         {
           "speaker": "Tidewater Manor: Vincent",
           "text": "Not this milk—",
-          "startMs": 38463
+          "startMs": 38464
         },
         {
           "speaker": "Game Show",
@@ -280,7 +280,7 @@
         {
           "speaker": "Game Show: Contestant",
           "text": "Is there a D in—",
-          "startMs": 43601
+          "startMs": 43602
         },
         {
           "speaker": "Nature Channel",
@@ -293,7 +293,7 @@
       "id": "show-004",
       "category": "show",
       "url": "/voice/channel-surf/show-004.mp3",
-      "durationMs": 53682,
+      "durationMs": 53693,
       "title": "The Everything Channel",
       "overMusic": false,
       "lines": [
@@ -380,7 +380,7 @@
         {
           "speaker": "Someone on the Couch",
           "text": "Do we need a stair?",
-          "startMs": 51589
+          "startMs": 51599
         }
       ]
     },
@@ -388,7 +388,7 @@
       "id": "show-005",
       "category": "show",
       "url": "/voice/channel-surf/show-005.mp3",
-      "durationMs": 48948,
+      "durationMs": 48949,
       "title": "Kids' TV",
       "overMusic": false,
       "daypart": "morning",
@@ -469,7 +469,7 @@
       "id": "show-006",
       "category": "show",
       "url": "/voice/channel-surf/show-006.mp3",
-      "durationMs": 49204,
+      "durationMs": 49203,
       "title": "Medical Drama and Other Emergencies",
       "overMusic": false,
       "lines": [
@@ -521,7 +521,7 @@
         {
           "speaker": "Fitness Channel",
           "text": "And now your cool down. Lie flat. Close your eyes. Imagine you are a pancake. A pancake has no worries. A—",
-          "startMs": 31223
+          "startMs": 31224
         },
         {
           "speaker": "Cooking: Chef Ingrid",
@@ -549,7 +549,7 @@
       "id": "show-007",
       "category": "show",
       "url": "/voice/channel-surf/show-007.mp3",
-      "durationMs": 49819,
+      "durationMs": 49820,
       "title": "Pick a Partner",
       "overMusic": false,
       "lines": [
@@ -606,7 +606,7 @@
         {
           "speaker": "Dating Show",
           "text": "Bachelorette, the moment of truth! Number one, number two, or number three?",
-          "startMs": 40348
+          "startMs": 40347
         },
         {
           "speaker": "Dating Show: Bachelorette",
@@ -661,7 +661,7 @@
         {
           "speaker": "Shopping: Trent",
           "text": "Song stuck in your head, and you can't remember the name? Introducing the Tune Finder! Hum into the funnel, and it hums back! It doesn't know either! But now there's two of you!",
-          "startMs": 21040
+          "startMs": 21039
         },
         {
           "speaker": "Music Channel",
@@ -711,12 +711,12 @@
         {
           "speaker": "Space Opera: Captain",
           "text": "Is it inhabited?",
-          "startMs": 11763
+          "startMs": 11762
         },
         {
           "speaker": "Space Opera: Lieutenant",
           "text": "Only by soup, sir—",
-          "startMs": 13490
+          "startMs": 13489
         },
         {
           "speaker": "Antiques Show",
@@ -756,7 +756,7 @@
         {
           "speaker": "History Channel",
           "text": "And that is why, to this day, nobody in the Overlap fully trusts a dryer.",
-          "startMs": 47067
+          "startMs": 47066
         }
       ]
     },
@@ -825,24 +825,24 @@
       "id": "show-011",
       "category": "show",
       "url": "/voice/channel-surf/show-011.mp3",
-      "durationMs": 57091,
+      "durationMs": 57090,
       "title": "Tidewater Manor Marathon",
       "overMusic": false,
       "lines": [
         {
           "speaker": "Announcer",
           "text": "Previously, on Tidewater Manor.",
-          "startMs": 350
+          "startMs": 349
         },
         {
           "speaker": "Tidewater Manor: Lorraine",
           "text": "Vincent, you've been gone for seven years.",
-          "startMs": 3153
+          "startMs": 3152
         },
         {
           "speaker": "Tidewater Manor: Vincent",
           "text": "I went to get—",
-          "startMs": 6449
+          "startMs": 6448
         },
         {
           "speaker": "Tidewater Manor: Vincent",
@@ -857,12 +857,12 @@
         {
           "speaker": "Tidewater Manor: Vincent",
           "text": "Then I'm just evil, Lorraine. That's so much—",
-          "startMs": 12736
+          "startMs": 12735
         },
         {
           "speaker": "Nature Channel",
           "text": "The twin, in the wild, is rarely evil. It is usually just tired of being mistaken for someone else.",
-          "startMs": 15568
+          "startMs": 15567
         },
         {
           "speaker": "Game Show",
@@ -872,7 +872,7 @@
         {
           "speaker": "Game Show: Contestant",
           "text": "Vincent?",
-          "startMs": 26677
+          "startMs": 26676
         },
         {
           "speaker": "Game Show",
@@ -882,7 +882,7 @@
         {
           "speaker": "Tidewater Manor: Lorraine",
           "text": "Vincent, who is that at the door?",
-          "startMs": 30932
+          "startMs": 30931
         },
         {
           "speaker": "Tidewater Manor: Vincent",
@@ -892,42 +892,42 @@
         {
           "speaker": "Announcer",
           "text": "Tidewater Manor will return, after these messages.",
-          "startMs": 36029
+          "startMs": 36028
         },
         {
           "speaker": "Shopping: Trent",
           "text": "Is your milk following you? Try the Milk Leash! Keep your dairy—",
-          "startMs": 39679
+          "startMs": 39678
         },
         {
           "speaker": "Tidewater Manor: Lorraine",
           "text": "Vincent, I can't do this anymore.",
-          "startMs": 42808
+          "startMs": 42807
         },
         {
           "speaker": "Tidewater Manor: Vincent",
           "text": "Do what?",
-          "startMs": 45716
+          "startMs": 45715
         },
         {
           "speaker": "Tidewater Manor: Lorraine",
           "text": "The milk, Vincent. It's always the—",
-          "startMs": 46954
+          "startMs": 46953
         },
         {
           "speaker": "Announcer",
           "text": "Next week, on Tidewater Manor.",
-          "startMs": 50247
+          "startMs": 50246
         },
         {
           "speaker": "Tidewater Manor: Lorraine",
           "text": "Vincent, what is that?",
-          "startMs": 53033
+          "startMs": 53032
         },
         {
           "speaker": "Tidewater Manor: Vincent",
           "text": "Cheese, Lorraine. I've moved on—",
-          "startMs": 54947
+          "startMs": 54946
         }
       ]
     },
@@ -947,7 +947,7 @@
         {
           "speaker": "Movie Trailer",
           "text": "This spring. One man. One tambourine. No sense of timing whatsoever.",
-          "startMs": 7366
+          "startMs": 7365
         },
         {
           "speaker": "Sports Channel",
@@ -982,7 +982,7 @@
         {
           "speaker": "Nature Channel",
           "text": "High in the canopy, a songbird rehearses its one song. It has been working on the bridge for nine years.",
-          "startMs": 33225
+          "startMs": 33224
         },
         {
           "speaker": "Public Access: Gerald",
@@ -1005,7 +1005,7 @@
       "id": "show-013",
       "category": "show",
       "url": "/voice/channel-surf/show-013.mp3",
-      "durationMs": 59373,
+      "durationMs": 59360,
       "title": "Judge Wexley Presides",
       "overMusic": false,
       "lines": [
@@ -1022,7 +1022,7 @@
         {
           "speaker": "Game Show",
           "text": "And that's the wrong answer! The correct answer was, always act surprised!",
-          "startMs": 10561
+          "startMs": 10560
         },
         {
           "speaker": "Courtroom: Judge Wexley",
@@ -1037,7 +1037,7 @@
         {
           "speaker": "Courtroom: Judge Wexley",
           "text": "That's everyone, madam—",
-          "startMs": 23842
+          "startMs": 23841
         },
         {
           "speaker": "Nature Channel",
@@ -1052,22 +1052,22 @@
         {
           "speaker": "Cooking: Chef Ingrid",
           "text": "Now, the secret to perfect toast is to never, ever take your eyes off it.",
-          "startMs": 37318
+          "startMs": 37317
         },
         {
           "speaker": "Courtroom: Judge Wexley",
           "text": "Does the defense have anything to add?",
-          "startMs": 42130
+          "startMs": 42129
         },
         {
           "speaker": "Courtroom: Defendant",
           "text": "Only that I love surprises, your honor. I just always know about—",
-          "startMs": 44750
+          "startMs": 44749
         },
         {
           "speaker": "Courtroom: Judge Wexley",
           "text": "This court finds the defendant not guilty, but a little bit weird. Case dismissed.",
-          "startMs": 48760
+          "startMs": 48759
         }
       ]
     },
@@ -1075,14 +1075,14 @@
       "id": "show-014",
       "category": "show",
       "url": "/voice/channel-surf/show-014.mp3",
-      "durationMs": 47991,
+      "durationMs": 47990,
       "title": "The Nature Hour",
       "overMusic": false,
       "lines": [
         {
           "speaker": "Nature Channel",
           "text": "Here, beneath the sofa, a colony of lost coins has formed its own small economy. They have a currency. It is themselves.",
-          "startMs": 350
+          "startMs": 349
         },
         {
           "speaker": "Shopping: Trent",
@@ -1127,12 +1127,12 @@
         {
           "speaker": "Space Opera: Captain",
           "text": "Ship's diary, day four hundred. We are lost in space. Morale is low. We have run out of the good biscuits.",
-          "startMs": 349
+          "startMs": 350
         },
         {
           "speaker": "Cooking: Chef Ingrid",
           "text": "And that is how you make the good biscuits.",
-          "startMs": 7626
+          "startMs": 7627
         },
         {
           "speaker": "Space Opera: Lieutenant",
@@ -1157,7 +1157,7 @@
         {
           "speaker": "Space Opera: Captain",
           "text": "Lieutenant, set a course for home.",
-          "startMs": 25799
+          "startMs": 25800
         },
         {
           "speaker": "Space Opera: Lieutenant",
@@ -1256,7 +1256,7 @@
       "id": "show-017",
       "category": "show",
       "url": "/voice/channel-surf/show-017.mp3",
-      "durationMs": 50482,
+      "durationMs": 50479,
       "title": "Prime Time, Part Two",
       "overMusic": false,
       "daypart": "evening",
@@ -1264,7 +1264,7 @@
         {
           "speaker": "Sitcom",
           "text": "Honey, I'm home!",
-          "startMs": 349
+          "startMs": 350
         },
         {
           "speaker": "Sitcom",
@@ -1274,7 +1274,7 @@
         {
           "speaker": "Crime Drama: Detective",
           "text": "The victim was a cake. Somebody ate it. Three slices, no fork. We're looking for an—",
-          "startMs": 4631
+          "startMs": 4632
         },
         {
           "speaker": "Cooking: Chef Ingrid",
@@ -1289,7 +1289,7 @@
         {
           "speaker": "Antiques Show: Owner",
           "text": "Well, it's a family heirloom. It was my grandmother's. She never let anyone eat—",
-          "startMs": 19018
+          "startMs": 19019
         },
         {
           "speaker": "Sports Channel",
@@ -1327,7 +1327,7 @@
       "id": "show-018",
       "category": "show",
       "url": "/voice/channel-surf/show-018.mp3",
-      "durationMs": 50551,
+      "durationMs": 50550,
       "title": "Every Channel Is Darlene",
       "overMusic": false,
       "lines": [
@@ -1339,7 +1339,7 @@
         {
           "speaker": "Shopping: Darlene",
           "text": "Or regret.",
-          "startMs": 3462
+          "startMs": 3461
         },
         {
           "speaker": "Weather Channel",
@@ -1354,32 +1354,32 @@
         {
           "speaker": "Nature Channel",
           "text": "And here, in its natural habitat, the stair. Available in oak, pine, or regret.",
-          "startMs": 11977
+          "startMs": 11976
         },
         {
           "speaker": "Kids' TV",
           "text": "Hello, friends! Today's word is stair! Can you say stair? Now ask a grown up to buy it!",
-          "startMs": 17647
+          "startMs": 17646
         },
         {
           "speaker": "Shopping: Darlene",
           "text": "Trent, I think they're trying to change the channel.",
-          "startMs": 23040
+          "startMs": 23039
         },
         {
           "speaker": "Shopping: Trent",
           "text": "They can't, Darlene! We're on every channel now! We bought them!",
-          "startMs": 25899
+          "startMs": 25898
         },
         {
           "speaker": "Shopping: Darlene",
           "text": "Hello, viewer. You've got crumbs on your jumper. It's all right. We all do.",
-          "startMs": 29458
+          "startMs": 29457
         },
         {
           "speaker": "Shopping: Trent",
           "text": "Hi again!",
-          "startMs": 33971
+          "startMs": 33970
         },
         {
           "speaker": "Someone on the Couch",
@@ -1394,7 +1394,7 @@
         {
           "speaker": "Shopping: Trent",
           "text": "No such thing, Darlene!",
-          "startMs": 41509
+          "startMs": 41508
         },
         {
           "speaker": "Nature Channel",
@@ -1405,6 +1405,1106 @@
           "speaker": "Shopping: Trent",
           "text": "Except this stair!—",
           "startMs": 49378
+        }
+      ]
+    },
+    {
+      "id": "the-late-late-late-show-open",
+      "category": "id",
+      "url": "/voice/channel-surf/the-late-late-late-show-open.mp3",
+      "durationMs": 6590,
+      "title": "The Late Late Late Show",
+      "overMusic": true,
+      "part": "open",
+      "show": "the-late-late-late-show",
+      "lines": [
+        {
+          "speaker": "Closedown",
+          "text": "This station has now closed down.",
+          "startMs": 350
+        },
+        {
+          "speaker": "Channel Surf",
+          "text": "Channel Surf. The Late Late Late Show.",
+          "startMs": 3462
+        }
+      ]
+    },
+    {
+      "id": "the-late-late-late-show-01",
+      "category": "dj",
+      "url": "/voice/channel-surf/the-late-late-late-show-01.mp3",
+      "durationMs": 7418,
+      "overMusic": true,
+      "show": "the-late-late-late-show",
+      "lines": [
+        {
+          "speaker": "Infomercial",
+          "text": "It's three in the morning! Are you awake? Of course you are! You're watching this!",
+          "startMs": 350
+        },
+        {
+          "speaker": "Someone on the Couch",
+          "text": "I'm not watching it. I'm just looking at it.",
+          "startMs": 4068
+        }
+      ]
+    },
+    {
+      "id": "the-late-late-late-show-02",
+      "category": "dj",
+      "url": "/voice/channel-surf/the-late-late-late-show-02.mp3",
+      "durationMs": 10708,
+      "overMusic": true,
+      "show": "the-late-late-late-show",
+      "lines": [
+        {
+          "speaker": "Late Night Poetry",
+          "text": "At this hour, the television is the only window that looks back.",
+          "startMs": 350
+        },
+        {
+          "speaker": "Shopping: Darlene",
+          "text": "And it comes in oak, pine, or regret.",
+          "startMs": 4663
+        },
+        {
+          "speaker": "Someone on the Couch",
+          "text": "Bed.",
+          "startMs": 7775
+        },
+        {
+          "speaker": "Someone on the Couch",
+          "text": "One more.",
+          "startMs": 9102
+        }
+      ]
+    },
+    {
+      "id": "the-late-late-late-show-03",
+      "category": "dj",
+      "url": "/voice/channel-surf/the-late-late-late-show-03.mp3",
+      "durationMs": 11494,
+      "overMusic": true,
+      "show": "the-late-late-late-show",
+      "lines": [
+        {
+          "speaker": "Closedown",
+          "text": "This station is now closing down. Please put the night back where you found it.",
+          "startMs": 350
+        },
+        {
+          "speaker": "Closedown",
+          "text": "This station is also closing down.",
+          "startMs": 5514
+        },
+        {
+          "speaker": "Closedown",
+          "text": "We all are, dear. Goodnight.",
+          "startMs": 8772
+        }
+      ]
+    },
+    {
+      "id": "cartoon-breakfast-open",
+      "category": "id",
+      "url": "/voice/channel-surf/cartoon-breakfast-open.mp3",
+      "durationMs": 6501,
+      "title": "Cartoon Breakfast",
+      "overMusic": true,
+      "part": "open",
+      "show": "cartoon-breakfast",
+      "lines": [
+        {
+          "speaker": "Kids' TV: Professor Pockets",
+          "text": "Hello, friends!",
+          "startMs": 350
+        },
+        {
+          "speaker": "Channel Surf",
+          "text": "Channel Surf. Cartoon Breakfast.",
+          "startMs": 1885
+        },
+        {
+          "speaker": "Kids' TV: Little Nothing",
+          "text": "Is it soon yet?",
+          "startMs": 4640
+        }
+      ]
+    },
+    {
+      "id": "cartoon-breakfast-01",
+      "category": "dj",
+      "url": "/voice/channel-surf/cartoon-breakfast-01.mp3",
+      "durationMs": 12935,
+      "overMusic": true,
+      "show": "cartoon-breakfast",
+      "lines": [
+        {
+          "speaker": "Kids' TV: Professor Pockets",
+          "text": "Hello, friends! Today's word is breakfast! Can you say breakfast?",
+          "startMs": 350
+        },
+        {
+          "speaker": "Kids' TV: Little Nothing",
+          "text": "Breakfast!",
+          "startMs": 4135
+        },
+        {
+          "speaker": "Cooking: Chef Ingrid",
+          "text": "Breakfast today is an egg that has been told it's a good egg.",
+          "startMs": 5624
+        },
+        {
+          "speaker": "Kids' TV: Little Nothing",
+          "text": "Is it a good egg?",
+          "startMs": 9603
+        },
+        {
+          "speaker": "Cooking: Chef Ingrid",
+          "text": "The best egg.",
+          "startMs": 11501
+        }
+      ]
+    },
+    {
+      "id": "cartoon-breakfast-02",
+      "category": "dj",
+      "url": "/voice/channel-surf/cartoon-breakfast-02.mp3",
+      "durationMs": 14103,
+      "overMusic": true,
+      "show": "cartoon-breakfast",
+      "lines": [
+        {
+          "speaker": "Kids' TV: Professor Pockets",
+          "text": "Little Nothing, what do we do when we feel sad?",
+          "startMs": 350
+        },
+        {
+          "speaker": "Kids' TV: Little Nothing",
+          "text": "We have a little sit down!",
+          "startMs": 2881
+        },
+        {
+          "speaker": "Nature Channel",
+          "text": "And here, in the wild, a toddler has a little sit down, in the middle of the supermarket. It is magnificent. Nobody can move it.",
+          "startMs": 4980
+        }
+      ]
+    },
+    {
+      "id": "tidewater-manor-omnibus-open",
+      "category": "id",
+      "url": "/voice/channel-surf/tidewater-manor-omnibus-open.mp3",
+      "durationMs": 8894,
+      "title": "Tidewater Manor Omnibus",
+      "overMusic": true,
+      "part": "open",
+      "show": "tidewater-manor-omnibus",
+      "lines": [
+        {
+          "speaker": "Announcer",
+          "text": "Previously, on Tidewater Manor.",
+          "startMs": 350
+        },
+        {
+          "speaker": "Channel Surf",
+          "text": "Channel Surf presents the Tidewater Manor Omnibus. All of it. At once.",
+          "startMs": 3453
+        }
+      ]
+    },
+    {
+      "id": "tidewater-manor-omnibus-01",
+      "category": "dj",
+      "url": "/voice/channel-surf/tidewater-manor-omnibus-01.mp3",
+      "durationMs": 17010,
+      "overMusic": true,
+      "show": "tidewater-manor-omnibus",
+      "lines": [
+        {
+          "speaker": "Tidewater Manor: Lorraine",
+          "text": "Vincent, it's been seven years.",
+          "startMs": 350
+        },
+        {
+          "speaker": "Tidewater Manor: Vincent",
+          "text": "I went to get milk—",
+          "startMs": 3046
+        },
+        {
+          "speaker": "Tidewater Manor: Lorraine",
+          "text": "Vincent, it's been eight years.",
+          "startMs": 4552
+        },
+        {
+          "speaker": "Tidewater Manor: Vincent",
+          "text": "There was a queue—",
+          "startMs": 7183
+        },
+        {
+          "speaker": "Tidewater Manor: Lorraine",
+          "text": "Vincent, it's been nine years.",
+          "startMs": 8559
+        },
+        {
+          "speaker": "Tidewater Manor: Vincent",
+          "text": "I've brought you some milk, Lorraine.",
+          "startMs": 11217
+        },
+        {
+          "speaker": "Tidewater Manor: Lorraine",
+          "text": "Oh, Vincent.",
+          "startMs": 13666
+        },
+        {
+          "speaker": "Someone on the Couch",
+          "text": "Finally.",
+          "startMs": 15430
+        }
+      ]
+    },
+    {
+      "id": "tidewater-manor-omnibus-02",
+      "category": "dj",
+      "url": "/voice/channel-surf/tidewater-manor-omnibus-02.mp3",
+      "durationMs": 16049,
+      "overMusic": true,
+      "show": "tidewater-manor-omnibus",
+      "lines": [
+        {
+          "speaker": "Announcer",
+          "text": "Previously, on Tidewater Manor.",
+          "startMs": 350
+        },
+        {
+          "speaker": "Announcer",
+          "text": "Also previously, on Tidewater Manor.",
+          "startMs": 3452
+        },
+        {
+          "speaker": "Announcer",
+          "text": "A very long time ago, on Tidewater Manor.",
+          "startMs": 6866
+        },
+        {
+          "speaker": "Tidewater Manor: Vincent",
+          "text": "Lorraine, who are all these people?",
+          "startMs": 10031
+        },
+        {
+          "speaker": "Tidewater Manor: Lorraine",
+          "text": "They're previously, Vincent. They never leave—",
+          "startMs": 12307
+        }
+      ]
+    },
+    {
+      "id": "surf-open-01",
+      "category": "show",
+      "url": "/voice/channel-surf/surf-open-01.mp3",
+      "durationMs": 3570,
+      "overMusic": false,
+      "part": "open",
+      "kit": "surf",
+      "lines": [
+        {
+          "speaker": "Channel Surf",
+          "text": "Channel Surf. Somebody's got the remote.",
+          "startMs": 350
+        }
+      ]
+    },
+    {
+      "id": "surf-open-02",
+      "category": "show",
+      "url": "/voice/channel-surf/surf-open-02.mp3",
+      "durationMs": 3802,
+      "overMusic": false,
+      "part": "open",
+      "kit": "surf",
+      "lines": [
+        {
+          "speaker": "Someone on the Couch",
+          "text": "Right. Budge up. What's on?",
+          "startMs": 349
+        },
+        {
+          "speaker": "Shopping: Trent",
+          "text": "Everything!—",
+          "startMs": 2862
+        }
+      ]
+    },
+    {
+      "id": "surf-open-03",
+      "category": "show",
+      "url": "/voice/channel-surf/surf-open-03.mp3",
+      "durationMs": 4222,
+      "overMusic": false,
+      "part": "open",
+      "kit": "surf",
+      "lines": [
+        {
+          "speaker": "Channel Surf",
+          "text": "One oh three point oh. Infinite channels. One thumb.",
+          "startMs": 350
+        }
+      ]
+    },
+    {
+      "id": "surf-open-04",
+      "category": "show",
+      "url": "/voice/channel-surf/surf-open-04.mp3",
+      "durationMs": 4874,
+      "overMusic": false,
+      "part": "open",
+      "kit": "surf",
+      "lines": [
+        {
+          "speaker": "Someone on the Couch",
+          "text": "Where's the remote?",
+          "startMs": 350
+        },
+        {
+          "speaker": "Someone on the Couch",
+          "text": "Oh. I'm holding it.",
+          "startMs": 2592
+        }
+      ]
+    },
+    {
+      "id": "surf-open-05",
+      "category": "show",
+      "url": "/voice/channel-surf/surf-open-05.mp3",
+      "durationMs": 4205,
+      "overMusic": false,
+      "part": "open",
+      "kit": "surf",
+      "lines": [
+        {
+          "speaker": "Shopping: Trent",
+          "text": "Don't touch that dial!",
+          "startMs": 350
+        },
+        {
+          "speaker": "Channel Surf",
+          "text": "Too late. Channel Surf.",
+          "startMs": 2022
+        }
+      ]
+    },
+    {
+      "id": "surf-body-01",
+      "category": "show",
+      "url": "/voice/channel-surf/surf-body-01.mp3",
+      "durationMs": 9416,
+      "overMusic": false,
+      "part": "body",
+      "kit": "surf",
+      "lines": [
+        {
+          "speaker": "Game Show",
+          "text": "For the car! What is the capital of Tuesday?—",
+          "startMs": 43
+        },
+        {
+          "speaker": "History Channel",
+          "text": "Lunchtime. It has been lunchtime since the long Tuesday, and historians see no reason to change it.",
+          "startMs": 2123
+        }
+      ]
+    },
+    {
+      "id": "surf-body-02",
+      "category": "show",
+      "url": "/voice/channel-surf/surf-body-02.mp3",
+      "durationMs": 11605,
+      "overMusic": false,
+      "part": "body",
+      "kit": "surf",
+      "lines": [
+        {
+          "speaker": "Courtroom: Judge Wexley",
+          "text": "The defendant is charged with eating the last biscuit. How do you—",
+          "startMs": 35
+        },
+        {
+          "speaker": "Nature Channel",
+          "text": "The last biscuit, once alone in the tin, rarely survives the night. Nobody is ever charged.",
+          "startMs": 4572
+        }
+      ]
+    },
+    {
+      "id": "surf-body-03",
+      "category": "show",
+      "url": "/voice/channel-surf/surf-body-03.mp3",
+      "durationMs": 9502,
+      "overMusic": false,
+      "part": "body",
+      "kit": "surf",
+      "lines": [
+        {
+          "speaker": "Space Opera: Lieutenant",
+          "text": "Captain, we're picking up a transmission from the edge of the dial.",
+          "startMs": 36
+        },
+        {
+          "speaker": "Space Opera: Captain",
+          "text": "Put it through.",
+          "startMs": 3740
+        },
+        {
+          "speaker": "Shopping: Trent",
+          "text": "Hi! Are you tired of living at the edge of the dial? Move to the middle! There's—",
+          "startMs": 5211
+        }
+      ]
+    },
+    {
+      "id": "surf-body-04",
+      "category": "show",
+      "url": "/voice/channel-surf/surf-body-04.mp3",
+      "durationMs": 10036,
+      "overMusic": false,
+      "part": "body",
+      "kit": "surf",
+      "lines": [
+        {
+          "speaker": "Weather Channel",
+          "text": "Tonight, a cold front moves in from the kitchen, where somebody has left the fridge open.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Crime Drama: Detective",
+          "text": "Somebody left the fridge open. We're looking for a man with a sandwich, and no—",
+          "startMs": 5468
+        }
+      ]
+    },
+    {
+      "id": "surf-body-05",
+      "category": "show",
+      "url": "/voice/channel-surf/surf-body-05.mp3",
+      "durationMs": 10206,
+      "overMusic": false,
+      "part": "body",
+      "kit": "surf",
+      "lines": [
+        {
+          "speaker": "Tidewater Manor: Lorraine",
+          "text": "Vincent. Are you seeing someone else?—",
+          "startMs": 50
+        },
+        {
+          "speaker": "Nature Channel",
+          "text": "The owl sees everyone else. It is one of the owl's very few talents, and it is not discreet about it.",
+          "startMs": 2954
+        }
+      ]
+    },
+    {
+      "id": "surf-body-06",
+      "category": "show",
+      "url": "/voice/channel-surf/surf-body-06.mp3",
+      "durationMs": 6320,
+      "overMusic": false,
+      "part": "body",
+      "kit": "surf",
+      "lines": [
+        {
+          "speaker": "Cooking: Chef Ingrid",
+          "text": "Now, how will you know when it's ready?—",
+          "startMs": 37
+        },
+        {
+          "speaker": "Sports Channel",
+          "text": "And it's ready! It's ready! Nobody saw it coming! The crowd is on its—",
+          "startMs": 2137
+        }
+      ]
+    },
+    {
+      "id": "surf-body-07",
+      "category": "show",
+      "url": "/voice/channel-surf/surf-body-07.mp3",
+      "durationMs": 12447,
+      "overMusic": false,
+      "part": "body",
+      "kit": "surf",
+      "lines": [
+        {
+          "speaker": "Kids' TV: Professor Pockets",
+          "text": "Hello, friends! Where do lost things go?—",
+          "startMs": 48
+        },
+        {
+          "speaker": "Auction Channel",
+          "text": "Sold! To the man under the sofa! He's had his eye on it for—",
+          "startMs": 2348
+        },
+        {
+          "speaker": "Nature Channel",
+          "text": "Beneath the sofa, the lost things have built a small, warm town. They have a mayor. He is a button.",
+          "startMs": 5339
+        }
+      ]
+    },
+    {
+      "id": "surf-body-08",
+      "category": "show",
+      "url": "/voice/channel-surf/surf-body-08.mp3",
+      "durationMs": 9344,
+      "overMusic": false,
+      "part": "body",
+      "kit": "surf",
+      "lines": [
+        {
+          "speaker": "Dating Show",
+          "text": "Contestant number one, describe yourself in three words.",
+          "startMs": 39
+        },
+        {
+          "speaker": "Dating Show: Contestant One",
+          "text": "Punctual. Damp. Hopeful.",
+          "startMs": 3539
+        },
+        {
+          "speaker": "Weather Channel",
+          "text": "Punctual, damp and hopeful, clearing by the afternoon.",
+          "startMs": 5533
+        }
+      ]
+    },
+    {
+      "id": "surf-body-09",
+      "category": "show",
+      "url": "/voice/channel-surf/surf-body-09.mp3",
+      "durationMs": 6917,
+      "overMusic": false,
+      "part": "body",
+      "kit": "surf",
+      "lines": [
+        {
+          "speaker": "Infomercial",
+          "text": "Do you have trouble sleeping?—",
+          "startMs": 36
+        },
+        {
+          "speaker": "Public Access: Gerald",
+          "text": "This rock has never once had trouble sleeping. It's a rock. I admire it very much.",
+          "startMs": 1626
+        }
+      ]
+    },
+    {
+      "id": "surf-body-10",
+      "category": "show",
+      "url": "/voice/channel-surf/surf-body-10.mp3",
+      "durationMs": 10373,
+      "overMusic": false,
+      "part": "body",
+      "kit": "surf",
+      "lines": [
+        {
+          "speaker": "Antiques Show",
+          "text": "And what would you say it's worth?",
+          "startMs": 41
+        },
+        {
+          "speaker": "Antiques Show: Owner",
+          "text": "To me? Everything. It was my nan's. She used to keep the good spoons in it.",
+          "startMs": 2376
+        },
+        {
+          "speaker": "Auction Channel",
+          "text": "Four pounds! Going once!—",
+          "startMs": 7603
+        },
+        {
+          "speaker": "Someone on the Couch",
+          "text": "Bargain.",
+          "startMs": 8868
+        }
+      ]
+    },
+    {
+      "id": "surf-body-11",
+      "category": "show",
+      "url": "/voice/channel-surf/surf-body-11.mp3",
+      "durationMs": 5805,
+      "overMusic": false,
+      "part": "body",
+      "kit": "surf",
+      "lines": [
+        {
+          "speaker": "Home Renovation",
+          "text": "So we've opened up the wall, and we've found, oh. We've found a man—",
+          "startMs": 37
+        },
+        {
+          "speaker": "Tidewater Manor: Vincent",
+          "text": "Hello, Lorraine. I'm back. I've got the milk—",
+          "startMs": 3198
+        }
+      ]
+    },
+    {
+      "id": "surf-body-12",
+      "category": "show",
+      "url": "/voice/channel-surf/surf-body-12.mp3",
+      "durationMs": 8885,
+      "overMusic": false,
+      "part": "body",
+      "kit": "surf",
+      "lines": [
+        {
+          "speaker": "Space Opera: Captain",
+          "text": "Ship's diary, day four hundred and one. We have found the good biscuits.",
+          "startMs": 44
+        },
+        {
+          "speaker": "Every Possible News",
+          "text": "And the good biscuits have been found. More at eleven.",
+          "startMs": 4907
+        }
+      ]
+    },
+    {
+      "id": "surf-body-13",
+      "category": "show",
+      "url": "/voice/channel-surf/surf-body-13.mp3",
+      "durationMs": 7306,
+      "overMusic": false,
+      "part": "body",
+      "kit": "surf",
+      "lines": [
+        {
+          "speaker": "Fitness Channel",
+          "text": "And hold that pose! Hold it! Hold it for as long as you—",
+          "startMs": 37
+        },
+        {
+          "speaker": "Game Show",
+          "text": "Contestant, you have been holding that pose for nine years! Would you like to phone a—",
+          "startMs": 2795
+        }
+      ]
+    },
+    {
+      "id": "surf-body-14",
+      "category": "show",
+      "url": "/voice/channel-surf/surf-body-14.mp3",
+      "durationMs": 8811,
+      "overMusic": false,
+      "part": "body",
+      "kit": "surf",
+      "lines": [
+        {
+          "speaker": "Music Channel",
+          "text": "That was a song about rain. Here's a song about rain, from the rain's point of—",
+          "startMs": 36
+        },
+        {
+          "speaker": "Weather Channel",
+          "text": "The rain's point of view, tonight: it's going down, and it's fine with that.",
+          "startMs": 4248
+        }
+      ]
+    },
+    {
+      "id": "surf-body-15",
+      "category": "show",
+      "url": "/voice/channel-surf/surf-body-15.mp3",
+      "durationMs": 6853,
+      "overMusic": false,
+      "part": "body",
+      "kit": "surf",
+      "lines": [
+        {
+          "speaker": "Telenovela: Esteban",
+          "text": "Ramona, tell me the truth. Do you love me?",
+          "startMs": 35
+        },
+        {
+          "speaker": "Telenovela: Ramona",
+          "text": "Esteban, I—",
+          "startMs": 2425
+        },
+        {
+          "speaker": "Game Show",
+          "text": "Yes or no?—",
+          "startMs": 3443
+        },
+        {
+          "speaker": "Someone on the Couch",
+          "text": "Yes. Obviously yes.",
+          "startMs": 4393
+        }
+      ]
+    },
+    {
+      "id": "surf-body-16",
+      "category": "show",
+      "url": "/voice/channel-surf/surf-body-16.mp3",
+      "durationMs": 9170,
+      "overMusic": false,
+      "part": "body",
+      "kit": "surf",
+      "lines": [
+        {
+          "speaker": "History Channel",
+          "text": "In the year of the great sofa, every family in the Overlap sat down at once.",
+          "startMs": 37
+        },
+        {
+          "speaker": "Nature Channel",
+          "text": "They have not, as yet, got up.",
+          "startMs": 5708
+        }
+      ]
+    },
+    {
+      "id": "surf-body-17",
+      "category": "show",
+      "url": "/voice/channel-surf/surf-body-17.mp3",
+      "durationMs": 7898,
+      "overMusic": false,
+      "part": "body",
+      "kit": "surf",
+      "lines": [
+        {
+          "speaker": "Medical Drama: Doctor",
+          "text": "Nurse, what's his name?",
+          "startMs": 39
+        },
+        {
+          "speaker": "Medical Drama: Nurse",
+          "text": "He won't say, doctor. He just keeps asking if this is the request—",
+          "startMs": 1782
+        },
+        {
+          "speaker": "Game Show: Bev",
+          "text": "Hello? Is this the request—",
+          "startMs": 5750
+        }
+      ]
+    },
+    {
+      "id": "surf-body-18",
+      "category": "show",
+      "url": "/voice/channel-surf/surf-body-18.mp3",
+      "durationMs": 9302,
+      "overMusic": false,
+      "part": "body",
+      "kit": "surf",
+      "lines": [
+        {
+          "speaker": "Movie Trailer",
+          "text": "This winter. One remote. One couch. One very, very long night. Rated P, for pyjamas.",
+          "startMs": 42
+        },
+        {
+          "speaker": "Someone on the Couch",
+          "text": "That's us. That's about us.",
+          "startMs": 6799
+        }
+      ]
+    },
+    {
+      "id": "surf-close-01",
+      "category": "show",
+      "url": "/voice/channel-surf/surf-close-01.mp3",
+      "durationMs": 4708,
+      "overMusic": false,
+      "part": "close",
+      "kit": "surf",
+      "lines": [
+        {
+          "speaker": "Someone on the Couch",
+          "text": "Nothing on.",
+          "startMs": 350
+        },
+        {
+          "speaker": "Someone on the Couch",
+          "text": "Nothing on that one, either.",
+          "startMs": 2099
+        }
+      ]
+    },
+    {
+      "id": "surf-close-02",
+      "category": "show",
+      "url": "/voice/channel-surf/surf-close-02.mp3",
+      "durationMs": 3924,
+      "overMusic": false,
+      "part": "close",
+      "kit": "surf",
+      "lines": [
+        {
+          "speaker": "Someone on the Couch",
+          "text": "Ooh. No. Go back.",
+          "startMs": 40
+        },
+        {
+          "speaker": "Someone on the Couch",
+          "text": "Further.",
+          "startMs": 2462
+        }
+      ]
+    },
+    {
+      "id": "surf-close-03",
+      "category": "show",
+      "url": "/voice/channel-surf/surf-close-03.mp3",
+      "durationMs": 5708,
+      "overMusic": false,
+      "part": "close",
+      "kit": "surf",
+      "lines": [
+        {
+          "speaker": "Closedown",
+          "text": "And that concludes this part of the evening. Please put the sofa back where you found it.",
+          "startMs": 36
+        }
+      ]
+    },
+    {
+      "id": "surf-close-04",
+      "category": "show",
+      "url": "/voice/channel-surf/surf-close-04.mp3",
+      "durationMs": 4828,
+      "overMusic": false,
+      "part": "close",
+      "kit": "surf",
+      "lines": [
+        {
+          "speaker": "Someone on the Couch",
+          "text": "Where's the remote?",
+          "startMs": 43
+        },
+        {
+          "speaker": "Someone on the Couch",
+          "text": "Oh. I'm sitting on it.",
+          "startMs": 2486
+        }
+      ]
+    },
+    {
+      "id": "surf-close-05",
+      "category": "show",
+      "url": "/voice/channel-surf/surf-close-05.mp3",
+      "durationMs": 4304,
+      "overMusic": false,
+      "part": "close",
+      "kit": "surf",
+      "lines": [
+        {
+          "speaker": "Channel Surf",
+          "text": "Channel Surf. Somebody, please, take the remote off them.",
+          "startMs": 36
+        }
+      ]
+    },
+    {
+      "id": "bev-gets-her-song-10",
+      "category": "show",
+      "url": "/voice/channel-surf/bev-gets-her-song-10.mp3",
+      "durationMs": 69731,
+      "title": "Bev Gets Her Song, Part Ten: For the Car",
+      "overMusic": false,
+      "serial": {
+        "id": "bev-gets-her-song",
+        "episode": 10
+      },
+      "lines": [
+        {
+          "speaker": "Game Show",
+          "text": "Welcome back to For the Car! Our returning champion, for the eleventh year running, Bev!",
+          "startMs": 350
+        },
+        {
+          "speaker": "Game Show",
+          "text": "Bev, for the car. Who is the song for?",
+          "startMs": 6895
+        },
+        {
+          "speaker": "Game Show: Bev",
+          "text": "Stan.",
+          "startMs": 8864
+        },
+        {
+          "speaker": "Game Show",
+          "text": "Stan is correct!",
+          "startMs": 9923
+        },
+        {
+          "speaker": "Every Possible News",
+          "text": "And the request line at Relay Four has reportedly been heard tonight, for the first time in eleven years.",
+          "startMs": 11460
+        },
+        {
+          "speaker": "Nature Channel",
+          "text": "The request, in the wild, will travel enormous distances to reach the one it is meant for. It does not stop. It does not ask for directions. It simply hums.",
+          "startMs": 18774
+        },
+        {
+          "speaker": "Tidewater Manor: Lorraine",
+          "text": "Vincent, what's that tune you're humming?",
+          "startMs": 29589
+        },
+        {
+          "speaker": "Tidewater Manor: Vincent",
+          "text": "I don't know, Lorraine. I heard it in a lift—",
+          "startMs": 32521
+        },
+        {
+          "speaker": "Shopping: Trent",
+          "text": "Want to make a request? It's the Request Line Extension Cord! Reach Relay Four from the comfort of your sofa!",
+          "startMs": 35106
+        },
+        {
+          "speaker": "Shopping: Darlene",
+          "text": "It's eleven years long, Trent.",
+          "startMs": 41142
+        },
+        {
+          "speaker": "Shopping: Trent",
+          "text": "And worth every inch, Darlene!—",
+          "startMs": 43478
+        },
+        {
+          "speaker": "Kids' TV: Professor Pockets",
+          "text": "Hello, friends! Today's word is dedication! It means a song that's for somebody.",
+          "startMs": 45011
+        },
+        {
+          "speaker": "Kids' TV: Little Nothing",
+          "text": "Who's it for?",
+          "startMs": 49874
+        },
+        {
+          "speaker": "Kids' TV: Professor Pockets",
+          "text": "Somebody who isn't here any more, Little Nothing. That's what makes it special.",
+          "startMs": 51213
+        },
+        {
+          "speaker": "Weather Channel",
+          "text": "And tonight, over the eastern Overlap, a single song, moving slowly east, with a strong chance of crying.",
+          "startMs": 55622
+        },
+        {
+          "speaker": "Game Show",
+          "text": "Bev, you've won the car!",
+          "startMs": 62046
+        },
+        {
+          "speaker": "Game Show: Bev",
+          "text": "I don't want the car, love. Give it to somebody who'll drive it somewhere nice.",
+          "startMs": 63346
+        },
+        {
+          "speaker": "Someone on the Couch",
+          "text": "Aw, Bev.",
+          "startMs": 67969
+        }
+      ]
+    },
+    {
+      "id": "halloween-01",
+      "category": "show",
+      "url": "/voice/channel-surf/halloween-01.mp3",
+      "durationMs": 41524,
+      "title": "The Late Late Horror Double Bill",
+      "overMusic": false,
+      "dates": [
+        "10-24",
+        "10-25",
+        "10-26",
+        "10-27",
+        "10-28",
+        "10-29",
+        "10-30",
+        "10-31"
+      ],
+      "lines": [
+        {
+          "speaker": "Movie Trailer",
+          "text": "This Halloween. The call is coming from inside the house.",
+          "startMs": 350
+        },
+        {
+          "speaker": "Sitcom",
+          "text": "It's your mother. She's in the kitchen. She wants to know if you've eaten.",
+          "startMs": 4210
+        },
+        {
+          "speaker": "Nature Channel",
+          "text": "The vampire, in the wild, is mostly nocturnal, mostly polite, and mostly asleep in a cupboard.",
+          "startMs": 9662
+        },
+        {
+          "speaker": "Cooking: Chef Ingrid",
+          "text": "Tonight, a pumpkin soup, made with a pumpkin that has seen things.",
+          "startMs": 16912
+        },
+        {
+          "speaker": "Tidewater Manor: Lorraine",
+          "text": "Vincent! You've come back from the dead!",
+          "startMs": 21445
+        },
+        {
+          "speaker": "Tidewater Manor: Vincent",
+          "text": "No, Lorraine. Just from the shop. They'd run out of—",
+          "startMs": 24371
+        },
+        {
+          "speaker": "Kids' TV: Professor Pockets",
+          "text": "Hello, friends! Today's word is boo! Can you say boo? Not too loud! Grandma's asleep!",
+          "startMs": 27619
+        },
+        {
+          "speaker": "Crime Drama: Detective",
+          "text": "We've got a sheet with two holes in it, and nobody inside. Either it's a ghost, or somebody's very cold.",
+          "startMs": 33003
+        },
+        {
+          "speaker": "Someone on the Couch",
+          "text": "Leave the light on.",
+          "startMs": 39447
+        }
+      ]
+    },
+    {
+      "id": "halloween-02",
+      "category": "show",
+      "url": "/voice/channel-surf/halloween-02.mp3",
+      "durationMs": 12808,
+      "title": "The Halloween Forecast, and the Cat",
+      "overMusic": false,
+      "part": "body",
+      "kit": "surf",
+      "dates": [
+        "10-24",
+        "10-25",
+        "10-26",
+        "10-27",
+        "10-28",
+        "10-29",
+        "10-30",
+        "10-31"
+      ],
+      "lines": [
+        {
+          "speaker": "Weather Channel",
+          "text": "Tonight's Halloween forecast. A full moon, light fog, and a ninety percent chance of somebody dressed as a ghost tripping over the cat.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Nature Channel",
+          "text": "The cat, sensing its moment, does absolutely nothing.",
+          "startMs": 7970
         }
       ]
     }

@@ -34,7 +34,7 @@
       "id": "id-003",
       "category": "id",
       "url": "/voice/comet-marimba/id-003.mp3",
-      "durationMs": 5906,
+      "durationMs": 5897,
       "overMusic": true,
       "daypart": "morning",
       "lines": [
@@ -49,7 +49,7 @@
       "id": "id-004",
       "category": "id",
       "url": "/voice/comet-marimba/id-004.mp3",
-      "durationMs": 5660,
+      "durationMs": 5640,
       "overMusic": true,
       "daypart": "night",
       "lines": [
@@ -64,7 +64,7 @@
       "id": "id-005",
       "category": "id",
       "url": "/voice/comet-marimba/id-005.mp3",
-      "durationMs": 4494,
+      "durationMs": 4490,
       "overMusic": true,
       "lines": [
         {
@@ -78,7 +78,7 @@
       "id": "id-006",
       "category": "id",
       "url": "/voice/comet-marimba/id-006.mp3",
-      "durationMs": 5112,
+      "durationMs": 5107,
       "overMusic": true,
       "lines": [
         {
@@ -97,7 +97,7 @@
       "id": "id-007",
       "category": "id",
       "url": "/voice/comet-marimba/id-007.mp3",
-      "durationMs": 5275,
+      "durationMs": 5276,
       "overMusic": true,
       "lines": [
         {
@@ -438,6 +438,541 @@
           "speaker": "Coco Halley",
           "text": "Stay in the lift, Bev! We'll keep it nice for you!",
           "startMs": 21395
+        }
+      ]
+    },
+    {
+      "id": "hammock-hours-open",
+      "category": "id",
+      "url": "/voice/comet-marimba/hammock-hours-open.mp3",
+      "durationMs": 5391,
+      "title": "Hammock Hours",
+      "overMusic": true,
+      "part": "open",
+      "show": "hammock-hours",
+      "lines": [
+        {
+          "speaker": "Coco Halley",
+          "text": "It's Hammock Hours on Comet Marimba! Lie back. The stars are going past like warm rain.",
+          "startMs": 40
+        }
+      ]
+    },
+    {
+      "id": "hammock-hours-01",
+      "category": "dj",
+      "url": "/voice/comet-marimba/hammock-hours-01.mp3",
+      "durationMs": 9995,
+      "overMusic": true,
+      "show": "hammock-hours",
+      "lines": [
+        {
+          "speaker": "Coco Halley",
+          "text": "The crab's asleep in his sunglasses. The hammock's swaying. Somebody left a coconut in the ice tail to chill, and it's perfect now.",
+          "startMs": 44
+        },
+        {
+          "speaker": "Coco Halley",
+          "text": "I'm going to drink it. Here's a slow one.",
+          "startMs": 7517
+        }
+      ]
+    },
+    {
+      "id": "hammock-hours-02",
+      "category": "dj",
+      "url": "/voice/comet-marimba/hammock-hours-02.mp3",
+      "durationMs": 10591,
+      "overMusic": true,
+      "show": "hammock-hours",
+      "lines": [
+        {
+          "speaker": "Coco Halley",
+          "text": "Late night thought. We're going seventy kilometres a second, but if you lie very still in the hammock, it feels like we're not moving at all.",
+          "startMs": 49
+        },
+        {
+          "speaker": "Coco Halley",
+          "text": "I think that's the secret. Of comets. And of everything.",
+          "startMs": 7375
+        }
+      ]
+    },
+    {
+      "id": "sunset-on-the-tail-open",
+      "category": "id",
+      "url": "/voice/comet-marimba/sunset-on-the-tail-open.mp3",
+      "durationMs": 5618,
+      "title": "Sunset on the Tail",
+      "overMusic": true,
+      "part": "open",
+      "show": "sunset-on-the-tail",
+      "lines": [
+        {
+          "speaker": "Coco Halley",
+          "text": "It's Sunset on the Tail! Everybody turn round and wave! Bye, sun!",
+          "startMs": 40
+        }
+      ]
+    },
+    {
+      "id": "sunset-on-the-tail-01",
+      "category": "dj",
+      "url": "/voice/comet-marimba/sunset-on-the-tail-01.mp3",
+      "durationMs": 10389,
+      "overMusic": true,
+      "show": "sunset-on-the-tail",
+      "lines": [
+        {
+          "speaker": "Coco Halley",
+          "text": "Sunset report! The sun's a lovely orange tonight, and getting smaller, because we're leaving it. Honestly the most relaxing way to watch a sunset.",
+          "startMs": 41
+        },
+        {
+          "speaker": "Coco Halley",
+          "text": "You don't have to do anything. It just goes.",
+          "startMs": 8161
+        }
+      ]
+    },
+    {
+      "id": "sunset-on-the-tail-02",
+      "category": "dj",
+      "url": "/voice/comet-marimba/sunset-on-the-tail-02.mp3",
+      "durationMs": 8478,
+      "overMusic": true,
+      "show": "sunset-on-the-tail",
+      "lines": [
+        {
+          "speaker": "DJ Sunglass Crab",
+          "text": "Play the sunset one.",
+          "startMs": 40
+        },
+        {
+          "speaker": "Coco Halley",
+          "text": "They're all sunset ones at sunset, Crab!",
+          "startMs": 1534
+        },
+        {
+          "speaker": "DJ Sunglass Crab",
+          "text": "Play it anyway.",
+          "startMs": 4310
+        },
+        {
+          "speaker": "Coco Halley",
+          "text": "You heard him! The crab has spoken! Twice in one week!",
+          "startMs": 5644
+        }
+      ]
+    },
+    {
+      "id": "dj-open-01",
+      "category": "dj",
+      "url": "/voice/comet-marimba/dj-open-01.mp3",
+      "durationMs": 3650,
+      "overMusic": true,
+      "part": "open",
+      "kit": "dj",
+      "lines": [
+        {
+          "speaker": "Coco Halley",
+          "text": "Comet Marimba! Still on vacation! Still going very fast!",
+          "startMs": 39
+        }
+      ]
+    },
+    {
+      "id": "dj-open-02",
+      "category": "dj",
+      "url": "/voice/comet-marimba/dj-open-02.mp3",
+      "durationMs": 2106,
+      "overMusic": true,
+      "part": "open",
+      "kit": "dj",
+      "lines": [
+        {
+          "speaker": "Coco Halley",
+          "text": "Ooh, that one had sand in it! Lovely!",
+          "startMs": 44
+        }
+      ]
+    },
+    {
+      "id": "dj-open-03",
+      "category": "dj",
+      "url": "/voice/comet-marimba/dj-open-03.mp3",
+      "durationMs": 3280,
+      "overMusic": true,
+      "part": "open",
+      "kit": "dj",
+      "lines": [
+        {
+          "speaker": "Coco Halley",
+          "text": "Hi, beach people! Coco here, horizontal, as usual!",
+          "startMs": 38
+        }
+      ]
+    },
+    {
+      "id": "dj-open-04",
+      "category": "dj",
+      "url": "/voice/comet-marimba/dj-open-04.mp3",
+      "durationMs": 3203,
+      "overMusic": true,
+      "daypart": "morning",
+      "part": "open",
+      "kit": "dj",
+      "lines": [
+        {
+          "speaker": "Coco Halley",
+          "text": "Morning on the comet! The sun's a friendly distance away!",
+          "startMs": 46
+        }
+      ]
+    },
+    {
+      "id": "dj-body-01",
+      "category": "dj",
+      "url": "/voice/comet-marimba/dj-body-01.mp3",
+      "durationMs": 7300,
+      "overMusic": true,
+      "part": "body",
+      "kit": "dj",
+      "lines": [
+        {
+          "speaker": "Coco Halley",
+          "text": "Hat update! Fourteen hats lost since lunch. One of them came all the way back round, on a different person. They looked great. We let them keep it.",
+          "startMs": 42
+        }
+      ]
+    },
+    {
+      "id": "dj-body-02",
+      "category": "dj",
+      "url": "/voice/comet-marimba/dj-body-02.mp3",
+      "durationMs": 8668,
+      "overMusic": true,
+      "part": "body",
+      "kit": "dj",
+      "lines": [
+        {
+          "speaker": "Coco Halley",
+          "text": "Los Perihelios are playing a set at the far end of the beach tonight! They only play when we're near the sun, so this is it, folks! Next gig in seventy six years! Get there early!",
+          "startMs": 40
+        }
+      ]
+    },
+    {
+      "id": "dj-body-03",
+      "category": "dj",
+      "url": "/voice/comet-marimba/dj-body-03.mp3",
+      "durationMs": 8979,
+      "overMusic": true,
+      "part": "body",
+      "kit": "dj",
+      "lines": [
+        {
+          "speaker": "Coco Halley",
+          "text": "The crab has refused another request.",
+          "startMs": 44
+        },
+        {
+          "speaker": "DJ Sunglass Crab",
+          "text": "Click.",
+          "startMs": 2908
+        },
+        {
+          "speaker": "Coco Halley",
+          "text": "That's a no. Somebody asked for something with a saxophone. The crab doesn't believe in saxophones.",
+          "startMs": 3901
+        }
+      ]
+    },
+    {
+      "id": "dj-body-04",
+      "category": "dj",
+      "url": "/voice/comet-marimba/dj-body-04.mp3",
+      "durationMs": 8674,
+      "overMusic": true,
+      "part": "body",
+      "kit": "dj",
+      "lines": [
+        {
+          "speaker": "Coco Halley",
+          "text": "Surf report! Waves of pure time, four minutes high, glassy, with the occasional Thursday. If you wipe out, you'll come out on Monday. Totally fine! Mondays are lovely here!",
+          "startMs": 41
+        }
+      ]
+    },
+    {
+      "id": "dj-body-05",
+      "category": "dj",
+      "url": "/voice/comet-marimba/dj-body-05.mp3",
+      "durationMs": 7017,
+      "overMusic": true,
+      "part": "body",
+      "kit": "dj",
+      "lines": [
+        {
+          "speaker": "Coco Halley",
+          "text": "The Hammock Syndicate have a new album, and they recorded the whole thing lying down. You can hear it. Some of it is snoring. It's the best bit.",
+          "startMs": 43
+        }
+      ]
+    },
+    {
+      "id": "dj-body-06",
+      "category": "dj",
+      "url": "/voice/comet-marimba/dj-body-06.mp3",
+      "durationMs": 7362,
+      "overMusic": true,
+      "part": "body",
+      "kit": "dj",
+      "lines": [
+        {
+          "speaker": "Coco Halley",
+          "text": "Reminder! The tide on this beach goes out every seventy six years. So if you left a towel by the water, it's fine. It'll be fine for ages!",
+          "startMs": 43
+        }
+      ]
+    },
+    {
+      "id": "dj-close-01",
+      "category": "dj",
+      "url": "/voice/comet-marimba/dj-close-01.mp3",
+      "durationMs": 3399,
+      "overMusic": true,
+      "part": "close",
+      "kit": "dj",
+      "lines": [
+        {
+          "speaker": "Coco Halley",
+          "text": "Here's another one! Bare feet only, please! Sandals by the door!",
+          "startMs": 40
+        }
+      ]
+    },
+    {
+      "id": "dj-close-02",
+      "category": "dj",
+      "url": "/voice/comet-marimba/dj-close-02.mp3",
+      "durationMs": 2579,
+      "overMusic": true,
+      "part": "close",
+      "kit": "dj",
+      "lines": [
+        {
+          "speaker": "Coco Halley",
+          "text": "Here's a breezy one! Hold on to your hat! Too late!",
+          "startMs": 40
+        }
+      ]
+    },
+    {
+      "id": "dj-close-03",
+      "category": "dj",
+      "url": "/voice/comet-marimba/dj-close-03.mp3",
+      "durationMs": 3973,
+      "overMusic": true,
+      "part": "close",
+      "kit": "dj",
+      "lines": [
+        {
+          "speaker": "Coco Halley",
+          "text": "Crab! Drop the next one!",
+          "startMs": 41
+        },
+        {
+          "speaker": "DJ Sunglass Crab",
+          "text": "Click.",
+          "startMs": 1929
+        },
+        {
+          "speaker": "Coco Halley",
+          "text": "He dropped it!",
+          "startMs": 2822
+        }
+      ]
+    },
+    {
+      "id": "dj-close-04",
+      "category": "dj",
+      "url": "/voice/comet-marimba/dj-close-04.mp3",
+      "durationMs": 2695,
+      "overMusic": true,
+      "part": "close",
+      "kit": "dj",
+      "lines": [
+        {
+          "speaker": "Coco Halley",
+          "text": "Here comes the marimba! It's always the marimba!",
+          "startMs": 38
+        }
+      ]
+    },
+    {
+      "id": "greg-comes-home-02",
+      "category": "story",
+      "url": "/voice/comet-marimba/greg-comes-home-02.mp3",
+      "durationMs": 72877,
+      "title": "Greg Comes Home, Part Two: Hitching a Comet",
+      "overMusic": false,
+      "serial": {
+        "id": "greg-comes-home",
+        "episode": 2
+      },
+      "lines": [
+        {
+          "speaker": "Coco Halley",
+          "text": "Okay, beach people! We picked up a passenger in lane twelve! He hopped across from a whale ship at four this morning! Say hi, Greg!",
+          "startMs": 440
+        },
+        {
+          "speaker": "Greg, a Shadow",
+          "text": "Hello. Sorry. I'm very sandy.",
+          "startMs": 7699
+        },
+        {
+          "speaker": "Coco Halley",
+          "text": "Everybody's sandy! That's the beach! Crab, get the man some sunglasses!",
+          "startMs": 10494
+        },
+        {
+          "speaker": "DJ Sunglass Crab",
+          "text": "Click.",
+          "startMs": 14633
+        },
+        {
+          "speaker": "Coco Halley",
+          "text": "The crab has given Greg sunglasses! The crab has never given anyone anything! Greg, that's huge!",
+          "startMs": 15625
+        },
+        {
+          "speaker": "Greg, a Shadow",
+          "text": "They're very small. They fit, though. When you're a shadow, everything fits.",
+          "startMs": 21124
+        },
+        {
+          "speaker": "Coco Halley",
+          "text": "So where are you headed?",
+          "startMs": 24867
+        },
+        {
+          "speaker": "Greg, a Shadow",
+          "text": "Home. The eastern Overlap. Is the comet going that way?",
+          "startMs": 26567
+        },
+        {
+          "speaker": "Coco Halley",
+          "text": "Sort of! But we only come round every seventy six years, so you'll have to jump off at exactly the right moment. Too early, you're in space. Too late, you're in seventy six years.",
+          "startMs": 30662
+        },
+        {
+          "speaker": "Greg, a Shadow",
+          "text": "When's the right moment?",
+          "startMs": 40295
+        },
+        {
+          "speaker": "Coco Halley",
+          "text": "When the moon goes past on the left! Big grey one, sleepy face, speakers on it. Jump for the moon. The moon's always got room.",
+          "startMs": 42428
+        },
+        {
+          "speaker": "Coco Halley",
+          "text": "Hey, Greg. Why did you leave, in the first place?",
+          "startMs": 49180
+        },
+        {
+          "speaker": "Greg, a Shadow",
+          "text": "He never went anywhere. I wanted to see things.",
+          "startMs": 51931
+        },
+        {
+          "speaker": "Greg, a Shadow",
+          "text": "I've seen things now. I want to tell him about them.",
+          "startMs": 55890
+        },
+        {
+          "speaker": "Coco Halley",
+          "text": "That's the best reason to go home I've ever heard! And I've never gone home!",
+          "startMs": 59419
+        },
+        {
+          "speaker": "Coco Halley",
+          "text": "There it is! The moon! Go, Greg! Jump!",
+          "startMs": 64051
+        },
+        {
+          "speaker": "Coco Halley",
+          "text": "He's off! He's flying! He's waving! He's still wearing the crab's sunglasses!",
+          "startMs": 67426
+        },
+        {
+          "speaker": "DJ Sunglass Crab",
+          "text": "Keep them.",
+          "startMs": 71606
+        }
+      ]
+    },
+    {
+      "id": "halloween-01",
+      "category": "dj",
+      "url": "/voice/comet-marimba/halloween-01.mp3",
+      "durationMs": 11172,
+      "title": "The Crab's Costume",
+      "overMusic": true,
+      "part": "body",
+      "kit": "dj",
+      "dates": [
+        "10-24",
+        "10-25",
+        "10-26",
+        "10-27",
+        "10-28",
+        "10-29",
+        "10-30",
+        "10-31"
+      ],
+      "lines": [
+        {
+          "speaker": "Coco Halley",
+          "text": "It's Halloween on the beach, and the crab has dressed up! He's taken his sunglasses off!",
+          "startMs": 40
+        },
+        {
+          "speaker": "DJ Sunglass Crab",
+          "text": "Click.",
+          "startMs": 4924
+        },
+        {
+          "speaker": "Coco Halley",
+          "text": "He's come as a crab without sunglasses! Nobody recognises him! It's genuinely unsettling!",
+          "startMs": 5916
+        }
+      ]
+    },
+    {
+      "id": "halloween-02",
+      "category": "id",
+      "url": "/voice/comet-marimba/halloween-02.mp3",
+      "durationMs": 8518,
+      "title": "Comet Marimba, Halloween",
+      "overMusic": true,
+      "dates": [
+        "10-24",
+        "10-25",
+        "10-26",
+        "10-27",
+        "10-28",
+        "10-29",
+        "10-30",
+        "10-31"
+      ],
+      "lines": [
+        {
+          "speaker": "Coco Halley",
+          "text": "Comet Marimba! Halloween on the tail! Spooky, sandy, and very, very fast!",
+          "startMs": 40
         }
       ]
     }

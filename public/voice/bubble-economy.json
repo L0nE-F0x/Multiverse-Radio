@@ -1,0 +1,577 @@
+{
+  "version": 1,
+  "station": "bubble-economy",
+  "clips": [
+    {
+      "id": "id-001",
+      "category": "id",
+      "url": "/voice/bubble-economy/id-001.mp3",
+      "durationMs": 8620,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Kiko Starlight",
+          "text": "You're tuned to Bubble Economy FM! Marina City Nine, where it's always Friday night. The weekend starts now!",
+          "startMs": 39
+        }
+      ]
+    },
+    {
+      "id": "id-002",
+      "category": "id",
+      "url": "/voice/bubble-economy/id-002.mp3",
+      "durationMs": 6567,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Kiko Starlight",
+          "text": "Bubble Economy FM. Nineteen eighty six, forever. Your hair looks amazing.",
+          "startMs": 39
+        }
+      ]
+    },
+    {
+      "id": "id-003",
+      "category": "id",
+      "url": "/voice/bubble-economy/id-003.mp3",
+      "durationMs": 7714,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Kiko Starlight",
+          "text": "This is Bubble Economy FM, ninety point five five. Prices are up, the top is down, and the weekend starts... now!",
+          "startMs": 39
+        }
+      ]
+    },
+    {
+      "id": "id-004",
+      "category": "id",
+      "url": "/voice/bubble-economy/id-004.mp3",
+      "durationMs": 7554,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Kiko Starlight",
+          "text": "Bubble Economy FM. A friendly reminder: please don't bring anything sharp to the waterfront.",
+          "startMs": 39
+        }
+      ]
+    },
+    {
+      "id": "id-005",
+      "category": "id",
+      "url": "/voice/bubble-economy/id-005.mp3",
+      "durationMs": 6884,
+      "overMusic": true,
+      "daypart": "morning",
+      "lines": [
+        {
+          "speaker": "Kiko Starlight",
+          "text": "Good morning, Marina City Nine! Just kidding. It's Friday night. It's always Friday night. Bubble Economy FM!",
+          "startMs": 38
+        }
+      ]
+    },
+    {
+      "id": "id-006",
+      "category": "id",
+      "url": "/voice/bubble-economy/id-006.mp3",
+      "durationMs": 6458,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Kiko Starlight",
+          "text": "Bubble Economy FM. The sound of a city that has never, ever had a Monday.",
+          "startMs": 36
+        }
+      ]
+    },
+    {
+      "id": "id-007",
+      "category": "id",
+      "url": "/voice/bubble-economy/id-007.mp3",
+      "durationMs": 7061,
+      "overMusic": true,
+      "daypart": "night",
+      "lines": [
+        {
+          "speaker": "Kiko Starlight",
+          "text": "Bubble Economy FM. It's late, it's Friday, and the neon is doing that thing you like.",
+          "startMs": 39
+        }
+      ]
+    },
+    {
+      "id": "dj-001",
+      "category": "dj",
+      "url": "/voice/bubble-economy/dj-001.mp3",
+      "durationMs": 14841,
+      "title": "The Weekend Starts Now",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Kiko Starlight",
+          "text": "Kiko Starlight here, with some big news. Are you ready? The weekend... starts... now!",
+          "startMs": 38
+        },
+        {
+          "speaker": "Kiko Starlight",
+          "text": "I've said that every night for forty years, and I have been right every single time. That's fourteen thousand six hundred Fridays in a row. Here's a song for the next one!",
+          "startMs": 5037
+        }
+      ]
+    },
+    {
+      "id": "dj-002",
+      "category": "dj",
+      "url": "/voice/bubble-economy/dj-002.mp3",
+      "durationMs": 16610,
+      "title": "The Marina Index",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Kiko Starlight",
+          "text": "Quick look at the markets! The Marina Index is up again, just like every day since nineteen eighty six. Analysts say the bubble is completely healthy.",
+          "startMs": 48
+        },
+        {
+          "speaker": "Kiko Starlight",
+          "text": "Analysts are holding the bubble very, very carefully, with both hands, and asking everybody to stop walking near it. Here's a song!",
+          "startMs": 9043
+        }
+      ]
+    },
+    {
+      "id": "dj-003",
+      "category": "dj",
+      "url": "/voice/bubble-economy/dj-003.mp3",
+      "durationMs": 15333,
+      "title": "The Pin Amnesty",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Kiko Starlight",
+          "text": "A reminder from the city council! This weekend is the Marina City pin amnesty. Bring your pins, your needles, your cactuses and your pointed remarks to the drop-off on Harbour Drive. No questions asked.",
+          "startMs": 46
+        },
+        {
+          "speaker": "Kiko Starlight",
+          "text": "Let's keep this bubble beautiful! Kiko loves you.",
+          "startMs": 12705
+        }
+      ]
+    },
+    {
+      "id": "dj-004",
+      "category": "dj",
+      "url": "/voice/bubble-economy/dj-004.mp3",
+      "durationMs": 13876,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Kiko Starlight",
+          "text": "Property update! A studio apartment in the Bay Tower now costs one sunset, two lifetimes of savings, and a sincere compliment to the landlord.",
+          "startMs": 36
+        },
+        {
+          "speaker": "Kiko Starlight",
+          "text": "They're selling fast! The landlord has never felt so good about himself. Here's the next one.",
+          "startMs": 8893
+        }
+      ]
+    },
+    {
+      "id": "dj-005",
+      "category": "dj",
+      "url": "/voice/bubble-economy/dj-005.mp3",
+      "durationMs": 15559,
+      "title": "What's a Monday?",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Kiko Starlight",
+          "text": "A listener writes in. Kiko, what's a Monday? Oh, honey. I don't know. Nobody here has seen one since nineteen eighty six.",
+          "startMs": 39
+        },
+        {
+          "speaker": "Kiko Starlight",
+          "text": "My mother says she saw a Monday once, when she was a little girl. She says it was grey, and it had a meeting in it. Let's not talk about it. Here's a song!",
+          "startMs": 7369
+        }
+      ]
+    },
+    {
+      "id": "dj-006",
+      "category": "dj",
+      "url": "/voice/bubble-economy/dj-006.mp3",
+      "durationMs": 14932,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Kiko Starlight",
+          "text": "Big shout-out to everybody at the Golden Tower offices! You got your bonus today! You get your bonus every day, because every day is Friday, and Friday is payday!",
+          "startMs": 45
+        },
+        {
+          "speaker": "Kiko Starlight",
+          "text": "Put it in the bank. The bank will put it in a bigger bank. Everybody wins! The weekend starts now!",
+          "startMs": 9597
+        }
+      ]
+    },
+    {
+      "id": "dj-007",
+      "category": "dj",
+      "url": "/voice/bubble-economy/dj-007.mp3",
+      "durationMs": 13534,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Kiko Starlight",
+          "text": "This one goes out to the man on the forty-second floor who has been taping this station since nineteen eighty six. He's on tape number fourteen thousand.",
+          "startMs": 42
+        },
+        {
+          "speaker": "Kiko Starlight",
+          "text": "He has labelled every single one of them, Friday. And he is not wrong!",
+          "startMs": 9579
+        }
+      ]
+    },
+    {
+      "id": "dj-008",
+      "category": "dj",
+      "url": "/voice/bubble-economy/dj-008.mp3",
+      "durationMs": 11528,
+      "overMusic": true,
+      "daypart": "night",
+      "lines": [
+        {
+          "speaker": "Kiko Starlight",
+          "text": "It's getting late, Marina City. The neon's soft, the bay is shiny, and somewhere a saxophone is thinking about you.",
+          "startMs": 36
+        },
+        {
+          "speaker": "Kiko Starlight",
+          "text": "Is the weekend still starting? Of course it is, baby. It's just starting... slowly.",
+          "startMs": 6857
+        }
+      ]
+    },
+    {
+      "id": "dj-009",
+      "category": "dj",
+      "url": "/voice/bubble-economy/dj-009.mp3",
+      "durationMs": 11452,
+      "title": "For the Night Shift",
+      "overMusic": true,
+      "daypart": "night",
+      "lines": [
+        {
+          "speaker": "Kiko Starlight",
+          "text": "Shout-out to the night operator up on that relay ship! You look like you've been working so hard. Well, guess what? On our frequency, it's Friday.",
+          "startMs": 44
+        },
+        {
+          "speaker": "Kiko Starlight",
+          "text": "Clock off. Loosen the tie. The weekend starts now.",
+          "startMs": 8628
+        }
+      ]
+    },
+    {
+      "id": "dj-010",
+      "category": "dj",
+      "url": "/voice/bubble-economy/dj-010.mp3",
+      "durationMs": 15623,
+      "overMusic": true,
+      "daypart": "day",
+      "lines": [
+        {
+          "speaker": "Kiko Starlight",
+          "text": "If it's daytime where you are, don't panic! Close the blinds, push your jacket sleeves up, and put a slice of pineapple on the rim of something. Congratulations. It's Friday night.",
+          "startMs": 50
+        },
+        {
+          "speaker": "Kiko Starlight",
+          "text": "Lisa Lagoon does this every day. She has never seen the sun, and she has never looked better.",
+          "startMs": 10569
+        }
+      ]
+    },
+    {
+      "id": "dj-011",
+      "category": "dj",
+      "url": "/voice/bubble-economy/dj-011.mp3",
+      "durationMs": 11169,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Kiko Starlight",
+          "text": "People ask me, Kiko, aren't you tired? Forty years of Friday nights? And I tell them, no! Every Friday is the first Friday!",
+          "startMs": 37
+        },
+        {
+          "speaker": "Kiko Starlight",
+          "text": "Also, yes. I'm a little tired. But in a sparkly way. Here's a song!",
+          "startMs": 7487
+        }
+      ]
+    },
+    {
+      "id": "dj-012",
+      "category": "dj",
+      "url": "/voice/bubble-economy/dj-012.mp3",
+      "durationMs": 16137,
+      "title": "The Duet",
+      "overMusic": true,
+      "daypart": "evening",
+      "lines": [
+        {
+          "speaker": "Kiko Starlight",
+          "text": "Tonight at the Lagoon Lounge it's karaoke, and the Overtime Boys are doing their duet again. They've been doing that duet since nineteen eighty six.",
+          "startMs": 37
+        },
+        {
+          "speaker": "Kiko Starlight",
+          "text": "They have never once finished it, because somebody always shouts, one more time! And honestly? That somebody is usually me.",
+          "startMs": 9232
+        }
+      ]
+    },
+    {
+      "id": "id-friday-night-drive",
+      "category": "id",
+      "url": "/voice/bubble-economy/id-friday-night-drive.mp3",
+      "durationMs": 7746,
+      "overMusic": true,
+      "part": "open",
+      "show": "friday-night-drive",
+      "lines": [
+        {
+          "speaker": "Kiko Starlight",
+          "text": "Bubble Economy FM, and this is Friday Night Drive! Hands on the wheel, the bay on your left, and the weekend starts... now!",
+          "startMs": 42
+        }
+      ]
+    },
+    {
+      "id": "dj-friday-night-drive-001",
+      "category": "dj",
+      "url": "/voice/bubble-economy/dj-friday-night-drive-001.mp3",
+      "durationMs": 10470,
+      "overMusic": true,
+      "show": "friday-night-drive",
+      "lines": [
+        {
+          "speaker": "Kiko Starlight",
+          "text": "The Bay Expressway tonight is one long ribbon of tail lights, and every single one of them is singing along.",
+          "startMs": 37
+        },
+        {
+          "speaker": "Kiko Starlight",
+          "text": "If you're stuck in traffic, that's not traffic. That's a parade. And you're in it!",
+          "startMs": 6596
+        }
+      ]
+    },
+    {
+      "id": "dj-friday-night-drive-002",
+      "category": "dj",
+      "url": "/voice/bubble-economy/dj-friday-night-drive-002.mp3",
+      "durationMs": 14950,
+      "overMusic": true,
+      "show": "friday-night-drive",
+      "lines": [
+        {
+          "speaker": "Kiko Starlight",
+          "text": "Drive safe out there, Marina City. Mirrors, signal, shoulder pads.",
+          "startMs": 37
+        },
+        {
+          "speaker": "Kiko Starlight",
+          "text": "And if you see the man in the white convertible who's been circling the bay since nineteen eighty six, give him a wave. He's looking for the exit. There isn't one. He's having a wonderful time.",
+          "startMs": 4290
+        }
+      ]
+    },
+    {
+      "id": "id-after-hours-marina",
+      "category": "id",
+      "url": "/voice/bubble-economy/id-after-hours-marina.mp3",
+      "durationMs": 9528,
+      "overMusic": true,
+      "part": "open",
+      "show": "after-hours-marina",
+      "lines": [
+        {
+          "speaker": "Kiko Starlight",
+          "text": "This is After Hours Marina, on Bubble Economy FM. The last train left an hour ago. Another last train leaves in an hour. Let's take it slow.",
+          "startMs": 42
+        }
+      ]
+    },
+    {
+      "id": "dj-after-hours-marina-001",
+      "category": "dj",
+      "url": "/voice/bubble-economy/dj-after-hours-marina-001.mp3",
+      "durationMs": 9777,
+      "overMusic": true,
+      "show": "after-hours-marina",
+      "lines": [
+        {
+          "speaker": "Kiko Starlight",
+          "text": "It's three in the morning, and the vending machines on Pier Five are glowing for nobody. That's the most romantic thing I know.",
+          "startMs": 37
+        },
+        {
+          "speaker": "Kiko Starlight",
+          "text": "Here's a slow one, for the vending machines.",
+          "startMs": 7762
+        }
+      ]
+    },
+    {
+      "id": "dj-after-hours-marina-002",
+      "category": "dj",
+      "url": "/voice/bubble-economy/dj-after-hours-marina-002.mp3",
+      "durationMs": 8181,
+      "overMusic": true,
+      "show": "after-hours-marina",
+      "lines": [
+        {
+          "speaker": "Kiko Starlight",
+          "text": "The waiter at the Lagoon Lounge is stacking the chairs. In an hour, he'll unstack them again.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Kiko Starlight",
+          "text": "That's the economy, honey. That's what keeps it bubbling.",
+          "startMs": 5375
+        }
+      ]
+    },
+    {
+      "id": "id-saturday-never-comes",
+      "category": "id",
+      "url": "/voice/bubble-economy/id-saturday-never-comes.mp3",
+      "durationMs": 8354,
+      "overMusic": true,
+      "part": "open",
+      "show": "saturday-never-comes",
+      "lines": [
+        {
+          "speaker": "Kiko Starlight",
+          "text": "Good morn... no. No. This is Saturday Never Comes, on Bubble Economy FM. Blinds down, sunglasses on. It's still Friday night, baby.",
+          "startMs": 36
+        }
+      ]
+    },
+    {
+      "id": "dj-saturday-never-comes-001",
+      "category": "dj",
+      "url": "/voice/bubble-economy/dj-saturday-never-comes-001.mp3",
+      "durationMs": 8155,
+      "overMusic": true,
+      "show": "saturday-never-comes",
+      "lines": [
+        {
+          "speaker": "Kiko Starlight",
+          "text": "Some of you out there may have a Saturday morning. That's okay! We don't judge.",
+          "startMs": 37
+        },
+        {
+          "speaker": "Kiko Starlight",
+          "text": "Just keep it down, would you? People here are very sensitive about it.",
+          "startMs": 4429
+        }
+      ]
+    },
+    {
+      "id": "dj-saturday-never-comes-002",
+      "category": "dj",
+      "url": "/voice/bubble-economy/dj-saturday-never-comes-002.mp3",
+      "durationMs": 12377,
+      "overMusic": true,
+      "show": "saturday-never-comes",
+      "lines": [
+        {
+          "speaker": "Kiko Starlight",
+          "text": "A listener in the Harbour District says she woke up today, and for one second, she felt like it was Saturday.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Kiko Starlight",
+          "text": "Honey, that's just what happens when you sleep in your earrings. Put the jacket back on. Drink some water. It's Friday.",
+          "startMs": 5858
+        }
+      ]
+    },
+    {
+      "id": "dj-halloween-001",
+      "category": "dj",
+      "url": "/voice/bubble-economy/dj-halloween-001.mp3",
+      "durationMs": 14599,
+      "title": "The Scariest Costume",
+      "overMusic": true,
+      "dates": [
+        "10-24",
+        "10-25",
+        "10-26",
+        "10-27",
+        "10-28",
+        "10-29",
+        "10-30",
+        "10-31"
+      ],
+      "lines": [
+        {
+          "speaker": "Kiko Starlight",
+          "text": "Is it Halloween? Not here, honey. Here it's Friday. But it's your Halloween, so the whole city has dressed up, just for you.",
+          "startMs": 42
+        },
+        {
+          "speaker": "Kiko Starlight",
+          "text": "The costume is Saturday. Everybody's walking round in pyjamas, reading a newspaper. It's terrifying. The weekend starts now!",
+          "startMs": 7110
+        }
+      ]
+    },
+    {
+      "id": "dj-halloween-002",
+      "category": "dj",
+      "url": "/voice/bubble-economy/dj-halloween-002.mp3",
+      "durationMs": 18108,
+      "title": "The Calendar in the Drawer",
+      "overMusic": true,
+      "dates": [
+        "10-24",
+        "10-25",
+        "10-26",
+        "10-27",
+        "10-28",
+        "10-29",
+        "10-30",
+        "10-31"
+      ],
+      "lines": [
+        {
+          "speaker": "Kiko Starlight",
+          "text": "Spooky story time. A temp in the old office district swears he found a calendar in a drawer, and on it there was a page that said...",
+          "startMs": 39
+        },
+        {
+          "speaker": "Kiko Starlight",
+          "text": "Monday.",
+          "startMs": 8047
+        },
+        {
+          "speaker": "Kiko Starlight",
+          "text": "Police went in. They found nothing. Just a stapler, still warm. Stay out of the old office district, Marina City. Here's a song, with all the lights on.",
+          "startMs": 9482
+        }
+      ]
+    }
+  ]
+}

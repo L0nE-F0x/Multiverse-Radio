@@ -1,0 +1,637 @@
+{
+  "version": 1,
+  "station": "breakbeat-observatory",
+  "clips": [
+    {
+      "id": "id-001",
+      "category": "id",
+      "url": "/voice/breakbeat-observatory/id-001.mp3",
+      "durationMs": 7262,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "MC Parallax",
+          "text": "Breakbeat Observatory! Ninety four point eight! Drum and bass from the top of Mount Subwoofer!",
+          "startMs": 35
+        }
+      ]
+    },
+    {
+      "id": "id-002",
+      "category": "id",
+      "url": "/voice/breakbeat-observatory/id-002.mp3",
+      "durationMs": 6610,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "MC Parallax",
+          "text": "This is Breakbeat Observatory. A hundred and seventy two beats a minute, at the speed of light. Hold on to your stars.",
+          "startMs": 38
+        }
+      ]
+    },
+    {
+      "id": "id-003",
+      "category": "id",
+      "url": "/voice/breakbeat-observatory/id-003.mp3",
+      "durationMs": 7010,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "MC Parallax",
+          "text": "MC Parallax, Breakbeat Observatory. Dome open, woofer up, and every star in the sky is shivering. Lovely.",
+          "startMs": 38
+        }
+      ]
+    },
+    {
+      "id": "id-004",
+      "category": "id",
+      "url": "/voice/breakbeat-observatory/id-004.mp3",
+      "durationMs": 7808,
+      "overMusic": true,
+      "daypart": "night",
+      "lines": [
+        {
+          "speaker": "MC Parallax",
+          "text": "Breakbeat Observatory. Clear skies, heavy bass, perfect seeing conditions. Let's see what we can hear.",
+          "startMs": 36
+        }
+      ]
+    },
+    {
+      "id": "id-005",
+      "category": "id",
+      "url": "/voice/breakbeat-observatory/id-005.mp3",
+      "durationMs": 5153,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Doctor Ferrin",
+          "text": "Breakbeat Observatory. Twenty three forty. Bass detected.",
+          "startMs": 50
+        },
+        {
+          "speaker": "MC Parallax",
+          "text": "She's right, you know.",
+          "startMs": 4207
+        }
+      ]
+    },
+    {
+      "id": "id-006",
+      "category": "id",
+      "url": "/voice/breakbeat-observatory/id-006.mp3",
+      "durationMs": 6602,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "MC Parallax",
+          "text": "You're locked to Breakbeat Observatory. Signal strength, massive. Distance, a few light years, give or take a drop.",
+          "startMs": 39
+        }
+      ]
+    },
+    {
+      "id": "id-007",
+      "category": "id",
+      "url": "/voice/breakbeat-observatory/id-007.mp3",
+      "durationMs": 7026,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "MC Parallax",
+          "text": "Breakbeat Observatory! Big up every galaxy listening right now. All two trillion of you.",
+          "startMs": 39
+        }
+      ]
+    },
+    {
+      "id": "dj-001",
+      "category": "dj",
+      "url": "/voice/breakbeat-observatory/dj-001.mp3",
+      "durationMs": 12672,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "MC Parallax",
+          "text": "That last tune was a hundred and seventy four beats a minute, and nine minutes long, which, at the speed of light, is about a hundred million miles.",
+          "startMs": 50
+        },
+        {
+          "speaker": "MC Parallax",
+          "text": "So if you're listening from the sun, it just got to you. Big up the sun! Here's the next one.",
+          "startMs": 7907
+        }
+      ]
+    },
+    {
+      "id": "dj-002",
+      "category": "dj",
+      "url": "/voice/breakbeat-observatory/dj-002.mp3",
+      "durationMs": 13819,
+      "title": "Shout-Outs",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "MC Parallax",
+          "text": "Shout-outs! Big up the Lesser Teacup Cluster. Big up the Velvet Spiral, all two hundred billion stars, I see you.",
+          "startMs": 36
+        },
+        {
+          "speaker": "MC Parallax",
+          "text": "And big up Gorbel's Nebula, who requested this one about thirty thousand years ago. Sorry for the wait, Gorbel. Worth it.",
+          "startMs": 6799
+        }
+      ]
+    },
+    {
+      "id": "dj-003",
+      "category": "dj",
+      "url": "/voice/breakbeat-observatory/dj-003.mp3",
+      "durationMs": 12848,
+      "title": "An Apology to the Brantley System",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "MC Parallax",
+          "text": "Quick apology to everybody in the Brantley System. That last drop moved your sun about four inches to the left. Your summers might be a bit warmer for a while. Our bad.",
+          "startMs": 38
+        },
+        {
+          "speaker": "MC Parallax",
+          "text": "Here's something lighter.",
+          "startMs": 10296
+        },
+        {
+          "speaker": "MC Parallax",
+          "text": "It's not lighter.",
+          "startMs": 11964
+        }
+      ]
+    },
+    {
+      "id": "dj-004",
+      "category": "dj",
+      "url": "/voice/breakbeat-observatory/dj-004.mp3",
+      "durationMs": 17484,
+      "title": "Doctor Ferrin",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "MC Parallax",
+          "text": "Up in the dome tonight, as always, it's Doctor Ferrin, our resident astronomer. Headphones on. Notebook out. Writing down every single drop.",
+          "startMs": 36
+        },
+        {
+          "speaker": "MC Parallax",
+          "text": "Three hundred nights a year she's up there, and she has never once nodded her head. Not once. Doc, how are we doing?",
+          "startMs": 8581
+        },
+        {
+          "speaker": "Doctor Ferrin",
+          "text": "Recording.",
+          "startMs": 15103
+        },
+        {
+          "speaker": "MC Parallax",
+          "text": "That's the vibe.",
+          "startMs": 16694
+        }
+      ]
+    },
+    {
+      "id": "dj-005",
+      "category": "dj",
+      "url": "/voice/breakbeat-observatory/dj-005.mp3",
+      "durationMs": 15690,
+      "title": "Observation Log",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Doctor Ferrin",
+          "text": "Observation log. Twenty three fifty one. The drop. Twenty three fifty one and four seconds. A star in Cassius Minor has moved.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Doctor Ferrin",
+          "text": "Twenty three fifty two. The star has moved back. It appears to be dancing. Noted.",
+          "startMs": 8470
+        },
+        {
+          "speaker": "MC Parallax",
+          "text": "Noted! She noted it! Here's another one!",
+          "startMs": 13721
+        }
+      ]
+    },
+    {
+      "id": "dj-006",
+      "category": "dj",
+      "url": "/voice/breakbeat-observatory/dj-006.mp3",
+      "durationMs": 11552,
+      "title": "A Calibration",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "MC Parallax",
+          "text": "Breaking news from the dome. I think. I think I just saw Doctor Ferrin's foot tap. Once. Doc, did your foot just tap?",
+          "startMs": 36
+        },
+        {
+          "speaker": "Doctor Ferrin",
+          "text": "It was a calibration.",
+          "startMs": 6871
+        },
+        {
+          "speaker": "MC Parallax",
+          "text": "It was a calibration, people! Calibrate with me!",
+          "startMs": 9064
+        }
+      ]
+    },
+    {
+      "id": "dj-007",
+      "category": "dj",
+      "url": "/voice/breakbeat-observatory/dj-007.mp3",
+      "durationMs": 15905,
+      "title": "The Nod",
+      "overMusic": true,
+      "daypart": "night",
+      "lines": [
+        {
+          "speaker": "MC Parallax",
+          "text": "Okay. I need everybody to stay very calm. About thirty seconds into that last tune, Doctor Ferrin nodded her head. Once. Slowly.",
+          "startMs": 37
+        },
+        {
+          "speaker": "MC Parallax",
+          "text": "And then she wrote something down, and underlined it twice. I don't know what it says. I'm not going to ask. Some things you just let be beautiful.",
+          "startMs": 8221
+        }
+      ]
+    },
+    {
+      "id": "dj-008",
+      "category": "dj",
+      "url": "/voice/breakbeat-observatory/dj-008.mp3",
+      "durationMs": 11802,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "MC Parallax",
+          "text": "If you're listening from the Andra Reach, you're hearing this set sixty thousand years from now. Hello, the future! Is the party still going?",
+          "startMs": 36
+        },
+        {
+          "speaker": "MC Parallax",
+          "text": "It is? I knew it! Tell them Parallax said hi. Here's one for the future.",
+          "startMs": 8044
+        }
+      ]
+    },
+    {
+      "id": "dj-009",
+      "category": "dj",
+      "url": "/voice/breakbeat-observatory/dj-009.mp3",
+      "durationMs": 14494,
+      "title": "The Old Cone",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "MC Parallax",
+          "text": "Technical note. The main woofer got a new cone this week. The old one had been pointed at the sky so long it started picking stuff up. Last night it played us a bassline from a planet that hasn't been named yet.",
+          "startMs": 37
+        },
+        {
+          "speaker": "MC Parallax",
+          "text": "So we kept it. It's in the gift shop. It's still going.",
+          "startMs": 11924
+        }
+      ]
+    },
+    {
+      "id": "dj-010",
+      "category": "dj",
+      "url": "/voice/breakbeat-observatory/dj-010.mp3",
+      "durationMs": 13607,
+      "title": "For the Night Shift",
+      "overMusic": true,
+      "daypart": "night",
+      "lines": [
+        {
+          "speaker": "MC Parallax",
+          "text": "Big, big shout to the Nightjar! Relay Seven! The night operator! I see your running lights. You're the closest listener we've got, about one point four light seconds out. Basically next door.",
+          "startMs": 50
+        },
+        {
+          "speaker": "MC Parallax",
+          "text": "Turn it up. The neighbours won't mind. You haven't got any.",
+          "startMs": 10797
+        }
+      ]
+    },
+    {
+      "id": "dj-011",
+      "category": "dj",
+      "url": "/voice/breakbeat-observatory/dj-011.mp3",
+      "durationMs": 11936,
+      "overMusic": true,
+      "daypart": "morning",
+      "lines": [
+        {
+          "speaker": "MC Parallax",
+          "text": "The sun's coming up over Mount Subwoofer, which means we have to turn down. The sun is very loud. Five thousand degrees of pure treble. We can't compete.",
+          "startMs": 47
+        },
+        {
+          "speaker": "MC Parallax",
+          "text": "One more tune, then the dome closes. Make it count.",
+          "startMs": 9303
+        }
+      ]
+    },
+    {
+      "id": "dj-012",
+      "category": "dj",
+      "url": "/voice/breakbeat-observatory/dj-012.mp3",
+      "durationMs": 13525,
+      "title": "Relay Four",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "MC Parallax",
+          "text": "Picking something up on the big woofer. Very faint. A man called Teodor, at Relay Four, asking if anyone can hear him.",
+          "startMs": 35
+        },
+        {
+          "speaker": "MC Parallax",
+          "text": "Teodor! We hear you, my friend! Here's one with extra sub, so it gets all the way out to you. Big up Relay Four!",
+          "startMs": 7345
+        }
+      ]
+    },
+    {
+      "id": "dj-013",
+      "category": "dj",
+      "url": "/voice/breakbeat-observatory/dj-013.mp3",
+      "durationMs": 10676,
+      "overMusic": true,
+      "daypart": "evening",
+      "lines": [
+        {
+          "speaker": "MC Parallax",
+          "text": "Evening, everybody! The sky's getting dark, which in our line of work means the speakers come out. The stars are tuning up. The moon's found a spot near the front.",
+          "startMs": 47
+        },
+        {
+          "speaker": "MC Parallax",
+          "text": "It's going to be a big one tonight.",
+          "startMs": 9173
+        }
+      ]
+    },
+    {
+      "id": "id-the-drop-zone",
+      "category": "id",
+      "url": "/voice/breakbeat-observatory/id-the-drop-zone.mp3",
+      "durationMs": 9255,
+      "overMusic": true,
+      "part": "open",
+      "show": "the-drop-zone",
+      "lines": [
+        {
+          "speaker": "MC Parallax",
+          "text": "Breakbeat Observatory, this is the Drop Zone! Dome open, woofers armed. Nearby planets, please secure any loose moons.",
+          "startMs": 37
+        }
+      ]
+    },
+    {
+      "id": "dj-the-drop-zone-001",
+      "category": "dj",
+      "url": "/voice/breakbeat-observatory/dj-the-drop-zone-001.mp3",
+      "durationMs": 12031,
+      "overMusic": true,
+      "show": "the-drop-zone",
+      "lines": [
+        {
+          "speaker": "MC Parallax",
+          "text": "Seismic update! The Drop Zone just registered a four point two on the observatory floor, and a mild tremor in the next valley, where some goats are now facing the other way.",
+          "startMs": 40
+        },
+        {
+          "speaker": "MC Parallax",
+          "text": "Sorry, goats. Here comes another one.",
+          "startMs": 10253
+        }
+      ]
+    },
+    {
+      "id": "dj-the-drop-zone-002",
+      "category": "dj",
+      "url": "/voice/breakbeat-observatory/dj-the-drop-zone-002.mp3",
+      "durationMs": 10085,
+      "overMusic": true,
+      "show": "the-drop-zone",
+      "lines": [
+        {
+          "speaker": "MC Parallax",
+          "text": "If you're in the dome tonight, watch out for the meteor shower. Those aren't meteors. Those are the stars we shook loose earlier.",
+          "startMs": 40
+        },
+        {
+          "speaker": "MC Parallax",
+          "text": "They'll be fine. Probably. Doc?",
+          "startMs": 7153
+        },
+        {
+          "speaker": "Doctor Ferrin",
+          "text": "Probably.",
+          "startMs": 9061
+        }
+      ]
+    },
+    {
+      "id": "id-light-cone",
+      "category": "id",
+      "url": "/voice/breakbeat-observatory/id-light-cone.mp3",
+      "durationMs": 7212,
+      "overMusic": true,
+      "part": "open",
+      "show": "light-cone",
+      "lines": [
+        {
+          "speaker": "MC Parallax",
+          "text": "It's late, and this is the Late Night Light Cone. Everything you hear tonight leaves here at the speed of light, and it's not slowing down.",
+          "startMs": 36
+        }
+      ]
+    },
+    {
+      "id": "dj-light-cone-001",
+      "category": "dj",
+      "url": "/voice/breakbeat-observatory/dj-light-cone-001.mp3",
+      "durationMs": 11139,
+      "overMusic": true,
+      "show": "light-cone",
+      "lines": [
+        {
+          "speaker": "MC Parallax",
+          "text": "After midnight the bass travels further. Every tune we play tonight is going to be heard, eventually, by somebody very far away and very surprised.",
+          "startMs": 35
+        },
+        {
+          "speaker": "MC Parallax",
+          "text": "Let's give them something to be surprised about.",
+          "startMs": 8936
+        }
+      ]
+    },
+    {
+      "id": "dj-light-cone-002",
+      "category": "dj",
+      "url": "/voice/breakbeat-observatory/dj-light-cone-002.mp3",
+      "durationMs": 9176,
+      "overMusic": true,
+      "show": "light-cone",
+      "lines": [
+        {
+          "speaker": "Doctor Ferrin",
+          "text": "Observation. Oh two hundred hours. It is very late. The music has not stopped.",
+          "startMs": 40
+        },
+        {
+          "speaker": "MC Parallax",
+          "text": "It's never stopping, Doc. Write that down.",
+          "startMs": 5046
+        },
+        {
+          "speaker": "Doctor Ferrin",
+          "text": "Never... stopping. Noted.",
+          "startMs": 7387
+        }
+      ]
+    },
+    {
+      "id": "id-closing-the-dome",
+      "category": "id",
+      "url": "/voice/breakbeat-observatory/id-closing-the-dome.mp3",
+      "durationMs": 8970,
+      "overMusic": true,
+      "part": "open",
+      "show": "closing-the-dome",
+      "lines": [
+        {
+          "speaker": "MC Parallax",
+          "text": "This is Closing the Dome, on Breakbeat Observatory. Last tunes before the sun comes up and drowns us out. Doc, final observations, please.",
+          "startMs": 41
+        }
+      ]
+    },
+    {
+      "id": "dj-closing-the-dome-001",
+      "category": "dj",
+      "url": "/voice/breakbeat-observatory/dj-closing-the-dome-001.mp3",
+      "durationMs": 11507,
+      "overMusic": true,
+      "show": "closing-the-dome",
+      "lines": [
+        {
+          "speaker": "MC Parallax",
+          "text": "Doc's packing up her notebook. She's filled another one tonight. That's three thousand notebooks, people, every page full of drops.",
+          "startMs": 43
+        },
+        {
+          "speaker": "MC Parallax",
+          "text": "One day we're going to read them all out, start to finish. That'll be a long show.",
+          "startMs": 7367
+        }
+      ]
+    },
+    {
+      "id": "dj-closing-the-dome-002",
+      "category": "dj",
+      "url": "/voice/breakbeat-observatory/dj-closing-the-dome-002.mp3",
+      "durationMs": 7674,
+      "overMusic": true,
+      "show": "closing-the-dome",
+      "lines": [
+        {
+          "speaker": "MC Parallax",
+          "text": "The sky's going pale. The stars are fading out, one by one, like a crowd going home.",
+          "startMs": 37
+        },
+        {
+          "speaker": "MC Parallax",
+          "text": "Thank you, stars. Get home safe. See you tonight.",
+          "startMs": 5448
+        }
+      ]
+    },
+    {
+      "id": "dj-halloween-001",
+      "category": "dj",
+      "url": "/voice/breakbeat-observatory/dj-halloween-001.mp3",
+      "durationMs": 16755,
+      "title": "A Ghost with a Sound System",
+      "overMusic": true,
+      "dates": [
+        "10-24",
+        "10-25",
+        "10-26",
+        "10-27",
+        "10-28",
+        "10-29",
+        "10-30",
+        "10-31"
+      ],
+      "lines": [
+        {
+          "speaker": "MC Parallax",
+          "text": "Halloween special, people! Tonight we pointed the woofer at a star that died a million years ago. It's still sending us its light. And, it turns out, its bass.",
+          "startMs": 46
+        },
+        {
+          "speaker": "MC Parallax",
+          "text": "That's a ghost, people. That's a ghost with a sound system. Doc?",
+          "startMs": 9408
+        },
+        {
+          "speaker": "Doctor Ferrin",
+          "text": "Observation. Spooky.",
+          "startMs": 12876
+        },
+        {
+          "speaker": "MC Parallax",
+          "text": "She's never written spooky before.",
+          "startMs": 15151
+        }
+      ]
+    },
+    {
+      "id": "id-halloween-001",
+      "category": "id",
+      "url": "/voice/breakbeat-observatory/id-halloween-001.mp3",
+      "durationMs": 10131,
+      "overMusic": true,
+      "dates": [
+        "10-24",
+        "10-25",
+        "10-26",
+        "10-27",
+        "10-28",
+        "10-29",
+        "10-30",
+        "10-31"
+      ],
+      "lines": [
+        {
+          "speaker": "MC Parallax",
+          "text": "Breakbeat Observatory. Happy Halloween. Half the stars you can see are already gone. Dance anyway.",
+          "startMs": 37
+        }
+      ]
+    }
+  ]
+}

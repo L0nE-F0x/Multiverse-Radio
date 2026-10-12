@@ -1,0 +1,602 @@
+{
+  "version": 1,
+  "station": "event-horizon-surf",
+  "clips": [
+    {
+      "id": "id-001",
+      "category": "id",
+      "url": "/voice/event-horizon-surf/id-001.mp3",
+      "durationMs": 7662,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Dash Coriolis",
+          "text": "This is the Event Horizon Surf Report! Surf's up, tide's out, and it's not coming back!",
+          "startMs": 42
+        }
+      ]
+    },
+    {
+      "id": "id-002",
+      "category": "id",
+      "url": "/voice/event-horizon-surf/id-002.mp3",
+      "durationMs": 7760,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Dash Coriolis",
+          "text": "Event Horizon Surf Report. The sun's bent, the waves are gravitational, and the vibes are, frankly, inescapable.",
+          "startMs": 44
+        }
+      ]
+    },
+    {
+      "id": "id-003",
+      "category": "id",
+      "url": "/voice/event-horizon-surf/id-003.mp3",
+      "durationMs": 8282,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Dash Coriolis",
+          "text": "You're listening to the Event Horizon Surf Report. No returns. That's not a rule. That's physics.",
+          "startMs": 50
+        }
+      ]
+    },
+    {
+      "id": "id-004",
+      "category": "id",
+      "url": "/voice/event-horizon-surf/id-004.mp3",
+      "durationMs": 7602,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Dash Coriolis",
+          "text": "Event Horizon Surf Report, one oh one point seven five! Waves rolling in at four to six years. Wax up!",
+          "startMs": 40
+        }
+      ]
+    },
+    {
+      "id": "id-005",
+      "category": "id",
+      "url": "/voice/event-horizon-surf/id-005.mp3",
+      "durationMs": 8576,
+      "overMusic": true,
+      "daypart": "morning",
+      "lines": [
+        {
+          "speaker": "Dash Coriolis",
+          "text": "Morning from the Event Horizon Surf Report! The sun came up hours ago. It's still coming up. It's taking the long way round the hole.",
+          "startMs": 50
+        }
+      ]
+    },
+    {
+      "id": "id-006",
+      "category": "id",
+      "url": "/voice/event-horizon-surf/id-006.mp3",
+      "durationMs": 6932,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Dash Coriolis",
+          "text": "Event Horizon Surf Report. Dash Coriolis, board under my arm, about to paddle out. Any minute now.",
+          "startMs": 43
+        }
+      ]
+    },
+    {
+      "id": "id-007",
+      "category": "id",
+      "url": "/voice/event-horizon-surf/id-007.mp3",
+      "durationMs": 7936,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Dash Coriolis",
+          "text": "Event Horizon Surf Report. If you can hear this, you're still on the right side of the line. Nice.",
+          "startMs": 41
+        }
+      ]
+    },
+    {
+      "id": "dj-001",
+      "category": "dj",
+      "url": "/voice/event-horizon-surf/dj-001.mp3",
+      "durationMs": 14446,
+      "title": "Paddling Out",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Dash Coriolis",
+          "text": "That's it. After this one, I'm paddling out. For real this time. Board's waxed, leash is on, I've done my stretches.",
+          "startMs": 47
+        },
+        {
+          "speaker": "Dash Coriolis",
+          "text": "I've been doing my stretches for about eleven years, which, I'm told, is thorough. Here's a song. Then I'm going.",
+          "startMs": 7656
+        }
+      ]
+    },
+    {
+      "id": "dj-002",
+      "category": "dj",
+      "url": "/voice/event-horizon-surf/dj-002.mp3",
+      "durationMs": 16341,
+      "title": "Real Talk",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Dash Coriolis",
+          "text": "Okay. Real talk. I'm not paddling out. I've never been paddling out. I just like holding the board. It's a really good board. It's got a little sunset on it.",
+          "startMs": 39
+        },
+        {
+          "speaker": "Dash Coriolis",
+          "text": "Some guys surf. Some guys hold the board and talk about surfing. Both are valid. Here's a song.",
+          "startMs": 10026
+        }
+      ]
+    },
+    {
+      "id": "dj-003",
+      "category": "dj",
+      "url": "/voice/event-horizon-surf/dj-003.mp3",
+      "durationMs": 16519,
+      "title": "Kai's Ride",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Dash Coriolis",
+          "text": "Big shout-out to Kai, who caught a monster on Tuesday and is still on it. From here he looks totally frozen, like a photo of a guy surfing.",
+          "startMs": 43
+        },
+        {
+          "speaker": "Dash Coriolis",
+          "text": "But from his side, he's having the ride of his life. He'll be back in about nine hundred years. We'll keep his towel warm.",
+          "startMs": 9287
+        }
+      ]
+    },
+    {
+      "id": "dj-004",
+      "category": "dj",
+      "url": "/voice/event-horizon-surf/dj-004.mp3",
+      "durationMs": 14773,
+      "title": "Lost Property",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Dash Coriolis",
+          "text": "Lost property! The sea took a flip-flop, a beach umbrella, a family-size cooler, and a guy called Steve. None of them are coming back. Nothing comes back here. That's sort of the vibe.",
+          "startMs": 50
+        },
+        {
+          "speaker": "Dash Coriolis",
+          "text": "Steve's fine, by the way. Steve's just... further.",
+          "startMs": 11792
+        }
+      ]
+    },
+    {
+      "id": "dj-005",
+      "category": "dj",
+      "url": "/voice/event-horizon-surf/dj-005.mp3",
+      "durationMs": 18416,
+      "title": "Bonnie",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Dash Coriolis",
+          "text": "Shout-out to Bonnie, up in the lifeguard tower. Six years on duty, and she has never rescued anyone, because, you know, physics. But she's waved goodbye to loads of people. Beautifully. Both arms.",
+          "startMs": 46
+        },
+        {
+          "speaker": "Dash Coriolis",
+          "text": "Bonnie, say hi!",
+          "startMs": 12943
+        },
+        {
+          "speaker": "Bonnie, Lifeguard",
+          "text": "Hi, Dash. You going out today?",
+          "startMs": 14310
+        },
+        {
+          "speaker": "Dash Coriolis",
+          "text": "Totally.",
+          "startMs": 16532
+        },
+        {
+          "speaker": "Bonnie, Lifeguard",
+          "text": "Sure you are.",
+          "startMs": 17724
+        }
+      ]
+    },
+    {
+      "id": "dj-006",
+      "category": "dj",
+      "url": "/voice/event-horizon-surf/dj-006.mp3",
+      "durationMs": 11462,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Dash Coriolis",
+          "text": "Bonnie's tower is leaning a little closer to the hole than last week. She says it's fine. She's put a book under one leg.",
+          "startMs": 41
+        },
+        {
+          "speaker": "Dash Coriolis",
+          "text": "The book is also leaning. Bonnie, buddy. Come down for a smoothie.",
+          "startMs": 7636
+        }
+      ]
+    },
+    {
+      "id": "dj-007",
+      "category": "dj",
+      "url": "/voice/event-horizon-surf/dj-007.mp3",
+      "durationMs": 14642,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Dash Coriolis",
+          "text": "Message from a listener who surfed close to the edge last summer. Says he came in, went to grab a soda, and when he got back, his kids were older than him.",
+          "startMs": 50
+        },
+        {
+          "speaker": "Dash Coriolis",
+          "text": "He says they're all getting along great. He says the soda was still cold, so, win.",
+          "startMs": 9671
+        }
+      ]
+    },
+    {
+      "id": "dj-008",
+      "category": "dj",
+      "url": "/voice/event-horizon-surf/dj-008.mp3",
+      "durationMs": 11447,
+      "title": "Tide Times",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Dash Coriolis",
+          "text": "Tide report. The tide went out in nineteen fifty nine. It hasn't come back. We don't expect it to.",
+          "startMs": 40
+        },
+        {
+          "speaker": "Dash Coriolis",
+          "text": "We've stopped printing the tide times. We just print a little picture of a wave, waving.",
+          "startMs": 6529
+        }
+      ]
+    },
+    {
+      "id": "dj-009",
+      "category": "dj",
+      "url": "/voice/event-horizon-surf/dj-009.mp3",
+      "durationMs": 12394,
+      "title": "For the Night Shift",
+      "overMusic": true,
+      "daypart": "night",
+      "lines": [
+        {
+          "speaker": "Dash Coriolis",
+          "text": "Shout-out to the night operator on the Nightjar! Relay Seven! I see you up there, drifting nice and slow, well clear of the hole. Smart. Good lines.",
+          "startMs": 46
+        },
+        {
+          "speaker": "Dash Coriolis",
+          "text": "Stay on that side, buddy. We'd miss you.",
+          "startMs": 10045
+        }
+      ]
+    },
+    {
+      "id": "dj-010",
+      "category": "dj",
+      "url": "/voice/event-horizon-surf/dj-010.mp3",
+      "durationMs": 14340,
+      "title": "Sponsored by Grumbel's Ladders",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Dash Coriolis",
+          "text": "The Event Horizon Surf Report is brought to you by Grumbel's Ladders. Every lifeguard tower on this beach is a Grumbel's. They lean, but they never fall in. Mostly.",
+          "startMs": 39
+        },
+        {
+          "speaker": "Dash Coriolis",
+          "text": "Grumbel's Ladders. Up is a choice. In is a decision.",
+          "startMs": 11225
+        }
+      ]
+    },
+    {
+      "id": "dj-011",
+      "category": "dj",
+      "url": "/voice/event-horizon-surf/dj-011.mp3",
+      "durationMs": 10138,
+      "overMusic": true,
+      "daypart": "evening",
+      "lines": [
+        {
+          "speaker": "Dash Coriolis",
+          "text": "Surf school's done for the day. Lesson one is always the same. Stand up on the board. Lesson two is, wave goodbye.",
+          "startMs": 48
+        },
+        {
+          "speaker": "Dash Coriolis",
+          "text": "There is no lesson three. Here's a song.",
+          "startMs": 7834
+        }
+      ]
+    },
+    {
+      "id": "weather-001",
+      "category": "weather",
+      "url": "/voice/event-horizon-surf/weather-001.mp3",
+      "durationMs": 36030,
+      "title": "The Surf Report",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Dash Coriolis",
+          "text": "Here's your full Event Horizon surf report.",
+          "startMs": 448
+        },
+        {
+          "speaker": "Dash Coriolis",
+          "text": "North beach, four to six years, clean and glassy, with a light offshore pull toward the singularity. Slight spaghettification on the inside. Experienced surfers only.",
+          "startMs": 3528
+        },
+        {
+          "speaker": "Dash Coriolis",
+          "text": "South beach, two years, choppy, with a strong time rip near the pier. If you see yourself paddling back out, don't wave. It only confuses him.",
+          "startMs": 14678
+        },
+        {
+          "speaker": "Dash Coriolis",
+          "text": "The Point is closed. The Point is now, technically, inside.",
+          "startMs": 23966
+        },
+        {
+          "speaker": "Dash Coriolis",
+          "text": "Wind, light and leaning. Water temperature, lovely, then infinite. Have fun out there, be safe, and say your goodbyes.",
+          "startMs": 28151
+        }
+      ]
+    },
+    {
+      "id": "id-dawn-patrol",
+      "category": "id",
+      "url": "/voice/event-horizon-surf/id-dawn-patrol.mp3",
+      "durationMs": 10080,
+      "overMusic": true,
+      "part": "open",
+      "show": "dawn-patrol",
+      "lines": [
+        {
+          "speaker": "Dash Coriolis",
+          "text": "This is Dawn Patrol, on the Event Horizon Surf Report! Beach is empty, waves are perfect, coffee's on. I'm paddling out right after this. Totally.",
+          "startMs": 47
+        }
+      ]
+    },
+    {
+      "id": "dj-dawn-patrol-001",
+      "category": "dj",
+      "url": "/voice/event-horizon-surf/dj-dawn-patrol-001.mp3",
+      "durationMs": 14157,
+      "overMusic": true,
+      "show": "dawn-patrol",
+      "lines": [
+        {
+          "speaker": "Dash Coriolis",
+          "text": "The dawn patrol crew is out there already. Four boards in the lineup, waiting on the next set. They've been waiting since about two years ago.",
+          "startMs": 48
+        },
+        {
+          "speaker": "Dash Coriolis",
+          "text": "Set's coming. You can feel it, in your bones. Your bones are getting heavier. That's the set.",
+          "startMs": 9098
+        }
+      ]
+    },
+    {
+      "id": "dj-dawn-patrol-002",
+      "category": "dj",
+      "url": "/voice/event-horizon-surf/dj-dawn-patrol-002.mp3",
+      "durationMs": 10395,
+      "overMusic": true,
+      "show": "dawn-patrol",
+      "lines": [
+        {
+          "speaker": "Dash Coriolis",
+          "text": "Coffee update. I started pouring a cup when I got here. It's still pouring. Something about the gravity.",
+          "startMs": 37
+        },
+        {
+          "speaker": "Dash Coriolis",
+          "text": "Longest pour of my life. Not complaining. It's really good coffee.",
+          "startMs": 6404
+        }
+      ]
+    },
+    {
+      "id": "id-the-long-sunset",
+      "category": "id",
+      "url": "/voice/event-horizon-surf/id-the-long-sunset.mp3",
+      "durationMs": 8826,
+      "overMusic": true,
+      "part": "open",
+      "show": "the-long-sunset",
+      "lines": [
+        {
+          "speaker": "Dash Coriolis",
+          "text": "It's the Long Sunset, on the Event Horizon Surf Report. The sun's going down. Then down again. Grab a towel. This'll take a while.",
+          "startMs": 39
+        }
+      ]
+    },
+    {
+      "id": "dj-the-long-sunset-001",
+      "category": "dj",
+      "url": "/voice/event-horizon-surf/dj-the-long-sunset-001.mp3",
+      "durationMs": 14246,
+      "overMusic": true,
+      "show": "the-long-sunset",
+      "lines": [
+        {
+          "speaker": "Dash Coriolis",
+          "text": "Check out that sunset, everybody. Light bends round the hole, so the sun sets here, and then it sets again, and then a third time, kind of behind you, very politely.",
+          "startMs": 37
+        },
+        {
+          "speaker": "Dash Coriolis",
+          "text": "Four sunsets for the price of one. Here's a song for number three.",
+          "startMs": 10376
+        }
+      ]
+    },
+    {
+      "id": "dj-the-long-sunset-002",
+      "category": "dj",
+      "url": "/voice/event-horizon-surf/dj-the-long-sunset-002.mp3",
+      "durationMs": 11169,
+      "overMusic": true,
+      "show": "the-long-sunset",
+      "lines": [
+        {
+          "speaker": "Dash Coriolis",
+          "text": "Bonnie's lowering the flag on the tower. The flag says no returns. It's the same flag as the morning. It's the same flag as always.",
+          "startMs": 47
+        },
+        {
+          "speaker": "Dash Coriolis",
+          "text": "She lowers it anyway. Tradition.",
+          "startMs": 9216
+        }
+      ]
+    },
+    {
+      "id": "id-night-session",
+      "category": "id",
+      "url": "/voice/event-horizon-surf/id-night-session.mp3",
+      "durationMs": 9026,
+      "overMusic": true,
+      "part": "open",
+      "show": "night-session",
+      "lines": [
+        {
+          "speaker": "Dash Coriolis",
+          "text": "Night Session, on the Event Horizon Surf Report. The ring's glowing, the water's dark, and Bonnie's put her little lamp on. Leashes on, people.",
+          "startMs": 48
+        }
+      ]
+    },
+    {
+      "id": "dj-night-session-001",
+      "category": "dj",
+      "url": "/voice/event-horizon-surf/dj-night-session-001.mp3",
+      "durationMs": 10639,
+      "overMusic": true,
+      "show": "night-session",
+      "lines": [
+        {
+          "speaker": "Dash Coriolis",
+          "text": "There's a few night surfers out there with little lights on their boards, way out near the edge. From here they look like stars.",
+          "startMs": 40
+        },
+        {
+          "speaker": "Dash Coriolis",
+          "text": "A couple of them have been out so long, they're on the charts.",
+          "startMs": 7412
+        }
+      ]
+    },
+    {
+      "id": "dj-night-session-002",
+      "category": "dj",
+      "url": "/voice/event-horizon-surf/dj-night-session-002.mp3",
+      "durationMs": 9928,
+      "overMusic": true,
+      "show": "night-session",
+      "lines": [
+        {
+          "speaker": "Dash Coriolis",
+          "text": "Water's warm tonight. Warm and dark and very patient. Listen. You can hear the waves, real slow.",
+          "startMs": 47
+        },
+        {
+          "speaker": "Dash Coriolis",
+          "text": "That's a seven-year wave, breaking. Takes a while. Worth it.",
+          "startMs": 6789
+        }
+      ]
+    },
+    {
+      "id": "dj-halloween-001",
+      "category": "dj",
+      "url": "/voice/event-horizon-surf/dj-halloween-001.mp3",
+      "durationMs": 15060,
+      "title": "The Ghost Surfers",
+      "overMusic": true,
+      "dates": [
+        "10-24",
+        "10-25",
+        "10-26",
+        "10-27",
+        "10-28",
+        "10-29",
+        "10-30",
+        "10-31"
+      ],
+      "lines": [
+        {
+          "speaker": "Dash Coriolis",
+          "text": "Halloween at the beach, and the ghost surfers are out. They're not really ghosts. They're a crew from nineteen fifty nine, still finishing the same wave.",
+          "startMs": 50
+        },
+        {
+          "speaker": "Dash Coriolis",
+          "text": "They look kind of see-through from here, because of the light bending. Happy Halloween, guys. Great form.",
+          "startMs": 9159
+        }
+      ]
+    },
+    {
+      "id": "dj-halloween-002",
+      "category": "dj",
+      "url": "/voice/event-horizon-surf/dj-halloween-002.mp3",
+      "durationMs": 17420,
+      "title": "The Bonfire",
+      "overMusic": true,
+      "dates": [
+        "10-24",
+        "10-25",
+        "10-26",
+        "10-27",
+        "10-28",
+        "10-29",
+        "10-30",
+        "10-31"
+      ],
+      "lines": [
+        {
+          "speaker": "Dash Coriolis",
+          "text": "Bonnie's running the Halloween bonfire on north beach. Bring a marshmallow on a stick. Hold it near the fire, and it toasts.",
+          "startMs": 47
+        },
+        {
+          "speaker": "Dash Coriolis",
+          "text": "Hold it near the hole, and it toasts for about a thousand years. Perfect golden brown. You won't be there to eat it, but somebody will, and they'll be so happy.",
+          "startMs": 8054
+        }
+      ]
+    }
+  ]
+}

@@ -113,6 +113,93 @@ def bubbles(rate: float, level_db: float) -> Step:
     return run
 
 
+def shimmer(level_db: float, rt60: float, pitch: float = 2.0) -> Step:
+    """A faint halo: the line pitched up (an octave by default) into a bright reverb, mixed far under."""
+
+    def run(x: np.ndarray, rng: np.random.Generator) -> np.ndarray:
+        up = dsp.ffmpeg_filter(np.concatenate([x, dsp.silence(0.05)]), f"rubberband=pitch={pitch}:formant=shifted")
+        ir = dsp.reverb_ir(rng, rt60, predelay=0.04, hi=10000, lo=1200, dark=0.6)
+        wet = dsp.convolve(up, ir)
+        out = np.zeros(max(len(x), len(wet)), np.float32)
+        out[: len(x)] += x
+        out[: len(wet)] += wet * (dsp.rms(x) / max(dsp.rms(wet), 1e-9)) * db(level_db)
+        return out
+
+    return run
+
+
+def wow(depth: float, rate: float, flutter_depth: float = 0.0, flutter_rate: float = 9.0) -> Step:
+    """Pitch wobble from an off-centre record (wow) and a wobbly motor (flutter), by resampling."""
+
+    def run(x: np.ndarray, rng: np.random.Generator) -> np.ndarray:
+        n = len(x)
+        t = dsp.times(n)
+        speed = (1 + depth * np.sin(dsp.TAU * rate * t + rng.uniform(0, dsp.TAU))
+                 + flutter_depth * np.sin(dsp.TAU * flutter_rate * t + rng.uniform(0, dsp.TAU)))
+        pos = np.clip(np.cumsum(speed) - speed[0], 0, n - 1)
+        return dsp.f32(np.interp(pos, np.arange(n), x))
+
+    return run
+
+
+def surface(level_db: float, crackle: float, tail: float = 0.25) -> Step:
+    """Record surface noise: hiss, a low rumble and crackle, running a little past the words."""
+
+    def run(x: np.ndarray, rng: np.random.Generator) -> np.ndarray:
+        ref = dsp.rms(x)
+        if ref <= 1e-9:
+            return x
+        x = np.concatenate([x, dsp.silence(tail)])
+        n = len(x)
+        base = 20 * np.log10(ref) + level_db
+        hiss_ = dsp.at_rms(dsp.band(dsp.white(rng, n), 900, 6000), base)
+        rumble = dsp.at_rms(dsp.band(dsp.colored(rng, n, -6), 30, 160), base + 2)
+        pops = dsp.band(dsp.impulses(rng, n, crackle, 0.2, 1.0), 700, 7000)
+        clicks = dsp.band(dsp.impulses(rng, n, crackle * 0.08, 0.6, 1.0), 200, 3000)
+        noise = dsp.fade(hiss_ + rumble + (pops * 1.6 + clicks * 2.5) * ref, 0.02, tail)
+        return dsp.f32(x + noise)
+
+    return run
+
+
+def squelch(head: float, tail: float, level_db: float) -> Step:
+    """CB squelch: a burst of channel noise as the mic keys up, and the 'kssh' when it lets go."""
+
+    def burst(rng: np.random.Generator, seconds: float, ref: float) -> np.ndarray:
+        n = dsp.ns(seconds)
+        t = dsp.times(n)
+        noise = dsp.band(dsp.white(rng, n), 350, 2800, order=4) * (1 + 0.5 * np.sin(dsp.TAU * 70 * t))
+        env = np.minimum(1, t / 0.004) * np.minimum(1, (seconds - t) / 0.012)
+        return dsp.at_rms(dsp.f32(noise * env), 20 * np.log10(ref) + level_db)
+
+    def run(x: np.ndarray, rng: np.random.Generator) -> np.ndarray:
+        ref = dsp.rms(x)
+        if ref <= 1e-9:
+            return x
+        gap = dsp.silence(0.03)
+        return dsp.f32(np.concatenate([burst(rng, head, ref) * 0.5, gap, x, gap, burst(rng, tail, ref)]))
+
+    return run
+
+
+def ghostly(delay: float, whisper_db: float, echo_delay: float, echo_db: float) -> Step:
+    """A voice slightly behind itself: a breathy double just behind the words (inside the ~30 ms
+    the ear fuses, so it reads as air rather than smear) and a thin, dim copy trailing further back."""
+
+    def run(x: np.ndarray, rng: np.random.Generator) -> np.ndarray:
+        breath = dsp.ffmpeg_filter(x, WHISPERIZE + ",highpass=f=500,equalizer=f=5000:t=q:w=1:g=3")
+        breath = dsp.at_rms(breath, 20 * np.log10(dsp.rms(x) + 1e-12) + whisper_db)
+        echo = dsp.band(dsp.ffmpeg_filter(x, "rubberband=pitch=0.985:formant=preserved"), 300, 3000)
+        echo = dsp.at_rms(echo, 20 * np.log10(dsp.rms(x) + 1e-12) + echo_db)
+        out = np.zeros(len(x) + dsp.ns(echo_delay) + dsp.ns(0.05), np.float32)
+        dsp.place(out, x, 0.0)
+        dsp.place(out, breath, delay)
+        dsp.place(out, echo, echo_delay)
+        return out
+
+    return run
+
+
 @dataclass(frozen=True)
 class Preset:
     steps: tuple[Step, ...]
@@ -192,6 +279,39 @@ PRESETS: dict[str, Preset] = {
         ff("highpass=f=250,lowpass=f=3800"),
         reverb(1.1, -3, dry=0.75, predelay=0.03, hi=3500),
     ), level_db=-4.0),
+    # v3
+    "ship": Preset((
+        # HUSH on the ship's PA: full and clear (it talks a lot), a touch of speaker, a small
+        # metal cabin and a faint octave-up halo.
+        ff("highpass=f=110,equalizer=f=320:t=q:w=1.2:g=-2,equalizer=f=2800:t=q:w=1.4:g=2.5,"
+           "lowpass=f=9500,acompressor=threshold=-24dB:ratio=2.5:attack=6:release=120:makeup=2dB"),
+        ff("chorus=0.92:0.92:18|27:0.12|0.09:0.21|0.27:0.6|0.8", tail=0.05),
+        reverb(0.45, -17, predelay=0.012, hi=7000, early=[(0.009, 0.5), (0.017, 0.35), (0.026, 0.25)]),
+        shimmer(-25, 1.6),
+    )),
+    "cb": Preset((
+        ff("highpass=f=340,highpass=f=340,lowpass=f=2800,lowpass=f=2800,equalizer=f=1500:t=q:w=1.2:g=5,"
+           "acompressor=threshold=-32dB:ratio=10:attack=1:release=50:makeup=9dB"),
+        drive(10),
+        flutter(0.08, 1.7),
+        hiss(-26, 350, 3000, crackle=4),
+        bandlimit(300, 3000),
+        squelch(0.07, 0.22, -7),
+    ), level_db=-1.5),
+    "vinyl": Preset((
+        ff("highpass=f=160,highpass=f=160,lowpass=f=5200,lowpass=f=5200,equalizer=f=1300:t=q:w=1:g=3,"
+           "acompressor=threshold=-26dB:ratio=3:attack=5:release=100:makeup=3dB"),
+        drive(4),
+        wow(0.0035, 0.55, 0.0012, 7.5),
+        reverb(0.7, -16, predelay=0.02, hi=4000),
+        surface(-31, 9),
+    ), level_db=-1.0),
+    "ghost": Preset((
+        ff("highpass=f=180,lowpass=f=7500,equalizer=f=3500:t=q:w=1:g=2"),
+        ghostly(0.022, -6, 0.23, -15),
+        flutter(0.12, 0.4),
+        reverb(2.8, -13, predelay=0.06, hi=5000),
+    ), level_db=-2.0),
 }
 
 

@@ -1,0 +1,583 @@
+{
+  "version": 1,
+  "station": "piano-empty-rooms",
+  "clips": [
+    {
+      "id": "id-001",
+      "category": "id",
+      "url": "/voice/piano-empty-rooms/id-001.mp3",
+      "durationMs": 5633,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The Caretaker",
+          "text": "Piano for Empty Rooms. Ninety three point oh five. Please. Don't get up.",
+          "startMs": 37
+        }
+      ]
+    },
+    {
+      "id": "id-002",
+      "category": "id",
+      "url": "/voice/piano-empty-rooms/id-002.mp3",
+      "durationMs": 5706,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The Caretaker",
+          "text": "This is Piano for Empty Rooms. Music, for rooms nobody has entered yet.",
+          "startMs": 50
+        }
+      ]
+    },
+    {
+      "id": "id-003",
+      "category": "id",
+      "url": "/voice/piano-empty-rooms/id-003.mp3",
+      "durationMs": 5426,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The Caretaker",
+          "text": "Piano for Empty Rooms. The door is open slightly. It always has been.",
+          "startMs": 36
+        }
+      ]
+    },
+    {
+      "id": "id-004",
+      "category": "id",
+      "url": "/voice/piano-empty-rooms/id-004.mp3",
+      "durationMs": 6221,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The Caretaker",
+          "text": "You're listening to Piano for Empty Rooms, from the unvisited wing. Quietly, please.",
+          "startMs": 50
+        }
+      ]
+    },
+    {
+      "id": "id-005",
+      "category": "id",
+      "url": "/voice/piano-empty-rooms/id-005.mp3",
+      "durationMs": 6122,
+      "overMusic": true,
+      "daypart": "night",
+      "lines": [
+        {
+          "speaker": "The Caretaker",
+          "text": "Piano for Empty Rooms. It's late. The rooms don't mind. They have nowhere to be.",
+          "startMs": 37
+        }
+      ]
+    },
+    {
+      "id": "id-006",
+      "category": "id",
+      "url": "/voice/piano-empty-rooms/id-006.mp3",
+      "durationMs": 5319,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The Caretaker",
+          "text": "Piano for Empty Rooms. Nobody is here.",
+          "startMs": 38
+        },
+        {
+          "speaker": "The Caretaker",
+          "text": "That's the idea.",
+          "startMs": 3948
+        }
+      ]
+    },
+    {
+      "id": "dj-001",
+      "category": "dj",
+      "url": "/voice/piano-empty-rooms/dj-001.mp3",
+      "durationMs": 13038,
+      "title": "The Linen Room",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The Caretaker",
+          "text": "This next piece is for the linen room on the third floor. It was finished in the spring. Nobody has been in since.",
+          "startMs": 44
+        },
+        {
+          "speaker": "The Caretaker",
+          "text": "It has shelves, and a window, and it has never been told what it's for.",
+          "startMs": 8207
+        }
+      ]
+    },
+    {
+      "id": "dj-002",
+      "category": "dj",
+      "url": "/voice/piano-empty-rooms/dj-002.mp3",
+      "durationMs": 15638,
+      "title": "The Guest Room",
+      "overMusic": true,
+      "daypart": "evening",
+      "lines": [
+        {
+          "speaker": "The Caretaker",
+          "text": "This one is for the guest room. It's been made up for a guest for a very long time. Fresh sheets every Sunday. A glass of water on the nightstand.",
+          "startMs": 39
+        },
+        {
+          "speaker": "The Caretaker",
+          "text": "The guest hasn't come. The room isn't upset. It's ready. That's all.",
+          "startMs": 10707
+        }
+      ]
+    },
+    {
+      "id": "dj-003",
+      "category": "dj",
+      "url": "/voice/piano-empty-rooms/dj-003.mp3",
+      "durationMs": 13264,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The Caretaker",
+          "text": "I don't go into the rooms. I'm not supposed to. I sit outside, in the corridor, and the piano plays, and I listen at the doors.",
+          "startMs": 36
+        },
+        {
+          "speaker": "The Caretaker",
+          "text": "It's a good arrangement. Nobody disturbs anybody.",
+          "startMs": 9452
+        }
+      ]
+    },
+    {
+      "id": "dj-004",
+      "category": "dj",
+      "url": "/voice/piano-empty-rooms/dj-004.mp3",
+      "durationMs": 11499,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The Caretaker",
+          "text": "The piano is playing itself again tonight. It doesn't need me. I've been told I'm not needed, by several people, quite kindly.",
+          "startMs": 41
+        },
+        {
+          "speaker": "The Caretaker",
+          "text": "I come anyway. Someone should hear it.",
+          "startMs": 8802
+        }
+      ]
+    },
+    {
+      "id": "dj-005",
+      "category": "dj",
+      "url": "/voice/piano-empty-rooms/dj-005.mp3",
+      "durationMs": 18245,
+      "title": "The Ballroom",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The Caretaker",
+          "text": "There's a ballroom on the fourth floor. Sprung floor. Chandeliers. A little balcony for the band. Nobody has ever danced there. Not once.",
+          "startMs": 46
+        },
+        {
+          "speaker": "The Caretaker",
+          "text": "The floor is perfect. Not a single scuff. This is a waltz for it. You don't have to dance. Neither does the floor.",
+          "startMs": 10420
+        }
+      ]
+    },
+    {
+      "id": "dj-006",
+      "category": "dj",
+      "url": "/voice/piano-empty-rooms/dj-006.mp3",
+      "durationMs": 21693,
+      "title": "Footprints in the East Room",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The Caretaker",
+          "text": "Something happened in the east wing this week. Footprints, in the dust. One person. To the window, and back. They stood at the window for a while, I think. Long enough to see the garden.",
+          "startMs": 46
+        },
+        {
+          "speaker": "The Caretaker",
+          "text": "We've taken the east room off the schedule. It's a visited room now. It'll be all right. It looked out of the window too.",
+          "startMs": 13657
+        }
+      ]
+    },
+    {
+      "id": "dj-007",
+      "category": "dj",
+      "url": "/voice/piano-empty-rooms/dj-007.mp3",
+      "durationMs": 18369,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The Caretaker",
+          "text": "People ask what a caretaker does, in rooms nobody uses. Mostly, I dust the light.",
+          "startMs": 39
+        },
+        {
+          "speaker": "The Caretaker",
+          "text": "It comes in through the tall windows and lies on the floorboards, and the dust settles in it. I don't move the dust. I just make sure the light is still there in the morning.",
+          "startMs": 6959
+        }
+      ]
+    },
+    {
+      "id": "dj-008",
+      "category": "dj",
+      "url": "/voice/piano-empty-rooms/dj-008.mp3",
+      "durationMs": 16693,
+      "title": "The Room Behind the Bookcase",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The Caretaker",
+          "text": "This piece is for the room behind the bookcase. Nobody has found it. I know it's there, because the corridor is three feet longer than the rooms add up to.",
+          "startMs": 47
+        },
+        {
+          "speaker": "The Caretaker",
+          "text": "I haven't looked. It's not my place. But it deserves music, the same as the others.",
+          "startMs": 10679
+        }
+      ]
+    },
+    {
+      "id": "dj-009",
+      "category": "dj",
+      "url": "/voice/piano-empty-rooms/dj-009.mp3",
+      "durationMs": 14854,
+      "title": "The Door",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The Caretaker",
+          "text": "The door at the back of the music room is open about an inch. It has been since I came here. I've never closed it.",
+          "startMs": 50
+        },
+        {
+          "speaker": "The Caretaker",
+          "text": "I don't know if it's an invitation or a draught. I've decided it's both. That seems kindest.",
+          "startMs": 8103
+        }
+      ]
+    },
+    {
+      "id": "dj-010",
+      "category": "dj",
+      "url": "/voice/piano-empty-rooms/dj-010.mp3",
+      "durationMs": 12994,
+      "overMusic": true,
+      "daypart": "morning",
+      "lines": [
+        {
+          "speaker": "The Caretaker",
+          "text": "Morning, now. The light is coming round the east side. In a minute it will reach the piano, and the piano will play a little brighter.",
+          "startMs": 36
+        },
+        {
+          "speaker": "The Caretaker",
+          "text": "It always does. It doesn't know it does. Don't tell it.",
+          "startMs": 9197
+        }
+      ]
+    },
+    {
+      "id": "dj-011",
+      "category": "dj",
+      "url": "/voice/piano-empty-rooms/dj-011.mp3",
+      "durationMs": 15329,
+      "title": "For the Night Watch",
+      "overMusic": true,
+      "daypart": "night",
+      "lines": [
+        {
+          "speaker": "The Caretaker",
+          "text": "If you're the one on the ship, on the night watch. I expect there's a room aboard that nobody uses. A storeroom. A spare cabin. A cupboard with one chair in it.",
+          "startMs": 50
+        },
+        {
+          "speaker": "The Caretaker",
+          "text": "This one is for it. Leave the door the way you found it.",
+          "startMs": 11531
+        }
+      ]
+    },
+    {
+      "id": "dj-012",
+      "category": "dj",
+      "url": "/voice/piano-empty-rooms/dj-012.mp3",
+      "durationMs": 16202,
+      "title": "The Waiting Room",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The Caretaker",
+          "text": "This is for a waiting room, in a station that was built, and finished, and never opened. Rows of benches. A clock that somebody winds.",
+          "startMs": 47
+        },
+        {
+          "speaker": "The Caretaker",
+          "text": "Nobody is waiting there. Which, if you think about it, is the best kind of waiting room.",
+          "startMs": 10060
+        }
+      ]
+    },
+    {
+      "id": "dj-013",
+      "category": "dj",
+      "url": "/voice/piano-empty-rooms/dj-013.mp3",
+      "durationMs": 15187,
+      "title": "A New Attic",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The Caretaker",
+          "text": "This one is for the attic of a house on a road that was only finished last week. Nobody has been up the ladder yet. It's warm up there, and quiet, and it smells of new wood.",
+          "startMs": 48
+        },
+        {
+          "speaker": "The Caretaker",
+          "text": "One day there'll be boxes. Not yet.",
+          "startMs": 12463
+        }
+      ]
+    },
+    {
+      "id": "id-dust-sheets",
+      "category": "id",
+      "url": "/voice/piano-empty-rooms/id-dust-sheets.mp3",
+      "durationMs": 7815,
+      "overMusic": true,
+      "part": "open",
+      "show": "dust-sheets",
+      "lines": [
+        {
+          "speaker": "The Caretaker",
+          "text": "This is Dust Sheets, on Piano for Empty Rooms. The chairs are covered. The lamps are off. Mind the rug.",
+          "startMs": 37
+        }
+      ]
+    },
+    {
+      "id": "dj-dust-sheets-001",
+      "category": "dj",
+      "url": "/voice/piano-empty-rooms/dj-dust-sheets-001.mp3",
+      "durationMs": 12447,
+      "overMusic": true,
+      "show": "dust-sheets",
+      "lines": [
+        {
+          "speaker": "The Caretaker",
+          "text": "I've been round with the dust sheets. The chairs in the drawing room are covered now, and they look like small ghosts having a meeting.",
+          "startMs": 50
+        },
+        {
+          "speaker": "The Caretaker",
+          "text": "I don't mind. They're only furniture, being shy.",
+          "startMs": 9048
+        }
+      ]
+    },
+    {
+      "id": "dj-dust-sheets-002",
+      "category": "dj",
+      "url": "/voice/piano-empty-rooms/dj-dust-sheets-002.mp3",
+      "durationMs": 12239,
+      "overMusic": true,
+      "show": "dust-sheets",
+      "lines": [
+        {
+          "speaker": "The Caretaker",
+          "text": "The grandfather clock in the hall has been stopped since before I came. I don't wind it. I think it's resting.",
+          "startMs": 38
+        },
+        {
+          "speaker": "The Caretaker",
+          "text": "I just like to stand near it, at about this time, and agree with it.",
+          "startMs": 7612
+        }
+      ]
+    },
+    {
+      "id": "id-unvisited-hours",
+      "category": "id",
+      "url": "/voice/piano-empty-rooms/id-unvisited-hours.mp3",
+      "durationMs": 7276,
+      "overMusic": true,
+      "part": "open",
+      "show": "unvisited-hours",
+      "lines": [
+        {
+          "speaker": "The Caretaker",
+          "text": "It's the middle of the night. This is the Unvisited Hours. Nobody will come now. We can all relax.",
+          "startMs": 36
+        }
+      ]
+    },
+    {
+      "id": "dj-unvisited-hours-001",
+      "category": "dj",
+      "url": "/voice/piano-empty-rooms/dj-unvisited-hours-001.mp3",
+      "durationMs": 15194,
+      "overMusic": true,
+      "show": "unvisited-hours",
+      "lines": [
+        {
+          "speaker": "The Caretaker",
+          "text": "At this hour the house makes small sounds. The pipes. The stairs settling. A window easing in its frame.",
+          "startMs": 42
+        },
+        {
+          "speaker": "The Caretaker",
+          "text": "People think a house is quiet when it's empty. It isn't. It's just talking to itself, now that it can.",
+          "startMs": 8132
+        }
+      ]
+    },
+    {
+      "id": "dj-unvisited-hours-002",
+      "category": "dj",
+      "url": "/voice/piano-empty-rooms/dj-unvisited-hours-002.mp3",
+      "durationMs": 12783,
+      "overMusic": true,
+      "show": "unvisited-hours",
+      "lines": [
+        {
+          "speaker": "The Caretaker",
+          "text": "Three in the morning. Every room in the wing is empty, every door closed, except the one. The piano is playing for all of them at once.",
+          "startMs": 47
+        },
+        {
+          "speaker": "The Caretaker",
+          "text": "That takes some doing. It manages.",
+          "startMs": 10076
+        }
+      ]
+    },
+    {
+      "id": "id-first-light",
+      "category": "id",
+      "url": "/voice/piano-empty-rooms/id-first-light.mp3",
+      "durationMs": 7022,
+      "overMusic": true,
+      "part": "open",
+      "show": "first-light",
+      "lines": [
+        {
+          "speaker": "The Caretaker",
+          "text": "Good morning. This is First Light in the East Wing. The sun is in the windows. The piano knows.",
+          "startMs": 50
+        }
+      ]
+    },
+    {
+      "id": "dj-first-light-001",
+      "category": "dj",
+      "url": "/voice/piano-empty-rooms/dj-first-light-001.mp3",
+      "durationMs": 17664,
+      "overMusic": true,
+      "show": "first-light",
+      "lines": [
+        {
+          "speaker": "The Caretaker",
+          "text": "The sun has reached the ballroom. Long gold stripes from the windows, right across the floor, and the chandelier throwing little lights on the ceiling.",
+          "startMs": 38
+        },
+        {
+          "speaker": "The Caretaker",
+          "text": "If anyone saw it, they'd gasp. Nobody will. It does it anyway. That's the whole idea, really.",
+          "startMs": 10534
+        }
+      ]
+    },
+    {
+      "id": "dj-first-light-002",
+      "category": "dj",
+      "url": "/voice/piano-empty-rooms/dj-first-light-002.mp3",
+      "durationMs": 9162,
+      "overMusic": true,
+      "show": "first-light",
+      "lines": [
+        {
+          "speaker": "The Caretaker",
+          "text": "Morning on the east side. The footprints are still there in the dust, from the other week. I haven't swept them.",
+          "startMs": 45
+        },
+        {
+          "speaker": "The Caretaker",
+          "text": "The room seems to like them.",
+          "startMs": 7333
+        }
+      ]
+    },
+    {
+      "id": "dj-halloween-001",
+      "category": "dj",
+      "url": "/voice/piano-empty-rooms/dj-halloween-001.mp3",
+      "durationMs": 14608,
+      "title": "Not Haunted",
+      "overMusic": true,
+      "dates": [
+        "10-24",
+        "10-25",
+        "10-26",
+        "10-27",
+        "10-28",
+        "10-29",
+        "10-30",
+        "10-31"
+      ],
+      "lines": [
+        {
+          "speaker": "The Caretaker",
+          "text": "It's the time of year when people ask me if the empty rooms are haunted. No. A haunted room has somebody in it.",
+          "startMs": 36
+        },
+        {
+          "speaker": "The Caretaker",
+          "text": "These rooms are waiting for somebody. That's a different thing entirely. It's much less noise.",
+          "startMs": 8381
+        }
+      ]
+    },
+    {
+      "id": "dj-halloween-002",
+      "category": "dj",
+      "url": "/voice/piano-empty-rooms/dj-halloween-002.mp3",
+      "durationMs": 14815,
+      "title": "The Pumpkin",
+      "overMusic": true,
+      "dates": [
+        "10-24",
+        "10-25",
+        "10-26",
+        "10-27",
+        "10-28",
+        "10-29",
+        "10-30",
+        "10-31"
+      ],
+      "lines": [
+        {
+          "speaker": "The Caretaker",
+          "text": "Someone has left a carved pumpkin at the end of the west corridor. A candle in it. Lit. I didn't light it. Nobody has been in.",
+          "startMs": 42
+        },
+        {
+          "speaker": "The Caretaker",
+          "text": "It's been glowing all week. I've decided not to look into it. It's company.",
+          "startMs": 9554
+        }
+      ]
+    }
+  ]
+}

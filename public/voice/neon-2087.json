@@ -20,7 +20,7 @@
       "id": "id-002",
       "category": "id",
       "url": "/voice/neon-2087/id-002.mp3",
-      "durationMs": 7331,
+      "durationMs": 7342,
       "overMusic": true,
       "lines": [
         {
@@ -34,7 +34,7 @@
       "id": "id-003",
       "category": "id",
       "url": "/voice/neon-2087/id-003.mp3",
-      "durationMs": 5645,
+      "durationMs": 5626,
       "overMusic": true,
       "lines": [
         {
@@ -48,7 +48,7 @@
       "id": "id-004",
       "category": "id",
       "url": "/voice/neon-2087/id-004.mp3",
-      "durationMs": 7690,
+      "durationMs": 7688,
       "overMusic": true,
       "daypart": "night",
       "lines": [
@@ -63,7 +63,7 @@
       "id": "id-005",
       "category": "id",
       "url": "/voice/neon-2087/id-005.mp3",
-      "durationMs": 7788,
+      "durationMs": 7798,
       "overMusic": true,
       "lines": [
         {
@@ -77,7 +77,7 @@
       "id": "id-006",
       "category": "id",
       "url": "/voice/neon-2087/id-006.mp3",
-      "durationMs": 7506,
+      "durationMs": 7514,
       "overMusic": true,
       "daypart": "morning",
       "lines": [
@@ -92,7 +92,7 @@
       "id": "id-007",
       "category": "id",
       "url": "/voice/neon-2087/id-007.mp3",
-      "durationMs": 7109,
+      "durationMs": 7108,
       "overMusic": true,
       "lines": [
         {
@@ -203,7 +203,7 @@
         {
           "speaker": "Velocity Jones",
           "text": "It's late, it's neon, it's twenty eighty-seven. If you're driving, keep it at a safe and stylish speed. If you're not driving, pretend. Hands at ten and two. Feel that? That's the future, baby.",
-          "startMs": 40
+          "startMs": 41
         }
       ]
     },
@@ -418,6 +418,422 @@
           "speaker": "Bev",
           "text": "Oh, that's nice. I'll try the next station, love.",
           "startMs": 31814
+        }
+      ]
+    },
+    {
+      "id": "the-rad-hour-open",
+      "category": "id",
+      "url": "/voice/neon-2087/the-rad-hour-open.mp3",
+      "durationMs": 8026,
+      "title": "The Rad Hour",
+      "overMusic": true,
+      "part": "open",
+      "show": "the-rad-hour",
+      "lines": [
+        {
+          "speaker": "Velocity Jones",
+          "text": "This is the Rad Hour! Counting down the most rad ordinary things in the multiverse! Let's go!",
+          "startMs": 49
+        }
+      ]
+    },
+    {
+      "id": "the-rad-hour-01",
+      "category": "dj",
+      "url": "/voice/neon-2087/the-rad-hour-01.mp3",
+      "durationMs": 13343,
+      "overMusic": true,
+      "show": "the-rad-hour",
+      "lines": [
+        {
+          "speaker": "Velocity Jones",
+          "text": "At number three on the Rad Hour, socks still warm from the dryer. At number two, the moment the kettle clicks off. And at number one.",
+          "startMs": 40
+        },
+        {
+          "speaker": "Velocity Jones",
+          "text": "Thinking it's Friday when it isn't, and having a really nice twenty seconds anyway.",
+          "startMs": 8744
+        }
+      ]
+    },
+    {
+      "id": "the-rad-hour-02",
+      "category": "dj",
+      "url": "/voice/neon-2087/the-rad-hour-02.mp3",
+      "durationMs": 10348,
+      "overMusic": true,
+      "show": "the-rad-hour",
+      "lines": [
+        {
+          "speaker": "Velocity Jones",
+          "text": "Rad Hour listener vote! You said the most rad thing today was, quote, my cat sat on me.",
+          "startMs": 36
+        },
+        {
+          "speaker": "Velocity Jones",
+          "text": "That's not news. That's not even unusual. It's still number one. Cats are rad.",
+          "startMs": 5799
+        }
+      ]
+    },
+    {
+      "id": "midnight-drive-open",
+      "category": "id",
+      "url": "/voice/neon-2087/midnight-drive-open.mp3",
+      "durationMs": 8682,
+      "title": "Midnight Drive",
+      "overMusic": true,
+      "part": "open",
+      "show": "midnight-drive",
+      "lines": [
+        {
+          "speaker": "Velocity Jones",
+          "text": "It's Midnight Drive, on Neon twenty eighty-seven. It's always midnight here. But this one's the real one.",
+          "startMs": 38
+        }
+      ]
+    },
+    {
+      "id": "midnight-drive-01",
+      "category": "dj",
+      "url": "/voice/neon-2087/midnight-drive-01.mp3",
+      "durationMs": 9074,
+      "overMusic": true,
+      "show": "midnight-drive",
+      "lines": [
+        {
+          "speaker": "Velocity Jones",
+          "text": "Mile four thousand on the grid. The car with too many wheels just passed me. Gave me a little honk.",
+          "startMs": 50
+        },
+        {
+          "speaker": "Velocity Jones",
+          "text": "All fourteen horns. Respect, buddy.",
+          "startMs": 6593
+        }
+      ]
+    },
+    {
+      "id": "midnight-drive-02",
+      "category": "dj",
+      "url": "/voice/neon-2087/midnight-drive-02.mp3",
+      "durationMs": 10204,
+      "overMusic": true,
+      "show": "midnight-drive",
+      "lines": [
+        {
+          "speaker": "Velocity Jones",
+          "text": "If you're on the night bus right now, forehead on the window, watching the lights go by, you're doing it. You're in the music video.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Velocity Jones",
+          "text": "Nobody's filming. Doesn't matter. It counts.",
+          "startMs": 7576
+        }
+      ]
+    },
+    {
+      "id": "dj-open-01",
+      "category": "dj",
+      "url": "/voice/neon-2087/dj-open-01.mp3",
+      "durationMs": 2150,
+      "overMusic": true,
+      "part": "open",
+      "kit": "dj",
+      "lines": [
+        {
+          "speaker": "Velocity Jones",
+          "text": "That was rad. That was so rad. Wow.",
+          "startMs": 39
+        }
+      ]
+    },
+    {
+      "id": "dj-open-02",
+      "category": "dj",
+      "url": "/voice/neon-2087/dj-open-02.mp3",
+      "durationMs": 4306,
+      "overMusic": true,
+      "part": "open",
+      "kit": "dj",
+      "lines": [
+        {
+          "speaker": "Velocity Jones",
+          "text": "Neon twenty eighty-seven. The future. Already happened. Still happening.",
+          "startMs": 49
+        }
+      ]
+    },
+    {
+      "id": "dj-open-03",
+      "category": "dj",
+      "url": "/voice/neon-2087/dj-open-03.mp3",
+      "durationMs": 3609,
+      "overMusic": true,
+      "daypart": "night",
+      "part": "open",
+      "kit": "dj",
+      "lines": [
+        {
+          "speaker": "Velocity Jones",
+          "text": "Midnight on the grid. It's always midnight. It still gets me.",
+          "startMs": 48
+        }
+      ]
+    },
+    {
+      "id": "dj-open-04",
+      "category": "dj",
+      "url": "/voice/neon-2087/dj-open-04.mp3",
+      "durationMs": 3742,
+      "overMusic": true,
+      "part": "open",
+      "kit": "dj",
+      "lines": [
+        {
+          "speaker": "Velocity Jones",
+          "text": "Whoa. Okay. Okay. I'm back. I'm good. Where were we? The future. Right.",
+          "startMs": 46
+        }
+      ]
+    },
+    {
+      "id": "dj-body-01",
+      "category": "dj",
+      "url": "/voice/neon-2087/dj-body-01.mp3",
+      "durationMs": 12603,
+      "overMusic": true,
+      "part": "body",
+      "kit": "dj",
+      "lines": [
+        {
+          "speaker": "Velocity Jones",
+          "text": "Laser Mom just dropped a new track. She recorded it in her kitchen, with the oven light as a strobe. She says it's for everyone who's ever danced while waiting for toast.",
+          "startMs": 50
+        },
+        {
+          "speaker": "Velocity Jones",
+          "text": "That's everyone. That's all of us.",
+          "startMs": 10881
+        }
+      ]
+    },
+    {
+      "id": "dj-body-02",
+      "category": "dj",
+      "url": "/voice/neon-2087/dj-body-02.mp3",
+      "durationMs": 12510,
+      "overMusic": true,
+      "part": "body",
+      "kit": "dj",
+      "lines": [
+        {
+          "speaker": "Velocity Jones",
+          "text": "Update from the boulevard. The palm trees with elbows have started leaning on things. Lamp posts. Each other.",
+          "startMs": 41
+        },
+        {
+          "speaker": "Velocity Jones",
+          "text": "One's leaning on a parked car like it's waiting for somebody. Coolest tree I have ever seen.",
+          "startMs": 7161
+        }
+      ]
+    },
+    {
+      "id": "dj-body-03",
+      "category": "dj",
+      "url": "/voice/neon-2087/dj-body-03.mp3",
+      "durationMs": 10245,
+      "overMusic": true,
+      "part": "body",
+      "kit": "dj",
+      "lines": [
+        {
+          "speaker": "Velocity Jones",
+          "text": "The Rad Accountants are back in the studio. They're a synth band, and also accountants. The new album's called Reconciled. Every song balances. It's incredible.",
+          "startMs": 48
+        }
+      ]
+    },
+    {
+      "id": "dj-body-04",
+      "category": "dj",
+      "url": "/voice/neon-2087/dj-body-04.mp3",
+      "durationMs": 10592,
+      "overMusic": true,
+      "part": "body",
+      "kit": "dj",
+      "lines": [
+        {
+          "speaker": "Velocity Jones",
+          "text": "Somebody texted in to ask if the future ever gets old. And the answer is yes. That's why it's the past now.",
+          "startMs": 48
+        },
+        {
+          "speaker": "Velocity Jones",
+          "text": "But you know what? The past was rad too. It had lasers.",
+          "startMs": 7254
+        }
+      ]
+    },
+    {
+      "id": "dj-body-05",
+      "category": "dj",
+      "url": "/voice/neon-2087/dj-body-05.mp3",
+      "durationMs": 9738,
+      "overMusic": true,
+      "part": "body",
+      "kit": "dj",
+      "lines": [
+        {
+          "speaker": "Velocity Jones",
+          "text": "Kassette Kowboy says his new single is best heard driving toward a sunset that never arrives. Buddy, that's all of our sunsets. That's the whole timeline.",
+          "startMs": 39
+        }
+      ]
+    },
+    {
+      "id": "dj-body-06",
+      "category": "dj",
+      "url": "/voice/neon-2087/dj-body-06.mp3",
+      "durationMs": 9660,
+      "overMusic": true,
+      "part": "body",
+      "kit": "dj",
+      "lines": [
+        {
+          "speaker": "Velocity Jones",
+          "text": "Real talk. The car with too many wheels is never going to reach the horizon. And it doesn't care. It just loves driving.",
+          "startMs": 42
+        },
+        {
+          "speaker": "Velocity Jones",
+          "text": "Be the car, everybody.",
+          "startMs": 8119
+        }
+      ]
+    },
+    {
+      "id": "dj-close-01",
+      "category": "dj",
+      "url": "/voice/neon-2087/dj-close-01.mp3",
+      "durationMs": 2662,
+      "overMusic": true,
+      "part": "close",
+      "kit": "dj",
+      "lines": [
+        {
+          "speaker": "Velocity Jones",
+          "text": "Here comes another one. Hands at ten and two.",
+          "startMs": 46
+        }
+      ]
+    },
+    {
+      "id": "dj-close-02",
+      "category": "dj",
+      "url": "/voice/neon-2087/dj-close-02.mp3",
+      "durationMs": 3028,
+      "overMusic": true,
+      "part": "close",
+      "kit": "dj",
+      "lines": [
+        {
+          "speaker": "Velocity Jones",
+          "text": "Okay. Here it comes. Windows down. Let's go.",
+          "startMs": 41
+        }
+      ]
+    },
+    {
+      "id": "dj-close-03",
+      "category": "dj",
+      "url": "/voice/neon-2087/dj-close-03.mp3",
+      "durationMs": 2757,
+      "overMusic": true,
+      "part": "close",
+      "kit": "dj",
+      "lines": [
+        {
+          "speaker": "Velocity Jones",
+          "text": "Turn it up. Turn it up a little more. Perfect.",
+          "startMs": 39
+        }
+      ]
+    },
+    {
+      "id": "dj-close-04",
+      "category": "dj",
+      "url": "/voice/neon-2087/dj-close-04.mp3",
+      "durationMs": 3675,
+      "overMusic": true,
+      "part": "close",
+      "kit": "dj",
+      "lines": [
+        {
+          "speaker": "Velocity Jones",
+          "text": "This one's for you. Yeah. You. Specifically. Don't tell the others.",
+          "startMs": 45
+        }
+      ]
+    },
+    {
+      "id": "halloween-01",
+      "category": "dj",
+      "url": "/voice/neon-2087/halloween-01.mp3",
+      "durationMs": 12982,
+      "title": "Dressed as the Past",
+      "overMusic": true,
+      "part": "body",
+      "kit": "dj",
+      "dates": [
+        "10-24",
+        "10-25",
+        "10-26",
+        "10-27",
+        "10-28",
+        "10-29",
+        "10-30",
+        "10-31"
+      ],
+      "lines": [
+        {
+          "speaker": "Velocity Jones",
+          "text": "Halloween in twenty eighty-seven! Everybody dresses up as the past. I saw a guy tonight dressed as a fax machine.",
+          "startMs": 49
+        },
+        {
+          "speaker": "Velocity Jones",
+          "text": "He just stood there, making the noise. Best costume I've ever seen. Terrifying. Rad.",
+          "startMs": 7922
+        }
+      ]
+    },
+    {
+      "id": "halloween-02",
+      "category": "id",
+      "url": "/voice/neon-2087/halloween-02.mp3",
+      "durationMs": 8716,
+      "title": "Spookrad",
+      "overMusic": true,
+      "dates": [
+        "10-24",
+        "10-25",
+        "10-26",
+        "10-27",
+        "10-28",
+        "10-29",
+        "10-30",
+        "10-31"
+      ],
+      "lines": [
+        {
+          "speaker": "Velocity Jones",
+          "text": "Neon twenty eighty-seven, Halloween edition! Spooky! Rad! Spookrad!",
+          "startMs": 50
         }
       ]
     }

@@ -1,0 +1,797 @@
+{
+  "version": 1,
+  "station": "unsolved-dimensions",
+  "clips": [
+    {
+      "id": "id-001",
+      "category": "id",
+      "url": "/voice/unsolved-dimensions/id-001.mp3",
+      "durationMs": 7430,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Inspector Delphine Gault",
+          "text": "Unsolved Dimensions. The crimes are mild. The dimensions are suspects.",
+          "startMs": 2900
+        }
+      ]
+    },
+    {
+      "id": "id-002",
+      "category": "id",
+      "url": "/voice/unsolved-dimensions/id-002.mp3",
+      "durationMs": 4985,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Inspector Delphine Gault",
+          "text": "This is Inspector Delphine Gault. I have never closed a case. I have never wanted to.",
+          "startMs": 38
+        }
+      ]
+    },
+    {
+      "id": "id-003",
+      "category": "id",
+      "url": "/voice/unsolved-dimensions/id-003.mp3",
+      "durationMs": 5890,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Inspector Delphine Gault",
+          "text": "Unsolved Dimensions, ninety three point nine five. Somebody did something. We may never know who.",
+          "startMs": 37
+        }
+      ]
+    },
+    {
+      "id": "id-004",
+      "category": "id",
+      "url": "/voice/unsolved-dimensions/id-004.mp3",
+      "durationMs": 8328,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Inspector Delphine Gault",
+          "text": "Unsolved Dimensions. Lock your doors. And keep your teaspoons where you left them.",
+          "startMs": 37
+        }
+      ]
+    },
+    {
+      "id": "show-rollcall-open",
+      "category": "id",
+      "url": "/voice/unsolved-dimensions/show-rollcall-open.mp3",
+      "durationMs": 5354,
+      "overMusic": true,
+      "part": "open",
+      "show": "morning-roll-call",
+      "lines": [
+        {
+          "speaker": "Inspector Delphine Gault",
+          "text": "Good morning. Roll call. Overnight, eleven new incidents. None solved. A good night's work.",
+          "startMs": 37
+        }
+      ]
+    },
+    {
+      "id": "show-rollcall-001",
+      "category": "dj",
+      "url": "/voice/unsolved-dimensions/show-rollcall-001.mp3",
+      "durationMs": 12444,
+      "overMusic": true,
+      "show": "morning-roll-call",
+      "lines": [
+        {
+          "speaker": "Constable Pike",
+          "text": "Inspector, there's been a breakthrough in the case of the warm chair.",
+          "startMs": 36
+        },
+        {
+          "speaker": "Inspector Delphine Gault",
+          "text": "Oh dear. How bad?",
+          "startMs": 3719
+        },
+        {
+          "speaker": "Constable Pike",
+          "text": "Someone's confessed.",
+          "startMs": 5562
+        },
+        {
+          "speaker": "Inspector Delphine Gault",
+          "text": "Then we'll need to interview them very carefully, Constable, until they're not sure any more.",
+          "startMs": 7392
+        }
+      ]
+    },
+    {
+      "id": "show-witness-open",
+      "category": "id",
+      "url": "/voice/unsolved-dimensions/show-witness-open.mp3",
+      "durationMs": 7131,
+      "overMusic": true,
+      "part": "open",
+      "show": "witness-hour",
+      "lines": [
+        {
+          "speaker": "Inspector Delphine Gault",
+          "text": "This is Witness Hour. If you saw something, the lines are open. Please think very carefully before you ring.",
+          "startMs": 436
+        }
+      ]
+    },
+    {
+      "id": "show-witness-001",
+      "category": "call",
+      "url": "/voice/unsolved-dimensions/show-witness-001.mp3",
+      "durationMs": 26579,
+      "title": "The Moon, and a Neighbour",
+      "overMusic": false,
+      "show": "witness-hour",
+      "lines": [
+        {
+          "speaker": "A Witness",
+          "text": "Inspector? I think I know who moved the moon.",
+          "startMs": 2850
+        },
+        {
+          "speaker": "Inspector Delphine Gault",
+          "text": "Do you.",
+          "startMs": 5586
+        },
+        {
+          "speaker": "A Witness",
+          "text": "It was my neighbour. He's got a very long pole, and he's always looking up at it, and...",
+          "startMs": 6820
+        },
+        {
+          "speaker": "Inspector Delphine Gault",
+          "text": "Madam. Have you considered that you don't?",
+          "startMs": 11307
+        },
+        {
+          "speaker": "A Witness",
+          "text": "Don't what?",
+          "startMs": 13993
+        },
+        {
+          "speaker": "Inspector Delphine Gault",
+          "text": "Know. It's very freeing. Try it for a week.",
+          "startMs": 15171
+        },
+        {
+          "speaker": "A Witness",
+          "text": "...All right.",
+          "startMs": 19024
+        },
+        {
+          "speaker": "Inspector Delphine Gault",
+          "text": "Thank you for calling. You've been very unhelpful. It's appreciated.",
+          "startMs": 20321
+        }
+      ]
+    },
+    {
+      "id": "show-witness-002",
+      "category": "call",
+      "url": "/voice/unsolved-dimensions/show-witness-002.mp3",
+      "durationMs": 32930,
+      "title": "Hollis Fenn, About Greg",
+      "overMusic": false,
+      "show": "witness-hour",
+      "lines": [
+        {
+          "speaker": "Hollis",
+          "text": "Inspector, it's Hollis Fenn. I'm ringing about my shadow.",
+          "startMs": 2850
+        },
+        {
+          "speaker": "Inspector Delphine Gault",
+          "text": "Greg.",
+          "startMs": 6528
+        },
+        {
+          "speaker": "Hollis",
+          "text": "You know him?",
+          "startMs": 7689
+        },
+        {
+          "speaker": "Inspector Delphine Gault",
+          "text": "Everybody knows Greg, Mister Fenn. He's been seen on the moon. On a beach. At a recital. Every time, he looks a little happier.",
+          "startMs": 9035
+        },
+        {
+          "speaker": "Hollis",
+          "text": "So you won't find him.",
+          "startMs": 16514
+        },
+        {
+          "speaker": "Inspector Delphine Gault",
+          "text": "I didn't say that. I said I won't look. He isn't missing. He's travelling. There's a difference, and I've decided to respect it.",
+          "startMs": 18275
+        },
+        {
+          "speaker": "Hollis",
+          "text": "Could you ask him to send a postcard?",
+          "startMs": 26207
+        },
+        {
+          "speaker": "Inspector Delphine Gault",
+          "text": "I'll put it in the file.",
+          "startMs": 28770
+        }
+      ]
+    },
+    {
+      "id": "show-cold-open",
+      "category": "id",
+      "url": "/voice/unsolved-dimensions/show-cold-open.mp3",
+      "durationMs": 7047,
+      "overMusic": true,
+      "daypart": "night",
+      "part": "open",
+      "show": "cold-cases",
+      "lines": [
+        {
+          "speaker": "Inspector Delphine Gault",
+          "text": "Cold Cases, Warm Milk. The oldest files in the basement. Pull up a chair. Not that one. It's evidence.",
+          "startMs": 436
+        }
+      ]
+    },
+    {
+      "id": "show-cold-001",
+      "category": "dj",
+      "url": "/voice/unsolved-dimensions/show-cold-001.mp3",
+      "durationMs": 15395,
+      "overMusic": true,
+      "show": "cold-cases",
+      "lines": [
+        {
+          "speaker": "Inspector Delphine Gault",
+          "text": "Some of these files are older than the dimensions they happened in. Case file one. A rock was moved. We don't know by whom. We don't know where to.",
+          "startMs": 440
+        },
+        {
+          "speaker": "Inspector Delphine Gault",
+          "text": "We have the rock. We have never known where it was. I take it out sometimes, and hold it, and wonder.",
+          "startMs": 9199
+        }
+      ]
+    },
+    {
+      "id": "show-cold-002",
+      "category": "dj",
+      "url": "/voice/unsolved-dimensions/show-cold-002.mp3",
+      "durationMs": 11623,
+      "overMusic": true,
+      "daypart": "night",
+      "show": "cold-cases",
+      "lines": [
+        {
+          "speaker": "Inspector Delphine Gault",
+          "text": "To the operator on the relay ship. I'm told you keep a log of everything you hear out there. Good. So do I.",
+          "startMs": 36
+        },
+        {
+          "speaker": "Inspector Delphine Gault",
+          "text": "Mine is full of questions. I hope yours is too. Don't answer any of them. Not tonight.",
+          "startMs": 6744
+        }
+      ]
+    },
+    {
+      "id": "case-open-1",
+      "category": "story",
+      "url": "/voice/unsolved-dimensions/case-open-1.mp3",
+      "durationMs": 11189,
+      "overMusic": false,
+      "part": "open",
+      "kit": "case",
+      "lines": [
+        {
+          "speaker": "Inspector Delphine Gault",
+          "text": "Case file four four one. The Teaspoon. A teaspoon was found in a sugar bowl. Nobody put it there. Nobody who will admit it.",
+          "startMs": 3300
+        }
+      ]
+    },
+    {
+      "id": "case-open-2",
+      "category": "story",
+      "url": "/voice/unsolved-dimensions/case-open-2.mp3",
+      "durationMs": 9643,
+      "overMusic": false,
+      "part": "open",
+      "kit": "case",
+      "lines": [
+        {
+          "speaker": "Inspector Delphine Gault",
+          "text": "Case file nine. The fridge magnets in a house in the Overlap were rearranged, overnight, to spell hello. The family owns no letter H.",
+          "startMs": 436
+        }
+      ]
+    },
+    {
+      "id": "case-open-3",
+      "category": "story",
+      "url": "/voice/unsolved-dimensions/case-open-3.mp3",
+      "durationMs": 10643,
+      "overMusic": false,
+      "part": "open",
+      "kit": "case",
+      "lines": [
+        {
+          "speaker": "Inspector Delphine Gault",
+          "text": "Case file two hundred and six. On the night of the ninth, the moon over Lower Pell was found one inch to the left.",
+          "startMs": 3300
+        }
+      ]
+    },
+    {
+      "id": "case-open-4",
+      "category": "story",
+      "url": "/voice/unsolved-dimensions/case-open-4.mp3",
+      "durationMs": 7212,
+      "overMusic": false,
+      "part": "open",
+      "kit": "case",
+      "lines": [
+        {
+          "speaker": "Inspector Delphine Gault",
+          "text": "Case file seventy. A ladder was borrowed in good faith. It was returned the following week. One rung taller.",
+          "startMs": 436
+        }
+      ]
+    },
+    {
+      "id": "case-open-5",
+      "category": "story",
+      "url": "/voice/unsolved-dimensions/case-open-5.mp3",
+      "durationMs": 11288,
+      "overMusic": false,
+      "part": "open",
+      "kit": "case",
+      "lines": [
+        {
+          "speaker": "Inspector Delphine Gault",
+          "text": "Case file eleven twelve. The Warm Chair. Missus Odile Fenwick came home and sat in her favourite chair, and it was warm. She lives alone. The cat was also surprised.",
+          "startMs": 436
+        }
+      ]
+    },
+    {
+      "id": "case-open-6",
+      "category": "story",
+      "url": "/voice/unsolved-dimensions/case-open-6.mp3",
+      "durationMs": 11513,
+      "overMusic": false,
+      "part": "open",
+      "kit": "case",
+      "lines": [
+        {
+          "speaker": "Inspector Delphine Gault",
+          "text": "Case file one hundred. Someone finished a jigsaw in the night. The jigsaw was not ours. Neither, it turns out, was the table.",
+          "startMs": 3300
+        }
+      ]
+    },
+    {
+      "id": "case-evidence-1",
+      "category": "story",
+      "url": "/voice/unsolved-dimensions/case-evidence-1.mp3",
+      "durationMs": 10145,
+      "overMusic": false,
+      "part": "body",
+      "kit": "case",
+      "lines": [
+        {
+          "speaker": "Inspector Delphine Gault",
+          "text": "We found a single footprint at the scene. Size nine. Left foot.",
+          "startMs": 441
+        },
+        {
+          "speaker": "Inspector Delphine Gault",
+          "text": "No right foot has ever been recovered. I've stopped looking. Some things walk alone.",
+          "startMs": 4925
+        }
+      ]
+    },
+    {
+      "id": "case-evidence-2",
+      "category": "story",
+      "url": "/voice/unsolved-dimensions/case-evidence-2.mp3",
+      "durationMs": 11572,
+      "overMusic": false,
+      "part": "body",
+      "kit": "case",
+      "lines": [
+        {
+          "speaker": "Inspector Delphine Gault",
+          "text": "We spoke to the neighbours. They said it was a quiet dimension. They always say that.",
+          "startMs": 441
+        },
+        {
+          "speaker": "Inspector Delphine Gault",
+          "text": "Every dimension is quiet, until somebody moves something half an inch and doesn't say sorry.",
+          "startMs": 5468
+        }
+      ]
+    },
+    {
+      "id": "case-evidence-3",
+      "category": "story",
+      "url": "/voice/unsolved-dimensions/case-evidence-3.mp3",
+      "durationMs": 11754,
+      "overMusic": false,
+      "part": "body",
+      "kit": "case",
+      "lines": [
+        {
+          "speaker": "Inspector Delphine Gault",
+          "text": "And then, of course, there is the goose. The goose was present. The goose is always present.",
+          "startMs": 439
+        },
+        {
+          "speaker": "Inspector Delphine Gault",
+          "text": "I asked the goose where it was on the night in question. The goose has asked for a solicitor.",
+          "startMs": 5723
+        }
+      ]
+    },
+    {
+      "id": "case-evidence-4",
+      "category": "story",
+      "url": "/voice/unsolved-dimensions/case-evidence-4.mp3",
+      "durationMs": 13557,
+      "overMusic": false,
+      "part": "body",
+      "kit": "case",
+      "lines": [
+        {
+          "speaker": "Inspector Delphine Gault",
+          "text": "The dimension itself had no alibi. Asked where it was at the time of the incident, it said: everywhere.",
+          "startMs": 435
+        },
+        {
+          "speaker": "Inspector Delphine Gault",
+          "text": "A classic answer. Impossible to disprove. I wrote it down anyway.",
+          "startMs": 8767
+        }
+      ]
+    },
+    {
+      "id": "case-evidence-5",
+      "category": "story",
+      "url": "/voice/unsolved-dimensions/case-evidence-5.mp3",
+      "durationMs": 12992,
+      "overMusic": false,
+      "part": "body",
+      "kit": "case",
+      "lines": [
+        {
+          "speaker": "Inspector Delphine Gault",
+          "text": "Forensics found traces of a substance on the handle. Jam. Strawberry. Possibly raspberry, with ambitions.",
+          "startMs": 447
+        },
+        {
+          "speaker": "Constable Pike",
+          "text": "We sent it to the lab, Inspector.",
+          "startMs": 7460
+        },
+        {
+          "speaker": "Inspector Delphine Gault",
+          "text": "And?",
+          "startMs": 9886
+        },
+        {
+          "speaker": "Constable Pike",
+          "text": "The lab ate it.",
+          "startMs": 11066
+        }
+      ]
+    },
+    {
+      "id": "case-evidence-6",
+      "category": "story",
+      "url": "/voice/unsolved-dimensions/case-evidence-6.mp3",
+      "durationMs": 13592,
+      "overMusic": false,
+      "part": "body",
+      "kit": "case",
+      "lines": [
+        {
+          "speaker": "Inspector Delphine Gault",
+          "text": "Our only witness was a standard lamp in the hallway. It was switched off at the time. When we switched it on, it had nothing to add.",
+          "startMs": 436
+        },
+        {
+          "speaker": "Inspector Delphine Gault",
+          "text": "Its testimony was, however, very illuminating. I won't apologise for that.",
+          "startMs": 8112
+        }
+      ]
+    },
+    {
+      "id": "case-evidence-7",
+      "category": "story",
+      "url": "/voice/unsolved-dimensions/case-evidence-7.mp3",
+      "durationMs": 12024,
+      "overMusic": false,
+      "part": "body",
+      "kit": "case",
+      "lines": [
+        {
+          "speaker": "Inspector Delphine Gault",
+          "text": "A clock in the hall had stopped at twenty past four. Forensics tell me it has always said twenty past four.",
+          "startMs": 438
+        },
+        {
+          "speaker": "Inspector Delphine Gault",
+          "text": "That clock has been lying to the family for years. Separate investigation.",
+          "startMs": 6927
+        }
+      ]
+    },
+    {
+      "id": "case-evidence-8",
+      "category": "story",
+      "url": "/voice/unsolved-dimensions/case-evidence-8.mp3",
+      "durationMs": 12194,
+      "overMusic": false,
+      "part": "body",
+      "kit": "case",
+      "lines": [
+        {
+          "speaker": "Inspector Delphine Gault",
+          "text": "I connected the evidence on my board with red string. The clue to the goose. The goose to the moon. The moon, somehow, back to me.",
+          "startMs": 442
+        },
+        {
+          "speaker": "Inspector Delphine Gault",
+          "text": "Then I ran out of string. That's usually when you know you're close.",
+          "startMs": 7927
+        }
+      ]
+    },
+    {
+      "id": "case-evidence-9",
+      "category": "story",
+      "url": "/voice/unsolved-dimensions/case-evidence-9.mp3",
+      "durationMs": 10304,
+      "overMusic": false,
+      "part": "body",
+      "kit": "case",
+      "lines": [
+        {
+          "speaker": "Constable Pike",
+          "text": "Inspector, the lab results are back.",
+          "startMs": 446
+        },
+        {
+          "speaker": "Inspector Delphine Gault",
+          "text": "And?",
+          "startMs": 3017
+        },
+        {
+          "speaker": "Constable Pike",
+          "text": "Inconclusive.",
+          "startMs": 4198
+        },
+        {
+          "speaker": "Inspector Delphine Gault",
+          "text": "Good. Put them with the others, Constable. The tall pile. Mind the goose.",
+          "startMs": 5777
+        }
+      ]
+    },
+    {
+      "id": "case-close-1",
+      "category": "story",
+      "url": "/voice/unsolved-dimensions/case-close-1.mp3",
+      "durationMs": 7994,
+      "overMusic": false,
+      "part": "close",
+      "kit": "case",
+      "lines": [
+        {
+          "speaker": "Inspector Delphine Gault",
+          "text": "The case remains open. So, I'm told, does the fridge.",
+          "startMs": 450
+        }
+      ]
+    },
+    {
+      "id": "case-close-2",
+      "category": "story",
+      "url": "/voice/unsolved-dimensions/case-close-2.mp3",
+      "durationMs": 6781,
+      "overMusic": false,
+      "part": "close",
+      "kit": "case",
+      "lines": [
+        {
+          "speaker": "Inspector Delphine Gault",
+          "text": "The case remains open. If you have any information, please keep it to yourself. We like it like this.",
+          "startMs": 443
+        }
+      ]
+    },
+    {
+      "id": "case-close-3",
+      "category": "story",
+      "url": "/voice/unsolved-dimensions/case-close-3.mp3",
+      "durationMs": 8556,
+      "overMusic": false,
+      "part": "close",
+      "kit": "case",
+      "lines": [
+        {
+          "speaker": "Inspector Delphine Gault",
+          "text": "The case remains open. Like all my cases. Like a door in a draughty house that nobody can quite bring themselves to close.",
+          "startMs": 443
+        }
+      ]
+    },
+    {
+      "id": "case-close-4",
+      "category": "story",
+      "url": "/voice/unsolved-dimensions/case-close-4.mp3",
+      "durationMs": 9487,
+      "overMusic": false,
+      "part": "close",
+      "kit": "case",
+      "lines": [
+        {
+          "speaker": "Inspector Delphine Gault",
+          "text": "The case remains open. I'll be here. I'm always here.",
+          "startMs": 449
+        },
+        {
+          "speaker": "Inspector Delphine Gault",
+          "text": "Goodnight.",
+          "startMs": 4354
+        }
+      ]
+    },
+    {
+      "id": "dj-001",
+      "category": "dj",
+      "url": "/voice/unsolved-dimensions/dj-001.mp3",
+      "durationMs": 10992,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Inspector Delphine Gault",
+          "text": "I'm often asked why I've never closed a case. It's quite simple. Once a case is closed, it stops being a question and becomes a story.",
+          "startMs": 36
+        },
+        {
+          "speaker": "Inspector Delphine Gault",
+          "text": "Stories end. Questions keep you company.",
+          "startMs": 8332
+        }
+      ]
+    },
+    {
+      "id": "psa-001",
+      "category": "psa",
+      "url": "/voice/unsolved-dimensions/psa-001.mp3",
+      "durationMs": 9387,
+      "title": "A Public Appeal",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Inspector Delphine Gault",
+          "text": "A public appeal. If you see something unusual, say something vague. Something like: that's odd.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Inspector Delphine Gault",
+          "text": "Then carry on with your evening. This has been a public appeal.",
+          "startMs": 5713
+        }
+      ]
+    },
+    {
+      "id": "ad-001",
+      "category": "ad",
+      "url": "/voice/unsolved-dimensions/ad-001.mp3",
+      "durationMs": 19987,
+      "title": "Grumbel's Ladders, Under Suspicion",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Inspector Delphine Gault",
+          "text": "Unsolved Dimensions is sponsored by Grumbel's Ladders.",
+          "startMs": 37
+        },
+        {
+          "speaker": "Inspector Delphine Gault",
+          "text": "Eleven generations of ladders. Not one complaint. Not one incident. Not a single rung out of place.",
+          "startMs": 3886
+        },
+        {
+          "speaker": "Inspector Delphine Gault",
+          "text": "Which is exactly what worries me. I have a file on them. It's very thin. I check it every night.",
+          "startMs": 10427
+        },
+        {
+          "speaker": "Inspector Delphine Gault",
+          "text": "Grumbel's Ladders. Up is a choice. So, Mister Grumbel, is down.",
+          "startMs": 16219
+        }
+      ]
+    },
+    {
+      "id": "halloween-1",
+      "category": "story",
+      "url": "/voice/unsolved-dimensions/halloween-1.mp3",
+      "durationMs": 28395,
+      "title": "The Pumpkin Carved From Inside",
+      "overMusic": false,
+      "dates": [
+        "10-24",
+        "10-25",
+        "10-26",
+        "10-27",
+        "10-28",
+        "10-29",
+        "10-30",
+        "10-31"
+      ],
+      "lines": [
+        {
+          "speaker": "Inspector Delphine Gault",
+          "text": "Case file thirty one. A pumpkin was found on a doorstep in Gristwick. Its face had been carved from the inside, outwards. No tools were recovered.",
+          "startMs": 3500
+        },
+        {
+          "speaker": "Inspector Delphine Gault",
+          "text": "The candle inside was lit, and humming. Nobody owns a humming candle.",
+          "startMs": 12945
+        },
+        {
+          "speaker": "Inspector Delphine Gault",
+          "text": "The pumpkin has been taken into custody. It is being very good about it. It smiles at everyone.",
+          "startMs": 17594
+        },
+        {
+          "speaker": "Inspector Delphine Gault",
+          "text": "The case remains open. As, I'm afraid, does the pumpkin's mouth.",
+          "startMs": 23686
+        }
+      ]
+    },
+    {
+      "id": "halloween-2",
+      "category": "dj",
+      "url": "/voice/unsolved-dimensions/halloween-2.mp3",
+      "durationMs": 13985,
+      "title": "The Busiest Week",
+      "overMusic": true,
+      "dates": [
+        "10-24",
+        "10-25",
+        "10-26",
+        "10-27",
+        "10-28",
+        "10-29",
+        "10-30",
+        "10-31"
+      ],
+      "lines": [
+        {
+          "speaker": "Inspector Delphine Gault",
+          "text": "Halloween week. The busiest week of the year for my department. Doors knock by themselves. Sheets walk about. Children demand sweets with menaces.",
+          "startMs": 44
+        },
+        {
+          "speaker": "Inspector Delphine Gault",
+          "text": "Almost none of it is a crime. All of it is unsolved. I love this time of year.",
+          "startMs": 9057
+        }
+      ]
+    }
+  ]
+}
