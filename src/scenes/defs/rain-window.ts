@@ -1,7 +1,9 @@
-// Rainfall FM: a big rainy window at night over a city where everyone travels under
-// floating umbrellas. A kettle steams on the stove; lightning flashes very far away.
+// Rainfall FM: a dark kitchen with a big rainy window at night, over a city where everyone
+// travels under floating umbrellas. A kettle steams on the stove; lightning flashes very far
+// away.
 
-import { hex, hsv, mix, shade } from '../kit/color';
+import { gloom, haze } from '../kit/atmos';
+import { hex, hsv, mix, mute, shade } from '../kit/color';
 import { blinking, clamp, envelope, steam } from '../kit/fx';
 import { bayer } from '../kit/gfx';
 import { hash3, noise1 } from '../kit/rng';
@@ -28,20 +30,22 @@ const def: SceneDef = {
   fps: 20,
   rareEvents: 3,
   rareDuration: 8,
+  focusY: 80,
+  grade: { temperature: -0.2, contrast: 1.12, saturation: 0.8, bloom: 0.7, threshold: 0.62, vignette: 0.34, shadows: '#04060c' },
   create({ accent, rng }) {
-    const ink = hex('#070b14');
-    const wallC = [hex('#0f1a26'), hex('#142333'), hex('#1b2d40')];
+    const ink = hex('#05080e');
+    const wallC = [hex('#0a121c'), hex('#0e1824'), hex('#131f2e')];
     const sky = [hex('#060c1c'), hex('#0e1a33'), hex('#1d2a4c'), hex('#3a2f5a')];
     const far = hex('#16223c');
     const near = hex('#0b1426');
     const frameC = { d: hex('#0a0f17'), m: hex('#1f2a36'), l: hex('#33414f') };
     const woodC = { d: hex('#24170f'), m: hex('#3a2617'), l: hex('#5a3c24'), h: hex('#7a5434') };
     const rain = mix(accent, hex('#ffffff'), 0.35);
-    const neon = [hex('#ff4fa3'), hex('#4fe3ff'), hex('#ffd34f'), accent];
+    const neon = [hex('#ff4fa3'), hex('#4fe3ff'), hex('#ffd34f'), accent].map((c) => mute(c, 0.75, 0.9));
     const warm = hex('#ffb070');
 
     const umbrellas: Umbrella[] = [];
-    const ucol = [hex('#ff6b8a'), hex('#ffd34f'), hex('#6fe3c8'), hex('#c49bff'), hex('#ff9e5a'), accent];
+    const ucol = [hex('#ff6b8a'), hex('#ffd34f'), hex('#6fe3c8'), hex('#c49bff'), hex('#ff9e5a'), accent].map((c) => mute(c, 0.6, 0.75));
     for (let i = 0; i < 7; i++) {
       umbrellas.push({
         y: 28 + i * 11 + rng.range(-4, 4),
@@ -88,7 +92,9 @@ const def: SceneDef = {
         g.glow(120, STREET_Y - 10, 90, hex('#ff4fa3'), 0.12, 6);
         g.glow(220, STREET_Y - 6, 70, hex('#4fe3ff'), 0.1, 6);
         buildings(g, 11, STREET_Y - 6, 26, 70, far, hex('#5a6a9a'), 0.12);
-        buildings(g, 23, STREET_Y, 14, 50, near, hex('#ffd38a'), 0.22);
+        // Rain haze between the far skyline and the near one.
+        haze(g, hex('#2a3656'), GL.y, STREET_Y, 0.45, 0.15);
+        buildings(g, 23, STREET_Y, 14, 50, near, hex('#e0b878'), 0.2);
         // Neon signs.
         const sign = (x: number, y: number, text: string, c: number) => {
           const w = text.length * 4 + 3;
@@ -153,13 +159,13 @@ const def: SceneDef = {
         g.disc(104, COUNTER_Y - 3, 1, hex('#3a4048'));
         // kettle
         g.ellipse(82, COUNTER_Y - 15, 13, 10, ink);
-        g.ball(82, COUNTER_Y - 15, 12, 9, [hex('#5a1e2a'), hex('#a43a4a'), hex('#e0606a'), hex('#ffb0a0')], -0.6, -0.6, 0.2);
-        g.rect(70, COUNTER_Y - 9, 25, 3, hex('#2a0e14'));
-        g.poly([70, COUNTER_Y - 16, 62, COUNTER_Y - 24, 60, COUNTER_Y - 22, 70, COUNTER_Y - 11], hex('#a43a4a'));
+        g.ball(82, COUNTER_Y - 15, 12, 9, [hex('#1a0a0e'), hex('#36161c'), hex('#56262c'), hex('#7e4642')], 0.6, -0.6, 0.2);
+        g.rect(70, COUNTER_Y - 9, 25, 3, hex('#1a080c'));
+        g.poly([70, COUNTER_Y - 16, 62, COUNTER_Y - 24, 60, COUNTER_Y - 22, 70, COUNTER_Y - 11], hex('#5e2430'));
         arc(g, 82, COUNTER_Y - 24, 8, 7, Math.PI, Math.PI * 2, ink, 3);
         g.ellipse(82, COUNTER_Y - 25, 3, 1, hex('#2a0e14'));
         // radio
-        roundRect(g, 196, COUNTER_Y - 15, 30, 15, 3, hex('#d8c8a8'));
+        roundRect(g, 196, COUNTER_Y - 15, 30, 15, 3, hex('#5a5446'));
         g.rect(199, COUNTER_Y - 12, 12, 9, hex('#4a3a2a'));
         for (let y = COUNTER_Y - 11; y < COUNTER_Y - 3; y += 2) g.rect(200, y, 10, 1, hex('#2a1e14'));
         g.rect(213, COUNTER_Y - 12, 10, 5, hex('#10202a'));
@@ -167,16 +173,21 @@ const def: SceneDef = {
         g.disc(218, COUNTER_Y - 3, 2, hex('#8a7a5a'));
         g.line(222, COUNTER_Y - 15, 232, COUNTER_Y - 34, hex('#9aa0a8'));
         // plant
-        g.rect(240, COUNTER_Y - 10, 12, 10, hex('#c46a4a'));
-        g.rect(240, COUNTER_Y - 10, 12, 2, hex('#e08a62'));
+        g.rect(240, COUNTER_Y - 10, 12, 10, hex('#5e3424'));
+        g.rect(240, COUNTER_Y - 10, 12, 2, hex('#7a4a34'));
         for (let i = 0; i < 7; i++) {
           const a = -Math.PI / 2 + (i - 3) * 0.45;
-          g.line(246, COUNTER_Y - 10, 246 + Math.cos(a) * 12, COUNTER_Y - 10 + Math.sin(a) * 14, hex('#3d7a45'));
-          g.ellipse(246 + Math.cos(a) * 12, COUNTER_Y - 10 + Math.sin(a) * 14, 2, 2, hex('#6db35a'));
+          g.line(246, COUNTER_Y - 10, 246 + Math.cos(a) * 12, COUNTER_Y - 10 + Math.sin(a) * 14, hex('#1e3a24'));
+          g.ellipse(246 + Math.cos(a) * 12, COUNTER_Y - 10 + Math.sin(a) * 14, 2, 2, hex('#2e5634'));
         }
         // Cool city light on the counter edge, warm pocket around the stove.
-        g.glow(160, COUNTER_Y, 120, hex('#3a5a9a'), 0.12, 5);
-        g.glow(86, COUNTER_Y - 6, 36, warm, 0.18, 4);
+        g.glow(160, COUNTER_Y, 120, hex('#3a5a9a'), 0.1, 5);
+        g.glow(86, COUNTER_Y - 6, 36, warm, 0.16, 4);
+        gloom(g, g.left, COUNTER_Y + 8, g.w, g.bottom - COUNTER_Y - 8, 0.55);
+        g.lighting(0.45);
+        g.light(160, GL.y + GL.h / 2, 150, 0.5, 80);
+        g.light(84, COUNTER_Y - 10, 40, 0.45, 26);
+        g.light(218, COUNTER_Y - 8, 24, 0.12);
       },
 
       frame(g, f) {
@@ -237,7 +248,7 @@ const def: SceneDef = {
           const py = y + s;
           const ph = s * 1.2;
           g.rect(x - Math.ceil(s / 3), py + 1, Math.ceil(s / 1.5), Math.ceil(ph), u.coat);
-          g.disc(x, py, Math.max(1, Math.round(s / 3)), hex('#e8c8a8'));
+          g.disc(x, py, Math.max(1, Math.round(s / 3)), hex('#a88a76'));
           const sw = Math.round(Math.sin(t * 2 + i) * (s > 5 ? 1 : 0));
           g.vline(x - 1 + sw, py + ph + 1, py + ph + Math.ceil(s / 2), u.coat);
           g.vline(x + 1 + sw, py + ph + 1, py + ph + Math.ceil(s / 2), u.coat);
@@ -252,8 +263,8 @@ const def: SceneDef = {
           const p = ev / 8;
           const fx = GL.x + GL.w + 10 - p * (GL.w + 30);
           const fy = 40 + Math.sin(p * 12) * 4;
-          g.ellipse(fx, fy, 6, 3, hex('#ff9e5a'));
-          g.tri(fx + 5, fy, fx + 10, fy - 3 + Math.sin(ev * 12) * 1, fx + 10, fy + 3 + Math.sin(ev * 12) * 1, hex('#ffb07a'));
+          g.ellipse(fx, fy, 6, 3, hex('#c87a48'));
+          g.tri(fx + 5, fy, fx + 10, fy - 3 + Math.sin(ev * 12) * 1, fx + 10, fy + 3 + Math.sin(ev * 12) * 1, hex('#d8925e'));
           g.px(fx - 3, fy - 1, ink);
           g.pxA(fx - 8, fy - 3, hex('#cfe8ff'), 0.7);
           g.pxA(fx - 10, fy - 5, hex('#cfe8ff'), 0.5);

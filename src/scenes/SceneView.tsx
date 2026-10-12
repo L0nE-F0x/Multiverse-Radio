@@ -25,6 +25,8 @@ export interface SceneViewProps {
   rareKind?: number;
   /** Lab: receives the runner (stats, advance). */
   onRunner?: (runner: SceneRunner | null) => void;
+  /** Lab: show the raw raster, without the grade/vignette/grain/bloom pass. */
+  raw?: boolean;
 }
 
 export function SceneView({
@@ -39,12 +41,14 @@ export function SceneView({
   rareNonce,
   rareKind,
   onRunner,
+  raw = false,
 }: SceneViewProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const runnerRef = useRef<SceneRunner | null>(null);
   const inputs = useRef<RunnerInputs>({ playing, energy, reducedMotion });
   const onRunnerRef = useRef(onRunner);
+  const rawRef = useRef(raw);
   const [ready, setReady] = useState(false);
 
   useLayoutEffect(() => {
@@ -54,7 +58,12 @@ export function SceneView({
     i.energy = energy;
     i.reducedMotion = reducedMotion;
     onRunnerRef.current = onRunner;
-    if (changed) runnerRef.current?.refresh();
+    const r = runnerRef.current;
+    if (r && r.postEnabled === raw) {
+      r.postEnabled = !raw;
+      r.refresh();
+    } else if (changed) r?.refresh();
+    rawRef.current = raw;
   });
 
   useEffect(() => {
@@ -67,6 +76,7 @@ export function SceneView({
       .then((def) => {
         if (cancelled) return;
         const runner = new SceneRunner(container, canvas, def, accent, inputs.current, variantKey ? hashString(variantKey) : 0);
+        runner.postEnabled = !rawRef.current;
         runnerRef.current = runner;
         onRunnerRef.current?.(runner);
         setReady(true);
@@ -80,7 +90,8 @@ export function SceneView({
       runnerRef.current = null;
       onRunnerRef.current?.(null);
     };
-  }, [sceneId, accent]);
+    // A new variant (another pirate on the same scene) rebuilds the scene with its own layout.
+  }, [sceneId, accent, variantKey]);
 
   useEffect(() => {
     if (rareNonce) runnerRef.current?.trigger(rareKind);
@@ -97,7 +108,8 @@ export function SceneView({
         width: '100%',
         height: '100%',
         overflow: 'hidden',
-        background: `radial-gradient(ellipse 80% 70% at 50% 60%, ${accent}40, #0a0a0c 75%)`,
+        // Shown while the scene's chunk loads: a dim glow of the accent in the dark.
+        background: `radial-gradient(ellipse 80% 70% at 50% 55%, ${accent}26, #07080f 75%)`,
       }}
     >
       <canvas
@@ -112,16 +124,6 @@ export function SceneView({
           imageRendering: 'pixelated',
           opacity: ready ? 1 : 0,
           transition: 'opacity 500ms ease',
-        }}
-      />
-      {/* A soft shared vignette ties every scene into the same "window". */}
-      <div
-        aria-hidden="true"
-        style={{
-          position: 'absolute',
-          inset: 0,
-          pointerEvents: 'none',
-          background: 'radial-gradient(ellipse 85% 85% at 50% 50%, transparent 60%, rgb(0 0 0 / 0.32) 100%)',
         }}
       />
     </div>

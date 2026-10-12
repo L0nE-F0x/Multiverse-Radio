@@ -1,7 +1,9 @@
-// Ask Grenda: a cozy late-night radio booth. A big vintage microphone, a lava lamp with
-// something alive inside, a switchboard of blinking caller lights, rain on the window.
+// Ask Grenda: a late-night radio booth lit only by its own small lights: the ON AIR sign,
+// the caller board, a lava lamp with something alive inside, a pool of desk light. A big
+// vintage microphone waits; rain runs down the window.
 
-import { hex, mix, ramp, shade } from '../kit/color';
+import { gloom, lightPool, motes } from '../kit/atmos';
+import { hex, mix, mute, ramp, shade } from '../kit/color';
 import { blinking, clamp, envelope, steam } from '../kit/fx';
 import type { Gfx } from '../kit/gfx';
 import { hash3, noise1 } from '../kit/rng';
@@ -10,7 +12,7 @@ import type { SceneDef } from '../types';
 
 const DESK_Y = 128;
 const WIN = { x: 196, y: 24, w: 72, h: 62 };
-const LAVA = { x: 252, y: 96 };
+const LAVA = { x: 240, y: 96 };
 const SWITCH = { x: 34, y: 40 };
 
 const def: SceneDef = {
@@ -18,16 +20,19 @@ const def: SceneDef = {
   fps: 18,
   rareEvents: 3,
   rareDuration: 7,
+  focusY: 80,
+  grade: { temperature: 0.25, contrast: 1.15, saturation: 0.82, bloom: 0.8, threshold: 0.62, vignette: 0.34 },
   create({ accent }) {
-    const ink = hex('#120a08');
-    const wood = [hex('#2a140c'), hex('#3a1e12'), hex('#4a2818'), hex('#5a3420')];
-    const chrome = ramp([hex('#2a2a34'), hex('#6a6a7a'), hex('#b8b8c8'), hex('#f0f0ff')], 4);
+    const ink = hex('#0a0504');
+    const wood = [hex('#140a06'), hex('#1e0f09'), hex('#28150d'), hex('#331b11')];
+    const chrome = ramp([hex('#1e1e26'), hex('#4e4e5a'), hex('#8e8e9c'), hex('#d8d8e4')], 4);
     const warm = hex('#ffb070');
     const onAir = hex('#ff3a3a');
-    const lavaC = accent;
+    const lavaC = mute(accent, 0.85, 0.95);
     const lavaGlow = mix(accent, hex('#ffd06a'), 0.4);
 
     const lava = (g: Gfx, t: number, wave: number) => {
+      // (the glass catches the room's only cool light)
       const { x, y } = LAVA;
       // base + cap
       g.poly([x - 8, y + 32, x + 8, y + 32, x + 6, y + 22, x - 6, y + 22], hex('#5a5a6a'));
@@ -63,7 +68,7 @@ const def: SceneDef = {
         g.px(cx + r + 1, cy - 2 + wv, mix(lavaC, hex('#ffd06a'), 0.5));
       }
       // glass highlight
-      g.vline(x - 4, y - 3, y + 16, hex('#ffd8c8'));
+      g.vline(x - 4, y - 3, y + 16, hex('#c8a8a0'));
     };
 
     return {
@@ -78,15 +83,15 @@ const def: SceneDef = {
           }
         // Acoustic foam strip.
         for (let x = g.left; x < g.right; x++)
-          for (let y = 0; y < 8; y++) g.px(x, y, (Math.floor((x + 400) / 4) + y) % 2 ? hex('#3a2a2a') : hex('#2a1e1e'));
+          for (let y = 0; y < 8; y++) g.px(x, y, (Math.floor((x + 400) / 4) + y) % 2 ? hex('#1e1616') : hex('#140e0e'));
 
         // Window with a rainy city beyond.
         g.gradRect(WIN.x, WIN.y, WIN.w, WIN.h, [hex('#0a1028'), hex('#1a2448'), hex('#2a2a4a')]);
         for (let i = 0; i < 26; i++) {
           const bx = WIN.x + 4 + hash3(i, 1) * (WIN.w - 8);
           const by = WIN.y + 30 + hash3(i, 2) * (WIN.h - 34);
-          const c = [hex('#ffd08a'), hex('#ff8ab0'), hex('#8ad0ff')][i % 3]!;
-          g.glow(bx, by, 3 + hash3(i, 3) * 3, c, 0.35, 3);
+          const c = [hex('#d8b07a'), hex('#c87a98'), hex('#7aa8c8')][i % 3]!;
+          g.glow(bx, by, 3 + hash3(i, 3) * 3, c, 0.3, 3);
         }
         frameRect(g, WIN.x - 3, WIN.y - 3, WIN.w + 6, WIN.h + 6, ink);
         g.rect(WIN.x - 2, WIN.y - 2, WIN.w + 4, 2, wood[3]!);
@@ -109,7 +114,7 @@ const def: SceneDef = {
         // patch cords dangling
         for (let k = 0; k < 4; k++) {
           const x0 = sx + 9 + k * 14;
-          for (let i = 0; i < 18; i++) g.px(x0 + Math.sin(i * 0.4 + k) * 3, sy + 52 + i, [hex('#c83a3a'), hex('#e8b84a'), hex('#3a8ac8'), hex('#3ac86a')][k]!);
+          for (let i = 0; i < 18; i++) g.px(x0 + Math.sin(i * 0.4 + k) * 3, sy + 52 + i, [hex('#6a2422'), hex('#7a6230'), hex('#2a4a6a'), hex('#2a5a3a')][k]!);
         }
 
         // Desk with a mixing console.
@@ -124,24 +129,32 @@ const def: SceneDef = {
         g.poly([152, DESK_Y + 1, 234, DESK_Y + 1, 229, DESK_Y - 11, 157, DESK_Y - 11], hex('#2a2a32'));
         for (let k = 0; k < 8; k++) {
           g.vline(162 + k * 8, DESK_Y - 8, DESK_Y - 2, hex('#14141a'));
-          g.disc(162 + k * 8, DESK_Y - 10, 1, [hex('#e04a4a'), hex('#e8b84a'), hex('#4ac0e8')][k % 3]!);
+          g.disc(162 + k * 8, DESK_Y - 10, 1, [hex('#a83a3a'), hex('#a8883a'), hex('#3a8aa8')][k % 3]!);
         }
         // VU meters
         for (const vx of [100, 124]) {
           g.rect(vx - 10, DESK_Y - 16, 20, 14, ink);
-          g.rect(vx - 9, DESK_Y - 15, 18, 12, hex('#f0e0b0'));
+          g.rect(vx - 9, DESK_Y - 15, 18, 12, hex('#b8a882'));
           arc(g, vx, DESK_Y - 4, 7, 7, Math.PI * 1.15, Math.PI * 1.85, hex('#8a6a4a'));
           g.px(vx + 6, DESK_Y - 11, hex('#e04a4a'));
         }
         // Mug, notebook, a box of tissues for the hard calls.
-        g.rect(64, DESK_Y - 9, 8, 9, hex('#f4ece0'));
-        g.rect(72, DESK_Y - 7, 2, 4, hex('#f4ece0'));
-        g.text('#1', 65, DESK_Y - 7, accent);
-        g.poly([24, DESK_Y + 1, 52, DESK_Y + 1, 50, DESK_Y - 2, 26, DESK_Y - 2], hex('#e8e0c8'));
-        g.rect(270, DESK_Y - 8, 18, 8, hex('#8ac8e8'));
-        g.ellipse(279, DESK_Y - 9, 4, 2, hex('#ffffff'));
-        // Warm desk lamp light.
-        g.glow(120, DESK_Y - 30, 110, warm, 0.14, 6);
+        g.rect(64, DESK_Y - 9, 8, 9, hex('#b8ae9c'));
+        g.rect(72, DESK_Y - 7, 2, 4, hex('#b8ae9c'));
+        g.rect(64, DESK_Y - 6, 8, 2, shade(accent, 0.5));
+        g.poly([24, DESK_Y + 1, 52, DESK_Y + 1, 50, DESK_Y - 2, 26, DESK_Y - 2], hex('#a8a08a'));
+        g.rect(270, DESK_Y - 8, 18, 8, hex('#4a6a7a'));
+        g.ellipse(279, DESK_Y - 9, 4, 2, hex('#b8c0c4'));
+        // Warm desk lamp light pooled on the desk; the rest of the booth is in the dark.
+        g.glow(120, DESK_Y - 30, 110, warm, 0.1, 6);
+        lightPool(g, 112, DESK_Y + 1, 60, 5, warm, 0.25);
+        gloom(g, g.left, DESK_Y + 8, g.w, g.bottom - DESK_Y - 8, 0.55);
+        g.lighting(0.42);
+        g.light(166, 34, 56, 0.45, 30);
+        g.light(LAVA.x, LAVA.y + 8, 44, 0.5);
+        g.light(SWITCH.x + 30, SWITCH.y + 30, 44, 0.3);
+        g.light(116, DESK_Y - 26, 80, 0.5, 40);
+        g.light(WIN.x + WIN.w / 2, WIN.y + WIN.h / 2, 40, 0.2);
       },
 
       frame(g, f) {
@@ -167,18 +180,19 @@ const def: SceneDef = {
         g.noClip();
 
         // ON AIR sign.
-        const sx = 128;
-        const sy = 12;
+        // Below the HUD's top band, clear of the mic's boom.
+        const sx = 138;
+        const sy = 26;
         const lit = f.playing ? 1 : 0.15;
         const buzz = !f.reduced && f.rare === 2 && ev < 7 ? 1 : 0;
-        roundRect(g, sx - 2, sy - 2, 64, 18, 3, ink);
-        roundRect(g, sx, sy, 60, 14, 3, mix(hex('#3a0a0a'), onAir, 0.25 + lit * 0.75));
-        g.textCenter('ON AIR', sx + 30, sy + 3, mix(hex('#5a2020'), hex('#ffe8e0'), lit), 1);
-        if (lit > 0.5) g.glow(sx + 30, sy + 7, 40, onAir, 0.2 + f.energy * 0.25, 4);
+        roundRect(g, sx - 2, sy - 2, 54, 18, 3, ink);
+        roundRect(g, sx, sy, 50, 14, 3, mix(hex('#2a0606'), mute(onAir, 0.85, 0.85), 0.2 + lit * 0.8));
+        g.textCenter('ON AIR', sx + 25, sy + 4, mix(hex('#4a1a1a'), hex('#ffe0d8'), lit), 1);
+        if (lit > 0.5) g.glow(sx + 25, sy + 7, 40, onAir, 0.16 + f.energy * 0.2, 4);
         if (buzz) {
           // a moth, enchanted by the sign
           const a = ev * 5;
-          const mx = sx + 30 + Math.cos(a) * 36;
+          const mx = sx + 25 + Math.cos(a) * 32;
           const my = sy + 7 + Math.sin(a * 1.3) * 12;
           g.px(mx, my, hex('#d8c8a8'));
           g.px(mx + (Math.floor(ev * 20) % 2 ? 1 : -1), my - 1, hex('#f0e8d0'));
@@ -234,8 +248,9 @@ const def: SceneDef = {
         // Steam from the mug; headphones hanging off the mic arm, swaying.
         steam(g, t, 68, DESK_Y - 11, hex('#f4ece0'), 5, 14, 2, 0.5);
         arc(g, 88, DESK_Y - 4, 7, 6, Math.PI, Math.PI * 2, hex('#2a2a32'), 2);
-        roundRect(g, 79, DESK_Y - 6, 5, 6, 2, accent);
-        roundRect(g, 92, DESK_Y - 6, 5, 6, 2, accent);
+        roundRect(g, 79, DESK_Y - 6, 5, 6, 2, shade(accent, 0.55));
+        roundRect(g, 92, DESK_Y - 6, 5, 6, 2, shade(accent, 0.55));
+        if (!f.reduced) motes(g, t, 80, 30, 200, 120, 10, hex('#ffd8b0'), 0.25, 8);
 
         // The lava lamp, with its resident.
         const wave = f.rare === 0 && ev < 7 ? envelope(ev, 7, 1, 1) : 0;

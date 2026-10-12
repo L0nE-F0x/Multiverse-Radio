@@ -1,16 +1,19 @@
-// Neon 2087: a striped sunset over an endless wireframe grid. A car with far too many
-// wheels drives toward the horizon, never arriving. The palm trees have elbows.
+// Neon 2087: the last of a striped sunset over an endless wireframe grid, hazy and violet.
+// A car with far too many wheels drives toward the horizon, never arriving. The palm trees
+// have elbows.
 
-import { hex, mix, ramp, shade } from '../kit/color';
+import { haze } from '../kit/atmos';
+import { hex, mix, mute, ramp, shade } from '../kit/color';
 import { envelope, stars, TAU } from '../kit/fx';
 import { type Gfx, bayer, mulPx } from '../kit/gfx';
 import { hash3 } from '../kit/rng';
 import { roundRect, thickLine } from '../kit/shapes';
 import type { SceneDef } from '../types';
 
-const HZ = 98; // horizon
+const HZ = 80; // horizon
 const VX = 160; // vanishing point x
-const SUN = { x: 160, y: 74, r: 42 };
+const SUN = { x: 160, y: 62, r: 38 };
+const CAR_Y = 112;
 const CAR_BODY_O = [-34, 12, 34, 12, 32, -2, 22, -6, -22, -6, -32, -2];
 const CAR_BODY = [-32, 10, 32, 10, 30, -1, 21, -4, -21, -4, -30, -1];
 const CAB_O = [-20, -5, 20, -5, 14, -16, -14, -16];
@@ -21,16 +24,18 @@ const def: SceneDef = {
   fps: 24,
   rareEvents: 4,
   rareDuration: 6,
+  focusY: 86,
+  grade: { contrast: 1.1, saturation: 0.78, bloom: 0.9, threshold: 0.58, vignette: 0.34, shadows: '#06020c' },
   create({ accent }) {
-    const ink = hex('#0b0016');
-    const skyC = [hex('#07001a'), hex('#1a0638'), hex('#3d0c5a'), hex('#8a1a6e'), hex('#ff5a7a')];
-    const sunR = ramp([hex('#fff27a'), hex('#ffb347'), hex('#ff6a6a'), accent], 12);
-    const grid = accent;
-    const cyan = hex('#4ff0ff');
-    const mount = hex('#1c0636');
-    const palm = hex('#1e0838');
-    const rim = hex('#ff4fd8');
-    const road = hex('#0e0020');
+    const ink = hex('#06000e');
+    const skyC = [hex('#04010c'), hex('#0e0420'), hex('#220a36'), hex('#4a1446'), hex('#8a3450')];
+    const sunR = ramp([hex('#ecd290'), hex('#e09a5a'), hex('#c8546a'), mute(accent, 0.7, 0.8)], 12);
+    const grid = mix(mute(accent, 0.75), hex('#5a2a7a'), 0.25);
+    const cyan = hex('#3a9aaa');
+    const mount = hex('#10031e');
+    const palm = hex('#0c0218');
+    const rim = mix(accent, palm, 0.78);
+    const road = hex('#08000f');
 
     // Mountain tops per view column, so the sun can sit behind them.
     let mtTop = new Int16Array(0);
@@ -79,9 +84,9 @@ const def: SceneDef = {
     return {
       background(g) {
         g.vgrad(skyC, g.top, HZ);
-        stars(g, 0, g.left, g.top, g.right, 60, 0.35, hex('#ffd8ff'), 5, 0);
-        g.glow(SUN.x, HZ - 6, 120, hex('#ff4f9a'), 0.22, 6);
-        g.glow(SUN.x, SUN.y, 60, hex('#ffb347'), 0.18, 6);
+        stars(g, 0, g.left, g.top, g.right, 50, 0.25, hex('#c8a8d8'), 5, 0);
+        g.glow(SUN.x, HZ - 6, 120, hex('#c84a7a'), 0.16, 6);
+        g.glow(SUN.x, SUN.y, 56, hex('#e09a5a'), 0.12, 6);
 
         // Mountains with neon ridges.
         mtTop = new Int16Array(g.w).fill(HZ);
@@ -93,8 +98,8 @@ const def: SceneDef = {
             const top = Math.round(base - h);
             if (x >= g.left && x < g.right) mtTop[x - g.left] = Math.min(mtTop[x - g.left]!, top);
             g.rect(x, top, 1, HZ - top, mount);
-            g.px(x, top, mix(grid, mount, 0.3));
-            if ((x - x0) % 9 === 0) g.rectD(x, top + 2, 1, HZ - top - 2, mix(grid, mount, 0.7), 0.5);
+            g.px(x, top, mix(grid, mount, 0.55));
+            if ((x - x0) % 9 === 0) g.rectD(x, top + 2, 1, HZ - top - 2, mix(grid, mount, 0.85), 0.5);
           }
         };
         ridge(g.left - 10, 128, 1.3, HZ, 26);
@@ -102,22 +107,27 @@ const def: SceneDef = {
         ridge(120, 200, 2.2, HZ, 6);
 
         // Ground: dark, vertical grid lines fanning from the vanishing point, the road.
-        g.vgrad([hex('#12002a'), hex('#0a0016')], HZ, g.bottom, HZ);
+        g.vgrad([hex('#0c0018'), hex('#05000c')], HZ, g.bottom, HZ);
         for (let k = -40; k <= 40; k++) {
           const slope = k * 0.12 * 9;
           for (let y = HZ; y < g.bottom; y++) {
             const x = VX + (slope * (y - HZ)) / 9;
             const kk = 0.25 + 0.75 * Math.min(1, (y - HZ) / 60);
-            g.px(Math.round(x), y, mix(hex('#12002a'), grid, kk * 0.8));
+            g.px(Math.round(x), y, mix(hex('#0c0018'), grid, kk * 0.42));
           }
         }
         for (let y = HZ; y < g.bottom; y++) {
           const hw = (y - HZ) * 1.05;
-          g.rect(VX - hw, y, hw * 2 + 1, 1, road);
-          g.px(VX - hw, y, cyan);
-          g.px(VX + hw, y, cyan);
+          // the road catches the last of the sunset near the horizon
+          g.rect(VX - hw, y, hw * 2 + 1, 1, mix(road, hex('#3a1238'), Math.max(0, 1 - (y - HZ) / 60) * 0.8));
+          const k = Math.min(1, (y - HZ) / 50);
+          g.px(VX - hw, y, mix(road, cyan, 0.3 + 0.6 * k));
+          g.px(VX + hw, y, mix(road, cyan, 0.3 + 0.6 * k));
         }
-        g.rect(g.left, HZ, g.w, 1, mix(grid, hex('#ffffff'), 0.4));
+        g.rect(g.left, HZ, g.w, 1, mix(grid, hex('#f0d0e0'), 0.25));
+        // Haze on the horizon swallows the far grid and the feet of the mountains.
+        haze(g, hex('#3a1640'), HZ - 18, HZ, 0, 0.5, HZ - 18, HZ + 1);
+        haze(g, hex('#3a1640'), HZ, HZ + 26, 0.55, 0, HZ, HZ + 26);
       },
 
       frame(g, f) {
@@ -172,14 +182,14 @@ const def: SceneDef = {
           if (y <= HZ + 1) break;
           if (y >= g.bottom) continue;
           const k = Math.min(1, (y - HZ) / 70);
-          const c = mix(hex('#3a0a4a'), grid, 0.35 + 0.65 * k);
+          const c = mix(mix(hex('#2a0c3a'), hex('#3a1640'), 1 - k), grid, 0.15 + 0.55 * k);
           const hw = (y - HZ) * 1.05;
           g.rect(g.left, y, VX - hw - g.left, 1, c);
           g.rect(VX + hw + 1, y, g.right - (VX + hw + 1), 1, c);
-          if (i % 2 === 0) g.rect(VX - 1, y, 2, Math.max(1, Math.round(k * 3)), hex('#fff27a'));
+          if (i % 2 === 0) g.rect(VX - 1, y, 2, Math.max(1, Math.round(k * 3)), mix(hex('#3a1640'), hex('#c8a860'), k));
         }
         // Glow along the horizon.
-        g.rectAdd(g.left, HZ - 1, g.w, 3, grid, 0.25 + f.energy * 0.3);
+        g.rectAdd(g.left, HZ - 1, g.w, 3, grid, 0.12 + f.energy * 0.2);
 
         // Palm trees with elbows, approaching on both sides.
         for (let i = 4; i >= 0; i--) {
@@ -192,30 +202,33 @@ const def: SceneDef = {
         // The car (rear view) — with a row of far too many wheels.
         const bob = f.reduced ? 0 : Math.round(Math.sin(t * 9) * 0.6 + f.pulse * 1);
         const cx = VX;
-        const cy = 152 + bob;
+        const cy = CAR_Y + bob;
         const extra = f.rare === 1 && ev < 6 ? ev > 1.2 : false;
         const wheels = extra ? 9 : 8;
         const ww = 7;
         const total = wheels * (ww + 1) - 1;
         const wx0 = cx - Math.floor(total / 2);
-        g.ellipseA(cx, 173, total / 2 + 8, 3, ink, 0.6);
+        g.ellipseA(cx, CAR_Y + 21, total / 2 + 8, 3, ink, 0.6);
         for (let i = 0; i < wheels; i++) {
           const x = wx0 + i * (ww + 1);
           roundRect(g, x, cy + 8, ww, 13, 2, ink);
-          g.rect(x + 1, cy + 9, ww - 2, 11, hex('#241a30'));
+          g.rect(x + 1, cy + 9, ww - 2, 11, hex('#1e1628'));
+          g.rect(x + 1, cy + 9, ww - 2, 1, hex('#5a3a4a'));
           const spin = Math.floor(t * 18 + i) % 3;
-          g.rect(x + 2, cy + 11 + spin * 2, ww - 4, 1, hex('#8a7aa8'));
+          g.rect(x + 2, cy + 11 + spin * 2, ww - 4, 1, hex('#6a5a7a'));
           if (extra && i === wheels - 1 && ev < 2.2) g.glow(x + 3, cy + 14, 9, hex('#fff27a'), 1 - (ev - 1.2));
         }
         if (extra && ev < 3.5) g.text('+1', wx0 + total + 3, cy + 2 - Math.min(6, (ev - 1.2) * 6), hex('#fff27a'));
         // body
         g.poly(CAR_BODY_O, ink, 0, 1, cx, cy);
-        g.poly(CAR_BODY, hex('#2a1450'), 0, 1, cx, cy);
+        g.poly(CAR_BODY, hex('#1a0c30'), 0, 1, cx, cy);
+        g.hline(cx - 21, cx + 21, cy - 4, mix(hex('#1a0c30'), hex('#e09a5a'), 0.35));
         // cabin
         g.poly(CAB_O, ink, 0, 1, cx, cy);
-        g.poly(CAB, hex('#170a30'), 0, 1, cx, cy);
-        g.line(cx - 10, cy - 14, cx - 4, cy - 7, cyan);
-        g.line(cx - 6, cy - 14, cx, cy - 7, shade(cyan, 0.5));
+        g.poly(CAB, hex('#0e0620'), 0, 1, cx, cy);
+        g.hline(cx - 12, cx + 12, cy - 15, mix(hex('#0e0620'), hex('#e09a5a'), 0.5));
+        g.line(cx - 10, cy - 14, cx - 4, cy - 7, shade(cyan, 0.6));
+        g.line(cx - 6, cy - 14, cx, cy - 7, shade(cyan, 0.3));
         // spoiler
         g.rect(cx - 30, cy - 9, 60, 2, ink);
         g.rect(cx - 26, cy - 7, 2, 3, ink);
@@ -226,19 +239,14 @@ const def: SceneDef = {
         g.rect(cx - 30, cy + 1, 60, 1, mix(accent, hex('#ffffff'), 0.4));
         g.glow(cx - 24, cy + 2, 12, accent, 0.3 * tl);
         g.glow(cx + 24, cy + 2, 12, accent, 0.3 * tl);
-        g.rect(cx - 6, cy + 6, 12, 3, hex('#d8d0e8'));
-        g.text('2087', cx - 7, cy + 6, ink);
+        g.rect(cx - 7, cy + 5, 14, 5, hex('#8a8498'));
+        g.text('2087', cx - 7, cy + 5, ink);
         // headlight spill on the road ahead
         g.tri(cx - 20, cy - 2, cx + 20, cy - 2, cx, HZ + 6, hex('#4f3a8a'), 2, 0.08);
 
-        // Scanlines + a slow shimmer band.
-        const band = ((t * 14) % (g.h + 40)) - 20;
-        const b = g.buf;
-        for (let by = 1; by < g.h; by += 2) {
-          const row = by * g.w;
-          const m = Math.abs(by - band) < 6 ? 236 : 218;
-          for (let bx = 0; bx < g.w; bx++) b[row + bx] = mulPx(b[row + bx]!, m);
-        }
+        // Tail lights on the road behind.
+        g.rectAdd(cx - 30, cy + 22, 60, 8, accent, 0.05 * tl);
+        void mulPx;
         void bayer;
         void TAU;
       },

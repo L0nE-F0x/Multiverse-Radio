@@ -1,7 +1,9 @@
-// Wild Multiverse: tall golden grass at sunset. Something improbable walks slowly across the
-// horizon. A tiny camera crew hides in the grass in the foreground, filming reverently.
+// Wild Multiverse: tall grass in the last of the sunset, backlit through warm haze. Something
+// improbable walks slowly across the horizon. A tiny camera crew hides in the grass in the
+// foreground, filming reverently.
 
-import { hex, mix, ramp, shade } from '../kit/color';
+import { haze } from '../kit/atmos';
+import { hex, mix, mute, ramp, shade } from '../kit/color';
 import { clamp, envelope, rampAt } from '../kit/fx';
 import type { Gfx } from '../kit/gfx';
 import { fbm, hash3 } from '../kit/rng';
@@ -9,8 +11,8 @@ import { arc, roundRect } from '../kit/shapes';
 import type { SceneDef } from '../types';
 
 const HZ = 110;
-const SUN = { x: 206, y: 104, r: 28 };
-const CREW = { x: 100, y: 162 };
+const SUN = { x: 206, y: 108, r: 26 };
+const CREW = { x: 100, y: 142 };
 
 interface Blade {
   x: number;
@@ -27,13 +29,14 @@ const def: SceneDef = {
   focusY: 96,
   rareEvents: 3,
   rareDuration: 8,
+  grade: { temperature: 0.35, contrast: 1.12, saturation: 0.78, bloom: 0.8, threshold: 0.66, vignette: 0.34 },
   create({ accent, rng }) {
-    const ink = hex('#1a0e10');
-    const sky = [hex('#2a1a4a'), hex('#6a2a5a'), hex('#c84a4a'), hex('#f08a3a'), hex('#ffc85a')];
-    const sil = hex('#2a1420');
-    const silRim = hex('#e88a4a');
-    const gold = ramp([hex('#5a3a14'), hex('#8a5a1a'), shade(accent, 1), mix(accent, hex('#fff0a0'), 0.4)], 4);
-    const far = hex('#4a2238');
+    const ink = hex('#0e0808');
+    const sky = [hex('#120e20'), hex('#2e1a32'), hex('#5e2a38'), hex('#9a4a38'), hex('#c88848')];
+    const sil = hex('#1c0e14');
+    const silRim = hex('#c8784a');
+    const gold = ramp([hex('#24180c'), hex('#4a3214'), mute(accent, 0.75, 0.72), mix(mute(accent, 0.7), hex('#f0d8a0'), 0.3)], 4);
+    const far = hex('#36182a');
 
     const blades: Blade[] = [];
     for (let i = 0; i < 240; i++) {
@@ -105,9 +108,11 @@ const def: SceneDef = {
       background(g) {
         g.vgrad(sky, g.top, HZ);
         // Sun with heat-haze bands, behind the far hills.
-        g.glow(SUN.x, SUN.y, 90, hex('#ffb04a'), 0.3, 6);
-        g.ball(SUN.x, SUN.y, SUN.r, SUN.r, ramp([hex('#ff8a3a'), hex('#ffc04a'), hex('#fff0a0')], 4), 0, -1, 0.7);
+        g.glow(SUN.x, SUN.y, 90, hex('#e8904a'), 0.24, 6);
+        g.ball(SUN.x, SUN.y, SUN.r, SUN.r, ramp([hex('#d86a34'), hex('#f0a048'), hex('#f8dc98')], 4), 0, -1, 0.7);
         for (let k = 0; k < 4; k++) g.rect(SUN.x - SUN.r, SUN.y + 4 + k * 5, SUN.r * 2, 1, mix(sky[3]!, hex('#ffc04a'), 0.5));
+        // Warm haze low in the sky swallows the sun's lower edge.
+        haze(g, hex('#b8603e'), HZ - 34, HZ, 0, 0.35, HZ - 34, HZ);
         // Far hills and an acacia.
         for (let x = g.left; x < g.right; x++) {
           const h = 8 + fbm(x / 40, 0, 7, 3) * 14;
@@ -126,8 +131,12 @@ const def: SceneDef = {
             const v = 0.5 + n * 0.22 + (y - HZ) / 200 - (y > 136 ? (y - 136) / 70 : 0);
             g.px(x, y, rampAt(gold, v, x, y));
           }
-        // Sun-glow across the near grass.
-        g.glow(SUN.x, HZ + 4, 80, hex('#ffb04a'), 0.12, 5);
+        // Sun-glow across the near grass, which is otherwise backlit and dark.
+        g.glow(SUN.x, HZ + 4, 80, hex('#e8904a'), 0.12, 5);
+        haze(g, hex('#7a3a2e'), HZ - 2, HZ + 12, 0.35, 0, HZ - 2, HZ + 12);
+        g.lighting(0.62);
+        g.light(SUN.x, SUN.y, 150, 0.4, 70);
+        g.light(CREW.x, CREW.y - 20, 60, 0.2);
         // Distant grass silhouette tips along the horizon.
         for (let x = g.left; x < g.right; x += 2) {
           const h = 2 + hash3(x, 3) * 4;
@@ -143,7 +152,7 @@ const def: SceneDef = {
         for (let i = 0; i < 18; i++) {
           const x = 120 + Math.sin(t * 0.1 + i * 2.3) * 140 + i * 3;
           const y = 80 + Math.sin(t * 0.17 + i) * 40;
-          g.pxAdd(x, y, hex('#fff0b0'), 0.25 + 0.25 * Math.sin(t * 2 + i));
+          g.pxAdd(x, y, hex('#f0d8a0'), 0.2 + 0.2 * Math.sin(t * 2 + i));
         }
 
         // Something walks across the horizon (a different something each crossing).
@@ -175,8 +184,8 @@ const def: SceneDef = {
         g.line(cx0, cy0 - 14, cx0, cy0 + 8, ink);
         const camY = cy0 - 28 + Math.round(duck * 0.3);
         roundRect(g, cx0 - 10, camY, 22, 14, 2, ink);
-        g.rect(cx0 - 9, camY + 1, 20, 12, hex('#2a2a34'));
-        g.rect(cx0 - 9, camY + 1, 20, 2, hex('#4a4a56'));
+        g.rect(cx0 - 9, camY + 1, 20, 12, hex('#1e1e26'));
+        g.rect(cx0 - 9, camY + 1, 20, 2, hex('#5a4a44'));
         roundRect(g, cx0 + 11, camY + 3, 8, 8, 2, ink);
         g.disc(cx0 + 16, camY + 7, 2, hex('#3a5a8a'));
         g.px(cx0 + 15, camY + 6, hex('#c8e8ff'));
@@ -188,21 +197,21 @@ const def: SceneDef = {
         // camera operator (cap, peering through the eyepiece)
         const oy = cy0 - 20 + duck;
         g.disc(cx0 - 15, oy, 6, ink);
-        g.disc(cx0 - 15, oy, 5, hex('#e8b890'));
-        g.rect(cx0 - 21, oy - 6, 12, 3, hex('#3a6a4a'));
-        g.rect(cx0 - 10, oy - 4, 4, 2, hex('#3a6a4a'));
+        g.disc(cx0 - 15, oy, 5, hex('#a8785a'));
+        g.rect(cx0 - 21, oy - 6, 12, 3, hex('#2a4430'));
+        g.rect(cx0 - 10, oy - 4, 4, 2, hex('#2a4430'));
         g.rect(cx0 - 13, oy - 1, 2, 2, ink);
-        g.rect(cx0 - 22, oy + 5, 13, 16, hex('#5a6a3a'));
+        g.rect(cx0 - 22, oy + 5, 13, 16, hex('#3a4428'));
         // boom operator and the fluffy boom mic poking above the grass
         const bx = cx0 + 44;
         const by = cy0 - 14 + duck;
         g.disc(bx, by, 6, ink);
-        g.disc(bx, by, 5, hex('#c8906a'));
+        g.disc(bx, by, 5, hex('#8a6048'));
         g.rect(bx - 5, by - 6, 11, 3, hex('#2a2a3a'));
         g.rect(bx - 6, by - 2, 2, 5, hex('#2a2a3a'));
         g.px(bx - 2, by, ink);
         g.px(bx + 2, by, ink);
-        g.rect(bx - 6, by + 5, 12, 16, hex('#8a5a3a'));
+        g.rect(bx - 6, by + 5, 12, 16, hex('#5a3a26'));
         const mx = bx - 30;
         const my = by - 40 + duck * 0.5 + Math.sin(t * 0.6) * 1;
         g.line(bx - 4, by + 6, mx, my, hex('#5a5a62'));
@@ -228,12 +237,11 @@ const def: SceneDef = {
         const dx = cx0 - 40;
         const dy = cy0 - 12 + duck;
         g.disc(dx, dy, 6, ink);
-        g.disc(dx, dy, 5, hex('#f0c8a0'));
-        g.rect(dx - 6, dy - 6, 12, 4, hex('#e8e0c8'));
-        g.rect(dx - 8, dy - 3, 16, 1, hex('#e8e0c8'));
+        g.disc(dx, dy, 5, hex('#b08868'));
+        g.rect(dx - 6, dy - 6, 12, 4, hex('#a89e88'));
+        g.rect(dx - 8, dy - 3, 16, 1, hex('#a89e88'));
         g.px(dx + 2, dy, ink);
-        g.rect(dx - 6, dy + 5, 12, 14, hex('#c87a3a'));
-        if (Math.floor(t / 4) % 3 === 0 && noticing < 0.2) g.text('shh', dx - 6, dy - 16, hex('#fff0d0'));
+        g.rect(dx - 6, dy + 5, 12, 14, hex('#7a4a2a'));
 
         // ── foreground grass (in front of the crew), swaying ──
         const e = f.energy;

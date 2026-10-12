@@ -1,14 +1,16 @@
-// Comet Marimba: a tiny sandy beach riding the glowing tail of a comet through space.
-// A palm, a hammock, and a crab in sunglasses at a DJ booth. Stars streak past.
+// Comet Marimba: a tiny island of sand and ice riding the glowing tail of a comet through
+// deep space. A palm, a hammock, and a crab in dark glasses at the decks. Stars streak past;
+// the sun is a small warm coin a long way off.
 
+import { haze, motes } from '../kit/atmos';
 import { hex, mix, ramp, shade } from '../kit/color';
 import { blinking, clamp, envelope, rampAt } from '../kit/fx';
 import { hash3 } from '../kit/rng';
 import { arc, dome, roundRect, thickLine } from '../kit/shapes';
 import type { SceneDef } from '../types';
 
-const HEAD = { x: 300, y: 54 };
-const SAND_Y = 128;
+const HEAD = { x: 296, y: 40 };
+const SAND_Y = 112;
 const ISLE = { l: 96, r: 240 };
 
 // The tail's centre line: from the comet head sweeping down-left.
@@ -19,39 +21,38 @@ const def: SceneDef = {
   fps: 20,
   rareEvents: 3,
   rareDuration: 7,
+  focusY: 84,
+  grade: { contrast: 1.12, saturation: 0.8, bloom: 0.8, threshold: 0.66, vignette: 0.32, temperature: -0.1 },
   create({ accent }) {
     const ink = hex('#0a0814');
-    const spaceC = [hex('#05061a'), hex('#0e0c2e'), hex('#1e1440')];
-    const sand = ramp([hex('#8a5a3a'), hex('#c89058'), hex('#f0c27a'), hex('#ffe4a8')], 5);
-    const ice = ramp([hex('#1a2a5a'), hex('#3a6aa8'), hex('#8ac4f0'), hex('#e0f4ff')], 4);
-    const leaf = ramp([hex('#1a4a2a'), hex('#2e8a3a'), hex('#6ac84a')], 3);
-    const crab = ramp([hex('#6a1a14'), hex('#c83a2a'), hex('#ff6a4a'), hex('#ffa88a')], 4);
-    const warm = accent;
+    const spaceC = [hex('#020309'), hex('#060818'), hex('#0c0e24')];
+    const sand = ramp([hex('#2e2622'), hex('#5a4a3e'), hex('#8a765e'), hex('#b8a284')], 5);
+    const ice = ramp([hex('#0a1226'), hex('#1c3254'), hex('#46688c'), hex('#a0c0d8')], 4);
+    const leaf = ramp([hex('#08120e'), hex('#152a20'), hex('#2a4a38')], 3);
+    const crab = ramp([hex('#2e100c'), hex('#6e2a1c'), hex('#a84e32'), hex('#d4865e')], 4);
+    const warm = mix(accent, hex('#c8a0a0'), 0.35);
 
     return {
       background(g) {
         g.vgrad(spaceC, g.top, g.bottom);
-        for (let i = 0; i < 90; i++) {
+        for (let i = 0; i < 70; i++) {
           const x = g.left + hash3(i, 1) * g.w;
           const y = g.top + hash3(i, 2) * g.h;
-          g.pxAdd(x, y, hex('#c8d0ff'), 0.3 + hash3(i, 3) * 0.5);
+          g.pxAdd(x, y, hex('#a8b4d8'), 0.2 + hash3(i, 3) * 0.4);
         }
-        // The friendly sun, a small distance away.
-        g.glow(52, 30, 40, hex('#ffcf6a'), 0.35, 5);
-        g.ball(52, 30, 11, 11, ramp([hex('#ff9a3a'), hex('#ffcf5a'), hex('#fff4b0')], 4), -0.4, -0.5, 0.5);
-        g.px(48, 28, ink);
-        g.px(56, 28, ink);
-        arc(g, 52, 32, 3, 2, 0.3, Math.PI - 0.3, ink);
+        // The sun: a small warm coin a long way off.
+        g.glow(48, 40, 30, hex('#ffb060'), 0.22, 5);
+        g.ball(48, 40, 6, 6, ramp([hex('#c86a2a'), hex('#f0a850'), hex('#fff0c8')], 4), -0.4, -0.5, 0.5);
 
         // Comet tail: layered glow along the curve, warmer and fainter with distance.
         for (let x = HEAD.x; x > g.left - 20; x -= 2) {
           const d = (HEAD.x - x) / 340;
           const y = tailY(x);
           const w = 8 + d * 46;
-          const c = mix(hex('#bff4ff'), warm, Math.min(1, d * 1.6));
-          g.glow(x, y, w, c, 0.07 * (1 - d * 0.7), 6);
+          const c = mix(hex('#a8dcef'), warm, Math.min(1, d * 1.6));
+          g.glow(x, y, w, c, 0.06 * (1 - d * 0.7), 6);
         }
-        g.glow(HEAD.x, HEAD.y, 46, hex('#bff4ff'), 0.5, 6);
+        g.glow(HEAD.x, HEAD.y, 46, hex('#a8dcef'), 0.45, 6);
         g.glow(HEAD.x, HEAD.y, 14, hex('#ffffff'), 0.9);
         g.ball(HEAD.x, HEAD.y, 6, 6, ice, -0.6, -0.4, 0.5);
 
@@ -63,15 +64,15 @@ const def: SceneDef = {
           for (let y = top; y < SAND_Y + depth; y++) {
             if (y < SAND_Y + 3) g.px(x, y, rampAt(sand, 0.7 - (y - top) / 14 + hash3(x, y) * 0.2, x, y));
             else {
-              const facet = Math.abs(((x * 0.7 + y) % 12) - 6) / 6;
-              g.px(x, y, rampAt(ice, 0.25 + facet * 0.5 - (y - SAND_Y) / 90, x, y));
+              const facet = Math.abs(((x * 0.7 + y) % 16) - 8) / 8;
+              g.px(x, y, rampAt(ice, 0.32 + facet * 0.22 - (y - SAND_Y) / 70 + (x - ISLE.l) / 600, x, y));
             }
           }
           g.px(x, top - 1, ink);
         }
         // lagoon on the left end
-        g.ellipse(ISLE.l + 20, SAND_Y + 1, 18, 3, hex('#2a8ac8'));
-        g.ellipse(ISLE.l + 20, SAND_Y + 1, 15, 2, hex('#4ac0e8'));
+        g.ellipse(ISLE.l + 20, SAND_Y + 1, 18, 3, hex('#14344a'));
+        g.ellipse(ISLE.l + 20, SAND_Y + 1, 15, 2, hex('#2a5a74'));
         // icicles under the island
         for (let i = 0; i < 9; i++) {
           const x = ISLE.l + 18 + i * 14;
@@ -88,7 +89,8 @@ const def: SceneDef = {
           const x = tx - u * 14 - u * u * 6;
           const y = tb - u * 50;
           g.rect(x - 2, y, 5, 2, ink);
-          g.rect(x - 1, y, 3, 2, (k % 4 < 2 ? hex('#8a5a32') : hex('#a8743e')));
+          g.rect(x - 1, y, 3, 2, k % 4 < 2 ? hex('#3a2a1e') : hex('#4e3826'));
+          g.px(x + 1, y, hex('#6a7e90'));
         }
         const cx = tx - 20;
         const cy = tb - 50;
@@ -106,27 +108,30 @@ const def: SceneDef = {
             py = qy;
           }
         }
-        g.disc(cx - 2, cy + 3, 2, hex('#6a4a2a'));
-        g.disc(cx + 3, cy + 3, 2, hex('#5a3a1e'));
+        g.disc(cx - 2, cy + 3, 2, hex('#2a1e14'));
+        g.disc(cx + 3, cy + 3, 2, hex('#22180e'));
 
         // Hammock post.
-        g.rect(160, SAND_Y - 30, 3, 26, hex('#8a5a32'));
+        g.rect(160, SAND_Y - 30, 3, 26, hex('#3a2a1e'));
+        g.vline(162, SAND_Y - 30, SAND_Y - 5, hex('#6a7e90'));
 
         // DJ booth: table, turntables, a tiny speaker.
         roundRect(g, 118, SAND_Y - 16, 40, 14, 2, ink);
-        g.rect(119, SAND_Y - 15, 38, 12, hex('#2a2440'));
-        g.rect(119, SAND_Y - 15, 38, 2, hex('#4a4070'));
-        g.text('MARIMBA', 120, SAND_Y - 10, warm);
+        g.rect(119, SAND_Y - 15, 38, 12, hex('#16141e'));
+        g.rect(119, SAND_Y - 15, 38, 1, hex('#3a3a4e'));
         g.rect(103, SAND_Y - 20, 12, 18, ink);
-        g.rect(104, SAND_Y - 19, 10, 16, hex('#2a2440'));
-        g.disc(109, SAND_Y - 14, 3, hex('#4a4070'));
-        g.disc(109, SAND_Y - 6, 2, hex('#4a4070'));
-        // beach towel + sandcastle
-        g.rect(176, SAND_Y - 2, 18, 4, hex('#ff6a8a'));
-        g.rect(176, SAND_Y - 1, 18, 1, hex('#ffd0dc'));
-        g.rect(228, SAND_Y - 8, 8, 6, sand[3]!);
-        g.rect(228, SAND_Y - 11, 2, 3, sand[3]!);
-        g.rect(234, SAND_Y - 11, 2, 3, sand[3]!);
+        g.rect(104, SAND_Y - 19, 10, 16, hex('#16141e'));
+        g.disc(109, SAND_Y - 14, 3, hex('#2a2a3a'));
+        g.disc(109, SAND_Y - 6, 2, hex('#2a2a3a'));
+        // a beach towel
+        g.rect(176, SAND_Y - 2, 18, 4, hex('#4a2a34'));
+        g.rect(176, SAND_Y - 1, 18, 1, hex('#7a5a60'));
+
+        haze(g, hex('#0a1428'), SAND_Y + 10, g.bottom, 0, 0.5);
+        g.lighting(0.55);
+        g.light(HEAD.x, HEAD.y, 130, 0.65);
+        g.light(165, 96, 80, 0.4, 40);
+        g.light(48, 40, 40, 0.25);
       },
 
       frame(g, f) {
@@ -135,14 +140,14 @@ const def: SceneDef = {
         const play = f.awake;
 
         // Stars streaking past (the beach is moving very fast).
-        const n = f.reduced ? 20 : 60;
+        const n = f.reduced ? 12 : 36;
         for (let i = 0; i < n; i++) {
           const sp = 40 + hash3(i, 11) * 120;
           const len = Math.round(sp / 25);
           const span = g.w + 30;
           const x = g.right + 10 - (((t * sp + hash3(i, 12) * span) % span));
           const y = g.top + hash3(i, 13) * g.h;
-          for (let k = 0; k < len; k++) g.pxAdd(x + k, y, hex('#d8e0ff'), (1 - k / len) * (0.3 + hash3(i, 14) * 0.5));
+          for (let k = 0; k < len; k++) g.pxAdd(x + k, y, hex('#b8c4e8'), (1 - k / len) * (0.15 + hash3(i, 14) * 0.35));
         }
 
         // Shimmer flowing down the tail.
@@ -150,14 +155,14 @@ const def: SceneDef = {
           const p = (t * 0.12 + hash3(i, 1)) % 1;
           const x = HEAD.x - p * 360;
           const y = tailY(x) + (hash3(i, 2) - 0.5) * (10 + p * 50);
-          g.pxAdd(x, y, mix(hex('#e0faff'), warm, p), (1 - p) * 0.7 + f.energy * 0.3);
+          g.pxAdd(x, y, mix(hex('#cdeef8'), warm, p), (1 - p) * 0.6 + f.energy * 0.25);
         }
         g.glow(HEAD.x, HEAD.y, 10 + f.pulse * 4, hex('#ffffff'), 0.2 + f.energy * 0.3);
 
         // Waves of pure time lapping at the lagoon.
         const wv = Math.sin(t * 1.4);
-        g.hline(ISLE.l + 4 + Math.round(wv * 2), ISLE.l + 34 + Math.round(wv * 2), SAND_Y - 1, hex('#d8f8ff'));
-        if (!f.reduced) for (let i = 0; i < 4; i++) g.px(ISLE.l + 8 + i * 7 + Math.round(Math.sin(t * 3 + i) * 2), SAND_Y + 1, hex('#ffffff'));
+        g.hline(ISLE.l + 4 + Math.round(wv * 2), ISLE.l + 34 + Math.round(wv * 2), SAND_Y - 1, hex('#7a9cb4'));
+        if (!f.reduced) for (let i = 0; i < 4; i++) g.px(ISLE.l + 8 + i * 7 + Math.round(Math.sin(t * 3 + i) * 2), SAND_Y + 1, hex('#a8c8dc'));
 
         // Hammock between the post and the palm, swaying.
         const sway = Math.sin(t * 0.9) * 2;
@@ -169,7 +174,7 @@ const def: SceneDef = {
           const u = k / 30;
           const x = hx0 + (hx1 - hx0) * u + Math.sin(u * Math.PI) * sway;
           const y = hy0 + (hy1 - hy0) * u + Math.sin(u * Math.PI) * 10;
-          g.rect(x, y, 1, 3, k % 3 ? hex('#ffd36a') : hex('#ff8a5a'));
+          g.rect(x, y, 1, 3, k % 3 ? hex('#8a7a5a') : hex('#6a4a3a'));
         }
         g.px(hx0, hy0, ink);
         g.px(hx1, hy1, ink);
@@ -180,21 +185,23 @@ const def: SceneDef = {
         const ccy = SAND_Y - 27 + bob;
         const scratching = f.rare === 1 && ev < 5;
         // turntables (in front of the crab's body, drawn after)
-        g.ellipse(ccx, ccy + 4, 13, 8, ink);
-        g.ball(ccx, ccy + 4, 12, 7, crab, -0.4, -0.8, 0.3);
-        g.px(ccx - 6, ccy + 1, crab[3]!);
-        g.px(ccx + 5, ccy + 2, crab[3]!);
-        // eye stalks + sunglasses
-        g.vline(ccx - 4, ccy - 4, ccy, crab[1]!);
-        g.vline(ccx + 4, ccy - 4, ccy, crab[1]!);
-        g.rect(ccx - 9, ccy - 7, 8, 4, ink);
-        g.rect(ccx + 1, ccy - 7, 8, 4, ink);
-        g.hline(ccx - 1, ccx + 1, ccy - 6, ink);
-        g.px(ccx - 7, ccy - 6, hex('#8ac4f0'));
-        g.px(ccx + 2, ccy - 6, hex('#8ac4f0'));
-        g.hline(ccx - 3, ccx + 3, ccy + 4, ink);
-        g.px(ccx - 4, ccy + 3, ink);
-        g.px(ccx + 4, ccy + 3, ink);
+        // carapace: a wide, flat shell, lit from the comet on the right
+        g.ellipse(ccx, ccy + 4, 14, 7, ink);
+        g.ellipse(ccx, ccy + 4, 13, 6, crab[1]!);
+        g.ellipse(ccx + 1, ccy + 2, 10, 3, crab[2]!);
+        g.ellipse(ccx + 5, ccy + 1, 5, 1, crab[3]!);
+        g.hline(ccx - 11, ccx + 11, ccy + 8, crab[0]!);
+        for (const k of [-8, -3, 3, 8]) g.px(ccx + k, ccy + 9, ink);
+        // eye stalks + dark glasses with the comet in them
+        g.vline(ccx - 4, ccy - 4, ccy - 1, crab[2]!);
+        g.vline(ccx + 4, ccy - 4, ccy - 1, crab[2]!);
+        g.rect(ccx - 8, ccy - 8, 7, 4, ink);
+        g.rect(ccx + 1, ccy - 8, 7, 4, ink);
+        g.hline(ccx - 1, ccx + 1, ccy - 7, ink);
+        g.hline(ccx - 8, ccx - 2, ccy - 8, hex('#3e4656'));
+        g.hline(ccx + 1, ccx + 7, ccy - 8, hex('#3e4656'));
+        g.px(ccx + 6, ccy - 7, hex('#cdeef8'));
+        g.px(ccx - 3, ccy - 7, hex('#7a9cb4'));
         // claws: one on the record, one pumping the air
         const pumpY = play > 0.4 ? Math.round(Math.sin(t * Math.PI * 1.4) * 3 - f.pulse * 2) : 2;
         const scratchX = scratching ? Math.round(Math.sin(ev * 25) * 3) : Math.round(Math.sin(t * 2) * 1);
@@ -214,25 +221,17 @@ const def: SceneDef = {
           const rx = ccx + dx;
           const ry = SAND_Y - 15;
           g.ellipse(rx, ry, 6, 2, ink);
-          g.ellipse(rx, ry, 5, 1, hex('#3a3450'));
+          g.ellipse(rx, ry, 5, 1, hex('#22202c'));
           g.px(rx + Math.round(Math.cos(spin) * 4), ry + Math.round(Math.sin(spin) * 1), warm);
         }
-        if (scratching && ev < 3) g.text('WIKKA', ccx - 16, ccy - 20 - (Math.floor(ev * 4) % 2), warm);
+        if (scratching) g.glow(ccx - 11, SAND_Y - 15, 6, warm, 0.25 + 0.2 * Math.abs(Math.sin(ev * 25)));
         // booth lights
         for (let i = 0; i < 5; i++) {
           const on = play > 0.4 && (Math.floor(t * 4) + i) % 5 < 2;
-          g.px(122 + i * 8, SAND_Y - 4, on ? hex('#ffe08a') : hex('#4a4070'));
+          g.px(122 + i * 8, SAND_Y - 6, on ? warm : hex('#2a2a3a'));
+          if (on) g.glow(122 + i * 8, SAND_Y - 6, 3, warm, 0.25);
         }
-        // music notes
-        if (play > 0.4) {
-          for (let i = 0; i < 3; i++) {
-            const p = (t * 0.3 + i / 3) % 1;
-            const nx = 106 + Math.sin(p * 5 + i) * 4 - p * 6;
-            const ny = SAND_Y - 26 - p * 26;
-            g.rect(nx, ny, 2, 2, mix(warm, spaceC[1]!, p));
-            g.vline(nx + 1, ny - 4, ny, mix(warm, spaceC[1]!, p));
-          }
-        }
+        if (!f.reduced) motes(g, t, ISLE.l, SAND_Y - 50, ISLE.r, SAND_Y, 10, hex('#cdeef8'), 0.3, 6, 0.3);
 
         // Beach ball bouncing across in the low gravity.
         if (f.rare === 0 && ev < 7) {
@@ -240,22 +239,23 @@ const def: SceneDef = {
           const bx = ISLE.r + 10 - p * (ISLE.r - ISLE.l + 30);
           const by = SAND_Y - 4 - Math.abs(Math.sin(p * Math.PI * 3)) * 26;
           g.disc(bx, by, 4, ink);
-          g.disc(bx, by, 3, hex('#ffffff'));
-          dome(g, bx, by, 3, 3, hex('#ff4a6a'));
-          g.rect(bx - 1, by - 3, 2, 7, hex('#4a8aff'));
+          g.disc(bx, by, 3, hex('#c8c4bc'));
+          dome(g, bx, by, 3, 3, hex('#a84a50'));
+          g.rect(bx - 1, by - 3, 2, 7, hex('#4a6a9a'));
         }
         // A surfer rides the tail.
         if (f.rare === 2 && ev < 7) {
           const p = ev / 7;
           const sx = HEAD.x - 20 - p * 340;
-          const sy = tailY(sx) - 4 + Math.sin(p * 20) * 2;
+          const sy = tailY(sx) - 26 + Math.sin(p * 20) * 2;
           g.rect(sx - 5, sy + 2, 11, 2, hex('#ffd36a'));
           g.rect(sx - 1, sy - 5, 2, 7, hex('#4a3aa8'));
           g.disc(sx, sy - 7, 1, hex('#e8b890'));
           g.line(sx, sy - 3, sx - 4, sy - 6, hex('#e8b890'));
           g.line(sx, sy - 3, sx + 4, sy - 4, hex('#e8b890'));
         }
-        if (blinking(t, 4, 6)) g.px(52 + 4, 28, hex('#ffcf5a'));
+        void blinking;
+        void arc;
         void clamp;
         void envelope;
         void shade;
