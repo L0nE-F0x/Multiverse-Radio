@@ -351,8 +351,8 @@ function talkClock(w: HourWriter, rng: Rng, pools: Pools): void {
     if (w.remaining <= 0) break;
     if (ads.due(w.elapsed)) aired += w.adBreak(pools.ads, rng.int(1, 3));
     if (idents.due(w.elapsed)) aired += w.voice(pools.idents);
-    // Nothing fit: let the music carry the rest of the hour.
-    if (!aired) w.track(w.remaining, 0);
+    // Nothing fresh fits right now: a track, then try again (clips free up as time passes).
+    if (!aired) w.track(rng.int(90, 180) * SEC, 75 * SEC);
     else interstitial();
   }
 }
