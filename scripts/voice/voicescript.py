@@ -74,7 +74,7 @@ LENGTH_GUIDE = {
 }
 OVER_MUSIC_BY_DEFAULT = {"id", "dj", "interrupt"}
 DEFAULT_GAP = 0.35
-WORDS_PER_SECOND = 2.5
+WORDS_PER_SECOND = 3.1  # measured on the rendered library (SCHEMA.md says ~2.5 to be safe)
 MAX_TEXT = 300
 SPEED_RANGE = (0.5, 2.0)  # what Kokoro accepts
 
