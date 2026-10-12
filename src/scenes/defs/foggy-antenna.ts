@@ -7,7 +7,8 @@ import { type Gfx, blendPx } from '../kit/gfx';
 import { fbm, hash3 } from '../kit/rng';
 import type { SceneDef } from '../types';
 
-const MAST = { x: 160, base: 136, top: 24 };
+// Between the HUD's bands: the beacon below the top one, the fox above the bottom one.
+const MAST = { x: 160, base: 124, top: 34 };
 const TEX_W = 512;
 
 interface FogLayer {
@@ -26,6 +27,7 @@ const def: SceneDef = {
   focusY: 84,
   rareEvents: 4,
   rareDuration: 8,
+  grade: { temperature: -0.2, contrast: 1.12, saturation: 0.8, bloom: 0.8, threshold: 0.6, vignette: 0.5, shadows: '#03050a' },
   create({ accent }) {
     const ink = hex('#05070c');
     const sky = [hex('#05070f'), hex('#0b1020'), hex('#151c30'), hex('#1e2638')];
@@ -35,9 +37,9 @@ const def: SceneDef = {
     const steelL = hex('#3a4458');
     const red = accent;
     const fogC = hex('#9aa6bc');
-    const fox = hex('#d8742e');
-    const foxD = hex('#8a3e18');
-    const cream = hex('#f4e8d8');
+    const fox = hex('#9a5428');
+    const foxD = hex('#4e2410');
+    const cream = hex('#c8bcaa');
 
     // Pre-baked fog textures (tile horizontally).
     const mkLayer = (y0: number, h: number, speed: number, seed: number, k: number): FogLayer => {
@@ -52,7 +54,7 @@ const def: SceneDef = {
         }
       return { y0, h, speed, alpha, k };
     };
-    const layers = [mkLayer(70, 50, 2.2, 3, 0.45), mkLayer(104, 46, -3.4, 7, 0.55), mkLayer(132, 70, 4.5, 11, 0.7)];
+    const layers = [mkLayer(58, 50, 2.2, 3, 0.45), mkLayer(92, 46, -3.4, 7, 0.55), mkLayer(118, 70, 4.5, 11, 0.7)];
 
     const drawFog = (g: Gfx, L: FogLayer, t: number, boost: number) => {
       const b = g.buf;
@@ -77,12 +79,12 @@ const def: SceneDef = {
         g.glow(70, 40, 30, hex('#c8d0e8'), 0.12, 5);
         // Distant ridge, then the hill.
         for (let x = g.left; x < g.right; x++) {
-          const ry = 128 + Math.sin(x * 0.02 + 1) * 6 + fbm(x / 30, 0, 4, 3) * 8;
+          const ry = 116 + Math.sin(x * 0.02 + 1) * 6 + fbm(x / 30, 0, 4, 3) * 8;
           g.rect(x, ry, 1, g.bottom - ry, hex('#0e131e'));
         }
         // a cottage far off on the ridge (window lit only in a rare moment)
-        g.rect(258, 122, 10, 7, hex('#0a0e16'));
-        g.tri(256, 122, 270, 122, 263, 116, hex('#0a0e16'));
+        g.rect(258, 110, 10, 7, hex('#0a0e16'));
+        g.tri(256, 110, 270, 110, 263, 104, hex('#0a0e16'));
         for (let x = g.left; x < g.right; x++) {
           const y = Math.round(hillY(x));
           g.rect(x, y, 1, g.bottom - y, hill);
@@ -120,6 +122,9 @@ const def: SceneDef = {
         g.rect(x - 22, base - 8, 14, 9, hex('#121826'));
         g.rect(x - 23, base - 9, 16, 2, steelL);
         g.rect(x - 18, base - 5, 3, 3, hex('#2a3448'));
+        g.lighting(0.55);
+        g.light(x, top, 60, 0.4);
+        g.light(188, base - 10, 40, 0.2);
       },
 
       frame(g, f) {
@@ -129,8 +134,8 @@ const def: SceneDef = {
         // A distant window lights up (rare), as though somebody else is listening too.
         if (f.rare === 3 && ev < 8) {
           const k = envelope(ev, 8, 1.5, 2);
-          g.rect(262, 124, 2, 2, mix(hex('#0a0e16'), hex('#ffd08a'), k));
-          g.glow(263, 125, 6, hex('#ffd08a'), k * 0.4);
+          g.rect(262, 112, 2, 2, mix(hex('#0a0e16'), hex('#ffd08a'), k));
+          g.glow(263, 113, 6, hex('#ffd08a'), k * 0.4);
         }
 
         // Geese, in formation, owed to someone.
