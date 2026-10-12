@@ -17,6 +17,13 @@ export function mix32(x: number): number {
 }
 
 export class Rng {
+  /**
+   * Artist taste (v3, see recipes/artist.ts): while an artist's track is being composed,
+   * named choices (string items in pick/weighted) are weighted by how much the artist
+   * likes them. Null the rest of the time. Draws the same numbers either way.
+   */
+  static taste: ((item: string) => number) | null = null;
+
   private a: number;
   private b: number;
   private c: number;
@@ -67,16 +74,19 @@ export class Rng {
 
   pick<T>(items: readonly T[]): T {
     if (items.length === 0) throw new Error('pick from empty list');
+    if (Rng.taste && items.length > 1 && typeof items[0] === 'string') return this.weighted(items.map((x) => [x, 1] as const));
     return items[this.u32() % items.length]!;
   }
 
   /** Weighted pick: weights need not sum to 1. */
   weighted<T>(items: readonly (readonly [T, number])[]): T {
+    const taste = Rng.taste;
+    const weight = (item: T, w: number) => (taste && typeof item === 'string' ? Math.max(0, w) * taste(item) : Math.max(0, w));
     let total = 0;
-    for (const [, w] of items) total += Math.max(0, w);
+    for (const [item, w] of items) total += weight(item, w);
     let r = this.next() * total;
     for (const [item, w] of items) {
-      r -= Math.max(0, w);
+      r -= weight(item, w);
       if (r < 0) return item;
     }
     return items[items.length - 1]![0];
