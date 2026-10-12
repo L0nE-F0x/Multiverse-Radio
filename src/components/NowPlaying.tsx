@@ -1,4 +1,3 @@
-import { useMemo, type CSSProperties } from 'react';
 import type { PlayStatus, Segment, StationDef } from '../broadcast/types';
 import { useNow } from '../hooks/useNow';
 import { segmentElapsed } from '../ui/clock';
@@ -40,7 +39,7 @@ export function NowPlaying() {
 
       <div key={station.id} className="vfd-station flicker-in">
         <p className="vfd-station-name">{station.name}</p>
-        <p className="vfd-dim vfd-origin">
+        <p className="vfd-dim vfd-origin clamp-1" title={station.origin}>
           {FORMAT_LABEL[station.format]} · from {station.origin}
         </p>
       </div>
@@ -71,8 +70,10 @@ function SegmentReadout({ segment, station }: { segment: Segment; station: Stati
         <p className="vfd-kind">
           <NoteIcon className="h-3.5 w-3.5" /> Now spinning
         </p>
-        <p className="vfd-title">{label.title}</p>
-        <p className="vfd-byline">
+        <p className="vfd-title clamp-2" title={label.title}>
+          {label.title}
+        </p>
+        <p className="vfd-byline clamp-2" title={album ? `${label.byline} · ${album}` : label.byline}>
           {label.byline}
           {album && (
             <>
@@ -81,7 +82,11 @@ function SegmentReadout({ segment, station }: { segment: Segment; station: Stati
             </>
           )}
         </p>
-        {note && <p className="vfd-note">{note}</p>}
+        {note && (
+          <p className="vfd-note" title={note}>
+            {note}
+          </p>
+        )}
       </div>
     );
   }
@@ -91,37 +96,31 @@ function SegmentReadout({ segment, station }: { segment: Segment; station: Stati
       <p className="vfd-kind" data-category={segment.clip.category}>
         <MicIcon className="h-3.5 w-3.5" /> {category}
       </p>
-      <p className="vfd-title">{label.title}</p>
-      <p className="vfd-byline">with {label.byline}</p>
+      <p className="vfd-title clamp-2" title={label.title}>
+        {label.title}
+      </p>
+      <p className="vfd-byline clamp-1">with {label.byline}</p>
     </div>
   );
 }
 
+const PROGRESS_CELLS = 36;
+
 /**
- * A compositor-driven progress bar (a CSS animation keyed to the segment) and a clock
- * that re-renders once a second at most.
+ * Segmented VFD progress, ticked by a once-a-second clock rather than a continuous
+ * animation: cheaper for a tab that stays open all night, and truer to the hardware.
  */
 function Progress({ segment, status }: { segment: Segment; status: PlayStatus }) {
-  const running = status === 'playing';
-  const now = useNow(1000, running);
+  const now = useNow(1000, status === 'playing');
   const elapsed = segmentElapsed(segment, now);
-  // Recomputed (and the animation restarted) only when the segment or status changes.
-  const start = useMemo(() => segmentElapsed(segment), [segment, status]);
+  const lit = Math.round((elapsed / Math.max(1, segment.durationMs)) * PROGRESS_CELLS);
 
   return (
     <div className="vfd-progress">
-      <div className="vfd-progress-track" aria-hidden>
-        <div
-          key={`${segment.id}:${status}`}
-          className="vfd-progress-fill"
-          style={
-            {
-              animationDuration: `${segment.durationMs}ms`,
-              animationDelay: `-${start}ms`,
-              animationPlayState: running ? 'running' : 'paused',
-            } as CSSProperties
-          }
-        />
+      <div className="vfd-cells" aria-hidden>
+        {Array.from({ length: PROGRESS_CELLS }, (_, i) => (
+          <span key={i} data-lit={i < lit} />
+        ))}
       </div>
       <div className="vfd-row vfd-dim tabular-nums">
         <span>{formatDuration(elapsed)}</span>

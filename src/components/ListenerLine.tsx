@@ -38,7 +38,7 @@ export function ListenerLine() {
       <ol className="fax-paper">
         {messages.map((message, i) => (
           <li key={message.seed} className={i === 0 ? 'fax-message fax-new' : 'fax-message'}>
-            <p className="fax-from">
+            <p className="fax-from clamp-2">
               <span>From:</span> {message.from}
               {message.where && (
                 <>
@@ -47,7 +47,9 @@ export function ListenerLine() {
                 </>
               )}
             </p>
-            <p className="fax-text">{message.text}</p>
+            <p className="fax-text clamp-5" title={message.text}>
+              {message.text}
+            </p>
           </li>
         ))}
       </ol>

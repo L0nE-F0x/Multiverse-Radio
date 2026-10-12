@@ -3,6 +3,7 @@ import { useBroadcast } from '../broadcast/store';
 import { useDocumentVisible } from '../hooks/useDocumentVisible';
 import { usePrefersReducedMotion } from '../hooks/usePrefersReducedMotion';
 import { useStation, useStatus } from '../ui/select';
+import { onFrame } from '../ui/frameloop';
 import { useUi } from '../ui/store';
 
 const SEGMENTS = 10;
@@ -12,8 +13,8 @@ const MAX_HZ = 9000;
 /**
  * A segmented VFD spectrum meter fed by the live analyser (post-mix, pre-volume, so it
  * keeps dancing when muted). With no analyser it plays a slow, obviously-idle ripple.
- * The loop only runs while on air and on screen, at 30 fps (10 with reduced motion),
- * and stops completely once the bars have settled.
+ * It runs on the shared 30 fps frame loop (10 fps with reduced motion) only while on
+ * air and on screen, and stops completely once the bars have settled.
  */
 export function Visualizer() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -45,9 +46,9 @@ export function Visualizer() {
     let levels = new Float32Array(0);
     let peaks = new Float32Array(0);
     let bins: Uint8Array<ArrayBuffer> | null = null;
-    let raf = 0;
+    let stop: (() => void) | undefined;
     let lastFrame = 0;
-    const frameMs = reducedMotion ? 100 : 33;
+    const frameMs = reducedMotion ? 100 : 30;
 
     const resize = () => {
       const dpr = Math.min(window.devicePixelRatio || 1, 2);
@@ -125,27 +126,25 @@ export function Visualizer() {
       }
     };
 
-    const loop = (t: number) => {
-      raf = 0;
-      if (t - lastFrame >= frameMs) {
-        lastFrame = t;
-        step(t);
-        draw();
-      }
+    const frame = (t: number) => {
+      if (t - lastFrame < frameMs) return;
+      lastFrame = t;
+      step(t);
+      draw();
       const settled = !runningRef.current && levels.every((v) => v < 0.01) && peaks.every((v) => v < 0.01);
       if (settled) {
         levels.fill(0);
         peaks.fill(0);
         draw();
-        return;
+        stop?.();
+        stop = undefined;
       }
-      raf = requestAnimationFrame(loop);
     };
 
     const wake = () => {
-      if (raf) return;
+      if (stop) return;
       draw();
-      raf = requestAnimationFrame(loop);
+      stop = onFrame(frame);
     };
     wakeRef.current = wake;
 
@@ -154,7 +153,7 @@ export function Visualizer() {
     wake();
 
     return () => {
-      cancelAnimationFrame(raf);
+      stop?.();
       observer.disconnect();
       wakeRef.current = () => {};
     };

@@ -120,8 +120,10 @@ function LogRow({
     <li className="log-row" style={{ '--ch': station?.color ?? 'currentColor' } as CSSProperties}>
       <span className="log-when">{when ?? (segment.kind === 'track' ? <NoteIcon className="h-3.5 w-3.5" /> : <MicIcon className="h-3.5 w-3.5" />)}</span>
       <span className="min-w-0 flex-1">
-        <span className="log-title">{label.title}</span>
-        <span className="log-byline">
+        <span className="log-title clamp-2" title={label.title}>
+          {label.title}
+        </span>
+        <span className="log-byline clamp-1">
           {segment.kind === 'track' ? label.byline : `${label.kind} · ${label.byline}`}
           {elsewhere && (
             <>

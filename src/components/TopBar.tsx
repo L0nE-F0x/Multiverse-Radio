@@ -46,14 +46,20 @@ export function TopBar() {
   );
 }
 
+/** The planet with a face and an antenna (same as the favicon). */
 function Logo() {
   return (
-    <svg viewBox="0 0 40 40" className="wordmark-logo" aria-hidden>
-      <circle cx="20" cy="22" r="13" fill="none" stroke="currentColor" strokeWidth="2.4" />
-      <ellipse cx="20" cy="22" rx="19" ry="6" fill="none" stroke="var(--accent)" strokeWidth="2.2" transform="rotate(-18 20 22)" />
-      <circle cx="20" cy="22" r="4" fill="var(--accent)" />
-      <path d="M26 9l6-7" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" />
-      <circle cx="32.5" cy="2.5" r="2" fill="var(--accent)" />
+    <svg viewBox="0 0 64 64" className="wordmark-logo" aria-hidden>
+      <path d="M37 22.5 47 6" stroke="#e8dcc4" strokeWidth="3.2" strokeLinecap="round" />
+      <circle cx="48" cy="5.5" r="3.5" fill="var(--accent)" />
+      <ellipse cx="32" cy="37" rx="27" ry="8.5" fill="none" stroke="#5a3a28" strokeWidth="5" transform="rotate(-18 32 37)" />
+      <circle cx="32" cy="37" r="16" fill="var(--accent)" stroke="#2a170d" strokeWidth="2.5" />
+      <circle cx="26.5" cy="32" r="3.6" fill="#fff" stroke="#2a170d" strokeWidth="1.6" />
+      <circle cx="37.5" cy="32" r="3.6" fill="#fff" stroke="#2a170d" strokeWidth="1.6" />
+      <circle cx="27.2" cy="33.4" r="1.7" fill="#2a170d" />
+      <circle cx="38.2" cy="33.4" r="1.7" fill="#2a170d" />
+      <path d="M27.5 38.5q4.5 3.5 9 0" fill="none" stroke="#2a170d" strokeWidth="2" strokeLinecap="round" />
+      <path d="M6.3 45.3A27 8.5 -18 0 0 57.7 28.7" fill="none" stroke="#ffd23f" strokeWidth="3.4" strokeLinecap="round" />
     </svg>
   );
 }

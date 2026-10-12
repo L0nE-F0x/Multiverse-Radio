@@ -1,12 +1,20 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
   <defs>
-    <radialGradient id="k" cx="40%" cy="35%" r="70%">
-      <stop offset="0" stop-color="#3a2f26"/>
-      <stop offset="1" stop-color="#0f0c0a"/>
+    <radialGradient id="p" cx="38%" cy="34%" r="70%">
+      <stop offset="0" stop-color="#ffd2b8"/>
+      <stop offset="0.55" stop-color="#ff9e7a"/>
+      <stop offset="1" stop-color="#b8502e"/>
     </radialGradient>
   </defs>
-  <circle cx="32" cy="32" r="30" fill="#0a0a0c"/>
-  <circle cx="32" cy="32" r="22" fill="url(#k)" stroke="#ff6b35" stroke-opacity=".35" stroke-width="2"/>
-  <line x1="32" y1="30" x2="45" y2="17" stroke="#ffaa44" stroke-width="4" stroke-linecap="round"/>
-  <circle cx="32" cy="32" r="4" fill="#ff6b35"/>
+  <rect width="64" height="64" rx="14" fill="#1a110c"/>
+  <path d="M37 22.5 47 6" stroke="#e8dcc4" stroke-width="3.2" stroke-linecap="round"/>
+  <circle cx="48" cy="5.5" r="3.5" fill="#ffd23f"/>
+  <ellipse cx="32" cy="37" rx="27" ry="8.5" fill="none" stroke="#5a3a28" stroke-width="5" transform="rotate(-18 32 37)"/>
+  <circle cx="32" cy="37" r="16" fill="url(#p)" stroke="#2a170d" stroke-width="2.5"/>
+  <circle cx="26.5" cy="32" r="3.6" fill="#fff" stroke="#2a170d" stroke-width="1.6"/>
+  <circle cx="37.5" cy="32" r="3.6" fill="#fff" stroke="#2a170d" stroke-width="1.6"/>
+  <circle cx="27.2" cy="33.4" r="1.7" fill="#2a170d"/>
+  <circle cx="38.2" cy="33.4" r="1.7" fill="#2a170d"/>
+  <path d="M27.5 38.5q4.5 3.5 9 0" fill="none" stroke="#2a170d" stroke-width="2" stroke-linecap="round"/>
+  <path d="M6.3 45.3A27 8.5 -18 0 0 57.7 28.7" fill="none" stroke="#ffd23f" stroke-width="3.4" stroke-linecap="round"/>
 </svg>

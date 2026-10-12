@@ -32,16 +32,18 @@ export function Cabinet() {
       <div className="cab-screen">
         <Screen />
       </div>
-      <div className="cab-vfd">
-        <NowPlaying />
-      </div>
-      <div className="cab-knobs">
-        <KnobPanel />
-      </div>
-      <div className="cab-grille grille">
-        <GooglyEyes />
-        <WarrantySticker />
-        <SmackZone />
+      <div className="cab-side">
+        <div className="cab-vfd">
+          <NowPlaying />
+        </div>
+        <div className="cab-knobs">
+          <KnobPanel />
+        </div>
+        <div className="cab-grille grille">
+          <GooglyEyes />
+          <WarrantySticker />
+          <SmackZone />
+        </div>
       </div>
       <div className="cab-band">
         <TuningBand />

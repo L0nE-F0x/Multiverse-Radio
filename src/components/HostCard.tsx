@@ -1,7 +1,9 @@
-import type { CSSProperties } from 'react';
+import { useEffect, useRef, type CSSProperties } from 'react';
+import { useDocumentVisible } from '../hooks/useDocumentVisible';
 import { useNow } from '../hooks/useNow';
+import { usePrefersReducedMotion } from '../hooks/usePrefersReducedMotion';
 import { daypart } from '../ui/format';
-import { useStation } from '../ui/select';
+import { useStation, useStatus } from '../ui/select';
 import { Portrait } from './Portrait';
 
 const GREETING = {
@@ -16,6 +18,8 @@ export function HostCard() {
   const station = useStation();
   const now = useNow(10 * 60_000);
   const { host, cast = [] } = station;
+  const photoRef = useRef<HTMLDivElement>(null);
+  useBlink(photoRef, useStatus() === 'playing');
 
   return (
     <section className="host-card" aria-labelledby="host-heading" style={{ '--ch': station.color } as CSSProperties}>
@@ -25,7 +29,9 @@ export function HostCard() {
         <span>Staff · Do not feed</span>
       </div>
       <div className="host-main">
-        <Portrait key={host.name} name={host.name} color={station.color} className="host-photo" />
+        <div ref={photoRef} className="host-photo">
+          <Portrait key={host.name} name={host.name} color={station.color} className="h-full w-full" />
+        </div>
         <div className="min-w-0">
           <p className="host-greeting">{GREETING[daypart(new Date(now))]}</p>
           <h2 id="host-heading" className="host-name">
@@ -54,4 +60,25 @@ export function HostCard() {
       </p>
     </section>
   );
+}
+
+/** The host blinks now and then while on air: a class flipped by a timer, not an endless animation. */
+function useBlink(ref: React.RefObject<HTMLElement | null>, active: boolean) {
+  const visible = useDocumentVisible();
+  const reducedMotion = usePrefersReducedMotion();
+  useEffect(() => {
+    const element = ref.current;
+    if (!element || !active || !visible || reducedMotion) return;
+    let open: ReturnType<typeof setTimeout>;
+    const blink = () => {
+      element.dataset.blink = 'true';
+      open = setTimeout(() => (element.dataset.blink = 'false'), 140);
+    };
+    const timer = setInterval(blink, 5200 + Math.random() * 2400);
+    return () => {
+      clearInterval(timer);
+      clearTimeout(open);
+      element.dataset.blink = 'false';
+    };
+  }, [ref, active, visible, reducedMotion]);
 }
