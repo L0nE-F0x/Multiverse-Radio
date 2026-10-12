@@ -36,4 +36,22 @@ export const DEEP_SCENES: Partial<Record<SceneId, SceneEntry>> = {
     label: 'A small boat at anchor at night, egg boxes in its lit windows and a long-wire aerial strung from the mast.',
     load: () => import('./defs/pirate-boat'),
   },
+
+  // ── oddities between stations ──
+  'oddity-testcard': {
+    label: 'An old television glows with a test card in a dark room, an empty armchair facing it.',
+    load: () => import('./defs/oddity-testcard'),
+  },
+  'oddity-beacon': {
+    label: 'A lone distress buoy turns slowly in deep space, blinking red against a faint nebula.',
+    load: () => import('./defs/oddity-beacon'),
+  },
+  'oddity-jukebox': {
+    label: 'A glowing jukebox plays the same record in an empty diner at night, rain on the windows.',
+    load: () => import('./defs/oddity-jukebox'),
+  },
+  'oddity-clock': {
+    label: 'An atomic clock in a steel vault tosses a glowing ball of atoms each second beside a nixie readout.',
+    load: () => import('./defs/oddity-clock'),
+  },
 };
