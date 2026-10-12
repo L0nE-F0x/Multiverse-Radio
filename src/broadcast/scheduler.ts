@@ -217,7 +217,7 @@ class HourWriter {
       durationMs: length,
       recipe,
       seed,
-      meta: trackMeta(this.station, seed),
+      meta: trackMeta(this.station, seed, recipe),
     };
     this.segments.push(segment);
     this.trackIndex++;
