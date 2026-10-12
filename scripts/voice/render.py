@@ -320,14 +320,15 @@ WORKER_GB = 0.9  # peak memory of one worker (Kokoro session + DSP buffers)
 
 def default_jobs() -> int:
     """Worker processes for a shared machine: Kokoro runs best single-threaded (1.65x realtime per
-    core; 4 threads only reach 70% efficiency), so one worker per idle core, minus one, capped
-    by free memory and at 8."""
+    core; 4 threads only reach 70% efficiency). Workers run niced, so they mostly soak up idle
+    time and yield to everything else; count half the current load as taken, keep a core
+    spare, and cap by free memory and at 8."""
     cores = os.cpu_count() or 2
     try:
         busy = os.getloadavg()[0]
     except (AttributeError, OSError):
         busy = 0.0
-    workers = int(cores - busy) - 1
+    workers = int(cores - busy / 2) - 1
     try:
         meminfo = Path("/proc/meminfo").read_text()
         available_gb = int(meminfo.split("MemAvailable:")[1].split()[0]) / 1e6
@@ -630,7 +631,7 @@ def main() -> int:
     parser.add_argument("--check", action="store_true", help="validate scripts without rendering")
     parser.add_argument("--force", action="store_true", help="re-render clips even if unchanged")
     parser.add_argument("--jobs", type=int, default=0, metavar="N",
-                        help="worker processes (default: idle cores - 1, capped by free memory, 1-8)")
+                        help="worker processes (default: by load and free memory, 1-8)")
     parser.add_argument("--threads", type=int, default=1, metavar="N",
                         help="Kokoro threads per worker (default 1: best throughput per core)")
     parser.add_argument("--nice", type=int, default=10, metavar="N",
