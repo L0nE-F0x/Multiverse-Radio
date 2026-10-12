@@ -3,7 +3,7 @@
 # The Keeper reads the forecast for the impossible seas every night, to nobody, just in case,
 # and keeps a logbook. Ambient: voices are rare, slow and steady, over waves and the beam.
 # The sea areas are all invented and recur, so regular listeners learn them:
-#   Lesser Marrow, Greater Marrow, the Tuesday Reach, Far and Near Nonesuch, Lullaby Bank,
+#   Lesser Marrow, Greater Marrow, the Tuesday Reach, Far and Near Nonsuch, Lullaby Bank,
 #   Thimble, Gannet's Regret, Outer and Inner Soup, the Spindles, Mothering Sound, Velvet Deep,
 #   Hesitation, Saltlight, North and South Elsewhere, the Quiet Rows, Old Pardon, Biscuit
 #   Shoals, the Mirrorline, Underneath, Dimity, Wren, Candlemouth.
@@ -108,7 +108,7 @@ category = "weather"
 title = "The Forecast for the Impossible Seas"
 bed = "sea"
 lines = [
-  { say = "keeper", text = "Far Nonesuch, Near Nonesuch. Variable, two, from no direction in particular. Fog patches, some of them shaped like people you used to know. Poor, becoming kind.", gap = 0.9 },
+  { say = "keeper", text = "Far Nonsuch, Near Nonsuch. Variable, two, from no direction in particular. Fog patches, some of them shaped like people you used to know. Poor, becoming kind.", gap = 0.9 },
   { say = "keeper", text = "Lullaby Bank. Westerly, one or two, humming. Showers of moths. Good.", gap = 0.9 },
   { say = "keeper", text = "Thimble. Calm. Very small. Visibility, the whole of Thimble.", gap = 0.9 },
   { say = "keeper", text = "Mothering Sound. Easterly, five, tucking in later. Drizzle. Moderate." },
@@ -324,7 +324,7 @@ category = "psa"
 title = "Notice to Mariners"
 bed = "sea"
 lines = [
-  { say = "keeper", text = "Notice to mariners. The rock at the edge of Far Nonesuch has moved again. It apologises.", gap = 0.8 },
+  { say = "keeper", text = "Notice to mariners. The rock at the edge of Far Nonsuch has moved again. It apologises.", gap = 0.8 },
   { say = "keeper", text = "Please give it a wide berth while it settles." },
 ]
 

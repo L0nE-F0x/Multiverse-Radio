@@ -37,7 +37,7 @@ shelley = { voice = "af_sky", speed = 0.78, name = "Shelley Shellbourne" }
 eventually = { voice = "af_heart", speed = 0.92, name = "DJ Eventually" }
 octavia = { voice = "bf_isabella", speed = 0.9, name = "Octavia Lowe" }
 chaz = { voice = "am_puck", speed = 1.12, name = "Chaz Brightley" }
-visitor = { voice = "ff_siwis", speed = 0.85, fx = "ghost", name = "Unknown Signal" }
+visitor = { voice = "af_nicole", speed = 0.85, fx = "ghost", name = "Unknown Signal" }
 visitors = { voice = "am_onyx", speed = 0.8, fx = "alien", name = "Unknown Signal" }
 
 # ── Dimensional storm ─────────────────────────────────────────────────────────

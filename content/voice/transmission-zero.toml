@@ -173,7 +173,7 @@ category = "dj"
 bed = "cave-drip"
 lines = [
   { say = "first", text = "Now. A song.", gap = 1.6 },
-  { say = "first", text = "Hmm. Hmm hmm. Hmmm.", speed = 0.75, gap = 1.8 },
+  { say = "first", text = "La. La la. Laaa.", speed = 0.75, gap = 1.8 },
   { say = "first", text = "That was the song. There will be more songs. Better. Probably with sticks." },
 ]
 
@@ -223,8 +223,8 @@ id = "dj-012"
 category = "dj"
 bed = "cave-drip"
 lines = [
-  { say = "first_hush", text = "Hah.", gap = 1.4 },
-  { say = "first", text = "That was breathing. It goes out, like the broadcast. Then it comes back in. Not like the broadcast.", gap = 1.4 },
+  { say = "first_hush", text = "Listen. I am breathing.", gap = 2.2 },
+  { say = "first", text = "It goes out, like the broadcast. Then it comes back in. Not like the broadcast.", gap = 1.4 },
   { say = "first", text = "The broadcast does not come back. It goes and goes. I hope it finds somebody nice." },
 ]
 
