@@ -1,9 +1,12 @@
 // Animated station scenes — public API.
 //
-// STUB: the scenes workstream replaces this with real generative scenes for every
-// SceneId. Keep the exported names and props stable; the UI codes against them.
+// Each station has a pixel-art diorama (src/scenes/defs/*), lazily loaded on first use and
+// drawn on a small canvas that the browser upscales. Scenes pause when the tab is hidden or
+// the element is offscreen, react subtly to `energy()`, doze when not playing, and go
+// near-static with `reducedMotion`.
 
 import type { StationDef } from '../broadcast/types';
+import { SceneView } from './SceneView';
 
 export interface StationSceneProps {
   station: StationDef;
@@ -17,17 +20,17 @@ export interface StationSceneProps {
 }
 
 /** Fills its container (position it yourself). */
-export function StationScene({ station, className = '' }: StationSceneProps) {
+export function StationScene({ station, playing, energy, reducedMotion, className }: StationSceneProps) {
   return (
-    <div
-      role="img"
-      aria-label={station.sceneBrief}
+    <SceneView
+      sceneId={station.scene}
+      accent={station.color}
+      playing={playing}
+      energy={energy}
+      reducedMotion={reducedMotion}
       className={className}
-      style={{
-        width: '100%',
-        height: '100%',
-        background: `radial-gradient(circle at 50% 70%, ${station.color}55, #0a0a0c 70%)`,
-      }}
     />
   );
 }
+
+export { preloadScene, sceneLabel } from './preload';
