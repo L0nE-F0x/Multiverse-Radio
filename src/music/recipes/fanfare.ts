@@ -32,7 +32,8 @@ export function composeFanfare(req: TrackRequest): Score {
   const tpt2 = b.inst({ kind: 'synth', patch: 'fanfare-trumpet', name: 'Trumpets II', gain: 0.3, pan: 0.22, reverb: 0.35, detune: -4 });
   const horns = b.inst({ kind: 'synth', patch: 'fanfare-horn', name: 'Horns', gain: 0.42, pan: 0.1, reverb: 0.45 });
   const bones = b.inst({ kind: 'synth', patch: 'trombone', name: 'Trombones', gain: 0.4, pan: -0.05, reverb: 0.35 });
-  const strings = b.inst({ kind: 'synth', patch: 'pad-strings', name: 'Low strings', gain: 0.14, reverb: 0.35, lowpass: 1400 });
+  const strings = b.inst({ kind: 'synth', patch: 'pad-strings', name: 'Low strings', gain: 0.12, reverb: 0.35, lowpass: 1400 });
+  const tuba = b.inst({ kind: 'synth', patch: 'band-tuba', name: 'Tuba', gain: 0.42, reverb: 0.2 });
   const timp = b.inst({ kind: 'sample', patch: 'timpani', name: 'Timpani', gain: 0.55, reverb: 0.35 });
   const snare = b.inst({ kind: 'sample', patch: 'snare-march', name: 'Side drum', gain: 0.24, pan: 0.15, reverb: 0.2 });
   const crash = b.inst({ kind: 'sample', patch: 'crash', name: 'Cymbals', gain: 0.2, reverb: 0.35 });
@@ -55,6 +56,7 @@ export function composeFanfare(req: TrackRequest): Score {
     for (const p of hornV) b.note(horns, span.t, len, p, vel(rng, v, 0.03));
     boneV = voiceChord(span.chord, boneV, { low: 40, high: 57, voices: 2, rootless: false });
     for (const p of [bassNote(bassPc(span.chord), null, 36, 48), ...boneV.slice(1)]) b.note(bones, span.t, len, p, vel(rng, v * 0.95, 0.03));
+    b.note(tuba, span.t, len, bassNote(bassPc(span.chord), null, 29, 41), vel(rng, v * 0.9, 0.03));
     if (withTrumpets) {
       // Trumpets on the top of an open voicing: fifth and root (or third) above the horns.
       const top = nearestInSet(Math.max(...hornV) + 5, chordPcs(span.chord));
@@ -134,6 +136,9 @@ export function composeFanfare(req: TrackRequest): Score {
       for (const p of hornV) b.note(horns, span.t, span.dur * 0.98, p, vel(rng, s.part === 'B' ? 0.42 : 0.36, 0.03));
       strV = voiceChord(span.chord, strV, { low: 40, high: 55, voices: 2, rootless: false });
       for (const p of strV) b.note(strings, span.t, span.dur + 0.15, p, 0.45);
+      // The tuba keeps the march on one and three, low and out of the commentator's way.
+      const root = bassNote(bassPc(span.chord), null, 29, 41);
+      for (const x of [0, 2]) if (x < span.beats) b.note(tuba, b.grid.at(span.bar, span.beat + x), beat * 0.9, x ? (root + 7 <= 43 ? root + 7 : root - 5) : root, vel(rng, x ? 0.55 : 0.62, 0.03));
     });
     for (let k = 0; k < s.bars; k++) {
       const bar = s.startBar + k;

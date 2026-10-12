@@ -220,13 +220,13 @@ export function composeStuckLoop(req: TrackRequest): Score {
   const beat = b.beat;
   const loopDur = fit.barDur * 4;
 
-  const ep = b.inst({ kind: 'sample', patch: rng.chance(0.5) ? 'wurli' : 'ep', name: 'Electric piano', gain: 0.42, pan: -0.15, reverb: 0.2, tremolo: { rate: 4.5, depth: 0.3 } });
+  const ep = b.inst({ kind: 'sample', patch: rng.chance(0.5) ? 'wurli' : 'ep', name: 'Electric piano', gain: 0.42, pan: -0.15, reverb: 0.2 });
   const bass = b.inst({ kind: 'sample', patch: 'bass-round', name: 'Bass', gain: 0.4 });
   const kick = b.inst({ kind: 'sample', patch: 'kick-soft', name: 'Kick', gain: 0.4 });
   const snare = b.inst({ kind: 'sample', patch: 'snare-lofi', name: 'Snare (towel on it)', gain: 0.34, reverb: 0.2 });
   const hat = b.inst({ kind: 'sample', patch: 'hat-closed', name: 'Hi-hat', gain: 0.3, pan: 0.25 });
-  const strings = b.inst({ kind: 'synth', patch: 'pad-strings', name: 'Strings', gain: 0.25, reverb: 0.45, lowpass: 3200, pan: 0.2 });
-  const oohs = b.inst({ kind: 'synth', patch: 'pad-choir', name: 'Backing oohs', gain: 0.22, reverb: 0.5, lowpass: 2500, pan: -0.2 });
+  const strings = b.inst({ kind: 'synth', patch: 'pad-strings', name: 'Strings', gain: 0.25, reverb: 0.45, pan: 0.2 });
+  const oohs = b.inst({ kind: 'synth', patch: 'pad-choir', name: 'Backing oohs', gain: 0.22, reverb: 0.5, pan: -0.2 });
   const hook = b.inst({ kind: 'synth', patch: 'flute', name: 'Flute hook', gain: 0.34, reverb: 0.35, pan: 0.1 });
   const click = b.inst({ kind: 'sample', patch: 'tape-click', name: 'Splice', gain: 0.32 });
   const hiss = b.inst({ kind: 'sample', patch: 'hiss', name: 'Tape hiss', gain: 0.06 + G * 0.08 });
@@ -283,7 +283,7 @@ export function composeStuckLoop(req: TrackRequest): Score {
   return b.build({
     key: keyName(tonic, 'major'),
     progression: tpl,
-    fx: trackFx({ gain: 0.31, lowpass: bright, highpass: 55, wow: 1.4 + G * 2 + W, wowRate: 0.55, flutter: 0.06 + G * 0.08, drive: 0.15 + G * 0.3, reverbTone: 4000, reverbLevel: 0.9 }),
+    fx: trackFx({ gain: 0.28, lowpass: bright, highpass: 55, wow: 1.4 + G * 2 + W, wowRate: 0.55, flutter: 0.06 + G * 0.08, drive: 0.15 + G * 0.3, reverbTone: 4000, reverbLevel: 0.9 }),
   });
 }
 
