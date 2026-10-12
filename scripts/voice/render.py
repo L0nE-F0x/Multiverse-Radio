@@ -30,7 +30,8 @@ import sys
 import time
 from pathlib import Path
 
-from voicescript import Script, available_voices, bitrate_for, load_script, roster_station_ids, ts_string_array
+from voicescript import (Script, available_voices, bitrate_for, check_serials, load_script, roster_station_ids,
+                         ts_string_array)
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent.parent
@@ -84,7 +85,9 @@ def discover(content: Path, stations: list[str]) -> list[Path]:
     return sorted(content.glob("*.toml"))
 
 
-def load_all(paths: list[Path]) -> list[Script]:
+def load_all(paths: list[Path], content: Path) -> list[Script]:
+    """Load and validate `paths`. Rules that span files (serials hop between stations) see
+    every script in `content`, even when only some were asked for."""
     roster = roster_station_ids(ROSTER)
     if not roster:
         sys.exit(f"error: couldn't read any station ids from {rel(ROSTER)}")
@@ -92,12 +95,17 @@ def load_all(paths: list[Path]) -> list[Script]:
     if not events:
         sys.exit(f"error: couldn't read EVENT_IDS from {rel(TYPES)}")
     voices = available_voices(KOKORO_VOICES)
+    wanted = {p.resolve() for p in paths}
+    everything = {p.resolve(): p for p in sorted(content.glob("*.toml"))} | {p.resolve(): p for p in paths}
+    loaded = {key: load_script(path, voices, roster, events) for key, path in everything.items()}
+    check_serials(list(loaded.values()))
     scripts = []
     for path in paths:
-        script = load_script(path, voices, roster, events)
+        script = loaded[path.resolve()]
         for issue in script.issues:
             issue.path = Path(rel(issue.path))
         scripts.append(script)
+    assert len(scripts) == len(wanted)
     return scripts
 
 
@@ -654,7 +662,7 @@ def main() -> int:
         parser.error("--clip renders a subset; use --out somewhere outside public/voice")
 
     paths = discover(args.content, args.station)
-    scripts = load_all(paths)
+    scripts = load_all(paths, args.content)
     if args.check:
         return check(scripts)
 

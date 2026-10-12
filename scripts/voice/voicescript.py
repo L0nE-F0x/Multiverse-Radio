@@ -566,7 +566,8 @@ class _Loader:
         return shows
 
     def check_clip_set(self, script: Script) -> None:
-        """Rules across a file's clips: show refs, show openers, complete kits, continuous serials."""
+        """Rules across a file's clips: show refs, show openers, complete kits. (Serials can hop
+        between stations, so check_serials() looks at every file at once.)"""
         show_ids = {s.id for s in script.shows}
         for clip in script.clips:
             if clip.show and clip.show not in show_ids:
@@ -589,26 +590,6 @@ class _Loader:
                 have = ", ".join(f"{len(parts[p])} {p}" for p in PARTS if parts.get(p))
                 self.warn(f"kit {kit!r} has {have} but no {' or '.join(missing)}; the director chains "
                           "open, body and close from the same kit", first.lineno)
-
-        serials: dict[str, list[Clip]] = {}
-        for clip in script.clips:
-            if clip.serial:
-                serials.setdefault(clip.serial.id, []).append(clip)
-        for serial_id, clips in sorted(serials.items()):
-            episodes: dict[int, Clip] = {}
-            for clip in clips:
-                assert clip.serial is not None
-                if clip.serial.episode in episodes:
-                    self.error(f"clip {clip.id!r}: serial {serial_id!r} episode {clip.serial.episode} is already "
-                               f"clip {episodes[clip.serial.episode].id!r}", clip.lineno)
-                else:
-                    episodes[clip.serial.episode] = clip
-            gaps = sorted(set(range(1, max(episodes) + 1)) - set(episodes)) if episodes else []
-            if gaps:
-                listed = ", ".join(str(g) for g in gaps)
-                first = min((c.lineno for c in clips if c.lineno), default=None)
-                self.error(f"serial {serial_id!r} skips episode(s) {listed}; episodes must run 1, 2, 3, ... "
-                           "without gaps", first)
 
     def load_aliases(self, raw) -> dict[str, dict]:
         aliases: dict[str, dict] = {}
@@ -927,6 +908,35 @@ class _Loader:
         if speed is None or gap is None:
             return None
         return Speech(alias["voice"], text, round(speed, 4), fx, round(gap, 4), cut, name or "")
+
+
+def check_serials(scripts: list[Script]) -> None:
+    """Serials run 1, 2, 3, ... per serial id across every aired script: a storyline may hop
+    between stations, one episode here and the next there. Adds issues to the scripts."""
+    by_id: dict[str, list[tuple[Script, Clip]]] = {}
+    for script in scripts:
+        if not script.is_draft:
+            for clip in script.clips:
+                if clip.serial:
+                    by_id.setdefault(clip.serial.id, []).append((script, clip))
+    for serial_id, entries in sorted(by_id.items()):
+        episodes: dict[int, tuple[Script, Clip]] = {}
+        for script, clip in entries:
+            assert clip.serial is not None
+            episode = clip.serial.episode
+            if episode in episodes:
+                other_script, other = episodes[episode]
+                script.issues.append(Issue("error", script.path, f"clip {clip.id!r}: serial {serial_id!r} episode "
+                                           f"{episode} is already {other_script.station}/{other.id}", clip.lineno))
+            else:
+                episodes[episode] = (script, clip)
+        gaps = sorted(set(range(1, max(episodes) + 1)) - set(episodes))
+        if gaps:
+            script, clip = entries[0]
+            where = ", ".join(sorted({s.station for s, _ in entries}))
+            script.issues.append(Issue("error", script.path, f"serial {serial_id!r} skips episode(s) "
+                                       f"{', '.join(map(str, gaps))} (episodes found in {where}); they must run "
+                                       "1, 2, 3, ... without gaps", clip.lineno))
 
 
 def load_script(path: Path, voices: list[str], roster: list[str], events: list[str]) -> Script:

@@ -202,7 +202,7 @@ function shapeProblems(data: unknown, station: string): string[] {
   return problems;
 }
 
-/** Serials must run 1, 2, 3, ... per serial id within a manifest. */
+/** Serials run 1, 2, 3, ... per serial id across the library (a storyline may hop stations). */
 function serialProblems(clips: Json[]): string[] {
   const episodes = new Map<string, number[]>();
   for (const clip of clips) {
@@ -221,6 +221,14 @@ function serialProblems(clips: Json[]): string[] {
 describe('voice library (public/voice)', () => {
   it('has readable JSON files', () => {
     for (const file of allJson) expect(() => JSON.parse(readFileSync(join(VOICE, file), 'utf8'))).not.toThrow();
+  });
+
+  it('has continuous serials across all manifests', () => {
+    const clips = manifestFiles.flatMap((file) => {
+      const data: unknown = JSON.parse(readFileSync(join(VOICE, file), 'utf8'));
+      return isObject(data) && Array.isArray(data.clips) ? (data.clips as Json[]) : [];
+    });
+    expect(serialProblems(clips)).toEqual([]);
   });
 
   it(`${SHOWS_FILE} matches the ShowIndex shape (when present)`, () => {
@@ -243,10 +251,6 @@ describe('voice library (public/voice)', () => {
       it('has unique clip ids', () => {
         const ids = clips.map((c) => c.id);
         expect(ids.filter((id, i) => ids.indexOf(id) !== i)).toEqual([]);
-      });
-
-      it('has continuous serials', () => {
-        expect(serialProblems(clips)).toEqual([]);
       });
 
       it('references MP3s that exist', () => {
