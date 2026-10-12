@@ -337,9 +337,10 @@ export class TrackPlayer {
 
   // ── Scheduling ──
 
-  /** Schedules everything that starts before `until` (context time). */
-  schedule(until: number): void {
-    if (this.disposed) return;
+  /** Schedules everything that starts before `until` (context time). Returns notes skipped as too late. */
+  schedule(until: number): number {
+    if (this.disposed) return 0;
+    let skipped = 0;
     const limit = Math.min(until, this.stopAt, this.endCtx);
     const now = this.ctx.currentTime;
     const lateCutoff = this.buses.offline ? -Infinity : now - 0.05;
@@ -352,7 +353,10 @@ export class TrackPlayer {
         this.playNote(e, this.when, this.offset - e.t);
         continue;
       }
-      if (at < lateCutoff) continue;
+      if (at < lateCutoff) {
+        skipped++;
+        continue;
+      }
       this.playNote(e, Math.max(at, now), 0);
     }
     while (this.autoIdx < this.autos.length) {
@@ -373,6 +377,7 @@ export class TrackPlayer {
         p.setTargetAtTime(1, at + 0.03, 0.08);
       }
     }
+    return skipped;
   }
 
   private applyAuto(a: AutoEvent, at: number): void {
@@ -435,7 +440,7 @@ export class TrackPlayer {
     const rate = 2 ** ((e.p - zone.root + (spec.detune ?? 0) / 100) / 12);
     src.playbackRate.value = rate;
     const g = ctx.createGain();
-    const amp = zone.loop ? e.v : e.v ** 1.5;
+    const amp = (zone.loop ? e.v : e.v ** 1.5) * (PATCHES[spec.patch].level ?? 1);
     const end = at + dur;
     const relTau = Math.max(0.005, inst.release / 4);
     const natural = (zone.buffer.duration - late * rate) / rate; // seconds left in the sample

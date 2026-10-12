@@ -40,14 +40,14 @@ export function composeMuzak(req: TrackRequest): Score {
 
   const compPatch: SamplePatch = rng.weighted([['nylon', 4], ['ep', 3], ['vibes', 2]]);
   const comp = b.inst({ kind: 'sample', patch: compPatch, name: compPatch === 'nylon' ? 'Nylon guitar' : compPatch === 'ep' ? 'Electric piano' : 'Vibraphone', gain: compPatch === 'nylon' ? 0.7 : 0.55, pan: -0.2, reverb: 0.2, tremolo: compPatch === 'ep' ? { rate: 4.5, depth: 0.3 } : undefined });
-  const strings = b.inst({ kind: 'synth', patch: 'pad-strings', name: 'Strings', gain: 0.4, reverb: 0.4, pan: 0.1 });
+  const strings = b.inst({ kind: 'synth', patch: 'pad-strings', name: 'Strings', gain: 0.55, reverb: 0.4, pan: 0.1 });
   const leadFlute = rng.chance(0.6);
   const lead = leadFlute
-    ? b.inst({ kind: 'synth', patch: 'flute', name: 'Flute', gain: 0.55, reverb: 0.35, pan: 0.15, detune: weirdDetune(rng, W, 25) })
+    ? b.inst({ kind: 'synth', patch: 'flute', name: 'Flute', gain: 0.45, reverb: 0.35, pan: 0.15, detune: weirdDetune(rng, W, 25) })
     : b.inst({ kind: 'sample', patch: 'vibes', name: 'Vibraphone', gain: 0.5, reverb: 0.35, pan: 0.15, tremolo: { rate: 5, depth: 0.35 }, detune: weirdDetune(rng, W, 25) });
   const bass = b.inst({ kind: 'sample', patch: 'bass-round', name: 'Bass', gain: 0.5 });
   const kick = b.inst({ kind: 'sample', patch: 'kick-soft', name: 'Kick', gain: 0.38 });
-  const rim = b.inst({ kind: 'sample', patch: 'rim', name: 'Rim click', gain: 0.45, pan: 0.1, reverb: 0.1 });
+  const rim = b.inst({ kind: 'sample', patch: 'rim', name: 'Rim click', gain: 0.65, pan: 0.1, reverb: 0.1 });
   const shaker = b.inst({ kind: 'sample', patch: 'shaker', name: 'Shaker', gain: 0.22, pan: -0.3 });
 
   const [lo, hi] = leadFlute ? [67, 86] : [64, 84];
@@ -123,7 +123,7 @@ export function composeMuzak(req: TrackRequest): Score {
     key: keyName(tonic, 'major'),
     progression: `${tplA.prog} / ${tplB.prog}`,
     fx: trackFx({
-      gain: 0.4,
+      gain: 0.37,
       lowpass: lerp(5000, 12000, B) * (1 - G * 0.35),
       highpass: 40 + G * 140,
       wow: G * 1.5 + W,

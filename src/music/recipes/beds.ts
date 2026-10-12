@@ -74,7 +74,7 @@ export function composeNews(req: TrackRequest): Score {
   return b.build({
     key: keyName(tonic, minor ? 'minor' : 'major'),
     progression: tpl.prog,
-    fx: trackFx({ gain: 0.34, lowpass: lerp(6000, 14000, B), highpass: 35, wow: W, wowRate: 0.4, flutter: 0, drive: 0.05, reverbTone: 6000, reverbLevel: 0.9 }),
+    fx: trackFx({ gain: 0.52, lowpass: lerp(6000, 14000, B), highpass: 35, wow: W, wowRate: 0.4, flutter: 0, drive: 0.05, reverbTone: 6000, reverbLevel: 0.9 }),
   });
 }
 
@@ -97,7 +97,7 @@ export function composeTalk(req: TrackRequest): Score {
   const keys = b.inst({ kind: 'sample', patch: keysPatch, name: keysPatch === 'wurli' ? 'Reed piano' : keysPatch === 'ep' ? 'Electric piano' : 'Marimba', gain: 0.5, pan: -0.15, reverb: 0.15, tremolo: keysPatch !== 'marimba' ? { rate: 5, depth: 0.25 } : undefined, lowpass: 3500 });
   const bass = b.inst({ kind: 'sample', patch: 'bass-round', name: 'Bass', gain: 0.55 });
   const kick = b.inst({ kind: 'sample', patch: 'kick-soft', name: 'Kick', gain: 0.45 });
-  const rim = b.inst({ kind: 'sample', patch: 'rim', name: 'Rim', gain: 0.45, pan: 0.05 });
+  const rim = b.inst({ kind: 'sample', patch: 'rim', name: 'Rim', gain: 0.6, pan: 0.05 });
   const shaker = b.inst({ kind: 'sample', patch: 'shaker', name: 'Shaker', gain: 0.2, pan: 0.3 });
   const lick = b.inst({ kind: 'sample', patch: rng.chance(0.5) ? 'kalimba' : 'vibes', name: 'Licks', gain: 0.35, pan: 0.3, reverb: 0.3 });
 
@@ -144,7 +144,7 @@ export function composeTalk(req: TrackRequest): Score {
   return b.build({
     key: keyName(tonic, tpl.scale),
     progression: tpl.prog,
-    fx: trackFx({ gain: 0.38, lowpass: lerp(5000, 11000, B), highpass: 40, wow: 0.3 + G * 1.5 + W, wowRate: 0.5, flutter: G * 0.04, drive: 0.1 + G * 0.3, reverbTone: 5000, reverbLevel: 0.8 }),
+    fx: trackFx({ gain: 0.39, lowpass: lerp(5000, 11000, B), highpass: 40, wow: 0.3 + G * 1.5 + W, wowRate: 0.5, flutter: G * 0.04, drive: 0.1 + G * 0.3, reverbTone: 5000, reverbLevel: 0.8 }),
   });
 }
 
@@ -163,12 +163,12 @@ export function composeFanfare(req: TrackRequest): Score {
   const beat = b.beat;
 
   const brass = b.inst({ kind: 'synth', patch: 'brass', name: 'Brass', gain: 0.6, reverb: 0.3, pan: -0.1 });
-  const horn = b.inst({ kind: 'synth', patch: 'horn', name: 'Horns', gain: 0.4, reverb: 0.4, pan: 0.15 });
+  const horn = b.inst({ kind: 'synth', patch: 'horn', name: 'Horns', gain: 0.25, reverb: 0.4, pan: 0.15 });
   const tuba = b.inst({ kind: 'synth', patch: 'tuba', name: 'Low brass', gain: 0.55 });
   const timp = b.inst({ kind: 'sample', patch: 'timpani', name: 'Timpani', gain: 0.55, reverb: 0.3 });
   const snare = b.inst({ kind: 'sample', patch: 'snare-march', name: 'Snare', gain: 0.32, pan: 0.1, reverb: 0.15 });
   const crash = b.inst({ kind: 'sample', patch: 'crash', name: 'Cymbals', gain: 0.25, reverb: 0.3 });
-  const glock = b.inst({ kind: 'sample', patch: 'celesta', name: 'Glockenspiel', gain: 0.3, pan: 0.3, reverb: 0.3 });
+  const glock = b.inst({ kind: 'sample', patch: 'celesta', name: 'Glockenspiel', gain: 0.22, pan: 0.3, reverb: 0.3 });
 
   const theme = makeMotif(rng, 8, 0.45 + D * 0.2, { restTail: 2, minNotes: 2, maxNotes: 4, maxLeap: 4 });
   let voicing: number[] | null = null;
@@ -231,7 +231,7 @@ export function composeFanfare(req: TrackRequest): Score {
   return b.build({
     key: keyName(tonic, tpl.scale),
     progression: tpl.prog,
-    fx: trackFx({ gain: 0.32, lowpass: lerp(7000, 15000, B), highpass: 35, wow: W, wowRate: 0.4, flutter: 0, drive: 0.1, reverbTone: 6500, reverbLevel: 1.2 }),
+    fx: trackFx({ gain: 0.78, lowpass: lerp(7000, 15000, B), highpass: 35, wow: W, wowRate: 0.4, flutter: 0, drive: 0.1, reverbTone: 6500, reverbLevel: 1.2 }),
   });
 }
 
@@ -253,9 +253,9 @@ export function composeDocumentary(req: TrackRequest): Score {
 
   const pianoPatch: SamplePatch = rng.chance(0.6) ? 'felt-piano' : 'piano';
   const piano = b.inst({ kind: 'sample', patch: pianoPatch, name: 'Piano', gain: 0.5, reverb: 0.35, pan: -0.1 });
-  const strings = b.inst({ kind: 'synth', patch: 'pad-strings', name: 'Strings', gain: 0.45, reverb: 0.5 });
+  const strings = b.inst({ kind: 'synth', patch: 'pad-strings', name: 'Strings', gain: 0.18, reverb: 0.5 });
   const horn = b.inst({ kind: 'synth', patch: 'horn', name: 'Horns', gain: 0.45, reverb: 0.5, pan: 0.15 });
-  const pizz = b.inst({ kind: 'sample', patch: 'pizz', name: 'Pizzicato', gain: 0.5, pan: -0.2, reverb: 0.3 });
+  const pizz = b.inst({ kind: 'sample', patch: 'pizz', name: 'Pizzicato', gain: 0.7, pan: -0.2, reverb: 0.3 });
   const celesta = b.inst({ kind: 'sample', patch: 'celesta', name: 'Celesta', gain: 0.3, pan: 0.3, reverb: 0.5 });
   const timp = b.inst({ kind: 'sample', patch: 'timpani', name: 'Timpani', gain: 0.45, reverb: 0.4 });
 
@@ -312,6 +312,6 @@ export function composeDocumentary(req: TrackRequest): Score {
   return b.build({
     key: keyName(tonic, tpl.scale),
     progression: tpl.prog,
-    fx: trackFx({ gain: 0.4, lowpass: lerp(6000, 14000, B), highpass: 32, wow: 0, wowRate: 0.3, flutter: 0, drive: 0, reverbTone: 6000, reverbLevel: 1.4 }),
+    fx: trackFx({ gain: 0.81, lowpass: lerp(6000, 14000, B), highpass: 32, wow: 0, wowRate: 0.3, flutter: 0, drive: 0, reverbTone: 6000, reverbLevel: 1.4 }),
   });
 }

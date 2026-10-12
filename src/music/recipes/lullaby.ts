@@ -32,7 +32,7 @@ export function composeLullaby(req: TrackRequest): Score {
 
   const box = b.inst({ kind: 'sample', patch: 'musicbox', name: 'Music box', gain: 0.5, reverb: 0.5, pan: 0.1 });
   const piano = b.inst({ kind: 'sample', patch: 'felt-piano', name: 'Felt piano', gain: 0.45, reverb: 0.4, pan: -0.15, lowpass: 2500 });
-  const pad = b.inst({ kind: 'synth', patch: 'pad-warm', name: 'Night pad', gain: 0.35, reverb: 0.6 });
+  const pad = b.inst({ kind: 'synth', patch: 'pad-warm', name: 'Night pad', gain: 0.25, reverb: 0.6 });
   const fuzz = b.inst({ kind: 'sample', patch: 'static', name: 'Static', gain: 0.18 + G * 0.22 });
   const wave = W > 0.3 ? b.inst({ kind: 'sample', patch: 'shortwave', name: 'Shortwave', gain: 0.2 + W * 0.2 }) : -1;
 
@@ -81,7 +81,7 @@ export function composeLullaby(req: TrackRequest): Score {
     key: keyName(tonic, 'major'),
     progression: tpl.prog,
     fx: trackFx({
-      gain: 0.42,
+      gain: 0.47,
       lowpass: lerp(3000, 8000, B),
       highpass: 60,
       wow: 1.2 + G * 2.2 + W,
@@ -151,7 +151,7 @@ export function composeNumbers(req: TrackRequest): Score {
     key: keyName(tonic, tpl.scale),
     progression: tpl.prog,
     fx: trackFx({
-      gain: 0.42,
+      gain: 0.26,
       lowpass: lerp(3000, 7000, B),
       highpass: 70,
       wow: 1 + G * 2 + W * 1.5,

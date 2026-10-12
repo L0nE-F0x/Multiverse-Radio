@@ -32,8 +32,8 @@ export function composePolka(req: TrackRequest): Score {
   const squeeze = b.inst({ kind: 'synth', patch: 'accordion', name: 'Accordion', gain: 0.5, pan: -0.25, reverb: 0.12 });
   const clarinetLead = rng.chance(0.55);
   const lead = b.inst({ kind: 'synth', patch: clarinetLead ? 'clarinet' : 'accordion', name: clarinetLead ? 'Clarinet' : 'Accordion lead', gain: clarinetLead ? 0.6 : 0.45, pan: 0.2, reverb: 0.15 });
-  const kick = b.inst({ kind: 'sample', patch: 'kick-soft', name: 'Bass drum', gain: 0.4 });
-  const snare = b.inst({ kind: 'sample', patch: 'snare-march', name: 'Snare', gain: 0.3, pan: 0.1, reverb: 0.1 });
+  const kick = b.inst({ kind: 'sample', patch: 'kick-soft', name: 'Bass drum', gain: 0.25 });
+  const snare = b.inst({ kind: 'sample', patch: 'snare-march', name: 'Snare', gain: 0.4, pan: 0.1, reverb: 0.1 });
   const crash = b.inst({ kind: 'sample', patch: 'crash', name: 'Cymbal', gain: 0.18, pan: 0.2 });
 
   const motifA = makeMotif(rng, 4, 0.6 + D * 0.4, { grid: 0.25, restTail: 0.5, minNotes: 4, maxNotes: 7, maxLeap: 4 });
@@ -63,7 +63,7 @@ export function composePolka(req: TrackRequest): Score {
       const last = outro && k === spans.length - 1;
       const root = bassNote(bassPc(span.chord), prevBass, 33, 45);
       prevBass = root;
-      const fifth = root + 7 <= 47 ? root + 7 : root - 5;
+      const fifth = root - 5 >= 28 ? root - 5 : root + 7;
       voicing = voiceChord(span.chord, voicing, { low: 57, high: 72, voices: 3, rootless: false });
       if (last) {
         // The button: one short tutti chord.
@@ -76,7 +76,7 @@ export function composePolka(req: TrackRequest): Score {
       }
       // Oom (tuba on the beats, root then fifth) – pah (accordion on the off-beats).
       b.note(tuba, b.grid.at(span.bar, 0), beat * 0.45, root, vel(rng, 0.85, 0.04));
-      b.note(tuba, b.grid.at(span.bar, 1), beat * 0.45, (span.bar - s.startBar) % 2 ? root : fifth, vel(rng, 0.75, 0.04));
+      b.note(tuba, b.grid.at(span.bar, 1), beat * 0.45, fifth, vel(rng, 0.75, 0.04));
       for (const off of [0.5, 1.5]) {
         for (const p of voicing) b.note(squeeze, b.grid.at(span.bar, off), beat * 0.32, p, vel(rng, 0.62, 0.04));
         if (!intro) b.hit(snare, b.grid.at(span.bar, off), vel(rng, 0.45, 0.06));
@@ -103,7 +103,7 @@ export function composePolka(req: TrackRequest): Score {
     key: keyName(tonic, 'major'),
     progression: `${tplA.prog} / ${tplB.prog}`,
     fx: trackFx({
-      gain: 0.32,
+      gain: 0.56,
       lowpass: lerp(5500, 12000, B) * (1 - G * 0.25),
       highpass: 45,
       wow: G * 2 + W * 1.5,

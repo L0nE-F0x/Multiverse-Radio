@@ -88,6 +88,21 @@ describe('every recipe', () => {
     });
   }
 
+  it('composes valid tracks at extreme tweaks', () => {
+    for (const recipe of RECIPE_IDS) {
+      for (const v of [0, 1]) {
+        const tweaks = { density: v, grit: v, weirdness: v, brightness: v, bpm: v ? 200 : 40 };
+        const s = compose({ recipe, seed: 7, durationSeconds: 90, tweaks });
+        expect(s.events.length, recipe).toBeGreaterThan(5);
+        for (const e of s.events) {
+          expect(Number.isFinite(e.t) && Number.isFinite(e.p) && Number.isFinite(e.d), recipe).toBe(true);
+          expect(e.t + e.d).toBeLessThanOrEqual(90 + 1e-6);
+        }
+        expect(Number.isFinite(s.fx.lowpass) && s.fx.lowpass > 100, recipe).toBe(true);
+      }
+    }
+  });
+
   it('responds to tweaks', () => {
     const base: TrackRequest = { recipe: 'lofi-hiphop', seed: 5, durationSeconds: 120 };
     const sparse = compose({ ...base, tweaks: { density: 0 } }).events.length;

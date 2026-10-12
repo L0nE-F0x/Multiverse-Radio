@@ -35,7 +35,7 @@ export function composeAmbient(req: TrackRequest): Score {
   const pad = b.inst({ kind: 'synth', patch: padPatch, name: padPatch === 'pad-choir' ? 'Choir pad' : padPatch === 'pad-glass' ? 'Glass pad' : 'Warm pad', gain: 0.5, reverb: 0.6, pan: 0 });
   const drone = b.inst({ kind: 'synth', patch: 'drone', name: 'Drone', gain: 0.55, reverb: 0.3 });
   const bellPatch: SamplePatch = rng.weighted([['glass', 3], ['celesta', 2], ['vibes', 2], ['kalimba', 1.5], ['musicbox', 1]]);
-  const bell = b.inst({ kind: 'sample', patch: bellPatch, name: 'Bells', gain: 0.32, reverb: 0.7, delay: 0.55, pan: rng.range(-0.4, 0.4), detune: weirdDetune(rng, W, 20) });
+  const bell = b.inst({ kind: 'sample', patch: bellPatch, name: 'Bells', gain: 0.5, reverb: 0.7, delay: 0.55, pan: rng.range(-0.4, 0.4), detune: weirdDetune(rng, W, 20) });
   const whale = b.inst({ kind: 'synth', patch: 'whale', name: 'Distant calls', gain: 0.4, reverb: 0.8, delay: 0.3, pan: rng.range(-0.3, 0.3) });
   const texturePatch: SamplePatch | null = rng.weighted([['ocean', 3], ['hiss', 2], [null, 2]] as [SamplePatch | null, number][]);
   const texture = texturePatch ? b.inst({ kind: 'sample', patch: texturePatch, name: texturePatch === 'ocean' ? 'Ocean' : 'Air', gain: texturePatch === 'ocean' ? 0.32 : 0.18 }) : -1;
@@ -110,7 +110,7 @@ export function composeAmbient(req: TrackRequest): Score {
     key: keyName(tonic, tpl.scale),
     progression: `${tpl.prog} / ${tpl2.prog}`,
     fx: trackFx({
-      gain: 0.42,
+      gain: 0.7,
       lowpass: cut,
       highpass: 30,
       wow: 0.4 + G * 1.5,

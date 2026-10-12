@@ -68,7 +68,7 @@ export const SYNTHS: Record<SynthPatch, SynthDef> = {
     ],
     filter: { type: 'lowpass', freq: 900, q: 0.5, keyTrack: 0.3 },
     amp: { a: 1.4, d: 2, s: 0.8, r: 2.2 },
-    gain: 0.2,
+    gain: 0.47,
   },
   'pad-strings': {
     oscs: [
@@ -77,7 +77,7 @@ export const SYNTHS: Record<SynthPatch, SynthDef> = {
     ],
     filter: { type: 'lowpass', freq: 2200, q: 0.6, keyTrack: 0.4 },
     amp: { a: 0.6, d: 1, s: 0.85, r: 1.3 },
-    gain: 0.16,
+    gain: 0.5,
   },
   'pad-glass': {
     oscs: [
@@ -85,7 +85,7 @@ export const SYNTHS: Record<SynthPatch, SynthDef> = {
       { wave: 'sine', octave: 1, detune: 5, gain: 0.22 },
     ],
     amp: { a: 0.9, d: 2, s: 0.7, r: 2.5 },
-    gain: 0.3,
+    gain: 0.57,
   },
   'pad-choir': {
     oscs: [
@@ -94,7 +94,7 @@ export const SYNTHS: Record<SynthPatch, SynthDef> = {
     ],
     amp: { a: 0.9, d: 1, s: 0.9, r: 1.6 },
     vibrato: { rate: 4.6, depth: 11 },
-    gain: 0.3,
+    gain: 0.6,
   },
   'pad-dark': {
     oscs: [
@@ -103,7 +103,7 @@ export const SYNTHS: Record<SynthPatch, SynthDef> = {
     ],
     filter: { type: 'lowpass', freq: 480, q: 1.1 },
     amp: { a: 2, d: 3, s: 0.8, r: 3 },
-    gain: 0.24,
+    gain: 0.6,
   },
   'saw-lead': {
     oscs: [
@@ -113,14 +113,14 @@ export const SYNTHS: Record<SynthPatch, SynthDef> = {
     filter: { type: 'lowpass', freq: 1500, q: 1.8, keyTrack: 0.5, env: { amount: 1.8, a: 0.01, d: 0.35, s: 0.35 } },
     amp: { a: 0.012, d: 0.25, s: 0.8, r: 0.25 },
     vibrato: { rate: 5.6, depth: 14, delay: 0.25 },
-    gain: 0.22,
+    gain: 1.4,
   },
   'square-lead': {
     oscs: [{ wave: 'square', gain: 1 }],
     filter: { type: 'lowpass', freq: 2600, q: 0.7, keyTrack: 0.5 },
     amp: { a: 0.01, d: 0.12, s: 0.8, r: 0.15 },
     vibrato: { rate: 5.5, depth: 10, delay: 0.2 },
-    gain: 0.16,
+    gain: 1.0,
   },
   'soft-lead': {
     oscs: [
@@ -130,14 +130,14 @@ export const SYNTHS: Record<SynthPatch, SynthDef> = {
     filter: { type: 'lowpass', freq: 2200, q: 0.5 },
     amp: { a: 0.04, d: 0.25, s: 0.7, r: 0.35 },
     vibrato: { rate: 5, depth: 12, delay: 0.3 },
-    gain: 0.34,
+    gain: 0.97,
   },
   flute: {
     oscs: [{ wave: 'flute', gain: 1 }],
     amp: { a: 0.07, d: 0.2, s: 0.85, r: 0.18 },
     vibrato: { rate: 5, depth: 14, delay: 0.22 },
     breath: 0.05,
-    gain: 0.36,
+    gain: 0.63,
   },
   whale: {
     oscs: [
@@ -146,7 +146,7 @@ export const SYNTHS: Record<SynthPatch, SynthDef> = {
     ],
     amp: { a: 0.7, d: 1.2, s: 0.9, r: 1.8 },
     vibrato: { rate: 0.9, depth: 22 },
-    gain: 0.32,
+    gain: 0.7,
   },
   'arp-pluck': {
     oscs: [
@@ -155,7 +155,7 @@ export const SYNTHS: Record<SynthPatch, SynthDef> = {
     ],
     filter: { type: 'lowpass', freq: 550, q: 4, keyTrack: 0.4, env: { amount: 5, a: 0.002, d: 0.16, s: 0 } },
     amp: { a: 0.002, d: 0.28, s: 0, r: 0.1 },
-    gain: 0.2,
+    gain: 2.2,
   },
   'synth-bass': {
     oscs: [
@@ -164,13 +164,13 @@ export const SYNTHS: Record<SynthPatch, SynthDef> = {
     ],
     filter: { type: 'lowpass', freq: 260, q: 2.5, keyTrack: 0.3, env: { amount: 3.5, a: 0.003, d: 0.2, s: 0.25 } },
     amp: { a: 0.003, d: 0.3, s: 0.75, r: 0.08 },
-    gain: 0.32,
+    gain: 1.26,
   },
   'acid-bass': {
     oscs: [{ wave: 'sawtooth', gain: 1 }],
     filter: { type: 'lowpass', freq: 380, q: 9, keyTrack: 0.2, env: { amount: 7, a: 0.003, d: 0.14, s: 0.1 } },
     amp: { a: 0.003, d: 0.2, s: 0.7, r: 0.06 },
-    gain: 0.22,
+    gain: 0.7,
   },
   brass: {
     oscs: [
@@ -181,19 +181,19 @@ export const SYNTHS: Record<SynthPatch, SynthDef> = {
     amp: { a: 0.035, d: 0.3, s: 0.8, r: 0.2 },
     vibrato: { rate: 5.2, depth: 9, delay: 0.3 },
     scoop: -40,
-    gain: 0.22,
+    gain: 0.42,
   },
   horn: {
     oscs: [{ wave: 'horn', gain: 1 }],
     filter: { type: 'lowpass', freq: 1100, q: 0.6, keyTrack: 0.4 },
     amp: { a: 0.18, d: 0.5, s: 0.85, r: 0.5 },
     vibrato: { rate: 4.6, depth: 7, delay: 0.4 },
-    gain: 0.36,
+    gain: 0.34,
   },
   organ: {
     oscs: [{ wave: 'organ', gain: 1 }],
     amp: { a: 0.006, d: 0.1, s: 1, r: 0.07 },
-    gain: 0.2,
+    gain: 0.63,
   },
   skank: {
     oscs: [
@@ -202,14 +202,14 @@ export const SYNTHS: Record<SynthPatch, SynthDef> = {
     ],
     filter: { type: 'bandpass', freq: 1400, q: 0.9 },
     amp: { a: 0.002, d: 0.11, s: 0, r: 0.05 },
-    gain: 0.5,
+    gain: 2.5,
   },
   melodica: {
     oscs: [{ wave: 'reed', gain: 1 }],
     filter: { type: 'lowpass', freq: 2600, q: 0.7, keyTrack: 0.3 },
     amp: { a: 0.035, d: 0.2, s: 0.9, r: 0.12 },
     vibrato: { rate: 5.4, depth: 9, delay: 0.3 },
-    gain: 0.28,
+    gain: 1.1,
   },
   accordion: {
     oscs: [
@@ -218,7 +218,7 @@ export const SYNTHS: Record<SynthPatch, SynthDef> = {
     ],
     filter: { type: 'lowpass', freq: 3200, q: 0.6 },
     amp: { a: 0.025, d: 0.1, s: 0.9, r: 0.08 },
-    gain: 0.24,
+    gain: 0.68,
   },
   tuba: {
     oscs: [
@@ -227,20 +227,20 @@ export const SYNTHS: Record<SynthPatch, SynthDef> = {
     ],
     filter: { type: 'lowpass', freq: 520, q: 0.8, env: { amount: 1.5, a: 0.03, d: 0.15, s: 0.4 } },
     amp: { a: 0.02, d: 0.2, s: 0.7, r: 0.08 },
-    gain: 0.42,
+    gain: 0.6,
   },
   clarinet: {
     oscs: [{ wave: 'clarinet', gain: 1 }],
     filter: { type: 'lowpass', freq: 2600, q: 0.6, keyTrack: 0.3 },
     amp: { a: 0.03, d: 0.1, s: 0.9, r: 0.1 },
     vibrato: { rate: 5, depth: 6, delay: 0.3 },
-    gain: 0.3,
+    gain: 0.38,
   },
-  'chip-pulse12': { oscs: [{ wave: 'pulse12', gain: 1 }], amp: { a: 0.001, d: 0.3, s: 0.55, r: 0.03 }, gain: 0.13 },
-  'chip-pulse25': { oscs: [{ wave: 'pulse25', gain: 1 }], amp: { a: 0.001, d: 0.3, s: 0.55, r: 0.03 }, gain: 0.12 },
-  'chip-square': { oscs: [{ wave: 'square', gain: 1 }], amp: { a: 0.001, d: 0.3, s: 0.55, r: 0.03 }, gain: 0.1 },
-  'chip-tri': { oscs: [{ wave: 'chipTri', gain: 1 }], amp: { a: 0.001, d: 0.05, s: 1, r: 0.02 }, gain: 0.34 },
-  'sine-beep': { oscs: [{ wave: 'sine', gain: 1 }], amp: { a: 0.005, d: 0.1, s: 1, r: 0.03 }, gain: 0.3 },
+  'chip-pulse12': { oscs: [{ wave: 'pulse12', gain: 1 }], amp: { a: 0.001, d: 0.3, s: 0.55, r: 0.03 }, gain: 0.74 },
+  'chip-pulse25': { oscs: [{ wave: 'pulse25', gain: 1 }], amp: { a: 0.001, d: 0.3, s: 0.55, r: 0.03 }, gain: 0.68 },
+  'chip-square': { oscs: [{ wave: 'square', gain: 1 }], amp: { a: 0.001, d: 0.3, s: 0.55, r: 0.03 }, gain: 0.57 },
+  'chip-tri': { oscs: [{ wave: 'chipTri', gain: 1 }], amp: { a: 0.001, d: 0.05, s: 1, r: 0.02 }, gain: 0.27 },
+  'sine-beep': { oscs: [{ wave: 'sine', gain: 1 }], amp: { a: 0.005, d: 0.1, s: 1, r: 0.03 }, gain: 0.95 },
   drone: {
     oscs: [
       { wave: 'softSaw', gain: 0.8 },
@@ -248,7 +248,7 @@ export const SYNTHS: Record<SynthPatch, SynthDef> = {
     ],
     filter: { type: 'lowpass', freq: 380, q: 0.7 },
     amp: { a: 3, d: 2, s: 1, r: 4 },
-    gain: 0.25,
+    gain: 0.47,
   },
 };
 

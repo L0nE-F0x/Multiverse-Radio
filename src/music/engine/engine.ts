@@ -35,6 +35,8 @@ export class Engine implements MusicEngine {
   constructor(
     private readonly ctx: BaseAudioContext,
     private readonly offline = false,
+    /** Diagnostics: tick interval and forcing the main-thread fallback clock. */
+    options: { tickMs?: number; workerless?: boolean } = {},
   ) {
     const g = (v: number) => {
       const n = ctx.createGain();
@@ -99,7 +101,7 @@ export class Engine implements MusicEngine {
     merger.connect(master);
 
     this.buses = { ctx, dryIn, reverbIn, bank: new SampleBank(ctx.sampleRate), offline };
-    this.ticker = offline ? null : new Ticker(() => this.tick(), TICK_MS);
+    this.ticker = offline ? null : new Ticker(() => this.tick(), options.tickMs ?? TICK_MS, options.workerless);
   }
 
   play(track: TrackRequest, options: PlayOptions = {}): void {
@@ -146,7 +148,7 @@ export class Engine implements MusicEngine {
   }
 
   /** Scheduler health, for the lab and diagnostics. */
-  readonly stats = { ticks: 0, busyMs: 0, maxTickMs: 0, lateTicks: 0, lastTickAt: 0 };
+  readonly stats = { ticks: 0, busyMs: 0, maxTickMs: 0, lateTicks: 0, lastTickAt: 0, skipped: 0 };
 
   private tick(): void {
     const t0 = performance.now();
@@ -155,7 +157,7 @@ export class Engine implements MusicEngine {
     // A tick arriving later than half the lookahead means the clock was throttled.
     if (st.lastTickAt && now - st.lastTickAt > LOOKAHEAD / 2) st.lateTicks++;
     st.lastTickAt = now;
-    for (const t of this.tracks) t.schedule(now + LOOKAHEAD);
+    for (const t of this.tracks) st.skipped += t.schedule(now + LOOKAHEAD);
     const alive: TrackPlayer[] = [];
     for (const t of this.tracks) {
       if (now >= t.disposeAt) t.dispose();

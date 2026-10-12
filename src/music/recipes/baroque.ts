@@ -112,7 +112,7 @@ export function composeBaroque(req: TrackRequest): Score {
     key: keyName(tonic, minor ? 'minor' : 'major'),
     progression: `${tplA.prog} / ${tplB.prog}`,
     fx: trackFx({
-      gain: 0.36,
+      gain: 0.99,
       lowpass: lerp(7000, 16000, B),
       highpass: 45,
       wow: G * 1.5,
@@ -154,7 +154,7 @@ function figuration(rng: Rng, figure: Figure, span: ChordSpan, from: number, key
   const n = Math.round(span.beats * 4);
   const tones = chordPcs(span.chord);
   const scale = chordScale(span.chord, keyScale);
-  const start = clampRange(nearestInSet(from, tones), 64, 84);
+  const start = clampRange(nearestInSet(from, tones), 64, 79);
   const out: number[] = [];
   switch (figure) {
     case 'arp': {

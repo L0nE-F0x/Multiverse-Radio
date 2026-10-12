@@ -14,6 +14,8 @@ export class Ticker {
   constructor(
     private readonly callback: () => void,
     private readonly ms = 100,
+    /** Skip the worker (tests the throttle-prone fallback). */
+    private readonly workerless = false,
   ) {}
 
   start(): void {
@@ -21,6 +23,7 @@ export class Ticker {
     this.running = true;
     if (typeof document !== 'undefined') document.addEventListener('visibilitychange', this.onVisibility);
     try {
+      if (this.workerless) throw new Error('workerless');
       if (!this.worker) {
         const src = `let id=null;onmessage=(e)=>{if(e.data==='start'){if(id===null)id=setInterval(()=>postMessage(0),${this.ms});}else{clearInterval(id);id=null;}};`;
         const url = URL.createObjectURL(new Blob([src], { type: 'text/javascript' }));

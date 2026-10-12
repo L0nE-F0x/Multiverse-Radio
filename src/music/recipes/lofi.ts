@@ -51,6 +51,8 @@ interface VariantDef {
   slowHarmony: number;
   rain: boolean;
   pad: SynthPatch | null;
+  /** Track level, calibrated for about -18 LUFS. */
+  level: number;
 }
 
 const VARIANTS: Record<Variant, VariantDef> = {
@@ -65,6 +67,7 @@ const VARIANTS: Record<Variant, VariantDef> = {
     slowHarmony: 0.1,
     rain: false,
     pad: null,
+    level: 0.276,
   },
   'lofi-rain': {
     bpm: [66, 80],
@@ -77,6 +80,7 @@ const VARIANTS: Record<Variant, VariantDef> = {
     slowHarmony: 0.3,
     rain: true,
     pad: null,
+    level: 0.27,
   },
   'lofi-slow': {
     bpm: [56, 68],
@@ -89,6 +93,7 @@ const VARIANTS: Record<Variant, VariantDef> = {
     slowHarmony: 0.6,
     rain: false,
     pad: 'pad-warm',
+    level: 0.276,
   },
   'lofi-glass': {
     bpm: [70, 88],
@@ -101,6 +106,7 @@ const VARIANTS: Record<Variant, VariantDef> = {
     slowHarmony: 0.25,
     rain: false,
     pad: 'pad-glass',
+    level: 0.228,
   },
 };
 
@@ -195,16 +201,16 @@ export function composeLofi(req: TrackRequest): Score {
   const leadIsSynth = SYNTH_LEADS.has(leadPatch);
   const leadSpec: InstrumentSpec = leadIsSynth
     ? { kind: 'synth', patch: leadPatch as SynthPatch, name: NAMES[leadPatch] ?? leadPatch, gain: 0.55, reverb: 0.3, pump: 0.15, pan: rng.range(-0.25, 0.25), detune: weirdDetune(rng, W, 25) }
-    : { kind: 'sample', patch: leadPatch as SamplePatch, name: NAMES[leadPatch] ?? leadPatch, gain: 0.42, reverb: 0.32, pump: 0.15, pan: rng.range(-0.3, 0.3), detune: weirdDetune(rng, W, 25), lowpass: lerp(3500, 9000, B) };
+    : { kind: 'sample', patch: leadPatch as SamplePatch, name: NAMES[leadPatch] ?? leadPatch, gain: 0.6, reverb: 0.32, pump: 0.15, pan: rng.range(-0.3, 0.3), detune: weirdDetune(rng, W, 25), lowpass: lerp(3500, 9000, B) };
   if (leadPatch === 'vibes') leadSpec.tremolo = { rate: 5.5, depth: 0.35 };
   const lead = b.inst(leadSpec);
   const [leadLo, leadHi] = leadRange(leadPatch);
   const bassPatch = rng.weighted(V.basses);
   const bass = b.inst({ kind: 'sample', patch: bassPatch, name: NAMES[bassPatch] ?? bassPatch, gain: bassPatch === 'bass-sub' ? 0.34 : 0.4, pump: 0.12, lowpass: 1400 });
-  const pad = V.pad ? b.inst({ kind: 'synth', patch: V.pad, name: NAMES[V.pad] ?? V.pad, gain: 0.32, reverb: 0.45, pump: 0.25, pan: 0 }) : -1;
+  const pad = V.pad ? b.inst({ kind: 'synth', patch: V.pad, name: NAMES[V.pad] ?? V.pad, gain: 0.3, reverb: 0.45, pump: 0.25, pan: 0 }) : -1;
 
   const softKit = variant === 'lofi-slow' || variant === 'lofi-glass' || rng.chance(0.3);
-  const kick = b.inst({ kind: 'sample', patch: softKit ? 'kick-soft' : 'kick-lofi', name: 'Kick', gain: 0.5 });
+  const kick = b.inst({ kind: 'sample', patch: softKit ? 'kick-soft' : 'kick-lofi', name: 'Kick', gain: 0.45 });
   const snarePatch: SamplePatch = variant === 'lofi-glass' ? 'rim' : rng.weighted([['snare-lofi', 5], ['rim', 2], ['clap', 1]]);
   const snare = b.inst({ kind: 'sample', patch: snarePatch, name: snarePatch === 'rim' ? 'Rimshot' : snarePatch === 'clap' ? 'Clap' : 'Snare', gain: snarePatch === 'rim' ? 0.75 : 0.62, reverb: 0.14, pan: 0.04 });
   const ghost = snarePatch === 'snare-lofi' ? snare : b.inst({ kind: 'sample', patch: 'snare-brush', name: 'Ghost snare', gain: 0.45, pan: 0.04 });
@@ -396,7 +402,7 @@ export function composeLofi(req: TrackRequest): Score {
     key: keyName(tonic, tplA.scale),
     progression,
     fx: trackFx({
-      gain: 0.3,
+      gain: V.level,
       lowpass: cutoff,
       highpass: 38,
       q: 0.6,

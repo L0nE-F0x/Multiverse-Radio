@@ -30,8 +30,8 @@ export function composeChiptune(req: TrackRequest): Score {
 
   const leadPatch = rng.pick(['chip-pulse25', 'chip-pulse12', 'chip-square'] as const);
   const lead = b.inst({ kind: 'synth', patch: leadPatch, name: 'Pulse lead', gain: 0.6, pan: 0.1 });
-  const echo = b.inst({ kind: 'synth', patch: leadPatch, name: 'Echo', gain: 0.22, pan: -0.35 });
-  const arp = b.inst({ kind: 'synth', patch: leadPatch === 'chip-pulse12' ? 'chip-pulse25' : 'chip-pulse12', name: 'Arpeggio', gain: 0.4, pan: -0.15 });
+  const echo = b.inst({ kind: 'synth', patch: leadPatch, name: 'Echo', gain: 0.3, pan: -0.35 });
+  const arp = b.inst({ kind: 'synth', patch: leadPatch === 'chip-pulse12' ? 'chip-pulse25' : 'chip-pulse12', name: 'Arpeggio', gain: 0.8, pan: -0.15 });
   const tri = b.inst({ kind: 'synth', patch: 'chip-tri', name: 'Triangle bass', gain: 0.7 });
   const kick = b.inst({ kind: 'sample', patch: 'kick-chip', name: 'Noise kick', gain: 0.6 });
   const snare = b.inst({ kind: 'sample', patch: 'snare-chip', name: 'Noise snare', gain: 0.4 });
@@ -111,7 +111,7 @@ export function composeChiptune(req: TrackRequest): Score {
     key: keyName(tonic, tplA.scale),
     progression: `${tplA.prog} / ${tplB.prog}`,
     fx: trackFx({
-      gain: 0.3,
+      gain: 0.47,
       lowpass: 9000 + B * 9000,
       highpass: 40,
       wow: W * 1.2,

@@ -34,6 +34,8 @@ export interface PatchDef {
   loop?: boolean;
   /** Output channel count (default 1). */
   channels?: 1 | 2;
+  /** Playback level multiplier (peak-normalized one-shots differ a lot in loudness). */
+  level?: number;
   render(root: number, layer: number, sr: number): Float32Array[];
 }
 
@@ -785,14 +787,15 @@ function ocean(sr: number): Float32Array[] {
 
 // ── Registry ──────────────────────────────────────────────────────────────────
 
-const oneShot = (fn: DrumRenderer, level = 0.85): PatchDef => ({
+const oneShot = (fn: DrumRenderer, level = 1): PatchDef => ({
   roots: [60],
   layers: 1,
   hiFi: true,
+  level,
   render: (_root, _layer, sr) => {
     const o = fn(sr);
     fadeTail(o, sr, 0.02);
-    normalize(o, level);
+    normalize(o, 0.85);
     return [o];
   },
 });
@@ -903,43 +906,43 @@ export const PATCHES: Record<SamplePatch, PatchDef> = {
     1200,
   ),
   steeldrum: { roots: range(52, 88, 3), layers: 1, render: (r, _l, sr) => renderSteel(r, sr) },
-  'bass-round': { roots: range(24, 60, 3), layers: 2, rate: 16000, render: (r, l, sr) => renderBass(r, l === 1, sr, 'bass-round') },
-  'bass-upright': { roots: range(24, 60, 3), layers: 2, rate: 16000, render: (r, l, sr) => renderBass(r, l === 1, sr, 'bass-upright') },
-  'bass-sub': { roots: range(24, 60, 3), layers: 1, rate: 12000, render: (r, l, sr) => renderBass(r, l === 1, sr, 'bass-sub') },
-  'kick-lofi': oneShot(DRUMS['kick-lofi']!),
-  'kick-soft': oneShot(DRUMS['kick-soft']!),
-  'kick-808': oneShot(DRUMS['kick-808']!),
-  'kick-punch': oneShot(DRUMS['kick-punch']!),
-  'kick-chip': oneShot(DRUMS['kick-chip']!),
+  'bass-round': { roots: range(24, 60, 3), layers: 2, rate: 16000, level: 0.7, render: (r, l, sr) => renderBass(r, l === 1, sr, 'bass-round') },
+  'bass-upright': { roots: range(24, 60, 3), layers: 2, rate: 16000, level: 0.65, render: (r, l, sr) => renderBass(r, l === 1, sr, 'bass-upright') },
+  'bass-sub': { roots: range(24, 60, 3), layers: 1, rate: 12000, level: 0.65, render: (r, l, sr) => renderBass(r, l === 1, sr, 'bass-sub') },
+  'kick-lofi': oneShot(DRUMS['kick-lofi']!, 0.75),
+  'kick-soft': oneShot(DRUMS['kick-soft']!, 0.75),
+  'kick-808': oneShot(DRUMS['kick-808']!, 0.75),
+  'kick-punch': oneShot(DRUMS['kick-punch']!, 0.75),
+  'kick-chip': oneShot(DRUMS['kick-chip']!, 0.8),
   'snare-lofi': oneShot(DRUMS['snare-lofi']!),
-  'snare-brush': oneShot(DRUMS['snare-brush']!),
-  'snare-gated': oneShot(DRUMS['snare-gated']!),
-  'snare-march': oneShot(DRUMS['snare-march']!),
-  'snare-chip': oneShot(DRUMS['snare-chip']!),
-  'snare-dub': oneShot(DRUMS['snare-dub']!),
-  rim: oneShot(DRUMS.rim!),
-  clap: oneShot(DRUMS.clap!),
-  'hat-closed': oneShot(DRUMS['hat-closed']!),
-  'hat-open': oneShot(DRUMS['hat-open']!),
+  'snare-brush': oneShot(DRUMS['snare-brush']!, 1.6),
+  'snare-gated': oneShot(DRUMS['snare-gated']!, 0.75),
+  'snare-march': oneShot(DRUMS['snare-march']!, 2),
+  'snare-chip': oneShot(DRUMS['snare-chip']!, 0.8),
+  'snare-dub': oneShot(DRUMS['snare-dub']!, 1.4),
+  rim: oneShot(DRUMS.rim!, 1.8),
+  clap: oneShot(DRUMS.clap!, 1.2),
+  'hat-closed': oneShot(DRUMS['hat-closed']!, 2.8),
+  'hat-open': oneShot(DRUMS['hat-open']!, 2.2),
   'hat-chip': oneShot(DRUMS['hat-chip']!),
-  shaker: oneShot(DRUMS.shaker!),
-  ride: oneShot(DRUMS.ride!),
+  shaker: oneShot(DRUMS.shaker!, 2.8),
+  ride: oneShot(DRUMS.ride!, 1.7),
   'brush-swish': oneShot(DRUMS['brush-swish']!),
   conga: oneShot(DRUMS.conga!),
-  bongo: oneShot(DRUMS.bongo!),
-  timpani: oneShot(DRUMS.timpani!),
-  tom: oneShot(DRUMS.tom!),
-  cowbell: oneShot(DRUMS.cowbell!),
-  woodblock: oneShot(DRUMS.woodblock!),
+  bongo: oneShot(DRUMS.bongo!, 1.6),
+  timpani: oneShot(DRUMS.timpani!, 0.55),
+  tom: oneShot(DRUMS.tom!, 0.6),
+  cowbell: oneShot(DRUMS.cowbell!, 3),
+  woodblock: oneShot(DRUMS.woodblock!, 2.5),
   triangle: oneShot(DRUMS.triangle!),
   crash: oneShot(DRUMS.crash!),
-  tick: oneShot(DRUMS.tick!),
-  vinyl: texture(vinyl, 32000),
-  rain: texture(rain),
+  tick: oneShot(DRUMS.tick!, 2.5),
+  vinyl: { ...texture(vinyl, 32000), level: 1.6 },
+  rain: { ...texture(rain), level: 0.7 },
   static: texture(staticNoise),
   hiss: texture(hiss),
   shortwave: texture(shortwave),
-  ocean: texture(ocean),
+  ocean: { ...texture(ocean), level: 0.8 },
 };
 
 /** Pitch of an unpitched one-shot, so the player can transpose it relative to 60. */

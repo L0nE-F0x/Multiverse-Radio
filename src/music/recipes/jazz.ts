@@ -29,7 +29,7 @@ export function composeJazz(req: TrackRequest): Score {
   const beat = b.beat;
 
   const pianoPatch: SamplePatch = rng.weighted([['piano', 4], ['felt-piano', 2], ['ep', 2]]);
-  const piano = b.inst({ kind: 'sample', patch: pianoPatch, name: pianoPatch === 'ep' ? 'Electric piano' : 'Piano', gain: 0.55, reverb: 0.2, pan: -0.15, lowpass: lerp(4500, 10000, B), tremolo: pianoPatch === 'ep' ? { rate: 4.2, depth: 0.25 } : undefined });
+  const piano = b.inst({ kind: 'sample', patch: pianoPatch, name: pianoPatch === 'ep' ? 'Electric piano' : 'Piano', gain: 0.65, reverb: 0.2, pan: -0.15, lowpass: lerp(4500, 10000, B), tremolo: pianoPatch === 'ep' ? { rate: 4.2, depth: 0.25 } : undefined });
   const bass = b.inst({ kind: 'sample', patch: 'bass-upright', name: 'Upright bass', gain: 0.75, reverb: 0.06, pan: 0.05 });
   const leadPatch: SamplePatch | SynthPatch = rng.weighted([['vibes', 6], ['flute', 2], ['ep-bright', 2]]);
   const leadSynth = leadPatch === 'flute';
@@ -69,7 +69,8 @@ export function composeJazz(req: TrackRequest): Score {
       spans.forEach((sp, k) => (sp.chord = k === spans.length - 1 ? home : sp.chord));
       if (spans.length > 1) spans[spans.length - 2]!.chord = chord(tonic + 7, minor ? '7b9' : '13');
     }
-    b.section({ ...s, name: solo ? `solo ${s.name}` : s.name }, spans.map((x) => x.chord), flats);
+    const label = intro ? 'intro' : outro ? 'ending' : `${solo ? 'solo' : chorusNo === 0 ? 'head' : 'head out'} ${s.part}`;
+    b.section({ ...s, name: label }, spans.map((x) => x.chord), flats);
 
     spans.forEach((span, k) => {
       const next = spans[k + 1];
@@ -78,7 +79,7 @@ export function composeJazz(req: TrackRequest): Score {
       voicing = voiceChord(span.chord, voicing, { low: 50, high: 74, voices: 4 });
       if (last) {
         voicing.forEach((p, j) => b.note(piano, span.t + j * 0.03, b.end - span.t - 0.4, p, 0.5));
-      } else if (ballad) {
+      } else if (ballad || intro) {
         b.note(piano, b.grid.at(span.bar, span.beat), span.dur * 0.95, voicing[0]!, vel(rng, 0.42));
         voicing.slice(1).forEach((p, j) => b.note(piano, b.grid.at(span.bar, span.beat) + (j + 1) * 0.025, span.dur * 0.95, p, vel(rng, 0.44)));
         if (span.beats >= 4 && rng.chance(0.4)) for (const p of voicing.slice(-2)) b.note(piano, b.grid.at(span.bar, span.beat + 2.5), beat, p, vel(rng, 0.32));
@@ -161,7 +162,7 @@ export function composeJazz(req: TrackRequest): Score {
     key: keyName(tonic, minor ? 'minor' : 'major'),
     progression: `A: ${tplA.prog} · B: ${tplB.prog}`,
     fx: trackFx({
-      gain: 0.36,
+      gain: 0.44,
       lowpass: lerp(6000, 16000, B),
       highpass: 35,
       wow: G * 1.2,

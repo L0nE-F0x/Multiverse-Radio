@@ -33,12 +33,12 @@ export function composeSynthwave(req: TrackRequest): Score {
   const padPatch = rng.pick(['pad-warm', 'pad-strings'] as const);
   const pad = b.inst({ kind: 'synth', patch: padPatch, name: padPatch === 'pad-warm' ? 'Warm pad' : 'Synth strings', gain: 0.55, reverb: 0.35, pump: 0.4 });
   const leadPatch = rng.pick(['saw-lead', 'square-lead', 'saw-lead'] as const);
-  const lead = b.inst({ kind: 'synth', patch: leadPatch, name: leadPatch === 'saw-lead' ? 'Saw lead' : 'Square lead', gain: 0.55, reverb: 0.3, delay: 0.25, detune: det, pan: 0.05 });
-  const kick = b.inst({ kind: 'sample', patch: 'kick-punch', name: 'Kick', gain: 0.6 });
-  const snare = b.inst({ kind: 'sample', patch: 'snare-gated', name: 'Gated snare', gain: 0.55, reverb: 0.5 });
+  const lead = b.inst({ kind: 'synth', patch: leadPatch, name: leadPatch === 'saw-lead' ? 'Saw lead' : 'Square lead', gain: 0.8, reverb: 0.3, delay: 0.25, detune: det, pan: 0.05 });
+  const kick = b.inst({ kind: 'sample', patch: 'kick-punch', name: 'Kick', gain: 0.45 });
+  const snare = b.inst({ kind: 'sample', patch: 'snare-gated', name: 'Gated snare', gain: 0.45, reverb: 0.5 });
   const clap = b.inst({ kind: 'sample', patch: 'clap', name: 'Clap', gain: 0.35, reverb: 0.3, pan: -0.1 });
-  const hat = b.inst({ kind: 'sample', patch: 'hat-closed', name: 'Hi-hat', gain: 0.22, pan: 0.25 });
-  const ohat = b.inst({ kind: 'sample', patch: 'hat-open', name: 'Open hat', gain: 0.14, pan: 0.25 });
+  const hat = b.inst({ kind: 'sample', patch: 'hat-closed', name: 'Hi-hat', gain: 0.35, pan: 0.25 });
+  const ohat = b.inst({ kind: 'sample', patch: 'hat-open', name: 'Open hat', gain: 0.25, pan: 0.25 });
   const tom = b.inst({ kind: 'sample', patch: 'tom', name: 'Toms', gain: 0.5, reverb: 0.4 });
   const crash = b.inst({ kind: 'sample', patch: 'crash', name: 'Crash', gain: 0.2, reverb: 0.3, pan: -0.2 });
 
@@ -149,7 +149,7 @@ export function composeSynthwave(req: TrackRequest): Score {
     key: keyName(tonic, tplA.scale),
     progression: `${tplA.prog} / ${tplB.prog}`,
     fx: trackFx({
-      gain: 0.3,
+      gain: 0.25,
       lowpass: lowCut,
       highpass: 32,
       q: 0.8,

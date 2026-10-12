@@ -33,7 +33,7 @@ export function composeDub(req: TrackRequest): Score {
   const sub = b.inst({ kind: 'sample', patch: 'bass-sub', name: 'Sub bass', gain: 0.8, lowpass: 600 });
   const kick = b.inst({ kind: 'sample', patch: 'kick-808', name: 'Kick', gain: 0.55 });
   const snare = b.inst({ kind: 'sample', patch: 'snare-dub', name: 'Rimshot', gain: 0.5, reverb: 0.35, delay: 0.05, pan: 0.05 });
-  const hat = b.inst({ kind: 'sample', patch: 'hat-closed', name: 'Hi-hat', gain: 0.24, pan: 0.25, delay: 0.02 });
+  const hat = b.inst({ kind: 'sample', patch: 'hat-closed', name: 'Hi-hat', gain: 0.5, pan: 0.25, delay: 0.02 });
   const skank = b.inst({ kind: 'synth', patch: 'skank', name: 'Skank', gain: 0.5, pan: -0.2, reverb: 0.2, delay: 0.08 });
   const organ = b.inst({ kind: 'synth', patch: 'organ', name: 'Organ bubble', gain: 0.3, pan: 0.3, tremolo: { rate: 6.5, depth: 0.4 } });
   const melodica = b.inst({ kind: 'synth', patch: 'melodica', name: 'Melodica', gain: 0.45, pan: 0.1, reverb: 0.25, delay: 0.35 });
@@ -67,8 +67,8 @@ export function composeDub(req: TrackRequest): Score {
     spans.forEach((span, k) => {
       const root = bassNote(bassPc(span.chord), null, 31, 42);
       const lastBar = outro && k >= spans.length - 2;
-      // Bass riff (two-bar cell; bar parity picks the half).
-      if (!intro || k === spans.length - 1) {
+      // Bass riff (two-bar cell; bar parity picks the half). It starts the tune alone.
+      {
         const half = (span.bar - s.startBar) % 2;
         for (const n of riff) {
           const bt = n.beat - half * 4;
@@ -119,7 +119,7 @@ export function composeDub(req: TrackRequest): Score {
     key: keyName(tonic, tpl.scale),
     progression: tpl.prog,
     fx: trackFx({
-      gain: 0.38,
+      gain: 0.27,
       lowpass: lerp(4500, 11000, B),
       highpass: 28,
       wow: 0.6 + G * 1.8,

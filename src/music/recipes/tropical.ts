@@ -33,15 +33,15 @@ export function composeTropical(req: TrackRequest): Score {
   const b = new ScoreBuilder(req.recipe, req, fit, 4, rng.range(0.5, 0.55), tweaks);
   const beat = b.beat;
 
-  const marimba = b.inst({ kind: 'sample', patch: 'marimba', name: 'Marimba', gain: 0.6, pan: -0.15, reverb: 0.18 });
-  const steel = b.inst({ kind: 'sample', patch: 'steeldrum', name: 'Steel drum', gain: 0.5, pan: 0.2, reverb: 0.25, detune: weirdDetune(rng, W, 25) });
+  const marimba = b.inst({ kind: 'sample', patch: 'marimba', name: 'Marimba', gain: 0.8, pan: -0.15, reverb: 0.18 });
+  const steel = b.inst({ kind: 'sample', patch: 'steeldrum', name: 'Steel drum', gain: 0.7, pan: 0.2, reverb: 0.25, detune: weirdDetune(rng, W, 25) });
   const bass = b.inst({ kind: 'sample', patch: 'bass-round', name: 'Bass', gain: 0.55 });
   const kick = b.inst({ kind: 'sample', patch: 'kick-soft', name: 'Kick', gain: 0.45 });
-  const clap = b.inst({ kind: 'sample', patch: rng.chance(0.5) ? 'rim' : 'clap', name: 'Rim/clap', gain: 0.35, pan: 0.05, reverb: 0.15 });
+  const clap = b.inst({ kind: 'sample', patch: rng.chance(0.5) ? 'rim' : 'clap', name: 'Rim/clap', gain: 0.9, pan: 0.05, reverb: 0.15 });
   const conga = b.inst({ kind: 'sample', patch: 'conga', name: 'Congas', gain: 0.45, pan: 0.3 });
   const bongo = b.inst({ kind: 'sample', patch: 'bongo', name: 'Bongos', gain: 0.32, pan: -0.35 });
   const shaker = b.inst({ kind: 'sample', patch: 'shaker', name: 'Shaker', gain: 0.22, pan: -0.2 });
-  const bell = b.inst({ kind: 'sample', patch: 'cowbell', name: 'Cowbell', gain: 0.16, pan: 0.4 });
+  const bell = b.inst({ kind: 'sample', patch: 'cowbell', name: 'Cowbell', gain: 0.3, pan: 0.4 });
   const ocean = b.inst({ kind: 'sample', patch: 'ocean', name: 'Waves', gain: 0.22 });
 
   const pattern = rng.pick(MARIMBA);
@@ -110,7 +110,7 @@ export function composeTropical(req: TrackRequest): Score {
     key: keyName(tonic, 'major'),
     progression: `${tplA.prog} / ${tplB.prog}`,
     fx: trackFx({
-      gain: 0.36,
+      gain: 0.335,
       lowpass: lerp(7000, 16000, B),
       highpass: 35,
       wow: W * 1.5,
