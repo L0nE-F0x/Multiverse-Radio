@@ -95,7 +95,7 @@ export function signatureOf(artist: number): ArtistSignature {
       let t = tastes.get(item);
       if (t === undefined) {
         // Log-normal: most artists have a clear favourite or two and a few dislikes.
-        t = Math.exp(1.25 * g(id, `taste:${item}`));
+        t = Math.exp(1.6 * g(id, `taste:${item}`));
         tastes.set(item, t);
       }
       return t;
