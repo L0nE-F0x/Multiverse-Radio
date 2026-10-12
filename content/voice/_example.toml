@@ -1,5 +1,7 @@
 # A tiny example script so the voice renderer has something to chew on before the
-# writers' room delivers. Not aired anywhere (no station uses the id "_example").
+# writers' room delivers. Not aired anywhere: underscore files other than _shared.toml
+# are validated by `npm run voice:check` but only rendered when named, e.g.
+#   npm run voice:render -- --station _example --out /tmp/voice-example
 station = "_example"
 
 [voices]
@@ -24,5 +26,10 @@ lines = [
   { say = "host", text = "You're on the air. Go ahead." },
   { say = "caller", text = "Hi. Long time listener, first time existing. Is it normal for my shadow to arrive before me?" },
   { say = "host", text = "Only on Tuesdays, sweetheart.", gap = 0.6 },
+  { say = "caller", text = "It's Thursday." },
+  { pause = 0.5 },
+  { say = "host", text = "Then it's early. Make it a cup of tea and let it tell you about its day." },
+  { say = "caller", text = "It doesn't drink tea. It just sort of... stands near the kettle." },
+  { say = "host", text = "Honestly? Same. Thanks for calling, love.", gap = 0.6 },
   { sfx = "phone-hangup" },
 ]

@@ -1,0 +1,476 @@
+{
+  "version": 1,
+  "station": "void-beats",
+  "clips": [
+    {
+      "id": "id-001",
+      "category": "id",
+      "url": "/voice/void-beats/id-001.mp3",
+      "durationMs": 7922,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "DJ Eventually",
+          "text": "You're listening to Void Beats. Lo-fi for staring into the void. The void is also studying.",
+          "startMs": 44
+        }
+      ]
+    },
+    {
+      "id": "id-002",
+      "category": "id",
+      "url": "/voice/void-beats/id-002.mp3",
+      "durationMs": 6492,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "DJ Eventually",
+          "text": "Void Beats. Eighty-eight point four. Somewhere underneath everything else.",
+          "startMs": 42
+        }
+      ]
+    },
+    {
+      "id": "id-003",
+      "category": "id",
+      "url": "/voice/void-beats/id-003.mp3",
+      "durationMs": 7186,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "DJ Eventually",
+          "text": "This is Void Beats, from Room Zero. There's no door. So, I suppose, you're already in.",
+          "startMs": 41
+        }
+      ]
+    },
+    {
+      "id": "id-004",
+      "category": "id",
+      "url": "/voice/void-beats/id-004.mp3",
+      "durationMs": 5691,
+      "overMusic": true,
+      "daypart": "night",
+      "lines": [
+        {
+          "speaker": "DJ Eventually",
+          "text": "Void Beats. It's late. The void's still up. So are you. Hi.",
+          "startMs": 46
+        }
+      ]
+    },
+    {
+      "id": "id-005",
+      "category": "id",
+      "url": "/voice/void-beats/id-005.mp3",
+      "durationMs": 8444,
+      "overMusic": true,
+      "daypart": "morning",
+      "lines": [
+        {
+          "speaker": "DJ Eventually",
+          "text": "Morning. This is Void Beats. The void doesn't really do mornings. Neither do I. And yet, here we all are.",
+          "startMs": 44
+        }
+      ]
+    },
+    {
+      "id": "id-006",
+      "category": "id",
+      "url": "/voice/void-beats/id-006.mp3",
+      "durationMs": 6850,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "DJ Eventually",
+          "text": "You're tuned to Void Beats. Please don't tap on the void. It's trying to concentrate.",
+          "startMs": 43
+        }
+      ]
+    },
+    {
+      "id": "id-007",
+      "category": "id",
+      "url": "/voice/void-beats/id-007.mp3",
+      "durationMs": 7421,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "DJ Eventually",
+          "text": "Void Beats.",
+          "startMs": 36
+        },
+        {
+          "speaker": "The Void",
+          "text": "Hm.",
+          "startMs": 1740
+        },
+        {
+          "speaker": "DJ Eventually",
+          "text": "That was the void. It says hi.",
+          "startMs": 3565
+        }
+      ]
+    },
+    {
+      "id": "dj-001",
+      "category": "dj",
+      "url": "/voice/void-beats/dj-001.mp3",
+      "durationMs": 13856,
+      "overMusic": true,
+      "daypart": "night",
+      "lines": [
+        {
+          "speaker": "DJ Eventually",
+          "text": "That was... I want to say a song. It was definitely a song. I was going to tell you what it was called, and then a planet drifted past the window, and I just...",
+          "startMs": 38
+        },
+        {
+          "speaker": "DJ Eventually",
+          "text": "...watched it. For a while. Anyway. Here's another one.",
+          "startMs": 10884
+        }
+      ]
+    },
+    {
+      "id": "dj-002",
+      "category": "dj",
+      "url": "/voice/void-beats/dj-002.mp3",
+      "durationMs": 14731,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "DJ Eventually",
+          "text": "Quick update on the void. It has not done the dishes. It has, however, borrowed my good mug, and I can see it from here, on the far side of the ceiling, being used as a small moon.",
+          "startMs": 38
+        },
+        {
+          "speaker": "DJ Eventually",
+          "text": "That's fine. I have other mugs. Here's something warm.",
+          "startMs": 11779
+        }
+      ]
+    },
+    {
+      "id": "dj-003",
+      "category": "dj",
+      "url": "/voice/void-beats/dj-003.mp3",
+      "durationMs": 10990,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "DJ Eventually",
+          "text": "So, I was thinking. About... you know when you... and then the...",
+          "startMs": 37
+        },
+        {
+          "speaker": "DJ Eventually",
+          "text": "Okay, it's gone. It was a really good thought. Possibly the best one I've ever had. Here's a song about it.",
+          "startMs": 4633
+        }
+      ]
+    },
+    {
+      "id": "dj-004",
+      "category": "dj",
+      "url": "/voice/void-beats/dj-004.mp3",
+      "durationMs": 13172,
+      "overMusic": true,
+      "daypart": "morning",
+      "lines": [
+        {
+          "speaker": "DJ Eventually",
+          "text": "Morning. Or the bit after night where it's still night, but with intentions. Put the kettle on.",
+          "startMs": 43
+        },
+        {
+          "speaker": "DJ Eventually",
+          "text": "The void put the kettle on four hours ago. It still hasn't boiled. We're starting to think the void is the kettle. Here's a song.",
+          "startMs": 5479
+        }
+      ]
+    },
+    {
+      "id": "dj-005",
+      "category": "dj",
+      "url": "/voice/void-beats/dj-005.mp3",
+      "durationMs": 13518,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "DJ Eventually",
+          "text": "Study tip from Room Zero. Read the same page eleven times. On the twelfth time, the page reads you. That's when you know you're ready.",
+          "startMs": 40
+        },
+        {
+          "speaker": "DJ Eventually",
+          "text": "That's not a good tip. Please don't take tips from me. Here's a better song.",
+          "startMs": 9288
+        }
+      ]
+    },
+    {
+      "id": "dj-006",
+      "category": "dj",
+      "url": "/voice/void-beats/dj-006.mp3",
+      "durationMs": 16398,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "DJ Eventually",
+          "text": "The thing asleep on my notes is, we think, a cat. It has the general shape of a cat. It purrs at the frequency of distant stars, which I'm told is not standard.",
+          "startMs": 43
+        },
+        {
+          "speaker": "DJ Eventually",
+          "text": "It's very warm. I'm not moving it. I'm not moving anything, ever again. Here's the next one.",
+          "startMs": 10731
+        }
+      ]
+    },
+    {
+      "id": "dj-007",
+      "category": "dj",
+      "url": "/voice/void-beats/dj-007.mp3",
+      "durationMs": 16988,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "DJ Eventually",
+          "text": "This hour of Void Beats comes to you from Grumbel's Ladders. I asked them if they make a ladder that goes down. They said, every ladder goes down, if you believe in yourself.",
+          "startMs": 44
+        },
+        {
+          "speaker": "DJ Eventually",
+          "text": "Then they hung up. Grumbel's Ladders. Up is a choice. I'm choosing to stay down here. It's cozy.",
+          "startMs": 11121
+        }
+      ]
+    },
+    {
+      "id": "dj-008",
+      "category": "dj",
+      "url": "/voice/void-beats/dj-008.mp3",
+      "durationMs": 10996,
+      "overMusic": true,
+      "daypart": "evening",
+      "lines": [
+        {
+          "speaker": "DJ Eventually",
+          "text": "Evening, everyone. The sun went down a while ago. Down where, nobody knows. Probably here. A lot of things end up here. Make yourself comfortable. Here's a slow one.",
+          "startMs": 38
+        }
+      ]
+    },
+    {
+      "id": "dj-009",
+      "category": "dj",
+      "url": "/voice/void-beats/dj-009.mp3",
+      "durationMs": 14087,
+      "overMusic": true,
+      "daypart": "night",
+      "lines": [
+        {
+          "speaker": "DJ Eventually",
+          "text": "Can't sleep? Me neither. I asked the void earlier if it ever sleeps.",
+          "startMs": 39
+        },
+        {
+          "speaker": "The Void",
+          "text": "No.",
+          "startMs": 4781
+        },
+        {
+          "speaker": "DJ Eventually",
+          "text": "It's never answered before. Okay. Okay. Here's a song. A loud one. No, a quiet one. Let's do a quiet one.",
+          "startMs": 6727
+        }
+      ]
+    },
+    {
+      "id": "dj-010",
+      "category": "dj",
+      "url": "/voice/void-beats/dj-010.mp3",
+      "durationMs": 11579,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "DJ Eventually",
+          "text": "Someone wrote in to ask if the void gets lonely. So I asked it. It didn't say anything. But later, I found it had made two cups of tea.",
+          "startMs": 41
+        },
+        {
+          "speaker": "DJ Eventually",
+          "text": "So I think it's alright. I think it's alright.",
+          "startMs": 8986
+        }
+      ]
+    },
+    {
+      "id": "dj-011",
+      "category": "dj",
+      "url": "/voice/void-beats/dj-011.mp3",
+      "durationMs": 11998,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "DJ Eventually",
+          "text": "Coming up, more beats for being a small creature in a very big room. Which is all of us. Even the void. Especially the void. It's enormous, and it still has to do the dishes. Eventually.",
+          "startMs": 37
+        }
+      ]
+    },
+    {
+      "id": "dj-012",
+      "category": "dj",
+      "url": "/voice/void-beats/dj-012.mp3",
+      "durationMs": 12110,
+      "overMusic": true,
+      "daypart": "day",
+      "lines": [
+        {
+          "speaker": "DJ Eventually",
+          "text": "Afternoon check-in. How's the work going? Mine's going great. I've written my name at the top. In bubble letters. It took most of the morning.",
+          "startMs": 46
+        },
+        {
+          "speaker": "DJ Eventually",
+          "text": "Here's something to keep you company while you do yours.",
+          "startMs": 9194
+        }
+      ]
+    },
+    {
+      "id": "dj-013",
+      "category": "dj",
+      "url": "/voice/void-beats/dj-013.mp3",
+      "durationMs": 11325,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "DJ Eventually",
+          "text": "That last one was recorded in a desk drawer, by someone very small, very patiently. You could hear the drawer in the low end. Lovely drawer. Here's a song from a much bigger drawer.",
+          "startMs": 49
+        }
+      ]
+    },
+    {
+      "id": "dj-014",
+      "category": "dj",
+      "url": "/voice/void-beats/dj-014.mp3",
+      "durationMs": 13184,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "DJ Eventually",
+          "text": "If you've lost a shadow, one went past the window about an hour ago. Smallish. Carrying a hat. Answers to Greg, apparently.",
+          "startMs": 41
+        },
+        {
+          "speaker": "DJ Eventually",
+          "text": "Hollis, if he's yours... he looked happy. Just so you know. Here's the next one.",
+          "startMs": 8341
+        }
+      ]
+    },
+    {
+      "id": "dj-015",
+      "category": "dj",
+      "url": "/voice/void-beats/dj-015.mp3",
+      "durationMs": 8962,
+      "overMusic": true,
+      "daypart": "night",
+      "lines": [
+        {
+          "speaker": "DJ Eventually",
+          "text": "It's very late, which is the best time to be a little bit sad and a little bit cozy at the same time. Like soup. Here's a song that's like soup.",
+          "startMs": 37
+        }
+      ]
+    },
+    {
+      "id": "dj-016",
+      "category": "dj",
+      "url": "/voice/void-beats/dj-016.mp3",
+      "durationMs": 13178,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "DJ Eventually",
+          "text": "I was going to read out a listener message, but I've lost it. It's in the void. Everything I lose ends up in the void. My keys. My lunch. A whole Thursday, once.",
+          "startMs": 39
+        },
+        {
+          "speaker": "DJ Eventually",
+          "text": "The void says hello. From Thursday.",
+          "startMs": 10947
+        }
+      ]
+    },
+    {
+      "id": "dj-017",
+      "category": "dj",
+      "url": "/voice/void-beats/dj-017.mp3",
+      "durationMs": 12733,
+      "overMusic": true,
+      "daypart": "day",
+      "lines": [
+        {
+          "speaker": "DJ Eventually",
+          "text": "Quick break. Stand up. Stretch. Drink some water. Look at something far away, to rest your eyes. If you're in Room Zero, everything is far away, so that's easy. Okay. Sit down. Here's a song.",
+          "startMs": 37
+        }
+      ]
+    },
+    {
+      "id": "call-001",
+      "category": "call",
+      "url": "/voice/void-beats/call-001.mp3",
+      "durationMs": 32371,
+      "title": "Bev is looking for a song",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "DJ Eventually",
+          "text": "Oh. We have a caller. Hello, you're on Void Beats.",
+          "startMs": 2850
+        },
+        {
+          "speaker": "Bev",
+          "text": "Hello, love. It's Bev. Is this the request line?",
+          "startMs": 6134
+        },
+        {
+          "speaker": "DJ Eventually",
+          "text": "There's... sort of only one line. So, yes?",
+          "startMs": 9267
+        },
+        {
+          "speaker": "Bev",
+          "text": "Lovely. I'm trying to find a song. I heard it once, in a lift, in a different dimension. It goes... da da dum. Da da.",
+          "startMs": 12309
+        },
+        {
+          "speaker": "DJ Eventually",
+          "text": "Da da dum. Da da.",
+          "startMs": 18783
+        },
+        {
+          "speaker": "Bev",
+          "text": "That's it! Do you know it?",
+          "startMs": 21092
+        },
+        {
+          "speaker": "DJ Eventually",
+          "text": "No. But I'm going to be thinking about it for the rest of my life.",
+          "startMs": 22862
+        },
+        {
+          "speaker": "Bev",
+          "text": "That's what happened to me, love. Thank you. I'll try the next one.",
+          "startMs": 26719
+        }
+      ]
+    }
+  ]
+}

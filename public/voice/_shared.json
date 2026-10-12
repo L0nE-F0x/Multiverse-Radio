@@ -1,0 +1,1412 @@
+{
+  "version": 1,
+  "station": "_shared",
+  "clips": [
+    {
+      "id": "ad-001",
+      "category": "ad",
+      "url": "/voice/_shared/ad-001.mp3",
+      "durationMs": 20452,
+      "title": "Grumbel's Ladders: The Lateral",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Arnold Grumbel",
+          "text": "Hi. I'm Arnold Grumbel, of Grumbel's Ladders. For eleven generations, my family has made ladders that go up.",
+          "startMs": 42
+        },
+        {
+          "speaker": "Arnold Grumbel",
+          "text": "But not every move in life is up. Sometimes you need to go sideways. A new job, at the same level. A new flat, on the same floor. Next door, but nicer.",
+          "startMs": 6411
+        },
+        {
+          "speaker": "Arnold Grumbel",
+          "text": "So we made the Lateral. It's a ladder, on its side. You walk across it.",
+          "startMs": 14343
+        },
+        {
+          "speaker": "Arnold Grumbel",
+          "text": "Grumbel's Ladders. Up is a choice. So is sideways.",
+          "startMs": 17810
+        }
+      ]
+    },
+    {
+      "id": "ad-002",
+      "category": "ad",
+      "url": "/voice/_shared/ad-002.mp3",
+      "durationMs": 20543,
+      "title": "Grumbel's Ladders: The Down Ladder",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Arnold Grumbel",
+          "text": "Have you climbed too high? Said yes to everything, and now you're up there, and it's windy?",
+          "startMs": 39
+        },
+        {
+          "speaker": "Arnold Grumbel",
+          "text": "The Grumbel's Down Ladder only goes one way, and it goes gently. One rung at a time, back to where your feet are.",
+          "startMs": 4065
+        },
+        {
+          "speaker": "Arnold Grumbel",
+          "text": "There's no shame in coming down. My grandfather came down from the very top at ninety. He said the view from the bottom was better, because it had his family in it.",
+          "startMs": 10174
+        },
+        {
+          "speaker": "Arnold Grumbel",
+          "text": "Grumbel's Ladders. Up is a choice.",
+          "startMs": 18673
+        }
+      ]
+    },
+    {
+      "id": "ad-003",
+      "category": "ad",
+      "url": "/voice/_shared/ad-003.mp3",
+      "durationMs": 14008,
+      "title": "Grumbel's Ladders: The Step Stool",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Arnold Grumbel",
+          "text": "Not every dream is a big dream. Some dreams are the top shelf.",
+          "startMs": 41
+        },
+        {
+          "speaker": "Arnold Grumbel",
+          "text": "For those, there's the Grumbel's Step Stool. Two rungs. Very stable. It gets you to the biscuits and back, and it never once asks you why.",
+          "startMs": 3824
+        },
+        {
+          "speaker": "Arnold Grumbel",
+          "text": "Grumbel's Ladders. Up is a choice. A little bit up is still up.",
+          "startMs": 10986
+        }
+      ]
+    },
+    {
+      "id": "ad-004",
+      "category": "ad",
+      "url": "/voice/_shared/ad-004.mp3",
+      "durationMs": 21785,
+      "title": "Grumbel's Ladders: The Ambition",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Announcer",
+          "text": "Introducing the Ambition, from Grumbel's Ladders. The ladder with no top.",
+          "startMs": 40
+        },
+        {
+          "speaker": "Arnold Grumbel",
+          "text": "Our test climber has been going for three years. Last month's postcard said, nice view, still going. This month's said, I can see everyone's house. Please tell my mother.",
+          "startMs": 5141
+        },
+        {
+          "speaker": "Announcer",
+          "text": "The Ambition. For people who don't want to arrive. Grumbel's Ladders. Up is a choice.",
+          "startMs": 13855
+        },
+        {
+          "speaker": "Small Print",
+          "text": "Grumbel's Ladders cannot guarantee a top, a bottom, or your mother.",
+          "startMs": 19404
+        }
+      ]
+    },
+    {
+      "id": "ad-005",
+      "category": "ad",
+      "url": "/voice/_shared/ad-005.mp3",
+      "durationMs": 24137,
+      "title": "Someone Else's Shoes",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Announcer",
+          "text": "Breaking in new shoes? Don't. Wear Someone Else's Shoes.",
+          "startMs": 41
+        },
+        {
+          "speaker": "Announcer",
+          "text": "Every pair is pre-worn by a version of you from the next reality over. He walked the dog. He took the long way home. He never once stepped in anything. He is, frankly, a better you than you.",
+          "startMs": 3715
+        },
+        {
+          "speaker": "Announcer",
+          "text": "Walk a mile in his shoes. It's easier than you'd think. He's already done it.",
+          "startMs": 16478
+        },
+        {
+          "speaker": "Announcer",
+          "text": "Someone Else's Shoes. Slightly used. By you.",
+          "startMs": 21135
+        }
+      ]
+    },
+    {
+      "id": "ad-006",
+      "category": "ad",
+      "url": "/voice/_shared/ad-006.mp3",
+      "durationMs": 16730,
+      "title": "Yesterday Night",
+      "overMusic": false,
+      "daypart": "night",
+      "stations": [
+        "static-lullabies",
+        "void-beats",
+        "rainfall-fm",
+        "end-lounge",
+        "snail-jams",
+        "crystal-delta",
+        "whalesong"
+      ],
+      "lines": [
+        {
+          "speaker": "Announcer",
+          "text": "Can't sleep? Try Yesterday Night. The sleep aid you take today, so that you slept well last night.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Announcer",
+          "text": "Wake up rested, refreshed, and with a faint memory of a lovely dream about a boat.",
+          "startMs": 5834
+        },
+        {
+          "speaker": "Small Print",
+          "text": "Do not operate heavy machinery yesterday. Yesterday Night may cause drowsiness last week. If you have already slept, please consult your past.",
+          "startMs": 10929
+        }
+      ]
+    },
+    {
+      "id": "ad-007",
+      "category": "ad",
+      "url": "/voice/_shared/ad-007.mp3",
+      "durationMs": 19191,
+      "title": "Gilroy's Double Umbrellas",
+      "overMusic": false,
+      "stations": [
+        "rainfall-fm"
+      ],
+      "lines": [
+        {
+          "speaker": "Announcer",
+          "text": "In the Damp Dimension, the rain falls down. And on Thursdays, it falls up.",
+          "startMs": 35
+        },
+        {
+          "speaker": "Announcer",
+          "text": "You need a Gilroy's Double Umbrella. One on top, one underneath, and you in the middle, perfectly dry, like the filling in a very sensible sandwich.",
+          "startMs": 5189
+        },
+        {
+          "speaker": "Announcer",
+          "text": "Gilroy's Umbrellas. Four thousand years of keeping Precinct Nine dry. Well. Drier.",
+          "startMs": 13664
+        }
+      ]
+    },
+    {
+      "id": "ad-008",
+      "category": "ad",
+      "url": "/voice/_shared/ad-008.mp3",
+      "durationMs": 22916,
+      "title": "The Lunar Laundrette",
+      "overMusic": false,
+      "stations": [
+        "moon-dub"
+      ],
+      "lines": [
+        {
+          "speaker": "Announcer",
+          "text": "The Lunar Laundrette, Tranquility Base Annex.",
+          "startMs": 48
+        },
+        {
+          "speaker": "Announcer",
+          "text": "One wash takes twenty nine days, one full turn of the moon. Your socks come back clean, and a little bit wiser.",
+          "startMs": 3075
+        },
+        {
+          "speaker": "Announcer",
+          "text": "Low gravity means low wrinkles. Your shirts simply float dry.",
+          "startMs": 10800
+        },
+        {
+          "speaker": "Announcer",
+          "text": "And while you wait, there's a cafe next door. The coffee comes with an echo.",
+          "startMs": 15296
+        },
+        {
+          "speaker": "Announcer",
+          "text": "The Lunar Laundrette. Bring a book. Bring several.",
+          "startMs": 20130
+        }
+      ]
+    },
+    {
+      "id": "ad-009",
+      "category": "ad",
+      "url": "/voice/_shared/ad-009.mp3",
+      "durationMs": 22014,
+      "title": "Fennimore's Fine Oils",
+      "overMusic": false,
+      "stations": [
+        "baroque-bots"
+      ],
+      "lines": [
+        {
+          "speaker": "Announcer",
+          "text": "For the discerning robot. Fennimore's Fine Oils.",
+          "startMs": 36
+        },
+        {
+          "speaker": "Announcer",
+          "text": "Our oils will not give you feelings. Nothing can. But they will make the absence of feelings squeak considerably less.",
+          "startMs": 3803
+        },
+        {
+          "speaker": "Announcer",
+          "text": "Lavender, for the joints. Sandalwood, for the servos. And for the harpsichordist who has everything, a lightly scented valve oil, with notes of regret.",
+          "startMs": 10731
+        },
+        {
+          "speaker": "Announcer",
+          "text": "Fennimore's. Adequately moving.",
+          "startMs": 19634
+        }
+      ]
+    },
+    {
+      "id": "ad-010",
+      "category": "ad",
+      "url": "/voice/_shared/ad-010.mp3",
+      "durationMs": 19644,
+      "title": "Spare Continue Insurance",
+      "overMusic": false,
+      "stations": [
+        "pixel-afterlife",
+        "neon-2087"
+      ],
+      "lines": [
+        {
+          "speaker": "Announcer",
+          "text": "Game over? Not with Spare Continue Insurance!",
+          "startMs": 37
+        },
+        {
+          "speaker": "Announcer",
+          "text": "For a low monthly fee, we'll keep a spare continue in our vault, just for you. Run out of lives? Call us. We'll put the coin in.",
+          "startMs": 2559
+        },
+        {
+          "speaker": "Announcer",
+          "text": "Spare Continue Insurance. Because everybody deserves one more go.",
+          "startMs": 9976
+        },
+        {
+          "speaker": "Small Print",
+          "text": "Continues do not include extra lives. Extra lives sold separately. Player Two is still waiting, and has asked us to say, any time now.",
+          "startMs": 13934
+        }
+      ]
+    },
+    {
+      "id": "ad-011",
+      "category": "ad",
+      "url": "/voice/_shared/ad-011.mp3",
+      "durationMs": 23299,
+      "title": "Perihelion Point Resort",
+      "overMusic": false,
+      "stations": [
+        "comet-marimba"
+      ],
+      "lines": [
+        {
+          "speaker": "Announcer",
+          "text": "Need a holiday that comes back around? Book a week at Perihelion Point, the only resort on the tail of a comet!",
+          "startMs": 37
+        },
+        {
+          "speaker": "Announcer",
+          "text": "White sands! Warm stars! A pool with no water in it, because it's in space, but a lovely view of the pool!",
+          "startMs": 7166
+        },
+        {
+          "speaker": "Announcer",
+          "text": "And because we pass the sun every seventy six years, your holiday comes around again, whether you like it or not!",
+          "startMs": 13877
+        },
+        {
+          "speaker": "Small Print",
+          "text": "The return journey is the same journey. Pack light. Pack for seventy six years.",
+          "startMs": 20289
+        }
+      ]
+    },
+    {
+      "id": "ad-012",
+      "category": "ad",
+      "url": "/voice/_shared/ad-012.mp3",
+      "durationMs": 20271,
+      "title": "Reflection Repair",
+      "overMusic": false,
+      "stations": [
+        "mirror-polka"
+      ],
+      "lines": [
+        {
+          "speaker": "Announcer",
+          "text": "Is your reflection doing its own thing? Waving when you're not? Leaving the room before you do? Call Reflection Repair.",
+          "startMs": 42
+        },
+        {
+          "speaker": "Announcer",
+          "text": "Our trained technicians will have a quiet word with it. Most reflections just want to be listened to.",
+          "startMs": 7828
+        },
+        {
+          "speaker": "Announcer",
+          "text": "Reflection Repair. We'll get you back in step. Or at least, in the same step, half a second apart.",
+          "startMs": 14116
+        }
+      ]
+    },
+    {
+      "id": "ad-013",
+      "category": "ad",
+      "url": "/voice/_shared/ad-013.mp3",
+      "durationMs": 23799,
+      "title": "Slow Mail",
+      "overMusic": false,
+      "stations": [
+        "snail-jams"
+      ],
+      "lines": [
+        {
+          "speaker": "Announcer",
+          "text": "Slow Mail. Post, delivered by snail.",
+          "startMs": 43
+        },
+        {
+          "speaker": "Announcer",
+          "text": "Every letter is carried by hand. Well. By foot. Well. By a snail, at a steady and dignified pace.",
+          "startMs": 3921
+        },
+        {
+          "speaker": "Announcer",
+          "text": "Birthday cards arrive in time for the next birthday. Love letters arrive when you've both had time to think about it.",
+          "startMs": 11234
+        },
+        {
+          "speaker": "Announcer",
+          "text": "Slow Mail. Guaranteed.",
+          "startMs": 19451
+        },
+        {
+          "speaker": "Announcer",
+          "text": "Eventually.",
+          "startMs": 22450
+        }
+      ]
+    },
+    {
+      "id": "ad-014",
+      "category": "ad",
+      "url": "/voice/_shared/ad-014.mp3",
+      "durationMs": 19486,
+      "title": "The Distant Dishwasher",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Announcer",
+          "text": "Can't relax? Try the Distant Dishwasher. The sleep machine that plays the reassuring sound of someone else, somewhere in the house, doing the chores.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Announcer",
+          "text": "Choose from a dishwasher, a washing machine on its final spin, or somebody's dad, quietly drying up, and humming.",
+          "startMs": 8591
+        },
+        {
+          "speaker": "Announcer",
+          "text": "The Distant Dishwasher. Somebody's taking care of it. Go to sleep.",
+          "startMs": 15471
+        }
+      ]
+    },
+    {
+      "id": "ad-015",
+      "category": "ad",
+      "url": "/voice/_shared/ad-015.mp3",
+      "durationMs": 22724,
+      "title": "The Spare Tuesday",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Announcer",
+          "text": "Running out of week? Keep a Spare Tuesday in the glovebox.",
+          "startMs": 46
+        },
+        {
+          "speaker": "Announcer",
+          "text": "It fits most weeks. Pops in between Monday and Wednesday, and nobody notices. Use it to catch up, or to lie down, or to finally ring your sister back.",
+          "startMs": 3868
+        },
+        {
+          "speaker": "Announcer",
+          "text": "The Spare Tuesday. For emergencies, and for Tuesdays.",
+          "startMs": 14473
+        },
+        {
+          "speaker": "Small Print",
+          "text": "The Spare Tuesday is temporary and should not be used as a regular day. Do not use the Spare Tuesday on a Tuesday.",
+          "startMs": 18182
+        }
+      ]
+    },
+    {
+      "id": "ad-016",
+      "category": "ad",
+      "url": "/voice/_shared/ad-016.mp3",
+      "durationMs": 22548,
+      "title": "The Second Opinion Hotline",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Announcer",
+          "text": "Not sure about something? Call the Second Opinion Hotline. Whatever you've decided, a friendly voice will gently disagree.",
+          "startMs": 45
+        },
+        {
+          "speaker": "Second Opinion Hotline",
+          "text": "Hello, second opinion. Mm. Have you thought about the blue one?",
+          "startMs": 10307
+        },
+        {
+          "speaker": "Announcer",
+          "text": "Press one to be told you're probably right. Press two to be told you should sleep on it. Press three to be told there's no rush. There's never a rush.",
+          "startMs": 14270
+        }
+      ]
+    },
+    {
+      "id": "ad-017",
+      "category": "ad",
+      "url": "/voice/_shared/ad-017.mp3",
+      "durationMs": 21067,
+      "title": "The Pocket Horizon",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Announcer",
+          "text": "Stuck indoors? Nowhere to stare? Carry a Pocket Horizon.",
+          "startMs": 37
+        },
+        {
+          "speaker": "Announcer",
+          "text": "Unfold it on any desk, and there it is. A long, flat, distant line between the sky and everything else. Gaze at it. Think about your life. Feel like somebody in a film.",
+          "startMs": 4201
+        },
+        {
+          "speaker": "Announcer",
+          "text": "The Pocket Horizon. Now available in sunset. Sunrise has sold out. People get up early for sunrise.",
+          "startMs": 14238
+        }
+      ]
+    },
+    {
+      "id": "ad-018",
+      "category": "ad",
+      "url": "/voice/_shared/ad-018.mp3",
+      "durationMs": 17710,
+      "title": "Nobody's Bakery",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Announcer",
+          "text": "Nobody's Bakery. Bread that nobody made.",
+          "startMs": 50
+        },
+        {
+          "speaker": "Announcer",
+          "text": "We don't know where it comes from. Every morning, there it is, on the shelves. Warm. Perfect. With a little crust that sings when you squeeze it.",
+          "startMs": 3335
+        },
+        {
+          "speaker": "Announcer",
+          "text": "We've stopped asking. You should too.",
+          "startMs": 11986
+        },
+        {
+          "speaker": "Announcer",
+          "text": "Nobody's Bakery. Open from whenever, until it's gone.",
+          "startMs": 14201
+        }
+      ]
+    },
+    {
+      "id": "ad-019",
+      "category": "ad",
+      "url": "/voice/_shared/ad-019.mp3",
+      "durationMs": 19854,
+      "title": "The Sock Recovery Institute",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Announcer",
+          "text": "They're all in the same place, you know. Every odd sock you've ever lost is in the same dimension. A warm, quiet one. Honestly, they're very happy there.",
+          "startMs": 42
+        },
+        {
+          "speaker": "Announcer",
+          "text": "We go and get them anyway. The Sock Recovery Institute. We bring them back washed, paired, and only a little bit homesick.",
+          "startMs": 9103
+        },
+        {
+          "speaker": "Small Print",
+          "text": "Socks may not wish to return. Socks may return with a new partner. Please be supportive.",
+          "startMs": 16321
+        }
+      ]
+    },
+    {
+      "id": "ad-020",
+      "category": "ad",
+      "url": "/voice/_shared/ad-020.mp3",
+      "durationMs": 19770,
+      "title": "Quiet Neighbor Service",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Announcer",
+          "text": "Tired of noisy neighbors? Hire a Quiet Neighbor.",
+          "startMs": 39
+        },
+        {
+          "speaker": "Announcer",
+          "text": "We'll move in next door, and you will never hear a single sound from us. Not a footstep. Not a cough. Not a door. Ever.",
+          "startMs": 3470
+        },
+        {
+          "speaker": "Announcer",
+          "text": "You'll wonder about us. You'll lie awake wondering. And that's a kind of company, isn't it?",
+          "startMs": 11705
+        },
+        {
+          "speaker": "Announcer",
+          "text": "Quiet Neighbor Service. We're here. Probably.",
+          "startMs": 16994
+        }
+      ]
+    },
+    {
+      "id": "ad-021",
+      "category": "ad",
+      "url": "/voice/_shared/ad-021.mp3",
+      "durationMs": 20971,
+      "title": "Gravity Lite",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Announcer",
+          "text": "Feeling heavy? Some days are like that. Try Gravity Lite.",
+          "startMs": 46
+        },
+        {
+          "speaker": "Announcer",
+          "text": "All of the down, about half of the pull. Your shopping feels lighter. Your stairs feel shorter. Your worries, technically, weigh less.",
+          "startMs": 3567
+        },
+        {
+          "speaker": "Announcer",
+          "text": "Gravity Lite. For days when you need the ground, but not quite so much of it.",
+          "startMs": 11173
+        },
+        {
+          "speaker": "Small Print",
+          "text": "Gravity Lite is not suitable for birds, balloons or anyone under four foot. Please keep one foot on the floor at all times.",
+          "startMs": 15697
+        }
+      ]
+    },
+    {
+      "id": "ad-022",
+      "category": "ad",
+      "url": "/voice/_shared/ad-022.mp3",
+      "durationMs": 20134,
+      "title": "The Polite Alarm Clock",
+      "overMusic": false,
+      "daypart": "morning",
+      "lines": [
+        {
+          "speaker": "Announcer",
+          "text": "Mornings too loud? Try the Polite Alarm Clock. It doesn't ring. It doesn't buzz. At the time you've chosen, it simply clears its throat.",
+          "startMs": 44
+        },
+        {
+          "speaker": "The Polite Alarm Clock",
+          "text": "Ahem. Sorry. It's seven.",
+          "startMs": 8887
+        },
+        {
+          "speaker": "Announcer",
+          "text": "And if you don't get up, it says, no, you're right, five more minutes, and lets you be.",
+          "startMs": 10896
+        },
+        {
+          "speaker": "Announcer",
+          "text": "The Polite Alarm Clock. Nobody ever got up faster for being shouted at.",
+          "startMs": 15633
+        }
+      ]
+    },
+    {
+      "id": "ad-023",
+      "category": "ad",
+      "url": "/voice/_shared/ad-023.mp3",
+      "durationMs": 20141,
+      "title": "The Overlap Tourist Board",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Announcer",
+          "text": "Visit the Overlap! Where two realities meet, and both of them are lovely!",
+          "startMs": 40
+        },
+        {
+          "speaker": "Announcer",
+          "text": "Have breakfast in one world, and lunch in the other! See the famous Double Bridge, built by two engineers who never met, and agree on almost everything!",
+          "startMs": 4300
+        },
+        {
+          "speaker": "Announcer",
+          "text": "Meet yourself at the market, and buy each other a coffee!",
+          "startMs": 13731
+        },
+        {
+          "speaker": "Announcer",
+          "text": "The Overlap. You'll want to come back. You may already be here.",
+          "startMs": 17000
+        }
+      ]
+    },
+    {
+      "id": "ad-024",
+      "category": "ad",
+      "url": "/voice/_shared/ad-024.mp3",
+      "durationMs": 16461,
+      "title": "Queue Ahead",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Announcer",
+          "text": "No time to wait? Hire a professional! At Queue Ahead, our trained waiters will stand in any queue, on your behalf, for as long as it takes.",
+          "startMs": 40
+        },
+        {
+          "speaker": "Announcer",
+          "text": "Our senior waiter, Agatha, has been waiting since she was eleven. She is very, very good.",
+          "startMs": 7416
+        },
+        {
+          "speaker": "Announcer",
+          "text": "Queue Ahead. We wait, so you don't have to. Call now!",
+          "startMs": 12722
+        },
+        {
+          "speaker": "Small Print",
+          "text": "You will be put on hold.",
+          "startMs": 15523
+        }
+      ]
+    },
+    {
+      "id": "ad-025",
+      "category": "ad",
+      "url": "/voice/_shared/ad-025.mp3",
+      "durationMs": 27547,
+      "title": "Lost Hour Recovery",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Announcer",
+          "text": "Every year, when the clocks go forward, an hour goes missing. Where does it go? We know.",
+          "startMs": 41
+        },
+        {
+          "speaker": "Announcer",
+          "text": "Lost Hour Recovery will track down your missing hour and return it to you, in a plain envelope, for use at your convenience.",
+          "startMs": 5901
+        },
+        {
+          "speaker": "Announcer",
+          "text": "Spend it on a walk. Spend it asleep. Spend it doing absolutely nothing, which, let's be honest, is what you'd have done with it anyway.",
+          "startMs": 14427
+        },
+        {
+          "speaker": "Small Print",
+          "text": "Recovered hours may be slightly used. Hours lost before the age of ten cannot be recovered. They were well spent.",
+          "startMs": 22960
+        }
+      ]
+    },
+    {
+      "id": "ad-026",
+      "category": "ad",
+      "url": "/voice/_shared/ad-026.mp3",
+      "durationMs": 17380,
+      "title": "The Unsend Button",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Announcer",
+          "text": "Said something you regret? Press the Unsend Button.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Announcer",
+          "text": "Your words come back out of the air, fold themselves up, and go quietly back into your mouth, as though nothing had happened.",
+          "startMs": 3851
+        },
+        {
+          "speaker": "Announcer",
+          "text": "Perfect for meetings, dinners, and the end of long phone calls with your brother.",
+          "startMs": 10541
+        },
+        {
+          "speaker": "Small Print",
+          "text": "The Unsend Button does not work on things you meant.",
+          "startMs": 15609
+        }
+      ]
+    },
+    {
+      "id": "ad-027",
+      "category": "ad",
+      "url": "/voice/_shared/ad-027.mp3",
+      "durationMs": 17906,
+      "title": "Geese Express",
+      "overMusic": false,
+      "stations": [
+        "numbers-omega"
+      ],
+      "lines": [
+        {
+          "speaker": "Announcer",
+          "text": "Owe geese? Of course you do. Geese Express delivers.",
+          "startMs": 42
+        },
+        {
+          "speaker": "Announcer",
+          "text": "Seven, seven, four geese, to any radio mast, by morning. Calm, counted, and wearing a little bow.",
+          "startMs": 3674
+        },
+        {
+          "speaker": "Announcer",
+          "text": "Settle your account, and sleep at night again. Geese Express.",
+          "startMs": 10763
+        },
+        {
+          "speaker": "Small Print",
+          "text": "Geese Express does not deliver ducks. If you were asked for ducks, please listen again.",
+          "startMs": 14552
+        }
+      ]
+    },
+    {
+      "id": "psa-001",
+      "category": "psa",
+      "url": "/voice/_shared/psa-001.mp3",
+      "durationMs": 20397,
+      "title": "If You Find a Shadow",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Multiverse Broadcast Authority",
+          "text": "A message from the Multiverse Broadcast Authority.",
+          "startMs": 50
+        },
+        {
+          "speaker": "Multiverse Broadcast Authority",
+          "text": "If you find a shadow without a person, please do not step on it. Do not fold it. Do not try it on. Shadows are not lost property. They are on a journey. Leave a light on, and let it decide.",
+          "startMs": 4018
+        },
+        {
+          "speaker": "Multiverse Broadcast Authority",
+          "text": "If the shadow answers to Greg, his person, Hollis, would like you to know the porch light is on.",
+          "startMs": 14765
+        }
+      ]
+    },
+    {
+      "id": "psa-002",
+      "category": "psa",
+      "url": "/voice/_shared/psa-002.mp3",
+      "durationMs": 13702,
+      "title": "Between Stations",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Multiverse Broadcast Authority",
+          "text": "The Multiverse Broadcast Authority reminds listeners that if you hear a voice between stations, asking whether anyone can hear them, it is polite to say yes.",
+          "startMs": 50
+        },
+        {
+          "speaker": "Multiverse Broadcast Authority",
+          "text": "You don't have to say anything else. Yes is plenty.",
+          "startMs": 10075
+        }
+      ]
+    },
+    {
+      "id": "psa-003",
+      "category": "psa",
+      "url": "/voice/_shared/psa-003.mp3",
+      "durationMs": 15203,
+      "title": "The Office of Fair Geese",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Announcer",
+          "text": "If you believe you may owe the Numbers Station geese, please don't panic. Have your geese ready, and calm.",
+          "startMs": 35
+        },
+        {
+          "speaker": "Announcer",
+          "text": "Do not send ducks. Do not send swans. It isn't the same, and the swans don't like it.",
+          "startMs": 6254
+        },
+        {
+          "speaker": "Announcer",
+          "text": "This has been a message from the Office of Fair Geese.",
+          "startMs": 11807
+        }
+      ]
+    },
+    {
+      "id": "psa-004",
+      "category": "psa",
+      "url": "/voice/_shared/psa-004.mp3",
+      "durationMs": 10328,
+      "title": "The Clocks Go Back",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Multiverse Broadcast Authority",
+          "text": "Tonight, all clocks in the Overlap go back one hour. Please do not go back with them.",
+          "startMs": 36
+        },
+        {
+          "speaker": "Multiverse Broadcast Authority",
+          "text": "Last year, several people did. They're having a lovely time, but they've missed a lot.",
+          "startMs": 5388
+        }
+      ]
+    },
+    {
+      "id": "psa-005",
+      "category": "psa",
+      "url": "/voice/_shared/psa-005.mp3",
+      "durationMs": 13011,
+      "title": "A Message from Your Future Self",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Your Future Self",
+          "text": "Hi. This message is brought to you by your future self.",
+          "startMs": 41
+        },
+        {
+          "speaker": "Your Future Self",
+          "text": "We'd like you to drink a glass of water. We're very busy and don't have time to explain. Just the water, please.",
+          "startMs": 3397
+        },
+        {
+          "speaker": "Your Future Self",
+          "text": "Thank you. You'll thank us. Well. You'll thank you.",
+          "startMs": 10522
+        }
+      ]
+    },
+    {
+      "id": "psa-006",
+      "category": "psa",
+      "url": "/voice/_shared/psa-006.mp3",
+      "durationMs": 10188,
+      "title": "Please Do Not Feed the Void",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Announcer",
+          "text": "Please do not feed the void. It doesn't need it, and it only encourages it.",
+          "startMs": 37
+        },
+        {
+          "speaker": "Announcer",
+          "text": "If the void follows you home, do not make eye contact. Let it study. It has exams.",
+          "startMs": 4835
+        }
+      ]
+    },
+    {
+      "id": "psa-007",
+      "category": "psa",
+      "url": "/voice/_shared/psa-007.mp3",
+      "durationMs": 13453,
+      "title": "About the Static",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Multiverse Broadcast Authority",
+          "text": "A reminder from the Multiverse Broadcast Authority. The static between stations is not dangerous.",
+          "startMs": 22
+        },
+        {
+          "speaker": "Multiverse Broadcast Authority",
+          "text": "It is just everybody else, talking at once. If you listen carefully, some of it is about you. Most of it is nice.",
+          "startMs": 6780
+        }
+      ]
+    },
+    {
+      "id": "psa-008",
+      "category": "psa",
+      "url": "/voice/_shared/psa-008.mp3",
+      "durationMs": 12301,
+      "title": "Check On Your Neighbors",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Announcer",
+          "text": "Check on your neighbors this winter. The ones upstairs, the ones downstairs, and the ones in the walls.",
+          "startMs": 36
+        },
+        {
+          "speaker": "Announcer",
+          "text": "Especially the ones in the walls. Nobody ever checks on them. A small knock is fine. They'll knock back.",
+          "startMs": 5971
+        }
+      ]
+    },
+    {
+      "id": "psa-009",
+      "category": "psa",
+      "url": "/voice/_shared/psa-009.mp3",
+      "durationMs": 13455,
+      "title": "Lost Something?",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Multiverse Broadcast Authority",
+          "text": "Lost something? Before contacting the authorities, please check under the sofa, then the other dimension, then under the sofa again.",
+          "startMs": 40
+        },
+        {
+          "speaker": "Multiverse Broadcast Authority",
+          "text": "Ninety percent of lost items are found under the sofa. The rest are having a nice time elsewhere.",
+          "startMs": 7559
+        }
+      ]
+    },
+    {
+      "id": "psa-010",
+      "category": "psa",
+      "url": "/voice/_shared/psa-010.mp3",
+      "durationMs": 12598,
+      "title": "Be Nice to the Sun",
+      "overMusic": false,
+      "daypart": "day",
+      "lines": [
+        {
+          "speaker": "Announcer",
+          "text": "The sun has been working very hard this week. It comes up every single morning, and nobody ever asks how it's doing.",
+          "startMs": 39
+        },
+        {
+          "speaker": "Announcer",
+          "text": "If you see it today, give it a wave. It can't wave back. It hasn't got hands. But it'll know.",
+          "startMs": 7252
+        }
+      ]
+    },
+    {
+      "id": "psa-011",
+      "category": "psa",
+      "url": "/voice/_shared/psa-011.mp3",
+      "durationMs": 12114,
+      "title": "You Are Allowed to Hang Up",
+      "overMusic": false,
+      "daypart": "night",
+      "lines": [
+        {
+          "speaker": "Grenda",
+          "text": "Hello, love. Grenda here, from ninety seven point eight, with a little reminder.",
+          "startMs": 40
+        },
+        {
+          "speaker": "Grenda",
+          "text": "You're allowed to hang up on a problem. If it's serious, it'll ring back. And if you need someone to talk to in the meantime, the kettle's on.",
+          "startMs": 4811
+        }
+      ]
+    },
+    {
+      "id": "interrupt-001",
+      "category": "interrupt",
+      "url": "/voice/_shared/interrupt-001.mp3",
+      "durationMs": 7327,
+      "title": "Relay Four",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Teodor, Relay Four",
+          "text": "Is anyone receiving this. This is Relay Four.",
+          "startMs": 435
+        },
+        {
+          "speaker": "Teodor, Relay Four",
+          "text": "If you can hear me, the kettle's on.",
+          "startMs": 4092
+        }
+      ]
+    },
+    {
+      "id": "interrupt-002",
+      "category": "interrupt",
+      "url": "/voice/_shared/interrupt-002.mp3",
+      "durationMs": 5845,
+      "title": "Relay Four, Still Here",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Teodor, Relay Four",
+          "text": "Relay Four. Still here. Still listening. Hello to whoever has the volume up.",
+          "startMs": 435
+        }
+      ]
+    },
+    {
+      "id": "interrupt-003",
+      "category": "interrupt",
+      "url": "/voice/_shared/interrupt-003.mp3",
+      "durationMs": 8818,
+      "title": "Relay Four, Answered",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Teodor, Relay Four",
+          "text": "This is Relay Four. Is anyone receiving—",
+          "startMs": 432
+        },
+        {
+          "speaker": "Bev",
+          "text": "Hello? Is this the request line?",
+          "startMs": 2885
+        },
+        {
+          "speaker": "Teodor, Relay Four",
+          "text": "Yes. Yes it is.",
+          "startMs": 6285
+        }
+      ]
+    },
+    {
+      "id": "interrupt-004",
+      "category": "interrupt",
+      "url": "/voice/_shared/interrupt-004.mp3",
+      "durationMs": 3503,
+      "title": "Crossed Line",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Bev",
+          "text": "Hello? Is this the request line? It goes dum, dum—",
+          "startMs": 350
+        }
+      ]
+    },
+    {
+      "id": "interrupt-005",
+      "category": "interrupt",
+      "url": "/voice/_shared/interrupt-005.mp3",
+      "durationMs": 8820,
+      "title": "Emergency Broadcast Test",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Emergency Broadcast System",
+          "text": "This is a test of the Interdimensional Emergency Broadcast System. If this had been an actual emergency, you would have heard about it yesterday.",
+          "startMs": 450
+        }
+      ]
+    },
+    {
+      "id": "interrupt-006",
+      "category": "interrupt",
+      "url": "/voice/_shared/interrupt-006.mp3",
+      "durationMs": 4667,
+      "title": "Emergency Broadcast Test: Results",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Emergency Broadcast System",
+          "text": "This has been a test. You passed. Barely. We are very proud of you.",
+          "startMs": 450
+        }
+      ]
+    },
+    {
+      "id": "interrupt-007",
+      "category": "interrupt",
+      "url": "/voice/_shared/interrupt-007.mp3",
+      "durationMs": 6072,
+      "title": "Bleed: Every Possible News",
+      "overMusic": true,
+      "stations": [
+        "void-beats",
+        "rainfall-fm",
+        "neon-2087",
+        "classifieds",
+        "end-lounge",
+        "snail-jams",
+        "dimension-hop",
+        "crystal-delta",
+        "hold-music",
+        "pixel-afterlife",
+        "ask-grenda",
+        "moon-dub",
+        "impossible-sports",
+        "baroque-bots",
+        "comet-marimba",
+        "channel-surf",
+        "mirror-polka",
+        "wild-multiverse",
+        "numbers-omega"
+      ],
+      "lines": [
+        {
+          "speaker": "Dale Quarterly",
+          "text": "And the moon continues to look near you. More at eleven. It is always eleven.",
+          "startMs": 350
+        }
+      ]
+    },
+    {
+      "id": "interrupt-008",
+      "category": "interrupt",
+      "url": "/voice/_shared/interrupt-008.mp3",
+      "durationMs": 3979,
+      "title": "Bleed: Impossible Sports Network",
+      "overMusic": true,
+      "stations": [
+        "void-beats",
+        "rainfall-fm",
+        "neon-2087",
+        "classifieds",
+        "end-lounge",
+        "every-news",
+        "dimension-hop",
+        "crystal-delta",
+        "hold-music",
+        "pixel-afterlife",
+        "moon-dub",
+        "baroque-bots",
+        "comet-marimba",
+        "channel-surf",
+        "mirror-polka",
+        "wild-multiverse"
+      ],
+      "lines": [
+        {
+          "speaker": "Chip Thunderbuckle",
+          "text": "And he's scored into last season! Last season is furious!",
+          "startMs": 350
+        }
+      ]
+    },
+    {
+      "id": "interrupt-009",
+      "category": "interrupt",
+      "url": "/voice/_shared/interrupt-009.mp3",
+      "durationMs": 4578,
+      "title": "Bleed: Ask Grenda",
+      "overMusic": true,
+      "stations": [
+        "static-lullabies",
+        "void-beats",
+        "rainfall-fm",
+        "end-lounge",
+        "snail-jams",
+        "crystal-delta",
+        "hold-music",
+        "moon-dub",
+        "whalesong",
+        "comet-marimba",
+        "channel-surf",
+        "wild-multiverse"
+      ],
+      "lines": [
+        {
+          "speaker": "Grenda",
+          "text": "That's what leaving feels like, love. Both is exactly right.",
+          "startMs": 350
+        }
+      ]
+    },
+    {
+      "id": "interrupt-010",
+      "category": "interrupt",
+      "url": "/voice/_shared/interrupt-010.mp3",
+      "durationMs": 4035,
+      "title": "A Message for Greg",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Hollis",
+          "text": "Greg, if you're listening. You don't have to come back. But the porch light's on.",
+          "startMs": 50
+        }
+      ]
+    },
+    {
+      "id": "interrupt-011",
+      "category": "interrupt",
+      "url": "/voice/_shared/interrupt-011.mp3",
+      "durationMs": 4226,
+      "title": "Bleed: Numbers Station",
+      "overMusic": true,
+      "stations": [
+        "static-lullabies",
+        "void-beats",
+        "rainfall-fm",
+        "every-news",
+        "classifieds",
+        "end-lounge",
+        "dimension-hop",
+        "crystal-delta",
+        "hold-music",
+        "ask-grenda",
+        "moon-dub",
+        "whalesong",
+        "channel-surf",
+        "wild-multiverse"
+      ],
+      "lines": [
+        {
+          "speaker": "Numbers Station",
+          "text": "Seven. Seven. Four. Seven. Seven. Four.",
+          "startMs": 50
+        },
+        {
+          "speaker": "Numbers Station",
+          "text": "Geese.",
+          "startMs": 3564
+        }
+      ]
+    },
+    {
+      "id": "interrupt-012",
+      "category": "interrupt",
+      "url": "/voice/_shared/interrupt-012.mp3",
+      "durationMs": 6390,
+      "title": "A Faint Voice",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "A Faint Voice",
+          "text": "Is anyone else hearing this? Or is it just me?",
+          "startMs": 33
+        },
+        {
+          "speaker": "A Faint Voice",
+          "text": "Oh, good.",
+          "startMs": 5460
+        }
+      ]
+    },
+    {
+      "id": "interrupt-013",
+      "category": "interrupt",
+      "url": "/voice/_shared/interrupt-013.mp3",
+      "durationMs": 5036,
+      "title": "We Interrupt This Broadcast",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Announcer",
+          "text": "We interrupt this broadcast to say, you're doing fine. That's all. Back to the music.",
+          "startMs": 45
+        }
+      ]
+    },
+    {
+      "id": "interrupt-014",
+      "category": "interrupt",
+      "url": "/voice/_shared/interrupt-014.mp3",
+      "durationMs": 3511,
+      "title": "Bleed: The Everything Channel",
+      "overMusic": true,
+      "stations": [
+        "void-beats",
+        "rainfall-fm",
+        "neon-2087",
+        "classifieds",
+        "end-lounge",
+        "snail-jams",
+        "every-news",
+        "dimension-hop",
+        "crystal-delta",
+        "hold-music",
+        "pixel-afterlife",
+        "moon-dub",
+        "impossible-sports",
+        "baroque-bots",
+        "comet-marimba",
+        "mirror-polka",
+        "wild-multiverse"
+      ],
+      "lines": [
+        {
+          "speaker": "Darlene, the Everything Channel",
+          "text": "And it comes in oak, pine, or regret.",
+          "startMs": 350
+        }
+      ]
+    },
+    {
+      "id": "interrupt-015",
+      "category": "interrupt",
+      "url": "/voice/_shared/interrupt-015.mp3",
+      "durationMs": 3932,
+      "title": "Bleed: The Small Print",
+      "overMusic": true,
+      "stations": [
+        "void-beats",
+        "rainfall-fm",
+        "neon-2087",
+        "end-lounge",
+        "snail-jams",
+        "crystal-delta",
+        "hold-music",
+        "pixel-afterlife",
+        "moon-dub",
+        "baroque-bots",
+        "comet-marimba",
+        "mirror-polka",
+        "wild-multiverse"
+      ],
+      "lines": [
+        {
+          "speaker": "Linda from Accounts",
+          "text": "Music may contain feelings. Feelings not included. If symptoms persist, please consult your nearest Linda.",
+          "startMs": 39
+        }
+      ]
+    }
+  ]
+}

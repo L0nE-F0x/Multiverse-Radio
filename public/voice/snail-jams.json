@@ -1,0 +1,525 @@
+{
+  "version": 1,
+  "station": "snail-jams",
+  "clips": [
+    {
+      "id": "id-001",
+      "category": "id",
+      "url": "/voice/snail-jams/id-001.mp3",
+      "durationMs": 5978,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Shelley Shellbourne",
+          "text": "Snail Jams.",
+          "startMs": 41
+        },
+        {
+          "speaker": "Shelley Shellbourne",
+          "text": "Take your time.",
+          "startMs": 2433
+        }
+      ]
+    },
+    {
+      "id": "id-002",
+      "category": "id",
+      "url": "/voice/snail-jams/id-002.mp3",
+      "durationMs": 8518,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Shelley Shellbourne",
+          "text": "You're listening... to Snail Jams. Ninety-three point five.",
+          "startMs": 50
+        },
+        {
+          "speaker": "Shelley Shellbourne",
+          "text": "Eventually.",
+          "startMs": 5243
+        }
+      ]
+    },
+    {
+      "id": "id-003",
+      "category": "id",
+      "url": "/voice/snail-jams/id-003.mp3",
+      "durationMs": 6129,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Shelley Shellbourne",
+          "text": "Snail Jams. Slow jams... for slow listeners.",
+          "startMs": 41
+        }
+      ]
+    },
+    {
+      "id": "id-004",
+      "category": "id",
+      "url": "/voice/snail-jams/id-004.mp3",
+      "durationMs": 7197,
+      "overMusic": true,
+      "daypart": "morning",
+      "lines": [
+        {
+          "speaker": "Shelley Shellbourne",
+          "text": "Good morning. It's still morning. It'll be morning for a while. Snail Jams.",
+          "startMs": 38
+        }
+      ]
+    },
+    {
+      "id": "id-005",
+      "category": "id",
+      "url": "/voice/snail-jams/id-005.mp3",
+      "durationMs": 7490,
+      "overMusic": true,
+      "daypart": "night",
+      "lines": [
+        {
+          "speaker": "Shelley Shellbourne",
+          "text": "Snail Jams. Good night.",
+          "startMs": 42
+        },
+        {
+          "speaker": "Shelley Shellbourne",
+          "text": "I started saying that at teatime.",
+          "startMs": 2901
+        }
+      ]
+    },
+    {
+      "id": "id-006",
+      "category": "id",
+      "url": "/voice/snail-jams/id-006.mp3",
+      "durationMs": 6523,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Shelley Shellbourne",
+          "text": "This is Snail Jams. Take everyone's time. They won't mind.",
+          "startMs": 45
+        }
+      ]
+    },
+    {
+      "id": "id-007",
+      "category": "id",
+      "url": "/voice/snail-jams/id-007.mp3",
+      "durationMs": 5207,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Shelley Shellbourne",
+          "text": "Snail...",
+          "startMs": 35
+        },
+        {
+          "speaker": "Shelley Shellbourne",
+          "text": "Jams.",
+          "startMs": 2151
+        }
+      ]
+    },
+    {
+      "id": "dj-001",
+      "category": "dj",
+      "url": "/voice/snail-jams/dj-001.mp3",
+      "durationMs": 10820,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Shelley Shellbourne",
+          "text": "Here's the traffic. On the leaf.",
+          "startMs": 48
+        },
+        {
+          "speaker": "Shelley Shellbourne",
+          "text": "Heading north, one snail. Me. Moving well.",
+          "startMs": 3139
+        },
+        {
+          "speaker": "Shelley Shellbourne",
+          "text": "Expected at the edge of the leaf... by Thursday.",
+          "startMs": 7106
+        }
+      ]
+    },
+    {
+      "id": "dj-002",
+      "category": "dj",
+      "url": "/voice/snail-jams/dj-002.mp3",
+      "durationMs": 9248,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Shelley Shellbourne",
+          "text": "That last song was three minutes long. For us, it was most of a spring.",
+          "startMs": 50
+        },
+        {
+          "speaker": "Shelley Shellbourne",
+          "text": "I cried at the chorus. It arrived in June.",
+          "startMs": 5814
+        }
+      ]
+    },
+    {
+      "id": "dj-003",
+      "category": "dj",
+      "url": "/voice/snail-jams/dj-003.mp3",
+      "durationMs": 9613,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Shelley Shellbourne",
+          "text": "Some people say I talk too slowly.",
+          "startMs": 43
+        },
+        {
+          "speaker": "Shelley Shellbourne",
+          "text": "Those people... have already left.",
+          "startMs": 3761
+        },
+        {
+          "speaker": "Shelley Shellbourne",
+          "text": "More music, for everyone who stayed.",
+          "startMs": 6892
+        }
+      ]
+    },
+    {
+      "id": "dj-004",
+      "category": "dj",
+      "url": "/voice/snail-jams/dj-004.mp3",
+      "durationMs": 10593,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Shelley Shellbourne",
+          "text": "Live update. A raindrop is falling.",
+          "startMs": 39
+        },
+        {
+          "speaker": "Shelley Shellbourne",
+          "text": "It is about... halfway down.",
+          "startMs": 4048
+        },
+        {
+          "speaker": "Shelley Shellbourne",
+          "text": "We'll keep you posted. Here's a song while we wait.",
+          "startMs": 7050
+        }
+      ]
+    },
+    {
+      "id": "dj-005",
+      "category": "dj",
+      "url": "/voice/snail-jams/dj-005.mp3",
+      "durationMs": 9142,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Shelley Shellbourne",
+          "text": "Raindrop update. It has landed.",
+          "startMs": 44
+        },
+        {
+          "speaker": "Shelley Shellbourne",
+          "text": "On the mushroom. The mushroom is fine.",
+          "startMs": 3412
+        },
+        {
+          "speaker": "Shelley Shellbourne",
+          "text": "Thank you all, for your concern.",
+          "startMs": 6723
+        }
+      ]
+    },
+    {
+      "id": "dj-006",
+      "category": "dj",
+      "url": "/voice/snail-jams/dj-006.mp3",
+      "durationMs": 13446,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Shelley Shellbourne",
+          "text": "Snail Jams is brought to you by Grumbel's Ladders.",
+          "startMs": 48
+        },
+        {
+          "speaker": "Shelley Shellbourne",
+          "text": "I've been climbing one of their ladders since spring. I'm on the first rung.",
+          "startMs": 4609
+        },
+        {
+          "speaker": "Shelley Shellbourne",
+          "text": "Lovely view. Grumbel's. Up is a choice.",
+          "startMs": 10197
+        }
+      ]
+    },
+    {
+      "id": "dj-007",
+      "category": "dj",
+      "url": "/voice/snail-jams/dj-007.mp3",
+      "durationMs": 8381,
+      "overMusic": true,
+      "daypart": "morning",
+      "lines": [
+        {
+          "speaker": "Shelley Shellbourne",
+          "text": "Morning, everyone. The dew is out. I'm going to have a little sip.",
+          "startMs": 47
+        },
+        {
+          "speaker": "Shelley Shellbourne",
+          "text": "That was the sip. Here's a song.",
+          "startMs": 5851
+        }
+      ]
+    },
+    {
+      "id": "dj-008",
+      "category": "dj",
+      "url": "/voice/snail-jams/dj-008.mp3",
+      "durationMs": 10034,
+      "overMusic": true,
+      "daypart": "night",
+      "lines": [
+        {
+          "speaker": "Shelley Shellbourne",
+          "text": "It's getting dark in the garden. The fireflies are on.",
+          "startMs": 40
+        },
+        {
+          "speaker": "Shelley Shellbourne",
+          "text": "One of them is blinking in time with the music.",
+          "startMs": 4774
+        },
+        {
+          "speaker": "Shelley Shellbourne",
+          "text": "Show-off.",
+          "startMs": 8957
+        }
+      ]
+    },
+    {
+      "id": "dj-009",
+      "category": "dj",
+      "url": "/voice/snail-jams/dj-009.mp3",
+      "durationMs": 9318,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Shelley Shellbourne",
+          "text": "A reminder to the snail on the next leaf: your headphones are on backwards.",
+          "startMs": 36
+        },
+        {
+          "speaker": "Shelley Shellbourne",
+          "text": "Don't fix it now. You'll miss the whole album.",
+          "startMs": 6030
+        }
+      ]
+    },
+    {
+      "id": "dj-010",
+      "category": "dj",
+      "url": "/voice/snail-jams/dj-010.mp3",
+      "durationMs": 10161,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Shelley Shellbourne",
+          "text": "We've had a request. It came in last month.",
+          "startMs": 47
+        },
+        {
+          "speaker": "Shelley Shellbourne",
+          "text": "We're getting to it. We're nearly there.",
+          "startMs": 3745
+        },
+        {
+          "speaker": "Shelley Shellbourne",
+          "text": "Coming up... after this one, and several others.",
+          "startMs": 6851
+        }
+      ]
+    },
+    {
+      "id": "dj-011",
+      "category": "dj",
+      "url": "/voice/snail-jams/dj-011.mp3",
+      "durationMs": 9224,
+      "overMusic": true,
+      "daypart": "evening",
+      "lines": [
+        {
+          "speaker": "Shelley Shellbourne",
+          "text": "Evening. Fast-moving weather is coming in. Very fast. A breeze.",
+          "startMs": 40
+        },
+        {
+          "speaker": "Shelley Shellbourne",
+          "text": "Hold on to something. I'm holding on to the leaf.",
+          "startMs": 5621
+        }
+      ]
+    },
+    {
+      "id": "dj-012",
+      "category": "dj",
+      "url": "/voice/snail-jams/dj-012.mp3",
+      "durationMs": 10237,
+      "overMusic": true,
+      "daypart": "day",
+      "lines": [
+        {
+          "speaker": "Shelley Shellbourne",
+          "text": "It's the afternoon. I've had a very busy day.",
+          "startMs": 39
+        },
+        {
+          "speaker": "Shelley Shellbourne",
+          "text": "I went all the way to the edge of the leaf.",
+          "startMs": 4249
+        },
+        {
+          "speaker": "Shelley Shellbourne",
+          "text": "It was too much. I came back.",
+          "startMs": 7784
+        }
+      ]
+    },
+    {
+      "id": "dj-013",
+      "category": "dj",
+      "url": "/voice/snail-jams/dj-013.mp3",
+      "durationMs": 13071,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Shelley Shellbourne",
+          "text": "A shadow went past this morning. Very quickly. Too quickly.",
+          "startMs": 42
+        },
+        {
+          "speaker": "Shelley Shellbourne",
+          "text": "We didn't get a name. We got half a hat.",
+          "startMs": 5470
+        },
+        {
+          "speaker": "Shelley Shellbourne",
+          "text": "If it was Greg... Hollis says hello. Slow down, Greg.",
+          "startMs": 8862
+        }
+      ]
+    },
+    {
+      "id": "dj-014",
+      "category": "dj",
+      "url": "/voice/snail-jams/dj-014.mp3",
+      "durationMs": 8492,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Shelley Shellbourne",
+          "text": "Big news. There is a lettuce.",
+          "startMs": 46
+        },
+        {
+          "speaker": "Shelley Shellbourne",
+          "text": "It's over there. Don't look. We're going.",
+          "startMs": 2918
+        },
+        {
+          "speaker": "Shelley Shellbourne",
+          "text": "We'll be there in the autumn.",
+          "startMs": 6188
+        }
+      ]
+    },
+    {
+      "id": "dj-015",
+      "category": "dj",
+      "url": "/voice/snail-jams/dj-015.mp3",
+      "durationMs": 10738,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Shelley Shellbourne",
+          "text": "If you're in a rush right now, this station isn't for you. But stay. Just this once. See what happens.",
+          "startMs": 43
+        },
+        {
+          "speaker": "Shelley Shellbourne",
+          "text": "Nothing. Isn't it nice.",
+          "startMs": 8704
+        }
+      ]
+    },
+    {
+      "id": "dj-016",
+      "category": "dj",
+      "url": "/voice/snail-jams/dj-016.mp3",
+      "durationMs": 12802,
+      "overMusic": true,
+      "daypart": "night",
+      "lines": [
+        {
+          "speaker": "Shelley Shellbourne",
+          "text": "Before you sleep, a tip from the garden.",
+          "startMs": 39
+        },
+        {
+          "speaker": "Shelley Shellbourne",
+          "text": "Whatever you didn't finish today, you can carry it on your back tomorrow. That's what we do.",
+          "startMs": 3708
+        },
+        {
+          "speaker": "Shelley Shellbourne",
+          "text": "It's not heavy. It's home.",
+          "startMs": 10430
+        }
+      ]
+    },
+    {
+      "id": "weather-001",
+      "category": "weather",
+      "url": "/voice/snail-jams/weather-001.mp3",
+      "durationMs": 18890,
+      "title": "Garden forecast",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Shelley Shellbourne",
+          "text": "The garden forecast.",
+          "startMs": 2290
+        },
+        {
+          "speaker": "Shelley Shellbourne",
+          "text": "Dew. Then more dew.",
+          "startMs": 4716
+        },
+        {
+          "speaker": "Shelley Shellbourne",
+          "text": "A chance of one leaf turning over, late in the afternoon.",
+          "startMs": 7173
+        },
+        {
+          "speaker": "Shelley Shellbourne",
+          "text": "Wind: none, thank you.",
+          "startMs": 12068
+        },
+        {
+          "speaker": "Shelley Shellbourne",
+          "text": "That's the forecast for today. And, knowing us, tomorrow.",
+          "startMs": 14629
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,615 @@
+{
+  "version": 1,
+  "station": "mirror-polka",
+  "clips": [
+    {
+      "id": "id-001",
+      "category": "id",
+      "url": "/voice/mirror-polka/id-001.mp3",
+      "durationMs": 5479,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Johnny Mirror",
+          "text": "Mirror World Polka Hour!",
+          "startMs": 35
+        },
+        {
+          "speaker": "Ynnhoj",
+          "text": "Polka Hour!",
+          "startMs": 2442
+        }
+      ]
+    },
+    {
+      "id": "id-002",
+      "category": "id",
+      "url": "/voice/mirror-polka/id-002.mp3",
+      "durationMs": 7212,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Johnny Mirror",
+          "text": "One oh three point nine, from the other side of your bathroom mirror!",
+          "startMs": 35
+        },
+        {
+          "speaker": "Ynnhoj",
+          "text": "Mirror!",
+          "startMs": 4611
+        }
+      ]
+    },
+    {
+      "id": "id-003",
+      "category": "id",
+      "url": "/voice/mirror-polka/id-003.mp3",
+      "durationMs": 6911,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Johnny Mirror",
+          "text": "Oom-pah, reversed! It's the Mirror World Polka Hour!",
+          "startMs": 35
+        },
+        {
+          "speaker": "Ynnhoj",
+          "text": "Hap-moo!",
+          "startMs": 4165
+        }
+      ]
+    },
+    {
+      "id": "id-004",
+      "category": "id",
+      "url": "/voice/mirror-polka/id-004.mp3",
+      "durationMs": 8848,
+      "overMusic": true,
+      "daypart": "morning",
+      "lines": [
+        {
+          "speaker": "Johnny Mirror",
+          "text": "Good morning! It's the Mirror World Polka Hour!",
+          "startMs": 35
+        },
+        {
+          "speaker": "Ynnhoj",
+          "text": "Good night!",
+          "startMs": 3594
+        },
+        {
+          "speaker": "Johnny Mirror",
+          "text": "Ynnhoj.",
+          "startMs": 4806
+        },
+        {
+          "speaker": "Ynnhoj",
+          "text": "Good morning.",
+          "startMs": 6057
+        }
+      ]
+    },
+    {
+      "id": "id-005",
+      "category": "id",
+      "url": "/voice/mirror-polka/id-005.mp3",
+      "durationMs": 7093,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Johnny Mirror",
+          "text": "Everyone here is left-handed! Even the accordion!",
+          "startMs": 35
+        },
+        {
+          "speaker": "Ynnhoj",
+          "text": "Even the accordion!",
+          "startMs": 3930
+        }
+      ]
+    },
+    {
+      "id": "id-006",
+      "category": "id",
+      "url": "/voice/mirror-polka/id-006.mp3",
+      "durationMs": 7374,
+      "overMusic": true,
+      "daypart": "night",
+      "lines": [
+        {
+          "speaker": "Johnny Mirror",
+          "text": "Mirror World Polka Hour, the late show. Brush your teeth.",
+          "startMs": 35
+        },
+        {
+          "speaker": "Ynnhoj",
+          "text": "We'll brush ours.",
+          "startMs": 4270
+        }
+      ]
+    },
+    {
+      "id": "id-007",
+      "category": "id",
+      "url": "/voice/mirror-polka/id-007.mp3",
+      "durationMs": 8610,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Ynnhoj",
+          "text": "Ruoh Aklop Dlrow Rorrim.",
+          "startMs": 35
+        },
+        {
+          "speaker": "Johnny Mirror",
+          "text": "He's reading the sign from the back again. Mirror World Polka Hour!",
+          "startMs": 2546
+        }
+      ]
+    },
+    {
+      "id": "dj-001",
+      "category": "dj",
+      "url": "/voice/mirror-polka/dj-001.mp3",
+      "durationMs": 9476,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Johnny Mirror",
+          "text": "What a polka! Wasn't that a polka, Ynnhoj?",
+          "startMs": 35
+        },
+        {
+          "speaker": "Ynnhoj",
+          "text": "What a polka!",
+          "startMs": 3705
+        },
+        {
+          "speaker": "Johnny Mirror",
+          "text": "He agrees. He always agrees. Just a little bit after. Here's another one!",
+          "startMs": 5060
+        }
+      ]
+    },
+    {
+      "id": "dj-002",
+      "category": "dj",
+      "url": "/voice/mirror-polka/dj-002.mp3",
+      "durationMs": 11943,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Johnny Mirror",
+          "text": "That was the finest accordion work this side of the mirror!",
+          "startMs": 36
+        },
+        {
+          "speaker": "Ynnhoj",
+          "text": "No it wasn't.",
+          "startMs": 3945
+        },
+        {
+          "speaker": "Johnny Mirror",
+          "text": "Ynnhoj?",
+          "startMs": 6232
+        },
+        {
+          "speaker": "Ynnhoj",
+          "text": "Yes it was. Sorry. Yes it was.",
+          "startMs": 7782
+        },
+        {
+          "speaker": "Johnny Mirror",
+          "text": "Never do that again.",
+          "startMs": 10661
+        }
+      ]
+    },
+    {
+      "id": "dj-003",
+      "category": "dj",
+      "url": "/voice/mirror-polka/dj-003.mp3",
+      "durationMs": 12338,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Johnny Mirror",
+          "text": "A reminder to our dancers: we polka to the left here. Always to the left. If you go to the right, you'll end up dancing with someone's reflection, and they will not let go.",
+          "startMs": 35
+        },
+        {
+          "speaker": "Ynnhoj",
+          "text": "We will not let go.",
+          "startMs": 10300
+        }
+      ]
+    },
+    {
+      "id": "dj-004",
+      "category": "dj",
+      "url": "/voice/mirror-polka/dj-004.mp3",
+      "durationMs": 12284,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Johnny Mirror",
+          "text": "The Mirror World Polka Hour is brought to you by Grumbel's Ladders!",
+          "startMs": 36
+        },
+        {
+          "speaker": "Ynnhoj",
+          "text": "Sreddal Slebmurg!",
+          "startMs": 4545
+        },
+        {
+          "speaker": "Johnny Mirror",
+          "text": "Up is a choice!",
+          "startMs": 6331
+        },
+        {
+          "speaker": "Ynnhoj",
+          "text": "Down is a choice!",
+          "startMs": 8090
+        },
+        {
+          "speaker": "Johnny Mirror",
+          "text": "He means up. On this side, he means up.",
+          "startMs": 9807
+        }
+      ]
+    },
+    {
+      "id": "dj-005",
+      "category": "dj",
+      "url": "/voice/mirror-polka/dj-005.mp3",
+      "durationMs": 9705,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Johnny Mirror",
+          "text": "Table six, your reflection is doing a waltz. You are doing a polka. One of you is wrong, and I'm afraid it's you, because your reflection is having a much better time.",
+          "startMs": 36
+        }
+      ]
+    },
+    {
+      "id": "dj-006",
+      "category": "dj",
+      "url": "/voice/mirror-polka/dj-006.mp3",
+      "durationMs": 10797,
+      "overMusic": true,
+      "daypart": "morning",
+      "lines": [
+        {
+          "speaker": "Johnny Mirror",
+          "text": "Good morning, ballroom! Toothbrushes in your left hands! Lean in close to the glass! Big smile!",
+          "startMs": 36
+        },
+        {
+          "speaker": "Ynnhoj",
+          "text": "Big smile!",
+          "startMs": 6089
+        },
+        {
+          "speaker": "Johnny Mirror",
+          "text": "Now smile at the same time as each other. Close enough!",
+          "startMs": 7372
+        }
+      ]
+    },
+    {
+      "id": "dj-007",
+      "category": "dj",
+      "url": "/voice/mirror-polka/dj-007.mp3",
+      "durationMs": 10946,
+      "overMusic": true,
+      "daypart": "night",
+      "lines": [
+        {
+          "speaker": "Johnny Mirror",
+          "text": "Late night polka. Softer oom, gentler pah. If you can see us in your mirror right now, give us a little wave.",
+          "startMs": 35
+        },
+        {
+          "speaker": "Ynnhoj",
+          "text": "We see you.",
+          "startMs": 7194
+        },
+        {
+          "speaker": "Johnny Mirror",
+          "text": "We do. Wave back. It's polite.",
+          "startMs": 8700
+        }
+      ]
+    },
+    {
+      "id": "dj-008",
+      "category": "dj",
+      "url": "/voice/mirror-polka/dj-008.mp3",
+      "durationMs": 13933,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Johnny Mirror",
+          "text": "We've got a shadow on the dance floor with no dancer! Answers to Greg! Lovely footwork, Greg!",
+          "startMs": 35
+        },
+        {
+          "speaker": "Ynnhoj",
+          "text": "Lovely footwork, Greg!",
+          "startMs": 6240
+        },
+        {
+          "speaker": "Johnny Mirror",
+          "text": "His person, Hollis, has written in. Wants him home. Greg, finish the dance. Then call home.",
+          "startMs": 8162
+        }
+      ]
+    },
+    {
+      "id": "dj-009",
+      "category": "dj",
+      "url": "/voice/mirror-polka/dj-009.mp3",
+      "durationMs": 12401,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Johnny Mirror",
+          "text": "A big hand for the tuba! He plays on both sides of the mirror at once, and he has never once been in time with himself.",
+          "startMs": 35
+        },
+        {
+          "speaker": "Ynnhoj",
+          "text": "A big hand.",
+          "startMs": 7538
+        },
+        {
+          "speaker": "Johnny Mirror",
+          "text": "Left hand, Ynnhoj.",
+          "startMs": 8864
+        },
+        {
+          "speaker": "Ynnhoj",
+          "text": "Left hand.",
+          "startMs": 10996
+        }
+      ]
+    },
+    {
+      "id": "dj-010",
+      "category": "dj",
+      "url": "/voice/mirror-polka/dj-010.mp3",
+      "durationMs": 12083,
+      "overMusic": true,
+      "daypart": "day",
+      "lines": [
+        {
+          "speaker": "Johnny Mirror",
+          "text": "Afternoon, everybody! Somebody's reflection has gone to lunch without them. If you look in a mirror and see an empty room, don't panic. They'll be back by two.",
+          "startMs": 35
+        },
+        {
+          "speaker": "Ynnhoj",
+          "text": "By three.",
+          "startMs": 9938
+        },
+        {
+          "speaker": "Johnny Mirror",
+          "text": "By two.",
+          "startMs": 11277
+        }
+      ]
+    },
+    {
+      "id": "dj-011",
+      "category": "dj",
+      "url": "/voice/mirror-polka/dj-011.mp3",
+      "durationMs": 11970,
+      "overMusic": true,
+      "daypart": "evening",
+      "lines": [
+        {
+          "speaker": "Johnny Mirror",
+          "text": "Evening polka! This next one's a request from the couple who fell in love through a shop window. She was inside the shop. He was in the reflection. They're very happy.",
+          "startMs": 35
+        },
+        {
+          "speaker": "Ynnhoj",
+          "text": "Very happy.",
+          "startMs": 10513
+        }
+      ]
+    },
+    {
+      "id": "dj-012",
+      "category": "dj",
+      "url": "/voice/mirror-polka/dj-012.mp3",
+      "durationMs": 9627,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Johnny Mirror",
+          "text": "What's the secret to a long life, Ynnhoj?",
+          "startMs": 36
+        },
+        {
+          "speaker": "Ynnhoj",
+          "text": "Polka.",
+          "startMs": 3394
+        },
+        {
+          "speaker": "Johnny Mirror",
+          "text": "Polka! And?",
+          "startMs": 4512
+        },
+        {
+          "speaker": "Ynnhoj",
+          "text": "Polka.",
+          "startMs": 6358
+        },
+        {
+          "speaker": "Johnny Mirror",
+          "text": "He's not wrong. Here's another one!",
+          "startMs": 7476
+        }
+      ]
+    },
+    {
+      "id": "dj-013",
+      "category": "dj",
+      "url": "/voice/mirror-polka/dj-013.mp3",
+      "durationMs": 12266,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Johnny Mirror",
+          "text": "Fun fact! If you play that last song backwards, it's a completely different polka. Also a banger.",
+          "startMs": 35
+        },
+        {
+          "speaker": "Johnny Mirror",
+          "text": "Over here it's the other way round, so we've only ever heard it backwards, and frankly, you got the good one.",
+          "startMs": 6445
+        }
+      ]
+    },
+    {
+      "id": "dj-014",
+      "category": "dj",
+      "url": "/voice/mirror-polka/dj-014.mp3",
+      "durationMs": 11118,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Ynnhoj",
+          "text": "Hello. It's just me. Johnny's gone to get a drink.",
+          "startMs": 34
+        },
+        {
+          "speaker": "Ynnhoj",
+          "text": "I could say anything.",
+          "startMs": 4524
+        },
+        {
+          "speaker": "Ynnhoj",
+          "text": "Polka.",
+          "startMs": 7209
+        },
+        {
+          "speaker": "Johnny Mirror",
+          "text": "I'm back!",
+          "startMs": 8527
+        },
+        {
+          "speaker": "Ynnhoj",
+          "text": "I'm back!",
+          "startMs": 9835
+        }
+      ]
+    },
+    {
+      "id": "dj-015",
+      "category": "dj",
+      "url": "/voice/mirror-polka/dj-015.mp3",
+      "durationMs": 10716,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Johnny Mirror",
+          "text": "When you leave tonight, remember: you came in through the mirror, so you go out through the mirror. Don't use the door. The door goes somewhere else.",
+          "startMs": 35
+        },
+        {
+          "speaker": "Ynnhoj",
+          "text": "Somewhere else.",
+          "startMs": 8054
+        },
+        {
+          "speaker": "Johnny Mirror",
+          "text": "We don't talk about where.",
+          "startMs": 9379
+        }
+      ]
+    },
+    {
+      "id": "dj-016",
+      "category": "dj",
+      "url": "/voice/mirror-polka/dj-016.mp3",
+      "durationMs": 12322,
+      "overMusic": true,
+      "daypart": "night",
+      "lines": [
+        {
+          "speaker": "Johnny Mirror",
+          "text": "Ynnhoj and I have been together a long time. Every morning, there he is. Every night, there he is. He's never once missed a shave.",
+          "startMs": 35
+        },
+        {
+          "speaker": "Ynnhoj",
+          "text": "You missed one.",
+          "startMs": 8363
+        },
+        {
+          "speaker": "Johnny Mirror",
+          "text": "Nobody needs to know that, Ynnhoj.",
+          "startMs": 10116
+        }
+      ]
+    },
+    {
+      "id": "call-001",
+      "category": "call",
+      "url": "/voice/mirror-polka/call-001.mp3",
+      "durationMs": 30511,
+      "title": "Bev, reversed",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Johnny Mirror",
+          "text": "We've got a caller! Hello, you're on the Polka Hour!",
+          "startMs": 2450
+        },
+        {
+          "speaker": "Bev",
+          "text": "Hello, love. It's Bev. Is this the request line?",
+          "startMs": 5955
+        },
+        {
+          "speaker": "Ynnhoj",
+          "text": "Veb!",
+          "startMs": 9237
+        },
+        {
+          "speaker": "Johnny Mirror",
+          "text": "Ynnhoj, don't. It's the request line, Bev. Go on.",
+          "startMs": 10208
+        },
+        {
+          "speaker": "Bev",
+          "text": "There's a song I heard once, in a lift. It goes, da da dum, da da.",
+          "startMs": 14091
+        },
+        {
+          "speaker": "Ynnhoj",
+          "text": "Ad ad, mud ad ad.",
+          "startMs": 18720
+        },
+        {
+          "speaker": "Bev",
+          "text": "That's it backwards, isn't it.",
+          "startMs": 21204
+        },
+        {
+          "speaker": "Johnny Mirror",
+          "text": "It is, Bev! Is it ringing any bells?",
+          "startMs": 23362
+        },
+        {
+          "speaker": "Bev",
+          "text": "It's ringing them in the wrong order, love.",
+          "startMs": 26257
+        }
+      ]
+    }
+  ]
+}

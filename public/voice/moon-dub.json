@@ -1,0 +1,484 @@
+{
+  "version": 1,
+  "station": "moon-dub",
+  "clips": [
+    {
+      "id": "id-001",
+      "category": "id",
+      "url": "/voice/moon-dub/id-001.mp3",
+      "durationMs": 5621,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Selector Crater",
+          "text": "Moon Dub Sound System.",
+          "startMs": 37
+        },
+        {
+          "speaker": "Echo",
+          "text": "Sound system.",
+          "startMs": 2744
+        }
+      ]
+    },
+    {
+      "id": "id-002",
+      "category": "id",
+      "url": "/voice/moon-dub/id-002.mp3",
+      "durationMs": 4261,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Selector Crater",
+          "text": "Heavy bass. Light gravity. Moon Dub.",
+          "startMs": 45
+        }
+      ]
+    },
+    {
+      "id": "id-003",
+      "category": "id",
+      "url": "/voice/moon-dub/id-003.mp3",
+      "durationMs": 7305,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Selector Crater",
+          "text": "Tranquility Base Annex. Ninety-eight point seven.",
+          "startMs": 36
+        },
+        {
+          "speaker": "Echo",
+          "text": "Point seven.",
+          "startMs": 4480
+        }
+      ]
+    },
+    {
+      "id": "id-004",
+      "category": "id",
+      "url": "/voice/moon-dub/id-004.mp3",
+      "durationMs": 4083,
+      "overMusic": true,
+      "daypart": "night",
+      "lines": [
+        {
+          "speaker": "Selector Crater",
+          "text": "Moon Dub. Earth's asleep. We're not.",
+          "startMs": 41
+        }
+      ]
+    },
+    {
+      "id": "id-005",
+      "category": "id",
+      "url": "/voice/moon-dub/id-005.mp3",
+      "durationMs": 5171,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Selector Crater",
+          "text": "Selector Crater. Moon Dub Sound System. Hold tight.",
+          "startMs": 41
+        }
+      ]
+    },
+    {
+      "id": "id-006",
+      "category": "id",
+      "url": "/voice/moon-dub/id-006.mp3",
+      "durationMs": 6016,
+      "overMusic": true,
+      "daypart": "morning",
+      "lines": [
+        {
+          "speaker": "Selector Crater",
+          "text": "Morning, Earth.",
+          "startMs": 35
+        },
+        {
+          "speaker": "Echo",
+          "text": "Earth.",
+          "startMs": 2301
+        },
+        {
+          "speaker": "Selector Crater",
+          "text": "She heard.",
+          "startMs": 3391
+        }
+      ]
+    },
+    {
+      "id": "id-007",
+      "category": "id",
+      "url": "/voice/moon-dub/id-007.mp3",
+      "durationMs": 5516,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Echo",
+          "text": "Dub sound system.",
+          "startMs": 42
+        },
+        {
+          "speaker": "Selector Crater",
+          "text": "That's from earlier. Moon Dub.",
+          "startMs": 1901
+        }
+      ]
+    },
+    {
+      "id": "dj-001",
+      "category": "dj",
+      "url": "/voice/moon-dub/dj-001.mp3",
+      "durationMs": 7967,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Selector Crater",
+          "text": "Big up the crater crew.",
+          "startMs": 36
+        },
+        {
+          "speaker": "Selector Crater",
+          "text": "Echo comes back in eleven seconds. We'll be in the next tune by then. It'll find us. Run it.",
+          "startMs": 2445
+        }
+      ]
+    },
+    {
+      "id": "dj-002",
+      "category": "dj",
+      "url": "/voice/moon-dub/dj-002.mp3",
+      "durationMs": 5642,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Echo",
+          "text": "The crater crew.",
+          "startMs": 35
+        },
+        {
+          "speaker": "Selector Crater",
+          "text": "There it is.",
+          "startMs": 2034
+        },
+        {
+          "speaker": "Selector Crater",
+          "text": "Told you it'd find us. Bass.",
+          "startMs": 3811
+        }
+      ]
+    },
+    {
+      "id": "dj-003",
+      "category": "dj",
+      "url": "/voice/moon-dub/dj-003.mp3",
+      "durationMs": 8084,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Selector Crater",
+          "text": "Low gravity tonight. Sixteen percent. Bass, four hundred percent. The dust doesn't know what to do with itself. Let it bounce.",
+          "startMs": 47
+        }
+      ]
+    },
+    {
+      "id": "dj-004",
+      "category": "dj",
+      "url": "/voice/moon-dub/dj-004.mp3",
+      "durationMs": 6244,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Selector Crater",
+          "text": "Earth's coming up over the ridge. Look at her. Sleepy face. Big blue yawn.",
+          "startMs": 37
+        },
+        {
+          "speaker": "Selector Crater",
+          "text": "This one's for Earth.",
+          "startMs": 5158
+        }
+      ]
+    },
+    {
+      "id": "dj-005",
+      "category": "dj",
+      "url": "/voice/moon-dub/dj-005.mp3",
+      "durationMs": 8426,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Selector Crater",
+          "text": "Shout-out to the lone astronaut by the lander. Been nodding for three days. Same tune, different tune. Doesn't matter. He's nodding.",
+          "startMs": 36
+        }
+      ]
+    },
+    {
+      "id": "dj-006",
+      "category": "dj",
+      "url": "/voice/moon-dub/dj-006.mp3",
+      "durationMs": 8870,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Selector Crater",
+          "text": "Grumbel's Ladders. Up here, you only need the first rung.",
+          "startMs": 36
+        },
+        {
+          "speaker": "Selector Crater",
+          "text": "Up is a choice.",
+          "startMs": 3866
+        },
+        {
+          "speaker": "Echo",
+          "text": "A choice.",
+          "startMs": 6194
+        }
+      ]
+    },
+    {
+      "id": "dj-007",
+      "category": "dj",
+      "url": "/voice/moon-dub/dj-007.mp3",
+      "durationMs": 11354,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Selector Crater",
+          "text": "Quiet one coming up.",
+          "startMs": 41
+        },
+        {
+          "speaker": "Echo",
+          "text": "Put the kettle on.",
+          "startMs": 2417
+        },
+        {
+          "speaker": "Selector Crater",
+          "text": "Not from me. Somebody on Earth. Eleven seconds ago. Two hundred thousand miles. Go on, then. Put the kettle on.",
+          "startMs": 4338
+        }
+      ]
+    },
+    {
+      "id": "dj-008",
+      "category": "dj",
+      "url": "/voice/moon-dub/dj-008.mp3",
+      "durationMs": 5802,
+      "overMusic": true,
+      "daypart": "night",
+      "lines": [
+        {
+          "speaker": "Selector Crater",
+          "text": "Late on the moon. Stars don't twinkle up here. They just stare.",
+          "startMs": 39
+        },
+        {
+          "speaker": "Selector Crater",
+          "text": "Respect. Here's a heavy one.",
+          "startMs": 4331
+        }
+      ]
+    },
+    {
+      "id": "dj-009",
+      "category": "dj",
+      "url": "/voice/moon-dub/dj-009.mp3",
+      "durationMs": 6606,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Selector Crater",
+          "text": "People ask why I don't talk much.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Selector Crater",
+          "text": "Bass is talking.",
+          "startMs": 3900
+        },
+        {
+          "speaker": "Selector Crater",
+          "text": "Listen.",
+          "startMs": 5938
+        }
+      ]
+    },
+    {
+      "id": "dj-010",
+      "category": "dj",
+      "url": "/voice/moon-dub/dj-010.mp3",
+      "durationMs": 13377,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Selector Crater",
+          "text": "Shadow on the far side. Nobody attached. Says his name's Greg. Sound guy now. Good ears.",
+          "startMs": 44
+        },
+        {
+          "speaker": "Selector Crater",
+          "text": "Hollis says come home. Greg says one more tune.",
+          "startMs": 6557
+        },
+        {
+          "speaker": "Echo",
+          "text": "One more tune.",
+          "startMs": 10647
+        }
+      ]
+    },
+    {
+      "id": "dj-011",
+      "category": "dj",
+      "url": "/voice/moon-dub/dj-011.mp3",
+      "durationMs": 7938,
+      "overMusic": true,
+      "daypart": "morning",
+      "lines": [
+        {
+          "speaker": "Selector Crater",
+          "text": "Morning on the moon looks exactly like night on the moon. Only difference, I've had a coffee.",
+          "startMs": 43
+        },
+        {
+          "speaker": "Selector Crater",
+          "text": "Selector's awake. Run it.",
+          "startMs": 6331
+        }
+      ]
+    },
+    {
+      "id": "dj-012",
+      "category": "dj",
+      "url": "/voice/moon-dub/dj-012.mp3",
+      "durationMs": 6232,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Selector Crater",
+          "text": "Dust from the last tune's still in the air. It'll come down next week. Leave it. It's part of the mix.",
+          "startMs": 40
+        }
+      ]
+    },
+    {
+      "id": "dj-013",
+      "category": "dj",
+      "url": "/voice/moon-dub/dj-013.mp3",
+      "durationMs": 7804,
+      "overMusic": true,
+      "daypart": "day",
+      "lines": [
+        {
+          "speaker": "Selector Crater",
+          "text": "Afternoon. Speaker stack pointed at Earth. If you're down there and your teacup's rattling, that's us.",
+          "startMs": 37
+        },
+        {
+          "speaker": "Selector Crater",
+          "text": "Sorry. Not sorry. Bass.",
+          "startMs": 6343
+        }
+      ]
+    },
+    {
+      "id": "dj-014",
+      "category": "dj",
+      "url": "/voice/moon-dub/dj-014.mp3",
+      "durationMs": 10802,
+      "overMusic": true,
+      "daypart": "evening",
+      "lines": [
+        {
+          "speaker": "Selector Crater",
+          "text": "Evening. Earth's lights are coming on. Little cities. Little kitchens. Little radios. Hello, little radios.",
+          "startMs": 37
+        },
+        {
+          "speaker": "Echo",
+          "text": "Little radios.",
+          "startMs": 7960
+        }
+      ]
+    },
+    {
+      "id": "dj-015",
+      "category": "dj",
+      "url": "/voice/moon-dub/dj-015.mp3",
+      "durationMs": 8851,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Selector Crater",
+          "text": "Selector Crater. I've said a lot tonight. Too much, maybe.",
+          "startMs": 40
+        },
+        {
+          "speaker": "Selector Crater",
+          "text": "Going to let the speakers do the rest. They're better at it. Here's a tune.",
+          "startMs": 4669
+        }
+      ]
+    },
+    {
+      "id": "dj-016",
+      "category": "dj",
+      "url": "/voice/moon-dub/dj-016.mp3",
+      "durationMs": 14709,
+      "overMusic": true,
+      "daypart": "night",
+      "lines": [
+        {
+          "speaker": "Selector Crater",
+          "text": "Something on the long-range set. Faint.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Faint voice",
+          "text": "Can anyone hear me? This is Teodor. Relay Four.",
+          "startMs": 3095
+        },
+        {
+          "speaker": "Selector Crater",
+          "text": "We hear you, Teodor. Moon hears you. Here's one for Relay Four.",
+          "startMs": 6823
+        },
+        {
+          "speaker": "Echo",
+          "text": "Relay Four.",
+          "startMs": 11752
+        }
+      ]
+    },
+    {
+      "id": "dj-017",
+      "category": "dj",
+      "url": "/voice/moon-dub/dj-017.mp3",
+      "durationMs": 7846,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Selector Crater",
+          "text": "Big up everyone on the late shift.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Echo",
+          "text": "Big up the crater crew.",
+          "startMs": 3250
+        },
+        {
+          "speaker": "Selector Crater",
+          "text": "That's an old one. Still counts. Big up everyone.",
+          "startMs": 5259
+        }
+      ]
+    }
+  ]
+}

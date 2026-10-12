@@ -1,0 +1,1452 @@
+{
+  "version": 1,
+  "station": "classifieds",
+  "clips": [
+    {
+      "id": "id-001",
+      "category": "id",
+      "url": "/voice/classifieds/id-001.mp3",
+      "durationMs": 5392,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Rex Bellows",
+          "text": "Alien Classifieds! Products you can't afford, from places you can't reach!",
+          "startMs": 39
+        }
+      ]
+    },
+    {
+      "id": "id-002",
+      "category": "id",
+      "url": "/voice/classifieds/id-002.mp3",
+      "durationMs": 4797,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Rex Bellows",
+          "text": "You're listening to Alien Classifieds, where every deal is final, and every final is a deal!",
+          "startMs": 36
+        }
+      ]
+    },
+    {
+      "id": "id-003",
+      "category": "id",
+      "url": "/voice/classifieds/id-003.mp3",
+      "durationMs": 4567,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Linda from Accounts",
+          "text": "Alien Classifieds. Prices subject to reality. Reality subject to change.",
+          "startMs": 38
+        }
+      ]
+    },
+    {
+      "id": "id-004",
+      "category": "id",
+      "url": "/voice/classifieds/id-004.mp3",
+      "durationMs": 4572,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Rex Bellows",
+          "text": "Alien Classifieds! Don't touch that dial! Buy that dial!",
+          "startMs": 40
+        }
+      ]
+    },
+    {
+      "id": "id-005",
+      "category": "id",
+      "url": "/voice/classifieds/id-005.mp3",
+      "durationMs": 3849,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Rex Bellows",
+          "text": "Alien Classifieds!",
+          "startMs": 37
+        },
+        {
+          "speaker": "Linda from Accounts",
+          "text": "Not affiliated with any actual aliens.",
+          "startMs": 1418
+        },
+        {
+          "speaker": "Rex Bellows",
+          "text": "Yet!",
+          "startMs": 3391
+        }
+      ]
+    },
+    {
+      "id": "dj-001",
+      "category": "dj",
+      "url": "/voice/classifieds/dj-001.mp3",
+      "durationMs": 9852,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Rex Bellows",
+          "text": "Rex Bellows here, with more deals than you've got days! Stay tuned, folks, because Linda's got the small print, and the small print has got teeth!",
+          "startMs": 37
+        },
+        {
+          "speaker": "Rex Bellows",
+          "text": "Linda, show them the teeth!",
+          "startMs": 7740
+        },
+        {
+          "speaker": "Linda from Accounts",
+          "text": "No.",
+          "startMs": 9183
+        }
+      ]
+    },
+    {
+      "id": "dj-002",
+      "category": "dj",
+      "url": "/voice/classifieds/dj-002.mp3",
+      "durationMs": 10472,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Rex Bellows",
+          "text": "Linda! What time is it?",
+          "startMs": 38
+        },
+        {
+          "speaker": "Linda from Accounts",
+          "text": "It's sale o'clock, Rex.",
+          "startMs": 1404
+        },
+        {
+          "speaker": "Rex Bellows",
+          "text": "It's always sale o'clock! Stay right where you are, folks!",
+          "startMs": 3288
+        },
+        {
+          "speaker": "Linda from Accounts",
+          "text": "It's also my lunch, Rex.",
+          "startMs": 6028
+        },
+        {
+          "speaker": "Rex Bellows",
+          "text": "Lunch is a sale, Linda!",
+          "startMs": 8093
+        },
+        {
+          "speaker": "Linda from Accounts",
+          "text": "It isn't.",
+          "startMs": 9486
+        }
+      ]
+    },
+    {
+      "id": "dj-003",
+      "category": "dj",
+      "url": "/voice/classifieds/dj-003.mp3",
+      "durationMs": 9311,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Rex Bellows",
+          "text": "Folks, I've just had word from Accounts. Linda?",
+          "startMs": 44
+        },
+        {
+          "speaker": "Linda from Accounts",
+          "text": "Every price you hear this hour is final, unless it isn't, in which case it is.",
+          "startMs": 2627
+        },
+        {
+          "speaker": "Rex Bellows",
+          "text": "That's Linda, folks! Give her a hand!",
+          "startMs": 5412
+        }
+      ]
+    },
+    {
+      "id": "dj-004",
+      "category": "dj",
+      "url": "/voice/classifieds/dj-004.mp3",
+      "durationMs": 9600,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Rex Bellows",
+          "text": "You're listening to Alien Classifieds, folks! If you don't need it, we've got it! If you need it, we can probably get it! And if you can't afford it, have you considered a hole? Mortimer's got holes!",
+          "startMs": 43
+        }
+      ]
+    },
+    {
+      "id": "dj-005",
+      "category": "dj",
+      "url": "/voice/classifieds/dj-005.mp3",
+      "durationMs": 9763,
+      "overMusic": true,
+      "daypart": "night",
+      "lines": [
+        {
+          "speaker": "Rex Bellows",
+          "text": "It's late, folks. The lot's closed. The lights are off. But the deals, the deals are still on. The deals never sleep. And neither do I. Linda?",
+          "startMs": 39
+        },
+        {
+          "speaker": "Linda from Accounts",
+          "text": "Rex sleeps nine hours a night. He sleeps on the cold side.",
+          "startMs": 7696
+        }
+      ]
+    },
+    {
+      "id": "dj-006",
+      "category": "dj",
+      "url": "/voice/classifieds/dj-006.mp3",
+      "durationMs": 8862,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Rex Bellows",
+          "text": "And now, a quick word from Linda's corner!",
+          "startMs": 41
+        },
+        {
+          "speaker": "Linda from Accounts",
+          "text": "Hello. Alien Classifieds would like to remind listeners that nothing advertised on this station has ever been approved by anyone. Thank you.",
+          "startMs": 2285
+        },
+        {
+          "speaker": "Rex Bellows",
+          "text": "And that's a guarantee!",
+          "startMs": 7828
+        }
+      ]
+    },
+    {
+      "id": "ad-001",
+      "category": "ad",
+      "url": "/voice/classifieds/ad-001.mp3",
+      "durationMs": 39253,
+      "title": "Bellows Pre-Owned Planets",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Rex Bellows",
+          "text": "Bellows Pre-Owned Planets is having a blowout sale! Everything must go, because the sun is going!",
+          "startMs": 1582
+        },
+        {
+          "speaker": "Rex Bellows",
+          "text": "Look at this one! Barely used! One previous owner, a very quiet civilization that kept to itself! Two moons! Comes with an ocean, and the ocean comes with a guy. Don't worry about the guy. He's fine.",
+          "startMs": 7214
+        },
+        {
+          "speaker": "Rex Bellows",
+          "text": "And for you young families, a starter asteroid! No atmosphere, no problem! Hold your breath, save some money!",
+          "startMs": 18778
+        },
+        {
+          "speaker": "Rex Bellows",
+          "text": "Financing available for any species with a concept of money! No credit? No body? No problem!",
+          "startMs": 24672
+        },
+        {
+          "speaker": "Rex Bellows",
+          "text": "Bellows Pre-Owned Planets. Our prices are astronomical. So are our planets.",
+          "startMs": 30963
+        },
+        {
+          "speaker": "Linda from Accounts",
+          "text": "Planets sold as is. Gravity sold separately. The guy is not included. We asked the guy. The guy said no.",
+          "startMs": 35483
+        }
+      ]
+    },
+    {
+      "id": "ad-002",
+      "category": "ad",
+      "url": "/voice/classifieds/ad-002.mp3",
+      "durationMs": 27239,
+      "title": "Mortimer's Holes",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Rex Bellows",
+          "text": "Hey! You! With the face! Are you tired of holes that are the wrong size? Come on down to Mortimer's Holes!",
+          "startMs": 1582
+        },
+        {
+          "speaker": "Rex Bellows",
+          "text": "We got big holes! Small holes! Holes you can fold up and put in your pocket! Need to get somewhere? Throw down a hole! Need to get out of somewhere? Also a hole!",
+          "startMs": 7120
+        },
+        {
+          "speaker": "Rex Bellows",
+          "text": "Look at this one! Look at it! You can't! Because it's a hole!",
+          "startMs": 15211
+        },
+        {
+          "speaker": "Rex Bellows",
+          "text": "Mortimer's Holes. Located wherever you fall.",
+          "startMs": 18076
+        },
+        {
+          "speaker": "Linda from Accounts",
+          "text": "Holes are non refundable. Holes may contain other holes. Mortimer is not responsible for where you end up. Mortimer is not responsible. Mortimer has never been responsible.",
+          "startMs": 20541
+        }
+      ]
+    },
+    {
+      "id": "ad-003",
+      "category": "ad",
+      "url": "/voice/classifieds/ad-003.mp3",
+      "durationMs": 26181,
+      "title": "Pre-Owned Grumbel's Ladder",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Rex Bellows",
+          "text": "Folks, I've got something special on the lot today. A genuine, pre-owned, Grumbel's Ladder!",
+          "startMs": 48
+        },
+        {
+          "speaker": "Rex Bellows",
+          "text": "One previous climber! He went up on a Tuesday and he never came down! That's how good this ladder is! He's still up there! He waves!",
+          "startMs": 5346
+        },
+        {
+          "speaker": "Rex Bellows",
+          "text": "Twelve rungs! Every one of them a step up! Climb it! Lean it! Lean on it emotionally! It can take it! It's a Grumbel!",
+          "startMs": 12178
+        },
+        {
+          "speaker": "Rex Bellows",
+          "text": "And if you buy today, I'll throw in the bottom rung, absolutely free!",
+          "startMs": 18079
+        },
+        {
+          "speaker": "Linda from Accounts",
+          "text": "Bottom rung is part of the ladder. Previous climber is not included and may not be disturbed. Up is a choice. Down is extra.",
+          "startMs": 21682
+        }
+      ]
+    },
+    {
+      "id": "ad-004",
+      "category": "ad",
+      "url": "/voice/classifieds/ad-004.mp3",
+      "durationMs": 23040,
+      "title": "Bellows Discount Gravity",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Rex Bellows",
+          "text": "Do you float? Do your kids float? Is your grandmother currently somewhere above the house? You need Bellows Discount Gravity!",
+          "startMs": 1582
+        },
+        {
+          "speaker": "Rex Bellows",
+          "text": "This is overstock gravity, folks, from a planet that turned out not to need it! Strap it on, and stay put!",
+          "startMs": 7556
+        },
+        {
+          "speaker": "Rex Bellows",
+          "text": "Comes in light, medium, and Tuesday! Tuesday is the heavy one!",
+          "startMs": 13667
+        },
+        {
+          "speaker": "Linda from Accounts",
+          "text": "Gravity may pool in the ankles. Do not apply gravity near birds. Gravity is not a gift and should not be wrapped. Rex cannot get your grandmother down. Rex has tried.",
+          "startMs": 17088
+        }
+      ]
+    },
+    {
+      "id": "ad-005",
+      "category": "ad",
+      "url": "/voice/classifieds/ad-005.mp3",
+      "durationMs": 24574,
+      "title": "The Box",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Rex Bellows",
+          "text": "Folks, I'm going to be honest with you. I don't know what's in this box.",
+          "startMs": 41
+        },
+        {
+          "speaker": "Rex Bellows",
+          "text": "You don't know what's in this box! Nobody knows what's in this box! But something in this box knows what's in this box, and it seems very happy about it!",
+          "startMs": 3485
+        },
+        {
+          "speaker": "Rex Bellows",
+          "text": "Is it a toaster? Is it a better life? Is it slightly warm? It is slightly warm!",
+          "startMs": 11109
+        },
+        {
+          "speaker": "Rex Bellows",
+          "text": "One box. Thirty dollars. Take it home, put it on a shelf, and feel watched, in a good way!",
+          "startMs": 15521
+        },
+        {
+          "speaker": "Linda from Accounts",
+          "text": "Do not open the box. The box will open when it is ready. The box is not a pet. The box is not, technically, a box.",
+          "startMs": 20357
+        }
+      ]
+    },
+    {
+      "id": "ad-006",
+      "category": "ad",
+      "url": "/voice/classifieds/ad-006.mp3",
+      "durationMs": 29102,
+      "title": "Refurbished Sunrises",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Rex Bellows",
+          "text": "Tired of the same old sunrise every single morning? Treat yourself to a Bellows Refurbished Sunrise!",
+          "startMs": 1582
+        },
+        {
+          "speaker": "Rex Bellows",
+          "text": "Every one of these sunrises has only been watched once, by a man who was facing the wrong way! They're practically brand new!",
+          "startMs": 7621
+        },
+        {
+          "speaker": "Rex Bellows",
+          "text": "Pinks! Golds! A sort of orange that makes you want to call your mother! Hang it in your window, and it rises every morning, at whatever time you like!",
+          "startMs": 14513
+        },
+        {
+          "speaker": "Linda from Accounts",
+          "text": "Sunrise may set unexpectedly. Sunrise not for indoor use. Do not look directly at the sunrise. The man who was facing the wrong way is fine, and has asked us to stop mentioning him.",
+          "startMs": 22001
+        }
+      ]
+    },
+    {
+      "id": "ad-007",
+      "category": "ad",
+      "url": "/voice/classifieds/ad-007.mp3",
+      "durationMs": 28634,
+      "title": "Pre-Loved Memories",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Rex Bellows",
+          "text": "Ever wanted to remember a really lovely wedding? A summer by a lake? A dog called Biscuit? Now you can, with Bellows Pre-Loved Memories!",
+          "startMs": 37
+        },
+        {
+          "speaker": "Rex Bellows",
+          "text": "These are genuine memories, gently used, from people who had more than they needed! You weren't there, but you'll swear you were!",
+          "startMs": 7957
+        },
+        {
+          "speaker": "Rex Bellows",
+          "text": "This week only, buy any two childhood birthdays, and get a first kiss at half price! It's on a ferris wheel! It's raining! It's perfect!",
+          "startMs": 14501
+        },
+        {
+          "speaker": "Linda from Accounts",
+          "text": "Memories are non transferable after transfer. You may not return a memory once you have had it. If you begin to remember a man named Kevin, stop. Kevin was not part of the sale.",
+          "startMs": 21976
+        }
+      ]
+    },
+    {
+      "id": "ad-008",
+      "category": "ad",
+      "url": "/voice/classifieds/ad-008.mp3",
+      "durationMs": 29774,
+      "title": "Spare Hours",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Rex Bellows",
+          "text": "Too much to do? Not enough day? Come on down and buy an hour!",
+          "startMs": 1582
+        },
+        {
+          "speaker": "Rex Bellows",
+          "text": "These are top quality hours, folks, left over from a nap that ended early. Never been used! Still got that new hour smell!",
+          "startMs": 4960
+        },
+        {
+          "speaker": "Rex Bellows",
+          "text": "Use one to finish your work! Use one to start your work! Use one to stare out of the window like somebody in a film! It's your hour!",
+          "startMs": 11801
+        },
+        {
+          "speaker": "Rex Bellows",
+          "text": "Hours from just nine ninety nine. Minutes sold loose at the register.",
+          "startMs": 19047
+        },
+        {
+          "speaker": "Linda from Accounts",
+          "text": "Hours must be spent within the hour. Hours may not be used on Tuesdays, as Tuesday is already full. Rex is not responsible for any hour that turns out to be a Monday.",
+          "startMs": 23170
+        }
+      ]
+    },
+    {
+      "id": "ad-009",
+      "category": "ad",
+      "url": "/voice/classifieds/ad-009.mp3",
+      "durationMs": 23609,
+      "title": "The Bellows Living Rock",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Rex Bellows",
+          "text": "Kids want a pet? Landlord says no pets? Say hello to the Bellows Living Rock!",
+          "startMs": 37
+        },
+        {
+          "speaker": "Rex Bellows",
+          "text": "That's right! It's a rock, and it's alive! It's slow, it's loyal, and it loves you very, very much, on a geological timeframe!",
+          "startMs": 4627
+        },
+        {
+          "speaker": "Rex Bellows",
+          "text": "Feed it once a century! Walk it never! It'll greet you at the door in about four hundred years, and boy, will it be excited!",
+          "startMs": 11538
+        },
+        {
+          "speaker": "Linda from Accounts",
+          "text": "The Living Rock may outlive you, your children, and the house. Please include the Living Rock in your will. The Living Rock has already included you in its will.",
+          "startMs": 18299
+        }
+      ]
+    },
+    {
+      "id": "ad-010",
+      "category": "ad",
+      "url": "/voice/classifieds/ad-010.mp3",
+      "durationMs": 25602,
+      "title": "Doors to Nowhere",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Rex Bellows",
+          "text": "Want to get away from it all? Really, really away? Come on down for a Bellows Door to Nowhere!",
+          "startMs": 1607
+        },
+        {
+          "speaker": "Rex Bellows",
+          "text": "Hang it in any wall! Open it up, and you're nowhere! It's peaceful! It's quiet! There's no phone signal!",
+          "startMs": 6521
+        },
+        {
+          "speaker": "Rex Bellows",
+          "text": "Customers tell me, Rex, nowhere is the nicest place I've ever been! And then they go back! And I never see them again! That's a satisfied customer!",
+          "startMs": 11916
+        },
+        {
+          "speaker": "Linda from Accounts",
+          "text": "Nowhere is not a place. Do not move to nowhere. Do not let children play in nowhere. If you are hearing this from nowhere, please knock twice, and we will come and get you.",
+          "startMs": 19870
+        }
+      ]
+    },
+    {
+      "id": "ad-011",
+      "category": "ad",
+      "url": "/voice/classifieds/ad-011.mp3",
+      "durationMs": 29015,
+      "title": "Gently Used Wishes",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Rex Bellows",
+          "text": "Folks! Wishes! Gently used wishes! Get them while they're wishy!",
+          "startMs": 1582
+        },
+        {
+          "speaker": "Rex Bellows",
+          "text": "This one here, one previous owner, wished for a slightly better sandwich and got it! The rest of the wish is good as new! That's ninety five percent of a wish, for half the price!",
+          "startMs": 4766
+        },
+        {
+          "speaker": "Rex Bellows",
+          "text": "This one's a birthday wish, only blown out once! And this one, ooh, this one was made on a shooting star, folks. It's still a little bit warm!",
+          "startMs": 13787
+        },
+        {
+          "speaker": "Linda from Accounts",
+          "text": "Wishes sold as is. Wishes may be partially used. Bellows is not responsible for irony, technicalities or sandwiches. Please do not wish for more wishes. It makes the other wishes nervous.",
+          "startMs": 21461
+        }
+      ]
+    },
+    {
+      "id": "ad-012",
+      "category": "ad",
+      "url": "/voice/classifieds/ad-012.mp3",
+      "durationMs": 21396,
+      "title": "Weather in a Jar",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Rex Bellows",
+          "text": "Dry spell? Bad summer? Uncork a jar of genuine Damp Dimension rain!",
+          "startMs": 36
+        },
+        {
+          "speaker": "Rex Bellows",
+          "text": "This rain is four thousand years old, folks! Aged in clouds! Hand bottled by the people of Precinct Nine, who have, frankly, got plenty!",
+          "startMs": 4373
+        },
+        {
+          "speaker": "Rex Bellows",
+          "text": "One jar waters a garden! Two jars waters a neighbor! Three jars, and you're a lake!",
+          "startMs": 12408
+        },
+        {
+          "speaker": "Linda from Accounts",
+          "text": "Do not uncork indoors. Jar may contain lightning. Jar does contain lightning. Jar is not to be used for jam.",
+          "startMs": 17312
+        }
+      ]
+    },
+    {
+      "id": "ad-013",
+      "category": "ad",
+      "url": "/voice/classifieds/ad-013.mp3",
+      "durationMs": 28056,
+      "title": "Personal Theme Music",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Rex Bellows",
+          "text": "Walk into a room, and bam! Your own theme music! Played live, by a tiny orchestra that follows you everywhere!",
+          "startMs": 3199
+        },
+        {
+          "speaker": "Rex Bellows",
+          "text": "Walking into a meeting? Trumpets! Leaving a party? Sad violins! Making a sandwich? A little bit of harp!",
+          "startMs": 9479
+        },
+        {
+          "speaker": "Rex Bellows",
+          "text": "Twelve tiny musicians, fully trained, extremely loyal, and small enough to fit in a coat pocket!",
+          "startMs": 15330
+        },
+        {
+          "speaker": "Linda from Accounts",
+          "text": "Orchestra must be fed. Orchestra may unionize. Orchestra cannot be dismissed, only outrun. Rex is not responsible if the orchestra plays at your wedding without being asked. It will.",
+          "startMs": 21119
+        }
+      ]
+    },
+    {
+      "id": "ad-014",
+      "category": "ad",
+      "url": "/voice/classifieds/ad-014.mp3",
+      "durationMs": 23548,
+      "title": "Silence, in Bulk",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Rex Bellows",
+          "text": "Noisy neighbors? Loud kids? Loud you? Bellows has silence, folks. In bulk!",
+          "startMs": 36
+        },
+        {
+          "speaker": "Rex Bellows",
+          "text": "Industrial quantities of pure, premium silence, from the overstock warehouse at Static Lullabies! You've never heard quiet like this! Because you can't!",
+          "startMs": 4344
+        },
+        {
+          "speaker": "Rex Bellows",
+          "text": "Sold by the yard! Spread it on a room! Hang it over a crib! Lay a little strip in the hallway so you can sneak in late!",
+          "startMs": 12732
+        },
+        {
+          "speaker": "Linda from Accounts",
+          "text": "Silence may contain listening. If the silence says hello, do not answer it. It's just being polite.",
+          "startMs": 19875
+        }
+      ]
+    },
+    {
+      "id": "ad-015",
+      "category": "ad",
+      "url": "/voice/classifieds/ad-015.mp3",
+      "durationMs": 23697,
+      "title": "Bellows Time Shares",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Rex Bellows",
+          "text": "Folks, you've heard of a timeshare. But have you heard of a time share?",
+          "startMs": 45
+        },
+        {
+          "speaker": "Rex Bellows",
+          "text": "That's right! You own a share of time! Every Thursday afternoon, two till three, forever! It's yours! Nobody can take it!",
+          "startMs": 3491
+        },
+        {
+          "speaker": "Rex Bellows",
+          "text": "Spend it on a hobby! Spend it with the kids! Spend it sitting in a chair, looking at your hour, saying, this is mine!",
+          "startMs": 9925
+        },
+        {
+          "speaker": "Linda from Accounts",
+          "text": "Time share does not include time. Other owners may be present. Owners must vacate the hour by three. If you are still in the hour at three, you are in the next hour, which belongs to a Mister Pellow, who would like you to leave.",
+          "startMs": 15876
+        }
+      ]
+    },
+    {
+      "id": "ad-016",
+      "category": "ad",
+      "url": "/voice/classifieds/ad-016.mp3",
+      "durationMs": 24465,
+      "title": "Mirror World Imports",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Rex Bellows",
+          "text": "Mirror World Imports! Everything you know, but the other way round!",
+          "startMs": 1582
+        },
+        {
+          "speaker": "Rex Bellows",
+          "text": "Left handed scissors that are right handed over here! Gloves for your other hands! Clocks that run backward, so you've always got time!",
+          "startMs": 4963
+        },
+        {
+          "speaker": "Rex Bellows",
+          "text": "And this week, direct from the other side of your bathroom mirror, a reversible jacket that's only reversible in one direction!",
+          "startMs": 12069
+        },
+        {
+          "speaker": "Linda from Accounts",
+          "text": "Imports may revert on contact with mirrors. Customers may revert on contact with mirrors. Do not buy a pair of anything. They will only agree with each other.",
+          "startMs": 18752
+        }
+      ]
+    },
+    {
+      "id": "ad-017",
+      "category": "ad",
+      "url": "/voice/classifieds/ad-017.mp3",
+      "durationMs": 27227,
+      "title": "Replacement Shadows",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Rex Bellows",
+          "text": "Lost your shadow? It happens to the best of us! Don't walk around flat, folks. Rex has replacement shadows!",
+          "startMs": 41
+        },
+        {
+          "speaker": "Rex Bellows",
+          "text": "Look at this one! Belonged to a ballroom dancer! It'll take you places! This one's from a basketball player, it's very tall, you'll look great at four in the afternoon!",
+          "startMs": 5976
+        },
+        {
+          "speaker": "Rex Bellows",
+          "text": "And for the kids, a little dinosaur! Just the shadow of one! Nobody's getting hurt!",
+          "startMs": 14966
+        },
+        {
+          "speaker": "Linda from Accounts",
+          "text": "Replacement shadows may not match the body. Shadow may lead. If your original shadow returns, Rex is not responsible for the fight. If your original shadow is called Greg, please call Hollis. He would like to know.",
+          "startMs": 19461
+        }
+      ]
+    },
+    {
+      "id": "ad-018",
+      "category": "ad",
+      "url": "/voice/classifieds/ad-018.mp3",
+      "durationMs": 22946,
+      "title": "Rex's Goose Barn",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Rex Bellows",
+          "text": "Do you owe the Numbers Station geese? Don't panic! We've all been there!",
+          "startMs": 40
+        },
+        {
+          "speaker": "Rex Bellows",
+          "text": "Come on down to Rex's Goose Barn, where the geese are plentiful, and the prices are seven, seven, four!",
+          "startMs": 3473
+        },
+        {
+          "speaker": "Rex Bellows",
+          "text": "Big geese! Little geese! Geese that look like they know something! Load up the car, settle your account, and sleep at night again!",
+          "startMs": 9146
+        },
+        {
+          "speaker": "Linda from Accounts",
+          "text": "Geese are not ducks. Rex does not accept ducks. Neither does the Numbers Station. Rex is not affiliated with the Numbers Station. The Numbers Station is affiliated with Rex. Rex does not want to talk about it.",
+          "startMs": 15272
+        }
+      ]
+    },
+    {
+      "id": "ad-019",
+      "category": "ad",
+      "url": "/voice/classifieds/ad-019.mp3",
+      "durationMs": 27638,
+      "title": "Silence-Cancelling Headphones",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Rex Bellows",
+          "text": "Can't stand the quiet? Hate it when everybody stops talking? Introducing silence cancelling headphones!",
+          "startMs": 37
+        },
+        {
+          "speaker": "Rex Bellows",
+          "text": "The moment it gets quiet, these babies fill the gap with the comforting sound of a man you don't know, explaining which road he took!",
+          "startMs": 5723
+        },
+        {
+          "speaker": "A Man Explaining a Road",
+          "text": "So I came off at the roundabout, and I thought, no, I'll take the long way, because of the bridge, and you know what the bridge is like on a Thursday.",
+          "startMs": 12689
+        },
+        {
+          "speaker": "Rex Bellows",
+          "text": "Never sit in silence again! He's got directions for days!",
+          "startMs": 21419
+        },
+        {
+          "speaker": "Linda from Accounts",
+          "text": "The man cannot be turned off. The man is not a real man. The man has never arrived.",
+          "startMs": 24740
+        }
+      ]
+    },
+    {
+      "id": "ad-020",
+      "category": "ad",
+      "url": "/voice/classifieds/ad-020.mp3",
+      "durationMs": 27218,
+      "title": "Previously Haunted Furniture",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Rex Bellows",
+          "text": "Folks, I've got a showroom full of previously haunted furniture, and every single piece has been personally un-haunted by me!",
+          "startMs": 1582
+        },
+        {
+          "speaker": "Rex Bellows",
+          "text": "This wardrobe? Had a ghost! The ghost moved out! The ghost left a note, saying, thanks for having me, the light switch in the hall is temperamental! That's a considerate ghost!",
+          "startMs": 8381
+        },
+        {
+          "speaker": "Rex Bellows",
+          "text": "And this rocking chair rocks all by itself! No more rocking! Let the chair do the work!",
+          "startMs": 17480
+        },
+        {
+          "speaker": "Linda from Accounts",
+          "text": "Ghost may visit on weekends. Ghost has been told about the sale and is fine with it. Chair rocks at night. Chair has always rocked at night.",
+          "startMs": 22298
+        }
+      ]
+    },
+    {
+      "id": "ad-021",
+      "category": "ad",
+      "url": "/voice/classifieds/ad-021.mp3",
+      "durationMs": 25699,
+      "title": "Bottled Applause",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Rex Bellows",
+          "text": "Feeling unappreciated? Did you do the dishes and nobody noticed? Uncork a bottle of Bellows Genuine Applause!",
+          "startMs": 49
+        },
+        {
+          "speaker": "Rex Bellows",
+          "text": "That's real applause, folks, harvested from a standing ovation in a dimension where everyone is very supportive!",
+          "startMs": 8405
+        },
+        {
+          "speaker": "Rex Bellows",
+          "text": "Use it when you finish a crossword! Use it when you get out of bed! Use it for no reason at all! You deserve it!",
+          "startMs": 14542
+        },
+        {
+          "speaker": "Linda from Accounts",
+          "text": "Applause may not correspond to any achievement. Applause may continue after the cork is replaced. If applause follows you to bed, please let it finish.",
+          "startMs": 20048
+        }
+      ]
+    },
+    {
+      "id": "ad-022",
+      "category": "ad",
+      "url": "/voice/classifieds/ad-022.mp3",
+      "durationMs": 22576,
+      "title": "A Quiet Room (Not for Sale)",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Rex Bellows",
+          "text": "And now, folks, a very special message, from Linda!",
+          "startMs": 41
+        },
+        {
+          "speaker": "Linda from Accounts",
+          "text": "Hello. I'd like to tell you about a room.",
+          "startMs": 3256
+        },
+        {
+          "speaker": "Linda from Accounts",
+          "text": "It's a small room. It has one chair, and a window, and a lamp that's always on, a little bit low.",
+          "startMs": 6023
+        },
+        {
+          "speaker": "Linda from Accounts",
+          "text": "Nobody shouts in it. Nobody sells anything in it. There is no small print in it, at all.",
+          "startMs": 11203
+        },
+        {
+          "speaker": "Linda from Accounts",
+          "text": "It isn't for sale. I just wanted you to know that it exists.",
+          "startMs": 16244
+        },
+        {
+          "speaker": "Rex Bellows",
+          "text": "Room may contain Rex!",
+          "startMs": 20265
+        },
+        {
+          "speaker": "Linda from Accounts",
+          "text": "It may not.",
+          "startMs": 21450
+        }
+      ]
+    },
+    {
+      "id": "ad-023",
+      "category": "ad",
+      "url": "/voice/classifieds/ad-023.mp3",
+      "durationMs": 24394,
+      "title": "The Elsewhere Alarm Clock",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Rex Bellows",
+          "text": "Hate mornings? Wake up somewhere better, with the Bellows Elsewhere Alarm Clock!",
+          "startMs": 450
+        },
+        {
+          "speaker": "Rex Bellows",
+          "text": "Set the alarm, go to sleep, and when it rings, you wake up in a different reality, one where you're already showered and the coffee's made!",
+          "startMs": 4543
+        },
+        {
+          "speaker": "Rex Bellows",
+          "text": "Snooze sends you back! Snooze twice, and you wake up on a beach! Snooze three times, and, well, folks, we've never pressed it three times!",
+          "startMs": 11183
+        },
+        {
+          "speaker": "Linda from Accounts",
+          "text": "Pick up from other realities not included. Your pillow may not follow you. Rex is not responsible for the version of you who wakes up in your bed and is also running late.",
+          "startMs": 18227
+        }
+      ]
+    },
+    {
+      "id": "ad-024",
+      "category": "ad",
+      "url": "/voice/classifieds/ad-024.mp3",
+      "durationMs": 21009,
+      "title": "Fine Aged Thunder",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Rex Bellows",
+          "text": "Thunder! Fine, aged thunder! Bottled in the year of the big storm, and aged in oak barrels!",
+          "startMs": 40
+        },
+        {
+          "speaker": "Rex Bellows",
+          "text": "Want to make an entrance? Uncork some thunder! Want to end an argument? Thunder! Want the dog to come out from under the bed? Wait, no. Don't do that one.",
+          "startMs": 5272
+        },
+        {
+          "speaker": "Rex Bellows",
+          "text": "Rolling thunder, clapping thunder, and a distant rumble for the mantelpiece!",
+          "startMs": 13302
+        },
+        {
+          "speaker": "Linda from Accounts",
+          "text": "Do not uncork thunder near lightning. They will reunite. It will be very emotional. Your windows will not survive.",
+          "startMs": 17129
+        }
+      ]
+    },
+    {
+      "id": "ad-025",
+      "category": "ad",
+      "url": "/voice/classifieds/ad-025.mp3",
+      "durationMs": 13703,
+      "title": "Discount Deja Vu",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Rex Bellows",
+          "text": "Folks, have I got a deal for you! Discount deja vu!",
+          "startMs": 45
+        },
+        {
+          "speaker": "Rex Bellows",
+          "text": "You've seen this deal before! You know you have! That feeling? That's value!",
+          "startMs": 3039
+        },
+        {
+          "speaker": "Rex Bellows",
+          "text": "Folks, have I got a deal for you! Discount deja vu!",
+          "startMs": 6961
+        },
+        {
+          "speaker": "Rex Bellows",
+          "text": "See? Wait. Did I say that already?",
+          "startMs": 10405
+        },
+        {
+          "speaker": "Linda from Accounts",
+          "text": "You have heard this disclaimer before.",
+          "startMs": 12241
+        }
+      ]
+    },
+    {
+      "id": "ad-026",
+      "category": "ad",
+      "url": "/voice/classifieds/ad-026.mp3",
+      "durationMs": 23244,
+      "title": "Rent an Echo",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Rex Bellows",
+          "text": "Small apartment? Feeling a bit cramped? Rent an echo!",
+          "startMs": 37
+        },
+        {
+          "speaker": "Rex Bellows",
+          "text": "Genuine lunar echoes, imported direct from the Moon Dub Sound System! Shout hello in your kitchen, and eleven seconds later, hello comes back! Like a canyon! Like a cathedral! Like a friend!",
+          "startMs": 2842
+        },
+        {
+          "speaker": "Rex Bellows",
+          "text": "Watch this. Hello!",
+          "startMs": 13244
+        },
+        {
+          "speaker": "Linda from Accounts",
+          "text": "Echo arrives eleven seconds after the original. Echo cannot be rushed. Echo is not a substitute for company. Echo is a little bit of company.",
+          "startMs": 14538
+        },
+        {
+          "speaker": "Rex Bellows",
+          "text": "Hello!",
+          "startMs": 20744
+        }
+      ]
+    },
+    {
+      "id": "ad-027",
+      "category": "ad",
+      "url": "/voice/classifieds/ad-027.mp3",
+      "durationMs": 22331,
+      "title": "Pre-Owned Moons",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Rex Bellows",
+          "text": "Folks, everybody wants a moon! But a brand new moon? Ha! Pricey! Why not a pre-owned moon?",
+          "startMs": 1582
+        },
+        {
+          "speaker": "Rex Bellows",
+          "text": "This one's shy! Never been looked at! Perfect for a quiet planet that doesn't like attention!",
+          "startMs": 6301
+        },
+        {
+          "speaker": "Rex Bellows",
+          "text": "And this one here's a harvest moon, slightly used, only had the one harvest! Lots of harvest left in her!",
+          "startMs": 11310
+        },
+        {
+          "speaker": "Linda from Accounts",
+          "text": "Moons sold without tides. Tides available as an add on. Moon may continue looking near you after purchase. That's just what moons do.",
+          "startMs": 17495
+        }
+      ]
+    },
+    {
+      "id": "ad-028",
+      "category": "ad",
+      "url": "/voice/classifieds/ad-028.mp3",
+      "durationMs": 25673,
+      "title": "Dial a Grandparent",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Rex Bellows",
+          "text": "Nobody asking if you're eating properly? Nobody telling you you look thin? Sign up for Dial a Grandparent!",
+          "startMs": 45
+        },
+        {
+          "speaker": "Rex Bellows",
+          "text": "Once a week, a lovely grandparent from a nearby reality gives you a ring, asks how you're doing, and tells you to wear a vest!",
+          "startMs": 5798
+        },
+        {
+          "speaker": "A Grandparent",
+          "text": "Hello, love. Are you eating? You sound thin. Wear a vest.",
+          "startMs": 14867
+        },
+        {
+          "speaker": "Rex Bellows",
+          "text": "That's love, folks! Twelve ninety five a month!",
+          "startMs": 18307
+        },
+        {
+          "speaker": "Linda from Accounts",
+          "text": "Grandparent may not be your grandparent. Grandparent will not stop asking about your teeth. Grandparent may send a cake. You must eat the cake.",
+          "startMs": 20659
+        }
+      ]
+    },
+    {
+      "id": "ad-029",
+      "category": "ad",
+      "url": "/voice/classifieds/ad-029.mp3",
+      "durationMs": 18993,
+      "title": "The Cold Side of the Pillow",
+      "overMusic": false,
+      "daypart": "night",
+      "lines": [
+        {
+          "speaker": "Rex Bellows",
+          "text": "Hot pillow? Cranky sleeper? Rex has the cold side of the pillow, sold separately!",
+          "startMs": 38
+        },
+        {
+          "speaker": "Rex Bellows",
+          "text": "That's right, just the cold side! Harvested fresh every night from the pillows of people who never turn them over!",
+          "startMs": 4702
+        },
+        {
+          "speaker": "Rex Bellows",
+          "text": "Flip it, slip it, and drift off like a happy little iceberg!",
+          "startMs": 10591
+        },
+        {
+          "speaker": "Linda from Accounts",
+          "text": "Cold side will warm up. That is what cold sides do. Please do not ask for a refund at three in the morning. Rex is asleep. Rex sleeps on the cold side.",
+          "startMs": 13780
+        }
+      ]
+    },
+    {
+      "id": "ad-030",
+      "category": "ad",
+      "url": "/voice/classifieds/ad-030.mp3",
+      "durationMs": 19840,
+      "title": "The Last Chair",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Rex Bellows",
+          "text": "Musical chairs got you anxious? Never be left standing again, with the Bellows Last Chair!",
+          "startMs": 1582
+        },
+        {
+          "speaker": "Rex Bellows",
+          "text": "This chair is always there, folks! When everyone else has sat down, look behind you! It's the last chair! It's for you! It's always been for you!",
+          "startMs": 6571
+        },
+        {
+          "speaker": "Linda from Accounts",
+          "text": "The Last Chair cannot be sat in by anyone else. The Last Chair will find you. The Last Chair has been known to appear at weddings, in lifts, and once, at sea.",
+          "startMs": 14390
+        }
+      ]
+    },
+    {
+      "id": "story-001",
+      "category": "story",
+      "url": "/voice/classifieds/story-001.mp3",
+      "durationMs": 50724,
+      "title": "Personals, Lost and Found",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Rex Bellows",
+          "text": "And now, the personals, and the lost and found, read by Linda, who reads them slowly, because she says they deserve it. Linda?",
+          "startMs": 1900
+        },
+        {
+          "speaker": "Linda from Accounts",
+          "text": "Thank you, Rex.",
+          "startMs": 8861
+        },
+        {
+          "speaker": "Linda from Accounts",
+          "text": "Lost. One shadow. Answers to Greg. Last seen leaving without me. If found, please do not approach. Greg has made his choice.",
+          "startMs": 10867
+        },
+        {
+          "speaker": "Linda from Accounts",
+          "text": "For sale. Haunted mirror. Shows you exactly as you are. Very upsetting. Make an offer.",
+          "startMs": 18197
+        },
+        {
+          "speaker": "Linda from Accounts",
+          "text": "Seeking. A tall, dark stranger to stand at the end of my garden. Must be patient. Must be quiet. I already have one. Looking for a second.",
+          "startMs": 23225
+        },
+        {
+          "speaker": "Linda from Accounts",
+          "text": "Found. A Tuesday. Mostly intact. Some damage to the afternoon. Claim at the front desk.",
+          "startMs": 31489
+        },
+        {
+          "speaker": "Linda from Accounts",
+          "text": "Free to a good home. My thoughts. Please take them. They are not house trained.",
+          "startMs": 37204
+        },
+        {
+          "speaker": "Rex Bellows",
+          "text": "Remember, folks. If you can't find it, it's probably in another reality. If you can find it, it probably isn't yours!",
+          "startMs": 41768
+        }
+      ]
+    },
+    {
+      "id": "story-002",
+      "category": "story",
+      "url": "/voice/classifieds/story-002.mp3",
+      "durationMs": 45602,
+      "title": "The Personals",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Rex Bellows",
+          "text": "Personals time, folks! Linda?",
+          "startMs": 1900
+        },
+        {
+          "speaker": "Linda from Accounts",
+          "text": "Seeking. A song. It goes dum, dum, da dum, and then a man cries. If you are this song, or know where it is, please call Bev. Bev has been looking for a long time.",
+          "startMs": 3701
+        },
+        {
+          "speaker": "Linda from Accounts",
+          "text": "Man, four seconds behind, seeks woman, four seconds ahead. Let's meet in the middle. I'll be there in a minute. You already are.",
+          "startMs": 13540
+        },
+        {
+          "speaker": "Linda from Accounts",
+          "text": "Lighthouse keeper at Relay Four seeks anyone. Anyone at all. Good listener. Has kettle.",
+          "startMs": 20714
+        },
+        {
+          "speaker": "Linda from Accounts",
+          "text": "Retired giant, gentle, seeks small friend for long walks. Will walk slowly. Will look where he's going. Has never once stepped on anybody, and would like that on the record.",
+          "startMs": 26101
+        },
+        {
+          "speaker": "Linda from Accounts",
+          "text": "Reflection, thirties, left handed, seeks a person who smiles first. Tired of always going second.",
+          "startMs": 35890
+        },
+        {
+          "speaker": "Rex Bellows",
+          "text": "Beautiful, Linda. Just beautiful.",
+          "startMs": 42317
+        },
+        {
+          "speaker": "Linda from Accounts",
+          "text": "Thank you, Rex.",
+          "startMs": 44347
+        }
+      ]
+    },
+    {
+      "id": "story-003",
+      "category": "story",
+      "url": "/voice/classifieds/story-003.mp3",
+      "durationMs": 46891,
+      "title": "Lost and Found",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Rex Bellows",
+          "text": "Lost and found! Linda, what have we got?",
+          "startMs": 1900
+        },
+        {
+          "speaker": "Linda from Accounts",
+          "text": "Lost. The thread. Of a conversation. Last seen at a dinner party, around the time somebody said, anyway. If found, please return it. We were getting somewhere.",
+          "startMs": 4057
+        },
+        {
+          "speaker": "Linda from Accounts",
+          "text": "Found. A key. It opens something. We have tried everything. It is not this. It is not that. It is possibly you.",
+          "startMs": 13292
+        },
+        {
+          "speaker": "Linda from Accounts",
+          "text": "Lost. My sense of direction. If found, please don't tell me where it is. I won't be able to get there.",
+          "startMs": 19838
+        },
+        {
+          "speaker": "Linda from Accounts",
+          "text": "Found. Half a Wednesday, in the back of a taxi. The driver says it was very quiet the whole way, and tipped well.",
+          "startMs": 25531
+        },
+        {
+          "speaker": "Linda from Accounts",
+          "text": "Lost. A small dog, in a large reality. Answers to Pickle. Pickle does not know he is lost. Pickle thinks this is a walk. Pickle is having a lovely time.",
+          "startMs": 32088
+        },
+        {
+          "speaker": "Rex Bellows",
+          "text": "If you've lost it, folks, Alien Classifieds has probably found it! Or sold it. Probably sold it.",
+          "startMs": 41697
+        }
+      ]
+    },
+    {
+      "id": "story-004",
+      "category": "story",
+      "url": "/voice/classifieds/story-004.mp3",
+      "durationMs": 36892,
+      "title": "Missed Connections",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Rex Bellows",
+          "text": "Missed connections, folks. Get your hankies out. Linda?",
+          "startMs": 1900
+        },
+        {
+          "speaker": "Linda from Accounts",
+          "text": "You, on the bus that goes through every reality. Me, also on the bus, in seven of them. You smiled in three. Let's talk about the other four.",
+          "startMs": 4644
+        },
+        {
+          "speaker": "Linda from Accounts",
+          "text": "You, standing in the rain in Precinct Nine with no umbrella, looking like you'd been doing it for years. Me, the umbrella. I'd like to try again.",
+          "startMs": 12601
+        },
+        {
+          "speaker": "Linda from Accounts",
+          "text": "You, the man in the queue at the Bureau of Infinite Queues. Me, the woman standing in front of you, for thirty years. I'm so glad you finally said hello.",
+          "startMs": 20901
+        },
+        {
+          "speaker": "Linda from Accounts",
+          "text": "You, a moon. Me, a man on a porch. You looked near me. I looked near you. Same time next month?",
+          "startMs": 29696
+        },
+        {
+          "speaker": "Rex Bellows",
+          "text": "Love, folks! It's out there! Possibly in a queue!",
+          "startMs": 34843
+        }
+      ]
+    },
+    {
+      "id": "story-005",
+      "category": "story",
+      "url": "/voice/classifieds/story-005.mp3",
+      "durationMs": 30050,
+      "title": "Still Lost: Greg",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Rex Bellows",
+          "text": "A quick one from the lost and found, folks, and it's an update.",
+          "startMs": 1900
+        },
+        {
+          "speaker": "Linda from Accounts",
+          "text": "Still lost. One shadow. Answers to Greg. Last seen at the sea, sitting on the sand with his knees up, looking at the water.",
+          "startMs": 5483
+        },
+        {
+          "speaker": "Linda from Accounts",
+          "text": "His person, Hollis, would like Greg to know that he isn't angry, that the porch light is on, and that he has been standing in the sun at noon every day, so there's room.",
+          "startMs": 12661
+        },
+        {
+          "speaker": "Linda from Accounts",
+          "text": "Greg, if you're listening, you don't have to come back. But send a postcard. Hollis would like a postcard.",
+          "startMs": 21751
+        },
+        {
+          "speaker": "Rex Bellows",
+          "text": "Come on, Greg. Send the man a postcard.",
+          "startMs": 28033
+        }
+      ]
+    },
+    {
+      "id": "story-006",
+      "category": "story",
+      "url": "/voice/classifieds/story-006.mp3",
+      "durationMs": 35007,
+      "title": "Private Sales",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Rex Bellows",
+          "text": "Private sales, folks! No dealers! No Rex! Just honest people selling honest things! Linda?",
+          "startMs": 1900
+        },
+        {
+          "speaker": "Linda from Accounts",
+          "text": "For sale. One staircase, slightly too long. Takes you one floor further than you need. You will not be told what's on that floor.",
+          "startMs": 6974
+        },
+        {
+          "speaker": "Linda from Accounts",
+          "text": "For sale. Hot air balloon. Only flown once. Still flying. Please collect.",
+          "startMs": 13723
+        },
+        {
+          "speaker": "Linda from Accounts",
+          "text": "Free. One kitten, three eyes, very good at noticing things. Will notice things about you. Will be kind about it.",
+          "startMs": 18674
+        },
+        {
+          "speaker": "Linda from Accounts",
+          "text": "For sale. A Grumbel's Ladder, the Ambition model. Selling because I would like to come down now. Please send help. Please send a ladder.",
+          "startMs": 25018
+        },
+        {
+          "speaker": "Rex Bellows",
+          "text": "Ooh. I'll take the ladder. Linda, put me down for the ladder.",
+          "startMs": 32531
+        }
+      ]
+    }
+  ]
+}
