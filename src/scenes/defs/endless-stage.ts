@@ -3,8 +3,8 @@
 // A candle has burned down to a puddle. A hand-painted sign keeps count of the verses.
 
 import { hex, mix, shade } from '../kit/color';
-import { blinking, clamp, envelope, smoothstep } from '../kit/fx';
-import { type Gfx, bayer } from '../kit/gfx';
+import { blinking, clamp, envelope } from '../kit/fx';
+import { type Gfx } from '../kit/gfx';
 import { hash3 } from '../kit/rng';
 import type { SceneDef } from '../types';
 import { flicker, motes, shaft, vignette } from './lib/night';
@@ -237,8 +237,6 @@ const def: SceneDef = {
             g.px(sx + k * 2, sy + 2, hex('#1a1414'));
           }
         }
-        void bayer;
-        void smoothstep;
       },
     };
   },

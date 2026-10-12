@@ -3,7 +3,7 @@
 // lamp stands like a lighthouse; a storybook lies open on the floor, the size of a field.
 
 import { type Color, hex, mix, shade } from '../kit/color';
-import { clamp, envelope, smoothstep } from '../kit/fx';
+import { clamp, envelope } from '../kit/fx';
 import { bayer } from '../kit/gfx';
 import { fbm, hash3 } from '../kit/rng';
 import type { SceneDef } from '../types';
@@ -110,7 +110,6 @@ const def: SceneDef = {
           const fold = Math.sin(x * 0.21) * 0.5 + 0.5;
           const col = Math.floor((x + 400) / 14);
           const xs = (x + 400) % 14 === 0;
-          const bx = g.left - g.ox;
           for (let y = Math.floor(top); y < BED_EDGE - 4; y++) {
             const dy = y - top;
             const row = Math.floor(dy / 9);
@@ -123,7 +122,6 @@ const def: SceneDef = {
             else c = patches[idx]!;
             g.px(x, y, c);
           }
-          void bx;
           g.px(x, BED_EDGE - 5, pSeam[(col * 7) & 63]!);
         }
         // Rare: a hand flops out from under the quilt, rests, and is drawn back in.
@@ -171,7 +169,6 @@ const def: SceneDef = {
         g.line(mx - 2, my - 1, mx - 6, my - 2 + Math.round(Math.sin(t) * 1), hex('#5a5058'));
         g.px(mx + 3, my - 5, ink);
         g.glow(mx, my - 3, 5, lampC, 0.12 * lk);
-        void smoothstep;
       },
     };
   },

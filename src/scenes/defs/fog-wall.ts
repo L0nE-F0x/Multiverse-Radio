@@ -2,8 +2,8 @@
 // pink-blue light. Effects pedals glow at their feet like a tiny city. The audience is
 // three blurry shapes and a lamp.
 
-import { type Color, hex, mix, shade } from '../kit/color';
-import { clamp, envelope, smoothstep } from '../kit/fx';
+import { type Color, hex, mix } from '../kit/color';
+import { envelope } from '../kit/fx';
 import type { Gfx } from '../kit/gfx';
 import { hash3 } from '../kit/rng';
 import type { SceneDef } from '../types';
@@ -66,12 +66,11 @@ const def: SceneDef = {
         g.lineA(x - 6, top + 18, x - 9, top + 10, c, a);
       }
     };
-    const musician = (g: Gfx, p: (typeof PLAYERS)[number], t: number, sway: number, look: number) => {
+    const musician = (g: Gfx, p: (typeof PLAYERS)[number], sway: number, look: number) => {
       const x = Math.round(p.x + sway);
       body(g, p, x - 1, look, sil, 0.45);
       body(g, p, x + 1, look, sil, 0.45);
       body(g, p, x, look, sil, 0.85);
-      void t;
     };
 
     return {
@@ -113,7 +112,7 @@ const def: SceneDef = {
           const p = PLAYERS[i]!;
           const sway = f.reduced ? 0 : Math.sin(t * 0.6 + p.seed * 1.7) * 1.5 * (0.4 + 0.6 * awake);
           const look = f.rare === 0 && i === 1 && ev > 5 && ev < 6.6 ? 1 : 0;
-          musician(g, p, t, sway, look);
+          musician(g, p, sway, look);
         }
         // Rare: a fifth player, who nobody booked.
         if (f.rare === 2 && ev < 12) {
@@ -180,9 +179,6 @@ const def: SceneDef = {
         g.hline(sx - 10 + turn * 3, sx + 9, y - 50, mix(lampC, hex('#ffffff'), 0.2));
         g.glow(sx, y - 52, 30, lampC, 0.16);
         g.ellipseA(sx, y - 48, 14, 3, lampC, 0.12);
-        void shade;
-        void clamp;
-        void smoothstep;
       },
     };
   },

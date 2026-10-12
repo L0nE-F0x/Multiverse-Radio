@@ -3,7 +3,7 @@
 // crystal ball shows static. The cards are fanned out. Madame's hands wait in the light.
 
 import { type Color, hex, mix, shade } from '../kit/color';
-import { blinking, clamp, envelope, smoothstep } from '../kit/fx';
+import { blinking, clamp, envelope } from '../kit/fx';
 import { type Gfx, bayer } from '../kit/gfx';
 import { hash3 } from '../kit/rng';
 import type { SceneDef } from '../types';
@@ -249,7 +249,6 @@ const def: SceneDef = {
           }
           card(g, cx, cy, false, cardBack);
         }
-        void smoothstep;
       },
     };
   },

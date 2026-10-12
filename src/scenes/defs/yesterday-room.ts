@@ -3,8 +3,8 @@
 // the rug, the tea has already gone cold, and the wall clock runs gently backwards.
 
 import { hex, mix, shade } from '../kit/color';
-import { clamp, envelope, smoothstep } from '../kit/fx';
-import { type Gfx, bayer } from '../kit/gfx';
+import { clamp, envelope } from '../kit/fx';
+import { type Gfx } from '../kit/gfx';
 import { hash3 } from '../kit/rng';
 import { roundRect } from '../kit/shapes';
 import type { SceneDef } from '../types';
@@ -238,8 +238,6 @@ const def: SceneDef = {
             const p = (t * 0.2 + i / 2) % 1;
             g.text('z', dx - 30 - p * 4, dy - 8 - p * 12, mix(hex('#e8d8c0'), panel[1]!, p));
           }
-        void bayer;
-        void smoothstep;
       },
     };
   },

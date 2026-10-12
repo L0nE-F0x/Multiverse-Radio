@@ -2,7 +2,7 @@
 // round hole. Bunting, a bake-sale stall, the council noticeboard, a dog peering over the
 // edge. Street lamps glow. Now and then something floats up, and everyone ignores it.
 
-import { type Color, hex, mix, shade } from '../kit/color';
+import { hex, mix } from '../kit/color';
 import { blinking, clamp, envelope, smoothstep, stars } from '../kit/fx';
 import { type Gfx, bayer } from '../kit/gfx';
 import { fbm, hash3 } from '../kit/rng';
@@ -37,7 +37,6 @@ const def: SceneDef = {
     const ink = hex('#06080a');
     const sky = [hex('#05080d'), hex('#0a1018'), hex('#121b24'), hex('#1c2a30'), hex('#2a3a3a')];
     const sage = accent;
-    const sageD = mix(shade(accent, 0.3), hex('#0a1014'), 0.4);
     const roofs = [hex('#0b0f14'), hex('#10161c'), hex('#151c22')];
     const wallC = hex('#121a1e');
     const lampC = hex('#ffcf87');
@@ -251,15 +250,12 @@ const def: SceneDef = {
           const B = bunting[b]!;
           const sway = f.reduced ? 0 : Math.sin(t * 0.8 + b) * 1.2;
           const n = Math.round((B.x1 - B.x0) / 6);
-          let py = B.y0;
           for (let i = 0; i <= n * 3; i++) {
             const u = i / (n * 3);
             const x = B.x0 + (B.x1 - B.x0) * u;
             const y = B.y0 + (B.y1 - B.y0) * u + Math.sin(u * Math.PI) * (B.sag + sway);
             g.px(x, y, hex('#2a302e'));
-            py = y;
           }
-          void py;
           for (let i = 1; i < n; i++) {
             const u = i / n;
             const x = Math.round(B.x0 + (B.x1 - B.x0) * u);
@@ -362,8 +358,6 @@ const def: SceneDef = {
         g.hline(hx - 2, hx + 1, hy - 3, furL);
         g.px(hx + 3, sy - 1 + (lift > 2 ? 0 : 1) - 1, furL);
         if (!blinking(t, 12)) g.px(hx + 1, hy - 1, ink);
-        void sageD;
-        void ((c: Color) => c);
       },
     };
   },

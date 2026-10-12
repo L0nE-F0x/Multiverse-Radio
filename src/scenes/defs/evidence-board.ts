@@ -40,13 +40,12 @@ const def: SceneDef = {
     const lampC = hex('#ffd890');
     const woodC = [hex('#160d08'), hex('#22140c'), hex('#2e1c10')];
 
-    const photo = (g: Gfx, x: number, y: number, w: number, h: number, tilt: number, inner: (g: Gfx, x: number, y: number) => void) => {
+    const photo = (g: Gfx, x: number, y: number, w: number, h: number, inner: (g: Gfx, x: number, y: number) => void) => {
       g.rect(x - w / 2 + 1, y + 1, w, h, ink);
       g.rect(x - w / 2, y, w, h, paper);
       g.rect(x - w / 2 + 2, y + 2, w - 4, h - 7, hex('#1e2024'));
       inner(g, x, y + 2);
       g.hline(x - w / 2, x + w / 2 - 1, y + h - 1, paperD);
-      void tilt;
     };
 
     const pin = (g: Gfx, x: number, y: number, c: Color) => {
@@ -116,16 +115,16 @@ const def: SceneDef = {
         g.hline(B.x + 78, B.x + 84, B.y + 36, hex('#5a5448'));
 
         // Photographs: a teaspoon, the moon, and the goose (drawn per frame).
-        photo(g, SPOON.x, SPOON.y + 1, 22, 24, 0, (gg, x, y) => {
+        photo(g, SPOON.x, SPOON.y + 1, 22, 24, (gg, x, y) => {
           gg.ellipse(x - 3, y + 6, 3, 2, hex('#b8bcc0'));
           gg.line(x - 1, y + 7, x + 6, y + 13, hex('#a8acb0'));
           gg.px(x - 4, y + 5, hex('#ffffff'));
         });
-        photo(g, MOON.x, MOON.y + 1, 22, 24, 0, (gg, x, y) => {
+        photo(g, MOON.x, MOON.y + 1, 22, 24, (gg, x, y) => {
           gg.disc(x, y + 8, 6, hex('#d8d4c0'));
           gg.disc(x + 3, y + 7, 5, hex('#1e2024'));
         });
-        photo(g, GOOSE.x, GOOSE.y - 20, 22, 24, 0, () => {});
+        photo(g, GOOSE.x, GOOSE.y - 20, 22, 24, () => {});
 
         // Window with blinds on the right: rain outside, the neon's glow beyond.
         const W = WIN;

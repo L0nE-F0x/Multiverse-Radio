@@ -3,8 +3,8 @@
 // (FRAGILE: CONTAINS TUESDAY); a waitress pours coffee; moths circle the sign.
 
 import { hex, mix, shade } from '../kit/color';
-import { clamp, envelope, smoothstep, stars } from '../kit/fx';
-import { type Gfx, bayer } from '../kit/gfx';
+import { clamp, envelope, stars } from '../kit/fx';
+import { type Gfx } from '../kit/gfx';
 import { fbm, hash3 } from '../kit/rng';
 import type { SceneDef } from '../types';
 import { haze, vignette } from './lib/night';
@@ -243,8 +243,6 @@ const def: SceneDef = {
           const y = LAMP.y + 4 + p * 50;
           g.pxAdd(x, y, sodium, 0.25 * Math.sin(p * Math.PI));
         }
-        void bayer;
-        void smoothstep;
       },
     };
   },

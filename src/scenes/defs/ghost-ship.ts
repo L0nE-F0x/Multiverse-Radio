@@ -2,8 +2,8 @@
 // ship rolls; a translucent crew stamps in time around an accordion player on a barrel;
 // the sea beyond the rail glows faintly green.
 
-import { type Color, hex, mix, shade } from '../kit/color';
-import { clamp, envelope, smoothstep, stars } from '../kit/fx';
+import { hex, mix } from '../kit/color';
+import { clamp, envelope, stars } from '../kit/fx';
 import { type Gfx, bayer } from '../kit/gfx';
 import { hash3 } from '../kit/rng';
 import type { SceneDef } from '../types';
@@ -197,7 +197,6 @@ const def: SceneDef = {
         if (f.rare === 0 && ev < 10) {
           const up = envelope(ev, 10, 2, 2);
           const tap = f.reduced ? 0 : Math.max(0, Math.sin(ev * 5)) * 2;
-          const bx = 286;
           const bx2 = 262;
           for (let i = 0; i < 44; i++) {
             const u = i / 44;
@@ -209,7 +208,6 @@ const def: SceneDef = {
             g.ellipse(tx, ty, w, 2, mix(hex('#0c1a18'), accent, 0.3));
             if (i % 4 === 0) g.px(tx + w - 1, ty + 1, mix(accent, hex('#c8fff0'), 0.35));
           }
-          void bx;
         }
         // Rare: a ghostly gull settles on the yard and joins in.
         if (f.rare === 1 && ev < 10) {
@@ -239,9 +237,6 @@ const def: SceneDef = {
 
         // Near fog rolling over the deck.
         drawFog(g, fogB, -t * 3.2, fogC, 0.55 + vanish * 0.4);
-        void shade;
-        void smoothstep;
-        void (0 as unknown as Color);
       },
     };
   },

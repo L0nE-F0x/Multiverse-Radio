@@ -2,8 +2,8 @@
 // ring. Surfers ride slow, gravitational swells out toward it; a lifeguard tower leans the
 // same way; a sign on the sand reads NO RETURNS.
 
-import { hex, mix, shade } from '../kit/color';
-import { clamp, envelope, smoothstep, stars } from '../kit/fx';
+import { hex, mix } from '../kit/color';
+import { clamp, envelope, stars } from '../kit/fx';
 import { type Gfx, bayer } from '../kit/gfx';
 import { fbm, hash3 } from '../kit/rng';
 import type { SceneDef } from '../types';
@@ -127,7 +127,6 @@ const def: SceneDef = {
       frame(g, f) {
         const { t } = f;
         const ev = f.rareT;
-        const awake = f.awake;
         const e = f.energy;
 
         // The hole: disc behind, the shadow, the photon ring, then the near side of the disc.
@@ -232,9 +231,6 @@ const def: SceneDef = {
           g.px(gx + 2, gy - flap, c);
           g.px(gx + 3, gy - flap * 2, c);
         }
-        void awake;
-        void shade;
-        void smoothstep;
       },
     };
   },

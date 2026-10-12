@@ -3,8 +3,8 @@
 // cactus is wearing headphones.
 
 import { type Color, hex, mix, shade } from '../kit/color';
-import { clamp, envelope, smoothstep } from '../kit/fx';
-import { type Gfx, bayer } from '../kit/gfx';
+import { clamp, envelope } from '../kit/fx';
+import { type Gfx } from '../kit/gfx';
 import { fbm, hash3 } from '../kit/rng';
 import type { SceneDef } from '../types';
 import { motes, shaft, vignette } from './lib/night';
@@ -290,8 +290,6 @@ const def: SceneDef = {
             }
           g.glow(74, 100, 12, accent, 0.15 * k);
         }
-        void bayer;
-        void smoothstep;
       },
     };
   },

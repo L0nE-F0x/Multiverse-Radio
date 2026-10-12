@@ -2,9 +2,9 @@
 // presenter on a thimble stool, a felt board, a ladybird puppet, two pinhead studio lights,
 // and everyday things looming at the edges: a pencil like a log, a button like a table.
 
-import { hex, mix, shade } from '../kit/color';
-import { blinking, clamp, envelope, smoothstep } from '../kit/fx';
-import { type Gfx, bayer } from '../kit/gfx';
+import { hex, mix } from '../kit/color';
+import { blinking, clamp, envelope } from '../kit/fx';
+import { type Gfx } from '../kit/gfx';
 import { hash3 } from '../kit/rng';
 import type { SceneDef } from '../types';
 import { motes, vignette } from './lib/night';
@@ -211,9 +211,6 @@ const def: SceneDef = {
           g.ellipse(BOX.x1 + 26, 40 - 40 * (1 - k), 14, 30, hex('#8a6a5a'));
           g.ellipse(BOX.x1 + 22, 60 - 40 * (1 - k), 8, 6, hex('#c8a8a0'));
         }
-        void bayer;
-        void shade;
-        void smoothstep;
       },
     };
   },

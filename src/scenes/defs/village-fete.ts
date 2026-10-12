@@ -3,11 +3,11 @@
 // judging table, a brass band in a striped tent, and a maypole that is mostly ribbon.
 
 import { type Color, hex, mix, shade } from '../kit/color';
-import { clamp, envelope, smoothstep, stars } from '../kit/fx';
-import { type Gfx, bayer } from '../kit/gfx';
+import { clamp, envelope, stars } from '../kit/fx';
+import { type Gfx } from '../kit/gfx';
 import { fbm, hash3 } from '../kit/rng';
 import type { SceneDef } from '../types';
-import { bakeFog, drawFog, flicker, vignette } from './lib/night';
+import { bakeFog, drawFog, vignette } from './lib/night';
 
 const GREEN_Y = 100;
 const POLE = { x: 86, top: 30, base: 116 };
@@ -251,9 +251,6 @@ const def: SceneDef = {
 
         // Mist over the green.
         drawFog(g, mist, t * 1.5, mix(hex('#3a4a40'), accent, 0.15), 0.4);
-        void flicker;
-        void smoothstep;
-        void bayer;
       },
     };
   },

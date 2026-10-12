@@ -4,7 +4,7 @@
 
 import { hex, mix, shade } from '../kit/color';
 import { blinking, clamp, envelope, smoothstep } from '../kit/fx';
-import { type Gfx, bayer } from '../kit/gfx';
+import { type Gfx } from '../kit/gfx';
 import { hash3 } from '../kit/rng';
 import { roundRect } from '../kit/shapes';
 import type { SceneDef } from '../types';
@@ -119,7 +119,6 @@ const def: SceneDef = {
       g.lineA(hx - 4, hy + 5, hx - 14, hy + 6, cream, 0.4);
       g.lineA(hx + 4, hy + 4, hx + 15, hy + 2, cream, 0.5);
       g.lineA(hx + 4, hy + 5, hx + 14, hy + 6, cream, 0.4);
-      void bayer;
     };
 
     return {

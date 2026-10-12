@@ -3,7 +3,7 @@
 // blinks; a cassette deck turns on the balcony table beside a cocktail with an umbrella.
 
 import { hex, mix, shade } from '../kit/color';
-import { clamp, envelope, smoothstep, stars } from '../kit/fx';
+import { envelope, stars } from '../kit/fx';
 import { type Gfx, bayer } from '../kit/gfx';
 import { hash3 } from '../kit/rng';
 import { frameRect } from '../kit/shapes';
@@ -383,8 +383,6 @@ const def: SceneDef = {
         }
         g.px(ux, uy - 1, hex('#fff0f4'));
         g.glow(TABLE.x + 15, TABLE.y - 8, 10, pink, 0.1 + f.energy * 0.08);
-        void clamp;
-        void smoothstep;
       },
     };
   },

@@ -3,8 +3,8 @@
 // softly. The door at the back is very slightly ajar.
 
 import { hex, mix, shade } from '../kit/color';
-import { clamp, envelope, smoothstep } from '../kit/fx';
-import { type Gfx, bayer } from '../kit/gfx';
+import { clamp, envelope } from '../kit/fx';
+import { bayer } from '../kit/gfx';
 import { hash3 } from '../kit/rng';
 import type { SceneDef } from '../types';
 import { motes, vignette } from './lib/night';
@@ -246,8 +246,6 @@ const def: SceneDef = {
           if (ev > 8) g.hline(mx - 1, mx + 1, my, mc);
           g.glow(mx, my, 3, moon, 0.15);
         }
-        void smoothstep;
-        void (null as unknown as Gfx);
       },
     };
   },

@@ -3,7 +3,7 @@
 // at its hub turns behind them; chaser lights run; the host's microphone is far too long.
 
 import { type Color, hex, mix, shade } from '../kit/color';
-import { blinking, clamp, envelope, smoothstep } from '../kit/fx';
+import { blinking, clamp, envelope } from '../kit/fx';
 import { type Gfx, bayer } from '../kit/gfx';
 import { hash3 } from '../kit/rng';
 import type { SceneDef } from '../types';
@@ -154,14 +154,12 @@ const def: SceneDef = {
         let mx = wx + Math.cos(moonA) * 15;
         let my = wy + Math.sin(moonA) * 5;
         if (f.rare === 3 && ev < 10) {
-          const p = clamp((ev - 1) / 7);
           if (ev > 1) {
             const fall = Math.min(FLOOR_Y - 3 - my, (ev - 1) * (ev - 1) * 30);
             my += fall;
             mx += fall >= FLOOR_Y - 3 - my - 0.1 ? (ev - 1) * 30 - 10 : (ev - 1) * 6;
             mx = Math.min(mx, g.right + 10);
           }
-          void p;
         }
         g.ball(mx, my, 2, 2, [hex('#5a5a60'), hex('#a8a8b0'), hex('#e8e8f0')], -0.5, -0.5);
 
@@ -220,7 +218,6 @@ const def: SceneDef = {
             g.px(cx, cy, i % 3 === 0 ? gold : i % 3 === 1 ? cyan : hex('#e86a8a'));
           }
         }
-        void smoothstep;
       },
     };
   },

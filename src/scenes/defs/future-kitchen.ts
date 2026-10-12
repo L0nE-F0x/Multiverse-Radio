@@ -3,7 +3,7 @@
 // the oven timer counts up instead of down; the steam has ideas.
 
 import { type Color, hex, mix, shade } from '../kit/color';
-import { clamp, envelope, smoothstep } from '../kit/fx';
+import { clamp, envelope } from '../kit/fx';
 import type { Gfx } from '../kit/gfx';
 import { hash3 } from '../kit/rng';
 import { roundRect } from '../kit/shapes';
@@ -352,7 +352,6 @@ const def: SceneDef = {
           g.glow(dx, dy - 3, 14, glowC, 0.3 * k);
           if (k > 0.5) for (let i = 0; i < 4; i++) g.pxA(dx - 6 + i * 4, dy - 8 - ((t * 6 + i * 3) % 6), hex('#ffffff'), 0.4 * k);
         }
-        void smoothstep;
       },
     };
   },
