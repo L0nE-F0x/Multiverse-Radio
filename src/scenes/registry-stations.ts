@@ -68,4 +68,20 @@ export const STATION_SCENES_V3: Partial<Record<SceneId, SceneEntry>> = {
     label: "From mouse height, a giant's patchwork quilt rises like slow mountains beside a lighthouse of a bedside lamp.",
     load: () => import('./defs/giant-bedroom'),
   },
+  'village-fete': {
+    label: 'A village fête at dusk: festoon lights, a tombola, a brass band in a striped tent and a prize marrow the size of a car.',
+    load: () => import('./defs/village-fete'),
+  },
+  'tiny-studio': {
+    label: "A children's TV set inside a matchbox: a tiny presenter on a thimble, a felt board and a ladybird, beside a giant pencil.",
+    load: () => import('./defs/tiny-studio'),
+  },
+  'endless-stage': {
+    label: 'An elderly band plays on a small stage while their long white beards flow across the floor and out of the door.',
+    load: () => import('./defs/endless-stage'),
+  },
+  greenhouse: {
+    label: 'In a sunlit greenhouse, houseplants lean toward a little radio on the bench; a cactus is wearing headphones.',
+    load: () => import('./defs/greenhouse'),
+  },
 };
