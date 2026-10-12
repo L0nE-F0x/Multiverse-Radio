@@ -124,10 +124,10 @@ def check(scripts: list[Script]) -> int:
         flag = "draft, not aired" if script.is_draft else ("FAILED" if not script.ok else "ok")
         extras = []
         if script.shows:
-            extras.append(f"{len(script.shows)} shows")
+            extras.append(f"{len(script.shows)} show{'s' if len(script.shows) > 1 else ''}")
         parts = sum(1 for c in script.clips if c.part)
         if parts:
-            extras.append(f"{parts} parts")
+            extras.append(f"{parts} part{'s' if parts > 1 else ''}")
         serials = {c.serial.id for c in script.clips if c.serial}
         if serials:
             extras.append(f"{len(serials)} serial{'s' if len(serials) > 1 else ''}")
@@ -350,15 +350,20 @@ def run_jobs(jobs: list, workers: int, threads: int, nice: int, on_done) -> None
     from concurrent.futures import ProcessPoolExecutor, as_completed
 
     ctx = multiprocessing.get_context("forkserver" if sys.platform != "win32" else "spawn")
-    with ProcessPoolExecutor(max_workers=workers, mp_context=ctx, initializer=engine.init_worker, initargs=init) as pool:
-        futures = {pool.submit(engine.render_safe, job): job for job in jobs}
-        try:
-            for future in as_completed(futures):
-                on_done(futures[future], future.result())
-        except BaseException:
-            for f in futures:
-                f.cancel()
-            raise
+    pool = ProcessPoolExecutor(max_workers=workers, mp_context=ctx, initializer=engine.init_worker, initargs=init)
+    futures = {pool.submit(engine.render_safe, job): job for job in jobs}
+    try:
+        for future in as_completed(futures):
+            on_done(futures[future], future.result())
+    except BaseException:
+        # Stop now rather than waiting for the clips in flight: what finished is saved, the
+        # rest renders on the next run. (Half-written files are temp files, cleaned up later.)
+        processes = list((getattr(pool, "_processes", None) or {}).values())
+        pool.shutdown(wait=False, cancel_futures=True)
+        for process in processes:
+            process.terminate()
+        raise
+    pool.shutdown(wait=True)
 
 
 class Plan:
@@ -442,7 +447,8 @@ def finish_station(plan: Plan, lock: Lock) -> tuple[bool, int]:
     return True, remove_orphans(out, script.station, {c.id for c in script.clips})
 
 
-def render(scripts: list[Script], out: Path, force: bool, workers: int, threads: int, nice: int, full: bool) -> int:
+def render(scripts: list[Script], out: Path, force: bool, workers: int, threads: int, nice: int, full: bool,
+           lock_path: Path | None) -> int:
     from clip import ENGINE_VERSION, Failure
     from fingerprint import EngineFingerprints
     from tts import model_identity
@@ -450,7 +456,7 @@ def render(scripts: list[Script], out: Path, force: bool, workers: int, threads:
     started = time.time()
     engine = EngineFingerprints(ENGINE_VERSION)
     model = model_identity(KOKORO_MODEL, KOKORO_VOICES)
-    lock = Lock(LOCK if out.resolve() == PUBLIC.resolve() else None)
+    lock = Lock(lock_path)
     plans, todo = plan_all(scripts, out, lock, engine, model, force)
     by_station = {plan.script.station: plan for plan in plans}
 
@@ -515,7 +521,7 @@ def render(scripts: list[Script], out: Path, force: bool, workers: int, threads:
             if not complete:
                 incomplete.append(plan.script.station)
             elif removed:
-                print(f"  removed {removed} orphaned clip(s) from {rel(out / plan.script.station)}")
+                print(f"  removed {removed} stale file(s) from {rel(out / plan.script.station)}")
         if full and not interrupted:
             for station in remove_orphan_stations(out, {s.station for s in scripts}):
                 lock.drop_station(station)
@@ -635,6 +641,7 @@ def main() -> int:
     parser.add_argument("--only", action="append", default=[], metavar="GLOB",
                         help="with --gallery: only these sounds, e.g. 'bed-*' or 'sfx-meow'")
     parser.add_argument("--gallery-voice", default="af_heart", help=argparse.SUPPRESS)
+    parser.add_argument("--lock", type=Path, default=None, help=argparse.SUPPRESS)  # testing: a lock for any --out
     args = parser.parse_args()
     outside_public = args.out.resolve() != PUBLIC.resolve()
 
@@ -669,8 +676,9 @@ def main() -> int:
         sys.exit(f"error: rendering needs numpy, soundfile and kokoro-onnx ({e}). "
                  "Point VOICE_PYTHON (npm scripts) at a Python that has them.")
     full = not args.station and not args.clip
+    lock_path = args.lock or (None if outside_public else LOCK)
     return render(scripts, args.out, args.force, args.jobs or default_jobs(), max(1, args.threads), max(0, args.nice),
-                  full)
+                  full, lock_path)
 
 
 def _terminate(signum, frame) -> None:

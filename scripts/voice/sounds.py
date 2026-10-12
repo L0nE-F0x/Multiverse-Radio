@@ -520,9 +520,9 @@ def bed_kitchen(rng, s):
     chops = np.zeros(n + ns(0.3), np.float32)
     for at in _events(rng, s, 7.0, (1.5, 4.0), min_gap=3.0):
         for k in range(int(rng.integers(3, 7))):
-            place(chops, _chop(rng), at + k * rng.uniform(0.17, 0.24), rng.uniform(0.6, 1.0))
+            place(chops, dsp.at_rms(_chop(rng), -22), at + k * rng.uniform(0.17, 0.24), rng.uniform(0.6, 1.0))
     return (dsp.at_rms(hood, -21) + dsp.at_rms(f32(motor), -34) + dsp.at_rms(simmer, -25)
-            + dsp.at_rms(clinks(rng, s, 0.35), -31) + dsp.at_rms(chops[:n] + 1e-9, -31))
+            + dsp.at_rms(clinks(rng, s, 0.35), -31) + chops[:n])
 
 
 def bed_truckstop(rng, s):
@@ -547,16 +547,16 @@ def bed_truckstop(rng, s):
             centre = np.where(u < peak, f_hi, f_lo)  # the doppler drop as it passes
             return amp * (f > 60) / (1 + (f / centre) ** 2) * (np.maximum(f, 1) / 300) ** -0.3
 
-        place(traffic, dsp.shaped_noise(rng, ns(dur), mag), at, rng.uniform(0.5, 1.0))
+        place(traffic, dsp.at_rms(dsp.shaped_noise(rng, ns(dur), mag), -22), at, rng.uniform(0.5, 1.0))
     brakes = np.zeros(n + ns(1), np.float32)
     for at in _events(rng, s, 14.0, (4.0, 9.0), min_gap=5.0):
         dur = rng.uniform(0.5, 0.9)
         m = ns(dur)
         tt = times(m)
         hiss_ = dsp.band(dsp.white(rng, m), 1800, 6000) * np.minimum(1, tt / 0.01) * np.exp(-tt / (dur * 0.5))
-        place(brakes, f32(hiss_), at, rng.uniform(0.6, 1.0))
+        place(brakes, dsp.at_rms(f32(hiss_), -30), at, rng.uniform(0.6, 1.0))
     room = dsp.band(murmur(rng, s, talkers=3), 150, 2000)
-    return (dsp.at_rms(diesel, -22) + dsp.at_rms(traffic, -24) + dsp.at_rms(brakes[:n] + 1e-9, -36)
+    return (dsp.at_rms(diesel, -22) + traffic + brakes[:n]
             + dsp.at_rms(room, -33))
 
 
@@ -593,9 +593,9 @@ def bed_sea(rng, s):
         for _ in range(int(rng.integers(1, 3))):
             at = peak + rng.uniform(-0.8, 0.6)
             if 0 <= at < s:
-                place(timbers, creak(rng, rng.uniform(0.5, 1.4), rate=(8, rng.uniform(30, 55)), modes=wood), at,
+                place(timbers, dsp.at_rms(creak(rng, rng.uniform(0.5, 1.4), rate=(8, rng.uniform(30, 55)), modes=wood), -22), at,
                       rng.uniform(0.4, 1.0))
-    return dsp.at_rms(water, -21) + dsp.at_rms(lapping[:n] + 1e-9, -31) + dsp.at_rms(timbers[:n] + 1e-9, -25)
+    return dsp.at_rms(water, -21) + dsp.at_rms(lapping[:n] + 1e-9, -31) + timbers[:n]
 
 
 def _owl(rng: np.random.Generator) -> np.ndarray:
@@ -634,9 +634,9 @@ def bed_night(rng, s):
     forest = dsp.reverb_ir(rng, 1.6, predelay=0.05, hi=3000)
     for at in _events(rng, s, 7.0, (1.0, 4.0), min_gap=4.0):
         hoot = dsp.add_reverb(dsp.band(_owl(rng), 200, 2500), forest, -6, dry=0.6)
-        place(owls, hoot, at, rng.uniform(0.6, 1.0))
+        place(owls, dsp.at_rms(hoot, -23), at, rng.uniform(0.6, 1.0))
     air = dsp.band(dsp.colored(rng, n, -4), 80, 1500) * (0.8 + 0.2 * dsp.wander(rng, n, 0.2))
-    return dsp.at_rms(crickets, -24) + dsp.at_rms(owls[:n] + 1e-9, -27) + dsp.at_rms(air, -30)
+    return dsp.at_rms(crickets, -24) + owls[:n] + dsp.at_rms(air, -30)
 
 
 def _oompah(rng: np.random.Generator, seconds: float) -> np.ndarray:
@@ -673,9 +673,9 @@ def bed_fete(rng, s):
     for at in _events(rng, s, 12.0, (3.0, 8.0), min_gap=5.0):
         dur = rng.uniform(1.2, 2.2)
         claps = clap_texture(rng, dur, 80, 0.2) * np.sin(np.pi * times(ns(dur)) / dur) ** 2
-        place(patter, f32(claps), at)
-    patter = dsp.band(patter[:n] + 1e-9, 300, 3500)
-    return dsp.at_rms(crowd, -23) + dsp.at_rms(band_, -24) + dsp.at_rms(patter, -34)
+        place(patter, dsp.at_rms(f32(claps), -28), at)
+    patter = dsp.band(patter[:n], 300, 3500, order=4)
+    return dsp.at_rms(crowd, -23) + dsp.at_rms(band_, -24) + patter
 
 
 def _cough(rng: np.random.Generator) -> np.ndarray:
@@ -701,17 +701,17 @@ def bed_hall(rng, s):
         if kind < 0.4:  # a chair creaks or scrapes
             sound = creak(rng, rng.uniform(0.2, 0.6), rate=(25, rng.uniform(60, 140)),
                           modes=((260, 0.03), (540, 0.02), (1300, 0.012)))
-            gain = 0.8
+            gain = dsp.db(-24)
         elif kind < 0.75:  # papers
             dur = rng.uniform(0.15, 0.45)
             m = ns(dur)
             crinkle = dsp.band(dsp.white(rng, m), 1800, 7000) * (rng.random(m) < 0.25) * np.sin(np.pi * times(m) / dur)
-            sound, gain = f32(crinkle), 0.5
+            sound, gain = f32(crinkle), dsp.db(-27)
         else:
-            sound, gain = _cough(rng), 0.9
-        place(events, sound, at, gain * rng.uniform(0.5, 1.0))
+            sound, gain = _cough(rng), dsp.db(-22)
+        place(events, dsp.at_rms(sound, 0.0), at, gain * rng.uniform(0.5, 1.0))
     events = dsp.add_reverb(events[:n] + 1e-9, room, -5)[:n]
-    return dsp.at_rms(air, -22) + dsp.at_rms(vent, -24) + dsp.at_rms(events, -29)
+    return dsp.at_rms(air, -22) + dsp.at_rms(vent, -24) + events
 
 
 def bed_studio(rng, s):
@@ -728,8 +728,8 @@ def bed_studio(rng, s):
             dur = rng.uniform(0.2, 0.4)
             m = ns(dur)
             sound = f32(dsp.band(dsp.white(rng, m), 1500, 6000) * (rng.random(m) < 0.3) * np.sin(np.pi * times(m) / dur))
-        place(small, sound, at, rng.uniform(0.3, 0.8))
-    return dsp.at_rms(air, -22) + dsp.at_rms(f32(hum), -38) + dsp.at_rms(small[:n] + 1e-9, -33)
+        place(small, dsp.at_rms(sound, -27), at, rng.uniform(0.4, 1.0))
+    return dsp.at_rms(air, -22) + dsp.at_rms(f32(hum), -38) + small[:n]
 
 
 def _thunder(rng: np.random.Generator) -> np.ndarray:
@@ -753,7 +753,7 @@ def bed_storm(rng, s):
     wind = bed_wind(rng, s)
     thunder = np.zeros(n + ns(5.5), np.float32)
     for at in _events(rng, s, 6.0, (0.5, 3.0), min_gap=3.0):
-        place(thunder, _thunder(rng), at, rng.uniform(0.5, 1.0))
+        place(thunder, dsp.at_rms(_thunder(rng), -20), at, rng.uniform(0.5, 1.0))
     weird = np.zeros(n + ns(4), np.float32)
     for at in _events(rng, s, 4.0, (1.0, 3.0), min_gap=1.5):
         dur = rng.uniform(1.2, 3.0)
@@ -761,9 +761,9 @@ def bed_storm(rng, s):
         tt = times(m)
         f = rng.uniform(150, 600) * 2 ** (rng.uniform(-2, 2) * tt / dur)
         tone = np.sin(dsp.phase_of(f)) * np.sin(TAU * rng.uniform(20, 70) * tt)  # ring-modulated: the sky, bending
-        place(weird, f32(tone * np.sin(np.pi * tt / dur) ** 2), at, rng.uniform(0.4, 1.0))
+        place(weird, dsp.at_rms(f32(tone * np.sin(np.pi * tt / dur) ** 2), -27), at, rng.uniform(0.4, 1.0))
     squalls = dsp.band(dsp.white(rng, n), 600, 6000) * dsp.wander(rng, n, 1.5) ** 4
-    return (dsp.at_rms(wind, -21) + dsp.at_rms(thunder[:n] + 1e-9, -21) + dsp.at_rms(weird[:n] + 1e-9, -30)
+    return (dsp.at_rms(wind, -21) + thunder[:n] + weird[:n]
             + dsp.at_rms(squalls, -29))
 
 
@@ -782,9 +782,9 @@ def bed_cockpit(rng, s):
             m = ns(0.05)
             tt = times(m)
             blip = np.sin(TAU * f0 * (1 + 0.5 * (k % 2)) * tt) * np.sin(np.pi * tt / 0.05) ** 2
-            place(chirps, f32(blip), at + k * 0.09, 0.8)
+            place(chirps, dsp.at_rms(f32(blip), -25), at + k * 0.09)
     relays = dsp.band(dsp.impulses(rng, n, 0.4, 0.5, 1.0), 800, 5000)
-    return (dsp.at_rms(f32(drive), -22) + dsp.at_rms(vent, -27) + dsp.at_rms(chirps[:n] + 1e-9, -31)
+    return (dsp.at_rms(f32(drive), -22) + dsp.at_rms(vent, -27) + chirps[:n]
             + dsp.at_rms(relays + 1e-9, -40))
 
 
@@ -797,8 +797,8 @@ def bed_greenhouse(rng, s):
         dur = rng.uniform(1.5, 3.0)
         m = ns(dur)
         tt = times(m)
-        jet = dsp.band(dsp.white(rng, m), 2500, 7000) * np.minimum(1, tt / 0.3) * np.minimum(1, (dur - tt) / 0.6)
-        place(mist, f32(jet), at, rng.uniform(0.6, 1.0))
+        jet = dsp.band(dsp.white(rng, m), 3000, 7000, order=3) * np.minimum(1, tt / 0.3) * np.minimum(1, (dur - tt) / 0.6)
+        place(mist, dsp.at_rms(f32(jet), -33), at, rng.uniform(0.6, 1.0))
     glass = dsp.reverb_ir(rng, 0.9, predelay=0.01, hi=7000)
     drips = np.zeros(n + ns(0.2), np.float32)
     for at in _events(rng, s, 0.9, (0, 0.6)):
@@ -811,9 +811,8 @@ def bed_greenhouse(rng, s):
         tt = times(m)
         f = rng.uniform(190, 240) * (1 + 0.04 * np.sin(TAU * 3 * tt)) * (1.03 - 0.06 * tt / dur)
         buzz = sum(np.sin(k * dsp.phase_of(f)) / k for k in range(1, 12))
-        place(bees, dsp.band(f32(buzz * np.sin(np.pi * tt / dur) ** 2), 150, 3000), at)
-    return (dsp.at_rms(fan, -24) + dsp.at_rms(mist[:n] + 1e-9, -31) + dsp.at_rms(drips + 1e-9, -27)
-            + dsp.at_rms(bees[:n] + 1e-9, -33))
+        place(bees, dsp.at_rms(dsp.band(f32(buzz * np.sin(np.pi * tt / dur) ** 2), 150, 3000), -30), at)
+    return dsp.at_rms(fan, -24) + mist[:n] + dsp.at_rms(drips + 1e-9, -27) + bees[:n]
 
 
 def bed_cave_drip(rng, s):
@@ -1225,7 +1224,7 @@ MORSE_TEXT = "CQ CQ DE NJ7 NJ7 K"  # "calling anyone, this is Nightjar relay sev
 def sfx_morse(rng, s):
     """Morse code on a CW tone (about 20 words a minute), cut at a letter boundary."""
     dot = 0.06
-    n = ns(s)
+    n = ns(max(s, 1.0))
     out = np.zeros(n + ns(0.1), np.float32)
     f0 = 650.0
     at = 0.0
@@ -1239,7 +1238,7 @@ def sfx_morse(rng, s):
             continue
         code = MORSE[ch]
         length = sum(dot * (1 if c == "." else 3) + dot for c in code)
-        if at + length > s:
+        if at + length > s and at > 0:  # always at least one letter, then whole letters only
             break
         for c in code:
             d = dot * (1 if c == "." else 3)
@@ -1370,13 +1369,15 @@ def _chop(rng: np.random.Generator) -> np.ndarray:
 
 
 def sfx_chopping(rng, s):
-    """Knife on a chopping board, about five chops a second."""
+    """Knife on a chopping board, about five chops a second (always at least one: a short
+    `seconds` makes a single tap)."""
     out = np.zeros(ns(s) + ns(0.1), np.float32)
     at = 0.0
-    while at < s - 0.05:
+    while True:
         place(out, _chop(rng), at, rng.uniform(0.7, 1.0))
         at += rng.uniform(0.17, 0.23)
-    return out
+        if at >= s - 0.05:
+            return out
 
 
 def sfx_pips(rng, s):
