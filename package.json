@@ -12,6 +12,8 @@
     "content:sync": "node scripts/sync-episodes.mjs",
     "test": "vitest run",
     "test:watch": "vitest",
+    "test:e2e": "vite build && playwright test",
+    "serve:dist": "node tests/e2e/serve-dist.mjs",
     "pwa:assets": "node src/pwa/assets/render.mjs"
   },
   "dependencies": {

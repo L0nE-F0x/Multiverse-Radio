@@ -5,3 +5,5 @@ dist
 scripts/.cache
 .netlify
 .env
+playwright-report
+test-results
