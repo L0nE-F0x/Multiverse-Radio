@@ -21,6 +21,23 @@ export function bayer(x: number, y: number): number {
   return BAYER[((y & 3) << 2) | (x & 3)]!;
 }
 
+const BAYER8 = (() => {
+  const m = new Float32Array(64);
+  for (let y = 0; y < 8; y++)
+    for (let x = 0; x < 8; x++) {
+      // Bit-interleave x^y and y (reversed) for the classic 8×8 matrix.
+      const a = x ^ y;
+      const v = ((a & 1) << 5) | ((y & 1) << 4) | ((a & 2) << 2) | ((y & 2) << 1) | ((a & 4) >> 1) | ((y & 4) >> 2);
+      m[y * 8 + x] = (v + 0.5) / 64;
+    }
+  return m;
+})();
+
+/** Finer 8×8 ordered-dither threshold, 0..1: 64 levels for smooth skies and fog. */
+export function bayer8(x: number, y: number): number {
+  return BAYER8[((y & 7) << 3) | (x & 7)]!;
+}
+
 export class Gfx {
   /** Buffer size in pixels. */
   w = 0;
@@ -34,6 +51,14 @@ export class Gfx {
   frame: Int32Array = new Int32Array(0);
   /** Static background restored at the start of every frame. */
   bg: Int32Array = new Int32Array(0);
+  /**
+   * Exposure map (one float per buffer pixel, 1 = as drawn), or null for even light. Built in
+   * background() with lighting()/light(); the runner's post pass multiplies every frame by it,
+   * so animated things darken as they leave the light.
+   */
+  exposure: Float32Array | null = null;
+  /** Bumped whenever the exposure map changes. */
+  exposureVersion = 0;
   // Clip rectangle in buffer coordinates (left/top inclusive, right/bottom exclusive).
   private cl = 0;
   private ct = 0;
@@ -52,7 +77,75 @@ export class Gfx {
     this.frame = new Int32Array(w * h);
     this.bg = new Int32Array(w * h);
     this.buf = this.frame;
+    this.exposure = null;
+    this.exposureVersion++;
     this.noClip();
+  }
+
+  // ── lighting (exposure map) ──────────────────────────────────────────
+
+  /**
+   * Light the scene: start an exposure map with everything at `ambient` (e.g. 0.45 for a dim
+   * room), then add sources with light()/lightRect(). Call from background(). Exposure
+   * multiplies the final picture (up to ~1.45), so it darkens sprites too.
+   */
+  lighting(ambient: number) {
+    if (!this.exposure || this.exposure.length !== this.w * this.h) this.exposure = new Float32Array(this.w * this.h);
+    this.exposure.fill(ambient);
+    this.exposureVersion++;
+  }
+
+  /** A soft light in the exposure map: +k at (x, y), fading smoothly to nothing at rx/ry. */
+  light(x: number, y: number, rx: number, k = 0.6, ry = rx) {
+    const e = this.exposure;
+    if (!e || rx <= 0 || ry <= 0) return;
+    const x0 = Math.max(0, Math.floor(x - rx) - this.ox);
+    const x1 = Math.min(this.w - 1, Math.ceil(x + rx) - this.ox);
+    const y0 = Math.max(0, Math.floor(y - ry) - this.oy);
+    const y1 = Math.min(this.h - 1, Math.ceil(y + ry) - this.oy);
+    for (let by = y0; by <= y1; by++) {
+      const dy = (by + this.oy + 0.5 - y) / ry;
+      for (let bx = x0; bx <= x1; bx++) {
+        const dx = (bx + this.ox + 0.5 - x) / rx;
+        const d = dx * dx + dy * dy;
+        if (d >= 1) continue;
+        const f = 1 - d;
+        e[by * this.w + bx]! += k * f * f;
+      }
+    }
+    this.exposureVersion++;
+  }
+
+  /** Add k over a rectangle, feathered over `soft` pixels at the edges (window light, screens). */
+  lightRect(x: number, y: number, w: number, h: number, k: number, soft = 6) {
+    const e = this.exposure;
+    if (!e) return;
+    const x0 = Math.max(0, Math.floor(x - soft) - this.ox);
+    const x1 = Math.min(this.w, Math.ceil(x + w + soft) - this.ox);
+    const y0 = Math.max(0, Math.floor(y - soft) - this.oy);
+    const y1 = Math.min(this.h, Math.ceil(y + h + soft) - this.oy);
+    const s = Math.max(0.001, soft);
+    for (let by = y0; by < y1; by++) {
+      const wy = by + this.oy + 0.5;
+      const fy = Math.min(1, Math.max(0, Math.min(wy - (y - s), y + h + s - wy) / (2 * s)));
+      for (let bx = x0; bx < x1; bx++) {
+        const wx = bx + this.ox + 0.5;
+        const fx = Math.min(1, Math.max(0, Math.min(wx - (x - s), x + w + s - wx) / (2 * s)));
+        const f = fx * fy;
+        e[by * this.w + bx]! += k * f * f * (3 - 2 * f);
+      }
+    }
+    this.exposureVersion++;
+  }
+
+  /** Exposure at a world point (1 when there is no map). */
+  exposureAt(x: number, y: number): number {
+    const e = this.exposure;
+    if (!e) return 1;
+    const bx = Math.floor(x) - this.ox;
+    const by = Math.floor(y) - this.oy;
+    if (bx < 0 || by < 0 || bx >= this.w || by >= this.h) return 1;
+    return e[by * this.w + bx]!;
   }
 
   /** Restrict drawing to a world-space rectangle. */
