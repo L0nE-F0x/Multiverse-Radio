@@ -461,10 +461,10 @@ lines = [
 [[clip]]
 id = "dj-halloween-001"
 category = "dj"
-title = "The Hitchhiker"
+title = "A Passenger Since 1958"
 dates = ["10-24", "10-25", "10-26", "10-27", "10-28", "10-29", "10-30", "10-31"]
 lines = [
-  { say = "host", text = "Halloween on the network. Drivers, if you pick up a hitchhiker on the Down Road, and they tell you they've been waiting since nineteen fifty eight, give them a lift." },
+  { say = "host", text = "Halloween on the network. Drivers, if somebody thumbs a ride on the Down Road, and they tell you they've been waiting since nineteen fifty eight, give them a lift." },
   { say = "host", text = "They're harmless. Very polite. They tip in old coins. Just don't take the sideways road with them in the cab. They don't like it either." },
 ]
 
