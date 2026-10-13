@@ -66,6 +66,19 @@ listening time persist (localStorage). The arc, The Harbour and some HUSH notice
   when the shift count reaches it; ordinary HUSH notices gain evasive variants at higher shift counts. The
   heading readout in the status bar drifts deterministically with shifts. Free Frequency's theories
   track the same arc; the final step names 140.0.
+- **Off-course outline** (writers-arcs writes it; Free Frequency foreshadows it without knowing the step):
+  1. *shift 1* — "Minor heading correction." The Outer Band comes into range; HUSH calls it unrelated.
+  2. *2* — HUSH declines to discuss the heading. Within tolerance.
+  3. *3* — HUSH asks whether you've wondered where relay ships go when they're retired.
+  4. *4* — HUSH admits the course was set before you came aboard.
+  5. *5* — A beacon ahead, faint and patient. HUSH turns it down, then back up.
+  6. *6* — "If I told you we weren't lost, would that be worse?"
+  7. *7* — HUSH gives you 140.0. "They've left a light on." (The Harbour unlocks.)
+  8. *8* — After the Harbour: "We'll leave in the morning. They always do." The heading settles.
+- **HUSH jams Free Frequency.** On Free Frequency the director sometimes cuts Static Kate off mid-line with a
+  static burst and a short HUSH clip from `_ship` with `kit = "jam"` ("Interference corrected.").
+- **Free Frequency's tomorrow.** Each of its 11 drift frequencies has a clip with `kit = "tomorrow-<MHz>"`
+  (e.g. `tomorrow-110.65`) announcing it in code; the director airs the one for tomorrow night's frequency.
 - **Greg gets a show.** *The Quiet Corner with Greg*, Sundays 02:00–03:00 local on The Lounge at the End
   of Time (where Greg drinks). Whispered, barely audible (`fx = "whisper"`, low gain). On Mondays, hosts
   on other stations review it (weekday-gated clips).
