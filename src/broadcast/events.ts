@@ -13,6 +13,7 @@ export const EVENT_NAMES: Record<EventId, string> = {
   'station-swap': 'Station swap',
   'signal-from-beyond': 'Signal from beyond',
   'time-slip': 'Time slip',
+  convergence: 'The Convergence',
 };
 
 const WEIGHT: Record<EventId, number> = {
@@ -22,6 +23,8 @@ const WEIGHT: Record<EventId, number> = {
   'station-swap': 2,
   'signal-from-beyond': 1.5,
   'time-slip': 2,
+  // Weekly at a fixed time, not part of the daily draw. TODO(v4 director): schedule it.
+  convergence: 0,
 };
 
 /** Seconds each kind of event lasts. */
@@ -32,6 +35,7 @@ const LENGTH_S: Record<EventId, [number, number]> = {
   'station-swap': [60, 180],
   'signal-from-beyond': [50, 90],
   'time-slip': [60, 120],
+  convergence: [240, 360],
 };
 
 const dayCache = new Map<number, ActiveEvent[]>();
@@ -48,7 +52,7 @@ export function eventsOnDay(day: number): ActiveEvent[] {
   for (let i = 0; i < count; i++) {
     const id = weightedPick(
       rng,
-      EVENT_IDS.filter((e) => e !== previous).map((e): [EventId, number] => [e, WEIGHT[e]]),
+      EVENT_IDS.filter((e) => e !== previous && WEIGHT[e] > 0).map((e): [EventId, number] => [e, WEIGHT[e]]),
     )!;
     const [lo, hi] = LENGTH_S[id];
     const durationMs = rng.int(lo, hi) * 1000;
@@ -122,6 +126,7 @@ const SHAPE: Record<EventId, { lead: number; base: number; underClip: number }> 
   'station-swap': { lead: 2500, base: 1, underClip: 0.2 },
   'signal-from-beyond': { lead: 4000, base: 0, underClip: 0 },
   'time-slip': { lead: 0, base: 1, underClip: 0.2 },
+  convergence: { lead: 3000, base: 1, underClip: 0.2 },
 };
 
 const SLIP_BACK_MS = 30_000;

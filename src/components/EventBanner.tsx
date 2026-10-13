@@ -11,6 +11,7 @@ const EVENT_NOTICE: Record<EventId, string> = {
   'station-swap': 'Host assignments inconsistent across the band. Logged.',
   'signal-from-beyond': 'Unidentified transmission on every frequency. Do not reply.',
   'time-slip': 'Chronometry fault. The last minute may repeat.',
+  convergence: 'All stations reporting the same anomaly. Cross-referencing.',
 };
 
 /** Shown on every station while a multiverse-wide event is in progress. */

@@ -46,7 +46,8 @@ describe('multiverse events', () => {
         seen.add(e.id);
       }
     }
-    expect(seen.size).toBe(EVENT_IDS.length);
+    // The Convergence is weekly at a fixed time, not part of the daily draw.
+    expect(seen.size).toBe(EVENT_IDS.filter((e) => e !== 'convergence').length);
   });
 
   it('happens at the same instant for everyone, whatever their time zone', () => {

@@ -241,6 +241,9 @@ export const useBroadcast = create<BroadcastStore>()((set, get) => {
     show: null,
     event: null,
     discovered: storage.getDiscovered(),
+    // TODO(v4 director): persist and count night shifts; drift the heading with them.
+    shifts: 0,
+    heading: 0,
     status: 'off',
     signalMessage: null,
     onAir: null,

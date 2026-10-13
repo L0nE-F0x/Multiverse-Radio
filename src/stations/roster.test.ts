@@ -27,13 +27,19 @@ describe('station roster', () => {
     expect(new Set(STATIONS.map((s) => s.scene)).size).toBe(STATIONS.length);
   });
 
-  it('keeps main stations inside the main band and every station on the dial', () => {
+  it('keeps ordinary stations inside the main or Outer Band and every station on the dial', () => {
     for (const s of STATIONS) {
       expect(s.frequency).toBeGreaterThanOrEqual(DIAL.min);
       expect(s.frequency).toBeLessThanOrEqual(DIAL.max);
       if (!s.secret) {
         expect(s.frequency).toBeGreaterThanOrEqual(DIAL.mainBand[0]);
-        expect(s.frequency).toBeLessThanOrEqual(DIAL.mainBand[1]);
+        expect(s.frequency).toBeLessThanOrEqual(DIAL.outerBand[1]);
+      }
+      for (const f of s.drift ?? []) {
+        expect(f).toBeGreaterThanOrEqual(DIAL.outerBand[0]);
+        expect(f).toBeLessThanOrEqual(DIAL.outerBand[1]);
+        expect(Math.abs(f / DIAL.step - Math.round(f / DIAL.step))).toBeLessThan(1e-6);
+        for (const other of STATIONS) if (other !== s) expect(Math.abs(other.frequency - f)).toBeGreaterThanOrEqual(0.35 - 1e-9);
       }
       expect(PHOSPHOR_IDS).toContain(s.phosphor);
     }
@@ -46,9 +52,20 @@ describe('station roster', () => {
     for (const s of STATIONS) expect(Math.abs(s.frequency / DIAL.step - Math.round(s.frequency / DIAL.step))).toBeLessThan(1e-6);
   });
 
-  it('has 42 main stations and 3 secret ones', () => {
-    expect(MAIN_STATIONS).toHaveLength(42);
-    expect(STATIONS.filter((s) => s.secret)).toHaveLength(3);
+  it('has 54 main stations (42 + the Outer Band) and 7 secret ones', () => {
+    expect(MAIN_STATIONS).toHaveLength(54);
+    expect(MAIN_STATIONS.filter((s) => s.frequency > DIAL.mainBand[1])).toHaveLength(12);
+    expect(STATIONS.filter((s) => s.secret)).toHaveLength(7);
+  });
+
+  it('gives each v4 secret a different unlock mechanism', () => {
+    const kinds = STATIONS.filter((s) => s.unlock).map((s) => s.unlock!.kind);
+    expect(kinds.sort()).toEqual(['clock', 'idle', 'sequence', 'shifts']);
+    for (const s of STATIONS) {
+      if (s.unlock) expect(s.secret).toBe(true);
+      if (s.unlock?.kind === 'sequence')
+        for (const f of s.unlock.frequencies) expect(MAIN_STATIONS.some((m) => m.frequency === f)).toBe(true);
+    }
   });
 
   it('includes the default station', () => {

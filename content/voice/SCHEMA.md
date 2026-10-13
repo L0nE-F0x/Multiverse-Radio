@@ -48,7 +48,10 @@ show = "the-3am-hour"        # belongs to this show ([[show]] id)
 serial = { id = "greg-comes-home", episode = 3 }   # daily storyline episode
 dates = ["10-31"]            # only on these local dates (MM-DD); preferred that day
 level = 2                    # _ship.toml only: strangeness 0-3
-event = "dimensional-storm"  # _events.toml only: which event
+event = "dimensional-storm"  # _events.toml only: which event (v4: also "convergence" in station files)
+# v4 (all optional):
+days = [1]                   # only on these local weekdays (0 = Sunday … 6 = Saturday); preferred that day
+arc = { id = "off-course", step = 3 }   # _ship.toml only: airs once, after >= 3 night shifts
 lines = [
   { say = "host", text = "You're tuned to Void Beats." },
   { pause = 0.4 },
@@ -74,6 +77,8 @@ end = 5
 host = "DJ Eventually"   # optional display name, if not the station host
 ```
 
+v4: add `days = [0]` (local weekdays, 0 = Sunday) for a weekly show, e.g. Greg's Sunday slot.
+
 Give a show an `id` (category) clip with `show = "<id>"` and `part = "open"` to open it, and
 `dj` links with `show = "<id>"` for show-specific chat. Clips without `show` air at any time.
 
@@ -84,6 +89,26 @@ all from the same station and `kit`. Write bodies that work after any open and b
 close: ten opens, twenty bodies and ten closes make thousands of different segments.
 Typical kits: `news` (anchor intro, stories, sign-off), `ads` (pitch, small print, sponsor
 tag), `calls` (caller's problem, advice, goodbye), `quiz` (question, wrong answers, score).
+
+### The Convergence (v4)
+
+Every Saturday at 20:00 UTC, for 4–6 minutes, every station notices the same thing. The topic
+rotates weekly (weeks since the epoch, mod 6) through these kits:
+
+| kit | What everyone notices |
+| --- | --- |
+| `missing-moon` | A moon has gone missing. Everyone agrees one is gone; nobody agrees which. |
+| `the-smell` | Everywhere, at once, smells faintly of toast. |
+| `the-song` | Everyone has the same half-remembered song stuck in their head. Nobody can finish it. |
+| `the-knock` | Three knocks on every studio door at the same moment. Nobody is there. |
+| `wrong-colour` | The sky is briefly a colour nobody has a word for. |
+| `the-pigeon` | The same pigeon has walked into every studio. It seems to know people. |
+
+`_events.toml` holds the shared parts: per kit, an `open` and a `close` (`category = "event"`,
+`event = "convergence"`, `kit = "<topic>"`, `part = "open"|"close"`). **Every station's own
+script** holds one reaction per kit: `category = "event"`, `event = "convergence"`,
+`kit = "<topic>"`, 5–15 s, in the host's voice and the station's style. The event airs open →
+the tuned station's reaction → close.
 
 ### Line types
 

@@ -61,6 +61,20 @@ export const RECIPE_IDS = [
   'distress-beacon',
   'stuck-loop',
   'time-signal',
+  // v4: Outer Band genres (docs/V4-PLAN.md)
+  'disco',
+  'space-funk',
+  'warehouse-techno',
+  'heat-death-house',
+  'roots-reggae',
+  'island-reggae',
+  'exotica',
+  'space-age-pop',
+  // v4: beds for the Outer Band talk stations
+  'court-bed',
+  'theatre-organ',
+  'traffic-bed',
+  'pirate-bed',
 ] as const;
 export type RecipeId = (typeof RECIPE_IDS)[number];
 
@@ -137,6 +151,24 @@ export const SCENE_IDS = [
   'oddity-beacon',
   'oddity-jukebox',
   'oddity-clock',
+  // v4: the 12 Outer Band stations
+  'roller-disco',
+  'supernova-casino',
+  'reactor-room',
+  'last-rave',
+  'farm-moon',
+  'drift-island',
+  'tiki-satellite',
+  'hifi-den',
+  'radio-theatre',
+  'courtroom',
+  'wormhole-interchange',
+  'pirate-attic',
+  // v4: secret stations
+  'switchboard',
+  'between-minutes',
+  'static-presence',
+  'harbour',
 ] as const;
 export type SceneId = (typeof SCENE_IDS)[number];
 
@@ -186,7 +218,33 @@ export interface StationDef {
   mood: string[];
   /** Hidden from the guide and dial markings until found by tuning to its exact frequency. */
   secret?: boolean;
+  /** v4, secret stations only: how it's found. Default `{ kind: 'tune' }` (the v3 behaviour). */
+  unlock?: SecretUnlock;
+  /**
+   * v4: a station that moves. Candidate frequencies (MHz, on the fine-tuning grid); the director
+   * picks one per local night (06:00 to 06:00), seeded by the date, so it's somewhere else
+   * tomorrow. `frequency` stays the canonical value for sorting and display fallbacks.
+   */
+  drift?: number[];
 }
+
+/**
+ * v4: how a secret station is found (docs/V4-PLAN.md, "Secrets").
+ * tune     – hold its exact frequency (v3)
+ * sequence – tune these frequencies in order, each held `holdMs`, all within `withinMs`; then
+ *            the station is discovered and on air at its own frequency
+ * clock    – only on air inside these local-time windows ("HH:MM", end exclusive); static there
+ *            otherwise, so it can only be discovered while on air
+ * idle     – sit in pure static (no station, pirate, oddity or bleed) for `afterMs` while playing;
+ *            the station comes to wherever you are, then lives at its own frequency
+ * shifts   – discovered once the listener has worked `count` night shifts (HUSH grants it)
+ */
+export type SecretUnlock =
+  | { kind: 'tune' }
+  | { kind: 'sequence'; frequencies: number[]; holdMs: number; withinMs: number }
+  | { kind: 'clock'; windows: { from: string; to: string }[] }
+  | { kind: 'idle'; afterMs: number }
+  | { kind: 'shifts'; count: number };
 
 /**
  * A named programme on a station, by the listener's local time. Defined in the station's
@@ -204,6 +262,8 @@ export interface ShowDef {
   end: number;
   /** Display name of the presenter, if not the station host. */
   host?: string;
+  /** v4: only on these local weekdays (0 = Sunday … 6 = Saturday; the start hour's day). Default: every day. */
+  days?: number[];
 }
 
 /** `/voice/_shows.json`: every station's shows. Stations without shows are absent. */
@@ -287,6 +347,13 @@ export interface VoiceClip {
   level?: number;
   /** Event clips only: which multiverse event (EVENT_IDS) this clip belongs to. */
   event?: string;
+  /**
+   * v4, ship computer only: a step of a long arc ("off-course"). Step n airs once, the first time
+   * HUSH speaks after the listener has worked ≥ n night shifts; steps never repeat or skip ahead.
+   */
+  arc?: { id: string; step: number };
+  /** v4: only air on these local weekdays (0 = Sunday … 6 = Saturday). Preferred that day, like `dates`. */
+  days?: number[];
   lines: CaptionLine[];
 }
 
@@ -298,6 +365,16 @@ export interface VoiceManifest {
   version: 1;
   station: string;
   clips: VoiceClip[];
+}
+
+/**
+ * v4: `/voice/_index.json`, written by the voice renderer. One entry per manifest: station ids
+ * and pools (`_shared`, `_ship`, `_events`, `_pirate`, `_oddities`). Offline packs use it for sizes
+ * and to notice changed stations (clip URLs aren't content-hashed).
+ */
+export interface VoiceIndex {
+  version: 1;
+  entries: Record<string, { clips: number; bytes: number; version: string }>;
 }
 
 // ── Schedule ──────────────────────────────────────────────────────────────────
@@ -346,6 +423,8 @@ export const DIAL = {
   min: 76,
   max: 160,
   mainBand: [87.5, 108] as const,
+  /** v4: the Outer Band, in range since the Nightjar drifted. Ordinary (non-secret) stations live here too. */
+  outerBand: [108, 118] as const,
   /** Fine-tuning resolution in MHz. */
   step: 0.05,
 } as const;
@@ -363,6 +442,8 @@ export type OddityId = (typeof ODDITY_IDS)[number];
  *   station-swap        – hosts wake up on the wrong station and carry on regardless
  *   signal-from-beyond  – an unknown transmission takes over every frequency for a minute
  *   time-slip           – the last minute replays, slightly wrong
+ *   convergence         – v4: weekly, Saturdays 20:00 UTC; every station notices the same thing
+ *                         (a topic rotating weekly). Not part of the random daily draw.
  */
 export const EVENT_IDS = [
   'dimensional-storm',
@@ -371,6 +452,7 @@ export const EVENT_IDS = [
   'station-swap',
   'signal-from-beyond',
   'time-slip',
+  'convergence',
 ] as const;
 export type EventId = (typeof EVENT_IDS)[number];
 
@@ -389,6 +471,12 @@ export type Tuned =
   | { kind: 'pirate'; station: StationDef }
   | { kind: 'oddity'; oddity: OddityId; label: string; scene: SceneId }
   | { kind: 'static' };
+
+/**
+ * v4: per-station listening time, ms, as JSON `Record<stationId, number>` in localStorage. The
+ * director writes it (throttled); offline packs read it to pick "your most-played" stations.
+ */
+export const LISTEN_TIME_KEY = 'multiverse-radio:listen-time';
 
 // ── Broadcast store (the UI ↔ engine contract) ────────────────────────────────
 
@@ -417,6 +505,10 @@ export interface BroadcastState {
   event: ActiveEvent | null;
   /** Ids of secret and pirate stations this listener has found (persisted). */
   discovered: string[];
+  /** v4: night shifts worked (local nights, 06:00 to 06:00, with ≥ 10 min listening; persisted). */
+  shifts: number;
+  /** v4: the Nightjar's heading in degrees [0, 360), drifting with `shifts` (the off-course arc). */
+  heading: number;
   status: PlayStatus;
   /** Human-readable reason while status is 'lost'. */
   signalMessage: string | null;
