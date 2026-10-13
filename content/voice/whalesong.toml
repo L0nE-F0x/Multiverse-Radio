@@ -309,7 +309,7 @@ category = "dj"
 kit = "dj"
 part = "close"
 lines = [
-  { say = "host", text = "Rest easy.", gap = 0.8 },
+  { say = "host", text = "Sleep easy.", gap = 0.8 },
   { say = "host", text = "Carry on." },
 ]
 

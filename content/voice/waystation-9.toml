@@ -59,7 +59,7 @@ lines = [
 id = "id-003"
 category = "id"
 lines = [
-  { say = "host", text = "Waystation Nine CB. Up, down or sideways, somebody's driving it tonight." },
+  { say = "host", text = "Way station Nine CB. Up, down or sideways, somebody's driving it tonight." },
   { sting = "id" },
 ]
 
