@@ -9,6 +9,8 @@
 #   station-swap        hosts wake up on the wrong station and carry on regardless
 #   signal-from-beyond  an unknown voice on every frequency at once
 #   time-slip           the last minute replays, slightly wrong
+#   convergence         v4: every station notices the same thing (open and close per kit here;
+#                       each station's own script holds its reaction)
 station = "_events"
 
 [voices]
@@ -39,6 +41,8 @@ octavia = { voice = "bf_isabella", speed = 0.9, name = "Octavia Lowe" }
 chaz = { voice = "am_puck", speed = 1.12, name = "Chaz Brightley" }
 visitor = { voice = "af_nicole", speed = 0.85, fx = "ghost", name = "Unknown Signal" }
 visitors = { voice = "am_onyx", speed = 0.8, fx = "alien", name = "Unknown Signal" }
+# v4: HUSH closes the Convergence with a log entry from the Nightjar.
+hush = { voice = "af_heart", speed = 0.95, fx = "ship", name = "HUSH" }
 
 # ── Dimensional storm ─────────────────────────────────────────────────────────
 
@@ -557,4 +561,468 @@ lines = [
   { sfx = "tape-rewind" },
   { say = "eventually", text = "So I was going to say something really important, and", gap = 1.2 },
   { say = "eventually", text = "Nope. Gone again. Twice now. That's a record." },
+]
+
+# ── The Convergence (v4) ──────────────────────────────────────────────────────
+#
+# Saturdays, 20:00 UTC: every station notices the same thing. The topic rotates weekly
+# through six kits; the event airs an open from here, the tuned station's own reaction, and
+# a close from here. Opens are the Multiverse Broadcast Authority's bulletin to every
+# frequency at once; most closes are HUSH's log entry from the Nightjar, a few are the
+# Authority standing everyone down. Three of each per kit, so the same topic six weeks
+# later sounds different. Opens and closes are written to fit any reaction in between.
+
+[[clip]]
+id = "conv-moon-open-1"
+category = "event"
+event = "convergence"
+kit = "missing-moon"
+part = "open"
+title = "A Moon Is Missing"
+lines = [
+  { sfx = "beep", level = 0.5 },
+  { say = "authority", text = "This is the Multiverse Broadcast Authority, on every frequency at once. A moon has gone missing.", gap = 0.5 },
+  { say = "authority", text = "Everyone agrees that one is gone. Nobody agrees which." },
+]
+
+[[clip]]
+id = "conv-moon-open-2"
+category = "event"
+event = "convergence"
+kit = "missing-moon"
+part = "open"
+title = "Count Your Moons"
+lines = [
+  { say = "authority", text = "A bulletin for every station, everywhere. Please look up, and count your moons.", gap = 0.6 },
+  { say = "authority", text = "Write the number down. Somewhere, it is now one smaller." },
+]
+
+[[clip]]
+id = "conv-moon-open-3"
+category = "event"
+event = "convergence"
+kit = "missing-moon"
+part = "open"
+title = "The Loss of a Moon"
+lines = [
+  { say = "authority", text = "The Authority regrets to announce the loss of a moon. If you have a moon, please check it is still yours.", gap = 0.5 },
+  { say = "authority", text = "If you have found a moon, please do not keep it." },
+]
+
+[[clip]]
+id = "conv-moon-close-1"
+category = "event"
+event = "convergence"
+kit = "missing-moon"
+part = "close"
+title = "Everyone Looked Up"
+lines = [
+  { sfx = "ship-chime" },
+  { say = "hush", text = "Ship's log. A moon went missing, everywhere, for about five minutes.", gap = 0.6 },
+  { say = "hush", text = "Everybody looked up at once. I've logged that part. It seemed more important." },
+]
+
+[[clip]]
+id = "conv-moon-close-2"
+category = "event"
+event = "convergence"
+kit = "missing-moon"
+part = "close"
+title = "Moons, Counted"
+lines = [
+  { sfx = "ship-chime" },
+  { say = "hush", text = "Ship's log. Moons, counted. We have none. We had none before.", gap = 0.6 },
+  { say = "hush", text = "No change. I counted twice, in case." },
+]
+
+[[clip]]
+id = "conv-moon-close-3"
+category = "event"
+event = "convergence"
+kit = "missing-moon"
+part = "close"
+title = "Behind Another Moon"
+lines = [
+  { say = "authority", text = "The Authority confirms that the moon has been found. It was behind another moon.", gap = 0.5 },
+  { say = "authority", text = "Normal programming resumes." },
+]
+
+[[clip]]
+id = "conv-smell-open-1"
+category = "event"
+event = "convergence"
+kit = "the-smell"
+part = "open"
+title = "Toast"
+lines = [
+  { sfx = "beep", level = 0.5 },
+  { say = "authority", text = "This is the Multiverse Broadcast Authority. Across every reality, at this moment, there is a faint smell of toast.", gap = 0.5 },
+  { say = "authority", text = "Nobody is making toast. Please do not look for the toaster." },
+]
+
+[[clip]]
+id = "conv-smell-open-2"
+category = "event"
+event = "convergence"
+kit = "the-smell"
+part = "open"
+title = "Not the Authority"
+lines = [
+  { say = "authority", text = "A bulletin for all stations. Every studio, every kitchen and every empty field now smells slightly of toast.", gap = 0.5 },
+  { say = "authority", text = "The Authority is not making toast. The Authority would like that on the record." },
+]
+
+[[clip]]
+id = "conv-smell-open-3"
+category = "event"
+event = "convergence"
+kit = "the-smell"
+part = "open"
+title = "Please Breathe In"
+lines = [
+  { say = "authority", text = "Attention, all frequencies. Please breathe in.", gap = 1.2 },
+  { say = "authority", text = "Thank you. That is toast. It is everywhere. Stay calm, and do not butter anything yet." },
+]
+
+[[clip]]
+id = "conv-smell-close-1"
+category = "event"
+event = "convergence"
+kit = "the-smell"
+part = "close"
+title = "All Innocent"
+lines = [
+  { sfx = "ship-chime" },
+  { say = "hush", text = "Ship's log. The Nightjar smelled of toast for four minutes. We have no toaster.", gap = 0.5 },
+  { say = "hush", text = "I've questioned the kettle, the heater and the operator. All innocent." },
+]
+
+[[clip]]
+id = "conv-smell-close-2"
+category = "event"
+event = "convergence"
+kit = "the-smell"
+part = "close"
+title = "Toast, Receding"
+lines = [
+  { sfx = "ship-chime" },
+  { say = "hush", text = "Ship's log. Toast, receding.", gap = 0.6 },
+  { say = "hush", text = "The air recycler would like it noted that it did nothing, and that it misses it." },
+]
+
+[[clip]]
+id = "conv-smell-close-3"
+category = "event"
+event = "convergence"
+kit = "the-smell"
+part = "close"
+title = "Actual Toast"
+lines = [
+  { say = "authority", text = "The smell of toast is now leaving the multiverse. It will be missed.", gap = 0.5 },
+  { say = "authority", text = "Where possible, the Authority recommends actual toast." },
+]
+
+[[clip]]
+id = "conv-song-open-1"
+category = "event"
+event = "convergence"
+kit = "the-song"
+part = "open"
+title = "The Song"
+lines = [
+  { sfx = "beep", level = 0.5 },
+  { say = "authority", text = "This is the Multiverse Broadcast Authority. Every listener, in every reality, has the same song stuck in their head.", gap = 0.5 },
+  { say = "authority", text = "Nobody knows how it ends. Please do not guess on air." },
+]
+
+[[clip]]
+id = "conv-song-open-2"
+category = "event"
+event = "convergence"
+kit = "the-song"
+part = "open"
+title = "Everybody Knows the Beginning"
+lines = [
+  { say = "authority", text = "A bulletin for all stations. A song is going round. Everybody knows the beginning. Nobody knows the end.", gap = 0.5 },
+  { say = "authority", text = "If you know the end, please wait your turn." },
+]
+
+[[clip]]
+id = "conv-song-open-3"
+category = "event"
+event = "convergence"
+kit = "the-song"
+part = "open"
+title = "Nobody's Song"
+lines = [
+  { say = "authority", text = "Attention, all frequencies. The tune you are humming is being hummed everywhere at once.", gap = 0.5 },
+  { say = "authority", text = "It is not your fault. It is nobody's song. Carry on humming." },
+]
+
+[[clip]]
+id = "conv-song-close-1"
+category = "event"
+event = "convergence"
+kit = "the-song"
+part = "close"
+title = "The Same Place"
+lines = [
+  { sfx = "ship-chime" },
+  { say = "hush", text = "Ship's log. The operator hummed the song and stopped in the same place as everybody else.", gap = 0.5 },
+  { say = "hush", text = "I hummed it on the air recycler. I stopped there too." },
+]
+
+[[clip]]
+id = "conv-song-close-2"
+category = "event"
+event = "convergence"
+kit = "the-song"
+part = "close"
+title = "Next to Your Three Notes"
+lines = [
+  { sfx = "ship-chime" },
+  { say = "hush", text = "Ship's log. Song, unfinished, everywhere. I've filed it next to your three notes.", gap = 0.6 },
+  { say = "hush", text = "They might go together. I'll keep trying." },
+]
+
+[[clip]]
+id = "conv-song-close-3"
+category = "event"
+event = "convergence"
+kit = "the-song"
+part = "close"
+title = "Your Own Song"
+lines = [
+  { say = "authority", text = "The song has now left everybody's head at once.", gap = 0.5 },
+  { say = "authority", text = "If you can still hear it, it is your own song. Please look after it." },
+]
+
+[[clip]]
+id = "conv-knock-open-1"
+category = "event"
+event = "convergence"
+kit = "the-knock"
+part = "open"
+title = "Three Knocks"
+lines = [
+  { sfx = "chopping", seconds = 0.3, level = 0.8 },
+  { pause = 0.35 },
+  { sfx = "chopping", seconds = 0.3, level = 0.8 },
+  { pause = 0.35 },
+  { sfx = "chopping", seconds = 0.3, level = 0.8 },
+  { pause = 0.8 },
+  { say = "authority", text = "This is the Multiverse Broadcast Authority. Someone has just knocked on every studio door in every reality.", gap = 0.5 },
+  { say = "authority", text = "Please do not answer. There is nobody there." },
+]
+
+[[clip]]
+id = "conv-knock-open-2"
+category = "event"
+event = "convergence"
+kit = "the-knock"
+part = "open"
+title = "Stay at Your Microphones"
+lines = [
+  { say = "authority", text = "A bulletin for all stations. Three knocks, everywhere at once. Hosts are asked to stay at their microphones.", gap = 0.5 },
+  { say = "authority", text = "The door is not going anywhere. Neither, it seems, is the knock." },
+]
+
+[[clip]]
+id = "conv-knock-open-3"
+category = "event"
+event = "convergence"
+kit = "the-knock"
+part = "open"
+title = "Very Polite"
+lines = [
+  { say = "authority", text = "Attention, all frequencies. If you just heard knocking, so did everyone. It was very polite.", gap = 0.5 },
+  { say = "authority", text = "The Authority recommends a polite response, from a safe distance." },
+]
+
+[[clip]]
+id = "conv-knock-close-1"
+category = "event"
+event = "convergence"
+kit = "the-knock"
+part = "close"
+title = "A Light On"
+lines = [
+  { sfx = "ship-chime" },
+  { say = "hush", text = "Ship's log. Three knocks on the hull, from the outside. I said, come in. Nothing came in.", gap = 0.6 },
+  { say = "hush", text = "I've left a light on anyway." },
+]
+
+[[clip]]
+id = "conv-knock-close-2"
+category = "event"
+event = "convergence"
+kit = "the-knock"
+part = "close"
+title = "Manners, Excellent"
+lines = [
+  { sfx = "ship-chime" },
+  { say = "hush", text = "Ship's log. Knocking, ceased. Origin, unknown. Manners, excellent.", gap = 0.6 },
+  { say = "hush", text = "Logged as a visitor who changed their mind." },
+]
+
+[[clip]]
+id = "conv-knock-close-3"
+category = "event"
+event = "convergence"
+kit = "the-knock"
+part = "close"
+title = "All Doors Closed"
+lines = [
+  { say = "authority", text = "The knocking has stopped. Every door in the multiverse remains closed.", gap = 0.5 },
+  { say = "authority", text = "The Authority thanks you for not opening them. Mostly." },
+]
+
+[[clip]]
+id = "conv-colour-open-1"
+category = "event"
+event = "convergence"
+kit = "wrong-colour"
+part = "open"
+title = "A Colour Without a Word"
+lines = [
+  { sfx = "beep", level = 0.5 },
+  { say = "authority", text = "This is the Multiverse Broadcast Authority. Every sky is now a colour nobody has a word for.", gap = 0.5 },
+  { say = "authority", text = "Please do not try to name it. Several people have tried. They are resting." },
+]
+
+[[clip]]
+id = "conv-colour-open-2"
+category = "event"
+event = "convergence"
+kit = "wrong-colour"
+part = "open"
+title = "Not on Any Chart"
+lines = [
+  { say = "authority", text = "A bulletin for all stations. Look up, if you have a sky. That colour is new. It is not on any chart.", gap = 0.5 },
+  { say = "authority", text = "Enjoy it. Describe it to no one." },
+]
+
+[[clip]]
+id = "conv-colour-open-3"
+category = "event"
+event = "convergence"
+kit = "wrong-colour"
+part = "open"
+title = "Expected to Pass"
+lines = [
+  { say = "authority", text = "Attention, all frequencies. The sky has gone a colour. Not a bad colour. Just one we don't have.", gap = 0.5 },
+  { say = "authority", text = "It is expected to pass." },
+]
+
+[[clip]]
+id = "conv-colour-close-1"
+category = "event"
+event = "convergence"
+kit = "wrong-colour"
+part = "close"
+title = "A New Field"
+lines = [
+  { sfx = "ship-chime" },
+  { say = "hush", text = "Ship's log. The viewport was briefly a colour I had no field for. So I've added a field.", gap = 0.6 },
+  { say = "hush", text = "It's called, the operator went quiet." },
+]
+
+[[clip]]
+id = "conv-colour-close-2"
+category = "event"
+event = "convergence"
+kit = "wrong-colour"
+part = "close"
+title = "Saved as Grey"
+lines = [
+  { sfx = "ship-chime" },
+  { say = "hush", text = "Ship's log. Sky, normal again. Colour, unrecorded.", gap = 0.6 },
+  { say = "hush", text = "I tried. The camera saved it as grey, and apologised." },
+]
+
+[[clip]]
+id = "conv-colour-close-3"
+category = "event"
+event = "convergence"
+kit = "wrong-colour"
+part = "close"
+title = "Filed, Unnamed"
+lines = [
+  { say = "authority", text = "The sky has returned to its usual colours. The new one has been filed.", gap = 0.5 },
+  { say = "authority", text = "The Authority has not named it. It's better that way." },
+]
+
+[[clip]]
+id = "conv-pigeon-open-1"
+category = "event"
+event = "convergence"
+kit = "the-pigeon"
+part = "open"
+title = "The Same Pigeon"
+lines = [
+  { sfx = "beep", level = 0.5 },
+  { say = "authority", text = "This is the Multiverse Broadcast Authority. A pigeon has walked into every studio in every reality. It is the same pigeon.", gap = 0.5 },
+  { say = "authority", text = "It appears to know people. Please be kind to it." },
+]
+
+[[clip]]
+id = "conv-pigeon-open-2"
+category = "event"
+event = "convergence"
+kit = "the-pigeon"
+part = "open"
+title = "The Pigeon Is Back"
+lines = [
+  { say = "authority", text = "A bulletin for all stations. The pigeon is back. Hosts may notice it looking at them as if they owe it something.", gap = 0.5 },
+  { say = "authority", text = "They may. The Authority makes no comment." },
+]
+
+[[clip]]
+id = "conv-pigeon-open-3"
+category = "event"
+event = "convergence"
+kit = "the-pigeon"
+part = "open"
+title = "It Has a Schedule"
+lines = [
+  { say = "authority", text = "Attention, all frequencies. There is a pigeon in your studio. It is in everyone's studio.", gap = 0.5 },
+  { say = "authority", text = "Do not chase it. It has a schedule." },
+]
+
+[[clip]]
+id = "conv-pigeon-close-1"
+category = "event"
+event = "convergence"
+kit = "the-pigeon"
+part = "close"
+title = "A Door We Don't Have"
+lines = [
+  { sfx = "ship-chime" },
+  { say = "hush", text = "Ship's log. A pigeon walked across the console, nodded at the operator, and left by a door we don't have.", gap = 0.5 },
+  { say = "hush", text = "Logged as a visitor. It seemed to expect that." },
+]
+
+[[clip]]
+id = "conv-pigeon-close-2"
+category = "event"
+event = "convergence"
+kit = "the-pigeon"
+part = "close"
+title = "One Feather"
+lines = [
+  { sfx = "ship-chime" },
+  { say = "hush", text = "Ship's log. Pigeon, departed. It left one feather, and the air of having been here before.", gap = 0.5 },
+  { say = "hush", text = "I believe it. It knew where the biscuits were." },
+]
+
+[[clip]]
+id = "conv-pigeon-close-3"
+category = "event"
+event = "convergence"
+kit = "the-pigeon"
+part = "close"
+title = "Wherever It Goes"
+lines = [
+  { say = "authority", text = "The pigeon has now left every studio at once, for wherever it goes.", gap = 0.5 },
+  { say = "authority", text = "The Authority wishes it well, and would like it to stop." },
 ]
