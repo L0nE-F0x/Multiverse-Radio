@@ -238,11 +238,16 @@
   }
 
   /* Dim the readouts but keep their scrim, so a busy scene doesn't bleed through. */
-  .hud-chrome > * {
+  .hud-chrome > *,
+  .hud-readouts > *,
+  .readout-now > * {
     transition: opacity 0.7s ease;
   }
 
-  .hud[data-hud='dim'] .hud-chrome > * {
+  /* Live captions in the NOW readout stay bright while the rest dims. */
+  .hud[data-hud='dim'] .hud-chrome > :not(.hud-readouts),
+  .hud[data-hud='dim'] .hud-readouts > :not(.readout-now),
+  .hud[data-hud='dim'] .readout-now > :not(.now-caption) {
     opacity: 0.4;
   }
 
@@ -800,6 +805,40 @@
   .now-note {
     color: var(--ph-mute);
     font-style: italic;
+  }
+
+  /* Live captions in the NOW readout: up to three lines, newest kept if a line runs long. */
+  .now-caption {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    max-height: calc(3 * 1.5em);
+    overflow: hidden;
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  .now-caption p {
+    margin: 0;
+    color: color-mix(in oklab, var(--ph) 40%, #fff);
+  }
+
+  .now-caption .caption-speaker {
+    display: inline;
+    margin: 0 8px 0 0;
+    font-size: 10px;
+  }
+
+  .now-caption .caption-speaker::after {
+    content: ' ›';
+  }
+
+  .now-caption .caption-prompt {
+    margin-right: 8px;
+  }
+
+  .now-caption[data-hush='true'] p {
+    color: color-mix(in oklab, var(--ship) 30%, #fff);
   }
 
   .progress {

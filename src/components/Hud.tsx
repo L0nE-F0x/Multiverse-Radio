@@ -23,7 +23,7 @@ export function Hud() {
     document.documentElement.dataset.hud = state;
   }, [state]);
 
-  // Captions and the power card sit just above the dock, whatever its height here.
+  // Toasts (and captions, once the dock withdraws) sit just above the dock, whatever its height here.
   useEffect(() => {
     const dock = dockRef.current;
     if (!dock) return;
@@ -42,7 +42,8 @@ export function Hud() {
       <IdentCard />
       <div className="hud-float">
         <Toaster />
-        <Captions />
+        {/* With the console up, captions print in the NOW readout instead (never over the scene). */}
+        {state === 'hidden' && <Captions placement="float" />}
       </div>
       <footer ref={dockRef} className="hud-dock hud-chrome" data-keep-awake="">
         <div className="hud-readouts">

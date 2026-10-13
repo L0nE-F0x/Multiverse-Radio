@@ -7,6 +7,7 @@ import { inMainBand } from '../ui/dial';
 import { FORMAT_LABEL, formatDuration, formatMhz, segmentLabel } from '../ui/format';
 import { useOnAir, useSource, useStatus, useTuned } from '../ui/select';
 import { KIND_TAG, ODDITY_SIGNAL } from '../ui/source';
+import { Captions, useLiveCaption } from './Captions';
 
 /** Who's on this frequency: name, origin, host and the show on air. */
 export function SourceBlock() {
@@ -66,9 +67,10 @@ function SearchHint() {
   );
 }
 
-/** What's on air: track or clip, who, and how far through. */
+/** What's on air: track or clip, who, and how far through. Live captions print here too. */
 export function NowBlock() {
   const segment = useOnAir();
+  const captioning = useLiveCaption() !== null;
   const status = useStatus();
   const source = useSource();
   const tuned = useTuned();
@@ -112,8 +114,14 @@ export function NowBlock() {
         {segment && airing && <span className="now-length tabular">{formatDuration(segment.durationMs)}</span>}
       </header>
       <p className="now-title">{title}</p>
-      {byline && <p className="now-by">{byline}</p>}
-      {note && <p className="now-note">{note}</p>}
+      {captioning ? (
+        <Captions placement="panel" />
+      ) : (
+        <>
+          {byline && <p className="now-by">{byline}</p>}
+          {note && <p className="now-note">{note}</p>}
+        </>
+      )}
       {segment && airing && <Progress segment={segment} running={status === 'playing'} />}
     </section>
   );
