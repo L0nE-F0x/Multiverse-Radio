@@ -1,0 +1,542 @@
+# The Velvet Collapse — 116.5, the Velvet Lounge, Casino Ultima, in orbit round a dying red giant.
+#
+# Baron Velour hosts (and plays bass): smooth, unbothered, regards the nightly supernova as a
+# lighting cue. Odette runs the roulette table and takes bets on the end of the world. The
+# star is Old Ruby: enormous, red, and touchy about her size. Every night at four o'clock
+# local she goes supernova; by about half past five she has pulled herself back together.
+#
+# The night is built from the shows: The Final Hour (3–4) escalates towards it, and The
+# Collapse (4–6) opens at four sharp with the countdown itself (the director airs a show's
+# opener at the top of its first hour), then the white-out and the morning after.
+# The `bets` kit chains Odette opening the table, one to three wagers and "no more bets".
+#
+# Running bits: the roulette wheel that is only red; the silver-jacket man who bets every night
+# that the star won't go; the band in sunglasses; stardust in the gift shop. Cross-station:
+# Bev and the request line, Grumbel's Ladders, Greg's show (Monday review).
+station = "velvet-collapse"
+
+[voices]
+host = { voice = "bm_daniel", speed = 0.96, name = "Baron Velour" }
+odette = { voice = "bf_lily", speed = 1.0, name = "Odette, the Croupier" }
+bev = { voice = "af_nova", fx = "phone", name = "Bev" }
+announcer = { voice = "am_michael", speed = 1.05, name = "Announcer" }
+grumbel = { voice = "am_eric", name = "Arnold Grumbel" }
+
+[[show]]
+id = "the-velvet-hour"
+name = "The Velvet Hour"
+blurb = "Slow funk, low lights and a red giant in the window. Dinner is served with sunglasses."
+start = 21
+end = 24
+
+[[show]]
+id = "the-final-hour"
+name = "The Final Hour"
+blurb = "The countdown to four o'clock. The star swells, the bets close, the band plays faster."
+start = 3
+end = 4
+
+[[show]]
+id = "the-collapse"
+name = "The Collapse"
+blurb = "Supernova at four sharp. White light, a short silence, and then, somehow, breakfast."
+start = 4
+end = 6
+
+# ── Idents ────────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "id-001"
+category = "id"
+lines = [
+  { say = "host", text = "The Velvet Collapse, one sixteen point five. Funk, at the edge of a dying star. Mind the window." },
+  { sting = "id" },
+]
+
+[[clip]]
+id = "id-002"
+category = "id"
+lines = [
+  { say = "host", text = "You're in the Velvet Lounge, Casino Ultima. The star outside is enormous, and not long for this world. Enjoy them both." },
+]
+
+[[clip]]
+id = "id-003"
+category = "id"
+lines = [
+  { say = "host", text = "The Baron, on the Velvet Collapse. The groove is mine. The star is somebody else's problem." },
+]
+
+[[clip]]
+id = "id-004"
+category = "id"
+daypart = "night"
+lines = [
+  { say = "host", text = "The Velvet Collapse. It's late, the star is swelling, and the dress code is fireproof velvet." },
+  { sting = "id" },
+]
+
+[[clip]]
+id = "id-005"
+category = "id"
+daypart = "day"
+lines = [
+  { say = "host", text = "The Velvet Collapse. Daytime, they tell me. Out here we only have two times. Before four, and after." },
+]
+
+[[clip]]
+id = "id-006"
+category = "id"
+lines = [
+  { say = "odette", text = "Casino Ultima. The house always wins." },
+  { say = "host", text = "And the star always comes back. The Velvet Collapse." },
+]
+
+# ── Host links ────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "dj-001"
+category = "dj"
+title = "Old Ruby"
+lines = [
+  { say = "host", text = "That's Old Ruby out there, filling the window. A red giant, three hundred times wider than she used to be. Aren't we all, darling." },
+  { say = "host", text = "She's dying, of course. She's been dying for years. She makes it look absolutely wonderful." },
+]
+
+[[clip]]
+id = "dj-002"
+category = "dj"
+title = "A Lighting Cue"
+lines = [
+  { say = "host", text = "People ask me, Baron, aren't you worried about the supernova? Worried? It's the finest lighting rig in the galaxy, and I don't pay a penny for it." },
+  { say = "host", text = "Every night at four, the whole room goes white, and the band looks incredible. You can't buy that. Believe me. I've asked." },
+]
+
+[[clip]]
+id = "dj-003"
+category = "dj"
+title = "The Roulette Wheel"
+lines = [
+  { say = "host", text = "Our roulette wheel has only red on it. Thirty seven pockets, all red. We had a black one once. It was lost in the year of the big flare, and we never replaced it." },
+  { say = "host", text = "Nobody's complained. Everybody wins, a little. That's not how a casino works, but then, very little out here is." },
+]
+
+[[clip]]
+id = "dj-004"
+category = "dj"
+title = "Insurance"
+lines = [
+  { say = "host", text = "A word about insurance. Casino Ultima is fully insured against the star exploding. Our insurers have paid out every single night for eleven years." },
+  { say = "host", text = "They've been very gracious about it. They send a card. This year's card just says, again?" },
+]
+
+[[clip]]
+id = "dj-005"
+category = "dj"
+title = "The Band"
+lines = [
+  { say = "host", text = "The house band tonight, as every night, is the Late Expansion. On drums, Ignatius Bell. On keys, the lovely Delphine Starr." },
+  { say = "host", text = "And on bass guitar, me. I'm wonderful. Don't tell me. I know." },
+]
+
+[[clip]]
+id = "dj-006"
+category = "dj"
+title = "Bev Calls"
+lines = [
+  { say = "bev", text = "Hello, love. It's Bev. Is this the request line?" },
+  { say = "host", text = "Bev, darling, there's no request line at the edge of a dying star. There's just this line, and it's yours. What'll it be?" },
+  { say = "bev", text = "Something slow, please." },
+  { say = "host", text = "Bev. Nothing here is slow. But I'll see what I can do." },
+]
+
+[[clip]]
+id = "dj-007"
+category = "dj"
+daypart = "evening"
+title = "Doors"
+lines = [
+  { say = "host", text = "Good evening. The doors of Casino Ultima are open, the velvet's been brushed, and Ruby is looking especially red tonight." },
+  { say = "host", text = "Radiant, really. Don't tell her. She's sensitive about her size." },
+]
+
+[[clip]]
+id = "dj-008"
+category = "dj"
+daypart = "night"
+title = "For the Newcomer"
+lines = [
+  { say = "host", text = "A relay ship has drifted into our orbit tonight. Lights low, very polite. Welcome to the outer reaches, newcomer." },
+  { say = "host", text = "A word of advice. Don't sit too near the window at four. And do tip the croupier. She remembers." },
+]
+
+[[clip]]
+id = "dj-009"
+category = "dj"
+title = "Sponsored by Grumbel's Ladders"
+lines = [
+  { say = "host", text = "Tonight's collapse comes to you courtesy of Grumbel's Ladders. From the top of a Grumbel's ladder, a supernova is just a very bright evening." },
+  { say = "grumbel", text = "Grumbel's Ladders. Up is a choice." },
+]
+
+# ── Bets: Odette opens the table, one to three wagers, no more bets ─────────
+
+[[clip]]
+id = "bets-open-1"
+category = "dj"
+kit = "bets"
+part = "open"
+lines = [
+  { say = "odette", text = "Place your bets, ladies and gentlemen. Place your bets." },
+]
+
+[[clip]]
+id = "bets-open-2"
+category = "dj"
+kit = "bets"
+part = "open"
+lines = [
+  { say = "host", text = "Let's see how the tables are doing. Odette?" },
+  { say = "odette", text = "Bets are open, Baron." },
+]
+
+[[clip]]
+id = "bets-001"
+category = "dj"
+kit = "bets"
+part = "body"
+lines = [
+  { say = "odette", text = "The gentleman in the silver jacket bets that tonight, the star won't go. He has placed that bet every night for eleven years. He has lost every night for eleven years." },
+  { say = "odette", text = "He says the night he wins, he'll be the richest man in the galaxy. For about four seconds." },
+]
+
+[[clip]]
+id = "bets-002"
+category = "dj"
+kit = "bets"
+part = "body"
+lines = [
+  { say = "odette", text = "Table four would like to bet on the colour of the flash. White, very white, or blinding." },
+  { say = "odette", text = "The house recommends blinding." },
+]
+
+[[clip]]
+id = "bets-003"
+category = "dj"
+kit = "bets"
+part = "body"
+lines = [
+  { say = "odette", text = "A lady at the bar bets her coat that she can finish her drink before four o'clock. Her coat is velvet. Her drink is very large." },
+  { say = "odette", text = "The room is quietly on her side." },
+]
+
+[[clip]]
+id = "bets-004"
+category = "dj"
+kit = "bets"
+part = "body"
+lines = [
+  { say = "host", text = "Somebody has bet the house that the star comes back tomorrow." },
+  { say = "odette", text = "Accepted." },
+  { say = "host", text = "It always comes back. We stopped taking that bet years ago. We take it anyway. It's tradition." },
+]
+
+[[clip]]
+id = "bets-005"
+category = "dj"
+kit = "bets"
+part = "body"
+lines = [
+  { say = "odette", text = "A first-time guest bets everything that he'll see the dawn. Sir. There is no dawn. There's a supernova, and then breakfast." },
+  { say = "odette", text = "He has changed his bet to breakfast." },
+]
+
+[[clip]]
+id = "bets-006"
+category = "dj"
+kit = "bets"
+part = "body"
+lines = [
+  { say = "odette", text = "A reminder that our chips are made of cooled starlight. Please don't put them in your mouth." },
+  { say = "odette", text = "They are much warmer than they look. So, frankly, is the starlight." },
+]
+
+[[clip]]
+id = "bets-close-1"
+category = "dj"
+kit = "bets"
+part = "close"
+lines = [
+  { say = "odette", text = "No more bets." },
+  { say = "host", text = "Nobody ever listens to her. Here's the band." },
+]
+
+[[clip]]
+id = "bets-close-2"
+category = "dj"
+kit = "bets"
+part = "close"
+lines = [
+  { say = "odette", text = "The wheel is spinning." },
+  { pause = 0.8 },
+  { say = "odette", text = "Red. It's always red." },
+]
+
+# ── The Velvet Hour (21–24) ───────────────────────────────────────────────────
+
+[[clip]]
+id = "id-the-velvet-hour"
+category = "id"
+show = "the-velvet-hour"
+part = "open"
+lines = [
+  { say = "host", text = "Good evening, and welcome to the Velvet Hour. Coats in the cloakroom, sunglasses in the pocket, and the star in the window. For now." },
+  { sting = "id" },
+]
+
+[[clip]]
+id = "dj-the-velvet-hour-001"
+category = "dj"
+show = "the-velvet-hour"
+lines = [
+  { say = "host", text = "The kitchen tonight recommends the flambé. Everything in here is flambé after four o'clock, so the chef likes to get in early." },
+  { say = "host", text = "Here's something to eat by. Slowly, darling. There's time. Not much. But some." },
+]
+
+[[clip]]
+id = "dj-the-velvet-hour-002"
+category = "dj"
+show = "the-velvet-hour"
+lines = [
+  { say = "host", text = "Dance with whoever you came with. Or don't. At four o'clock we all leave together anyway, at the speed of light, and come back for breakfast." },
+  { say = "host", text = "It's terribly romantic, if you don't think about it too hard. I never do." },
+]
+
+# ── The Final Hour (3–4): the build to four o'clock ──────────────────────────
+
+[[clip]]
+id = "id-the-final-hour"
+category = "id"
+show = "the-final-hour"
+part = "open"
+lines = [
+  { say = "host", text = "It's three o'clock at the Velvet Collapse. One hour to collapse. Ladies and gentlemen, the Final Hour." },
+  { sting = "fanfare" },
+]
+
+[[clip]]
+id = "dj-the-final-hour-001"
+category = "dj"
+show = "the-final-hour"
+title = "The Window"
+lines = [
+  { say = "host", text = "The window has gone from red to a sort of very loud red. That's quite normal. Ruby's taking a deep breath." },
+  { say = "host", text = "Order your last drinks now, please. Somewhere around four, the bar will be briefly made of light." },
+]
+
+[[clip]]
+id = "dj-the-final-hour-002"
+category = "dj"
+show = "the-final-hour"
+title = "Sunglasses"
+lines = [
+  { say = "host", text = "The staff are coming round with the sunglasses. Please take a pair, and put them on when the band does." },
+  { say = "host", text = "The band put theirs on eleven years ago, and have never taken them off. They say it's for the supernova. I have my doubts." },
+]
+
+[[clip]]
+id = "dj-the-final-hour-003"
+category = "dj"
+show = "the-final-hour"
+title = "The Tremor"
+lines = [
+  { say = "host", text = "Did you feel that? That's Ruby. She does this towards the end. A little shiver, right through the floor." },
+  { say = "host", text = "The roulette ball has jumped into red. Well. It was always going to be red." },
+]
+
+[[clip]]
+id = "dj-the-final-hour-004"
+category = "dj"
+show = "the-final-hour"
+title = "Bets Close"
+lines = [
+  { say = "host", text = "Odette, I think it's time." },
+  { say = "odette", text = "Ladies and gentlemen, the house is no longer taking bets on the end of the world. It's too close to call." },
+  { say = "odette", text = "We are, however, taking bets on breakfast." },
+]
+
+[[clip]]
+id = "dj-the-final-hour-005"
+category = "dj"
+show = "the-final-hour"
+title = "One More Chorus"
+lines = [
+  { say = "host", text = "The band always plays a little faster in the Final Hour. They're trying to fit in one more chorus before the end." },
+  { say = "host", text = "Eleven years, they've never managed it. Tonight, I think they might. Listen to them go." },
+]
+
+# ── The Collapse (4–6): supernova at four sharp, then the morning after ──────
+
+[[clip]]
+id = "id-the-collapse"
+category = "id"
+show = "the-collapse"
+part = "open"
+title = "Supernova"
+lines = [
+  { say = "host", text = "Ladies and gentlemen, it's four o'clock. Sunglasses on, please." },
+  { sfx = "drumroll", seconds = 1.5 },
+  { say = "host", text = "Five. Four. Three. Two. One.", speed = 0.85 },
+  { sfx = "tiny-explosion" },
+  { pause = 1.2 },
+  { say = "host", text = "Lovely." },
+]
+
+[[clip]]
+id = "dj-the-collapse-001"
+category = "dj"
+show = "the-collapse"
+title = "The White"
+lines = [
+  { say = "host", text = "We're in the white now. The room is very bright and very quiet and a little warm, like the inside of a lamp. Don't be alarmed." },
+  { say = "host", text = "The band's still playing. You just can't see them. You can hear me, which is the main thing." },
+]
+
+[[clip]]
+id = "dj-the-collapse-002"
+category = "dj"
+show = "the-collapse"
+title = "Taking the Register"
+lines = [
+  { say = "host", text = "Right. Is everybody still here? Silver jacket? Yes. The lady with the very large drink? Finished it. Well done. Odette?" },
+  { say = "odette", text = "Present." },
+  { say = "host", text = "Good. Nobody ever goes anywhere. We just get very, very bright for a while." },
+]
+
+[[clip]]
+id = "dj-the-collapse-003"
+category = "dj"
+show = "the-collapse"
+title = "Housekeeping"
+lines = [
+  { say = "host", text = "Housekeeping are sweeping the stardust off the dance floor. It all goes in a little velvet bag, and the bags go in the gift shop." },
+  { say = "host", text = "Supernova dust. One careful owner. Lightly exploded." },
+]
+
+[[clip]]
+id = "dj-morning-001"
+category = "dj"
+daypart = "morning"
+title = "She's Fine"
+lines = [
+  { say = "host", text = "Good morning from the Velvet Collapse. You'll be pleased to hear the star is fine. Ruby pulled herself back together at about half past five, the way she does." },
+  { say = "host", text = "She's looking a little embarrassed. Nobody mention it." },
+]
+
+[[clip]]
+id = "dj-morning-002"
+category = "dj"
+daypart = "morning"
+title = "Breakfast"
+lines = [
+  { say = "host", text = "Breakfast is served in the lounge. Eggs, toast, coffee, and a view of a red giant who exploded last night and is now acting as if nothing happened." },
+  { say = "host", text = "Honestly, darling. We've all been there." },
+]
+
+# ── Ads and notices ───────────────────────────────────────────────────────────
+
+[[clip]]
+id = "ad-001"
+category = "ad"
+title = "Ultima Fireproof Velvet"
+lines = [
+  { sting = "ad" },
+  { say = "announcer", text = "Ultima Fireproof Velvet. The jacket that doesn't mind the end of the world." },
+  { say = "host", text = "I've been wearing mine for eleven years. Eleven supernovas. Not a scorch on it. The lapels have never looked better." },
+  { say = "announcer", text = "Ultima Fireproof Velvet. Rated to one supernova per night. Dry clean only.", speed = 1.25 },
+]
+
+[[clip]]
+id = "psa-001"
+category = "psa"
+title = "In the Event of a Supernova"
+lines = [
+  { say = "announcer", text = "A message from the management of Casino Ultima." },
+  { say = "announcer", text = "In the event of a supernova, please remain in your seat, keep your sunglasses on, and hold your drink level. Do not run. There is nowhere to run to, and the carpet is new." },
+  { say = "announcer", text = "And please, do not tip the star. The star is not staff." },
+]
+
+# ── Monday: a review of Greg's show ──────────────────────────────────────────
+
+[[clip]]
+id = "dj-greg-review"
+category = "dj"
+days = [1]
+title = "Reviewing the Quiet Corner"
+lines = [
+  { say = "host", text = "I listened to the Quiet Corner last night, on the Lounge at the End of Time. Greg's show. I turned the speaker up so far the star started listening." },
+  { say = "host", text = "Not a sound. Marvellous. The man's a minimalist. Four stars. Ruby gives it five." },
+]
+
+# ── The Convergence: one reaction per weekly topic ───────────────────────────
+
+[[clip]]
+id = "convergence-missing-moon"
+category = "event"
+event = "convergence"
+kit = "missing-moon"
+lines = [
+  { say = "host", text = "Somebody at the bar says a moon has gone missing. Not ours, darling. We haven't had a moon since Ruby swallowed it. She does that." },
+  { say = "host", text = "Check under the roulette table, just in case." },
+]
+
+[[clip]]
+id = "convergence-the-smell"
+category = "event"
+event = "convergence"
+kit = "the-smell"
+lines = [
+  { say = "host", text = "Does the whole lounge smell of toast, or is it me? We do smell of toast after four, usually. It's early for toast. Odette?" },
+  { say = "odette", text = "It isn't the star, Baron." },
+  { say = "host", text = "Then somebody, somewhere, is making breakfast." },
+]
+
+[[clip]]
+id = "convergence-the-song"
+category = "event"
+event = "convergence"
+kit = "the-song"
+lines = [
+  { say = "host", text = "The band has started playing a song nobody wrote. Everybody knows it. Now they've stopped, right before the end, and they're looking at me." },
+  { say = "host", text = "I don't know how it ends either, darlings. Play it again." },
+]
+
+[[clip]]
+id = "convergence-the-knock"
+category = "event"
+event = "convergence"
+kit = "the-knock"
+lines = [
+  { say = "host", text = "Three knocks on the stage door. Odette opened it. Nothing out there but a red giant and a very long way down." },
+  { say = "host", text = "Close it, darling. Whoever it is, they're welcome. They'll need sunglasses." },
+]
+
+[[clip]]
+id = "convergence-wrong-colour"
+category = "event"
+event = "convergence"
+kit = "wrong-colour"
+lines = [
+  { say = "host", text = "The star has gone a colour. Not red. Not white. A colour I have never seen in eleven years of watching her explode." },
+  { say = "host", text = "Odette, put it on the wheel. We'll call it Ruby's Own." },
+]
+
+[[clip]]
+id = "convergence-the-pigeon"
+category = "event"
+event = "convergence"
+kit = "the-pigeon"
+lines = [
+  { say = "host", text = "A pigeon has just walked into the Velvet Lounge. No ship, no ladder. It walked past the doorman like they were old friends." },
+  { say = "host", text = "It's at the bar now. It's having what I'm having. I like it." },
+]

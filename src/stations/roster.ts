@@ -1000,8 +1000,11 @@ const V4: StationDef[] = [
       name: 'Donna Midnight',
       voice: 'af_bella',
       speed: 1.0,
-      bio: 'Has hosted the same Saturday night for a few million hours. Counts them with pride. Warm, glamorous, quietly the most patient person in any timeline.',
+      bio: 'Has hosted the same Saturday night for about three and a half million hours, and counts every one of them with pride. Warm, glamorous, calls everyone honey. Quietly the most patient person in any timeline.',
     },
+    cast: [
+      { name: 'Rollo', voice: 'am_puck', bio: 'Rink guard. Keeps everyone going counter-clockwise, and a backup of the hour count on his wrist, in biro.' },
+    ],
     mood: ['glamorous', 'euphoric', 'timeless'],
   },
   {
@@ -1075,7 +1078,7 @@ const V4: StationDef[] = [
     id: 'substation-null',
     name: 'Substation Null',
     frequency: 111.1,
-    origin: 'Reactor Room, the derelict freighter Calloway',
+    origin: 'Reactor Room, the derelict freighter Diligence',
     tagline: 'Techno from a dead reactor. The coolant is fine. Please stop asking about the coolant.',
     color: '#5ce1ff',
     phosphor: 'cyan',
@@ -1088,9 +1091,12 @@ const V4: StationDef[] = [
       name: 'Null',
       voice: 'am_echo',
       speed: 0.9,
-      bio: 'Barely speaks. BPM counts, coolant readings, the occasional single word. Means every one of them.',
+      bio: 'Barely speaks. Tempo counts, coolant readings, the occasional single word, and now and then an incident report. Means every one of them.',
     },
-    mood: ['hypnotic', 'industrial', 'relentless'],
+    cast: [
+      { name: 'Diligence Safety System', voice: 'af_sarah', bio: 'The freighter’s recorded safety announcements. Forty years out of date and extremely thorough. Null answers them in one word.' },
+    ],
+    mood: ['hypnotic', 'deadpan', 'relentless'],
   },
   {
     id: 'tiki-satellite',
@@ -1209,7 +1215,7 @@ const V4: StationDef[] = [
     name: 'The Velvet Collapse',
     frequency: 116.5,
     origin: 'The Velvet Lounge, Casino Ultima, orbiting a dying red giant',
-    tagline: 'Funk and disco at the edge of a dying star. Supernova at four. Dress accordingly.',
+    tagline: 'Funk at the edge of a dying star. Supernova at four, breakfast at six. Dress accordingly.',
     color: '#c77dff',
     phosphor: 'violet',
     format: 'music',
@@ -1221,8 +1227,11 @@ const V4: StationDef[] = [
       name: 'Baron Velour',
       voice: 'bm_daniel',
       speed: 0.96,
-      bio: 'Owner, host and bass player. Smooth, unbothered by the supernova, which he regards as a lighting cue.',
+      bio: 'Owner, host and bass player. Smooth, unbothered by the nightly supernova, which he regards as the finest lighting rig in the galaxy. The star outside is Old Ruby; he is very fond of her.',
     },
+    cast: [
+      { name: 'Odette', voice: 'bf_lily', bio: 'Croupier. Takes bets on the end of the world, and on breakfast. The roulette wheel is only red.' },
+    ],
     mood: ['slinky', 'decadent', 'apocalyptic'],
   },
   {
@@ -1240,10 +1249,13 @@ const V4: StationDef[] = [
       'A tiny dancefloor on a rock at the end of everything: one speaker stack, a DJ under a single warm light, three figures dancing, and a dim nebula swaying along. Stars are going out one by one in the black sky.',
     host: {
       name: 'DJ Entropy',
-      voice: 'am_fenrir',
-      speed: 0.88,
-      bio: 'The last DJ. Gentle, unhurried, a little sad and very kind. Her sets lose a few BPM every hour, like everything else.',
+      voice: 'bf_emma',
+      speed: 0.9,
+      bio: 'The last DJ. Gentle, unhurried, a little sad and very kind; calls everyone love. Her sets lose a few beats a minute every hour, like everything else. Says goodnight to every star that goes out.',
     },
+    cast: [
+      { name: 'Dov', voice: 'am_liam', bio: 'One of the three guys. Does a thing with his arms that has no name. (Wendell and the third guy do not speak. Lorraine, a nebula, glows.)' },
+    ],
     mood: ['melancholy', 'euphoric', 'final'],
   },
   // v4 secrets, one per unlock mechanism.

@@ -18,9 +18,7 @@ function expectClean(text: string, context: string) {
 
 // TODO(v4 integration): stations and recipes whose packs the v4 writers haven't delivered yet.
 const V4_PENDING = new Set<string>([
-  'saturday-night-forever', 'orbit-roots', 'substation-null', 'tiki-satellite', 'island-time',
-  'atomic-bachelor-pad', 'velvet-collapse', 'heat-death-afterparty',
-  'disco', 'space-funk', 'warehouse-techno', 'heat-death-house', 'roots-reggae',
+  'orbit-roots', 'tiki-satellite', 'island-time', 'atomic-bachelor-pad', 'roots-reggae',
   'island-reggae', 'exotica', 'space-age-pop', 'court-bed', 'theatre-organ', 'traffic-bed', 'pirate-bed',
 ]);
 
