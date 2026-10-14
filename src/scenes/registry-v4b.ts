@@ -28,4 +28,8 @@ export const TALK_SCENES_V4: Partial<Record<SceneId, SceneEntry>> = {
     label: 'An old telephone exchange stretches away into darkness, lamps winking, one operator in a headset at a pool of light.',
     load: () => import('./defs/switchboard'),
   },
+  'between-minutes': {
+    label: 'A moonlit room held still between two ticks: dust hangs in the air and a falling glass waits mid-air beside a glowing radio.',
+    load: () => import('./defs/between-minutes'),
+  },
 };
