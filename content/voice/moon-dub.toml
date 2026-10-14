@@ -577,3 +577,69 @@ lines = [
   { say = "host", text = "Nodded at me like it knew the tune. Respect, pigeon." },
   { say = "echo", text = "Respect, pigeon." },
 ]
+
+
+# ══ v4: Full moon ═════════════════════════════════════════════════════════════
+#
+# kit = "full-moon": the director airs these only on full-moon nights. Selector Crater's
+# full-moon rituals, and a sound system playing to a full moon from on top of it.
+
+[[clip]]
+id = "full-moon-id"
+category = "id"
+title = "Moon Dub, Full Moon"
+kit = "full-moon"
+lines = [
+  { say = "host", text = "Moon Dub Sound System. Full moon tonight." },
+  { say = "host", text = "We're the full part." },
+  { say = "echo", text = "The full part." },
+  { sting = "id" },
+]
+
+[[clip]]
+id = "full-moon-01"
+category = "dj"
+kit = "full-moon"
+lines = [
+  { say = "host", text = "Full moon down there means a dark Earth up here. Funny how it works." },
+  { say = "host", text = "They get the light. We get the dark. Fair trade. Speakers out. Pointed down. Bass, all the way." },
+]
+
+[[clip]]
+id = "full-moon-02"
+category = "dj"
+kit = "full-moon"
+lines = [
+  { say = "host", text = "Full moon ritual. Turn every speaker to face the sun, one at a time. Say thank you for the light." },
+  { say = "host", text = "Turn them back round. Play the heaviest tune in the box. That's it. That's the ritual." },
+  { say = "echo", text = "That's the ritual." },
+]
+
+[[clip]]
+id = "full-moon-03"
+category = "dj"
+kit = "full-moon"
+lines = [
+  { say = "host", text = "Full moon. The tide's pulling on every ocean down there." },
+  { say = "host", text = "Some of that's us. Bass moves water. Surf's up in seven countries. You're welcome." },
+]
+
+[[clip]]
+id = "full-moon-04"
+category = "dj"
+kit = "full-moon"
+lines = [
+  { say = "host", text = "Lone astronaut's come out for the full moon. Still nodding. Day four hundred." },
+  { say = "host", text = "Brought his own sandwich this time." },
+  { say = "echo", text = "Growth." },
+]
+
+[[clip]]
+id = "full-moon-05"
+category = "dj"
+kit = "full-moon"
+lines = [
+  { say = "host", text = "Shout-out to everybody down there, looking up at the full moon, thinking it's quiet up here." },
+  { say = "host", text = "It isn't. Wave. Hold tight." },
+  { say = "echo", text = "Hold tight." },
+]
