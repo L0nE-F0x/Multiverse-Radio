@@ -9,8 +9,11 @@ import { toast, togglePanel, useUi, type PanelId } from '../ui/store';
 /**
  * The console's key strip. Each key prints its keyboard shortcut where an old terminal
  * would print F1, F2, …; the shortcuts are letters, so the browser keeps its own F-keys.
+ *
+ * `drawer` is the phone sheet's version: the four everyday keys large, the rest smaller
+ * underneath. Play lives on the mini-player and volume on the phone's own buttons.
  */
-export function FunctionKeys() {
+export function FunctionKeys({ variant = 'dock' }: { variant?: 'dock' | 'drawer' }) {
   const status = useStatus();
   const muted = useBroadcast((s) => s.muted);
   const volume = useBroadcast((s) => s.volume);
@@ -28,6 +31,39 @@ export function FunctionKeys() {
     else if (result === 'unavailable') toast('Installation unavailable on this terminal.');
   };
 
+  const share = (
+    <Key
+      cap="⇪"
+      label="Share"
+      onClick={() => void act.share()}
+      disabled={!act.shareable(tuned)}
+      title={act.shareable(tuned) ? `Share ${tuned.station.name}` : 'Only listed stations can be shared'}
+    />
+  );
+  const offline = <PanelKey id="offline" cap="O" label="Offline" open={panel === 'offline'} title="Prepare for dead space: stow stations for offline listening" />;
+  const installKey = install.canInstall && <Key cap="⤓" label="Install" onClick={() => void onInstall()} testId="hud-install" />;
+
+  if (variant === 'drawer') {
+    return (
+      <nav className="fkeys fkeys-drawer" aria-label="Console controls">
+        <div className="fkeys-group fkeys-primary">
+          <PanelKey id="guide" cap="G" label="Guide" open={panel === 'guide'} />
+          <Key cap="S" label="Scan" onClick={act.scan} />
+          <Key cap="N" label="Skip" onClick={act.skip} />
+          <PanelKey id="log" cap="L" label="Log" open={panel === 'log'} />
+        </div>
+        <div className="fkeys-group fkeys-secondary">
+          <Key cap="M" label={muted ? 'Muted' : 'Mute'} lamp={muted} pressed={muted} onClick={act.toggleMute} />
+          <Key cap="C" label="Captions" lamp={captions} pressed={captions} onClick={act.toggleCaptions} />
+          {share}
+          {offline}
+          {installKey}
+          <PanelKey id="help" cap="?" label="Manual" open={panel === 'help'} />
+        </div>
+      </nav>
+    );
+  }
+
   return (
     <nav className="fkeys" aria-label="Console controls">
       <div className="fkeys-group fkeys-primary">
@@ -41,14 +77,9 @@ export function FunctionKeys() {
         <Key cap="M" label={muted ? 'Muted' : 'Mute'} lamp={muted} pressed={muted} onClick={act.toggleMute} />
         <Volume volume={volume} muted={muted} />
         <Key cap="C" label="Captions" lamp={captions} pressed={captions} onClick={act.toggleCaptions} className="fkey-cc" />
-        <Key
-          cap="⇪"
-          label="Share"
-          onClick={() => void act.share()}
-          disabled={!act.shareable(tuned)}
-          title={act.shareable(tuned) ? `Share ${tuned.station.name}` : 'Only listed stations can be shared'}
-        />
-        {install.canInstall && <Key cap="⤓" label="Install" onClick={() => void onInstall()} testId="hud-install" />}
+        {share}
+        {offline}
+        {installKey}
         <PanelKey id="help" cap="?" label="Manual" open={panel === 'help'} className="fkey-help" />
       </div>
       <MakersPlate />
@@ -103,8 +134,8 @@ function Key({
   );
 }
 
-function PanelKey({ id, cap, label, open, className }: { id: PanelId; cap: string; label: string; open: boolean; className?: string }) {
-  return <Key cap={cap} label={label} onClick={() => togglePanel(id)} expanded={open} controls={id} className={className} />;
+function PanelKey({ id, cap, label, open, className, title }: { id: PanelId; cap: string; label: string; open: boolean; className?: string; title?: string }) {
+  return <Key cap={cap} label={label} onClick={() => togglePanel(id)} expanded={open} controls={id} className={className} title={title} />;
 }
 
 const keyShortcut = (cap: string): string | undefined =>

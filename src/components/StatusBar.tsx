@@ -1,14 +1,15 @@
 import { useBroadcast } from '../broadcast/store';
 import { useNow } from '../hooks/useNow';
 import { SHIP } from '../stations/ship';
-import { formatClock, formatElapsed } from '../ui/format';
+import { formatClock, formatElapsed, formatHeading } from '../ui/format';
 import { useStatus, useTuned } from '../ui/select';
 import { useUi } from '../ui/store';
 import { linkStatus, SignalMeter } from './SignalMeter';
 
 /**
- * The top line of the console: hull designation, vessel time, link quality, the show on
- * air, the length of the shift and what HUSH is up to.
+ * The top line of the console: hull designation, vessel time, link quality, the ship's
+ * heading, the show on air, the length of the shift and what HUSH is up to. On phones it
+ * drops to the essentials (CSS, by width) and never wraps or overflows.
  */
 export function StatusBar({ live }: { live: boolean }) {
   const status = useStatus();
@@ -17,6 +18,7 @@ export function StatusBar({ live }: { live: boolean }) {
   const show = useBroadcast((s) => s.show?.name ?? null);
   const hushSpeaking = useBroadcast((s) => s.caption?.speaker === SHIP.computer.name);
   const shiftStart = useUi((s) => s.shiftStart);
+  const heading = useBroadcast((s) => s.heading);
   const link = linkStatus(status, tuned.kind, signal);
   const [hull, relay] = SHIP.designation.split(' · ');
 
@@ -24,7 +26,7 @@ export function StatusBar({ live }: { live: boolean }) {
     <div className="statusbar">
       <span className="sb-designation">
         <span className="sb-mark" aria-hidden />
-        <span>{hull}</span>
+        <span className="sb-hull">{hull}</span>
         {relay && <span className="sb-relay">{relay}</span>}
       </span>
       <span className="sb-field sb-time">
@@ -35,6 +37,13 @@ export function StatusBar({ live }: { live: boolean }) {
         <span className="sb-label">Link</span>
         <SignalMeter signal={signal} lit={status === 'playing' && tuned.kind !== 'static'} bars={5} />
         <span className="sb-value">{link.code}</span>
+      </span>
+      <span className="sb-field sb-hdg" title="Heading">
+        <span className="sb-label" aria-hidden>
+          Hdg
+        </span>
+        <span className="sr-only">Heading</span>
+        <span className="sb-value tabular">{formatHeading(heading)}</span>
       </span>
       <span className="sb-field sb-show">
         <span className="sb-label">On air</span>
@@ -56,9 +65,12 @@ export function StatusBar({ live }: { live: boolean }) {
 
 function Clock({ live }: { live: boolean }) {
   const now = useNow(1000, live);
+  const clock = formatClock(now);
+  // Seconds drop off on narrow screens (CSS).
   return (
     <time className="sb-value tabular" dateTime={new Date(now).toISOString()}>
-      {formatClock(now)}
+      {clock.slice(0, 5)}
+      <span className="sb-sec">{clock.slice(5)}</span>
     </time>
   );
 }

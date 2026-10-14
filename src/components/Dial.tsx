@@ -3,7 +3,7 @@ import { useBroadcast } from '../broadcast/store';
 import { DIAL } from '../broadcast/types';
 import { usePrefersReducedMotion } from '../hooks/usePrefersReducedMotion';
 import * as act from '../ui/actions';
-import { dialMarkers, inMainBand, MAIN_HI, MAIN_LO, snapMhz, type DialMarker } from '../ui/dial';
+import { BAND_LABEL, bandOf, dialMarkers, inMainBand, inOuterBand, MAIN_HI, MAIN_LO, OUTER_HI, snapMhz, type DialMarker } from '../ui/dial';
 import { formatMhz } from '../ui/format';
 import { PHOSPHOR } from '../ui/phosphor';
 import { useShipLog } from '../ui/shiplog';
@@ -12,15 +12,22 @@ import { holdDial, moveDial, nudgeDial, useTuning } from '../ui/tuning';
 import { linkStatus, SignalMeter } from './SignalMeter';
 
 const SPAN = DIAL.max - DIAL.min;
-/** Pixels per MHz on the scale, by the width of the band window. */
-const scaleFor = (width: number) => (width < 520 ? 140 : width < 900 ? 165 : 190);
+/** Pixels per MHz on the scale, by the width of the band window. The phone strip is tighter. */
+const scaleFor = (width: number, strip: boolean) => (strip ? 96 : width < 520 ? 140 : width < 900 ? 165 : 190);
+/** A release faster than this (px/ms) on the phone strip steps to the next station. */
+const FLICK = 0.55;
 
 /**
  * The fine-tuning dial: a frequency scale that slides under a fixed needle. Drag it, flick
  * it, scroll it or arrow-key it in 0.05 MHz steps; markers show the stations (and anything
- * secret or pirate this listener has found). Beyond the main band, the deep band.
+ * secret or pirate this listener has found). Above the main band, the Outer Band; beyond
+ * both, the deep band.
+ *
+ * `strip` is the phone mini-player's thin version: just the scale and needle. Drag to
+ * fine-tune; a flick steps to the next or previous station instead of gliding.
  */
-export function Dial() {
+export function Dial({ variant = 'full' }: { variant?: 'full' | 'strip' }) {
+  const strip = variant === 'strip';
   const stations = useBroadcast((s) => s.stations);
   const discovered = useBroadcast((s) => s.discovered);
   const pirates = useShipLog((s) => s.pirates);
@@ -39,7 +46,7 @@ export function Dial() {
   const windowRef = useRef<HTMLDivElement>(null);
   const stripRef = useRef<HTMLDivElement>(null);
   const [width, setWidth] = useState(0);
-  const ppm = scaleFor(width);
+  const ppm = scaleFor(width, strip);
 
   // Drag state lives in refs: the strip follows the pointer without re-rendering.
   const drag = useRef<{
@@ -147,6 +154,12 @@ export function Dial() {
     const dt = Math.max(1, last.t - first.t);
     const velocity = event.timeStamp - last.t > 80 ? 0 : (last.x - first.x) / dt; // px/ms
     const start = clamp(d.f0 - (last.x - d.x0) / ppm);
+    if (strip && Math.abs(velocity) >= FLICK) {
+      // Dragging the scale left moves up the dial: a flick left is the next station.
+      endHold();
+      act.step(velocity < 0 ? 1 : -1);
+      return;
+    }
     if (Math.abs(velocity) < 0.25 || reducedMotion) {
       moveDial(start, { flush: true });
       endHold();
@@ -187,50 +200,63 @@ export function Dial() {
     event.preventDefault();
   };
 
-  const deep = !inMainBand(shown);
+  const band = bandOf(shown);
+  const deep = band === 'deep';
   const link = linkStatus(status, tuned.kind, signal);
-  const valueText = `${formatMhz(shown)} MHz, ${tuned.kind === 'static' ? 'no signal' : `${source.name}${tuned.kind === 'pirate' ? ' (pirate)' : ''}`}${deep ? ', deep band' : ''}`;
+  const valueText = `${formatMhz(shown)} MHz, ${tuned.kind === 'static' ? 'no signal' : `${source.name}${tuned.kind === 'pirate' ? ' (pirate)' : ''}`}${band === 'main' ? '' : `, ${BAND_LABEL[band].toLowerCase()}`}`;
+
+  const tuner = (
+    <div
+      ref={windowRef}
+      className="dial-window"
+      role="slider"
+      tabIndex={0}
+      aria-label={strip ? 'Tuning strip' : 'Fine tuning'}
+      aria-orientation="horizontal"
+      aria-valuemin={DIAL.min}
+      aria-valuemax={DIAL.max}
+      aria-valuenow={Number(formatMhz(shown))}
+      aria-valuetext={valueText}
+      onPointerDown={onPointerDown}
+      onPointerMove={onPointerMove}
+      onPointerUp={onPointerUp}
+      onPointerCancel={onPointerUp}
+      onKeyDown={onKeyDown}
+      style={{ '--ppm': `${ppm}px` } as CSSProperties}
+    >
+      <div ref={stripRef} className="dial-strip" style={{ width: SPAN * ppm }}>
+        <Scale ppm={ppm} markers={markers} tunedId={tunedId} />
+      </div>
+      <div className="dial-needle" aria-hidden>
+        <span className="dial-needle-tag tabular">{formatMhz(shown)}</span>
+      </div>
+    </div>
+  );
+
+  if (strip) {
+    return (
+      <div className="dial dial-mini" data-band={band} data-deep={deep} data-held={held}>
+        {tuner}
+      </div>
+    );
+  }
 
   return (
-    <div className="dial" data-deep={deep} data-held={held}>
+    <div className="dial" data-band={band} data-deep={deep} data-held={held}>
       <div className="dial-readout">
         <span className="dial-label">Freq</span>
         <span className="dial-freq tabular">
           {formatMhz(shown)}
           <small>MHz</small>
         </span>
-        <span className="dial-band">{deep ? 'Deep band' : 'Main band'}</span>
+        <span className="dial-band">{BAND_LABEL[band]}</span>
       </div>
 
       <button type="button" className="dial-step" onClick={() => act.step(-1)} aria-label="Previous station">
         <span aria-hidden>◂</span>
       </button>
 
-      <div
-        ref={windowRef}
-        className="dial-window"
-        role="slider"
-        tabIndex={0}
-        aria-label="Fine tuning"
-        aria-orientation="horizontal"
-        aria-valuemin={DIAL.min}
-        aria-valuemax={DIAL.max}
-        aria-valuenow={Number(formatMhz(shown))}
-        aria-valuetext={valueText}
-        onPointerDown={onPointerDown}
-        onPointerMove={onPointerMove}
-        onPointerUp={onPointerUp}
-        onPointerCancel={onPointerUp}
-        onKeyDown={onKeyDown}
-        style={{ '--ppm': `${ppm}px` } as CSSProperties}
-      >
-        <div ref={stripRef} className="dial-strip" style={{ width: SPAN * ppm }}>
-          <Scale ppm={ppm} markers={markers} tunedId={tunedId} />
-        </div>
-        <div className="dial-needle" aria-hidden>
-          <span className="dial-needle-tag tabular">{formatMhz(shown)}</span>
-        </div>
-      </div>
+      {tuner}
 
       <button type="button" className="dial-step" onClick={() => act.step(1)} aria-label="Next station">
         <span aria-hidden>▸</span>
@@ -263,11 +289,15 @@ const Scale = memo(function Scale({ ppm, markers, tunedId }: { ppm: number; mark
     <>
       <div className="dial-region dial-region-deep" style={{ left: 0, width: x(MAIN_LO) }} />
       <div className="dial-region dial-region-main" style={{ left: x(MAIN_LO), width: x(MAIN_HI) - x(MAIN_LO) }} />
-      <div className="dial-region dial-region-deep" style={{ left: x(MAIN_HI), width: x(DIAL.max) - x(MAIN_HI) }} />
+      <div className="dial-region dial-region-outer" style={{ left: x(MAIN_HI), width: x(OUTER_HI) - x(MAIN_HI) }} />
+      <div className="dial-region dial-region-deep" style={{ left: x(OUTER_HI), width: x(DIAL.max) - x(OUTER_HI) }} />
       <span className="dial-edge" style={{ left: x(MAIN_LO) }}>
         ◂ Deep band
       </span>
-      <span className="dial-edge dial-edge-end" style={{ left: x(MAIN_HI) }}>
+      <span className="dial-edge dial-edge-end dial-edge-outer" style={{ left: x(MAIN_HI) }}>
+        Outer band ▸
+      </span>
+      <span className="dial-edge dial-edge-end" style={{ left: x(OUTER_HI) }}>
         Deep band ▸
       </span>
       <svg className="dial-carrier" viewBox={`${DIAL.min} 0 ${SPAN} 1`} preserveAspectRatio="none" aria-hidden>
@@ -275,7 +305,7 @@ const Scale = memo(function Scale({ ppm, markers, tunedId }: { ppm: number; mark
       </svg>
       <div className="dial-ticks" />
       {numbers.map((f) => (
-        <span key={f} className="dial-number" data-deep={!inMainBand(f)} style={{ left: x(f) }}>
+        <span key={f} className="dial-number" data-deep={!inMainBand(f) && !inOuterBand(f)} style={{ left: x(f) }}>
           {f}
         </span>
       ))}
@@ -287,6 +317,7 @@ const Scale = memo(function Scale({ ppm, markers, tunedId }: { ppm: number; mark
           data-kind={m.kind}
           data-row={i % 2}
           data-tuned={m.id === tunedId}
+          data-drift={m.drift || undefined}
           style={{ left: x(m.frequency), '--mk': PHOSPHOR[m.phosphor] } as CSSProperties}
         >
           <span className="dial-marker-label">{m.label}</span>
@@ -308,7 +339,7 @@ function carrierPath(markers: DialMarker[]): string {
     seed ^= seed << 13;
     seed ^= seed >>> 17;
     seed ^= seed << 5;
-    let level = 0.06 + ((seed >>> 0) / 4294967296) * (inMainBand(f) ? 0.07 : 0.12);
+    let level = 0.06 + ((seed >>> 0) / 4294967296) * (inMainBand(f) || inOuterBand(f) ? 0.07 : 0.12);
     for (const m of markers) {
       const d = (f - m.frequency) / 0.11;
       if (Math.abs(d) < 4) level = Math.max(level, Math.exp(-d * d) * (m.kind === 'station' ? 0.92 : 0.7));
@@ -318,7 +349,7 @@ function carrierPath(markers: DialMarker[]): string {
   return `M${points.join('L')}`;
 }
 
-/** The whole dial in miniature: where the main band sits and where the needle is. */
+/** The whole dial in miniature: where the main and outer bands sit and where the needle is. */
 function BandMap({ frequency, markers }: { frequency: number; markers: DialMarker[] }) {
   const pct = (mhz: number) => `${(((mhz - DIAL.min) / SPAN) * 100).toFixed(3)}%`;
   return (
@@ -326,6 +357,7 @@ function BandMap({ frequency, markers }: { frequency: number; markers: DialMarke
       <span className="bandmap-label">{DIAL.min}</span>
       <div className="bandmap-track">
         <span className="bandmap-main" style={{ left: pct(MAIN_LO), width: `${((MAIN_HI - MAIN_LO) / SPAN) * 100}%` }} />
+        <span className="bandmap-outer" style={{ left: pct(MAIN_HI), width: `${((OUTER_HI - MAIN_HI) / SPAN) * 100}%` }} />
         {markers.map((m) => (
           <span key={m.id} className="bandmap-dot" data-kind={m.kind} style={{ left: pct(m.frequency) }} />
         ))}

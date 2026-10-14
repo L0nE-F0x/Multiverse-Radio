@@ -25,7 +25,7 @@ export function PowerOverlay() {
           <span>{lost ? 'Retry link' : 'Power on'}</span>
         </button>
         {!lost && (
-          <p className="power-hint">
+          <p className="power-hint hint-kbd">
             <span className="hint-key">Space</span> begins the night shift
           </p>
         )}

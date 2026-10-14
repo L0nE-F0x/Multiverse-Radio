@@ -4,7 +4,7 @@ import { shipLogNote } from '../content';
 import { SHIP } from '../stations/ship';
 import * as act from '../ui/actions';
 import { pirateFrequency } from '../ui/dial';
-import { formatClock, formatMhzPadded, hash } from '../ui/format';
+import { formatClock, formatHeading, formatMhzPadded, hash } from '../ui/format';
 import { phosphorHex } from '../ui/phosphor';
 import { clearShipLog, LOG_MAX, useShipLog, type LogEntry } from '../ui/shiplog';
 import { openPanel, useUi } from '../ui/store';
@@ -20,6 +20,8 @@ export default function ShipLogPanel() {
   const discovered = useBroadcast((s) => s.discovered);
   const stations = useBroadcast((s) => s.stations);
   const recentCount = useBroadcast((s) => s.recent.length);
+  const shifts = useBroadcast((s) => s.shifts);
+  const heading = useBroadcast((s) => s.heading);
   const shiftStart = useUi((s) => s.shiftStart);
   const [confirm, setConfirm] = useState(false);
 
@@ -46,6 +48,15 @@ export default function ShipLogPanel() {
   return (
     <Panel id="log" kicker={`${SHIP.designation} · Operator's record`} title="Ship's log">
       <dl className="log-summary">
+        <div className="log-shift">
+          <dt>Shift</dt>
+          {/* Night shifts worked (the store counts one once a night has 10 minutes on air); a new operator is on their first. */}
+          <dd className="tabular">{Math.max(1, shifts)}</dd>
+        </div>
+        <div className="log-hdg">
+          <dt>Heading</dt>
+          <dd className="tabular">{formatHeading(heading)}</dd>
+        </div>
         <div>
           <dt>This shift</dt>
           <dd className="tabular">{recentCount} intercepts</dd>

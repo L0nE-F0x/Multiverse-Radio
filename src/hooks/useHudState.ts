@@ -14,15 +14,17 @@ export const VIEWPORT = '[data-viewport]';
 
 /**
  * "Leave it on": while on air, the HUD dims after a few idle seconds, then hides, and wakes
- * on any input. It stays up while paused/off, while a panel is open, and while the pointer
- * rests on (or the keyboard focus sits in) the controls. H hides it until H or a tap.
+ * on any input. It stays up while paused/off, while a panel or the phone drawer is open, and
+ * while the pointer rests on (or the keyboard focus sits in) the controls. H hides it until H
+ * or a tap.
  */
 export function useHudState(): HudState {
   const mode = useUi((s) => s.hud);
   const playing = useBroadcast((s) => s.status === 'playing');
   const panel = useUi((s) => s.panel);
+  const drawer = useUi((s) => s.drawer);
   const [level, setLevel] = useState<0 | 1 | 2>(0);
-  const auto = playing && !panel && mode === 'auto';
+  const auto = playing && !panel && !drawer && mode === 'auto';
   const state: HudState = mode === 'hidden' ? 'hidden' : !auto ? 'awake' : (['awake', 'dim', 'hidden'] as const)[level];
   const stateRef = useRef(state);
   stateRef.current = state;

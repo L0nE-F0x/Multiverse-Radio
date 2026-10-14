@@ -58,9 +58,12 @@
   html {
     color-scheme: dark;
     background: var(--color-void);
+    /* The console is one fixed screen: no pull-to-refresh or rubber-banding behind it. */
+    overscroll-behavior: none;
   }
 
   body {
+    overscroll-behavior: none;
     background: var(--color-void);
     color: var(--color-cream);
     font-family: var(--font-term);
@@ -2024,6 +2027,749 @@
     color: var(--ph-mute);
   }
 
+  /* ── v4: the Outer Band ──────────────────────────────────────────────────── */
+
+  /* Listed, like the main band, but further out: a faint stipple instead of the main band's glow. */
+  .dial-region-outer {
+    background:
+      linear-gradient(to bottom, transparent 30%, color-mix(in oklab, var(--ph) 6%, transparent)),
+      radial-gradient(circle, color-mix(in oklab, var(--ph) 22%, transparent) 0.7px, transparent 1.2px) 0 0 / 7px 7px;
+  }
+
+  .dial-edge-outer {
+    color: var(--ph-dim);
+  }
+
+  .dial[data-band='outer'] .dial-band,
+  .tag-outer {
+    align-self: flex-start;
+    padding: 0 5px;
+    border: 1px solid var(--ph);
+    color: var(--ph-hi);
+  }
+
+  .tag-outer {
+    padding: 1px 6px;
+  }
+
+  .bandmap-outer {
+    position: absolute;
+    top: 2px;
+    height: 3px;
+    background: repeating-linear-gradient(to right, var(--ph-mute) 0 2px, transparent 2px 4px);
+  }
+
+  /* A station that moves: tonight's position, marked as provisional. */
+  .dial-marker[data-drift] .dial-marker-label::after {
+    content: ' ~';
+  }
+
+  .dial-marker[data-drift]::after {
+    background: transparent;
+    border: 1px dotted var(--mk);
+  }
+
+  /* Michroma has no proper degree sign. */
+  .log-hdg dd {
+    font-family: var(--font-term);
+    font-weight: 600;
+  }
+
+  .dir-note {
+    font-family: var(--font-term);
+    font-size: 9.5px;
+    letter-spacing: 0.14em;
+    color: var(--ph-mute);
+  }
+
+  .dir-freq {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .dir-tonight {
+    font-size: 8.5px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--ph-mute);
+  }
+
+  /* ── v4: hints for the input in hand ─────────────────────────────────────── */
+
+  .hint-touch {
+    display: none;
+  }
+
+  @media (hover: none) and (pointer: coarse) {
+    .hint-kbd,
+    .manual-keyboard {
+      display: none !important;
+    }
+
+    .hint-touch {
+      display: inline;
+    }
+  }
+
+  @media not ((hover: none) and (pointer: coarse)) {
+    .manual-touch {
+      display: none;
+    }
+  }
+
+  .manual-touch .manual-keys > div {
+    grid-template-columns: 150px 1fr;
+  }
+
+  .manual-touch dt {
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ph-hi);
+  }
+
+  /* ── v4: the phone drawer ────────────────────────────────────────────────── */
+
+  .drawer-scrim {
+    position: absolute;
+    inset: 0;
+    background: rgb(var(--scrim) / 0.6);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.38s ease;
+  }
+
+  .drawer-scrim[data-open='true'] {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .drawer-scrim[data-dragging='true'] {
+    pointer-events: none;
+  }
+
+  .drawer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    max-height: calc(100dvh - var(--safe-t) - 40px);
+    border-top: 1px solid var(--ph-line);
+    background: linear-gradient(to bottom, rgb(var(--scrim) / 0.9), rgb(var(--scrim) / 0.97) 72px);
+    box-shadow: 0 -18px 40px -24px rgb(0 0 0 / 0.9);
+    transform: translate3d(0, var(--travel, 0px), 0);
+    transition:
+      transform 0.4s cubic-bezier(0.22, 0.9, 0.24, 1),
+      opacity 0.7s ease,
+      translate 0.7s var(--ease-out);
+    will-change: transform;
+  }
+
+  .drawer[data-open='true'] {
+    transform: none;
+  }
+
+  .hud[data-hud='hidden'] .drawer {
+    translate: 0 16px;
+  }
+
+  .drawer-peek {
+    flex: none;
+    padding: 0 var(--gutter) calc(8px + var(--safe-b));
+    transition: padding 0.4s var(--ease-out);
+  }
+
+  .drawer[data-open='true'] .drawer-peek {
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--ph-faint);
+  }
+
+  /* 44 px to the touch, a slim grip to the eye. */
+  .drawer-handle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 44px;
+    margin: -14px 0 -10px;
+    touch-action: none;
+    cursor: grab;
+  }
+
+  .drawer-grip {
+    width: 40px;
+    height: 4px;
+    border-radius: 2px;
+    background: var(--ph-dim);
+    box-shadow: 0 0 8px var(--ph-glow);
+    transition:
+      width 0.2s ease,
+      background-color 0.2s ease;
+  }
+
+  .drawer-handle:hover .drawer-grip,
+  .drawer[data-dragging='true'] .drawer-grip {
+    width: 56px;
+    background: var(--ph);
+  }
+
+  .drawer-handle:focus-visible {
+    outline-offset: -8px;
+  }
+
+  .mini {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0 12px;
+  }
+
+  .mini-play {
+    order: 1;
+  }
+
+  .mini .drawer-strip {
+    order: 2;
+    flex: 1 0 100%;
+  }
+
+  .mini-id {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    min-width: 0;
+    min-height: 52px;
+    touch-action: none;
+    cursor: grab;
+  }
+
+  .mini-lamp {
+    flex: none;
+    width: 8px;
+    height: 8px;
+    margin: 0 2px;
+    border: 1.5px solid var(--ph);
+    transform: rotate(45deg);
+    box-shadow: 0 0 8px var(--ph-glow);
+  }
+
+  html[data-status='playing'] .mini-lamp {
+    background: var(--ph);
+  }
+
+  .mini-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 0;
+  }
+
+  .mini-name,
+  .mini-now {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .mini-name {
+    font-family: var(--font-head);
+    font-size: 12.5px;
+    line-height: 1.2;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ph-hi);
+    text-shadow: 0 0 14px var(--ph-glow);
+  }
+
+  .mini-now {
+    font-size: 11.5px;
+    line-height: 1.3;
+    color: var(--ph-dim);
+  }
+
+  .mini-freq {
+    flex: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 4px;
+    font-family: var(--font-head);
+    font-size: 16px;
+    line-height: 1;
+    color: var(--ph-hi);
+  }
+
+  .mini-freq small {
+    font-family: var(--font-term);
+    font-size: 9px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--ph-mute);
+  }
+
+  .mini-play {
+    flex: none;
+    display: grid;
+    place-items: center;
+    width: 52px;
+    height: 52px;
+    border: 1px solid var(--ph);
+    background: var(--ph-faint);
+    color: var(--ph-hi);
+    box-shadow:
+      0 0 20px -8px var(--ph-glow),
+      inset 0 0 16px -8px var(--ph-glow);
+    transition:
+      background-color 0.15s ease,
+      color 0.15s ease;
+  }
+
+  .mini-play:active {
+    background: var(--ph);
+    color: var(--ink);
+  }
+
+  .mini-glyph {
+    position: relative;
+    width: 16px;
+    height: 16px;
+    background: currentColor;
+  }
+
+  .mini-play[data-glyph='play'] .mini-glyph {
+    clip-path: polygon(18% 0, 100% 50%, 18% 100%);
+  }
+
+  .mini-play[data-glyph='pause'] .mini-glyph {
+    width: 14px;
+    background: linear-gradient(to right, currentColor 0 34%, transparent 34% 66%, currentColor 66%);
+  }
+
+  .mini-play[data-glyph='power'] .mini-glyph {
+    width: 15px;
+    height: 15px;
+    background: none;
+    border: 2px solid currentColor;
+    border-top-color: transparent;
+    border-radius: 50%;
+  }
+
+  .mini-play[data-glyph='power'] .mini-glyph::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: -5px;
+    width: 2px;
+    height: 8px;
+    background: currentColor;
+    transform: translateX(-50%);
+  }
+
+  /* The thin tuning strip under the mini-player; the sheet's own dial takes over when open. */
+  .drawer-strip {
+    max-height: 40px;
+    margin-top: 6px;
+    overflow: hidden;
+    transition:
+      max-height 0.4s var(--ease-out),
+      margin 0.4s var(--ease-out),
+      opacity 0.25s ease;
+  }
+
+  .drawer[data-open='true'] .drawer-strip {
+    max-height: 0;
+    margin-top: 0;
+    opacity: 0;
+  }
+
+  .dial.dial-mini {
+    display: block;
+  }
+
+  .dial-mini .dial-window {
+    height: 34px;
+    border-top: 0;
+    mask-image: linear-gradient(to right, transparent, #000 14%, #000 86%, transparent);
+  }
+
+  .dial-mini .dial-marker-label,
+  .dial-mini .dial-edge,
+  .dial-mini .dial-carrier {
+    display: none;
+  }
+
+  .dial-mini .dial-marker {
+    bottom: 10px;
+  }
+
+  .dial-mini .dial-marker::after {
+    top: 5px;
+    width: 5px;
+    height: 5px;
+    left: -2.5px;
+  }
+
+  .dial-mini .dial-marker::before {
+    top: 8px;
+  }
+
+  .dial-mini .dial-marker[data-tuned='true']::after {
+    box-shadow: 0 0 6px var(--mk);
+  }
+
+  .dial-mini .dial-number {
+    bottom: 10px;
+    font-size: 8.5px;
+  }
+
+  .dial-mini .dial-ticks {
+    height: 9px;
+    background-size:
+      100% 9px,
+      100% 6px,
+      100% 3px;
+  }
+
+  .dial-mini .dial-needle::before,
+  .dial-mini .dial-needle::after {
+    border-width: 4px;
+  }
+
+  /* The full console, as a sheet. */
+  .drawer-sheet {
+    flex: 0 1 auto;
+    min-height: 0;
+    display: grid;
+    align-content: start;
+    gap: 14px;
+    padding: 12px var(--gutter) calc(14px + var(--safe-b));
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    outline: none;
+  }
+
+  .drawer-sheet .hud-readouts {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 10px;
+  }
+
+  .drawer-sheet .source-meta {
+    flex-wrap: wrap;
+  }
+
+  .drawer-sheet .readout-now .readout-head {
+    display: flex;
+  }
+
+  .drawer-sheet .readout-now {
+    padding-left: 0;
+    border-left: 0;
+  }
+
+  .drawer-sheet .source-meta > .source-origin {
+    display: flex;
+  }
+
+  .drawer-sheet .dial {
+    grid-template-columns: 44px minmax(0, 1fr) minmax(0, 1fr) 44px;
+  }
+
+  .drawer-sheet .dial-window,
+  .drawer-sheet .dial-step {
+    height: 56px;
+  }
+
+  .fkeys-drawer {
+    display: grid;
+    gap: 8px;
+  }
+
+  .fkeys-drawer .fkeys-group {
+    display: grid;
+    gap: 6px;
+  }
+
+  .fkeys-drawer .fkeys-primary {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .fkeys-drawer .fkeys-secondary {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .fkeys-drawer .fkey {
+    min-width: 0;
+    height: 52px;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+  }
+
+  .fkeys-drawer .fkeys-secondary .fkey {
+    height: 44px;
+    border-color: color-mix(in oklab, var(--ph) 20%, transparent);
+    color: var(--ph-dim);
+    font-size: 10px;
+    letter-spacing: 0.1em;
+  }
+
+  /* Roomier phones on their side: readouts left, dial and keys right. */
+  @media (min-width: 560px) {
+    .mini {
+      flex-wrap: nowrap;
+    }
+
+    .mini-id {
+      flex: 1 1 0;
+    }
+
+    .mini .drawer-strip {
+      order: 0;
+      flex: 1.25 1 0;
+      min-width: 0;
+      margin-top: 0;
+    }
+
+    .drawer[data-open='true'] .mini .drawer-strip {
+      max-height: 34px;
+      opacity: 0;
+    }
+
+    .drawer-sheet {
+      grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+      column-gap: 22px;
+    }
+
+    .drawer-sheet .hud-readouts {
+      grid-row: span 2;
+    }
+
+    .fkeys-drawer .fkeys-secondary {
+      grid-template-columns: none;
+      grid-auto-flow: column;
+      grid-auto-columns: minmax(0, 1fr);
+    }
+
+    .fkeys-drawer .fkey {
+      height: 46px;
+    }
+
+    .fkeys-drawer .fkeys-secondary .fkey {
+      font-size: 9.5px;
+      letter-spacing: 0.04em;
+      padding-inline: 4px;
+    }
+  }
+
+  /* ── v4: phone layout (the drawer's surroundings) ────────────────────────── */
+
+  html[data-layout='drawer'] .statusbar {
+    gap: 12px;
+    height: 34px;
+    overflow: hidden;
+    font-size: 10px;
+    letter-spacing: 0.08em;
+  }
+
+  html[data-layout='drawer'] .sb-designation {
+    flex: none;
+    gap: 8px;
+    font-size: 9.5px;
+    letter-spacing: 0.14em;
+  }
+
+  html[data-layout='drawer'] :is(.sb-hull, .sb-relay, .sb-sec, .sb-label, .sb-show, .sb-shift, .sb-spacer, .sb-hush) {
+    display: none;
+  }
+
+  html[data-layout='drawer'] .sb-hdg .sb-label {
+    display: inline;
+  }
+
+  html[data-layout='drawer'] .sb-link {
+    margin-left: auto;
+  }
+
+  html[data-layout='drawer'] .sb-field {
+    flex: none;
+    gap: 6px;
+  }
+
+  @media (min-width: 420px) {
+    html[data-layout='drawer'] .sb-hull {
+      display: inline;
+    }
+  }
+
+  @media (min-width: 600px) {
+    html[data-layout='drawer'] .sb-sec {
+      display: inline;
+    }
+
+    html[data-layout='drawer'] .sb-hush {
+      display: flex;
+    }
+
+    html[data-layout='drawer'] .sb-hush .sb-label {
+      display: inline;
+    }
+  }
+
+  html[data-layout='drawer'] .event-banner {
+    top: calc(var(--safe-t) + 42px);
+  }
+
+  html[data-layout='drawer'] .ident {
+    top: calc(var(--safe-t) + 12%);
+  }
+
+  /* Short screens (a phone on its side): a smaller title card. */
+  @media (max-height: 500px) {
+    html[data-layout='drawer'] .ident {
+      top: calc(var(--safe-t) + 48px);
+      padding-top: 4px;
+    }
+
+    html[data-layout='drawer'] .ident-name {
+      margin: 6px 0;
+      font-size: 22px;
+    }
+
+    html[data-layout='drawer'] .ident-tagline {
+      max-width: 60ch;
+      font-size: 12px;
+    }
+
+    html[data-layout='drawer'] .hud-top {
+      padding-bottom: 14px;
+    }
+  }
+
+  /* The cold-console card sits clear of the mini-player, and makes way for the open sheet. */
+  html[data-layout='drawer'] .power {
+    bottom: calc(var(--dock-h, 120px) + 8px);
+    padding-top: calc(var(--safe-t) + 44px);
+  }
+
+  .console:has(.drawer:is([data-open='true'], [data-dragging='true'])) .power {
+    visibility: hidden;
+  }
+
+  html[data-layout='drawer'] .caption {
+    font-size: 13.5px;
+  }
+
+  /* Panels: full width, clear of notches, with Close (and search) at the bottom. */
+  .panel-foot {
+    display: none;
+  }
+
+  html[data-layout='drawer'] .panel {
+    width: 100vw;
+    border-left: 0;
+  }
+
+  html[data-layout='drawer'] :is(.panel-head, .panel-body, .panel-foot) {
+    padding-left: max(16px, env(safe-area-inset-left, 0px));
+    padding-right: max(16px, env(safe-area-inset-right, 0px));
+  }
+
+  html[data-layout='drawer'] .panel-head {
+    padding-top: calc(12px + var(--safe-t));
+    padding-bottom: 10px;
+  }
+
+  html[data-layout='drawer'] .panel-body {
+    padding-bottom: 20px;
+  }
+
+  html[data-layout='drawer'] .panel-foot {
+    display: flex;
+    align-items: stretch;
+    gap: 8px;
+    padding-top: 10px;
+    padding-bottom: calc(10px + var(--safe-b));
+    border-top: 1px solid var(--ph-line);
+    background: rgb(5 6 8 / 0.98);
+  }
+
+  .panel-foot .dir-find {
+    flex: 1;
+    min-width: 0;
+    margin: 0;
+    min-height: 48px;
+  }
+
+  .panel-foot .dir-find input {
+    font-size: 16px; /* iOS zooms into anything smaller */
+  }
+
+  .panel-foot-close {
+    flex: none;
+    min-width: 92px;
+    min-height: 48px;
+    border: 1px solid var(--ph-dim);
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--ph-hi);
+  }
+
+  .panel-foot-close:only-child {
+    flex: 1;
+  }
+
+  .panel-foot-close:active {
+    background: var(--ph);
+    color: var(--ink);
+  }
+
+  /* Fingers: every target at least 44 px. */
+  @media (pointer: coarse) {
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      min-height: 44px;
+      padding: 0 14px;
+    }
+
+    .panel-close {
+      min-width: 64px;
+      min-height: 44px;
+    }
+
+    .dir-row {
+      min-height: 48px;
+      padding-block: 9px;
+    }
+
+    .dial-step {
+      min-width: 44px;
+    }
+
+    .vol-step {
+      min-width: 44px;
+    }
+  }
+
+  /* Installed: keep the phone's own status bar legible over the scene. */
+  @media (display-mode: standalone) {
+    .console::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: var(--safe-t);
+      background: linear-gradient(to bottom, rgb(var(--scrim) / 0.85), rgb(var(--scrim) / 0.6));
+      pointer-events: none;
+    }
+  }
+
   /* ── Tablet ──────────────────────────────────────────────────────────────── */
 
   @media (max-width: 1100px) {
@@ -2080,7 +2826,7 @@
     }
 
     .dial-readout .dial-label,
-    .dial[data-deep='false'] .dial-band {
+    .dial[data-band='main'] .dial-band {
       display: none;
     }
 
@@ -2528,6 +3274,10 @@
 
     .dial-strip,
     .bandmap-needle,
+    .drawer,
+    .drawer-scrim,
+    .drawer-peek,
+    .drawer-strip,
     .hud-chrome,
     .hud-chrome > *,
     .hud-float {
