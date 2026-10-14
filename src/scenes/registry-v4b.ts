@@ -36,4 +36,8 @@ export const TALK_SCENES_V4: Partial<Record<SceneId, SceneEntry>> = {
     label: 'Soft, dark television static slowly gathers into the suggestion of a face leaning closer to listen, then lets go.',
     load: () => import('./defs/static-presence'),
   },
+  harbour: {
+    label: 'A quiet harbour at the edge of space: old relay ships moored at piers of light, and the Nightjar gliding in to an empty berth.',
+    load: () => import('./defs/harbour'),
+  },
 };
