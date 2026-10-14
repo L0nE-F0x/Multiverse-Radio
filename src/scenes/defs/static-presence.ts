@@ -54,12 +54,18 @@ const faceField = (u: number, v: number) => {
 
 /** A figure standing in a lit doorway, far back. */
 const doorField = (u: number, v: number) => {
-  let f = -0.15;
-  if (Math.abs(u) < 0.3 && v > -0.9 && v < 1.4) f = 0.45;
-  const head = (u / 0.08) ** 2 + ((v + 0.38) / 0.1) ** 2;
-  if (head < 1) f = -0.7;
-  if (Math.abs(u) < 0.13 - (v > 0.4 ? (v - 0.4) * 0.03 : 0) && v > -0.28 && v < 1.4) f = -0.7;
-  if (v > 1.25 && Math.abs(u) < 0.6) f = Math.max(f, 0.25 - Math.abs(u) * 0.3); // light on the floor
+  // the doorway's light, soft at its edges
+  const ex = Math.max(0, Math.abs(u) - 0.26) / 0.06;
+  const ey = Math.max(0, -0.85 - v) / 0.06;
+  let f = -0.12 + 0.48 * Math.exp(-(ex * ex + ey * ey));
+  if (v > 1.25) f = Math.max(f, 0.22 * Math.exp(-((u / 0.5) ** 2))); // light on the floor
+  // someone standing in it: a head, shoulders, the hint of two legs; dim, not black
+  const head = (u / 0.085) ** 2 + ((v + 0.3) / 0.1) ** 2;
+  const neck = v > -0.22 && v < -0.14 && Math.abs(u) < 0.04;
+  const sh = (u / 0.21) ** 2 + ((v + 0.06) / 0.08) ** 2; // rounded shoulders
+  const torso = v > -0.06 && v < 0.62 && Math.abs(u) < 0.21 - Math.max(0, v) * 0.07;
+  const legs = v >= 0.62 && v < 1.32 && Math.abs(u) < 0.16 && Math.abs(u) > 0.015;
+  if (head < 1 || neck || sh < 1 || torso || legs) f = -0.26;
   return f;
 };
 
@@ -74,8 +80,11 @@ const handField = (u: number, v: number) => {
     [0.27, -0.22, 0.34],
   ];
   for (const [fx, fy, len] of fingers) {
-    const d = (((u - fx) / 0.065) ** 2 + ((v - fy) / len) ** 2);
-    if (d < 1) f = Math.max(f, 0.45);
+    // a capsule from the palm up to a rounded tip
+    const top = fy - len + 0.07;
+    const cy = Math.max(top, Math.min(0.3, v));
+    const d = Math.hypot(u - fx, v - cy) / 0.052;
+    if (d < 1.2) f = Math.max(f, 0.45 * Math.min(1, (1.2 - d) * 3));
   }
   const th = (((u + 0.36) * 0.8 + (v - 0.35) * 0.6) / 0.08) ** 2 + (((v - 0.35) * 0.8 - (u + 0.36) * 0.6) / 0.24) ** 2;
   if (th < 1) f = Math.max(f, 0.42);
@@ -130,7 +139,7 @@ const def: SceneDef = {
           gather = Math.max(gather * (1 - k), k * 0.95);
           if (f.rare === 0) {
             field = door;
-            scale = 1.1;
+            scale = 0.95;
             dropY = 4;
           } else if (f.rare === 1) {
             field = hand;
