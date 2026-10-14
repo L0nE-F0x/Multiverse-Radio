@@ -106,3 +106,32 @@ export function fullMoonNight(night: number, tz: TzOffset = browserTzOffset): bo
 export const fullMoonAt = (ms: number, tz: TzOffset = browserTzOffset): boolean => fullMoonNight(nightOf(ms, tz), tz);
 
 export const isFullMoonClip = (clip: VoiceClip): boolean => clip.kit === FULL_MOON_KIT;
+
+// ── Greg's show ──────────────────────────────────────────────────────────────
+
+/** The Quiet Corner with Greg (The Lounge at the End of Time, Sundays 02–03). */
+export const GREG_SHOW = 'the-quiet-corner';
+/** Greg is barely audible: his own clips air about 11 dB under a normal voice. */
+export const GREG_GAIN = 10 ** (-11 / 20);
+
+/** Gain for a station clip: 1 for nearly everything; Greg's own clips in his show, very low. */
+export function voiceGain(clip: VoiceClip): number {
+  if (clip.show !== GREG_SHOW || clip.lines.length === 0) return 1;
+  return clip.lines.every((l) => /^greg\b/i.test(l.speaker)) ? GREG_GAIN : 1;
+}
+
+// ── First visits ─────────────────────────────────────────────────────────────
+
+/**
+ * Clips a secret station airs once, to welcome a listener on their first visit after finding
+ * it (never in its rotation): Something Listening's "noticed", the Switchboard's "found-*".
+ */
+const WELCOMES: Record<string, (clip: VoiceClip) => boolean> = {
+  'something-listening': (c) => c.id === 'noticed',
+  'the-switchboard': (c) => c.id.startsWith('found-'),
+};
+
+export const isWelcomeClip = (stationId: string, clip: VoiceClip): boolean => WELCOMES[stationId]?.(clip) ?? false;
+
+/** Stations with a first-visit welcome. */
+export const WELCOME_STATIONS: readonly string[] = Object.keys(WELCOMES);

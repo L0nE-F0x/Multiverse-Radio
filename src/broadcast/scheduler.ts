@@ -35,7 +35,7 @@
 
 import { trackMeta } from '../content/tracks';
 import { artistSeed } from '../music/recipes/artist';
-import { eightsInHour, fullMoonNight, isFullMoonClip, onTheEights, tweaksAt } from './quirks';
+import { eightsInHour, fullMoonNight, isFullMoonClip, isWelcomeClip, onTheEights, tweaksAt } from './quirks';
 import { createRng, hash, weightedPick, type Rng } from './random';
 import { frequencyTomorrow, tomorrowKitFrequency } from './secrets';
 import { browserTzOffset, localMinuteToMs, localTime, NIGHT_START_HOUR, nightOf, showAtHour, type TzOffset } from './time';
@@ -334,8 +334,9 @@ function buildPools(stationId: string, clips: StationClips): Pools {
   const meta: Pick<Pools, 'showOpeners' | 'serials'> = { showOpeners: new Map(), serials: new Map() };
   // Event clips (Convergence reactions) belong to the overlay; tomorrow's frequency airs at fixed times.
   const sharedRaw = clips.shared.filter((c) => !c.event && (!c.stations?.length || c.stations.includes(stationId)));
+  // (A secret's first-visit welcome airs from the overlay, once.)
   const tomorrow = clips.own.filter((c) => !c.event && tomorrowKitFrequency(c.kit) !== null);
-  const ownRaw = clips.own.filter((c) => !c.event && tomorrowKitFrequency(c.kit) === null);
+  const ownRaw = clips.own.filter((c) => !c.event && tomorrowKitFrequency(c.kit) === null && !isWelcomeClip(stationId, c));
   const mine = sortClips(ownRaw, 'own', meta);
   const theirs = sortClips(sharedRaw, 'shared', meta);
   const own = mine.standalone;
@@ -465,6 +466,9 @@ class HourWriter {
 
   /** A generated track. If too little of the hour would be left after it, it stretches to the hour. */
   track(lengthMs: number, stretchBelow: number): number {
+    // A show's opener airs on the dot (the supernova is at four sharp): end the track there.
+    const opener = this.specials.find((s) => s.show !== undefined && s.atMs > this.t);
+    if (opener && opener.atMs - this.t >= 15 * SEC && opener.atMs - this.t < lengthMs) lengthMs = opener.atMs - this.t;
     let length = Math.min(lengthMs, this.remaining);
     if (this.remaining - length < stretchBelow) length = this.remaining;
     if (length <= 0) return 0;

@@ -22,6 +22,9 @@ import {
   fullMoonNight,
   moonIllumination,
   tweaksAt,
+  GREG_GAIN,
+  isWelcomeClip,
+  voiceGain,
 } from './quirks';
 import { HOUR_MS, StationSchedule, tomorrowMinutes } from './scheduler';
 import {
@@ -686,6 +689,68 @@ describe('station quirks', () => {
       const local = localTime(r.startMs, tz);
       expect(r.tweaks?.bpm).toBe(afterpartyBpm(local.minuteOfDay));
       expect(r.tweaks!.bpm!).toBeLessThan(AFTERPARTY_BPM.day);
+    }
+  });
+});
+
+// ── Requests from the writers ─────────────────────────────────────────────────
+
+describe('v4 content conventions', () => {
+  it('keeps Greg nearly inaudible in his own show (his host’s open and close stay normal)', () => {
+    const greg = clip('end-lounge', 'dj', { show: 'the-quiet-corner', lines: [{ speaker: 'Greg, a Shadow', text: 'Hello.', startMs: 0 }] });
+    const open = clip('end-lounge', 'id', { show: 'the-quiet-corner', part: 'open', lines: [{ speaker: 'Barnaby', text: 'Lean in.', startMs: 0 }] });
+    const elsewhere = clip('end-lounge', 'dj', { lines: [{ speaker: 'Greg, a Shadow', text: 'Hi.', startMs: 0 }] });
+    expect(voiceGain(greg)).toBe(GREG_GAIN);
+    expect(20 * Math.log10(GREG_GAIN)).toBeCloseTo(-11, 5);
+    expect(voiceGain(open)).toBe(1);
+    expect(voiceGain(elsewhere)).toBe(1);
+  });
+
+  it('gives heading notices from the first shift, and holds arc steps that must wait', () => {
+    const ship = (extra: Partial<VoiceClip>) => clip('_ship', 'ship', extra, 6);
+    const heading = ship({ kit: 'heading' });
+    const plain = ship({ kit: 'outer-band' });
+    const before = new Set(Array.from({ length: 12 }, () => new HushPicker().pick([heading, plain], 0, { date: '10-14', daypart: 'night', shifts: 0 }, Math.random)));
+    expect([...before]).toEqual([plain]);
+    const after = new Set(Array.from({ length: 30 }, () => new HushPicker().pick([heading, plain], 0, { date: '10-14', daypart: 'night', shifts: 1 }, Math.random)));
+    expect(after.has(heading)).toBe(true);
+    // Step 8 waits for The Harbour.
+    const steps = [7, 8].map((step) => ship({ arc: { id: 'off-course', step } }));
+    const aired = { 'off-course': [1, 2, 3, 4, 5, 6, 7] };
+    const hold = (arc: { step: number }) => arc.step > 7;
+    expect(dueArcClip(steps, 9, aired, Math.random, hold)).toBeUndefined();
+    expect(dueArcClip(steps, 9, aired, Math.random, () => false)).toBe(steps[1]);
+  });
+
+  it('keeps a secret’s first-visit welcome out of its rotation', () => {
+    const listening = station('something-listening');
+    const noticed = clip(listening.id, 'dj', { id: 'noticed' }, 10);
+    const found = clip('the-switchboard', 'dj', { id: 'found-1' }, 10);
+    expect(isWelcomeClip(listening.id, noticed)).toBe(true);
+    expect(isWelcomeClip('the-switchboard', found)).toBe(true);
+    expect(isWelcomeClip('void-beats', found)).toBe(false);
+    const own = [noticed, ...many(8, () => clip(listening.id, 'dj', {}, 20)), ...many(3, () => clip(listening.id, 'id', {}, 5))];
+    const schedule = new StationSchedule(listening, { own, shared: [] }, { tzOffset: UTC });
+    const segments = voices(schedule.segmentsBetween(WED, WED + 2 * DAY_MS));
+    expect(segments.length).toBeGreaterThan(10);
+    expect(segments.some((x) => x.clip === noticed)).toBe(false);
+  });
+
+  it('opens a show on the dot, even where the local hour falls mid-way through a UTC hour', () => {
+    const velvet = station('velvet-collapse');
+    const collapse: ShowDef = { id: 'the-collapse', name: 'The Collapse', blurb: '', start: 4, end: 6 };
+    const supernova = clip(velvet.id, 'id', { show: 'the-collapse', part: 'open' }, 12);
+    const own = [supernova, ...many(10, () => clip(velvet.id, 'dj', {}, 15)), ...many(4, () => clip(velvet.id, 'id', {}, 4))];
+    for (const minutes of [0, 330, -570, 345]) {
+      const tz = fixedTzOffset(minutes);
+      const schedule = new StationSchedule(velvet, { own, shared: [], shows: [collapse] }, { tzOffset: tz });
+      const openers = voices(schedule.segmentsBetween(WED, WED + 3 * DAY_MS)).filter((x) => x.clip === supernova);
+      expect(openers.length).toBeGreaterThanOrEqual(2);
+      for (const o of openers) {
+        const local = localTime(o.startMs, tz);
+        expect(local.minuteOfDay).toBe(4 * 60);
+        expect(o.startMs % MIN_MS).toBe(0);
+      }
     }
   });
 });

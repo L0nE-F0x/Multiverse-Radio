@@ -26,6 +26,7 @@ import { DEFAULT_STATION_ID, MAIN_STATIONS, STATIONS, stationById } from '../sta
 import { DISCOVER_MS, DISCOVER_SIGNAL, pirates, pureStatic, stationForId, stepFrom } from './dial';
 import { Director } from './director';
 import { OFF_COURSE } from './hush';
+import { isWelcomeClip, WELCOME_STATIONS } from './quirks';
 import { POOLS, VoiceLibrary } from './library';
 import type { OutputMode } from './mixer';
 import { SecretWatcher, type Visitor } from './secrets';
@@ -91,11 +92,30 @@ const watcher = new SecretWatcher(STATIONS);
 /** v4: the listener's progress (the director lab reads and pokes at it). */
 export const progress = { shifts: shiftLog, listen: listenLog, arcs: arcLog, watcher };
 
-director.shiftView = () => ({ shifts: shiftLog.shifts, aired: arcLog.aired });
 director.setSecrets(storage.getDiscovered(), null);
 
 /** `shifts` secrets (The Harbour): the arc step with their count grants them. */
 const GRANTED = STATIONS.filter((s): s is StationDef & { unlock: { kind: 'shifts'; count: number } } => s.unlock?.kind === 'shifts');
+
+/** Arc steps after the one that grants a station wait until it's found (step 8 waits for The Harbour). */
+const holdArc = (arc: { id: string; step: number }) =>
+  arc.id === OFF_COURSE && GRANTED.some((s) => arc.step > s.unlock.count && !useBroadcast.getState().discovered.includes(s.id));
+
+director.shiftView = () => ({ shifts: shiftLog.shifts, aired: arcLog.aired, holdArc });
+
+/** Secrets whose first-visit welcome has aired. */
+const welcomed = new Set(storage.getWelcomed());
+
+/** A secret's welcome on the first visit after finding it (once its clips are in). */
+function welcomeVisit(stationId: string | null, discovered: readonly string[]): void {
+  if (!stationId || welcomed.has(stationId) || !WELCOME_STATIONS.includes(stationId) || !discovered.includes(stationId)) return;
+  if (!library.isLoaded(stationId)) return;
+  const clips = library.pool(stationId).filter((c) => isWelcomeClip(stationId, c));
+  const clip = clips[Math.floor(Math.random() * clips.length)];
+  if (clip && !director.welcome(clip)) return;
+  welcomed.add(stationId);
+  storage.setWelcomed([...welcomed]);
+}
 
 /** True if HUSH has no way to say the arc step that grants a station (so grant it at once). */
 function hushCantSpeak(step: number): boolean {
@@ -247,6 +267,8 @@ export const useBroadcast = create<BroadcastStore>()((set, get) => {
       storage.setDiscovered(discovered);
     }
     if (discovered !== state.discovered || visitor !== before) syncSecrets(discovered);
+    // A secret's first visit after finding it gets its welcome (once the dial has settled there).
+    if (playing && settled && program?.kind === 'station') welcomeVisit(program.id, discovered);
 
     const show = tuned.kind === 'station' ? showAt(library.shows(tuned.station.id), localTime(director.stationNow(tuned.station.id))) : null;
     const event = director.eventAt();

@@ -39,6 +39,8 @@ export const isJamClip = (clip: VoiceClip): boolean => clip.kit === JAM_KIT;
 
 /** The off-course arc (docs/V4-PLAN.md). */
 export const OFF_COURSE = 'off-course';
+/** Evasive notices about the heading: ordinary notices once the listener has worked a shift. */
+export const HEADING_KIT = 'heading';
 
 /** Arc steps aired so far, per arc id (persisted by the store). */
 export type ArcProgress = Readonly<Record<string, readonly number[]>>;
@@ -54,13 +56,21 @@ export interface HushContext {
   shifts?: number;
   /** v4: arc steps already aired. */
   aired?: ArcProgress;
+  /** v4: arc steps that must wait for something else (step 8 waits for The Harbour). */
+  holdArc?: (arc: { id: string; step: number }) => boolean;
 }
 
 /**
  * The arc step due now, if any: for each arc, the lowest step not yet aired, provided the
  * listener has worked at least that many shifts. Several clips for one step are variants.
  */
-export function dueArcClip(pool: readonly VoiceClip[], shifts: number, aired: ArcProgress = {}, random: () => number = Math.random): VoiceClip | undefined {
+export function dueArcClip(
+  pool: readonly VoiceClip[],
+  shifts: number,
+  aired: ArcProgress = {},
+  random: () => number = Math.random,
+  hold?: (arc: { id: string; step: number }) => boolean,
+): VoiceClip | undefined {
   const next = new Map<string, number>();
   for (const c of pool) {
     if (!c.arc) continue;
@@ -69,7 +79,7 @@ export function dueArcClip(pool: readonly VoiceClip[], shifts: number, aired: Ar
     const step = next.get(c.arc.id);
     if (step === undefined || c.arc.step < step) next.set(c.arc.id, c.arc.step);
   }
-  const due = [...next.entries()].filter(([, step]) => step <= shifts).sort((a, b) => a[1] - b[1] || (a[0] < b[0] ? -1 : 1))[0];
+  const due = [...next.entries()].filter(([id, step]) => step <= shifts && !hold?.({ id, step })).sort((a, b) => a[1] - b[1] || (a[0] < b[0] ? -1 : 1))[0];
   if (!due) return undefined;
   const variants = pool.filter((c) => c.arc?.id === due[0] && c.arc.step === due[1]);
   return variants[Math.min(variants.length - 1, Math.floor(random() * variants.length))];
@@ -85,7 +95,7 @@ export class HushPicker {
   private count = 0;
 
   pick(pool: readonly VoiceClip[], level: number, context: HushContext, random: () => number): VoiceClip | undefined {
-    const arc = dueArcClip(pool, context.shifts ?? 0, context.aired, random);
+    const arc = dueArcClip(pool, context.shifts ?? 0, context.aired, random, context.holdArc);
     if (arc) {
       this.heard.set(arc.url, ++this.count);
       return arc;
@@ -95,6 +105,7 @@ export class HushPicker {
       (c) =>
         !c.arc &&
         !isJamClip(c) &&
+        (c.kit !== HEADING_KIT || (context.shifts ?? 0) >= 1) &&
         (c.level ?? 0) <= level &&
         (!c.dates || c.dates.includes(context.date)) &&
         (!c.days || weekday === undefined || c.days.includes(weekday)),

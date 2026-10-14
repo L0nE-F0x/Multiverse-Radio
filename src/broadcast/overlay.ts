@@ -51,6 +51,8 @@ export interface ProgramView {
 export interface ShiftView {
   shifts: number;
   aired: ArcProgress;
+  /** Arc steps that must wait (step 8 waits for The Harbour). */
+  holdArc?: (arc: { id: string; step: number }) => boolean;
 }
 
 interface Airing {
@@ -289,6 +291,17 @@ export class Overlay {
     return this.air(`jam:${++this.jamCount}`, 'ship', clip, start, 1, wall, ctxAt) ? start + clip.durationMs : null;
   }
 
+  /**
+   * v4: airs a station's own clip over it, in a moment, with the station ducked (a secret's
+   * first-visit welcome). Returns false if it isn't decoded yet (it starts loading).
+   */
+  announce(clip: VoiceClip, wall: number, duck = 0.3): boolean {
+    const mixer = this.mixer();
+    if (!mixer || !this.cache() || mixer.ctx.state !== 'running') return false;
+    const ctxNow = mixer.ctx.currentTime;
+    return this.air(`announce:${clip.url}@${wall}`, 'event', clip, wall + 1200, duck, wall, (ms) => ctxNow + (ms - wall) / 1000);
+  }
+
   /** Starts decoding a clip ahead of time. */
   warm(clip: VoiceClip): void {
     if (this.cache()) this.prefetch(clip);
@@ -409,7 +422,7 @@ export class Overlay {
       const clip = this.picker.pick(
         pool,
         this.level(),
-        { date: program.date, daypart: program.daypart, weekday: program.weekday, shifts: view.shifts, aired: view.aired },
+        { date: program.date, daypart: program.daypart, weekday: program.weekday, shifts: view.shifts, aired: view.aired, holdArc: view.holdArc },
         this.random,
       );
       if (!clip) {

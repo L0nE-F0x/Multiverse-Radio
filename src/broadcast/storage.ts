@@ -11,6 +11,7 @@ const KEYS = {
   // v4
   shifts: 'multiverse-radio:shifts',
   arcs: 'multiverse-radio:arcs',
+  welcomed: 'multiverse-radio:welcomed',
   listenTime: LISTEN_TIME_KEY,
 } as const;
 
@@ -88,6 +89,14 @@ export const storage = {
   },
   setArcs(arcs: Record<string, readonly number[]>): void {
     write(KEYS.arcs, JSON.stringify(arcs));
+  },
+  /** v4: secrets whose first-visit welcome has aired. */
+  getWelcomed(): string[] {
+    const value = readJson(KEYS.welcomed);
+    return Array.isArray(value) ? value.filter((x): x is string => typeof x === 'string').slice(0, 50) : [];
+  },
+  setWelcomed(ids: string[]): void {
+    write(KEYS.welcomed, JSON.stringify(ids));
   },
   /** v4: listening time per station id, ms (LISTEN_TIME_KEY; offline packs read it too). */
   getListenTime(): Record<string, number> {

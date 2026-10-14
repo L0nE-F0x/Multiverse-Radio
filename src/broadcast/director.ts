@@ -25,6 +25,7 @@ import { bleedOf, clampFrequency, currentLayout, onPirateNames, receptionAt, set
 import { eventAt as seededEventAt } from './events';
 import { isJamClip, type HushLevel } from './hush';
 import { POOLS, type VoiceLibrary } from './library';
+import { voiceGain } from './quirks';
 import { resolveAsset } from './manifest';
 import { Mixer, type OutputMode, type VoiceHandle } from './mixer';
 import type { Overlay, ShiftView } from './overlay';
@@ -405,6 +406,17 @@ export class Director {
   /** True while HUSH is jamming the programme (it's cut; HUSH has the air). */
   get jammed(): boolean {
     return this.jamState !== null;
+  }
+
+  /**
+   * v4: airs a station's welcome clip over the programme (a secret's first visit). Returns
+   * true once it's scheduled; false while it's still loading or nothing is on.
+   */
+  welcome(clip: VoiceClip): boolean {
+    if (this.status !== 'playing' || !this.live || !this.overlay) return false;
+    const ok = this.overlay.announce(clip, this.clock.now());
+    if (ok) this.note(`welcome: ${clip.id}`);
+    return ok;
   }
 
   /** Lab: jam at the next chance (if tuned to a jammable station). */
@@ -1004,7 +1016,7 @@ export class Director {
         offset,
         end,
         fadeIn: offset > 0.05 ? 0.15 : 0,
-        gain: ambient ? VOICE_GAIN.ambient : VOICE_GAIN.default,
+        gain: (ambient ? VOICE_GAIN.ambient : VOICE_GAIN.default) * voiceGain(segment.clip),
       });
       this.voices.set(segment.id, { handle, segment });
       this.scheduleDuck(segment, schedule, when, end);
