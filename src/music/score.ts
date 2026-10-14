@@ -5,6 +5,7 @@ import type { RecipeId, RecipeTweaks } from '../broadcast/types';
 import type { GenreSamplePatch, GenreSynthPatch } from './dsp/genres';
 import type { Rng } from './rng';
 import type { BedsSamplePatch, BedsSynthPatch } from './dsp/beds-v3';
+import type { GrooveSamplePatch, GrooveSynthPatch } from './dsp/groove';
 
 export interface NoteEvent {
   /** Start, seconds from track start. */
@@ -98,7 +99,9 @@ export type SamplePatch =
   | 'shortwave'
   | 'ocean'
   // v3 genre instruments (dsp/genres.ts)
-  | GenreSamplePatch;
+  | GenreSamplePatch
+  // v4 groove instruments (dsp/groove.ts)
+  | GrooveSamplePatch;
 
 export type SynthPatch =
   | BedsSynthPatch
@@ -130,7 +133,9 @@ export type SynthPatch =
   | 'sine-beep'
   | 'drone'
   // v3 genre instruments (dsp/genres.ts)
-  | GenreSynthPatch;
+  | GenreSynthPatch
+  // v4 groove instruments (dsp/groove.ts)
+  | GrooveSynthPatch;
 
 interface InstrumentMix {
   /** Display name. */

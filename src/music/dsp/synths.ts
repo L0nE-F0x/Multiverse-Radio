@@ -8,6 +8,7 @@ import { midiToFreq } from '../theory';
 import { Biquad, Noise, sinc, TAU } from './core';
 import { BEDS_SYNTHS } from './beds-v3';
 import { GENRE_SYNTHS } from './genres';
+import { GROOVE_SYNTHS } from './groove';
 
 export type Wave =
   | 'sine'
@@ -254,6 +255,7 @@ export const SYNTHS: Record<SynthPatch, SynthDef> = {
     gain: 0.47,
   },
   ...GENRE_SYNTHS,
+  ...GROOVE_SYNTHS,
 };
 
 // ── Waves ─────────────────────────────────────────────────────────────────────
