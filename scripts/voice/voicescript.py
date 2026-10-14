@@ -154,6 +154,8 @@ CONVERGENCE_KITS = ("missing-moon", "the-smell", "the-song", "the-knock", "wrong
 # station announcing tomorrow's frequency (`tomorrow-<MHz>`, one of its roster `drift` values),
 # and the full-moon show (dates computed per year by the director).
 JAM_KIT = "jam"
+# Other standalone HUSH kits the director picks by name (evasive heading notices, the Outer Band).
+SHIP_KITS = {JAM_KIT, "heading", "outer-band"}
 FULL_MOON_KIT = "full-moon"
 TOMORROW_KIT = re.compile(r"^tomorrow-(\d{2,3}(?:\.\d{1,2})?)$")
 WEEKDAYS = ("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday")
@@ -920,7 +922,7 @@ class _Loader:
                 bad(f"kit must be a kebab-case name like \"news\" or \"late-calls\", got {kit!r}")
             else:
                 out["kit"] = kit
-                standalone = (event == CONVERGENCE or kit == FULL_MOON_KIT or (kit == JAM_KIT and station == SHIP))
+                standalone = (event == CONVERGENCE or kit == FULL_MOON_KIT or (kit in SHIP_KITS and station == SHIP))
                 if part is None and not standalone:
                     hint = f"; {JAM_KIT!r} (HUSH jamming Free Frequency) belongs in {SHIP}.toml" if kit == JAM_KIT else ""
                     self.warn(f"{label}: kit {kit!r} only matters on modular parts (add `part`){hint}", lineno)
