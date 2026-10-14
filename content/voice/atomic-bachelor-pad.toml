@@ -10,7 +10,7 @@
 # rocket on the horizon. The neighbours at Lot Eleven. Sponsor: Starburst Hi-Fi, on the Atomic
 # Parkway. Cross-station: Grumbel's Ladders; on Mondays, a review of Greg's Sunday show (days).
 # Resident artists in src/content/packs/v4b.ts. Write "left" and "right" in lower case: capitals
-# get spelled out by the voice.
+# get spelled out by the voice, and "theremin" is spelled "therramin" (Kokoro says "thair-MIN").
 station = "atomic-bachelor-pad"
 
 [voices]
@@ -113,8 +113,8 @@ id = "dj-004"
 category = "dj"
 title = "The Theremin Is in the Hallway"
 lines = [
-  { say = "host", text = "Some of you have written in to ask where the theremin is. It is not in the left speaker. It is not in the right speaker." },
-  { say = "host", text = "In my professional opinion, the theremin is in the hallway. It has been there since Tuesday. I've left it a sandwich." },
+  { say = "host", text = "Some of you have written in to ask where the therramin is. It is not in the left speaker. It is not in the right speaker." },
+  { say = "host", text = "In my professional opinion, the therramin is in the hallway. It has been there since Tuesday. I've left it a sandwich." },
 ]
 
 [[clip]]
@@ -123,7 +123,7 @@ category = "dj"
 title = "For Listeners With One Speaker"
 lines = [
   { say = "host", text = "A word to listeners with only one speaker. I'm sorry. Truly." },
-  { say = "host", text = "Please tilt your head slightly to one side, and imagine the other half. Many fine people live this way. They are very brave." },
+  { say = "host", text = "Please tilt your head slightly to one side, and imagine the other half. Many fine people get by this way. They are very brave." },
 ]
 
 [[clip]]
@@ -342,7 +342,7 @@ category = "dj"
 title = "The Haunted Theremin"
 dates = ["10-24", "10-25", "10-26", "10-27", "10-28", "10-29", "10-30", "10-31"]
 lines = [
-  { say = "host", text = "A special Halloween demonstration. Hear the haunted theremin travel from your left speaker, to your right speaker, and then out of the room entirely, and up the stairs.", gap = 0.8 },
+  { say = "host", text = "A special Halloween demonstration. Hear the haunted therramin travel from your left speaker, to your right speaker, and then out of the room entirely, and up the stairs.", gap = 0.8 },
   { say = "host", text = "I don't have any stairs. It's a split level. Nevertheless. Footsteps." },
 ]
 
