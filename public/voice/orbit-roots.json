@@ -1,0 +1,726 @@
+{
+  "version": 1,
+  "station": "orbit-roots",
+  "clips": [
+    {
+      "id": "id-001",
+      "category": "id",
+      "url": "/voice/orbit-roots/id-001.mp3",
+      "durationMs": 9310,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Sister Meridian",
+          "text": "Orbit Roots, one oh nine point three. Roots music from the Greenhouse Ring, where nothing is in a hurry. Least of all me.",
+          "startMs": 38
+        }
+      ]
+    },
+    {
+      "id": "id-002",
+      "category": "id",
+      "url": "/voice/orbit-roots/id-002.mp3",
+      "durationMs": 7927,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Sister Meridian",
+          "text": "You're listening to Orbit Roots. Sister Meridian, on the porch, by the speaker stack. The tomatoes can hear you too. Be kind.",
+          "startMs": 47
+        }
+      ]
+    },
+    {
+      "id": "id-003",
+      "category": "id",
+      "url": "/voice/orbit-roots/id-003.mp3",
+      "durationMs": 7972,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Sister Meridian",
+          "text": "Orbit Roots, from the moon that feeds three systems. If you ate a salad this week, it heard us first.",
+          "startMs": 38
+        }
+      ]
+    },
+    {
+      "id": "id-004",
+      "category": "id",
+      "url": "/voice/orbit-roots/id-004.mp3",
+      "durationMs": 7310,
+      "overMusic": true,
+      "daypart": "morning",
+      "lines": [
+        {
+          "speaker": "Sister Meridian",
+          "text": "Good morning from Orbit Roots. The misters are on, the ring is up, and the beans grew another metre in the night. Give thanks.",
+          "startMs": 44
+        }
+      ]
+    },
+    {
+      "id": "id-005",
+      "category": "id",
+      "url": "/voice/orbit-roots/id-005.mp3",
+      "durationMs": 8670,
+      "overMusic": true,
+      "daypart": "night",
+      "lines": [
+        {
+          "speaker": "Sister Meridian",
+          "text": "Orbit Roots, late on the farm moon. The ring is low, and the bass is going down to the roots. Where it belongs.",
+          "startMs": 36
+        }
+      ]
+    },
+    {
+      "id": "dj-001",
+      "category": "dj",
+      "url": "/voice/orbit-roots/dj-001.mp3",
+      "durationMs": 16108,
+      "title": "On the Off-Beat",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Sister Meridian",
+          "text": "The irrigation on this moon runs on the off-beat. It always has. Whoever built these pumps knew exactly what they were doing.",
+          "startMs": 39
+        },
+        {
+          "speaker": "Sister Meridian",
+          "text": "Every second beat, a little water. Every second beat, a little bass. Everything on this moon grows on the off-beat. Including me.",
+          "startMs": 8248
+        }
+      ]
+    },
+    {
+      "id": "dj-002",
+      "category": "dj",
+      "url": "/voice/orbit-roots/dj-002.mp3",
+      "durationMs": 17446,
+      "title": "Two Weeks Ahead",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Sister Meridian",
+          "text": "People ask why our tomatoes are so big. Some of it is the low gravity. Most of it is the speaker stack.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Sister Meridian",
+          "text": "The tomatoes by the porch are two weeks ahead of the tomatoes by the office. Nobody is surprised. The office plays nothing all day. The office plays spreadsheets.",
+          "startMs": 7211
+        }
+      ]
+    },
+    {
+      "id": "dj-003",
+      "category": "dj",
+      "url": "/voice/orbit-roots/dj-003.mp3",
+      "durationMs": 21322,
+      "title": "A Letter on Very Nice Paper",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Sister Meridian",
+          "text": "A letter came up today from Clearline Holdings, three systems away. Very nice paper. It says the water that comes down off the rings belongs to them.",
+          "startMs": 49
+        },
+        {
+          "speaker": "Sister Meridian",
+          "text": "Now. That ice was falling off those rings before there was paper. Before there were letters. It will still be falling after.",
+          "startMs": 9858
+        },
+        {
+          "speaker": "Sister Meridian",
+          "text": "We wrote back. On a cabbage leaf. Here's a tune while it gets there.",
+          "startMs": 17675
+        }
+      ]
+    },
+    {
+      "id": "dj-004",
+      "category": "dj",
+      "url": "/voice/orbit-roots/dj-004.mp3",
+      "durationMs": 16924,
+      "title": "Greg in the Lettuce",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Sister Meridian",
+          "text": "Shade is precious on a greenhouse moon. So when a little shadow called Greg turned up and stood over the lettuce bed all afternoon, the lettuce was very grateful.",
+          "startMs": 46
+        },
+        {
+          "speaker": "Sister Meridian",
+          "text": "He says he's on his way home, to a man called Hollis. He's welcome back any time. The spinach is jealous.",
+          "startMs": 10070
+        }
+      ]
+    },
+    {
+      "id": "dj-005",
+      "category": "dj",
+      "url": "/voice/orbit-roots/dj-005.mp3",
+      "durationMs": 14854,
+      "title": "Bev Rings the Pump House",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Sister Meridian",
+          "text": "Bev called again. She was looking for the request line. She got the pump house.",
+          "startMs": 41
+        },
+        {
+          "speaker": "Sister Meridian",
+          "text": "Brother Amos took her request anyway. He can't play records down there, so he played it on the pipes. She says it wasn't her song. But the carrots haven't stopped talking about it.",
+          "startMs": 4557
+        }
+      ]
+    },
+    {
+      "id": "dj-006",
+      "category": "dj",
+      "url": "/voice/orbit-roots/dj-006.mp3",
+      "durationMs": 15453,
+      "title": "For the Night Shift",
+      "overMusic": true,
+      "daypart": "night",
+      "lines": [
+        {
+          "speaker": "Sister Meridian",
+          "text": "A word for the operator on the relay ship, passing over us in the night. We saw your running lights go across the ring.",
+          "startMs": 49
+        },
+        {
+          "speaker": "Sister Meridian",
+          "text": "You've drifted a long way out to find us, out here on the edge of the dial. You're welcome. Wipe your feet. There's soil on everything.",
+          "startMs": 7621
+        }
+      ]
+    },
+    {
+      "id": "dj-007",
+      "category": "dj",
+      "url": "/voice/orbit-roots/dj-007.mp3",
+      "durationMs": 13395,
+      "title": "Sponsored by Grumbel's Ladders",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Sister Meridian",
+          "text": "This hour comes to you with the help of Grumbel's Ladders. In low gravity the runner beans grow straight up into the dark, and somebody has to go up after them.",
+          "startMs": 42
+        },
+        {
+          "speaker": "Sister Meridian",
+          "text": "Grumbel's Ladders. Up is a choice. Some days, up is a bean.",
+          "startMs": 9826
+        }
+      ]
+    },
+    {
+      "id": "dj-008",
+      "category": "dj",
+      "url": "/voice/orbit-roots/dj-008.mp3",
+      "durationMs": 17606,
+      "title": "Mother Hale",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Sister Meridian",
+          "text": "Mother Hale has farmed this moon for sixty years. She says the secret is patience, good soil, and never arguing with a pumpkin that has decided to float.",
+          "startMs": 45
+        },
+        {
+          "speaker": "Sister Meridian",
+          "text": "This one's for Mother Hale. Turn it up a little. She's in the far greenhouse, and she says the young ones play everything too quiet.",
+          "startMs": 10312
+        }
+      ]
+    },
+    {
+      "id": "dj-009",
+      "category": "dj",
+      "url": "/voice/orbit-roots/dj-009.mp3",
+      "durationMs": 12606,
+      "overMusic": true,
+      "daypart": "day",
+      "lines": [
+        {
+          "speaker": "Sister Meridian",
+          "text": "Afternoon on the farm moon. Oldwater is high, the misters are turning in slow circles, and somewhere in greenhouse nine, a bee is flying sideways.",
+          "startMs": 48
+        },
+        {
+          "speaker": "Sister Meridian",
+          "text": "Low gravity. She's doing her best. So are we all.",
+          "startMs": 9804
+        }
+      ]
+    },
+    {
+      "id": "ad-001",
+      "category": "ad",
+      "url": "/voice/orbit-roots/ad-001.mp3",
+      "durationMs": 21294,
+      "title": "The Ringside Seed Exchange",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Sister Meridian",
+          "text": "Bring a seed, take a seed. The Ringside Seed Exchange, behind the packing shed. Open whenever somebody is there, which is usually Mother Hale.",
+          "startMs": 42
+        },
+        {
+          "speaker": "Sister Meridian",
+          "text": "No money changes hands. Money doesn't grow here. We tried. We planted some. Nothing came up but a letter from the bank.",
+          "startMs": 9281
+        },
+        {
+          "speaker": "Sister Meridian",
+          "text": "The Ringside Seed Exchange. Everything you plant comes back. Mostly.",
+          "startMs": 17123
+        }
+      ]
+    },
+    {
+      "id": "psa-001",
+      "category": "psa",
+      "url": "/voice/orbit-roots/psa-001.mp3",
+      "durationMs": 17454,
+      "title": "Respect the Pipes",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Sister Meridian",
+          "text": "A notice from the Greenhouse Ring Co-operative. When the pumps are running, please don't stand on the pipes.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Sister Meridian",
+          "text": "When the pumps are not running, please also don't stand on the pipes. They're old. They've carried a great deal of water for a great many people. They've done enough.",
+          "startMs": 6667
+        },
+        {
+          "speaker": "Sister Meridian",
+          "text": "Respect the pipes.",
+          "startMs": 16309
+        }
+      ]
+    },
+    {
+      "id": "crop-open-01",
+      "category": "news",
+      "url": "/voice/orbit-roots/crop-open-01.mp3",
+      "durationMs": 5103,
+      "overMusic": false,
+      "part": "open",
+      "kit": "crop-report",
+      "lines": [
+        {
+          "speaker": "Sister Meridian",
+          "text": "Time for the crop report, from greenhouse one, all the way round to greenhouse forty.",
+          "startMs": 37
+        }
+      ]
+    },
+    {
+      "id": "crop-open-02",
+      "category": "news",
+      "url": "/voice/orbit-roots/crop-open-02.mp3",
+      "durationMs": 4963,
+      "overMusic": false,
+      "part": "open",
+      "kit": "crop-report",
+      "lines": [
+        {
+          "speaker": "Sister Meridian",
+          "text": "Crop report. Brother Amos, how's the ring looking?",
+          "startMs": 37
+        },
+        {
+          "speaker": "Brother Amos, the Pump House",
+          "text": "Green, Sister. Mostly green.",
+          "startMs": 3275
+        }
+      ]
+    },
+    {
+      "id": "crop-body-01",
+      "category": "news",
+      "url": "/voice/orbit-roots/crop-body-01.mp3",
+      "durationMs": 12378,
+      "overMusic": false,
+      "part": "body",
+      "kit": "crop-report",
+      "lines": [
+        {
+          "speaker": "Sister Meridian",
+          "text": "Runner beans. Up another metre. The tallest has gone through the roof panel in greenhouse twelve and is now, technically, in space. We've sent somebody up with a ladder and a very long piece of string.",
+          "startMs": 50
+        }
+      ]
+    },
+    {
+      "id": "crop-body-02",
+      "category": "news",
+      "url": "/voice/orbit-roots/crop-body-02.mp3",
+      "durationMs": 7359,
+      "overMusic": false,
+      "part": "body",
+      "kit": "crop-report",
+      "lines": [
+        {
+          "speaker": "Sister Meridian",
+          "text": "Cabbages. Heavy. On a moon like this, heavy is the highest compliment there is. The cabbage crew are walking taller today.",
+          "startMs": 36
+        }
+      ]
+    },
+    {
+      "id": "crop-body-03",
+      "category": "news",
+      "url": "/voice/orbit-roots/crop-body-03.mp3",
+      "durationMs": 9445,
+      "overMusic": false,
+      "part": "body",
+      "kit": "crop-report",
+      "lines": [
+        {
+          "speaker": "Sister Meridian",
+          "text": "Pumpkins. Three of them have floated off the patch and are drifting slowly towards the packing shed. Leave them. They know the way. They do this every season.",
+          "startMs": 40
+        }
+      ]
+    },
+    {
+      "id": "crop-body-04",
+      "category": "news",
+      "url": "/voice/orbit-roots/crop-body-04.mp3",
+      "durationMs": 11456,
+      "overMusic": false,
+      "part": "body",
+      "kit": "crop-report",
+      "lines": [
+        {
+          "speaker": "Sister Meridian",
+          "text": "Water. The ice came down off the rings this morning, clean and cold, the same as it has every morning for a thousand years. Nobody sent us a bill. Not yet. Give thanks anyway.",
+          "startMs": 50
+        }
+      ]
+    },
+    {
+      "id": "crop-close-01",
+      "category": "news",
+      "url": "/voice/orbit-roots/crop-close-01.mp3",
+      "durationMs": 4396,
+      "overMusic": false,
+      "part": "close",
+      "kit": "crop-report",
+      "lines": [
+        {
+          "speaker": "Sister Meridian",
+          "text": "That's the crop report. Eat your greens. Somebody up here grew them for you.",
+          "startMs": 36
+        }
+      ]
+    },
+    {
+      "id": "id-first-light",
+      "category": "id",
+      "url": "/voice/orbit-roots/id-first-light.mp3",
+      "durationMs": 11030,
+      "overMusic": true,
+      "part": "open",
+      "show": "first-light",
+      "lines": [
+        {
+          "speaker": "Sister Meridian",
+          "text": "Good morning. This is First Light Irrigation, on Orbit Roots. The misters are coming on, all the way round the ring. Wake up gently. The lettuce is.",
+          "startMs": 41
+        }
+      ]
+    },
+    {
+      "id": "dj-first-light-001",
+      "category": "dj",
+      "url": "/voice/orbit-roots/dj-first-light-001.mp3",
+      "durationMs": 14435,
+      "overMusic": true,
+      "show": "first-light",
+      "lines": [
+        {
+          "speaker": "Sister Meridian",
+          "text": "Morning word from the pump house. Brother Amos?",
+          "startMs": 36
+        },
+        {
+          "speaker": "Brother Amos, the Pump House",
+          "text": "Pressure's good, Sister. Pipes are singing. And one sprinkler in row six has turned round to face the speaker stack again.",
+          "startMs": 3200
+        },
+        {
+          "speaker": "Sister Meridian",
+          "text": "Leave it be. It knows what it likes. This one's for row six.",
+          "startMs": 11020
+        }
+      ]
+    },
+    {
+      "id": "id-the-long-table",
+      "category": "id",
+      "url": "/voice/orbit-roots/id-the-long-table.mp3",
+      "durationMs": 7422,
+      "overMusic": true,
+      "part": "open",
+      "show": "the-long-table",
+      "lines": [
+        {
+          "speaker": "Sister Meridian",
+          "text": "This is the Long Table, on Orbit Roots. Pull up a crate. Lunch is whatever's ripe. Today, that's nearly everything.",
+          "startMs": 37
+        }
+      ]
+    },
+    {
+      "id": "dj-the-long-table-001",
+      "category": "dj",
+      "url": "/voice/orbit-roots/dj-the-long-table-001.mp3",
+      "durationMs": 19239,
+      "title": "Who Owns the Water",
+      "overMusic": true,
+      "show": "the-long-table",
+      "lines": [
+        {
+          "speaker": "Sister Meridian",
+          "text": "At the long table today, the children of the co-op took on the big question. Who owns the water?",
+          "startMs": 39
+        },
+        {
+          "speaker": "Sister Meridian",
+          "text": "They said the water belongs to the ice. The ice belongs to the rings. And the rings belong to nobody, because nobody can reach them.",
+          "startMs": 6233
+        },
+        {
+          "speaker": "Sister Meridian",
+          "text": "I've been trying to say that for thirty years. They did it before pudding.",
+          "startMs": 15216
+        }
+      ]
+    },
+    {
+      "id": "dj-the-long-table-002",
+      "category": "dj",
+      "url": "/voice/orbit-roots/dj-the-long-table-002.mp3",
+      "durationMs": 14776,
+      "overMusic": true,
+      "show": "the-long-table",
+      "lines": [
+        {
+          "speaker": "Sister Meridian",
+          "text": "Mother Hale has the floor. She says if a company in another system owns our water, then the company is welcome to come up here and drink it.",
+          "startMs": 45
+        },
+        {
+          "speaker": "Sister Meridian",
+          "text": "She's laid them a place at the long table. It's been empty for eleven years. She still puts a spoon out.",
+          "startMs": 8681
+        }
+      ]
+    },
+    {
+      "id": "id-deep-roots",
+      "category": "id",
+      "url": "/voice/orbit-roots/id-deep-roots.mp3",
+      "durationMs": 10015,
+      "overMusic": true,
+      "part": "open",
+      "show": "deep-roots",
+      "lines": [
+        {
+          "speaker": "Sister Meridian",
+          "text": "Deep Roots, on Orbit Roots. The greenhouses are dark, the plants are sleeping, and the bass is going down into the soil. The roots are awake. They always are.",
+          "startMs": 42
+        }
+      ]
+    },
+    {
+      "id": "dj-deep-roots-001",
+      "category": "dj",
+      "url": "/voice/orbit-roots/dj-deep-roots-001.mp3",
+      "durationMs": 13051,
+      "overMusic": true,
+      "show": "deep-roots",
+      "lines": [
+        {
+          "speaker": "Sister Meridian",
+          "text": "This is the hour the roots listen hardest. Down in the soil the bass travels further than the light ever gets.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Sister Meridian",
+          "text": "Somewhere under greenhouse four, a carrot is having the best night of its life. Let's not stop now.",
+          "startMs": 6871
+        }
+      ]
+    },
+    {
+      "id": "dj-halloween-001",
+      "category": "dj",
+      "url": "/voice/orbit-roots/dj-halloween-001.mp3",
+      "durationMs": 14352,
+      "title": "The Pumpkins Have Heard",
+      "overMusic": true,
+      "dates": [
+        "10-24",
+        "10-25",
+        "10-26",
+        "10-27",
+        "10-28",
+        "10-29",
+        "10-30",
+        "10-31"
+      ],
+      "lines": [
+        {
+          "speaker": "Sister Meridian",
+          "text": "It's nearly Halloween, and the pumpkins have heard. Every one of them has floated up to the glass, facing out, very still.",
+          "startMs": 47
+        },
+        {
+          "speaker": "Sister Meridian",
+          "text": "We don't carve them here. We ask. Two have said yes. One is thinking about it. Here's a tune for the one that's thinking.",
+          "startMs": 7645
+        }
+      ]
+    },
+    {
+      "id": "convergence-missing-moon",
+      "category": "event",
+      "url": "/voice/orbit-roots/convergence-missing-moon.mp3",
+      "durationMs": 11510,
+      "overMusic": false,
+      "kit": "missing-moon",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Sister Meridian",
+          "text": "A moon has gone missing, they say. We checked. We're still here. Feet on the soil.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Sister Meridian",
+          "text": "But if it was yours, and it's lost, the light's on in the greenhouse. Moons are welcome. Bring your own water.",
+          "startMs": 4937
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-smell",
+      "category": "event",
+      "url": "/voice/orbit-roots/convergence-the-smell.mp3",
+      "durationMs": 10207,
+      "overMusic": false,
+      "kit": "the-smell",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Sister Meridian",
+          "text": "The whole ring smells of toast. We don't make toast up here. We grow the wheat, and somebody else does the rest.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Sister Meridian",
+          "text": "So somebody, somewhere, has finished the job. Give thanks.",
+          "startMs": 6916
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-song",
+      "category": "event",
+      "url": "/voice/orbit-roots/convergence-the-song.mp3",
+      "durationMs": 11493,
+      "overMusic": false,
+      "kit": "the-song",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Sister Meridian",
+          "text": "The harvest crew are all humming the same tune, and none of them can finish it. The sprinklers are humming it too.",
+          "startMs": 39
+        },
+        {
+          "speaker": "Sister Meridian",
+          "text": "Bev has rung the pump house to say it's her song. She's probably right.",
+          "startMs": 7420
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-knock",
+      "category": "event",
+      "url": "/voice/orbit-roots/convergence-the-knock.mp3",
+      "durationMs": 10280,
+      "overMusic": false,
+      "kit": "the-knock",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Sister Meridian",
+          "text": "Three knocks on the shack door, just now. Nobody there. Only the misters, and the ring.",
+          "startMs": 43
+        },
+        {
+          "speaker": "Sister Meridian",
+          "text": "If that was Clearline Holdings, we're out. In the fields. All of us. For years.",
+          "startMs": 5824
+        }
+      ]
+    },
+    {
+      "id": "convergence-wrong-colour",
+      "category": "event",
+      "url": "/voice/orbit-roots/convergence-wrong-colour.mp3",
+      "durationMs": 9533,
+      "overMusic": false,
+      "kit": "wrong-colour",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Sister Meridian",
+          "text": "The sky above the greenhouses has gone a colour I don't have a word for. Every lettuce on the moon has turned to face it.",
+          "startMs": 41
+        },
+        {
+          "speaker": "Sister Meridian",
+          "text": "They know something. They're not saying.",
+          "startMs": 7690
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-pigeon",
+      "category": "event",
+      "url": "/voice/orbit-roots/convergence-the-pigeon.mp3",
+      "durationMs": 9982,
+      "overMusic": false,
+      "kit": "the-pigeon",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Sister Meridian",
+          "text": "A pigeon has walked into the shack. On a farm moon. It went straight to the seed trays, then looked at me like I owed it something.",
+          "startMs": 43
+        },
+        {
+          "speaker": "Sister Meridian",
+          "text": "Maybe I do. Help yourself, friend.",
+          "startMs": 8064
+        }
+      ]
+    }
+  ]
+}

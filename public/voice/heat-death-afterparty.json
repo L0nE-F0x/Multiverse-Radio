@@ -1,0 +1,901 @@
+{
+  "version": 1,
+  "station": "heat-death-afterparty",
+  "clips": [
+    {
+      "id": "id-001",
+      "category": "id",
+      "url": "/voice/heat-death-afterparty/id-001.mp3",
+      "durationMs": 7017,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "DJ Entropy",
+          "text": "Afterparty at the Heat Death, one seventeen point four. The top of the dial, and the end of everything. Come in. It's warm.",
+          "startMs": 35
+        }
+      ]
+    },
+    {
+      "id": "id-002",
+      "category": "id",
+      "url": "/voice/heat-death-afterparty/id-002.mp3",
+      "durationMs": 6736,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "DJ Entropy",
+          "text": "This is DJ Entropy, at the last party in the universe. Plenty of room on the floor, love. There always is, now.",
+          "startMs": 44
+        }
+      ]
+    },
+    {
+      "id": "id-003",
+      "category": "id",
+      "url": "/voice/heat-death-afterparty/id-003.mp3",
+      "durationMs": 8120,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "DJ Entropy",
+          "text": "Afterparty at the Heat Death. Three guys, a nebula, and you. That's a crowd, love. That's a proper crowd.",
+          "startMs": 44
+        }
+      ]
+    },
+    {
+      "id": "id-004",
+      "category": "id",
+      "url": "/voice/heat-death-afterparty/id-004.mp3",
+      "durationMs": 6667,
+      "overMusic": true,
+      "daypart": "night",
+      "lines": [
+        {
+          "speaker": "DJ Entropy",
+          "text": "Afterparty at the Heat Death. The stars are going out. We've still got the light over the decks. Come and stand near it.",
+          "startMs": 40
+        }
+      ]
+    },
+    {
+      "id": "id-005",
+      "category": "id",
+      "url": "/voice/heat-death-afterparty/id-005.mp3",
+      "durationMs": 5773,
+      "overMusic": true,
+      "daypart": "morning",
+      "lines": [
+        {
+          "speaker": "DJ Entropy",
+          "text": "Good morning from the end of the universe. There isn't a morning any more, technically. We do one anyway.",
+          "startMs": 36
+        }
+      ]
+    },
+    {
+      "id": "id-006",
+      "category": "id",
+      "url": "/voice/heat-death-afterparty/id-006.mp3",
+      "durationMs": 5820,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "DJ Entropy",
+          "text": "Afterparty at the Heat Death. The beat's slowing down. That's all right. So is everything. We'll go together.",
+          "startMs": 35
+        }
+      ]
+    },
+    {
+      "id": "dj-001",
+      "category": "dj",
+      "url": "/voice/heat-death-afterparty/dj-001.mp3",
+      "durationMs": 17763,
+      "title": "Tonight's Crowd",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "DJ Entropy",
+          "text": "Let me introduce tonight's crowd. On the left, Dov. In the middle, Wendell. On the right, a third guy, who has never told us his name. At this point, love, it would be rude to ask.",
+          "startMs": 35
+        },
+        {
+          "speaker": "DJ Entropy",
+          "text": "And behind them, about forty light years wide, swaying, that's Lorraine. Lorraine's a nebula. She has never missed a night.",
+          "startMs": 10871
+        }
+      ]
+    },
+    {
+      "id": "dj-002",
+      "category": "dj",
+      "url": "/voice/heat-death-afterparty/dj-002.mp3",
+      "durationMs": 12296,
+      "title": "Slowing Down",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "DJ Entropy",
+          "text": "If you've noticed the music getting slower, you're right. We lose a few beats a minute every hour. Everything does, out here.",
+          "startMs": 37
+        },
+        {
+          "speaker": "DJ Entropy",
+          "text": "It's not the end of the song, love. It's the song getting comfortable. It's taking its shoes off.",
+          "startMs": 6990
+        }
+      ]
+    },
+    {
+      "id": "dj-003",
+      "category": "dj",
+      "url": "/voice/heat-death-afterparty/dj-003.mp3",
+      "durationMs": 11319,
+      "title": "The Light Over the Decks",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "DJ Entropy",
+          "text": "There's one light left above the decks. A little warm bulb. It's the brightest thing for a very long way, in every direction.",
+          "startMs": 48
+        },
+        {
+          "speaker": "DJ Entropy",
+          "text": "So if you're lost out there, look for it. That's us. Come in. Mind the cables.",
+          "startMs": 7385
+        }
+      ]
+    },
+    {
+      "id": "dj-004",
+      "category": "dj",
+      "url": "/voice/heat-death-afterparty/dj-004.mp3",
+      "durationMs": 15705,
+      "title": "Lorraine",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "DJ Entropy",
+          "text": "Lorraine's glowing a bit pinker tonight. That's how you know she's enjoying it. Nebulas haven't got hands, so she can't put them in the air.",
+          "startMs": 50
+        },
+        {
+          "speaker": "DJ Entropy",
+          "text": "She does the next best thing. She's making a star, very slowly, just for the drop. It'll be ready in about a million years. We'll wait.",
+          "startMs": 8142
+        }
+      ]
+    },
+    {
+      "id": "dj-005",
+      "category": "dj",
+      "url": "/voice/heat-death-afterparty/dj-005.mp3",
+      "durationMs": 12363,
+      "title": "Dov's Request",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Dov",
+          "text": "Can you play the one from the beginning?",
+          "startMs": 36
+        },
+        {
+          "speaker": "DJ Entropy",
+          "text": "Dov wants the one from the beginning. Love, they're all from the beginning. Everything is.",
+          "startMs": 2268
+        },
+        {
+          "speaker": "DJ Entropy",
+          "text": "But I know the one you mean. Here it is. A little slower than it used to be. Aren't we all.",
+          "startMs": 7518
+        }
+      ]
+    },
+    {
+      "id": "dj-006",
+      "category": "dj",
+      "url": "/voice/heat-death-afterparty/dj-006.mp3",
+      "durationMs": 15698,
+      "title": "Sponsored by Grumbel's Ladders",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "DJ Entropy",
+          "text": "This set is brought to you by Grumbel's Ladders, the last company still trading. Years ago they sent a ladder out here, with a note on it. It said, up is a choice.",
+          "startMs": 39
+        },
+        {
+          "speaker": "DJ Entropy",
+          "text": "We leaned it against the dark. Nobody's had the heart to climb it. It's just nice to know it's there.",
+          "startMs": 10029
+        }
+      ]
+    },
+    {
+      "id": "dj-007",
+      "category": "dj",
+      "url": "/voice/heat-death-afterparty/dj-007.mp3",
+      "durationMs": 11076,
+      "title": "For the Newcomer",
+      "overMusic": true,
+      "daypart": "night",
+      "lines": [
+        {
+          "speaker": "DJ Entropy",
+          "text": "There's a ship out there. A relay ship, lights on, drifting up the dial. Hello, love. You came all this way. Not many do, any more.",
+          "startMs": 47
+        },
+        {
+          "speaker": "DJ Entropy",
+          "text": "There's room by the speakers. The guys will budge up.",
+          "startMs": 7853
+        }
+      ]
+    },
+    {
+      "id": "dj-008",
+      "category": "dj",
+      "url": "/voice/heat-death-afterparty/dj-008.mp3",
+      "durationMs": 13366,
+      "title": "Bev Calls",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Bev",
+          "text": "Hello, love. It's Bev. Is this the request line?",
+          "startMs": 43
+        },
+        {
+          "speaker": "DJ Entropy",
+          "text": "Bev. You found us. All the way out here.",
+          "startMs": 3176
+        },
+        {
+          "speaker": "Bev",
+          "text": "I'm still looking for my song.",
+          "startMs": 5951
+        },
+        {
+          "speaker": "DJ Entropy",
+          "text": "I know, love. Stay on the line. If it's anywhere, it's here. Everything ends up here, in the end.",
+          "startMs": 8018
+        }
+      ]
+    },
+    {
+      "id": "dj-009",
+      "category": "dj",
+      "url": "/voice/heat-death-afterparty/dj-009.mp3",
+      "durationMs": 14949,
+      "title": "Why We Dance",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "DJ Entropy",
+          "text": "A little science, for anyone wondering. The heat death means everything ends up the same temperature. Nothing warmer than anything else.",
+          "startMs": 47
+        },
+        {
+          "speaker": "DJ Entropy",
+          "text": "Which is why we dance. Every step, we're a little bit warmer than the dark. That's the whole idea, love. That's the rave.",
+          "startMs": 8072
+        }
+      ]
+    },
+    {
+      "id": "dj-010",
+      "category": "dj",
+      "url": "/voice/heat-death-afterparty/dj-010.mp3",
+      "durationMs": 10660,
+      "title": "The Spin",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "DJ Entropy",
+          "text": "The third guy just did a spin. Nobody has ever seen him spin. Wendell had to sit down. Lorraine went bright blue.",
+          "startMs": 42
+        },
+        {
+          "speaker": "DJ Entropy",
+          "text": "I don't know what it means, love. I've written it down.",
+          "startMs": 7559
+        }
+      ]
+    },
+    {
+      "id": "goodnight-open-1",
+      "category": "dj",
+      "url": "/voice/heat-death-afterparty/goodnight-open-1.mp3",
+      "durationMs": 4700,
+      "overMusic": true,
+      "part": "open",
+      "kit": "goodnight",
+      "lines": [
+        {
+          "speaker": "DJ Entropy",
+          "text": "Excuse me, everybody. Quick dedication. Look up, just there, to the left.",
+          "startMs": 36
+        }
+      ]
+    },
+    {
+      "id": "goodnight-open-2",
+      "category": "dj",
+      "url": "/voice/heat-death-afterparty/goodnight-open-2.mp3",
+      "durationMs": 3282,
+      "overMusic": true,
+      "part": "open",
+      "kit": "goodnight",
+      "lines": [
+        {
+          "speaker": "DJ Entropy",
+          "text": "Hold on. Look up, everybody. Over there. Just going now.",
+          "startMs": 46
+        }
+      ]
+    },
+    {
+      "id": "goodnight-001",
+      "category": "dj",
+      "url": "/voice/heat-death-afterparty/goodnight-001.mp3",
+      "durationMs": 12665,
+      "overMusic": true,
+      "part": "body",
+      "kit": "goodnight",
+      "lines": [
+        {
+          "speaker": "DJ Entropy",
+          "text": "That was Little Wenna, a yellow star in the Brass Reach. Eleven billion years old. She warmed four planets, and a comet that kept coming back to visit.",
+          "startMs": 43
+        },
+        {
+          "speaker": "DJ Entropy",
+          "text": "She went out just now, very quietly, the way she did everything.",
+          "startMs": 8946
+        }
+      ]
+    },
+    {
+      "id": "goodnight-002",
+      "category": "dj",
+      "url": "/voice/heat-death-afterparty/goodnight-002.mp3",
+      "durationMs": 11651,
+      "overMusic": true,
+      "part": "body",
+      "kit": "goodnight",
+      "lines": [
+        {
+          "speaker": "DJ Entropy",
+          "text": "That was Old Corvane, a red dwarf, out past the Long Spiral. Not much to look at. Never was.",
+          "startMs": 41
+        },
+        {
+          "speaker": "DJ Entropy",
+          "text": "But he burned for a trillion years, steady as anything, and he never once let anybody down.",
+          "startMs": 6254
+        }
+      ]
+    },
+    {
+      "id": "goodnight-003",
+      "category": "dj",
+      "url": "/voice/heat-death-afterparty/goodnight-003.mp3",
+      "durationMs": 14543,
+      "overMusic": true,
+      "part": "body",
+      "kit": "goodnight",
+      "lines": [
+        {
+          "speaker": "DJ Entropy",
+          "text": "That was Hespera Nine. Blue, very bright, gone young. She used to be the first star out in the evening, on a little moon called Fallow, and every night a child would wish on her.",
+          "startMs": 46
+        },
+        {
+          "speaker": "DJ Entropy",
+          "text": "The child grew up. The wish came true. Hespera never knew. So I'm telling her now.",
+          "startMs": 9970
+        }
+      ]
+    },
+    {
+      "id": "goodnight-004",
+      "category": "dj",
+      "url": "/voice/heat-death-afterparty/goodnight-004.mp3",
+      "durationMs": 12647,
+      "overMusic": true,
+      "part": "body",
+      "kit": "goodnight",
+      "lines": [
+        {
+          "speaker": "DJ Entropy",
+          "text": "That was the Twins, two stars going round each other, out in the Quiet Arm. They went out at exactly the same moment.",
+          "startMs": 42
+        },
+        {
+          "speaker": "DJ Entropy",
+          "text": "Neither of them had to be the one left. That's lucky, love. That's the luckiest thing I know.",
+          "startMs": 7649
+        }
+      ]
+    },
+    {
+      "id": "goodnight-005",
+      "category": "dj",
+      "url": "/voice/heat-death-afterparty/goodnight-005.mp3",
+      "durationMs": 11071,
+      "overMusic": true,
+      "part": "body",
+      "kit": "goodnight",
+      "lines": [
+        {
+          "speaker": "DJ Entropy",
+          "text": "That was a little orange star nobody ever named. So I'm naming him now. Gloam. Small, a bit shy, out on the edge of things.",
+          "startMs": 40
+        },
+        {
+          "speaker": "DJ Entropy",
+          "text": "Like us, really. Goodnight, Gloam. You had a name all along.",
+          "startMs": 7907
+        }
+      ]
+    },
+    {
+      "id": "goodnight-006",
+      "category": "dj",
+      "url": "/voice/heat-death-afterparty/goodnight-006.mp3",
+      "durationMs": 11261,
+      "overMusic": true,
+      "part": "body",
+      "kit": "goodnight",
+      "lines": [
+        {
+          "speaker": "DJ Entropy",
+          "text": "That was a star called Patience, the last one in her whole galaxy. She waited a very long time for company.",
+          "startMs": 46
+        },
+        {
+          "speaker": "DJ Entropy",
+          "text": "Then she heard the music. And she held on, just long enough, for one more drop.",
+          "startMs": 6864
+        }
+      ]
+    },
+    {
+      "id": "goodnight-close-1",
+      "category": "dj",
+      "url": "/voice/heat-death-afterparty/goodnight-close-1.mp3",
+      "durationMs": 2915,
+      "overMusic": true,
+      "part": "close",
+      "kit": "goodnight",
+      "lines": [
+        {
+          "speaker": "DJ Entropy",
+          "text": "Goodnight, love. Thanks for the light. This one's for you.",
+          "startMs": 48
+        }
+      ]
+    },
+    {
+      "id": "goodnight-close-2",
+      "category": "dj",
+      "url": "/voice/heat-death-afterparty/goodnight-close-2.mp3",
+      "durationMs": 5426,
+      "overMusic": true,
+      "part": "close",
+      "kit": "goodnight",
+      "lines": [
+        {
+          "speaker": "DJ Entropy",
+          "text": "The guys have their hands up. Lorraine's dimmed a little, out of respect. Here's the next one.",
+          "startMs": 41
+        }
+      ]
+    },
+    {
+      "id": "goodnight-close-3",
+      "category": "dj",
+      "url": "/voice/heat-death-afterparty/goodnight-close-3.mp3",
+      "durationMs": 3546,
+      "overMusic": true,
+      "part": "close",
+      "kit": "goodnight",
+      "lines": [
+        {
+          "speaker": "DJ Entropy",
+          "text": "We'll keep the beat going for you. That's what we do here. Goodnight.",
+          "startMs": 46
+        }
+      ]
+    },
+    {
+      "id": "id-the-warm-up",
+      "category": "id",
+      "url": "/voice/heat-death-afterparty/id-the-warm-up.mp3",
+      "durationMs": 7031,
+      "overMusic": true,
+      "part": "open",
+      "show": "the-warm-up",
+      "lines": [
+        {
+          "speaker": "DJ Entropy",
+          "text": "Good evening, and welcome to the Warm-Up. The universe is about two degrees above absolute zero. Let's see what we can do.",
+          "startMs": 37
+        }
+      ]
+    },
+    {
+      "id": "dj-the-warm-up-001",
+      "category": "dj",
+      "url": "/voice/heat-death-afterparty/dj-the-warm-up-001.mp3",
+      "durationMs": 11075,
+      "overMusic": true,
+      "show": "the-warm-up",
+      "lines": [
+        {
+          "speaker": "DJ Entropy",
+          "text": "The Warm-Up is going well, everybody. We've brought the dance floor up by nearly a whole degree.",
+          "startMs": 50
+        },
+        {
+          "speaker": "DJ Entropy",
+          "text": "The rest of the universe is still freezing. But the dance floor, love. The dance floor is lovely.",
+          "startMs": 5551
+        }
+      ]
+    },
+    {
+      "id": "dj-the-warm-up-002",
+      "category": "dj",
+      "url": "/voice/heat-death-afterparty/dj-the-warm-up-002.mp3",
+      "durationMs": 13569,
+      "overMusic": true,
+      "show": "the-warm-up",
+      "lines": [
+        {
+          "speaker": "DJ Entropy",
+          "text": "Early in the night the beat's still quick, and the guys are fresh. Dov's doing the thing with his arms. It hasn't got a name.",
+          "startMs": 40
+        },
+        {
+          "speaker": "DJ Entropy",
+          "text": "Nothing new has had a name for a very long time. So we'll call it the Dov. Well done, Dov.",
+          "startMs": 7325
+        },
+        {
+          "speaker": "Dov",
+          "text": "Thanks.",
+          "startMs": 12880
+        }
+      ]
+    },
+    {
+      "id": "id-the-long-fade",
+      "category": "id",
+      "url": "/voice/heat-death-afterparty/id-the-long-fade.mp3",
+      "durationMs": 7376,
+      "overMusic": true,
+      "part": "open",
+      "show": "the-long-fade",
+      "lines": [
+        {
+          "speaker": "DJ Entropy",
+          "text": "It's late. This is the Long Fade. The beat has come down a long way tonight. Hold on to each other. It's going to be beautiful.",
+          "startMs": 38
+        }
+      ]
+    },
+    {
+      "id": "dj-the-long-fade-001",
+      "category": "dj",
+      "url": "/voice/heat-death-afterparty/dj-the-long-fade-001.mp3",
+      "durationMs": 13607,
+      "overMusic": true,
+      "show": "the-long-fade",
+      "lines": [
+        {
+          "speaker": "DJ Entropy",
+          "text": "We've been losing beats all night, and now we're right down where it's slow and deep, and every kick takes its time.",
+          "startMs": 39
+        },
+        {
+          "speaker": "DJ Entropy",
+          "text": "Wendell says it's like dancing under water. Wendell's never seen water. There isn't any left. He's guessing. He's right, though.",
+          "startMs": 6373
+        }
+      ]
+    },
+    {
+      "id": "dj-the-long-fade-002",
+      "category": "dj",
+      "url": "/voice/heat-death-afterparty/dj-the-long-fade-002.mp3",
+      "durationMs": 7815,
+      "overMusic": true,
+      "show": "the-long-fade",
+      "lines": [
+        {
+          "speaker": "DJ Entropy",
+          "text": "Three guys and a nebula, in the dark, at the end of everything, swaying.",
+          "startMs": 42
+        },
+        {
+          "speaker": "DJ Entropy",
+          "text": "I've played bigger rooms, love. I've never played a better one.",
+          "startMs": 4284
+        }
+      ]
+    },
+    {
+      "id": "dj-the-long-fade-003",
+      "category": "dj",
+      "url": "/voice/heat-death-afterparty/dj-the-long-fade-003.mp3",
+      "durationMs": 12095,
+      "overMusic": true,
+      "show": "the-long-fade",
+      "lines": [
+        {
+          "speaker": "DJ Entropy",
+          "text": "Somewhere in the Long Fade, the guys always stop dancing for a bit, and just stand there, arms round each other, looking up.",
+          "startMs": 39
+        },
+        {
+          "speaker": "DJ Entropy",
+          "text": "Then the beat comes round again, and they start again. That's all any of us are doing, really.",
+          "startMs": 7222
+        }
+      ]
+    },
+    {
+      "id": "id-morning-anyway",
+      "category": "id",
+      "url": "/voice/heat-death-afterparty/id-morning-anyway.mp3",
+      "durationMs": 8326,
+      "overMusic": true,
+      "part": "open",
+      "show": "morning-anyway",
+      "lines": [
+        {
+          "speaker": "DJ Entropy",
+          "text": "Good morning. This is Morning, Anyway. There's no sun now, so the third guy holds the lamp up as high as he can, and we all say, oh, look. Dawn.",
+          "startMs": 38
+        }
+      ]
+    },
+    {
+      "id": "dj-morning-anyway-001",
+      "category": "dj",
+      "url": "/voice/heat-death-afterparty/dj-morning-anyway-001.mp3",
+      "durationMs": 11898,
+      "overMusic": true,
+      "show": "morning-anyway",
+      "lines": [
+        {
+          "speaker": "DJ Entropy",
+          "text": "Breakfast at the end of the universe is a flask of tea that Wendell has been keeping warm since the stars were young.",
+          "startMs": 38
+        },
+        {
+          "speaker": "DJ Entropy",
+          "text": "One cup each. Lorraine has the steam. She says it's the best thing she's had in ages.",
+          "startMs": 6769
+        }
+      ]
+    },
+    {
+      "id": "dj-morning-anyway-002",
+      "category": "dj",
+      "url": "/voice/heat-death-afterparty/dj-morning-anyway-002.mp3",
+      "durationMs": 9632,
+      "overMusic": true,
+      "show": "morning-anyway",
+      "lines": [
+        {
+          "speaker": "DJ Entropy",
+          "text": "If you're out there, and it's a real morning where you are, with a real sun in it, go and stand in it for a minute, love.",
+          "startMs": 38
+        },
+        {
+          "speaker": "DJ Entropy",
+          "text": "Just for us. We'll keep the music going till you're back.",
+          "startMs": 6767
+        }
+      ]
+    },
+    {
+      "id": "ad-001",
+      "category": "ad",
+      "url": "/voice/heat-death-afterparty/ad-001.mp3",
+      "durationMs": 15606,
+      "title": "The Last Advertisement",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Announcer",
+          "text": "This is the last advertisement in the universe.",
+          "startMs": 36
+        },
+        {
+          "speaker": "Announcer",
+          "text": "We would like to thank our sponsors. All of them have now closed. They were lovely. They sold lamps, and soup, and blankets, and they always gave you a little bit extra.",
+          "startMs": 3538
+        },
+        {
+          "speaker": "DJ Entropy",
+          "text": "Offer ends at the end.",
+          "startMs": 14112
+        }
+      ]
+    },
+    {
+      "id": "psa-001",
+      "category": "psa",
+      "url": "/voice/heat-death-afterparty/psa-001.mp3",
+      "durationMs": 12135,
+      "title": "Conserving Heat",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "DJ Entropy",
+          "text": "A message from the afterparty. To conserve heat, please dance close together, wave your arms at least once a song, and keep the door shut.",
+          "startMs": 40
+        },
+        {
+          "speaker": "DJ Entropy",
+          "text": "There isn't a door. Keep it shut anyway. It's the thought that counts.",
+          "startMs": 8192
+        }
+      ]
+    },
+    {
+      "id": "dj-greg-review",
+      "category": "dj",
+      "url": "/voice/heat-death-afterparty/dj-greg-review.mp3",
+      "durationMs": 16557,
+      "title": "Reviewing the Quiet Corner",
+      "overMusic": true,
+      "days": [
+        1
+      ],
+      "lines": [
+        {
+          "speaker": "DJ Entropy",
+          "text": "Did anyone hear the Quiet Corner last night? Greg's show, on the Lounge at the End of Time. I put my ear right up against the speaker.",
+          "startMs": 37
+        },
+        {
+          "speaker": "DJ Entropy",
+          "text": "A little breathing, a long pause, and once, very softly, the word, okay. That's an honest show, love. We played it to Lorraine. She liked the pauses.",
+          "startMs": 8217
+        }
+      ]
+    },
+    {
+      "id": "convergence-missing-moon",
+      "category": "event",
+      "url": "/voice/heat-death-afterparty/convergence-missing-moon.mp3",
+      "durationMs": 14142,
+      "overMusic": false,
+      "kit": "missing-moon",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "DJ Entropy",
+          "text": "Someone says a moon's gone missing. Out here, love, we've been missing moons for ages. Most of them, honestly. But a new one? That's nearly news.",
+          "startMs": 45
+        },
+        {
+          "speaker": "DJ Entropy",
+          "text": "The guys are looking under the speakers. Lorraine's checking her pockets. She hasn't got pockets.",
+          "startMs": 8680
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-smell",
+      "category": "event",
+      "url": "/voice/heat-death-afterparty/convergence-the-smell.mp3",
+      "durationMs": 13653,
+      "overMusic": false,
+      "kit": "the-smell",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "DJ Entropy",
+          "text": "Toast. Everything smells of toast. There hasn't been any toast for a hundred trillion years. Dov's crying.",
+          "startMs": 37
+        },
+        {
+          "speaker": "DJ Entropy",
+          "text": "The third guy says, that's my nan's kitchen. That's the most he's ever said. Somebody, somewhere, is making breakfast. Good.",
+          "startMs": 6512
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-song",
+      "category": "event",
+      "url": "/voice/heat-death-afterparty/convergence-the-song.mp3",
+      "durationMs": 10073,
+      "overMusic": false,
+      "kit": "the-song",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "DJ Entropy",
+          "text": "Everybody's humming the same song. Even Lorraine, low and slow, from forty light years off. Nobody knows how it ends.",
+          "startMs": 44
+        },
+        {
+          "speaker": "DJ Entropy",
+          "text": "Maybe it doesn't, love. Let's just keep humming.",
+          "startMs": 7576
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-knock",
+      "category": "event",
+      "url": "/voice/heat-death-afterparty/convergence-the-knock.mp3",
+      "durationMs": 10027,
+      "overMusic": false,
+      "kit": "the-knock",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "DJ Entropy",
+          "text": "Three knocks. Out here. There's no door. There's nothing to knock on for a very long way. The guys have gone very quiet.",
+          "startMs": 44
+        },
+        {
+          "speaker": "DJ Entropy",
+          "text": "Come in, whoever you are. It's warm by the decks.",
+          "startMs": 7217
+        }
+      ]
+    },
+    {
+      "id": "convergence-wrong-colour",
+      "category": "event",
+      "url": "/voice/heat-death-afterparty/convergence-wrong-colour.mp3",
+      "durationMs": 12034,
+      "overMusic": false,
+      "kit": "wrong-colour",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "DJ Entropy",
+          "text": "The dark has gone a colour. Out here, where nothing has had a colour for ages. Not red. Not blue. Something new. Lorraine's trying to match it.",
+          "startMs": 39
+        },
+        {
+          "speaker": "DJ Entropy",
+          "text": "First new colour in a trillion years, love. Let's dance in it.",
+          "startMs": 8380
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-pigeon",
+      "category": "event",
+      "url": "/voice/heat-death-afterparty/convergence-the-pigeon.mp3",
+      "durationMs": 12299,
+      "overMusic": false,
+      "kit": "the-pigeon",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "DJ Entropy",
+          "text": "A pigeon just walked onto the dance floor. At the end of the universe. The guys have never seen a bird. It's walking round each of them, like it knows them.",
+          "startMs": 36
+        },
+        {
+          "speaker": "DJ Entropy",
+          "text": "Now it's looking at me. Hello, love. Did you come far?",
+          "startMs": 9051
+        }
+      ]
+    }
+  ]
+}

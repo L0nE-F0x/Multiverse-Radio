@@ -1,0 +1,686 @@
+{
+  "version": 1,
+  "station": "island-time",
+  "clips": [
+    {
+      "id": "id-001",
+      "category": "id",
+      "url": "/voice/island-time/id-001.mp3",
+      "durationMs": 9014,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Professor Easy",
+          "text": "Island Time Observatory, one thirteen point eight. Slow music from Tide Hill. It's half past something. Don't worry which.",
+          "startMs": 37
+        }
+      ]
+    },
+    {
+      "id": "id-002",
+      "category": "id",
+      "url": "/voice/island-time/id-002.mp3",
+      "durationMs": 7076,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Professor Easy",
+          "text": "Island Time Observatory. Nobody here has been late since nineteen eighty three. We didn't get punctual. We stopped counting.",
+          "startMs": 38
+        }
+      ]
+    },
+    {
+      "id": "id-003",
+      "category": "id",
+      "url": "/voice/island-time/id-003.mp3",
+      "durationMs": 6482,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Professor Easy",
+          "text": "Island Time Observatory. Two suns, one island, and no hurry whatsoever.",
+          "startMs": 37
+        }
+      ]
+    },
+    {
+      "id": "id-004",
+      "category": "id",
+      "url": "/voice/island-time/id-004.mp3",
+      "durationMs": 6443,
+      "overMusic": true,
+      "daypart": "morning",
+      "lines": [
+        {
+          "speaker": "Professor Easy",
+          "text": "Good morning. Or nearly. This is Island Time Observatory, where the morning arrives when it's ready. So do I.",
+          "startMs": 39
+        }
+      ]
+    },
+    {
+      "id": "id-005",
+      "category": "id",
+      "url": "/voice/island-time/id-005.mp3",
+      "durationMs": 8416,
+      "overMusic": true,
+      "daypart": "night",
+      "lines": [
+        {
+          "speaker": "Professor Easy",
+          "text": "Island Time Observatory. The dome is open, and some of the stars are from last week. Take your time. They did.",
+          "startMs": 38
+        }
+      ]
+    },
+    {
+      "id": "dj-001",
+      "category": "dj",
+      "url": "/voice/island-time/dj-001.mp3",
+      "durationMs": 13631,
+      "title": "Time Is Optional",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Professor Easy",
+          "text": "I have measured time on this island for forty years. With clocks, with sundials, with the tide, and with a very patient tortoise.",
+          "startMs": 39
+        },
+        {
+          "speaker": "Professor Easy",
+          "text": "My conclusion, published this morning, is that time is optional. The paper isn't finished. It doesn't need to be.",
+          "startMs": 7298
+        }
+      ]
+    },
+    {
+      "id": "dj-002",
+      "category": "dj",
+      "url": "/voice/island-time/dj-002.mp3",
+      "durationMs": 13770,
+      "title": "Sooner and Later",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Professor Easy",
+          "text": "The two suns are setting again. The quick one went down an hour ago. The slow one is still thinking it over.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Professor Easy",
+          "text": "Here we call them Sooner and Later. Most people on the island set their watches by Later. Most people on the island don't wear a watch.",
+          "startMs": 6146
+        }
+      ]
+    },
+    {
+      "id": "dj-003",
+      "category": "dj",
+      "url": "/voice/island-time/dj-003.mp3",
+      "durationMs": 13920,
+      "title": "Nineteen Eighty Three",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Professor Easy",
+          "text": "In nineteen eighty three, the island drifted out of time. Nobody noticed for a week. Then somebody went down to catch the ferry, and found it had already arrived. Every day. For good.",
+          "startMs": 40
+        },
+        {
+          "speaker": "Professor Easy",
+          "text": "Since then, nobody has been late. When you get here, that's when it was.",
+          "startMs": 10054
+        }
+      ]
+    },
+    {
+      "id": "dj-004",
+      "category": "dj",
+      "url": "/voice/island-time/dj-004.mp3",
+      "durationMs": 13151,
+      "title": "The Post",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Professor Easy",
+          "text": "The post came this morning, with a letter from me that I haven't written yet. It's very good. I'm looking forward to writing it.",
+          "startMs": 45
+        },
+        {
+          "speaker": "Professor Easy",
+          "text": "I'll send it off next week, and it will get here this morning. That's the island postal service. Quick, in its own way.",
+          "startMs": 6794
+        }
+      ]
+    },
+    {
+      "id": "dj-005",
+      "category": "dj",
+      "url": "/voice/island-time/dj-005.mp3",
+      "durationMs": 15076,
+      "title": "Greg Asks the Time",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Professor Easy",
+          "text": "A shadow came up the hill to the observatory last night, asking the time. Said his name was Greg, and he had to get home to somebody called Hollis.",
+          "startMs": 36
+        },
+        {
+          "speaker": "Professor Easy",
+          "text": "I told him the truth. Here, it's whenever you arrive. He said that was the kindest thing anybody had told him all trip.",
+          "startMs": 8427
+        }
+      ]
+    },
+    {
+      "id": "dj-006",
+      "category": "dj",
+      "url": "/voice/island-time/dj-006.mp3",
+      "durationMs": 10102,
+      "title": "Sponsored by Grumbel's Ladders",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Professor Easy",
+          "text": "The observatory runs on goodwill, mangoes, and Grumbel's Ladders, which is how I get up to the telescope.",
+          "startMs": 41
+        },
+        {
+          "speaker": "Professor Easy",
+          "text": "Grumbel's Ladders. Up is a choice. On Tide Hill, so is when.",
+          "startMs": 6408
+        }
+      ]
+    },
+    {
+      "id": "dj-007",
+      "category": "dj",
+      "url": "/voice/island-time/dj-007.mp3",
+      "durationMs": 14175,
+      "title": "For the Night Shift",
+      "overMusic": true,
+      "daypart": "night",
+      "lines": [
+        {
+          "speaker": "Professor Easy",
+          "text": "A word for the operator on the relay ship. Your heading is moving a little every night. I can see it from here, through the big lens.",
+          "startMs": 39
+        },
+        {
+          "speaker": "Professor Easy",
+          "text": "Don't worry. On this island, nobody is ever off course. You just arrive somewhere you weren't expecting, and it turns out you were.",
+          "startMs": 7468
+        }
+      ]
+    },
+    {
+      "id": "dj-008",
+      "category": "dj",
+      "url": "/voice/island-time/dj-008.mp3",
+      "durationMs": 13031,
+      "title": "Relay Four on the Big Dish",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Professor Easy",
+          "text": "Faint signal on the big dish tonight. A man called Teodor, on Relay Four, asking if anybody can hear him.",
+          "startMs": 47
+        },
+        {
+          "speaker": "Professor Easy",
+          "text": "We can, Teodor. We heard you in nineteen eighty three as well. Same message. Still lovely. Here's a slow one for you.",
+          "startMs": 6732
+        }
+      ]
+    },
+    {
+      "id": "dj-009",
+      "category": "dj",
+      "url": "/voice/island-time/dj-009.mp3",
+      "durationMs": 15032,
+      "title": "Half Past",
+      "overMusic": true,
+      "daypart": "day",
+      "lines": [
+        {
+          "speaker": "Professor Easy",
+          "text": "Afternoon at the beach bar. The clock behind the counter has said half past for forty years. Nobody has ever asked half past what.",
+          "startMs": 39
+        },
+        {
+          "speaker": "Professor Easy",
+          "text": "It would be rude. The clock is doing its best. So is Miss Dorothy.",
+          "startMs": 7819
+        },
+        {
+          "speaker": "Miss Dorothy, the Half Past Bar",
+          "text": "I heard that, Professor. It's half past. Drink your juice.",
+          "startMs": 11920
+        }
+      ]
+    },
+    {
+      "id": "dj-010",
+      "category": "dj",
+      "url": "/voice/island-time/dj-010.mp3",
+      "durationMs": 15572,
+      "title": "The Time Signal",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Professor Easy",
+          "text": "And now, the observatory time signal. At the third pip, it will be precisely whenever you like.",
+          "startMs": 39
+        },
+        {
+          "speaker": "Professor Easy",
+          "text": "Set your watch by that. Or don't. It really doesn't mind.",
+          "startMs": 12254
+        }
+      ]
+    },
+    {
+      "id": "ad-001",
+      "category": "ad",
+      "url": "/voice/island-time/ad-001.mp3",
+      "durationMs": 16524,
+      "title": "The Half Past Bar",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Miss Dorothy, the Half Past Bar",
+          "text": "The Half Past Bar, on the beach, under the clock. Fresh juice, cold drinks, and a hammock if you need a hammock.",
+          "startMs": 44
+        },
+        {
+          "speaker": "Miss Dorothy, the Half Past Bar",
+          "text": "Happy hour runs from whenever until later. Come down any time you like. You won't be late. Nobody is.",
+          "startMs": 6823
+        },
+        {
+          "speaker": "Professor Easy",
+          "text": "The Half Past Bar. It's half past. It always is.",
+          "startMs": 13467
+        }
+      ]
+    },
+    {
+      "id": "tides-open-01",
+      "category": "weather",
+      "url": "/voice/island-time/tides-open-01.mp3",
+      "durationMs": 3096,
+      "overMusic": false,
+      "part": "open",
+      "kit": "tides",
+      "lines": [
+        {
+          "speaker": "Professor Easy",
+          "text": "Now the tide tables, from the three markers on the beach.",
+          "startMs": 39
+        }
+      ]
+    },
+    {
+      "id": "tides-open-02",
+      "category": "weather",
+      "url": "/voice/island-time/tides-open-02.mp3",
+      "durationMs": 4658,
+      "overMusic": false,
+      "part": "open",
+      "kit": "tides",
+      "lines": [
+        {
+          "speaker": "Professor Easy",
+          "text": "Tide report. As usual, the markers do not agree. Here is what each of them thinks.",
+          "startMs": 38
+        }
+      ]
+    },
+    {
+      "id": "tides-body-01",
+      "category": "weather",
+      "url": "/voice/island-time/tides-body-01.mp3",
+      "durationMs": 5512,
+      "overMusic": false,
+      "part": "body",
+      "kit": "tides",
+      "lines": [
+        {
+          "speaker": "Professor Easy",
+          "text": "The marker by the pier says high tide. The water is up to its chin, and it's very sure of itself.",
+          "startMs": 38
+        }
+      ]
+    },
+    {
+      "id": "tides-body-02",
+      "category": "weather",
+      "url": "/voice/island-time/tides-body-02.mp3",
+      "durationMs": 8845,
+      "overMusic": false,
+      "part": "body",
+      "kit": "tides",
+      "lines": [
+        {
+          "speaker": "Professor Easy",
+          "text": "The marker by the rocks says low tide. The water is round its ankles. The two markers are ten metres apart, and they haven't spoken since nineteen eighty three.",
+          "startMs": 41
+        }
+      ]
+    },
+    {
+      "id": "tides-body-03",
+      "category": "weather",
+      "url": "/voice/island-time/tides-body-03.mp3",
+      "durationMs": 7455,
+      "overMusic": false,
+      "part": "body",
+      "kit": "tides",
+      "lines": [
+        {
+          "speaker": "Professor Easy",
+          "text": "The marker by the bar says the tide is out to lunch, and will be back shortly. It's said that for forty years. It's never once been wrong.",
+          "startMs": 38
+        }
+      ]
+    },
+    {
+      "id": "tides-body-04",
+      "category": "weather",
+      "url": "/voice/island-time/tides-body-04.mp3",
+      "durationMs": 7547,
+      "overMusic": false,
+      "part": "body",
+      "kit": "tides",
+      "lines": [
+        {
+          "speaker": "Professor Easy",
+          "text": "The tide itself says nothing. It comes in a little, goes out a little, and looks up at the moon. Of everybody on the beach, I trust the tide.",
+          "startMs": 37
+        }
+      ]
+    },
+    {
+      "id": "tides-close-01",
+      "category": "weather",
+      "url": "/voice/island-time/tides-close-01.mp3",
+      "durationMs": 5082,
+      "overMusic": false,
+      "part": "close",
+      "kit": "tides",
+      "lines": [
+        {
+          "speaker": "Professor Easy",
+          "text": "That's the tides. Swim whenever you like. The sea will be there. Probably in several places.",
+          "startMs": 41
+        }
+      ]
+    },
+    {
+      "id": "id-morning-eventually",
+      "category": "id",
+      "url": "/voice/island-time/id-morning-eventually.mp3",
+      "durationMs": 11799,
+      "overMusic": true,
+      "part": "open",
+      "show": "morning-eventually",
+      "lines": [
+        {
+          "speaker": "Professor Easy",
+          "text": "Good morning, eventually. This is Morning, Eventually, on Island Time Observatory. The breakfast show starts when the kettle does. There it goes.",
+          "startMs": 3540
+        }
+      ]
+    },
+    {
+      "id": "dj-morning-eventually-001",
+      "category": "dj",
+      "url": "/voice/island-time/dj-morning-eventually-001.mp3",
+      "durationMs": 9077,
+      "overMusic": true,
+      "show": "morning-eventually",
+      "lines": [
+        {
+          "speaker": "Professor Easy",
+          "text": "Breakfast on the hill. Mango, coffee, and a boiled egg I put on in nineteen eighty three.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Professor Easy",
+          "text": "It'll be done when it's done. Everything is. Here's something to wait with.",
+          "startMs": 5201
+        }
+      ]
+    },
+    {
+      "id": "id-slow-sunset",
+      "category": "id",
+      "url": "/voice/island-time/id-slow-sunset.mp3",
+      "durationMs": 10028,
+      "overMusic": true,
+      "part": "open",
+      "show": "slow-sunset",
+      "lines": [
+        {
+          "speaker": "Professor Easy",
+          "text": "This is the Slow Sunset, on Island Time Observatory. Sooner is going down. Later isn't. Find a chair facing west, and stay in it.",
+          "startMs": 43
+        }
+      ]
+    },
+    {
+      "id": "dj-slow-sunset-001",
+      "category": "dj",
+      "url": "/voice/island-time/dj-slow-sunset-001.mp3",
+      "durationMs": 14368,
+      "overMusic": true,
+      "show": "slow-sunset",
+      "lines": [
+        {
+          "speaker": "Professor Easy",
+          "text": "Sooner has set. Later is hanging just above the water, enormous and orange, in no hurry at all. It takes about three hours to go down.",
+          "startMs": 36
+        },
+        {
+          "speaker": "Professor Easy",
+          "text": "Some evenings it changes its mind and comes back up for a bit. Nobody complains. It's a lovely sun.",
+          "startMs": 8545
+        }
+      ]
+    },
+    {
+      "id": "id-lying-down-astronomy",
+      "category": "id",
+      "url": "/voice/island-time/id-lying-down-astronomy.mp3",
+      "durationMs": 8066,
+      "overMusic": true,
+      "part": "open",
+      "show": "lying-down-astronomy",
+      "lines": [
+        {
+          "speaker": "Professor Easy",
+          "text": "Lying Down Astronomy, on Island Time Observatory. The dome is open, the hammock is strung, and the telescope is pointed roughly up.",
+          "startMs": 40
+        }
+      ]
+    },
+    {
+      "id": "dj-lying-down-astronomy-001",
+      "category": "dj",
+      "url": "/voice/island-time/dj-lying-down-astronomy-001.mp3",
+      "durationMs": 13322,
+      "overMusic": true,
+      "show": "lying-down-astronomy",
+      "lines": [
+        {
+          "speaker": "Professor Easy",
+          "text": "Tonight's observations. A star I've been watching since nineteen eighty three. It's still there. I find that very encouraging.",
+          "startMs": 37
+        },
+        {
+          "speaker": "Professor Easy",
+          "text": "Also three shooting stars, a satellite, and something that might have been a relay ship. Wave, if that was you.",
+          "startMs": 7297
+        }
+      ]
+    },
+    {
+      "id": "dj-halloween-001",
+      "category": "dj",
+      "url": "/voice/island-time/dj-halloween-001.mp3",
+      "durationMs": 13126,
+      "title": "The Coconut",
+      "overMusic": true,
+      "dates": [
+        "10-24",
+        "10-25",
+        "10-26",
+        "10-27",
+        "10-28",
+        "10-29",
+        "10-30",
+        "10-31"
+      ],
+      "lines": [
+        {
+          "speaker": "Professor Easy",
+          "text": "Halloween on the island isn't one night. It's whichever night you happen to get scared on.",
+          "startMs": 41
+        },
+        {
+          "speaker": "Professor Easy",
+          "text": "Miss Dorothy has carved a coconut. It's very frightening. It keeps rolling towards you, slowly, like it has all the time in the world. It has.",
+          "startMs": 5347
+        }
+      ]
+    },
+    {
+      "id": "convergence-missing-moon",
+      "category": "event",
+      "url": "/voice/island-time/convergence-missing-moon.mp3",
+      "durationMs": 10189,
+      "overMusic": false,
+      "kit": "missing-moon",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Professor Easy",
+          "text": "Somebody has lost a moon, they say. I've been through the telescope. We have one moon tonight. Or the same moon twice.",
+          "startMs": 42
+        },
+        {
+          "speaker": "Professor Easy",
+          "text": "It depends when you start counting. I'd stop counting.",
+          "startMs": 6937
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-smell",
+      "category": "event",
+      "url": "/voice/island-time/convergence-the-smell.mp3",
+      "durationMs": 7648,
+      "overMusic": false,
+      "kit": "the-smell",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Professor Easy",
+          "text": "The whole island smells of toast. Miss Dorothy put the bread under the grill in nineteen eighty three.",
+          "startMs": 37
+        },
+        {
+          "speaker": "Professor Easy",
+          "text": "It may simply be ready.",
+          "startMs": 5973
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-song",
+      "category": "event",
+      "url": "/voice/island-time/convergence-the-song.mp3",
+      "durationMs": 10149,
+      "overMusic": false,
+      "kit": "the-song",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Professor Easy",
+          "text": "Everybody has the same song in their head, and nobody can finish it.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Professor Easy",
+          "text": "Here, unfinished is how songs usually are. We'll finish it later. Later is a sun. It's in no hurry.",
+          "startMs": 4242
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-knock",
+      "category": "event",
+      "url": "/voice/island-time/convergence-the-knock.mp3",
+      "durationMs": 10107,
+      "overMusic": false,
+      "kit": "the-knock",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Professor Easy",
+          "text": "Three knocks on the observatory door, and nobody there.",
+          "startMs": 40
+        },
+        {
+          "speaker": "Professor Easy",
+          "text": "Somebody early, which hasn't happened here since nineteen eighty three. Or somebody very late. We'll leave the door open.",
+          "startMs": 3867
+        }
+      ]
+    },
+    {
+      "id": "convergence-wrong-colour",
+      "category": "event",
+      "url": "/voice/island-time/convergence-wrong-colour.mp3",
+      "durationMs": 10195,
+      "overMusic": false,
+      "kit": "wrong-colour",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Professor Easy",
+          "text": "The sky has gone a colour nobody has a word for. I've written it down in the logbook as colour number nine.",
+          "startMs": 42
+        },
+        {
+          "speaker": "Professor Easy",
+          "text": "We'll give it a proper name when it's finished being that colour. No rush.",
+          "startMs": 6459
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-pigeon",
+      "category": "event",
+      "url": "/voice/island-time/convergence-the-pigeon.mp3",
+      "durationMs": 9554,
+      "overMusic": false,
+      "kit": "the-pigeon",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Professor Easy",
+          "text": "A pigeon has just walked up the observatory steps, and it was on time.",
+          "startMs": 36
+        },
+        {
+          "speaker": "Professor Easy",
+          "text": "First thing on this island to be on time since nineteen eighty three. We're all a little shaken.",
+          "startMs": 4616
+        }
+      ]
+    }
+  ]
+}

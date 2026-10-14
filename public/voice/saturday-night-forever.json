@@ -1,0 +1,957 @@
+{
+  "version": 1,
+  "station": "saturday-night-forever",
+  "clips": [
+    {
+      "id": "id-001",
+      "category": "id",
+      "url": "/voice/saturday-night-forever/id-001.mp3",
+      "durationMs": 8018,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Donna Midnight",
+          "text": "You're listening to Saturday Night Forever, one oh eight point four. It's Saturday night. It has been for a while. Nobody minds.",
+          "startMs": 37
+        }
+      ]
+    },
+    {
+      "id": "id-002",
+      "category": "id",
+      "url": "/voice/saturday-night-forever/id-002.mp3",
+      "durationMs": 7034,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Donna Midnight",
+          "text": "Saturday Night Forever, from the Starlite Rollerdrome, where the night is young. It's been young for a very long time.",
+          "startMs": 39
+        }
+      ]
+    },
+    {
+      "id": "id-003",
+      "category": "id",
+      "url": "/voice/saturday-night-forever/id-003.mp3",
+      "durationMs": 10239,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Donna Midnight",
+          "text": "This is Donna Midnight, on Saturday Night Forever. Skates on, lights low, and nobody, but nobody, is asking what time it is.",
+          "startMs": 38
+        }
+      ]
+    },
+    {
+      "id": "id-004",
+      "category": "id",
+      "url": "/voice/saturday-night-forever/id-004.mp3",
+      "durationMs": 5885,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Donna Midnight",
+          "text": "Saturday Night Forever. The mirror ball is turning, the floor is lit, and Sunday is just a rumour.",
+          "startMs": 37
+        }
+      ]
+    },
+    {
+      "id": "id-005",
+      "category": "id",
+      "url": "/voice/saturday-night-forever/id-005.mp3",
+      "durationMs": 6957,
+      "overMusic": true,
+      "daypart": "day",
+      "lines": [
+        {
+          "speaker": "Donna Midnight",
+          "text": "Saturday Night Forever. If it's daytime where you are, that's fine, honey. We don't judge. In here, it's Saturday night.",
+          "startMs": 45
+        }
+      ]
+    },
+    {
+      "id": "id-006",
+      "category": "id",
+      "url": "/voice/saturday-night-forever/id-006.mp3",
+      "durationMs": 6949,
+      "overMusic": true,
+      "daypart": "night",
+      "lines": [
+        {
+          "speaker": "Donna Midnight",
+          "text": "One oh eight point four, Saturday Night Forever. Way out at the edge of the dial, where the party never got the memo.",
+          "startMs": 36
+        }
+      ]
+    },
+    {
+      "id": "dj-001",
+      "category": "dj",
+      "url": "/voice/saturday-night-forever/dj-001.mp3",
+      "durationMs": 18002,
+      "title": "The Clock",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Donna Midnight",
+          "text": "Some of you newer skaters have been asking about the clock over the rink. The one with no hands. We voted the hands off, back in hour forty.",
+          "startMs": 37
+        },
+        {
+          "speaker": "Donna Midnight",
+          "text": "It was close. The minute hand gave a lovely speech. But the hour hand kept looking at people, and honey, nobody likes to be looked at like that on a Saturday.",
+          "startMs": 8379
+        }
+      ]
+    },
+    {
+      "id": "dj-002",
+      "category": "dj",
+      "url": "/voice/saturday-night-forever/dj-002.mp3",
+      "durationMs": 17136,
+      "title": "The Conga Line",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Donna Midnight",
+          "text": "News of the conga line. It left the rink in hour nine hundred, out through the fire doors, and it hasn't come back.",
+          "startMs": 37
+        },
+        {
+          "speaker": "Donna Midnight",
+          "text": "We got a postcard this week. It's three counties north now, and still going. Still a conga. Still on the beat. Wherever you are, conga line, we're proud of you.",
+          "startMs": 7244
+        }
+      ]
+    },
+    {
+      "id": "dj-003",
+      "category": "dj",
+      "url": "/voice/saturday-night-forever/dj-003.mp3",
+      "durationMs": 15639,
+      "title": "Brenda and Lou",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Donna Midnight",
+          "text": "Over by the snack bar, Brenda and Lou, who met in hour six, and have been on their first date ever since.",
+          "startMs": 37
+        },
+        {
+          "speaker": "Donna Midnight",
+          "text": "It's going very well. He's about to ask her to skate. He's been about to ask for a long time. Don't rush him. In here, there's no such thing as too late.",
+          "startMs": 6567
+        }
+      ]
+    },
+    {
+      "id": "dj-004",
+      "category": "dj",
+      "url": "/voice/saturday-night-forever/dj-004.mp3",
+      "durationMs": 13962,
+      "title": "Sunday",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Donna Midnight",
+          "text": "Some of the regulars say there's a thing that comes after Saturday. They call it Sunday. Church bells, a roast dinner, a sort of quiet headache.",
+          "startMs": 39
+        },
+        {
+          "speaker": "Donna Midnight",
+          "text": "I don't believe a word of it, honey. Sounds made up. Here's a song that definitely isn't.",
+          "startMs": 8871
+        }
+      ]
+    },
+    {
+      "id": "dj-005",
+      "category": "dj",
+      "url": "/voice/saturday-night-forever/dj-005.mp3",
+      "durationMs": 14985,
+      "title": "The Mirror Ball",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Donna Midnight",
+          "text": "The mirror ball has gone round about four hundred million times tonight. People worry. Isn't it dizzy?",
+          "startMs": 36
+        },
+        {
+          "speaker": "Donna Midnight",
+          "text": "We asked it. It said, honey, I'm a mirror ball. Going round is the job. Then it threw a little light on my shoes, which I thought was very sweet.",
+          "startMs": 6280
+        }
+      ]
+    },
+    {
+      "id": "dj-006",
+      "category": "dj",
+      "url": "/voice/saturday-night-forever/dj-006.mp3",
+      "durationMs": 13643,
+      "title": "Rollo on the Floor",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Donna Midnight",
+          "text": "Let's check in with Rollo, our rink guard. Rollo, how's the floor?",
+          "startMs": 36
+        },
+        {
+          "speaker": "Rollo, the Rink Guard",
+          "text": "Busy, Donna. Everyone's going counter-clockwise. Nobody's going backwards. Lovely night.",
+          "startMs": 4162
+        },
+        {
+          "speaker": "Donna Midnight",
+          "text": "That's the thing about a night that never ends, honey. It only goes one way.",
+          "startMs": 9551
+        }
+      ]
+    },
+    {
+      "id": "dj-007",
+      "category": "dj",
+      "url": "/voice/saturday-night-forever/dj-007.mp3",
+      "durationMs": 16354,
+      "title": "Bev Calls",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Bev",
+          "text": "Hello, love. It's Bev. Is this the request line?",
+          "startMs": 40
+        },
+        {
+          "speaker": "Donna Midnight",
+          "text": "Bev, honey, it's Saturday night. Everything's the request line. What can I play for you?",
+          "startMs": 3173
+        },
+        {
+          "speaker": "Bev",
+          "text": "I don't know what it's called. It goes, da da dum. Da da.",
+          "startMs": 8756
+        },
+        {
+          "speaker": "Donna Midnight",
+          "text": "Oh, we play that one every night, Bev. You stay on the floor. It's coming.",
+          "startMs": 12310
+        }
+      ]
+    },
+    {
+      "id": "dj-008",
+      "category": "dj",
+      "url": "/voice/saturday-night-forever/dj-008.mp3",
+      "durationMs": 15211,
+      "title": "A Light Over the Car Park",
+      "overMusic": true,
+      "daypart": "night",
+      "lines": [
+        {
+          "speaker": "Donna Midnight",
+          "text": "There's a new light in the sky over the car park. A relay ship, drifted in from somewhere further up the dial. Hello, newcomer.",
+          "startMs": 39
+        },
+        {
+          "speaker": "Donna Midnight",
+          "text": "Skate hire's free after hour three million. Come on down. And leave your watch in the ship. You won't be needing it.",
+          "startMs": 8152
+        }
+      ]
+    },
+    {
+      "id": "dj-009",
+      "category": "dj",
+      "url": "/voice/saturday-night-forever/dj-009.mp3",
+      "durationMs": 10025,
+      "title": "Sponsored by Grumbel's Ladders",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Donna Midnight",
+          "text": "Somebody has to dust the mirror ball, and tonight that somebody is standing on a ladder from Grumbel's.",
+          "startMs": 39
+        },
+        {
+          "speaker": "Arnold Grumbel",
+          "text": "Grumbel's Ladders. Up is a choice.",
+          "startMs": 5927
+        },
+        {
+          "speaker": "Donna Midnight",
+          "text": "And down, honey, is the next song.",
+          "startMs": 8098
+        }
+      ]
+    },
+    {
+      "id": "dj-010",
+      "category": "dj",
+      "url": "/voice/saturday-night-forever/dj-010.mp3",
+      "durationMs": 14205,
+      "title": "Doing Your Hair",
+      "overMusic": true,
+      "daypart": "evening",
+      "lines": [
+        {
+          "speaker": "Donna Midnight",
+          "text": "Out there it's evening, and people are doing their hair. That's sweet. In here, we did our hair in nineteen seventy seven, and it has held.",
+          "startMs": 36
+        },
+        {
+          "speaker": "Donna Midnight",
+          "text": "Every curl. Every wave. If you're getting ready, take your time. We'll still be here. We're always still here.",
+          "startMs": 8162
+        }
+      ]
+    },
+    {
+      "id": "dj-011",
+      "category": "dj",
+      "url": "/voice/saturday-night-forever/dj-011.mp3",
+      "durationMs": 12390,
+      "title": "What Time Is It?",
+      "overMusic": true,
+      "daypart": "night",
+      "lines": [
+        {
+          "speaker": "Donna Midnight",
+          "text": "A newcomer asked me the time earlier. The whole rink went quiet. Even the mirror ball slowed down.",
+          "startMs": 36
+        },
+        {
+          "speaker": "Donna Midnight",
+          "text": "Then the drummer laughed, and we all laughed, and I bought her a lemonade. Honey, it's Saturday. That's the time.",
+          "startMs": 6376
+        }
+      ]
+    },
+    {
+      "id": "count-open-1",
+      "category": "dj",
+      "url": "/voice/saturday-night-forever/count-open-1.mp3",
+      "durationMs": 3251,
+      "overMusic": true,
+      "part": "open",
+      "kit": "count",
+      "lines": [
+        {
+          "speaker": "Donna Midnight",
+          "text": "Time check, everybody. Donna Midnight, with the hours.",
+          "startMs": 36
+        }
+      ]
+    },
+    {
+      "id": "count-open-2",
+      "category": "dj",
+      "url": "/voice/saturday-night-forever/count-open-2.mp3",
+      "durationMs": 5528,
+      "overMusic": true,
+      "part": "open",
+      "kit": "count",
+      "lines": [
+        {
+          "speaker": "Donna Midnight",
+          "text": "It's that time again. Not the time, honey. We don't do the time. The count.",
+          "startMs": 1050
+        }
+      ]
+    },
+    {
+      "id": "count-open-3",
+      "category": "dj",
+      "url": "/voice/saturday-night-forever/count-open-3.mp3",
+      "durationMs": 4191,
+      "overMusic": true,
+      "part": "open",
+      "kit": "count",
+      "lines": [
+        {
+          "speaker": "Donna Midnight",
+          "text": "Hands up if you've lost track. Good. That's my job. Here's the count.",
+          "startMs": 45
+        }
+      ]
+    },
+    {
+      "id": "count-001",
+      "category": "dj",
+      "url": "/voice/saturday-night-forever/count-001.mp3",
+      "durationMs": 10878,
+      "overMusic": true,
+      "part": "body",
+      "kit": "count",
+      "lines": [
+        {
+          "speaker": "Donna Midnight",
+          "text": "Hour three million, four hundred and six thousand, and twelve. Still Saturday.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Donna Midnight",
+          "text": "The ice in my lemonade has started to think about melting. Only thinking. I'll keep you posted.",
+          "startMs": 5038
+        }
+      ]
+    },
+    {
+      "id": "count-002",
+      "category": "dj",
+      "url": "/voice/saturday-night-forever/count-002.mp3",
+      "durationMs": 11788,
+      "overMusic": true,
+      "part": "body",
+      "kit": "count",
+      "lines": [
+        {
+          "speaker": "Donna Midnight",
+          "text": "We have now been dancing for three million, four hundred thousand hours. That's about three hundred and eighty years, give or take a slow song.",
+          "startMs": 39
+        },
+        {
+          "speaker": "Donna Midnight",
+          "text": "And nobody in this room looks a day over Saturday.",
+          "startMs": 8790
+        }
+      ]
+    },
+    {
+      "id": "count-003",
+      "category": "dj",
+      "url": "/voice/saturday-night-forever/count-003.mp3",
+      "durationMs": 13835,
+      "overMusic": true,
+      "part": "body",
+      "kit": "count",
+      "lines": [
+        {
+          "speaker": "Donna Midnight",
+          "text": "Hour three million, four hundred and seven thousand. To celebrate, the snack bar has turned the hot dog over.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Donna Midnight",
+          "text": "It's been the same hot dog since hour one. It's a very good hot dog. It's had a lot of time to think about it.",
+          "startMs": 7470
+        }
+      ]
+    },
+    {
+      "id": "count-004",
+      "category": "dj",
+      "url": "/voice/saturday-night-forever/count-004.mp3",
+      "durationMs": 13528,
+      "overMusic": true,
+      "part": "body",
+      "kit": "count",
+      "lines": [
+        {
+          "speaker": "Donna Midnight",
+          "text": "Hour three million and, ooh. I'll be honest, I lost count for a second there, in the drum break. It happens.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Donna Midnight",
+          "text": "Luckily Rollo keeps a backup, written on his wrist in biro. Rollo? Thank you, honey. We're right on track.",
+          "startMs": 6908
+        }
+      ]
+    },
+    {
+      "id": "count-005",
+      "category": "dj",
+      "url": "/voice/saturday-night-forever/count-005.mp3",
+      "durationMs": 14317,
+      "overMusic": true,
+      "part": "body",
+      "kit": "count",
+      "lines": [
+        {
+          "speaker": "Donna Midnight",
+          "text": "Hour three million, four hundred and six thousand, five hundred and fifty. Somebody's grandmother just did the splits.",
+          "startMs": 36
+        },
+        {
+          "speaker": "Donna Midnight",
+          "text": "She's been here since hour one. She was nineteen when she came in. And honey, in every way that matters, she still is.",
+          "startMs": 7409
+        }
+      ]
+    },
+    {
+      "id": "count-006",
+      "category": "dj",
+      "url": "/voice/saturday-night-forever/count-006.mp3",
+      "durationMs": 10137,
+      "overMusic": true,
+      "part": "body",
+      "kit": "count",
+      "lines": [
+        {
+          "speaker": "Donna Midnight",
+          "text": "Three million, four hundred and six thousand, eight hundred hours, and not a single one of them has been a Monday.",
+          "startMs": 50
+        },
+        {
+          "speaker": "Donna Midnight",
+          "text": "Think about that. Then don't. Thinking is for Sundays.",
+          "startMs": 6898
+        }
+      ]
+    },
+    {
+      "id": "count-close-1",
+      "category": "dj",
+      "url": "/voice/saturday-night-forever/count-close-1.mp3",
+      "durationMs": 3498,
+      "overMusic": true,
+      "part": "close",
+      "kit": "count",
+      "lines": [
+        {
+          "speaker": "Donna Midnight",
+          "text": "That's the count. Don't write it down. It'll be wrong in an hour.",
+          "startMs": 40
+        }
+      ]
+    },
+    {
+      "id": "count-close-2",
+      "category": "dj",
+      "url": "/voice/saturday-night-forever/count-close-2.mp3",
+      "durationMs": 5413,
+      "overMusic": true,
+      "part": "close",
+      "kit": "count",
+      "lines": [
+        {
+          "speaker": "Donna Midnight",
+          "text": "Still Saturday, everybody. Back on the floor.",
+          "startMs": 44
+        }
+      ]
+    },
+    {
+      "id": "count-close-3",
+      "category": "dj",
+      "url": "/voice/saturday-night-forever/count-close-3.mp3",
+      "durationMs": 3320,
+      "overMusic": true,
+      "part": "close",
+      "kit": "count",
+      "lines": [
+        {
+          "speaker": "Donna Midnight",
+          "text": "And that's the time, honey. It's tonight. It's always tonight.",
+          "startMs": 38
+        }
+      ]
+    },
+    {
+      "id": "id-the-hustle-hour",
+      "category": "id",
+      "url": "/voice/saturday-night-forever/id-the-hustle-hour.mp3",
+      "durationMs": 10287,
+      "overMusic": true,
+      "part": "open",
+      "show": "the-hustle-hour",
+      "lines": [
+        {
+          "speaker": "Donna Midnight",
+          "text": "This is the Hustle Hour, on Saturday Night Forever! Find a space, find a partner, find your feet. In that order.",
+          "startMs": 38
+        }
+      ]
+    },
+    {
+      "id": "dj-the-hustle-hour-001",
+      "category": "dj",
+      "url": "/voice/saturday-night-forever/dj-the-hustle-hour-001.mp3",
+      "durationMs": 13480,
+      "title": "Hustle Lesson",
+      "overMusic": true,
+      "show": "the-hustle-hour",
+      "lines": [
+        {
+          "speaker": "Donna Midnight",
+          "text": "Hustle lesson, for the newcomers. Step one, step to the left. Step two, step back. Step three, point at the mirror ball like it owes you money.",
+          "startMs": 42
+        },
+        {
+          "speaker": "Donna Midnight",
+          "text": "Step four, do it all again, for three hundred years. You're a natural, honey.",
+          "startMs": 9263
+        }
+      ]
+    },
+    {
+      "id": "dj-the-hustle-hour-002",
+      "category": "dj",
+      "url": "/voice/saturday-night-forever/dj-the-hustle-hour-002.mp3",
+      "durationMs": 14800,
+      "title": "The Line Dance",
+      "overMusic": true,
+      "show": "the-hustle-hour",
+      "lines": [
+        {
+          "speaker": "Donna Midnight",
+          "text": "The line dance in the middle of the rink started in hour two hundred. It's forty thousand hours long. There are steps in it nobody has seen yet.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Donna Midnight",
+          "text": "If you join in now, you'll get to the good bit in about eleven years. Worth it. I've heard there's a spin.",
+          "startMs": 8710
+        }
+      ]
+    },
+    {
+      "id": "id-couples-skate",
+      "category": "id",
+      "url": "/voice/saturday-night-forever/id-couples-skate.mp3",
+      "durationMs": 7724,
+      "overMusic": true,
+      "part": "open",
+      "show": "couples-skate",
+      "lines": [
+        {
+          "speaker": "Donna Midnight",
+          "text": "Lights down, everybody. It's Couples Skate. Find someone you've been dancing next to for eleven years, and introduce yourself.",
+          "startMs": 38
+        }
+      ]
+    },
+    {
+      "id": "dj-couples-skate-001",
+      "category": "dj",
+      "url": "/voice/saturday-night-forever/dj-couples-skate-001.mp3",
+      "durationMs": 17343,
+      "title": "Lou Asks",
+      "overMusic": true,
+      "show": "couples-skate",
+      "lines": [
+        {
+          "speaker": "Donna Midnight",
+          "text": "Oh, look at that. Lou has asked Brenda to skate. He asks her every Couples Skate, and every Couples Skate, she says yes, like it's the first time.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Donna Midnight",
+          "text": "They're going round now, slowly, holding hands. That's about forty thousand first dates, honey. And not one of them has been a bad one.",
+          "startMs": 9213
+        }
+      ]
+    },
+    {
+      "id": "dj-couples-skate-002",
+      "category": "dj",
+      "url": "/voice/saturday-night-forever/dj-couples-skate-002.mp3",
+      "durationMs": 10554,
+      "overMusic": true,
+      "show": "couples-skate",
+      "lines": [
+        {
+          "speaker": "Donna Midnight",
+          "text": "To everyone sitting this one out on the carpet benches. That's all right too. Rest your feet. Hold your lemonade.",
+          "startMs": 37
+        },
+        {
+          "speaker": "Donna Midnight",
+          "text": "Somebody has to watch. A night this long needs witnesses.",
+          "startMs": 6963
+        }
+      ]
+    },
+    {
+      "id": "id-breakfast-at-the-rink",
+      "category": "id",
+      "url": "/voice/saturday-night-forever/id-breakfast-at-the-rink.mp3",
+      "durationMs": 8097,
+      "overMusic": true,
+      "part": "open",
+      "show": "breakfast-at-the-rink",
+      "lines": [
+        {
+          "speaker": "Donna Midnight",
+          "text": "Good morning, out there. This is Breakfast at the Rink. You've got the sunrise. We've got pancakes, and a mirror ball. It's a fair trade.",
+          "startMs": 37
+        }
+      ]
+    },
+    {
+      "id": "dj-breakfast-at-the-rink-001",
+      "category": "dj",
+      "url": "/voice/saturday-night-forever/dj-breakfast-at-the-rink-001.mp3",
+      "durationMs": 12061,
+      "overMusic": true,
+      "show": "breakfast-at-the-rink",
+      "lines": [
+        {
+          "speaker": "Donna Midnight",
+          "text": "We call this breakfast, but it's still Saturday night in here. The snack bar started doing pancakes in hour three thousand, because somebody asked.",
+          "startMs": 37
+        },
+        {
+          "speaker": "Donna Midnight",
+          "text": "And on a Saturday night, honey, nobody ever says no.",
+          "startMs": 8938
+        }
+      ]
+    },
+    {
+      "id": "dj-breakfast-at-the-rink-002",
+      "category": "dj",
+      "url": "/voice/saturday-night-forever/dj-breakfast-at-the-rink-002.mp3",
+      "durationMs": 12931,
+      "overMusic": true,
+      "show": "breakfast-at-the-rink",
+      "lines": [
+        {
+          "speaker": "Donna Midnight",
+          "text": "A word for everyone out there in the morning. Your night ended. That's all right. Nights do. Ours didn't.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Donna Midnight",
+          "text": "So we're keeping it for you. Come back tonight, and it'll be right where you left it. Same song, same floor. Same us.",
+          "startMs": 6426
+        }
+      ]
+    },
+    {
+      "id": "ad-001",
+      "category": "ad",
+      "url": "/voice/saturday-night-forever/ad-001.mp3",
+      "durationMs": 16512,
+      "title": "Forever Hold Hairspray",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Announcer",
+          "text": "Forever Hold Hairspray. Holds for one night. Any night. This night.",
+          "startMs": 1582
+        },
+        {
+          "speaker": "Donna Midnight",
+          "text": "I've used it since nineteen seventy seven, honey. I haven't touched my hair since. I'm not allowed to. It's load bearing.",
+          "startMs": 5965
+        },
+        {
+          "speaker": "Announcer",
+          "text": "Forever Hold. Keep away from mirror balls. They get ideas.",
+          "startMs": 13429
+        }
+      ]
+    },
+    {
+      "id": "ad-002",
+      "category": "ad",
+      "url": "/voice/saturday-night-forever/ad-002.mp3",
+      "durationMs": 18323,
+      "title": "Starlite Skate Hire",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Announcer",
+          "text": "Starlite Skate Hire, at the counter by the snack bar. Wheels for every foot. Sizes four to fourteen.",
+          "startMs": 1582
+        },
+        {
+          "speaker": "Rollo, the Rink Guard",
+          "text": "Size nine's out. Size nine's been out since hour eleven. He's very good. He's not giving them back.",
+          "startMs": 8702
+        },
+        {
+          "speaker": "Announcer",
+          "text": "Starlite Skate Hire. Return your skates when the night ends.",
+          "startMs": 15069
+        }
+      ]
+    },
+    {
+      "id": "psa-001",
+      "category": "psa",
+      "url": "/voice/saturday-night-forever/psa-001.mp3",
+      "durationMs": 14236,
+      "title": "Please Don't Ask the Time",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Announcer",
+          "text": "A message from the management of the Starlite Rollerdrome.",
+          "startMs": 39
+        },
+        {
+          "speaker": "Announcer",
+          "text": "Please don't ask the time. Not because we're hiding it. Because the last person who asked made the drummer cry, and he's very good, and we need him.",
+          "startMs": 3787
+        },
+        {
+          "speaker": "Donna Midnight",
+          "text": "Thank you, management.",
+          "startMs": 12872
+        }
+      ]
+    },
+    {
+      "id": "dj-greg-review",
+      "category": "dj",
+      "url": "/voice/saturday-night-forever/dj-greg-review.mp3",
+      "durationMs": 14749,
+      "title": "Reviewing the Quiet Corner",
+      "overMusic": true,
+      "days": [
+        1
+      ],
+      "lines": [
+        {
+          "speaker": "Donna Midnight",
+          "text": "Did anybody catch the Quiet Corner, over on the Lounge at the End of Time? Greg's show. I had my ear right up against the speaker.",
+          "startMs": 36
+        },
+        {
+          "speaker": "Donna Midnight",
+          "text": "I heard one word. I think it was, lovely. Five stars, Greg. Turn it up a little, honey. Come and dance.",
+          "startMs": 8366
+        }
+      ]
+    },
+    {
+      "id": "convergence-missing-moon",
+      "category": "event",
+      "url": "/voice/saturday-night-forever/convergence-missing-moon.mp3",
+      "durationMs": 13240,
+      "overMusic": false,
+      "kit": "missing-moon",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Donna Midnight",
+          "text": "Somebody's just skated in from the car park saying a moon has gone missing. Honey, we haven't looked at the sky since nineteen seventy seven.",
+          "startMs": 37
+        },
+        {
+          "speaker": "Donna Midnight",
+          "text": "We'll take your word for it. This one's for the moon, wherever she's dancing tonight.",
+          "startMs": 8753
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-smell",
+      "category": "event",
+      "url": "/voice/saturday-night-forever/convergence-the-smell.mp3",
+      "durationMs": 11443,
+      "overMusic": false,
+      "kit": "the-smell",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Donna Midnight",
+          "text": "Can everybody smell toast? The whole rink smells of toast. The snack bar swears it isn't them. They don't do toast. They do one hot dog.",
+          "startMs": 37
+        },
+        {
+          "speaker": "Donna Midnight",
+          "text": "Keep skating, everybody. Breathe it in.",
+          "startMs": 9013
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-song",
+      "category": "event",
+      "url": "/voice/saturday-night-forever/convergence-the-song.mp3",
+      "durationMs": 12170,
+      "overMusic": false,
+      "kit": "the-song",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Donna Midnight",
+          "text": "Everyone on the floor is humming the same song, and nobody can remember how it ends. Bev's here. Bev's crying. Bev says that's the one.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Donna Midnight",
+          "text": "If anybody knows the last line, come up to the booth.",
+          "startMs": 9182
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-knock",
+      "category": "event",
+      "url": "/voice/saturday-night-forever/convergence-the-knock.mp3",
+      "durationMs": 8730,
+      "overMusic": false,
+      "kit": "the-knock",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Donna Midnight",
+          "text": "Three knocks on the booth door, just now. Rollo went to look. Nobody there.",
+          "startMs": 46
+        },
+        {
+          "speaker": "Rollo, the Rink Guard",
+          "text": "Might be Sunday, Donna.",
+          "startMs": 4819
+        },
+        {
+          "speaker": "Donna Midnight",
+          "text": "Then don't open it, Rollo. Not tonight.",
+          "startMs": 6350
+        }
+      ]
+    },
+    {
+      "id": "convergence-wrong-colour",
+      "category": "event",
+      "url": "/voice/saturday-night-forever/convergence-wrong-colour.mp3",
+      "durationMs": 11882,
+      "overMusic": false,
+      "kit": "wrong-colour",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Donna Midnight",
+          "text": "The skylight's gone a colour I don't have a word for. And I have a lot of words for colours, honey. I've got eleven for gold.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Donna Midnight",
+          "text": "The mirror ball's throwing it all over the floor. Everybody looks wonderful in it.",
+          "startMs": 7439
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-pigeon",
+      "category": "event",
+      "url": "/voice/saturday-night-forever/convergence-the-pigeon.mp3",
+      "durationMs": 9281,
+      "overMusic": false,
+      "kit": "the-pigeon",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Donna Midnight",
+          "text": "There's a pigeon on the rink. It's going round counter-clockwise, like everybody. It just nodded at me like it knew me.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Donna Midnight",
+          "text": "Maybe it does. It's been a long night.",
+          "startMs": 7210
+        }
+      ]
+    }
+  ]
+}
