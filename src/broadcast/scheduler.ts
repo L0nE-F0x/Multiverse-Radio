@@ -21,11 +21,24 @@
 //     two or three times that day at seeded local times. Serial clips never air otherwise.
 //   - Dates: clips with `dates` air only on those days and are preferred on them.
 //   - Modular parts: clips with `part` chain open → 1–3 bodies → close from one kit.
+//
+// v4:
+//   - Weekdays: shows with `days` only run on those local weekdays; clips with `days` only
+//     air on them (and are preferred then, while fresh).
+//   - Full moon: clips with `kit = "full-moon"` only air on full-moon nights (preferred then).
+//   - Free Frequency's "tomorrow" clips (`kit = "tomorrow-<MHz>"`) never rotate: the one for
+//     tomorrow night's frequency airs a few times a day at seeded times.
+//   - Traffic on the 8s: a traffic report (its own `weather` clips) at the slot nearest each
+//     local minute ending in 8; its weather clips air nowhere else.
+//   - Afterparty at the Heat Death: music runs carry the tempo of the local night.
+//   - Event clips in station manifests (Convergence reactions) never air in the schedule.
 
 import { trackMeta } from '../content/tracks';
 import { artistSeed } from '../music/recipes/artist';
+import { eightsInHour, fullMoonAt, isFullMoonClip, onTheEights, tweaksAt } from './quirks';
 import { createRng, hash, weightedPick, type Rng } from './random';
-import { browserTzOffset, localMinuteToMs, localTime, showAtHour, type TzOffset } from './time';
+import { frequencyTomorrow, tomorrowKitFrequency } from './secrets';
+import { browserTzOffset, localMinuteToMs, localTime, nightOf, showAtHour, type TzOffset } from './time';
 import type {
   Daypart,
   RecipeId,
@@ -88,6 +101,13 @@ export function serialMinutes(serialId: string, localDay: number): number[] {
   return out;
 }
 
+/** v4: local minutes-of-day at which a drifting station announces tomorrow's frequency: four, seeded. */
+export function tomorrowMinutes(stationId: string, localDay: number): number[] {
+  const rng = createRng(hash('tomorrow', stationId, localDay));
+  // One airing in each quarter of the day.
+  return [0, 1, 2, 3].map((q) => (q * 6 + rng.int(0, 5)) * 60 + rng.int(3, 55));
+}
+
 /** The episode of a serial on a local day: the day index mod the number of episodes. */
 export function serialEpisode(episodes: readonly number[], localDay: number): number | undefined {
   if (episodes.length === 0) return undefined;
@@ -117,6 +137,11 @@ const REPEAT_AVOID_MS = 3 * HOUR_MS;
 const REPEAT_FLOOR_MS = 45 * MIN;
 const IDENT_REPEAT_FLOOR_MS = 10 * MIN;
 
+/** Traffic reports may come round this soon (six an hour need a short floor). */
+const TRAFFIC_REPEAT_FLOOR_MS = 12 * MIN;
+/** A traffic report airs at the first slot boundary within this long of its :x8 mark. */
+const TRAFFIC_TOLERANCE_MS = 25 * SEC;
+
 /** What the listener's clock says when a clip is chosen. */
 interface PickContext {
   daypart: Daypart;
@@ -124,15 +149,22 @@ interface PickContext {
   show: string | null;
   /** Local "MM-DD". */
   date: string;
+  /** v4: local weekday, 0 = Sunday. */
+  weekday: number;
+  /** v4: a full-moon night. */
+  fullMoon: boolean;
 }
 
 /** Idents and the opens/closes of modular parts are short and meant to come round often. */
 const floorFor = (c: VoiceClip) =>
   c.category === 'id' || c.part === 'open' || c.part === 'close' ? IDENT_REPEAT_FLOOR_MS : REPEAT_FLOOR_MS;
 
-/** Can this clip air at all right now? (Its date and show, if it has them.) */
+/** Can this clip air at all right now? (Its date, weekday, moon and show, if it has them.) */
 const available = (c: VoiceClip, ctx: PickContext) =>
-  (!c.dates || c.dates.includes(ctx.date)) && (!c.show || c.show === ctx.show);
+  (!c.dates || c.dates.includes(ctx.date)) &&
+  (!c.days || c.days.includes(ctx.weekday)) &&
+  (!isFullMoonClip(c) || ctx.fullMoon) &&
+  (!c.show || c.show === ctx.show);
 
 /** Least-recently-used picker with a seeded per-day shuffle for never-aired clips. */
 class ClipPicker {
@@ -167,6 +199,7 @@ class ClipPicker {
     atMs: number,
     maxMs: number,
     allowRepeat = true,
+    floorMs?: number,
   ): VoiceClip | undefined {
     const now = candidates.filter((c) => available(c, ctx));
     if (now.length === 0) return undefined;
@@ -177,9 +210,10 @@ class ClipPicker {
     // Rotation: only the stalest half may come round again.
     const times = rotation.map(last).sort((a, b) => a - b);
     const threshold = times[Math.ceil(times.length / 2) - 1]!;
-    let eligible = rotation.filter((c) => last(c) <= threshold && c.durationMs <= maxMs && age(c) >= floorFor(c));
+    let eligible = rotation.filter((c) => last(c) <= threshold && c.durationMs <= maxMs && age(c) >= (floorMs ?? floorFor(c)));
     if (eligible.length === 0) return undefined;
-    const dated = eligible.filter((c) => c.dates);
+    // Today's clips first: dated ones always, weekday and full-moon ones while fresh.
+    const dated = eligible.filter((c) => c.dates || ((c.days || isFullMoonClip(c)) && age(c) > REPEAT_AVOID_MS));
     if (dated.length > 0) {
       eligible = dated;
     } else {
@@ -205,8 +239,9 @@ class ClipPicker {
     atMs: number,
     maxMs: number,
     allowRepeat = true,
+    floorMs?: number,
   ): VoiceClip | undefined {
-    const clip = this.choose(rng, candidates, ctx, atMs, maxMs, allowRepeat);
+    const clip = this.choose(rng, candidates, ctx, atMs, maxMs, allowRepeat, floorMs);
     if (clip) this.use(clip, atMs);
     return clip;
   }
@@ -252,6 +287,10 @@ interface Pools {
   showOpeners: Map<string, VoiceClip[]>;
   /** Serial id → episode → its clips, in order. */
   serials: Map<string, Map<number, VoiceClip[]>>;
+  /** v4: announcements of tomorrow's frequency (drifting stations). */
+  tomorrow: VoiceClip[];
+  /** v4: traffic reports on the 8s (Traffic on the 8s only). */
+  traffic: { clips: VoiceClip[]; kits: Kit[] } | null;
   any: boolean;
 }
 
@@ -293,8 +332,11 @@ function sortClips(list: readonly VoiceClip[], owner: string, pools: Pick<Pools,
 
 function buildPools(stationId: string, clips: StationClips): Pools {
   const meta: Pick<Pools, 'showOpeners' | 'serials'> = { showOpeners: new Map(), serials: new Map() };
-  const sharedRaw = clips.shared.filter((c) => !c.stations?.length || c.stations.includes(stationId));
-  const mine = sortClips(clips.own, 'own', meta);
+  // Event clips (Convergence reactions) belong to the overlay; tomorrow's frequency airs at fixed times.
+  const sharedRaw = clips.shared.filter((c) => !c.event && (!c.stations?.length || c.stations.includes(stationId)));
+  const tomorrow = clips.own.filter((c) => !c.event && tomorrowKitFrequency(c.kit) !== null);
+  const ownRaw = clips.own.filter((c) => !c.event && tomorrowKitFrequency(c.kit) === null);
+  const mine = sortClips(ownRaw, 'own', meta);
   const theirs = sortClips(sharedRaw, 'shared', meta);
   const own = mine.standalone;
   const shared = theirs.standalone;
@@ -305,7 +347,11 @@ function buildPools(stationId: string, clips: StationClips): Pools {
   const sharedIdents = of(shared, 'id').filter((c) => c.stations?.includes(stationId));
   const content = new Map<VoiceCategory, ContentEntry>();
   const kitWeight = (kits: Kit[]) => kits.reduce((n, k) => n + Math.min(k.bodies.length, 8), 0);
+  // Traffic on the 8s keeps its own weather (the traffic) for the reports on the 8s.
+  const eights = onTheEights(stationId);
+  const traffic = eights ? { clips: of(own, 'weather'), kits: kitsOf(mine.kits, 'weather') } : null;
   for (const cat of CONTENT_CATEGORIES) {
+    if (eights && cat === 'weather') continue;
     const ownClips = of(own, cat);
     const ownKits = kitsOf(mine.kits, cat);
     // Ads air in ad breaks; only stations whose own content is ads (classifieds) talk in ads.
@@ -327,7 +373,9 @@ function buildPools(stationId: string, clips: StationClips): Pools {
     ambientVoices: of(own, ...AMBIENT_VOICES),
     ambientKits: kitsOf(mine.kits, ...AMBIENT_VOICES),
     ...meta,
-    any: clips.own.length + sharedRaw.length > 0,
+    tomorrow,
+    traffic: traffic && traffic.clips.length + traffic.kits.length > 0 ? traffic : null,
+    any: ownRaw.length + tomorrow.length + sharedRaw.length > 0,
   };
 }
 
@@ -389,7 +437,18 @@ class HourWriter {
 
   private context(at = this.t): PickContext {
     const local = localTime(at, this.tz);
-    return { daypart: this.daypart, show: showAtHour(this.shows, local.hour)?.id ?? null, date: local.date };
+    return {
+      daypart: this.daypart,
+      show: showAtHour(this.shows, local.hour, local.weekday)?.id ?? null,
+      date: local.date,
+      weekday: local.weekday,
+      fullMoon: fullMoonAt(at, this.tz),
+    };
+  }
+
+  /** v4: offsets in this hour of the local minutes ending in 8. */
+  eights(): number[] {
+    return eightsInHour(this.start, this.tz);
   }
 
   private meta(seed: number, recipe: RecipeId): TrackMeta {
@@ -445,9 +504,9 @@ class HourWriter {
   }
 
   /** Picks and airs a clip from `candidates` if one fits. Returns its duration (0 if none). */
-  voice(candidates: readonly VoiceClip[], allowRepeat = true): number {
+  voice(candidates: readonly VoiceClip[], allowRepeat = true, floorMs?: number): number {
     if (candidates.length === 0) return 0;
-    const clip = this.picker.pick(this.rng, candidates, this.context(), this.t, this.remaining - this.minTail, allowRepeat);
+    const clip = this.picker.pick(this.rng, candidates, this.context(), this.t, this.remaining - this.minTail, allowRepeat, floorMs);
     return clip ? this.push(clip, this.bedFor(clip)) : 0;
   }
 
@@ -455,7 +514,7 @@ class HourWriter {
    * A modular segment from a kit: an open (if the kit has any), one to three different
    * bodies and a close (if it has any), back to back. Returns its duration (0 if none fits).
    */
-  chain(kit: Kit, allowRepeat = true): number {
+  chain(kit: Kit, allowRepeat = true, floorMs?: number, maxBodies = 3): number {
     const ctx = this.context();
     const max = this.remaining - this.minTail;
     const at = this.t;
@@ -464,10 +523,10 @@ class HourWriter {
     const closeMin = kit.closes.length ? Math.min(...kit.closes.map((c) => c.durationMs)) : 0;
     let used = open?.durationMs ?? 0;
     const bodies: VoiceClip[] = [];
-    const want = this.rng.int(1, 3);
+    const want = this.rng.int(1, maxBodies);
     for (let i = 0; i < want; i++) {
       const left = kit.bodies.filter((b) => !bodies.includes(b));
-      const body = this.picker.choose(this.rng, left, ctx, at + used, max - used - closeMin, allowRepeat);
+      const body = this.picker.choose(this.rng, left, ctx, at + used, max - used - closeMin, allowRepeat, floorMs);
       if (!body) break;
       bodies.push(body);
       used += body.durationMs;
@@ -494,6 +553,17 @@ class HourWriter {
       return this.chain(kit, allowRepeat) || this.voice(clips, allowRepeat);
     }
     return this.voice(clips, allowRepeat) || this.chain(kit, allowRepeat);
+  }
+
+  /** v4: a traffic report (Traffic on the 8s): a short chain from its weather kits, or a clip. */
+  traffic(pools: Pools): number {
+    const t = pools.traffic;
+    if (!t) return 0;
+    const kit = t.kits.length ? t.kits[this.rng.int(0, t.kits.length - 1)]! : null;
+    if (kit && (t.clips.length === 0 || this.rng.chance(0.7))) {
+      return this.chain(kit, true, TRAFFIC_REPEAT_FLOOR_MS, 1) || this.voice(t.clips, true, TRAFFIC_REPEAT_FLOOR_MS);
+    }
+    return this.voice(t.clips, true, TRAFFIC_REPEAT_FLOOR_MS) || (kit ? this.chain(kit, true, TRAFFIC_REPEAT_FLOOR_MS, 1) : 0);
   }
 
   /** 1–n ads back to back. */
@@ -616,15 +686,28 @@ function mixedClock(w: HourWriter, rng: Rng, pools: Pools): void {
 }
 
 function talkClock(w: HourWriter, rng: Rng, pools: Pools): void {
-  if (pools.content.size === 0) return musicClock(w, rng, pools);
+  if (pools.content.size === 0 && !pools.traffic) return musicClock(w, rng, pools);
   const ads = new Marks([rng.range(17, 23), rng.range(43, 50)]);
   const idents = new Marks([15 + rng.range(0, 2), 30 + rng.range(0, 2), 45 + rng.range(0, 2)]);
   const interstitial = () => w.track(rng.int(20, 60) * SEC, 75 * SEC);
+  // Traffic on the 8s: a report at the first boundary near each :x8.
+  const eights = pools.traffic ? w.eights().map((ms) => ms - TRAFFIC_TOLERANCE_MS) : [];
+  const trafficDue = () => {
+    let due = false;
+    while (eights.length && w.elapsed >= eights[0]!) {
+      eights.shift();
+      due = true;
+    }
+    return due ? w.traffic(pools) : 0;
+  };
   if (w.ident(pools)) interstitial();
   while (w.remaining > 0) {
     let aired = w.specialsDue();
+    aired += trafficDue();
     const block = rng.int(1, 3);
     for (let i = 0; i < block; i++) {
+      if (i > 0) aired += trafficDue();
+      if (w.remaining <= 0) break;
       const length = w.talk(pools);
       if (!length) break;
       aired += length;
@@ -714,7 +797,8 @@ export class StationSchedule {
 
   /** The show on air at a moment (listener's local time), if any. */
   showAt(ms: number): ShowDef | null {
-    return showAtHour(this.shows, localTime(ms, this.tz).hour);
+    const local = localTime(ms, this.tz);
+    return showAtHour(this.shows, local.hour, local.weekday);
   }
 
   /** True if the library has any clips at all (otherwise the schedule is music only). */
@@ -744,18 +828,33 @@ export class StationSchedule {
 
   /** Show openers and serial airings that fall due during an hour, in order. */
   private specialsIn(hourIndex: number): Special[] {
-    const { showOpeners, serials } = this.pools;
-    if (showOpeners.size === 0 && serials.size === 0) return [];
+    const { showOpeners, serials, tomorrow } = this.pools;
+    if (showOpeners.size === 0 && serials.size === 0 && tomorrow.length === 0) return [];
     const start = hourIndex * HOUR_MS;
     const end = start + HOUR_MS;
     const out: Special[] = [];
     if (showOpeners.size > 0) {
       // The first local o'clock in this UTC hour (usually its start).
       const at = start + ((60 - (localTime(start, this.tz).minuteOfDay % 60)) % 60) * MIN;
-      const hour = localTime(at, this.tz).hour;
+      const { hour, weekday } = localTime(at, this.tz);
       for (const show of this.shows) {
         const clips = showOpeners.get(show.id);
-        if (at < end && show.start === hour && clips?.length) out.push({ atMs: at, clips, show: show.id });
+        const today = !show.days || show.days.includes(weekday);
+        if (at < end && show.start === hour && today && clips?.length) out.push({ atMs: at, clips, show: show.id });
+      }
+    }
+    if (tomorrow.length > 0) {
+      // Tomorrow night's frequency, announced a few times a day (never the wrong one).
+      for (const day of new Set([localTime(start, this.tz).day, localTime(end - 1, this.tz).day])) {
+        for (const minute of tomorrowMinutes(this.station.id, day)) {
+          const at = localMinuteToMs(day, minute, this.tz);
+          if (at < start || at >= end) continue;
+          const mhz = frequencyTomorrow(this.station, at, this.tz);
+          const matching = tomorrow.filter((c) => Math.abs(tomorrowKitFrequency(c.kit)! - mhz) < 0.005);
+          if (matching.length === 0) continue;
+          const clip = matching[hash('tomorrow-clip', nightOf(at, this.tz)) % matching.length]!;
+          out.push({ atMs: at, clips: [clip] });
+        }
       }
     }
     const days = new Set([localTime(start, this.tz).day, localTime(end - 1, this.tz).day]);
@@ -850,7 +949,7 @@ export class StationSchedule {
     const cacheable = !failed || failed.size === 0;
     const cached = cacheable ? this.runCache.get(hourIndex) : undefined;
     if (cached) return cached;
-    const runs = computeRuns(this.station, this.hour(hourIndex), failed);
+    const runs = computeRuns(this.station, this.hour(hourIndex), failed, this.tz);
     if (cacheable) {
       this.runCache.set(hourIndex, runs);
       if (this.runCache.size > 6) this.runCache.delete(this.runCache.keys().next().value!);
@@ -868,10 +967,11 @@ export class StationSchedule {
   }
 }
 
-function computeRuns(station: StationDef, segments: Segment[], failed?: ReadonlySet<string>): MusicRun[] {
+function computeRuns(station: StationDef, segments: Segment[], failed?: ReadonlySet<string>, tz: TzOffset = browserTzOffset): MusicRun[] {
   const runs: MusicRun[] = [];
   let pending: VoiceSegment[] = [];
-  const tweaksFor = (recipe: RecipeId) => (recipe === station.recipe ? station.tweaks : undefined);
+  // Station quirks may change the tweaks with the time of day (the afterparty's tempo).
+  const tweaksFor = (recipe: RecipeId, at: number) => (recipe === station.recipe ? tweaksAt(station, at, tz) : undefined);
   const flushBed = () => {
     const first = pending[0];
     const last = pending[pending.length - 1];
@@ -882,7 +982,7 @@ function computeRuns(station: StationDef, segments: Segment[], failed?: Readonly
       endMs: last.startMs + last.durationMs,
       recipe: station.recipe,
       seed: hash(first.id, 'bed'),
-      tweaks: station.tweaks,
+      tweaks: tweaksAt(station, first.startMs, tz),
     });
     pending = [];
   };
@@ -895,7 +995,7 @@ function computeRuns(station: StationDef, segments: Segment[], failed?: Readonly
         endMs: s.startMs + s.durationMs,
         recipe: s.recipe,
         seed: s.seed,
-        tweaks: tweaksFor(s.recipe),
+        tweaks: tweaksFor(s.recipe, startMs),
         artist: artistSeed(s.meta.artist),
       });
       pending = [];
