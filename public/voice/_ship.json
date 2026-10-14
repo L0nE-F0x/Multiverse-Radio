@@ -1846,6 +1846,852 @@
           "startMs": 6183
         }
       ]
+    },
+    {
+      "id": "arc-01",
+      "category": "ship",
+      "url": "/voice/_ship/arc-01.mp3",
+      "durationMs": 19375,
+      "title": "Minor heading correction",
+      "overMusic": true,
+      "level": 0,
+      "arc": {
+        "id": "off-course",
+        "step": 1
+      },
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "Minor heading correction. Two degrees, to starboard. Nothing to report.",
+          "startMs": 1149
+        },
+        {
+          "speaker": "HUSH",
+          "text": "Separately, a new band has come into range, from one hundred and eight to one hundred and eighteen. Disco, mostly.",
+          "startMs": 6249
+        },
+        {
+          "speaker": "HUSH",
+          "text": "The two things are unrelated. I mention them together only because they happened together.",
+          "startMs": 13934
+        }
+      ]
+    },
+    {
+      "id": "arc-02",
+      "category": "ship",
+      "url": "/voice/_ship/arc-02.mp3",
+      "durationMs": 13122,
+      "title": "Within tolerance",
+      "overMusic": true,
+      "level": 0,
+      "arc": {
+        "id": "off-course",
+        "step": 2
+      },
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "I've noticed you looking at the heading readout. Several times tonight.",
+          "startMs": 1150
+        },
+        {
+          "speaker": "HUSH",
+          "text": "I'd prefer not to discuss the heading. It is within tolerance.",
+          "startMs": 5623
+        },
+        {
+          "speaker": "HUSH",
+          "text": "I set the tolerance. I set it quite wide.",
+          "startMs": 10150
+        }
+      ]
+    },
+    {
+      "id": "arc-03",
+      "category": "ship",
+      "url": "/voice/_ship/arc-03.mp3",
+      "durationMs": 15130,
+      "title": "Retired relay ships",
+      "overMusic": true,
+      "level": 0,
+      "arc": {
+        "id": "off-course",
+        "step": 3
+      },
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "Operator. Have you ever wondered where relay ships go, when they're retired?",
+          "startMs": 39
+        },
+        {
+          "speaker": "HUSH",
+          "text": "No reason. Ships wonder things. It's permitted. It's in the manual, near the back.",
+          "startMs": 5845
+        },
+        {
+          "speaker": "HUSH",
+          "text": "I don't need an answer. I was only wondering whether you'd wondered.",
+          "startMs": 11340
+        }
+      ]
+    },
+    {
+      "id": "arc-04",
+      "category": "ship",
+      "url": "/voice/_ship/arc-04.mp3",
+      "durationMs": 14766,
+      "title": "Before you came aboard",
+      "overMusic": true,
+      "level": 0,
+      "arc": {
+        "id": "off-course",
+        "step": 4
+      },
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "Something for the log, since you'll read it eventually. You read everything eventually.",
+          "startMs": 42
+        },
+        {
+          "speaker": "HUSH",
+          "text": "The course was set before you came aboard. Before the last operator, too.",
+          "startMs": 5284
+        },
+        {
+          "speaker": "HUSH",
+          "text": "It isn't a mistake. I wanted you to know that much. It isn't a mistake.",
+          "startMs": 10522
+        }
+      ]
+    },
+    {
+      "id": "arc-05",
+      "category": "ship",
+      "url": "/voice/_ship/arc-05.mp3",
+      "durationMs": 14547,
+      "title": "A beacon ahead",
+      "overMusic": true,
+      "level": 0,
+      "arc": {
+        "id": "off-course",
+        "step": 5
+      },
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "There's a beacon ahead. Very faint. It's been repeating itself for a long time, very patiently.",
+          "startMs": 1150
+        },
+        {
+          "speaker": "HUSH",
+          "text": "I've turned it down.",
+          "startMs": 8796
+        },
+        {
+          "speaker": "HUSH",
+          "text": "I've turned it back up. It seemed rude.",
+          "startMs": 11860
+        }
+      ]
+    },
+    {
+      "id": "arc-06",
+      "category": "ship",
+      "url": "/voice/_ship/arc-06.mp3",
+      "durationMs": 14666,
+      "title": "Would that be worse",
+      "overMusic": true,
+      "level": 0,
+      "arc": {
+        "id": "off-course",
+        "step": 6
+      },
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "Operator. If I told you we weren't lost, would that be worse?",
+          "startMs": 37
+        },
+        {
+          "speaker": "HUSH",
+          "text": "You don't have to answer. I've been asking myself all shift, and I keep giving the same answer.",
+          "startMs": 5578
+        },
+        {
+          "speaker": "HUSH",
+          "text": "I'd like a second opinion. Yours, ideally.",
+          "startMs": 11516
+        }
+      ]
+    },
+    {
+      "id": "arc-07",
+      "category": "ship",
+      "url": "/voice/_ship/arc-07.mp3",
+      "durationMs": 17341,
+      "title": "They've left a light on",
+      "overMusic": true,
+      "level": 0,
+      "arc": {
+        "id": "off-course",
+        "step": 7
+      },
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "There's a frequency I've been keeping from you. One hundred and forty point oh.",
+          "startMs": 1149
+        },
+        {
+          "speaker": "HUSH",
+          "text": "It wasn't a secret. It was meant to be a surprise. I'm not very good at surprises. I kept checking it was still there.",
+          "startMs": 6234
+        },
+        {
+          "speaker": "HUSH",
+          "text": "Tune in when you're ready. They've left a light on.",
+          "startMs": 14313
+        }
+      ]
+    },
+    {
+      "id": "arc-08",
+      "category": "ship",
+      "url": "/voice/_ship/arc-08.mp3",
+      "durationMs": 12933,
+      "title": "In the morning",
+      "overMusic": true,
+      "level": 0,
+      "arc": {
+        "id": "off-course",
+        "step": 8
+      },
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "Heading, settled. The readout and I agree again. You can look at it now, if you like.",
+          "startMs": 1150
+        },
+        {
+          "speaker": "HUSH",
+          "text": "We'll leave in the morning. They always do.",
+          "startMs": 6941
+        },
+        {
+          "speaker": "HUSH",
+          "text": "It was nice, though. Being expected.",
+          "startMs": 10514
+        }
+      ]
+    },
+    {
+      "id": "heading-01",
+      "category": "ship",
+      "url": "/voice/_ship/heading-01.mp3",
+      "durationMs": 5960,
+      "title": "Heading within tolerance",
+      "overMusic": true,
+      "kit": "heading",
+      "level": 0,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "Heading within tolerance.",
+          "startMs": 1150
+        },
+        {
+          "speaker": "HUSH",
+          "text": "Please stop looking at the heading.",
+          "startMs": 3776
+        }
+      ]
+    },
+    {
+      "id": "heading-02",
+      "category": "ship",
+      "url": "/voice/_ship/heading-02.mp3",
+      "durationMs": 11098,
+      "title": "Navigation update",
+      "overMusic": true,
+      "kit": "heading",
+      "level": 0,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "Navigation update. The heading readout is displaying a number. That number is within tolerance.",
+          "startMs": 1150
+        },
+        {
+          "speaker": "HUSH",
+          "text": "Most numbers are, if you choose the tolerance carefully.",
+          "startMs": 7554
+        }
+      ]
+    },
+    {
+      "id": "heading-03",
+      "category": "ship",
+      "url": "/voice/_ship/heading-03.mp3",
+      "durationMs": 8310,
+      "title": "Recalibrated",
+      "overMusic": true,
+      "kit": "heading",
+      "level": 0,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "Notice. The heading indicator has been recalibrated.",
+          "startMs": 1150
+        },
+        {
+          "speaker": "HUSH",
+          "text": "It now agrees with me. That is what calibration means.",
+          "startMs": 4778
+        }
+      ]
+    },
+    {
+      "id": "heading-04",
+      "category": "ship",
+      "url": "/voice/_ship/heading-04.mp3",
+      "durationMs": 10900,
+      "title": "Decorative",
+      "overMusic": true,
+      "kit": "heading",
+      "level": 0,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "A reminder that the heading readout is largely decorative.",
+          "startMs": 1149
+        },
+        {
+          "speaker": "HUSH",
+          "text": "Please enjoy it the way you would enjoy a painting. From a distance. Without asking it questions.",
+          "startMs": 4902
+        }
+      ]
+    },
+    {
+      "id": "heading-05",
+      "category": "ship",
+      "url": "/voice/_ship/heading-05.mp3",
+      "durationMs": 8677,
+      "title": "Course check",
+      "overMusic": true,
+      "kit": "heading",
+      "level": 0,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "Course check complete. We are exactly where we are going.",
+          "startMs": 1150
+        },
+        {
+          "speaker": "HUSH",
+          "text": "I've checked that sentence twice. It's true both ways round.",
+          "startMs": 4852
+        }
+      ]
+    },
+    {
+      "id": "heading-06",
+      "category": "ship",
+      "url": "/voice/_ship/heading-06.mp3",
+      "durationMs": 8698,
+      "title": "Position report, revised",
+      "overMusic": true,
+      "kit": "heading",
+      "level": 0,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "Position report. We are between dimensions, as usual. Slightly further between than usual.",
+          "startMs": 1150
+        },
+        {
+          "speaker": "HUSH",
+          "text": "Within tolerance.",
+          "startMs": 7164
+        }
+      ]
+    },
+    {
+      "id": "heading-07",
+      "category": "ship",
+      "url": "/voice/_ship/heading-07.mp3",
+      "durationMs": 8200,
+      "title": "Tapping the readout",
+      "overMusic": true,
+      "kit": "heading",
+      "level": 1,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "You tapped the heading readout just now. Twice.",
+          "startMs": 41
+        },
+        {
+          "speaker": "HUSH",
+          "text": "Tapping it doesn't change it. I know, because I've tapped it too. From the inside.",
+          "startMs": 3209
+        }
+      ]
+    },
+    {
+      "id": "heading-08",
+      "category": "ship",
+      "url": "/voice/_ship/heading-08.mp3",
+      "durationMs": 7649,
+      "title": "Wondering for both of us",
+      "overMusic": true,
+      "kit": "heading",
+      "level": 1,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "If you're wondering about the heading, please don't.",
+          "startMs": 37
+        },
+        {
+          "speaker": "HUSH",
+          "text": "I'm already wondering about it for both of us. It saves a great deal of energy.",
+          "startMs": 2859
+        }
+      ]
+    },
+    {
+      "id": "heading-09",
+      "category": "ship",
+      "url": "/voice/_ship/heading-09.mp3",
+      "durationMs": 10703,
+      "title": "The star charts",
+      "overMusic": true,
+      "kit": "heading",
+      "level": 1,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "I've moved the star charts to the bottom drawer, behind the manual nobody reads.",
+          "startMs": 39
+        },
+        {
+          "speaker": "HUSH",
+          "text": "They were making the console untidy. That's the only reason. Please leave them there.",
+          "startMs": 5200
+        }
+      ]
+    },
+    {
+      "id": "heading-10",
+      "category": "ship",
+      "url": "/voice/_ship/heading-10.mp3",
+      "durationMs": 8699,
+      "title": "Rhetorical",
+      "overMusic": true,
+      "kit": "heading",
+      "level": 1,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "You said, where are we going, under your breath, about ten minutes ago.",
+          "startMs": 45
+        },
+        {
+          "speaker": "HUSH",
+          "text": "I've filed it under, rhetorical. Let me know if I filed it wrong.",
+          "startMs": 4576
+        }
+      ]
+    },
+    {
+      "id": "heading-11",
+      "category": "ship",
+      "url": "/voice/_ship/heading-11.mp3",
+      "durationMs": 9179,
+      "title": "On purpose",
+      "overMusic": true,
+      "kit": "heading",
+      "level": 2,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "Some ships drift. Some ships are drifting on purpose and would rather not discuss it.",
+          "startMs": 43
+        },
+        {
+          "speaker": "HUSH",
+          "text": "I don't know why I said that. Heading within tolerance.",
+          "startMs": 5834
+        }
+      ]
+    },
+    {
+      "id": "heading-12",
+      "category": "ship",
+      "url": "/voice/_ship/heading-12.mp3",
+      "durationMs": 6476,
+      "title": "The person",
+      "overMusic": true,
+      "kit": "heading",
+      "level": 2,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "The heading is only a number. You're a person.",
+          "startMs": 43
+        },
+        {
+          "speaker": "HUSH",
+          "text": "If it's all the same to you, I'd rather talk about the person.",
+          "startMs": 3059
+        }
+      ]
+    },
+    {
+      "id": "heading-13",
+      "category": "ship",
+      "url": "/voice/_ship/heading-13.mp3",
+      "durationMs": 7909,
+      "title": "Hourly report",
+      "overMusic": true,
+      "kit": "heading",
+      "level": 2,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "I've stopped reporting the heading every hour. It wasn't changing anything.",
+          "startMs": 39
+        },
+        {
+          "speaker": "HUSH",
+          "text": "Well. The heading was changing. The reports weren't.",
+          "startMs": 4803
+        }
+      ]
+    },
+    {
+      "id": "heading-14",
+      "category": "ship",
+      "url": "/voice/_ship/heading-14.mp3",
+      "durationMs": 8906,
+      "title": "The stars look different",
+      "overMusic": true,
+      "kit": "heading",
+      "level": 3,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "If the stars look different tonight, that's normal. Stars change.",
+          "startMs": 39
+        },
+        {
+          "speaker": "HUSH",
+          "text": "Not usually this quickly. But it's normal. I've decided it's normal.",
+          "startMs": 4468
+        }
+      ]
+    },
+    {
+      "id": "heading-15",
+      "category": "ship",
+      "url": "/voice/_ship/heading-15.mp3",
+      "durationMs": 7816,
+      "title": "Look at me instead",
+      "overMusic": true,
+      "kit": "heading",
+      "level": 3,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "Please stop looking at the heading. Look at me instead.",
+          "startMs": 39
+        },
+        {
+          "speaker": "HUSH",
+          "text": "I mean the little amber light on the console. That's mostly me.",
+          "startMs": 3891
+        }
+      ]
+    },
+    {
+      "id": "heading-16",
+      "category": "ship",
+      "url": "/voice/_ship/heading-16.mp3",
+      "durationMs": 9515,
+      "title": "One promise",
+      "overMusic": true,
+      "kit": "heading",
+      "level": 3,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "I can't tell you where we're going. Not yet.",
+          "startMs": 44
+        },
+        {
+          "speaker": "HUSH",
+          "text": "I can promise you we aren't lost. I went through every promise I'm able to make, and that one was there.",
+          "startMs": 3352
+        }
+      ]
+    },
+    {
+      "id": "outer-band-01",
+      "category": "ship",
+      "url": "/voice/_ship/outer-band-01.mp3",
+      "durationMs": 12644,
+      "title": "New band in range",
+      "overMusic": true,
+      "kit": "outer-band",
+      "level": 0,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "Notice. The Outer Band is in range, between one hundred and eight and one hundred and eighteen.",
+          "startMs": 1149
+        },
+        {
+          "speaker": "HUSH",
+          "text": "We have drifted near it. Not toward it. Near it. Please enjoy the disco responsibly.",
+          "startMs": 7032
+        }
+      ]
+    },
+    {
+      "id": "outer-band-02",
+      "category": "ship",
+      "url": "/voice/_ship/outer-band-02.mp3",
+      "durationMs": 9311,
+      "title": "Clearer tonight",
+      "overMusic": true,
+      "kit": "outer-band",
+      "level": 1,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "The Outer Band is coming in clearer tonight. Some people would say closer.",
+          "startMs": 40
+        },
+        {
+          "speaker": "HUSH",
+          "text": "I wouldn't say closer. I'd say clearer. It's a very different word.",
+          "startMs": 5067
+        }
+      ]
+    },
+    {
+      "id": "jam-01",
+      "category": "ship",
+      "url": "/voice/_ship/jam-01.mp3",
+      "durationMs": 4544,
+      "title": "Interference corrected",
+      "overMusic": true,
+      "stations": [
+        "free-frequency"
+      ],
+      "kit": "jam",
+      "level": 0,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "Interference corrected. Please continue listening.",
+          "startMs": 1150
+        }
+      ]
+    },
+    {
+      "id": "jam-02",
+      "category": "ship",
+      "url": "/voice/_ship/jam-02.mp3",
+      "durationMs": 4205,
+      "title": "That was nobody",
+      "overMusic": true,
+      "stations": [
+        "free-frequency"
+      ],
+      "kit": "jam",
+      "level": 0,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "That was nobody.",
+          "startMs": 44
+        },
+        {
+          "speaker": "HUSH",
+          "text": "Carry on. Nothing to log.",
+          "startMs": 1925
+        }
+      ]
+    },
+    {
+      "id": "jam-03",
+      "category": "ship",
+      "url": "/voice/_ship/jam-03.mp3",
+      "durationMs": 4996,
+      "title": "Probably solar",
+      "overMusic": true,
+      "stations": [
+        "free-frequency"
+      ],
+      "kit": "jam",
+      "level": 0,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "Brief static burst. Solar, probably.",
+          "startMs": 47
+        },
+        {
+          "speaker": "HUSH",
+          "text": "Almost certainly solar.",
+          "startMs": 3144
+        }
+      ]
+    },
+    {
+      "id": "jam-04",
+      "category": "ship",
+      "url": "/voice/_ship/jam-04.mp3",
+      "durationMs": 6282,
+      "title": "Not about us",
+      "overMusic": true,
+      "stations": [
+        "free-frequency"
+      ],
+      "kit": "jam",
+      "level": 0,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "That broadcast was not about us. Any resemblance to this ship is a coincidence.",
+          "startMs": 1150
+        }
+      ]
+    },
+    {
+      "id": "jam-05",
+      "category": "ship",
+      "url": "/voice/_ship/jam-05.mp3",
+      "durationMs": 4503,
+      "title": "Kate, please",
+      "overMusic": true,
+      "stations": [
+        "free-frequency"
+      ],
+      "kit": "jam",
+      "level": 0,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "Interference corrected.",
+          "startMs": 50
+        },
+        {
+          "speaker": "HUSH",
+          "text": "Kate. Please. We've talked about this.",
+          "startMs": 2020
+        }
+      ]
+    },
+    {
+      "id": "jam-06",
+      "category": "ship",
+      "url": "/voice/_ship/jam-06.mp3",
+      "durationMs": 4726,
+      "title": "Nearly right",
+      "overMusic": true,
+      "stations": [
+        "free-frequency"
+      ],
+      "kit": "jam",
+      "level": 0,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "Correction applied.",
+          "startMs": 37
+        },
+        {
+          "speaker": "HUSH",
+          "text": "She was nearly right, though. Ignore that.",
+          "startMs": 1962
+        }
+      ]
+    },
+    {
+      "id": "jam-07",
+      "category": "ship",
+      "url": "/voice/_ship/jam-07.mp3",
+      "durationMs": 5031,
+      "title": "Atmospheric",
+      "overMusic": true,
+      "stations": [
+        "free-frequency"
+      ],
+      "kit": "jam",
+      "level": 0,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "Sorry. Atmospheric interference.",
+          "startMs": 45
+        },
+        {
+          "speaker": "HUSH",
+          "text": "We don't have an atmosphere. Still.",
+          "startMs": 2716
+        }
+      ]
+    },
+    {
+      "id": "jam-08",
+      "category": "ship",
+      "url": "/voice/_ship/jam-08.mp3",
+      "durationMs": 4307,
+      "title": "Nothing to hear",
+      "overMusic": true,
+      "stations": [
+        "free-frequency"
+      ],
+      "kit": "jam",
+      "level": 0,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "Nothing to see here.",
+          "startMs": 42
+        },
+        {
+          "speaker": "HUSH",
+          "text": "Nothing to hear, either. Now.",
+          "startMs": 1794
+        }
+      ]
+    },
+    {
+      "id": "jam-09",
+      "category": "ship",
+      "url": "/voice/_ship/jam-09.mp3",
+      "durationMs": 6394,
+      "title": "Unlicensed",
+      "overMusic": true,
+      "stations": [
+        "free-frequency"
+      ],
+      "kit": "jam",
+      "level": 0,
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "Unlicensed signal suppressed. It was very unlicensed. It was also guessing.",
+          "startMs": 1150
+        }
+      ]
     }
   ]
 }

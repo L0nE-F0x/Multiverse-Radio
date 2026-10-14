@@ -968,6 +968,138 @@
           "startMs": 8035
         }
       ]
+    },
+    {
+      "id": "convergence-missing-moon",
+      "category": "event",
+      "url": "/voice/rainfall-fm/convergence-missing-moon.mp3",
+      "durationMs": 12263,
+      "title": "The Convergence: A Moon Goes Missing",
+      "overMusic": false,
+      "kit": "missing-moon",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Drizzle Montgomery",
+          "text": "Somebody's lost a moon, apparently. Everyone's ringing in about it.",
+          "startMs": 39
+        },
+        {
+          "speaker": "Drizzle Montgomery",
+          "text": "We've not seen a moon in Precinct Nine for four thousand years, love, so it's not ours. Hope it turns up. Kettle's on, just in case.",
+          "startMs": 4390
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-smell",
+      "category": "event",
+      "url": "/voice/rainfall-fm/convergence-the-smell.mp3",
+      "durationMs": 11223,
+      "title": "The Convergence: Toast, Everywhere",
+      "overMusic": false,
+      "kit": "the-smell",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Drizzle Montgomery",
+          "text": "It smells of toast. Everywhere, they're saying. Even here, and you can't make toast in Precinct Nine. It goes soggy on the way to the plate.",
+          "startMs": 36
+        },
+        {
+          "speaker": "Drizzle Montgomery",
+          "text": "Somebody's managed it somewhere. Good for them.",
+          "startMs": 8362
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-song",
+      "category": "event",
+      "url": "/voice/rainfall-fm/convergence-the-song.mp3",
+      "durationMs": 10371,
+      "title": "The Convergence: The Song Nobody Can Finish",
+      "overMusic": false,
+      "kit": "the-song",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Drizzle Montgomery",
+          "text": "There's a song going round everybody's head, and nobody knows the end.",
+          "startMs": 50
+        },
+        {
+          "speaker": "Drizzle Montgomery",
+          "text": "I think the rain knows it. It keeps tapping out the first bit on the window, and stopping, like it's being polite.",
+          "startMs": 4452
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-knock",
+      "category": "event",
+      "url": "/voice/rainfall-fm/convergence-the-knock.mp3",
+      "durationMs": 8284,
+      "title": "The Convergence: Three Knocks",
+      "overMusic": false,
+      "kit": "the-knock",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Drizzle Montgomery",
+          "text": "Three knocks at the studio door just then. Nobody there. Just the rain, stood on the step.",
+          "startMs": 49
+        },
+        {
+          "speaker": "Drizzle Montgomery",
+          "text": "Come in, love. Wipe your feet. Not that it helps.",
+          "startMs": 5497
+        }
+      ]
+    },
+    {
+      "id": "convergence-wrong-colour",
+      "category": "event",
+      "url": "/voice/rainfall-fm/convergence-wrong-colour.mp3",
+      "durationMs": 10990,
+      "title": "The Convergence: A Colour With No Name",
+      "overMusic": false,
+      "kit": "wrong-colour",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Drizzle Montgomery",
+          "text": "The clouds parted for a second, and the sky behind them was a colour I've never seen. Neither has anyone.",
+          "startMs": 40
+        },
+        {
+          "speaker": "Drizzle Montgomery",
+          "text": "Then they closed again, quite quickly, like they'd shown us something they shouldn't have.",
+          "startMs": 6629
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-pigeon",
+      "category": "event",
+      "url": "/voice/rainfall-fm/convergence-the-pigeon.mp3",
+      "durationMs": 9118,
+      "title": "The Convergence: The Pigeon",
+      "overMusic": false,
+      "kit": "the-pigeon",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Drizzle Montgomery",
+          "text": "There's a pigeon in the studio. Wet through, bless it. Walked in like it had a key.",
+          "startMs": 44
+        },
+        {
+          "speaker": "Drizzle Montgomery",
+          "text": "It's sat by the kettle, looking at me as if we've met. Maybe we have.",
+          "startMs": 5010
+        }
+      ]
     }
   ]
 }

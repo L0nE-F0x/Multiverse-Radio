@@ -838,6 +838,173 @@
           "startMs": 10225
         }
       ]
+    },
+    {
+      "id": "convergence-missing-moon",
+      "category": "event",
+      "url": "/voice/win-this-planet/convergence-missing-moon.mp3",
+      "durationMs": 10152,
+      "title": "The Convergence: A Moon Goes Missing",
+      "overMusic": false,
+      "kit": "missing-moon",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Chaz Brightley",
+          "text": "Contestants! For the planet! Which moon has gone missing?",
+          "startMs": 39
+        },
+        {
+          "speaker": "Grandma Hester",
+          "text": "Nineteen fifty two.",
+          "startMs": 2904
+        },
+        {
+          "speaker": "Chaz Brightley",
+          "text": "Hester, nobody knows! Ten points!",
+          "startMs": 4754
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-smell",
+      "category": "event",
+      "url": "/voice/win-this-planet/convergence-the-smell.mp3",
+      "durationMs": 9609,
+      "title": "The Convergence: Toast, Everywhere",
+      "overMusic": false,
+      "kit": "the-smell",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Chaz Brightley",
+          "text": "Contestants! What is that smell?",
+          "startMs": 38
+        },
+        {
+          "speaker": "Unit Seven",
+          "text": "Toast. Everywhere. Simultaneously.",
+          "startMs": 1789
+        },
+        {
+          "speaker": "Chaz Brightley",
+          "text": "Correct! Unit Seven, that's the first right answer in the history of the show!",
+          "startMs": 4300
+        },
+        {
+          "speaker": "Unit Seven",
+          "text": "I did not enjoy it.",
+          "startMs": 8339
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-song",
+      "category": "event",
+      "url": "/voice/win-this-planet/convergence-the-song.mp3",
+      "durationMs": 6389,
+      "title": "The Convergence: The Song Nobody Can Finish",
+      "overMusic": false,
+      "kit": "the-song",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Chaz Brightley",
+          "text": "For the planet! Finish this song!",
+          "startMs": 41
+        },
+        {
+          "speaker": "Wendell, a Nervous Blob",
+          "text": "I can't, Chaz. Nobody can.",
+          "startMs": 1765
+        },
+        {
+          "speaker": "Chaz Brightley",
+          "text": "Wrong! The answer is... oh. The card stops halfway too.",
+          "startMs": 3892
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-knock",
+      "category": "event",
+      "url": "/voice/win-this-planet/convergence-the-knock.mp3",
+      "durationMs": 8299,
+      "title": "The Convergence: Three Knocks",
+      "overMusic": false,
+      "kit": "the-knock",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Chaz Brightley",
+          "text": "Three knocks on the studio door! A mystery contestant? Doreen, go and look!",
+          "startMs": 41
+        },
+        {
+          "speaker": "Doreen, the Studio Audience",
+          "text": "Nobody, Chaz.",
+          "startMs": 4476
+        },
+        {
+          "speaker": "Chaz Brightley",
+          "text": "Nobody! Nobody has also never won the planet!",
+          "startMs": 5836
+        }
+      ]
+    },
+    {
+      "id": "convergence-wrong-colour",
+      "category": "event",
+      "url": "/voice/win-this-planet/convergence-wrong-colour.mp3",
+      "durationMs": 6829,
+      "title": "The Convergence: A Colour With No Name",
+      "overMusic": false,
+      "kit": "wrong-colour",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Chaz Brightley",
+          "text": "Wendell! What colour is the sky right now?",
+          "startMs": 38
+        },
+        {
+          "speaker": "Wendell, a Nervous Blob",
+          "text": "That one, Chaz. That one there. I don't know its name.",
+          "startMs": 2254
+        },
+        {
+          "speaker": "Chaz Brightley",
+          "text": "Neither does the card! Ten points!",
+          "startMs": 5242
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-pigeon",
+      "category": "event",
+      "url": "/voice/win-this-planet/convergence-the-pigeon.mp3",
+      "durationMs": 8516,
+      "title": "The Convergence: The Pigeon",
+      "overMusic": false,
+      "kit": "the-pigeon",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Chaz Brightley",
+          "text": "There's a pigeon in the contestant booth! It seems to know everyone! Pigeon, when were you last on the show?",
+          "startMs": 40
+        },
+        {
+          "speaker": "Grandma Hester",
+          "text": "Nineteen fifty two.",
+          "startMs": 5467
+        },
+        {
+          "speaker": "Chaz Brightley",
+          "text": "Hester, that might be right!",
+          "startMs": 7316
+        }
+      ]
     }
   ]
 }

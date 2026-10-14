@@ -677,6 +677,138 @@
           "startMs": 25083
         }
       ]
+    },
+    {
+      "id": "convergence-missing-moon",
+      "category": "event",
+      "url": "/voice/last-lighthouse/convergence-missing-moon.mp3",
+      "durationMs": 15030,
+      "title": "Notice to Mariners: Mind the Moon",
+      "overMusic": false,
+      "kit": "missing-moon",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "The Keeper",
+          "text": "Notice to mariners. A moon is missing from the sky over Saltlight. Tides may be confused.",
+          "startMs": 437
+        },
+        {
+          "speaker": "The Keeper",
+          "text": "Mariners are advised to steer by the beam. The beam is still here. It isn't going anywhere.",
+          "startMs": 8081
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-smell",
+      "category": "event",
+      "url": "/voice/last-lighthouse/convergence-the-smell.mp3",
+      "durationMs": 13316,
+      "title": "The Gull Suspects",
+      "overMusic": false,
+      "kit": "the-smell",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "The Keeper",
+          "text": "The lamp room smells of toast. I haven't made toast in forty years.",
+          "startMs": 437
+        },
+        {
+          "speaker": "The Keeper",
+          "text": "The gull has come to the window and is looking at me with suspicion. It isn't me. I've told it so.",
+          "startMs": 6224
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-song",
+      "category": "event",
+      "url": "/voice/last-lighthouse/convergence-the-song.mp3",
+      "durationMs": 14356,
+      "title": "As Far as It Goes",
+      "overMusic": false,
+      "kit": "the-song",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "The Keeper",
+          "text": "There's a tune going round. I've been humming it while I wind the lamp. I stop in the same place every time.",
+          "startMs": 437
+        },
+        {
+          "speaker": "The Keeper",
+          "text": "I'll write it in the logbook, as far as it goes. Someone after me can finish it.",
+          "startMs": 8567
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-knock",
+      "category": "event",
+      "url": "/voice/last-lighthouse/convergence-the-knock.mp3",
+      "durationMs": 15535,
+      "title": "Unbolted",
+      "overMusic": false,
+      "kit": "the-knock",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "The Keeper",
+          "text": "Three knocks at the lighthouse door. Nobody comes to the lighthouse. I went down anyway.",
+          "startMs": 447
+        },
+        {
+          "speaker": "The Keeper",
+          "text": "Nobody there. Only the sea, and the beam going round. I've left the door unbolted. Just in case.",
+          "startMs": 7514
+        }
+      ]
+    },
+    {
+      "id": "convergence-wrong-colour",
+      "category": "event",
+      "url": "/voice/last-lighthouse/convergence-wrong-colour.mp3",
+      "durationMs": 13091,
+      "title": "See Sky",
+      "overMusic": false,
+      "kit": "wrong-colour",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "The Keeper",
+          "text": "The sky over the impossible seas has gone a colour. The logbook has no word for it.",
+          "startMs": 436
+        },
+        {
+          "speaker": "The Keeper",
+          "text": "I have written, see sky. Visibility, good. Wonderful, occasionally.",
+          "startMs": 7415
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-pigeon",
+      "category": "event",
+      "url": "/voice/last-lighthouse/convergence-the-pigeon.mp3",
+      "durationMs": 15098,
+      "title": "Inspected",
+      "overMusic": false,
+      "kit": "the-pigeon",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "The Keeper",
+          "text": "A pigeon has landed on the gallery rail. Not a gull. A pigeon. Out here.",
+          "startMs": 450
+        },
+        {
+          "speaker": "The Keeper",
+          "text": "It looked at the lamp, and then at me, as if checking I was keeping it properly. I am. It seemed satisfied.",
+          "startMs": 6670
+        }
+      ]
     }
   ]
 }

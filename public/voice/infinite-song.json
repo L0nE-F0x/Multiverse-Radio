@@ -740,6 +740,138 @@
           "startMs": 21325
         }
       ]
+    },
+    {
+      "id": "convergence-missing-moon",
+      "category": "event",
+      "url": "/voice/infinite-song/convergence-missing-moon.mp3",
+      "durationMs": 8854,
+      "title": "The Convergence: A Moon Goes Missing",
+      "overMusic": false,
+      "kit": "missing-moon",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Ambrose Long",
+          "text": "We've just reached a verse about the moon. Well. About where a moon was.",
+          "startMs": 46
+        },
+        {
+          "speaker": "Ambrose Long",
+          "text": "Everyone on the dial says one's gone missing. The band have left a gap in the lyric, out of respect.",
+          "startMs": 3670
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-smell",
+      "category": "event",
+      "url": "/voice/infinite-song/convergence-the-smell.mp3",
+      "durationMs": 9637,
+      "title": "The Convergence: Toast, Everywhere",
+      "overMusic": false,
+      "kit": "the-smell",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Ambrose Long",
+          "text": "The stage smells of toast. So does everywhere, I'm told.",
+          "startMs": 43
+        },
+        {
+          "speaker": "Ambrose Long",
+          "text": "Old Wendeline looked up from the drums for the first time since the Iron Age. She missed a beat. Nobody minded.",
+          "startMs": 3423
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-song",
+      "category": "event",
+      "url": "/voice/infinite-song/convergence-the-song.mp3",
+      "durationMs": 10429,
+      "title": "The Convergence: The Song Nobody Can Finish",
+      "overMusic": false,
+      "kit": "the-song",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Ambrose Long",
+          "text": "Everyone on the dial has a song stuck in their head tonight, and nobody can finish it.",
+          "startMs": 39
+        },
+        {
+          "speaker": "Ambrose Long",
+          "text": "Well. Welcome. We've been in the same position for about four million verses. You get used to it. There's usually a boat.",
+          "startMs": 4561
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-knock",
+      "category": "event",
+      "url": "/voice/infinite-song/convergence-the-knock.mp3",
+      "durationMs": 7671,
+      "title": "The Convergence: Three Knocks",
+      "overMusic": false,
+      "kit": "the-knock",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Ambrose Long",
+          "text": "Three knocks at the stage door. The band's beards were in the way, and by the time we got there, nobody.",
+          "startMs": 41
+        },
+        {
+          "speaker": "Ambrose Long",
+          "text": "First knock since verse two hundred, that.",
+          "startMs": 5454
+        }
+      ]
+    },
+    {
+      "id": "convergence-wrong-colour",
+      "category": "event",
+      "url": "/voice/infinite-song/convergence-wrong-colour.mp3",
+      "durationMs": 8995,
+      "title": "The Convergence: A Colour With No Name",
+      "overMusic": false,
+      "kit": "wrong-colour",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Ambrose Long",
+          "text": "The sky went a colour just now, at verse four million, one hundred and twelve.",
+          "startMs": 40
+        },
+        {
+          "speaker": "Ambrose Long",
+          "text": "I'm writing that down, in case anyone ever asks when it happened. Nobody will. But I'll know.",
+          "startMs": 4173
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-pigeon",
+      "category": "event",
+      "url": "/voice/infinite-song/convergence-the-pigeon.mp3",
+      "durationMs": 7514,
+      "title": "The Convergence: The Pigeon",
+      "overMusic": false,
+      "kit": "the-pigeon",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Ambrose Long",
+          "text": "A pigeon has walked onto the stage. It's nodding along.",
+          "startMs": 46
+        },
+        {
+          "speaker": "Ambrose Long",
+          "text": "It knows which verse we're on. I've never met anyone else who knows which verse we're on.",
+          "startMs": 3350
+        }
+      ]
     }
   ]
 }

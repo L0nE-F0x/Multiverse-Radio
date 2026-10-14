@@ -889,6 +889,138 @@
           "startMs": 20435
         }
       ]
+    },
+    {
+      "id": "convergence-missing-moon",
+      "category": "event",
+      "url": "/voice/gristwick-parish/convergence-missing-moon.mp3",
+      "durationMs": 13306,
+      "title": "The Convergence: A Moon Goes Missing",
+      "overMusic": false,
+      "kit": "missing-moon",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Reverend Clement Ashby",
+          "text": "A notice from the tea tent. A moon has gone missing. Everyone is agreed that one is gone, and not one person is agreed on which.",
+          "startMs": 39
+        },
+        {
+          "speaker": "Reverend Clement Ashby",
+          "text": "If found, please hand it in at lost property. Mind the marrow.",
+          "startMs": 9173
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-smell",
+      "category": "event",
+      "url": "/voice/gristwick-parish/convergence-the-smell.mp3",
+      "durationMs": 14239,
+      "title": "The Convergence: Toast, Everywhere",
+      "overMusic": false,
+      "kit": "the-smell",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Reverend Clement Ashby",
+          "text": "The entire fête smells of toast. So, I'm told, does the entire multiverse.",
+          "startMs": 37
+        },
+        {
+          "speaker": "Reverend Clement Ashby",
+          "text": "Mrs Pargeter has been to check the cake stall. It is not the cake stall. The cake stall is very hurt to have been suspected.",
+          "startMs": 6048
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-song",
+      "category": "event",
+      "url": "/voice/gristwick-parish/convergence-the-song.mp3",
+      "durationMs": 13102,
+      "title": "The Convergence: The Song Nobody Can Finish",
+      "overMusic": false,
+      "kit": "the-song",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Reverend Clement Ashby",
+          "text": "The Silver Band have struck up a tune that everybody seems to know, and stopped at the same place everybody stops.",
+          "startMs": 45
+        },
+        {
+          "speaker": "Reverend Clement Ashby",
+          "text": "They've been nearly at the trio section for a very long time. We shan't rush them now.",
+          "startMs": 7637
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-knock",
+      "category": "event",
+      "url": "/voice/gristwick-parish/convergence-the-knock.mp3",
+      "durationMs": 11570,
+      "title": "The Convergence: Three Knocks",
+      "overMusic": false,
+      "kit": "the-knock",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Reverend Clement Ashby",
+          "text": "Three knocks on the door of the judging marquee. Mrs Pargeter opened it. Nobody there.",
+          "startMs": 46
+        },
+        {
+          "speaker": "Reverend Clement Ashby",
+          "text": "She has awarded the knocks third prize, in absentia. They were very well knocked.",
+          "startMs": 6406
+        }
+      ]
+    },
+    {
+      "id": "convergence-wrong-colour",
+      "category": "event",
+      "url": "/voice/gristwick-parish/convergence-wrong-colour.mp3",
+      "durationMs": 11827,
+      "title": "The Convergence: A Colour With No Name",
+      "overMusic": false,
+      "kit": "wrong-colour",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Reverend Clement Ashby",
+          "text": "For a moment there, the sky was a colour none of us has a name for.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Reverend Clement Ashby",
+          "text": "Mister Hebblethwaite says it was the exact colour of his marrow at dawn, in a good year. I've no reason to doubt him.",
+          "startMs": 4576
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-pigeon",
+      "category": "event",
+      "url": "/voice/gristwick-parish/convergence-the-pigeon.mp3",
+      "durationMs": 11258,
+      "title": "The Convergence: The Pigeon",
+      "overMusic": false,
+      "kit": "the-pigeon",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Reverend Clement Ashby",
+          "text": "A pigeon has walked into the tea tent and been served before me. It knows everybody. It nodded at the urn.",
+          "startMs": 39
+        },
+        {
+          "speaker": "Reverend Clement Ashby",
+          "text": "Mrs Pargeter has entered it in the dog show. It's winning.",
+          "startMs": 7444
+        }
+      ]
     }
   ]
 }

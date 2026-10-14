@@ -1317,6 +1317,179 @@
           "startMs": 37
         }
       ]
+    },
+    {
+      "id": "convergence-missing-moon",
+      "category": "event",
+      "url": "/voice/hold-music/convergence-missing-moon.mp3",
+      "durationMs": 8666,
+      "title": "The Convergence: A Moon Goes Missing",
+      "overMusic": false,
+      "kit": "missing-moon",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Pam (Automated)",
+          "text": "Thank you for holding. We are aware that a moon has gone missing. Please do not call about the moon.",
+          "startMs": 40
+        },
+        {
+          "speaker": "Pam (Automated)",
+          "text": "The moon is in the queue. It is behind you. Please hold.",
+          "startMs": 5515
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-smell",
+      "category": "event",
+      "url": "/voice/hold-music/convergence-the-smell.mp3",
+      "durationMs": 13593,
+      "title": "The Convergence: Toast, Everywhere",
+      "overMusic": false,
+      "kit": "the-smell",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Pam (Automated)",
+          "text": "Callers have reported a smell of toast. The Department confirms the smell is everywhere, and is not the Department.",
+          "startMs": 43
+        },
+        {
+          "speaker": "Pam (Automated)",
+          "text": "The toaster on Floor minus four has been on hold since the Bronze Age. It has never been allowed to finish. Please hold.",
+          "startMs": 6770
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-song",
+      "category": "event",
+      "url": "/voice/hold-music/convergence-the-song.mp3",
+      "durationMs": 10510,
+      "title": "The Convergence: The Song Nobody Can Finish",
+      "overMusic": false,
+      "kit": "the-song",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Pam (Automated)",
+          "text": "Many callers have asked whether the hold music is the song they cannot finish. It is not.",
+          "startMs": 46
+        },
+        {
+          "speaker": "Pam (Automated)",
+          "text": "The hold music also does not finish. This is a coincidence. Please hold.",
+          "startMs": 5689
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-knock",
+      "category": "event",
+      "url": "/voice/hold-music/convergence-the-knock.mp3",
+      "durationMs": 9657,
+      "title": "The Convergence: Three Knocks",
+      "overMusic": false,
+      "kit": "the-knock",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Pam (Automated)",
+          "text": "There has been a knock at the door of the Department. Three knocks. Nobody is there.",
+          "startMs": 45
+        },
+        {
+          "speaker": "Pam (Automated)",
+          "text": "Whoever is knocking, please take a ticket. Your knock is important to us. Please hold.",
+          "startMs": 4865
+        }
+      ]
+    },
+    {
+      "id": "convergence-wrong-colour",
+      "category": "event",
+      "url": "/voice/hold-music/convergence-wrong-colour.mp3",
+      "durationMs": 9249,
+      "title": "The Convergence: A Colour With No Name",
+      "overMusic": false,
+      "kit": "wrong-colour",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Pam (Automated)",
+          "text": "The sky has briefly been a colour with no name. The Department has opened a file.",
+          "startMs": 45
+        },
+        {
+          "speaker": "Pam (Automated)",
+          "text": "To name the colour, please hold. The colour is also holding. Please hold.",
+          "startMs": 5117
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-pigeon",
+      "category": "event",
+      "url": "/voice/hold-music/convergence-the-pigeon.mp3",
+      "durationMs": 11187,
+      "title": "The Convergence: The Pigeon",
+      "overMusic": false,
+      "kit": "the-pigeon",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Pam (Automated)",
+          "text": "A pigeon has entered the Department, gone straight past the queue, and is now being seen to on Floor minus four.",
+          "startMs": 40
+        },
+        {
+          "speaker": "Pam (Automated)",
+          "text": "We have no file on the pigeon. The pigeon appears to have a file on us. Please hold.",
+          "startMs": 6399
+        }
+      ]
+    },
+    {
+      "id": "psa-switchboard",
+      "category": "psa",
+      "url": "/voice/hold-music/psa-switchboard.mp3",
+      "durationMs": 17615,
+      "title": "Other Universes",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Pam (Automated)",
+          "text": "Thank you for holding. Callers wishing to be connected to another universe should not hold.",
+          "startMs": 50
+        },
+        {
+          "speaker": "Pam (Automated)",
+          "text": "The Department does not connect calls between universes. That is the Switchboard. The Switchboard does not take calls from the queue.",
+          "startMs": 5215
+        },
+        {
+          "speaker": "Pam (Automated)",
+          "text": "Please hang up, and try advice, then the news, then the traffic. Briskly. Or, please hold.",
+          "startMs": 12580
+        }
+      ]
+    },
+    {
+      "id": "hold-body-outer-band",
+      "category": "psa",
+      "url": "/voice/hold-music/hold-body-outer-band.mp3",
+      "durationMs": 7844,
+      "overMusic": false,
+      "part": "body",
+      "kit": "hold",
+      "lines": [
+        {
+          "speaker": "Pam (Automated)",
+          "text": "Callers from the Outer Band, past one hundred and eight, welcome. The queue extends to you. It has always extended to you. You are not at the front.",
+          "startMs": 41
+        }
+      ]
     }
   ]
 }

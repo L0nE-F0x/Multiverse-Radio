@@ -1118,6 +1118,176 @@
           "startMs": 41
         }
       ]
+    },
+    {
+      "id": "convergence-missing-moon",
+      "category": "event",
+      "url": "/voice/void-beats/convergence-missing-moon.mp3",
+      "durationMs": 14490,
+      "title": "The Convergence: A Moon Goes Missing",
+      "overMusic": false,
+      "kit": "missing-moon",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "DJ Eventually",
+          "text": "Okay, so, everyone's saying a moon's gone missing, and nobody can agree which one.",
+          "startMs": 36
+        },
+        {
+          "speaker": "DJ Eventually",
+          "text": "I checked. My good mug is still up on the ceiling, being a small moon. So it's not that one. Phew.",
+          "startMs": 5502
+        },
+        {
+          "speaker": "The Void",
+          "text": "Hm.",
+          "startMs": 11797
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-smell",
+      "category": "event",
+      "url": "/voice/void-beats/convergence-the-smell.mp3",
+      "durationMs": 10666,
+      "title": "The Convergence: Toast, Everywhere",
+      "overMusic": false,
+      "kit": "the-smell",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "DJ Eventually",
+          "text": "Does it smell like toast in here? It smells like toast everywhere, apparently.",
+          "startMs": 42
+        },
+        {
+          "speaker": "DJ Eventually",
+          "text": "The void says it wasn't the void. The void has never made toast. The void can't reach the toaster.",
+          "startMs": 4763
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-song",
+      "category": "event",
+      "url": "/voice/void-beats/convergence-the-song.mp3",
+      "durationMs": 11365,
+      "title": "The Convergence: The Song Nobody Can Finish",
+      "overMusic": false,
+      "kit": "the-song",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "DJ Eventually",
+          "text": "Is anyone else stuck on that song? The one that goes... and then... yeah.",
+          "startMs": 38
+        },
+        {
+          "speaker": "DJ Eventually",
+          "text": "Nobody can finish it. The void got further than me, and then it just stopped, and looked out of the window for a while.",
+          "startMs": 4757
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-knock",
+      "category": "event",
+      "url": "/voice/void-beats/convergence-the-knock.mp3",
+      "durationMs": 9713,
+      "title": "The Convergence: Three Knocks",
+      "overMusic": false,
+      "kit": "the-knock",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "DJ Eventually",
+          "text": "Did you hear that? Three knocks.",
+          "startMs": 50
+        },
+        {
+          "speaker": "DJ Eventually",
+          "text": "Room Zero doesn't have a door. So that's... new. Void, was that you?",
+          "startMs": 2237
+        },
+        {
+          "speaker": "The Void",
+          "text": "No.",
+          "startMs": 6945
+        },
+        {
+          "speaker": "DJ Eventually",
+          "text": "Okay. Let's not get up.",
+          "startMs": 8042
+        }
+      ]
+    },
+    {
+      "id": "convergence-wrong-colour",
+      "category": "event",
+      "url": "/voice/void-beats/convergence-wrong-colour.mp3",
+      "durationMs": 9991,
+      "title": "The Convergence: A Colour With No Name",
+      "overMusic": false,
+      "kit": "wrong-colour",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "DJ Eventually",
+          "text": "Look out the window, if you've got one. The sky's gone a colour I've never seen. It's sort of... no. Nope. It's gone.",
+          "startMs": 44
+        },
+        {
+          "speaker": "DJ Eventually",
+          "text": "I'm going to think about that for the rest of the night.",
+          "startMs": 7472
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-pigeon",
+      "category": "event",
+      "url": "/voice/void-beats/convergence-the-pigeon.mp3",
+      "durationMs": 10743,
+      "title": "The Convergence: The Pigeon",
+      "overMusic": false,
+      "kit": "the-pigeon",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "DJ Eventually",
+          "text": "A pigeon just walked into Room Zero. There's no door. It walked in anyway.",
+          "startMs": 39
+        },
+        {
+          "speaker": "DJ Eventually",
+          "text": "It's sitting on my notes, next to the probably a cat. They seem to know each other. Hi, pigeon.",
+          "startMs": 5141
+        }
+      ]
+    },
+    {
+      "id": "quiet-corner-review",
+      "category": "dj",
+      "url": "/voice/void-beats/quiet-corner-review.mp3",
+      "durationMs": 14527,
+      "title": "Review: The Quiet Corner with Greg",
+      "overMusic": true,
+      "days": [
+        1
+      ],
+      "lines": [
+        {
+          "speaker": "DJ Eventually",
+          "text": "Shout-out to Greg, who did his first show on Sunday, on the Lounge at the End of Time. I listened to the whole thing. I didn't hear any of it.",
+          "startMs": 48
+        },
+        {
+          "speaker": "DJ Eventually",
+          "text": "The void heard it. The void says it was about a porch light. The void has been very quiet all day.",
+          "startMs": 8728
+        }
+      ]
     }
   ]
 }

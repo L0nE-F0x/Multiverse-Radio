@@ -822,6 +822,158 @@
           "startMs": 9546
         }
       ]
+    },
+    {
+      "id": "convergence-missing-moon",
+      "category": "event",
+      "url": "/voice/bedtime-for-giants/convergence-missing-moon.mp3",
+      "durationMs": 9301,
+      "title": "The Convergence: A Moon Goes Missing",
+      "overMusic": false,
+      "kit": "missing-moon",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Little Agnes, a Giant",
+          "text": "Nanny, a moon's gone.",
+          "startMs": 31
+        },
+        {
+          "speaker": "Nanny Bramblewick",
+          "text": "Has it, dear?",
+          "startMs": 2081
+        },
+        {
+          "speaker": "Little Agnes, a Giant",
+          "text": "Everyone says so.",
+          "startMs": 3687
+        },
+        {
+          "speaker": "Nanny Bramblewick",
+          "text": "Then it's gone to bed. Which is where you are. Goodnight, Agnes.",
+          "startMs": 5151
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-smell",
+      "category": "event",
+      "url": "/voice/bedtime-for-giants/convergence-the-smell.mp3",
+      "durationMs": 6582,
+      "title": "The Convergence: Toast, Everywhere",
+      "overMusic": false,
+      "kit": "the-smell",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Bartholomew, a Giant",
+          "text": "Nanny... I can smell toast.",
+          "startMs": 33
+        },
+        {
+          "speaker": "Nanny Bramblewick",
+          "text": "Everyone can, dear. Close your eyes, and it'll be breakfast in the morning.",
+          "startMs": 2079
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-song",
+      "category": "event",
+      "url": "/voice/bedtime-for-giants/convergence-the-song.mp3",
+      "durationMs": 8667,
+      "title": "The Convergence: The Song Nobody Can Finish",
+      "overMusic": false,
+      "kit": "the-song",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Nanny Bramblewick",
+          "text": "There's a little song going round tonight. Nobody knows the end of it.",
+          "startMs": 40
+        },
+        {
+          "speaker": "Nanny Bramblewick",
+          "text": "Which is the very best kind, for bedtime. Shh.",
+          "startMs": 4790
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-knock",
+      "category": "event",
+      "url": "/voice/bedtime-for-giants/convergence-the-knock.mp3",
+      "durationMs": 8316,
+      "title": "The Convergence: Three Knocks",
+      "overMusic": false,
+      "kit": "the-knock",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Nanny Bramblewick",
+          "text": "Three little knocks at the bedroom door. Nobody there.",
+          "startMs": 36
+        },
+        {
+          "speaker": "Nanny Bramblewick",
+          "text": "Just a dream, knocking a bit early. Let it in when you're ready, dear.",
+          "startMs": 3837
+        }
+      ]
+    },
+    {
+      "id": "convergence-wrong-colour",
+      "category": "event",
+      "url": "/voice/bedtime-for-giants/convergence-wrong-colour.mp3",
+      "durationMs": 8576,
+      "title": "The Convergence: A Colour With No Name",
+      "overMusic": false,
+      "kit": "wrong-colour",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Nanny Bramblewick",
+          "text": "The sky went a colour just now, dears. There isn't a word for it.",
+          "startMs": 42
+        },
+        {
+          "speaker": "Nanny Bramblewick",
+          "text": "It's a colour for sleeping. You only see it with your eyes closed.",
+          "startMs": 4645
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-pigeon",
+      "category": "event",
+      "url": "/voice/bedtime-for-giants/convergence-the-pigeon.mp3",
+      "durationMs": 9451,
+      "title": "The Convergence: The Pigeon",
+      "overMusic": false,
+      "kit": "the-pigeon",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Little Agnes, a Giant",
+          "text": "Nanny, there's a pigeon in the village. On my knee.",
+          "startMs": 31
+        },
+        {
+          "speaker": "Nanny Bramblewick",
+          "text": "Is it a nice pigeon?",
+          "startMs": 3536
+        },
+        {
+          "speaker": "Little Agnes, a Giant",
+          "text": "It knows everyone.",
+          "startMs": 5532
+        },
+        {
+          "speaker": "Nanny Bramblewick",
+          "text": "Then it can stay. Goodnight, pigeon.",
+          "startMs": 6940
+        }
+      ]
     }
   ]
 }

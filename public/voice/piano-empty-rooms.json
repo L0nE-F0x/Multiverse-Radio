@@ -578,6 +578,138 @@
           "startMs": 9554
         }
       ]
+    },
+    {
+      "id": "convergence-missing-moon",
+      "category": "event",
+      "url": "/voice/piano-empty-rooms/convergence-missing-moon.mp3",
+      "durationMs": 9623,
+      "title": "The Convergence: A Moon Goes Missing",
+      "overMusic": false,
+      "kit": "missing-moon",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "The Caretaker",
+          "text": "They say a moon has gone. Nobody knows which.",
+          "startMs": 38
+        },
+        {
+          "speaker": "The Caretaker",
+          "text": "There's a space in the sky now. Nobody has been in it. I'll add it to the schedule.",
+          "startMs": 3700
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-smell",
+      "category": "event",
+      "url": "/voice/piano-empty-rooms/convergence-the-smell.mp3",
+      "durationMs": 8961,
+      "title": "The Convergence: Toast, Everywhere",
+      "overMusic": false,
+      "kit": "the-smell",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "The Caretaker",
+          "text": "The corridor smells of toast. There's no kitchen in this wing.",
+          "startMs": 50
+        },
+        {
+          "speaker": "The Caretaker",
+          "text": "I've left the doors open a little. So the rooms can have some.",
+          "startMs": 4701
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-song",
+      "category": "event",
+      "url": "/voice/piano-empty-rooms/convergence-the-song.mp3",
+      "durationMs": 11080,
+      "title": "The Convergence: The Song Nobody Can Finish",
+      "overMusic": false,
+      "kit": "the-song",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "The Caretaker",
+          "text": "The piano is playing a tune that everyone seems to know.",
+          "startMs": 38
+        },
+        {
+          "speaker": "The Caretaker",
+          "text": "It stops at the same place each time. Then it waits. I think it's waiting for a room to hum the rest.",
+          "startMs": 4225
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-knock",
+      "category": "event",
+      "url": "/voice/piano-empty-rooms/convergence-the-knock.mp3",
+      "durationMs": 11636,
+      "title": "The Convergence: Three Knocks",
+      "overMusic": false,
+      "kit": "the-knock",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "The Caretaker",
+          "text": "Three knocks. On the door at the back of the music room. The one that's open about an inch.",
+          "startMs": 47
+        },
+        {
+          "speaker": "The Caretaker",
+          "text": "Nobody there. I said, come in. It's open. It has always been open.",
+          "startMs": 6299
+        }
+      ]
+    },
+    {
+      "id": "convergence-wrong-colour",
+      "category": "event",
+      "url": "/voice/piano-empty-rooms/convergence-wrong-colour.mp3",
+      "durationMs": 11947,
+      "title": "The Convergence: A Colour With No Name",
+      "overMusic": false,
+      "kit": "wrong-colour",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "The Caretaker",
+          "text": "The light came through the window a colour I've never seen. It lay on the floor of the music room for a moment.",
+          "startMs": 39
+        },
+        {
+          "speaker": "The Caretaker",
+          "text": "The first thing ever to visit that room. I've taken it off the schedule.",
+          "startMs": 7335
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-pigeon",
+      "category": "event",
+      "url": "/voice/piano-empty-rooms/convergence-the-pigeon.mp3",
+      "durationMs": 12927,
+      "title": "The Convergence: The Pigeon",
+      "overMusic": false,
+      "kit": "the-pigeon",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "The Caretaker",
+          "text": "A pigeon walked down the west corridor. It stopped at every door, as if it knew which ones were empty.",
+          "startMs": 47
+        },
+        {
+          "speaker": "The Caretaker",
+          "text": "It listened at the music room for a while. Then it left. It didn't disturb the dust.",
+          "startMs": 7291
+        }
+      ]
     }
   ]
 }

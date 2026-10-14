@@ -888,6 +888,159 @@
           "startMs": 6592
         }
       ]
+    },
+    {
+      "id": "convergence-missing-moon",
+      "category": "event",
+      "url": "/voice/lower-hollow/convergence-missing-moon.mp3",
+      "durationMs": 9695,
+      "title": "The Convergence: A Moon Goes Missing",
+      "overMusic": false,
+      "kit": "missing-moon",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Maureen Pettigrew",
+          "text": "A notice. A moon has gone missing. Everyone agrees one's gone. Nobody can agree which.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Maureen Pettigrew",
+          "text": "If it has come up out of the hole, it'll be at the post office with the umbrella. Please don't explain.",
+          "startMs": 5046
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-smell",
+      "category": "event",
+      "url": "/voice/lower-hollow/convergence-the-smell.mp3",
+      "durationMs": 9438,
+      "title": "The Convergence: Toast, Everywhere",
+      "overMusic": false,
+      "kit": "the-smell",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Maureen Pettigrew",
+          "text": "Residents report a smell of toast, all over the town, and I'm told everywhere else.",
+          "startMs": 43
+        },
+        {
+          "speaker": "Maureen Pettigrew",
+          "text": "Councillor Dibbs has asked me to say it is not coming from the hole. He's quite sure about that, at least.",
+          "startMs": 4334
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-song",
+      "category": "event",
+      "url": "/voice/lower-hollow/convergence-the-song.mp3",
+      "durationMs": 10924,
+      "title": "The Convergence: The Song Nobody Can Finish",
+      "overMusic": false,
+      "kit": "the-song",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Maureen Pettigrew",
+          "text": "Everybody in the Hollow has the same tune in their heads, and nobody can finish it.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Maureen Pettigrew",
+          "text": "Biscuit's been howling the first bit at the edge of the hole. Something down there hummed the next note. Then stopped. We all went in for tea.",
+          "startMs": 4378
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-knock",
+      "category": "event",
+      "url": "/voice/lower-hollow/convergence-the-knock.mp3",
+      "durationMs": 10967,
+      "title": "The Convergence: Three Knocks",
+      "overMusic": false,
+      "kit": "the-knock",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Maureen Pettigrew",
+          "text": "Three knocks at the studio door just now, and nobody there. Ron on Rim Lane had the same, and so did half the street.",
+          "startMs": 45
+        },
+        {
+          "speaker": "Maureen Pettigrew",
+          "text": "We think it came from the hole. The hole has never knocked before. It must be a special occasion.",
+          "startMs": 6312
+        }
+      ]
+    },
+    {
+      "id": "convergence-wrong-colour",
+      "category": "event",
+      "url": "/voice/lower-hollow/convergence-wrong-colour.mp3",
+      "durationMs": 9970,
+      "title": "The Convergence: A Colour With No Name",
+      "overMusic": false,
+      "kit": "wrong-colour",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Councillor Dibbs",
+          "text": "The committee notes that the sky was, briefly, a colour. The committee has no name for it.",
+          "startMs": 44
+        },
+        {
+          "speaker": "Councillor Dibbs",
+          "text": "And the committee has decided, after careful consideration, to move on to item three.",
+          "startMs": 4951
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-pigeon",
+      "category": "event",
+      "url": "/voice/lower-hollow/convergence-the-pigeon.mp3",
+      "durationMs": 10149,
+      "title": "The Convergence: The Pigeon",
+      "overMusic": false,
+      "kit": "the-pigeon",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Maureen Pettigrew",
+          "text": "A pigeon walked into the studio just now, and sat on the noticeboard. It seems to know everybody.",
+          "startMs": 40
+        },
+        {
+          "speaker": "Maureen Pettigrew",
+          "text": "It nodded at Biscuit, and Biscuit nodded back. If it's yours, it's fine. It likes the view.",
+          "startMs": 5464
+        }
+      ]
+    },
+    {
+      "id": "notice-body-outer-band",
+      "category": "psa",
+      "url": "/voice/lower-hollow/notice-body-outer-band.mp3",
+      "durationMs": 11920,
+      "overMusic": false,
+      "part": "body",
+      "kit": "notices",
+      "lines": [
+        {
+          "speaker": "Maureen Pettigrew",
+          "text": "Notice. The ship that drifts over the Hollow at night is a little further east than usual. Several residents have waved and not been waved back at.",
+          "startMs": 39
+        },
+        {
+          "speaker": "Maureen Pettigrew",
+          "text": "Please don't take it personally. I'm told it's picking up a lot of new stations. It's busy.",
+          "startMs": 7411
+        }
+      ]
     }
   ]
 }

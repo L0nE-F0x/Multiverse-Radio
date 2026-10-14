@@ -703,6 +703,138 @@
           "startMs": 6486
         }
       ]
+    },
+    {
+      "id": "convergence-missing-moon",
+      "category": "event",
+      "url": "/voice/other-horoscopes/convergence-missing-moon.mp3",
+      "durationMs": 13316,
+      "title": "The Convergence: A Moon Goes Missing",
+      "overMusic": false,
+      "kit": "missing-moon",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Madame Orrery",
+          "text": "A moon has gone missing, dear. Everyone agrees one's gone, and nobody agrees which.",
+          "startMs": 36
+        },
+        {
+          "speaker": "Madame Orrery",
+          "text": "For The Ladder, it was yours. For The Teapot, it was someone else's. For everyone else, look under the bed. Moons get everywhere.",
+          "startMs": 5618
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-smell",
+      "category": "event",
+      "url": "/voice/other-horoscopes/convergence-the-smell.mp3",
+      "durationMs": 11950,
+      "title": "The Convergence: Toast, Everywhere",
+      "overMusic": false,
+      "kit": "the-smell",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Madame Orrery",
+          "text": "The whole of creation smells faintly of toast. I've checked the charts.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Madame Orrery",
+          "text": "A very good sign for The Teapot, and for anyone waiting for something to pop up. Have a slice, dear. The stars insist.",
+          "startMs": 4414
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-song",
+      "category": "event",
+      "url": "/voice/other-horoscopes/convergence-the-song.mp3",
+      "durationMs": 11337,
+      "title": "The Convergence: The Song Nobody Can Finish",
+      "overMusic": false,
+      "kit": "the-song",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Madame Orrery",
+          "text": "Everyone, under every sign, has the same song in their head tonight, and nobody can finish it.",
+          "startMs": 36
+        },
+        {
+          "speaker": "Madame Orrery",
+          "text": "It's in the charts, dear. The ending rises next week, in the house of The Single Sock. Be patient.",
+          "startMs": 5738
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-knock",
+      "category": "event",
+      "url": "/voice/other-horoscopes/convergence-the-knock.mp3",
+      "durationMs": 7994,
+      "title": "The Convergence: Three Knocks",
+      "overMusic": false,
+      "kit": "the-knock",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Madame Orrery",
+          "text": "Three knocks at the planetarium door, dear. Nobody there.",
+          "startMs": 41
+        },
+        {
+          "speaker": "Madame Orrery",
+          "text": "For The Spare Key, this is a sign. For everyone else, it's a door. Leave it be.",
+          "startMs": 3786
+        }
+      ]
+    },
+    {
+      "id": "convergence-wrong-colour",
+      "category": "event",
+      "url": "/voice/other-horoscopes/convergence-wrong-colour.mp3",
+      "durationMs": 12144,
+      "title": "The Convergence: A Colour With No Name",
+      "overMusic": false,
+      "kit": "wrong-colour",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Madame Orrery",
+          "text": "The sky went a colour I've never seen, dear, and I've seen the sky in every universe I've checked.",
+          "startMs": 42
+        },
+        {
+          "speaker": "Madame Orrery",
+          "text": "My crystal ball showed it for a moment. Then static again. Lucky colour: that one. Good luck finding it.",
+          "startMs": 5840
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-pigeon",
+      "category": "event",
+      "url": "/voice/other-horoscopes/convergence-the-pigeon.mp3",
+      "durationMs": 10556,
+      "title": "The Convergence: The Pigeon",
+      "overMusic": false,
+      "kit": "the-pigeon",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Madame Orrery",
+          "text": "A pigeon has walked into the back room, dear, and sat on the chart for The Paper Boat.",
+          "startMs": 36
+        },
+        {
+          "speaker": "Madame Orrery",
+          "text": "It knows people, I'm told. It certainly knows its sign. It's a Lamp Left On. You can always tell.",
+          "startMs": 4978
+        }
+      ]
     }
   ]
 }

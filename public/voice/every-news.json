@@ -3532,6 +3532,243 @@
           "startMs": 7019
         }
       ]
+    },
+    {
+      "id": "convergence-missing-moon",
+      "category": "event",
+      "url": "/voice/every-news/convergence-missing-moon.mp3",
+      "durationMs": 16298,
+      "title": "The Convergence: A Moon Goes Missing",
+      "overMusic": false,
+      "kit": "missing-moon",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Dale Quarterly",
+          "text": "Breaking news. A moon is missing. Every possible timeline agrees that one moon has gone, and no two timelines agree on which.",
+          "startMs": 37
+        },
+        {
+          "speaker": "Dale Quarterly",
+          "text": "Kim Harrowgate is standing where it used to be. Kim?",
+          "startMs": 8887
+        },
+        {
+          "speaker": "Kim Harrowgate",
+          "text": "Dale, it's very dark here. Somebody's just handed me a torch.",
+          "startMs": 12663
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-smell",
+      "category": "event",
+      "url": "/voice/every-news/convergence-the-smell.mp3",
+      "durationMs": 13794,
+      "title": "The Convergence: Toast, Everywhere",
+      "overMusic": false,
+      "kit": "the-smell",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Dale Quarterly",
+          "text": "We are receiving reports that everywhere, at once, smells faintly of toast.",
+          "startMs": 39
+        },
+        {
+          "speaker": "Dale Quarterly",
+          "text": "The source has not been identified. Officials ask that you check your own toaster, and then, gently, everyone else's. More at eleven.",
+          "startMs": 5034
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-song",
+      "category": "event",
+      "url": "/voice/every-news/convergence-the-song.mp3",
+      "durationMs": 12557,
+      "title": "The Convergence: The Song Nobody Can Finish",
+      "overMusic": false,
+      "kit": "the-song",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Dale Quarterly",
+          "text": "A song is stuck in the head of every listener in every timeline. Nobody knows how it ends.",
+          "startMs": 37
+        },
+        {
+          "speaker": "Skip Daley",
+          "text": "I've got it, Dale! Ba, ba ba, ba... and then...",
+          "startMs": 6248
+        },
+        {
+          "speaker": "Dale Quarterly",
+          "text": "That is where it stops for everyone, Skip. More at eleven.",
+          "startMs": 8989
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-knock",
+      "category": "event",
+      "url": "/voice/every-news/convergence-the-knock.mp3",
+      "durationMs": 12074,
+      "title": "The Convergence: Three Knocks",
+      "overMusic": false,
+      "kit": "the-knock",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Dale Quarterly",
+          "text": "There has been a knock at the newsroom door. Three knocks. We have checked. There is nobody there.",
+          "startMs": 44
+        },
+        {
+          "speaker": "Dale Quarterly",
+          "text": "Stations across the dial report the same. The door has been asked to comment. It has declined.",
+          "startMs": 5951
+        }
+      ]
+    },
+    {
+      "id": "convergence-wrong-colour",
+      "category": "event",
+      "url": "/voice/every-news/convergence-wrong-colour.mp3",
+      "durationMs": 10960,
+      "title": "The Convergence: A Colour With No Name",
+      "overMusic": false,
+      "kit": "wrong-colour",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Dale Quarterly",
+          "text": "For a few seconds, the sky was a colour our science desk cannot name. Kim?",
+          "startMs": 39
+        },
+        {
+          "speaker": "Kim Harrowgate",
+          "text": "Dale, it was like... I haven't got it. Somebody's just handed me a paint chart. It's none of these.",
+          "startMs": 5308
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-pigeon",
+      "category": "event",
+      "url": "/voice/every-news/convergence-the-pigeon.mp3",
+      "durationMs": 12678,
+      "title": "The Convergence: The Pigeon",
+      "overMusic": false,
+      "kit": "the-pigeon",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Dale Quarterly",
+          "text": "A pigeon has walked into the newsroom. Sources say the same pigeon is in every studio on the dial.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Dale Quarterly",
+          "text": "It has nodded at me twice, as if we went to school together. We did not. More at eleven.",
+          "startMs": 7068
+        }
+      ]
+    },
+    {
+      "id": "quiet-corner-review",
+      "category": "dj",
+      "url": "/voice/every-news/quiet-corner-review.mp3",
+      "durationMs": 16223,
+      "title": "Review: The Quiet Corner with Greg",
+      "overMusic": true,
+      "days": [
+        1
+      ],
+      "lines": [
+        {
+          "speaker": "Dale Quarterly",
+          "text": "Arts. Early on Sunday morning, the Lounge at the End of Time broadcast the first Quiet Corner with Greg, a shadow. Our critic listened at full volume, with the windows shut.",
+          "startMs": 36
+        },
+        {
+          "speaker": "Dale Quarterly",
+          "text": "Her review reads, in full: bold, spare, I think he said hello. Four stars.",
+          "startMs": 11204
+        }
+      ]
+    },
+    {
+      "id": "news-switchboard",
+      "category": "news",
+      "url": "/voice/every-news/news-switchboard.mp3",
+      "durationMs": 35812,
+      "title": "The Switchboard Lights Up",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Dale Quarterly",
+          "text": "Telephone engineers report that a switchboard last staffed in nineteen forty six has begun lighting up again. Callers say they reached it by accident, while turning a radio dial.",
+          "startMs": 36
+        },
+        {
+          "speaker": "Dale Quarterly",
+          "text": "Kim Harrowgate is with one of them. Kim?",
+          "startMs": 12147
+        },
+        {
+          "speaker": "Kim Harrowgate",
+          "text": "Dale, I'm with a woman who got through. She'd been listening to an agony aunt, then to us, then to that new traffic report, out past the edge of the dial. All in about a minute.",
+          "startMs": 15236
+        },
+        {
+          "speaker": "Kim Harrowgate",
+          "text": "And a voice said, number, please. She's handed me the receiver, Dale. It's still warm.",
+          "startMs": 25795
+        },
+        {
+          "speaker": "Dale Quarterly",
+          "text": "Thank you, Kim. We have tried this ourselves. We got the traffic. More at eleven.",
+          "startMs": 30720
+        }
+      ]
+    },
+    {
+      "id": "news-body-outer-band",
+      "category": "news",
+      "url": "/voice/every-news/news-body-outer-band.mp3",
+      "durationMs": 24058,
+      "overMusic": false,
+      "part": "body",
+      "kit": "news",
+      "lines": [
+        {
+          "speaker": "Dale Quarterly",
+          "text": "Navigation. The Multiverse Broadcast Authority reports that several relay ships are drifting from their usual courses. Officials describe the drift as within tolerance. Asked whose tolerance, officials said, ours.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Dale Quarterly",
+          "text": "As the ships drift, listeners report new stations coming in above one hundred and eight. So far: disco, a courtroom, and traffic for a wormhole.",
+          "startMs": 14725
+        }
+      ]
+    },
+    {
+      "id": "weather-body-outer-band",
+      "category": "weather",
+      "url": "/voice/every-news/weather-body-outer-band.mp3",
+      "durationMs": 9087,
+      "overMusic": false,
+      "part": "body",
+      "kit": "weather",
+      "lines": [
+        {
+          "speaker": "Skip Daley",
+          "text": "Space weather! The relay ships are drifting a little tonight, so if you hear new stations out past one hundred and eight, that's not interference, folks. That's neighbours! Give them a wave!",
+          "startMs": 37
+        }
+      ]
     }
   ]
 }

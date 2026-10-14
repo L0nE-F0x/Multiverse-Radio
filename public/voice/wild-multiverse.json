@@ -1311,6 +1311,148 @@
           "startMs": 7806
         }
       ]
+    },
+    {
+      "id": "convergence-missing-moon",
+      "category": "event",
+      "url": "/voice/wild-multiverse/convergence-missing-moon.mp3",
+      "durationMs": 12904,
+      "title": "The Convergence: A Moon Goes Missing",
+      "overMusic": false,
+      "kit": "missing-moon",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Sir Reginald Thistlewood",
+          "text": "Tonight, a rare phenomenon. A moon has gone missing. Every creature on the plain is looking up, and every one of them is looking at a different gap.",
+          "startMs": 36
+        },
+        {
+          "speaker": "Pip (Camera)",
+          "text": "I've pointed the camera at the sky, sir. I don't know where.",
+          "startMs": 9932
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-smell",
+      "category": "event",
+      "url": "/voice/wild-multiverse/convergence-the-smell.mp3",
+      "durationMs": 11984,
+      "title": "The Convergence: Toast, Everywhere",
+      "overMusic": false,
+      "kit": "the-smell",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Sir Reginald Thistlewood",
+          "text": "A scent drifts across the savannah. Faint. Golden. Unmistakable. Toast.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Sir Reginald Thistlewood",
+          "text": "For one moment, nobody is chasing anybody. Everybody is simply thinking about breakfast.",
+          "startMs": 5804
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-song",
+      "category": "event",
+      "url": "/voice/wild-multiverse/convergence-the-song.mp3",
+      "durationMs": 12989,
+      "title": "The Convergence: The Song Nobody Can Finish",
+      "overMusic": false,
+      "kit": "the-song",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Sir Reginald Thistlewood",
+          "text": "Listen. The chorus has fallen silent, mid phrase.",
+          "startMs": 36
+        },
+        {
+          "speaker": "Sir Reginald Thistlewood",
+          "text": "Every bird in the valley is singing the same half of the same song, then stopping, and looking at the others. Not one of them knows the rest.",
+          "startMs": 3934
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-knock",
+      "category": "event",
+      "url": "/voice/wild-multiverse/convergence-the-knock.mp3",
+      "durationMs": 12473,
+      "title": "The Convergence: Three Knocks",
+      "overMusic": false,
+      "kit": "the-knock",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Sir Reginald Thistlewood",
+          "text": "Three knocks, on the tent pole. We are four hundred miles from the nearest door. Pip has looked outside.",
+          "startMs": 48
+        },
+        {
+          "speaker": "Pip (Camera)",
+          "text": "Nobody, sir.",
+          "startMs": 7149
+        },
+        {
+          "speaker": "Sir Reginald Thistlewood",
+          "text": "Nobody. One of the shyest creatures in the multiverse.",
+          "startMs": 8651
+        }
+      ]
+    },
+    {
+      "id": "convergence-wrong-colour",
+      "category": "event",
+      "url": "/voice/wild-multiverse/convergence-wrong-colour.mp3",
+      "durationMs": 11357,
+      "title": "The Convergence: A Colour With No Name",
+      "overMusic": false,
+      "kit": "wrong-colour",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Sir Reginald Thistlewood",
+          "text": "Look. The sky. For perhaps three seconds, a colour no eye has ever named.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Sir Reginald Thistlewood",
+          "text": "The herd stopped. The river stopped. Pip forgot to film it. And I am, for once, glad.",
+          "startMs": 5380
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-pigeon",
+      "category": "event",
+      "url": "/voice/wild-multiverse/convergence-the-pigeon.mp3",
+      "durationMs": 13048,
+      "title": "The Convergence: The Pigeon",
+      "overMusic": false,
+      "kit": "the-pigeon",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Sir Reginald Thistlewood",
+          "text": "And here, an extraordinary sight. A common pigeon, walking calmly into the hide. It is looking at Pip. Pip is looking at it.",
+          "startMs": 43
+        },
+        {
+          "speaker": "Pip (Camera)",
+          "text": "Hello again.",
+          "startMs": 8860
+        },
+        {
+          "speaker": "Sir Reginald Thistlewood",
+          "text": "They have, it seems, met before.",
+          "startMs": 10316
+        }
+      ]
     }
   ]
 }

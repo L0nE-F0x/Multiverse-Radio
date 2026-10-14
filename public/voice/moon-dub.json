@@ -1119,6 +1119,304 @@
           "startMs": 2827
         }
       ]
+    },
+    {
+      "id": "convergence-missing-moon",
+      "category": "event",
+      "url": "/voice/moon-dub/convergence-missing-moon.mp3",
+      "durationMs": 7386,
+      "title": "The Convergence: A Moon Goes Missing",
+      "overMusic": false,
+      "kit": "missing-moon",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Selector Crater",
+          "text": "Word on the dial. A moon gone missing.",
+          "startMs": 41
+        },
+        {
+          "speaker": "Selector Crater",
+          "text": "Not this one. I'm standing on it.",
+          "startMs": 2474
+        },
+        {
+          "speaker": "Echo",
+          "text": "Standing on it.",
+          "startMs": 4592
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-smell",
+      "category": "event",
+      "url": "/voice/moon-dub/convergence-the-smell.mp3",
+      "durationMs": 7778,
+      "title": "The Convergence: Toast, Everywhere",
+      "overMusic": false,
+      "kit": "the-smell",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Selector Crater",
+          "text": "Smell of toast. Everywhere. Even up here.",
+          "startMs": 39
+        },
+        {
+          "speaker": "Selector Crater",
+          "text": "No air on the moon. Still smell it. Heavy.",
+          "startMs": 2624
+        },
+        {
+          "speaker": "Echo",
+          "text": "Heavy.",
+          "startMs": 5265
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-song",
+      "category": "event",
+      "url": "/voice/moon-dub/convergence-the-song.mp3",
+      "durationMs": 9618,
+      "title": "The Convergence: The Song Nobody Can Finish",
+      "overMusic": false,
+      "kit": "the-song",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Selector Crater",
+          "text": "Everybody's got the same tune. Nobody's got the end.",
+          "startMs": 36
+        },
+        {
+          "speaker": "Selector Crater",
+          "text": "So dub it. Take the end out. Nobody notices.",
+          "startMs": 3602
+        },
+        {
+          "speaker": "Echo",
+          "text": "Nobody notices.",
+          "startMs": 6870
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-knock",
+      "category": "event",
+      "url": "/voice/moon-dub/convergence-the-knock.mp3",
+      "durationMs": 7731,
+      "title": "The Convergence: Three Knocks",
+      "overMusic": false,
+      "kit": "the-knock",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Selector Crater",
+          "text": "Three knocks on the airlock.",
+          "startMs": 45
+        },
+        {
+          "speaker": "Selector Crater",
+          "text": "Nobody out there. Nobody's ever out there. Respect.",
+          "startMs": 1752
+        },
+        {
+          "speaker": "Echo",
+          "text": "Respect.",
+          "startMs": 5061
+        }
+      ]
+    },
+    {
+      "id": "convergence-wrong-colour",
+      "category": "event",
+      "url": "/voice/moon-dub/convergence-wrong-colour.mp3",
+      "durationMs": 8008,
+      "title": "The Convergence: A Colour With No Name",
+      "overMusic": false,
+      "kit": "wrong-colour",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Selector Crater",
+          "text": "Earth just went a colour. Not blue. Not green. Something else.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Selector Crater",
+          "text": "Pointed the stack at it. Bass, four hundred percent. It went back to blue.",
+          "startMs": 3755
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-pigeon",
+      "category": "event",
+      "url": "/voice/moon-dub/convergence-the-pigeon.mp3",
+      "durationMs": 9293,
+      "title": "The Convergence: The Pigeon",
+      "overMusic": false,
+      "kit": "the-pigeon",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Selector Crater",
+          "text": "A pigeon. On the moon. Walked in through the airlock.",
+          "startMs": 36
+        },
+        {
+          "speaker": "Selector Crater",
+          "text": "Nodded at me like it knew the tune. Respect, pigeon.",
+          "startMs": 3095
+        },
+        {
+          "speaker": "Echo",
+          "text": "Respect, pigeon.",
+          "startMs": 6393
+        }
+      ]
+    },
+    {
+      "id": "full-moon-id",
+      "category": "id",
+      "url": "/voice/moon-dub/full-moon-id.mp3",
+      "durationMs": 7202,
+      "title": "Moon Dub, Full Moon",
+      "overMusic": true,
+      "kit": "full-moon",
+      "lines": [
+        {
+          "speaker": "Selector Crater",
+          "text": "Moon Dub Sound System. Full moon tonight.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Selector Crater",
+          "text": "We're the full part.",
+          "startMs": 2958
+        },
+        {
+          "speaker": "Echo",
+          "text": "The full part.",
+          "startMs": 4320
+        }
+      ]
+    },
+    {
+      "id": "full-moon-01",
+      "category": "dj",
+      "url": "/voice/moon-dub/full-moon-01.mp3",
+      "durationMs": 10106,
+      "overMusic": true,
+      "kit": "full-moon",
+      "lines": [
+        {
+          "speaker": "Selector Crater",
+          "text": "Full moon down there means a dark Earth up here. Funny how it works.",
+          "startMs": 44
+        },
+        {
+          "speaker": "Selector Crater",
+          "text": "They get the light. We get the dark. Fair trade. Speakers out. Pointed down. Bass, all the way.",
+          "startMs": 4359
+        }
+      ]
+    },
+    {
+      "id": "full-moon-02",
+      "category": "dj",
+      "url": "/voice/moon-dub/full-moon-02.mp3",
+      "durationMs": 14486,
+      "overMusic": true,
+      "kit": "full-moon",
+      "lines": [
+        {
+          "speaker": "Selector Crater",
+          "text": "Full moon ritual. Turn every speaker to face the sun, one at a time. Say thank you for the light.",
+          "startMs": 44
+        },
+        {
+          "speaker": "Selector Crater",
+          "text": "Turn them back round. Play the heaviest tune in the box. That's it. That's the ritual.",
+          "startMs": 6440
+        },
+        {
+          "speaker": "Echo",
+          "text": "That's the ritual.",
+          "startMs": 11616
+        }
+      ]
+    },
+    {
+      "id": "full-moon-03",
+      "category": "dj",
+      "url": "/voice/moon-dub/full-moon-03.mp3",
+      "durationMs": 8202,
+      "overMusic": true,
+      "kit": "full-moon",
+      "lines": [
+        {
+          "speaker": "Selector Crater",
+          "text": "Full moon. The tide's pulling on every ocean down there.",
+          "startMs": 45
+        },
+        {
+          "speaker": "Selector Crater",
+          "text": "Some of that's us. Bass moves water. Surf's up in seven countries. You're welcome.",
+          "startMs": 3405
+        }
+      ]
+    },
+    {
+      "id": "full-moon-04",
+      "category": "dj",
+      "url": "/voice/moon-dub/full-moon-04.mp3",
+      "durationMs": 9642,
+      "overMusic": true,
+      "kit": "full-moon",
+      "lines": [
+        {
+          "speaker": "Selector Crater",
+          "text": "Lone astronaut's come out for the full moon. Still nodding. Day four hundred.",
+          "startMs": 39
+        },
+        {
+          "speaker": "Selector Crater",
+          "text": "Brought his own sandwich this time.",
+          "startMs": 5019
+        },
+        {
+          "speaker": "Echo",
+          "text": "Growth.",
+          "startMs": 7065
+        }
+      ]
+    },
+    {
+      "id": "full-moon-05",
+      "category": "dj",
+      "url": "/voice/moon-dub/full-moon-05.mp3",
+      "durationMs": 10197,
+      "overMusic": true,
+      "kit": "full-moon",
+      "lines": [
+        {
+          "speaker": "Selector Crater",
+          "text": "Shout-out to everybody down there, looking up at the full moon, thinking it's quiet up here.",
+          "startMs": 41
+        },
+        {
+          "speaker": "Selector Crater",
+          "text": "It isn't. Wave. Hold tight.",
+          "startMs": 5526
+        },
+        {
+          "speaker": "Echo",
+          "text": "Hold tight.",
+          "startMs": 7456
+        }
+      ]
     }
   ]
 }

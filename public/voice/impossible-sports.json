@@ -2400,6 +2400,201 @@
           "startMs": 5284
         }
       ]
+    },
+    {
+      "id": "convergence-missing-moon",
+      "category": "event",
+      "url": "/voice/impossible-sports/convergence-missing-moon.mp3",
+      "durationMs": 11408,
+      "title": "The Convergence: A Moon Goes Missing",
+      "overMusic": false,
+      "kit": "missing-moon",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Chip Thunderbuckle",
+          "text": "Folks, breaking news, a moon is missing! And Doug, the Lunar Relay has been postponed!",
+          "startMs": 39
+        },
+        {
+          "speaker": "Doug Steadman",
+          "text": "You can't run a relay without the baton, Chip.",
+          "startMs": 5190
+        },
+        {
+          "speaker": "Chip Thunderbuckle",
+          "text": "The moon was the baton?",
+          "startMs": 8171
+        },
+        {
+          "speaker": "Doug Steadman",
+          "text": "Every sport's got one, Chip.",
+          "startMs": 9563
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-smell",
+      "category": "event",
+      "url": "/voice/impossible-sports/convergence-the-smell.mp3",
+      "durationMs": 9602,
+      "title": "The Convergence: Toast, Everywhere",
+      "overMusic": false,
+      "kit": "the-smell",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Chip Thunderbuckle",
+          "text": "Doug, the whole stadium smells like toast!",
+          "startMs": 37
+        },
+        {
+          "speaker": "Doug Steadman",
+          "text": "It's not the stadium, Chip. It's everywhere. They're saying it on every station.",
+          "startMs": 2213
+        },
+        {
+          "speaker": "Chip Thunderbuckle",
+          "text": "Then it's a home crowd advantage for everybody!",
+          "startMs": 7309
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-song",
+      "category": "event",
+      "url": "/voice/impossible-sports/convergence-the-song.mp3",
+      "durationMs": 10240,
+      "title": "The Convergence: The Song Nobody Can Finish",
+      "overMusic": false,
+      "kit": "the-song",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Chip Thunderbuckle",
+          "text": "The crowd's singing, folks! Ninety thousand voices! The same song!",
+          "startMs": 40
+        },
+        {
+          "speaker": "Doug Steadman",
+          "text": "And there they go. Stopped. Same place. Nobody knows the next bit.",
+          "startMs": 3632
+        },
+        {
+          "speaker": "Chip Thunderbuckle",
+          "text": "It's a draw, folks! A draw, against a song!",
+          "startMs": 8264
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-knock",
+      "category": "event",
+      "url": "/voice/impossible-sports/convergence-the-knock.mp3",
+      "durationMs": 7300,
+      "title": "The Convergence: Three Knocks",
+      "overMusic": false,
+      "kit": "the-knock",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Chip Thunderbuckle",
+          "text": "Three knocks on the commentary box door, folks! Who's there?",
+          "startMs": 37
+        },
+        {
+          "speaker": "Doug Steadman",
+          "text": "Nobody, Chip.",
+          "startMs": 3322
+        },
+        {
+          "speaker": "Chip Thunderbuckle",
+          "text": "Nobody! The undefeated champion of Hide and Seek!",
+          "startMs": 4741
+        }
+      ]
+    },
+    {
+      "id": "convergence-wrong-colour",
+      "category": "event",
+      "url": "/voice/impossible-sports/convergence-wrong-colour.mp3",
+      "durationMs": 10703,
+      "title": "The Convergence: A Colour With No Name",
+      "overMusic": false,
+      "kit": "wrong-colour",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Chip Thunderbuckle",
+          "text": "The sky's gone a colour, folks! And the score is a colour! Doug, is that the score?",
+          "startMs": 41
+        },
+        {
+          "speaker": "Doug Steadman",
+          "text": "Nobody's ever scored that one, Chip. Nobody knows what it's worth.",
+          "startMs": 4263
+        },
+        {
+          "speaker": "Chip Thunderbuckle",
+          "text": "Then whoever did it, that's a world first!",
+          "startMs": 8751
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-pigeon",
+      "category": "event",
+      "url": "/voice/impossible-sports/convergence-the-pigeon.mp3",
+      "durationMs": 9098,
+      "title": "The Convergence: The Pigeon",
+      "overMusic": false,
+      "kit": "the-pigeon",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Chip Thunderbuckle",
+          "text": "There's a pigeon on the pitch, folks! It's walking straight through the Gravity Polo! It's waving at Doug! Doug, do you know this pigeon?",
+          "startMs": 42
+        },
+        {
+          "speaker": "Doug Steadman",
+          "text": "We played Cloudball together, Chip.",
+          "startMs": 7024
+        }
+      ]
+    },
+    {
+      "id": "quiet-corner-review",
+      "category": "dj",
+      "url": "/voice/impossible-sports/quiet-corner-review.mp3",
+      "durationMs": 13781,
+      "title": "Review: The Quiet Corner with Greg",
+      "overMusic": true,
+      "days": [
+        1
+      ],
+      "lines": [
+        {
+          "speaker": "Chip Thunderbuckle",
+          "text": "Doug, did you catch The Quiet Corner with Greg on Sunday?",
+          "startMs": 36
+        },
+        {
+          "speaker": "Doug Steadman",
+          "text": "I did, Chip. The full hour. Didn't hear a thing.",
+          "startMs": 3162
+        },
+        {
+          "speaker": "Chip Thunderbuckle",
+          "text": "That's Greg, Number Zero, folks! Same as on the pitch! You never see him coming!",
+          "startMs": 6697
+        },
+        {
+          "speaker": "Doug Steadman",
+          "text": "Lovely restraint. You can't coach that.",
+          "startMs": 11112
+        }
+      ]
     }
   ]
 }

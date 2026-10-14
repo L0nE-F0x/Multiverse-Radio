@@ -686,6 +686,163 @@
           "startMs": 10766
         }
       ]
+    },
+    {
+      "id": "convergence-missing-moon",
+      "category": "event",
+      "url": "/voice/transmission-zero/convergence-missing-moon.mp3",
+      "durationMs": 13274,
+      "title": "The Moon (There Is Only One)",
+      "overMusic": false,
+      "kit": "missing-moon",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "The First Announcer",
+          "text": "The moon. Is gone.",
+          "startMs": 436
+        },
+        {
+          "speaker": "The First Announcer",
+          "text": "Which moon? There is only. One moon.",
+          "startMs": 3832
+        },
+        {
+          "speaker": "The First Announcer",
+          "text": "I will wait. It will come back. Things. Come back.",
+          "startMs": 8111
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-smell",
+      "category": "event",
+      "url": "/voice/transmission-zero/convergence-the-smell.mp3",
+      "durationMs": 14998,
+      "title": "The First Toast",
+      "overMusic": false,
+      "kit": "the-smell",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "The First Announcer",
+          "text": "A smell. New. Warm. Brown. Good.",
+          "startMs": 436
+        },
+        {
+          "speaker": "The First Announcer",
+          "text": "I will call it. Toast.",
+          "startMs": 4781
+        },
+        {
+          "speaker": "The First Announcer",
+          "text": "Toast is the word. I have decided. Nobody has made it yet. But it has a word.",
+          "startMs": 7901
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-song",
+      "category": "event",
+      "url": "/voice/transmission-zero/convergence-the-song.mp3",
+      "durationMs": 14844,
+      "title": "Hm, Hm, Hm",
+      "overMusic": false,
+      "kit": "the-song",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "The First Announcer",
+          "text": "There is a song. In my head. I have not made it. Yet.",
+          "startMs": 436
+        },
+        {
+          "speaker": "The First Announcer",
+          "text": "Hm. Hm. Hm.",
+          "startMs": 5555
+        },
+        {
+          "speaker": "The First Announcer",
+          "text": "That is all of it. So far. More tomorrow.",
+          "startMs": 9892
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-knock",
+      "category": "event",
+      "url": "/voice/transmission-zero/convergence-the-knock.mp3",
+      "durationMs": 12319,
+      "title": "Who Is There",
+      "overMusic": false,
+      "kit": "the-knock",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "The First Announcer",
+          "text": "That was not me. Who. Is there?",
+          "startMs": 2450
+        },
+        {
+          "speaker": "The First Announcer",
+          "text": "Nobody. There is nobody. Yet. Come back. When there is somebody.",
+          "startMs": 6369
+        }
+      ]
+    },
+    {
+      "id": "convergence-wrong-colour",
+      "category": "event",
+      "url": "/voice/transmission-zero/convergence-wrong-colour.mp3",
+      "durationMs": 13871,
+      "title": "Sky Is the Colour",
+      "overMusic": false,
+      "kit": "wrong-colour",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "The First Announcer",
+          "text": "The sky. Is a colour.",
+          "startMs": 436
+        },
+        {
+          "speaker": "The First Announcer",
+          "text": "There are no words. For colours. Yet. So this one is fine.",
+          "startMs": 4007
+        },
+        {
+          "speaker": "The First Announcer",
+          "text": "This one is. Sky. Like all of them.",
+          "startMs": 9269
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-pigeon",
+      "category": "event",
+      "url": "/voice/transmission-zero/convergence-the-pigeon.mp3",
+      "durationMs": 14007,
+      "title": "Hello, Bird",
+      "overMusic": false,
+      "kit": "the-pigeon",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "The First Announcer",
+          "text": "A bird. Is walking in the cave. It nods. At me.",
+          "startMs": 435
+        },
+        {
+          "speaker": "The First Announcer",
+          "text": "Like it knows me. Nobody knows me. I am the first one.",
+          "startMs": 5590
+        },
+        {
+          "speaker": "The First Announcer",
+          "text": "Hello, bird.",
+          "startMs": 10551
+        }
+      ]
     }
   ]
 }

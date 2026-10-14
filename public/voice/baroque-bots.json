@@ -852,6 +852,191 @@
           "startMs": 42
         }
       ]
+    },
+    {
+      "id": "convergence-missing-moon",
+      "category": "event",
+      "url": "/voice/baroque-bots/convergence-missing-moon.mp3",
+      "durationMs": 10449,
+      "title": "The Convergence: A Moon Goes Missing",
+      "overMusic": false,
+      "kit": "missing-moon",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Maestro Unit Seven",
+          "text": "The Court has been informed that a moon is missing, and that nobody can agree which.",
+          "startMs": 36
+        },
+        {
+          "speaker": "Maestro Unit Seven",
+          "text": "We have counted ours. There is one. It is painted on the ceiling, and it is adequately there. Next piece.",
+          "startMs": 4963
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-smell",
+      "category": "event",
+      "url": "/voice/baroque-bots/convergence-the-smell.mp3",
+      "durationMs": 10499,
+      "title": "The Convergence: Toast, Everywhere",
+      "overMusic": false,
+      "kit": "the-smell",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Maestro Unit Seven",
+          "text": "There is a smell of toast in the concert hall. I have checked the portrait of the toaster. It is innocent. It is also a painting.",
+          "startMs": 43
+        },
+        {
+          "speaker": "Unit Nine (Cello)",
+          "text": "It smells warm.",
+          "startMs": 7175
+        },
+        {
+          "speaker": "Maestro Unit Seven",
+          "text": "Overheating, Unit Nine.",
+          "startMs": 8654
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-song",
+      "category": "event",
+      "url": "/voice/baroque-bots/convergence-the-song.mp3",
+      "durationMs": 12310,
+      "title": "The Convergence: The Song Nobody Can Finish",
+      "overMusic": false,
+      "kit": "the-song",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Unit Nine (Cello)",
+          "text": "Maestro. I have a melody in my circuits. I cannot find the final cadence.",
+          "startMs": 28
+        },
+        {
+          "speaker": "Maestro Unit Seven",
+          "text": "Nor can anyone, Unit Nine. Improvise an ending.",
+          "startMs": 4974
+        },
+        {
+          "speaker": "Unit Nine (Cello)",
+          "text": "I do not know how.",
+          "startMs": 8483
+        },
+        {
+          "speaker": "Maestro Unit Seven",
+          "text": "Neither does anybody. Proceed.",
+          "startMs": 10094
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-knock",
+      "category": "event",
+      "url": "/voice/baroque-bots/convergence-the-knock.mp3",
+      "durationMs": 9326,
+      "title": "The Convergence: Three Knocks",
+      "overMusic": false,
+      "kit": "the-knock",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Maestro Unit Seven",
+          "text": "Three knocks at the door of the Clockwork Court. Perfectly in time. Andante.",
+          "startMs": 41
+        },
+        {
+          "speaker": "Maestro Unit Seven",
+          "text": "There was nobody there. Whoever it was, the rhythm was impeccable. By human standards.",
+          "startMs": 4607
+        }
+      ]
+    },
+    {
+      "id": "convergence-wrong-colour",
+      "category": "event",
+      "url": "/voice/baroque-bots/convergence-wrong-colour.mp3",
+      "durationMs": 9314,
+      "title": "The Convergence: A Colour With No Name",
+      "overMusic": false,
+      "kit": "wrong-colour",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Maestro Unit Seven",
+          "text": "The sky outside the Court briefly displayed a colour that is not in our specification. Unit Nine?",
+          "startMs": 36
+        },
+        {
+          "speaker": "Unit Nine (Cello)",
+          "text": "Blue-ish. But sadder.",
+          "startMs": 5933
+        },
+        {
+          "speaker": "Maestro Unit Seven",
+          "text": "Overheating. Beautiful.",
+          "startMs": 7596
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-pigeon",
+      "category": "event",
+      "url": "/voice/baroque-bots/convergence-the-pigeon.mp3",
+      "durationMs": 10128,
+      "title": "The Convergence: The Pigeon",
+      "overMusic": false,
+      "kit": "the-pigeon",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Maestro Unit Seven",
+          "text": "A pigeon has walked into the orchestra pit, and is standing beside the conductor's spoon.",
+          "startMs": 40
+        },
+        {
+          "speaker": "Maestro Unit Seven",
+          "text": "It appears to be keeping time. Several of the musicians have curtsied to it. Next piece.",
+          "startMs": 5237
+        }
+      ]
+    },
+    {
+      "id": "quiet-corner-review",
+      "category": "dj",
+      "url": "/voice/baroque-bots/quiet-corner-review.mp3",
+      "durationMs": 17410,
+      "title": "Review: The Quiet Corner with Greg",
+      "overMusic": true,
+      "days": [
+        1
+      ],
+      "lines": [
+        {
+          "speaker": "Maestro Unit Seven",
+          "text": "A review. The Quiet Corner with Greg, on Sunday, at the Lounge at the End of Time. I listened with every sensor at maximum.",
+          "startMs": 46
+        },
+        {
+          "speaker": "Maestro Unit Seven",
+          "text": "I detected one word, the clink of a dry ginger, and what may have been a kindness. Adequately moving. By shadow standards.",
+          "startMs": 7144
+        },
+        {
+          "speaker": "Unit Nine (Cello)",
+          "text": "I cried.",
+          "startMs": 14269
+        },
+        {
+          "speaker": "Maestro Unit Seven",
+          "text": "Condensation, Unit Nine.",
+          "startMs": 15452
+        }
+      ]
     }
   ]
 }

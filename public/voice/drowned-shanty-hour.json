@@ -634,6 +634,162 @@
           "startMs": 6530
         }
       ]
+    },
+    {
+      "id": "convergence-missing-moon",
+      "category": "event",
+      "url": "/voice/drowned-shanty-hour/convergence-missing-moon.mp3",
+      "durationMs": 12484,
+      "title": "The Convergence: A Moon Goes Missing",
+      "overMusic": false,
+      "kit": "missing-moon",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Captain Ezra Wetherell",
+          "text": "A moon has gone missing, lads. The whole dial's saying so.",
+          "startMs": 36
+        },
+        {
+          "speaker": "Captain Ezra Wetherell",
+          "text": "We've been sailing by it since before there was water. Now we'll sail by the others. The ship is fine.",
+          "startMs": 3894
+        },
+        {
+          "speaker": "The Crew",
+          "text": "The ship is fine.",
+          "startMs": 9744
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-smell",
+      "category": "event",
+      "url": "/voice/drowned-shanty-hour/convergence-the-smell.mp3",
+      "durationMs": 10395,
+      "title": "The Convergence: Toast, Everywhere",
+      "overMusic": false,
+      "kit": "the-smell",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Captain Ezra Wetherell",
+          "text": "Smell that, crew? Toast. Everywhere at once, they say. Even down here at the bottom.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Captain Ezra Wetherell",
+          "text": "The cook says he's never made toast. He says it would only go to soup. Everything here goes to soup.",
+          "startMs": 4918
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-song",
+      "category": "event",
+      "url": "/voice/drowned-shanty-hour/convergence-the-song.mp3",
+      "durationMs": 10000,
+      "title": "The Convergence: The Song Nobody Can Finish",
+      "overMusic": false,
+      "kit": "the-song",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Captain Ezra Wetherell",
+          "text": "There's a shanty going round every head on the dial, and nobody knows how it ends.",
+          "startMs": 49
+        },
+        {
+          "speaker": "Captain Ezra Wetherell",
+          "text": "Old Pettibone swears it's about a wreck that hasn't happened yet. Let's hope it never finishes.",
+          "startMs": 4974
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-knock",
+      "category": "event",
+      "url": "/voice/drowned-shanty-hour/convergence-the-knock.mp3",
+      "durationMs": 7978,
+      "title": "The Convergence: Three Knocks",
+      "overMusic": false,
+      "kit": "the-knock",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Captain Ezra Wetherell",
+          "text": "Three knocks on the hull. Below the waterline.",
+          "startMs": 39
+        },
+        {
+          "speaker": "Captain Ezra Wetherell",
+          "text": "Nobody out there, of course. Nobody but the sea. Come aboard, then, sea. You always do.",
+          "startMs": 3067
+        }
+      ]
+    },
+    {
+      "id": "convergence-wrong-colour",
+      "category": "event",
+      "url": "/voice/drowned-shanty-hour/convergence-wrong-colour.mp3",
+      "durationMs": 10525,
+      "title": "The Convergence: A Colour With No Name",
+      "overMusic": false,
+      "kit": "wrong-colour",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Captain Ezra Wetherell",
+          "text": "The surface went a colour just now, lads, way up above us. No word for it.",
+          "startMs": 48
+        },
+        {
+          "speaker": "Captain Ezra Wetherell",
+          "text": "The lookout's been gone since eighteen forty. That's the first time I've wished he was back. He'd have had a word.",
+          "startMs": 4682
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-pigeon",
+      "category": "event",
+      "url": "/voice/drowned-shanty-hour/convergence-the-pigeon.mp3",
+      "durationMs": 9995,
+      "title": "The Convergence: The Pigeon",
+      "overMusic": false,
+      "kit": "the-pigeon",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Captain Ezra Wetherell",
+          "text": "A pigeon has come aboard. Below the waterline. Perfectly dry.",
+          "startMs": 40
+        },
+        {
+          "speaker": "Captain Ezra Wetherell",
+          "text": "It walked to the wheel as if it's sailed with us before. Maybe it has. The crew are saluting it. The ship is fine.",
+          "startMs": 3940
+        }
+      ]
+    },
+    {
+      "id": "dj-outer-band",
+      "category": "dj",
+      "url": "/voice/drowned-shanty-hour/dj-outer-band.mp3",
+      "durationMs": 12462,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Captain Ezra Wetherell",
+          "text": "Ahoy, the Nightjar. Your lamp's further off than it was, up there above the fog. Drifting, are you?",
+          "startMs": 36
+        },
+        {
+          "speaker": "Captain Ezra Wetherell",
+          "text": "Happens to the best of ships. Mind how you go, past one hundred and eight. There's new ports out there, and some of them are playing disco.",
+          "startMs": 5544
+        }
+      ]
     }
   ]
 }

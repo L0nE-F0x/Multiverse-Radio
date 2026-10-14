@@ -632,6 +632,148 @@
           "startMs": 37
         }
       ]
+    },
+    {
+      "id": "convergence-missing-moon",
+      "category": "event",
+      "url": "/voice/breakbeat-observatory/convergence-missing-moon.mp3",
+      "durationMs": 10647,
+      "title": "The Convergence: A Moon Goes Missing",
+      "overMusic": false,
+      "kit": "missing-moon",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "MC Parallax",
+          "text": "People, a moon's gone missing, and nobody can agree which one! Doc, did we move it? Did that last drop move a moon?",
+          "startMs": 38
+        },
+        {
+          "speaker": "Doctor Ferrin",
+          "text": "Checking. No. We moved two. Both accounted for.",
+          "startMs": 6897
+        },
+        {
+          "speaker": "MC Parallax",
+          "text": "Phew!",
+          "startMs": 10126
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-smell",
+      "category": "event",
+      "url": "/voice/breakbeat-observatory/convergence-the-smell.mp3",
+      "durationMs": 8441,
+      "title": "The Convergence: Toast, Everywhere",
+      "overMusic": false,
+      "kit": "the-smell",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Doctor Ferrin",
+          "text": "Observation. Toast.",
+          "startMs": 41
+        },
+        {
+          "speaker": "MC Parallax",
+          "text": "She's right! The whole dome smells like toast, and so does the rest of the multiverse! Big up whoever's on breakfast!",
+          "startMs": 2070
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-song",
+      "category": "event",
+      "url": "/voice/breakbeat-observatory/convergence-the-song.mp3",
+      "durationMs": 11993,
+      "title": "The Convergence: The Song Nobody Can Finish",
+      "overMusic": false,
+      "kit": "the-song",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "MC Parallax",
+          "text": "Everybody's got the same tune stuck, people, and nobody can finish it! We pointed the telescope at the far end of the universe to see if they've got the ending. Doc?",
+          "startMs": 50
+        },
+        {
+          "speaker": "Doctor Ferrin",
+          "text": "Observation. They're also humming it.",
+          "startMs": 9641
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-knock",
+      "category": "event",
+      "url": "/voice/breakbeat-observatory/convergence-the-knock.mp3",
+      "durationMs": 7717,
+      "title": "The Convergence: Three Knocks",
+      "overMusic": false,
+      "kit": "the-knock",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "MC Parallax",
+          "text": "Three knocks on the observatory door! Right on the beat! Doc went to look. Nobody.",
+          "startMs": 50
+        },
+        {
+          "speaker": "MC Parallax",
+          "text": "Whoever you are, you're welcome at the front. Lovely timing.",
+          "startMs": 4811
+        }
+      ]
+    },
+    {
+      "id": "convergence-wrong-colour",
+      "category": "event",
+      "url": "/voice/breakbeat-observatory/convergence-wrong-colour.mp3",
+      "durationMs": 7866,
+      "title": "The Convergence: A Colour With No Name",
+      "overMusic": false,
+      "kit": "wrong-colour",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "MC Parallax",
+          "text": "Whoa. The sky just did a colour. Doc, log it!",
+          "startMs": 42
+        },
+        {
+          "speaker": "Doctor Ferrin",
+          "text": "Observation. I don't have a word.",
+          "startMs": 2803
+        },
+        {
+          "speaker": "MC Parallax",
+          "text": "She's never not had a word, people. That's historic.",
+          "startMs": 5248
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-pigeon",
+      "category": "event",
+      "url": "/voice/breakbeat-observatory/convergence-the-pigeon.mp3",
+      "durationMs": 8428,
+      "title": "The Convergence: The Pigeon",
+      "overMusic": false,
+      "kit": "the-pigeon",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "MC Parallax",
+          "text": "There's a pigeon in the dome, standing right next to Doctor Ferrin. And people, the pigeon's head is nodding.",
+          "startMs": 37
+        },
+        {
+          "speaker": "MC Parallax",
+          "text": "Doc? Doc's head is... no. Not yet. Close, though!",
+          "startMs": 5901
+        }
+      ]
     }
   ]
 }

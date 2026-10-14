@@ -1141,6 +1141,183 @@
           "startMs": 3558
         }
       ]
+    },
+    {
+      "id": "convergence-missing-moon",
+      "category": "event",
+      "url": "/voice/crystal-delta/convergence-missing-moon.mp3",
+      "durationMs": 8719,
+      "title": "The Convergence: A Moon Goes Missing",
+      "overMusic": false,
+      "kit": "missing-moon",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Prism",
+          "text": "A moon has gone missing.",
+          "startMs": 37
+        },
+        {
+          "speaker": "Prism",
+          "text": "A missing has gone moon.",
+          "startMs": 1633
+        },
+        {
+          "speaker": "Prism",
+          "text": "Every crystal in the cave is still reflecting where it used to be. So in here, at least, it's still up.",
+          "startMs": 3180
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-smell",
+      "category": "event",
+      "url": "/voice/crystal-delta/convergence-the-smell.mp3",
+      "durationMs": 6327,
+      "title": "The Convergence: Toast, Everywhere",
+      "overMusic": false,
+      "kit": "the-smell",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Prism",
+          "text": "Everything smells of toast.",
+          "startMs": 36
+        },
+        {
+          "speaker": "Prism",
+          "text": "Toast smells of everything.",
+          "startMs": 1758
+        },
+        {
+          "speaker": "Prism",
+          "text": "The tiny miner says he didn't do it.",
+          "startMs": 3403
+        },
+        {
+          "speaker": "The Tiny Miner",
+          "text": "Didn't do it.",
+          "startMs": 5553
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-song",
+      "category": "event",
+      "url": "/voice/crystal-delta/convergence-the-song.mp3",
+      "durationMs": 8321,
+      "title": "The Convergence: The Song Nobody Can Finish",
+      "overMusic": false,
+      "kit": "the-song",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Prism",
+          "text": "There's a song nobody can finish.",
+          "startMs": 37
+        },
+        {
+          "speaker": "Prism",
+          "text": "There's a finish nobody can sing.",
+          "startMs": 2059
+        },
+        {
+          "speaker": "Prism",
+          "text": "The crystals all remember how it starts. Not one of them remembers the end.",
+          "startMs": 3980
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-knock",
+      "category": "event",
+      "url": "/voice/crystal-delta/convergence-the-knock.mp3",
+      "durationMs": 6033,
+      "title": "The Convergence: Three Knocks",
+      "overMusic": false,
+      "kit": "the-knock",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Prism",
+          "text": "Three knocks at the mouth of the cave.",
+          "startMs": 42
+        },
+        {
+          "speaker": "Prism",
+          "text": "Three caves at the mouth of the knock.",
+          "startMs": 2025
+        },
+        {
+          "speaker": "The Tiny Miner",
+          "text": "Nobody there.",
+          "startMs": 3960
+        },
+        {
+          "speaker": "Prism",
+          "text": "Nobody there.",
+          "startMs": 5125
+        }
+      ]
+    },
+    {
+      "id": "convergence-wrong-colour",
+      "category": "event",
+      "url": "/voice/crystal-delta/convergence-wrong-colour.mp3",
+      "durationMs": 10142,
+      "title": "The Convergence: A Colour With No Name",
+      "overMusic": false,
+      "kit": "wrong-colour",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Prism",
+          "text": "The sky outside just went a colour.",
+          "startMs": 37
+        },
+        {
+          "speaker": "Prism",
+          "text": "The colour inside just went a sky.",
+          "startMs": 2056
+        },
+        {
+          "speaker": "Prism",
+          "text": "Every crystal in the chandelier tried to split it into a rainbow. Not one could. They've gone very quiet.",
+          "startMs": 4105
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-pigeon",
+      "category": "event",
+      "url": "/voice/crystal-delta/convergence-the-pigeon.mp3",
+      "durationMs": 7743,
+      "title": "The Convergence: The Pigeon",
+      "overMusic": false,
+      "kit": "the-pigeon",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Prism",
+          "text": "A pigeon has walked into the chandelier.",
+          "startMs": 36
+        },
+        {
+          "speaker": "Prism",
+          "text": "A chandelier has walked into the pigeon.",
+          "startMs": 2379
+        },
+        {
+          "speaker": "The Tiny Miner",
+          "text": "It knows me. Said hello.",
+          "startMs": 4712
+        },
+        {
+          "speaker": "Prism",
+          "text": "It's never said hello to me.",
+          "startMs": 6299
+        }
+      ]
     }
   ]
 }

@@ -597,6 +597,143 @@
           "startMs": 8054
         }
       ]
+    },
+    {
+      "id": "convergence-missing-moon",
+      "category": "event",
+      "url": "/voice/event-horizon-surf/convergence-missing-moon.mp3",
+      "durationMs": 10789,
+      "title": "The Convergence: A Moon Goes Missing",
+      "overMusic": false,
+      "kit": "missing-moon",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Dash Coriolis",
+          "text": "Surf's weird today. Somebody's lost a moon. Nobody knows which.",
+          "startMs": 47
+        },
+        {
+          "speaker": "Dash Coriolis",
+          "text": "My money says it's out past the break. Nothing comes back from out there. It'll have the ride of its life, though.",
+          "startMs": 4484
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-smell",
+      "category": "event",
+      "url": "/voice/event-horizon-surf/convergence-the-smell.mp3",
+      "durationMs": 9360,
+      "title": "The Convergence: Toast, Everywhere",
+      "overMusic": false,
+      "kit": "the-smell",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Dash Coriolis",
+          "text": "Is it me, or does the whole beach smell like toast?",
+          "startMs": 37
+        },
+        {
+          "speaker": "Dash Coriolis",
+          "text": "Not Bonnie's marshmallow. That's still toasting. Everybody's toast, apparently. Not in a bad way!",
+          "startMs": 3335
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-song",
+      "category": "event",
+      "url": "/voice/event-horizon-surf/convergence-the-song.mp3",
+      "durationMs": 11302,
+      "title": "The Convergence: The Song Nobody Can Finish",
+      "overMusic": false,
+      "kit": "the-song",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Dash Coriolis",
+          "text": "Everybody's got the same song stuck, and nobody can finish it.",
+          "startMs": 36
+        },
+        {
+          "speaker": "Dash Coriolis",
+          "text": "Kai knew how it ends. He was humming it when he caught that wave. He'll be back in about nine hundred years. We'll ask him.",
+          "startMs": 4000
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-knock",
+      "category": "event",
+      "url": "/voice/event-horizon-surf/convergence-the-knock.mp3",
+      "durationMs": 10819,
+      "title": "The Convergence: Three Knocks",
+      "overMusic": false,
+      "kit": "the-knock",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Dash Coriolis",
+          "text": "Three knocks on the surf shack! Nobody there!",
+          "startMs": 44
+        },
+        {
+          "speaker": "Dash Coriolis",
+          "text": "Bonnie says they were knocking from the far side of the horizon. They'll get here in about a thousand years. We'll leave the door open.",
+          "startMs": 3078
+        }
+      ]
+    },
+    {
+      "id": "convergence-wrong-colour",
+      "category": "event",
+      "url": "/voice/event-horizon-surf/convergence-wrong-colour.mp3",
+      "durationMs": 8447,
+      "title": "The Convergence: A Colour With No Name",
+      "overMusic": false,
+      "kit": "wrong-colour",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Dash Coriolis",
+          "text": "Whoa. The sky just did a colour. Bonnie, did you see that?",
+          "startMs": 50
+        },
+        {
+          "speaker": "Bonnie, Lifeguard",
+          "text": "I waved at it.",
+          "startMs": 3501
+        },
+        {
+          "speaker": "Dash Coriolis",
+          "text": "She waved at it! Perfect goodbye, Bonnie! It's not coming back!",
+          "startMs": 4755
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-pigeon",
+      "category": "event",
+      "url": "/voice/event-horizon-surf/convergence-the-pigeon.mp3",
+      "durationMs": 11893,
+      "title": "The Convergence: The Pigeon",
+      "overMusic": false,
+      "kit": "the-pigeon",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Dash Coriolis",
+          "text": "There's a pigeon on the beach. It walked right up to the no returns flag, and turned round. Smart bird.",
+          "startMs": 40
+        },
+        {
+          "speaker": "Dash Coriolis",
+          "text": "It knows Bonnie! It's waving at Bonnie! Bonnie's waving back! Best wave I've ever seen!",
+          "startMs": 6504
+        }
+      ]
     }
   ]
 }

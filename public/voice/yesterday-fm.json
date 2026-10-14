@@ -717,6 +717,138 @@
           "startMs": 8771
         }
       ]
+    },
+    {
+      "id": "convergence-missing-moon",
+      "category": "event",
+      "url": "/voice/yesterday-fm/convergence-missing-moon.mp3",
+      "durationMs": 10610,
+      "title": "The Convergence: A Moon Goes Missing",
+      "overMusic": false,
+      "kit": "missing-moon",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Gordon Ago",
+          "text": "I'm told that today, a moon has gone missing. That's today, you understand. I don't do today.",
+          "startMs": 50
+        },
+        {
+          "speaker": "Gordon Ago",
+          "text": "But yesterday, all the moons were exactly where they should be. I counted. It was a lovely night.",
+          "startMs": 5316
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-smell",
+      "category": "event",
+      "url": "/voice/yesterday-fm/convergence-the-smell.mp3",
+      "durationMs": 10281,
+      "title": "The Convergence: Toast, Everywhere",
+      "overMusic": false,
+      "kit": "the-smell",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Gordon Ago",
+          "text": "Yesterday, nobody here made toast. I'm certain of it. So whatever you're smelling today, it isn't us.",
+          "startMs": 50
+        },
+        {
+          "speaker": "Gordon Ago",
+          "text": "Though I'll admit, it has me thinking about yesterday's breakfast. It was very good.",
+          "startMs": 5811
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-song",
+      "category": "event",
+      "url": "/voice/yesterday-fm/convergence-the-song.mp3",
+      "durationMs": 10741,
+      "title": "The Convergence: The Song Nobody Can Finish",
+      "overMusic": false,
+      "kit": "the-song",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Gordon Ago",
+          "text": "There's a song everyone can't finish today, I'm told. Yesterday it was on the radio. Right here. All the way through.",
+          "startMs": 50
+        },
+        {
+          "speaker": "Gordon Ago",
+          "text": "I should have paid more attention. You never think you'll need the end of something.",
+          "startMs": 6676
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-knock",
+      "category": "event",
+      "url": "/voice/yesterday-fm/convergence-the-knock.mp3",
+      "durationMs": 9345,
+      "title": "The Convergence: Three Knocks",
+      "overMusic": false,
+      "kit": "the-knock",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Gordon Ago",
+          "text": "Three knocks at your door today, I hear, and nobody there.",
+          "startMs": 45
+        },
+        {
+          "speaker": "Gordon Ago",
+          "text": "Yesterday there were three knocks at mine. I didn't answer. So I suppose they went on to you. Sorry about that.",
+          "startMs": 3633
+        }
+      ]
+    },
+    {
+      "id": "convergence-wrong-colour",
+      "category": "event",
+      "url": "/voice/yesterday-fm/convergence-wrong-colour.mp3",
+      "durationMs": 8465,
+      "title": "The Convergence: A Colour With No Name",
+      "overMusic": false,
+      "kit": "wrong-colour",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Gordon Ago",
+          "text": "The sky went a colour today, they're saying. Yesterday it was blue.",
+          "startMs": 50
+        },
+        {
+          "speaker": "Gordon Ago",
+          "text": "Plain old blue. Lovely, really. I'd stop and look at that too, if I were you.",
+          "startMs": 4022
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-pigeon",
+      "category": "event",
+      "url": "/voice/yesterday-fm/convergence-the-pigeon.mp3",
+      "durationMs": 10706,
+      "title": "The Convergence: The Pigeon",
+      "overMusic": false,
+      "kit": "the-pigeon",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Gordon Ago",
+          "text": "A pigeon walked into the studio yesterday. It looked at the calendar, and nodded.",
+          "startMs": 43
+        },
+        {
+          "speaker": "Gordon Ago",
+          "text": "It's been in everyone's studio today, I hear. It came here first. It likes to get the old news out of the way.",
+          "startMs": 4773
+        }
+      ]
     }
   ]
 }

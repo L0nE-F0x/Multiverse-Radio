@@ -34,13 +34,13 @@
       "id": "id-003",
       "category": "id",
       "url": "/voice/waystation-9/id-003.mp3",
-      "durationMs": 6990,
+      "durationMs": 7043,
       "overMusic": true,
       "lines": [
         {
           "speaker": "Big Rosalind",
-          "text": "Waystation Nine CB. Up, down or sideways, somebody's driving it tonight.",
-          "startMs": 46
+          "text": "Way station Nine CB. Up, down or sideways, somebody's driving it tonight.",
+          "startMs": 42
         }
       ]
     },
@@ -942,6 +942,169 @@
           "speaker": "Grandma Diesel",
           "text": "Widest there is, dear. Tell the drivers, if they see a big orange light coming up behind them, that's just me and the moon. Don't howl. It only encourages it.",
           "startMs": 6497
+        }
+      ]
+    },
+    {
+      "id": "convergence-missing-moon",
+      "category": "event",
+      "url": "/voice/waystation-9/convergence-missing-moon.mp3",
+      "durationMs": 12086,
+      "title": "The Convergence: A Moon Goes Missing",
+      "overMusic": false,
+      "kit": "missing-moon",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Midnight Mongoose",
+          "text": "Rosalind, I've lost a moon. Used to steer by it, on the old river road.",
+          "startMs": 49
+        },
+        {
+          "speaker": "Big Rosalind",
+          "text": "Everybody's lost one, Mongoose. Nobody can agree which.",
+          "startMs": 4776
+        },
+        {
+          "speaker": "Midnight Mongoose",
+          "text": "Well, mine was the one on the left. I'll steer by the fox.",
+          "startMs": 8391
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-smell",
+      "category": "event",
+      "url": "/voice/waystation-9/convergence-the-smell.mp3",
+      "durationMs": 9731,
+      "title": "The Convergence: Toast, Everywhere",
+      "overMusic": false,
+      "kit": "the-smell",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Grandma Diesel",
+          "text": "Breaker, Rosalind. Whole highway smells of toast.",
+          "startMs": 49
+        },
+        {
+          "speaker": "Big Rosalind",
+          "text": "Everywhere does, Diesel. It's not Dolores this time. Dolores is pouring coffee and looking very innocent.",
+          "startMs": 3717
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-song",
+      "category": "event",
+      "url": "/voice/waystation-9/convergence-the-song.mp3",
+      "durationMs": 9928,
+      "title": "The Convergence: The Song Nobody Can Finish",
+      "overMusic": false,
+      "kit": "the-song",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "The New Guy",
+          "text": "Uh, Rosalind? Everyone on the channel's humming the same song.",
+          "startMs": 50
+        },
+        {
+          "speaker": "Big Rosalind",
+          "text": "And nobody can finish it, rookie. Leave it be. A song with no end is just a long haul. We know all about those.",
+          "startMs": 3605
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-knock",
+      "category": "event",
+      "url": "/voice/waystation-9/convergence-the-knock.mp3",
+      "durationMs": 10505,
+      "title": "The Convergence: Three Knocks",
+      "overMusic": false,
+      "kit": "the-knock",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Big Rosalind",
+          "text": "Three knocks on the diner door. Nobody there.",
+          "startMs": 46
+        },
+        {
+          "speaker": "Big Rosalind",
+          "text": "Diesel says she had three knocks on the cab, doing seventy on the Up Road. That's the strange part, drivers. Nobody can knock at seventy.",
+          "startMs": 2939
+        }
+      ]
+    },
+    {
+      "id": "convergence-wrong-colour",
+      "category": "event",
+      "url": "/voice/waystation-9/convergence-wrong-colour.mp3",
+      "durationMs": 9634,
+      "title": "The Convergence: A Colour With No Name",
+      "overMusic": false,
+      "kit": "wrong-colour",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Midnight Mongoose",
+          "text": "Rosalind, the sky's gone a colour I've never seen.",
+          "startMs": 50
+        },
+        {
+          "speaker": "Big Rosalind",
+          "text": "Is it the sideways road?",
+          "startMs": 3476
+        },
+        {
+          "speaker": "Midnight Mongoose",
+          "text": "No. Nobody's got a word for it. Not even the sideways road.",
+          "startMs": 5719
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-pigeon",
+      "category": "event",
+      "url": "/voice/waystation-9/convergence-the-pigeon.mp3",
+      "durationMs": 10557,
+      "title": "The Convergence: The Pigeon",
+      "overMusic": false,
+      "kit": "the-pigeon",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Big Rosalind",
+          "text": "There's a pigeon at the counter. Walked in, sat on a stool, nodded at Dolores.",
+          "startMs": 43
+        },
+        {
+          "speaker": "Big Rosalind",
+          "text": "She's poured it a coffee. Says it's been in before. Drivers, if this is anybody's pigeon, it's welcome.",
+          "startMs": 4867
+        }
+      ]
+    },
+    {
+      "id": "roads-body-outer-band",
+      "category": "weather",
+      "url": "/voice/waystation-9/roads-body-outer-band.mp3",
+      "durationMs": 13018,
+      "overMusic": false,
+      "part": "body",
+      "kit": "roads",
+      "lines": [
+        {
+          "speaker": "Big Rosalind",
+          "text": "The Outer Band road, out past one hundred and eight. Brand new, and already jammed solid.",
+          "startMs": 42
+        },
+        {
+          "speaker": "Big Rosalind",
+          "text": "Drivers coming back say there's a whole station out there that does nothing but report it, every eight minutes. Rosalind respects that.",
+          "startMs": 5483
         }
       ]
     }
