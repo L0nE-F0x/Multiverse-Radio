@@ -33,11 +33,12 @@ describe('multiverse events', () => {
     for (let day = DAY0; day < DAY0 + 60; day++) {
       const events = eventsOnDay(day);
       expect(events.length).toBeGreaterThanOrEqual(3);
-      expect(events.length).toBeLessThanOrEqual(5);
+      expect(events.length).toBeLessThanOrEqual(events.some((e) => e.id === 'convergence') ? 6 : 5);
       for (const e of events) {
         expect(e.startMs).toBeGreaterThanOrEqual(previousEnd);
         expect(e.durationMs).toBeGreaterThanOrEqual(50_000);
-        expect(e.durationMs).toBeLessThanOrEqual(180_000);
+        // (The Convergence, on Saturdays, runs four to six minutes.)
+        expect(e.durationMs).toBeLessThanOrEqual(e.id === 'convergence' ? 360_000 : 180_000);
         expect(Math.floor(e.startMs / DAY_MS)).toBe(day);
         expect(Math.floor((e.startMs + e.durationMs) / DAY_MS)).toBe(day);
         expect(EVENT_IDS).toContain(e.id);
@@ -46,8 +47,8 @@ describe('multiverse events', () => {
         seen.add(e.id);
       }
     }
-    // The Convergence is weekly at a fixed time, not part of the daily draw.
-    expect(seen.size).toBe(EVENT_IDS.filter((e) => e !== 'convergence').length);
+    // Every kind turns up (the Convergence weekly, the rest in the daily draw).
+    expect(seen.size).toBe(EVENT_IDS.length);
   });
 
   it('happens at the same instant for everyone, whatever their time zone', () => {

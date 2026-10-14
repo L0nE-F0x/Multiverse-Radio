@@ -94,7 +94,20 @@ function parseClip(raw: unknown): VoiceClip | null {
   }
   if (raw.level !== undefined && Number.isFinite(Number(raw.level))) clip.level = Math.min(3, Math.max(0, Math.round(Number(raw.level))));
   if ((EVENT_IDS as readonly string[]).includes(raw.event as string)) clip.event = raw.event as string;
+  // v4: arcs and weekdays.
+  if (isRecord(raw.arc) && isId(raw.arc.id) && Number.isInteger(Number(raw.arc.step)) && Number(raw.arc.step) >= 1) {
+    clip.arc = { id: raw.arc.id, step: Number(raw.arc.step) };
+  }
+  const days = parseDays(raw.days);
+  if (days) clip.days = days;
   return clip;
+}
+
+/** Local weekdays 0–6 (0 = Sunday), deduplicated and sorted; undefined if none are valid. */
+function parseDays(raw: unknown): number[] | undefined {
+  if (!Array.isArray(raw)) return undefined;
+  const days = [...new Set(raw.map(Number).filter((d) => Number.isInteger(d) && d >= 0 && d <= 6))].sort((a, b) => a - b);
+  return days.length ? days : undefined;
 }
 
 type Part = NonNullable<VoiceClip['part']>;
@@ -116,6 +129,8 @@ export function parseShowIndex(data: unknown): ShowIndex | null {
       }
       const show: ShowDef = { id: raw.id, name: raw.name, blurb: typeof raw.blurb === 'string' ? raw.blurb : '', start, end };
       if (typeof raw.host === 'string' && raw.host) show.host = raw.host;
+      const days = parseDays(raw.days);
+      if (days) show.days = days;
       return [show];
     });
     if (valid.length) shows[stationId] = valid;

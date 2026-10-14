@@ -4,6 +4,10 @@
 // Power, tune, fine-tune across the whole dial, skip and time-warp around the schedule;
 // force multiverse events and HUSH notices; watch the timeline, the bus meters and the
 // ducking; read captions. `window.__mvr` exposes the internals for browser tests.
+//
+// v4: shifts and heading (with an override), a fake clock (warp to the moments that matter),
+// an unlock tester for the four new secrets, Free Frequency's drift and jams, a preview of
+// the Convergence, and the station quirks.
 
 import { useEffect, useRef, useState, type ReactNode } from 'react';
 import { createRoot } from 'react-dom/client';
@@ -15,11 +19,15 @@ import { CATEGORY_LABELS, segmentArtist, segmentTitle } from '../broadcast/descr
 import * as dial from '../broadcast/dial';
 import { useBroadcastEffects } from '../broadcast/effects';
 import * as events from '../broadcast/events';
-import { HUSH_LEVEL_AT_MS } from '../broadcast/hush';
+import { HUSH_LEVEL_AT_MS, OFF_COURSE, dueArcClip } from '../broadcast/hush';
 import { POOLS } from '../broadcast/library';
+import * as quirks from '../broadcast/quirks';
 import { HOUR_MS } from '../broadcast/scheduler';
-import { director, library, useBroadcast } from '../broadcast/store';
-import { localTime } from '../broadcast/time';
+import * as secrets from '../broadcast/secrets';
+import { HEADING_SETTLES_AT, SHIFT_MIN_MS } from '../broadcast/shifts';
+import { director, library, progress, useBroadcast } from '../broadcast/store';
+import { storage } from '../broadcast/storage';
+import { DAY_MS, MIN_MS, localMinuteToMs, localTime, nightOf } from '../broadcast/time';
 import { EVENT_IDS, type EventId, type Segment, type StationDef, type Tuned, type VoiceClip, type VoiceManifest } from '../broadcast/types';
 import { STATIONS } from '../stations/roster';
 
@@ -31,6 +39,9 @@ Object.assign(window, {
     dial,
     events,
     loadFixtures,
+    progress,
+    secrets,
+    quirks,
   },
 });
 
@@ -153,6 +164,10 @@ function App() {
       <div className="mt-4 grid gap-4 lg:grid-cols-2">
         <DialPanel />
         <LivingPanel />
+      </div>
+
+      <div className="mt-4">
+        <V4Panel />
       </div>
 
       <div className="mt-4 grid gap-4 lg:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)]">
@@ -434,6 +449,237 @@ async function loadFixtures(): Promise<void> {
   });
 }
 
+// ── v4: off course ────────────────────────────────────────────────────────────
+
+const WEEKDAYS = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+const V4_SECRETS = STATIONS.filter((s) => s.unlock && s.unlock.kind !== 'tune');
+
+/** The next wall-clock moment (after now) at a local hh:mm, optionally on a local weekday. */
+function nextLocal(hh: number, mm: number, weekday?: number): number {
+  const tz = director.tzOffset;
+  const now = director.clock.now();
+  const today = localTime(now, tz).day;
+  for (let day = today; day < today + 9; day++) {
+    const at = localMinuteToMs(day, hh * 60 + mm, tz);
+    if (at > now && (weekday === undefined || localTime(at, tz).weekday === weekday)) return at;
+  }
+  return now;
+}
+
+const warpTo = (at: number) => director.warpBy(at - director.clock.now());
+
+/** Changes the found list everywhere (store, storage, the dial). */
+function setDiscovered(ids: string[]) {
+  storage.setDiscovered(ids);
+  useBroadcast.setState({ discovered: ids });
+  director.setSecrets(ids, progress.watcher.visitor);
+}
+
+/** Tunes a dial sequence: each frequency held a little longer than it needs. */
+function playSequence(frequencies: number[], holdMs: number) {
+  const { tuneFrequency } = useBroadcast.getState();
+  frequencies.forEach((f, i) => setTimeout(() => tuneFrequency(f), i * (holdMs + 900)));
+}
+
+/** The nearest frequency in pure static (nothing bleeding through), searching outwards. */
+function nearestQuiet(from: number): number | null {
+  for (let d = 0; d < 40; d += 0.05) {
+    for (const f of [from + d, from - d]) {
+      if (f < 76 || f > 160) continue;
+      if (dial.pureStatic(dial.receptionAt(f))) return Math.round(f * 100) / 100;
+    }
+  }
+  return null;
+}
+
+function V4Panel() {
+  const state = useBroadcast();
+  useNow(2);
+  const wall = director.clock.now();
+  const tz = director.tzOffset;
+  const local = localTime(wall, tz);
+  const d = director.debug();
+  const shifts = progress.shifts;
+  const aired = progress.arcs.aired[OFF_COURSE] ?? [];
+  const due = dueArcClip(library.pool(POOLS.ship), state.shifts, progress.arcs.aired, () => 0);
+  const arcSteps = [...new Set(library.pool(POOLS.ship).flatMap((c) => (c.arc?.id === OFF_COURSE ? [c.arc.step] : [])))].sort((a, b) => a - b);
+  const ff = STATIONS.find((s) => s.id === 'free-frequency')!;
+  const ffNow = state.stations.find((s) => s.id === ff.id) ?? ff;
+  const jamClips = library.pool(POOLS.ship).filter((c) => c.kit === 'jam').length;
+  const conv = events.nextConvergence(wall - 10 * MIN_MS);
+  const convOn = state.event?.id === 'convergence' ? state.event : null;
+  const plan = convOn ? overlay().plan(convOn, director.program?.id ?? null) : null;
+  const topic = events.convergenceTopic(convOn?.startMs ?? conv.startMs);
+  const reaction = director.program ? events.convergenceReaction(library.pool(director.program.id), topic, conv.startMs) : undefined;
+  const night = nightOf(wall, tz);
+  const quiet = progress.watcher.quietMs(wall);
+  const eights = quirks.eightsInHour(Math.floor(wall / HOUR_MS) * HOUR_MS, tz).map((ms) => Math.floor(wall / HOUR_MS) * HOUR_MS + ms);
+  const nextEight = [...eights, ...eights.map((t) => t + HOUR_MS)].find((t) => t > wall)!;
+
+  return (
+    <Panel title="v4 · off course">
+      <div className="grid gap-4 lg:grid-cols-3">
+        <div>
+          <h3 className="mb-1 text-cream/60">Shifts and heading</h3>
+          <dl className="grid grid-cols-[7rem_minmax(0,1fr)] gap-x-2 gap-y-1" data-testid="v4-shifts">
+            <dt className="text-cream/50">shifts</dt>
+            <dd data-testid="shifts">
+              {state.shifts}
+              {shifts.override !== null ? ' (pinned)' : ''} · tonight {mmss(shifts.tonightMs(wall))} / {mmss(SHIFT_MIN_MS)}
+            </dd>
+            <dt className="text-cream/50">heading</dt>
+            <dd data-testid="heading">
+              {state.heading.toFixed(1)}°{state.shifts >= HEADING_SETTLES_AT ? ' (settled)' : ''}
+            </dd>
+            <dt className="text-cream/50">arc aired</dt>
+            <dd data-testid="arc">
+              {aired.join(', ') || '—'} · steps in pool {arcSteps.join(',') || 'none'} · due {due?.arc ? `step ${due.arc.step}` : '—'}
+            </dd>
+          </dl>
+          <div className="mt-2 flex flex-wrap items-center gap-2">
+            <select
+              className="rounded border border-cream/20 bg-well px-2 py-1.5"
+              value={shifts.override ?? 'auto'}
+              onChange={(e) => (shifts.override = e.target.value === 'auto' ? null : Number(e.target.value))}
+              data-testid="shift-override"
+            >
+              <option value="auto">shifts: as worked</option>
+              {Array.from({ length: 11 }, (_, i) => (
+                <option key={i} value={i}>
+                  {i} shifts
+                </option>
+              ))}
+            </select>
+            <Button onClick={() => overlay().hushNow()}>HUSH now</Button>
+            <Button onClick={() => progress.arcs.reset(OFF_COURSE)}>Reset arc</Button>
+          </div>
+        </div>
+
+        <div>
+          <h3 className="mb-1 text-cream/60">Fake clock (local {WEEKDAYS[local.weekday]} {time(wall)}, night {night})</h3>
+          <div className="flex flex-wrap gap-1.5" data-testid="v4-clock">
+            <Button onClick={() => warpTo(nextLocal(3, 32, undefined) + 45_000)}>03:32:45 (Minute Between)</Button>
+            <Button onClick={() => warpTo(nextLocal(5, 59) + 30_000)}>05:59:30 (drift)</Button>
+            <Button onClick={() => warpTo(nextLocal(1, 59, 0) + 40_000)}>Sun 01:59:40 (Greg)</Button>
+            <Button onClick={() => warpTo(conv.startMs - 15_000)} data-testid="warp-convergence">
+              Convergence −15 s
+            </Button>
+            <Button onClick={() => warpTo(nextEight - 30_000)}>next :x8 −30 s</Button>
+            <Button onClick={() => director.warpBy(DAY_MS)}>+1 day</Button>
+            <Button onClick={() => director.warpBy(-director.warp)}>reset</Button>
+          </div>
+          <h3 className="mt-3 mb-1 text-cream/60">Free Frequency</h3>
+          <p data-testid="v4-drift">
+            tonight {ffNow.frequency.toFixed(2)} · tomorrow {secrets.frequencyTomorrow(ff, wall, tz).toFixed(2)} · jam clips {jamClips}
+            {d.jamInMs ? ` · jam in ${mmss(d.jamInMs)}` : ''}
+            {d.jamming && <span className="text-ember"> · JAMMED</span>}
+          </p>
+          <div className="mt-1 flex flex-wrap gap-1.5">
+            <Button onClick={() => state.tune(ff.id)}>Tune Free Frequency</Button>
+            <Button onClick={() => director.jamNow()} data-testid="jam-now">
+              Jam now
+            </Button>
+          </div>
+        </div>
+
+        <div>
+          <h3 className="mb-1 text-cream/60">Convergence</h3>
+          <p data-testid="v4-convergence">
+            {convOn ? (
+              <span className="text-ember">
+                ON: {events.convergenceTopic(convOn.startMs)} · {mmss(convOn.startMs + convOn.durationMs - wall)} left · {plan?.clips.length ?? 0} shared clips
+                {plan?.convergence ? ` · reactions ${time(plan.convergence.fromMs)}–${time(plan.convergence.toMs)}` : ''}
+              </span>
+            ) : (
+              <>
+                next {new Date(conv.startMs).toUTCString().slice(0, 22)} UTC ({mmss(conv.durationMs)}) · topic {topic}
+              </>
+            )}
+            <span className="text-cream/40"> · this station’s reaction: {reaction ? reaction.id : 'none'}</span>
+          </p>
+          <div className="mt-1 flex flex-wrap gap-1.5">
+            <Button onClick={() => overlay().force('convergence', director.clock.now(), 4 * MIN_MS)} data-testid="force-convergence">
+              Force convergence (this week’s topic)
+            </Button>
+          </div>
+          <h3 className="mt-3 mb-1 text-cream/60">Quirks</h3>
+          <p>
+            afterparty {quirks.afterpartyBpm(local.minuteOfDay)} BPM · moon {(quirks.moonIllumination(wall) * 100).toFixed(0)}%
+            {quirks.fullMoonNight(night, tz) ? ' (full-moon night)' : ''} · next :x8 in {mmss(nextEight - wall)}
+          </p>
+        </div>
+      </div>
+
+      <h3 className="mt-4 mb-1 text-cream/60">Unlock tester</h3>
+      <table className="w-full text-left" data-testid="v4-unlocks">
+        <tbody>
+          {V4_SECRETS.map((s) => {
+            const found = state.discovered.includes(s.id);
+            const onAir = director.layout.onAir.find((x) => x.id === s.id);
+            const u = s.unlock!;
+            let how = '';
+            let action: ReactNode = null;
+            if (u.kind === 'sequence') {
+              how = `${u.frequencies.join(' → ')} (${u.holdMs / 1000} s each, ${u.withinMs / 1000} s) · matched ${progress.watcher.sequenceProgress(s.id, wall)}/${u.frequencies.length}`;
+              action = <Button onClick={() => playSequence(u.frequencies, u.holdMs)}>Play sequence</Button>;
+            } else if (u.kind === 'clock') {
+              how = `${u.windows.map((w) => `${w.from}–${w.to}`).join(', ')} local`;
+              action = <Button onClick={() => warpTo(nextLocal(Number(u.windows[0]!.from.slice(0, 2)), Number(u.windows[0]!.from.slice(3)) ) + 5000)}>Warp to window</Button>;
+            } else if (u.kind === 'idle') {
+              how = `${u.afterMs / 60_000} min in pure static · quiet for ${mmss(quiet)}${progress.watcher.visitor ? ` · visiting at ${progress.watcher.visitor.frequency}` : ''}`;
+              action = (
+                <>
+                  <Button
+                    onClick={() => {
+                      const f = nearestQuiet(state.frequency);
+                      if (f !== null) state.tuneFrequency(f);
+                    }}
+                  >
+                    Find pure static
+                  </Button>{' '}
+                  <Button onClick={() => progress.watcher.rushQuiet(u.afterMs)}>Skip the wait</Button>
+                </>
+              );
+            } else if (u.kind === 'shifts') {
+              how = `${u.count} shifts, then HUSH’s arc step ${u.count}`;
+              action = (
+                <Button
+                  onClick={() => {
+                    shifts.override = Math.max(u.count, shifts.override ?? 0);
+                    overlay().hushNow();
+                  }}
+                >
+                  {u.count} shifts + HUSH now
+                </Button>
+              );
+            }
+            return (
+              <tr key={s.id} className="border-t border-cream/10">
+                <td className="py-1 pr-2">
+                  {s.frequency.toFixed(2)} {s.name}
+                </td>
+                <td className="pr-2 text-cream/50">{u.kind}</td>
+                <td className="pr-2" data-testid={`unlock-${s.id}`}>
+                  {found ? '✓ found' : '—'} · {onAir ? `on air ${onAir.frequency.toFixed(2)}` : 'off air'}
+                </td>
+                <td className="pr-2 text-cream/60">{how}</td>
+                <td>
+                  {action} <Button onClick={() => state.tuneFrequency(s.frequency)}>Tune</Button>
+                </td>
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
+      <div className="mt-2">
+        <Button onClick={() => setDiscovered(state.discovered.filter((id) => !V4_SECRETS.some((s) => s.id === id)))} data-testid="forget-v4">
+          Forget the v4 secrets
+        </Button>
+      </div>
+    </Panel>
+  );
+}
+
 // ── Timeline, meters, engine ──────────────────────────────────────────────────
 
 function Timeline({ station, stationNow }: { station: StationDef; stationNow: number }) {
@@ -485,7 +731,14 @@ function SegmentLabel({ segment }: { segment: Segment }) {
     );
   }
   const { clip } = segment;
-  const tags = [clip.daypart, clip.part && `${clip.part}${clip.kit ? `:${clip.kit}` : ''}`, clip.show && `show:${clip.show}`, clip.serial && `${clip.serial.id} #${clip.serial.episode}`, clip.dates?.join(',')].filter(Boolean);
+  const tags = [
+    clip.daypart,
+    clip.part ? `${clip.part}${clip.kit ? `:${clip.kit}` : ''}` : clip.kit && `kit:${clip.kit}`,
+    clip.show && `show:${clip.show}`,
+    clip.serial && `${clip.serial.id} #${clip.serial.episode}`,
+    clip.dates?.join(','),
+    clip.days && `days:${clip.days.join(',')}`,
+  ].filter(Boolean);
   return (
     <>
       <span className="text-teal">{CATEGORY_LABELS[clip.category]}</span> {clip.title ?? clip.id}

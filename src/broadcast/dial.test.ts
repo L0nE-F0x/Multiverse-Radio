@@ -1,29 +1,45 @@
 import { beforeAll, describe, expect, it } from 'vitest';
 import { pirateIdentity } from '../content';
-import { MAIN_STATIONS, STATIONS } from '../stations/roster';
+import { MAIN_STATIONS, STATIONS, stationById } from '../stations/roster';
 import {
   BLEED_RANGE,
   DISCOVER_SIGNAL,
   REACH,
+  TUNED_MIN,
   bleedOf,
+  dialStations,
   loadPirateNames,
+  mainStations,
   oddities,
   pirateAt,
   pirateStation,
   pirates,
+  pureStatic,
   receptionAt,
+  setDialLayout,
   signalOf,
   stationForId,
   stepFrom,
   transmitters,
 } from './dial';
 import { hash } from './random';
+import { DRIFT_SLOTS, dialLayout, driftFrequency } from './secrets';
+import { fixedTzOffset, nightOf } from './time';
 import { DIAL, ODDITY_IDS, PHOSPHOR_IDS, RECIPE_IDS, SCENE_IDS } from './types';
 
 const station = { frequency: 100, width: REACH.station, peak: 1 };
+const UTC = fixedTzOffset(0);
+const SECRETS = STATIONS.filter((s) => s.secret).map((s) => s.id);
+/** 03:40 UTC: inside The Minute Between's window. */
+const AT_0340 = Date.UTC(2026, 9, 14, 3, 40);
+/** Every secret found and The Minute Between on the air: the whole roster transmits. */
+const everything = () => setDialLayout(dialLayout({ ms: AT_0340, tz: UTC, discovered: SECRETS }));
 
 describe('the dial', () => {
-  beforeAll(() => loadPirateNames());
+  beforeAll(() => {
+    everything();
+    return loadPirateNames();
+  });
 
   it('has a smooth signal curve that peaks at the centre and fades over about ±0.15 MHz', () => {
     expect(signalOf(station, 100)).toBe(1);
@@ -45,11 +61,13 @@ describe('the dial', () => {
   });
 
   it('puts every roster station at its frequency, at full strength', () => {
-    for (const s of STATIONS) {
+    expect(dialStations()).toHaveLength(STATIONS.length);
+    for (const s of dialStations()) {
       const r = receptionAt(s.frequency);
       expect(r.signal).toBe(1);
       expect(r.lock?.id).toBe(s.id);
       expect(r.tuned).toEqual({ kind: 'station', station: s });
+      expect(stationForId(s.id)).toBe(s);
     }
   });
 
@@ -65,7 +83,7 @@ describe('the dial', () => {
   });
 
   it('hides secret stations behind a very narrow signal', () => {
-    for (const s of STATIONS.filter((x) => x.secret)) {
+    for (const s of dialStations().filter((x) => x.secret)) {
       expect(receptionAt(s.frequency).signal).toBe(1);
       expect(receptionAt(s.frequency + 0.05).signal).toBeLessThan(DISCOVER_SIGNAL);
       // (Transmission Zero sits at the very bottom of the dial.)
@@ -76,17 +94,26 @@ describe('the dial', () => {
     }
   });
 
-  it('steps through the main stations in order, wrapping', () => {
+  it('steps through the main stations in order, both bands, wrapping', () => {
+    const main = mainStations();
+    expect(main.map((s) => s.id).sort()).toEqual(MAIN_STATIONS.map((s) => s.id).sort());
     let f: number = DIAL.min;
     const seen: string[] = [];
-    for (let i = 0; i < MAIN_STATIONS.length; i++) {
+    for (let i = 0; i < main.length; i++) {
       const next = stepFrom(f, 1);
       seen.push(next.id);
       f = next.frequency;
     }
-    expect(seen).toEqual(MAIN_STATIONS.map((s) => s.id));
-    expect(stepFrom(f, 1).id).toBe(MAIN_STATIONS[0]!.id);
-    expect(stepFrom(MAIN_STATIONS[0]!.frequency, -1).id).toBe(MAIN_STATIONS[MAIN_STATIONS.length - 1]!.id);
+    expect(seen).toEqual(main.map((s) => s.id));
+    expect(seen).toContain('heat-death-afterparty');
+    expect(seen).toContain('free-frequency');
+    expect(stepFrom(f, 1).id).toBe(main[0]!.id);
+    expect(stepFrom(main[0]!.frequency, -1).id).toBe(main[main.length - 1]!.id);
+    // Off the top of the main band, the next station up is the first in the Outer Band.
+    const outer = main.filter((s) => s.frequency > DIAL.outerBand[0] && s.frequency <= DIAL.outerBand[1]);
+    expect(outer).toHaveLength(12);
+    expect(stepFrom(DIAL.mainBand[1] - 0.01, 1)).toBe(outer[0]);
+    expect(stepFrom(DIAL.outerBand[1], -1)).toBe(outer[outer.length - 1]);
   });
 
   it('places pirates deterministically: sparse in the main band, dense beyond it', () => {
@@ -105,9 +132,16 @@ describe('the dial', () => {
     expect(main.length).toBeLessThan(30);
     expect(deep.length / (DIAL.max - hi)).toBeGreaterThan(1); // more than one per MHz
     expect(low.length / (lo - DIAL.min)).toBeGreaterThan(1);
-    for (const p of main) {
+    for (const p of list) {
       for (const s of MAIN_STATIONS) expect(Math.abs(p.frequency - s.frequency)).toBeGreaterThanOrEqual(0.2 - 1e-9);
+      for (const f of DRIFT_SLOTS) expect(Math.abs(p.frequency - f)).toBeGreaterThanOrEqual(0.2 - 1e-9);
     }
+    // The Outer Band has stations of its own: a few pirates, far fewer than the deep band.
+    const [olo, ohi] = DIAL.outerBand;
+    const outer = list.filter((p) => p.frequency > olo && p.frequency <= ohi);
+    const beyond = list.filter((p) => p.frequency > ohi);
+    expect(outer.length).toBeGreaterThan(0);
+    expect(outer.length / (ohi - olo)).toBeLessThan((beyond.length / (DIAL.max - ohi)) * 0.6);
     // Pirates never overlap each other or anything else.
     const all = transmitters();
     for (let i = 1; i < all.length; i++) {
@@ -161,6 +195,62 @@ describe('the dial', () => {
       }
       expect(o.station.recipe).toBe(o.oddity);
       for (const s of STATIONS) expect(Math.abs(o.frequency - s.frequency)).toBeGreaterThanOrEqual(0.3 - 1e-9);
+      for (const f of DRIFT_SLOTS) expect(Math.abs(o.frequency - f)).toBeGreaterThanOrEqual(0.3 - 1e-9);
     }
+  });
+});
+
+describe('the dial, v4 layout', () => {
+  beforeAll(() => loadPirateNames());
+
+  it('puts Free Frequency at tonight’s drift slot, and nowhere else', () => {
+    const ff = stationById('free-frequency')!;
+    for (let d = 0; d < 6; d++) {
+      const ms = AT_0340 + d * 86_400_000;
+      setDialLayout(dialLayout({ ms, tz: UTC, discovered: [] }));
+      const tonight = driftFrequency(ff, nightOf(ms, UTC));
+      const def = stationForId('free-frequency')!;
+      expect(def.frequency).toBe(tonight);
+      expect(dialStations().find((s) => s.id === 'free-frequency')).toBe(def);
+      expect(receptionAt(tonight).tuned).toEqual({ kind: 'station', station: def });
+      for (const f of ff.drift!) if (f !== tonight) expect(receptionAt(f).signal).toBeLessThan(TUNED_MIN);
+    }
+    everything();
+  });
+
+  it('keeps gated secrets off the air until they open or are found', () => {
+    const noon = Date.UTC(2026, 9, 14, 12, 0);
+    setDialLayout(dialLayout({ ms: noon, tz: UTC, discovered: [] }));
+    for (const id of ['the-switchboard', 'minute-between', 'the-harbour', 'something-listening']) {
+      const s = stationById(id)!;
+      expect(receptionAt(s.frequency).lock?.id).not.toBe(id);
+      expect(receptionAt(s.frequency).tuned.kind).toBe('static');
+      // Still known by id (for the guide and links), at its own frequency.
+      expect(stationForId(id)?.frequency).toBe(s.frequency);
+    }
+    // v3 secrets are always there.
+    for (const s of STATIONS.filter((x) => x.secret && !x.unlock)) expect(receptionAt(s.frequency).lock?.id).toBe(s.id);
+    // The Minute Between opens on the clock, found or not.
+    setDialLayout(dialLayout({ ms: AT_0340, tz: UTC, discovered: [] }));
+    expect(receptionAt(133.3).lock?.id).toBe('minute-between');
+    // A visitor sits where the listener was, instead of at its own frequency.
+    setDialLayout(dialLayout({ ms: noon, tz: UTC, discovered: ['something-listening'], visitor: { id: 'something-listening', frequency: 125.55 } }));
+    expect(receptionAt(125.55).tuned).toMatchObject({ kind: 'station', station: { id: 'something-listening', frequency: 125.55 } });
+    expect(receptionAt(144.4).lock?.id).not.toBe('something-listening');
+    setDialLayout(dialLayout({ ms: noon, tz: UTC, discovered: ['something-listening'] }));
+    expect(receptionAt(144.4).lock?.id).toBe('something-listening');
+    everything();
+  });
+
+  it('leaves stretches of pure static (nothing bleeding through) for patient listeners', () => {
+    const quiet = (from: number, to: number) => {
+      let n = 0;
+      for (let f = from; f < to; f += 0.05) if (pureStatic(receptionAt(f))) n++;
+      return n;
+    };
+    expect(quiet(118, 160)).toBeGreaterThan(30);
+    expect(quiet(DIAL.outerBand[0], DIAL.outerBand[1])).toBeGreaterThan(2);
+    // Right next to a station isn't pure static, whatever the signal says.
+    expect(pureStatic(receptionAt(stationById('void-beats')!.frequency + REACH.station + 0.01))).toBe(false);
   });
 });
