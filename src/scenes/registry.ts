@@ -4,6 +4,7 @@
 import type { SceneId } from '../broadcast/types';
 import { DEEP_SCENES } from './registry-deep';
 import { STATION_SCENES_V3 } from './registry-stations';
+import { MUSIC_SCENES_V4 } from './registry-v4a';
 import { TALK_SCENES_V4 } from './registry-v4b';
 import type { SceneDef } from './types';
 
@@ -16,6 +17,7 @@ export interface SceneEntry {
 export const SCENES: Partial<Record<SceneId, SceneEntry>> = {
   ...STATION_SCENES_V3,
   ...DEEP_SCENES,
+  ...MUSIC_SCENES_V4,
   ...TALK_SCENES_V4,
   'study-desk': {
     label: 'A sleepy many-eyed creature in big headphones studies at a desk by a window onto the purple void.',

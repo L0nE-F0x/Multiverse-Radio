@@ -29,9 +29,7 @@ function frame(): Frame {
 
 describe('scene registry', () => {
   it('has a scene module for every SceneId and nothing else', () => {
-    // TODO(v4 integration): compare against every SceneId once the v4 scenes land.
-    const v4 = SCENE_IDS.slice(SCENE_IDS.indexOf('roller-disco'));
-    expect(Object.keys(SCENES).sort()).toEqual(SCENE_IDS.filter((id) => !v4.includes(id) || id in SCENES).sort());
+    expect(Object.keys(SCENES).sort()).toEqual([...SCENE_IDS].sort());
   });
 
   it('gives every scene a short one-sentence aria-label', () => {
