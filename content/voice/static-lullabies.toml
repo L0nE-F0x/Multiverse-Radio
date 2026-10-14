@@ -486,3 +486,15 @@ lines = [
   { say = "hush", text = "I could. I hear everything quiet. It was lovely.", gap = 1.2 },
   { say = "hush", text = "No, I won't tell you. It was for whoever was leaning in." },
 ]
+
+
+# ── v4: the Outer Band. Relay ships are drifting, and new stations are coming in from
+#    beyond 108 (108-118 MHz). Light mentions only; nobody knows why yet. ──
+
+[[clip]]
+id = "dj-outer-band"
+category = "dj"
+lines = [
+  { say = "host", text = "The dial's longer than it used to be. Out past one hundred and eight, there are new voices. Very faint." },
+  { say = "hush", text = "Don't be frightened of them. They're just more people, awake. Like you.", gap = 0.8 },
+]

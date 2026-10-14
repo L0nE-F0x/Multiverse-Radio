@@ -399,3 +399,15 @@ lines = [
   { say = "host", text = "A pigeon has come aboard. Below the waterline. Perfectly dry." },
   { say = "host", text = "It walked to the wheel as if it's sailed with us before. Maybe it has. The crew are saluting it. The ship is fine." },
 ]
+
+
+# ── v4: the Outer Band. Relay ships are drifting, and new stations are coming in from
+#    beyond 108 (108-118 MHz). Light mentions only; nobody knows why yet. ──
+
+[[clip]]
+id = "dj-outer-band"
+category = "dj"
+lines = [
+  { say = "host", text = "Ahoy, the Nightjar. Your lamp's further off than it was, up there above the fog. Drifting, are you?" },
+  { say = "host", text = "Happens to the best of ships. Mind how you go, past one hundred and eight. There's new ports out there, and some of them are playing disco." },
+]

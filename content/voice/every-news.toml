@@ -1684,3 +1684,26 @@ lines = [
   { say = "kim", text = "And a voice said, number, please. She's handed me the receiver, Dale. It's still warm." },
   { say = "dale", text = "Thank you, Kim. We have tried this ourselves. We got the traffic. More at eleven." },
 ]
+
+
+# ── v4: the Outer Band. Relay ships are drifting, and new stations are coming in from
+#    beyond 108 (108-118 MHz). Light mentions only; nobody knows why yet. ──
+
+[[clip]]
+id = "news-body-outer-band"
+category = "news"
+kit = "news"
+part = "body"
+lines = [
+  { say = "dale", text = "Navigation. The Multiverse Broadcast Authority reports that several relay ships are drifting from their usual courses. Officials describe the drift as within tolerance. Asked whose tolerance, officials said, ours." },
+  { say = "dale", text = "As the ships drift, listeners report new stations coming in above one hundred and eight. So far: disco, a courtroom, and traffic for a wormhole." },
+]
+
+[[clip]]
+id = "weather-body-outer-band"
+category = "weather"
+kit = "weather"
+part = "body"
+lines = [
+  { say = "skip", text = "Space weather! The relay ships are drifting a little tonight, so if you hear new stations out past one hundred and eight, that's not interference, folks. That's neighbours! Give them a wave!" },
+]

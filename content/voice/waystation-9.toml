@@ -554,3 +554,17 @@ lines = [
   { say = "host", text = "There's a pigeon at the counter. Walked in, sat on a stool, nodded at Dolores." },
   { say = "host", text = "She's poured it a coffee. Says it's been in before. Drivers, if this is anybody's pigeon, it's welcome." },
 ]
+
+
+# ── v4: the Outer Band. Relay ships are drifting, and new stations are coming in from
+#    beyond 108 (108-118 MHz). Light mentions only; nobody knows why yet. ──
+
+[[clip]]
+id = "roads-body-outer-band"
+category = "weather"
+kit = "roads"
+part = "body"
+lines = [
+  { say = "host", text = "The Outer Band road, out past one hundred and eight. Brand new, and already jammed solid." },
+  { say = "host", text = "Drivers coming back say there's a whole station out there that does nothing but report it, every eight minutes. Rosalind respects that." },
+]

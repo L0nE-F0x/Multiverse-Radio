@@ -1188,3 +1188,17 @@ lines = [
   { say = "linda", text = "She is, Rex. She's very patient.", gap = 0.8 },
   { say = "rex", text = "That's lost and found, folks! If any of it's yours, bring a box!" },
 ]
+
+
+# ── v4: the Outer Band. Relay ships are drifting, and new stations are coming in from
+#    beyond 108 (108-118 MHz). Light mentions only; nobody knows why yet. ──
+
+[[clip]]
+id = "ad-outer-band"
+category = "ad"
+title = "Bellows Pre-Owned Frequencies"
+lines = [
+  { say = "rex", text = "Folks, Bellows Pre-Owned Frequencies! Brand new frequencies, just come in past one hundred and eight! Barely broadcast on!" },
+  { say = "rex", text = "Want your own little patch of the dial? Pick a number! Any number! Point a radio at it, and it's yours!" },
+  { say = "linda", text = "Frequencies may drift. Frequencies may already be occupied by a disco, a courtroom or a pirate. Rex does not own any frequencies. Nobody does. That's the point of them." },
+]

@@ -572,3 +572,17 @@ lines = [
   { say = "host", text = "A pigeon walked into the studio just now, and sat on the noticeboard. It seems to know everybody." },
   { say = "host", text = "It nodded at Biscuit, and Biscuit nodded back. If it's yours, it's fine. It likes the view." },
 ]
+
+
+# ── v4: the Outer Band. Relay ships are drifting, and new stations are coming in from
+#    beyond 108 (108-118 MHz). Light mentions only; nobody knows why yet. ──
+
+[[clip]]
+id = "notice-body-outer-band"
+category = "psa"
+kit = "notices"
+part = "body"
+lines = [
+  { say = "host", text = "Notice. The ship that drifts over the Hollow at night is a little further east than usual. Several residents have waved and not been waved back at." },
+  { say = "host", text = "Please don't take it personally. I'm told it's picking up a lot of new stations. It's busy." },
+]

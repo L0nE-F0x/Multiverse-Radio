@@ -536,3 +536,15 @@ lines = [
   { say = "host", text = "Did anybody catch The Quiet Corner with Greg at the weekend? Over on the Lounge? I turned it all the way up. I put my ear on the speaker." },
   { say = "host", text = "Bold. Spare. I think he said hello. Greg, buddy, that was the most rad hour of radio I have never heard." },
 ]
+
+
+# ── v4: the Outer Band. Relay ships are drifting, and new stations are coming in from
+#    beyond 108 (108-118 MHz). Light mentions only; nobody knows why yet. ──
+
+[[clip]]
+id = "dj-outer-band"
+category = "dj"
+lines = [
+  { say = "host", text = "Big shout-out to the new stations out past one hundred and eight! There's one out there where it's been Saturday night since nineteen seventy seven." },
+  { say = "host", text = "I tuned in for one song. Stayed six hours. Not even mad. That's commitment. That's rad." },
+]

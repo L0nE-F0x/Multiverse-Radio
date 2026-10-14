@@ -798,3 +798,16 @@ lines = [
   { say = "host", text = "The Department does not connect calls between universes. That is the Switchboard. The Switchboard does not take calls from the queue." },
   { say = "host", text = "Please hang up, and try advice, then the news, then the traffic. Briskly. Or, please hold." },
 ]
+
+
+# ── v4: the Outer Band. Relay ships are drifting, and new stations are coming in from
+#    beyond 108 (108-118 MHz). Light mentions only; nobody knows why yet. ──
+
+[[clip]]
+id = "hold-body-outer-band"
+category = "psa"
+kit = "hold"
+part = "body"
+lines = [
+  { say = "host", text = "Callers from the Outer Band, past one hundred and eight, welcome. The queue extends to you. It has always extended to you. You are not at the front." },
+]

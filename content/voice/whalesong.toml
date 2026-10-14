@@ -481,3 +481,16 @@ lines = [
   { say = "host", text = "I don't know how it came aboard. It seems to know the ship. It went straight to the coffee." },
   { say = "host", text = "Carry on." },
 ]
+
+
+# ── v4: the Outer Band. Relay ships are drifting, and new stations are coming in from
+#    beyond 108 (108-118 MHz). Light mentions only; nobody knows why yet. ──
+
+[[clip]]
+id = "dj-outer-band"
+category = "dj"
+lines = [
+  { say = "host", text = "Ship's log. The relay ships are drifting. Two passed us this week, well off their lanes." },
+  { say = "host", text = "Past one hundred and eight, there's music I don't know. The whales have started singing back." },
+  { say = "host", text = "They're fine." },
+]
