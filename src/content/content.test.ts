@@ -16,10 +16,6 @@ function expectClean(text: string, context: string) {
   expect(text, `${context}: doubled space`).not.toMatch(/ {2}/);
 }
 
-// TODO(v4 integration): stations and recipes whose packs the v4 writers haven't delivered yet.
-const V4_PENDING = new Set<string>([
-  'court-bed', 'theatre-organ', 'traffic-bed', 'pirate-bed',
-]);
 
 describe('rng', () => {
   it('is deterministic and roughly uniform', () => {
@@ -114,11 +110,10 @@ describe('trackMeta', () => {
   });
 
   it('has a pack for every music, mixed and ambient station and every recipe', () => {
-    // TODO(v4 integration): drop the V4_PENDING exemption once the v4 writers' packs land.
-    for (const s of STATIONS) if (s.format !== 'talk' && !V4_PENDING.has(s.id)) expect(STATION_PACKS[s.id], s.id).toBeDefined();
+    for (const s of STATIONS) if (s.format !== 'talk') expect(STATION_PACKS[s.id], s.id).toBeDefined();
     // Oddities are named by the scheduler itself ("Line-up tone, 1 kHz"), not by packs.
     const oddities = new Set<string>(ODDITY_IDS);
-    for (const r of RECIPE_IDS) if (!oddities.has(r) && !V4_PENDING.has(r)) expect(RECIPE_PACKS[r], r).toBeDefined();
+    for (const r of RECIPE_IDS) if (!oddities.has(r)) expect(RECIPE_PACKS[r], r).toBeDefined();
   });
 });
 
