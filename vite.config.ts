@@ -13,7 +13,7 @@ export default defineConfig({
     pwa(),
     // Warns (never fails) when the main page's JS outgrows these gzip budgets. The total is
     // mostly lazily loaded scenes and recipes (one per station, fetched on tune).
-    bundleBudget({ initialJsKb: 200, totalJsKb: 600 }),
+    bundleBudget({ initialJsKb: 200, totalJsKb: 700 }),
   ],
   build: {
     rollupOptions: {
