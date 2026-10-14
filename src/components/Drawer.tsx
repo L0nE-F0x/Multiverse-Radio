@@ -163,10 +163,7 @@ export function Drawer() {
           >
             <span className="drawer-grip" aria-hidden />
           </button>
-          <MiniPlayer dragProps={dragProps} />
-          <div className="drawer-strip" inert={open}>
-            <Dial variant="strip" />
-          </div>
+          <MiniPlayer dragProps={dragProps} open={open} />
         </div>
         <div ref={sheetRef} id="console-sheet" className="drawer-sheet" role="region" aria-label="Console" tabIndex={-1} inert={!open && !dragging} data-keep-awake="">
           <div className="hud-readouts">
@@ -183,8 +180,8 @@ export function Drawer() {
 
 type DragProps = Pick<HTMLAttributes<HTMLElement>, 'onPointerDown' | 'onPointerMove' | 'onPointerUp' | 'onPointerCancel'>;
 
-/** The drawer's always-visible row: what's tuned, where, and the play key. */
-function MiniPlayer({ dragProps }: { dragProps: DragProps }) {
+/** The drawer's always-visible row: what's tuned, where, the tuning strip and the play key. */
+function MiniPlayer({ dragProps, open }: { dragProps: DragProps; open: boolean }) {
   const source = useSource();
   const status = useStatus();
   const segment = useOnAir();
@@ -216,6 +213,10 @@ function MiniPlayer({ dragProps }: { dragProps: DragProps }) {
           {formatMhz(frequency)}
           <small>{band === 'main' ? 'MHz' : BAND_LABEL[band].split(' ')[0]}</small>
         </span>
+      </div>
+      {/* Under the row on a portrait phone; between name and play on a phone on its side. */}
+      <div className="drawer-strip" inert={open}>
+        <Dial variant="strip" />
       </div>
       <PlayKey />
     </div>
