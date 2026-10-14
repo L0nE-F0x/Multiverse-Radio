@@ -13,7 +13,7 @@ import { rimLight } from '../kit/atmos';
 import { flicker, haze, vignette } from './lib/night';
 import { Follow, type Pose, figure, hoursSinceDusk } from './lib/outer';
 
-const STAR = { x: 170, y: 82 };
+const STAR = { x: 196, y: 82 };
 const WIN = { x0: 30, x1: 290, sill: 100 };
 const FLOOR_Y = 122;
 const STAGE = { x0: 192, x1: 276, y: 108 };
@@ -431,7 +431,7 @@ const def: SceneDef = {
 
         // ── the band, in silhouette against the star ──
         band(g, t, f, sil);
-        rimLight(g, 196, 60, 90, STAGE.y - 58, (c) => c === sil, mix(fire, hex('#ffc890'), 0.3), 0.35 + b * 0.35, true);
+        rimLight(g, 196, 60, 90, STAGE.y - 58, (c) => c === sil, mix(fire, hex('#ffc890'), 0.3), 0.12 + b * 0.25, true);
         // stage light: a violet glint on the bass, brighter in rare event 3
         const spot = f.rare === 3 && ev < 10 ? envelope(ev, 10, 1.5, 2) : 0;
         g.glow(236, STAGE.y - 22, 22 + spot * 14, violet, (0.06 + f.pulse * 0.05 * awake) + spot * 0.18);
@@ -456,7 +456,7 @@ const def: SceneDef = {
         g.clip(g.left, g.top, g.w, WHEEL.y - g.top);
         figure(g, WHEEL.x - 2, FLOOR_Y, 34, pose, sil);
         g.noClip();
-        rimLight(g, WHEEL.x - 20, 80, 40, WHEEL.y - 80, (c) => c === sil, mix(fire, hex('#ffc890'), 0.3), 0.3 + b * 0.3, false);
+        rimLight(g, WHEEL.x - 20, 80, 40, WHEEL.y - 80, (c) => c === sil, mix(fire, hex('#ffc890'), 0.3), 0.12 + b * 0.22, false);
         g.px(WHEEL.x - 2, 95, mix(sil, hex('#e8e0d8'), 0.5));
         const wa = t * (0.3 + spin * 6) * (f.reduced ? 0.2 : 1);
         const wx = WHEEL.x - 15;
