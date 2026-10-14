@@ -237,6 +237,11 @@ export class SecretWatcher {
     return this.quietSince === null ? 0 : wall - this.quietSince;
   }
 
+  /** Lab: pretends the receiver has already sat in pure static `ms` longer (if it's there now). */
+  rushQuiet(ms: number): void {
+    if (this.quietSince !== null) this.quietSince -= ms;
+  }
+
   /** Lab: how many steps of a sequence secret are matched right now. */
   sequenceProgress(stationId: string, wall: number): number {
     const station = this.stations.find((s) => s.id === stationId);

@@ -358,9 +358,9 @@ export function currentLayout(): DialLayout {
  * The director sets it whenever the layout's key changes. Returns true if anything changed.
  */
 export function setDialLayout(next: DialLayout): boolean {
-  if (layout?.key === next.key) return false;
+  const changed = layout?.key !== next.key;
   layout = next;
-  return true;
+  return changed;
 }
 
 function getTable(): Table {
