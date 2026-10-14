@@ -1,9 +1,9 @@
 import { useEffect, useMemo, useState, type CSSProperties, type KeyboardEvent } from 'react';
 import { useBroadcast } from '../broadcast/store';
-import type { ShowIndex, StationFormat } from '../broadcast/types';
-import { MAIN_STATIONS } from '../stations/roster';
+import type { ShowIndex, StationDef, StationFormat } from '../broadcast/types';
+import { useLayout } from '../hooks/useLayout';
 import * as act from '../ui/actions';
-import { pirateFrequency } from '../ui/dial';
+import { drifts, inMainBand, pirateFrequency } from '../ui/dial';
 import { FORMAT_LABEL, formatMhzPadded } from '../ui/format';
 import { phosphorHex } from '../ui/phosphor';
 import { useTuned } from '../ui/select';
@@ -25,9 +25,15 @@ interface Row {
   /** Roster stations tune by id; pirates by frequency. */
   roster: boolean;
   tag?: string;
+  /** Somewhere else every night (Free Frequency): the frequency shown is tonight's. */
+  drift?: boolean;
 }
 
-/** The directory: every listed station by format, plus whatever this operator has found. */
+/**
+ * The directory: every listed station on the main band by format, the Outer Band, and
+ * whatever this operator has found. Frequencies come from the live roster, so a drifting
+ * station shows where it is tonight.
+ */
 export default function Guide() {
   const stations = useBroadcast((s) => s.stations);
   const discovered = useBroadcast((s) => s.discovered);
@@ -37,6 +43,7 @@ export default function Guide() {
   const [query, setQuery] = useState('');
   const hour = new Date().getHours();
   const tunedId = tuned.kind === 'station' || tuned.kind === 'pirate' ? tuned.station.id : null;
+  const phone = useLayout() === 'drawer';
 
   useEffect(() => {
     let alive = true;
@@ -48,20 +55,26 @@ export default function Guide() {
 
   const groups = useMemo(() => {
     const showName = (id: string) => showAt(shows?.[id], hour)?.name ?? null;
-    const groups: { key: string; label: string; rows: Row[] }[] = FORMATS.map((format) => ({
+    const listed = stations.filter((s) => !s.secret);
+    const row = (s: StationDef): Row => ({
+      id: s.id,
+      frequency: s.frequency,
+      name: s.name,
+      host: s.host.name,
+      origin: s.origin,
+      phosphor: phosphorHex(s.phosphor),
+      show: showName(s.id),
+      roster: true,
+      ...(drifts(s) ? { drift: true, tag: 'Drifting' } : {}),
+    });
+    const main = listed.filter((s) => inMainBand(s.frequency) && !drifts(s));
+    const outer = listed.filter((s) => !main.includes(s)).sort((a, b) => a.frequency - b.frequency);
+    const groups: { key: string; label: string; note?: string; rows: Row[] }[] = FORMATS.map((format) => ({
       key: format,
       label: FORMAT_LABEL[format],
-      rows: MAIN_STATIONS.filter((s) => s.format === format).map((s) => ({
-        id: s.id,
-        frequency: s.frequency,
-        name: s.name,
-        host: s.host.name,
-        origin: s.origin,
-        phosphor: phosphorHex(s.phosphor),
-        show: showName(s.id),
-        roster: true,
-      })),
-    }));
+      rows: main.filter((s) => s.format === format).map(row),
+    })).filter((g) => g.rows.length);
+    if (outer.length) groups.push({ key: 'outer', label: 'Outer band', note: '108–118 MHz', rows: outer.map(row) });
     const found: Row[] = [];
     for (const id of discovered) {
       const secret = stations.find((s) => s.id === id && s.secret);
@@ -83,7 +96,7 @@ export default function Guide() {
     ? groups
         .map((g) => ({
           ...g,
-          rows: g.rows.filter((r) => [r.name, r.host, r.origin, r.show ?? '', r.frequency.toFixed(2)].some((v) => v.toLowerCase().includes(needle))),
+          rows: g.rows.filter((r) => [r.name, r.host, r.origin, r.show ?? '', r.tag ?? '', r.frequency.toFixed(2)].some((v) => v.toLowerCase().includes(needle))),
         }))
         .filter((g) => g.rows.length)
     : groups;
@@ -107,15 +120,28 @@ export default function Guide() {
     }
   };
 
+  const find = (
+    <label className="dir-find">
+      <span className="dir-find-prompt" aria-hidden>
+        Find&gt;
+      </span>
+      <span className="sr-only">Filter stations</span>
+      <input
+        type="search"
+        value={query}
+        onChange={(e) => setQuery(e.target.value)}
+        placeholder={phone ? 'name, host, show or MHz' : 'name, host, origin, show or frequency'}
+        spellCheck={false}
+        autoComplete="off"
+        enterKeyHint="search"
+      />
+    </label>
+  );
+
+  // Phones: search sits at the bottom with Close, in reach of a thumb.
   return (
-    <Panel id="guide" kicker={`Directory · ${total} sources · Local hour ${String(hour).padStart(2, '0')}:00`} title="Station guide">
-      <label className="dir-find">
-        <span className="dir-find-prompt" aria-hidden>
-          Find&gt;
-        </span>
-        <span className="sr-only">Filter stations</span>
-        <input type="search" value={query} onChange={(e) => setQuery(e.target.value)} placeholder="name, host, origin, show or frequency" spellCheck={false} autoComplete="off" />
-      </label>
+    <Panel id="guide" kicker={`Directory · ${total} sources · Local hour ${String(hour).padStart(2, '0')}:00`} title="Station guide" footer={phone ? find : undefined}>
+      {!phone && find}
       <div className="dir" onKeyDown={onKeyDown}>
         <div className="dir-columns" aria-hidden>
           <span />
@@ -128,6 +154,7 @@ export default function Guide() {
           <section key={group.key} className="dir-group" aria-labelledby={`dir-${group.key}`}>
             <h3 id={`dir-${group.key}`} className="dir-heading">
               {group.label}
+              {group.note && <span className="dir-note">{group.note}</span>}
               <span className="dir-count">{group.rows.length}</span>
             </h3>
             <ul>
@@ -144,7 +171,10 @@ export default function Guide() {
                       style={{ '--sw': row.phosphor } as CSSProperties}
                     >
                       <span className="dir-swatch" aria-hidden />
-                      <span className="dir-freq tabular">{formatMhzPadded(row.frequency)}</span>
+                      <span className="dir-freq tabular" title={row.drift ? 'Tonight’s frequency. It moves every night.' : undefined}>
+                        {formatMhzPadded(row.frequency)}
+                        {row.drift && <span className="dir-tonight">Tonight</span>}
+                      </span>
                       <span className="dir-name">
                         {row.name}
                         {row.tag && <span className="tag tag-quiet">{row.tag}</span>}

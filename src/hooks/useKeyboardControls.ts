@@ -6,7 +6,7 @@ import { nudgeDial } from '../ui/tuning';
 
 /**
  * Space play/pause · ←/→ fine-tune · Shift+←/→ or ↑/↓ station step · S scan · N skip ·
- * M mute · −/+ volume · G guide · L log · C captions · H HUD · ? manual.
+ * M mute · −/+ volume · G guide · L log · O offline · C captions · H HUD · ? manual.
  *
  * Shortcuts stay out of the way while typing, inside open panels (except the key that
  * toggles that panel), and on sliders that use the arrow keys themselves. Space on a button
@@ -31,8 +31,14 @@ export function useKeyboardControls(): void {
       const once = !event.repeat;
 
       if (panel) {
-        // Inside a panel only its own toggle key closes it; Esc is the dialog's.
-        const toggles: Record<string, string> = { g: 'guide', l: 'log', '?': 'help' };
+        // Inside a panel only its own toggle key closes it; Esc is the dialog's (the offline
+        // panel is the offline agent's own, so Esc is covered here too).
+        if (key === 'Escape' && panel === 'offline') {
+          togglePanel(panel);
+          event.preventDefault();
+          return;
+        }
+        const toggles: Record<string, string> = { g: 'guide', l: 'log', o: 'offline', '?': 'help' };
         if (toggles[key] === panel && once) {
           togglePanel(panel);
           event.preventDefault();
@@ -77,6 +83,9 @@ export function useKeyboardControls(): void {
             return true;
           case 'l':
             if (once) togglePanel('log');
+            return true;
+          case 'o':
+            if (once) togglePanel('offline');
             return true;
           case 'c':
             if (once) act.toggleCaptions();

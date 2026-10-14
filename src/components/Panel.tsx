@@ -1,13 +1,33 @@
 import { useEffect, useRef, type ReactNode } from 'react';
+import { useLayout } from '../hooks/useLayout';
 import { openPanel, type PanelId } from '../ui/store';
 
 /**
  * A console panel on the native modal <dialog>: focus trapping, Esc and the top layer for
  * free. Mounted only while open; returns focus to wherever it came from when it goes.
+ *
+ * The head (with its close key) stays put while the body scrolls. On phones a bar pinned to
+ * the bottom repeats Close (and carries `footer`, e.g. the guide's search) within reach of a
+ * thumb.
  */
-export function Panel({ id, kicker, title, aside, children }: { id: PanelId; kicker: string; title: string; aside?: ReactNode; children: ReactNode }) {
+export function Panel({
+  id,
+  kicker,
+  title,
+  aside,
+  footer,
+  children,
+}: {
+  id: PanelId;
+  kicker: string;
+  title: string;
+  aside?: ReactNode;
+  footer?: ReactNode;
+  children: ReactNode;
+}) {
   const ref = useRef<HTMLDialogElement>(null);
   const close = () => openPanel(null);
+  const phone = useLayout() === 'drawer';
 
   useEffect(() => {
     const dialog = ref.current;
@@ -49,10 +69,24 @@ export function Panel({ id, kicker, title, aside, children }: { id: PanelId; kic
           </div>
           {aside}
           <button type="button" className="panel-close" onClick={close} aria-label={`Close ${title}`}>
-            <span aria-hidden>Esc</span>
+            {/* Keyboards get the key to press; touch screens a word. */}
+            <span className="hint-kbd" aria-hidden>
+              Esc
+            </span>
+            <span className="hint-touch" aria-hidden>
+              Close
+            </span>
           </button>
         </header>
         <div className="panel-body">{children}</div>
+        {phone && (
+          <footer className="panel-foot">
+            {footer}
+            <button type="button" className="panel-foot-close" onClick={close}>
+              Close
+            </button>
+          </footer>
+        )}
       </div>
     </dialog>
   );

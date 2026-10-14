@@ -3,7 +3,7 @@
 
 import { create } from 'zustand';
 
-export type PanelId = 'guide' | 'log' | 'help';
+export type PanelId = 'guide' | 'log' | 'help' | 'offline';
 
 /** auto: shown, then dims and hides when idle. hidden: kept out of the way (H). */
 export type HudMode = 'auto' | 'hidden';
@@ -22,6 +22,8 @@ interface UiState {
   identNonce: number;
   /** When this session's shift began (first time on air), epoch ms. */
   shiftStart: number | null;
+  /** Phones: the pull-up console drawer is open. */
+  drawer: boolean;
 }
 
 const PREFS_KEY = 'multiverse-radio:ui';
@@ -41,6 +43,7 @@ export const useUi = create<UiState>()(() => ({
   toast: null,
   identNonce: 0,
   shiftStart: null,
+  drawer: false,
 }));
 
 useUi.subscribe((state, previous) => {
@@ -60,6 +63,10 @@ export function openPanel(panel: PanelId | null): void {
 
 export function togglePanel(panel: PanelId): void {
   useUi.setState({ panel: ui().panel === panel ? null : panel });
+}
+
+export function setDrawer(drawer: boolean): void {
+  if (ui().drawer !== drawer) useUi.setState({ drawer });
 }
 
 let toastId = 0;
