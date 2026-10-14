@@ -1099,9 +1099,12 @@ def check_serials(scripts: list[Script]) -> None:
             assert clip.serial is not None
             episode = clip.serial.episode
             if episode in episodes:
+                # An episode may span several clips on one station (the scheduler airs them whole,
+                # in id order), but not two stations.
                 other_script, other = episodes[episode]
-                script.issues.append(Issue("error", script.path, f"clip {clip.id!r}: serial {serial_id!r} episode "
-                                           f"{episode} is already {other_script.station}/{other.id}", clip.lineno))
+                if other_script.station != script.station:
+                    script.issues.append(Issue("error", script.path, f"clip {clip.id!r}: serial {serial_id!r} episode "
+                                               f"{episode} is already {other_script.station}/{other.id}", clip.lineno))
             else:
                 episodes[episode] = (script, clip)
         gaps = sorted(set(range(1, max(episodes) + 1)) - set(episodes))
