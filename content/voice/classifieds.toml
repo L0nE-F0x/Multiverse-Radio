@@ -1095,3 +1095,110 @@ lines = [
   { say = "rex", text = "Spooky, Linda!", speed = 1.0 },
   { say = "linda", text = "Thank you, Rex. I've been practising.", speed = 0.95 },
 ]
+
+
+# ══ v4: The Convergence ═══════════════════════════════════════════════════════
+#
+# Saturdays, 20:00 UTC: every station notices the same thing. One reaction per topic
+# (SCHEMA.md, "The Convergence"); the director airs the _events open, then the tuned
+# station's reaction, then the close.
+
+[[clip]]
+id = "convergence-missing-moon"
+category = "event"
+title = "The Convergence: A Moon Goes Missing"
+event = "convergence"
+kit = "missing-moon"
+lines = [
+  { say = "rex", text = "Folks, a moon has gone missing, and nobody knows which one! Lost and found, Linda?" },
+  { say = "linda", text = "Found. One moon. Unclaimed. We will not be handing it over until somebody describes it correctly. Nobody has yet." },
+]
+
+[[clip]]
+id = "convergence-the-smell"
+category = "event"
+title = "The Convergence: Toast, Everywhere"
+event = "convergence"
+kit = "the-smell"
+lines = [
+  { say = "rex", text = "Smell that? That's toast, folks, everywhere, all at once! And Rex has got the toasters!" },
+  { say = "linda", text = "Rex has one toaster. It is not the source. The toaster does not smell of toast. The toaster smells of Rex." },
+]
+
+[[clip]]
+id = "convergence-the-song"
+category = "event"
+title = "The Convergence: The Song Nobody Can Finish"
+event = "convergence"
+kit = "the-song"
+lines = [
+  { say = "rex", text = "Got a song stuck in your head with no ending? Bellows Song Endings! Every ending, guaranteed to fit!" },
+  { say = "linda", text = "Endings may not fit. Endings may belong to other songs. Nobody has the real ending. Rex has checked." },
+]
+
+[[clip]]
+id = "convergence-the-knock"
+category = "event"
+title = "The Convergence: Three Knocks"
+event = "convergence"
+kit = "the-knock"
+lines = [
+  { say = "rex", text = "Somebody knocked! Three times! It's a customer!" },
+  { say = "linda", text = "There is nobody there, Rex." },
+  { say = "rex", text = "Then it's the best kind of customer, folks! Doesn't haggle!" },
+]
+
+[[clip]]
+id = "convergence-wrong-colour"
+category = "event"
+title = "The Convergence: A Colour With No Name"
+event = "convergence"
+kit = "wrong-colour"
+lines = [
+  { say = "rex", text = "The sky's a colour nobody's got a word for, folks, and I'm calling it Bellows Blue!" },
+  { say = "linda", text = "It is not blue. Rex cannot name the sky. The sky has been informed, and was very gracious about it." },
+]
+
+[[clip]]
+id = "convergence-the-pigeon"
+category = "event"
+title = "The Convergence: The Pigeon"
+event = "convergence"
+kit = "the-pigeon"
+lines = [
+  { say = "linda", text = "Found. One pigeon. In the office. It seems to know us. It knows where the biscuits are." },
+  { say = "linda", text = "If this is your pigeon, please collect it. If you are the pigeon, hello. You may stay." },
+]
+
+
+# ── v4: clues to The Switchboard (131.1). It answers if you tune 97.8, 89.3, then 114.8
+#    (advice, the news, the traffic), holding each a moment, all within ninety seconds. ──
+
+[[clip]]
+id = "story-switchboard"
+category = "story"
+title = "Found: A Number"
+lines = [
+  { say = "rex", text = "Lost and found, folks! Linda, what's in the box tonight?" },
+  { say = "linda", text = "Found. One glove, left hand, on the night bus. It has been waving at people. If it's yours, wave back." },
+  { say = "linda", text = "Found. A number, handwritten on the back of an old switchboard ticket. Nine, seven, eight. Eight, nine, three. One, one, four, eight." },
+  { say = "linda", text = "No name. Just a note underneath, in pencil. Quickly, and in that order. Advice, news, traffic." },
+  { say = "linda", text = "If this is your number, the operator is still holding." },
+  { say = "rex", text = "Nobody's still holding, Linda! It's nineteen forty six on that ticket!" },
+  { say = "linda", text = "She is, Rex. She's very patient.", gap = 0.8 },
+  { say = "rex", text = "That's lost and found, folks! If any of it's yours, bring a box!" },
+]
+
+
+# ── v4: the Outer Band. Relay ships are drifting, and new stations are coming in from
+#    beyond 108 (108-118 MHz). Light mentions only; nobody knows why yet. ──
+
+[[clip]]
+id = "ad-outer-band"
+category = "ad"
+title = "Bellows Pre-Owned Frequencies"
+lines = [
+  { say = "rex", text = "Folks, Bellows Pre-Owned Frequencies! Brand new frequencies, just come in past one hundred and eight! Barely broadcast on!" },
+  { say = "rex", text = "Want your own little patch of the dial? Pick a number! Any number! Point a radio at it, and it's yours!" },
+  { say = "linda", text = "Frequencies may drift. Frequencies may already be occupied by a disco, a courtroom or a pirate. Rex does not own any frequencies. Nobody does. That's the point of them." },
+]

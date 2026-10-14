@@ -308,3 +308,76 @@ lines = [
   { say = "host", text = "Monday.", gap = 0.8 },
   { say = "host", text = "Police went in. They found nothing. Just a stapler, still warm. Stay out of the old office district, Marina City. Here's a song, with all the lights on." },
 ]
+
+
+# ══ v4: The Convergence ═══════════════════════════════════════════════════════
+#
+# Saturdays, 20:00 UTC: every station notices the same thing. One reaction per topic
+# (SCHEMA.md, "The Convergence"); the director airs the _events open, then the tuned
+# station's reaction, then the close.
+
+[[clip]]
+id = "convergence-missing-moon"
+category = "event"
+title = "The Convergence: A Moon Goes Missing"
+event = "convergence"
+kit = "missing-moon"
+lines = [
+  { say = "host", text = "Marina City, a moon has gone missing! Nobody knows which!" },
+  { say = "host", text = "The Marina Index has reacted the only way it knows how. It's gone up! The weekend starts now, with one less moon!" },
+]
+
+[[clip]]
+id = "convergence-the-smell"
+category = "event"
+title = "The Convergence: Toast, Everywhere"
+event = "convergence"
+kit = "the-smell"
+lines = [
+  { say = "host", text = "Is that toast? The whole bay smells like toast! On a Friday night!" },
+  { say = "host", text = "Somebody's planning Saturday breakfast! Honey, there's no Saturday! But I love the optimism!" },
+]
+
+[[clip]]
+id = "convergence-the-song"
+category = "event"
+title = "The Convergence: The Song Nobody Can Finish"
+event = "convergence"
+kit = "the-song"
+lines = [
+  { say = "host", text = "Everybody's humming the same song, Marina City, and nobody knows the end!" },
+  { say = "host", text = "The Overtime Boys say it's theirs! They're still singing the middle! They've been singing the middle since nineteen eighty six!" },
+]
+
+[[clip]]
+id = "convergence-the-knock"
+category = "event"
+title = "The Convergence: Three Knocks"
+event = "convergence"
+kit = "the-knock"
+lines = [
+  { say = "host", text = "Three knocks on the studio door! I opened it! Nobody!" },
+  { say = "host", text = "Just the neon, and the bay, and a feeling like Monday was standing there a second ago. Lock the door, baby!" },
+]
+
+[[clip]]
+id = "convergence-wrong-colour"
+category = "event"
+title = "The Convergence: A Colour With No Name"
+event = "convergence"
+kit = "wrong-colour"
+lines = [
+  { say = "host", text = "The sky just went a colour I have never seen, Marina City! Not pink, not peach, not sunset!" },
+  { say = "host", text = "Somebody's already bought the view of it for eleven compliments! The Index is up!" },
+]
+
+[[clip]]
+id = "convergence-the-pigeon"
+category = "event"
+title = "The Convergence: The Pigeon"
+event = "convergence"
+kit = "the-pigeon"
+lines = [
+  { say = "host", text = "There's a pigeon in the studio! Wearing a tiny tie! Walked straight in, like it's on the guest list!" },
+  { say = "host", text = "And the way it's looking at me, honey, it's been listening a long, long time. Hi, pigeon!" },
+]

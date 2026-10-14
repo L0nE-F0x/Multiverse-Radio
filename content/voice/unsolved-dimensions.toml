@@ -438,3 +438,78 @@ lines = [
   { say = "gault", text = "Halloween week. The busiest week of the year for my department. Doors knock by themselves. Sheets walk about. Children demand sweets with menaces." },
   { say = "gault", text = "Almost none of it is a crime. All of it is unsolved. I love this time of year." },
 ]
+
+
+# ══ v4: The Convergence ═══════════════════════════════════════════════════════
+#
+# Saturdays, 20:00 UTC: every station notices the same thing. One reaction per topic
+# (SCHEMA.md, "The Convergence"); the director airs the _events open, then the tuned
+# station's reaction, then the close.
+
+[[clip]]
+id = "convergence-missing-moon"
+category = "event"
+title = "The Convergence: A Moon Goes Missing"
+event = "convergence"
+kit = "missing-moon"
+lines = [
+  { say = "gault", text = "Case file seven hundred. A moon has gone missing. Every witness agrees one is gone. No two witnesses agree which. Pike?" },
+  { say = "pike", text = "Lab results inconclusive, ma'am." },
+  { say = "gault", text = "The goose has been brought in. The case remains open." },
+]
+
+[[clip]]
+id = "convergence-the-smell"
+category = "event"
+title = "The Convergence: Toast, Everywhere"
+event = "convergence"
+kit = "the-smell"
+lines = [
+  { say = "gault", text = "A smell of toast, reported in every dimension at once." },
+  { say = "gault", text = "Nobody has confessed to toasting anything. Somebody is lying. Possibly everybody. The case remains open." },
+]
+
+[[clip]]
+id = "convergence-the-song"
+category = "event"
+title = "The Convergence: The Song Nobody Can Finish"
+event = "convergence"
+kit = "the-song"
+lines = [
+  { say = "gault", text = "A song, lodged in the head of every witness. Every one of them stops at the same place. Somebody knows how it ends, Pike." },
+  { say = "pike", text = "The goose has been humming it, ma'am." },
+  { say = "gault", text = "Of course it has." },
+]
+
+[[clip]]
+id = "convergence-the-knock"
+category = "event"
+title = "The Convergence: Three Knocks"
+event = "convergence"
+kit = "the-knock"
+lines = [
+  { say = "gault", text = "Three knocks at the archive door. Constable Pike opened it. Nobody there." },
+  { say = "gault", text = "No footprints. No fingerprints. One faint smell of goose. The case remains open." },
+]
+
+[[clip]]
+id = "convergence-wrong-colour"
+category = "event"
+title = "The Convergence: A Colour With No Name"
+event = "convergence"
+kit = "wrong-colour"
+lines = [
+  { say = "gault", text = "The sky was, briefly, a colour. No witness can name it. Pike has written it down as blue, but suspicious." },
+  { say = "pike", text = "It's the best I could do, ma'am." },
+]
+
+[[clip]]
+id = "convergence-the-pigeon"
+category = "event"
+title = "The Convergence: The Pigeon"
+event = "convergence"
+kit = "the-pigeon"
+lines = [
+  { say = "gault", text = "A pigeon has entered the archive, walked past the evidence, and sat in my chair. It appears to know me." },
+  { say = "gault", text = "I have never seen it before in my life. Which is exactly what it would want me to say." },
+]

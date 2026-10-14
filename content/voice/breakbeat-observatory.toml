@@ -326,3 +326,78 @@ lines = [
   { say = "host", text = "Breakbeat Observatory. Happy Halloween. Half the stars you can see are already gone. Dance anyway." },
   { sting = "halloween" },
 ]
+
+
+# ══ v4: The Convergence ═══════════════════════════════════════════════════════
+#
+# Saturdays, 20:00 UTC: every station notices the same thing. One reaction per topic
+# (SCHEMA.md, "The Convergence"); the director airs the _events open, then the tuned
+# station's reaction, then the close.
+
+[[clip]]
+id = "convergence-missing-moon"
+category = "event"
+title = "The Convergence: A Moon Goes Missing"
+event = "convergence"
+kit = "missing-moon"
+lines = [
+  { say = "host", text = "People, a moon's gone missing, and nobody can agree which one! Doc, did we move it? Did that last drop move a moon?" },
+  { say = "ferrin", text = "Checking. No. We moved two. Both accounted for." },
+  { say = "host", text = "Phew!" },
+]
+
+[[clip]]
+id = "convergence-the-smell"
+category = "event"
+title = "The Convergence: Toast, Everywhere"
+event = "convergence"
+kit = "the-smell"
+lines = [
+  { say = "ferrin", text = "Observation. Toast." },
+  { say = "host", text = "She's right! The whole dome smells like toast, and so does the rest of the multiverse! Big up whoever's on breakfast!" },
+]
+
+[[clip]]
+id = "convergence-the-song"
+category = "event"
+title = "The Convergence: The Song Nobody Can Finish"
+event = "convergence"
+kit = "the-song"
+lines = [
+  { say = "host", text = "Everybody's got the same tune stuck, people, and nobody can finish it! We pointed the telescope at the far end of the universe to see if they've got the ending. Doc?" },
+  { say = "ferrin", text = "Observation. They're also humming it." },
+]
+
+[[clip]]
+id = "convergence-the-knock"
+category = "event"
+title = "The Convergence: Three Knocks"
+event = "convergence"
+kit = "the-knock"
+lines = [
+  { say = "host", text = "Three knocks on the observatory door! Right on the beat! Doc went to look. Nobody." },
+  { say = "host", text = "Whoever you are, you're welcome at the front. Lovely timing." },
+]
+
+[[clip]]
+id = "convergence-wrong-colour"
+category = "event"
+title = "The Convergence: A Colour With No Name"
+event = "convergence"
+kit = "wrong-colour"
+lines = [
+  { say = "host", text = "Whoa. The sky just did a colour. Doc, log it!" },
+  { say = "ferrin", text = "Observation. I don't have a word." },
+  { say = "host", text = "She's never not had a word, people. That's historic." },
+]
+
+[[clip]]
+id = "convergence-the-pigeon"
+category = "event"
+title = "The Convergence: The Pigeon"
+event = "convergence"
+kit = "the-pigeon"
+lines = [
+  { say = "host", text = "There's a pigeon in the dome, standing right next to Doctor Ferrin. And people, the pigeon's head is nodding." },
+  { say = "host", text = "Doc? Doc's head is... no. Not yet. Close, though!" },
+]

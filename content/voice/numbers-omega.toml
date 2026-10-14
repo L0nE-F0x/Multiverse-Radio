@@ -749,3 +749,86 @@ lines = [
   { say = "host", text = "Boo. Boo. Four." },
   { sting = "chime" },
 ]
+
+
+# ══ v4: The Convergence ═══════════════════════════════════════════════════════
+#
+# Saturdays, 20:00 UTC: every station notices the same thing. One reaction per topic
+# (SCHEMA.md, "The Convergence"); the director airs the _events open, then the tuned
+# station's reaction, then the close.
+
+[[clip]]
+id = "convergence-missing-moon"
+category = "event"
+title = "The Convergence: A Moon Goes Missing"
+event = "convergence"
+kit = "missing-moon"
+lines = [
+  { say = "host", text = "Attention." },
+  { say = "host", text = "Zero. Zero. One." },
+  { say = "host", text = "One moon. Not accounted for." },
+  { say = "host", text = "Do not look for it. It knows where it is. End of message." },
+]
+
+[[clip]]
+id = "convergence-the-smell"
+category = "event"
+title = "The Convergence: Toast, Everywhere"
+event = "convergence"
+kit = "the-smell"
+lines = [
+  { say = "host", text = "Attention." },
+  { say = "host", text = "Four. Four." },
+  { say = "host", text = "Toast. Everywhere. It is not a code. It is breakfast." },
+  { say = "host", text = "The fox at the bottom of the mast would like some. End of message." },
+]
+
+[[clip]]
+id = "convergence-the-song"
+category = "event"
+title = "The Convergence: The Song Nobody Can Finish"
+event = "convergence"
+kit = "the-song"
+lines = [
+  { say = "host", text = "Attention." },
+  { say = "host", text = "Three. Three. Three." },
+  { say = "host", text = "That is not the song. You were hoping it was the song. It is three." },
+  { say = "host", text = "Nobody has the end. Not even us. End of message." },
+]
+
+[[clip]]
+id = "convergence-the-knock"
+category = "event"
+title = "The Convergence: Three Knocks"
+event = "convergence"
+kit = "the-knock"
+lines = [
+  { say = "host", text = "Knock. Knock. Knock." },
+  { say = "host", text = "That was three. Three is a number. This is a numbers station." },
+  { say = "host", text = "We counted them for you. End of message." },
+]
+
+[[clip]]
+id = "convergence-wrong-colour"
+category = "event"
+title = "The Convergence: A Colour With No Name"
+event = "convergence"
+kit = "wrong-colour"
+lines = [
+  { say = "host", text = "Attention." },
+  { say = "host", text = "The sky has displayed a colour with no name. It has a number." },
+  { say = "host", text = "The number is seven. Seven. Four." },
+  { say = "host", text = "Of course it is. End of message." },
+]
+
+[[clip]]
+id = "convergence-the-pigeon"
+category = "event"
+title = "The Convergence: The Pigeon"
+event = "convergence"
+kit = "the-pigeon"
+lines = [
+  { say = "host", text = "Attention." },
+  { say = "host", text = "One pigeon. Not a goose. Repeat. Not a goose." },
+  { say = "host", text = "The pigeon knows this. The pigeon has come to say so in person. The account remains open." },
+]
