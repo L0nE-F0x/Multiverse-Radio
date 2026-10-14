@@ -154,6 +154,14 @@ safe to use. Unknown names fail the render with a clear error.
 
 ## Writing for TTS (Kokoro)
 
+- **Mispronounced words: don't respell them in the script** (captions would show the
+  respelling). Write the word normally and add it to `scripts/voice/lexicon.toml`
+  (`theremin = "therr-a-min"`): the renderer swaps the respelling into the text Kokoro hears
+  only. Matching is whole-word, case-insensitive and case-preserving; plurals are separate
+  entries. Editing an entry re-renders just the clips that use it. Check a respelling by
+  rendering to scratch (`--out`) and listening or transcribing with whisper.cpp. For
+  homographs ("read", "live", "present") reword the line instead: the lexicon can't tell
+  the senses apart.
 - Spell numbers the way an announcer says them ("four thousand", "seven, seven, four").
 - No symbols, emoji, URLs or abbreviations the voice can't say. Write "percent", "doctor".
 - Keep each `text` under ~300 characters; split long speeches into several lines.
