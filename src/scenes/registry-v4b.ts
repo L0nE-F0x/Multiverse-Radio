@@ -22,4 +22,10 @@ export const TALK_SCENES_V4: Partial<Record<SceneId, SceneEntry>> = {
     label: 'A pirate broadcasts from a cramped attic of egg boxes and string-linked blueprints while a small light passes the round window.',
     load: () => import('./defs/pirate-attic'),
   },
+
+  // ── v4 secrets ──
+  switchboard: {
+    label: 'An old telephone exchange stretches away into darkness, lamps winking, one operator in a headset at a pool of light.',
+    load: () => import('./defs/switchboard'),
+  },
 };
