@@ -1668,3 +1668,19 @@ lines = [
   { say = "dale", text = "Arts. Early on Sunday morning, the Lounge at the End of Time broadcast the first Quiet Corner with Greg, a shadow. Our critic listened at full volume, with the windows shut." },
   { say = "dale", text = "Her review reads, in full: bold, spare, I think he said hello. Four stars." },
 ]
+
+
+# ── v4: clues to The Switchboard (131.1). It answers if you tune 97.8, 89.3, then 114.8
+#    (advice, the news, the traffic), holding each a moment, all within ninety seconds. ──
+
+[[clip]]
+id = "news-switchboard"
+category = "news"
+title = "The Switchboard Lights Up"
+lines = [
+  { say = "dale", text = "Telephone engineers report that a switchboard last staffed in nineteen forty six has begun lighting up again. Callers say they reached it by accident, while turning a radio dial." },
+  { say = "dale", text = "Kim Harrowgate is with one of them. Kim?" },
+  { say = "kim", text = "Dale, I'm with a woman who got through. She'd been listening to an agony aunt, then to us, then to that new traffic report, out past the edge of the dial. All in about a minute." },
+  { say = "kim", text = "And a voice said, number, please. She's handed me the receiver, Dale. It's still warm." },
+  { say = "dale", text = "Thank you, Kim. We have tried this ourselves. We got the traffic. More at eleven." },
+]

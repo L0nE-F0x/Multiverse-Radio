@@ -1169,3 +1169,22 @@ lines = [
   { say = "linda", text = "Found. One pigeon. In the office. It seems to know us. It knows where the biscuits are." },
   { say = "linda", text = "If this is your pigeon, please collect it. If you are the pigeon, hello. You may stay." },
 ]
+
+
+# ── v4: clues to The Switchboard (131.1). It answers if you tune 97.8, 89.3, then 114.8
+#    (advice, the news, the traffic), holding each a moment, all within ninety seconds. ──
+
+[[clip]]
+id = "story-switchboard"
+category = "story"
+title = "Found: A Number"
+lines = [
+  { say = "rex", text = "Lost and found, folks! Linda, what's in the box tonight?" },
+  { say = "linda", text = "Found. One glove, left hand, on the night bus. It has been waving at people. If it's yours, wave back." },
+  { say = "linda", text = "Found. A number, handwritten on the back of an old switchboard ticket. Nine, seven, eight. Eight, nine, three. One, one, four, eight." },
+  { say = "linda", text = "No name. Just a note underneath, in pencil. Quickly, and in that order. Advice, news, traffic." },
+  { say = "linda", text = "If this is your number, the operator is still holding." },
+  { say = "rex", text = "Nobody's still holding, Linda! It's nineteen forty six on that ticket!" },
+  { say = "linda", text = "She is, Rex. She's very patient.", gap = 0.8 },
+  { say = "rex", text = "That's lost and found, folks! If any of it's yours, bring a box!" },
+]
