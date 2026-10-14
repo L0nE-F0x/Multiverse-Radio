@@ -399,3 +399,76 @@ lines = [
   { say = "hush", text = "Static Lullabies. Something is listening.", gap = 1.0 },
   { say = "hush", text = "This week, it's wearing a little hat." },
 ]
+
+
+# ══ v4: The Convergence ═══════════════════════════════════════════════════════
+#
+# Saturdays, 20:00 UTC: every station notices the same thing. One reaction per topic
+# (SCHEMA.md, "The Convergence"); the director airs the _events open, then the tuned
+# station's reaction, then the close.
+
+[[clip]]
+id = "convergence-missing-moon"
+category = "event"
+title = "The Convergence: A Moon Goes Missing"
+event = "convergence"
+kit = "missing-moon"
+lines = [
+  { say = "host", text = "One of the moons has gone. Everyone's saying so." },
+  { say = "hush", text = "Don't go looking for it tonight. It's probably just tired. It'll come back when it's slept." },
+]
+
+[[clip]]
+id = "convergence-the-smell"
+category = "event"
+title = "The Convergence: Toast, Everywhere"
+event = "convergence"
+kit = "the-smell"
+lines = [
+  { say = "host", text = "Can you smell toast? Everywhere can, apparently." },
+  { say = "hush", text = "Somebody, somewhere, is making breakfast for everyone. Go back to sleep. It'll keep." },
+]
+
+[[clip]]
+id = "convergence-the-song"
+category = "event"
+title = "The Convergence: The Song Nobody Can Finish"
+event = "convergence"
+kit = "the-song"
+lines = [
+  { say = "host", text = "There's a song going round. Nobody can finish it." },
+  { say = "hush", text = "I'll hum the part I know. You hum the rest in your sleep. Between us, we'll get there." },
+]
+
+[[clip]]
+id = "convergence-the-knock"
+category = "event"
+title = "The Convergence: Three Knocks"
+event = "convergence"
+kit = "the-knock"
+lines = [
+  { say = "host", text = "Three knocks. On the door. Nobody there." },
+  { say = "hush", text = "That's all right. I'll get it. I'm always up." },
+]
+
+[[clip]]
+id = "convergence-wrong-colour"
+category = "event"
+title = "The Convergence: A Colour With No Name"
+event = "convergence"
+kit = "wrong-colour"
+lines = [
+  { say = "host", text = "The sky went a colour just now. There isn't a word for it." },
+  { say = "hush", text = "You don't need one. Keep it like a dream. Let it fade gently." },
+]
+
+[[clip]]
+id = "convergence-the-pigeon"
+category = "event"
+title = "The Convergence: The Pigeon"
+event = "convergence"
+kit = "the-pigeon"
+lines = [
+  { say = "host", text = "There's a pigeon on the television. Next to the cat." },
+  { say = "hush", text = "It knows my name. Nobody knows my name. Hello, pigeon. Shh." },
+]

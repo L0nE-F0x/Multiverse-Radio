@@ -325,3 +325,77 @@ lines = [
   { say = "host", text = "The crew have carved a turnip lantern for the bow, as is tradition. It's lit. Underwater. Don't ask me how." },
   { say = "host", text = "Old Pettibone says it's the most cheerful thing he's seen since the Long Calm. Then he played a very, very sad song about it." },
 ]
+
+
+# ══ v4: The Convergence ═══════════════════════════════════════════════════════
+#
+# Saturdays, 20:00 UTC: every station notices the same thing. One reaction per topic
+# (SCHEMA.md, "The Convergence"); the director airs the _events open, then the tuned
+# station's reaction, then the close.
+
+[[clip]]
+id = "convergence-missing-moon"
+category = "event"
+title = "The Convergence: A Moon Goes Missing"
+event = "convergence"
+kit = "missing-moon"
+lines = [
+  { say = "host", text = "A moon has gone missing, lads. The whole dial's saying so." },
+  { say = "host", text = "We've been sailing by it since before there was water. Now we'll sail by the others. The ship is fine." },
+  { say = "crew", text = "The ship is fine." },
+]
+
+[[clip]]
+id = "convergence-the-smell"
+category = "event"
+title = "The Convergence: Toast, Everywhere"
+event = "convergence"
+kit = "the-smell"
+lines = [
+  { say = "host", text = "Smell that, crew? Toast. Everywhere at once, they say. Even down here at the bottom." },
+  { say = "host", text = "The cook says he's never made toast. He says it would only go to soup. Everything here goes to soup." },
+]
+
+[[clip]]
+id = "convergence-the-song"
+category = "event"
+title = "The Convergence: The Song Nobody Can Finish"
+event = "convergence"
+kit = "the-song"
+lines = [
+  { say = "host", text = "There's a shanty going round every head on the dial, and nobody knows how it ends." },
+  { say = "host", text = "Old Pettibone swears it's about a wreck that hasn't happened yet. Let's hope it never finishes." },
+]
+
+[[clip]]
+id = "convergence-the-knock"
+category = "event"
+title = "The Convergence: Three Knocks"
+event = "convergence"
+kit = "the-knock"
+lines = [
+  { say = "host", text = "Three knocks on the hull. Below the waterline." },
+  { say = "host", text = "Nobody out there, of course. Nobody but the sea. Come aboard, then, sea. You always do." },
+]
+
+[[clip]]
+id = "convergence-wrong-colour"
+category = "event"
+title = "The Convergence: A Colour With No Name"
+event = "convergence"
+kit = "wrong-colour"
+lines = [
+  { say = "host", text = "The surface went a colour just now, lads, way up above us. No word for it." },
+  { say = "host", text = "The lookout's been gone since eighteen forty. That's the first time I've wished he was back. He'd have had a word." },
+]
+
+[[clip]]
+id = "convergence-the-pigeon"
+category = "event"
+title = "The Convergence: The Pigeon"
+event = "convergence"
+kit = "the-pigeon"
+lines = [
+  { say = "host", text = "A pigeon has come aboard. Below the waterline. Perfectly dry." },
+  { say = "host", text = "It walked to the wheel as if it's sailed with us before. Maybe it has. The crew are saluting it. The ship is fine." },
+]

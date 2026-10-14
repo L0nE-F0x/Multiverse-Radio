@@ -479,3 +479,78 @@ lines = [
   { say = "host", text = "Wide load?" },
   { say = "diesel", text = "Widest there is, dear. Tell the drivers, if they see a big orange light coming up behind them, that's just me and the moon. Don't howl. It only encourages it." },
 ]
+
+
+# ══ v4: The Convergence ═══════════════════════════════════════════════════════
+#
+# Saturdays, 20:00 UTC: every station notices the same thing. One reaction per topic
+# (SCHEMA.md, "The Convergence"); the director airs the _events open, then the tuned
+# station's reaction, then the close.
+
+[[clip]]
+id = "convergence-missing-moon"
+category = "event"
+title = "The Convergence: A Moon Goes Missing"
+event = "convergence"
+kit = "missing-moon"
+lines = [
+  { say = "mongoose", text = "Rosalind, I've lost a moon. Used to steer by it, on the old river road." },
+  { say = "host", text = "Everybody's lost one, Mongoose. Nobody can agree which." },
+  { say = "mongoose", text = "Well, mine was the one on the left. I'll steer by the fox." },
+]
+
+[[clip]]
+id = "convergence-the-smell"
+category = "event"
+title = "The Convergence: Toast, Everywhere"
+event = "convergence"
+kit = "the-smell"
+lines = [
+  { say = "diesel", text = "Breaker, Rosalind. Whole highway smells of toast." },
+  { say = "host", text = "Everywhere does, Diesel. It's not Dolores this time. Dolores is pouring coffee and looking very innocent." },
+]
+
+[[clip]]
+id = "convergence-the-song"
+category = "event"
+title = "The Convergence: The Song Nobody Can Finish"
+event = "convergence"
+kit = "the-song"
+lines = [
+  { say = "rookie", text = "Uh, Rosalind? Everyone on the channel's humming the same song." },
+  { say = "host", text = "And nobody can finish it, rookie. Leave it be. A song with no end is just a long haul. We know all about those." },
+]
+
+[[clip]]
+id = "convergence-the-knock"
+category = "event"
+title = "The Convergence: Three Knocks"
+event = "convergence"
+kit = "the-knock"
+lines = [
+  { say = "host", text = "Three knocks on the diner door. Nobody there." },
+  { say = "host", text = "Diesel says she had three knocks on the cab, doing seventy on the Up Road. That's the strange part, drivers. Nobody can knock at seventy." },
+]
+
+[[clip]]
+id = "convergence-wrong-colour"
+category = "event"
+title = "The Convergence: A Colour With No Name"
+event = "convergence"
+kit = "wrong-colour"
+lines = [
+  { say = "mongoose", text = "Rosalind, the sky's gone a colour I've never seen." },
+  { say = "host", text = "Is it the sideways road?" },
+  { say = "mongoose", text = "No. Nobody's got a word for it. Not even the sideways road." },
+]
+
+[[clip]]
+id = "convergence-the-pigeon"
+category = "event"
+title = "The Convergence: The Pigeon"
+event = "convergence"
+kit = "the-pigeon"
+lines = [
+  { say = "host", text = "There's a pigeon at the counter. Walked in, sat on a stool, nodded at Dolores." },
+  { say = "host", text = "She's poured it a coffee. Says it's been in before. Drivers, if this is anybody's pigeon, it's welcome." },
+]

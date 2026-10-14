@@ -492,3 +492,82 @@ lines = [
   { say = "host", text = "Boo.", gap = 1.2 },
   { say = "host", text = "Sorry. That took a while to get here." },
 ]
+
+
+# ══ v4: The Convergence ═══════════════════════════════════════════════════════
+#
+# Saturdays, 20:00 UTC: every station notices the same thing. One reaction per topic
+# (SCHEMA.md, "The Convergence"); the director airs the _events open, then the tuned
+# station's reaction, then the close.
+
+[[clip]]
+id = "convergence-missing-moon"
+category = "event"
+title = "The Convergence: A Moon Goes Missing"
+event = "convergence"
+kit = "missing-moon"
+lines = [
+  { say = "host", text = "A moon is missing." },
+  { say = "host", text = "Nobody knows which." },
+  { say = "host", text = "I'll keep an eye out. I see most things... eventually." },
+]
+
+[[clip]]
+id = "convergence-the-smell"
+category = "event"
+title = "The Convergence: Toast, Everywhere"
+event = "convergence"
+kit = "the-smell"
+lines = [
+  { say = "host", text = "Toast." },
+  { say = "host", text = "Everywhere smells of toast." },
+  { say = "host", text = "By the time I get to the kitchen... it'll be breakfast anyway." },
+]
+
+[[clip]]
+id = "convergence-the-song"
+category = "event"
+title = "The Convergence: The Song Nobody Can Finish"
+event = "convergence"
+kit = "the-song"
+lines = [
+  { say = "host", text = "There's a song. Everyone's humming it." },
+  { say = "host", text = "Nobody knows the end." },
+  { say = "host", text = "I'm still on the first note. Lovely note." },
+]
+
+[[clip]]
+id = "convergence-the-knock"
+category = "event"
+title = "The Convergence: Three Knocks"
+event = "convergence"
+kit = "the-knock"
+lines = [
+  { say = "host", text = "Knock. Knock. Knock." },
+  { say = "host", text = "By the time I got to the door... it was Tuesday." },
+  { say = "host", text = "Nobody there. Of course." },
+]
+
+[[clip]]
+id = "convergence-wrong-colour"
+category = "event"
+title = "The Convergence: A Colour With No Name"
+event = "convergence"
+kit = "wrong-colour"
+lines = [
+  { say = "host", text = "The sky went a colour." },
+  { say = "host", text = "It's gone, you say?" },
+  { say = "host", text = "Not for me. I'm still looking at it." },
+]
+
+[[clip]]
+id = "convergence-the-pigeon"
+category = "event"
+title = "The Convergence: The Pigeon"
+event = "convergence"
+kit = "the-pigeon"
+lines = [
+  { say = "host", text = "A pigeon walked in. Very quickly. Too quickly." },
+  { say = "host", text = "It knows me, apparently. Hello." },
+  { say = "host", text = "...It's gone. Oh well." },
+]

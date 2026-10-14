@@ -402,3 +402,80 @@ lines = [
   { say = "agnes", text = "Nanny? I can't find my nightie." },
   { say = "nanny", text = "That's only Agnes." },
 ]
+
+
+# ══ v4: The Convergence ═══════════════════════════════════════════════════════
+#
+# Saturdays, 20:00 UTC: every station notices the same thing. One reaction per topic
+# (SCHEMA.md, "The Convergence"); the director airs the _events open, then the tuned
+# station's reaction, then the close.
+
+[[clip]]
+id = "convergence-missing-moon"
+category = "event"
+title = "The Convergence: A Moon Goes Missing"
+event = "convergence"
+kit = "missing-moon"
+lines = [
+  { say = "agnes", text = "Nanny, a moon's gone." },
+  { say = "nanny", text = "Has it, dear?" },
+  { say = "agnes", text = "Everyone says so." },
+  { say = "nanny", text = "Then it's gone to bed. Which is where you are. Goodnight, Agnes." },
+]
+
+[[clip]]
+id = "convergence-the-smell"
+category = "event"
+title = "The Convergence: Toast, Everywhere"
+event = "convergence"
+kit = "the-smell"
+lines = [
+  { say = "bartholomew", text = "Nanny... I can smell toast." },
+  { say = "nanny", text = "Everyone can, dear. Close your eyes, and it'll be breakfast in the morning." },
+]
+
+[[clip]]
+id = "convergence-the-song"
+category = "event"
+title = "The Convergence: The Song Nobody Can Finish"
+event = "convergence"
+kit = "the-song"
+lines = [
+  { say = "nanny", text = "There's a little song going round tonight. Nobody knows the end of it." },
+  { say = "nanny", text = "Which is the very best kind, for bedtime. Shh." },
+]
+
+[[clip]]
+id = "convergence-the-knock"
+category = "event"
+title = "The Convergence: Three Knocks"
+event = "convergence"
+kit = "the-knock"
+lines = [
+  { say = "nanny", text = "Three little knocks at the bedroom door. Nobody there." },
+  { say = "nanny", text = "Just a dream, knocking a bit early. Let it in when you're ready, dear." },
+]
+
+[[clip]]
+id = "convergence-wrong-colour"
+category = "event"
+title = "The Convergence: A Colour With No Name"
+event = "convergence"
+kit = "wrong-colour"
+lines = [
+  { say = "nanny", text = "The sky went a colour just now, dears. There isn't a word for it." },
+  { say = "nanny", text = "It's a colour for sleeping. You only see it with your eyes closed." },
+]
+
+[[clip]]
+id = "convergence-the-pigeon"
+category = "event"
+title = "The Convergence: The Pigeon"
+event = "convergence"
+kit = "the-pigeon"
+lines = [
+  { say = "agnes", text = "Nanny, there's a pigeon in the village. On my knee." },
+  { say = "nanny", text = "Is it a nice pigeon?" },
+  { say = "agnes", text = "It knows everyone." },
+  { say = "nanny", text = "Then it can stay. Goodnight, pigeon." },
+]

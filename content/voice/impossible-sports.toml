@@ -987,3 +987,82 @@ lines = [
   { say = "chip", text = "Apple Bobbing, the Halloween final! The champion has had her head in the barrel for four minutes!" },
   { say = "doug", text = "She's not bobbing any more, Chip. She lives there now. Lovely apple, to be fair." },
 ]
+
+
+# ══ v4: The Convergence ═══════════════════════════════════════════════════════
+#
+# Saturdays, 20:00 UTC: every station notices the same thing. One reaction per topic
+# (SCHEMA.md, "The Convergence"); the director airs the _events open, then the tuned
+# station's reaction, then the close.
+
+[[clip]]
+id = "convergence-missing-moon"
+category = "event"
+title = "The Convergence: A Moon Goes Missing"
+event = "convergence"
+kit = "missing-moon"
+lines = [
+  { say = "chip", text = "Folks, breaking news, a moon is missing! And Doug, the Lunar Relay has been postponed!" },
+  { say = "doug", text = "You can't run a relay without the baton, Chip." },
+  { say = "chip", text = "The moon was the baton?" },
+  { say = "doug", text = "Every sport's got one, Chip." },
+]
+
+[[clip]]
+id = "convergence-the-smell"
+category = "event"
+title = "The Convergence: Toast, Everywhere"
+event = "convergence"
+kit = "the-smell"
+lines = [
+  { say = "chip", text = "Doug, the whole stadium smells like toast!" },
+  { say = "doug", text = "It's not the stadium, Chip. It's everywhere. They're saying it on every station." },
+  { say = "chip", text = "Then it's a home crowd advantage for everybody!" },
+]
+
+[[clip]]
+id = "convergence-the-song"
+category = "event"
+title = "The Convergence: The Song Nobody Can Finish"
+event = "convergence"
+kit = "the-song"
+lines = [
+  { say = "chip", text = "The crowd's singing, folks! Ninety thousand voices! The same song!" },
+  { say = "doug", text = "And there they go. Stopped. Same place. Nobody knows the next bit." },
+  { say = "chip", text = "It's a draw, folks! A draw, against a song!" },
+]
+
+[[clip]]
+id = "convergence-the-knock"
+category = "event"
+title = "The Convergence: Three Knocks"
+event = "convergence"
+kit = "the-knock"
+lines = [
+  { say = "chip", text = "Three knocks on the commentary box door, folks! Who's there?" },
+  { say = "doug", text = "Nobody, Chip." },
+  { say = "chip", text = "Nobody! The undefeated champion of Hide and Seek!" },
+]
+
+[[clip]]
+id = "convergence-wrong-colour"
+category = "event"
+title = "The Convergence: A Colour With No Name"
+event = "convergence"
+kit = "wrong-colour"
+lines = [
+  { say = "chip", text = "The sky's gone a colour, folks! And the score is a colour! Doug, is that the score?" },
+  { say = "doug", text = "Nobody's ever scored that one, Chip. Nobody knows what it's worth." },
+  { say = "chip", text = "Then whoever did it, that's a world first!" },
+]
+
+[[clip]]
+id = "convergence-the-pigeon"
+category = "event"
+title = "The Convergence: The Pigeon"
+event = "convergence"
+kit = "the-pigeon"
+lines = [
+  { say = "chip", text = "There's a pigeon on the pitch, folks! It's walking straight through the Gravity Polo! It's waving at Doug! Doug, do you know this pigeon?" },
+  { say = "doug", text = "We played Cloudball together, Chip." },
+]

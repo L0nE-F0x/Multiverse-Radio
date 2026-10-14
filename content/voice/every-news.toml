@@ -1580,3 +1580,78 @@ lines = [
   { say = "skip", text = "The Halloween forecast! A big full moon, light fog, and scattered howling, mostly from people stepping on plugs in the dark!" },
   { say = "skip", text = "And if a bedsheet comes down your street and says boo, say boo back, folks. It's only polite!" },
 ]
+
+
+# ══ v4: The Convergence ═══════════════════════════════════════════════════════
+#
+# Saturdays, 20:00 UTC: every station notices the same thing. One reaction per topic
+# (SCHEMA.md, "The Convergence"); the director airs the _events open, then the tuned
+# station's reaction, then the close.
+
+[[clip]]
+id = "convergence-missing-moon"
+category = "event"
+title = "The Convergence: A Moon Goes Missing"
+event = "convergence"
+kit = "missing-moon"
+lines = [
+  { say = "dale", text = "Breaking news. A moon is missing. Every possible timeline agrees that one moon has gone, and no two timelines agree on which." },
+  { say = "dale", text = "Kim Harrowgate is standing where it used to be. Kim?" },
+  { say = "kim", text = "Dale, it's very dark here. Somebody's just handed me a torch." },
+]
+
+[[clip]]
+id = "convergence-the-smell"
+category = "event"
+title = "The Convergence: Toast, Everywhere"
+event = "convergence"
+kit = "the-smell"
+lines = [
+  { say = "dale", text = "We are receiving reports that everywhere, at once, smells faintly of toast." },
+  { say = "dale", text = "The source has not been identified. Officials ask that you check your own toaster, and then, gently, everyone else's. More at eleven." },
+]
+
+[[clip]]
+id = "convergence-the-song"
+category = "event"
+title = "The Convergence: The Song Nobody Can Finish"
+event = "convergence"
+kit = "the-song"
+lines = [
+  { say = "dale", text = "A song is stuck in the head of every listener in every timeline. Nobody knows how it ends." },
+  { say = "skip", text = "I've got it, Dale! Ba, ba ba, ba... and then..." },
+  { say = "dale", text = "That is where it stops for everyone, Skip. More at eleven." },
+]
+
+[[clip]]
+id = "convergence-the-knock"
+category = "event"
+title = "The Convergence: Three Knocks"
+event = "convergence"
+kit = "the-knock"
+lines = [
+  { say = "dale", text = "There has been a knock at the newsroom door. Three knocks. We have checked. There is nobody there." },
+  { say = "dale", text = "Stations across the dial report the same. The door has been asked to comment. It has declined." },
+]
+
+[[clip]]
+id = "convergence-wrong-colour"
+category = "event"
+title = "The Convergence: A Colour With No Name"
+event = "convergence"
+kit = "wrong-colour"
+lines = [
+  { say = "dale", text = "For a few seconds, the sky was a colour our science desk cannot name. Kim?" },
+  { say = "kim", text = "Dale, it was like... I haven't got it. Somebody's just handed me a paint chart. It's none of these." },
+]
+
+[[clip]]
+id = "convergence-the-pigeon"
+category = "event"
+title = "The Convergence: The Pigeon"
+event = "convergence"
+kit = "the-pigeon"
+lines = [
+  { say = "dale", text = "A pigeon has walked into the newsroom. Sources say the same pigeon is in every studio on the dial." },
+  { say = "dale", text = "It has nodded at me twice, as if we went to school together. We did not. More at eleven." },
+]

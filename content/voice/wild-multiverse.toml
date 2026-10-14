@@ -579,3 +579,78 @@ lines = [
   { say = "pip", text = "It's me. I'm dressed as a lion." },
   { say = "host", text = "Magnificent." },
 ]
+
+
+# ══ v4: The Convergence ═══════════════════════════════════════════════════════
+#
+# Saturdays, 20:00 UTC: every station notices the same thing. One reaction per topic
+# (SCHEMA.md, "The Convergence"); the director airs the _events open, then the tuned
+# station's reaction, then the close.
+
+[[clip]]
+id = "convergence-missing-moon"
+category = "event"
+title = "The Convergence: A Moon Goes Missing"
+event = "convergence"
+kit = "missing-moon"
+lines = [
+  { say = "host", text = "Tonight, a rare phenomenon. A moon has gone missing. Every creature on the plain is looking up, and every one of them is looking at a different gap." },
+  { say = "pip", text = "I've pointed the camera at the sky, sir. I don't know where." },
+]
+
+[[clip]]
+id = "convergence-the-smell"
+category = "event"
+title = "The Convergence: Toast, Everywhere"
+event = "convergence"
+kit = "the-smell"
+lines = [
+  { say = "host", text = "A scent drifts across the savannah. Faint. Golden. Unmistakable. Toast." },
+  { say = "host", text = "For one moment, nobody is chasing anybody. Everybody is simply thinking about breakfast." },
+]
+
+[[clip]]
+id = "convergence-the-song"
+category = "event"
+title = "The Convergence: The Song Nobody Can Finish"
+event = "convergence"
+kit = "the-song"
+lines = [
+  { say = "host", text = "Listen. The chorus has fallen silent, mid phrase." },
+  { say = "host", text = "Every bird in the valley is singing the same half of the same song, then stopping, and looking at the others. Not one of them knows the rest." },
+]
+
+[[clip]]
+id = "convergence-the-knock"
+category = "event"
+title = "The Convergence: Three Knocks"
+event = "convergence"
+kit = "the-knock"
+lines = [
+  { say = "host", text = "Three knocks, on the tent pole. We are four hundred miles from the nearest door. Pip has looked outside." },
+  { say = "pip", text = "Nobody, sir." },
+  { say = "host", text = "Nobody. One of the shyest creatures in the multiverse." },
+]
+
+[[clip]]
+id = "convergence-wrong-colour"
+category = "event"
+title = "The Convergence: A Colour With No Name"
+event = "convergence"
+kit = "wrong-colour"
+lines = [
+  { say = "host", text = "Look. The sky. For perhaps three seconds, a colour no eye has ever named." },
+  { say = "host", text = "The herd stopped. The river stopped. Pip forgot to film it. And I am, for once, glad." },
+]
+
+[[clip]]
+id = "convergence-the-pigeon"
+category = "event"
+title = "The Convergence: The Pigeon"
+event = "convergence"
+kit = "the-pigeon"
+lines = [
+  { say = "host", text = "And here, an extraordinary sight. A common pigeon, walking calmly into the hide. It is looking at Pip. Pip is looking at it." },
+  { say = "pip", text = "Hello again." },
+  { say = "host", text = "They have, it seems, met before." },
+]

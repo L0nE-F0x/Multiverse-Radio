@@ -499,3 +499,76 @@ lines = [
   { say = "host", text = "The pumpkin carving results. Third place, Ellie Marsh, for a lovely cat. Second, the Ainsleys, for a very good owl." },
   { say = "host", text = "And first place, a pumpkin nobody entered, which came up out of the hole on Thursday, carved from the inside. It's very good. It's smiling. It's been smiling at the post office all week." },
 ]
+
+
+# ══ v4: The Convergence ═══════════════════════════════════════════════════════
+#
+# Saturdays, 20:00 UTC: every station notices the same thing. One reaction per topic
+# (SCHEMA.md, "The Convergence"); the director airs the _events open, then the tuned
+# station's reaction, then the close.
+
+[[clip]]
+id = "convergence-missing-moon"
+category = "event"
+title = "The Convergence: A Moon Goes Missing"
+event = "convergence"
+kit = "missing-moon"
+lines = [
+  { say = "host", text = "A notice. A moon has gone missing. Everyone agrees one's gone. Nobody can agree which." },
+  { say = "host", text = "If it has come up out of the hole, it'll be at the post office with the umbrella. Please don't explain." },
+]
+
+[[clip]]
+id = "convergence-the-smell"
+category = "event"
+title = "The Convergence: Toast, Everywhere"
+event = "convergence"
+kit = "the-smell"
+lines = [
+  { say = "host", text = "Residents report a smell of toast, all over the town, and I'm told everywhere else." },
+  { say = "host", text = "Councillor Dibbs has asked me to say it is not coming from the hole. He's quite sure about that, at least." },
+]
+
+[[clip]]
+id = "convergence-the-song"
+category = "event"
+title = "The Convergence: The Song Nobody Can Finish"
+event = "convergence"
+kit = "the-song"
+lines = [
+  { say = "host", text = "Everybody in the Hollow has the same tune in their heads, and nobody can finish it." },
+  { say = "host", text = "Biscuit's been howling the first bit at the edge of the hole. Something down there hummed the next note. Then stopped. We all went in for tea." },
+]
+
+[[clip]]
+id = "convergence-the-knock"
+category = "event"
+title = "The Convergence: Three Knocks"
+event = "convergence"
+kit = "the-knock"
+lines = [
+  { say = "host", text = "Three knocks at the studio door just now, and nobody there. Ron on Rim Lane had the same, and so did half the street." },
+  { say = "host", text = "We think it came from the hole. The hole has never knocked before. It must be a special occasion." },
+]
+
+[[clip]]
+id = "convergence-wrong-colour"
+category = "event"
+title = "The Convergence: A Colour With No Name"
+event = "convergence"
+kit = "wrong-colour"
+lines = [
+  { say = "dibbs", text = "The committee notes that the sky was, briefly, a colour. The committee has no name for it." },
+  { say = "dibbs", text = "And the committee has decided, after careful consideration, to move on to item three." },
+]
+
+[[clip]]
+id = "convergence-the-pigeon"
+category = "event"
+title = "The Convergence: The Pigeon"
+event = "convergence"
+kit = "the-pigeon"
+lines = [
+  { say = "host", text = "A pigeon walked into the studio just now, and sat on the noticeboard. It seems to know everybody." },
+  { say = "host", text = "It nodded at Biscuit, and Biscuit nodded back. If it's yours, it's fine. It likes the view." },
+]

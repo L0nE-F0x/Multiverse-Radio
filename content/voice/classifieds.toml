@@ -1095,3 +1095,77 @@ lines = [
   { say = "rex", text = "Spooky, Linda!", speed = 1.0 },
   { say = "linda", text = "Thank you, Rex. I've been practising.", speed = 0.95 },
 ]
+
+
+# ══ v4: The Convergence ═══════════════════════════════════════════════════════
+#
+# Saturdays, 20:00 UTC: every station notices the same thing. One reaction per topic
+# (SCHEMA.md, "The Convergence"); the director airs the _events open, then the tuned
+# station's reaction, then the close.
+
+[[clip]]
+id = "convergence-missing-moon"
+category = "event"
+title = "The Convergence: A Moon Goes Missing"
+event = "convergence"
+kit = "missing-moon"
+lines = [
+  { say = "rex", text = "Folks, a moon has gone missing, and nobody knows which one! Lost and found, Linda?" },
+  { say = "linda", text = "Found. One moon. Unclaimed. We will not be handing it over until somebody describes it correctly. Nobody has yet." },
+]
+
+[[clip]]
+id = "convergence-the-smell"
+category = "event"
+title = "The Convergence: Toast, Everywhere"
+event = "convergence"
+kit = "the-smell"
+lines = [
+  { say = "rex", text = "Smell that? That's toast, folks, everywhere, all at once! And Rex has got the toasters!" },
+  { say = "linda", text = "Rex has one toaster. It is not the source. The toaster does not smell of toast. The toaster smells of Rex." },
+]
+
+[[clip]]
+id = "convergence-the-song"
+category = "event"
+title = "The Convergence: The Song Nobody Can Finish"
+event = "convergence"
+kit = "the-song"
+lines = [
+  { say = "rex", text = "Got a song stuck in your head with no ending? Bellows Song Endings! Every ending, guaranteed to fit!" },
+  { say = "linda", text = "Endings may not fit. Endings may belong to other songs. Nobody has the real ending. Rex has checked." },
+]
+
+[[clip]]
+id = "convergence-the-knock"
+category = "event"
+title = "The Convergence: Three Knocks"
+event = "convergence"
+kit = "the-knock"
+lines = [
+  { say = "rex", text = "Somebody knocked! Three times! It's a customer!" },
+  { say = "linda", text = "There is nobody there, Rex." },
+  { say = "rex", text = "Then it's the best kind of customer, folks! Doesn't haggle!" },
+]
+
+[[clip]]
+id = "convergence-wrong-colour"
+category = "event"
+title = "The Convergence: A Colour With No Name"
+event = "convergence"
+kit = "wrong-colour"
+lines = [
+  { say = "rex", text = "The sky's a colour nobody's got a word for, folks, and I'm calling it Bellows Blue!" },
+  { say = "linda", text = "It is not blue. Rex cannot name the sky. The sky has been informed, and was very gracious about it." },
+]
+
+[[clip]]
+id = "convergence-the-pigeon"
+category = "event"
+title = "The Convergence: The Pigeon"
+event = "convergence"
+kit = "the-pigeon"
+lines = [
+  { say = "linda", text = "Found. One pigeon. In the office. It seems to know us. It knows where the biscuits are." },
+  { say = "linda", text = "If this is your pigeon, please collect it. If you are the pigeon, hello. You may stay." },
+]

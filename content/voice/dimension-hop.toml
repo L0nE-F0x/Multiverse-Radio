@@ -1034,3 +1034,87 @@ lines = [
   { say = "mara", text = "Jace. That's the most frightening thing you've ever told me. Not normal. Keep it away from Gerald." },
   { sfx = "beep" },
 ]
+
+
+# ══ v4: The Convergence ═══════════════════════════════════════════════════════
+#
+# Saturdays, 20:00 UTC: every station notices the same thing. One reaction per topic
+# (SCHEMA.md, "The Convergence"); the director airs the _events open, then the tuned
+# station's reaction, then the close.
+
+[[clip]]
+id = "convergence-missing-moon"
+category = "event"
+title = "The Convergence: A Moon Goes Missing"
+event = "convergence"
+kit = "missing-moon"
+lines = [
+  { say = "jace", text = "Mara, everyone's saying a moon's gone missing." },
+  { say = "mara", text = "Ours is fine. It's on the floor, where moons go." },
+  { say = "jace", text = "Ours is... actually, I'm not sure how many we had." },
+  { say = "mara", text = "Then it's yours, Jace. Not normal." },
+]
+
+[[clip]]
+id = "convergence-the-smell"
+category = "event"
+title = "The Convergence: Toast, Everywhere"
+event = "convergence"
+kit = "the-smell"
+lines = [
+  { say = "mara", text = "Jace, why does everything smell like toast?" },
+  { say = "jace", text = "That's toast. It's bread you burn a little bit, on purpose." },
+  { say = "mara", text = "On purpose. Everywhere. All at once?" },
+  { say = "jace", text = "Not usually all at once." },
+]
+
+[[clip]]
+id = "convergence-the-song"
+category = "event"
+title = "The Convergence: The Song Nobody Can Finish"
+event = "convergence"
+kit = "the-song"
+lines = [
+  { say = "jace", text = "I've had this song in my head all day. It goes..." },
+  { say = "mara", text = "I know. I heard you stop four seconds ago." },
+  { say = "jace", text = "Do you know how it ends?" },
+  { say = "mara", text = "No. And I'm four seconds ahead. So it doesn't end for at least four more seconds." },
+]
+
+[[clip]]
+id = "convergence-the-knock"
+category = "event"
+title = "The Convergence: Three Knocks"
+event = "convergence"
+kit = "the-knock"
+lines = [
+  { say = "mara", text = "Someone's going to knock." },
+  { say = "jace", text = "Somebody just knocked. Three times." },
+  { say = "mara", text = "I answered it four seconds ago. Nobody. I said hello anyway." },
+]
+
+[[clip]]
+id = "convergence-wrong-colour"
+category = "event"
+title = "The Convergence: A Colour With No Name"
+event = "convergence"
+kit = "wrong-colour"
+lines = [
+  { say = "jace", text = "Mara, look at the sky." },
+  { say = "mara", text = "Already did. It's the colour we use for Thursdays, upside down." },
+  { say = "jace", text = "We haven't got that colour." },
+  { say = "mara", text = "Nobody has it, Jace. I made that up. It was beautiful, though." },
+]
+
+[[clip]]
+id = "convergence-the-pigeon"
+category = "event"
+title = "The Convergence: The Pigeon"
+event = "convergence"
+kit = "the-pigeon"
+lines = [
+  { say = "jace", text = "There's a pigeon in the garage. It walked through the rift." },
+  { say = "mara", text = "It came through my side first. It says it knows you." },
+  { say = "jace", text = "I've never seen it before." },
+  { say = "mara", text = "It said you'd say that." },
+]

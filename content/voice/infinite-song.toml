@@ -387,3 +387,76 @@ lines = [
   { say = "ambrose", text = "Very sensible. Mind the beat." },
   { sfx = "phone-hangup" },
 ]
+
+
+# ══ v4: The Convergence ═══════════════════════════════════════════════════════
+#
+# Saturdays, 20:00 UTC: every station notices the same thing. One reaction per topic
+# (SCHEMA.md, "The Convergence"); the director airs the _events open, then the tuned
+# station's reaction, then the close.
+
+[[clip]]
+id = "convergence-missing-moon"
+category = "event"
+title = "The Convergence: A Moon Goes Missing"
+event = "convergence"
+kit = "missing-moon"
+lines = [
+  { say = "ambrose", text = "We've just reached a verse about the moon. Well. About where a moon was." },
+  { say = "ambrose", text = "Everyone on the dial says one's gone missing. The band have left a gap in the lyric, out of respect." },
+]
+
+[[clip]]
+id = "convergence-the-smell"
+category = "event"
+title = "The Convergence: Toast, Everywhere"
+event = "convergence"
+kit = "the-smell"
+lines = [
+  { say = "ambrose", text = "The stage smells of toast. So does everywhere, I'm told." },
+  { say = "ambrose", text = "Old Wendeline looked up from the drums for the first time since the Iron Age. She missed a beat. Nobody minded." },
+]
+
+[[clip]]
+id = "convergence-the-song"
+category = "event"
+title = "The Convergence: The Song Nobody Can Finish"
+event = "convergence"
+kit = "the-song"
+lines = [
+  { say = "ambrose", text = "Everyone on the dial has a song stuck in their head tonight, and nobody can finish it." },
+  { say = "ambrose", text = "Well. Welcome. We've been in the same position for about four million verses. You get used to it. There's usually a boat." },
+]
+
+[[clip]]
+id = "convergence-the-knock"
+category = "event"
+title = "The Convergence: Three Knocks"
+event = "convergence"
+kit = "the-knock"
+lines = [
+  { say = "ambrose", text = "Three knocks at the stage door. The band's beards were in the way, and by the time we got there, nobody." },
+  { say = "ambrose", text = "First knock since verse two hundred, that." },
+]
+
+[[clip]]
+id = "convergence-wrong-colour"
+category = "event"
+title = "The Convergence: A Colour With No Name"
+event = "convergence"
+kit = "wrong-colour"
+lines = [
+  { say = "ambrose", text = "The sky went a colour just now, at verse four million, one hundred and twelve." },
+  { say = "ambrose", text = "I'm writing that down, in case anyone ever asks when it happened. Nobody will. But I'll know." },
+]
+
+[[clip]]
+id = "convergence-the-pigeon"
+category = "event"
+title = "The Convergence: The Pigeon"
+event = "convergence"
+kit = "the-pigeon"
+lines = [
+  { say = "ambrose", text = "A pigeon has walked onto the stage. It's nodding along." },
+  { say = "ambrose", text = "It knows which verse we're on. I've never met anyone else who knows which verse we're on." },
+]

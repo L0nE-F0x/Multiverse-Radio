@@ -506,3 +506,80 @@ dates = ["10-24", "10-25", "10-26", "10-27", "10-28", "10-29", "10-30", "10-31"]
 lines = [
   { say = "host", text = "The Lounge at the End of Time. Halloween. Everything ends here, darling. Beautifully. Boo." },
 ]
+
+
+# ══ v4: The Convergence ═══════════════════════════════════════════════════════
+#
+# Saturdays, 20:00 UTC: every station notices the same thing. One reaction per topic
+# (SCHEMA.md, "The Convergence"); the director airs the _events open, then the tuned
+# station's reaction, then the close.
+
+[[clip]]
+id = "convergence-missing-moon"
+category = "event"
+title = "The Convergence: A Moon Goes Missing"
+event = "convergence"
+kit = "missing-moon"
+lines = [
+  { say = "host", text = "A moon has gone missing, darling. Everybody agrees one's gone. Nobody agrees which." },
+  { say = "host", text = "At the end of time we've lost a great many moons. We never mind. We simply look up, fondly, at the space where it was." },
+]
+
+[[clip]]
+id = "convergence-the-smell"
+category = "event"
+title = "The Convergence: Toast, Everywhere"
+event = "convergence"
+kit = "the-smell"
+lines = [
+  { say = "host", text = "Gilbert, is that toast?" },
+  { say = "gilbert", text = "Not mine." },
+  { say = "host", text = "The whole universe smells of toast tonight, darling. Someone, somewhere, is having breakfast at the end of everything. Good for them." },
+]
+
+[[clip]]
+id = "convergence-the-song"
+category = "event"
+title = "The Convergence: The Song Nobody Can Finish"
+event = "convergence"
+kit = "the-song"
+lines = [
+  { say = "host", text = "There's a song in everybody's head tonight, darling, and nobody can finish it." },
+  { say = "host", text = "Smooth Harold gets to the same bar every time, and stops, and looks at the empty microphone. A real heartbreaker. Even without the end." },
+]
+
+[[clip]]
+id = "convergence-the-knock"
+category = "event"
+title = "The Convergence: Three Knocks"
+event = "convergence"
+kit = "the-knock"
+lines = [
+  { say = "host", text = "Three knocks at the door of the Lounge." },
+  { say = "gilbert", text = "Nobody." },
+  { say = "host", text = "Nobody, darling. At the end of time, that's usually who it is. Come in, Nobody. Booth five's free." },
+]
+
+[[clip]]
+id = "convergence-wrong-colour"
+category = "event"
+title = "The Convergence: A Colour With No Name"
+event = "convergence"
+kit = "wrong-colour"
+lines = [
+  { say = "host", text = "Did you see the big window just now? The sky went a colour I've not seen in eleven billion years. Gilbert, what would you call that?" },
+  { say = "gilbert", text = "I wouldn't." },
+  { say = "host", text = "He wouldn't. Some things you just let be." },
+]
+
+[[clip]]
+id = "convergence-the-pigeon"
+category = "event"
+title = "The Convergence: The Pigeon"
+event = "convergence"
+kit = "the-pigeon"
+lines = [
+  { say = "host", text = "A pigeon has walked into the Lounge, darling, and taken a stool at the bar, as if it's been coming here for years." },
+  { say = "gilbert", text = "The usual?" },
+  { say = "host", text = "Gilbert knows its usual. I didn't know it had a usual." },
+]

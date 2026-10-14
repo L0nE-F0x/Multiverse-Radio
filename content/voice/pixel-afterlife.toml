@@ -530,3 +530,78 @@ lines = [
   { say = "host", text = "Eight-Bit Afterlife! Halloween! Everybody here is already a ghost! Easiest costume ever!" },
   { sting = "halloween" },
 ]
+
+
+# ══ v4: The Convergence ═══════════════════════════════════════════════════════
+#
+# Saturdays, 20:00 UTC: every station notices the same thing. One reaction per topic
+# (SCHEMA.md, "The Convergence"); the director airs the _events open, then the tuned
+# station's reaction, then the close.
+
+[[clip]]
+id = "convergence-missing-moon"
+category = "event"
+title = "The Convergence: A Moon Goes Missing"
+event = "convergence"
+kit = "missing-moon"
+lines = [
+  { say = "host", text = "Glitch report! A moon's missing! Everyone agrees one's gone, and nobody agrees which!" },
+  { say = "host", text = "I checked level six. The moon on level six is still there. It's just a circle. Lag, did you lose a moon?" },
+  { say = "lag", text = "Probably." },
+]
+
+[[clip]]
+id = "convergence-the-smell"
+category = "event"
+title = "The Convergence: Toast, Everywhere"
+event = "convergence"
+kit = "the-smell"
+lines = [
+  { say = "host", text = "Is it just me, or does the whole afterlife smell like toast?" },
+  { say = "host", text = "We don't even have a toaster! We have a picture of a toaster! It doesn't do anything! It's just very brown!" },
+]
+
+[[clip]]
+id = "convergence-the-song"
+category = "event"
+title = "The Convergence: The Song Nobody Can Finish"
+event = "convergence"
+kit = "the-song"
+lines = [
+  { say = "host", text = "Everybody's humming the same song and nobody can finish it! It's like a level with no exit!" },
+  { say = "host", text = "Player One, if you know how it ends, now's a great time to press start!" },
+]
+
+[[clip]]
+id = "convergence-the-knock"
+category = "event"
+title = "The Convergence: Three Knocks"
+event = "convergence"
+kit = "the-knock"
+lines = [
+  { say = "host", text = "Three knocks on the arcade door! Player One? Is it Player One?" },
+  { say = "host", text = "...Nobody. It's fine! It's fine. That's three more knocks than usual!" },
+]
+
+[[clip]]
+id = "convergence-wrong-colour"
+category = "event"
+title = "The Convergence: A Colour With No Name"
+event = "convergence"
+kit = "wrong-colour"
+lines = [
+  { say = "host", text = "Whoa! The sky just went a colour that isn't in the palette! We've only got sixteen colours! That was a seventeenth!" },
+  { say = "host", text = "Lag tried to save it." },
+  { say = "lag", text = "Lost it." },
+]
+
+[[clip]]
+id = "convergence-the-pigeon"
+category = "event"
+title = "The Convergence: The Pigeon"
+event = "convergence"
+kit = "the-pigeon"
+lines = [
+  { say = "host", text = "A pigeon just walked into the arcade! It's walking right past the high score table, and... it stopped at triple A. It's nodding." },
+  { say = "host", text = "Is the pigeon triple A? Has it been the pigeon this whole time?" },
+]

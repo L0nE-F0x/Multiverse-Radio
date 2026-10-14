@@ -431,3 +431,80 @@ dates = ["10-24", "10-25", "10-26", "10-27", "10-28", "10-29", "10-30", "10-31"]
 lines = [
   { say = "host", text = "The Baroque Robot Philharmonic, at Halloween. We have come dressed as humans. Note the visible feelings." },
 ]
+
+
+# ══ v4: The Convergence ═══════════════════════════════════════════════════════
+#
+# Saturdays, 20:00 UTC: every station notices the same thing. One reaction per topic
+# (SCHEMA.md, "The Convergence"); the director airs the _events open, then the tuned
+# station's reaction, then the close.
+
+[[clip]]
+id = "convergence-missing-moon"
+category = "event"
+title = "The Convergence: A Moon Goes Missing"
+event = "convergence"
+kit = "missing-moon"
+lines = [
+  { say = "host", text = "The Court has been informed that a moon is missing, and that nobody can agree which." },
+  { say = "host", text = "We have counted ours. There is one. It is painted on the ceiling, and it is adequately there. Next piece." },
+]
+
+[[clip]]
+id = "convergence-the-smell"
+category = "event"
+title = "The Convergence: Toast, Everywhere"
+event = "convergence"
+kit = "the-smell"
+lines = [
+  { say = "host", text = "There is a smell of toast in the concert hall. I have checked the portrait of the toaster. It is innocent. It is also a painting." },
+  { say = "cello", text = "It smells warm." },
+  { say = "host", text = "Overheating, Unit Nine." },
+]
+
+[[clip]]
+id = "convergence-the-song"
+category = "event"
+title = "The Convergence: The Song Nobody Can Finish"
+event = "convergence"
+kit = "the-song"
+lines = [
+  { say = "cello", text = "Maestro. I have a melody in my circuits. I cannot find the final cadence." },
+  { say = "host", text = "Nor can anyone, Unit Nine. Improvise an ending." },
+  { say = "cello", text = "I do not know how." },
+  { say = "host", text = "Neither does anybody. Proceed." },
+]
+
+[[clip]]
+id = "convergence-the-knock"
+category = "event"
+title = "The Convergence: Three Knocks"
+event = "convergence"
+kit = "the-knock"
+lines = [
+  { say = "host", text = "Three knocks at the door of the Clockwork Court. Perfectly in time. Andante." },
+  { say = "host", text = "There was nobody there. Whoever it was, the rhythm was impeccable. By human standards." },
+]
+
+[[clip]]
+id = "convergence-wrong-colour"
+category = "event"
+title = "The Convergence: A Colour With No Name"
+event = "convergence"
+kit = "wrong-colour"
+lines = [
+  { say = "host", text = "The sky outside the Court briefly displayed a colour that is not in our specification. Unit Nine?" },
+  { say = "cello", text = "Blue-ish. But sadder." },
+  { say = "host", text = "Overheating. Beautiful." },
+]
+
+[[clip]]
+id = "convergence-the-pigeon"
+category = "event"
+title = "The Convergence: The Pigeon"
+event = "convergence"
+kit = "the-pigeon"
+lines = [
+  { say = "host", text = "A pigeon has walked into the orchestra pit, and is standing beside the conductor's spoon." },
+  { say = "host", text = "It appears to be keeping time. Several of the musicians have curtsied to it. Next piece." },
+]

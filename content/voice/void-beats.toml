@@ -561,3 +561,79 @@ lines = [
   { say = "host", text = "Void Beats. Halloween week. The void does this all year, for free." },
   { sting = "halloween" },
 ]
+
+
+# ══ v4: The Convergence ═══════════════════════════════════════════════════════
+#
+# Saturdays, 20:00 UTC: every station notices the same thing. One reaction per topic
+# (SCHEMA.md, "The Convergence"); the director airs the _events open, then the tuned
+# station's reaction, then the close.
+
+[[clip]]
+id = "convergence-missing-moon"
+category = "event"
+title = "The Convergence: A Moon Goes Missing"
+event = "convergence"
+kit = "missing-moon"
+lines = [
+  { say = "host", text = "Okay, so, everyone's saying a moon's gone missing, and nobody can agree which one." },
+  { say = "host", text = "I checked. My good mug is still up on the ceiling, being a small moon. So it's not that one. Phew." },
+  { say = "void", text = "Hm." },
+]
+
+[[clip]]
+id = "convergence-the-smell"
+category = "event"
+title = "The Convergence: Toast, Everywhere"
+event = "convergence"
+kit = "the-smell"
+lines = [
+  { say = "host", text = "Does it smell like toast in here? It smells like toast everywhere, apparently." },
+  { say = "host", text = "The void says it wasn't the void. The void has never made toast. The void can't reach the toaster." },
+]
+
+[[clip]]
+id = "convergence-the-song"
+category = "event"
+title = "The Convergence: The Song Nobody Can Finish"
+event = "convergence"
+kit = "the-song"
+lines = [
+  { say = "host", text = "Is anyone else stuck on that song? The one that goes... and then... yeah." },
+  { say = "host", text = "Nobody can finish it. The void got further than me, and then it just stopped, and looked out of the window for a while." },
+]
+
+[[clip]]
+id = "convergence-the-knock"
+category = "event"
+title = "The Convergence: Three Knocks"
+event = "convergence"
+kit = "the-knock"
+lines = [
+  { say = "host", text = "Did you hear that? Three knocks." },
+  { say = "host", text = "Room Zero doesn't have a door. So that's... new. Void, was that you?" },
+  { say = "void", text = "No." },
+  { say = "host", text = "Okay. Let's not get up." },
+]
+
+[[clip]]
+id = "convergence-wrong-colour"
+category = "event"
+title = "The Convergence: A Colour With No Name"
+event = "convergence"
+kit = "wrong-colour"
+lines = [
+  { say = "host", text = "Look out the window, if you've got one. The sky's gone a colour I've never seen. It's sort of... no. Nope. It's gone." },
+  { say = "host", text = "I'm going to think about that for the rest of the night." },
+]
+
+[[clip]]
+id = "convergence-the-pigeon"
+category = "event"
+title = "The Convergence: The Pigeon"
+event = "convergence"
+kit = "the-pigeon"
+lines = [
+  { say = "host", text = "A pigeon just walked into Room Zero. There's no door. It walked in anyway." },
+  { say = "host", text = "It's sitting on my notes, next to the probably a cat. They seem to know each other. Hi, pigeon." },
+]

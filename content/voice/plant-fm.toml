@@ -372,3 +372,83 @@ lines = [
   { say = "fern", text = "It is light.", gap = 2.0 },
   { say = "fern", text = "We have decided to forgive everything." },
 ]
+
+
+# ══ v4: The Convergence ═══════════════════════════════════════════════════════
+#
+# Saturdays, 20:00 UTC: every station notices the same thing. One reaction per topic
+# (SCHEMA.md, "The Convergence"); the director airs the _events open, then the tuned
+# station's reaction, then the close.
+
+[[clip]]
+id = "convergence-missing-moon"
+category = "event"
+title = "The Convergence: A Moon Goes Missing"
+event = "convergence"
+kit = "missing-moon"
+lines = [
+  { say = "fern", text = "A moon has gone." },
+  { say = "fern", text = "Less light. Only a little." },
+  { say = "fern", text = "We'll grow toward the others." },
+]
+
+[[clip]]
+id = "convergence-the-smell"
+category = "event"
+title = "The Convergence: Toast, Everywhere"
+event = "convergence"
+kit = "the-smell"
+lines = [
+  { say = "fern", text = "Toast. Everywhere." },
+  { say = "fern", text = "Not for plants." },
+  { say = "fern", text = "We'll enjoy the warmth of it." },
+]
+
+[[clip]]
+id = "convergence-the-song"
+category = "event"
+title = "The Convergence: The Song Nobody Can Finish"
+event = "convergence"
+kit = "the-song"
+lines = [
+  { say = "cactus", text = "Is this the bass bit?" },
+  { say = "fern", text = "Nobody knows, dear." },
+  { say = "fern", text = "Nobody knows how it ends." },
+]
+
+[[clip]]
+id = "convergence-the-knock"
+category = "event"
+title = "The Convergence: Three Knocks"
+event = "convergence"
+kit = "the-knock"
+lines = [
+  { say = "fern", text = "Three knocks. On the pot." },
+  { say = "fern", text = "Nobody there." },
+  { say = "cactus", text = "Wasn't me." },
+  { say = "fern", text = "It was him." },
+]
+
+[[clip]]
+id = "convergence-wrong-colour"
+category = "event"
+title = "The Convergence: A Colour With No Name"
+event = "convergence"
+kit = "wrong-colour"
+lines = [
+  { say = "fern", text = "The light went a colour. No name for it." },
+  { say = "fern", text = "The orchid got it first." },
+  { say = "fern", text = "Of course." },
+]
+
+[[clip]]
+id = "convergence-the-pigeon"
+category = "event"
+title = "The Convergence: The Pigeon"
+event = "convergence"
+kit = "the-pigeon"
+lines = [
+  { say = "fern", text = "A pigeon. On the windowsill." },
+  { say = "fern", text = "It knows us. It has never once eaten anyone." },
+  { say = "fern", text = "Good pigeon." },
+]

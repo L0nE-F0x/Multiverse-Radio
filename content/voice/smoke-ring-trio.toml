@@ -312,3 +312,78 @@ lines = [
   { say = "host", text = "Smoke Ring Trio. The cloud has gone dark grey for Halloween. It's been practising." },
   { sting = "halloween" },
 ]
+
+
+# ══ v4: The Convergence ═══════════════════════════════════════════════════════
+#
+# Saturdays, 20:00 UTC: every station notices the same thing. One reaction per topic
+# (SCHEMA.md, "The Convergence"); the director airs the _events open, then the tuned
+# station's reaction, then the close.
+
+[[clip]]
+id = "convergence-missing-moon"
+category = "event"
+title = "The Convergence: A Moon Goes Missing"
+event = "convergence"
+kit = "missing-moon"
+lines = [
+  { say = "host", text = "The cloud drifted past the place where a moon used to be, darlings. Everyone says one's missing. Nobody can agree which." },
+  { say = "host", text = "Mercy played a little something into the gap. It sounded like a moon. Close enough." },
+]
+
+[[clip]]
+id = "convergence-the-smell"
+category = "event"
+title = "The Convergence: Toast, Everywhere"
+event = "convergence"
+kit = "the-smell"
+lines = [
+  { say = "host", text = "The whole room smells of toast. So, they tell me, does everywhere else." },
+  { say = "host", text = "Florian swears it isn't the kitchen. We haven't got a kitchen. We have a small cloud with a kettle on it." },
+]
+
+[[clip]]
+id = "convergence-the-song"
+category = "event"
+title = "The Convergence: The Song Nobody Can Finish"
+event = "convergence"
+kit = "the-song"
+lines = [
+  { say = "host", text = "There's a tune going round, darlings, the whole dial's humming it, and nobody can finish it." },
+  { say = "host", text = "Mercy's been playing the first half all night. She's waiting for somebody else to play the end. That's jazz." },
+]
+
+[[clip]]
+id = "convergence-the-knock"
+category = "event"
+title = "The Convergence: Three Knocks"
+event = "convergence"
+kit = "the-knock"
+lines = [
+  { say = "host", text = "Three knocks at the stage door. Silas played them back on the snare, very softly." },
+  { say = "host", text = "There was nobody there. There never is, in a cloud. But it was a lovely rhythm." },
+]
+
+[[clip]]
+id = "convergence-wrong-colour"
+category = "event"
+title = "The Convergence: A Colour With No Name"
+event = "convergence"
+kit = "wrong-colour"
+lines = [
+  { say = "host", text = "The sky outside the Cumulus Room went a colour just now. There's no word for it." },
+  { say = "host", text = "Augustin stopped walking his bass line, for the first time since spring. Then he picked it up again, a little slower." },
+]
+
+[[clip]]
+id = "convergence-the-pigeon"
+category = "event"
+title = "The Convergence: The Pigeon"
+event = "convergence"
+kit = "the-pigeon"
+lines = [
+  { say = "florian", text = "Madame Octavia, there is a pigeon at table nine." },
+  { say = "host", text = "Is it ordering, Florian?" },
+  { say = "florian", text = "It asked for the usual." },
+  { say = "host", text = "Then bring it the usual, darling. It's clearly been here before." },
+]
