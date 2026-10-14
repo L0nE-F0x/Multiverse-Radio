@@ -136,7 +136,7 @@ const def: SceneDef = {
           const top = 214 - Math.sqrt(Math.max(0, 1 - u * u)) * 4 + (fbm(x / 4, 7, 57, 2) - 0.5) * 2;
           const bot = 214 + Math.pow(Math.max(0, 1 - u * u), 1.4) * 16;
           for (let y = Math.round(top); y < bot; y++) g.px(x, y, rockC[Math.min(2, Math.floor((1 - (y - top) / 20) * 2.4 + bayer(x, y) * 0.8))]!);
-          g.px(x, Math.round(top), rockC[3]!);
+          g.px(x, Math.round(top), mix(rockC[4]!, violet, 0.4));
         }
         // dust lit by the party, behind the rock
         g.glow(160, 124, 120, hex('#3a1c22'), 0.22, 7);
