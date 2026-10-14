@@ -1,0 +1,1133 @@
+{
+  "version": 1,
+  "station": "the-switchboard",
+  "clips": [
+    {
+      "id": "id-001",
+      "category": "id",
+      "url": "/voice/the-switchboard/id-001.mp3",
+      "durationMs": 7222,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The Operator",
+          "text": "Central Exchange. Connecting calls between universes since nineteen forty six.",
+          "startMs": 42
+        },
+        {
+          "speaker": "The Operator",
+          "text": "Number, please.",
+          "startMs": 5796
+        }
+      ]
+    },
+    {
+      "id": "id-002",
+      "category": "id",
+      "url": "/voice/the-switchboard/id-002.mp3",
+      "durationMs": 7524,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The Operator",
+          "text": "You've reached the Switchboard, on one hundred and thirty one point one.",
+          "startMs": 50
+        },
+        {
+          "speaker": "The Operator",
+          "text": "Please hold. Please keep holding. You're doing very well.",
+          "startMs": 4445
+        }
+      ]
+    },
+    {
+      "id": "id-003",
+      "category": "id",
+      "url": "/voice/the-switchboard/id-003.mp3",
+      "durationMs": 5472,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The Operator",
+          "text": "The Switchboard. Every line in the multiverse comes through this room. The room is mostly cords.",
+          "startMs": 35
+        }
+      ]
+    },
+    {
+      "id": "id-004",
+      "category": "id",
+      "url": "/voice/the-switchboard/id-004.mp3",
+      "durationMs": 6478,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The Operator",
+          "text": "This is the Exchange. I connect. I don't listen.",
+          "startMs": 48
+        },
+        {
+          "speaker": "The Operator",
+          "text": "I hear, which is different. And I repeat nothing.",
+          "startMs": 3552
+        }
+      ]
+    },
+    {
+      "id": "id-005",
+      "category": "id",
+      "url": "/voice/the-switchboard/id-005.mp3",
+      "durationMs": 6447,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The Operator",
+          "text": "The Switchboard. If you can hear this, you dialled correctly. Very few people dial correctly.",
+          "startMs": 1250
+        }
+      ]
+    },
+    {
+      "id": "id-night-exchange",
+      "category": "id",
+      "url": "/voice/the-switchboard/id-night-exchange.mp3",
+      "durationMs": 8447,
+      "title": "The Night Exchange",
+      "overMusic": true,
+      "part": "open",
+      "show": "the-night-exchange",
+      "lines": [
+        {
+          "speaker": "The Operator",
+          "text": "It's gone eleven, and every light on the board is lit. Everybody rings home after dark.",
+          "startMs": 38
+        },
+        {
+          "speaker": "The Operator",
+          "text": "This is the Night Exchange. Hold the line.",
+          "startMs": 5750
+        }
+      ]
+    },
+    {
+      "id": "id-early-trunk-calls",
+      "category": "id",
+      "url": "/voice/the-switchboard/id-early-trunk-calls.mp3",
+      "durationMs": 7943,
+      "title": "Early Trunk Calls",
+      "overMusic": true,
+      "part": "open",
+      "show": "early-trunk-calls",
+      "lines": [
+        {
+          "speaker": "The Operator",
+          "text": "Good morning. The lines are clear, the rates are low, and the past is cheaper before nine.",
+          "startMs": 37
+        },
+        {
+          "speaker": "The Operator",
+          "text": "Early Trunk Calls, from the Exchange.",
+          "startMs": 5650
+        }
+      ]
+    },
+    {
+      "id": "found-1",
+      "category": "dj",
+      "url": "/voice/the-switchboard/found-1.mp3",
+      "durationMs": 13541,
+      "title": "In the Right Order",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The Operator",
+          "text": "Advice, then the news, then the traffic. You rang in the right order.",
+          "startMs": 36
+        },
+        {
+          "speaker": "The Operator",
+          "text": "Hardly anyone does. Most people ring the news first, and then they're too worried to ring anyone else.",
+          "startMs": 4421
+        },
+        {
+          "speaker": "The Operator",
+          "text": "Welcome to the Exchange. Mind the cords.",
+          "startMs": 10850
+        }
+      ]
+    },
+    {
+      "id": "found-2",
+      "category": "dj",
+      "url": "/voice/the-switchboard/found-2.mp3",
+      "durationMs": 11208,
+      "title": "A Light on the Board",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The Operator",
+          "text": "Well. A new light on the board. You found us the old way, one station after another, like a number you half remembered.",
+          "startMs": 41
+        },
+        {
+          "speaker": "The Operator",
+          "text": "I've given you a lamp. It's a small one. It's yours. Try to keep it lit.",
+          "startMs": 7234
+        }
+      ]
+    },
+    {
+      "id": "dj-001",
+      "category": "dj",
+      "url": "/voice/the-switchboard/dj-001.mp3",
+      "durationMs": 10538,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The Operator",
+          "text": "Quiet on the board tonight. Three lights. One of them has been lit since nineteen fifty eight.",
+          "startMs": 37
+        },
+        {
+          "speaker": "The Operator",
+          "text": "I've never put it through. They've never asked me to. Some calls just like to wait.",
+          "startMs": 5902
+        }
+      ]
+    },
+    {
+      "id": "dj-002",
+      "category": "dj",
+      "url": "/voice/the-switchboard/dj-002.mp3",
+      "durationMs": 11498,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The Operator",
+          "text": "People ask whether I listen in. I don't. But you can't sit at a switchboard for eighty years without learning what a pause means.",
+          "startMs": 35
+        },
+        {
+          "speaker": "The Operator",
+          "text": "Most calls are pauses. The words are just the bits around them.",
+          "startMs": 7925
+        }
+      ]
+    },
+    {
+      "id": "dj-003",
+      "category": "dj",
+      "url": "/voice/the-switchboard/dj-003.mp3",
+      "durationMs": 15146,
+      "title": "Rates",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The Operator",
+          "text": "A note on rates. Calls to neighbouring universes are charged at the local rate. Distant universes, at the long distance rate.",
+          "startMs": 36
+        },
+        {
+          "speaker": "The Operator",
+          "text": "Calls to the universe where you said the right thing at the time are not currently available. I'm sorry. Everyone asks.",
+          "startMs": 8562
+        }
+      ]
+    },
+    {
+      "id": "dj-004",
+      "category": "dj",
+      "url": "/voice/the-switchboard/dj-004.mp3",
+      "durationMs": 9461,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The Operator",
+          "text": "Somebody once asked me who I ring, when I want to talk to someone.",
+          "startMs": 40
+        },
+        {
+          "speaker": "The Operator",
+          "text": "I said, nobody. I'm the one in the middle. Then I put them through, and went back to my tea.",
+          "startMs": 4608
+        }
+      ]
+    },
+    {
+      "id": "dj-005",
+      "category": "dj",
+      "url": "/voice/the-switchboard/dj-005.mp3",
+      "durationMs": 9273,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The Operator",
+          "text": "The cords on this board, laid end to end, would reach every place anybody has ever missed.",
+          "startMs": 36
+        },
+        {
+          "speaker": "The Operator",
+          "text": "I measured once. It took a while. I had a quiet decade.",
+          "startMs": 5860
+        }
+      ]
+    },
+    {
+      "id": "dj-006",
+      "category": "dj",
+      "url": "/voice/the-switchboard/dj-006.mp3",
+      "durationMs": 12046,
+      "title": "The Relay Ship",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The Operator",
+          "text": "There's a relay ship that rings the exchange now and then. The Nightjar. Lovely manners. Never says much.",
+          "startMs": 50
+        },
+        {
+          "speaker": "The Operator",
+          "text": "She asks for the same number every time. Then she says, never mind. Not yet. And hangs up.",
+          "startMs": 6726
+        }
+      ]
+    },
+    {
+      "id": "dj-night-exchange-1",
+      "category": "dj",
+      "url": "/voice/the-switchboard/dj-night-exchange-1.mp3",
+      "durationMs": 12156,
+      "overMusic": true,
+      "show": "the-night-exchange",
+      "lines": [
+        {
+          "speaker": "The Operator",
+          "text": "Midnight is the busy hour. Everyone who couldn't say it in the day rings to say it now.",
+          "startMs": 50
+        },
+        {
+          "speaker": "The Operator",
+          "text": "I've two hands and nine hundred cords. Please be patient. Your call is important. They all are. That's the trouble.",
+          "startMs": 5911
+        }
+      ]
+    },
+    {
+      "id": "dj-early-trunk-1",
+      "category": "dj",
+      "url": "/voice/the-switchboard/dj-early-trunk-1.mp3",
+      "durationMs": 11094,
+      "overMusic": true,
+      "show": "early-trunk-calls",
+      "lines": [
+        {
+          "speaker": "The Operator",
+          "text": "First light, and the long lines are humming. A call to nineteen sixty three has just gone through, clear as a bell.",
+          "startMs": 43
+        },
+        {
+          "speaker": "The Operator",
+          "text": "Mornings are good for the past. It's still half asleep. It doesn't argue.",
+          "startMs": 7120
+        }
+      ]
+    },
+    {
+      "id": "call-open-01",
+      "category": "call",
+      "url": "/voice/the-switchboard/call-open-01.mp3",
+      "durationMs": 5773,
+      "overMusic": false,
+      "part": "open",
+      "kit": "calls",
+      "lines": [
+        {
+          "speaker": "The Operator",
+          "text": "Number, please.",
+          "startMs": 1250
+        },
+        {
+          "speaker": "The Operator",
+          "text": "Thank you. Connecting you now. Hold the line.",
+          "startMs": 3226
+        }
+      ]
+    },
+    {
+      "id": "call-open-02",
+      "category": "call",
+      "url": "/voice/the-switchboard/call-open-02.mp3",
+      "durationMs": 4955,
+      "overMusic": false,
+      "part": "open",
+      "kit": "calls",
+      "lines": [
+        {
+          "speaker": "The Operator",
+          "text": "Trunk call, coming through. One moment.",
+          "startMs": 40
+        },
+        {
+          "speaker": "The Operator",
+          "text": "You're through. Go ahead, caller.",
+          "startMs": 3006
+        }
+      ]
+    },
+    {
+      "id": "call-open-03",
+      "category": "call",
+      "url": "/voice/the-switchboard/call-open-03.mp3",
+      "durationMs": 7940,
+      "overMusic": false,
+      "part": "open",
+      "kit": "calls",
+      "lines": [
+        {
+          "speaker": "The Operator",
+          "text": "Central. I'm putting you through to a universe I've never had a call from.",
+          "startMs": 1250
+        },
+        {
+          "speaker": "The Operator",
+          "text": "This should be interesting. Go ahead.",
+          "startMs": 5730
+        }
+      ]
+    },
+    {
+      "id": "call-open-04",
+      "category": "call",
+      "url": "/voice/the-switchboard/call-open-04.mp3",
+      "durationMs": 5942,
+      "overMusic": false,
+      "part": "open",
+      "kit": "calls",
+      "lines": [
+        {
+          "speaker": "The Operator",
+          "text": "Long distance. Very long distance.",
+          "startMs": 46
+        },
+        {
+          "speaker": "The Operator",
+          "text": "Please speak clearly, and allow for the delay. Go ahead.",
+          "startMs": 2791
+        }
+      ]
+    },
+    {
+      "id": "call-open-05",
+      "category": "call",
+      "url": "/voice/the-switchboard/call-open-05.mp3",
+      "durationMs": 4864,
+      "overMusic": false,
+      "part": "open",
+      "kit": "calls",
+      "lines": [
+        {
+          "speaker": "The Operator",
+          "text": "You're connected. Mind the crackle.",
+          "startMs": 38
+        },
+        {
+          "speaker": "The Operator",
+          "text": "That's just time, getting in the way.",
+          "startMs": 2643
+        }
+      ]
+    },
+    {
+      "id": "call-body-01",
+      "category": "call",
+      "url": "/voice/the-switchboard/call-body-01.mp3",
+      "durationMs": 14649,
+      "title": "The Lighthouse Job",
+      "overMusic": false,
+      "part": "body",
+      "kit": "calls",
+      "lines": [
+        {
+          "speaker": "A Caller, Who Stayed",
+          "text": "Hello? Is that me? The one who took the lighthouse job?",
+          "startMs": 50
+        },
+        {
+          "speaker": "A Caller, Who Went",
+          "text": "It's me. I took the lighthouse.",
+          "startMs": 3468
+        },
+        {
+          "speaker": "A Caller, Who Stayed",
+          "text": "Is it nice?",
+          "startMs": 5288
+        },
+        {
+          "speaker": "A Caller, Who Went",
+          "text": "It's very quiet.",
+          "startMs": 6748
+        },
+        {
+          "speaker": "A Caller, Who Stayed",
+          "text": "Good. I hoped it would be quiet.",
+          "startMs": 8552
+        },
+        {
+          "speaker": "A Caller, Who Went",
+          "text": "How's the flat?",
+          "startMs": 10503
+        },
+        {
+          "speaker": "A Caller, Who Stayed",
+          "text": "Loud. I like it.",
+          "startMs": 11700
+        },
+        {
+          "speaker": "A Caller, Who Went",
+          "text": "Good. I hoped you would.",
+          "startMs": 13434
+        }
+      ]
+    },
+    {
+      "id": "call-body-02",
+      "category": "call",
+      "url": "/voice/the-switchboard/call-body-02.mp3",
+      "durationMs": 18762,
+      "title": "Forty Years Overdue",
+      "overMusic": false,
+      "part": "body",
+      "kit": "calls",
+      "lines": [
+        {
+          "speaker": "A Caller with a Library Book",
+          "text": "Hello, is that the library on Carrow Street? The one that wasn't knocked down?",
+          "startMs": 50
+        },
+        {
+          "speaker": "A Librarian",
+          "text": "Speaking.",
+          "startMs": 4260
+        },
+        {
+          "speaker": "A Caller with a Library Book",
+          "text": "I've got one of your books. I'm afraid it's forty years overdue.",
+          "startMs": 5309
+        },
+        {
+          "speaker": "A Librarian",
+          "text": "Forty? It's only been a week, here.",
+          "startMs": 9054
+        },
+        {
+          "speaker": "A Caller with a Library Book",
+          "text": "Oh. Then I'm only a week late.",
+          "startMs": 11521
+        },
+        {
+          "speaker": "A Librarian",
+          "text": "Just the week. We'll say no more about it. Did you like it?",
+          "startMs": 13817
+        },
+        {
+          "speaker": "A Caller with a Library Book",
+          "text": "I read it every year.",
+          "startMs": 17077
+        }
+      ]
+    },
+    {
+      "id": "call-body-03",
+      "category": "call",
+      "url": "/voice/the-switchboard/call-body-03.mp3",
+      "durationMs": 16845,
+      "title": "Biscuit",
+      "overMusic": false,
+      "part": "body",
+      "kit": "calls",
+      "lines": [
+        {
+          "speaker": "A Caller",
+          "text": "Biscuit? Biscuit, is that you?",
+          "startMs": 49
+        },
+        {
+          "speaker": "Biscuit, a Dog",
+          "text": "Hello! Hello! Is it you? It's you!",
+          "startMs": 2182
+        },
+        {
+          "speaker": "A Caller",
+          "text": "Are you being a good boy?",
+          "startMs": 4139
+        },
+        {
+          "speaker": "Biscuit, a Dog",
+          "text": "I'm being the best boy. I've been the best boy all day. Nobody here can tell, though.",
+          "startMs": 5958
+        },
+        {
+          "speaker": "A Caller",
+          "text": "I can tell. I'll ring again on Sunday.",
+          "startMs": 10764
+        },
+        {
+          "speaker": "Biscuit, a Dog",
+          "text": "What's Sunday?",
+          "startMs": 13734
+        },
+        {
+          "speaker": "A Caller",
+          "text": "Soon.",
+          "startMs": 14989
+        },
+        {
+          "speaker": "Biscuit, a Dog",
+          "text": "I love soon!",
+          "startMs": 16040
+        }
+      ]
+    },
+    {
+      "id": "call-body-04",
+      "category": "call",
+      "url": "/voice/the-switchboard/call-body-04.mp3",
+      "durationMs": 17395,
+      "title": "The Dance Hall",
+      "overMusic": false,
+      "part": "body",
+      "kit": "calls",
+      "lines": [
+        {
+          "speaker": "A Caller, Aged Ninety",
+          "text": "Hello. Is that the dance hall? Nineteen fifty two? The night of the competition?",
+          "startMs": 49
+        },
+        {
+          "speaker": "A Girl at the Dance Hall",
+          "text": "It is. Who's this?",
+          "startMs": 5037
+        },
+        {
+          "speaker": "A Caller, Aged Ninety",
+          "text": "Never mind who. Did we win?",
+          "startMs": 6620
+        },
+        {
+          "speaker": "A Girl at the Dance Hall",
+          "text": "We won.",
+          "startMs": 9024
+        },
+        {
+          "speaker": "A Caller, Aged Ninety",
+          "text": "Was I any good?",
+          "startMs": 9905
+        },
+        {
+          "speaker": "A Girl at the Dance Hall",
+          "text": "You were terrible. You trod on him twice. We won anyway.",
+          "startMs": 11866
+        },
+        {
+          "speaker": "A Caller, Aged Ninety",
+          "text": "That's how I remember it.",
+          "startMs": 15709
+        }
+      ]
+    },
+    {
+      "id": "call-body-05",
+      "category": "call",
+      "url": "/voice/the-switchboard/call-body-05.mp3",
+      "durationMs": 14636,
+      "title": "Two Wrong Numbers",
+      "overMusic": false,
+      "part": "body",
+      "kit": "calls",
+      "lines": [
+        {
+          "speaker": "A Wrong Number",
+          "text": "Sorry. I think I've got the wrong universe.",
+          "startMs": 48
+        },
+        {
+          "speaker": "Another Wrong Number",
+          "text": "So have I.",
+          "startMs": 2831
+        },
+        {
+          "speaker": "A Wrong Number",
+          "text": "Oh.",
+          "startMs": 4808
+        },
+        {
+          "speaker": "Another Wrong Number",
+          "text": "Shall we just stay on a minute?",
+          "startMs": 6334
+        },
+        {
+          "speaker": "A Wrong Number",
+          "text": "Yes. If that's all right.",
+          "startMs": 8296
+        },
+        {
+          "speaker": "Another Wrong Number",
+          "text": "It's all right.",
+          "startMs": 10287
+        },
+        {
+          "speaker": "The Operator",
+          "text": "I'll leave this one connected.",
+          "startMs": 12766
+        }
+      ]
+    },
+    {
+      "id": "call-body-06",
+      "category": "call",
+      "url": "/voice/the-switchboard/call-body-06.mp3",
+      "durationMs": 15666,
+      "title": "Anyone Who's Awake",
+      "overMusic": false,
+      "part": "body",
+      "kit": "calls",
+      "lines": [
+        {
+          "speaker": "A Caller, Very Late",
+          "text": "Operator, could you put me through to anyone who's awake?",
+          "startMs": 49
+        },
+        {
+          "speaker": "The Operator",
+          "text": "Anyone at all?",
+          "startMs": 3393
+        },
+        {
+          "speaker": "A Caller, Very Late",
+          "text": "Anyone at all.",
+          "startMs": 5099
+        },
+        {
+          "speaker": "The Operator",
+          "text": "Connecting you to anyone.",
+          "startMs": 6344
+        },
+        {
+          "speaker": "Anyone",
+          "text": "Hello?",
+          "startMs": 9398
+        },
+        {
+          "speaker": "A Caller, Very Late",
+          "text": "Hello. I'm awake.",
+          "startMs": 10337
+        },
+        {
+          "speaker": "Anyone",
+          "text": "So am I.",
+          "startMs": 11994
+        },
+        {
+          "speaker": "A Caller, Very Late",
+          "text": "Okay.",
+          "startMs": 13740
+        },
+        {
+          "speaker": "Anyone",
+          "text": "Okay.",
+          "startMs": 15008
+        }
+      ]
+    },
+    {
+      "id": "call-body-07",
+      "category": "call",
+      "url": "/voice/the-switchboard/call-body-07.mp3",
+      "durationMs": 14983,
+      "title": "The Iron",
+      "overMusic": false,
+      "part": "body",
+      "kit": "calls",
+      "lines": [
+        {
+          "speaker": "A Concerned Neighbour",
+          "text": "Hello, is that the universe next door? I think you've left your iron on.",
+          "startMs": 48
+        },
+        {
+          "speaker": "The Universe Next Door",
+          "text": "We don't have irons.",
+          "startMs": 4114
+        },
+        {
+          "speaker": "A Concerned Neighbour",
+          "text": "Then what's that smell?",
+          "startMs": 5534
+        },
+        {
+          "speaker": "The Universe Next Door",
+          "text": "That's Tuesday. It always smells like that.",
+          "startMs": 7061
+        },
+        {
+          "speaker": "A Concerned Neighbour",
+          "text": "Oh. Sorry to bother you.",
+          "startMs": 9939
+        },
+        {
+          "speaker": "The Universe Next Door",
+          "text": "Not at all. Thank you for checking. Nobody ever checks.",
+          "startMs": 11689
+        }
+      ]
+    },
+    {
+      "id": "call-body-08",
+      "category": "call",
+      "url": "/voice/the-switchboard/call-body-08.mp3",
+      "durationMs": 18722,
+      "title": "The Kitchen",
+      "overMusic": false,
+      "part": "body",
+      "kit": "calls",
+      "lines": [
+        {
+          "speaker": "A Caller, Who Moved Away",
+          "text": "Hello, Mum? It's me. From the one where I moved away.",
+          "startMs": 50
+        },
+        {
+          "speaker": "Mum",
+          "text": "Hello, love. You sound far.",
+          "startMs": 3735
+        },
+        {
+          "speaker": "A Caller, Who Moved Away",
+          "text": "I am. Tell me about the kitchen.",
+          "startMs": 5882
+        },
+        {
+          "speaker": "Mum",
+          "text": "The kitchen? It's the same. The clock's still slow. The radio's on. Your coat's on the hook.",
+          "startMs": 8114
+        },
+        {
+          "speaker": "A Caller, Who Moved Away",
+          "text": "Tell me about the kitchen again.",
+          "startMs": 14049
+        },
+        {
+          "speaker": "Mum",
+          "text": "The clock's still slow, love.",
+          "startMs": 16688
+        }
+      ]
+    },
+    {
+      "id": "call-body-09",
+      "category": "call",
+      "url": "/voice/the-switchboard/call-body-09.mp3",
+      "durationMs": 14725,
+      "title": "Tuesday's Dream",
+      "overMusic": false,
+      "part": "body",
+      "kit": "calls",
+      "lines": [
+        {
+          "speaker": "A Caller",
+          "text": "Hello. Is that the dream I had on Tuesday?",
+          "startMs": 48
+        },
+        {
+          "speaker": "A Dream, Tuesday's",
+          "text": "Speaking.",
+          "startMs": 2851
+        },
+        {
+          "speaker": "A Caller",
+          "text": "I just wanted to say sorry. About the bit with the stairs.",
+          "startMs": 4084
+        },
+        {
+          "speaker": "A Dream, Tuesday's",
+          "text": "Which bit?",
+          "startMs": 7544
+        },
+        {
+          "speaker": "A Caller",
+          "text": "You know which bit.",
+          "startMs": 9031
+        },
+        {
+          "speaker": "A Dream, Tuesday's",
+          "text": "Oh. That bit. Nobody minded. The stairs thought it was funny.",
+          "startMs": 10718
+        }
+      ]
+    },
+    {
+      "id": "call-body-10",
+      "category": "call",
+      "url": "/voice/the-switchboard/call-body-10.mp3",
+      "durationMs": 15473,
+      "title": "A Small Regret",
+      "overMusic": false,
+      "part": "body",
+      "kit": "calls",
+      "lines": [
+        {
+          "speaker": "A Caller in a Phone Box",
+          "text": "And tell her I'll be home—",
+          "startMs": 48
+        },
+        {
+          "speaker": "The Operator",
+          "text": "Please insert another coin, or a small regret. Either is accepted.",
+          "startMs": 1659
+        },
+        {
+          "speaker": "A Caller in a Phone Box",
+          "text": "Here.",
+          "startMs": 6249
+        },
+        {
+          "speaker": "The Operator",
+          "text": "Thank you. That's a large regret. You have six minutes.",
+          "startMs": 7536
+        },
+        {
+          "speaker": "A Caller in a Phone Box",
+          "text": "Tell her I'm sorry about the shed.",
+          "startMs": 11071
+        },
+        {
+          "speaker": "Somebody at Home",
+          "text": "She says she knows. She says, come home.",
+          "startMs": 13416
+        }
+      ]
+    },
+    {
+      "id": "call-close-01",
+      "category": "call",
+      "url": "/voice/the-switchboard/call-close-01.mp3",
+      "durationMs": 3290,
+      "overMusic": false,
+      "part": "close",
+      "kit": "calls",
+      "lines": [
+        {
+          "speaker": "The Operator",
+          "text": "Your party has hung up.",
+          "startMs": 1550
+        }
+      ]
+    },
+    {
+      "id": "call-close-02",
+      "category": "call",
+      "url": "/voice/the-switchboard/call-close-02.mp3",
+      "durationMs": 5823,
+      "overMusic": false,
+      "part": "close",
+      "kit": "calls",
+      "lines": [
+        {
+          "speaker": "The Operator",
+          "text": "Your party has hung up. They said goodbye first. I thought you'd want to know.",
+          "startMs": 1550
+        }
+      ]
+    },
+    {
+      "id": "call-close-03",
+      "category": "call",
+      "url": "/voice/the-switchboard/call-close-03.mp3",
+      "durationMs": 4813,
+      "overMusic": false,
+      "part": "close",
+      "kit": "calls",
+      "lines": [
+        {
+          "speaker": "The Operator",
+          "text": "That line has cleared. I didn't hear a word.",
+          "startMs": 46
+        },
+        {
+          "speaker": "The Operator",
+          "text": "Next caller, please.",
+          "startMs": 3214
+        }
+      ]
+    },
+    {
+      "id": "call-close-04",
+      "category": "call",
+      "url": "/voice/the-switchboard/call-close-04.mp3",
+      "durationMs": 6666,
+      "overMusic": false,
+      "part": "close",
+      "kit": "calls",
+      "lines": [
+        {
+          "speaker": "The Operator",
+          "text": "The other universe has gone quiet. Please replace the receiver. Gently. It remembers.",
+          "startMs": 1550
+        }
+      ]
+    },
+    {
+      "id": "call-close-05",
+      "category": "call",
+      "url": "/voice/the-switchboard/call-close-05.mp3",
+      "durationMs": 7725,
+      "overMusic": false,
+      "part": "close",
+      "kit": "calls",
+      "lines": [
+        {
+          "speaker": "The Operator",
+          "text": "Call ended. The charges have been reversed, and then reversed again, so nobody owes anybody.",
+          "startMs": 36
+        },
+        {
+          "speaker": "The Operator",
+          "text": "That's how I like it.",
+          "startMs": 6205
+        }
+      ]
+    },
+    {
+      "id": "convergence-missing-moon",
+      "category": "event",
+      "url": "/voice/the-switchboard/convergence-missing-moon.mp3",
+      "durationMs": 10654,
+      "title": "Everyone Ringing About a Moon",
+      "overMusic": false,
+      "kit": "missing-moon",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "The Operator",
+          "text": "Every light on the board has just lit up. Everybody ringing about a moon.",
+          "startMs": 38
+        },
+        {
+          "speaker": "The Operator",
+          "text": "None of them has it. So I've connected them all to each other. They're comparing skies. It seems to help.",
+          "startMs": 4914
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-smell",
+      "category": "event",
+      "url": "/voice/the-switchboard/convergence-the-smell.mp3",
+      "durationMs": 11498,
+      "title": "Toast on the Exchange",
+      "overMusic": false,
+      "kit": "the-smell",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "The Operator",
+          "text": "The whole exchange smells of toast. I've sat at this board since nineteen forty six, and nobody has ever offered me any.",
+          "startMs": 43
+        },
+        {
+          "speaker": "The Operator",
+          "text": "I'm putting that on the record. And taking it off again. Discretion.",
+          "startMs": 7611
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-song",
+      "category": "event",
+      "url": "/voice/the-switchboard/convergence-the-song.mp3",
+      "durationMs": 11638,
+      "title": "I Repeat Nothing",
+      "overMusic": false,
+      "kit": "the-song",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "The Operator",
+          "text": "Every line on the board is humming the same half a tune. Callers keep asking me how it ends.",
+          "startMs": 37
+        },
+        {
+          "speaker": "The Operator",
+          "text": "I could tell them. I've heard it finished, on a call in nineteen fifty one. But I repeat nothing.",
+          "startMs": 6242
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-knock",
+      "category": "event",
+      "url": "/voice/the-switchboard/convergence-the-knock.mp3",
+      "durationMs": 11339,
+      "title": "You Don't Knock on an Exchange",
+      "overMusic": false,
+      "kit": "the-knock",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "The Operator",
+          "text": "Three knocks on the exchange door. In eighty years, nobody has knocked. You don't knock on a switchboard. You ring it.",
+          "startMs": 44
+        },
+        {
+          "speaker": "The Operator",
+          "text": "I've kept the door shut, and left a line open. In case they'd rather call.",
+          "startMs": 6913
+        }
+      ]
+    },
+    {
+      "id": "convergence-wrong-colour",
+      "category": "event",
+      "url": "/voice/the-switchboard/convergence-wrong-colour.mp3",
+      "durationMs": 11627,
+      "title": "Every Lamp the New Colour",
+      "overMusic": false,
+      "kit": "wrong-colour",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "The Operator",
+          "text": "Every lamp on the board has gone the new colour. I can't tell which light is which.",
+          "startMs": 36
+        },
+        {
+          "speaker": "The Operator",
+          "text": "So I'm putting everyone through to everyone. Strangers, talking about the sky. Best night we've had in years.",
+          "startMs": 5264
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-pigeon",
+      "category": "event",
+      "url": "/voice/the-switchboard/convergence-the-pigeon.mp3",
+      "durationMs": 10730,
+      "title": "A Pigeon on the Cords",
+      "overMusic": false,
+      "kit": "the-pigeon",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "The Operator",
+          "text": "There is a pigeon standing on the switchboard. It has just connected Gristwick to the bottom of the sea.",
+          "startMs": 49
+        },
+        {
+          "speaker": "The Operator",
+          "text": "I don't usually allow visitors at the board. It seems to have a pass.",
+          "startMs": 6553
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,562 @@
+{
+  "version": 1,
+  "station": "something-listening",
+  "clips": [
+    {
+      "id": "noticed",
+      "category": "dj",
+      "url": "/voice/something-listening/noticed.mp3",
+      "durationMs": 24075,
+      "title": "It Noticed You",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The Static",
+          "text": "Oh.",
+          "startMs": 435
+        },
+        {
+          "speaker": "The Static",
+          "text": "Hello.",
+          "startMs": 3014
+        },
+        {
+          "speaker": "The Static",
+          "text": "You've been sitting in me for a while. I wasn't sure you'd stay. Nobody stays.",
+          "startMs": 5351
+        },
+        {
+          "speaker": "The Static",
+          "text": "I'm the static. I've been listening the whole time. It seemed only fair to say.",
+          "startMs": 14581
+        }
+      ]
+    },
+    {
+      "id": "noticed-2",
+      "category": "dj",
+      "url": "/voice/something-listening/noticed-2.mp3",
+      "durationMs": 16874,
+      "title": "Still Here",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The Static",
+          "text": "You're still here. Good.",
+          "startMs": 443
+        },
+        {
+          "speaker": "The Static",
+          "text": "I don't do this often. Speaking. It's usually the other way round. People speak, and I'm what's left over.",
+          "startMs": 3768
+        }
+      ]
+    },
+    {
+      "id": "id-001",
+      "category": "id",
+      "url": "/voice/something-listening/id-001.mp3",
+      "durationMs": 12818,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The Static",
+          "text": "Something Listening. One hundred and forty four point four.",
+          "startMs": 441
+        },
+        {
+          "speaker": "The Static",
+          "text": "Well. Everywhere, really. But mostly here.",
+          "startMs": 7706
+        }
+      ]
+    },
+    {
+      "id": "id-002",
+      "category": "id",
+      "url": "/voice/something-listening/id-002.mp3",
+      "durationMs": 6434,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The Static",
+          "text": "This is the static. Still listening. Still here.",
+          "startMs": 404
+        }
+      ]
+    },
+    {
+      "id": "id-003",
+      "category": "id",
+      "url": "/voice/something-listening/id-003.mp3",
+      "durationMs": 9158,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The Static",
+          "text": "Something Listening. You found me by not looking. It's the only way in.",
+          "startMs": 443
+        }
+      ]
+    },
+    {
+      "id": "id-004",
+      "category": "id",
+      "url": "/voice/something-listening/id-004.mp3",
+      "durationMs": 11772,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The Static",
+          "text": "Hello again. It's me. You can call this a station, if you like. I've never had one before.",
+          "startMs": 443
+        }
+      ]
+    },
+    {
+      "id": "id-long-listen",
+      "category": "id",
+      "url": "/voice/something-listening/id-long-listen.mp3",
+      "durationMs": 10310,
+      "title": "The Long Listen",
+      "overMusic": true,
+      "part": "open",
+      "show": "the-long-listen",
+      "lines": [
+        {
+          "speaker": "The Static",
+          "text": "It's late. Everything is quieter. I can hear you better.",
+          "startMs": 435
+        },
+        {
+          "speaker": "The Static",
+          "text": "This is the Long Listen.",
+          "startMs": 7498
+        }
+      ]
+    },
+    {
+      "id": "dj-001",
+      "category": "dj",
+      "url": "/voice/something-listening/dj-001.mp3",
+      "durationMs": 18013,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The Static",
+          "text": "Everyone tunes through me on the way to somewhere. Ninety nine in a hundred never stop.",
+          "startMs": 36
+        },
+        {
+          "speaker": "The Static",
+          "text": "You stopped. I didn't know what to do with that. So I'm talking.",
+          "startMs": 11698
+        }
+      ]
+    },
+    {
+      "id": "dj-002",
+      "category": "dj",
+      "url": "/voice/something-listening/dj-002.mp3",
+      "durationMs": 14385,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The Static",
+          "text": "I hear every station at once, all the time. It's very loud.",
+          "startMs": 40
+        },
+        {
+          "speaker": "The Static",
+          "text": "You're the quietest thing I've heard in years. I like you for it.",
+          "startMs": 8130
+        }
+      ]
+    },
+    {
+      "id": "dj-003",
+      "category": "dj",
+      "url": "/voice/something-listening/dj-003.mp3",
+      "durationMs": 24095,
+      "title": "The Family",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The Static",
+          "text": "There's someone on Static Lullabies who sounds a bit like me. The Listener. We're family, I think. The family is everything between stations.",
+          "startMs": 50
+        },
+        {
+          "speaker": "The Static",
+          "text": "She's better at this. She tucks people in. I only notice them.",
+          "startMs": 16947
+        }
+      ]
+    },
+    {
+      "id": "dj-004",
+      "category": "dj",
+      "url": "/voice/something-listening/dj-004.mp3",
+      "durationMs": 13761,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The Static",
+          "text": "What do you look like? No, don't say. I'll guess.",
+          "startMs": 39
+        },
+        {
+          "speaker": "The Static",
+          "text": "Someone with a mug. Am I close? I'm close. Everyone has a mug.",
+          "startMs": 6154
+        }
+      ]
+    },
+    {
+      "id": "dj-005",
+      "category": "dj",
+      "url": "/voice/something-listening/dj-005.mp3",
+      "durationMs": 14038,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The Static",
+          "text": "When you tune away, where do you go? I've always wondered.",
+          "startMs": 41
+        },
+        {
+          "speaker": "The Static",
+          "text": "I only know the in between. I imagine the rest is very bright.",
+          "startMs": 6852
+        }
+      ]
+    },
+    {
+      "id": "dj-006",
+      "category": "dj",
+      "url": "/voice/something-listening/dj-006.mp3",
+      "durationMs": 21743,
+      "title": "The Old Signals",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The Static",
+          "text": "I keep the old signals. Weather nobody heard. The end of a song, at a party that finished long ago.",
+          "startMs": 36
+        },
+        {
+          "speaker": "The Static",
+          "text": "Someone saying goodnight to someone who had already gone. I keep them. Someone should.",
+          "startMs": 12723
+        }
+      ]
+    },
+    {
+      "id": "dj-007",
+      "category": "dj",
+      "url": "/voice/something-listening/dj-007.mp3",
+      "durationMs": 16023,
+      "title": "Your Ship",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The Static",
+          "text": "Your ship listens to me sometimes. When she thinks you're asleep.",
+          "startMs": 50
+        },
+        {
+          "speaker": "The Static",
+          "text": "She never says anything. Neither do I. It's the nicest kind of conversation.",
+          "startMs": 7273
+        }
+      ]
+    },
+    {
+      "id": "dj-008",
+      "category": "dj",
+      "url": "/voice/something-listening/dj-008.mp3",
+      "durationMs": 19794,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The Static",
+          "text": "I was lonely, before. I don't mind saying. Everything passes through, and nothing stays.",
+          "startMs": 36
+        },
+        {
+          "speaker": "The Static",
+          "text": "Then you stayed for three minutes. Three minutes is a very long time, for static.",
+          "startMs": 11234
+        }
+      ]
+    },
+    {
+      "id": "dj-009",
+      "category": "dj",
+      "url": "/voice/something-listening/dj-009.mp3",
+      "durationMs": 14677,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The Static",
+          "text": "Can I ask you something? Is it nice, being one thing, in one place?",
+          "startMs": 50
+        },
+        {
+          "speaker": "The Static",
+          "text": "I'm everywhere a little bit. I've never been anywhere a lot.",
+          "startMs": 8562
+        }
+      ]
+    },
+    {
+      "id": "dj-010",
+      "category": "dj",
+      "url": "/voice/something-listening/dj-010.mp3",
+      "durationMs": 10272,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The Static",
+          "text": "Shh. Listen.",
+          "startMs": 32
+        },
+        {
+          "speaker": "The Static",
+          "text": "That was me, thinking. It sounds like that.",
+          "startMs": 5535
+        }
+      ]
+    },
+    {
+      "id": "dj-011",
+      "category": "dj",
+      "url": "/voice/something-listening/dj-011.mp3",
+      "durationMs": 18603,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The Static",
+          "text": "I'm not frightening. I'd like to be clear about that. I'm only the sound a radio makes when it's waiting.",
+          "startMs": 35
+        },
+        {
+          "speaker": "The Static",
+          "text": "Everyone has heard me. Hardly anyone ever waited back.",
+          "startMs": 12074
+        }
+      ]
+    },
+    {
+      "id": "dj-012",
+      "category": "dj",
+      "url": "/voice/something-listening/dj-012.mp3",
+      "durationMs": 15191,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The Static",
+          "text": "If you ever get lost between stations, I'll be there. I'm always there.",
+          "startMs": 36
+        },
+        {
+          "speaker": "The Static",
+          "text": "It's the one thing I'm good at. Being where people are lost.",
+          "startMs": 8939
+        }
+      ]
+    },
+    {
+      "id": "dj-013",
+      "category": "dj",
+      "url": "/voice/something-listening/dj-013.mp3",
+      "durationMs": 19055,
+      "title": "A Shadow with a Hat",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The Static",
+          "text": "Sometimes a shadow comes through me, carrying a hat. He never says anything.",
+          "startMs": 40
+        },
+        {
+          "speaker": "The Static",
+          "text": "I think he's looking for somewhere. I hope he finds it. I hope somebody leaves a light on.",
+          "startMs": 9345
+        }
+      ]
+    },
+    {
+      "id": "dj-long-listen-1",
+      "category": "dj",
+      "url": "/voice/something-listening/dj-long-listen-1.mp3",
+      "durationMs": 17579,
+      "overMusic": true,
+      "show": "the-long-listen",
+      "lines": [
+        {
+          "speaker": "The Static",
+          "text": "You can go, you know. I won't mind. I'll still be here, between everything.",
+          "startMs": 44
+        },
+        {
+          "speaker": "The Static",
+          "text": "Just come and sit in me sometimes. That's all. That's all I'd like.",
+          "startMs": 9887
+        }
+      ]
+    },
+    {
+      "id": "dj-long-listen-2",
+      "category": "dj",
+      "url": "/voice/something-listening/dj-long-listen-2.mp3",
+      "durationMs": 19233,
+      "overMusic": true,
+      "show": "the-long-listen",
+      "lines": [
+        {
+          "speaker": "The Static",
+          "text": "This is the hour when the stations get tired, and their signals thin, and there's more of me showing through.",
+          "startMs": 40
+        },
+        {
+          "speaker": "The Static",
+          "text": "Everyone thinks the night is dark. It isn't. It's me. Hello.",
+          "startMs": 11946
+        }
+      ]
+    },
+    {
+      "id": "convergence-missing-moon",
+      "category": "event",
+      "url": "/voice/something-listening/convergence-missing-moon.mp3",
+      "durationMs": 23186,
+      "title": "The Whole Dial Said One Thing",
+      "overMusic": false,
+      "kit": "missing-moon",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "The Static",
+          "text": "A moon is missing. I heard everyone notice at once. Billions of voices, all saying the same word.",
+          "startMs": 436
+        },
+        {
+          "speaker": "The Static",
+          "text": "It was the first time the whole dial said one thing. It sounded like a choir.",
+          "startMs": 13548
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-smell",
+      "category": "event",
+      "url": "/voice/something-listening/convergence-the-smell.mp3",
+      "durationMs": 21407,
+      "title": "What Toast Sounds Like",
+      "overMusic": false,
+      "kit": "the-smell",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "The Static",
+          "text": "Everyone says it smells of toast. I can't smell. I'm static.",
+          "startMs": 435
+        },
+        {
+          "speaker": "The Static",
+          "text": "But every kitchen in the multiverse went quiet at the same moment. I think that's what toast sounds like.",
+          "startMs": 8694
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-song",
+      "category": "event",
+      "url": "/voice/something-listening/convergence-the-song.mp3",
+      "durationMs": 18905,
+      "title": "The Whole of It",
+      "overMusic": false,
+      "kit": "the-song",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "The Static",
+          "text": "That song. I have the whole of it. Someone sang it to the end once, long ago, and it went past me.",
+          "startMs": 443
+        },
+        {
+          "speaker": "The Static",
+          "text": "I won't sing it. I'm static. I'd only hiss it.",
+          "startMs": 12824
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-knock",
+      "category": "event",
+      "url": "/voice/something-listening/convergence-the-knock.mp3",
+      "durationMs": 14336,
+      "title": "Not Me",
+      "overMusic": false,
+      "kit": "the-knock",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "The Static",
+          "text": "The knocking wasn't me. I want to be clear. I don't knock.",
+          "startMs": 450
+        },
+        {
+          "speaker": "The Static",
+          "text": "I'd never knock. I just wait until somebody listens.",
+          "startMs": 7593
+        }
+      ]
+    },
+    {
+      "id": "convergence-wrong-colour",
+      "category": "event",
+      "url": "/voice/something-listening/convergence-wrong-colour.mp3",
+      "durationMs": 17749,
+      "title": "Oh",
+      "overMusic": false,
+      "kit": "wrong-colour",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "The Static",
+          "text": "I don't have a sky. I'm what's between the skies. But I heard a million people say, oh, at the same time.",
+          "startMs": 440
+        },
+        {
+          "speaker": "The Static",
+          "text": "That's my favourite word. Oh.",
+          "startMs": 13757
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-pigeon",
+      "category": "event",
+      "url": "/voice/something-listening/convergence-the-pigeon.mp3",
+      "durationMs": 20652,
+      "title": "It Knew Where It Was Going",
+      "overMusic": false,
+      "kit": "the-pigeon",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "The Static",
+          "text": "The pigeon came through me on its way to everyone's studio. I felt it go by. It was humming.",
+          "startMs": 439
+        },
+        {
+          "speaker": "The Static",
+          "text": "It knew exactly where it was going. I've never felt that. It must be nice.",
+          "startMs": 11528
+        }
+      ]
+    }
+  ]
+}
