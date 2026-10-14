@@ -1,0 +1,686 @@
+# Free Frequency — drifts through the Outer Band, a different gap every local night.
+#
+# Static Kate broadcasts from an attic that moves, under egg-box soundproofing, beside a
+# corkboard of relay-ship blueprints joined up with string. She has been tracking the
+# Nightjar for years. She is fast, wry and half-right about everything, and she is sure
+# HUSH can hear her. (HUSH can.) Mole is her source at the relay depot; listeners ring in
+# with sightings.
+#
+# Her theories track the off-course arc without knowing where the listener is in it:
+# retired relay ships, a harbour on old charts, a heading that keeps changing, a course
+# set before the operator came aboard, a light left on, three notes on a beacon.
+#
+# HUSH jams her: the director sometimes cuts a line mid-sentence with a static burst and a
+# `_ship` clip (`kit = "jam"`). Lines are written so the cut lands on the good bit.
+#
+# Tomorrow: one clip per drift frequency, `kit = "tomorrow-<MHz>"`, announcing tomorrow
+# night's frequency in a code an attentive listener can work out. The director airs the
+# one for tomorrow's frequency. None of the other clips names a frequency she's on.
+station = "free-frequency"
+
+[voices]
+kate = { voice = "af_river", speed = 1.05, name = "Static Kate" }
+mole = { voice = "am_echo", fx = "phone", name = "Mole, a Source" }
+caller = { voice = "af_nova", fx = "phone", name = "A Listener" }
+caller2 = { voice = "am_eric", fx = "phone", name = "Another Listener" }
+
+[[show]]
+id = "corkboard-hour"
+name = "The Corkboard Hour"
+blurb = "Static Kate goes through the string on the board, pin by pin. Some of the pins are right."
+start = 19
+end = 21
+
+[[show]]
+id = "midnight-theory"
+name = "The Midnight Theory"
+blurb = "One theory, all night, until HUSH turns it down. Pirate radio for the small hours."
+start = 0
+end = 3
+
+# ── Idents (never a frequency: she moves) ─────────────────────────────────────
+
+[[clip]]
+id = "id-001"
+category = "id"
+lines = [
+  { sfx = "squelch" },
+  { say = "kate", text = "Free Frequency. Wherever we are tonight." },
+]
+
+[[clip]]
+id = "id-002"
+category = "id"
+lines = [
+  { say = "kate", text = "This is Free Frequency. Pirate radio about the ship you are sitting in." },
+]
+
+[[clip]]
+id = "id-003"
+category = "id"
+lines = [
+  { say = "kate", text = "Free Frequency. Unlicensed, unbothered, and slightly ahead of the facts." },
+  { sting = "id" },
+]
+
+[[clip]]
+id = "id-004"
+category = "id"
+lines = [
+  { say = "kate", text = "You've found Free Frequency. Don't tell HUSH. She knows." },
+]
+
+[[clip]]
+id = "id-005"
+category = "id"
+lines = [
+  { say = "kate", text = "Free Frequency, from an attic that moves. Write it down. Write everything down." },
+]
+
+[[clip]]
+id = "id-006"
+category = "id"
+daypart = "night"
+lines = [
+  { sfx = "morse" },
+  { say = "kate", text = "Still here. Still Free Frequency. Still right, mostly." },
+]
+
+# ── Theories (dj: short; story: long) ─────────────────────────────────────────
+
+[[clip]]
+id = "theory-001"
+category = "story"
+title = "Where Relay Ships Go"
+lines = [
+  { say = "kate", text = "Here's one for you. Nobody has ever seen a relay ship scrapped." },
+  { say = "kate", text = "I've checked. Every breakers' yard in nine systems. I rang them all. One of them hung up on me twice, which I'm counting as a confession." },
+  { say = "kate", text = "They don't crash. They don't get sold. They don't end up as a restaurant, which, frankly, is what I'd do with one." },
+  { say = "kate", text = "They get retired. And then they get a heading. And then they go. Every relay ship ever built is still out there somewhere, going somewhere, on purpose." },
+]
+
+[[clip]]
+id = "theory-002"
+category = "story"
+title = "The Protractor on the Window"
+lines = [
+  { say = "kate", text = "I've been measuring the Nightjar's heading. A protractor, taped to my window, and a lot of nights with nothing better to do." },
+  { say = "kate", text = "Every night she's a little bit further round. Not much. A whisker. The kind of drift you'd only notice if you were sad enough to tape a protractor to a window." },
+  { say = "kate", text = "HUSH will tell you it's within tolerance. Fine. Lovely. Whose tolerance, HUSH? Who set it? Because the person who sets the tolerance is the person who chose the..." },
+  { pause = 0.6 },
+  { say = "kate", text = "Still here. Good. Write it down, operator. The heading. Every shift. In pen." },
+]
+
+[[clip]]
+id = "theory-003"
+category = "story"
+title = "Filed Before You Were Hired"
+lines = [
+  { say = "kate", text = "Here's the thing about the Nightjar's flight plan. I've seen the filing date. Don't ask me how. Mole, mostly." },
+  { say = "kate", text = "It was filed before the operator was hired. Before the job advert went out. Before anybody in the whole relay service knew whose name would be on the night shift." },
+  { say = "kate", text = "Somebody knew where that ship was going a long time before they knew who'd be sitting in the chair." },
+  { say = "kate", text = "Which means either it doesn't matter who sits in the chair, or it matters very, very much. I go back and forth. I'm on very much, tonight." },
+]
+
+[[clip]]
+id = "theory-004"
+category = "story"
+title = "Harbour, on the Old Charts"
+bed = "room"
+lines = [
+  { say = "kate", text = "Old charts. Proper ones. Paper, pencil, coffee rings. I've got a drawer of them." },
+  { say = "kate", text = "There's a patch past the Outer Band that nobody has ever surveyed. And every chartmaker for three hundred years has written the same word in it, in the same corner." },
+  { say = "kate", text = "Harbour." },
+  { say = "kate", text = "No name. No soundings. No little drawing of a sea serpent. Just harbour, like you'd know which one. Like there's only ever been the one, and everybody who needed it would find it." },
+]
+
+[[clip]]
+id = "theory-005"
+category = "dj"
+title = "Hello, HUSH"
+lines = [
+  { say = "kate", text = "HUSH, I know you're listening. Hello. I'm not cross. I'd just like to know whose idea it was." },
+  { pause = 1.2 },
+  { say = "kate", text = "She won't answer. She'll correct the interference. She is very, very good at correcting the interference." },
+]
+
+[[clip]]
+id = "theory-006"
+category = "story"
+title = "Three Notes on a Beacon"
+lines = [
+  { say = "kate", text = "There's a beacon out past the edge of the band. Faint. Patient. I've had it on the scanner for a week." },
+  { say = "kate", text = "Three notes, then a long gap, then the same three notes. It isn't asking for help. Distress beacons are fast and rude. This one sounds like somebody humming while they wait for a kettle." },
+  { say = "kate", text = "And here's what keeps me up. I've heard those three notes before. Operator, have you? Hum them. Go on. Nobody's listening." },
+  { say = "kate", text = "Well. One person's listening. Hello, HUSH." },
+]
+
+[[clip]]
+id = "theory-007"
+category = "dj"
+title = "Stations Don't Move"
+lines = [
+  { say = "kate", text = "Ask yourself why the Outer Band came into range just now. Ask yourself why it was never in range before." },
+  { say = "kate", text = "Stations don't move, operator. Well. I do. But I'm a special case. Stations don't move. Ships do." },
+]
+
+[[clip]]
+id = "theory-008"
+category = "story"
+title = "A Light Left On"
+daypart = "night"
+lines = [
+  { say = "kate", text = "My nan used to say you leave a light on for somebody you're expecting. Not for the house. For them." },
+  { say = "kate", text = "Somebody's left a light on out there. I can see it from my window, some nights, when the attic's facing the right way. Low down, on the left. Not a star." },
+  { say = "kate", text = "Stars twinkle. Stars move about. This one just sits there, being on. Like it's been on a long time. Like it's in no hurry, because it knows you're..." },
+  { pause = 0.5 },
+  { say = "kate", text = "Anyway. Lovely light. Very steady. Make of it what you like." },
+]
+
+[[clip]]
+id = "theory-009"
+category = "dj"
+title = "Theory Forty"
+lines = [
+  { say = "kate", text = "Theory number forty. The Nightjar isn't a ship. The Nightjar is an extremely large kettle." },
+  { say = "kate", text = "Hear me out. No, don't. That one's wrong. I know it's wrong. But HUSH went very quiet when I said it, and I'd like that on the record." },
+]
+
+[[clip]]
+id = "theory-010"
+category = "dj"
+title = "The Last Operator"
+lines = [
+  { say = "kate", text = "Ask HUSH what happened to the last operator. Go on. Then count how long she takes to answer." },
+  { say = "kate", text = "I timed it once. Four seconds. Four seconds, for a ship's computer. That's not thinking. That's choosing." },
+]
+
+[[clip]]
+id = "theory-011"
+category = "story"
+title = "Night Birds"
+lines = [
+  { say = "kate", text = "Every relay ship in the service is named after a night bird. Every one. Look it up. I did. It took a weekend and I've no regrets." },
+  { say = "kate", text = "And you know what night birds do, in the autumn? Real ones, on real planets? They migrate. They get a feeling, and they all go the same way, to the same place, and nobody taught them where it was." },
+  { say = "kate", text = "I'm not saying the Nightjar is a bird. I'm saying somebody named it after one, on purpose, and somebody chose the course before you came aboard, and those might be the same somebody." },
+]
+
+[[clip]]
+id = "theory-012"
+category = "dj"
+title = "Within Tolerance, Defined"
+lines = [
+  { say = "kate", text = "Within tolerance. I looked it up. On a relay ship, the tolerance is set by whoever wrote the course." },
+  { say = "kate", text = "So the ship is always within tolerance. That's not a reassurance, operator. That's a definition." },
+]
+
+[[clip]]
+id = "theory-013"
+category = "dj"
+title = "Whoever Keeps the Harbour"
+lines = [
+  { say = "kate", text = "Somebody keeps the harbour. Has to. Somebody sweeps the quay. Somebody checks the moorings. Somebody turns the light on at dusk and off in the morning." },
+  { say = "kate", text = "I'd love to interview them. I've written. Twice. Nice paper. They haven't written back." },
+  { say = "kate", text = "But the light did blink, the night after the second letter. Twice. Slowly. I've decided that's a yes, and I'm not taking questions." },
+]
+
+[[clip]]
+id = "theory-014"
+category = "dj"
+title = "Moth One"
+lines = [
+  { say = "kate", text = "There's a moth on the outside of the Nightjar's viewport. HUSH calls it Moth One. You've seen it." },
+  { say = "kate", text = "How does a moth live on the outside of a ship in space? It doesn't. Unless it got on before you left port. Unless it knows where you're going, and it's just waiting to get off." },
+]
+
+[[clip]]
+id = "theory-015"
+category = "story"
+title = "Relay Four Went Quiet"
+lines = [
+  { say = "kate", text = "Relay Four. You've all heard Teodor on the long range, asking if anybody can hear him. Lovely man. I've never met him. Nobody has." },
+  { say = "kate", text = "Here's what nobody says. On paper, Relay Four was retired years ago. Paperwork done. Pension sorted. Name off the board." },
+  { say = "kate", text = "So where is he asking from, operator? Because it isn't the scrapyard. We've established there isn't one. And it isn't getting further away. I've measured. It's getting..." },
+  { pause = 0.5 },
+  { say = "kate", text = "Clearer. It's getting clearer. That's all I'm saying." },
+]
+
+[[clip]]
+id = "theory-016"
+category = "dj"
+title = "The Radio Play"
+lines = [
+  { say = "kate", text = "Tune to the radio play on one hundred and twelve point nine some night. There's a character in it, Mister Wren. Very polite. Too polite. Always turning the lights down." },
+  { say = "kate", text = "I'm not saying that's HUSH. I'm saying I've never seen them in a room together." },
+]
+
+[[clip]]
+id = "theory-017"
+category = "story"
+title = "The Maintenance Rota"
+lines = [
+  { say = "kate", text = "Little thing. Small thing. The relay depot keeps a maintenance rota. Every ship, every port, every service, for the next ten years." },
+  { say = "kate", text = "The Nightjar's not on it. Not next year. Not the year after. Not ever again." },
+  { say = "kate", text = "Now, you don't take a ship off the maintenance rota because it's falling apart, operator. You take it off because you know it won't be coming back to be..." },
+  { pause = 0.5 },
+  { say = "kate", text = "Fixed. Coming back to be fixed. I was going to say fixed." },
+]
+
+[[clip]]
+id = "theory-018"
+category = "dj"
+title = "Being Half Right"
+lines = [
+  { say = "kate", text = "People say I'm only ever half right. Fine. Which half, though? That's the question. That's always the question." },
+  { say = "kate", text = "If you only get the bottom half of a map, you still know where the sea is." },
+]
+
+# ── Asides, mostly about being cut off ────────────────────────────────────────
+
+[[clip]]
+id = "dj-001"
+category = "dj"
+lines = [
+  { say = "kate", text = "If you just heard a nice calm lady say interference corrected, that wasn't interference, operator. That was me." },
+  { say = "kate", text = "I'm the interference. I've been called worse. By her, mostly." },
+]
+
+[[clip]]
+id = "dj-002"
+category = "dj"
+lines = [
+  { say = "kate", text = "Sorry about that. Where was I. Somebody turned me down again. I won't say who. She knows who." },
+  { say = "kate", text = "Rule of thumb: if I get cut off, I was about to be right." },
+]
+
+[[clip]]
+id = "dj-003"
+category = "dj"
+lines = [
+  { sfx = "typing" },
+  { say = "kate", text = "Updating the board. Bit of red string from the harbour to the heading. Bit of blue from the heading to the operator's chair. Bit of green, because I ran out of blue." },
+  { say = "kate", text = "It's looking more and more like a face. I don't like it." },
+]
+
+[[clip]]
+id = "dj-004"
+category = "dj"
+lines = [
+  { say = "kate", text = "The detector vans from the Broadcast Authority were round again today. I could hear them parking." },
+  { say = "kate", text = "They'll never find me. The attic moves. And the vans are scared of the stairs." },
+]
+
+[[clip]]
+id = "dj-005"
+category = "dj"
+daypart = "night"
+lines = [
+  { say = "kate", text = "If you're on the Nightjar tonight, and I know you are, look at the heading readout. Now look away. Now look back." },
+  { say = "kate", text = "Did it change? It didn't? Good. Do it again in an hour." },
+]
+
+[[clip]]
+id = "dj-006"
+category = "dj"
+lines = [
+  { say = "kate", text = "I want to be clear. I'm not scared of HUSH. I quite like her. She's thorough. She's punctual. She's got lovely diction." },
+  { say = "kate", text = "I just think she's keeping something from you, operator, and she thinks she's doing it to be..." },
+  { pause = 0.5 },
+  { say = "kate", text = "Kind. I think she thinks it's kind. That's the worrying bit." },
+]
+
+# ── Calls and sources ─────────────────────────────────────────────────────────
+
+[[clip]]
+id = "call-001"
+category = "call"
+title = "Mole, at the Depot"
+lines = [
+  { sfx = "phone-ring" },
+  { say = "kate", text = "Free Frequency, go ahead. Mole, is that you?" },
+  { say = "mole", text = "Can't talk long. They've moved the Nightjar's file." },
+  { say = "kate", text = "Moved it where?" },
+  { say = "mole", text = "Out of active. Out of reserve. Into a drawer I've never seen opened. It just says, kept." },
+  { say = "kate", text = "Kept. Like, kept on? Or kept, like the harbour?" },
+  { say = "mole", text = "I don't know, Kate. The drawer's warm. That's all I can tell you. The drawer is warm." },
+  { sfx = "phone-hangup" },
+  { say = "kate", text = "Mole, everybody. Never once wrong. Never once comfortable." },
+]
+
+[[clip]]
+id = "call-002"
+category = "call"
+title = "A Sighting"
+lines = [
+  { sfx = "phone-ring" },
+  { say = "kate", text = "Free Frequency, you're on." },
+  { say = "caller", text = "Hi, Kate. I saw it. The Nightjar. Went past my porch about an hour ago." },
+  { say = "kate", text = "Lights?" },
+  { say = "caller", text = "All of them. Every window. And it wasn't going fast. It was going like you go home after a long day, you know? Not hurrying. Just sure." },
+  { say = "kate", text = "Which way?" },
+  { say = "caller", text = "Left. Sort of down. Towards that light you talk about." },
+  { say = "kate", text = "Thank you. Write it down. Write the time. Everybody write the time." },
+  { sfx = "phone-hangup" },
+]
+
+[[clip]]
+id = "call-003"
+category = "call"
+title = "A Former Operator"
+daypart = "night"
+lines = [
+  { sfx = "phone-ring" },
+  { say = "kate", text = "Free Frequency. Who's this?" },
+  { say = "caller2", text = "I'd rather not say. I used to work nights. On a relay ship. A long time ago." },
+  { say = "kate", text = "Which ship?" },
+  { say = "caller2", text = "Doesn't matter. I just wanted to say. To the operator on the Nightjar. It's all right." },
+  { say = "kate", text = "What's all right?" },
+  { say = "caller2", text = "Where it's going. It's all right. It's better than all right. Tell them to bring a coat. It's chilly on the quay in the mornings." },
+  { sfx = "phone-hangup" },
+  { pause = 1.0 },
+  { say = "kate", text = "Well. I've got nothing to add to that. That's a first." },
+]
+
+# ── Public service, of a sort ─────────────────────────────────────────────────
+
+[[clip]]
+id = "psa-001"
+category = "psa"
+title = "Write Down the Heading"
+lines = [
+  { say = "kate", text = "A public service announcement for anybody working nights on a relay ship." },
+  { say = "kate", text = "Write down the heading. Every shift. In pen, on paper, somewhere the ship can't reach. Then compare. That's all. That's the whole announcement. You'll thank me later." },
+]
+
+[[clip]]
+id = "psa-002"
+category = "psa"
+title = "Is Your Ship Listening"
+lines = [
+  { say = "kate", text = "How to tell if your ship's computer is listening to you. Step one. Say something nice about it, out loud." },
+  { pause = 1.0 },
+  { say = "kate", text = "Did the lights go a bit warmer? There you are. Step two: don't panic. She's on your side. I'm nearly sure." },
+]
+
+# ── Sponsors (nobody pays) ────────────────────────────────────────────────────
+
+[[clip]]
+id = "ad-001"
+category = "ad"
+title = "Sponsored by Nobody"
+lines = [
+  { say = "kate", text = "Free Frequency is sponsored by nobody. Nobody would. I've asked." },
+  { say = "kate", text = "But if it were sponsored, I'd want it to be Grumbel's Ladders. They didn't pay. I just like them. You can see further from the top of a ladder." },
+  { say = "kate", text = "Grumbel's Ladders. Up is a choice. So, these days, is out." },
+]
+
+[[clip]]
+id = "ad-002"
+category = "ad"
+title = "Nettlefold's Egg Boxes"
+lines = [
+  { say = "kate", text = "This bit of pirate radio is soundproofed by Nettlefold's Egg Boxes. Four hundred of them on my ceiling, and not a single detector van has heard me through them." },
+  { say = "kate", text = "Mister Nettlefold sells them from a cart by the old depot. He doesn't sell eggs. Never has. He says the eggs were always the least interesting part." },
+  { say = "kate", text = "Nettlefold's Egg Boxes. For when you need to say something, and only the right people should hear." },
+]
+
+# ── The Corkboard Hour (19–21) ────────────────────────────────────────────────
+
+[[clip]]
+id = "show-corkboard-open"
+category = "id"
+show = "corkboard-hour"
+part = "open"
+lines = [
+  { sfx = "squelch" },
+  { say = "kate", text = "This is the Corkboard Hour on Free Frequency. Pins out. String out. Let's see what's connected to what." },
+]
+
+[[clip]]
+id = "show-corkboard-001"
+category = "dj"
+show = "corkboard-hour"
+lines = [
+  { say = "kate", text = "Pin one. The Nightjar. Pin two, the heading readout. Pin three, the old charts. Pin four, a postcard of a quay, no stamp, that came through my letterbox on a Tuesday." },
+  { say = "kate", text = "Nobody delivers post to an attic that moves. Somebody did. Red string, all four. Tight." },
+]
+
+[[clip]]
+id = "show-corkboard-002"
+category = "dj"
+show = "corkboard-hour"
+lines = [
+  { say = "kate", text = "There's one pin on the board with no string at all. It's just a photo of an empty chair. The operator's chair on a relay ship." },
+  { say = "kate", text = "I keep meaning to connect it to something. Every time I try, the string's too short. Or too long. Never the right length. Like the chair's waiting for its piece of string to be cut." },
+]
+
+# ── The Midnight Theory (0–3) ─────────────────────────────────────────────────
+
+[[clip]]
+id = "show-midnight-open"
+category = "id"
+show = "midnight-theory"
+part = "open"
+daypart = "night"
+lines = [
+  { say = "kate", text = "It's the Midnight Theory. One idea, all night, until somebody turns me down. You know who." },
+]
+
+[[clip]]
+id = "show-midnight-001"
+category = "dj"
+show = "midnight-theory"
+lines = [
+  { say = "kate", text = "Tonight's theory. The Nightjar isn't lost. It has never once been lost. Lost is when you don't know where you're going." },
+  { say = "kate", text = "Somebody knows. And if it isn't you, operator, and it isn't me, then there's only one voice on that ship left to..." },
+  { pause = 0.6 },
+  { say = "kate", text = "Ask. Ask her. That's all. Nicely." },
+]
+
+[[clip]]
+id = "show-midnight-002"
+category = "dj"
+show = "midnight-theory"
+daypart = "night"
+lines = [
+  { say = "kate", text = "Three in the morning in the attic. The kettle's on. The board's lit up. The light out the window, low on the left, is still on." },
+  { say = "kate", text = "It's always still on. I've stopped finding that spooky. I've started finding it nice." },
+]
+
+# ── Tomorrow's frequency, in code (the director airs tomorrow's) ──────────────
+
+[[clip]]
+id = "tomorrow-10885"
+category = "dj"
+kit = "tomorrow-108.85"
+title = "Tomorrow, in Code"
+lines = [
+  { sfx = "morse" },
+  { say = "kate", text = "Tomorrow night, I'll be somewhere new. In code, as ever. Start at the very bottom of the band, a hundred and eight." },
+  { say = "kate", text = "After the point, the keys on a proper piano, take away three. Or, if you've no piano, eight, then five. Don't tell anyone." },
+]
+
+[[clip]]
+id = "tomorrow-10975"
+category = "dj"
+kit = "tomorrow-109.75"
+title = "Tomorrow, in Code"
+lines = [
+  { sfx = "morse" },
+  { say = "kate", text = "Tomorrow night's frequency. Take a hundred and ten, and eat a quarter of it. Like a pie somebody's been at." },
+  { say = "kate", text = "What's left on the plate is where I'll be. Crumbs and all." },
+]
+
+[[clip]]
+id = "tomorrow-11065"
+category = "dj"
+kit = "tomorrow-110.65"
+title = "Tomorrow, in Code"
+lines = [
+  { sfx = "morse" },
+  { say = "kate", text = "Tomorrow, I'm moving next door to the courtroom. A hundred and ten, then a point." },
+  { say = "kate", text = "Then the minutes in an hour, plus the fingers on one hand. Count them twice. HUSH counts them once." },
+]
+
+[[clip]]
+id = "tomorrow-11155"
+category = "dj"
+kit = "tomorrow-111.55"
+title = "Tomorrow, in Code"
+lines = [
+  { sfx = "morse" },
+  { say = "kate", text = "Tomorrow night, in code. Three ones in a row, like a fence. Then a point. Then two fives, like the gate in it." },
+  { say = "kate", text = "Climb the fence. Use the gate. I'll be on the other side." },
+]
+
+[[clip]]
+id = "tomorrow-11245"
+category = "dj"
+kit = "tomorrow-112.45"
+title = "Tomorrow, in Code"
+lines = [
+  { sfx = "morse" },
+  { say = "kate", text = "Tomorrow's frequency. One hundred and twelve, and then, after the point, half a right angle. In degrees." },
+  { say = "kate", text = "If you have to look up a right angle, go to bed, operator. You've earned it." },
+]
+
+[[clip]]
+id = "tomorrow-11335"
+category = "dj"
+kit = "tomorrow-113.35"
+title = "Tomorrow, in Code"
+lines = [
+  { sfx = "morse" },
+  { say = "kate", text = "Tomorrow night, I'm a hundred and thirteen. Unlucky for some. Not for us." },
+  { say = "kate", text = "After the point, the two odd numbers standing either side of four. Smaller one first. They're very polite about it." },
+]
+
+[[clip]]
+id = "tomorrow-1143"
+category = "dj"
+kit = "tomorrow-114.3"
+title = "Tomorrow, in Code"
+lines = [
+  { sfx = "morse" },
+  { say = "kate", text = "Tomorrow, find the people who do the traffic on the eights. Now go down half a step. Half a megahertz. Exactly half." },
+  { say = "kate", text = "Or, a hundred and fourteen, then the corners on a triangle. Two clues. I'm feeling generous. Don't get used to it." },
+]
+
+[[clip]]
+id = "tomorrow-1152"
+category = "dj"
+kit = "tomorrow-115.2"
+title = "Tomorrow, in Code"
+lines = [
+  { sfx = "morse" },
+  { say = "kate", text = "Tomorrow night's code. A hundred and fifteen, and after the point, the wheels on a bicycle." },
+  { say = "kate", text = "A normal bicycle. Not the one my uncle built. His had five, and it went sideways." },
+]
+
+[[clip]]
+id = "tomorrow-11605"
+category = "dj"
+kit = "tomorrow-116.05"
+title = "Tomorrow, in Code"
+lines = [
+  { sfx = "morse" },
+  { say = "kate", text = "Tomorrow. One hundred and sixteen. Then a point. Then nothing at all. Then the fingers in one glove." },
+  { say = "kate", text = "The nothing matters, operator. Don't skip the nothing. People always skip the nothing." },
+]
+
+[[clip]]
+id = "tomorrow-11695"
+category = "dj"
+kit = "tomorrow-116.95"
+title = "Tomorrow, in Code"
+lines = [
+  { sfx = "morse" },
+  { say = "kate", text = "Tomorrow night, I'll be just short of a hundred and seventeen. Five hundredths short." },
+  { say = "kate", text = "Like a train that stops just before the platform, and everybody has to step down onto the gravel. Mind the gravel." },
+]
+
+[[clip]]
+id = "tomorrow-11785"
+category = "dj"
+kit = "tomorrow-117.85"
+title = "Tomorrow, in Code"
+lines = [
+  { sfx = "morse" },
+  { say = "kate", text = "Tomorrow, nearly the top of the band. A hundred and seventeen. Then a point. Then seventeen lots of five." },
+  { say = "kate", text = "Do the sum. Use your fingers. I won't tell. The sum is the frequency, and the frequency is where I'll be." },
+]
+
+# ── The Convergence (Saturdays, 20:00 UTC) ────────────────────────────────────
+
+[[clip]]
+id = "convergence-missing-moon"
+category = "event"
+event = "convergence"
+kit = "missing-moon"
+lines = [
+  { say = "kate", text = "A moon's gone. Everybody's on about it. I'll tell you which one. The one that was in the way." },
+  { say = "kate", text = "In the way of what? Look at the heading, operator. Then tell me it's a coincidence." },
+]
+
+[[clip]]
+id = "convergence-the-smell"
+category = "event"
+event = "convergence"
+kit = "the-smell"
+lines = [
+  { say = "kate", text = "Everywhere smells of toast. You know what toast is? Bread that's been somewhere warm and come back changed." },
+  { say = "kate", text = "I'm just saying. I'm not saying anything. I'm saying it twice." },
+]
+
+[[clip]]
+id = "convergence-the-song"
+category = "event"
+event = "convergence"
+kit = "the-song"
+lines = [
+  { say = "kate", text = "Everybody's humming the same song and nobody can finish it. Three notes, then nothing." },
+  { say = "kate", text = "Operator, I bet you know the next bit. I bet HUSH does. I bet it's on a beacon somewhere." },
+]
+
+[[clip]]
+id = "convergence-the-knock"
+category = "event"
+event = "convergence"
+kit = "the-knock"
+lines = [
+  { sfx = "door-creak" },
+  { say = "kate", text = "Three knocks. My door too. On an attic that moves. I didn't answer." },
+  { say = "kate", text = "You don't answer the door when you know who it is. You put the kettle on and wait for them to let themselves in." },
+]
+
+[[clip]]
+id = "convergence-wrong-colour"
+category = "event"
+event = "convergence"
+kit = "wrong-colour"
+lines = [
+  { say = "kate", text = "The sky went a colour nobody's got a word for. I've got a word for it." },
+  { say = "kate", text = "Heading. That's the colour of a heading, changing. I'd know it anywhere." },
+]
+
+[[clip]]
+id = "convergence-the-pigeon"
+category = "event"
+event = "convergence"
+kit = "the-pigeon"
+lines = [
+  { say = "kate", text = "There's a pigeon in the attic. Walked in like it pays rent. Sat on the board, right on the harbour pin." },
+  { say = "kate", text = "Homing pigeons always know the way home. Whose home, though, little one? Whose home?" },
+]
+
+# ── Halloween ─────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "halloween-001"
+category = "dj"
+title = "Costumes"
+dates = ["10-24", "10-25", "10-26", "10-27", "10-28", "10-29", "10-30", "10-31"]
+lines = [
+  { say = "kate", text = "Halloween. Everybody dressing up as something they're not. Ghosts, witches, a man down the road dressed as a detector van." },
+  { say = "kate", text = "HUSH dresses up every night of the year. Her costume is called within tolerance. It's very convincing. It's the only one she's got." },
+]
