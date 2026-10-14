@@ -18,4 +18,8 @@ export const TALK_SCENES_V4: Partial<Record<SceneId, SceneEntry>> = {
     label: 'A vast knot of glowing wormhole lanes jammed bumper to bumper with ship lights, a traffic pod sweeping a searchlight over it.',
     load: () => import('./defs/wormhole-interchange'),
   },
+  'pirate-attic': {
+    label: 'A pirate broadcasts from a cramped attic of egg boxes and string-linked blueprints while a small light passes the round window.',
+    load: () => import('./defs/pirate-attic'),
+  },
 };
