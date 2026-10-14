@@ -499,3 +499,147 @@ lines = [
   { say = "host", text = "Big night for us." },
   { sting = "halloween" },
 ]
+
+
+# ══ v4: The Convergence ═══════════════════════════════════════════════════════
+#
+# Saturdays, 20:00 UTC: every station notices the same thing. One reaction per topic
+# (SCHEMA.md, "The Convergence"); the director airs the _events open, then the tuned
+# station's reaction, then the close.
+
+[[clip]]
+id = "convergence-missing-moon"
+category = "event"
+title = "The Convergence: A Moon Goes Missing"
+event = "convergence"
+kit = "missing-moon"
+lines = [
+  { say = "host", text = "Word on the dial. A moon gone missing." },
+  { say = "host", text = "Not this one. I'm standing on it." },
+  { say = "echo", text = "Standing on it." },
+]
+
+[[clip]]
+id = "convergence-the-smell"
+category = "event"
+title = "The Convergence: Toast, Everywhere"
+event = "convergence"
+kit = "the-smell"
+lines = [
+  { say = "host", text = "Smell of toast. Everywhere. Even up here." },
+  { say = "host", text = "No air on the moon. Still smell it. Heavy." },
+  { say = "echo", text = "Heavy." },
+]
+
+[[clip]]
+id = "convergence-the-song"
+category = "event"
+title = "The Convergence: The Song Nobody Can Finish"
+event = "convergence"
+kit = "the-song"
+lines = [
+  { say = "host", text = "Everybody's got the same tune. Nobody's got the end." },
+  { say = "host", text = "So dub it. Take the end out. Nobody notices." },
+  { say = "echo", text = "Nobody notices." },
+]
+
+[[clip]]
+id = "convergence-the-knock"
+category = "event"
+title = "The Convergence: Three Knocks"
+event = "convergence"
+kit = "the-knock"
+lines = [
+  { say = "host", text = "Three knocks on the airlock." },
+  { say = "host", text = "Nobody out there. Nobody's ever out there. Respect." },
+  { say = "echo", text = "Respect." },
+]
+
+[[clip]]
+id = "convergence-wrong-colour"
+category = "event"
+title = "The Convergence: A Colour With No Name"
+event = "convergence"
+kit = "wrong-colour"
+lines = [
+  { say = "host", text = "Earth just went a colour. Not blue. Not green. Something else." },
+  { say = "host", text = "Pointed the stack at it. Bass, four hundred percent. It went back to blue." },
+]
+
+[[clip]]
+id = "convergence-the-pigeon"
+category = "event"
+title = "The Convergence: The Pigeon"
+event = "convergence"
+kit = "the-pigeon"
+lines = [
+  { say = "host", text = "A pigeon. On the moon. Walked in through the airlock." },
+  { say = "host", text = "Nodded at me like it knew the tune. Respect, pigeon." },
+  { say = "echo", text = "Respect, pigeon." },
+]
+
+
+# ══ v4: Full moon ═════════════════════════════════════════════════════════════
+#
+# kit = "full-moon": the director airs these only on full-moon nights. Selector Crater's
+# full-moon rituals, and a sound system playing to a full moon from on top of it.
+
+[[clip]]
+id = "full-moon-id"
+category = "id"
+title = "Moon Dub, Full Moon"
+kit = "full-moon"
+lines = [
+  { say = "host", text = "Moon Dub Sound System. Full moon tonight." },
+  { say = "host", text = "We're the full part." },
+  { say = "echo", text = "The full part." },
+  { sting = "id" },
+]
+
+[[clip]]
+id = "full-moon-01"
+category = "dj"
+kit = "full-moon"
+lines = [
+  { say = "host", text = "Full moon down there means a dark Earth up here. Funny how it works." },
+  { say = "host", text = "They get the light. We get the dark. Fair trade. Speakers out. Pointed down. Bass, all the way." },
+]
+
+[[clip]]
+id = "full-moon-02"
+category = "dj"
+kit = "full-moon"
+lines = [
+  { say = "host", text = "Full moon ritual. Turn every speaker to face the sun, one at a time. Say thank you for the light." },
+  { say = "host", text = "Turn them back round. Play the heaviest tune in the box. That's it. That's the ritual." },
+  { say = "echo", text = "That's the ritual." },
+]
+
+[[clip]]
+id = "full-moon-03"
+category = "dj"
+kit = "full-moon"
+lines = [
+  { say = "host", text = "Full moon. The tide's pulling on every ocean down there." },
+  { say = "host", text = "Some of that's us. Bass moves water. Surf's up in seven countries. You're welcome." },
+]
+
+[[clip]]
+id = "full-moon-04"
+category = "dj"
+kit = "full-moon"
+lines = [
+  { say = "host", text = "Lone astronaut's come out for the full moon. Still nodding. Day four hundred." },
+  { say = "host", text = "Brought his own sandwich this time." },
+  { say = "echo", text = "Growth." },
+]
+
+[[clip]]
+id = "full-moon-05"
+category = "dj"
+kit = "full-moon"
+lines = [
+  { say = "host", text = "Shout-out to everybody down there, looking up at the full moon, thinking it's quiet up here." },
+  { say = "host", text = "It isn't. Wave. Hold tight." },
+  { say = "echo", text = "Hold tight." },
+]

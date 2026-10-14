@@ -1,6 +1,10 @@
 // Multiverse-wide events, seeded from UTC: every listener, on every station, hears the same
 // event at the same instant. A few a day at seeded times, a minute or three each, never
 // overlapping. Pure; the overlay (./overlay.ts) turns a plan into sound.
+//
+// v4, the Convergence: every Saturday at 20:00 UTC, for 4–6 minutes (seeded per week), every
+// station notices the same thing. The topic rotates weekly (weeks since the epoch, mod 6).
+// A random event that would clash with it moves out of the way, or is dropped.
 
 import { createRng, hash, weightedPick } from './random';
 import { DAY_MS, MIN_MS } from './time';
@@ -23,7 +27,7 @@ const WEIGHT: Record<EventId, number> = {
   'station-swap': 2,
   'signal-from-beyond': 1.5,
   'time-slip': 2,
-  // Weekly at a fixed time, not part of the daily draw. TODO(v4 director): schedule it.
+  // Weekly at a fixed time (Saturdays 20:00 UTC), not part of the daily draw.
   convergence: 0,
 };
 
@@ -38,9 +42,70 @@ const LENGTH_S: Record<EventId, [number, number]> = {
   convergence: [240, 360],
 };
 
+// ── The Convergence ───────────────────────────────────────────────────────────
+
+/** What everyone notices, in rotation order (content/voice/SCHEMA.md): the clips' `kit`. */
+export const CONVERGENCE_TOPICS = ['missing-moon', 'the-smell', 'the-song', 'the-knock', 'wrong-colour', 'the-pigeon'] as const;
+export type ConvergenceTopic = (typeof CONVERGENCE_TOPICS)[number];
+
+export const WEEK_MS = 7 * DAY_MS;
+/** Saturday, 20:00 UTC. */
+export const CONVERGENCE_UTC = { weekday: 6, hour: 20 } as const;
+/** Random events keep this far clear of the Convergence. */
+const CONVERGENCE_CLEARANCE_MS = 10 * MIN_MS;
+
+/** UTC weekday of a day since the epoch (1970-01-01 was a Thursday). */
+const utcWeekday = (day: number) => (((day + 4) % 7) + 7) % 7;
+
+/** The topic of the Convergence in the week `ms` falls in (weeks since the epoch, mod 6). */
+export function convergenceTopic(ms: number): ConvergenceTopic {
+  const week = Math.floor(ms / WEEK_MS);
+  return CONVERGENCE_TOPICS[((week % CONVERGENCE_TOPICS.length) + CONVERGENCE_TOPICS.length) % CONVERGENCE_TOPICS.length]!;
+}
+
+/** The Convergence on a UTC day, if that day is a Saturday. */
+export function convergenceOnDay(day: number): ActiveEvent | null {
+  if (utcWeekday(day) !== CONVERGENCE_UTC.weekday) return null;
+  const startMs = day * DAY_MS + CONVERGENCE_UTC.hour * 3_600_000;
+  const [lo, hi] = LENGTH_S.convergence;
+  const durationMs = createRng(hash('convergence', Math.floor(startMs / WEEK_MS))).int(lo, hi) * 1000;
+  return { id: 'convergence', name: EVENT_NAMES.convergence, startMs, durationMs };
+}
+
+/** The next Convergence starting after `ms`. */
+export function nextConvergence(ms: number): ActiveEvent {
+  for (let day = Math.floor(ms / DAY_MS); ; day++) {
+    const c = convergenceOnDay(day);
+    if (c && c.startMs > ms) return c;
+  }
+}
+
+// ── The daily draw ────────────────────────────────────────────────────────────
+
 const dayCache = new Map<number, ActiveEvent[]>();
 
-/** The events of one UTC day (days since the epoch), in order. */
+/** Moves random events out of the Convergence's way (earlier, else later), or drops them. */
+function clearFor(convergence: ActiveEvent, events: ActiveEvent[], day: number): ActiveEvent[] {
+  const from = convergence.startMs - CONVERGENCE_CLEARANCE_MS;
+  const to = convergence.startMs + convergence.durationMs + CONVERGENCE_CLEARANCE_MS;
+  const out: ActiveEvent[] = [];
+  events.forEach((e, i) => {
+    if (e.startMs >= to || e.startMs + e.durationMs <= from) {
+      out.push(e);
+      return;
+    }
+    const before = out[out.length - 1];
+    const after = events[i + 1];
+    const earliest = Math.max(day * DAY_MS + 10 * MIN_MS, before ? before.startMs + before.durationMs : -Infinity);
+    const latest = Math.min((day + 1) * DAY_MS - 10 * MIN_MS, after ? after.startMs : Infinity);
+    if (from - e.durationMs >= earliest) out.push({ ...e, startMs: from - e.durationMs });
+    else if (to + e.durationMs <= latest) out.push({ ...e, startMs: to });
+  });
+  out.push(convergence);
+  return out.sort((a, b) => a.startMs - b.startMs);
+}
+
+/** The events of one UTC day (days since the epoch), in order. Saturdays include the Convergence. */
 export function eventsOnDay(day: number): ActiveEvent[] {
   const cached = dayCache.get(day);
   if (cached) return cached;
@@ -63,9 +128,11 @@ export function eventsOnDay(day: number): ActiveEvent[] {
     events.push({ id, name: EVENT_NAMES[id], startMs, durationMs });
     previous = id;
   }
-  dayCache.set(day, events);
+  const convergence = convergenceOnDay(day);
+  const all = convergence ? clearFor(convergence, events, day) : events;
+  dayCache.set(day, all);
   if (dayCache.size > 8) dayCache.delete(dayCache.keys().next().value!);
-  return events;
+  return all;
 }
 
 /** The event in progress at a UTC moment, if any. */
@@ -116,6 +183,11 @@ export interface EventPlan {
   underClip: number;
   /** Time-slip: between these times the station runs `shiftMs` behind (a replay). */
   slip: { fromMs: number; toMs: number; shiftMs: number } | null;
+  /**
+   * v4, the Convergence: its topic, and when the tuned station's own reaction may air (each
+   * station's once, between the open and the close; tuning around hears several).
+   */
+  convergence?: { topic: ConvergenceTopic; fromMs: number; toMs: number };
 }
 
 /** How each event treats the station underneath it. */
@@ -138,6 +210,7 @@ const MAX_CLIPS = 3;
  * Deterministic for an event; `stationId` only narrows clips that name their stations.
  */
 export function planEvent(event: ActiveEvent, pool: readonly VoiceClip[], stationId?: string): EventPlan {
+  if (event.id === 'convergence') return planConvergence(event, pool, stationId);
   const shape = SHAPE[event.id];
   const end = event.startMs + event.durationMs;
   const order = (c: VoiceClip) => (c.part === 'open' ? 0 : c.part === 'close' ? 2 : 1);
@@ -185,4 +258,67 @@ export function planEvent(event: ActiveEvent, pool: readonly VoiceClip[], statio
     t += clip.durationMs + CLIP_GAP_MS;
   }
   return { event, clips, base: shape.base, underClip: shape.underClip, slip };
+}
+
+// ── The Convergence ───────────────────────────────────────────────────────────
+
+/** Is this clip part of the Convergence (open, close or a station's reaction)? */
+export const isConvergenceClip = (clip: VoiceClip): boolean => clip.event === 'convergence';
+
+/**
+ * The Convergence: the shared open for this week's topic as it starts, the shared close
+ * just before it ends, and a window in between for the tuned station's reaction.
+ */
+export function planConvergence(event: ActiveEvent, pool: readonly VoiceClip[], stationId?: string): EventPlan {
+  const shape = SHAPE.convergence;
+  const topic = convergenceTopic(event.startMs);
+  const end = event.startMs + event.durationMs;
+  const ranked = pool
+    .filter((c) => c.event === 'convergence' && c.kit === topic)
+    .filter((c) => !c.stations?.length || (stationId !== undefined && c.stations.includes(stationId)))
+    .map((clip) => ({ clip, rank: hash('event-clip', event.startMs, clip.url) }))
+    .sort((a, b) => a.rank - b.rank)
+    .map((x) => x.clip);
+  const open = ranked.find((c) => c.part === 'open');
+  const close = ranked.find((c) => c.part === 'close');
+  const clips: PlannedClip[] = [];
+  let from = event.startMs + shape.lead;
+  if (open && from + open.durationMs < end - 2000) {
+    clips.push({ clip: open, startMs: from });
+    from += open.durationMs + CLIP_GAP_MS;
+  }
+  let to = end - 2000;
+  if (close) {
+    const at = end - 2500 - close.durationMs;
+    if (at >= from) {
+      clips.push({ clip: close, startMs: at });
+      to = at - CLIP_GAP_MS;
+    }
+  }
+  return {
+    event,
+    clips,
+    base: shape.base,
+    underClip: shape.underClip,
+    slip: null,
+    convergence: { topic, fromMs: from, toMs: to },
+  };
+}
+
+/**
+ * A station's reaction to this week's topic, from its own manifest (`category = "event"`,
+ * `event = "convergence"`, `kit = <topic>`), or undefined if it has none.
+ */
+export function convergenceReaction(clips: readonly VoiceClip[], topic: string, eventStartMs: number): VoiceClip | undefined {
+  let best: VoiceClip | undefined;
+  let bestRank = Infinity;
+  for (const c of clips) {
+    if (c.category !== 'event' || c.event !== 'convergence' || c.kit !== topic || c.part === 'open' || c.part === 'close') continue;
+    const rank = hash('reaction', eventStartMs, c.url);
+    if (rank < bestRank) {
+      best = c;
+      bestRank = rank;
+    }
+  }
+  return best;
 }

@@ -1,0 +1,882 @@
+# Small Claims of the Multiverse — 110.2, Courtroom Four of the Interdimensional Small
+# Claims Tribunal, live from the bench.
+#
+# Judge Alvarez-Penhallow presides over the smallest claims in the largest jurisdiction:
+# precise, unflappable, quietly delighted by nonsense, and fair to everyone, including the
+# weather. Clerk Odell reads the cases in the tone of a shipping forecast. Mr. Lusk
+# appears for plaintiffs, Ms. Castellane for the defence; Bailiff Mutch keeps order. The
+# gavel is a foley tap (`chopping`, a single short knock).
+#
+# The `case` kit chains the clerk's claim, one to three bodies (testimony, objections,
+# exhibits) and a ruling. Bodies never name the case; rulings fit any case and are funny
+# on their own. A weekly show, Landmark Rulings (Fridays), retells the court's great
+# precedents.
+station = "small-claims"
+
+[voices]
+judge = { voice = "bf_isabella", speed = 0.95, name = "Judge Alvarez-Penhallow" }
+odell = { voice = "am_adam", speed = 0.92, name = "Clerk Odell" }
+lusk = { voice = "bm_fable", name = "Mr. Lusk, for the Plaintiff" }
+castellane = { voice = "af_aoede", name = "Ms. Castellane, for the Defence" }
+plaintiff = { voice = "am_michael", name = "The Plaintiff" }
+defendant = { voice = "af_nicole", name = "The Defendant" }
+expert = { voice = "bm_lewis", name = "An Expert Witness" }
+dimension = { voice = "am_onyx", fx = "giant", name = "A Dimension" }
+small = { voice = "af_sky", fx = "tiny", name = "A Very Small Party" }
+mutch = { voice = "am_eric", name = "Bailiff Mutch" }
+
+[[show]]
+id = "petty-sessions"
+name = "Petty Sessions"
+blurb = "The morning list: fences, borrowed hours and the odd cloud. Clerk Odell reads; the Judge takes notes in green ink."
+start = 9
+end = 12
+
+[[show]]
+id = "the-late-list"
+name = "The Late List"
+blurb = "Cases heard after hours, for parties who only exist at night. Noise complaints from the void a speciality."
+start = 22
+end = 1
+
+[[show]]
+id = "landmark-rulings"
+name = "Landmark Rulings"
+blurb = "Fridays: the Judge revisits the great precedents of the Tribunal. The tide. The last biscuit. The two Tuesdays."
+start = 20
+end = 21
+days = [5]
+
+# ── Idents ────────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "id-001"
+category = "id"
+lines = [
+  { sfx = "chopping", seconds = 0.1 },
+  { say = "odell", text = "Small Claims of the Multiverse. One hundred and ten point two. All rise." },
+]
+
+[[clip]]
+id = "id-002"
+category = "id"
+lines = [
+  { say = "judge", text = "This is Small Claims of the Multiverse. I am Judge Alvarez-Penhallow. Please be seated, in whatever way you sit." },
+]
+
+[[clip]]
+id = "id-003"
+category = "id"
+lines = [
+  { say = "odell", text = "Small Claims of the Multiverse. Disputes between dimensions, settled with dignity, and a gavel." },
+  { sfx = "chopping", seconds = 0.1 },
+]
+
+[[clip]]
+id = "id-004"
+category = "id"
+lines = [
+  { say = "judge", text = "Small Claims of the Multiverse. No claim too small. Several, frankly, far too small. We hear them anyway." },
+]
+
+[[clip]]
+id = "id-005"
+category = "id"
+lines = [
+  { say = "odell", text = "You are listening to Courtroom Four, on one one oh point two. The court is in session. The court is always in session." },
+]
+
+# ── Case kit: the claim, the hearing, the ruling ──────────────────────────────
+
+[[clip]]
+id = "case-open-001"
+category = "story"
+kit = "case"
+part = "open"
+bed = "hall"
+title = "Vell versus Vell"
+lines = [
+  { sfx = "chopping", seconds = 0.1 },
+  { say = "odell", text = "Case four thousand and six. The Upper Atmosphere of Vell, against the Lower Atmosphere of Vell. A cloud, parked across both, for nine days." },
+]
+
+[[clip]]
+id = "case-open-002"
+category = "story"
+kit = "case"
+part = "open"
+bed = "hall"
+title = "The Echo and the Shout"
+lines = [
+  { say = "odell", text = "The Echo of Hollow Point, against the Original Shout. A claim for unpaid royalties, going back eleven centuries." },
+  { say = "judge", text = "Proceed. Proceed. Proceed." },
+]
+
+[[clip]]
+id = "case-open-003"
+category = "story"
+kit = "case"
+part = "open"
+bed = "hall"
+title = "The Fence Between Nines"
+lines = [
+  { say = "odell", text = "Dimension Nine, against Dimension Nine B. A garden fence, eleven inches over the boundary, in a direction neither party can point to." },
+]
+
+[[clip]]
+id = "case-open-004"
+category = "story"
+kit = "case"
+part = "open"
+bed = "hall"
+title = "Too Quiet"
+lines = [
+  { say = "odell", text = "Mister Barnaby Chell, a ghost, against the tenants of number four, Lantern Row. A noise complaint. The tenants are too quiet. He finds it unsettling." },
+]
+
+[[clip]]
+id = "case-open-005"
+category = "story"
+kit = "case"
+part = "open"
+bed = "hall"
+title = "Three Borrowed Hours"
+lines = [
+  { sfx = "chopping", seconds = 0.1 },
+  { say = "odell", text = "The Tuesday of the Grey Reach, against the Wednesday of the Grey Reach. Three hours, borrowed in good faith, never returned." },
+]
+
+[[clip]]
+id = "case-open-006"
+category = "story"
+kit = "case"
+part = "open"
+bed = "hall"
+title = "The Sock and the Machine"
+lines = [
+  { say = "odell", text = "A single sock, left foot, against a washing machine in the Overlap. Wrongful relocation. The sock seeks the return of its partner." },
+]
+
+[[clip]]
+id = "case-open-007"
+category = "story"
+kit = "case"
+part = "open"
+bed = "hall"
+title = "The Moon and the Tide"
+lines = [
+  { say = "odell", text = "The Tide of Pellam, against the Moon of Pellam. The tide says it is being pulled about. The moon says it never laid a finger on it." },
+]
+
+[[clip]]
+id = "case-open-008"
+category = "story"
+kit = "case"
+part = "open"
+bed = "hall"
+title = "Fairweather versus Fairweather"
+lines = [
+  { say = "odell", text = "Mister Gideon Fairweather, against Mister Gideon Fairweather, of next Thursday. Reimbursement for a haircut the plaintiff hasn't had yet, and will regret." },
+]
+
+[[clip]]
+id = "case-open-009"
+category = "story"
+kit = "case"
+part = "open"
+bed = "hall"
+title = "The Snow Globe and the Shelf"
+lines = [
+  { say = "odell", text = "The residents of a snow globe, against the shelf it stands on. A shaking incident, during a door being slammed, on the evening of the fourth." },
+]
+
+[[clip]]
+id = "case-open-010"
+category = "story"
+kit = "case"
+part = "open"
+bed = "hall"
+title = "The Library and the Dragon"
+lines = [
+  { sfx = "chopping", seconds = 0.1 },
+  { say = "odell", text = "The Marrowgate Lending Library, against a small dragon. A book of poems, returned slightly toasted. The dragon counterclaims that the poems were very exciting." },
+]
+
+[[clip]]
+id = "case-open-011"
+category = "story"
+kit = "case"
+part = "open"
+bed = "hall"
+title = "The Lighthouse and the Fog"
+lines = [
+  { say = "odell", text = "A lighthouse, retired, against a fog bank. The lighthouse alleges it has been followed, every evening, for forty years." },
+]
+
+[[clip]]
+id = "case-body-001"
+category = "story"
+kit = "case"
+part = "body"
+bed = "hall"
+lines = [
+  { say = "plaintiff", text = "Your Honour, I have never been so inconvenienced in all my dimensions. And I have a great many dimensions." },
+  { say = "plaintiff", text = "I want it noted that I was there first. I was there first in every version of events. I have the versions here, in a folder." },
+  { say = "judge", text = "The court will take the folder. The court notes the folder is also a dimension. Please don't put it down near the others." },
+]
+
+[[clip]]
+id = "case-body-002"
+category = "story"
+kit = "case"
+part = "body"
+bed = "hall"
+lines = [
+  { say = "defendant", text = "In my defence, Your Honour, it was like that when I found it." },
+  { say = "judge", text = "When did you find it?" },
+  { say = "defendant", text = "Just after I did it." },
+  { pause = 0.8 },
+  { say = "castellane", text = "My client would like a moment, Your Honour." },
+]
+
+[[clip]]
+id = "case-body-003"
+category = "story"
+kit = "case"
+part = "body"
+bed = "hall"
+lines = [
+  { say = "castellane", text = "Objection, Your Honour. Counsel is leading the witness." },
+  { say = "judge", text = "Leading them where?" },
+  { say = "castellane", text = "Somewhere nicer, Your Honour. There's a view." },
+  { say = "judge", text = "Overruled. Everyone deserves a view. Carry on, Mister Lusk, but come straight back." },
+]
+
+[[clip]]
+id = "case-body-004"
+category = "story"
+kit = "case"
+part = "body"
+bed = "hall"
+lines = [
+  { say = "lusk", text = "I call an expert witness. A professor of comparative ownership." },
+  { say = "expert", text = "Your Honour, in my professional opinion, the item in question belongs to whoever is holding it, unless somebody else is also holding it, in which case it belongs to the situation." },
+  { say = "judge", text = "And who owns the situation?" },
+  { say = "expert", text = "Nobody, Your Honour. That's why we're all here." },
+]
+
+[[clip]]
+id = "case-body-005"
+category = "story"
+kit = "case"
+part = "body"
+bed = "hall"
+lines = [
+  { say = "judge", text = "Have the two parties tried simply talking to one another?" },
+  { say = "plaintiff", text = "We tried, Your Honour. We're from different dimensions. Every time we talk, one of us is yesterday." },
+  { say = "defendant", text = "It's usually me." },
+  { say = "judge", text = "Let the record show the court sympathises. The court has been yesterday too. It doesn't suit everybody." },
+]
+
+[[clip]]
+id = "case-body-006"
+category = "story"
+kit = "case"
+part = "body"
+bed = "hall"
+lines = [
+  { say = "lusk", text = "I'd like to enter exhibit A, Your Honour." },
+  { say = "odell", text = "Exhibit A. A cardboard box. Inside the box, a second, smaller box. Inside that, a note, which reads, nearly." },
+  { say = "judge", text = "Nearly what?" },
+  { say = "lusk", text = "That's rather the point of the case, Your Honour." },
+]
+
+[[clip]]
+id = "case-body-007"
+category = "story"
+kit = "case"
+part = "body"
+bed = "hall"
+lines = [
+  { sfx = "chopping", seconds = 0.45 },
+  { say = "judge", text = "Order. Order. Bailiff, the cloud in the public gallery is raining again." },
+  { say = "mutch", text = "Shall I remove it, Your Honour?" },
+  { say = "judge", text = "No. Give it a tissue. It's been a very emotional morning for everyone." },
+]
+
+[[clip]]
+id = "case-body-008"
+category = "story"
+kit = "case"
+part = "body"
+bed = "hall"
+lines = [
+  { say = "judge", text = "Is the defendant present?" },
+  { say = "castellane", text = "Partly, Your Honour." },
+  { say = "judge", text = "Which part?" },
+  { say = "castellane", text = "The part that's sorry, Your Honour. The rest of my client sends its apologies, but it's in another dimension, and it isn't sorry at all." },
+]
+
+[[clip]]
+id = "case-body-009"
+category = "story"
+kit = "case"
+part = "body"
+bed = "hall"
+lines = [
+  { say = "dimension", text = "Your Honour. I wish to give evidence." },
+  { say = "judge", text = "The court recognises the dimension. Please keep your voice down. You're rattling the windows in two other courtrooms." },
+  { say = "dimension", text = "Sorry. I only wished to say that I saw everything." },
+  { say = "judge", text = "Everything?" },
+  { say = "dimension", text = "I'm a dimension, Your Honour. I can't help it. It's all just there." },
+]
+
+[[clip]]
+id = "case-body-010"
+category = "story"
+kit = "case"
+part = "body"
+bed = "hall"
+lines = [
+  { say = "small", text = "Your Honour! Down here! I'd like to be heard!" },
+  { say = "judge", text = "Bailiff, would you lift the very small party onto the witness stand, please. Gently." },
+  { say = "mutch", text = "Up you come." },
+  { say = "small", text = "Thank you. I just want to say that this whole business has been very big, from where I'm standing." },
+  { say = "judge", text = "Noted. It has been very big from up here too." },
+]
+
+[[clip]]
+id = "case-body-011"
+category = "story"
+kit = "case"
+part = "body"
+bed = "hall"
+lines = [
+  { say = "plaintiff", text = "I'd like to call a witness from next week, Your Honour." },
+  { say = "judge", text = "The court allows it. Where is the witness?" },
+  { say = "odell", text = "They'll be here next week, Your Honour." },
+  { say = "judge", text = "Then we shall hear their evidence next week, and pretend, for now, that we have. Everyone look convinced." },
+]
+
+[[clip]]
+id = "case-body-012"
+category = "story"
+kit = "case"
+part = "body"
+bed = "hall"
+lines = [
+  { say = "castellane", text = "Your Honour, my client did not take the item. My client was merely standing very close to the item when it left." },
+  { say = "lusk", text = "Your Honour, the item was in the defendant's coat." },
+  { say = "castellane", text = "A coincidence. My client has a very large coat. Things get into it." },
+]
+
+[[clip]]
+id = "case-body-013"
+category = "story"
+kit = "case"
+part = "body"
+bed = "hall"
+lines = [
+  { say = "lusk", text = "Objection, Your Honour. Relevance." },
+  { say = "judge", text = "To what?" },
+  { say = "lusk", text = "To anything, Your Honour. Anything at all." },
+  { say = "judge", text = "Sustained. The court has been wondering about that for some years." },
+]
+
+[[clip]]
+id = "case-body-014"
+category = "story"
+kit = "case"
+part = "body"
+bed = "hall"
+lines = [
+  { say = "defendant", text = "I'd like to say something, Your Honour. In all the dimensions I've lived in, this is the only one where anybody has ever taken me to court." },
+  { say = "judge", text = "And how does that feel?" },
+  { say = "defendant", text = "Honestly? Quite flattering. It's nice to be noticed." },
+]
+
+[[clip]]
+id = "case-body-015"
+category = "story"
+kit = "case"
+part = "body"
+bed = "hall"
+lines = [
+  { say = "judge", text = "Clerk Odell, would you read back the plaintiff's last statement?" },
+  { say = "odell", text = "The plaintiff said, and I quote: it's the principle of the thing, and also the thing." },
+  { say = "judge", text = "Thank you. The court has rarely heard it put so clearly." },
+]
+
+[[clip]]
+id = "case-body-016"
+category = "story"
+kit = "case"
+part = "body"
+bed = "hall"
+lines = [
+  { say = "castellane", text = "Your Honour, my client has prepared a statement." },
+  { say = "defendant", text = "I am sorry for any inconvenience that may or may not have occurred, in any timeline where it may or may not have occurred, to anybody who was there, or who wasn't, but heard." },
+  { say = "judge", text = "That is the most thorough apology the court has received. The court is going to frame it." },
+]
+
+[[clip]]
+id = "case-body-017"
+category = "story"
+kit = "case"
+part = "body"
+bed = "hall"
+lines = [
+  { say = "lusk", text = "Your Honour, I direct the court's attention to the plaintiff's face. Look at it. That is the face of someone who has been wronged." },
+  { say = "judge", text = "The court has looked. The court notes the plaintiff's face has been like that since the plaintiff arrived. And in the corridor. And in the photograph on the claim form." },
+  { say = "lusk", text = "Wronged for a long time, Your Honour." },
+]
+
+[[clip]]
+id = "case-body-018"
+category = "story"
+kit = "case"
+part = "body"
+bed = "hall"
+lines = [
+  { say = "judge", text = "Before we go further, does anybody in this courtroom have any idea what this case is actually about?" },
+  { pause = 1.4 },
+  { say = "odell", text = "The clerk does, Your Honour. Roughly. In outline." },
+  { say = "judge", text = "Splendid. Then we have a quorum." },
+]
+
+[[clip]]
+id = "case-body-019"
+category = "story"
+kit = "case"
+part = "body"
+bed = "hall"
+lines = [
+  { say = "mutch", text = "Your Honour, there's a goose in the corridor asking whether it's needed." },
+  { say = "judge", text = "Tell the goose it isn't a suspect here. This isn't that sort of station." },
+  { say = "mutch", text = "It says it'll wait. Just in case." },
+]
+
+[[clip]]
+id = "case-close-001"
+category = "story"
+kit = "case"
+part = "close"
+bed = "hall"
+lines = [
+  { say = "judge", text = "The court finds that everybody is a little bit right, which is the most annoying verdict available. Costs shared. Next." },
+  { sfx = "chopping", seconds = 0.1 },
+]
+
+[[clip]]
+id = "case-close-002"
+category = "story"
+kit = "case"
+part = "close"
+bed = "hall"
+lines = [
+  { say = "judge", text = "Case dismissed. Both parties are to shake hands, using whatever they have." },
+  { sfx = "chopping", seconds = 0.1 },
+]
+
+[[clip]]
+id = "case-close-003"
+category = "story"
+kit = "case"
+part = "close"
+bed = "hall"
+lines = [
+  { say = "judge", text = "Judgment for the plaintiff in this dimension, and for the defendant in all the others. Please sort it out amongst yourselves, in the car park." },
+]
+
+[[clip]]
+id = "case-close-004"
+category = "story"
+kit = "case"
+part = "close"
+bed = "hall"
+lines = [
+  { say = "judge", text = "The court awards damages of one sincere apology, payable now." },
+  { pause = 1.2 },
+  { say = "judge", text = "That will do. Case closed." },
+  { sfx = "chopping", seconds = 0.1 },
+]
+
+[[clip]]
+id = "case-close-005"
+category = "story"
+kit = "case"
+part = "close"
+bed = "hall"
+lines = [
+  { say = "judge", text = "Settled out of court, apparently, while I was talking. Well done, both of you. Odell, the next one." },
+]
+
+[[clip]]
+id = "case-close-006"
+category = "story"
+kit = "case"
+part = "close"
+bed = "hall"
+lines = [
+  { say = "judge", text = "Adjourned until the matter makes sense. Odell, mark it as a long adjournment." },
+  { say = "odell", text = "The longest, Your Honour." },
+]
+
+[[clip]]
+id = "case-close-007"
+category = "story"
+kit = "case"
+part = "close"
+bed = "hall"
+lines = [
+  { say = "judge", text = "The court rules for the defendant, but would like it known that it didn't enjoy doing so, and it won't be doing it again." },
+  { sfx = "chopping", seconds = 0.1 },
+]
+
+[[clip]]
+id = "case-close-008"
+category = "story"
+kit = "case"
+part = "close"
+bed = "hall"
+lines = [
+  { say = "judge", text = "The item is to be returned to whoever misses it most." },
+  { say = "judge", text = "That's both of you. Then share it. On alternate Tuesdays." },
+]
+
+[[clip]]
+id = "case-close-009"
+category = "story"
+kit = "case"
+part = "close"
+bed = "hall"
+lines = [
+  { say = "judge", text = "Judgment reserved. I'll reserve it somewhere nice, with a view, and come back for it after lunch." },
+]
+
+[[clip]]
+id = "case-close-010"
+category = "story"
+kit = "case"
+part = "close"
+bed = "hall"
+lines = [
+  { say = "judge", text = "The court finds for the plaintiff. The defendant will pay costs of one hour of sitting quietly, thinking about it." },
+  { sfx = "chopping", seconds = 0.1 },
+]
+
+[[clip]]
+id = "case-close-011"
+category = "story"
+kit = "case"
+part = "close"
+bed = "hall"
+lines = [
+  { say = "judge", text = "No case to answer. There's barely a case to ask. Off you go, the lot of you. Mind the cloud." },
+]
+
+# ── Recess and housekeeping ───────────────────────────────────────────────────
+
+[[clip]]
+id = "psa-recess-001"
+category = "psa"
+title = "Recess"
+lines = [
+  { sfx = "chopping", seconds = 0.1 },
+  { say = "odell", text = "The court is in recess. Please remain seated, or, if you have no means of sitting, remain whatever you are." },
+  { say = "odell", text = "The tea trolley is in the corridor. Parties from opposing dimensions are asked to take turns." },
+]
+
+[[clip]]
+id = "psa-recess-002"
+category = "psa"
+title = "Recess, Briefly"
+lines = [
+  { say = "judge", text = "We'll take a short recess. Fifteen minutes, local time. If you don't have local time, borrow some from the clerk." },
+  { say = "odell", text = "I have plenty, Your Honour. It's in the drawer." },
+]
+
+[[clip]]
+id = "psa-recess-003"
+category = "psa"
+title = "Court Notices"
+lines = [
+  { say = "odell", text = "Court notices. Witnesses who exist only in the past tense are asked to give evidence before lunch, while they still can." },
+  { say = "odell", text = "Lost property, at the clerk's desk: one umbrella, one shadow, one very small hat. The hat was fined for contempt, and has paid." },
+]
+
+# ── Chambers ──────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "dj-001"
+category = "dj"
+title = "The Docket"
+lines = [
+  { say = "odell", text = "Today's docket, Your Honour. Forty one cases. Six fences. Three hours, borrowed. Two moons. One hat." },
+  { say = "judge", text = "Just the one hat?" },
+  { say = "odell", text = "It's a very serious hat, Your Honour." },
+]
+
+[[clip]]
+id = "dj-002"
+category = "dj"
+title = "Fair to the Weather"
+lines = [
+  { say = "judge", text = "I'm often asked why I take claims from the weather. The answer is simple. Everybody complains about the weather. Nobody asks what the weather thinks." },
+  { say = "judge", text = "It has a great deal to say. It says most of it on Tuesdays." },
+]
+
+[[clip]]
+id = "dj-003"
+category = "dj"
+title = "Odell's Voice"
+lines = [
+  { say = "judge", text = "People ask me why Clerk Odell reads the cases in that voice." },
+  { say = "odell", text = "Which voice, Your Honour?" },
+  { say = "judge", text = "That one, Odell. Like a forecast for a sea that isn't there." },
+  { say = "odell", text = "Moderate, Your Honour. Becoming good." },
+]
+
+[[clip]]
+id = "dj-004"
+category = "dj"
+daypart = "night"
+title = "Jurisdiction"
+lines = [
+  { say = "judge", text = "The court notes that a relay ship has drifted into its jurisdiction. Good evening, operator." },
+  { say = "judge", text = "You've done nothing wrong. Drifting is not an offence. Not knowing why you are drifting is not an offence either. It's merely interesting." },
+]
+
+[[clip]]
+id = "dj-005"
+category = "dj"
+title = "Green Ink"
+lines = [
+  { say = "judge", text = "I take my notes in green ink. Red ink is for mistakes. Black ink is for the record. Green ink is for things I found delightful." },
+  { say = "judge", text = "My notebooks are almost entirely green. Clerk Odell says it's unprofessional. Clerk Odell has a green pen too. I've seen it." },
+]
+
+# ── Adverts ───────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "ad-001"
+category = "ad"
+title = "Fenwright and Daughters, Notaries"
+lines = [
+  { say = "odell", text = "Small Claims of the Multiverse is supported by Fenwright and Daughters, interdimensional notaries." },
+  { say = "odell", text = "Witnessing signatures in every dimension since the first contract, which was between a cliff and the sea, and is still being argued about." },
+  { say = "odell", text = "Fenwright and Daughters. We'll stamp anything. Within reason. Reason is extra." },
+]
+
+[[clip]]
+id = "ad-002"
+category = "ad"
+title = "Plaintiff's Pastilles"
+lines = [
+  { say = "lusk", text = "Long day in court? Throat raw from objecting? Try Plaintiff's Pastilles." },
+  { say = "lusk", text = "Honey, lemon, and a faint taste of justice. Suitable for counsel, witnesses and the occasional dimension." },
+  { say = "castellane", text = "Defendants may experience the same benefits. It's only fair." },
+]
+
+[[clip]]
+id = "ad-003"
+category = "ad"
+title = "Grumbel's Ladders, Before the Bench"
+lines = [
+  { say = "judge", text = "This court is not permitted to endorse products. However." },
+  { say = "judge", text = "Grumbel's Ladders have appeared before this bench forty one times, as plaintiff, defendant and witness, and have never once been found to be anything other than a ladder." },
+  { say = "judge", text = "That is more than can be said for most of us. Up is a choice." },
+]
+
+# ── Petty Sessions (9–12) ─────────────────────────────────────────────────────
+
+[[clip]]
+id = "show-petty-open"
+category = "id"
+show = "petty-sessions"
+part = "open"
+lines = [
+  { sfx = "chopping", seconds = 0.1 },
+  { say = "odell", text = "All rise for Petty Sessions. Judge Alvarez-Penhallow presiding. Fences first, then clouds." },
+]
+
+[[clip]]
+id = "show-petty-001"
+category = "dj"
+show = "petty-sessions"
+lines = [
+  { say = "judge", text = "Good morning. Before we start, a reminder that the court does not accept evidence in the form of a hunch, a vibe, or a strong feeling about a neighbour." },
+  { say = "judge", text = "Unless the neighbour is the weather, in which case, we'll allow it." },
+]
+
+# ── The Late List (22–1) ──────────────────────────────────────────────────────
+
+[[clip]]
+id = "show-late-open"
+category = "id"
+show = "the-late-list"
+part = "open"
+daypart = "night"
+lines = [
+  { say = "odell", text = "The court is now sitting for the Late List. Parties who only exist after dark, please come forward. Mind the step. It's darker than it looks." },
+]
+
+[[clip]]
+id = "show-late-001"
+category = "dj"
+show = "the-late-list"
+lines = [
+  { say = "judge", text = "The Late List. Tonight, eleven noise complaints from the void. The void says everything else is too loud." },
+  { say = "judge", text = "It has a point. It always has a point. It's a very small point, in a very large silence." },
+]
+
+[[clip]]
+id = "show-late-002"
+category = "dj"
+show = "the-late-list"
+lines = [
+  { say = "odell", text = "Your Honour, the plaintiff in the next case is a shadow, who says it's been walked out on." },
+  { say = "judge", text = "Not Greg?" },
+  { say = "odell", text = "No, Your Honour. The other way round. Its person left it." },
+  { say = "judge", text = "Oh. Oh, that's much worse. Bring it some tea. Bring it a chair it can lie across." },
+]
+
+# ── Landmark Rulings (Fridays, 20–21) ─────────────────────────────────────────
+
+[[clip]]
+id = "show-landmark-open"
+category = "id"
+show = "landmark-rulings"
+part = "open"
+lines = [
+  { sting = "fanfare" },
+  { say = "odell", text = "It's Friday, and this is Landmark Rulings. The great precedents of the Tribunal, revisited from the bench." },
+]
+
+[[clip]]
+id = "show-landmark-001"
+category = "story"
+show = "landmark-rulings"
+title = "The Sea against the Shore"
+bed = "hall"
+lines = [
+  { say = "judge", text = "Landmark ruling number one. The Sea, against the Shore. The oldest case on our books." },
+  { say = "odell", text = "The Sea claimed the beach. The Shore claimed the beach. The beach declined to give evidence, and simply lay there." },
+  { say = "judge", text = "Counsel for the Sea argued that the beach was wet, and wet things are the Sea's. Counsel for the Shore argued that the beach was sandy, and sandy things are the Shore's." },
+  { say = "judge", text = "The court ruled that the wet bit belongs to the Sea, and the dry bit belongs to the Shore, and the bit in between belongs to whoever is standing on it at the time, eating an ice cream." },
+  { sfx = "chopping", seconds = 0.1 },
+  { say = "odell", text = "The ruling stands to this day, Your Honour. Twice a day, it's tested." },
+]
+
+[[clip]]
+id = "show-landmark-002"
+category = "story"
+show = "landmark-rulings"
+title = "In the Matter of the Last Biscuit"
+bed = "hall"
+lines = [
+  { say = "judge", text = "Landmark ruling number two. In the matter of the last biscuit." },
+  { say = "odell", text = "Eleven parties, Your Honour, from four dimensions, all of whom had been offered the last biscuit, and all of whom had said, oh, no, you have it." },
+  { say = "judge", text = "The biscuit sat on the plate for nine years. It became a landmark in its own right. People came to see it." },
+  { say = "judge", text = "The court ruled that the last biscuit belongs to whoever did not ask for it. Since nobody had, it belonged to everybody, and was broken into eleven pieces, by the Bailiff, very carefully." },
+  { say = "odell", text = "Mutch still talks about it, Your Honour." },
+  { say = "judge", text = "So do I, Odell. So do I." },
+]
+
+[[clip]]
+id = "show-landmark-003"
+category = "story"
+show = "landmark-rulings"
+title = "Tuesday against Tuesday"
+bed = "hall"
+lines = [
+  { say = "judge", text = "Landmark ruling number three. Tuesday, against Tuesday." },
+  { say = "odell", text = "A week in the Grey Reach was found to contain two Tuesdays. Each claimed to be the real one. Each had its own weather, its own bin day, and its own very strong opinion." },
+  { say = "judge", text = "The week asked the court to choose. The court declined. You cannot ask a week to choose between its days. It's cruel. And the days can hear you." },
+  { say = "judge", text = "The court ruled that the week may keep both Tuesdays, on condition that it treat them equally, and that Wednesday be told gently." },
+  { sfx = "chopping", seconds = 0.1 },
+  { say = "odell", text = "Wednesday took it very well, Your Honour. All things considered." },
+]
+
+# ── The Convergence (Saturdays, 20:00 UTC) ────────────────────────────────────
+
+[[clip]]
+id = "convergence-missing-moon"
+category = "event"
+event = "convergence"
+kit = "missing-moon"
+lines = [
+  { say = "odell", text = "Your Honour, eleven planets have filed claims for the same missing moon." },
+  { say = "judge", text = "Then the moon is ordered to appear before this court. Immediately. Or, failing that, tonight, where people can see it." },
+]
+
+[[clip]]
+id = "convergence-the-smell"
+category = "event"
+event = "convergence"
+kit = "the-smell"
+lines = [
+  { say = "judge", text = "Order. Order. The court is aware that everything smells of toast." },
+  { say = "judge", text = "The court did not make the toast. The court would like that on the record, and also, if possible, some toast." },
+]
+
+[[clip]]
+id = "convergence-the-song"
+category = "event"
+event = "convergence"
+kit = "the-song"
+lines = [
+  { say = "odell", text = "Your Honour, the whole gallery is humming the same song." },
+  { say = "judge", text = "So is the bench, Odell. Nobody can finish it. Adjourned until somebody remembers how it goes." },
+]
+
+[[clip]]
+id = "convergence-the-knock"
+category = "event"
+event = "convergence"
+kit = "the-knock"
+lines = [
+  { sfx = "chopping", seconds = 0.45 },
+  { say = "judge", text = "That wasn't the gavel. Somebody knocked. Three times." },
+  { say = "mutch", text = "Nobody at the door, Your Honour." },
+  { say = "judge", text = "Then let the record show the court was knocked on, by nobody. We'll hear them when they're ready." },
+]
+
+[[clip]]
+id = "convergence-wrong-colour"
+category = "event"
+event = "convergence"
+kit = "wrong-colour"
+lines = [
+  { say = "judge", text = "The sky outside the windows is a colour the court has no word for." },
+  { say = "judge", text = "Clerk Odell, enter it in the record as, indescribable, and underline it twice. In green ink." },
+]
+
+[[clip]]
+id = "convergence-the-pigeon"
+category = "event"
+event = "convergence"
+kit = "the-pigeon"
+lines = [
+  { say = "mutch", text = "Your Honour, there's a pigeon on the witness stand." },
+  { say = "judge", text = "It seems to know me. Has it been sworn in?" },
+  { say = "mutch", text = "It's nodding, Your Honour." },
+  { say = "judge", text = "Good enough. Go on, then. Tell us everything." },
+]
+
+# ── Halloween ─────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "halloween-001"
+category = "story"
+title = "The Haunted House against Its Ghost"
+bed = "hall"
+dates = ["10-24", "10-25", "10-26", "10-27", "10-28", "10-29", "10-30", "10-31"]
+lines = [
+  { sting = "halloween" },
+  { say = "odell", text = "A special Halloween hearing. Number nine, Crowsfoot Lane, a house, against its ghost. The house claims the ghost hasn't haunted it properly in years." },
+  { say = "judge", text = "Is this true?" },
+  { say = "castellane", text = "My client has been very tired, Your Honour. Two hundred years of rattling. It's taken up knitting." },
+  { say = "judge", text = "The court orders one proper haunting, on the thirty first, with chains, and the knitting may come along. Case closed. Boo." },
+  { sfx = "chopping", seconds = 0.1 },
+]

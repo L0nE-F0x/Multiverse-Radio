@@ -390,3 +390,76 @@ lines = [
   { say = "orrery", text = "A note for Halloween. This week, your sign is whatever you're dressed as. The stars respect a costume." },
   { say = "orrery", text = "If you've come as a sheet with two holes in it, your sign is The Laundry. You'll be fine, dear. You'll be folded by Sunday." },
 ]
+
+
+# ══ v4: The Convergence ═══════════════════════════════════════════════════════
+#
+# Saturdays, 20:00 UTC: every station notices the same thing. One reaction per topic
+# (SCHEMA.md, "The Convergence"); the director airs the _events open, then the tuned
+# station's reaction, then the close.
+
+[[clip]]
+id = "convergence-missing-moon"
+category = "event"
+title = "The Convergence: A Moon Goes Missing"
+event = "convergence"
+kit = "missing-moon"
+lines = [
+  { say = "orrery", text = "A moon has gone missing, dear. Everyone agrees one's gone, and nobody agrees which." },
+  { say = "orrery", text = "For The Ladder, it was yours. For The Teapot, it was someone else's. For everyone else, look under the bed. Moons get everywhere." },
+]
+
+[[clip]]
+id = "convergence-the-smell"
+category = "event"
+title = "The Convergence: Toast, Everywhere"
+event = "convergence"
+kit = "the-smell"
+lines = [
+  { say = "orrery", text = "The whole of creation smells faintly of toast. I've checked the charts." },
+  { say = "orrery", text = "A very good sign for The Teapot, and for anyone waiting for something to pop up. Have a slice, dear. The stars insist." },
+]
+
+[[clip]]
+id = "convergence-the-song"
+category = "event"
+title = "The Convergence: The Song Nobody Can Finish"
+event = "convergence"
+kit = "the-song"
+lines = [
+  { say = "orrery", text = "Everyone, under every sign, has the same song in their head tonight, and nobody can finish it." },
+  { say = "orrery", text = "It's in the charts, dear. The ending rises next week, in the house of The Single Sock. Be patient." },
+]
+
+[[clip]]
+id = "convergence-the-knock"
+category = "event"
+title = "The Convergence: Three Knocks"
+event = "convergence"
+kit = "the-knock"
+lines = [
+  { say = "orrery", text = "Three knocks at the planetarium door, dear. Nobody there." },
+  { say = "orrery", text = "For The Spare Key, this is a sign. For everyone else, it's a door. Leave it be." },
+]
+
+[[clip]]
+id = "convergence-wrong-colour"
+category = "event"
+title = "The Convergence: A Colour With No Name"
+event = "convergence"
+kit = "wrong-colour"
+lines = [
+  { say = "orrery", text = "The sky went a colour I've never seen, dear, and I've seen the sky in every universe I've checked." },
+  { say = "orrery", text = "My crystal ball showed it for a moment. Then static again. Lucky colour: that one. Good luck finding it." },
+]
+
+[[clip]]
+id = "convergence-the-pigeon"
+category = "event"
+title = "The Convergence: The Pigeon"
+event = "convergence"
+kit = "the-pigeon"
+lines = [
+  { say = "orrery", text = "A pigeon has walked into the back room, dear, and sat on the chart for The Paper Boat." },
+  { say = "orrery", text = "It knows people, I'm told. It certainly knows its sign. It's a Lamp Left On. You can always tell." },
+]

@@ -106,6 +106,11 @@ export class VoiceLibrary {
     return this.fetchManifest(name);
   }
 
+  /** True once a manifest or pool has settled (loaded, known missing or failed for now). */
+  settled(name: string): boolean {
+    return this.overrides.has(name) || this.entries.get(name)?.settled === true;
+  }
+
   /** True once every manifest the programme needs has settled (loaded or known missing). */
   isLoaded(stationId: string): boolean {
     return sourcesFor(stationId).every((name) => this.overrides.has(name) || this.entries.get(name)?.settled === true);

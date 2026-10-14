@@ -1,0 +1,629 @@
+# Substation Null — 111.1, the reactor room of the derelict freighter Diligence.
+#
+# Null hosts, barely: tempo counts, coolant readings, single words, long silences. Means every
+# one of them. The deadpan minimalism is the joke, so most clips are short; the count is made
+# up with idents, readings, the freighter's ancient and very thorough safety announcements
+# (which Null answers in one word) and a few longer incident reports, in Null's own style.
+#
+# The `readings` kit chains "Readings.", one to three instrument readings and a sign-off.
+# Running bits: the coolant (fine; stop asking); the reactor, dormant, with feelings; the glow
+# stick on the console. Cross-station: Teodor at Relay Four, Bev and the request line,
+# Grumbel's Ladders, Greg's show (Monday review: too loud).
+station = "substation-null"
+
+[voices]
+host = { voice = "am_echo", speed = 0.9, name = "Null" }
+safety = { voice = "af_sarah", speed = 1.05, fx = "megaphone", name = "Diligence Safety System" }
+bev = { voice = "af_nova", fx = "phone", name = "Bev" }
+teodor = { voice = "bm_daniel", fx = "radio", name = "Teodor, Relay Four" }
+
+[[show]]
+id = "peak-load"
+name = "Peak Load"
+blurb = "The core at full output. A hundred and thirty-something beats a minute. Nobody talks. Least of all the host."
+start = 0
+end = 3
+
+[[show]]
+id = "cooldown"
+name = "Cooldown"
+blurb = "Steam, slower kicks, the crowd sitting on the pipes. The coolant is fine."
+start = 5
+end = 8
+
+[[show]]
+id = "maintenance-window"
+name = "The Maintenance Window"
+blurb = "Scheduled maintenance. Nothing is maintained. The music continues."
+start = 13
+end = 16
+
+# ── Idents ────────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "id-001"
+category = "id"
+lines = [
+  { say = "host", text = "Substation Null.", gap = 1.0 },
+  { say = "host", text = "One one one point one." },
+]
+
+[[clip]]
+id = "id-002"
+category = "id"
+lines = [
+  { say = "host", text = "Null.", gap = 1.6 },
+  { say = "host", text = "Substation Null." },
+]
+
+[[clip]]
+id = "id-003"
+category = "id"
+lines = [
+  { say = "host", text = "One thirty two.", gap = 1.4 },
+  { say = "host", text = "Substation Null." },
+]
+
+[[clip]]
+id = "id-004"
+category = "id"
+lines = [
+  { say = "host", text = "Substation Null.", gap = 1.0 },
+  { say = "host", text = "Coolant.", gap = 0.8 },
+  { say = "host", text = "Fine." },
+]
+
+[[clip]]
+id = "id-005"
+category = "id"
+lines = [
+  { say = "host", text = "Reactor room. Substation Null.", gap = 1.2 },
+  { say = "host", text = "Keep moving." },
+]
+
+[[clip]]
+id = "id-006"
+category = "id"
+daypart = "night"
+lines = [
+  { say = "host", text = "Substation Null.", gap = 1.8 },
+  { say = "host", text = "Late." },
+]
+
+[[clip]]
+id = "id-007"
+category = "id"
+daypart = "day"
+lines = [
+  { say = "host", text = "Substation Null. Daytime.", gap = 1.4 },
+  { say = "host", text = "Irrelevant." },
+]
+
+[[clip]]
+id = "id-008"
+category = "id"
+lines = [
+  { say = "host", text = "One one one point one. Substation Null.", gap = 1.2 },
+  { say = "host", text = "Stop asking about the coolant." },
+]
+
+[[clip]]
+id = "id-009"
+category = "id"
+daypart = "morning"
+lines = [
+  { say = "host", text = "Morning.", gap = 2.0 },
+  { say = "host", text = "Substation Null.", gap = 1.2 },
+  { say = "host", text = "Still here." },
+]
+
+# ── Host links ────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "dj-001"
+category = "dj"
+title = "The Coolant"
+lines = [
+  { say = "host", text = "People ask about the coolant.", gap = 1.6 },
+  { say = "host", text = "The coolant is fine.", gap = 2.2 },
+  { say = "host", text = "Stop asking about the coolant." },
+]
+
+[[clip]]
+id = "dj-002"
+category = "dj"
+title = "Words"
+lines = [
+  { say = "host", text = "This track has words.", gap = 1.2 },
+  { say = "host", text = "One word.", gap = 1.8 },
+  { say = "host", text = "You'll know it when it comes.", gap = 1.4 },
+  { say = "host", text = "Shout it." },
+]
+
+[[clip]]
+id = "dj-003"
+category = "dj"
+title = "Relay Four"
+lines = [
+  { say = "host", text = "Request.", gap = 1.0 },
+  { say = "teodor", text = "This is Teodor, at Relay Four. Can anyone hear me? I'd like a song. Any song." },
+  { say = "host", text = "Teodor. Relay Four.", gap = 1.2 },
+  { say = "host", text = "Request: anything.", gap = 1.6 },
+  { say = "host", text = "Here is anything." },
+]
+
+[[clip]]
+id = "dj-004"
+category = "dj"
+daypart = "night"
+title = "A Ship"
+lines = [
+  { say = "host", text = "A ship.", gap = 1.2 },
+  { say = "host", text = "In range. Relay class. Lights on.", gap = 2.0 },
+  { say = "host", text = "Welcome.", gap = 1.6 },
+  { say = "host", text = "Dance." },
+]
+
+[[clip]]
+id = "dj-005"
+category = "dj"
+title = "Sponsor"
+lines = [
+  { say = "host", text = "Sponsor.", gap = 1.2 },
+  { say = "host", text = "Grumbel's Ladders.", gap = 1.4 },
+  { say = "host", text = "Up is a choice.", gap = 1.8 },
+  { say = "host", text = "The catwalk is also a choice." },
+]
+
+[[clip]]
+id = "dj-006"
+category = "dj"
+title = "Bev Calls"
+lines = [
+  { say = "bev", text = "Hello, love. It's Bev. Is this the request line?" },
+  { say = "host", text = "No.", gap = 2.2 },
+  { say = "host", text = "Yes." },
+  { say = "bev", text = "Oh, lovely. I don't know what it's called. It goes, da da dum. Da da." },
+  { pause = 2.5 },
+  { say = "host", text = "Noted." },
+]
+
+[[clip]]
+id = "dj-007"
+category = "dj"
+title = "The Drop"
+lines = [
+  { say = "host", text = "The drop.", gap = 2.6 },
+  { say = "host", text = "Recovered.", gap = 1.2 },
+  { say = "host", text = "No injuries.", gap = 1.6 },
+  { say = "host", text = "Again." },
+]
+
+[[clip]]
+id = "dj-008"
+category = "dj"
+title = "A Few Words"
+lines = [
+  { say = "host", text = "Tonight I would like to say a few words about what this music means to me, about the long nights in this room, and about the people who keep coming back.", gap = 1.8 },
+  { say = "host", text = "Those were the words." },
+]
+
+# ── Readings: one to three instrument readings ───────────────────────────────
+
+[[clip]]
+id = "readings-open-1"
+category = "dj"
+kit = "readings"
+part = "open"
+lines = [
+  { sfx = "beep" },
+  { say = "host", text = "Readings.", gap = 1.6 },
+  { say = "host", text = "Listen.", gap = 1.0 },
+]
+
+[[clip]]
+id = "readings-open-2"
+category = "dj"
+kit = "readings"
+part = "open"
+lines = [
+  { sfx = "beep" },
+  { say = "host", text = "Status.", gap = 1.0 },
+  { say = "host", text = "Briefly.", gap = 1.0 },
+]
+
+[[clip]]
+id = "readings-001"
+category = "dj"
+kit = "readings"
+part = "body"
+lines = [
+  { say = "host", text = "Tempo.", gap = 1.0 },
+  { say = "host", text = "One thirty two.", gap = 1.8 },
+  { say = "host", text = "One thirty three.", gap = 1.8 },
+  { say = "host", text = "Rising.", gap = 1.0 },
+]
+
+[[clip]]
+id = "readings-002"
+category = "dj"
+kit = "readings"
+part = "body"
+lines = [
+  { say = "host", text = "Coolant.", gap = 1.0 },
+  { say = "host", text = "Ninety one percent.", gap = 1.4 },
+  { say = "host", text = "Blue.", gap = 1.4 },
+  { say = "host", text = "Correct blue.", gap = 1.0 },
+]
+
+[[clip]]
+id = "readings-003"
+category = "dj"
+kit = "readings"
+part = "body"
+lines = [
+  { say = "host", text = "Crowd.", gap = 1.0 },
+  { say = "host", text = "Four hundred.", gap = 1.6 },
+  { say = "host", text = "Four hundred and one.", gap = 1.4 },
+  { say = "host", text = "Welcome.", gap = 1.0 },
+]
+
+[[clip]]
+id = "readings-004"
+category = "dj"
+kit = "readings"
+part = "body"
+lines = [
+  { say = "host", text = "Core temperature.", gap = 1.0 },
+  { say = "host", text = "Warm.", gap = 2.0 },
+  { say = "host", text = "Warm is correct.", gap = 1.6 },
+  { say = "host", text = "Cold was a phase.", gap = 1.0 },
+]
+
+[[clip]]
+id = "readings-005"
+category = "dj"
+kit = "readings"
+part = "body"
+lines = [
+  { say = "host", text = "Steam.", gap = 1.0 },
+  { say = "host", text = "Venting.", gap = 1.6 },
+  { say = "host", text = "On purpose.", gap = 1.6 },
+  { say = "host", text = "It looks good.", gap = 1.0 },
+]
+
+[[clip]]
+id = "readings-006"
+category = "dj"
+kit = "readings"
+part = "body"
+lines = [
+  { say = "host", text = "Hazard lights.", gap = 1.0 },
+  { say = "host", text = "Strobing.", gap = 1.4 },
+  { say = "host", text = "As designed.", gap = 1.8 },
+  { say = "host", text = "Not as designed. As preferred.", gap = 1.0 },
+]
+
+[[clip]]
+id = "readings-007"
+category = "dj"
+kit = "readings"
+part = "body"
+lines = [
+  { say = "host", text = "Low end.", gap = 1.0 },
+  { say = "host", text = "Heavy.", gap = 1.6 },
+  { say = "host", text = "Structural.", gap = 1.6 },
+  { say = "host", text = "Do not lean on it.", gap = 1.0 },
+]
+
+[[clip]]
+id = "readings-close-1"
+category = "dj"
+kit = "readings"
+part = "close"
+lines = [
+  { say = "host", text = "End of readings.", gap = 0.8 },
+  { say = "host", text = "Continue." },
+]
+
+[[clip]]
+id = "readings-close-2"
+category = "dj"
+kit = "readings"
+part = "close"
+lines = [
+  { say = "host", text = "Nominal.", gap = 1.4 },
+  { say = "host", text = "Mostly." },
+]
+
+# ── Safety announcements (the freighter's, decades old) ──────────────────────
+
+[[clip]]
+id = "psa-001"
+category = "psa"
+title = "Coolant Is Not a Beverage"
+lines = [
+  { say = "safety", text = "Attention, crew of the Diligence. Coolant is not a beverage. It is blue, it glows, and it is served from a pipe. None of these things make it a beverage." },
+  { say = "safety", text = "Thank you for your cooperation." },
+  { pause = 1.2 },
+  { say = "host", text = "Noted." },
+]
+
+[[clip]]
+id = "psa-002"
+category = "psa"
+title = "The Reactor Is Dormant"
+lines = [
+  { say = "safety", text = "This is a reminder that the main reactor is in a dormant state. Dormant is not the same as asleep." },
+  { say = "safety", text = "Please do not tuck the reactor in. Please do not read the reactor stories. The reactor does not require a goodnight." },
+  { pause = 1.6 },
+  { say = "host", text = "It liked the stories." },
+]
+
+[[clip]]
+id = "psa-003"
+category = "psa"
+title = "Hazard Lighting"
+lines = [
+  { say = "safety", text = "Some sections of this vessel contain flashing hazard lights. These lights indicate an emergency." },
+  { say = "safety", text = "They have indicated an emergency continuously for forty years. At this point, please treat them as decoration." },
+  { pause = 1.2 },
+  { say = "host", text = "Correct." },
+]
+
+[[clip]]
+id = "psa-004"
+category = "psa"
+title = "Muster Stations"
+lines = [
+  { say = "safety", text = "In the event of an emergency, please proceed calmly to your nearest muster station. Your nearest muster station is the dance floor." },
+  { say = "safety", text = "All muster stations are the dance floor. This was not the original plan." },
+  { pause = 1.4 },
+  { say = "host", text = "It is now." },
+]
+
+# ── Incident reports ──────────────────────────────────────────────────────────
+
+[[clip]]
+id = "story-001"
+category = "story"
+title = "Incident Report: The Glow Stick"
+lines = [
+  { say = "host", text = "Incident report.", gap = 1.0 },
+  { say = "host", text = "Someone brought a glow stick. Green.", gap = 1.2 },
+  { say = "host", text = "The reactor saw it. Core output rose by two percent.", gap = 1.4 },
+  { say = "host", text = "The glow stick was asked to leave. It did not leave. It cannot walk.", gap = 1.4 },
+  { say = "host", text = "It is now on the console. The reactor is calmer when it can see it.", gap = 1.6 },
+  { say = "host", text = "Resolved." },
+]
+
+[[clip]]
+id = "story-002"
+category = "story"
+title = "Incident Report: A Question"
+lines = [
+  { say = "host", text = "Incident report.", gap = 1.0 },
+  { say = "host", text = "A man on the catwalk asked what kind of music this is.", gap = 1.4 },
+  { say = "host", text = "I said, yes.", gap = 1.4 },
+  { say = "host", text = "He left.", gap = 2.4 },
+  { say = "host", text = "He came back.", gap = 1.4 },
+  { say = "host", text = "He has not asked again.", gap = 1.2 },
+  { say = "host", text = "He comes every night. He stands where he stood. He nods at me. I nod back.", gap = 1.4 },
+  { say = "host", text = "That is the answer. Resolved." },
+]
+
+[[clip]]
+id = "story-003"
+category = "story"
+title = "Incident Report: A Smile"
+lines = [
+  { say = "host", text = "Incident report. Hour three. Peak load.", gap = 1.0 },
+  { say = "host", text = "A smile was observed in the crowd. Source unknown.", gap = 1.4 },
+  { say = "host", text = "It spread.", gap = 1.8 },
+  { say = "host", text = "By hour four, eleven smiles. Containment was not attempted.", gap = 1.6 },
+  { say = "host", text = "Hour five. The smiles reached the catwalk. A man laughed out loud. The steam pipes rattled.", gap = 1.6 },
+  { say = "host", text = "No damage. Some things should be allowed to vent.", gap = 1.4 },
+  { say = "host", text = "Resolved." },
+]
+
+[[clip]]
+id = "story-004"
+category = "story"
+title = "Incident Report: One Second"
+lines = [
+  { say = "host", text = "Incident report.", gap = 1.0 },
+  { say = "host", text = "At two fourteen, the music stopped. For one second.", gap = 1.4 },
+  { say = "host", text = "Nobody moved. Four hundred people, standing completely still in the dark, in a dead reactor, waiting.", gap = 1.8 },
+  { say = "host", text = "It was the best second of the night.", gap = 1.4 },
+  { say = "host", text = "The music came back. Four hundred people came back with it.", gap = 1.6 },
+  { say = "host", text = "Cause of the stop: unknown. Will not be repeated.", gap = 1.6 },
+  { say = "host", text = "Probably. Logged." },
+]
+
+# ── Peak Load (0–3) ───────────────────────────────────────────────────────────
+
+[[clip]]
+id = "id-peak-load"
+category = "id"
+show = "peak-load"
+part = "open"
+lines = [
+  { say = "host", text = "Peak load.", gap = 1.4 },
+  { say = "host", text = "Substation Null." },
+  { sting = "id" },
+]
+
+[[clip]]
+id = "dj-peak-load-001"
+category = "dj"
+show = "peak-load"
+lines = [
+  { say = "host", text = "Peak.", gap = 1.4 },
+  { say = "host", text = "Load.", gap = 2.2 },
+  { say = "host", text = "Hold on to something.", gap = 1.4 },
+  { say = "host", text = "Not the pipes." },
+]
+
+[[clip]]
+id = "dj-peak-load-002"
+category = "dj"
+show = "peak-load"
+lines = [
+  { say = "host", text = "The catwalk is shaking.", gap = 1.6 },
+  { say = "host", text = "That is the catwalk's decision.", gap = 1.6 },
+  { say = "host", text = "Respect it." },
+]
+
+# ── Cooldown (5–8) ────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "id-cooldown"
+category = "id"
+show = "cooldown"
+part = "open"
+lines = [
+  { say = "host", text = "Cooldown.", gap = 1.6 },
+  { say = "host", text = "Sit on a pipe." },
+]
+
+[[clip]]
+id = "dj-cooldown-001"
+category = "dj"
+show = "cooldown"
+lines = [
+  { say = "host", text = "Steam is rising off the crowd.", gap = 1.6 },
+  { say = "host", text = "Morning, probably.", gap = 1.8 },
+  { say = "host", text = "Nobody check." },
+]
+
+[[clip]]
+id = "dj-cooldown-002"
+category = "dj"
+show = "cooldown"
+lines = [
+  { say = "host", text = "Someone is asleep on the reactor.", gap = 1.6 },
+  { say = "host", text = "It doesn't mind.", gap = 1.6 },
+  { say = "host", text = "Neither do I." },
+]
+
+# ── The Maintenance Window (13–16) ────────────────────────────────────────────
+
+[[clip]]
+id = "id-maintenance-window"
+category = "id"
+show = "maintenance-window"
+part = "open"
+lines = [
+  { say = "safety", text = "This is the scheduled maintenance window. All systems will now be maintained." },
+  { pause = 1.0 },
+  { say = "host", text = "No." },
+]
+
+[[clip]]
+id = "dj-maintenance-window-001"
+category = "dj"
+show = "maintenance-window"
+lines = [
+  { say = "host", text = "Maintenance.", gap = 1.2 },
+  { say = "host", text = "Checked the kick drum.", gap = 1.6 },
+  { say = "host", text = "Still kicking.", gap = 1.6 },
+  { say = "host", text = "Maintenance complete." },
+]
+
+[[clip]]
+id = "dj-maintenance-window-002"
+category = "dj"
+show = "maintenance-window"
+lines = [
+  { say = "host", text = "Maintenance.", gap = 1.2 },
+  { say = "host", text = "Tightened a bolt.", gap = 2.0 },
+  { say = "host", text = "Loosened it again. It sounded better." },
+]
+
+# ── Monday: a review of Greg's show ──────────────────────────────────────────
+
+[[clip]]
+id = "dj-greg-review"
+category = "dj"
+days = [1]
+title = "Reviewing the Quiet Corner"
+lines = [
+  { say = "host", text = "The Quiet Corner. Greg.", gap = 1.2 },
+  { say = "host", text = "Reviewed.", gap = 2.2 },
+  { say = "host", text = "Too loud.", gap = 1.6 },
+  { say = "host", text = "Five stars." },
+]
+
+# ── The Convergence: one reaction per weekly topic ───────────────────────────
+
+[[clip]]
+id = "convergence-missing-moon"
+category = "event"
+event = "convergence"
+kit = "missing-moon"
+lines = [
+  { say = "host", text = "A moon is missing.", gap = 1.4 },
+  { say = "host", text = "Checked the reactor.", gap = 1.4 },
+  { say = "host", text = "Not in the reactor.", gap = 2.0 },
+  { say = "host", text = "Continue." },
+]
+
+[[clip]]
+id = "convergence-the-smell"
+category = "event"
+event = "convergence"
+kit = "the-smell"
+lines = [
+  { say = "host", text = "Smell.", gap = 1.0 },
+  { say = "host", text = "Toast.", gap = 1.6 },
+  { say = "host", text = "Not the coolant.", gap = 1.4 },
+  { say = "host", text = "The coolant smells of nothing. The coolant is fine." },
+]
+
+[[clip]]
+id = "convergence-the-song"
+category = "event"
+event = "convergence"
+kit = "the-song"
+lines = [
+  { say = "host", text = "Everyone is humming.", gap = 1.2 },
+  { say = "host", text = "Same song. No ending.", gap = 2.0 },
+  { say = "host", text = "I am humming it too.", gap = 1.6 },
+  { say = "host", text = "I don't know the ending either." },
+]
+
+[[clip]]
+id = "convergence-the-knock"
+category = "event"
+event = "convergence"
+kit = "the-knock"
+lines = [
+  { say = "host", text = "Three knocks.", gap = 1.4 },
+  { say = "host", text = "Reactor door. Opened it.", gap = 2.0 },
+  { say = "host", text = "Nobody.", gap = 1.6 },
+  { say = "host", text = "Left it open. It's warm in here." },
+]
+
+[[clip]]
+id = "convergence-wrong-colour"
+category = "event"
+event = "convergence"
+kit = "wrong-colour"
+lines = [
+  { say = "host", text = "Hazard lights.", gap = 1.0 },
+  { say = "host", text = "New colour.", gap = 1.6 },
+  { say = "host", text = "No word for it.", gap = 2.0 },
+  { say = "host", text = "Strobing anyway." },
+]
+
+[[clip]]
+id = "convergence-the-pigeon"
+category = "event"
+event = "convergence"
+kit = "the-pigeon"
+lines = [
+  { say = "host", text = "Pigeon.", gap = 1.0 },
+  { say = "host", text = "On the console.", gap = 1.6 },
+  { say = "host", text = "It knows me.", gap = 2.0 },
+  { say = "host", text = "It nods on the beat. Welcome." },
+]

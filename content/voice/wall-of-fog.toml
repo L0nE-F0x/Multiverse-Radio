@@ -312,3 +312,92 @@ lines = [
   { say = "reverb", text = "...boo...", gap = 0.9 },
   { say = "host", text = "...we said boo back... it was us... it was always us... happy Halloween." },
 ]
+
+
+# ══ v4: The Convergence ═══════════════════════════════════════════════════════
+#
+# Saturdays, 20:00 UTC: every station notices the same thing. One reaction per topic
+# (SCHEMA.md, "The Convergence"); the director airs the _events open, then the tuned
+# station's reaction, then the close.
+
+[[clip]]
+id = "convergence-missing-moon"
+category = "event"
+title = "The Convergence: A Moon Goes Missing"
+event = "convergence"
+kit = "missing-moon"
+lines = [
+  { say = "host", text = "...so... a moon's... gone?..." },
+  { say = "host", text = "...nobody knows which... you couldn't see it in here anyway... but I miss it... yeah." },
+]
+
+[[clip]]
+id = "convergence-the-smell"
+category = "event"
+title = "The Convergence: Toast, Everywhere"
+event = "convergence"
+kit = "the-smell"
+lines = [
+  { say = "host", text = "...is that... toast?..." },
+  { say = "host", text = "...somebody made breakfast in nineteen ninety one... and it's only just come round the back... yeah." },
+]
+
+[[clip]]
+id = "convergence-the-song"
+category = "event"
+title = "The Convergence: The Song Nobody Can Finish"
+event = "convergence"
+kit = "the-song"
+lines = [
+  { say = "host", text = "...there's this song... everybody's got it... and it goes..." },
+  { say = "host", text = "...and then..." },
+  { say = "reverb", text = "...and then..." },
+  { say = "host", text = "...yeah... that's as far as anyone gets." },
+]
+
+[[clip]]
+id = "convergence-the-knock"
+category = "event"
+title = "The Convergence: Three Knocks"
+event = "convergence"
+kit = "the-knock"
+lines = [
+  { say = "host", text = "...three knocks... or was that the drums from... no..." },
+  { say = "host", text = "...nobody there... it'll come round again in about a year... we'll get it then." },
+]
+
+[[clip]]
+id = "convergence-wrong-colour"
+category = "event"
+title = "The Convergence: A Colour With No Name"
+event = "convergence"
+kit = "wrong-colour"
+lines = [
+  { say = "host", text = "...the fog went a colour... not grey... not..." },
+  { say = "host", text = "...there's no word... I had one... it went into the reverb... yeah." },
+]
+
+[[clip]]
+id = "convergence-the-pigeon"
+category = "event"
+title = "The Convergence: The Pigeon"
+event = "convergence"
+kit = "the-pigeon"
+lines = [
+  { say = "host", text = "...there's a pigeon... by the lamp... it knows the lamp..." },
+  { say = "host", text = "...they're old friends... I'm a bit jealous, honestly." },
+]
+
+
+# ── v4: Monday review of The Quiet Corner with Greg (92.6, Sundays at two) ──
+
+[[clip]]
+id = "quiet-corner-review"
+category = "dj"
+title = "Review: The Quiet Corner with Greg"
+days = [1]
+lines = [
+  { say = "host", text = "...did anyone hear... the Greg thing... on Sunday..." },
+  { say = "host", text = "...couldn't make out a word... not one..." },
+  { say = "host", text = "...finally... somebody gets it... yeah." },
+]

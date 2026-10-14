@@ -241,3 +241,32 @@ export function sweep(ctx: BaseAudioContext, out: AudioNode, noise: AudioBuffer,
   source.start(at, Math.random() * Math.max(0, noise.duration - length * 1.6));
   return treatment(ctx, output, sources, at + length);
 }
+
+/**
+ * v4: a short, harsh burst of static (HUSH jamming a pirate): band-passed noise chopped into
+ * crackles, loudest at the start.
+ */
+export function burst(ctx: BaseAudioContext, out: AudioNode, noise: AudioBuffer, at: number, length: number, seed: number): Treatment {
+  const rng = createRng(seed);
+  const source = ctx.createBufferSource();
+  source.buffer = noise;
+  const band = ctx.createBiquadFilter();
+  band.type = 'bandpass';
+  band.Q.value = 0.9;
+  band.frequency.setValueAtTime(2400, at);
+  band.frequency.exponentialRampToValueAtTime(900, at + length);
+  const output = ctx.createGain();
+  output.gain.value = 0;
+  // Crackle: the level jumps every few tens of milliseconds, dying away.
+  let t = at;
+  output.gain.setValueAtTime(0, t);
+  while (t < at + length) {
+    const fade = 1 - (t - at) / length;
+    output.gain.setValueAtTime((0.25 + rng.next() * 0.35) * fade, t);
+    t += 0.02 + rng.next() * 0.05;
+  }
+  output.gain.setValueAtTime(0, at + length);
+  source.connect(band).connect(output).connect(out);
+  source.start(at, rng.next() * Math.max(0, noise.duration - length - 0.1));
+  return treatment(ctx, output, [source], at + length);
+}

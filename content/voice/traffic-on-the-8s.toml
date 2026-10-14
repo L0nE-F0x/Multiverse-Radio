@@ -1,0 +1,802 @@
+# Traffic on the 8s — 114.8, the traffic desk high above the Great Wormhole Interchange.
+#
+# Rita Gridley is brisk, cheerful and has never seen traffic move. She reports it anyway,
+# every ten minutes, with total commitment. Captain Buzz Ferraro circles the junction in
+# the traffic pod and has done for thirty one years; he comes in on the radio. The bypass
+# has been jammed since the Big Bang. The front car is waiting for the lights to change.
+# The lights haven't been invented yet.
+#
+# The `traffic` kit (category weather) is the report the director airs at every local
+# minute ending in 8: open × 1–3 incidents × close. Opens never name the minute. Incidents
+# are written to stand alone in any order.
+#
+# Switchboard clue (dj-004): the operator answers if you ring advice, then the news, then
+# the traffic (97.8 → 89.3 → 114.8). Callbacks: Waystation Nine's sideways road, the space
+# whales of the Drift, Grumbel's Ladders, a relay ship drifting across the Outer Band.
+station = "traffic-on-the-8s"
+
+[voices]
+rita = { voice = "af_jessica", speed = 1.08, name = "Rita Gridley" }
+buzz = { voice = "am_puck", fx = "radio", name = "Captain Buzz Ferraro" }
+commuter = { voice = "am_eric", fx = "phone", name = "A Commuter" }
+commuter2 = { voice = "bf_lily", fx = "phone", name = "A Commuter" }
+voiceover = { voice = "am_michael", speed = 1.1, name = "Advert" }
+
+[[show]]
+id = "morning-crawl"
+name = "The Morning Crawl"
+blurb = "Rush hour, every hour from seven, with Rita at the desk and Buzz over the junction. Nobody is late. Everybody is late."
+start = 7
+end = 10
+
+[[show]]
+id = "evening-crawl"
+name = "The Evening Crawl"
+blurb = "The homeward jam, live. The same cars as this morning, facing the other way."
+start = 16
+end = 19
+
+[[show]]
+id = "small-hours-jam"
+name = "The Small Hours Jam"
+blurb = "Overnight traffic for the lanes that never sleep. Lighter everywhere except the bypass."
+start = 1
+end = 5
+
+# ── Idents ────────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "id-001"
+category = "id"
+lines = [
+  { say = "rita", text = "Traffic on the eights. One hundred and fourteen point eight. Every ten minutes, whether you're moving or not." },
+  { sting = "weather" },
+]
+
+[[clip]]
+id = "id-002"
+category = "id"
+lines = [
+  { say = "rita", text = "This is Traffic on the eights. Rita Gridley, at the desk. Nothing is moving. Here's how." },
+]
+
+[[clip]]
+id = "id-003"
+category = "id"
+lines = [
+  { say = "buzz", text = "Captain Buzz Ferraro, in the pod, over the junction. You're listening to Traffic on the eights." },
+  { sfx = "whoosh" },
+]
+
+[[clip]]
+id = "id-004"
+category = "id"
+lines = [
+  { say = "rita", text = "Traffic on the eights. Wormholes, timelines and the bypass. Mostly the bypass." },
+  { sting = "id" },
+]
+
+[[clip]]
+id = "id-005"
+category = "id"
+lines = [
+  { say = "rita", text = "One one four point eight. Traffic on the eights. The jam's been here since the Big Bang, and so, it feels like, have I." },
+]
+
+[[clip]]
+id = "id-006"
+category = "id"
+daypart = "night"
+lines = [
+  { say = "rita", text = "Traffic on the eights, through the night. The lanes are quiet. The bypass is not. The bypass is never quiet." },
+]
+
+# ── Traffic kit (weather), at every minute ending in 8 ────────────────────────
+
+[[clip]]
+id = "traffic-open-001"
+category = "weather"
+kit = "traffic"
+part = "open"
+bed = "studio"
+lines = [
+  { sting = "weather" },
+  { say = "rita", text = "Traffic on the eights. Rita Gridley at the desk. Here's how it isn't moving." },
+]
+
+[[clip]]
+id = "traffic-open-002"
+category = "weather"
+kit = "traffic"
+part = "open"
+bed = "studio"
+lines = [
+  { say = "rita", text = "It's that time again. It's always that time again. Traffic." },
+]
+
+[[clip]]
+id = "traffic-open-003"
+category = "weather"
+kit = "traffic"
+part = "open"
+bed = "studio"
+lines = [
+  { say = "rita", text = "Your traffic and travel, every ten minutes, on the eights. Eyes on the road you're on. It isn't going anywhere." },
+]
+
+[[clip]]
+id = "traffic-open-004"
+category = "weather"
+kit = "traffic"
+part = "open"
+bed = "studio"
+lines = [
+  { say = "rita", text = "Traffic now. If you're listening in a vehicle, you've got time. Trust me." },
+]
+
+[[clip]]
+id = "traffic-open-005"
+category = "weather"
+kit = "traffic"
+part = "open"
+bed = "studio"
+lines = [
+  { sting = "weather" },
+  { say = "rita", text = "Traffic on the eights. Same jam, fresh report." },
+]
+
+[[clip]]
+id = "traffic-open-006"
+category = "weather"
+kit = "traffic"
+part = "open"
+bed = "studio"
+lines = [
+  { say = "rita", text = "Here's the traffic, brought to you by the traffic. It sponsors itself. Nobody else will go near it." },
+]
+
+[[clip]]
+id = "traffic-open-007"
+category = "weather"
+kit = "traffic"
+part = "open"
+bed = "studio"
+lines = [
+  { say = "rita", text = "Let's go straight up to Buzz in the pod." },
+  { sfx = "whoosh" },
+  { say = "buzz", text = "Morning, Rita. Or evening. Hard to say from up here." },
+  { say = "rita", text = "It's always hard to say, Buzz. Here's the traffic." },
+]
+
+[[clip]]
+id = "traffic-open-008"
+category = "weather"
+kit = "traffic"
+part = "open"
+daypart = "night"
+bed = "studio"
+lines = [
+  { say = "rita", text = "Late night traffic. Lighter in most lanes. Still solid on the bypass. Some things don't sleep." },
+]
+
+[[clip]]
+id = "traffic-body-001"
+category = "weather"
+kit = "traffic"
+part = "body"
+bed = "studio"
+title = "The Bypass"
+lines = [
+  { say = "rita", text = "On the bypass, the gridlock that's been there since the Big Bang is still there. Delays of roughly fourteen billion years." },
+  { say = "rita", text = "The front car is still waiting for the lights to change. The lights haven't been invented yet. When they are, we'll let you know." },
+]
+
+[[clip]]
+id = "traffic-body-002"
+category = "weather"
+kit = "traffic"
+part = "body"
+bed = "studio"
+title = "The Great Wormhole Interchange"
+lines = [
+  { say = "rita", text = "Long delays at the Great Wormhole Interchange. Junction nine is backed up to junction four, and junction four is backed up to last Tuesday." },
+  { say = "rita", text = "Allow plenty of time. And then allow a little extra time for the time." },
+]
+
+[[clip]]
+id = "traffic-body-003"
+category = "weather"
+kit = "traffic"
+part = "body"
+bed = "studio"
+title = "Jackknifed Comet"
+lines = [
+  { say = "rita", text = "Buzz, what are you seeing on the Outer Ring?" },
+  { say = "buzz", text = "Rita, I've got a jackknifed comet across both lanes, eastbound. Tail's everywhere." },
+  { say = "buzz", text = "Nobody's hurt. Everybody's slowing down to make a wish. That's what's causing the tailback. The wishing." },
+]
+
+[[clip]]
+id = "traffic-body-004"
+category = "weather"
+kit = "traffic"
+part = "body"
+bed = "studio"
+title = "Rubbernecking at a Supernova"
+lines = [
+  { say = "rita", text = "Slow traffic northbound past the Varn Nebula, where drivers are rubbernecking at a supernova on the hard shoulder." },
+  { say = "rita", text = "It's been going off for three days. Please keep your eyes on your lane. It'll still be exploding when you get home." },
+]
+
+[[clip]]
+id = "traffic-body-005"
+category = "weather"
+kit = "traffic"
+part = "body"
+bed = "studio"
+title = "Contraflow in the Eleventh Century"
+lines = [
+  { say = "rita", text = "In the timelines, a contraflow is in operation through the eleventh century." },
+  { say = "rita", text = "If you're heading for the twelfth, expect a diversion through a short Dark Age. Lights on, windows up, and please don't stop to help anybody build a cathedral. It takes ages." },
+]
+
+[[clip]]
+id = "traffic-body-006"
+category = "weather"
+kit = "traffic"
+part = "body"
+bed = "studio"
+title = "The Ring Road With One Side"
+lines = [
+  { say = "rita", text = "On the ring road with only one side, the outside lane is also the inside lane." },
+  { say = "rita", text = "If you're overtaking, you are also being overtaken, by you. Drivers are asked to stop waving at themselves. It's distracting the other drivers, who are also you." },
+]
+
+[[clip]]
+id = "traffic-body-007"
+category = "weather"
+kit = "traffic"
+part = "body"
+bed = "studio"
+title = "Wormhole in Reverse"
+lines = [
+  { say = "rita", text = "Lane two of the Hennick wormhole has been stuck in reverse since this morning. Drivers are arriving before they've set off." },
+  { say = "rita", text = "If you meet yourself at the other end, please don't discuss the journey. It spoils it for you." },
+]
+
+[[clip]]
+id = "traffic-body-008"
+category = "weather"
+kit = "traffic"
+part = "body"
+bed = "studio"
+title = "The Thursday Flyover"
+lines = [
+  { say = "rita", text = "The Thursday flyover is closed for maintenance until Wednesday. Which Wednesday hasn't been confirmed." },
+  { say = "rita", text = "Diversions are in place through Friday, which is busier than it looks. It always is." },
+]
+
+[[clip]]
+id = "traffic-body-009"
+category = "weather"
+kit = "traffic"
+part = "body"
+bed = "studio"
+title = "A Glacier in the Slow Lane"
+lines = [
+  { say = "rita", text = "A glacier is moving slowly in the slow lane of the Ice Age Parkway." },
+  { say = "rita", text = "It's in the right lane. It's doing the right speed. It's just a very, very long vehicle. Patience, please. It'll be past you by the spring. Not this spring." },
+]
+
+[[clip]]
+id = "traffic-body-010"
+category = "weather"
+kit = "traffic"
+part = "body"
+bed = "studio"
+title = "Lost Property"
+lines = [
+  { say = "rita", text = "Lost property on the hard shoulder near exit forty. One moon. Small. Slightly dented. Answers to nothing." },
+  { say = "rita", text = "If it's yours, please collect it before it gets dark. It'll want to be up by then." },
+]
+
+[[clip]]
+id = "traffic-body-011"
+category = "weather"
+kit = "traffic"
+part = "body"
+bed = "studio"
+title = "Drifting on the Outer Band"
+lines = [
+  { say = "buzz", text = "Rita, I've got a relay ship on the Outer Band approach. Drifting across the lanes, one at a time. No indicators. Running lights all on." },
+  { say = "rita", text = "Is it lost, Buzz?" },
+  { say = "buzz", text = "Doesn't drive like it's lost, Rita. Drives like it knows the way, and it's in no hurry to get there." },
+]
+
+[[clip]]
+id = "traffic-body-012"
+category = "weather"
+kit = "traffic"
+part = "body"
+bed = "studio"
+title = "Recovery on the Way"
+lines = [
+  { say = "rita", text = "A broken-down star on the Long Straight is blocking the middle lane. Recovery is on the way." },
+  { say = "rita", text = "Recovery has been on the way for some time. Recovery may, itself, have broken down. We're sending recovery for recovery." },
+]
+
+[[clip]]
+id = "traffic-body-013"
+category = "weather"
+kit = "traffic"
+part = "body"
+bed = "studio"
+title = "Whales at the Drift"
+lines = [
+  { say = "rita", text = "A pod of very slow space whales is crossing all lanes at the Drift." },
+  { say = "rita", text = "They have right of way. They have always had right of way. They were here first, and they'll tell you so, at length, in a low voice, for about an hour." },
+]
+
+[[clip]]
+id = "traffic-body-014"
+category = "weather"
+kit = "traffic"
+part = "body"
+bed = "studio"
+title = "Roadworks on the Spiral Arm"
+lines = [
+  { say = "rita", text = "Roadworks on the Spiral Arm. Three lanes down to one, while a crew fills in a pothole that goes through to another dimension." },
+  { say = "rita", text = "They've filled it twice. It keeps filling them back. Expect delays, and a small amount of somebody else's gravel." },
+]
+
+[[clip]]
+id = "traffic-body-015"
+category = "weather"
+kit = "traffic"
+part = "body"
+bed = "studio"
+title = "A Gap in Lane Three"
+lines = [
+  { say = "rita", text = "Buzz, how's it looking from up there?" },
+  { say = "buzz", text = "Rita, I've been circling this junction thirty one years, and I've just seen something I've never seen." },
+  { say = "rita", text = "What?" },
+  { say = "buzz", text = "A gap. Lane three. About a car's length." },
+  { say = "rita", text = "Is it moving?" },
+  { say = "buzz", text = "No, Rita. Somebody's already in it." },
+]
+
+[[clip]]
+id = "traffic-body-016"
+category = "weather"
+kit = "traffic"
+part = "body"
+bed = "studio"
+title = "Expansion Ahead"
+lines = [
+  { say = "rita", text = "Drivers on the Big Bang approach should expect expansion. The road is getting longer while you drive on it." },
+  { say = "rita", text = "You are not going slower. Everything is simply further away than it was. It's not personal. It's the universe." },
+]
+
+[[clip]]
+id = "traffic-body-017"
+category = "weather"
+kit = "traffic"
+part = "body"
+bed = "studio"
+title = "A Commuter on the Bypass"
+lines = [
+  { say = "rita", text = "We've got a commuter on the line from the bypass. Go ahead, caller." },
+  { say = "commuter", text = "Rita, I've been on the bypass since I was nine." },
+  { say = "rita", text = "How's it moving?" },
+  { say = "commuter", text = "I moved up one, the summer I turned twenty. I still think about it." },
+  { say = "rita", text = "Hold on to that. Thank you, caller." },
+]
+
+[[clip]]
+id = "traffic-body-018"
+category = "weather"
+kit = "traffic"
+part = "body"
+bed = "studio"
+title = "Junction Thirteen"
+lines = [
+  { say = "rita", text = "Around the black hole at junction thirteen, traffic is approaching at normal speed, but appears, from outside, to slow to a complete stop." },
+  { say = "rita", text = "It isn't stopped. It only looks stopped. Unlike the bypass, which looks stopped because it is." },
+]
+
+[[clip]]
+id = "traffic-body-019"
+category = "weather"
+kit = "traffic"
+part = "body"
+bed = "studio"
+title = "The Parallel Lanes"
+lines = [
+  { say = "rita", text = "On the parallel lanes, there's a version of you who left ten minutes earlier. They're making good progress." },
+  { say = "rita", text = "Don't think about them. They're not thinking about you. They're nearly home." },
+]
+
+[[clip]]
+id = "traffic-body-020"
+category = "weather"
+kit = "traffic"
+part = "body"
+bed = "studio"
+title = "The Sideways Road"
+lines = [
+  { say = "rita", text = "Word from Waystation Nine dispatch. A wide load on the sideways road, and a strong suggestion from Big Rosalind that you don't take it." },
+  { say = "rita", text = "We agree. In thirty years on this desk, we've never once seen anybody come back from the sideways road on time. Or on the same day." },
+]
+
+[[clip]]
+id = "traffic-body-021"
+category = "weather"
+kit = "traffic"
+part = "body"
+bed = "studio"
+title = "The Phantom Jam"
+lines = [
+  { say = "buzz", text = "Rita, there's a phantom jam on the Old Lane. Nobody can see the front of it, because there's no front." },
+  { say = "buzz", text = "It formed eleven years ago when somebody braked for a moth. The moth's long gone. The jam stayed. It likes it here." },
+]
+
+[[clip]]
+id = "traffic-close-001"
+category = "weather"
+kit = "traffic"
+part = "close"
+bed = "studio"
+lines = [
+  { say = "rita", text = "That's traffic. Next report in ten minutes, on the eights. The jam will still be there. It's very loyal." },
+]
+
+[[clip]]
+id = "traffic-close-002"
+category = "weather"
+kit = "traffic"
+part = "close"
+bed = "studio"
+lines = [
+  { say = "rita", text = "That's your traffic. Mirror, signal, wait. Mostly wait." },
+]
+
+[[clip]]
+id = "traffic-close-003"
+category = "weather"
+kit = "traffic"
+part = "close"
+bed = "studio"
+lines = [
+  { say = "rita", text = "Traffic on the eights, back in ten. Stay in your lane. Everyone else is." },
+]
+
+[[clip]]
+id = "traffic-close-004"
+category = "weather"
+kit = "traffic"
+part = "close"
+bed = "studio"
+lines = [
+  { say = "rita", text = "That's the traffic for now. And for later. It's the same traffic. Back in ten." },
+]
+
+[[clip]]
+id = "traffic-close-005"
+category = "weather"
+kit = "traffic"
+part = "close"
+bed = "studio"
+lines = [
+  { say = "rita", text = "If you've moved since the last report, ring in. We'd love to hear how. Traffic on the eights." },
+]
+
+[[clip]]
+id = "traffic-close-006"
+category = "weather"
+kit = "traffic"
+part = "close"
+bed = "studio"
+lines = [
+  { say = "rita", text = "That's the traffic. Drive safely. Arrive eventually." },
+  { sting = "weather" },
+]
+
+[[clip]]
+id = "traffic-close-007"
+category = "weather"
+kit = "traffic"
+part = "close"
+bed = "studio"
+lines = [
+  { say = "rita", text = "Buzz, anything to add?" },
+  { say = "buzz", text = "Negative, Rita." },
+  { say = "rita", text = "Thank you, Buzz. Back in ten." },
+]
+
+[[clip]]
+id = "traffic-close-008"
+category = "weather"
+kit = "traffic"
+part = "close"
+bed = "studio"
+lines = [
+  { say = "rita", text = "Back in ten minutes with more of the same. Rita Gridley, at the traffic desk." },
+]
+
+# ── Space weather (standalone) ────────────────────────────────────────────────
+
+[[clip]]
+id = "weather-001"
+category = "weather"
+title = "Solar Wind"
+lines = [
+  { say = "rita", text = "The weather for drivers. A brisk solar wind from the east, gusting to strong around the big yellow star at junction two." },
+  { say = "rita", text = "High-sided vessels, take care. Small ones, hold on to something. Anything with a sail, you'll be in the next system by tea time, and you won't have enjoyed it." },
+]
+
+[[clip]]
+id = "weather-002"
+category = "weather"
+title = "Meteor Showers"
+lines = [
+  { say = "rita", text = "Scattered meteor showers over the Interchange this evening, heavier towards the bypass, where nobody is going anywhere anyway." },
+  { say = "rita", text = "Wipers on. And if one lands on your bonnet, it's yours. That's the law out here. Finders keepers." },
+  { say = "buzz", text = "Rita, one just went past the pod. Didn't indicate. They never indicate." },
+]
+
+[[clip]]
+id = "weather-003"
+category = "weather"
+title = "Fog in the Nebula"
+daypart = "night"
+lines = [
+  { say = "rita", text = "Thick fog in the Varn Nebula overnight. Visibility down to about a planet's length." },
+  { say = "rita", text = "Dipped headlights, please. Full beam just lights the fog up, and then the fog wants to talk to you about it." },
+  { say = "rita", text = "It's lonely, the fog. It means well. Just don't encourage it. Clearing by morning, or by the morning after." },
+]
+
+[[clip]]
+id = "weather-004"
+category = "weather"
+title = "A Front of Tuesdays"
+daypart = "morning"
+lines = [
+  { say = "rita", text = "This morning, a slow-moving front of Tuesdays is pushing in from the timelines. Expect it to feel like Tuesday for most of the day, even where it isn't." },
+  { say = "rita", text = "Clearing to Wednesday by the evening, for most of you. Some of you will be in Tuesday till the weekend. Sorry." },
+]
+
+# ── Desk chatter ──────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "dj-001"
+category = "dj"
+title = "Thirty One Years in the Pod"
+lines = [
+  { say = "rita", text = "Buzz, how long have you been up there now?" },
+  { say = "buzz", text = "Thirty one years, Rita. I land on my birthday. They bring me a cake and a fresh flask." },
+  { say = "rita", text = "And then?" },
+  { say = "buzz", text = "And then I go back up. Somebody's got to watch it not move." },
+]
+
+[[clip]]
+id = "dj-002"
+category = "dj"
+title = "Never Seen It Move"
+lines = [
+  { say = "rita", text = "People ask me what it's like to report on traffic that has never once moved." },
+  { say = "rita", text = "And I say, it's like any other job. You turn up. You look at it. You tell people how it is. And every ten minutes you hope, just a little, that this is the time." },
+]
+
+[[clip]]
+id = "dj-003"
+category = "dj"
+title = "Ten Minutes"
+lines = [
+  { say = "rita", text = "Ten minutes is a long time in traffic. It's also no time at all. I've done a few million of them now." },
+  { say = "rita", text = "My advice? Bring a sandwich. Bring two. Bring somebody to share the second one with." },
+]
+
+[[clip]]
+id = "dj-004"
+category = "dj"
+title = "The Old Switchboard"
+lines = [
+  { say = "buzz", text = "Rita, you ever hear the one about the old switchboard?" },
+  { say = "rita", text = "Which one?" },
+  { say = "buzz", text = "Story goes there's an operator out past the edge of the dial, still putting calls through. She answers if you ring advice, then the news, then the traffic. In that order. Hold each line a moment." },
+  { say = "rita", text = "We're the traffic, Buzz." },
+  { say = "buzz", text = "I know. I always wondered who was ringing." },
+]
+
+[[clip]]
+id = "dj-005"
+category = "dj"
+daypart = "night"
+title = "To the Relay Ship"
+lines = [
+  { say = "rita", text = "A message for the relay ship on the Outer Band tonight. Buzz can see your running lights from the pod." },
+  { say = "rita", text = "You're drifting across three lanes. We're not complaining. There's nobody in them. Just, wherever you're headed, indicate. It's polite." },
+]
+
+[[clip]]
+id = "dj-006"
+category = "dj"
+title = "The Flask"
+lines = [
+  { say = "buzz", text = "Rita, my flask's empty." },
+  { say = "rita", text = "We'll send one up, Buzz." },
+  { say = "buzz", text = "How long?" },
+  { say = "rita", text = "Well. It'll have to go round by the bypass." },
+  { pause = 1.0 },
+  { say = "buzz", text = "I'll ration the biscuits." },
+]
+
+# ── Adverts ───────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "ad-001"
+category = "ad"
+title = "Gridlock Grill"
+lines = [
+  { say = "voiceover", text = "Stuck on the bypass? Of course you are. Gridlock Grill comes to you." },
+  { say = "voiceover", text = "Our waiters walk between the lanes with hot food, cold drinks and a smile that has been on duty for generations." },
+  { say = "voiceover", text = "Gridlock Grill. Drive thru, at no miles an hour. Table for one? You've got the whole car." },
+]
+
+[[clip]]
+id = "ad-002"
+category = "ad"
+title = "Lane Change Lozenges"
+lines = [
+  { say = "voiceover", text = "Feeling the urge to change lanes? Don't. It won't help. It has never helped." },
+  { say = "voiceover", text = "Lane Change Lozenges. One soothing lozenge, and the urge to switch lanes simply melts away. Blackcurrant, or patience flavour." },
+  { say = "voiceover", text = "Lane Change Lozenges. Stay where you are. It's lovely, where you are." },
+]
+
+[[clip]]
+id = "ad-003"
+category = "ad"
+title = "Grumbel's Ladders, Overhead"
+lines = [
+  { say = "rita", text = "Traffic on the eights is brought to you by Grumbel's Ladders." },
+  { say = "rita", text = "Can't see the front of the jam? Climb a Grumbel's. Sixty rungs, folds flat into the boot, and from the top you can see the whole bypass." },
+  { say = "rita", text = "It doesn't help. But you can see it. Grumbel's Ladders. Up is a choice." },
+]
+
+# ── The Morning Crawl (7–10) ──────────────────────────────────────────────────
+
+[[clip]]
+id = "show-morning-open"
+category = "id"
+show = "morning-crawl"
+part = "open"
+lines = [
+  { say = "rita", text = "Good morning. This is the Morning Crawl, on Traffic on the eights. Buzz is up, the kettle's on, and the bypass is exactly where we left it." },
+]
+
+[[clip]]
+id = "show-morning-001"
+category = "dj"
+show = "morning-crawl"
+lines = [
+  { say = "rita", text = "Morning commuters, a reminder. You don't have to be anywhere on time. Nobody does. Everybody's employer is on the bypass too." },
+  { say = "rita", text = "Your boss is three lanes over. Wave. He's waving back." },
+]
+
+# ── The Evening Crawl (16–19) ─────────────────────────────────────────────────
+
+[[clip]]
+id = "show-evening-open"
+category = "id"
+show = "evening-crawl"
+part = "open"
+lines = [
+  { say = "rita", text = "It's the Evening Crawl. Same cars as this morning, facing the other way. Let's get you home. Eventually." },
+]
+
+[[clip]]
+id = "show-evening-001"
+category = "dj"
+show = "evening-crawl"
+lines = [
+  { say = "commuter2", text = "Rita, I've just realised I'm in the morning queue. I've been facing the wrong way since breakfast." },
+  { say = "rita", text = "That's all right, love. It's the same queue. Turn your radio round and pretend." },
+]
+
+# ── The Small Hours Jam (1–5) ─────────────────────────────────────────────────
+
+[[clip]]
+id = "show-small-hours-open"
+category = "id"
+show = "small-hours-jam"
+part = "open"
+daypart = "night"
+lines = [
+  { say = "rita", text = "This is the Small Hours Jam. The wormholes are quiet, the timelines are dozing, and the bypass is wide awake. It always is." },
+]
+
+[[clip]]
+id = "show-small-hours-001"
+category = "dj"
+show = "small-hours-jam"
+lines = [
+  { say = "buzz", text = "Rita, it's three in the morning and I can see every headlight in the jam from up here. Billions of them." },
+  { say = "buzz", text = "From the pod, it looks like a river. A very slow, very patient river of people trying to get home. It's the prettiest thing I know." },
+  { say = "rita", text = "Don't tell them that, Buzz. They'll stop and look." },
+]
+
+# ── The Convergence (Saturdays, 20:00 UTC) ────────────────────────────────────
+
+[[clip]]
+id = "convergence-missing-moon"
+category = "event"
+event = "convergence"
+kit = "missing-moon"
+lines = [
+  { say = "rita", text = "Breaking traffic news. A moon has gone missing. We had one in lost property on the hard shoulder. It's gone too." },
+  { say = "buzz", text = "Rita, I think it took the slip road." },
+]
+
+[[clip]]
+id = "convergence-the-smell"
+category = "event"
+event = "convergence"
+kit = "the-smell"
+lines = [
+  { say = "rita", text = "Reports from every lane of a strong smell of toast. Buzz, is that you?" },
+  { say = "buzz", text = "Not me, Rita. The whole jam smells of it. Fourteen billion years of traffic, and it smells like breakfast." },
+]
+
+[[clip]]
+id = "convergence-the-song"
+category = "event"
+event = "convergence"
+kit = "the-song"
+lines = [
+  { say = "rita", text = "Every driver on the bypass is humming the same song. I can hear it through the desk." },
+  { say = "rita", text = "Nobody knows how it ends. That's the bypass for you. Nothing here has ever got to the end." },
+]
+
+[[clip]]
+id = "convergence-the-knock"
+category = "event"
+event = "convergence"
+kit = "the-knock"
+lines = [
+  { say = "buzz", text = "Rita, somebody just knocked on the pod. Three times." },
+  { say = "rita", text = "Buzz, you're four miles up." },
+  { say = "buzz", text = "I know, Rita. I'm not opening it." },
+]
+
+[[clip]]
+id = "convergence-wrong-colour"
+category = "event"
+event = "convergence"
+kit = "wrong-colour"
+lines = [
+  { say = "rita", text = "Drivers, the sky has gone a colour nobody has a word for. Please don't stop to look. You're stopped anyway, I know, but don't." },
+  { say = "rita", text = "Buzz says it's the colour of a green light. Nobody here has ever seen one." },
+]
+
+[[clip]]
+id = "convergence-the-pigeon"
+category = "event"
+event = "convergence"
+kit = "the-pigeon"
+lines = [
+  { say = "rita", text = "There's a pigeon walking along the bypass. Lane one. Overtaking everyone." },
+  { say = "buzz", text = "Fastest thing on the bypass in fourteen billion years, Rita. I'm giving it a round of applause." },
+]
+
+# ── Halloween ─────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "halloween-001"
+category = "dj"
+title = "The Ghost Lane"
+dates = ["10-24", "10-25", "10-26", "10-27", "10-28", "10-29", "10-30", "10-31"]
+lines = [
+  { say = "rita", text = "Halloween traffic. Reports of a ghost car in lane four of the bypass, with nobody driving it, and the indicator going." },
+  { say = "buzz", text = "Rita, I've had a look. It's been indicating left since before the war. Which war, I can't tell you." },
+  { say = "rita", text = "Let it in, everyone. It's waited long enough." },
+]

@@ -1,0 +1,349 @@
+# The Harbour — 140.0, where the Nightjar has been going all along. A secret station.
+#
+# HUSH grants this frequency at the end of the off-course arc (_ship.toml, arc step 7: "They've
+# left a light on"), after seven night shifts. The Harbourmaster keeps a quiet harbour for
+# relay ships and their operators: long piers of light, old relays asleep at their berths, an
+# office with a warm window, a kettle that is always on. He knows HUSH of old, and he knew the
+# operator before you (the one who left the blanket that smells of oranges).
+#
+# What it resolves, gently and never all at once: relay ships drift a long way between
+# harbours, and every so often they come here to rest for a night, instruments down, while
+# somebody else keeps watch. Then they go back out in the morning. They always do. HUSH didn't
+# say where you were going because saying it too early felt like it might make it not be there.
+#
+# Mixed format (ambient piano between links). Callbacks: berth seven (Relay Seven), Teodor at
+# Relay Four, the Last Lighthouse, oranges, "in your writing".
+station = "the-harbour"
+
+[voices]
+harbourmaster = { voice = "am_santa", speed = 0.9, name = "The Harbourmaster" }
+hush = { voice = "af_heart", speed = 0.95, fx = "ship", name = "HUSH" }
+
+[[show]]
+id = "evening-berths"
+name = "Evening Berths"
+blurb = "Ships come in out of the dark, one at a time, and the Harbourmaster talks them in."
+start = 19
+end = 23
+
+[[show]]
+id = "lights-on-the-water"
+name = "Lights on the Water"
+blurb = "The small hours at the Harbour. Old ships asleep at the piers, and someone keeping watch for them."
+start = 23
+end = 4
+
+[[show]]
+id = "the-morning-tide"
+name = "The Morning Tide"
+blurb = "Lines off at first light. Ships leave in the morning. They always do."
+start = 4
+end = 8
+
+# ── Idents ────────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "id-001"
+category = "id"
+lines = [
+  { say = "harbourmaster", text = "This is the Harbour, on one hundred and forty point oh. The light's on. Come in slow." },
+]
+
+[[clip]]
+id = "id-002"
+category = "id"
+lines = [
+  { say = "harbourmaster", text = "The Harbour. Rest for relay ships, and for whoever's sitting in the chair.", gap = 0.6 },
+  { say = "harbourmaster", text = "Kettle's on." },
+]
+
+[[clip]]
+id = "id-003"
+category = "id"
+lines = [
+  { say = "harbourmaster", text = "You've found the Harbour. Well. You were brought. Same thing, in the end." },
+]
+
+[[clip]]
+id = "id-004"
+category = "id"
+lines = [
+  { say = "harbourmaster", text = "The Harbour, at the end of the long drift. Berth seven is yours. It always has been." },
+]
+
+[[clip]]
+id = "id-005"
+category = "id"
+lines = [
+  { sfx = "kettle", level = 0.4 },
+  { say = "harbourmaster", text = "The Harbourmaster's office. Lights on the piers, and a radio for anyone coming in." },
+]
+
+[[clip]]
+id = "id-evening-berths"
+category = "id"
+title = "Evening Berths"
+show = "evening-berths"
+part = "open"
+lines = [
+  { say = "harbourmaster", text = "Evening Berths, from the Harbour.", gap = 0.6 },
+  { say = "harbourmaster", text = "Ships coming in out of the dark, one at a time. I'll talk you in." },
+]
+
+[[clip]]
+id = "id-lights-on-the-water"
+category = "id"
+title = "Lights on the Water"
+show = "lights-on-the-water"
+part = "open"
+lines = [
+  { say = "harbourmaster", text = "Lights on the Water. Everyone's moored. Everyone's quiet.", gap = 0.6 },
+  { say = "harbourmaster", text = "Just me, the kettle, and whoever's still awake." },
+]
+
+[[clip]]
+id = "id-morning-tide"
+category = "id"
+title = "The Morning Tide"
+show = "the-morning-tide"
+part = "open"
+lines = [
+  { say = "harbourmaster", text = "The Morning Tide. Lines off at first light.", gap = 0.6 },
+  { say = "harbourmaster", text = "They always go in the morning." },
+]
+
+# ── Coming in ─────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "dj-welcome"
+category = "dj"
+title = "Evening, Nightjar"
+lines = [
+  { say = "harbourmaster", text = "Evening, Nightjar. Evening, operator. I'm the Harbourmaster.", gap = 0.6 },
+  { say = "harbourmaster", text = "You'll be tired. Everyone's tired when they get here. Berth seven, on your left, with the light on.", gap = 0.6 },
+  { say = "harbourmaster", text = "Take it slow. There's no hurry. There never was." },
+]
+
+[[clip]]
+id = "dj-old-friends"
+category = "dj"
+title = "Evening, HUSH"
+lines = [
+  { say = "harbourmaster", text = "Evening, HUSH." },
+  { say = "hush", text = "Evening, Harbourmaster.", gap = 0.6 },
+  { say = "harbourmaster", text = "Hull's a bit dusty." },
+  { say = "hush", text = "We came the long way." },
+  { say = "harbourmaster", text = "You always do.", gap = 0.8 },
+  { say = "hush", text = "I've brought the operator." },
+  { say = "harbourmaster", text = "So I see. Hello, operator. She's told me all about you.", gap = 0.5 },
+  { say = "hush", text = "I haven't said a word." },
+  { say = "harbourmaster", text = "No. You never do." },
+]
+
+[[clip]]
+id = "dj-a-night-off"
+category = "dj"
+title = "A Night Off"
+lines = [
+  { say = "harbourmaster", text = "Relay ships drift a long way between harbours. Years, some of them. Nobody's meant to drift forever. Not even a ship.", gap = 0.7 },
+  { say = "harbourmaster", text = "So they come here, for a night. Tie up. Turn the instruments down. Let somebody else keep watch for once.", gap = 0.7 },
+  { say = "harbourmaster", text = "Then they go back out. That's all this is. A night off." },
+]
+
+[[clip]]
+id = "dj-didnt-tell-you"
+category = "dj"
+title = "She Didn't Tell You"
+lines = [
+  { say = "harbourmaster", text = "She didn't tell you where you were going, did she. No. They never do.", gap = 0.7 },
+  { say = "harbourmaster", text = "It isn't secrecy. Say a place out loud too early, and you start to worry it won't be there.", gap = 0.6 },
+  { say = "harbourmaster", text = "It's always here." },
+]
+
+[[clip]]
+id = "dj-oranges"
+category = "dj"
+title = "Oranges"
+lines = [
+  { say = "harbourmaster", text = "Last time the Nightjar came in, the operator before you brought a bag of oranges. We sat out on the pier and peeled them.", gap = 0.7 },
+  { say = "harbourmaster", text = "She said HUSH hummed all the way here. Through the air vents. I believe her." },
+]
+
+[[clip]]
+id = "dj-teodor"
+category = "dj"
+title = "Relay Four"
+lines = [
+  { say = "harbourmaster", text = "Relay Four was in, last spring. Teodor slept for fourteen hours.", gap = 0.6 },
+  { say = "harbourmaster", text = "When he woke up, he didn't ask whether anyone was receiving. Not once. He just had his breakfast. Nicest thing I've ever seen." },
+]
+
+[[clip]]
+id = "dj-mug"
+category = "dj"
+title = "A Mug on the Hook"
+lines = [
+  { sfx = "kettle", level = 0.5 },
+  { say = "harbourmaster", text = "Kettle's on. There's a mug for you on the hook. Every operator gets one.", gap = 0.6 },
+  { say = "harbourmaster", text = "Yours has a little star on it. I painted it this morning. I knew you were coming." },
+]
+
+[[clip]]
+id = "dj-the-log"
+category = "dj"
+title = "Who Came In"
+lines = [
+  { say = "harbourmaster", text = "I keep a log too. Not like hers. Mine only says who came in, and whether they slept.", gap = 0.7 },
+  { say = "harbourmaster", text = "Tonight it says, Nightjar, and her operator. Write the rest in yourself, if you like. In your writing." },
+]
+
+[[clip]]
+id = "dj-lighthouse"
+category = "dj"
+title = "The Light Across the Water"
+lines = [
+  { say = "harbourmaster", text = "On a clear night you can see the Last Lighthouse from the end of the long pier. Very small.", gap = 0.6 },
+  { say = "harbourmaster", text = "The Keeper and I wave. Neither of us has ever seen the other wave back. We both keep doing it." },
+]
+
+[[clip]]
+id = "dj-evening-berths-1"
+category = "dj"
+show = "evening-berths"
+lines = [
+  { say = "harbourmaster", text = "Lights coming up out of the dark. That'll be Relay Two, and behind her, a little survey ship that's never been in before.", gap = 0.6 },
+  { say = "harbourmaster", text = "First time's always slow. They don't believe the light's for them. It is. Come on in." },
+]
+
+[[clip]]
+id = "dj-evening-berths-2"
+category = "dj"
+show = "evening-berths"
+lines = [
+  { say = "harbourmaster", text = "Berth seven, you're tied up. Well done. Leave the engines. Leave the heading. Nobody needs a heading in a harbour.", gap = 0.6 },
+  { say = "harbourmaster", text = "Put your feet up. That's an order. The only one I give." },
+]
+
+[[clip]]
+id = "dj-lights-on-the-water-1"
+category = "dj"
+show = "lights-on-the-water"
+lines = [
+  { say = "harbourmaster", text = "Three old relays asleep along the long pier tonight. Relay Two, Relay Eleven, and one so old she hasn't got a number, only a name.", gap = 0.6 },
+  { say = "harbourmaster", text = "Ships snore, you know. Very softly. A sort of hum." },
+]
+
+[[clip]]
+id = "dj-lights-on-the-water-2"
+category = "dj"
+show = "lights-on-the-water"
+lines = [
+  { say = "harbourmaster", text = "Your ship's asleep. First time in a long time. I can tell, because her heading light's gone out.", gap = 0.6 },
+  { say = "harbourmaster", text = "Don't wake her. She's earned it. I'll keep the watch tonight. That's what I'm for." },
+]
+
+[[clip]]
+id = "dj-morning-tide-1"
+category = "dj"
+show = "the-morning-tide"
+lines = [
+  { say = "harbourmaster", text = "Tide's turning. Ships leave in the morning. They always do.", gap = 0.7 },
+  { say = "harbourmaster", text = "Not because they have to. Because out there somebody's broadcasting, and somebody ought to be listening." },
+]
+
+[[clip]]
+id = "dj-morning-tide-2"
+category = "dj"
+show = "the-morning-tide"
+lines = [
+  { say = "harbourmaster", text = "Before you go, take an orange. Take two.", gap = 0.6 },
+  { say = "harbourmaster", text = "And next time she drifts, and won't say where, and the heading won't sit still, you'll know. She's bringing you here. For the night." },
+]
+
+[[clip]]
+id = "weather-001"
+category = "weather"
+title = "Weather for the Harbour"
+lines = [
+  { say = "harbourmaster", text = "The weather, for the Harbour. Calm in the basin. Light airs along the piers.", gap = 0.7 },
+  { say = "harbourmaster", text = "A ridge of good sleep moving in from the east. Visibility, as far as the next light.", gap = 0.7 },
+  { say = "harbourmaster", text = "Outlook for the morning. Departures, as usual. Fair, and kind." },
+]
+
+[[clip]]
+id = "psa-001"
+category = "psa"
+title = "Notices to Ships in Harbour"
+lines = [
+  { say = "harbourmaster", text = "Notices to ships in harbour. Berth three, your aerial is snoring. Berth nine, your operator left a scarf on the bench.", gap = 0.7 },
+  { say = "harbourmaster", text = "Berth seven, welcome.", gap = 0.8 },
+  { say = "harbourmaster", text = "That's the notices. It's a quiet harbour. That's the point of it." },
+]
+
+# ── The Convergence (v4): one reaction per kit ────────────────────────────────
+
+[[clip]]
+id = "convergence-missing-moon"
+category = "event"
+event = "convergence"
+kit = "missing-moon"
+title = "Not Tied Up Here"
+lines = [
+  { say = "harbourmaster", text = "A moon's gone missing, they say. Well, it's not tied up here. I've checked every berth.", gap = 0.6 },
+  { say = "harbourmaster", text = "Mind you, if a moon ever needed a night off, there's room at the end of the long pier." },
+]
+
+[[clip]]
+id = "convergence-the-smell"
+category = "event"
+event = "convergence"
+kit = "the-smell"
+title = "Not a Toaster Among Them"
+lines = [
+  { say = "harbourmaster", text = "Toast. Every ship in the harbour has woken up at once, sniffing. Thirty old relays, and not a toaster among them.", gap = 0.6 },
+  { say = "harbourmaster", text = "I've put some bread on, so nobody's disappointed." },
+]
+
+[[clip]]
+id = "convergence-the-song"
+category = "event"
+event = "convergence"
+kit = "the-song"
+title = "The Bit You Hum on the Way Home"
+lines = [
+  { say = "harbourmaster", text = "Every ship in the harbour is humming that tune through its vents, and they all stop in the same place.", gap = 0.6 },
+  { say = "harbourmaster", text = "I think the ending's the bit you hum on the way home." },
+]
+
+[[clip]]
+id = "convergence-the-knock"
+category = "event"
+event = "convergence"
+kit = "the-knock"
+title = "On the Latch"
+lines = [
+  { say = "harbourmaster", text = "Three knocks at the office door. I opened it. I always open it, here. Nobody. Only the lights on the water.", gap = 0.6 },
+  { say = "harbourmaster", text = "Come in anyway, I said. I've left it on the latch." },
+]
+
+[[clip]]
+id = "convergence-wrong-colour"
+category = "event"
+event = "convergence"
+kit = "wrong-colour"
+title = "The Old Ships Look Up"
+lines = [
+  { say = "harbourmaster", text = "The sky over the harbour has gone a colour I've not seen in all my years here.", gap = 0.6 },
+  { say = "harbourmaster", text = "The old ships have tilted their viewports up to look. I haven't seen them so awake in a decade." },
+]
+
+[[clip]]
+id = "convergence-the-pigeon"
+category = "event"
+event = "convergence"
+kit = "the-pigeon"
+title = "Berth Twelve"
+lines = [
+  { say = "harbourmaster", text = "There's a pigeon on the harbour wall. It walked in off the long pier, nodded at me, and asked for berth twelve.", gap = 0.6 },
+  { say = "harbourmaster", text = "I didn't argue. It knew the number." },
+]

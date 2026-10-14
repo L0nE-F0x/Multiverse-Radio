@@ -1,0 +1,532 @@
+# The Switchboard — 131.1, the Central Exchange between every universe. A secret station.
+#
+# Found by ringing advice, then the news, then the traffic (97.8, 89.3, 114.8, each held a
+# couple of seconds, within ninety); after that it's on the dial like any discovered secret.
+# The Operator has connected calls between universes since 1946: crisp, discreet, has heard
+# everything, repeats nothing. Most of the airtime is the board itself: modular `calls`
+# segments, an open (she plugs a cord in), one to three overheard snatches of strangers'
+# calls between universes (bodies: tender, absurd, a little sad), and a close ("Your party
+# has hung up."). Bodies are separate calls, so any two can follow each other.
+#
+# The `found-*` links welcome a listener who has just found the exchange; they also stand
+# on their own. Callbacks: the Nightjar (HUSH rings now and then and never says much), the
+# lighthouse, Gristwick.
+station = "the-switchboard"
+
+[voices]
+operator = { voice = "bf_alice", speed = 0.95, name = "The Operator" }
+op_line = { voice = "bf_alice", speed = 0.95, fx = "phone", name = "The Operator" }
+caller_a = { voice = "af_sarah", fx = "phone", name = "A Caller" }
+caller_b = { voice = "af_aoede", fx = "phone", name = "A Caller" }
+caller_c = { voice = "bm_daniel", fx = "phone", name = "A Caller" }
+caller_d = { voice = "af_kore", fx = "phone", name = "A Caller" }
+caller_e = { voice = "am_michael", fx = "phone", name = "A Caller" }
+caller_f = { voice = "am_puck", speed = 1.1, fx = "phone", name = "A Caller" }
+caller_g = { voice = "bf_isabella", speed = 0.88, fx = "phone", name = "A Caller" }
+caller_h = { voice = "af_bella", fx = "phone", name = "A Caller" }
+caller_i = { voice = "am_echo", fx = "phone", name = "A Caller" }
+caller_j = { voice = "af_jessica", fx = "phone", name = "A Caller" }
+caller_k = { voice = "am_fenrir", speed = 0.92, fx = "phone", name = "A Caller" }
+caller_l = { voice = "am_adam", fx = "phone", name = "A Caller" }
+caller_m = { voice = "am_onyx", speed = 0.9, fx = "phone", name = "A Caller" }
+
+[[show]]
+id = "the-night-exchange"
+name = "The Night Exchange"
+blurb = "The busiest hours on the lines between universes. Everybody rings home after dark."
+start = 23
+end = 4
+
+[[show]]
+id = "early-trunk-calls"
+name = "Early Trunk Calls"
+blurb = "Long-distance calls at first light, when the lines are clear and the past is cheaper."
+start = 5
+end = 9
+
+# ── Idents ────────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "id-001"
+category = "id"
+lines = [
+  { say = "operator", text = "Central Exchange. Connecting calls between universes since nineteen forty six.", gap = 0.6 },
+  { say = "operator", text = "Number, please." },
+]
+
+[[clip]]
+id = "id-002"
+category = "id"
+lines = [
+  { say = "operator", text = "You've reached the Switchboard, on one hundred and thirty one point one.", gap = 0.6 },
+  { say = "operator", text = "Please hold. Please keep holding. You're doing very well." },
+]
+
+[[clip]]
+id = "id-003"
+category = "id"
+lines = [
+  { say = "operator", text = "The Switchboard. Every line in the multiverse comes through this room. The room is mostly cords." },
+]
+
+[[clip]]
+id = "id-004"
+category = "id"
+lines = [
+  { say = "operator", text = "This is the Exchange. I connect. I don't listen.", gap = 0.6 },
+  { say = "operator", text = "I hear, which is different. And I repeat nothing." },
+]
+
+[[clip]]
+id = "id-005"
+category = "id"
+lines = [
+  { sfx = "phone-ring", seconds = 1.2 },
+  { say = "operator", text = "The Switchboard. If you can hear this, you dialled correctly. Very few people dial correctly." },
+]
+
+[[clip]]
+id = "id-night-exchange"
+category = "id"
+title = "The Night Exchange"
+show = "the-night-exchange"
+part = "open"
+lines = [
+  { say = "operator", text = "It's gone eleven, and every light on the board is lit. Everybody rings home after dark.", gap = 0.6 },
+  { say = "operator", text = "This is the Night Exchange. Hold the line." },
+]
+
+[[clip]]
+id = "id-early-trunk-calls"
+category = "id"
+title = "Early Trunk Calls"
+show = "early-trunk-calls"
+part = "open"
+lines = [
+  { say = "operator", text = "Good morning. The lines are clear, the rates are low, and the past is cheaper before nine.", gap = 0.6 },
+  { say = "operator", text = "Early Trunk Calls, from the Exchange." },
+]
+
+# ── Finding the exchange ──────────────────────────────────────────────────────
+
+[[clip]]
+id = "found-1"
+category = "dj"
+title = "In the Right Order"
+lines = [
+  { say = "operator", text = "Advice, then the news, then the traffic. You rang in the right order.", gap = 0.6 },
+  { say = "operator", text = "Hardly anyone does. Most people ring the news first, and then they're too worried to ring anyone else.", gap = 0.6 },
+  { say = "operator", text = "Welcome to the Exchange. Mind the cords." },
+]
+
+[[clip]]
+id = "found-2"
+category = "dj"
+title = "A Light on the Board"
+lines = [
+  { say = "operator", text = "Well. A new light on the board. You found us the old way, one station after another, like a number you half remembered.", gap = 0.7 },
+  { say = "operator", text = "I've given you a lamp. It's a small one. It's yours. Try to keep it lit." },
+]
+
+# ── The Operator ──────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "dj-001"
+category = "dj"
+lines = [
+  { say = "operator", text = "Quiet on the board tonight. Three lights. One of them has been lit since nineteen fifty eight.", gap = 0.6 },
+  { say = "operator", text = "I've never put it through. They've never asked me to. Some calls just like to wait." },
+]
+
+[[clip]]
+id = "dj-002"
+category = "dj"
+lines = [
+  { say = "operator", text = "People ask whether I listen in. I don't. But you can't sit at a switchboard for eighty years without learning what a pause means.", gap = 0.6 },
+  { say = "operator", text = "Most calls are pauses. The words are just the bits around them." },
+]
+
+[[clip]]
+id = "dj-003"
+category = "dj"
+title = "Rates"
+lines = [
+  { say = "operator", text = "A note on rates. Calls to neighbouring universes are charged at the local rate. Distant universes, at the long distance rate.", gap = 0.6 },
+  { say = "operator", text = "Calls to the universe where you said the right thing at the time are not currently available. I'm sorry. Everyone asks." },
+]
+
+[[clip]]
+id = "dj-004"
+category = "dj"
+lines = [
+  { say = "operator", text = "Somebody once asked me who I ring, when I want to talk to someone.", gap = 0.8 },
+  { say = "operator", text = "I said, nobody. I'm the one in the middle. Then I put them through, and went back to my tea." },
+]
+
+[[clip]]
+id = "dj-005"
+category = "dj"
+lines = [
+  { say = "operator", text = "The cords on this board, laid end to end, would reach every place anybody has ever missed.", gap = 0.6 },
+  { say = "operator", text = "I measured once. It took a while. I had a quiet decade." },
+]
+
+[[clip]]
+id = "dj-006"
+category = "dj"
+title = "The Relay Ship"
+lines = [
+  { say = "operator", text = "There's a relay ship that rings the exchange now and then. The Nightjar. Lovely manners. Never says much.", gap = 0.6 },
+  { say = "operator", text = "She asks for the same number every time. Then she says, never mind. Not yet. And hangs up." },
+]
+
+[[clip]]
+id = "dj-night-exchange-1"
+category = "dj"
+show = "the-night-exchange"
+lines = [
+  { say = "operator", text = "Midnight is the busy hour. Everyone who couldn't say it in the day rings to say it now.", gap = 0.6 },
+  { say = "operator", text = "I've two hands and nine hundred cords. Please be patient. Your call is important. They all are. That's the trouble." },
+]
+
+[[clip]]
+id = "dj-early-trunk-1"
+category = "dj"
+show = "early-trunk-calls"
+lines = [
+  { say = "operator", text = "First light, and the long lines are humming. A call to nineteen sixty three has just gone through, clear as a bell.", gap = 0.6 },
+  { say = "operator", text = "Mornings are good for the past. It's still half asleep. It doesn't argue." },
+]
+
+# ── Calls: open, overheard snatches, close (kit "calls") ──────────────────────
+
+[[clip]]
+id = "call-open-01"
+category = "call"
+kit = "calls"
+part = "open"
+lines = [
+  { sfx = "phone-ring", seconds = 1.2 },
+  { say = "operator", text = "Number, please.", gap = 0.6 },
+  { say = "operator", text = "Thank you. Connecting you now. Hold the line." },
+]
+
+[[clip]]
+id = "call-open-02"
+category = "call"
+kit = "calls"
+part = "open"
+lines = [
+  { say = "operator", text = "Trunk call, coming through. One moment.", gap = 0.6 },
+  { say = "operator", text = "You're through. Go ahead, caller." },
+]
+
+[[clip]]
+id = "call-open-03"
+category = "call"
+kit = "calls"
+part = "open"
+lines = [
+  { sfx = "phone-ring", seconds = 1.2 },
+  { say = "operator", text = "Central. I'm putting you through to a universe I've never had a call from.", gap = 0.5 },
+  { say = "operator", text = "This should be interesting. Go ahead." },
+]
+
+[[clip]]
+id = "call-open-04"
+category = "call"
+kit = "calls"
+part = "open"
+lines = [
+  { say = "operator", text = "Long distance. Very long distance.", gap = 0.5 },
+  { say = "operator", text = "Please speak clearly, and allow for the delay. Go ahead." },
+]
+
+[[clip]]
+id = "call-open-05"
+category = "call"
+kit = "calls"
+part = "open"
+lines = [
+  { say = "operator", text = "You're connected. Mind the crackle.", gap = 0.5 },
+  { say = "operator", text = "That's just time, getting in the way." },
+]
+
+[[clip]]
+id = "call-body-01"
+category = "call"
+kit = "calls"
+part = "body"
+title = "The Lighthouse Job"
+lines = [
+  { say = "caller_a", text = "Hello? Is that me? The one who took the lighthouse job?", name = "A Caller, Who Stayed" },
+  { say = "caller_b", text = "It's me. I took the lighthouse.", name = "A Caller, Who Went" },
+  { say = "caller_a", text = "Is it nice?", name = "A Caller, Who Stayed", gap = 0.6 },
+  { say = "caller_b", text = "It's very quiet.", name = "A Caller, Who Went", gap = 0.8 },
+  { say = "caller_a", text = "Good. I hoped it would be quiet.", name = "A Caller, Who Stayed" },
+  { say = "caller_b", text = "How's the flat?", name = "A Caller, Who Went" },
+  { say = "caller_a", text = "Loud. I like it.", name = "A Caller, Who Stayed", gap = 0.6 },
+  { say = "caller_b", text = "Good. I hoped you would.", name = "A Caller, Who Went" },
+]
+
+[[clip]]
+id = "call-body-02"
+category = "call"
+kit = "calls"
+part = "body"
+title = "Forty Years Overdue"
+lines = [
+  { say = "caller_c", text = "Hello, is that the library on Carrow Street? The one that wasn't knocked down?", name = "A Caller with a Library Book" },
+  { say = "caller_d", text = "Speaking.", name = "A Librarian" },
+  { say = "caller_c", text = "I've got one of your books. I'm afraid it's forty years overdue.", name = "A Caller with a Library Book" },
+  { say = "caller_d", text = "Forty? It's only been a week, here.", name = "A Librarian", gap = 0.7 },
+  { say = "caller_c", text = "Oh. Then I'm only a week late.", name = "A Caller with a Library Book" },
+  { say = "caller_d", text = "Just the week. We'll say no more about it. Did you like it?", name = "A Librarian" },
+  { say = "caller_c", text = "I read it every year.", name = "A Caller with a Library Book" },
+]
+
+[[clip]]
+id = "call-body-03"
+category = "call"
+kit = "calls"
+part = "body"
+title = "Biscuit"
+lines = [
+  { say = "caller_e", text = "Biscuit? Biscuit, is that you?", name = "A Caller" },
+  { say = "caller_f", text = "Hello! Hello! Is it you? It's you!", name = "Biscuit, a Dog" },
+  { say = "caller_e", text = "Are you being a good boy?", name = "A Caller" },
+  { say = "caller_f", text = "I'm being the best boy. I've been the best boy all day. Nobody here can tell, though.", name = "Biscuit, a Dog" },
+  { say = "caller_e", text = "I can tell. I'll ring again on Sunday.", name = "A Caller" },
+  { say = "caller_f", text = "What's Sunday?", name = "Biscuit, a Dog", gap = 0.5 },
+  { say = "caller_e", text = "Soon.", name = "A Caller", gap = 0.4 },
+  { say = "caller_f", text = "I love soon!", name = "Biscuit, a Dog" },
+]
+
+[[clip]]
+id = "call-body-04"
+category = "call"
+kit = "calls"
+part = "body"
+title = "The Dance Hall"
+lines = [
+  { say = "caller_g", text = "Hello. Is that the dance hall? Nineteen fifty two? The night of the competition?", name = "A Caller, Aged Ninety" },
+  { say = "caller_h", text = "It is. Who's this?", name = "A Girl at the Dance Hall" },
+  { say = "caller_g", text = "Never mind who. Did we win?", name = "A Caller, Aged Ninety", gap = 0.6 },
+  { say = "caller_h", text = "We won.", name = "A Girl at the Dance Hall" },
+  { say = "caller_g", text = "Was I any good?", name = "A Caller, Aged Ninety", gap = 0.6 },
+  { say = "caller_h", text = "You were terrible. You trod on him twice. We won anyway.", name = "A Girl at the Dance Hall", gap = 0.6 },
+  { say = "caller_g", text = "That's how I remember it.", name = "A Caller, Aged Ninety" },
+]
+
+[[clip]]
+id = "call-body-05"
+category = "call"
+kit = "calls"
+part = "body"
+title = "Two Wrong Numbers"
+lines = [
+  { say = "caller_i", text = "Sorry. I think I've got the wrong universe.", name = "A Wrong Number" },
+  { say = "caller_j", text = "So have I.", name = "Another Wrong Number", gap = 1.0 },
+  { say = "caller_i", text = "Oh.", name = "A Wrong Number", gap = 0.8 },
+  { say = "caller_j", text = "Shall we just stay on a minute?", name = "Another Wrong Number" },
+  { say = "caller_i", text = "Yes. If that's all right.", name = "A Wrong Number" },
+  { say = "caller_j", text = "It's all right.", name = "Another Wrong Number", gap = 1.4 },
+  { say = "operator", text = "I'll leave this one connected." },
+]
+
+[[clip]]
+id = "call-body-06"
+category = "call"
+kit = "calls"
+part = "body"
+title = "Anyone Who's Awake"
+lines = [
+  { say = "caller_k", text = "Operator, could you put me through to anyone who's awake?", name = "A Caller, Very Late" },
+  { say = "op_line", text = "Anyone at all?" },
+  { say = "caller_k", text = "Anyone at all.", name = "A Caller, Very Late" },
+  { say = "op_line", text = "Connecting you to anyone." },
+  { sfx = "phone-ring", seconds = 1.0 },
+  { say = "caller_d", text = "Hello?", name = "Anyone" },
+  { say = "caller_k", text = "Hello. I'm awake.", name = "A Caller, Very Late", gap = 0.6 },
+  { say = "caller_d", text = "So am I.", name = "Anyone", gap = 1.0 },
+  { say = "caller_k", text = "Okay.", name = "A Caller, Very Late", gap = 0.6 },
+  { say = "caller_d", text = "Okay.", name = "Anyone" },
+]
+
+[[clip]]
+id = "call-body-07"
+category = "call"
+kit = "calls"
+part = "body"
+title = "The Iron"
+lines = [
+  { say = "caller_l", text = "Hello, is that the universe next door? I think you've left your iron on.", name = "A Concerned Neighbour" },
+  { say = "caller_a", text = "We don't have irons.", name = "The Universe Next Door" },
+  { say = "caller_l", text = "Then what's that smell?", name = "A Concerned Neighbour" },
+  { say = "caller_a", text = "That's Tuesday. It always smells like that.", name = "The Universe Next Door", gap = 0.6 },
+  { say = "caller_l", text = "Oh. Sorry to bother you.", name = "A Concerned Neighbour" },
+  { say = "caller_a", text = "Not at all. Thank you for checking. Nobody ever checks.", name = "The Universe Next Door" },
+]
+
+[[clip]]
+id = "call-body-08"
+category = "call"
+kit = "calls"
+part = "body"
+title = "The Kitchen"
+lines = [
+  { say = "caller_e", text = "Hello, Mum? It's me. From the one where I moved away.", name = "A Caller, Who Moved Away" },
+  { say = "caller_g", text = "Hello, love. You sound far.", name = "Mum" },
+  { say = "caller_e", text = "I am. Tell me about the kitchen.", name = "A Caller, Who Moved Away" },
+  { say = "caller_g", text = "The kitchen? It's the same. The clock's still slow. The radio's on. Your coat's on the hook.", name = "Mum", gap = 0.8 },
+  { say = "caller_e", text = "Tell me about the kitchen again.", name = "A Caller, Who Moved Away", gap = 1.0 },
+  { say = "caller_g", text = "The clock's still slow, love.", name = "Mum" },
+]
+
+[[clip]]
+id = "call-body-09"
+category = "call"
+kit = "calls"
+part = "body"
+title = "Tuesday's Dream"
+lines = [
+  { say = "caller_h", text = "Hello. Is that the dream I had on Tuesday?", name = "A Caller" },
+  { say = "caller_m", text = "Speaking.", name = "A Dream, Tuesday's" },
+  { say = "caller_h", text = "I just wanted to say sorry. About the bit with the stairs.", name = "A Caller" },
+  { say = "caller_m", text = "Which bit?", name = "A Dream, Tuesday's", gap = 0.6 },
+  { say = "caller_h", text = "You know which bit.", name = "A Caller", gap = 0.8 },
+  { say = "caller_m", text = "Oh. That bit. Nobody minded. The stairs thought it was funny.", name = "A Dream, Tuesday's" },
+]
+
+[[clip]]
+id = "call-body-10"
+category = "call"
+kit = "calls"
+part = "body"
+title = "A Small Regret"
+lines = [
+  { say = "caller_c", text = "And tell her I'll be home by", name = "A Caller in a Phone Box", cut = 0.9 },
+  { say = "op_line", text = "Please insert another coin, or a small regret. Either is accepted." },
+  { say = "caller_c", text = "Here.", name = "A Caller in a Phone Box", gap = 0.6 },
+  { say = "op_line", text = "Thank you. That's a large regret. You have six minutes.", gap = 0.6 },
+  { say = "caller_c", text = "Tell her I'm sorry about the shed.", name = "A Caller in a Phone Box" },
+  { say = "caller_b", text = "She says she knows. She says, come home.", name = "Somebody at Home" },
+]
+
+[[clip]]
+id = "call-close-01"
+category = "call"
+kit = "calls"
+part = "close"
+lines = [
+  { sfx = "phone-hangup" },
+  { say = "operator", text = "Your party has hung up." },
+]
+
+[[clip]]
+id = "call-close-02"
+category = "call"
+kit = "calls"
+part = "close"
+lines = [
+  { sfx = "phone-hangup" },
+  { say = "operator", text = "Your party has hung up. They said goodbye first. I thought you'd want to know." },
+]
+
+[[clip]]
+id = "call-close-03"
+category = "call"
+kit = "calls"
+part = "close"
+lines = [
+  { say = "operator", text = "That line has cleared. I didn't hear a word.", gap = 0.5 },
+  { say = "operator", text = "Next caller, please." },
+]
+
+[[clip]]
+id = "call-close-04"
+category = "call"
+kit = "calls"
+part = "close"
+lines = [
+  { sfx = "phone-hangup" },
+  { say = "operator", text = "The other universe has gone quiet. Please replace the receiver. Gently. It remembers." },
+]
+
+[[clip]]
+id = "call-close-05"
+category = "call"
+kit = "calls"
+part = "close"
+lines = [
+  { say = "operator", text = "Call ended. The charges have been reversed, and then reversed again, so nobody owes anybody.", gap = 0.5 },
+  { say = "operator", text = "That's how I like it." },
+]
+
+# ── The Convergence (v4): one reaction per kit ────────────────────────────────
+
+[[clip]]
+id = "convergence-missing-moon"
+category = "event"
+event = "convergence"
+kit = "missing-moon"
+title = "Everyone Ringing About a Moon"
+lines = [
+  { say = "operator", text = "Every light on the board has just lit up. Everybody ringing about a moon.", gap = 0.6 },
+  { say = "operator", text = "None of them has it. So I've connected them all to each other. They're comparing skies. It seems to help." },
+]
+
+[[clip]]
+id = "convergence-the-smell"
+category = "event"
+event = "convergence"
+kit = "the-smell"
+title = "Toast on the Exchange"
+lines = [
+  { say = "operator", text = "The whole exchange smells of toast. I've sat at this board since nineteen forty six, and nobody has ever offered me any.", gap = 0.6 },
+  { say = "operator", text = "I'm putting that on the record. And taking it off again. Discretion." },
+]
+
+[[clip]]
+id = "convergence-the-song"
+category = "event"
+event = "convergence"
+kit = "the-song"
+title = "I Repeat Nothing"
+lines = [
+  { say = "operator", text = "Every line on the board is humming the same half a tune. Callers keep asking me how it ends.", gap = 0.6 },
+  { say = "operator", text = "I could tell them. I've heard it finished, on a call in nineteen fifty one. But I repeat nothing." },
+]
+
+[[clip]]
+id = "convergence-the-knock"
+category = "event"
+event = "convergence"
+kit = "the-knock"
+title = "You Don't Knock on an Exchange"
+lines = [
+  { say = "operator", text = "Three knocks on the exchange door. In eighty years, nobody has knocked. You don't knock on a switchboard. You ring it.", gap = 0.6 },
+  { say = "operator", text = "I've kept the door shut, and left a line open. In case they'd rather call." },
+]
+
+[[clip]]
+id = "convergence-wrong-colour"
+category = "event"
+event = "convergence"
+kit = "wrong-colour"
+title = "Every Lamp the New Colour"
+lines = [
+  { say = "operator", text = "Every lamp on the board has gone the new colour. I can't tell which light is which.", gap = 0.6 },
+  { say = "operator", text = "So I'm putting everyone through to everyone. Strangers, talking about the sky. Best night we've had in years." },
+]
+
+[[clip]]
+id = "convergence-the-pigeon"
+category = "event"
+event = "convergence"
+kit = "the-pigeon"
+title = "A Pigeon on the Cords"
+lines = [
+  { say = "operator", text = "There is a pigeon standing on the switchboard. It has just connected Gristwick to the bottom of the sea.", gap = 0.6 },
+  { say = "operator", text = "I don't usually allow visitors at the board. It seems to have a pass." },
+]

@@ -10,12 +10,20 @@
 //     the deep band (108–160) and below 87.5
 //   - secret stations: roster stations with `secret`, very narrow, at their exact frequency
 //
-// Pure and cheap: the table is built once on first use (~1,700 hashes) and lookups are a
-// binary search.
+// v4: the Outer Band (108–118) holds twelve ordinary stations and only a few pirates, and
+// the roster's part of the dial follows a *layout* (./secrets.ts): Free Frequency moves
+// every night, gated secrets transmit only when on the air or once found, and a patient
+// listener's visitor sits wherever they are. Pirates and oddities keep clear of every
+// station's frequency, every drift slot and every secret, on the air or not.
+//
+// Pure and cheap: pirates and oddities are placed once on first use (~1,700 hashes), the
+// roster part is merged in again only when the layout changes, and lookups are a binary
+// search.
 
 import type { PirateIdentity } from '../content/pirates';
-import { MAIN_STATIONS, STATIONS, stationById } from '../stations/roster';
+import { STATIONS, stationById } from '../stations/roster';
 import { createRng, hash } from './random';
+import { DISCOVER_SIGNAL, DRIFT_SLOTS, SECRET_REACH, dialLayout, type DialLayout } from './secrets';
 import {
   DIAL,
   ODDITY_IDS,
@@ -44,13 +52,13 @@ export interface Transmitter {
 }
 
 /** Reach of each kind of transmitter (MHz to silence). */
-export const REACH = { station: 0.17, secret: 0.08, pirate: 0.12, oddity: 0.1 } as const;
+export const REACH = { station: 0.17, secret: SECRET_REACH, pirate: 0.12, oddity: 0.1 } as const;
 /** Below this signal the dial reports static (you may still hear faint bleed). */
 export const TUNED_MIN = 0.12;
 /** Beyond its reach a transmitter still bleeds faintly through the static, out to this distance. */
 export const BLEED_RANGE = 0.55;
-/** Secrets and pirates count as found after this signal… */
-export const DISCOVER_SIGNAL = 0.8;
+/** Secrets and pirates count as found after this signal (see ./secrets)… */
+export { DISCOVER_SIGNAL };
 /** …held for this long. */
 export const DISCOVER_MS = 1200;
 
@@ -249,26 +257,37 @@ class Tx implements Transmitter {
   }
 }
 
-interface Table {
-  all: Tx[];
-  byId: Map<string, Tx>;
+interface Base {
   pirates: Tx[];
   oddities: Tx[];
 }
 
-let table: Table | null = null;
+interface Table extends Base {
+  layout: DialLayout;
+  all: Tx[];
+  byId: Map<string, Tx>;
+  /** Roster stations by id, at their current frequency (on the air or not). */
+  roster: Map<string, StationDef>;
+}
 
-function buildTable(): Table {
-  const fixed: Tx[] = STATIONS.map(
-    (s) => new Tx('station', s.id, s.frequency, s.secret ? REACH.secret : REACH.station, 1, () => s),
-  );
-  const mainFreqs = MAIN_STATIONS.map((s) => s.frequency);
+let base: Base | null = null;
+let table: Table | null = null;
+let layout: DialLayout | null = null;
+
+/** Chance that an Outer Band slot is a pirate candidate (main band 0.3, deep band 0.6). */
+const OUTER_PIRATE_CHANCE = 0.16;
+
+/** Pirates and oddities: placed for good, clear of every frequency a roster station may use. */
+function buildBase(): Base {
+  const [mainLo, mainHi] = DIAL.mainBand;
+  const [outerLo, outerHi] = DIAL.outerBand;
+  const mainFreqs = [...STATIONS.filter((s) => !s.secret).map((s) => s.frequency), ...DRIFT_SLOTS];
   const secretFreqs = STATIONS.filter((s) => s.secret).map((s) => s.frequency);
   const near = (f: number, list: number[], d: number) => list.some((x) => Math.abs(x - f) < d - 1e-9);
+  const inOuter = (f: number) => f > outerLo && f <= outerHi;
 
   // Oddities first: a couple of each, away from stations and each other. One lives in the
   // main band, so casual listeners have a chance of stumbling on something strange.
-  const [mainLo, mainHi] = DIAL.mainBand;
   const oddities: Tx[] = [];
   const oddFreqs: number[] = [];
   for (const oddity of ODDITY_IDS) {
@@ -287,21 +306,22 @@ function buildTable(): Table {
     }
   }
 
-  // Pirates: candidate slots by hash, thinned so no two sit within `sep` slots.
+  // Pirates: candidate slots by hash, thinned so no two sit within `sep` slots. Sparse in the
+  // main band, sparser still in the Outer Band (it has stations of its own), dense elsewhere.
   const candidate = new Float64Array(SLOTS + 1).fill(NaN);
   for (let k = 0; k <= SLOTS; k++) {
     const f = slotFrequency(k);
     if (near(f, mainFreqs, 0.2) || near(f, secretFreqs, 0.25) || near(f, oddFreqs, 0.25)) continue;
     const inMain = f >= mainLo && f <= mainHi;
     const roll = unit(hash('pirate-slot', key(f)));
-    if (roll < (inMain ? 0.3 : 0.6)) candidate[k] = roll;
+    if (roll < (inMain ? 0.3 : inOuter(f) ? OUTER_PIRATE_CHANCE : 0.6)) candidate[k] = roll;
   }
   const pirates: Tx[] = [];
   for (let k = 0; k <= SLOTS; k++) {
     const roll = candidate[k]!;
     if (Number.isNaN(roll)) continue;
     const f = slotFrequency(k);
-    const sep = f >= mainLo && f <= mainHi ? 5 : 6;
+    const sep = f >= mainLo && f <= mainHi ? 5 : inOuter(f) ? 8 : 6;
     let best = true;
     for (let j = Math.max(0, k - sep); j <= Math.min(SLOTS, k + sep) && best; j++) {
       if (j !== k && !Number.isNaN(candidate[j]!) && (candidate[j]! < roll || (candidate[j] === roll && j < k))) best = false;
@@ -310,41 +330,82 @@ function buildTable(): Table {
     const peak = round2(0.86 + unit(hash('pirate-peak', key(f))) * 0.14);
     pirates.push(new Tx('pirate', `pirate-${key(f)}`, f, REACH.pirate, peak, () => pirateStation(f)));
   }
+  return { pirates, oddities };
+}
 
-  const all = [...fixed, ...oddities, ...pirates].sort((a, b) => a.frequency - b.frequency);
-  return { all, byId: new Map(all.map((t) => [t.id, t])), pirates, oddities };
+function buildTable(current: DialLayout): Table {
+  const fixed = (base ??= buildBase());
+  const stations = current.onAir.map(
+    (s) => new Tx('station', s.id, s.frequency, s.secret ? REACH.secret : REACH.station, 1, () => s),
+  );
+  const all = [...stations, ...fixed.oddities, ...fixed.pirates].sort((a, b) => a.frequency - b.frequency);
+  return {
+    ...fixed,
+    layout: current,
+    all,
+    byId: new Map(all.map((t) => [t.id, t])),
+    roster: new Map(current.roster.map((s) => [s.id, s])),
+  };
+}
+
+/** The layout in force (until the director sets one: now, with nothing found yet). */
+export function currentLayout(): DialLayout {
+  return (layout ??= dialLayout({ ms: Date.now(), discovered: [] }));
+}
+
+/**
+ * v4: puts the roster on the dial as a layout describes (drift, gated secrets, a visitor).
+ * The director sets it whenever the layout's key changes. Returns true if anything changed.
+ */
+export function setDialLayout(next: DialLayout): boolean {
+  const changed = layout?.key !== next.key;
+  layout = next;
+  return changed;
 }
 
 function getTable(): Table {
-  return (table ??= buildTable());
+  const current = currentLayout();
+  if (!table || table.layout !== current) table = buildTable(current);
+  return table;
 }
 
-/** Every transmitter on the dial, by frequency. */
+/** Every transmitter on the dial right now, by frequency. */
 export function transmitters(): readonly Transmitter[] {
   return getTable().all;
 }
 
 export function pirates(): readonly Transmitter[] {
-  return getTable().pirates;
+  return (base ??= buildBase()).pirates;
 }
 
 export function oddities(): readonly Transmitter[] {
-  return getTable().oddities;
+  return (base ??= buildBase()).oddities;
 }
 
 export function transmitterById(id: string): Transmitter | undefined {
   return getTable().byId.get(id);
 }
 
+/** v4: every roster station at its current frequency (Free Frequency at tonight's), by frequency. */
+export function dialStations(): readonly StationDef[] {
+  return currentLayout().roster;
+}
+
+/** v4: the main (non-secret) stations at their current frequencies, by frequency. */
+export function mainStations(): StationDef[] {
+  return currentLayout().roster.filter((s) => !s.secret);
+}
+
 /** The pirate centred on this frequency (to the 0.05 MHz slot), if there is one. */
 export function pirateAt(mhz: number): StationDef | null {
   const t = getTable().byId.get(`pirate-${key(snapFrequency(mhz))}`);
-  return t ? t.station : null;
+  return t?.kind === 'pirate' ? t.station : null;
 }
 
-/** A roster station, a pirate (`pirate-<MHz>`) or an oddity's programme, by id. */
+/** A roster station (at its current frequency), a pirate (`pirate-<MHz>`) or an oddity's programme, by id. */
 export function stationForId(id: string): StationDef | undefined {
-  return stationById(id) ?? getTable().byId.get(id)?.station;
+  const t = getTable();
+  return t.roster.get(id) ?? stationById(id) ?? t.byId.get(id)?.station;
 }
 
 // ── Reception ─────────────────────────────────────────────────────────────────
@@ -403,9 +464,23 @@ export function receptionAt(mhz: number): Reception {
   return { frequency, signal: best, lock, tuned: tunedFor(lock, best) };
 }
 
-/** The next (+1) or previous (−1) main station along the dial from a frequency, wrapping. */
+/**
+ * Bleed below this is lost under the static (its level is ≥ 30 dB under the dial noise), so
+ * it doesn't count as hearing anything.
+ */
+export const QUIET_BLEED = 0.3;
+
+/** v4: pure static: no signal at all, and no bleed you could hear. */
+export function pureStatic(r: Reception): boolean {
+  return r.signal === 0 && (r.lock === null || bleedOf(r.lock, r.frequency) < QUIET_BLEED);
+}
+
+/**
+ * The next (+1) or previous (−1) main station along the dial from a frequency, wrapping:
+ * main band and Outer Band alike, at their current frequencies.
+ */
 export function stepFrom(mhz: number, delta: 1 | -1): StationDef {
-  const list = MAIN_STATIONS;
+  const list = mainStations();
   if (delta > 0) return list.find((s) => s.frequency > mhz + 1e-6) ?? list[0]!;
   for (let i = list.length - 1; i >= 0; i--) if (list[i]!.frequency < mhz - 1e-6) return list[i]!;
   return list[list.length - 1]!;

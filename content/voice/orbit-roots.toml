@@ -1,0 +1,403 @@
+# Orbit Roots — 109.3, the Greenhouse Ring, Meridian Farm Moon.
+#
+# Sister Meridian hosts from a hand-painted shack with a speaker stack on the porch: farmer,
+# selector and the moon's conscience. Warm, unhurried, funny without mocking anyone. The
+# humour comes from the farm moon, never from the culture: no phonetic accents, no caricature.
+#
+# The world: long glass greenhouses under Oldwater, a ringed planet whose rings are ice. The
+# water comes down off the rings; Clearline Holdings, three systems away, keeps writing to say
+# they own it (on very nice paper). Low gravity: beans grow up into the dark, pumpkins float,
+# bees fly sideways. The irrigation runs on the off-beat. The tomatoes by the speaker stack are
+# two weeks ahead of the ones by the office.
+#
+# People: Brother Amos at the pump house, Mother Hale (sixty years farming), the children of
+# the co-op. Cross-station: Greg the shadow (shade is precious here), Bev and the request line,
+# Grumbel's Ladders. Resident artists in src/content/packs/v4b.ts.
+station = "orbit-roots"
+
+[voices]
+host = { voice = "af_kore", speed = 0.95, name = "Sister Meridian" }
+amos = { voice = "am_fenrir", speed = 0.92, fx = "radio", name = "Brother Amos, the Pump House" }
+
+[[show]]
+id = "first-light"
+name = "First Light Irrigation"
+blurb = "The misters come on across the whole ring. Crop reports, pump pressure and something gentle for the lettuce."
+start = 5
+end = 8
+
+[[show]]
+id = "the-long-table"
+name = "The Long Table"
+blurb = "Lunch in the packing shed: whatever is ripe, a crate to sit on, and a little talk about who owns the water."
+start = 12
+end = 14
+
+[[show]]
+id = "deep-roots"
+name = "Deep Roots"
+blurb = "The greenhouses are dark and the plants are sleeping. The bass goes down into the soil. The roots are awake."
+start = 22
+end = 2
+
+# ── Idents ────────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "id-001"
+category = "id"
+lines = [
+  { say = "host", text = "Orbit Roots, one oh nine point three. Roots music from the Greenhouse Ring, where nothing is in a hurry. Least of all me." },
+  { sting = "id" },
+]
+
+[[clip]]
+id = "id-002"
+category = "id"
+lines = [
+  { say = "host", text = "You're listening to Orbit Roots. Sister Meridian, on the porch, by the speaker stack. The tomatoes can hear you too. Be kind." },
+]
+
+[[clip]]
+id = "id-003"
+category = "id"
+lines = [
+  { say = "host", text = "Orbit Roots, from the moon that feeds three systems. If you ate a salad this week, it heard us first." },
+  { sting = "id" },
+]
+
+[[clip]]
+id = "id-004"
+category = "id"
+daypart = "morning"
+lines = [
+  { say = "host", text = "Good morning from Orbit Roots. The misters are on, the ring is up, and the beans grew another metre in the night. Give thanks." },
+]
+
+[[clip]]
+id = "id-005"
+category = "id"
+daypart = "night"
+lines = [
+  { say = "host", text = "Orbit Roots, late on the farm moon. The ring is low, and the bass is going down to the roots. Where it belongs." },
+  { sting = "id" },
+]
+
+# ── Host links ────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "dj-001"
+category = "dj"
+title = "On the Off-Beat"
+lines = [
+  { say = "host", text = "The irrigation on this moon runs on the off-beat. It always has. Whoever built these pumps knew exactly what they were doing." },
+  { say = "host", text = "Every second beat, a little water. Every second beat, a little bass. Everything on this moon grows on the off-beat. Including me." },
+]
+
+[[clip]]
+id = "dj-002"
+category = "dj"
+title = "Two Weeks Ahead"
+lines = [
+  { say = "host", text = "People ask why our tomatoes are so big. Some of it is the low gravity. Most of it is the speaker stack." },
+  { say = "host", text = "The tomatoes by the porch are two weeks ahead of the tomatoes by the office. Nobody is surprised. The office plays nothing all day. The office plays spreadsheets." },
+]
+
+[[clip]]
+id = "dj-003"
+category = "dj"
+title = "A Letter on Very Nice Paper"
+lines = [
+  { say = "host", text = "A letter came up today from Clearline Holdings, three systems away. Very nice paper. It says the water that comes down off the rings belongs to them." },
+  { say = "host", text = "Now. That ice was falling off those rings before there was paper. Before there were letters. It will still be falling after.", gap = 0.6 },
+  { say = "host", text = "We wrote back. On a cabbage leaf. Here's a tune while it gets there." },
+]
+
+[[clip]]
+id = "dj-004"
+category = "dj"
+title = "Greg in the Lettuce"
+lines = [
+  { say = "host", text = "Shade is precious on a greenhouse moon. So when a little shadow called Greg turned up and stood over the lettuce bed all afternoon, the lettuce was very grateful." },
+  { say = "host", text = "He says he's on his way home, to a man called Hollis. He's welcome back any time. The spinach is jealous." },
+]
+
+[[clip]]
+id = "dj-005"
+category = "dj"
+title = "Bev Rings the Pump House"
+lines = [
+  { say = "host", text = "Bev called again. She was looking for the request line. She got the pump house." },
+  { say = "host", text = "Brother Amos took her request anyway. He can't play records down there, so he played it on the pipes. She says it wasn't her song. But the carrots haven't stopped talking about it." },
+]
+
+[[clip]]
+id = "dj-006"
+category = "dj"
+daypart = "night"
+title = "For the Night Shift"
+lines = [
+  { say = "host", text = "A word for the operator on the relay ship, passing over us in the night. We saw your running lights go across the ring." },
+  { say = "host", text = "You've drifted a long way out to find us, out here on the edge of the dial. You're welcome. Wipe your feet. There's soil on everything." },
+]
+
+[[clip]]
+id = "dj-007"
+category = "dj"
+title = "Sponsored by Grumbel's Ladders"
+lines = [
+  { say = "host", text = "This hour comes to you with the help of Grumbel's Ladders. In low gravity the runner beans grow straight up into the dark, and somebody has to go up after them." },
+  { say = "host", text = "Grumbel's Ladders. Up is a choice. Some days, up is a bean." },
+]
+
+[[clip]]
+id = "dj-008"
+category = "dj"
+title = "Mother Hale"
+lines = [
+  { say = "host", text = "Mother Hale has farmed this moon for sixty years. She says the secret is patience, good soil, and never arguing with a pumpkin that has decided to float." },
+  { say = "host", text = "This one's for Mother Hale. Turn it up a little. She's in the far greenhouse, and she says the young ones play everything too quiet." },
+]
+
+[[clip]]
+id = "dj-009"
+category = "dj"
+daypart = "day"
+lines = [
+  { say = "host", text = "Afternoon on the farm moon. Oldwater is high, the misters are turning in slow circles, and somewhere in greenhouse nine, a bee is flying sideways." },
+  { say = "host", text = "Low gravity. She's doing her best. So are we all." },
+]
+
+# ── Ads and notices ───────────────────────────────────────────────────────────
+
+[[clip]]
+id = "ad-001"
+category = "ad"
+title = "The Ringside Seed Exchange"
+lines = [
+  { say = "host", text = "Bring a seed, take a seed. The Ringside Seed Exchange, behind the packing shed. Open whenever somebody is there, which is usually Mother Hale." },
+  { say = "host", text = "No money changes hands. Money doesn't grow here. We tried. We planted some. Nothing came up but a letter from the bank.", gap = 0.6 },
+  { say = "host", text = "The Ringside Seed Exchange. Everything you plant comes back. Mostly." },
+]
+
+[[clip]]
+id = "psa-001"
+category = "psa"
+title = "Respect the Pipes"
+lines = [
+  { say = "host", text = "A notice from the Greenhouse Ring Co-operative. When the pumps are running, please don't stand on the pipes." },
+  { say = "host", text = "When the pumps are not running, please also don't stand on the pipes. They're old. They've carried a great deal of water for a great many people. They've done enough.", gap = 0.6 },
+  { say = "host", text = "Respect the pipes." },
+]
+
+# ── Crop report kit (open, one to three bodies, close) ───────────────────────
+
+[[clip]]
+id = "crop-open-01"
+category = "news"
+kit = "crop-report"
+part = "open"
+lines = [
+  { say = "host", text = "Time for the crop report, from greenhouse one, all the way round to greenhouse forty." },
+]
+
+[[clip]]
+id = "crop-open-02"
+category = "news"
+kit = "crop-report"
+part = "open"
+lines = [
+  { say = "host", text = "Crop report. Brother Amos, how's the ring looking?" },
+  { say = "amos", text = "Green, Sister. Mostly green." },
+]
+
+[[clip]]
+id = "crop-body-01"
+category = "news"
+kit = "crop-report"
+part = "body"
+lines = [
+  { say = "host", text = "Runner beans. Up another metre. The tallest has gone through the roof panel in greenhouse twelve and is now, technically, in space. We've sent somebody up with a ladder and a very long piece of string." },
+]
+
+[[clip]]
+id = "crop-body-02"
+category = "news"
+kit = "crop-report"
+part = "body"
+lines = [
+  { say = "host", text = "Cabbages. Heavy. On a moon like this, heavy is the highest compliment there is. The cabbage crew are walking taller today." },
+]
+
+[[clip]]
+id = "crop-body-03"
+category = "news"
+kit = "crop-report"
+part = "body"
+lines = [
+  { say = "host", text = "Pumpkins. Three of them have floated off the patch and are drifting slowly towards the packing shed. Leave them. They know the way. They do this every season." },
+]
+
+[[clip]]
+id = "crop-body-04"
+category = "news"
+kit = "crop-report"
+part = "body"
+lines = [
+  { say = "host", text = "Water. The ice came down off the rings this morning, clean and cold, the same as it has every morning for a thousand years. Nobody sent us a bill. Not yet. Give thanks anyway." },
+]
+
+[[clip]]
+id = "crop-close-01"
+category = "news"
+kit = "crop-report"
+part = "close"
+lines = [
+  { say = "host", text = "That's the crop report. Eat your greens. Somebody up here grew them for you." },
+]
+
+# ── First Light Irrigation (5–8) ──────────────────────────────────────────────
+
+[[clip]]
+id = "id-first-light"
+category = "id"
+show = "first-light"
+part = "open"
+lines = [
+  { say = "host", text = "Good morning. This is First Light Irrigation, on Orbit Roots. The misters are coming on, all the way round the ring. Wake up gently. The lettuce is." },
+  { sting = "id" },
+]
+
+[[clip]]
+id = "dj-first-light-001"
+category = "dj"
+show = "first-light"
+lines = [
+  { say = "host", text = "Morning word from the pump house. Brother Amos?" },
+  { say = "amos", text = "Pressure's good, Sister. Pipes are singing. And one sprinkler in row six has turned round to face the speaker stack again." },
+  { say = "host", text = "Leave it be. It knows what it likes. This one's for row six." },
+]
+
+# ── The Long Table (12–14) ────────────────────────────────────────────────────
+
+[[clip]]
+id = "id-the-long-table"
+category = "id"
+show = "the-long-table"
+part = "open"
+lines = [
+  { say = "host", text = "This is the Long Table, on Orbit Roots. Pull up a crate. Lunch is whatever's ripe. Today, that's nearly everything." },
+]
+
+[[clip]]
+id = "dj-the-long-table-001"
+category = "dj"
+show = "the-long-table"
+title = "Who Owns the Water"
+lines = [
+  { say = "host", text = "At the long table today, the children of the co-op took on the big question. Who owns the water?" },
+  { say = "host", text = "They said the water belongs to the ice. The ice belongs to the rings. And the rings belong to nobody, because nobody can reach them.", gap = 0.6 },
+  { say = "host", text = "I've been trying to say that for thirty years. They did it before pudding." },
+]
+
+[[clip]]
+id = "dj-the-long-table-002"
+category = "dj"
+show = "the-long-table"
+lines = [
+  { say = "host", text = "Mother Hale has the floor. She says if a company in another system owns our water, then the company is welcome to come up here and drink it." },
+  { say = "host", text = "She's laid them a place at the long table. It's been empty for eleven years. She still puts a spoon out." },
+]
+
+# ── Deep Roots (22–2) ─────────────────────────────────────────────────────────
+
+[[clip]]
+id = "id-deep-roots"
+category = "id"
+show = "deep-roots"
+part = "open"
+lines = [
+  { say = "host", text = "Deep Roots, on Orbit Roots. The greenhouses are dark, the plants are sleeping, and the bass is going down into the soil. The roots are awake. They always are." },
+]
+
+[[clip]]
+id = "dj-deep-roots-001"
+category = "dj"
+show = "deep-roots"
+lines = [
+  { say = "host", text = "This is the hour the roots listen hardest. Down in the soil the bass travels further than the light ever gets." },
+  { say = "host", text = "Somewhere under greenhouse four, a carrot is having the best night of its life. Let's not stop now." },
+]
+
+# ── Halloween ─────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "dj-halloween-001"
+category = "dj"
+title = "The Pumpkins Have Heard"
+dates = ["10-24", "10-25", "10-26", "10-27", "10-28", "10-29", "10-30", "10-31"]
+lines = [
+  { say = "host", text = "It's nearly Halloween, and the pumpkins have heard. Every one of them has floated up to the glass, facing out, very still." },
+  { say = "host", text = "We don't carve them here. We ask. Two have said yes. One is thinking about it. Here's a tune for the one that's thinking." },
+]
+
+# ── The Convergence (one reaction per topic) ──────────────────────────────────
+
+[[clip]]
+id = "convergence-missing-moon"
+category = "event"
+event = "convergence"
+kit = "missing-moon"
+lines = [
+  { say = "host", text = "A moon has gone missing, they say. We checked. We're still here. Feet on the soil.", gap = 0.6 },
+  { say = "host", text = "But if it was yours, and it's lost, the light's on in the greenhouse. Moons are welcome. Bring your own water." },
+]
+
+[[clip]]
+id = "convergence-the-smell"
+category = "event"
+event = "convergence"
+kit = "the-smell"
+lines = [
+  { say = "host", text = "The whole ring smells of toast. We don't make toast up here. We grow the wheat, and somebody else does the rest.", gap = 0.6 },
+  { say = "host", text = "So somebody, somewhere, has finished the job. Give thanks." },
+]
+
+[[clip]]
+id = "convergence-the-song"
+category = "event"
+event = "convergence"
+kit = "the-song"
+lines = [
+  { say = "host", text = "The harvest crew are all humming the same tune, and none of them can finish it. The sprinklers are humming it too.", gap = 0.6 },
+  { say = "host", text = "Bev has rung the pump house to say it's her song. She's probably right." },
+]
+
+[[clip]]
+id = "convergence-the-knock"
+category = "event"
+event = "convergence"
+kit = "the-knock"
+lines = [
+  { say = "host", text = "Three knocks on the shack door, just now. Nobody there. Only the misters, and the ring.", gap = 0.8 },
+  { say = "host", text = "If that was Clearline Holdings, we're out. In the fields. All of us. For years." },
+]
+
+[[clip]]
+id = "convergence-wrong-colour"
+category = "event"
+event = "convergence"
+kit = "wrong-colour"
+lines = [
+  { say = "host", text = "The sky above the greenhouses has gone a colour I don't have a word for. Every lettuce on the moon has turned to face it.", gap = 0.6 },
+  { say = "host", text = "They know something. They're not saying." },
+]
+
+[[clip]]
+id = "convergence-the-pigeon"
+category = "event"
+event = "convergence"
+kit = "the-pigeon"
+lines = [
+  { say = "host", text = "A pigeon has walked into the shack. On a farm moon. It went straight to the seed trays, then looked at me like I owed it something.", gap = 0.6 },
+  { say = "host", text = "Maybe I do. Help yourself, friend." },
+]

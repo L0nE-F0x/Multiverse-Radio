@@ -1,0 +1,391 @@
+# Island Time Observatory — 113.8, Tide Hill, an island that drifted out of time.
+#
+# Professor Easy hosts from the observatory at the top of the hill: astronomer, timekeeper and
+# selector, who has measured time very carefully for forty years and concluded it is optional.
+# Slow, kind, amused. No phonetic accents and no caricature: the joke is the island's time.
+#
+# The world: two suns that set at different speeds (Sooner and Later), three tide markers on
+# the beach that have not agreed since 1983, when the island drifted out of time. Nobody has
+# been late since: when you arrive, that's when it was. The post brings letters before they're
+# written. Miss Dorothy's Half Past Bar, under a clock that has said "half past" for forty years.
+#
+# Cross-station: Greg the shadow asks the time, Teodor at Relay Four on the big dish, Grumbel's
+# Ladders (up to the telescope). Resident artists in src/content/packs/v4b.ts.
+station = "island-time"
+
+[voices]
+host = { voice = "am_liam", speed = 0.9, name = "Professor Easy" }
+dorothy = { voice = "af_aoede", speed = 0.92, name = "Miss Dorothy, the Half Past Bar" }
+
+[[show]]
+id = "morning-eventually"
+name = "Morning, Eventually"
+blurb = "The breakfast show. It starts when the kettle does, and the kettle is thinking about it."
+start = 9
+end = 12
+
+[[show]]
+id = "slow-sunset"
+name = "The Slow Sunset"
+blurb = "Sooner goes down. Later takes three hours about it. Find a chair facing west and stay in it."
+start = 17
+end = 21
+
+[[show]]
+id = "lying-down-astronomy"
+name = "Lying Down Astronomy"
+blurb = "The dome is open, the hammock is strung, and the telescope is pointed roughly up."
+start = 23
+end = 3
+
+# ── Idents ────────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "id-001"
+category = "id"
+lines = [
+  { say = "host", text = "Island Time Observatory, one thirteen point eight. Slow music from Tide Hill. It's half past something. Don't worry which." },
+  { sting = "id" },
+]
+
+[[clip]]
+id = "id-002"
+category = "id"
+lines = [
+  { say = "host", text = "Island Time Observatory. Nobody here has been late since nineteen eighty three. We didn't get punctual. We stopped counting." },
+]
+
+[[clip]]
+id = "id-003"
+category = "id"
+lines = [
+  { say = "host", text = "Island Time Observatory. Two suns, one island, and no hurry whatsoever." },
+  { sting = "id" },
+]
+
+[[clip]]
+id = "id-004"
+category = "id"
+daypart = "morning"
+lines = [
+  { say = "host", text = "Good morning. Or nearly. This is Island Time Observatory, where the morning arrives when it's ready. So do I." },
+]
+
+[[clip]]
+id = "id-005"
+category = "id"
+daypart = "night"
+lines = [
+  { say = "host", text = "Island Time Observatory. The dome is open, and some of the stars are from last week. Take your time. They did." },
+  { sting = "id" },
+]
+
+# ── Host links ────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "dj-001"
+category = "dj"
+title = "Time Is Optional"
+lines = [
+  { say = "host", text = "I have measured time on this island for forty years. With clocks, with sundials, with the tide, and with a very patient tortoise." },
+  { say = "host", text = "My conclusion, published this morning, is that time is optional. The paper isn't finished. It doesn't need to be." },
+]
+
+[[clip]]
+id = "dj-002"
+category = "dj"
+title = "Sooner and Later"
+lines = [
+  { say = "host", text = "The two suns are setting again. The quick one went down an hour ago. The slow one is still thinking it over." },
+  { say = "host", text = "Here we call them Sooner and Later. Most people on the island set their watches by Later. Most people on the island don't wear a watch." },
+]
+
+[[clip]]
+id = "dj-003"
+category = "dj"
+title = "Nineteen Eighty Three"
+lines = [
+  { say = "host", text = "In nineteen eighty three, the island drifted out of time. Nobody noticed for a week. Then somebody went down to catch the ferry, and found it had already arrived. Every day. For good." },
+  { say = "host", text = "Since then, nobody has been late. When you get here, that's when it was." },
+]
+
+[[clip]]
+id = "dj-004"
+category = "dj"
+title = "The Post"
+lines = [
+  { say = "host", text = "The post came this morning, with a letter from me that I haven't written yet. It's very good. I'm looking forward to writing it." },
+  { say = "host", text = "I'll send it off next week, and it will get here this morning. That's the island postal service. Quick, in its own way." },
+]
+
+[[clip]]
+id = "dj-005"
+category = "dj"
+title = "Greg Asks the Time"
+lines = [
+  { say = "host", text = "A shadow came up the hill to the observatory last night, asking the time. Said his name was Greg, and he had to get home to somebody called Hollis." },
+  { say = "host", text = "I told him the truth. Here, it's whenever you arrive. He said that was the kindest thing anybody had told him all trip." },
+]
+
+[[clip]]
+id = "dj-006"
+category = "dj"
+title = "Sponsored by Grumbel's Ladders"
+lines = [
+  { say = "host", text = "The observatory runs on goodwill, mangoes, and Grumbel's Ladders, which is how I get up to the telescope." },
+  { say = "host", text = "Grumbel's Ladders. Up is a choice. On Tide Hill, so is when." },
+]
+
+[[clip]]
+id = "dj-007"
+category = "dj"
+daypart = "night"
+title = "For the Night Shift"
+lines = [
+  { say = "host", text = "A word for the operator on the relay ship. Your heading is moving a little every night. I can see it from here, through the big lens." },
+  { say = "host", text = "Don't worry. On this island, nobody is ever off course. You just arrive somewhere you weren't expecting, and it turns out you were." },
+]
+
+[[clip]]
+id = "dj-008"
+category = "dj"
+title = "Relay Four on the Big Dish"
+lines = [
+  { say = "host", text = "Faint signal on the big dish tonight. A man called Teodor, on Relay Four, asking if anybody can hear him." },
+  { say = "host", text = "We can, Teodor. We heard you in nineteen eighty three as well. Same message. Still lovely. Here's a slow one for you." },
+]
+
+[[clip]]
+id = "dj-009"
+category = "dj"
+daypart = "day"
+title = "Half Past"
+lines = [
+  { say = "host", text = "Afternoon at the beach bar. The clock behind the counter has said half past for forty years. Nobody has ever asked half past what." },
+  { say = "host", text = "It would be rude. The clock is doing its best. So is Miss Dorothy." },
+  { say = "dorothy", text = "I heard that, Professor. It's half past. Drink your juice." },
+]
+
+[[clip]]
+id = "dj-010"
+category = "dj"
+title = "The Time Signal"
+lines = [
+  { say = "host", text = "And now, the observatory time signal. At the third pip, it will be precisely whenever you like." },
+  { sfx = "pips" },
+  { pause = 0.6 },
+  { say = "host", text = "Set your watch by that. Or don't. It really doesn't mind." },
+]
+
+# ── Ads ───────────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "ad-001"
+category = "ad"
+title = "The Half Past Bar"
+lines = [
+  { say = "dorothy", text = "The Half Past Bar, on the beach, under the clock. Fresh juice, cold drinks, and a hammock if you need a hammock." },
+  { say = "dorothy", text = "Happy hour runs from whenever until later. Come down any time you like. You won't be late. Nobody is." },
+  { say = "host", text = "The Half Past Bar. It's half past. It always is." },
+]
+
+# ── Tide tables kit (open, one to three bodies, close) ───────────────────────
+
+[[clip]]
+id = "tides-open-01"
+category = "weather"
+kit = "tides"
+part = "open"
+lines = [
+  { say = "host", text = "Now the tide tables, from the three markers on the beach." },
+]
+
+[[clip]]
+id = "tides-open-02"
+category = "weather"
+kit = "tides"
+part = "open"
+lines = [
+  { say = "host", text = "Tide report. As usual, the markers do not agree. Here is what each of them thinks." },
+]
+
+[[clip]]
+id = "tides-body-01"
+category = "weather"
+kit = "tides"
+part = "body"
+lines = [
+  { say = "host", text = "The marker by the pier says high tide. The water is up to its chin, and it's very sure of itself." },
+]
+
+[[clip]]
+id = "tides-body-02"
+category = "weather"
+kit = "tides"
+part = "body"
+lines = [
+  { say = "host", text = "The marker by the rocks says low tide. The water is round its ankles. The two markers are ten metres apart, and they haven't spoken since nineteen eighty three." },
+]
+
+[[clip]]
+id = "tides-body-03"
+category = "weather"
+kit = "tides"
+part = "body"
+lines = [
+  { say = "host", text = "The marker by the bar says the tide is out to lunch, and will be back shortly. It's said that for forty years. It's never once been wrong." },
+]
+
+[[clip]]
+id = "tides-body-04"
+category = "weather"
+kit = "tides"
+part = "body"
+lines = [
+  { say = "host", text = "The tide itself says nothing. It comes in a little, goes out a little, and looks up at the moon. Of everybody on the beach, I trust the tide." },
+]
+
+[[clip]]
+id = "tides-close-01"
+category = "weather"
+kit = "tides"
+part = "close"
+lines = [
+  { say = "host", text = "That's the tides. Swim whenever you like. The sea will be there. Probably in several places." },
+]
+
+# ── Morning, Eventually (9–12) ────────────────────────────────────────────────
+
+[[clip]]
+id = "id-morning-eventually"
+category = "id"
+show = "morning-eventually"
+part = "open"
+lines = [
+  { sfx = "kettle" },
+  { say = "host", text = "Good morning, eventually. This is Morning, Eventually, on Island Time Observatory. The breakfast show starts when the kettle does. There it goes." },
+]
+
+[[clip]]
+id = "dj-morning-eventually-001"
+category = "dj"
+show = "morning-eventually"
+lines = [
+  { say = "host", text = "Breakfast on the hill. Mango, coffee, and a boiled egg I put on in nineteen eighty three." },
+  { say = "host", text = "It'll be done when it's done. Everything is. Here's something to wait with." },
+]
+
+# ── The Slow Sunset (17–21) ───────────────────────────────────────────────────
+
+[[clip]]
+id = "id-slow-sunset"
+category = "id"
+show = "slow-sunset"
+part = "open"
+lines = [
+  { say = "host", text = "This is the Slow Sunset, on Island Time Observatory. Sooner is going down. Later isn't. Find a chair facing west, and stay in it." },
+  { sting = "id" },
+]
+
+[[clip]]
+id = "dj-slow-sunset-001"
+category = "dj"
+show = "slow-sunset"
+lines = [
+  { say = "host", text = "Sooner has set. Later is hanging just above the water, enormous and orange, in no hurry at all. It takes about three hours to go down." },
+  { say = "host", text = "Some evenings it changes its mind and comes back up for a bit. Nobody complains. It's a lovely sun." },
+]
+
+# ── Lying Down Astronomy (23–3) ───────────────────────────────────────────────
+
+[[clip]]
+id = "id-lying-down-astronomy"
+category = "id"
+show = "lying-down-astronomy"
+part = "open"
+lines = [
+  { say = "host", text = "Lying Down Astronomy, on Island Time Observatory. The dome is open, the hammock is strung, and the telescope is pointed roughly up." },
+]
+
+[[clip]]
+id = "dj-lying-down-astronomy-001"
+category = "dj"
+show = "lying-down-astronomy"
+lines = [
+  { say = "host", text = "Tonight's observations. A star I've been watching since nineteen eighty three. It's still there. I find that very encouraging." },
+  { say = "host", text = "Also three shooting stars, a satellite, and something that might have been a relay ship. Wave, if that was you." },
+]
+
+# ── Halloween ─────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "dj-halloween-001"
+category = "dj"
+title = "The Coconut"
+dates = ["10-24", "10-25", "10-26", "10-27", "10-28", "10-29", "10-30", "10-31"]
+lines = [
+  { say = "host", text = "Halloween on the island isn't one night. It's whichever night you happen to get scared on." },
+  { say = "host", text = "Miss Dorothy has carved a coconut. It's very frightening. It keeps rolling towards you, slowly, like it has all the time in the world. It has." },
+]
+
+# ── The Convergence (one reaction per topic) ──────────────────────────────────
+
+[[clip]]
+id = "convergence-missing-moon"
+category = "event"
+event = "convergence"
+kit = "missing-moon"
+lines = [
+  { say = "host", text = "Somebody has lost a moon, they say. I've been through the telescope. We have one moon tonight. Or the same moon twice.", gap = 0.6 },
+  { say = "host", text = "It depends when you start counting. I'd stop counting." },
+]
+
+[[clip]]
+id = "convergence-the-smell"
+category = "event"
+event = "convergence"
+kit = "the-smell"
+lines = [
+  { say = "host", text = "The whole island smells of toast. Miss Dorothy put the bread under the grill in nineteen eighty three.", gap = 0.6 },
+  { say = "host", text = "It may simply be ready." },
+]
+
+[[clip]]
+id = "convergence-the-song"
+category = "event"
+event = "convergence"
+kit = "the-song"
+lines = [
+  { say = "host", text = "Everybody has the same song in their head, and nobody can finish it.", gap = 0.6 },
+  { say = "host", text = "Here, unfinished is how songs usually are. We'll finish it later. Later is a sun. It's in no hurry." },
+]
+
+[[clip]]
+id = "convergence-the-knock"
+category = "event"
+event = "convergence"
+kit = "the-knock"
+lines = [
+  { say = "host", text = "Three knocks on the observatory door, and nobody there.", gap = 0.8 },
+  { say = "host", text = "Somebody early, which hasn't happened here since nineteen eighty three. Or somebody very late. We'll leave the door open." },
+]
+
+[[clip]]
+id = "convergence-wrong-colour"
+category = "event"
+event = "convergence"
+kit = "wrong-colour"
+lines = [
+  { say = "host", text = "The sky has gone a colour nobody has a word for. I've written it down in the logbook as colour number nine.", gap = 0.6 },
+  { say = "host", text = "We'll give it a proper name when it's finished being that colour. No rush." },
+]
+
+[[clip]]
+id = "convergence-the-pigeon"
+category = "event"
+event = "convergence"
+kit = "the-pigeon"
+lines = [
+  { say = "host", text = "A pigeon has just walked up the observatory steps, and it was on time.", gap = 0.6 },
+  { say = "host", text = "First thing on this island to be on time since nineteen eighty three. We're all a little shaken." },
+]

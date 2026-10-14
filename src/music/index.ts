@@ -238,6 +238,39 @@ export const RECIPE_INFO: Partial<Record<RecipeId, RecipeInfo>> = {
     label: 'Time signal',
     description: 'A pip on every second and a long one on the minute, over a faint carrier. Each dimension has its own idea of a second.',
   },
+  // v4 world recipes and talk beds (music-world workstream, recipes/v4-world.ts)
+  'roots-reggae': {
+    label: 'Roots reggae',
+    description: 'One-drop drums, a guitar-and-piano skank, an organ bubble and a deep singing bass in minor and dorian keys. A melodica sings the verses, trumpet and trombone take the chorus, a spring-reverb snare marks the phrase ends.',
+  },
+  'island-reggae': {
+    label: 'Island reggae',
+    description: 'Lovers rock and rocksteady at a lazy tilt: major sevenths on chorused guitar and electric piano, a sweet vibraphone, steel pan or whistler behind the beat, soft strings and hand drums.',
+  },
+  exotica: {
+    label: 'Exotica',
+    description: 'Vibraphone, bongos and congas in a bolero, cha-cha or jungle beat, lush sevenths on a soft organ or celesta, upright bass, a gliding theremin, a tam-tam and the odd jungle bird.',
+  },
+  'space-age-pop': {
+    label: 'Space-age pop',
+    description: 'A bachelor-pad orchestra in hard-panned stereo: "pa-pa" singers call from one speaker, muted brass answers from the other, xylophone runs bounce between them and the bongos take a demonstration trip across the room.',
+  },
+  'court-bed': {
+    label: 'Court bed',
+    description: 'A stately processional for low strings and a chapel organ, walking pizzicato basses, a horn in the gaps, timpani at the cadences and the occasional rap of the gavel.',
+  },
+  'theatre-organ': {
+    label: 'Theatre organ',
+    description: 'A cinema organ with its tremulant: swelling suspense chords over a pedal, noir stings, a melodramatic minor theme between scenes and a "dun, dun, DUNNN" to finish.',
+  },
+  'traffic-bed': {
+    label: 'Traffic bed',
+    description: 'A brisk traffic-desk pulse: a rolling eighth-note bass, a ticking turn signal, a light arpeggio and a five-note station jingle at the top. Busy without nagging.',
+  },
+  'pirate-bed': {
+    label: 'Pirate bed',
+    description: 'A hand-made mono beat from an attic: boom-bap played by hand, a sneaky chromatic bassline, keys never quite in tune, crackle, and wobbly tape that sometimes stops.',
+  },
 };
 
 /**

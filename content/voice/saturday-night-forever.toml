@@ -1,0 +1,514 @@
+# Saturday Night Forever — 108.4, the Starlite Rollerdrome, Saturday night, 1977, still.
+#
+# Donna Midnight hosts: warm, glamorous, endlessly patient. One Saturday night never ended
+# and she counts its hours with pride (somewhere past three million, four hundred thousand).
+# The crowd stopped asking what time it is long ago. Rollo is the rink guard with the whistle.
+#
+# Running bits: the clock over the rink with no hands (voted off in hour forty); the conga
+# line that left in hour nine hundred and is still out there; Brenda and Lou's first date,
+# which started in hour six; Sunday, which nobody believes in; the snack bar's one hot dog.
+# The `count` kit chains Donna's time check, one to three hour counts and a sign-off.
+# Cross-station: Bev and the request line, Grumbel's Ladders, Greg's show (Monday review).
+# Resident artists in src/content/packs/v4a.ts (Velveteen Moss, the Midnight Hustle Orchestra...).
+station = "saturday-night-forever"
+
+[voices]
+host = { voice = "af_bella", speed = 1.0, name = "Donna Midnight" }
+rollo = { voice = "am_puck", speed = 1.0, name = "Rollo, the Rink Guard" }
+bev = { voice = "af_nova", fx = "phone", name = "Bev" }
+announcer = { voice = "am_michael", speed = 1.05, name = "Announcer" }
+grumbel = { voice = "am_eric", name = "Arnold Grumbel" }
+
+[[show]]
+id = "the-hustle-hour"
+name = "The Hustle Hour"
+blurb = "Peak time on the rink. Line dances, hustle lessons and a crowd that last looked at a clock in 1977."
+start = 21
+end = 24
+
+[[show]]
+id = "couples-skate"
+name = "Couples Skate"
+blurb = "Lights down, slow songs, and the mirror ball turning just for two. Counter-clockwise, please."
+start = 0
+end = 3
+
+[[show]]
+id = "breakfast-at-the-rink"
+name = "Breakfast at the Rink"
+blurb = "The morning show from a night that never ended. Pancakes at the snack bar, under the mirror ball."
+start = 7
+end = 10
+
+# ── Idents ────────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "id-001"
+category = "id"
+lines = [
+  { say = "host", text = "You're listening to Saturday Night Forever, one oh eight point four. It's Saturday night. It has been for a while. Nobody minds." },
+]
+
+[[clip]]
+id = "id-002"
+category = "id"
+lines = [
+  { say = "host", text = "Saturday Night Forever, from the Starlite Rollerdrome, where the night is young. It's been young for a very long time." },
+]
+
+[[clip]]
+id = "id-003"
+category = "id"
+lines = [
+  { say = "host", text = "This is Donna Midnight, on Saturday Night Forever. Skates on, lights low, and nobody, but nobody, is asking what time it is." },
+  { sting = "id" },
+]
+
+[[clip]]
+id = "id-004"
+category = "id"
+lines = [
+  { say = "host", text = "Saturday Night Forever. The mirror ball is turning, the floor is lit, and Sunday is just a rumour." },
+]
+
+[[clip]]
+id = "id-005"
+category = "id"
+daypart = "day"
+lines = [
+  { say = "host", text = "Saturday Night Forever. If it's daytime where you are, that's fine, honey. We don't judge. In here, it's Saturday night." },
+]
+
+[[clip]]
+id = "id-006"
+category = "id"
+daypart = "night"
+lines = [
+  { say = "host", text = "One oh eight point four, Saturday Night Forever. Way out at the edge of the dial, where the party never got the memo." },
+]
+
+# ── Host links ────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "dj-001"
+category = "dj"
+title = "The Clock"
+lines = [
+  { say = "host", text = "Some of you newer skaters have been asking about the clock over the rink. The one with no hands. We voted the hands off, back in hour forty." },
+  { say = "host", text = "It was close. The minute hand gave a lovely speech. But the hour hand kept looking at people, and honey, nobody likes to be looked at like that on a Saturday." },
+]
+
+[[clip]]
+id = "dj-002"
+category = "dj"
+title = "The Conga Line"
+lines = [
+  { say = "host", text = "News of the conga line. It left the rink in hour nine hundred, out through the fire doors, and it hasn't come back." },
+  { say = "host", text = "We got a postcard this week. It's three counties north now, and still going. Still a conga. Still on the beat. Wherever you are, conga line, we're proud of you." },
+]
+
+[[clip]]
+id = "dj-003"
+category = "dj"
+title = "Brenda and Lou"
+lines = [
+  { say = "host", text = "Over by the snack bar, Brenda and Lou, who met in hour six, and have been on their first date ever since." },
+  { say = "host", text = "It's going very well. He's about to ask her to skate. He's been about to ask for a long time. Don't rush him. In here, there's no such thing as too late." },
+]
+
+[[clip]]
+id = "dj-004"
+category = "dj"
+title = "Sunday"
+lines = [
+  { say = "host", text = "Some of the regulars say there's a thing that comes after Saturday. They call it Sunday. Church bells, a roast dinner, a sort of quiet headache." },
+  { say = "host", text = "I don't believe a word of it, honey. Sounds made up. Here's a song that definitely isn't." },
+]
+
+[[clip]]
+id = "dj-005"
+category = "dj"
+title = "The Mirror Ball"
+lines = [
+  { say = "host", text = "The mirror ball has gone round about four hundred million times tonight. People worry. Isn't it dizzy?" },
+  { say = "host", text = "We asked it. It said, honey, I'm a mirror ball. Going round is the job. Then it threw a little light on my shoes, which I thought was very sweet." },
+]
+
+[[clip]]
+id = "dj-006"
+category = "dj"
+title = "Rollo on the Floor"
+lines = [
+  { say = "host", text = "Let's check in with Rollo, our rink guard. Rollo, how's the floor?" },
+  { say = "rollo", text = "Busy, Donna. Everyone's going counter-clockwise. Nobody's going backwards. Lovely night." },
+  { say = "host", text = "That's the thing about a night that never ends, honey. It only goes one way." },
+]
+
+[[clip]]
+id = "dj-007"
+category = "dj"
+title = "Bev Calls"
+lines = [
+  { say = "bev", text = "Hello, love. It's Bev. Is this the request line?" },
+  { say = "host", text = "Bev, honey, it's Saturday night. Everything's the request line. What can I play for you?" },
+  { say = "bev", text = "I don't know what it's called. It goes, da da dum. Da da." },
+  { say = "host", text = "Oh, we play that one every night, Bev. You stay on the floor. It's coming." },
+]
+
+[[clip]]
+id = "dj-008"
+category = "dj"
+daypart = "night"
+title = "A Light Over the Car Park"
+lines = [
+  { say = "host", text = "There's a new light in the sky over the car park. A relay ship, drifted in from somewhere further up the dial. Hello, newcomer." },
+  { say = "host", text = "Skate hire's free after hour three million. Come on down. And leave your watch in the ship. You won't be needing it." },
+]
+
+[[clip]]
+id = "dj-009"
+category = "dj"
+title = "Sponsored by Grumbel's Ladders"
+lines = [
+  { say = "host", text = "Somebody has to dust the mirror ball, and tonight that somebody is standing on a ladder from Grumbel's." },
+  { say = "grumbel", text = "Grumbel's Ladders. Up is a choice." },
+  { say = "host", text = "And down, honey, is the next song." },
+]
+
+[[clip]]
+id = "dj-010"
+category = "dj"
+daypart = "evening"
+title = "Doing Your Hair"
+lines = [
+  { say = "host", text = "Out there it's evening, and people are doing their hair. That's sweet. In here, we did our hair in nineteen seventy seven, and it has held." },
+  { say = "host", text = "Every curl. Every wave. If you're getting ready, take your time. We'll still be here. We're always still here." },
+]
+
+[[clip]]
+id = "dj-011"
+category = "dj"
+daypart = "night"
+title = "What Time Is It?"
+lines = [
+  { say = "host", text = "A newcomer asked me the time earlier. The whole rink went quiet. Even the mirror ball slowed down." },
+  { say = "host", text = "Then the drummer laughed, and we all laughed, and I bought her a lemonade. Honey, it's Saturday. That's the time." },
+]
+
+# ── The count: Donna's time check, one to three hour counts, a sign-off ──────
+
+[[clip]]
+id = "count-open-1"
+category = "dj"
+kit = "count"
+part = "open"
+lines = [
+  { say = "host", text = "Time check, everybody. Donna Midnight, with the hours." },
+]
+
+[[clip]]
+id = "count-open-2"
+category = "dj"
+kit = "count"
+part = "open"
+lines = [
+  { sfx = "ding" },
+  { say = "host", text = "It's that time again. Not the time, honey. We don't do the time. The count." },
+]
+
+[[clip]]
+id = "count-open-3"
+category = "dj"
+kit = "count"
+part = "open"
+lines = [
+  { say = "host", text = "Hands up if you've lost track. Good. That's my job. Here's the count." },
+]
+
+[[clip]]
+id = "count-001"
+category = "dj"
+kit = "count"
+part = "body"
+lines = [
+  { say = "host", text = "Hour three million, four hundred and six thousand, and twelve. Still Saturday." },
+  { say = "host", text = "The ice in my lemonade has started to think about melting. Only thinking. I'll keep you posted." },
+]
+
+[[clip]]
+id = "count-002"
+category = "dj"
+kit = "count"
+part = "body"
+lines = [
+  { say = "host", text = "We have now been dancing for three million, four hundred thousand hours. That's about three hundred and eighty years, give or take a slow song." },
+  { say = "host", text = "And nobody in this room looks a day over Saturday." },
+]
+
+[[clip]]
+id = "count-003"
+category = "dj"
+kit = "count"
+part = "body"
+lines = [
+  { say = "host", text = "Hour three million, four hundred and seven thousand. To celebrate, the snack bar has turned the hot dog over." },
+  { say = "host", text = "It's been the same hot dog since hour one. It's a very good hot dog. It's had a lot of time to think about it." },
+]
+
+[[clip]]
+id = "count-004"
+category = "dj"
+kit = "count"
+part = "body"
+lines = [
+  { say = "host", text = "Hour three million and, ooh. I'll be honest, I lost count for a second there, in the drum break. It happens." },
+  { say = "host", text = "Luckily Rollo keeps a backup, written on his wrist in biro. Rollo? Thank you, honey. We're right on track." },
+]
+
+[[clip]]
+id = "count-005"
+category = "dj"
+kit = "count"
+part = "body"
+lines = [
+  { say = "host", text = "Hour three million, four hundred and six thousand, five hundred and fifty. Somebody's grandmother just did the splits." },
+  { say = "host", text = "She's been here since hour one. She was nineteen when she came in. And honey, in every way that matters, she still is." },
+]
+
+[[clip]]
+id = "count-006"
+category = "dj"
+kit = "count"
+part = "body"
+lines = [
+  { say = "host", text = "Three million, four hundred and six thousand, eight hundred hours, and not a single one of them has been a Monday." },
+  { say = "host", text = "Think about that. Then don't. Thinking is for Sundays." },
+]
+
+[[clip]]
+id = "count-close-1"
+category = "dj"
+kit = "count"
+part = "close"
+lines = [
+  { say = "host", text = "That's the count. Don't write it down. It'll be wrong in an hour." },
+]
+
+[[clip]]
+id = "count-close-2"
+category = "dj"
+kit = "count"
+part = "close"
+lines = [
+  { say = "host", text = "Still Saturday, everybody. Back on the floor." },
+  { sting = "chime" },
+]
+
+[[clip]]
+id = "count-close-3"
+category = "dj"
+kit = "count"
+part = "close"
+lines = [
+  { say = "host", text = "And that's the time, honey. It's tonight. It's always tonight." },
+]
+
+# ── The Hustle Hour (21–24) ───────────────────────────────────────────────────
+
+[[clip]]
+id = "id-the-hustle-hour"
+category = "id"
+show = "the-hustle-hour"
+part = "open"
+lines = [
+  { say = "host", text = "This is the Hustle Hour, on Saturday Night Forever! Find a space, find a partner, find your feet. In that order." },
+  { sting = "fanfare" },
+]
+
+[[clip]]
+id = "dj-the-hustle-hour-001"
+category = "dj"
+show = "the-hustle-hour"
+title = "Hustle Lesson"
+lines = [
+  { say = "host", text = "Hustle lesson, for the newcomers. Step one, step to the left. Step two, step back. Step three, point at the mirror ball like it owes you money." },
+  { say = "host", text = "Step four, do it all again, for three hundred years. You're a natural, honey." },
+]
+
+[[clip]]
+id = "dj-the-hustle-hour-002"
+category = "dj"
+show = "the-hustle-hour"
+title = "The Line Dance"
+lines = [
+  { say = "host", text = "The line dance in the middle of the rink started in hour two hundred. It's forty thousand hours long. There are steps in it nobody has seen yet." },
+  { say = "host", text = "If you join in now, you'll get to the good bit in about eleven years. Worth it. I've heard there's a spin." },
+]
+
+# ── Couples Skate (0–3) ───────────────────────────────────────────────────────
+
+[[clip]]
+id = "id-couples-skate"
+category = "id"
+show = "couples-skate"
+part = "open"
+lines = [
+  { say = "host", text = "Lights down, everybody. It's Couples Skate. Find someone you've been dancing next to for eleven years, and introduce yourself." },
+]
+
+[[clip]]
+id = "dj-couples-skate-001"
+category = "dj"
+show = "couples-skate"
+title = "Lou Asks"
+lines = [
+  { say = "host", text = "Oh, look at that. Lou has asked Brenda to skate. He asks her every Couples Skate, and every Couples Skate, she says yes, like it's the first time." },
+  { say = "host", text = "They're going round now, slowly, holding hands. That's about forty thousand first dates, honey. And not one of them has been a bad one." },
+]
+
+[[clip]]
+id = "dj-couples-skate-002"
+category = "dj"
+show = "couples-skate"
+lines = [
+  { say = "host", text = "To everyone sitting this one out on the carpet benches. That's all right too. Rest your feet. Hold your lemonade." },
+  { say = "host", text = "Somebody has to watch. A night this long needs witnesses." },
+]
+
+# ── Breakfast at the Rink (7–10) ──────────────────────────────────────────────
+
+[[clip]]
+id = "id-breakfast-at-the-rink"
+category = "id"
+show = "breakfast-at-the-rink"
+part = "open"
+lines = [
+  { say = "host", text = "Good morning, out there. This is Breakfast at the Rink. You've got the sunrise. We've got pancakes, and a mirror ball. It's a fair trade." },
+]
+
+[[clip]]
+id = "dj-breakfast-at-the-rink-001"
+category = "dj"
+show = "breakfast-at-the-rink"
+lines = [
+  { say = "host", text = "We call this breakfast, but it's still Saturday night in here. The snack bar started doing pancakes in hour three thousand, because somebody asked." },
+  { say = "host", text = "And on a Saturday night, honey, nobody ever says no." },
+]
+
+[[clip]]
+id = "dj-breakfast-at-the-rink-002"
+category = "dj"
+show = "breakfast-at-the-rink"
+lines = [
+  { say = "host", text = "A word for everyone out there in the morning. Your night ended. That's all right. Nights do. Ours didn't." },
+  { say = "host", text = "So we're keeping it for you. Come back tonight, and it'll be right where you left it. Same song, same floor. Same us." },
+]
+
+# ── Ads and notices ───────────────────────────────────────────────────────────
+
+[[clip]]
+id = "ad-001"
+category = "ad"
+title = "Forever Hold Hairspray"
+lines = [
+  { sting = "ad" },
+  { say = "announcer", text = "Forever Hold Hairspray. Holds for one night. Any night. This night." },
+  { say = "host", text = "I've used it since nineteen seventy seven, honey. I haven't touched my hair since. I'm not allowed to. It's load bearing." },
+  { say = "announcer", text = "Forever Hold. Keep away from mirror balls. They get ideas.", speed = 1.25 },
+]
+
+[[clip]]
+id = "ad-002"
+category = "ad"
+title = "Starlite Skate Hire"
+lines = [
+  { sting = "ad" },
+  { say = "announcer", text = "Starlite Skate Hire, at the counter by the snack bar. Wheels for every foot. Sizes four to fourteen." },
+  { say = "rollo", text = "Size nine's out. Size nine's been out since hour eleven. He's very good. He's not giving them back." },
+  { say = "announcer", text = "Starlite Skate Hire. Return your skates when the night ends.", speed = 1.2 },
+]
+
+[[clip]]
+id = "psa-001"
+category = "psa"
+title = "Please Don't Ask the Time"
+lines = [
+  { say = "announcer", text = "A message from the management of the Starlite Rollerdrome." },
+  { say = "announcer", text = "Please don't ask the time. Not because we're hiding it. Because the last person who asked made the drummer cry, and he's very good, and we need him." },
+  { say = "host", text = "Thank you, management." },
+]
+
+# ── Monday: a review of Greg's show ──────────────────────────────────────────
+
+[[clip]]
+id = "dj-greg-review"
+category = "dj"
+days = [1]
+title = "Reviewing the Quiet Corner"
+lines = [
+  { say = "host", text = "Did anybody catch the Quiet Corner, over on the Lounge at the End of Time? Greg's show. I had my ear right up against the speaker." },
+  { say = "host", text = "I heard one word. I think it was, lovely. Five stars, Greg. Turn it up a little, honey. Come and dance." },
+]
+
+# ── The Convergence: one reaction per weekly topic ───────────────────────────
+
+[[clip]]
+id = "convergence-missing-moon"
+category = "event"
+event = "convergence"
+kit = "missing-moon"
+lines = [
+  { say = "host", text = "Somebody's just skated in from the car park saying a moon has gone missing. Honey, we haven't looked at the sky since nineteen seventy seven." },
+  { say = "host", text = "We'll take your word for it. This one's for the moon, wherever she's dancing tonight." },
+]
+
+[[clip]]
+id = "convergence-the-smell"
+category = "event"
+event = "convergence"
+kit = "the-smell"
+lines = [
+  { say = "host", text = "Can everybody smell toast? The whole rink smells of toast. The snack bar swears it isn't them. They don't do toast. They do one hot dog." },
+  { say = "host", text = "Keep skating, everybody. Breathe it in." },
+]
+
+[[clip]]
+id = "convergence-the-song"
+category = "event"
+event = "convergence"
+kit = "the-song"
+lines = [
+  { say = "host", text = "Everyone on the floor is humming the same song, and nobody can remember how it ends. Bev's here. Bev's crying. Bev says that's the one." },
+  { say = "host", text = "If anybody knows the last line, come up to the booth." },
+]
+
+[[clip]]
+id = "convergence-the-knock"
+category = "event"
+event = "convergence"
+kit = "the-knock"
+lines = [
+  { say = "host", text = "Three knocks on the booth door, just now. Rollo went to look. Nobody there." },
+  { say = "rollo", text = "Might be Sunday, Donna." },
+  { say = "host", text = "Then don't open it, Rollo. Not tonight." },
+]
+
+[[clip]]
+id = "convergence-wrong-colour"
+category = "event"
+event = "convergence"
+kit = "wrong-colour"
+lines = [
+  { say = "host", text = "The skylight's gone a colour I don't have a word for. And I have a lot of words for colours, honey. I've got eleven for gold." },
+  { say = "host", text = "The mirror ball's throwing it all over the floor. Everybody looks wonderful in it." },
+]
+
+[[clip]]
+id = "convergence-the-pigeon"
+category = "event"
+event = "convergence"
+kit = "the-pigeon"
+lines = [
+  { say = "host", text = "There's a pigeon on the rink. It's going round counter-clockwise, like everybody. It just nodded at me like it knew me." },
+  { say = "host", text = "Maybe it does. It's been a long night." },
+]

@@ -146,6 +146,18 @@ POOLS = (SHARED, SHIP, PIRATE, ODDITIES, EVENTS)
 # Pools whose clips may be restricted to some roster stations with `stations`.
 STATION_FILTER_POOLS = (SHARED, SHIP, EVENTS)
 
+# v4: The Convergence (SCHEMA "The Convergence"): a weekly event whose topic rotates through
+# these kits. `_events` holds an open and a close per kit; every station file a reaction per kit.
+CONVERGENCE = "convergence"
+CONVERGENCE_KITS = ("missing-moon", "the-smell", "the-song", "the-knock", "wrong-colour", "the-pigeon")
+# v4 kits that stand alone (no `part`): HUSH jamming Free Frequency (`_ship` only), a drifting
+# station announcing tomorrow's frequency (`tomorrow-<MHz>`, one of its roster `drift` values),
+# and the full-moon show (dates computed per year by the director).
+JAM_KIT = "jam"
+FULL_MOON_KIT = "full-moon"
+TOMORROW_KIT = re.compile(r"^tomorrow-(\d{2,3}(?:\.\d{1,2})?)$")
+WEEKDAYS = ("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday")
+
 # ── Model ─────────────────────────────────────────────────────────────────────
 
 
@@ -190,6 +202,12 @@ class Serial:
     episode: int
 
 
+@dataclass(frozen=True)
+class Arc:
+    id: str
+    step: int
+
+
 @dataclass
 class Clip:
     id: str
@@ -209,6 +227,9 @@ class Clip:
     dates: list[str] | None = None
     level: int | None = None
     event: str | None = None
+    # v4 (all optional)
+    arc: Arc | None = None
+    days: list[int] | None = None
 
     @property
     def kit_key(self) -> str:
@@ -271,16 +292,21 @@ class Show:
     end: int
     host: str | None = None
     lineno: int | None = None
+    days: tuple[int, ...] | None = None  # v4: local weekdays of the start hour; None = every day
 
-    def hours(self) -> set[int]:
-        if self.end > self.start:
-            return set(range(self.start, self.end))
-        return set(range(self.start, 24)) | set(range(0, self.end))
+    def slots(self) -> set[tuple[int, int]]:
+        """(weekday, hour) pairs the show is on air across a week. `days` are the start hour's
+        day, so a Saturday 22-2 show also takes Sunday 00:00 and 01:00."""
+        length = (self.end - self.start) % 24 or 24
+        days = self.days if self.days is not None else range(7)
+        return {((day + (self.start + k) // 24) % 7, (self.start + k) % 24) for day in days for k in range(length)}
 
     def to_json(self) -> dict:
         out: dict = {"id": self.id, "name": self.name, "blurb": self.blurb, "start": self.start, "end": self.end}
         if self.host:
             out["host"] = self.host
+        if self.days is not None:
+            out["days"] = list(self.days)
         return out
 
 
@@ -314,6 +340,30 @@ def roster_station_ids(roster_ts: Path) -> list[str]:
     """Pull the station ids out of src/stations/roster.ts without running TypeScript."""
     text = roster_ts.read_text(encoding="utf-8")
     return re.findall(r"^\s{4}id:\s*'([a-z0-9-]+)'", text, flags=re.M)
+
+
+def roster_drift(roster_ts: Path) -> dict[str, list[float]]:
+    """v4: each drifting station's candidate frequencies (`drift: [...]` in roster.ts), by id."""
+    text = roster_ts.read_text(encoding="utf-8")
+    starts = [(m.start(), m.group(1)) for m in re.finditer(r"^\s{4}id:\s*'([a-z0-9-]+)'", text, flags=re.M)]
+    out: dict[str, list[float]] = {}
+    for i, (pos, station) in enumerate(starts):
+        block = text[pos:starts[i + 1][0] if i + 1 < len(starts) else len(text)]
+        match = re.search(r"^\s{4}drift:\s*\[([^\]]*)\]", block, flags=re.M)
+        if match:
+            out[station] = [float(v) for v in re.findall(r"\d+(?:\.\d+)?", match.group(1))]
+    return out
+
+
+def fmt_mhz(mhz: float) -> str:
+    """A frequency the way roster.ts writes it (114.3, 110.65, 108)."""
+    return f"{mhz:.2f}".rstrip("0").rstrip(".")
+
+
+def valid_days(value) -> bool:
+    """v4 `days`: a non-empty list of distinct local weekdays 0-6."""
+    return (isinstance(value, list) and bool(value) and all(_is_int(d) and 0 <= d <= 6 for d in value)
+            and len(set(value)) == len(value))
 
 
 def ts_string_array(types_ts: Path, name: str) -> list[str]:
@@ -383,12 +433,15 @@ def _text_warnings(text: str) -> list[str]:
 
 SCRIPT_KEYS = {"station", "voices", "clip", "show"}
 ALIAS_KEYS = {"voice", "speed", "fx", "name"}
-SHOW_KEYS = {"id", "name", "blurb", "start", "end", "host"}
+SHOW_KEYS = {"id", "name", "blurb", "start", "end", "host", "days"}
 CLIP_KEYS = {
     "id", "category", "title", "over_music", "daypart", "bed", "stations", "lines",
     "part", "kit", "show", "serial", "dates", "level", "event",
+    "arc", "days",
 }
 SERIAL_KEYS = {"id", "episode"}
+ARC_KEYS = {"id", "step"}
+DAYS_HINT = "must be a non-empty list of local weekdays 0-6 (0 = Sunday), each once, e.g. [1] for Mondays"
 LINE_KEYS = {
     "say": {"say", "text", "speed", "fx", "gap", "cut", "name"},
     "pause": {"pause"},
@@ -406,12 +459,14 @@ def _is_int(v) -> bool:
 
 
 class _Loader:
-    def __init__(self, path: Path, voices: list[str], roster: list[str], events: list[str]):
+    def __init__(self, path: Path, voices: list[str], roster: list[str], events: list[str],
+                 drift: dict[str, list[float]] | None = None):
         self.path = path
         self.voices = set(voices)
         self.voice_list = voices
         self.roster = roster
         self.events = events
+        self.drift = drift or {}
         self.issues: list[Issue] = []
         self.raw_lines: list[str] = []
 
@@ -549,17 +604,23 @@ class _Loader:
             if ok and start == end:
                 self.error(f"{label}: start and end are both {start}; a show needs at least an hour", lineno)
                 ok = False
+            days = entry.get("days")
+            if days is not None and not valid_days(days):
+                self.error(f"{label}: days {DAYS_HINT}; got {days!r}", lineno)
+                ok = False
             if not ok:
                 continue
             show = Show(show_id, " ".join(entry["name"].split()), " ".join(entry["blurb"].split()), start, end,
-                        " ".join(host.split()) if host else None, lineno)
+                        " ".join(host.split()) if host else None, lineno, tuple(sorted(days)) if days else None)
             if len(show.blurb) > 160:
                 self.warn(f"{label}: blurb is {len(show.blurb)} characters; the guide shows one line (~120)", lineno)
             for other in shows:
-                both = show.hours() & other.hours()
+                both = show.slots() & other.slots()
                 if both:
-                    hours = ", ".join(f"{h:02d}:00" for h in sorted(both))
-                    self.error(f"{label} overlaps show {other.id!r} (line {other.lineno}) at {hours}", lineno)
+                    first = min(both)
+                    when = f"{WEEKDAYS[first[0]]} {first[1]:02d}:00"
+                    more = f" and {len(both) - 1} more hour(s) a week" if len(both) > 1 else ""
+                    self.error(f"{label} overlaps show {other.id!r} (line {other.lineno}) on {when}{more}", lineno)
                     ok = False
             if ok:
                 shows.append(show)
@@ -581,7 +642,7 @@ class _Loader:
 
         kits: dict[str, dict[str, list[Clip]]] = {}
         for clip in script.clips:
-            if clip.part and not clip.is_show_bumper:
+            if clip.part and not clip.is_show_bumper and clip.event != CONVERGENCE:
                 kits.setdefault(clip.kit_key, {}).setdefault(clip.part, []).append(clip)
         for kit, parts in sorted(kits.items()):
             missing = [p for p in PARTS if not parts.get(p)]
@@ -590,6 +651,56 @@ class _Loader:
                 have = ", ".join(f"{len(parts[p])} {p}" for p in PARTS if parts.get(p))
                 self.warn(f"kit {kit!r} has {have} but no {' or '.join(missing)}; the director chains "
                           "open, body and close from the same kit", first.lineno)
+        self.check_v4_set(script)
+
+    def check_v4_set(self, script: Script) -> None:
+        """v4 rules across a file: arc steps, convergence coverage, a drifting station's tomorrows."""
+        arcs: dict[str, dict[int, Clip]] = {}
+        for clip in script.clips:
+            if clip.arc:
+                steps = arcs.setdefault(clip.arc.id, {})
+                if clip.arc.step in steps:
+                    other = steps[clip.arc.step]
+                    self.error(f"clip {clip.id!r}: arc {clip.arc.id!r} step {clip.arc.step} is already clip "
+                               f"{other.id!r} (line {other.lineno}); each step airs once, so it needs exactly one clip",
+                               clip.lineno)
+                else:
+                    steps[clip.arc.step] = clip
+        for arc_id, steps in sorted(arcs.items()):
+            gaps = sorted(set(range(1, max(steps) + 1)) - set(steps))
+            if gaps:
+                first = min(steps.values(), key=lambda c: c.lineno or 0)
+                self.error(f"arc {arc_id!r} skips step(s) {', '.join(map(str, gaps))}; steps run 1, 2, 3, ... "
+                           "(the director never skips ahead)", first.lineno)
+
+        convergence = [c for c in script.clips if c.event == CONVERGENCE]
+        if script.station == EVENTS:
+            gaps = []
+            for kit in CONVERGENCE_KITS:
+                have = {c.part for c in convergence if c.kit == kit}
+                missing = [p for p in ("open", "close") if p not in have]
+                if missing:
+                    gaps.append(f"{kit} ({' and '.join(missing)})")
+            if gaps:
+                which = ("no convergence opens or closes yet" if len(gaps) == len(CONVERGENCE_KITS) and not convergence
+                         else f"convergence topics without an open or close: {', '.join(gaps)}")
+                self.warn(f"{which}; each topic airs its open, the tuned station's reaction, then its close "
+                          f"(event = \"{CONVERGENCE}\", kit = \"<topic>\", part = \"open\" or \"close\")")
+        elif script.station not in POOLS and not script.is_draft:
+            missing = [k for k in CONVERGENCE_KITS if not any(c.kit == k for c in convergence)]
+            if missing:
+                which = "any topic" if len(missing) == len(CONVERGENCE_KITS) else ", ".join(missing)
+                self.warn(f"no convergence reaction for {which} (one per topic: category = \"event\", "
+                          f"event = \"{CONVERGENCE}\", kit = \"<topic>\"; topics in SCHEMA.md)",
+                          self.find_key("station"))
+
+        drift = self.drift.get(script.station)
+        if drift and script.clips:
+            have = {c.kit for c in script.clips if c.kit}
+            missing = [fmt_mhz(f) for f in drift if f"tomorrow-{fmt_mhz(f)}" not in have]
+            if missing:
+                self.warn(f"no tomorrow-<MHz> clip for {', '.join(missing)}; the director airs the one for tomorrow "
+                          f"night's frequency (e.g. kit = \"tomorrow-{missing[0]}\")", self.find_key("station"))
 
     def load_aliases(self, raw) -> dict[str, dict]:
         aliases: dict[str, dict] = {}
@@ -720,7 +831,7 @@ class _Loader:
         return clip
 
     def load_v3_fields(self, raw: dict, label: str, category, station: str, lineno: int | None) -> tuple[dict, bool]:
-        """part, kit, show, serial, dates, level, event (all optional; see SCHEMA.md)."""
+        """v3 part, kit, show, serial, dates, level, event and v4 arc, days (all optional; see SCHEMA.md)."""
         out: dict = {}
         ok = True
 
@@ -736,14 +847,29 @@ class _Loader:
             else:
                 out["part"] = part
 
+        event = raw.get("event")
         kit = raw.get("kit")
         if kit is not None:
-            if not isinstance(kit, str) or not CLIP_ID.match(kit):
+            tomorrow = TOMORROW_KIT.match(kit) if isinstance(kit, str) else None
+            if tomorrow:
+                drift = self.drift.get(station)
+                if drift is None:
+                    drifting = ", ".join(sorted(self.drift)) or "none"
+                    bad(f"kit {kit!r}: tomorrow-<MHz> kits are for stations that drift (roster `drift`: {drifting})")
+                else:
+                    known = [f"tomorrow-{fmt_mhz(f)}" for f in drift]
+                    if kit in known:
+                        out["kit"] = kit
+                    else:
+                        bad(f"kit {kit!r} isn't one of {station}'s drift frequencies{_suggest(kit, known)}")
+            elif not isinstance(kit, str) or not CLIP_ID.match(kit):
                 bad(f"kit must be a kebab-case name like \"news\" or \"late-calls\", got {kit!r}")
             else:
                 out["kit"] = kit
-                if part is None:
-                    self.warn(f"{label}: kit {kit!r} only matters on modular parts (add `part`)", lineno)
+                standalone = (event == CONVERGENCE or kit == FULL_MOON_KIT or (kit == JAM_KIT and station == SHIP))
+                if part is None and not standalone:
+                    hint = f"; {JAM_KIT!r} (HUSH jamming Free Frequency) belongs in {SHIP}.toml" if kit == JAM_KIT else ""
+                    self.warn(f"{label}: kit {kit!r} only matters on modular parts (add `part`){hint}", lineno)
 
         show = raw.get("show")
         if show is not None:
@@ -786,21 +912,69 @@ class _Loader:
             else:
                 out["level"] = level
 
-        event = raw.get("event")
+        in_station_file = station not in POOLS  # roster stations (and drafts like _example)
+        topics = ", ".join(CONVERGENCE_KITS)
         if event is not None:
-            if station != EVENTS:
-                bad(f"event is only for {EVENTS}.toml")
-            elif event not in self.events:
-                bad(f"unknown event {event!r}{_suggest(str(event), self.events)}")
+            if station == EVENTS:
+                if event not in self.events:
+                    bad(f"unknown event {event!r}{_suggest(str(event), self.events)}")
+                elif event == CONVERGENCE and kit not in CONVERGENCE_KITS:
+                    bad(f"convergence clips need kit = one of {topics}; got {kit!r}"
+                        f"{_suggest(str(kit), CONVERGENCE_KITS) if kit else ''}")
+                elif event == CONVERGENCE and part not in ("open", "close"):
+                    bad(f"convergence clips in {EVENTS}.toml are the shared open or close: part = \"open\" or "
+                        f"\"close\" (each station's reaction goes in its own script); got {part!r}")
+                else:
+                    out["event"] = event
+            elif not in_station_file:
+                bad(f"event is only for {EVENTS}.toml (and convergence reactions in station scripts)")
+            elif event != CONVERGENCE:
+                bad(f"station scripts only hold reactions to {CONVERGENCE!r}; {event!r} clips belong in "
+                    f"{EVENTS}.toml{_suggest(str(event), [CONVERGENCE]) if event not in self.events else ''}")
+            elif category != "event":
+                bad(f"a convergence reaction needs category = \"event\"; got {category!r}")
+            elif kit not in CONVERGENCE_KITS:
+                bad(f"a convergence reaction needs kit = one of {topics}; got {kit!r}"
+                    f"{_suggest(str(kit), CONVERGENCE_KITS) if kit else ''}")
+            elif part is not None:
+                bad("a convergence reaction is a single clip; drop `part` (the open and close live in "
+                    f"{EVENTS}.toml)")
             else:
                 out["event"] = event
         elif station == EVENTS:
             self.warn(f"{label}: no `event`; the director can't tell which event it belongs to", lineno)
+        elif category == "event" and in_station_file:
+            bad(f"event clips in station scripts are convergence reactions: add event = {CONVERGENCE!r} and "
+                f"kit = one of {topics}")
+
+        arc = raw.get("arc")
+        if arc is not None:
+            if station != SHIP:
+                bad(f"arc (HUSH's long storylines) is only for {SHIP}.toml")
+            elif not isinstance(arc, dict) or set(arc) != ARC_KEYS:
+                bad("arc must look like { id = \"off-course\", step = 3 }")
+            elif not isinstance(arc["id"], str) or not CLIP_ID.match(arc["id"]):
+                bad(f"arc id must be kebab-case like \"off-course\", got {arc['id']!r}")
+            elif not _is_int(arc["step"]) or arc["step"] < 1:
+                bad(f"arc step must be a whole number from 1 (the night shift it airs after), got {arc['step']!r}")
+            else:
+                out["arc"] = Arc(arc["id"], arc["step"])
+                if category != "ship":
+                    self.warn(f"{label}: arc steps are HUSH notices; expected category = \"ship\", got {category!r}",
+                              lineno)
+
+        days = raw.get("days")
+        if days is not None:
+            if not valid_days(days):
+                bad(f"days {DAYS_HINT}; got {days!r}")
+            else:
+                out["days"] = sorted(days)
 
         if category == "ship" and station != SHIP:
             self.warn(f"{label}: ship clips (HUSH) belong in {SHIP}.toml", lineno)
-        if category == "event" and station != EVENTS:
-            self.warn(f"{label}: event clips belong in {EVENTS}.toml", lineno)
+        if category == "event" and not in_station_file and station != EVENTS:
+            self.warn(f"{label}: event clips belong in {EVENTS}.toml (or, for convergence reactions, a station "
+                      "script)", lineno)
         return out, ok
 
     def locate_line(self, raw, start: int) -> int | None:
@@ -925,9 +1099,12 @@ def check_serials(scripts: list[Script]) -> None:
             assert clip.serial is not None
             episode = clip.serial.episode
             if episode in episodes:
+                # An episode may span several clips on one station (the scheduler airs them whole,
+                # in id order), but not two stations.
                 other_script, other = episodes[episode]
-                script.issues.append(Issue("error", script.path, f"clip {clip.id!r}: serial {serial_id!r} episode "
-                                           f"{episode} is already {other_script.station}/{other.id}", clip.lineno))
+                if other_script.station != script.station:
+                    script.issues.append(Issue("error", script.path, f"clip {clip.id!r}: serial {serial_id!r} episode "
+                                               f"{episode} is already {other_script.station}/{other.id}", clip.lineno))
             else:
                 episodes[episode] = (script, clip)
         gaps = sorted(set(range(1, max(episodes) + 1)) - set(episodes))
@@ -939,5 +1116,6 @@ def check_serials(scripts: list[Script]) -> None:
                                        "1, 2, 3, ... without gaps", clip.lineno))
 
 
-def load_script(path: Path, voices: list[str], roster: list[str], events: list[str]) -> Script:
-    return _Loader(path, voices, roster, events).load()
+def load_script(path: Path, voices: list[str], roster: list[str], events: list[str],
+                drift: dict[str, list[float]] | None = None) -> Script:
+    return _Loader(path, voices, roster, events, drift).load()

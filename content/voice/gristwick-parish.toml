@@ -498,3 +498,76 @@ lines = [
   { say = "host", text = "It did, in seventeen ninety. It was a tin of pears. We still have it. We've told him. He isn't convinced. He's staying for the next draw.", gap = 0.6 },
   { say = "host", text = "Aren't we all." },
 ]
+
+
+# ══ v4: The Convergence ═══════════════════════════════════════════════════════
+#
+# Saturdays, 20:00 UTC: every station notices the same thing. One reaction per topic
+# (SCHEMA.md, "The Convergence"); the director airs the _events open, then the tuned
+# station's reaction, then the close.
+
+[[clip]]
+id = "convergence-missing-moon"
+category = "event"
+title = "The Convergence: A Moon Goes Missing"
+event = "convergence"
+kit = "missing-moon"
+lines = [
+  { say = "host", text = "A notice from the tea tent. A moon has gone missing. Everyone is agreed that one is gone, and not one person is agreed on which." },
+  { say = "host", text = "If found, please hand it in at lost property. Mind the marrow." },
+]
+
+[[clip]]
+id = "convergence-the-smell"
+category = "event"
+title = "The Convergence: Toast, Everywhere"
+event = "convergence"
+kit = "the-smell"
+lines = [
+  { say = "host", text = "The entire fête smells of toast. So, I'm told, does the entire multiverse." },
+  { say = "host", text = "Mrs Pargeter has been to check the cake stall. It is not the cake stall. The cake stall is very hurt to have been suspected." },
+]
+
+[[clip]]
+id = "convergence-the-song"
+category = "event"
+title = "The Convergence: The Song Nobody Can Finish"
+event = "convergence"
+kit = "the-song"
+lines = [
+  { say = "host", text = "The Silver Band have struck up a tune that everybody seems to know, and stopped at the same place everybody stops." },
+  { say = "host", text = "They've been nearly at the trio section for a very long time. We shan't rush them now." },
+]
+
+[[clip]]
+id = "convergence-the-knock"
+category = "event"
+title = "The Convergence: Three Knocks"
+event = "convergence"
+kit = "the-knock"
+lines = [
+  { say = "host", text = "Three knocks on the door of the judging marquee. Mrs Pargeter opened it. Nobody there." },
+  { say = "host", text = "She has awarded the knocks third prize, in absentia. They were very well knocked." },
+]
+
+[[clip]]
+id = "convergence-wrong-colour"
+category = "event"
+title = "The Convergence: A Colour With No Name"
+event = "convergence"
+kit = "wrong-colour"
+lines = [
+  { say = "host", text = "For a moment there, the sky was a colour none of us has a name for." },
+  { say = "host", text = "Mister Hebblethwaite says it was the exact colour of his marrow at dawn, in a good year. I've no reason to doubt him." },
+]
+
+[[clip]]
+id = "convergence-the-pigeon"
+category = "event"
+title = "The Convergence: The Pigeon"
+event = "convergence"
+kit = "the-pigeon"
+lines = [
+  { say = "host", text = "A pigeon has walked into the tea tent and been served before me. It knows everybody. It nodded at the urn." },
+  { say = "host", text = "Mrs Pargeter has entered it in the dog show. It's winning." },
+]

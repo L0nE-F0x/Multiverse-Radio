@@ -459,3 +459,84 @@ lines = [
   { sfx = "buzzer" },
   { say = "chaz", text = "Wrong! The card says spiders! Ten points for honesty, though! We don't give points for honesty!" },
 ]
+
+
+# ══ v4: The Convergence ═══════════════════════════════════════════════════════
+#
+# Saturdays, 20:00 UTC: every station notices the same thing. One reaction per topic
+# (SCHEMA.md, "The Convergence"); the director airs the _events open, then the tuned
+# station's reaction, then the close.
+
+[[clip]]
+id = "convergence-missing-moon"
+category = "event"
+title = "The Convergence: A Moon Goes Missing"
+event = "convergence"
+kit = "missing-moon"
+lines = [
+  { say = "chaz", text = "Contestants! For the planet! Which moon has gone missing?" },
+  { say = "hester", text = "Nineteen fifty two." },
+  { say = "chaz", text = "Hester, nobody knows! Ten points!" },
+  { sfx = "applause" },
+]
+
+[[clip]]
+id = "convergence-the-smell"
+category = "event"
+title = "The Convergence: Toast, Everywhere"
+event = "convergence"
+kit = "the-smell"
+lines = [
+  { say = "chaz", text = "Contestants! What is that smell?" },
+  { say = "robot", text = "Toast. Everywhere. Simultaneously." },
+  { say = "chaz", text = "Correct! Unit Seven, that's the first right answer in the history of the show!" },
+  { say = "robot", text = "I did not enjoy it." },
+]
+
+[[clip]]
+id = "convergence-the-song"
+category = "event"
+title = "The Convergence: The Song Nobody Can Finish"
+event = "convergence"
+kit = "the-song"
+lines = [
+  { say = "chaz", text = "For the planet! Finish this song!" },
+  { say = "wendell", text = "I can't, Chaz. Nobody can." },
+  { say = "chaz", text = "Wrong! The answer is... oh. The card stops halfway too." },
+]
+
+[[clip]]
+id = "convergence-the-knock"
+category = "event"
+title = "The Convergence: Three Knocks"
+event = "convergence"
+kit = "the-knock"
+lines = [
+  { say = "chaz", text = "Three knocks on the studio door! A mystery contestant? Doreen, go and look!" },
+  { say = "doreen", text = "Nobody, Chaz." },
+  { say = "chaz", text = "Nobody! Nobody has also never won the planet!" },
+]
+
+[[clip]]
+id = "convergence-wrong-colour"
+category = "event"
+title = "The Convergence: A Colour With No Name"
+event = "convergence"
+kit = "wrong-colour"
+lines = [
+  { say = "chaz", text = "Wendell! What colour is the sky right now?" },
+  { say = "wendell", text = "That one, Chaz. That one there. I don't know its name." },
+  { say = "chaz", text = "Neither does the card! Ten points!" },
+]
+
+[[clip]]
+id = "convergence-the-pigeon"
+category = "event"
+title = "The Convergence: The Pigeon"
+event = "convergence"
+kit = "the-pigeon"
+lines = [
+  { say = "chaz", text = "There's a pigeon in the contestant booth! It seems to know everyone! Pigeon, when were you last on the show?" },
+  { say = "hester", text = "Nineteen fifty two." },
+  { say = "chaz", text = "Hester, that might be right!" },
+]

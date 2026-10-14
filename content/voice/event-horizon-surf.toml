@@ -315,3 +315,77 @@ lines = [
   { say = "host", text = "Bonnie's running the Halloween bonfire on north beach. Bring a marshmallow on a stick. Hold it near the fire, and it toasts." },
   { say = "host", text = "Hold it near the hole, and it toasts for about a thousand years. Perfect golden brown. You won't be there to eat it, but somebody will, and they'll be so happy." },
 ]
+
+
+# ══ v4: The Convergence ═══════════════════════════════════════════════════════
+#
+# Saturdays, 20:00 UTC: every station notices the same thing. One reaction per topic
+# (SCHEMA.md, "The Convergence"); the director airs the _events open, then the tuned
+# station's reaction, then the close.
+
+[[clip]]
+id = "convergence-missing-moon"
+category = "event"
+title = "The Convergence: A Moon Goes Missing"
+event = "convergence"
+kit = "missing-moon"
+lines = [
+  { say = "host", text = "Surf's weird today. Somebody's lost a moon. Nobody knows which." },
+  { say = "host", text = "My money says it's out past the break. Nothing comes back from out there. It'll have the ride of its life, though." },
+]
+
+[[clip]]
+id = "convergence-the-smell"
+category = "event"
+title = "The Convergence: Toast, Everywhere"
+event = "convergence"
+kit = "the-smell"
+lines = [
+  { say = "host", text = "Is it me, or does the whole beach smell like toast?" },
+  { say = "host", text = "Not Bonnie's marshmallow. That's still toasting. Everybody's toast, apparently. Not in a bad way!" },
+]
+
+[[clip]]
+id = "convergence-the-song"
+category = "event"
+title = "The Convergence: The Song Nobody Can Finish"
+event = "convergence"
+kit = "the-song"
+lines = [
+  { say = "host", text = "Everybody's got the same song stuck, and nobody can finish it." },
+  { say = "host", text = "Kai knew how it ends. He was humming it when he caught that wave. He'll be back in about nine hundred years. We'll ask him." },
+]
+
+[[clip]]
+id = "convergence-the-knock"
+category = "event"
+title = "The Convergence: Three Knocks"
+event = "convergence"
+kit = "the-knock"
+lines = [
+  { say = "host", text = "Three knocks on the surf shack! Nobody there!" },
+  { say = "host", text = "Bonnie says they were knocking from the far side of the horizon. They'll get here in about a thousand years. We'll leave the door open." },
+]
+
+[[clip]]
+id = "convergence-wrong-colour"
+category = "event"
+title = "The Convergence: A Colour With No Name"
+event = "convergence"
+kit = "wrong-colour"
+lines = [
+  { say = "host", text = "Whoa. The sky just did a colour. Bonnie, did you see that?" },
+  { say = "bonnie", text = "I waved at it." },
+  { say = "host", text = "She waved at it! Perfect goodbye, Bonnie! It's not coming back!" },
+]
+
+[[clip]]
+id = "convergence-the-pigeon"
+category = "event"
+title = "The Convergence: The Pigeon"
+event = "convergence"
+kit = "the-pigeon"
+lines = [
+  { say = "host", text = "There's a pigeon on the beach. It walked right up to the no returns flag, and turned round. Smart bird." },
+  { say = "host", text = "It knows Bonnie! It's waving at Bonnie! Bonnie's waving back! Best wave I've ever seen!" },
+]
