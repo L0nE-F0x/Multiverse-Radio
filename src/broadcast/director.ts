@@ -10,23 +10,29 @@
 // moves, and the programme changes only once the dial settles on a new transmitter. On top,
 // the overlay (./overlay.ts) airs multiverse events and HUSH on every frequency.
 //
+// v4: the director keeps the dial's layout current (./secrets.ts: Free Frequency's nightly
+// move, secrets opening on the clock or once found, a patient listener's visitor) and, while
+// Free Frequency is on, lets HUSH jam it now and then: the host is cut mid-sentence by a
+// burst of static, HUSH says its piece, and the station resumes at its next segment.
+//
 // Timing model: each tick maps station time to context time (`ctxAt`) and schedules
 // anything starting within the lookahead. Ticks come from a Worker, but nothing relies on
 // them being punctual — a late tick only eats into the lookahead.
 
 import { createMusicEngine, type MusicEngine, type TrackRequest } from '../music';
 import { AudioBufferCache, contextDecoder } from './audioCache';
-import { bleedOf, clampFrequency, onPirateNames, receptionAt, signalOf, stationForId, type Reception, type Transmitter } from './dial';
+import { bleedOf, clampFrequency, currentLayout, onPirateNames, receptionAt, setDialLayout, signalOf, stationForId, type Reception, type Transmitter } from './dial';
 import { eventAt as seededEventAt } from './events';
-import type { HushLevel } from './hush';
+import { isJamClip, type HushLevel } from './hush';
 import { POOLS, type VoiceLibrary } from './library';
 import { resolveAsset } from './manifest';
 import { Mixer, type OutputMode, type VoiceHandle } from './mixer';
-import type { Overlay } from './overlay';
+import type { Overlay, ShiftView } from './overlay';
 import { daypartForHour, joinOffset, skipOffset, type MusicRun, type StationSchedule } from './scheduler';
+import { dialLayout, layoutKey, type DialLayout, type Visitor } from './secrets';
 import { createTicker, type Ticker } from './ticker';
 import { browserTzOffset, localTime, type TzOffset } from './time';
-import type { ActiveEvent, PlayStatus, StationDef, VoiceSegment } from './types';
+import type { ActiveEvent, PlayStatus, StationDef, VoiceClip, VoiceSegment } from './types';
 
 export interface Clock {
   now(): number;
@@ -79,6 +85,9 @@ export interface DirectorDebug {
   hushLevel: number;
   hushInMs: number;
   dialNoise: boolean;
+  /** v4: listening on a jammable station until HUSH next jams it (ms), and whether it's jamming now. */
+  jamInMs: number;
+  jamming: boolean;
 }
 
 type StartKind = 'power' | 'channel' | 'dial' | 'skip' | 'resume' | 'retry';
@@ -98,6 +107,12 @@ const VOICE_GAIN = { default: 1, ambient: 0.75 };
 const MIN_STATIC_MS: Record<StartKind, number> = { power: 650, channel: 650, retry: 650, dial: 150, skip: 320, resume: 280 };
 /** While dragging, the programme changes only after the dial has rested on a new transmitter this long. */
 const SETTLE_MS = 160;
+/** HUSH jams Free Frequency about this often (listening there). */
+const JAM_EVERY_MS: [number, number] = [10 * 60_000, 15 * 60_000];
+/** A jam cuts a clip at least this far in, with at least this much left (it's mid-sentence). */
+const JAM_CUT = { into: 1500, left: 4000 };
+/** HUSH doesn't jam this close to a multiverse event. */
+const JAM_EVENT_CLEARANCE_MS = 75_000;
 
 const delay = (ms: number) => new Promise<void>((resolve) => setTimeout(resolve, ms));
 
@@ -120,6 +135,8 @@ export class Director {
   readonly log: LogEntry[] = [];
   /** Events and HUSH (loaded on first power-on: a separate chunk). */
   overlay: Overlay | null = null;
+  /** True once loading the overlay has failed (offline before it was cached): HUSH can't speak. */
+  overlayFailed = false;
 
   /** Dial position in MHz. */
   frequency: number;
@@ -167,6 +184,24 @@ export class Director {
   private readonly levelBuffer = new Float32Array(512);
   private hushOverride: HushLevel | null = null;
 
+  /** v4: secrets found (the store keeps this up to date) and the patient listener's visitor. */
+  private discovered: readonly string[] = [];
+  private visitor: Visitor | null = null;
+  /** v4: the dial's layout, and a count of how often it has changed. */
+  layout: DialLayout;
+  layoutVersion = 0;
+  /** v4: what HUSH knows of the listener's shifts (the store wires this up). */
+  shiftView: () => ShiftView = () => ({ shifts: 0, aired: {} });
+  /** v4: an arc step went out (the store records it). */
+  onArc: ((arc: NonNullable<VoiceClip['arc']>, clip: VoiceClip) => void) | null = null;
+  /** v4: HUSH jamming Free Frequency. */
+  private jamListenMs = 0;
+  private jamNextMs: number;
+  private jamLastWall: number | null = null;
+  private jamClip: VoiceClip | null = null;
+  private jamState: { stationId: string; resumeAt: number; resumeStationMs: number } | null = null;
+  private readonly random: () => number = Math.random;
+
   private readonly voices = new Map<string, { handle: VoiceHandle; segment: VoiceSegment }>();
   /** Voice segments that couldn't air (id → end of slot, station ms). Music fills them. */
   private readonly failed = new Map<string, number>();
@@ -188,6 +223,9 @@ export class Director {
     this.output = options.output ?? 'auto';
     this.createEngine = options.createEngine ?? createMusicEngine;
     this.volume = options.volume ?? 0.8;
+    this.jamNextMs = this.jamDelay();
+    this.layout = this.layoutNow();
+    setDialLayout(this.layout);
     const start = stationForId(options.stationId ?? '') ?? this.stations[0]!;
     this.frequency = clampFrequency(options.frequency ?? start.frequency);
     this.reception = receptionAt(this.frequency);
@@ -286,11 +324,14 @@ export class Director {
           this.library,
         );
         overlay.levelOverride = this.hushOverride;
+        overlay.shiftView = () => this.shiftView();
+        overlay.onArc = (arc, clip) => this.onArc?.(arc, clip);
         this.overlay = overlay;
         return overlay;
       },
       () => {
         this.overlayLoad = null;
+        this.overlayFailed = true;
         return null;
       },
     );
@@ -310,6 +351,134 @@ export class Director {
   /** Lab: how far the clock has been warped (ms). */
   get warp(): number {
     return this.warpMs;
+  }
+
+  /** The listener's UTC offset function (labs show local times with it). */
+  get tzOffset(): TzOffset {
+    return this.tz;
+  }
+
+  // ── v4: the dial's layout ─────────────────────────────────────────────────
+
+  private layoutNow(): DialLayout {
+    return dialLayout({ ms: this.clock.now(), tz: this.tz, discovered: this.discovered, visitor: this.visitor });
+  }
+
+  /**
+   * Tells the director which secrets are found and where a visitor sits (the store calls it
+   * whenever either changes). The dial follows at once.
+   */
+  setSecrets(discovered: readonly string[], visitor: Visitor | null): void {
+    this.discovered = discovered;
+    this.visitor = visitor;
+    this.updateLayout();
+  }
+
+  /** Rebuilds the dial's layout if anything it depends on has changed (cheap otherwise). */
+  private updateLayout(): void {
+    const key = layoutKey({ ms: this.clock.now(), tz: this.tz, discovered: this.discovered, visitor: this.visitor });
+    if (key === this.layout.key && currentLayout() === this.layout) return;
+    this.layout = this.layoutNow();
+    setDialLayout(this.layout);
+    this.layoutVersion++;
+    this.note(`dial layout: ${key}`);
+    this.reception = receptionAt(this.frequency);
+    this.updateReception();
+    const lock = this.reception.lock;
+    if ((lock?.id ?? null) !== (this.program?.id ?? null)) {
+      this.cancelSettle();
+      this.retune(lock, 'dial');
+    } else {
+      // Same transmitter id, maybe a new definition (Free Frequency moved under the dial).
+      this.program = lock;
+      this.emit();
+    }
+  }
+
+  // ── v4: HUSH jams Free Frequency ──────────────────────────────────────────
+
+  private jamDelay(): number {
+    const [lo, hi] = JAM_EVERY_MS;
+    return lo + this.random() * (hi - lo);
+  }
+
+  /** True while HUSH is jamming the programme (it's cut; HUSH has the air). */
+  get jammed(): boolean {
+    return this.jamState !== null;
+  }
+
+  /** Lab: jam at the next chance (if tuned to a jammable station). */
+  jamNow(): void {
+    this.jamListenMs = Math.max(this.jamListenMs, this.jamNextMs);
+  }
+
+  private jammable(): boolean {
+    return this.program?.kind === 'station' && (this.program.station.drift?.length ?? 0) > 0;
+  }
+
+  /** Counts listening on Free Frequency and, when it's time, cuts the host for HUSH. */
+  private tickJam(wall: number): void {
+    const mixer = this.mixer;
+    const overlay = this.overlay;
+    const jam = this.jamState;
+    if (jam) {
+      if (wall >= jam.resumeAt) this.resumeFromJam(jam);
+      return;
+    }
+    if (!this.jammable() || !this.live || !mixer || !overlay) {
+      this.jamLastWall = null;
+      return;
+    }
+    if (this.jamLastWall !== null) this.jamListenMs += Math.min(2000, Math.max(0, wall - this.jamLastWall));
+    this.jamLastWall = wall;
+    if (this.jamListenMs < this.jamNextMs - 30_000) return;
+    // Nearly time: choose the notice and decode it.
+    if (!this.jamClip) {
+      const pool = this.library.pool(POOLS.ship).filter(isJamClip);
+      if (pool.length === 0) {
+        // Nothing to jam with (yet): look again later.
+        this.jamNextMs = this.jamListenMs + 5 * 60_000;
+        return;
+      }
+      this.jamClip = pool[Math.floor(this.random() * pool.length)]!;
+    }
+    overlay.warm(this.jamClip);
+    if (this.jamListenMs < this.jamNextMs) return;
+    // Mid-sentence, clear of events, with nothing else on the overlay.
+    const event = this.eventAt(wall);
+    if (event || overlay.nextEventAfter(wall).startMs - wall < JAM_EVENT_CLEARANCE_MS || overlay.speakingSoon) return;
+    const now = this.stationNow();
+    const segment = this.schedule().segmentAt(now);
+    if (segment.kind !== 'voice' || !this.voices.has(segment.id)) return;
+    if (now - segment.startMs < JAM_CUT.into || segment.startMs + segment.durationMs - now < JAM_CUT.left) return;
+    const ends = overlay.jam(this.jamClip, wall);
+    if (ends === null) return;
+    const stationId = this.stationId;
+    this.note(`HUSH jams ${stationId}: ${this.jamClip.id}`);
+    this.halt(0.04);
+    this.jamState = { stationId, resumeAt: ends + 450, resumeStationMs: segment.startMs + segment.durationMs };
+    this.jamClip = null;
+    this.jamListenMs = 0;
+    this.jamNextMs = this.jamDelay();
+    this.emit();
+  }
+
+  /** After a jam: the station carries on from the segment after the one HUSH cut. */
+  private resumeFromJam(jam: NonNullable<Director['jamState']>): void {
+    this.jamState = null;
+    const mixer = this.mixer;
+    if (!mixer || this.stationId !== jam.stationId) return;
+    const now = this.clock.now();
+    this.offsets.set(jam.stationId, jam.resumeStationMs - now - this.appliedShift);
+    this.live = true;
+    this.joining = true;
+    this.lastTick = null;
+    mixer.resetDuck();
+    mixer.fadeProgramme(1, 0.25);
+    this.note(`jam over: ${jam.stationId} resumes`);
+    this.scheduleAudio();
+    this.joining = false;
+    this.emit();
   }
 
   subscribe(listener: () => void): () => void {
@@ -349,6 +518,8 @@ export class Director {
       hushLevel: this.overlay?.level() ?? this.hushOverride ?? 0,
       hushInMs: this.overlay?.hushInMs ?? 0,
       dialNoise: mixer?.dialNoiseActive ?? false,
+      jamInMs: this.jammable() ? Math.max(0, this.jamNextMs - this.jamListenMs) : 0,
+      jamming: this.jamState !== null,
     };
   }
 
@@ -439,6 +610,8 @@ export class Director {
   pause(): void {
     if (this.status === 'off' || this.status === 'paused') return;
     this.generation++;
+    this.jamState = null;
+    this.jamLastWall = null;
     this.halt(0.15);
     this.overlay?.stop(0.15);
     this.mixer?.stopStatic(0.1);
@@ -558,6 +731,8 @@ export class Director {
     }
     mixer.unlock();
     const generation = ++this.generation;
+    this.jamState = null;
+    this.jamLastWall = null;
     clearTimeout(this.suspendTimer);
     this.halt(kind === 'dial' ? 0.06 : 0.12);
     this.message = null;
@@ -704,6 +879,7 @@ export class Director {
   // ── The heartbeat ─────────────────────────────────────────────────────────
 
   private readonly tick = (): void => {
+    this.updateLayout();
     const mixer = this.mixer;
     if (this.powered && mixer && mixer.ctx.state === 'running') {
       if (this.live && this.program) this.scheduleAudio();
@@ -715,7 +891,9 @@ export class Director {
         stationId: this.program?.id ?? null,
         daypart: daypartForHour(local.hour),
         date: local.date,
+        weekday: local.weekday,
       });
+      if (this.status === 'playing') this.tickJam(wall);
     }
     for (const listener of this.tickListeners) listener();
   };

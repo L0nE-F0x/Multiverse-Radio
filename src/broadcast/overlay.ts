@@ -5,15 +5,19 @@
 //     carry `event` clips from /voice/_events.json.
 //   - HUSH (./hush.ts): the ship's computer, every 10–20 minutes of listening, ducked like a
 //     host, waiting for a gap in the station's talk, and never near an event.
+//   - v4: the Convergence's shared open and close, and between them the tuned station's own
+//     reaction (each station's once per Convergence, so tuning around hears several); HUSH's
+//     arc steps (reported through `onArc`); and HUSH jamming Free Frequency (`jam`, called by
+//     the director, which cuts the station itself).
 //
 // The director calls `tick` on every heartbeat while the radio is on; audio is scheduled a
 // few seconds ahead on the context clock, like the station's own clips.
 
 import { SHIP } from '../stations/ship';
 import type { AudioBufferCache } from './audioCache';
-import { alert, beyond, hum, squalls, sweep, type Treatment } from './eventfx';
-import { eventAt, makeEvent, nextEvent, planEvent, type EventPlan } from './events';
-import { HushPicker, hushLevel, nextHushDelay, type HushLevel } from './hush';
+import { alert, beyond, burst, hum, squalls, sweep, type Treatment } from './eventfx';
+import { convergenceReaction, eventAt, makeEvent, nextEvent, planEvent, type EventPlan } from './events';
+import { HushPicker, hushLevel, nextHushDelay, type ArcProgress, type HushLevel } from './hush';
 import { POOLS, type VoiceLibrary } from './library';
 import { resolveAsset } from './manifest';
 import type { Mixer, VoiceHandle } from './mixer';
@@ -39,6 +43,14 @@ export interface ProgramView {
   daypart: Daypart;
   /** Local "MM-DD". */
   date: string;
+  /** v4: local weekday (0 = Sunday). */
+  weekday?: number;
+}
+
+/** v4: what HUSH knows about the listener's shifts (for arc steps). */
+export interface ShiftView {
+  shifts: number;
+  aired: ArcProgress;
 }
 
 interface Airing {
@@ -66,6 +78,10 @@ export class Overlay {
   levelOverride: HushLevel | null = null;
   /** Listening time this session (only while the radio is on). */
   listenMs = 0;
+  /** v4: the listener's shifts and the arc steps aired so far. */
+  shiftView: () => ShiftView = () => ({ shifts: 0, aired: {} });
+  /** v4: called when an arc step actually goes out. */
+  onArc: ((arc: NonNullable<VoiceClip['arc']>, clip: VoiceClip) => void) | null = null;
 
   private lastWall: number | null = null;
   private nextHushMs: number;
@@ -77,6 +93,9 @@ export class Overlay {
   private treatment: { key: string; parts: Treatment[]; quietStatic: boolean } | null = null;
   private spans: DuckSpan[] = [];
   private duckUntil = -Infinity;
+  /** Convergence reactions already aired (`<event key>:react:<station>`), for the event on now. */
+  private reacted = new Set<string>();
+  private jamCount = 0;
 
   constructor(
     private readonly mixer: () => Mixer | null,
@@ -209,6 +228,9 @@ export class Overlay {
     if (plan && key && !this.treatment) this.startTreatment(plan, key, mixer, wall, ctxAt);
     if (plan && key) {
       plan.clips.forEach((planned, i) => this.air(`${key}:${i}`, 'event', planned.clip, planned.startMs, plan.underClip, wall, ctxAt));
+      if (plan.convergence) this.react(plan, key, program.stationId, wall, ctxAt);
+    } else if (this.reacted.size) {
+      this.reacted.clear();
     }
     const upcoming = this.nextEventAfter(wall);
     if (upcoming.startMs - wall < 45_000) {
@@ -220,6 +242,56 @@ export class Overlay {
     this.scheduleDuck(wall, ctxNow, ctxAt);
     this.airings = this.airings.filter((a) => !a.handle.ended);
     this.spans = this.spans.filter((s) => s.to > wall - 5000);
+  }
+
+  /**
+   * The Convergence: the tuned station's reaction to this week's topic, once per station,
+   * between the open and the close, whenever nothing else from the event is speaking.
+   */
+  private react(plan: EventPlan, key: string, stationId: string | null, wall: number, ctxAt: (ms: number) => number): void {
+    const c = plan.convergence!;
+    if (!stationId || stationId.startsWith('pirate-') || stationId.startsWith('oddity-')) return;
+    const reactKey = `${key}:react:${stationId}`;
+    if (this.reacted.has(reactKey)) return;
+    const clip = convergenceReaction(this.library.pool(stationId), c.topic, plan.event.startMs);
+    if (!clip) return;
+    this.prefetch(clip);
+    const start = Math.max(c.fromMs, wall + 1200);
+    if (start + clip.durationMs > c.toMs) return;
+    const busy = this.airings.some((a) => !a.handle.ended && a.startMs < start + clip.durationMs + 800 && a.startMs + a.clip.durationMs + 800 > start);
+    if (busy) return;
+    if (this.air(reactKey, 'event', clip, start, plan.underClip, wall, ctxAt)) this.reacted.add(reactKey);
+  }
+
+  /** True while anything from the overlay is speaking (or about to). */
+  get speakingSoon(): boolean {
+    return this.airings.some((a) => !a.handle.ended);
+  }
+
+  /**
+   * v4: HUSH jams the programme (Free Frequency): a burst of static now, then the jam clip.
+   * The director has already cut the station. Returns the wall time the clip ends, or null
+   * if the clip isn't decoded yet (it starts loading).
+   */
+  jam(clip: VoiceClip, wall: number): number | null {
+    const mixer = this.mixer();
+    const cache = this.cache();
+    if (!mixer || !cache || mixer.ctx.state !== 'running') return null;
+    const url = resolveAsset(clip.url);
+    if (!cache.get(url)) {
+      if (cache.state(url) === 'idle') void cache.load(url);
+      return null;
+    }
+    const ctxNow = mixer.ctx.currentTime;
+    const ctxAt = (ms: number) => ctxNow + (ms - wall) / 1000;
+    burst(mixer.ctx, mixer.overlayBus, mixer.noiseBuffer, ctxNow + 0.02, 0.7, hash('jam', wall));
+    const start = wall + 750;
+    return this.air(`jam:${++this.jamCount}`, 'ship', clip, start, 1, wall, ctxAt) ? start + clip.durationMs : null;
+  }
+
+  /** Starts decoding a clip ahead of time. */
+  warm(clip: VoiceClip): void {
+    if (this.cache()) this.prefetch(clip);
   }
 
   private prefetch(clip: VoiceClip): void {
@@ -333,7 +405,13 @@ export class Overlay {
     if (!this.pending) {
       const pool = this.library.pool(POOLS.ship);
       void this.library.loadPool(POOLS.ship);
-      const clip = this.picker.pick(pool, this.level(), { date: program.date, daypart: program.daypart }, this.random);
+      const view = this.shiftView();
+      const clip = this.picker.pick(
+        pool,
+        this.level(),
+        { date: program.date, daypart: program.daypart, weekday: program.weekday, shifts: view.shifts, aired: view.aired },
+        this.random,
+      );
       if (!clip) {
         // Nothing to say yet (the pool may still be loading, or not exist): ask again later.
         this.nextHushMs = this.listenMs + (pool.length ? 5 : 1) * MIN;
@@ -362,6 +440,7 @@ export class Overlay {
     this.pending = null;
     if (this.air(`ship:${++this.hushCount}`, 'ship', clip, start, HOST_DUCK, wall, ctxAt)) {
       this.nextHushMs = this.listenMs + nextHushDelay(this.random);
+      if (clip.arc) this.onArc?.(clip.arc, clip);
     } else {
       this.nextHushMs = this.listenMs + MIN;
     }
