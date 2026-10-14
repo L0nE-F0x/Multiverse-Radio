@@ -27,8 +27,8 @@ start = 19
 end = 23
 
 [[show]]
-id = "harbour-lights"
-name = "Harbour Lights"
+id = "lights-on-the-water"
+name = "Lights on the Water"
 blurb = "The small hours at the Harbour. Old ships asleep at the piers, and someone keeping watch for them."
 start = 23
 end = 4
@@ -91,14 +91,14 @@ lines = [
 ]
 
 [[clip]]
-id = "id-harbour-lights"
+id = "id-lights-on-the-water"
 category = "id"
-title = "Harbour Lights"
-show = "harbour-lights"
+title = "Lights on the Water"
+show = "lights-on-the-water"
 part = "open"
 lines = [
-  { say = "harbourmaster", text = "Harbour Lights. Everyone's moored. Everyone's quiet.", gap = 0.6 },
-  { say = "harbourmaster", text = "Just me, the kettle, and the lights on the water." },
+  { say = "harbourmaster", text = "Lights on the Water. Everyone's moored. Everyone's quiet.", gap = 0.6 },
+  { say = "harbourmaster", text = "Just me, the kettle, and whoever's still awake." },
 ]
 
 [[clip]]
@@ -225,18 +225,18 @@ lines = [
 ]
 
 [[clip]]
-id = "dj-harbour-lights-1"
+id = "dj-lights-on-the-water-1"
 category = "dj"
-show = "harbour-lights"
+show = "lights-on-the-water"
 lines = [
   { say = "harbourmaster", text = "Three old relays asleep along the long pier tonight. Relay Two, Relay Eleven, and one so old she hasn't got a number, only a name.", gap = 0.6 },
   { say = "harbourmaster", text = "Ships snore, you know. Very softly. A sort of hum." },
 ]
 
 [[clip]]
-id = "dj-harbour-lights-2"
+id = "dj-lights-on-the-water-2"
 category = "dj"
-show = "harbour-lights"
+show = "lights-on-the-water"
 lines = [
   { say = "harbourmaster", text = "Your ship's asleep. First time in a long time. I can tell, because her heading light's gone out.", gap = 0.6 },
   { say = "harbourmaster", text = "Don't wake her. She's earned it. I'll keep the watch tonight. That's what I'm for." },
