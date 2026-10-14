@@ -262,3 +262,44 @@ export class GlobeRenderer {
     }
   }
 }
+
+/**
+ * A crowd member seen from behind: chunky shoulders, a head, arms that go from a loose
+ * elbows-out groove (`up` 0) to straight up (`up` 1), and legs for when they're in view.
+ */
+export function crowdBack(g: Gfx, x: number, footY: number, h: number, up: number, sway: number, bob: number, c: Color, hair = 0) {
+  x = Math.round(x + sway * h * 0.03);
+  const y = footY + bob;
+  const sh = y - h * 0.66;
+  const sw = h * 0.2;
+  const lw = Math.max(1, Math.round(h * 0.075));
+  // legs and hips
+  limb(g, x - h * 0.06, y - h * 0.42, x - h * 0.08, footY, lw + 1, c);
+  limb(g, x + h * 0.06, y - h * 0.42, x + h * 0.08, footY, lw + 1, c);
+  g.ellipse(x, y - h * 0.42, h * 0.13, h * 0.08, c);
+  // torso
+  g.poly([x - sw, sh + 1, x + sw, sh + 1, x + h * 0.14, y - h * 0.4, x - h * 0.14, y - h * 0.4], c);
+  g.ellipse(x, sh + 1, sw, Math.max(1, h * 0.05), c);
+  // arms
+  const s = sway * h * 0.05;
+  for (let side = -1; side <= 1; side += 2) {
+    const ax = x + side * sw * 0.85;
+    const ay = sh + 2;
+    const ex = ax + side * h * (0.16 - 0.08 * up);
+    const ey = ay + h * (0.12 - 0.32 * up);
+    const hx = ax + side * h * (0.08 + 0.04 * up) + s * up;
+    const hy = ay + h * (0.02 - 0.44 * up);
+    limb(g, ax, ay, ex, ey, lw, c);
+    limb(g, ex, ey, hx, hy, lw, c);
+  }
+  // neck and head
+  const hr = Math.max(1.2, h * 0.095);
+  g.rect(x - hr * 0.5, sh - hr, hr + 1, hr + 1, c);
+  g.disc(x, sh - hr * 1.35, hr, c);
+  if (hair === 1) g.disc(x, sh - hr * 1.6, hr * 1.45, c);
+  else if (hair === 2) g.rect(x - hr * 0.4, sh - hr * 2.9, hr * 0.9, hr * 0.8, c);
+  else if (hair === 3) {
+    g.rect(x - hr * 1.6, sh - hr * 2.0, hr * 3.2 + 1, 1, c);
+    g.rect(x - hr, sh - hr * 3, hr * 2 + 1, hr, c);
+  }
+}
