@@ -390,13 +390,13 @@ export function createPacks(deps: OfflineDeps) {
     }
   }
 
-  async function downloadPack(pack: PackId, onProgress: (progress: DownloadProgress) => void, signal?: AbortSignal): Promise<void> {
+  /** Stow a pack, or specific entries (e.g. the stale ones). Skips what's current. */
+  async function stow(what: PackId | string[], onProgress: (progress: DownloadProgress) => void, signal?: AbortSignal): Promise<void> {
     if (signal?.aborted) throw abortError();
     void requestPersistence();
     const index = await loadIndex();
-    const stowedEntries = await readStowed();
-    const stowed = versions(stowedEntries);
-    const plan = await packPlan(pack, { index, stowed });
+    const stowed = versions(await readStowed());
+    const plan = typeof what === 'string' ? await packPlan(what, { index, stowed }) : sizePlan('everything', what, index, stowed);
     const cache = await open();
     const totalBytes = plan.bytes;
     let doneBase = 0;
@@ -415,7 +415,9 @@ export function createPacks(deps: OfflineDeps) {
       if (signal?.aborted) throw abortError();
       const planned = index?.entries[key]?.bytes ?? 0;
       let entryDone = 0;
-      const report = () => onProgress({ doneBytes: doneBase + Math.min(entryDone, planned || entryDone), totalBytes, current: key });
+      const report = () =>
+        !signal?.aborted &&
+        onProgress({ doneBytes: doneBase + Math.min(entryDone, planned || entryDone), totalBytes, current: key });
       report();
 
       const res = await fetchRetry(manifestPath(key), signal);
@@ -534,7 +536,16 @@ export function createPacks(deps: OfflineDeps) {
     };
   }
 
-  return { loadIndex, packPlan: (pack: PackId) => packPlan(pack), packPlans, downloadPack, removePacks, offlineStatus, requestPersistence };
+  return {
+    loadIndex,
+    packPlan: (pack: PackId) => packPlan(pack),
+    packPlans,
+    downloadPack: (pack: PackId, onProgress: (progress: DownloadProgress) => void, signal?: AbortSignal) => stow(pack, onProgress, signal),
+    downloadEntries: (entries: string[], onProgress: (progress: DownloadProgress) => void, signal?: AbortSignal) => stow(entries, onProgress, signal),
+    removePacks,
+    offlineStatus,
+    requestPersistence,
+  };
 }
 
 function clipsOf(text: string): { url: string; durationMs: number }[] | null {
@@ -629,6 +640,11 @@ export function packPlans(): Promise<Record<PackId, PackPlan>> {
 /** Stow a pack. Resumable: entries already stowed at the current version are skipped. */
 export function downloadPack(pack: PackId, onProgress: (progress: DownloadProgress) => void, signal?: AbortSignal): Promise<void> {
   return packs().downloadPack(pack, onProgress, signal);
+}
+
+/** Stow (or refresh) specific entries, e.g. the stale ones from `offlineStatus()`. */
+export function downloadEntries(entries: string[], onProgress: (progress: DownloadProgress) => void, signal?: AbortSignal): Promise<void> {
+  return packs().downloadEntries(entries, onProgress, signal);
 }
 
 /** Remove the given stowed entries, or everything when called without arguments. */

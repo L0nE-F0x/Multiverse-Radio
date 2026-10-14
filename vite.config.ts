@@ -24,6 +24,7 @@ export default defineConfig({
         'lab-director': 'lab/director.html',
         'lab-scenes': 'lab/scenes.html',
         'lab-onboarding': 'lab/onboarding.html',
+        'lab-offline': 'lab/offline.html',
       },
     },
   },

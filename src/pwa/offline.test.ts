@@ -198,7 +198,8 @@ describe('downloads', () => {
 
   it('marks changed entries stale and replaces their clips on refresh', async () => {
     const files = library();
-    const packs = createPacks(fakeBrowser(files).deps);
+    const browser = fakeBrowser(files);
+    const packs = createPacks(browser.deps);
     await packs.downloadPack('essentials', () => {});
 
     // A new deploy: void-beats re-rendered with a different clip list.
@@ -213,8 +214,13 @@ describe('downloads', () => {
     const plan = await packs.packPlan('essentials');
     expect(plan.missing).toEqual(['void-beats']);
 
-    await packs.downloadPack('essentials', () => {});
+    await packs.downloadEntries(status.stale, () => {});
     expect((await packs.offlineStatus()).stale).toEqual([]);
+    expect((await packs.packPlan('essentials')).missing).toEqual([]);
+    const cache = browser.caches.get('mvr-packs')!;
+    expect(cache.store.has('/voice/void-beats/dj-1.mp3')).toBe(false);
+    expect(await (await cache.match('/voice/void-beats/dj-2.mp3'))!.text()).toContain(':new');
+    expect(await (await cache.match('/voice/void-beats/id-1.mp3'))!.text()).toContain(':new');
   });
 
   it('removes one entry or everything', async () => {
