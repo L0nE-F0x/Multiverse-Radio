@@ -581,6 +581,148 @@
           "startMs": 38
         }
       ]
+    },
+    {
+      "id": "convergence-missing-moon",
+      "category": "event",
+      "url": "/voice/smoke-ring-trio/convergence-missing-moon.mp3",
+      "durationMs": 12196,
+      "title": "The Convergence: A Moon Goes Missing",
+      "overMusic": false,
+      "kit": "missing-moon",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Octavia Lowe",
+          "text": "The cloud drifted past the place where a moon used to be, darlings. Everyone says one's missing. Nobody can agree which.",
+          "startMs": 36
+        },
+        {
+          "speaker": "Octavia Lowe",
+          "text": "Mercy played a little something into the gap. It sounded like a moon. Close enough.",
+          "startMs": 7429
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-smell",
+      "category": "event",
+      "url": "/voice/smoke-ring-trio/convergence-the-smell.mp3",
+      "durationMs": 10524,
+      "title": "The Convergence: Toast, Everywhere",
+      "overMusic": false,
+      "kit": "the-smell",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Octavia Lowe",
+          "text": "The whole room smells of toast. So, they tell me, does everywhere else.",
+          "startMs": 40
+        },
+        {
+          "speaker": "Octavia Lowe",
+          "text": "Florian swears it isn't the kitchen. We haven't got a kitchen. We have a small cloud with a kettle on it.",
+          "startMs": 4394
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-song",
+      "category": "event",
+      "url": "/voice/smoke-ring-trio/convergence-the-song.mp3",
+      "durationMs": 11738,
+      "title": "The Convergence: The Song Nobody Can Finish",
+      "overMusic": false,
+      "kit": "the-song",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Octavia Lowe",
+          "text": "There's a tune going round, darlings, the whole dial's humming it, and nobody can finish it.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Octavia Lowe",
+          "text": "Mercy's been playing the first half all night. She's waiting for somebody else to play the end. That's jazz.",
+          "startMs": 5485
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-knock",
+      "category": "event",
+      "url": "/voice/smoke-ring-trio/convergence-the-knock.mp3",
+      "durationMs": 9501,
+      "title": "The Convergence: Three Knocks",
+      "overMusic": false,
+      "kit": "the-knock",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Octavia Lowe",
+          "text": "Three knocks at the stage door. Silas played them back on the snare, very softly.",
+          "startMs": 50
+        },
+        {
+          "speaker": "Octavia Lowe",
+          "text": "There was nobody there. There never is, in a cloud. But it was a lovely rhythm.",
+          "startMs": 4975
+        }
+      ]
+    },
+    {
+      "id": "convergence-wrong-colour",
+      "category": "event",
+      "url": "/voice/smoke-ring-trio/convergence-wrong-colour.mp3",
+      "durationMs": 11760,
+      "title": "The Convergence: A Colour With No Name",
+      "overMusic": false,
+      "kit": "wrong-colour",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Octavia Lowe",
+          "text": "The sky outside the Cumulus Room went a colour just now. There's no word for it.",
+          "startMs": 37
+        },
+        {
+          "speaker": "Octavia Lowe",
+          "text": "Augustin stopped walking his bass line, for the first time since spring. Then he picked it up again, a little slower.",
+          "startMs": 5228
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-pigeon",
+      "category": "event",
+      "url": "/voice/smoke-ring-trio/convergence-the-pigeon.mp3",
+      "durationMs": 11116,
+      "title": "The Convergence: The Pigeon",
+      "overMusic": false,
+      "kit": "the-pigeon",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Florian, the Waiter",
+          "text": "Madame Octavia, there is a pigeon at table nine.",
+          "startMs": 44
+        },
+        {
+          "speaker": "Octavia Lowe",
+          "text": "Is it ordering, Florian?",
+          "startMs": 3228
+        },
+        {
+          "speaker": "Florian, the Waiter",
+          "text": "It asked for the usual.",
+          "startMs": 5252
+        },
+        {
+          "speaker": "Octavia Lowe",
+          "text": "Then bring it the usual, darling. It's clearly been here before.",
+          "startMs": 7315
+        }
+      ]
     }
   ]
 }

@@ -247,6 +247,76 @@ describe.skipIf(!PYTHON)('voice:check (v4 fields)', () => {
   });
 });
 
+describe.skipIf(!PYTHON)('pronunciation lexicon', () => {
+  const HERE = fileURLToPath(new URL('.', import.meta.url));
+  /** Runs Python with scripts/voice on the path and returns stdout as JSON. */
+  function py(code: string, env: Record<string, string> = {}) {
+    const result = spawnSync(PYTHON!, ['-c', code], { encoding: 'utf8', cwd: HERE, env: { ...process.env, ...env } });
+    if (result.status !== 0) throw new Error(result.stderr);
+    return JSON.parse(result.stdout);
+  }
+
+  it('respells whole words only, keeping the written case', () => {
+    const out = py(`
+import json
+from voicescript import apply_lexicon
+lex = {"theremin": "therr-a-min", "la la": "lah lah"}
+print(json.dumps([apply_lexicon(t, lex) for t in [
+  "The theremin, the Theremin's case, THEREMIN!", "theremins and thereminist", "Sing la la, not lala.", "No change."]]))`);
+    expect(out).toEqual([
+      "The therr-a-min, the Therr-a-min's case, THERR-A-MIN!",
+      'theremins and thereminist',
+      'Sing lah lah, not lala.',
+      'No change.',
+    ]);
+  });
+
+  it('changes what Kokoro hears (and the clip hash) but not the captions', () => {
+    const dir = tempDir({
+      'lexicon.toml': '[words]\ntheremin = "therr-a-min"\n',
+      'tiki-satellite.toml': station('tiki-satellite', clip('t', 'category = "dj"',
+        'lines = [{ say = "host", text = "The Theremin is warming up." }, { pause = 0.5 }, { say = "host", text = "Theremin, theremin, therem", cut = 0.5 }]')),
+    });
+    const code = `
+import json, sys
+sys.argv = ["render.py"]
+import render
+from pathlib import Path
+lex = render.load_lexicon(Path(${JSON.stringify(join(dir, 'lexicon.toml'))}))
+[script] = render.load_all([Path(${JSON.stringify(join(dir, 'tiki-satellite.toml'))})], Path(${JSON.stringify(dir)}))
+clip = script.clips[0]
+spoken = [l.text for l in clip.lines if hasattr(l, "text")]
+heard = [{"speaker": "Lyle", "text": t, "startMs": 0} for t in ["The Therr-a-min is warming up.", "Therr-a-min, therr-—"]]
+print(json.dumps({"lex": lex, "spoken": spoken, "written": {str(k): v for k, v in clip.written.items()},
+                  "captions": [c["text"] for c in render.written_captions(clip, heard)],
+                  "canonical": json.dumps(clip.audio_canonical())}))`;
+    const out = py(code, { VOICE_LEXICON: join(dir, 'lexicon.toml') });
+    expect(out.lex).toEqual({ theremin: 'therr-a-min' });
+    expect(out.spoken).toEqual(['The Therr-a-min is warming up.', 'Therr-a-min, therr-a-min, therem']);
+    expect(out.written).toEqual({ 0: 'The Theremin is warming up.', 2: 'Theremin, theremin, therem' });
+    expect(out.captions).toEqual(['The Theremin is warming up.', 'Theremin, theremin—']);
+    expect(out.canonical).toContain('Therr-a-min');
+    expect(out.canonical).not.toContain('Theremin');
+  });
+
+  it('rejects a malformed lexicon before checking anything', () => {
+    for (const bad of ['[words]\nTheremin = "x"\n', '[words]\ntheremin = ""\n', '[words]\ntheremin = "theremin"\n', 'theremin = "x"\n']) {
+      const dir = tempDir({ 'lexicon.toml': bad, 'void-beats.toml': station('void-beats', reactions()) });
+      const result = spawnSync(PYTHON!, [RENDER, '--check', '--content', dir], {
+        encoding: 'utf8',
+        env: { ...process.env, VOICE_LEXICON: join(dir, 'lexicon.toml') },
+      });
+      expect(result.status, bad).toBe(1);
+      expect(result.stderr).toMatch(/lexicon\.toml: /);
+    }
+  });
+
+  it('ships a lexicon that loads', () => {
+    const out = py('import json; from pathlib import Path; from voicescript import load_lexicon; print(json.dumps(load_lexicon(Path("lexicon.toml"))))');
+    expect(out.theremin).toBeTruthy();
+  });
+});
+
 describe.skipIf(!PYTHON)('voice:render --index', () => {
   const manifest = (station: string, ids: string[]) =>
     `${JSON.stringify({

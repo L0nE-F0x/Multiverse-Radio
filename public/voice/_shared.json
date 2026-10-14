@@ -1702,6 +1702,31 @@
           "startMs": 5787
         }
       ]
+    },
+    {
+      "id": "ad-outer-band-01",
+      "category": "ad",
+      "url": "/voice/_shared/ad-outer-band-01.mp3",
+      "durationMs": 21159,
+      "title": "Grumbel's Outer Band Extension",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Arnold Grumbel",
+          "text": "They're saying the dial's got longer. New stations, out past one hundred and eight, further than anyone's tuned before.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Arnold Grumbel",
+          "text": "The Grumbel's Outer Band Extension. Three extra rungs. Clips on to the top of any Grumbel's ladder, so you can hold your radio up that little bit higher, and listen.",
+          "startMs": 6172
+        },
+        {
+          "speaker": "Arnold Grumbel",
+          "text": "My grandfather heard the sea from the top of one. He lived nowhere near the sea. Grumbel's Ladders. Up is a choice. Out is a bit further.",
+          "startMs": 14519
+        }
+      ]
     }
   ]
 }

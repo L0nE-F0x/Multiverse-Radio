@@ -1255,6 +1255,188 @@
           "startMs": 3469
         }
       ]
+    },
+    {
+      "id": "convergence-missing-moon",
+      "category": "event",
+      "url": "/voice/mirror-polka/convergence-missing-moon.mp3",
+      "durationMs": 11403,
+      "title": "The Convergence: A Moon Goes Missing",
+      "overMusic": false,
+      "kit": "missing-moon",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Johnny Mirror",
+          "text": "Folks, a moon's gone missing! Everybody agrees one's gone!",
+          "startMs": 35
+        },
+        {
+          "speaker": "Ynnhoj",
+          "text": "Everybody agrees!",
+          "startMs": 4414
+        },
+        {
+          "speaker": "Johnny Mirror",
+          "text": "Ours is still here! It's just on the left now!",
+          "startMs": 5984
+        },
+        {
+          "speaker": "Ynnhoj",
+          "text": "It was always on the left.",
+          "startMs": 9365
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-smell",
+      "category": "event",
+      "url": "/voice/mirror-polka/convergence-the-smell.mp3",
+      "durationMs": 9604,
+      "title": "The Convergence: Toast, Everywhere",
+      "overMusic": false,
+      "kit": "the-smell",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Johnny Mirror",
+          "text": "Who's making toast? The whole mirror smells of toast!",
+          "startMs": 36
+        },
+        {
+          "speaker": "Ynnhoj",
+          "text": "Toast!",
+          "startMs": 3794
+        },
+        {
+          "speaker": "Johnny Mirror",
+          "text": "Over here we butter the other side! Still lovely!",
+          "startMs": 4826
+        },
+        {
+          "speaker": "Ynnhoj",
+          "text": "Still lovely!",
+          "startMs": 8130
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-song",
+      "category": "event",
+      "url": "/voice/mirror-polka/convergence-the-song.mp3",
+      "durationMs": 10564,
+      "title": "The Convergence: The Song Nobody Can Finish",
+      "overMusic": false,
+      "kit": "the-song",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Johnny Mirror",
+          "text": "Everybody's got the same song in their head, and nobody can finish it! So the band's playing it backwards!",
+          "startMs": 35
+        },
+        {
+          "speaker": "Ynnhoj",
+          "text": "Backwards!",
+          "startMs": 6501
+        },
+        {
+          "speaker": "Johnny Mirror",
+          "text": "Over here, it's the start nobody can remember!",
+          "startMs": 7648
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-knock",
+      "category": "event",
+      "url": "/voice/mirror-polka/convergence-the-knock.mp3",
+      "durationMs": 8362,
+      "title": "The Convergence: Three Knocks",
+      "overMusic": false,
+      "kit": "the-knock",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Johnny Mirror",
+          "text": "Three knocks on the bathroom mirror, folks! From your side!",
+          "startMs": 36
+        },
+        {
+          "speaker": "Ynnhoj",
+          "text": "Nobody there.",
+          "startMs": 3619
+        },
+        {
+          "speaker": "Johnny Mirror",
+          "text": "Ynnhoj, you didn't agree late.",
+          "startMs": 4933
+        },
+        {
+          "speaker": "Ynnhoj",
+          "text": "I knocked.",
+          "startMs": 7048
+        }
+      ]
+    },
+    {
+      "id": "convergence-wrong-colour",
+      "category": "event",
+      "url": "/voice/mirror-polka/convergence-wrong-colour.mp3",
+      "durationMs": 9693,
+      "title": "The Convergence: A Colour With No Name",
+      "overMusic": false,
+      "kit": "wrong-colour",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Johnny Mirror",
+          "text": "The sky just went a colour we've never seen! Not even backwards!",
+          "startMs": 35
+        },
+        {
+          "speaker": "Ynnhoj",
+          "text": "Not even backwards!",
+          "startMs": 4419
+        },
+        {
+          "speaker": "Johnny Mirror",
+          "text": "Polka to the left, folks! Maybe it'll come round again!",
+          "startMs": 6146
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-pigeon",
+      "category": "event",
+      "url": "/voice/mirror-polka/convergence-the-pigeon.mp3",
+      "durationMs": 10389,
+      "title": "The Convergence: The Pigeon",
+      "overMusic": false,
+      "kit": "the-pigeon",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Johnny Mirror",
+          "text": "There's a pigeon on the dance floor! Lovely footwork!",
+          "startMs": 36
+        },
+        {
+          "speaker": "Ynnhoj",
+          "text": "Lovely footwork!",
+          "startMs": 3699
+        },
+        {
+          "speaker": "Johnny Mirror",
+          "text": "It's going to the left! It's been here before!",
+          "startMs": 5182
+        },
+        {
+          "speaker": "Ynnhoj",
+          "text": "It's been here before.",
+          "startMs": 8338
+        }
+      ]
     }
   ]
 }

@@ -1,0 +1,3594 @@
+{
+  "version": 1,
+  "station": "the-long-dark",
+  "clips": [
+    {
+      "id": "id-001",
+      "category": "id",
+      "url": "/voice/the-long-dark/id-001.mp3",
+      "durationMs": 7253,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The Announcer",
+          "text": "The Long Dark. Radio theatre from the shadows between stars.",
+          "startMs": 2900
+        }
+      ]
+    },
+    {
+      "id": "id-002",
+      "category": "id",
+      "url": "/voice/the-long-dark/id-002.mp3",
+      "durationMs": 6912,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The Announcer",
+          "text": "You are listening to the Penumbra Players, on one hundred and twelve point nine. Please do not adjust your lights.",
+          "startMs": 38
+        }
+      ]
+    },
+    {
+      "id": "id-003",
+      "category": "id",
+      "url": "/voice/the-long-dark/id-003.mp3",
+      "durationMs": 7334,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Mr. Wren",
+          "text": "Oh. I'm so sorry. I didn't see you there. This is The Long Dark.",
+          "startMs": 38
+        }
+      ]
+    },
+    {
+      "id": "id-004",
+      "category": "id",
+      "url": "/voice/the-long-dark/id-004.mp3",
+      "durationMs": 8307,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The Announcer",
+          "text": "The Long Dark, from Studio B. A new episode every night. The lights are going out on Penumbra Station. Stay tuned.",
+          "startMs": 35
+        }
+      ]
+    },
+    {
+      "id": "id-005",
+      "category": "id",
+      "url": "/voice/the-long-dark/id-005.mp3",
+      "durationMs": 4791,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "Calder. Station Security. You're listening to The Long Dark. Keep a torch in your coat.",
+          "startMs": 36
+        }
+      ]
+    },
+    {
+      "id": "id-006",
+      "category": "id",
+      "url": "/voice/the-long-dark/id-006.mp3",
+      "durationMs": 9411,
+      "overMusic": true,
+      "daypart": "night",
+      "lines": [
+        {
+          "speaker": "The Announcer",
+          "text": "One hundred and twelve point nine. The Long Dark. The lights are low. As they should be.",
+          "startMs": 38
+        }
+      ]
+    },
+    {
+      "id": "recap-001",
+      "category": "story",
+      "url": "/voice/the-long-dark/recap-001.mp3",
+      "durationMs": 30234,
+      "title": "Previously, on The Long Dark",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "The Announcer",
+          "text": "Previously, on The Long Dark.",
+          "startMs": 3300
+        },
+        {
+          "speaker": "The Announcer",
+          "text": "The lights went out. Somebody apologised. A clock was wrong, and then, to everybody's alarm, it was right.",
+          "startMs": 5818
+        },
+        {
+          "speaker": "The Announcer",
+          "text": "Detective Calder said something tired, and meant it. Mister Wren was standing somewhere he could not possibly have been standing, and was very sorry about it.",
+          "startMs": 13172
+        },
+        {
+          "speaker": "The Announcer",
+          "text": "And Dov Haskett, deep in the Lamp Room, put his hand on the glass, and said, steady, old girl. Steady.",
+          "startMs": 23010
+        }
+      ]
+    },
+    {
+      "id": "recap-002",
+      "category": "story",
+      "url": "/voice/the-long-dark/recap-002.mp3",
+      "durationMs": 25898,
+      "title": "Previously, on The Long Dark",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "The Announcer",
+          "text": "Previously, on The Long Dark. A coin that drinks the light. A station master who knows more than he says, and says it loudly.",
+          "startMs": 3300
+        },
+        {
+          "speaker": "The Announcer",
+          "text": "A bar that has never once gone dark. And a great glass lamp that has burned for forty years, and would, if anybody thought to ask it, quite like a sit down.",
+          "startMs": 12067
+        },
+        {
+          "speaker": "The Announcer",
+          "text": "Nobody has thought to ask it. Yet.",
+          "startMs": 22640
+        }
+      ]
+    },
+    {
+      "id": "recap-003",
+      "category": "dj",
+      "url": "/voice/the-long-dark/recap-003.mp3",
+      "durationMs": 26594,
+      "title": "For Listeners Just Joining Us",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The Announcer",
+          "text": "For listeners just joining us. Penumbra Station is the last lit place before the Long Dark, a stretch of nothing so wide that light gives up halfway across.",
+          "startMs": 441
+        },
+        {
+          "speaker": "The Announcer",
+          "text": "Detective Ines Calder works nights. Mister Wren works, as far as anybody can tell, whenever the lights go out.",
+          "startMs": 11775
+        },
+        {
+          "speaker": "The Announcer",
+          "text": "He is extremely punctual about it. He would like you to know that he is sorry for any inconvenience.",
+          "startMs": 19743
+        }
+      ]
+    },
+    {
+      "id": "recap-004",
+      "category": "story",
+      "url": "/voice/the-long-dark/recap-004.mp3",
+      "durationMs": 29516,
+      "title": "Previously, Or Possibly Next Time",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "The Announcer",
+          "text": "Previously, on The Long Dark. Or possibly next time. The Penumbra Players have been performing this story for a very long while.",
+          "startMs": 3300
+        },
+        {
+          "speaker": "The Announcer",
+          "text": "It ends, and then it begins again, in the same corridor, with the same flicker, and the same polite voice in the dark.",
+          "startMs": 12259
+        },
+        {
+          "speaker": "The Announcer",
+          "text": "The Players find this restful. The Announcer finds it, frankly, a relief. You always know where you are, in a story that comes back.",
+          "startMs": 20322
+        }
+      ]
+    },
+    {
+      "id": "dj-001",
+      "category": "dj",
+      "url": "/voice/the-long-dark/dj-001.mp3",
+      "durationMs": 15532,
+      "title": "Mrs. Ruddle",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The Announcer",
+          "text": "Tonight's sound effects are performed, as ever, by Missus Ruddle, who has been closing the same door for the Penumbra Players for forty one years.",
+          "startMs": 36
+        },
+        {
+          "speaker": "Mrs. Ruddle, Foley",
+          "text": "It's a good door.",
+          "startMs": 11197
+        },
+        {
+          "speaker": "The Announcer",
+          "text": "It is a very good door, Missus Ruddle.",
+          "startMs": 12920
+        }
+      ]
+    },
+    {
+      "id": "dj-002",
+      "category": "dj",
+      "url": "/voice/the-long-dark/dj-002.mp3",
+      "durationMs": 16216,
+      "title": "The Part of Mr. Wren",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The Announcer",
+          "text": "A note on tonight's cast. The part of Mister Wren is played by Mister Wren.",
+          "startMs": 39
+        },
+        {
+          "speaker": "The Announcer",
+          "text": "We have asked him to stop. He was very nice about it. He is in the studio now, by the coat stand, being sorry. It's the only coat stand that never casts a shadow.",
+          "startMs": 5435
+        }
+      ]
+    },
+    {
+      "id": "dj-003",
+      "category": "dj",
+      "url": "/voice/the-long-dark/dj-003.mp3",
+      "durationMs": 18339,
+      "title": "A Dramatic Device",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The Announcer",
+          "text": "The Penumbra Players would like to remind listeners that the lights going out on Penumbra Station are a dramatic device.",
+          "startMs": 45
+        },
+        {
+          "speaker": "The Announcer",
+          "text": "If the lights are going out where you are, that is a separate matter, and you should probably check the fuse. And then, perhaps, say good evening. Just in case.",
+          "startMs": 8369
+        }
+      ]
+    },
+    {
+      "id": "dj-004",
+      "category": "dj",
+      "url": "/voice/the-long-dark/dj-004.mp3",
+      "durationMs": 18781,
+      "title": "At the Organ",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The Announcer",
+          "text": "At the organ tonight, Mister Pomeroy Vale, who has played for every episode of The Long Dark and has never once seen the script.",
+          "startMs": 36
+        },
+        {
+          "speaker": "The Announcer",
+          "text": "He simply knows when something dreadful is about to happen. We don't ask how. We are grateful, and a little nervous.",
+          "startMs": 11207
+        }
+      ]
+    },
+    {
+      "id": "dj-005",
+      "category": "dj",
+      "url": "/voice/the-long-dark/dj-005.mp3",
+      "durationMs": 16119,
+      "title": "For the Night Shift",
+      "overMusic": true,
+      "daypart": "night",
+      "lines": [
+        {
+          "speaker": "The Announcer",
+          "text": "To the operator on the relay ship, listening on the night shift. The Players perform this one for you, in particular. They think of you as a fellow worker of the dark.",
+          "startMs": 36
+        },
+        {
+          "speaker": "The Announcer",
+          "text": "Keep a light on. Not too bright. Just enough to read by, and to be found by.",
+          "startMs": 10812
+        }
+      ]
+    },
+    {
+      "id": "dj-006",
+      "category": "dj",
+      "url": "/voice/the-long-dark/dj-006.mp3",
+      "durationMs": 12356,
+      "title": "The Interval",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The Announcer",
+          "text": "A short interval, while the Players change scripts, and Missus Ruddle sweeps up the gravel from the last episode.",
+          "startMs": 39
+        },
+        {
+          "speaker": "Mrs. Ruddle, Foley",
+          "text": "There was a lot of gravel.",
+          "startMs": 7169
+        },
+        {
+          "speaker": "The Announcer",
+          "text": "It was a gravelly episode. Do stay with us.",
+          "startMs": 9277
+        }
+      ]
+    },
+    {
+      "id": "ad-001",
+      "category": "ad",
+      "url": "/voice/the-long-dark/ad-001.mp3",
+      "durationMs": 22149,
+      "title": "Brightwick's Everlasting Matches",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "The Announcer",
+          "text": "The Long Dark is brought to you by Brightwick's Everlasting Matches.",
+          "startMs": 438
+        },
+        {
+          "speaker": "The Announcer",
+          "text": "Strike one tonight, and it will still be burning at breakfast. Strike two, and you'll have one for the walk home.",
+          "startMs": 5141
+        },
+        {
+          "speaker": "The Announcer",
+          "text": "Brightwick's. Because the dark is long, and the corridor is longer. Not to be used in the Lamp Room. Dov Haskett has asked us to say that. Twice.",
+          "startMs": 12340
+        }
+      ]
+    },
+    {
+      "id": "ad-002",
+      "category": "ad",
+      "url": "/voice/the-long-dark/ad-002.mp3",
+      "durationMs": 24949,
+      "title": "Dunmore's Night Cocoa",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "The Announcer",
+          "text": "When the lights go out, and the Players are about to say something terrible, reach for a mug of Dunmore's Night Cocoa.",
+          "startMs": 438
+        },
+        {
+          "speaker": "The Announcer",
+          "text": "Rich, dark, and warm all the way down. Made with real cocoa, and a little bit of something we're not allowed to name, from a farm that only grows at night.",
+          "startMs": 8134
+        },
+        {
+          "speaker": "The Announcer",
+          "text": "Dunmore's Night Cocoa. Darker than it needs to be. Exactly as dark as you'd like.",
+          "startMs": 18724
+        }
+      ]
+    },
+    {
+      "id": "ad-003",
+      "category": "ad",
+      "url": "/voice/the-long-dark/ad-003.mp3",
+      "durationMs": 20677,
+      "title": "Quillfeather Ribbons",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "The Announcer",
+          "text": "Every word you hear on The Long Dark was typed by Missus Ruddle, on a Quillfeather typewriter ribbon.",
+          "startMs": 437
+        },
+        {
+          "speaker": "The Announcer",
+          "text": "Quillfeather Ribbons. They never fade, never smudge, and never, ever run out halfway through a cliffhanger. Unlike some ribbons. We won't name them. They know who they are.",
+          "startMs": 9431
+        }
+      ]
+    },
+    {
+      "id": "ad-004",
+      "category": "ad",
+      "url": "/voice/the-long-dark/ad-004.mp3",
+      "durationMs": 19358,
+      "title": "The Lumen Bar",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Mags",
+          "text": "The Lumen Bar, on Ring One of Penumbra Station. Forty years, and the lights have never once gone out on their own.",
+          "startMs": 439
+        },
+        {
+          "speaker": "Mags",
+          "text": "Warm drinks, cold drinks, and a seat at the end of the bar that's always kept free. Don't sit in it, love. It's taken.",
+          "startMs": 6911
+        },
+        {
+          "speaker": "The Announcer",
+          "text": "The Lumen Bar is a fictional establishment. Its seat at the end is not.",
+          "startMs": 13481
+        }
+      ]
+    },
+    {
+      "id": "ep-01-a",
+      "category": "show",
+      "url": "/voice/the-long-dark/ep-01-a.mp3",
+      "durationMs": 77259,
+      "title": "Episode One: Lights Out on Ring Four",
+      "overMusic": false,
+      "serial": {
+        "id": "the-long-dark",
+        "episode": 1
+      },
+      "lines": [
+        {
+          "speaker": "The Announcer",
+          "text": "The Penumbra Players bring you: The Long Dark.",
+          "startMs": 3300
+        },
+        {
+          "speaker": "The Announcer",
+          "text": "Penumbra Station. The last lit place before the Long Dark, a stretch of nothing so wide that light gives up halfway across. Four rings. Eleven hundred souls. One detective.",
+          "startMs": 6694
+        },
+        {
+          "speaker": "The Announcer",
+          "text": "And lately, the lights have started going out. Episode one. Lights Out on Ring Four.",
+          "startMs": 19162
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "Calder. Station Security. Night shift. The heater's broken. The kettle's broken. The coffee's been broken since I got here, eleven years ago.",
+          "startMs": 27470
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "On Penumbra Station you learn two things fast. Keep a torch in your coat. And never ask Dov Haskett about the Lamp, unless you've got an hour.",
+          "startMs": 36406
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "Calder.",
+          "startMs": 47484
+        },
+        {
+          "speaker": "Dov Haskett",
+          "text": "Detective, it's Haskett, down in the Lamp Room. Ring Four's gone dark.",
+          "startMs": 48465
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "Again?",
+          "startMs": 53495
+        },
+        {
+          "speaker": "Dov Haskett",
+          "text": "Not like the others. Eleven minutes, dead black, then back on like nothing happened. The Lamp never blinked. The power never dropped.",
+          "startMs": 54460
+        },
+        {
+          "speaker": "Dov Haskett",
+          "text": "The light just went somewhere, Detective. And then it came back.",
+          "startMs": 62929
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "Light doesn't go anywhere, Haskett.",
+          "startMs": 67052
+        },
+        {
+          "speaker": "Dov Haskett",
+          "text": "That's what I've been telling it for forty years. Somebody ought to tell it again.",
+          "startMs": 69113
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "I'm on my way.",
+          "startMs": 73762
+        }
+      ]
+    },
+    {
+      "id": "ep-01-b",
+      "category": "show",
+      "url": "/voice/the-long-dark/ep-01-b.mp3",
+      "durationMs": 60904,
+      "title": "Episode One: Lights Out on Ring Four",
+      "overMusic": false,
+      "serial": {
+        "id": "the-long-dark",
+        "episode": 1
+      },
+      "lines": [
+        {
+          "speaker": "The Announcer",
+          "text": "Ring Four. The long curve of corridor where the miners sleep. The bulbs hum. The bulbs have always hummed.",
+          "startMs": 437
+        },
+        {
+          "speaker": "Dov Haskett",
+          "text": "Here's what bothers me, Detective. Look at the clocks.",
+          "startMs": 7704
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "They're all eleven minutes slow.",
+          "startMs": 11213
+        },
+        {
+          "speaker": "Dov Haskett",
+          "text": "All but one. The one at the end. Right on time.",
+          "startMs": 13055
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "The corridor ends at a wall, Haskett.",
+          "startMs": 16379
+        },
+        {
+          "speaker": "Dov Haskett",
+          "text": "It does.",
+          "startMs": 18694
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "Then who's that, standing at the end of it?",
+          "startMs": 19765
+        },
+        {
+          "speaker": "Mr. Wren",
+          "text": "Oh. I do beg your pardon. Am I in the way?",
+          "startMs": 23392
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "Station Security. Who are you, and how did you get there?",
+          "startMs": 26020
+        },
+        {
+          "speaker": "Mr. Wren",
+          "text": "Wren. Mister Wren. And I came the usual way, Detective. I'm so sorry about your corridor.",
+          "startMs": 29693
+        },
+        {
+          "speaker": "Mr. Wren",
+          "text": "It won't happen again. Well. It will. But I shall be sorry each time.",
+          "startMs": 35822
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "Stay exactly where you are.",
+          "startMs": 40047
+        },
+        {
+          "speaker": "Mr. Wren",
+          "text": "Of course.",
+          "startMs": 41800
+        },
+        {
+          "speaker": "Dov Haskett",
+          "text": "Lights flickered. Detective. Detective, he's gone.",
+          "startMs": 44684
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "Into a wall.",
+          "startMs": 48254
+        },
+        {
+          "speaker": "Dov Haskett",
+          "text": "Into a wall. And the clock at the end's eleven minutes slow, now. Like the others. Like it was waiting for him to leave.",
+          "startMs": 49461
+        }
+      ]
+    },
+    {
+      "id": "ep-01-c",
+      "category": "show",
+      "url": "/voice/the-long-dark/ep-01-c.mp3",
+      "durationMs": 74307,
+      "title": "Episode One: Lights Out on Ring Four",
+      "overMusic": false,
+      "serial": {
+        "id": "the-long-dark",
+        "episode": 1
+      },
+      "lines": [
+        {
+          "speaker": "The Announcer",
+          "text": "The Lumen Bar, on Ring One. The only place on Penumbra Station where the lights have never once gone out. Mags has kept it that way for forty years. Nobody knows how. Nobody asks.",
+          "startMs": 437
+        },
+        {
+          "speaker": "Mags",
+          "text": "You look like you've watched a man walk into a wall, Ines.",
+          "startMs": 13183
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "Grey coat. Very polite. Calls himself Wren.",
+          "startMs": 16359
+        },
+        {
+          "speaker": "Mags",
+          "text": "Oh. Him.",
+          "startMs": 19395
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "You know him?",
+          "startMs": 20624
+        },
+        {
+          "speaker": "Mags",
+          "text": "He comes in, sometimes. Late. Never through the door. Sits at the end, orders a glass of water, never drinks it.",
+          "startMs": 21759
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "What does he pay with?",
+          "startMs": 28167
+        },
+        {
+          "speaker": "Mags",
+          "text": "That's the funny thing. He pays for the dark. That's how he puts it. One dark hour, please, Mags. And he leaves a coin.",
+          "startMs": 29531
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "And?",
+          "startMs": 36114
+        },
+        {
+          "speaker": "Mags",
+          "text": "And in the morning the coin's gone, and so's the hour. I never miss it.",
+          "startMs": 36936
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "I finished my drink. I didn't like any of it. Not the drink, not the story, and not the way Mags had stopped polishing the glass.",
+          "startMs": 40776
+        },
+        {
+          "speaker": "The Announcer",
+          "text": "And then, for the first time in forty years, the lights in the Lumen Bar went out. Every light on Penumbra Station went with them.",
+          "startMs": 50190
+        },
+        {
+          "speaker": "Mr. Wren",
+          "text": "Detective. I'm so sorry. I believe you're sitting in my seat.",
+          "startMs": 60032
+        },
+        {
+          "speaker": "The Announcer",
+          "text": "Who is Mister Wren? And whose seat is it, really? Join the Penumbra Players tomorrow night, for The Long Dark.",
+          "startMs": 66859
+        }
+      ]
+    },
+    {
+      "id": "ep-02-a",
+      "category": "show",
+      "url": "/voice/the-long-dark/ep-02-a.mp3",
+      "durationMs": 59036,
+      "title": "Episode Two: The Man Who Paid for the Dark",
+      "overMusic": false,
+      "serial": {
+        "id": "the-long-dark",
+        "episode": 2
+      },
+      "lines": [
+        {
+          "speaker": "The Announcer",
+          "text": "Previously, on The Long Dark. The lights on Ring Four went out for eleven minutes. A polite man in a grey coat walked into a wall.",
+          "startMs": 3300
+        },
+        {
+          "speaker": "The Announcer",
+          "text": "And in the Lumen Bar, where the lights never go out, they went out. Episode two. The Man Who Paid for the Dark.",
+          "startMs": 12375
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "Who's there?",
+          "startMs": 20181
+        },
+        {
+          "speaker": "Mr. Wren",
+          "text": "Only me. Please don't get up. I'm afraid this is the only way I know how to knock.",
+          "startMs": 21256
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "You turned out every light on the station to knock?",
+          "startMs": 26647
+        },
+        {
+          "speaker": "Mr. Wren",
+          "text": "I did ask the corridor first. It said no.",
+          "startMs": 29583
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "What do you want, Mister Wren?",
+          "startMs": 32534
+        },
+        {
+          "speaker": "Mr. Wren",
+          "text": "To introduce myself. Properly. My name is Wren, and I live next door.",
+          "startMs": 34378
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "Nobody lives next door. Next door is the Long Dark.",
+          "startMs": 39104
+        },
+        {
+          "speaker": "Mr. Wren",
+          "text": "Yes.",
+          "startMs": 42746
+        },
+        {
+          "speaker": "Mags",
+          "text": "Lights. Ines? Ines, are you all right?",
+          "startMs": 44933
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "He's gone.",
+          "startMs": 47359
+        },
+        {
+          "speaker": "Mags",
+          "text": "He's left something on the bar.",
+          "startMs": 48478
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "A coin. Black. Mags, look at it. There's no shine on it at all. It's like it's drinking the light.",
+          "startMs": 50475
+        },
+        {
+          "speaker": "Mags",
+          "text": "Don't hold it too long, love. It gets cold.",
+          "startMs": 55950
+        }
+      ]
+    },
+    {
+      "id": "ep-02-b",
+      "category": "show",
+      "url": "/voice/the-long-dark/ep-02-b.mp3",
+      "durationMs": 66933,
+      "title": "Episode Two: The Man Who Paid for the Dark",
+      "overMusic": false,
+      "serial": {
+        "id": "the-long-dark",
+        "episode": 2
+      },
+      "lines": [
+        {
+          "speaker": "The Announcer",
+          "text": "The Lamp Room, deep under Ring One. A great glass furnace that has burned for forty years and never once flickered. Dov Haskett tends it. Dov Haskett talks to it. It doesn't talk back. Usually.",
+          "startMs": 438
+        },
+        {
+          "speaker": "Dov Haskett",
+          "text": "Put that coin away, Detective. You're upsetting her.",
+          "startMs": 13584
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "It's a lamp, Haskett.",
+          "startMs": 17113
+        },
+        {
+          "speaker": "Dov Haskett",
+          "text": "She's the Lamp. Capital L. Now look at the meters.",
+          "startMs": 18626
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "They're all fine.",
+          "startMs": 22191
+        },
+        {
+          "speaker": "Dov Haskett",
+          "text": "They're all fine. Power's fine. Lamp's fine. Every bulb on the station, fine. But the light...",
+          "startMs": 23498
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "Is leaving.",
+          "startMs": 29987
+        },
+        {
+          "speaker": "Dov Haskett",
+          "text": "Going out through the hull. All of it, slowly. A little more every night. Like bath water, with a very small plug.",
+          "startMs": 31093
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "Leaking?",
+          "startMs": 38352
+        },
+        {
+          "speaker": "Dov Haskett",
+          "text": "Or being let out. Or being invited. I don't know which is worse, Detective. I've been sitting with her all week, trying to decide.",
+          "startMs": 39379
+        },
+        {
+          "speaker": "Station Master Ashby",
+          "text": "Calder. Station Master Ashby. My office. Now. And bring nothing. Especially not that coin.",
+          "startMs": 49991
+        },
+        {
+          "speaker": "Dov Haskett",
+          "text": "He knows about the coin.",
+          "startMs": 57779
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "Everybody knows about the coin, Haskett. That's the trouble with a station. The walls are thin, and the people are thinner.",
+          "startMs": 59507
+        }
+      ]
+    },
+    {
+      "id": "ep-02-c",
+      "category": "show",
+      "url": "/voice/the-long-dark/ep-02-c.mp3",
+      "durationMs": 61075,
+      "title": "Episode Two: The Man Who Paid for the Dark",
+      "overMusic": false,
+      "serial": {
+        "id": "the-long-dark",
+        "episode": 2
+      },
+      "lines": [
+        {
+          "speaker": "Station Master Ashby",
+          "text": "Here's what's going to happen, Detective. The supply ship docks in six days. Until it does, nobody on this station hears the word blackout. You'll call it maintenance.",
+          "startMs": 450
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "Eleven hundred people sat in the dark last night, sir. They noticed.",
+          "startMs": 11892
+        },
+        {
+          "speaker": "Station Master Ashby",
+          "text": "They noticed maintenance.",
+          "startMs": 15903
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "There's a man...",
+          "startMs": 17728
+        },
+        {
+          "speaker": "Station Master Ashby",
+          "text": "There is no man. There is a registry. I've checked it. No Wren. There never has been. Go home, Calder.",
+          "startMs": 18899
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "I went back to my office. I put the coin in the top drawer, under the bad coffee. I locked the drawer. I put the key in my shoe. Then I sat with my back to the wall until morning.",
+          "startMs": 26741
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "In the morning, the drawer was still locked. The key was still in my shoe. The coin was gone.",
+          "startMs": 38355
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "In its place, a note. Very neat handwriting.",
+          "startMs": 43116
+        },
+        {
+          "speaker": "Mr. Wren",
+          "text": "Thank you so much for keeping it safe. Do forgive the intrusion. W.",
+          "startMs": 46172
+        },
+        {
+          "speaker": "The Announcer",
+          "text": "Who is Mister Wren? And how does he get into a locked drawer? Join us tomorrow night, on The Long Dark.",
+          "startMs": 53936
+        }
+      ]
+    },
+    {
+      "id": "ep-03-a",
+      "category": "show",
+      "url": "/voice/the-long-dark/ep-03-a.mp3",
+      "durationMs": 64903,
+      "title": "Episode Three: Neat Handwriting",
+      "overMusic": false,
+      "serial": {
+        "id": "the-long-dark",
+        "episode": 3
+      },
+      "lines": [
+        {
+          "speaker": "The Announcer",
+          "text": "Previously, on The Long Dark. Mister Wren put out every light on Penumbra Station to say hello. He left a black coin that drinks the light, and then he took it back, from a locked drawer, with a thank you note.",
+          "startMs": 3300
+        },
+        {
+          "speaker": "The Announcer",
+          "text": "Station Master Ashby says there is no Wren. The registry agrees. Episode three. Neat Handwriting.",
+          "startMs": 16668
+        },
+        {
+          "speaker": "Mags",
+          "text": "Hold it to the light, Ines. Go on. Look at the end of the bar.",
+          "startMs": 24689
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "The bar's opening night. Forty years ago. That's you, at the taps.",
+          "startMs": 28380
+        },
+        {
+          "speaker": "Mags",
+          "text": "Nineteen, and too proud to smile. Now look at the end.",
+          "startMs": 32476
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "A man in a grey coat. With a glass of water.",
+          "startMs": 36074
+        },
+        {
+          "speaker": "Mags",
+          "text": "Same coat. Same face. Same age. I've got one of these from every year, love. He's in all of them. Never a day older.",
+          "startMs": 38987
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "How does a man not age for forty years?",
+          "startMs": 45744
+        },
+        {
+          "speaker": "Mags",
+          "text": "He doesn't stand in the light long enough for it to catch him. That's what I think. Light's what ages you. Ask anybody's curtains.",
+          "startMs": 48190
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "I looked at the photographs a long time. In every one, he was looking at the camera. Politely. Like he was sorry to be in the picture, and glad to be asked.",
+          "startMs": 55598
+        }
+      ]
+    },
+    {
+      "id": "ep-03-b",
+      "category": "show",
+      "url": "/voice/the-long-dark/ep-03-b.mp3",
+      "durationMs": 106630,
+      "title": "Episode Three: Neat Handwriting",
+      "overMusic": false,
+      "serial": {
+        "id": "the-long-dark",
+        "episode": 3
+      },
+      "lines": [
+        {
+          "speaker": "The Announcer",
+          "text": "Back in the Lamp Room, Dov Haskett had found something. He did not like it. He showed it to the Lamp first, and the Lamp didn't like it either.",
+          "startMs": 437
+        },
+        {
+          "speaker": "Dov Haskett",
+          "text": "The visitors' book, Detective. Everybody who comes into the Lamp Room signs in. Rules.",
+          "startMs": 9276
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "Nobody comes into the Lamp Room.",
+          "startMs": 15266
+        },
+        {
+          "speaker": "Dov Haskett",
+          "text": "Nobody but me. And look. Every night. Three in the morning. One letter. W. Very neat.",
+          "startMs": 17340
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "How far back?",
+          "startMs": 23418
+        },
+        {
+          "speaker": "Dov Haskett",
+          "text": "Every page. Forty years of pages. I thought it was the night man. Never thought about it.",
+          "startMs": 24706
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "Who's the night man?",
+          "startMs": 30798
+        },
+        {
+          "speaker": "Dov Haskett",
+          "text": "We haven't had a night man, Detective, since before they built Ring Two.",
+          "startMs": 32267
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "Then tonight, Haskett, I'm the night man.",
+          "startMs": 37777
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "Two in the morning. The Lamp hummed. I sat behind a crate of spare bulbs with a torch in my lap and a cold cup of something that had been coffee.",
+          "startMs": 43951
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "Half past two. Haskett went home. He patted the glass on his way out, and said goodnight to her. I didn't laugh. I wanted to.",
+          "startMs": 52454
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "Three o'clock.",
+          "startMs": 59906
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "Nobody came in. But somebody passed me. I felt them go by, close enough to smell the cold on their coat.",
+          "startMs": 63996
+        },
+        {
+          "speaker": "Mr. Wren",
+          "text": "Pardon me.",
+          "startMs": 70455
+        },
+        {
+          "speaker": "Mr. Wren",
+          "text": "So sorry. Excuse me.",
+          "startMs": 71622
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "Who's there? Station Security. Stand still.",
+          "startMs": 73530
+        },
+        {
+          "speaker": "The Announcer",
+          "text": "And for the first time in forty years, the Lamp went out.",
+          "startMs": 77331
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "Black. Not dark. Black. The kind you can hear.",
+          "startMs": 83619
+        },
+        {
+          "speaker": "The Announcer",
+          "text": "A match flared. And behind it, holding it up as if it were a candle on a birthday cake, was Mister Wren.",
+          "startMs": 87209
+        },
+        {
+          "speaker": "Mr. Wren",
+          "text": "I thought you'd want to see. Most people do.",
+          "startMs": 94097
+        },
+        {
+          "speaker": "The Announcer",
+          "text": "The Lamp is out. The detective is alone with Mister Wren. Tomorrow night, on The Long Dark.",
+          "startMs": 99880
+        }
+      ]
+    },
+    {
+      "id": "ep-04-a",
+      "category": "show",
+      "url": "/voice/the-long-dark/ep-04-a.mp3",
+      "durationMs": 67411,
+      "title": "Episode Four: A Match in the Lamp Room",
+      "overMusic": false,
+      "serial": {
+        "id": "the-long-dark",
+        "episode": 4
+      },
+      "lines": [
+        {
+          "speaker": "The Announcer",
+          "text": "Previously, on The Long Dark. Detective Calder kept watch in the Lamp Room. At three in the morning, something passed her in the dark, apologising. And the Lamp, which had burned for forty years, went out.",
+          "startMs": 3300
+        },
+        {
+          "speaker": "The Announcer",
+          "text": "Episode four. A Match in the Lamp Room.",
+          "startMs": 16732
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "You put out the Lamp.",
+          "startMs": 20452
+        },
+        {
+          "speaker": "Mr. Wren",
+          "text": "Oh, no. No, no. I'd never. She went out on her own. She's very tired, you know. I simply happened to be here when she did. I usually am.",
+          "startMs": 21856
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "Who are you?",
+          "startMs": 30330
+        },
+        {
+          "speaker": "Mr. Wren",
+          "text": "I've said. Wren. A neighbour. We've come about the boundary.",
+          "startMs": 31487
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "What boundary?",
+          "startMs": 34938
+        },
+        {
+          "speaker": "Mr. Wren",
+          "text": "The one your station is standing on, Detective. Rather heavily. In its outdoor shoes.",
+          "startMs": 36206
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "The station's been here forty years.",
+          "startMs": 42052
+        },
+        {
+          "speaker": "Mr. Wren",
+          "text": "Yes. We've been very patient. We've written. Several times. In our best hand.",
+          "startMs": 44233
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "Written to whom?",
+          "startMs": 49111
+        },
+        {
+          "speaker": "Mr. Wren",
+          "text": "Ah. I'm afraid that's my match. They don't last, out here. Do forgive me.",
+          "startMs": 50407
+        },
+        {
+          "speaker": "The Announcer",
+          "text": "The Lamp came back, as if it had only closed its eyes. The visitors' book lay open on the desk. In it, freshly dried, a single letter. W.",
+          "startMs": 56758
+        }
+      ]
+    },
+    {
+      "id": "ep-04-b",
+      "category": "show",
+      "url": "/voice/the-long-dark/ep-04-b.mp3",
+      "durationMs": 72653,
+      "title": "Episode Four: A Match in the Lamp Room",
+      "overMusic": false,
+      "serial": {
+        "id": "the-long-dark",
+        "episode": 4
+      },
+      "lines": [
+        {
+          "speaker": "Station Master Ashby",
+          "text": "The Lamp went out. On Haskett's watch.",
+          "startMs": 440
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "On my watch, sir. Haskett had gone home.",
+          "startMs": 3227
+        },
+        {
+          "speaker": "Station Master Ashby",
+          "text": "He left the room unattended. He's suspended. Effective now. Somebody take his keys.",
+          "startMs": 6019
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "He didn't do it.",
+          "startMs": 12109
+        },
+        {
+          "speaker": "Station Master Ashby",
+          "text": "Then who did? Your polite friend? Find me a polite friend, Detective, and I'll find him a cell.",
+          "startMs": 13407
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "And if he's not the kind of thing that fits in a cell?",
+          "startMs": 19432
+        },
+        {
+          "speaker": "Station Master Ashby",
+          "text": "Everything fits in a cell. You just need a big enough cell.",
+          "startMs": 22068
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "Sir, with respect. The light is leaving this station. Haskett has the meters to prove it. Suspending the one man who can read them is like firing the doctor because you've got a cough.",
+          "startMs": 25854
+        },
+        {
+          "speaker": "Station Master Ashby",
+          "text": "Then I'll get a new doctor, Calder. One who doesn't talk to the patient. And you can get out of my office before I find out what fits in your cell.",
+          "startMs": 36602
+        },
+        {
+          "speaker": "The Announcer",
+          "text": "In the corridor outside, Dov Haskett handed over his keys. All but one. He pressed it into Calder's hand as he passed.",
+          "startMs": 47050
+        },
+        {
+          "speaker": "Dov Haskett",
+          "text": "The Old Spur, Detective. The first bit of the station they built. Sealed thirty years. Ashby's got the only other key. He goes down there on Sundays. Ask yourself what for.",
+          "startMs": 55306
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "Haskett...",
+          "startMs": 66641
+        },
+        {
+          "speaker": "Dov Haskett",
+          "text": "Tell her I'll be back. The Lamp. Tell her I didn't leave her on purpose.",
+          "startMs": 67747
+        }
+      ]
+    },
+    {
+      "id": "ep-04-c",
+      "category": "show",
+      "url": "/voice/the-long-dark/ep-04-c.mp3",
+      "durationMs": 71909,
+      "title": "Episode Four: A Match in the Lamp Room",
+      "overMusic": false,
+      "serial": {
+        "id": "the-long-dark",
+        "episode": 4
+      },
+      "lines": [
+        {
+          "speaker": "The Announcer",
+          "text": "The Old Spur. The first rooms ever built at the edge of the Long Dark. Damp, and cold, and quiet in the way that only very old places are quiet.",
+          "startMs": 436
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "The key turned like it had been waiting. Inside, my torch found a cot. A kettle. A grey coat, very neatly folded. And shelves.",
+          "startMs": 10750
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "Shelves, floor to ceiling, of burnt-out light bulbs. Hundreds. Thousands. Every one with a little paper label on a string.",
+          "startMs": 18784
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "Ring Four, corridor nine, the eleventh of the month. Ring Two, the chapel, Tuesday. Lumen Bar, back room, a date from before I was born.",
+          "startMs": 26549
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "Every light that had ever gone out on Penumbra Station. Somebody had collected them. Somebody had kept them. Like evidence. Like a confession nobody had made.",
+          "startMs": 34736
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "On the cot, a ledger. Columns of dates, in four different hands. And in the last column, in the newest hand, the same word, over and over. Dimmer. Dimmer. Dimmer.",
+          "startMs": 44646
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "Behind me, a second torch came on.",
+          "startMs": 57045
+        },
+        {
+          "speaker": "Station Master Ashby",
+          "text": "You weren't supposed to find this, Detective.",
+          "startMs": 59452
+        },
+        {
+          "speaker": "The Announcer",
+          "text": "What is Station Master Ashby hiding in the Old Spur? Tomorrow night, on The Long Dark.",
+          "startMs": 65269
+        }
+      ]
+    },
+    {
+      "id": "ep-05-a",
+      "category": "show",
+      "url": "/voice/the-long-dark/ep-05-a.mp3",
+      "durationMs": 71726,
+      "title": "Episode Five: The Station Master's Torch",
+      "overMusic": false,
+      "serial": {
+        "id": "the-long-dark",
+        "episode": 5
+      },
+      "lines": [
+        {
+          "speaker": "The Announcer",
+          "text": "Previously, on The Long Dark. Dov Haskett was suspended. With his last key, Detective Calder opened the Old Spur, and found every light that had ever gone out on Penumbra Station, labelled and kept. And Station Master Ashby found her.",
+          "startMs": 3300
+        },
+        {
+          "speaker": "The Announcer",
+          "text": "Episode five. The Station Master's Torch.",
+          "startMs": 19917
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "You collected them.",
+          "startMs": 23854
+        },
+        {
+          "speaker": "Station Master Ashby",
+          "text": "Not me. Not only me. Every station master since the first. It's part of the job. Nobody tells you, when you take it. You find out on your first Sunday.",
+          "startMs": 25191
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "Why?",
+          "startMs": 35560
+        },
+        {
+          "speaker": "Station Master Ashby",
+          "text": "Because they're the evidence, Calder. Every bulb on that shelf went out for no reason. And every ten years, the station master gets one of these.",
+          "startMs": 36461
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "A letter.",
+          "startMs": 45799
+        },
+        {
+          "speaker": "Station Master Ashby",
+          "text": "Go on. Read it. You'll know the hand.",
+          "startMs": 46772
+        },
+        {
+          "speaker": "Mr. Wren",
+          "text": "Dear Sirs. Forgive me for writing. Your lights are in our living room. The children cannot sleep. We have been very patient. We will continue to be. Yours, with the greatest respect. W.",
+          "startMs": 49298
+        },
+        {
+          "speaker": "Station Master Ashby",
+          "text": "Four of those. Forty years. Every one more polite than the last. Do you know how frightening that is, Detective? A politeness that keeps getting worse?",
+          "startMs": 61563
+        }
+      ]
+    },
+    {
+      "id": "ep-05-b",
+      "category": "show",
+      "url": "/voice/the-long-dark/ep-05-b.mp3",
+      "durationMs": 67034,
+      "title": "Episode Five: The Station Master's Torch",
+      "overMusic": false,
+      "serial": {
+        "id": "the-long-dark",
+        "episode": 5
+      },
+      "lines": [
+        {
+          "speaker": "Station Master Ashby",
+          "text": "My predecessors ignored them. Sensible. You don't move a station because the dark has a complaint.",
+          "startMs": 448
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "And the lights?",
+          "startMs": 7108
+        },
+        {
+          "speaker": "Station Master Ashby",
+          "text": "Dimmer every decade. You won't have noticed. Nobody does. You only notice when you dig out an old photograph and wonder why everybody in it is squinting.",
+          "startMs": 8263
+        },
+        {
+          "speaker": "Station Master Ashby",
+          "text": "My father was station master before me. He used to say the first lamp they lit out here could be seen from the inner worlds. Now you can barely see it from the dock.",
+          "startMs": 18473
+        },
+        {
+          "speaker": "Station Master Ashby",
+          "text": "Forty years, Calder, and this station has been fading like an old photograph. And every ten years, a letter, thanking us for our patience.",
+          "startMs": 28812
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "So what's your plan, sir?",
+          "startMs": 37992
+        },
+        {
+          "speaker": "Station Master Ashby",
+          "text": "The supply ship. The Tern. Due in four days. In her hold, ten thousand floodlights. I ordered them myself. Out of my own budget, and some of somebody else's.",
+          "startMs": 39530
+        },
+        {
+          "speaker": "Station Master Ashby",
+          "text": "We are going to light this station so bright they'll see it from the inner worlds. We are going to show it that we're here.",
+          "startMs": 50373
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "You want to shout at the dark.",
+          "startMs": 57040
+        },
+        {
+          "speaker": "Station Master Ashby",
+          "text": "I want it to know we're here.",
+          "startMs": 58757
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "Sir. I think it knows.",
+          "startMs": 61630
+        }
+      ]
+    },
+    {
+      "id": "ep-05-c",
+      "category": "show",
+      "url": "/voice/the-long-dark/ep-05-c.mp3",
+      "durationMs": 64069,
+      "title": "Episode Five: The Station Master's Torch",
+      "overMusic": false,
+      "serial": {
+        "id": "the-long-dark",
+        "episode": 5
+      },
+      "lines": [
+        {
+          "speaker": "The Announcer",
+          "text": "Four nights later. The communications room on Ring One. Dov Haskett, who was not supposed to be there, was there.",
+          "startMs": 447
+        },
+        {
+          "speaker": "Dov Haskett",
+          "text": "Don't tell Ashby. I had a spare key. I always have a spare key.",
+          "startMs": 8229
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "Is that her?",
+          "startMs": 12507
+        },
+        {
+          "speaker": "Dov Haskett",
+          "text": "That's the Tern. On approach. Right on time.",
+          "startMs": 13648
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "Ten thousand floodlights, Haskett. What happens when he turns them all on?",
+          "startMs": 16860
+        },
+        {
+          "speaker": "Dov Haskett",
+          "text": "She'll take it. The Lamp'll take anything you ask of her, for a while. That's the trouble with the kind ones. You don't know they're tired till they stop.",
+          "startMs": 21222
+        },
+        {
+          "speaker": "Captain Vance",
+          "text": "Penumbra, this is the Tern, Captain Vance. We're on final approach. We've, uh. We've got a problem with our lights.",
+          "startMs": 30445
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "What kind of problem, Captain?",
+          "startMs": 36786
+        },
+        {
+          "speaker": "Captain Vance",
+          "text": "They're going out. One at a time. Nose to tail. Like somebody's walking the length of my ship, switching them off. Very carefully. Very politely.",
+          "startMs": 38593
+        },
+        {
+          "speaker": "Dov Haskett",
+          "text": "Captain, is anybody aboard who shouldn't be?",
+          "startMs": 46026
+        },
+        {
+          "speaker": "Captain Vance",
+          "text": "Not aboard. Penumbra, there's a man on my hull. No suit. Grey coat.",
+          "startMs": 50469
+        },
+        {
+          "speaker": "Captain Vance",
+          "text": "He's waving.",
+          "startMs": 54778
+        },
+        {
+          "speaker": "The Announcer",
+          "text": "The Tern is coming in dark. Tomorrow night, on The Long Dark.",
+          "startMs": 59255
+        }
+      ]
+    },
+    {
+      "id": "ep-06-a",
+      "category": "show",
+      "url": "/voice/the-long-dark/ep-06-a.mp3",
+      "durationMs": 74417,
+      "title": "Episode Six: The Tern Comes In",
+      "overMusic": false,
+      "serial": {
+        "id": "the-long-dark",
+        "episode": 6
+      },
+      "lines": [
+        {
+          "speaker": "The Announcer",
+          "text": "Previously, on The Long Dark. Station Master Ashby confessed to forty years of polite letters, and ordered ten thousand floodlights. The supply ship Tern came to deliver them. And her lights went out, one by one, while a man in a grey coat waved from her hull.",
+          "startMs": 3300
+        },
+        {
+          "speaker": "The Announcer",
+          "text": "Episode six. The Tern Comes In.",
+          "startMs": 20657
+        },
+        {
+          "speaker": "Captain Vance",
+          "text": "Penumbra, I'm blind up here. No instruments, no running lights. I can't see your dock.",
+          "startMs": 26379
+        },
+        {
+          "speaker": "Dov Haskett",
+          "text": "Captain, this is Haskett. Listen to me. Ten degrees to port. You'll feel the station's pull on your left.",
+          "startMs": 31364
+        },
+        {
+          "speaker": "Captain Vance",
+          "text": "I feel it.",
+          "startMs": 38195
+        },
+        {
+          "speaker": "Dov Haskett",
+          "text": "Now slow. Slower. Like you're parking next to somebody's good car.",
+          "startMs": 39646
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "Haskett, how do you know where she is? The screens are dead.",
+          "startMs": 44296
+        },
+        {
+          "speaker": "Dov Haskett",
+          "text": "Forty years listening to the Lamp, Detective. You learn to hear a ship.",
+          "startMs": 47622
+        },
+        {
+          "speaker": "Captain Vance",
+          "text": "Contact. We're docked. We're docked, Penumbra. Somebody tell my hands to stop shaking.",
+          "startMs": 54136
+        },
+        {
+          "speaker": "Dov Haskett",
+          "text": "Welcome to Penumbra Station, Captain. Mind the step. We've no lights either.",
+          "startMs": 59147
+        },
+        {
+          "speaker": "Mr. Wren",
+          "text": "Welcome home, Captain. Mind how you go.",
+          "startMs": 65326
+        },
+        {
+          "speaker": "Captain Vance",
+          "text": "Who said that? Penumbra, who's on this channel?",
+          "startMs": 67880
+        },
+        {
+          "speaker": "Dov Haskett",
+          "text": "Nobody, Captain. Nobody on this channel at all.",
+          "startMs": 70696
+        }
+      ]
+    },
+    {
+      "id": "ep-06-b",
+      "category": "show",
+      "url": "/voice/the-long-dark/ep-06-b.mp3",
+      "durationMs": 58874,
+      "title": "Episode Six: The Tern Comes In",
+      "overMusic": false,
+      "serial": {
+        "id": "the-long-dark",
+        "episode": 6
+      },
+      "lines": [
+        {
+          "speaker": "The Announcer",
+          "text": "The hold of the Tern. Two hundred crates. Ten thousand floodlights, packed in straw, bound for Station Master Ashby.",
+          "startMs": 436
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "Captain. Open one.",
+          "startMs": 8453
+        },
+        {
+          "speaker": "Captain Vance",
+          "text": "They're fine, Detective. They were checked at the depot. I watched them. Every crate signed for. Every crate sealed. Ashby's name on every docket, in very large letters.",
+          "startMs": 10073
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "Humour me, Captain. It's been a long week, and I've started to distrust anything that's sealed.",
+          "startMs": 19263
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "Open one.",
+          "startMs": 24501
+        },
+        {
+          "speaker": "Captain Vance",
+          "text": "They're... they're all unscrewed. Half a turn. Every one. That's ten thousand bulbs. That's two days of work for a crew of ten, and we never left the bridge.",
+          "startMs": 27266
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "He's very thorough.",
+          "startMs": 34824
+        },
+        {
+          "speaker": "Captain Vance",
+          "text": "He waved at me, Detective. The whole way in. Not like a threat. Like somebody seeing a friend off. Like a man standing on a quay.",
+          "startMs": 36251
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "Did he say anything?",
+          "startMs": 42751
+        },
+        {
+          "speaker": "Captain Vance",
+          "text": "He mouthed something. I think it was, mind how you go.",
+          "startMs": 44220
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "I screwed one bulb back in, to see. It lit. It was beautiful. It was the brightest thing I'd seen in a week. And it made the dark around it look so very much darker.",
+          "startMs": 48488
+        }
+      ]
+    },
+    {
+      "id": "ep-06-c",
+      "category": "show",
+      "url": "/voice/the-long-dark/ep-06-c.mp3",
+      "durationMs": 57744,
+      "title": "Episode Six: The Tern Comes In",
+      "overMusic": false,
+      "serial": {
+        "id": "the-long-dark",
+        "episode": 6
+      },
+      "lines": [
+        {
+          "speaker": "The Announcer",
+          "text": "Later. The Lumen Bar. And something was wrong with the Lumen Bar, because it was dark.",
+          "startMs": 436
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "Mags?",
+          "startMs": 6324
+        },
+        {
+          "speaker": "Mags",
+          "text": "Over here, Ines. Behind the bar. Don't put the light on.",
+          "startMs": 7293
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "You turned them off. Yourself.",
+          "startMs": 10552
+        },
+        {
+          "speaker": "Mags",
+          "text": "I did. It felt like the right thing. It usually does, about now.",
+          "startMs": 12524
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "About now?",
+          "startMs": 16185
+        },
+        {
+          "speaker": "Mags",
+          "text": "Three in the morning. I'll tell you about that, love. Not tonight.",
+          "startMs": 17314
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "I sat down at the bar. Not at the end. I knew better than that by now. Mags poured me something by feel, and didn't spill a drop. Forty years of practice, I thought. Forty years of three in the morning.",
+          "startMs": 21009
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "What's in your hand?",
+          "startMs": 32952
+        },
+        {
+          "speaker": "Mags",
+          "text": "A coin. Black. No shine. He left it on the bar an hour ago, while my back was turned.",
+          "startMs": 35236
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "For his dark hour.",
+          "startMs": 40379
+        },
+        {
+          "speaker": "Mags",
+          "text": "No. That's the thing. He's already paid for tonight. He always pays on the night.",
+          "startMs": 41805
+        },
+        {
+          "speaker": "Mags",
+          "text": "He's paid me, Ines, for something I haven't sold him yet.",
+          "startMs": 46134
+        },
+        {
+          "speaker": "The Announcer",
+          "text": "What has Mags promised Mister Wren? Tomorrow night, on The Long Dark.",
+          "startMs": 52499
+        }
+      ]
+    },
+    {
+      "id": "ep-07-a",
+      "category": "show",
+      "url": "/voice/the-long-dark/ep-07-a.mp3",
+      "durationMs": 64427,
+      "title": "Episode Seven: What Mags Sold",
+      "overMusic": false,
+      "serial": {
+        "id": "the-long-dark",
+        "episode": 7
+      },
+      "lines": [
+        {
+          "speaker": "The Announcer",
+          "text": "Previously, on The Long Dark. The Tern came in blind, with ten thousand floodlights, every one unscrewed half a turn. And in the Lumen Bar, in the dark, Mags held a coin for something she hadn't sold.",
+          "startMs": 3300
+        },
+        {
+          "speaker": "The Announcer",
+          "text": "Episode seven. What Mags Sold.",
+          "startMs": 17022
+        },
+        {
+          "speaker": "Mags",
+          "text": "Opening night. Forty years ago. Last customer gone, I'm wiping down, and there he is at the end of the bar. Grey coat. Glass of water. Sorry to trouble me.",
+          "startMs": 20335
+        },
+        {
+          "speaker": "Mags",
+          "text": "And he says...",
+          "startMs": 29654
+        },
+        {
+          "speaker": "Mr. Wren",
+          "text": "I'd like to buy an hour of dark, please. Just the one. Every night. From three until four. If it's no trouble.",
+          "startMs": 30903
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "And you said yes.",
+          "startMs": 38134
+        },
+        {
+          "speaker": "Mags",
+          "text": "I was nineteen. He was polite. I said yes to a lot of polite things at nineteen. So every night, at three, I turn everything off, and I sit with him in the dark.",
+          "startMs": 39436
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "What do you do?",
+          "startMs": 48327
+        },
+        {
+          "speaker": "Mags",
+          "text": "We talk. He tells me about his family. Very large. Very quiet. They live in the Long Dark, and they've not had a proper night's sleep since the station was built.",
+          "startMs": 49503
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "And what do you get?",
+          "startMs": 58428
+        },
+        {
+          "speaker": "Mags",
+          "text": "The lights in here have never failed. Not once. Except when he needs to knock.",
+          "startMs": 59702
+        }
+      ]
+    },
+    {
+      "id": "ep-07-b",
+      "category": "show",
+      "url": "/voice/the-long-dark/ep-07-b.mp3",
+      "durationMs": 62745,
+      "title": "Episode Seven: What Mags Sold",
+      "overMusic": false,
+      "serial": {
+        "id": "the-long-dark",
+        "episode": 7
+      },
+      "lines": [
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "And tonight's coin?",
+          "startMs": 437
+        },
+        {
+          "speaker": "Mags",
+          "text": "He wants the station's dark hour, Ines. All of it. Every ring. Every corridor. One hour a night. He's never asked for that before.",
+          "startMs": 1796
+        },
+        {
+          "speaker": "Mags",
+          "text": "And I don't think it's mine to sell.",
+          "startMs": 9009
+        },
+        {
+          "speaker": "The Announcer",
+          "text": "It wasn't. It was Station Master Ashby's. And within the hour, he had heard all of it.",
+          "startMs": 11113
+        },
+        {
+          "speaker": "Station Master Ashby",
+          "text": "Forty years. Forty years, she's been trading with it. In my station. Over my bar.",
+          "startMs": 17001
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "It's her bar, sir.",
+          "startMs": 22728
+        },
+        {
+          "speaker": "Station Master Ashby",
+          "text": "It is trading with the enemy, Calder. Every night. While the rest of us sat in our cabins wondering why the corridors kept getting dimmer, she was selling it the dark by the hour.",
+          "startMs": 24031
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "She was keeping the bar lit, sir. The one place on this station that never failed. You drink there yourself. Every Friday. Third stool.",
+          "startMs": 35196
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "He's not an enemy, sir. He's a neighbour. With a noise complaint. Forty years of it, written in his best hand.",
+          "startMs": 43078
+        },
+        {
+          "speaker": "Station Master Ashby",
+          "text": "Then let's give the neighbour something to complain about.",
+          "startMs": 49206
+        },
+        {
+          "speaker": "Station Master Ashby",
+          "text": "Haskett. Yes, I know you're there. I can hear you breathing behind the filing cabinet. Get the Tern's floodlights screwed in. Every one. Tonight.",
+          "startMs": 53194
+        }
+      ]
+    },
+    {
+      "id": "ep-07-c",
+      "category": "show",
+      "url": "/voice/the-long-dark/ep-07-c.mp3",
+      "durationMs": 74241,
+      "title": "Episode Seven: What Mags Sold",
+      "overMusic": false,
+      "serial": {
+        "id": "the-long-dark",
+        "episode": 7
+      },
+      "lines": [
+        {
+          "speaker": "The Announcer",
+          "text": "Midnight. The Lamp Room. Ten thousand floodlights wired into every ring, and one switch to throw.",
+          "startMs": 437
+        },
+        {
+          "speaker": "Dov Haskett",
+          "text": "Sir, I'm asking you as a man who's tended her forty years. If we put this much through her, the Lamp will burn out.",
+          "startMs": 7138
+        },
+        {
+          "speaker": "Station Master Ashby",
+          "text": "Then she burns out bright.",
+          "startMs": 14514
+        },
+        {
+          "speaker": "Dov Haskett",
+          "text": "She's not a firework, sir. She's the only thing keeping us warm. You don't make a fire burn brighter by sitting on it.",
+          "startMs": 16390
+        },
+        {
+          "speaker": "Station Master Ashby",
+          "text": "Forty years we've been asking it nicely, Haskett. Forty years of patience, and four polite letters, and a station you can't see from the dock. I'm done asking.",
+          "startMs": 23641
+        },
+        {
+          "speaker": "Station Master Ashby",
+          "text": "Throw the switch, Haskett.",
+          "startMs": 34247
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "Haskett. Don't.",
+          "startMs": 36021
+        },
+        {
+          "speaker": "Dov Haskett",
+          "text": "Sorry, old girl. Sorry. I'll make it up to you.",
+          "startMs": 38915
+        },
+        {
+          "speaker": "The Announcer",
+          "text": "And Penumbra Station lit up like a struck match. Every window. Every porthole. Every crack under every door. Brighter than it had ever been. Bright enough to be seen across the whole of the Long Dark.",
+          "startMs": 44917
+        },
+        {
+          "speaker": "The Announcer",
+          "text": "And somewhere outside, something very large, and very polite, sighed.",
+          "startMs": 59077
+        },
+        {
+          "speaker": "The Announcer",
+          "text": "Penumbra Station is at full bright. How long can the Lamp hold? Tomorrow night, on The Long Dark.",
+          "startMs": 66897
+        }
+      ]
+    },
+    {
+      "id": "ep-08-a",
+      "category": "show",
+      "url": "/voice/the-long-dark/ep-08-a.mp3",
+      "durationMs": 67457,
+      "title": "Episode Eight: Full Bright",
+      "overMusic": false,
+      "serial": {
+        "id": "the-long-dark",
+        "episode": 8
+      },
+      "lines": [
+        {
+          "speaker": "The Announcer",
+          "text": "Previously, on The Long Dark. Mags confessed to forty years of selling the dark hour. Station Master Ashby declared it trading with the enemy, and ordered the floodlights on. Every one. All night.",
+          "startMs": 3300
+        },
+        {
+          "speaker": "The Announcer",
+          "text": "Episode eight. Full Bright.",
+          "startMs": 16811
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "Two days at full bright. Nobody on the station has slept. You can't. It comes through your eyelids. It comes through the pillow.",
+          "startMs": 19691
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "The chapel's hydroponics wilted on the first afternoon. The miners on Ring Four have started wearing their welding goggles to breakfast. Mags can't tell when to close, so she hasn't.",
+          "startMs": 26822
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "And everybody's cross. Not angry. Cross. The way you are when you've been at a party too long, and you can't find your coat.",
+          "startMs": 37691
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "You'd think more light would make it easier to see. It doesn't. It just makes everything look like evidence.",
+          "startMs": 44941
+        },
+        {
+          "speaker": "Dov Haskett",
+          "text": "She's running hot, Detective. Hotter every hour. I've got my hand on the glass and I can't keep it there.",
+          "startMs": 51270
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "Can you turn it down?",
+          "startMs": 57835
+        },
+        {
+          "speaker": "Dov Haskett",
+          "text": "Ashby's got the key to the governor. On a chain. Round his neck. He sleeps in it. Well. He would, if anybody could sleep.",
+          "startMs": 59283
+        }
+      ]
+    },
+    {
+      "id": "ep-08-b",
+      "category": "show",
+      "url": "/voice/the-long-dark/ep-08-b.mp3",
+      "durationMs": 57886,
+      "title": "Episode Eight: Full Bright",
+      "overMusic": false,
+      "serial": {
+        "id": "the-long-dark",
+        "episode": 8
+      },
+      "lines": [
+        {
+          "speaker": "The Announcer",
+          "text": "That night, Detective Calder sat in her office, with the blinds down, and the light coming through them anyway. And somebody knocked. Not on the door. On the window.",
+          "startMs": 435
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "My office window looks out on the Long Dark. There's nothing out there to knock with.",
+          "startMs": 10770
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "I lifted the blind. Out past the glare, just where the light gave up, stood Mister Wren. Outside. On nothing. Hat in his hand.",
+          "startMs": 16517
+        },
+        {
+          "speaker": "Mr. Wren",
+          "text": "I'm so sorry to bother you, Detective. I did try the door. It's very bright, at the door.",
+          "startMs": 24229
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "What do you want?",
+          "startMs": 30316
+        },
+        {
+          "speaker": "Mr. Wren",
+          "text": "The children can't sleep.",
+          "startMs": 31521
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "Children?",
+          "startMs": 33231
+        },
+        {
+          "speaker": "Mr. Wren",
+          "text": "Mine. And a great many others. Your light comes right through our walls, you see. Like a neighbour's party that never ends. We've been lying awake forty years.",
+          "startMs": 34261
+        },
+        {
+          "speaker": "Mr. Wren",
+          "text": "Would you ask him to turn it down? Just a little. Just for an hour. I'd ask myself, but he never opens the letters.",
+          "startMs": 44083
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "And if he won't?",
+          "startMs": 51765
+        },
+        {
+          "speaker": "Mr. Wren",
+          "text": "Then I'm afraid the Lamp will decide for him. She's ever so tired.",
+          "startMs": 52969
+        }
+      ]
+    },
+    {
+      "id": "ep-08-c",
+      "category": "show",
+      "url": "/voice/the-long-dark/ep-08-c.mp3",
+      "durationMs": 63152,
+      "title": "Episode Eight: Full Bright",
+      "overMusic": false,
+      "serial": {
+        "id": "the-long-dark",
+        "episode": 8
+      },
+      "lines": [
+        {
+          "speaker": "The Announcer",
+          "text": "The Lamp Room. Four in the morning, by the clocks. Nobody believes the clocks any more.",
+          "startMs": 2849
+        },
+        {
+          "speaker": "Dov Haskett",
+          "text": "Sir! Sir, she's past the red. I can't hold her!",
+          "startMs": 8809
+        },
+        {
+          "speaker": "Station Master Ashby",
+          "text": "Hold her, Haskett! That is an order!",
+          "startMs": 12146
+        },
+        {
+          "speaker": "Dov Haskett",
+          "text": "You can't order a lamp, sir! You can't order her to do anything! You ask her, and she says yes, because she's kind. You've asked too much.",
+          "startMs": 14699
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "Ashby, give him the key.",
+          "startMs": 23144
+        },
+        {
+          "speaker": "Station Master Ashby",
+          "text": "If we go dark now, it wins.",
+          "startMs": 24758
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "It isn't a fight, sir. It never was. There's a man outside my window with his hat in his hand.",
+          "startMs": 27004
+        },
+        {
+          "speaker": "Station Master Ashby",
+          "text": "Outside your window is the Long Dark, Detective. There's nothing out there.",
+          "startMs": 32555
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "There's a whole family out there, sir, and they haven't slept in forty years. Give Haskett the key. Give it to him, or give it to me, but give it to somebody before she gives it to nobody.",
+          "startMs": 37440
+        },
+        {
+          "speaker": "Station Master Ashby",
+          "text": "No.",
+          "startMs": 49105
+        },
+        {
+          "speaker": "Dov Haskett",
+          "text": "She's going. Detective, she's going. Get down!",
+          "startMs": 52388
+        },
+        {
+          "speaker": "The Announcer",
+          "text": "The Lamp is failing. Tomorrow night, on The Long Dark.",
+          "startMs": 58798
+        }
+      ]
+    },
+    {
+      "id": "ep-09-a",
+      "category": "show",
+      "url": "/voice/the-long-dark/ep-09-a.mp3",
+      "durationMs": 61836,
+      "title": "Episode Nine: The Lamp Gives Out",
+      "overMusic": false,
+      "serial": {
+        "id": "the-long-dark",
+        "episode": 9
+      },
+      "lines": [
+        {
+          "speaker": "The Announcer",
+          "text": "Previously, on The Long Dark. Two days at full bright. Mister Wren knocked on Calder's window from the outside, hat in hand, and asked for one hour. And in the Lamp Room, the Lamp ran past the red.",
+          "startMs": 3300
+        },
+        {
+          "speaker": "The Announcer",
+          "text": "Episode nine. The Lamp Gives Out.",
+          "startMs": 16454
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "She didn't explode. I'd braced for it. We all had.",
+          "startMs": 19647
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "She just stopped. The way somebody very tired stops, at the end of a long day, when they finally sit down and don't get up.",
+          "startMs": 22772
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "And Penumbra Station went dark. Not a blackout. Not eleven minutes. Dark.",
+          "startMs": 31463
+        },
+        {
+          "speaker": "Dov Haskett",
+          "text": "Oh, old girl. Oh, I'm sorry.",
+          "startMs": 36261
+        },
+        {
+          "speaker": "Station Master Ashby",
+          "text": "Batteries. The air recyclers have batteries. How long?",
+          "startMs": 38778
+        },
+        {
+          "speaker": "Dov Haskett",
+          "text": "Air for days. Heat for hours. It'll get cold, sir. Then it'll get colder.",
+          "startMs": 42548
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "Can she be restarted?",
+          "startMs": 47488
+        },
+        {
+          "speaker": "Dov Haskett",
+          "text": "By hand. From the core. Down the long ladder. In the dark. And I'd need my torch to work, and look.",
+          "startMs": 49026
+        },
+        {
+          "speaker": "Dov Haskett",
+          "text": "Nothing. Brightwick's Everlasting, and nothing. The dark's having all of it. Every scrap.",
+          "startMs": 55969
+        }
+      ]
+    },
+    {
+      "id": "ep-09-b",
+      "category": "show",
+      "url": "/voice/the-long-dark/ep-09-b.mp3",
+      "durationMs": 87387,
+      "title": "Episode Nine: The Lamp Gives Out",
+      "overMusic": false,
+      "serial": {
+        "id": "the-long-dark",
+        "episode": 9
+      },
+      "lines": [
+        {
+          "speaker": "The Announcer",
+          "text": "They went down anyway. Calder and Haskett, hand over hand, down the long ladder to the core, with the cold coming up to meet them.",
+          "startMs": 435
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "Halfway down, Haskett stopped. I nearly stood on his hands.",
+          "startMs": 9076
+        },
+        {
+          "speaker": "Dov Haskett",
+          "text": "Detective. Listen.",
+          "startMs": 12857
+        },
+        {
+          "speaker": "Mr. Wren",
+          "text": "Pardon me.",
+          "startMs": 16017
+        },
+        {
+          "speaker": "A Small One",
+          "text": "Sorry. Sorry.",
+          "startMs": 17184
+        },
+        {
+          "speaker": "Mr. Wren",
+          "text": "Mind the step. Do mind the step.",
+          "startMs": 18649
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "The station was full. In the dark, all around us, on the ladder, in the corridors, the station was full of people. Quiet people. Lots of them. Apologising.",
+          "startMs": 20635
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "It was like walking into a party you weren't invited to, in a house you thought was yours.",
+          "startMs": 30096
+        },
+        {
+          "speaker": "Dov Haskett",
+          "text": "Detective. Who are they?",
+          "startMs": 35115
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "Neighbours.",
+          "startMs": 36920
+        },
+        {
+          "speaker": "Dov Haskett",
+          "text": "How many?",
+          "startMs": 37965
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "All of them, I think. Keep climbing.",
+          "startMs": 39072
+        },
+        {
+          "speaker": "The Announcer",
+          "text": "The core. The very bottom of Penumbra Station. Where the Lamp keeps its great glass heart, cold now, and still.",
+          "startMs": 42200
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "There was a light down there. Small. A single match.",
+          "startMs": 49972
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "And sitting at the Lamp's controls, in a grey coat, one hand flat on the glass, was a man I'd seen in forty years of photographs.",
+          "startMs": 53080
+        },
+        {
+          "speaker": "Dov Haskett",
+          "text": "Get your hand off her.",
+          "startMs": 60787
+        },
+        {
+          "speaker": "Mr. Wren",
+          "text": "Oh, Mister Haskett. Forgive me. I've been keeping her warm for you. She doesn't like to be alone in the dark. Not after all this time.",
+          "startMs": 62318
+        },
+        {
+          "speaker": "Mr. Wren",
+          "text": "Neither, I think, do you.",
+          "startMs": 70620
+        },
+        {
+          "speaker": "Mr. Wren",
+          "text": "Good evening, Detective. I'm so glad you came down. I think it's time we talked properly. Don't you?",
+          "startMs": 73223
+        },
+        {
+          "speaker": "The Announcer",
+          "text": "Mister Wren has the Lamp. Tomorrow night, on The Long Dark.",
+          "startMs": 82732
+        }
+      ]
+    },
+    {
+      "id": "ep-10-a",
+      "category": "show",
+      "url": "/voice/the-long-dark/ep-10-a.mp3",
+      "durationMs": 111586,
+      "title": "Episode Ten: Terms",
+      "overMusic": false,
+      "serial": {
+        "id": "the-long-dark",
+        "episode": 10
+      },
+      "lines": [
+        {
+          "speaker": "The Announcer",
+          "text": "Previously, on The Long Dark. The Lamp gave out, and Penumbra Station went dark, and filled with quiet strangers saying sorry on the stairs. At the bottom of it all, keeping the Lamp warm, sat Mister Wren.",
+          "startMs": 3300
+        },
+        {
+          "speaker": "The Announcer",
+          "text": "Episode ten. Terms.",
+          "startMs": 17148
+        },
+        {
+          "speaker": "Mr. Wren",
+          "text": "Let me tell you where you are, Detective. You're in a doorway.",
+          "startMs": 19894
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "Whose?",
+          "startMs": 23452
+        },
+        {
+          "speaker": "Mr. Wren",
+          "text": "Ours. The Long Dark isn't empty. It never was. It's a house. A very large one. Very quiet. We like it quiet. We are, I'm afraid, a family of light sleepers.",
+          "startMs": 24400
+        },
+        {
+          "speaker": "Mr. Wren",
+          "text": "And forty years ago, somebody built a lighthouse in our front hall. And then lit it. And then never, ever turned it off.",
+          "startMs": 35626
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "And the lights going out?",
+          "startMs": 43210
+        },
+        {
+          "speaker": "Mr. Wren",
+          "text": "I have never taken anything that wasn't already leaving. Light leaks, Detective. It goes out through every crack. I've only been gathering it up. It seemed so wasteful, just letting it go.",
+          "startMs": 44784
+        },
+        {
+          "speaker": "Dov Haskett",
+          "text": "You took the bulbs.",
+          "startMs": 57374
+        },
+        {
+          "speaker": "Mr. Wren",
+          "text": "Only the ones that had finished. Somebody upstairs kept them. Labelled. I always thought that was rather sweet.",
+          "startMs": 58859
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "Can she be restarted?",
+          "startMs": 67055
+        },
+        {
+          "speaker": "Mr. Wren",
+          "text": "Oh, yes. She's only sleeping. Mister Haskett knows how. And I'll hold the match for him. If.",
+          "startMs": 68593
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "If.",
+          "startMs": 74536
+        },
+        {
+          "speaker": "Mr. Wren",
+          "text": "If you'll come and see. Just for a moment. Out there. Next door.",
+          "startMs": 75242
+        },
+        {
+          "speaker": "Mr. Wren",
+          "text": "Then you can come back and tell them. And they'll believe you, Detective, because you're you. Nobody on this station has ever believed me. I'm far too polite. It makes people nervous.",
+          "startMs": 79128
+        },
+        {
+          "speaker": "Dov Haskett",
+          "text": "Detective, you can't.",
+          "startMs": 90270
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "And if I don't come back?",
+          "startMs": 91988
+        },
+        {
+          "speaker": "Mr. Wren",
+          "text": "Then I shall be very, very sorry. But you will. I'll walk you to the door myself. I always see my guests to the door.",
+          "startMs": 93585
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "Haskett. If I'm not back in an hour, light a match.",
+          "startMs": 102586
+        },
+        {
+          "speaker": "Dov Haskett",
+          "text": "Nothing lights, Detective.",
+          "startMs": 105527
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "Then try anyway. Somebody should be trying, when I get back.",
+          "startMs": 107613
+        }
+      ]
+    },
+    {
+      "id": "ep-10-b",
+      "category": "show",
+      "url": "/voice/the-long-dark/ep-10-b.mp3",
+      "durationMs": 66307,
+      "title": "Episode Ten: Terms",
+      "overMusic": false,
+      "serial": {
+        "id": "the-long-dark",
+        "episode": 10
+      },
+      "lines": [
+        {
+          "speaker": "The Announcer",
+          "text": "The outer airlock of Ring Four. The last door on Penumbra Station. On the other side of it, there has never been anything at all.",
+          "startMs": 435
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "Haskett held the match. Nothing lit. He held it anyway. Ashby stood behind him with his hands in his pockets, saying nothing, which for Ashby was a speech.",
+          "startMs": 11444
+        },
+        {
+          "speaker": "Station Master Ashby",
+          "text": "Calder. If it's a trick.",
+          "startMs": 20922
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "Then you'll have the station back, sir, and one less detective to argue with. Either way, you win something.",
+          "startMs": 22641
+        },
+        {
+          "speaker": "Mr. Wren",
+          "text": "After you. No, please. I insist.",
+          "startMs": 28511
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "I'd expected cold. I'd expected the kind of nothing that pulls the breath out of you. I'd expected stars, or no stars, and the long fall.",
+          "startMs": 31644
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "I hadn't expected carpet.",
+          "startMs": 41003
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "Thick. Soft. Underfoot, in the black, as far as I could feel. And air, warm air, smelling of rain on old books, and somebody's supper, and sleep.",
+          "startMs": 42988
+        },
+        {
+          "speaker": "Mr. Wren",
+          "text": "Detective Ines Calder. Welcome to the Long Dark.",
+          "startMs": 51439
+        },
+        {
+          "speaker": "Mr. Wren",
+          "text": "Please. Do wipe your feet.",
+          "startMs": 55674
+        },
+        {
+          "speaker": "The Announcer",
+          "text": "Detective Calder has stepped into the Long Dark. Tomorrow night, on The Long Dark.",
+          "startMs": 60513
+        }
+      ]
+    },
+    {
+      "id": "ep-11-a",
+      "category": "show",
+      "url": "/voice/the-long-dark/ep-11-a.mp3",
+      "durationMs": 113621,
+      "title": "Episode Eleven: Next Door",
+      "overMusic": false,
+      "serial": {
+        "id": "the-long-dark",
+        "episode": 11
+      },
+      "lines": [
+        {
+          "speaker": "The Announcer",
+          "text": "Previously, on The Long Dark. Mister Wren offered to help restart the Lamp, on one condition: that Detective Calder come and see. She went through the last door on Penumbra Station. And found carpet.",
+          "startMs": 3300
+        },
+        {
+          "speaker": "The Announcer",
+          "text": "Episode eleven. Next Door.",
+          "startMs": 16836
+        },
+        {
+          "speaker": "Mr. Wren",
+          "text": "Do keep your voice down. Most of them are asleep. Some of them for the first time in forty years. Since your Lamp went out.",
+          "startMs": 20047
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "I couldn't see a thing. And yet, after a while, I could tell where things were. The way you know your own house at night. Here a chair. Here a step. Here, somebody breathing, slow and deep.",
+          "startMs": 27635
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "It went on forever. Room after room, without walls. A whole family, I thought. No. A whole town of them. Lying in the dark, the way the dark is supposed to be lain in.",
+          "startMs": 37808
+        },
+        {
+          "speaker": "Mr. Wren",
+          "text": "It's not much. But it's ours. We were here before the stars, you know. We've watched every one of them come on. We were very polite about it. We didn't say a word.",
+          "startMs": 47975
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "But the station.",
+          "startMs": 57387
+        },
+        {
+          "speaker": "Mr. Wren",
+          "text": "The station was close. That's all. Stars are a long way off. Your Lamp was in the hall. It's always the neighbours, isn't it? Never the city. Always the house next door.",
+          "startMs": 58605
+        },
+        {
+          "speaker": "A Small One",
+          "text": "Is that one of the bright ones?",
+          "startMs": 70338
+        },
+        {
+          "speaker": "Mr. Wren",
+          "text": "Hush, little one. It's all right. She's a detective.",
+          "startMs": 72451
+        },
+        {
+          "speaker": "A Small One",
+          "text": "What's a detective?",
+          "startMs": 75376
+        },
+        {
+          "speaker": "Mr. Wren",
+          "text": "Someone who wants to know why. Like you, at bedtime.",
+          "startMs": 76982
+        },
+        {
+          "speaker": "A Small One",
+          "text": "Are you going to put the light back on?",
+          "startMs": 80353
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "Are you scared of the light?",
+          "startMs": 82671
+        },
+        {
+          "speaker": "A Small One",
+          "text": "Mama says the bright ones never sleep. That's why they're so cross all the time.",
+          "startMs": 84205
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "I laughed. I couldn't help it. I'd been cross for eleven years and never once thought to blame the lights.",
+          "startMs": 89611
+        },
+        {
+          "speaker": "A Small One",
+          "text": "You can have this. It's for the dark. So you can find your way back. Hold it tight.",
+          "startMs": 95337
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "Something small and cool in my palm. A pebble, I think. Smooth as a coin.",
+          "startMs": 99759
+        },
+        {
+          "speaker": "Mr. Wren",
+          "text": "We tell them stories about you, you know. The great bright station that never sleeps. They're terrified of you. And, I think, a little bit in love.",
+          "startMs": 104548
+        }
+      ]
+    },
+    {
+      "id": "ep-11-b",
+      "category": "show",
+      "url": "/voice/the-long-dark/ep-11-b.mp3",
+      "durationMs": 61741,
+      "title": "Episode Eleven: Next Door",
+      "overMusic": false,
+      "serial": {
+        "id": "the-long-dark",
+        "episode": 11
+      },
+      "lines": [
+        {
+          "speaker": "The Announcer",
+          "text": "Back on Penumbra Station, Dov Haskett had been trying. He'd said he would. Nothing lit. Nothing lit. And then, after forty minutes, something did.",
+          "startMs": 437
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "Behind us, the airlock blazed. The Lamp, roaring back to life, all of her at once, straight through the open door.",
+          "startMs": 10461
+        },
+        {
+          "speaker": "A Small One",
+          "text": "Too bright! Too bright!",
+          "startMs": 17220
+        },
+        {
+          "speaker": "Mr. Wren",
+          "text": "Close your eyes, little one. Close them tight. Turn round. There. There. Count to a hundred, the way we practised.",
+          "startMs": 18924
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "All around me the dark flinched. I felt it, the way you feel a whole room take a breath. Things woke, and turned their faces away.",
+          "startMs": 25988
+        },
+        {
+          "speaker": "Mr. Wren",
+          "text": "Oh dear. Oh, Mister Haskett. I did say an hour.",
+          "startMs": 33585
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "And the door, my door, the last door on Penumbra Station, began to close. Not slammed. Eased shut. The way you close a door on a room full of sleeping people.",
+          "startMs": 38381
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "Wren. Wren, I'm on the wrong side.",
+          "startMs": 48162
+        },
+        {
+          "speaker": "Mr. Wren",
+          "text": "Yes. I'm so sorry. I'm afraid you are.",
+          "startMs": 50231
+        },
+        {
+          "speaker": "The Announcer",
+          "text": "Detective Calder is shut out in the Long Dark. Tomorrow night, on The Long Dark.",
+          "startMs": 55818
+        }
+      ]
+    },
+    {
+      "id": "ep-12-a",
+      "category": "show",
+      "url": "/voice/the-long-dark/ep-12-a.mp3",
+      "durationMs": 71786,
+      "title": "Episode Twelve: The Wrong Side of the Door",
+      "overMusic": false,
+      "serial": {
+        "id": "the-long-dark",
+        "episode": 12
+      },
+      "lines": [
+        {
+          "speaker": "The Announcer",
+          "text": "Previously, on The Long Dark. Next door, Detective Calder met a small one who was frightened of the light, and was given a pebble to find her way. Then the Lamp came back, too soon, too bright. And the door closed, with Calder on the wrong side.",
+          "startMs": 3300
+        },
+        {
+          "speaker": "The Announcer",
+          "text": "Episode twelve. The Wrong Side of the Door.",
+          "startMs": 19026
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "I wasn't frightened. That surprised me. I sat down on the carpet in the dark, and Wren sat down beside me, and neither of us said anything for a while.",
+          "startMs": 22862
+        },
+        {
+          "speaker": "Mr. Wren",
+          "text": "They'll want to find you. They'll turn every light on to look.",
+          "startMs": 31790
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "And they won't see a thing.",
+          "startMs": 35274
+        },
+        {
+          "speaker": "Mr. Wren",
+          "text": "No. You can't find a light in the light. Nobody ever learns that until they need to.",
+          "startMs": 36762
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "Far off, something went past. A ship. Long and old, with every window lit, moving slow and sure, the way you walk home along a road you know.",
+          "startMs": 43139
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "Where's that one going?",
+          "startMs": 51430
+        },
+        {
+          "speaker": "Mr. Wren",
+          "text": "Home, I think. The old relay ships come through here, now and then. They get called, eventually. Somebody leaves a light on for them, further along.",
+          "startMs": 52910
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "I thought you didn't like lights.",
+          "startMs": 62279
+        },
+        {
+          "speaker": "Mr. Wren",
+          "text": "I don't mind one. A light for somebody who's coming home. It's forty years of eleven hundred that keeps a person up.",
+          "startMs": 64128
+        }
+      ]
+    },
+    {
+      "id": "ep-12-b",
+      "category": "show",
+      "url": "/voice/the-long-dark/ep-12-b.mp3",
+      "durationMs": 101421,
+      "title": "Episode Twelve: The Wrong Side of the Door",
+      "overMusic": false,
+      "serial": {
+        "id": "the-long-dark",
+        "episode": 12
+      },
+      "lines": [
+        {
+          "speaker": "The Announcer",
+          "text": "Meanwhile, on Penumbra Station. The Lumen Bar. Every light on full. Three people, and a great deal of blame.",
+          "startMs": 440
+        },
+        {
+          "speaker": "Dov Haskett",
+          "text": "I thought she was in trouble. Forty minutes. I thought, she's in trouble, she needs a light. So I gave her one.",
+          "startMs": 8297
+        },
+        {
+          "speaker": "Mags",
+          "text": "You gave her a blindfold, Dov. You can't find a light in the light. You need dark to see one. That's the whole point of a light.",
+          "startMs": 14926
+        },
+        {
+          "speaker": "Station Master Ashby",
+          "text": "We are not turning the station off. If we go dark, we lose.",
+          "startMs": 21860
+        },
+        {
+          "speaker": "Mags",
+          "text": "Lose what, Corvin? Forty years of not sleeping? Your squint? Your temper?",
+          "startMs": 25995
+        },
+        {
+          "speaker": "Station Master Ashby",
+          "text": "My station.",
+          "startMs": 30142
+        },
+        {
+          "speaker": "Mags",
+          "text": "It was never yours, love. It was always in somebody's hall. We've just been very loud guests.",
+          "startMs": 31399
+        },
+        {
+          "speaker": "Station Master Ashby",
+          "text": "One hour.",
+          "startMs": 38248
+        },
+        {
+          "speaker": "Mags",
+          "text": "Say it again.",
+          "startMs": 39401
+        },
+        {
+          "speaker": "Station Master Ashby",
+          "text": "One hour. All of it. Every ring. And if she isn't out there, Mags, I'll never forgive any of us.",
+          "startMs": 40724
+        },
+        {
+          "speaker": "The Announcer",
+          "text": "And so, at three in the morning, Mags reached under the bar, as she had every night for forty years, and turned off the lights of the Lumen Bar.",
+          "startMs": 48016
+        },
+        {
+          "speaker": "The Announcer",
+          "text": "Then Ring One.",
+          "startMs": 57567
+        },
+        {
+          "speaker": "The Announcer",
+          "text": "Then Ring Two. Ring Three. Ring Four.",
+          "startMs": 59417
+        },
+        {
+          "speaker": "The Announcer",
+          "text": "For the first time, on purpose, Penumbra Station went dark. Eleven hundred people stood at the windows, and looked out, and waited.",
+          "startMs": 64429
+        },
+        {
+          "speaker": "Dov Haskett",
+          "text": "Nothing. Nothing. There's nothing out there.",
+          "startMs": 73335
+        },
+        {
+          "speaker": "Mags",
+          "text": "Give it a minute. Your eyes have been shouting for forty years. Let them stop.",
+          "startMs": 76183
+        },
+        {
+          "speaker": "Station Master Ashby",
+          "text": "There. There. Low down. On the left.",
+          "startMs": 82649
+        },
+        {
+          "speaker": "The Announcer",
+          "text": "A light. Tiny. Far out in the Long Dark. Somebody holding up a match, and waving.",
+          "startMs": 84900
+        },
+        {
+          "speaker": "The Announcer",
+          "text": "And then the match went out.",
+          "startMs": 91511
+        },
+        {
+          "speaker": "The Announcer",
+          "text": "Is Calder on her way home? Tomorrow night, on The Long Dark.",
+          "startMs": 96722
+        }
+      ]
+    },
+    {
+      "id": "ep-13-a",
+      "category": "show",
+      "url": "/voice/the-long-dark/ep-13-a.mp3",
+      "durationMs": 69104,
+      "title": "Episode Thirteen: The Treaty of the Lumen Bar",
+      "overMusic": false,
+      "serial": {
+        "id": "the-long-dark",
+        "episode": 13
+      },
+      "lines": [
+        {
+          "speaker": "The Announcer",
+          "text": "Previously, on The Long Dark. Detective Calder, shut out in the Long Dark, watched an old ship go home. On the station, Station Master Ashby turned out the lights. And far out in the dark, a match was lit. And went out.",
+          "startMs": 3300
+        },
+        {
+          "speaker": "The Announcer",
+          "text": "Episode thirteen. The Treaty of the Lumen Bar.",
+          "startMs": 18196
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "It was only a match. They don't last, out there. Wren had said so.",
+          "startMs": 22529
+        },
+        {
+          "speaker": "Mr. Wren",
+          "text": "That was the last of my matches, I'm afraid. We'll have to do the rest by feel. Hold the pebble. It knows the way.",
+          "startMs": 26482
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "We walked. The pebble went warm when I turned the right way, and cool when I didn't. It's the strangest compass I've ever held, and the only one that's never been wrong.",
+          "startMs": 33628
+        },
+        {
+          "speaker": "Dov Haskett",
+          "text": "Detective! Oh, Detective. Mind the step. Mind the step.",
+          "startMs": 47457
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "Haskett, you're hugging me.",
+          "startMs": 51515
+        },
+        {
+          "speaker": "Dov Haskett",
+          "text": "I'm aware. I'll stop in a minute.",
+          "startMs": 53164
+        },
+        {
+          "speaker": "The Announcer",
+          "text": "And there, on the threshold of the last door, in a grey coat, with his hat in his hands, stood Mister Wren. He did not step inside.",
+          "startMs": 56641
+        },
+        {
+          "speaker": "Mr. Wren",
+          "text": "May I come in? I've never actually been invited.",
+          "startMs": 65560
+        }
+      ]
+    },
+    {
+      "id": "ep-13-b",
+      "category": "show",
+      "url": "/voice/the-long-dark/ep-13-b.mp3",
+      "durationMs": 113997,
+      "title": "Episode Thirteen: The Treaty of the Lumen Bar",
+      "overMusic": false,
+      "serial": {
+        "id": "the-long-dark",
+        "episode": 13
+      },
+      "lines": [
+        {
+          "speaker": "The Announcer",
+          "text": "The Lumen Bar. Five people round a single table, by the light of one small lamp, turned very low. Mags poured. Nobody drank.",
+          "startMs": 435
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "Here are the terms. Every night, one hour of dark. Full dark. Every ring, every corridor, every window. From three until four.",
+          "startMs": 9679
+        },
+        {
+          "speaker": "Mr. Wren",
+          "text": "And in return, the light stops leaving. I'll stop gathering it. The Lamp gets an hour's rest a night. She's earned it.",
+          "startMs": 17776
+        },
+        {
+          "speaker": "Dov Haskett",
+          "text": "She has. She has, sir.",
+          "startMs": 25344
+        },
+        {
+          "speaker": "Mr. Wren",
+          "text": "And next door gets one hour of proper sleep. Just one. You'd be amazed what one hour does. It's the difference between a neighbour and a stranger.",
+          "startMs": 27170
+        },
+        {
+          "speaker": "Station Master Ashby",
+          "text": "And if we refuse?",
+          "startMs": 36704
+        },
+        {
+          "speaker": "Mr. Wren",
+          "text": "Then nothing, Station Master. Nothing at all. I'll keep writing. Very politely. Forever.",
+          "startMs": 38235
+        },
+        {
+          "speaker": "Station Master Ashby",
+          "text": "That's worse.",
+          "startMs": 45495
+        },
+        {
+          "speaker": "Mr. Wren",
+          "text": "I know. I'm so sorry.",
+          "startMs": 46669
+        },
+        {
+          "speaker": "The Announcer",
+          "text": "Missus Ruddle typed it up on the bar's old machine. One page. Five signatures. It is the shortest treaty ever signed, and possibly the most polite.",
+          "startMs": 51394
+        },
+        {
+          "speaker": "Station Master Ashby",
+          "text": "What do we call you? For the paperwork.",
+          "startMs": 61981
+        },
+        {
+          "speaker": "Mr. Wren",
+          "text": "Ah. I'm afraid Wren is the only part of it you could pronounce. The rest goes on rather a long time, and most of it is silence.",
+          "startMs": 64526
+        },
+        {
+          "speaker": "Station Master Ashby",
+          "text": "Wren it is.",
+          "startMs": 73084
+        },
+        {
+          "speaker": "The Announcer",
+          "text": "Station Master Ashby signed in full. Mags signed with a flourish. Haskett signed for himself, and, in brackets, for the Lamp. Calder signed last. And Mister Wren signed with one letter. Very neat.",
+          "startMs": 74325
+        },
+        {
+          "speaker": "Mags",
+          "text": "When does it start?",
+          "startMs": 88039
+        },
+        {
+          "speaker": "Mr. Wren",
+          "text": "Tonight, if you'll have it. At three.",
+          "startMs": 89590
+        },
+        {
+          "speaker": "The Announcer",
+          "text": "And at three o'clock, Penumbra Station turned out every one of its lights. Not because they failed. Not because it was told. Because it had promised.",
+          "startMs": 94770
+        },
+        {
+          "speaker": "The Announcer",
+          "text": "The first Long Dark Hour has begun. Tomorrow night, the final episode of The Long Dark.",
+          "startMs": 107379
+        }
+      ]
+    },
+    {
+      "id": "ep-14-a",
+      "category": "show",
+      "url": "/voice/the-long-dark/ep-14-a.mp3",
+      "durationMs": 108731,
+      "title": "Episode Fourteen: The Long Dark Hour",
+      "overMusic": false,
+      "serial": {
+        "id": "the-long-dark",
+        "episode": 14
+      },
+      "lines": [
+        {
+          "speaker": "The Announcer",
+          "text": "Previously, on The Long Dark. Detective Calder came home by the light of a pebble. Around a table in the Lumen Bar, five people signed the most polite treaty ever written. And at three o'clock, the lights went out, on purpose.",
+          "startMs": 3300
+        },
+        {
+          "speaker": "The Announcer",
+          "text": "The final episode. The Long Dark Hour.",
+          "startMs": 18528
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "Everyone went to the windows. Nobody told them to. Eleven hundred people, in their dressing gowns and their goggles and their good coats, pressed up against the glass.",
+          "startMs": 22241
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "For a minute, there was nothing. Then our eyes stopped shouting. And then we saw them.",
+          "startMs": 31667
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "Stars. Thousands of them. Tens of thousands. Out past the Long Dark, all along the far edge, where we'd been told for forty years that there was nothing at all.",
+          "startMs": 36181
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "They'd been there the whole time. We'd just been too bright to see them.",
+          "startMs": 45950
+        },
+        {
+          "speaker": "Station Master Ashby",
+          "text": "Forty years. Forty years I've been station master, and I've never once seen a star from this station.",
+          "startMs": 50882
+        },
+        {
+          "speaker": "Mags",
+          "text": "Here, Corvin. Have a hanky. It's dark. Nobody's looking.",
+          "startMs": 57567
+        },
+        {
+          "speaker": "Dov Haskett",
+          "text": "Sleep, old girl. Go on. I'm here. I'll wake you at four.",
+          "startMs": 60983
+        },
+        {
+          "speaker": "The Announcer",
+          "text": "At the window at the end of Ring Four, where a corridor ends in a wall, Detective Calder found Mister Wren. He was looking out, the way you look out at your own garden after a long time away.",
+          "startMs": 65758
+        },
+        {
+          "speaker": "Mr. Wren",
+          "text": "Listen.",
+          "startMs": 78582
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "I can't hear anything.",
+          "startMs": 79589
+        },
+        {
+          "speaker": "Mr. Wren",
+          "text": "Exactly. That's them, sleeping. Forty years. You've no idea what you've given them.",
+          "startMs": 81113
+        },
+        {
+          "speaker": "Mr. Wren",
+          "text": "Here. For the hour. I always pay.",
+          "startMs": 86148
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "The coin. Black, with no shine on it. Keep it, Wren.",
+          "startMs": 88207
+        },
+        {
+          "speaker": "Mr. Wren",
+          "text": "Then I shall owe you. I don't like owing, Detective. I'll be back to settle it.",
+          "startMs": 91399
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "When?",
+          "startMs": 96245
+        },
+        {
+          "speaker": "Mr. Wren",
+          "text": "When the lights go out, of course. Isn't that always when?",
+          "startMs": 97140
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "I looked down at the coin in my hand. When I looked up, the window was just a window. And the stars were very bright.",
+          "startMs": 101599
+        }
+      ]
+    },
+    {
+      "id": "ep-14-b",
+      "category": "show",
+      "url": "/voice/the-long-dark/ep-14-b.mp3",
+      "durationMs": 73090,
+      "title": "Episode Fourteen: The Long Dark Hour",
+      "overMusic": false,
+      "serial": {
+        "id": "the-long-dark",
+        "episode": 14
+      },
+      "lines": [
+        {
+          "speaker": "The Announcer",
+          "text": "At four o'clock, the lights came back on. Gently. Haskett brought them up slowly, a ring at a time, like opening curtains on somebody you love.",
+          "startMs": 437
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "Report. Case of the lights on Ring Four. Cause, a neighbour. Resolution, a treaty. One hour of dark, nightly. Status.",
+          "startMs": 12457
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "Closed.",
+          "startMs": 20678
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "I looked at that word a long time. Eleven years on Penumbra Station, and it's the first case I ever closed where nobody went to a cell, and everybody went to bed.",
+          "startMs": 21682
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "And the kettle boiled. For the first time in eleven years, the kettle boiled. I don't know why. I've decided not to ask.",
+          "startMs": 35082
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "Calder.",
+          "startMs": 46216
+        },
+        {
+          "speaker": "Dov Haskett",
+          "text": "Detective, it's Haskett. Sorry. Probably nothing. Ring Four's just flickered.",
+          "startMs": 47198
+        },
+        {
+          "speaker": "Mr. Wren",
+          "text": "Excuse me.",
+          "startMs": 53878
+        },
+        {
+          "speaker": "The Announcer",
+          "text": "On Penumbra Station, the lights still go out, now and then. Somebody is always very sorry about it. And somebody always picks up the phone.",
+          "startMs": 55158
+        },
+        {
+          "speaker": "The Announcer",
+          "text": "The Long Dark will return. From the beginning. As it always does.",
+          "startMs": 64629
+        }
+      ]
+    },
+    {
+      "id": "show-matinee-open",
+      "category": "id",
+      "url": "/voice/the-long-dark/show-matinee-open.mp3",
+      "durationMs": 9738,
+      "overMusic": true,
+      "part": "open",
+      "show": "late-matinee",
+      "lines": [
+        {
+          "speaker": "The Announcer",
+          "text": "The Late Matinee. The Penumbra Players perform short plays for long evenings. House lights down, please.",
+          "startMs": 2900
+        }
+      ]
+    },
+    {
+      "id": "show-matinee-001",
+      "category": "story",
+      "url": "/voice/the-long-dark/show-matinee-001.mp3",
+      "durationMs": 39942,
+      "title": "A Short Play: The Lift",
+      "overMusic": false,
+      "show": "late-matinee",
+      "lines": [
+        {
+          "speaker": "The Announcer",
+          "text": "A short play. The Lift. Two strangers, between floors, on Penumbra Station.",
+          "startMs": 438
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "We've stopped.",
+          "startMs": 6512
+        },
+        {
+          "speaker": "Mr. Wren",
+          "text": "So we have. I'm so sorry. I think that might be me.",
+          "startMs": 7693
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "You stopped the lift?",
+          "startMs": 11063
+        },
+        {
+          "speaker": "Mr. Wren",
+          "text": "Not on purpose. I have that effect on lifts. And lamps. And the occasional clock. Would you like a mint? It's going to be a while.",
+          "startMs": 12493
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "How long a while?",
+          "startMs": 20504
+        },
+        {
+          "speaker": "Mr. Wren",
+          "text": "Until one of us says something true. Lifts are very old-fashioned about it.",
+          "startMs": 21804
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "I'm tired. I've been tired for eleven years.",
+          "startMs": 28161
+        },
+        {
+          "speaker": "Mr. Wren",
+          "text": "There. Ring Three. Mind how you go.",
+          "startMs": 32113
+        },
+        {
+          "speaker": "The Announcer",
+          "text": "The Lift. A short play, by the Penumbra Players. It's shorter than most lifts.",
+          "startMs": 34236
+        }
+      ]
+    },
+    {
+      "id": "show-matinee-002",
+      "category": "dj",
+      "url": "/voice/the-long-dark/show-matinee-002.mp3",
+      "durationMs": 17542,
+      "overMusic": true,
+      "show": "late-matinee",
+      "lines": [
+        {
+          "speaker": "The Announcer",
+          "text": "The Players are often asked whether The Long Dark is a true story. The answer is no. It is a play.",
+          "startMs": 36
+        },
+        {
+          "speaker": "The Announcer",
+          "text": "However, the Players would like to note that the lights in Studio B have gone out four times this week, and somebody keeps signing the visitors' book with a single letter.",
+          "startMs": 7201
+        }
+      ]
+    },
+    {
+      "id": "show-lights-out-open",
+      "category": "id",
+      "url": "/voice/the-long-dark/show-lights-out-open.mp3",
+      "durationMs": 8882,
+      "overMusic": true,
+      "daypart": "night",
+      "part": "open",
+      "show": "lights-out-theatre",
+      "lines": [
+        {
+          "speaker": "The Announcer",
+          "text": "Lights Out Theatre. The Penumbra Players perform in the dark. Please do the same.",
+          "startMs": 40
+        }
+      ]
+    },
+    {
+      "id": "show-lights-out-001",
+      "category": "story",
+      "url": "/voice/the-long-dark/show-lights-out-001.mp3",
+      "durationMs": 40762,
+      "title": "A Short Play: The Night Man",
+      "overMusic": false,
+      "show": "lights-out-theatre",
+      "lines": [
+        {
+          "speaker": "The Announcer",
+          "text": "A short play for the small hours. The Night Man. The Lamp Room. Three in the morning.",
+          "startMs": 438
+        },
+        {
+          "speaker": "Dov Haskett",
+          "text": "Evening, old girl. Just us again.",
+          "startMs": 6244
+        },
+        {
+          "speaker": "Mr. Wren",
+          "text": "And me, I'm afraid. Don't get up.",
+          "startMs": 10531
+        },
+        {
+          "speaker": "Dov Haskett",
+          "text": "You're signing in, are you?",
+          "startMs": 12738
+        },
+        {
+          "speaker": "Mr. Wren",
+          "text": "Always. One must.",
+          "startMs": 14575
+        },
+        {
+          "speaker": "Dov Haskett",
+          "text": "Forty years you've been doing that. Every night. I always thought you were the night man.",
+          "startMs": 16075
+        },
+        {
+          "speaker": "Mr. Wren",
+          "text": "In a way, Mister Haskett, I am. Somebody has to sit with her while you're asleep. She doesn't like being alone.",
+          "startMs": 21260
+        },
+        {
+          "speaker": "Dov Haskett",
+          "text": "Neither do I, much.",
+          "startMs": 29231
+        },
+        {
+          "speaker": "Mr. Wren",
+          "text": "No. I know. Same time tomorrow?",
+          "startMs": 31026
+        },
+        {
+          "speaker": "The Announcer",
+          "text": "The Night Man. Performed in the dark, by the Penumbra Players. The visitors' book is available for inspection.",
+          "startMs": 33165
+        }
+      ]
+    },
+    {
+      "id": "show-lights-out-002",
+      "category": "dj",
+      "url": "/voice/the-long-dark/show-lights-out-002.mp3",
+      "durationMs": 15187,
+      "overMusic": true,
+      "daypart": "night",
+      "show": "lights-out-theatre",
+      "lines": [
+        {
+          "speaker": "The Announcer",
+          "text": "It is very late. The organist has gone home. Missus Ruddle is asleep at the foley table with her head on the gravel tray.",
+          "startMs": 37
+        },
+        {
+          "speaker": "The Announcer",
+          "text": "Only the Announcer remains. And, by the coat stand, someone in a grey coat, being sorry. Goodnight.",
+          "startMs": 8538
+        }
+      ]
+    },
+    {
+      "id": "convergence-missing-moon",
+      "category": "event",
+      "url": "/voice/the-long-dark/convergence-missing-moon.mp3",
+      "durationMs": 15281,
+      "overMusic": false,
+      "kit": "missing-moon",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "The Announcer",
+          "text": "We interrupt this episode. A moon has gone missing. The Penumbra Players wish to state that it was not in the props cupboard.",
+          "startMs": 2900
+        },
+        {
+          "speaker": "Mr. Wren",
+          "text": "I'm so sorry. I think I may have borrowed it. Just for the dark bits.",
+          "startMs": 11290
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-smell",
+      "category": "event",
+      "url": "/voice/the-long-dark/convergence-the-smell.mp3",
+      "durationMs": 13516,
+      "overMusic": false,
+      "kit": "the-smell",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "The Announcer",
+          "text": "The studio smells of toast. Missus Ruddle wishes it known that toast is not, and has never been, one of her effects.",
+          "startMs": 43
+        },
+        {
+          "speaker": "Mrs. Ruddle, Foley",
+          "text": "I do a very good bacon. That's coconut shells and a frying pan. Not toast. Never toast.",
+          "startMs": 8232
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-song",
+      "category": "event",
+      "url": "/voice/the-long-dark/convergence-the-song.mp3",
+      "durationMs": 15626,
+      "overMusic": false,
+      "kit": "the-song",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "The Announcer",
+          "text": "The organist has begun playing a song nobody can name, and nobody can finish. He has never seen the script for this one either.",
+          "startMs": 45
+        },
+        {
+          "speaker": "The Announcer",
+          "text": "He has been playing the first three notes for some minutes now. The Players are waiting. The Players are very patient.",
+          "startMs": 8450
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-knock",
+      "category": "event",
+      "url": "/voice/the-long-dark/convergence-the-knock.mp3",
+      "durationMs": 13069,
+      "overMusic": false,
+      "kit": "the-knock",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "The Announcer",
+          "text": "Three knocks on the studio door. Missus Ruddle insists that wasn't her. She was holding the door.",
+          "startMs": 1607
+        },
+        {
+          "speaker": "Mr. Wren",
+          "text": "That wasn't me either, before anybody asks. I always knock with the lights.",
+          "startMs": 8311
+        }
+      ]
+    },
+    {
+      "id": "convergence-wrong-colour",
+      "category": "event",
+      "url": "/voice/the-long-dark/convergence-wrong-colour.mp3",
+      "durationMs": 10557,
+      "overMusic": false,
+      "kit": "wrong-colour",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "The Announcer",
+          "text": "Listeners will be aware that the sky has turned a colour nobody has a word for.",
+          "startMs": 37
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "I've been in the Long Dark, love. I've seen worse colours. Mostly black. This is nicer.",
+          "startMs": 5667
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-pigeon",
+      "category": "event",
+      "url": "/voice/the-long-dark/convergence-the-pigeon.mp3",
+      "durationMs": 13251,
+      "overMusic": false,
+      "kit": "the-pigeon",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "The Announcer",
+          "text": "A pigeon has walked into Studio B, and taken up a position at the microphone. The Players have given it a script. It seems to know its lines.",
+          "startMs": 35
+        },
+        {
+          "speaker": "The Announcer",
+          "text": "It is, we are told, very good. Better than some.",
+          "startMs": 9767
+        }
+      ]
+    },
+    {
+      "id": "halloween-001",
+      "category": "story",
+      "url": "/voice/the-long-dark/halloween-001.mp3",
+      "durationMs": 37195,
+      "title": "A Ghost Story, Cast Badly",
+      "overMusic": false,
+      "dates": [
+        "10-24",
+        "10-25",
+        "10-26",
+        "10-27",
+        "10-28",
+        "10-29",
+        "10-30",
+        "10-31"
+      ],
+      "lines": [
+        {
+          "speaker": "The Announcer",
+          "text": "For Halloween, the Penumbra Players perform a traditional ghost story. The role of the ghost is played by Mister Wren, who asked for it, very politely, eleven times.",
+          "startMs": 3500
+        },
+        {
+          "speaker": "Mr. Wren",
+          "text": "Woo. Is that right? Woo. I'm so sorry. Woo.",
+          "startMs": 15183
+        },
+        {
+          "speaker": "The Announcer",
+          "text": "He is the least frightening ghost the Players have ever cast. He apologises to every door before he walks through it.",
+          "startMs": 17894
+        },
+        {
+          "speaker": "The Announcer",
+          "text": "And yet. When the studio lights went out during rehearsal, every single member of the cast screamed. He was so sorry. He brought biscuits the next day. Happy Halloween.",
+          "startMs": 25510
+        }
+      ]
+    }
+  ]
+}

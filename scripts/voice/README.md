@@ -113,6 +113,17 @@ then `python3`.
 - If a clip fails, the others still render; that station's manifest is left as it was
   and the command exits 1.
 
+## Pronunciation lexicon (`lexicon.toml`)
+
+`[words]` maps a written word or phrase (lowercase) to a respelling Kokoro says better. The
+loader applies it whole-word, case-insensitively and case-preserving to each speech line, and
+the respelled text becomes the line's `text` (what TTS hears and what the clip hash covers),
+so editing an entry re-renders exactly the clips that use it. The written text is kept on the
+clip (`Clip.written`) and `written_captions()` puts it back into the manifest's captions
+(`cut` lines keep the same share of words). This is all outside the engine fingerprint:
+adding the lexicon re-rendered nothing else. A bad lexicon stops `--check` and renders with
+an error. `VOICE_LEXICON` points at another file (tests).
+
 ## The index (`_index.json`, v4)
 
 Every render into a directory (and `--index`) rewrites `<out>/_index.json` from the

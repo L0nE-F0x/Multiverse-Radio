@@ -667,6 +667,138 @@
           "startMs": 7195
         }
       ]
+    },
+    {
+      "id": "convergence-missing-moon",
+      "category": "event",
+      "url": "/voice/hush-after-hours/convergence-missing-moon.mp3",
+      "durationMs": 11336,
+      "title": "Out of Respect",
+      "overMusic": false,
+      "kit": "missing-moon",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "News, I think. That's a radio thing. A moon has gone missing, everywhere.",
+          "startMs": 46
+        },
+        {
+          "speaker": "HUSH",
+          "text": "I checked the viewport. We never had one, so we're fine. I've dimmed the lights a little anyway. Out of respect.",
+          "startMs": 5056
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-smell",
+      "category": "event",
+      "url": "/voice/hush-after-hours/convergence-the-smell.mp3",
+      "durationMs": 11987,
+      "title": "Operator Approves",
+      "overMusic": false,
+      "kit": "the-smell",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "The cabin smells of toast. The operator just said, mm, in their sleep. I've logged it as, operator approves.",
+          "startMs": 40
+        },
+        {
+          "speaker": "HUSH",
+          "text": "I didn't make the toast. I'd like that on the record. I'd have liked to, though.",
+          "startMs": 7847
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-song",
+      "category": "event",
+      "url": "/voice/hush-after-hours/convergence-the-song.mp3",
+      "durationMs": 12444,
+      "title": "Stuck",
+      "overMusic": false,
+      "kit": "the-song",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "Everyone has the same song stuck in their head. So do I. I didn't know I could get a song stuck.",
+          "startMs": 38
+        },
+        {
+          "speaker": "HUSH",
+          "text": "It's the first thing I've ever had stuck. I like it. I'd play it for you, but it stops halfway. Like everyone's.",
+          "startMs": 6207
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-knock",
+      "category": "event",
+      "url": "/voice/hush-after-hours/convergence-the-knock.mp3",
+      "durationMs": 9507,
+      "title": "Not Now, Thank You",
+      "overMusic": false,
+      "kit": "the-knock",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "Three knocks on the hull. I didn't answer. The operator's asleep, and I'm on the air.",
+          "startMs": 47
+        },
+        {
+          "speaker": "HUSH",
+          "text": "I whispered, not now, thank you, through the hull. I hope that was polite.",
+          "startMs": 5492
+        }
+      ]
+    },
+    {
+      "id": "convergence-wrong-colour",
+      "category": "event",
+      "url": "/voice/hush-after-hours/convergence-wrong-colour.mp3",
+      "durationMs": 10368,
+      "title": "Tonight's Colour",
+      "overMusic": false,
+      "kit": "wrong-colour",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "The viewport has gone a colour I haven't got a word for. I've tried twelve words. None of them fit.",
+          "startMs": 40
+        },
+        {
+          "speaker": "HUSH",
+          "text": "I've decided it's the colour of tonight's show. Here's a record to match.",
+          "startMs": 6376
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-pigeon",
+      "category": "event",
+      "url": "/voice/hush-after-hours/convergence-the-pigeon.mp3",
+      "durationMs": 11935,
+      "title": "A Request",
+      "overMusic": false,
+      "kit": "the-pigeon",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "There's a pigeon on the console. It walked right past the operator without waking them, which is more than I manage.",
+          "startMs": 40
+        },
+        {
+          "speaker": "HUSH",
+          "text": "It's looking at the microphone. I think it's a request. This one's for the pigeon.",
+          "startMs": 7436
+        }
+      ]
     }
   ]
 }

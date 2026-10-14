@@ -2507,6 +2507,198 @@
           "startMs": 7970
         }
       ]
+    },
+    {
+      "id": "convergence-missing-moon",
+      "category": "event",
+      "url": "/voice/channel-surf/convergence-missing-moon.mp3",
+      "durationMs": 9413,
+      "title": "The Convergence: A Moon Goes Missing",
+      "overMusic": false,
+      "kit": "missing-moon",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Every Possible News",
+          "text": "Breaking news. A moon is missing.",
+          "startMs": 39
+        },
+        {
+          "speaker": "Nature Channel",
+          "text": "And here, the moon. Which is not here.",
+          "startMs": 3101
+        },
+        {
+          "speaker": "Someone on the Couch",
+          "text": "Which moon?",
+          "startMs": 6746
+        },
+        {
+          "speaker": "Shopping: Trent",
+          "text": "Everything must go!",
+          "startMs": 8451
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-smell",
+      "category": "event",
+      "url": "/voice/channel-surf/convergence-the-smell.mp3",
+      "durationMs": 11587,
+      "title": "The Convergence: Toast, Everywhere",
+      "overMusic": false,
+      "kit": "the-smell",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Cooking: Chef Ingrid",
+          "text": "And you'll notice, now, the smell of toast.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Weather Channel",
+          "text": "Toast, spreading in from the west, and every other direction.",
+          "startMs": 2853
+        },
+        {
+          "speaker": "Someone on the Couch",
+          "text": "I didn't make toast.",
+          "startMs": 6718
+        },
+        {
+          "speaker": "Crime Drama: Detective",
+          "text": "Nobody made the toast. That's what bothers me.",
+          "startMs": 8918
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-song",
+      "category": "event",
+      "url": "/voice/channel-surf/convergence-the-song.mp3",
+      "durationMs": 8941,
+      "title": "The Convergence: The Song Nobody Can Finish",
+      "overMusic": false,
+      "kit": "the-song",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Music Channel",
+          "text": "And here's the song everyone's humming!—",
+          "startMs": 39
+        },
+        {
+          "speaker": "Tidewater Manor: Lorraine",
+          "text": "Vincent, how does it end?",
+          "startMs": 2065
+        },
+        {
+          "speaker": "Tidewater Manor: Vincent",
+          "text": "I went to get milk, Lorraine. I don't know.",
+          "startMs": 4582
+        },
+        {
+          "speaker": "Someone on the Couch",
+          "text": "Hum it again.",
+          "startMs": 7564
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-knock",
+      "category": "event",
+      "url": "/voice/channel-surf/convergence-the-knock.mp3",
+      "durationMs": 9910,
+      "title": "The Convergence: Three Knocks",
+      "overMusic": false,
+      "kit": "the-knock",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Someone on the Couch",
+          "text": "Did someone knock?",
+          "startMs": 36
+        },
+        {
+          "speaker": "Sitcom",
+          "text": "Now who could that be?",
+          "startMs": 2057
+        },
+        {
+          "speaker": "Courtroom: Judge Wexley",
+          "text": "Order! That's three knocks!",
+          "startMs": 4013
+        },
+        {
+          "speaker": "Nature Channel",
+          "text": "And there is no one there. There almost never is.",
+          "startMs": 6460
+        }
+      ]
+    },
+    {
+      "id": "convergence-wrong-colour",
+      "category": "event",
+      "url": "/voice/channel-surf/convergence-wrong-colour.mp3",
+      "durationMs": 9170,
+      "title": "The Convergence: A Colour With No Name",
+      "overMusic": false,
+      "kit": "wrong-colour",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Weather Channel",
+          "text": "The sky, just now, briefly, a colour.",
+          "startMs": 39
+        },
+        {
+          "speaker": "Antiques Show",
+          "text": "And what would you call this colour?",
+          "startMs": 2872
+        },
+        {
+          "speaker": "Antiques Show: Owner",
+          "text": "I've no idea.",
+          "startMs": 5588
+        },
+        {
+          "speaker": "Antiques Show",
+          "text": "Nobody does. Priceless.",
+          "startMs": 7361
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-pigeon",
+      "category": "event",
+      "url": "/voice/channel-surf/convergence-the-pigeon.mp3",
+      "durationMs": 9949,
+      "title": "The Convergence: The Pigeon",
+      "overMusic": false,
+      "kit": "the-pigeon",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Nature Channel",
+          "text": "A pigeon walks into the living room.",
+          "startMs": 36
+        },
+        {
+          "speaker": "Late Night",
+          "text": "My next guest is a pigeon!",
+          "startMs": 3624
+        },
+        {
+          "speaker": "Someone on the Couch",
+          "text": "It's on the sofa.",
+          "startMs": 5895
+        },
+        {
+          "speaker": "Kids' TV: Professor Pockets",
+          "text": "Hello, friend! You know everybody!",
+          "startMs": 7968
+        }
+      ]
     }
   ]
 }

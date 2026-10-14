@@ -792,6 +792,148 @@
           "startMs": 9057
         }
       ]
+    },
+    {
+      "id": "convergence-missing-moon",
+      "category": "event",
+      "url": "/voice/unsolved-dimensions/convergence-missing-moon.mp3",
+      "durationMs": 13840,
+      "title": "The Convergence: A Moon Goes Missing",
+      "overMusic": false,
+      "kit": "missing-moon",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Inspector Delphine Gault",
+          "text": "Case file seven hundred. A moon has gone missing. Every witness agrees one is gone. No two witnesses agree which. Pike?",
+          "startMs": 36
+        },
+        {
+          "speaker": "Constable Pike",
+          "text": "Lab results inconclusive, ma'am.",
+          "startMs": 8011
+        },
+        {
+          "speaker": "Inspector Delphine Gault",
+          "text": "The goose has been brought in. The case remains open.",
+          "startMs": 10571
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-smell",
+      "category": "event",
+      "url": "/voice/unsolved-dimensions/convergence-the-smell.mp3",
+      "durationMs": 10742,
+      "title": "The Convergence: Toast, Everywhere",
+      "overMusic": false,
+      "kit": "the-smell",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Inspector Delphine Gault",
+          "text": "A smell of toast, reported in every dimension at once.",
+          "startMs": 40
+        },
+        {
+          "speaker": "Inspector Delphine Gault",
+          "text": "Nobody has confessed to toasting anything. Somebody is lying. Possibly everybody. The case remains open.",
+          "startMs": 3970
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-song",
+      "category": "event",
+      "url": "/voice/unsolved-dimensions/convergence-the-song.mp3",
+      "durationMs": 11101,
+      "title": "The Convergence: The Song Nobody Can Finish",
+      "overMusic": false,
+      "kit": "the-song",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Inspector Delphine Gault",
+          "text": "A song, lodged in the head of every witness. Every one of them stops at the same place. Somebody knows how it ends, Pike.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Constable Pike",
+          "text": "The goose has been humming it, ma'am.",
+          "startMs": 7399
+        },
+        {
+          "speaker": "Inspector Delphine Gault",
+          "text": "Of course it has.",
+          "startMs": 9659
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-knock",
+      "category": "event",
+      "url": "/voice/unsolved-dimensions/convergence-the-knock.mp3",
+      "durationMs": 9851,
+      "title": "The Convergence: Three Knocks",
+      "overMusic": false,
+      "kit": "the-knock",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Inspector Delphine Gault",
+          "text": "Three knocks at the archive door. Constable Pike opened it. Nobody there.",
+          "startMs": 40
+        },
+        {
+          "speaker": "Inspector Delphine Gault",
+          "text": "No footprints. No fingerprints. One faint smell of goose. The case remains open.",
+          "startMs": 4853
+        }
+      ]
+    },
+    {
+      "id": "convergence-wrong-colour",
+      "category": "event",
+      "url": "/voice/unsolved-dimensions/convergence-wrong-colour.mp3",
+      "durationMs": 8653,
+      "title": "The Convergence: A Colour With No Name",
+      "overMusic": false,
+      "kit": "wrong-colour",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Inspector Delphine Gault",
+          "text": "The sky was, briefly, a colour. No witness can name it. Pike has written it down as blue, but suspicious.",
+          "startMs": 39
+        },
+        {
+          "speaker": "Constable Pike",
+          "text": "It's the best I could do, ma'am.",
+          "startMs": 6689
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-pigeon",
+      "category": "event",
+      "url": "/voice/unsolved-dimensions/convergence-the-pigeon.mp3",
+      "durationMs": 11317,
+      "title": "The Convergence: The Pigeon",
+      "overMusic": false,
+      "kit": "the-pigeon",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Inspector Delphine Gault",
+          "text": "A pigeon has entered the archive, walked past the evidence, and sat in my chair. It appears to know me.",
+          "startMs": 37
+        },
+        {
+          "speaker": "Inspector Delphine Gault",
+          "text": "I have never seen it before in my life. Which is exactly what it would want me to say.",
+          "startMs": 6404
+        }
+      ]
     }
   ]
 }

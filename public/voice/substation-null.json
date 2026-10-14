@@ -1,0 +1,1449 @@
+{
+  "version": 1,
+  "station": "substation-null",
+  "clips": [
+    {
+      "id": "id-001",
+      "category": "id",
+      "url": "/voice/substation-null/id-001.mp3",
+      "durationMs": 4904,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Null",
+          "text": "Substation Null.",
+          "startMs": 42
+        },
+        {
+          "speaker": "Null",
+          "text": "One one one point one.",
+          "startMs": 2751
+        }
+      ]
+    },
+    {
+      "id": "id-002",
+      "category": "id",
+      "url": "/voice/substation-null/id-002.mp3",
+      "durationMs": 4370,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Null",
+          "text": "Null.",
+          "startMs": 40
+        },
+        {
+          "speaker": "Null",
+          "text": "Substation Null.",
+          "startMs": 2611
+        }
+      ]
+    },
+    {
+      "id": "id-003",
+      "category": "id",
+      "url": "/voice/substation-null/id-003.mp3",
+      "durationMs": 4778,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Null",
+          "text": "One thirty two.",
+          "startMs": 39
+        },
+        {
+          "speaker": "Null",
+          "text": "Substation Null.",
+          "startMs": 3017
+        }
+      ]
+    },
+    {
+      "id": "id-004",
+      "category": "id",
+      "url": "/voice/substation-null/id-004.mp3",
+      "durationMs": 5292,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Null",
+          "text": "Substation Null.",
+          "startMs": 42
+        },
+        {
+          "speaker": "Null",
+          "text": "Coolant.",
+          "startMs": 2751
+        },
+        {
+          "speaker": "Null",
+          "text": "Fine.",
+          "startMs": 4457
+        }
+      ]
+    },
+    {
+      "id": "id-005",
+      "category": "id",
+      "url": "/voice/substation-null/id-005.mp3",
+      "durationMs": 4826,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Null",
+          "text": "Reactor room. Substation Null.",
+          "startMs": 44
+        },
+        {
+          "speaker": "Null",
+          "text": "Keep moving.",
+          "startMs": 3644
+        }
+      ]
+    },
+    {
+      "id": "id-006",
+      "category": "id",
+      "url": "/voice/substation-null/id-006.mp3",
+      "durationMs": 4517,
+      "overMusic": true,
+      "daypart": "night",
+      "lines": [
+        {
+          "speaker": "Null",
+          "text": "Substation Null.",
+          "startMs": 42
+        },
+        {
+          "speaker": "Null",
+          "text": "Late.",
+          "startMs": 3551
+        }
+      ]
+    },
+    {
+      "id": "id-007",
+      "category": "id",
+      "url": "/voice/substation-null/id-007.mp3",
+      "durationMs": 4850,
+      "overMusic": true,
+      "daypart": "day",
+      "lines": [
+        {
+          "speaker": "Null",
+          "text": "Substation Null. Daytime.",
+          "startMs": 40
+        },
+        {
+          "speaker": "Null",
+          "text": "Irrelevant.",
+          "startMs": 3721
+        }
+      ]
+    },
+    {
+      "id": "id-008",
+      "category": "id",
+      "url": "/voice/substation-null/id-008.mp3",
+      "durationMs": 6555,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Null",
+          "text": "One one one point one. Substation Null.",
+          "startMs": 40
+        },
+        {
+          "speaker": "Null",
+          "text": "Stop asking about the coolant.",
+          "startMs": 4416
+        }
+      ]
+    },
+    {
+      "id": "id-009",
+      "category": "id",
+      "url": "/voice/substation-null/id-009.mp3",
+      "durationMs": 6800,
+      "overMusic": true,
+      "daypart": "morning",
+      "lines": [
+        {
+          "speaker": "Null",
+          "text": "Morning.",
+          "startMs": 42
+        },
+        {
+          "speaker": "Null",
+          "text": "Substation Null.",
+          "startMs": 2791
+        },
+        {
+          "speaker": "Null",
+          "text": "Still here.",
+          "startMs": 5700
+        }
+      ]
+    },
+    {
+      "id": "dj-001",
+      "category": "dj",
+      "url": "/voice/substation-null/dj-001.mp3",
+      "durationMs": 9692,
+      "title": "The Coolant",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Null",
+          "text": "People ask about the coolant.",
+          "startMs": 49
+        },
+        {
+          "speaker": "Null",
+          "text": "The coolant is fine.",
+          "startMs": 3583
+        },
+        {
+          "speaker": "Null",
+          "text": "Stop asking about the coolant.",
+          "startMs": 7553
+        }
+      ]
+    },
+    {
+      "id": "dj-002",
+      "category": "dj",
+      "url": "/voice/substation-null/dj-002.mp3",
+      "durationMs": 9847,
+      "title": "Words",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Null",
+          "text": "This track has words.",
+          "startMs": 44
+        },
+        {
+          "speaker": "Null",
+          "text": "One word.",
+          "startMs": 2971
+        },
+        {
+          "speaker": "Null",
+          "text": "You'll know it when it comes.",
+          "startMs": 5829
+        },
+        {
+          "speaker": "Null",
+          "text": "Shout it.",
+          "startMs": 8952
+        }
+      ]
+    },
+    {
+      "id": "dj-003",
+      "category": "dj",
+      "url": "/voice/substation-null/dj-003.mp3",
+      "durationMs": 14348,
+      "title": "Relay Four",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Null",
+          "text": "Request.",
+          "startMs": 45
+        },
+        {
+          "speaker": "Teodor, Relay Four",
+          "text": "This is Teodor, at Relay Four. Can anyone hear me? I'd like a song. Any song.",
+          "startMs": 2116
+        },
+        {
+          "speaker": "Null",
+          "text": "Teodor. Relay Four.",
+          "startMs": 6665
+        },
+        {
+          "speaker": "Null",
+          "text": "Request: anything.",
+          "startMs": 9600
+        },
+        {
+          "speaker": "Null",
+          "text": "Here is anything.",
+          "startMs": 12838
+        }
+      ]
+    },
+    {
+      "id": "dj-004",
+      "category": "dj",
+      "url": "/voice/substation-null/dj-004.mp3",
+      "durationMs": 10156,
+      "title": "A Ship",
+      "overMusic": true,
+      "daypart": "night",
+      "lines": [
+        {
+          "speaker": "Null",
+          "text": "A ship.",
+          "startMs": 42
+        },
+        {
+          "speaker": "Null",
+          "text": "In range. Relay class. Lights on.",
+          "startMs": 2129
+        },
+        {
+          "speaker": "Null",
+          "text": "Welcome.",
+          "startMs": 6774
+        },
+        {
+          "speaker": "Null",
+          "text": "Dance.",
+          "startMs": 9322
+        }
+      ]
+    },
+    {
+      "id": "dj-005",
+      "category": "dj",
+      "url": "/voice/substation-null/dj-005.mp3",
+      "durationMs": 10589,
+      "title": "Sponsor",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Null",
+          "text": "Sponsor.",
+          "startMs": 50
+        },
+        {
+          "speaker": "Null",
+          "text": "Grumbel's Ladders.",
+          "startMs": 2208
+        },
+        {
+          "speaker": "Null",
+          "text": "Up is a choice.",
+          "startMs": 5124
+        },
+        {
+          "speaker": "Null",
+          "text": "The catwalk is also a choice.",
+          "startMs": 8416
+        }
+      ]
+    },
+    {
+      "id": "dj-006",
+      "category": "dj",
+      "url": "/voice/substation-null/dj-006.mp3",
+      "durationMs": 14873,
+      "title": "Bev Calls",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Bev",
+          "text": "Hello, love. It's Bev. Is this the request line?",
+          "startMs": 50
+        },
+        {
+          "speaker": "Null",
+          "text": "No.",
+          "startMs": 3182
+        },
+        {
+          "speaker": "Null",
+          "text": "Yes.",
+          "startMs": 6173
+        },
+        {
+          "speaker": "Bev",
+          "text": "Oh, lovely. I don't know what it's called. It goes, da da dum. Da da.",
+          "startMs": 7467
+        },
+        {
+          "speaker": "Null",
+          "text": "Noted.",
+          "startMs": 14047
+        }
+      ]
+    },
+    {
+      "id": "dj-007",
+      "category": "dj",
+      "url": "/voice/substation-null/dj-007.mp3",
+      "durationMs": 9715,
+      "title": "The Drop",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Null",
+          "text": "The drop.",
+          "startMs": 37
+        },
+        {
+          "speaker": "Null",
+          "text": "Recovered.",
+          "startMs": 3615
+        },
+        {
+          "speaker": "Null",
+          "text": "No injuries.",
+          "startMs": 5865
+        },
+        {
+          "speaker": "Null",
+          "text": "Again.",
+          "startMs": 8774
+        }
+      ]
+    },
+    {
+      "id": "dj-008",
+      "category": "dj",
+      "url": "/voice/substation-null/dj-008.mp3",
+      "durationMs": 11538,
+      "title": "A Few Words",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Null",
+          "text": "Tonight I would like to say a few words about what this music means to me, about the long nights in this room, and about the people who keep coming back.",
+          "startMs": 40
+        },
+        {
+          "speaker": "Null",
+          "text": "Those were the words.",
+          "startMs": 9932
+        }
+      ]
+    },
+    {
+      "id": "readings-open-1",
+      "category": "dj",
+      "url": "/voice/substation-null/readings-open-1.mp3",
+      "durationMs": 3851,
+      "overMusic": true,
+      "part": "open",
+      "kit": "readings",
+      "lines": [
+        {
+          "speaker": "Null",
+          "text": "Readings.",
+          "startMs": 450
+        },
+        {
+          "speaker": "Null",
+          "text": "Listen.",
+          "startMs": 2951
+        }
+      ]
+    },
+    {
+      "id": "readings-open-2",
+      "category": "dj",
+      "url": "/voice/substation-null/readings-open-2.mp3",
+      "durationMs": 3538,
+      "overMusic": true,
+      "part": "open",
+      "kit": "readings",
+      "lines": [
+        {
+          "speaker": "Null",
+          "text": "Status.",
+          "startMs": 450
+        },
+        {
+          "speaker": "Null",
+          "text": "Briefly.",
+          "startMs": 2393
+        }
+      ]
+    },
+    {
+      "id": "readings-001",
+      "category": "dj",
+      "url": "/voice/substation-null/readings-001.mp3",
+      "durationMs": 9667,
+      "overMusic": true,
+      "part": "body",
+      "kit": "readings",
+      "lines": [
+        {
+          "speaker": "Null",
+          "text": "Tempo.",
+          "startMs": 36
+        },
+        {
+          "speaker": "Null",
+          "text": "One thirty two.",
+          "startMs": 1935
+        },
+        {
+          "speaker": "Null",
+          "text": "One thirty three.",
+          "startMs": 5313
+        },
+        {
+          "speaker": "Null",
+          "text": "Rising.",
+          "startMs": 8726
+        }
+      ]
+    },
+    {
+      "id": "readings-002",
+      "category": "dj",
+      "url": "/voice/substation-null/readings-002.mp3",
+      "durationMs": 8481,
+      "overMusic": true,
+      "part": "body",
+      "kit": "readings",
+      "lines": [
+        {
+          "speaker": "Null",
+          "text": "Coolant.",
+          "startMs": 50
+        },
+        {
+          "speaker": "Null",
+          "text": "Ninety one percent.",
+          "startMs": 1956
+        },
+        {
+          "speaker": "Null",
+          "text": "Blue.",
+          "startMs": 5096
+        },
+        {
+          "speaker": "Null",
+          "text": "Correct blue.",
+          "startMs": 7222
+        }
+      ]
+    },
+    {
+      "id": "readings-003",
+      "category": "dj",
+      "url": "/voice/substation-null/readings-003.mp3",
+      "durationMs": 8824,
+      "overMusic": true,
+      "part": "body",
+      "kit": "readings",
+      "lines": [
+        {
+          "speaker": "Null",
+          "text": "Crowd.",
+          "startMs": 50
+        },
+        {
+          "speaker": "Null",
+          "text": "Four hundred.",
+          "startMs": 1848
+        },
+        {
+          "speaker": "Null",
+          "text": "Four hundred and one.",
+          "startMs": 4650
+        },
+        {
+          "speaker": "Null",
+          "text": "Welcome.",
+          "startMs": 7826
+        }
+      ]
+    },
+    {
+      "id": "readings-004",
+      "category": "dj",
+      "url": "/voice/substation-null/readings-004.mp3",
+      "durationMs": 10103,
+      "overMusic": true,
+      "part": "body",
+      "kit": "readings",
+      "lines": [
+        {
+          "speaker": "Null",
+          "text": "Core temperature.",
+          "startMs": 36
+        },
+        {
+          "speaker": "Null",
+          "text": "Warm.",
+          "startMs": 2400
+        },
+        {
+          "speaker": "Null",
+          "text": "Warm is correct.",
+          "startMs": 5210
+        },
+        {
+          "speaker": "Null",
+          "text": "Cold was a phase.",
+          "startMs": 8414
+        }
+      ]
+    },
+    {
+      "id": "readings-005",
+      "category": "dj",
+      "url": "/voice/substation-null/readings-005.mp3",
+      "durationMs": 8419,
+      "overMusic": true,
+      "part": "body",
+      "kit": "readings",
+      "lines": [
+        {
+          "speaker": "Null",
+          "text": "Steam.",
+          "startMs": 47
+        },
+        {
+          "speaker": "Null",
+          "text": "Venting.",
+          "startMs": 1924
+        },
+        {
+          "speaker": "Null",
+          "text": "On purpose.",
+          "startMs": 4421
+        },
+        {
+          "speaker": "Null",
+          "text": "It looks good.",
+          "startMs": 7198
+        }
+      ]
+    },
+    {
+      "id": "readings-006",
+      "category": "dj",
+      "url": "/voice/substation-null/readings-006.mp3",
+      "durationMs": 10292,
+      "overMusic": true,
+      "part": "body",
+      "kit": "readings",
+      "lines": [
+        {
+          "speaker": "Null",
+          "text": "Hazard lights.",
+          "startMs": 42
+        },
+        {
+          "speaker": "Null",
+          "text": "Strobing.",
+          "startMs": 2306
+        },
+        {
+          "speaker": "Null",
+          "text": "As designed.",
+          "startMs": 4690
+        },
+        {
+          "speaker": "Null",
+          "text": "Not as designed. As preferred.",
+          "startMs": 7837
+        }
+      ]
+    },
+    {
+      "id": "readings-007",
+      "category": "dj",
+      "url": "/voice/substation-null/readings-007.mp3",
+      "durationMs": 8670,
+      "overMusic": true,
+      "part": "body",
+      "kit": "readings",
+      "lines": [
+        {
+          "speaker": "Null",
+          "text": "Low end.",
+          "startMs": 46
+        },
+        {
+          "speaker": "Null",
+          "text": "Heavy.",
+          "startMs": 2183
+        },
+        {
+          "speaker": "Null",
+          "text": "Structural.",
+          "startMs": 4525
+        },
+        {
+          "speaker": "Null",
+          "text": "Do not lean on it.",
+          "startMs": 7173
+        }
+      ]
+    },
+    {
+      "id": "readings-close-1",
+      "category": "dj",
+      "url": "/voice/substation-null/readings-close-1.mp3",
+      "durationMs": 3482,
+      "overMusic": true,
+      "part": "close",
+      "kit": "readings",
+      "lines": [
+        {
+          "speaker": "Null",
+          "text": "End of readings.",
+          "startMs": 39
+        },
+        {
+          "speaker": "Null",
+          "text": "Continue.",
+          "startMs": 2269
+        }
+      ]
+    },
+    {
+      "id": "readings-close-2",
+      "category": "dj",
+      "url": "/voice/substation-null/readings-close-2.mp3",
+      "durationMs": 3275,
+      "overMusic": true,
+      "part": "close",
+      "kit": "readings",
+      "lines": [
+        {
+          "speaker": "Null",
+          "text": "Nominal.",
+          "startMs": 46
+        },
+        {
+          "speaker": "Null",
+          "text": "Mostly.",
+          "startMs": 2266
+        }
+      ]
+    },
+    {
+      "id": "psa-001",
+      "category": "psa",
+      "url": "/voice/substation-null/psa-001.mp3",
+      "durationMs": 12923,
+      "title": "Coolant Is Not a Beverage",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Diligence Safety System",
+          "text": "Attention, crew of the Diligence. Coolant is not a beverage. It is blue, it glows, and it is served from a pipe. None of these things make it a beverage.",
+          "startMs": 49
+        },
+        {
+          "speaker": "Diligence Safety System",
+          "text": "Thank you for your cooperation.",
+          "startMs": 8971
+        },
+        {
+          "speaker": "Null",
+          "text": "Noted.",
+          "startMs": 12097
+        }
+      ]
+    },
+    {
+      "id": "psa-002",
+      "category": "psa",
+      "url": "/voice/substation-null/psa-002.mp3",
+      "durationMs": 16036,
+      "title": "The Reactor Is Dormant",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Diligence Safety System",
+          "text": "This is a reminder that the main reactor is in a dormant state. Dormant is not the same as asleep.",
+          "startMs": 42
+        },
+        {
+          "speaker": "Diligence Safety System",
+          "text": "Please do not tuck the reactor in. Please do not read the reactor stories. The reactor does not require a goodnight.",
+          "startMs": 5933
+        },
+        {
+          "speaker": "Null",
+          "text": "It liked the stories.",
+          "startMs": 14417
+        }
+      ]
+    },
+    {
+      "id": "psa-003",
+      "category": "psa",
+      "url": "/voice/substation-null/psa-003.mp3",
+      "durationMs": 14804,
+      "title": "Hazard Lighting",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Diligence Safety System",
+          "text": "Some sections of this vessel contain flashing hazard lights. These lights indicate an emergency.",
+          "startMs": 49
+        },
+        {
+          "speaker": "Diligence Safety System",
+          "text": "They have indicated an emergency continuously for forty years. At this point, please treat them as decoration.",
+          "startMs": 5911
+        },
+        {
+          "speaker": "Null",
+          "text": "Correct.",
+          "startMs": 13814
+        }
+      ]
+    },
+    {
+      "id": "psa-004",
+      "category": "psa",
+      "url": "/voice/substation-null/psa-004.mp3",
+      "durationMs": 15083,
+      "title": "Muster Stations",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Diligence Safety System",
+          "text": "In the event of an emergency, please proceed calmly to your nearest muster station. Your nearest muster station is the dance floor.",
+          "startMs": 40
+        },
+        {
+          "speaker": "Diligence Safety System",
+          "text": "All muster stations are the dance floor. This was not the original plan.",
+          "startMs": 7748
+        },
+        {
+          "speaker": "Null",
+          "text": "It is now.",
+          "startMs": 13769
+        }
+      ]
+    },
+    {
+      "id": "story-001",
+      "category": "story",
+      "url": "/voice/substation-null/story-001.mp3",
+      "durationMs": 24050,
+      "title": "Incident Report: The Glow Stick",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Null",
+          "text": "Incident report.",
+          "startMs": 41
+        },
+        {
+          "speaker": "Null",
+          "text": "Someone brought a glow stick. Green.",
+          "startMs": 2690
+        },
+        {
+          "speaker": "Null",
+          "text": "The reactor saw it. Core output rose by two percent.",
+          "startMs": 6465
+        },
+        {
+          "speaker": "Null",
+          "text": "The glow stick was asked to leave. It did not leave. It cannot walk.",
+          "startMs": 11550
+        },
+        {
+          "speaker": "Null",
+          "text": "It is now on the console. The reactor is calmer when it can see it.",
+          "startMs": 17284
+        },
+        {
+          "speaker": "Null",
+          "text": "Resolved.",
+          "startMs": 22954
+        }
+      ]
+    },
+    {
+      "id": "story-002",
+      "category": "story",
+      "url": "/voice/substation-null/story-002.mp3",
+      "durationMs": 27617,
+      "title": "Incident Report: A Question",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Null",
+          "text": "Incident report.",
+          "startMs": 41
+        },
+        {
+          "speaker": "Null",
+          "text": "A man on the catwalk asked what kind of music this is.",
+          "startMs": 2690
+        },
+        {
+          "speaker": "Null",
+          "text": "I said, yes.",
+          "startMs": 7626
+        },
+        {
+          "speaker": "Null",
+          "text": "He left.",
+          "startMs": 10413
+        },
+        {
+          "speaker": "Null",
+          "text": "He came back.",
+          "startMs": 13695
+        },
+        {
+          "speaker": "Null",
+          "text": "He has not asked again.",
+          "startMs": 16265
+        },
+        {
+          "speaker": "Null",
+          "text": "He comes every night. He stands where he stood. He nods at me. I nod back.",
+          "startMs": 19279
+        },
+        {
+          "speaker": "Null",
+          "text": "That is the answer. Resolved.",
+          "startMs": 25207
+        }
+      ]
+    },
+    {
+      "id": "story-003",
+      "category": "story",
+      "url": "/voice/substation-null/story-003.mp3",
+      "durationMs": 30341,
+      "title": "Incident Report: A Smile",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Null",
+          "text": "Incident report. Hour three. Peak load.",
+          "startMs": 41
+        },
+        {
+          "speaker": "Null",
+          "text": "A smile was observed in the crowd. Source unknown.",
+          "startMs": 4009
+        },
+        {
+          "speaker": "Null",
+          "text": "It spread.",
+          "startMs": 9111
+        },
+        {
+          "speaker": "Null",
+          "text": "By hour four, eleven smiles. Containment was not attempted.",
+          "startMs": 11916
+        },
+        {
+          "speaker": "Null",
+          "text": "Hour five. The smiles reached the catwalk. A man laughed out loud. The steam pipes rattled.",
+          "startMs": 17753
+        },
+        {
+          "speaker": "Null",
+          "text": "No damage. Some things should be allowed to vent.",
+          "startMs": 24957
+        },
+        {
+          "speaker": "Null",
+          "text": "Resolved.",
+          "startMs": 29249
+        }
+      ]
+    },
+    {
+      "id": "story-004",
+      "category": "story",
+      "url": "/voice/substation-null/story-004.mp3",
+      "durationMs": 30261,
+      "title": "Incident Report: One Second",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Null",
+          "text": "Incident report.",
+          "startMs": 41
+        },
+        {
+          "speaker": "Null",
+          "text": "At two fourteen, the music stopped. For one second.",
+          "startMs": 2690
+        },
+        {
+          "speaker": "Null",
+          "text": "Nobody moved. Four hundred people, standing completely still in the dark, in a dead reactor, waiting.",
+          "startMs": 7387
+        },
+        {
+          "speaker": "Null",
+          "text": "It was the best second of the night.",
+          "startMs": 15123
+        },
+        {
+          "speaker": "Null",
+          "text": "The music came back. Four hundred people came back with it.",
+          "startMs": 18712
+        },
+        {
+          "speaker": "Null",
+          "text": "Cause of the stop: unknown. Will not be repeated.",
+          "startMs": 23847
+        },
+        {
+          "speaker": "Null",
+          "text": "Probably. Logged.",
+          "startMs": 28667
+        }
+      ]
+    },
+    {
+      "id": "id-peak-load",
+      "category": "id",
+      "url": "/voice/substation-null/id-peak-load.mp3",
+      "durationMs": 6170,
+      "overMusic": true,
+      "part": "open",
+      "show": "peak-load",
+      "lines": [
+        {
+          "speaker": "Null",
+          "text": "Peak load.",
+          "startMs": 49
+        },
+        {
+          "speaker": "Null",
+          "text": "Substation Null.",
+          "startMs": 2471
+        }
+      ]
+    },
+    {
+      "id": "dj-peak-load-001",
+      "category": "dj",
+      "url": "/voice/substation-null/dj-peak-load-001.mp3",
+      "durationMs": 9392,
+      "overMusic": true,
+      "show": "peak-load",
+      "lines": [
+        {
+          "speaker": "Null",
+          "text": "Peak.",
+          "startMs": 39
+        },
+        {
+          "speaker": "Null",
+          "text": "Load.",
+          "startMs": 2129
+        },
+        {
+          "speaker": "Null",
+          "text": "Hold on to something.",
+          "startMs": 5124
+        },
+        {
+          "speaker": "Null",
+          "text": "Not the pipes.",
+          "startMs": 8102
+        }
+      ]
+    },
+    {
+      "id": "dj-peak-load-002",
+      "category": "dj",
+      "url": "/voice/substation-null/dj-peak-load-002.mp3",
+      "durationMs": 8407,
+      "overMusic": true,
+      "show": "peak-load",
+      "lines": [
+        {
+          "speaker": "Null",
+          "text": "The catwalk is shaking.",
+          "startMs": 39
+        },
+        {
+          "speaker": "Null",
+          "text": "That is the catwalk's decision.",
+          "startMs": 3458
+        },
+        {
+          "speaker": "Null",
+          "text": "Respect it.",
+          "startMs": 7135
+        }
+      ]
+    },
+    {
+      "id": "id-cooldown",
+      "category": "id",
+      "url": "/voice/substation-null/id-cooldown.mp3",
+      "durationMs": 4003,
+      "overMusic": true,
+      "part": "open",
+      "show": "cooldown",
+      "lines": [
+        {
+          "speaker": "Null",
+          "text": "Cooldown.",
+          "startMs": 44
+        },
+        {
+          "speaker": "Null",
+          "text": "Sit on a pipe.",
+          "startMs": 2607
+        }
+      ]
+    },
+    {
+      "id": "dj-cooldown-001",
+      "category": "dj",
+      "url": "/voice/substation-null/dj-cooldown-001.mp3",
+      "durationMs": 8795,
+      "overMusic": true,
+      "show": "cooldown",
+      "lines": [
+        {
+          "speaker": "Null",
+          "text": "Steam is rising off the crowd.",
+          "startMs": 39
+        },
+        {
+          "speaker": "Null",
+          "text": "Morning, probably.",
+          "startMs": 3876
+        },
+        {
+          "speaker": "Null",
+          "text": "Nobody check.",
+          "startMs": 7254
+        }
+      ]
+    },
+    {
+      "id": "dj-cooldown-002",
+      "category": "dj",
+      "url": "/voice/substation-null/dj-cooldown-002.mp3",
+      "durationMs": 8635,
+      "overMusic": true,
+      "show": "cooldown",
+      "lines": [
+        {
+          "speaker": "Null",
+          "text": "Someone is asleep on the reactor.",
+          "startMs": 40
+        },
+        {
+          "speaker": "Null",
+          "text": "It doesn't mind.",
+          "startMs": 4130
+        },
+        {
+          "speaker": "Null",
+          "text": "Neither do I.",
+          "startMs": 7101
+        }
+      ]
+    },
+    {
+      "id": "id-maintenance-window",
+      "category": "id",
+      "url": "/voice/substation-null/id-maintenance-window.mp3",
+      "durationMs": 6547,
+      "overMusic": true,
+      "part": "open",
+      "show": "maintenance-window",
+      "lines": [
+        {
+          "speaker": "Diligence Safety System",
+          "text": "This is the scheduled maintenance window. All systems will now be maintained.",
+          "startMs": 42
+        },
+        {
+          "speaker": "Null",
+          "text": "No.",
+          "startMs": 5707
+        }
+      ]
+    },
+    {
+      "id": "dj-maintenance-window-001",
+      "category": "dj",
+      "url": "/voice/substation-null/dj-maintenance-window-001.mp3",
+      "durationMs": 10002,
+      "overMusic": true,
+      "show": "maintenance-window",
+      "lines": [
+        {
+          "speaker": "Null",
+          "text": "Maintenance.",
+          "startMs": 42
+        },
+        {
+          "speaker": "Null",
+          "text": "Checked the kick drum.",
+          "startMs": 2310
+        },
+        {
+          "speaker": "Null",
+          "text": "Still kicking.",
+          "startMs": 5512
+        },
+        {
+          "speaker": "Null",
+          "text": "Maintenance complete.",
+          "startMs": 8375
+        }
+      ]
+    },
+    {
+      "id": "dj-maintenance-window-002",
+      "category": "dj",
+      "url": "/voice/substation-null/dj-maintenance-window-002.mp3",
+      "durationMs": 8267,
+      "overMusic": true,
+      "show": "maintenance-window",
+      "lines": [
+        {
+          "speaker": "Null",
+          "text": "Maintenance.",
+          "startMs": 42
+        },
+        {
+          "speaker": "Null",
+          "text": "Tightened a bolt.",
+          "startMs": 2310
+        },
+        {
+          "speaker": "Null",
+          "text": "Loosened it again. It sounded better.",
+          "startMs": 5756
+        }
+      ]
+    },
+    {
+      "id": "dj-greg-review",
+      "category": "dj",
+      "url": "/voice/substation-null/dj-greg-review.mp3",
+      "durationMs": 10404,
+      "title": "Reviewing the Quiet Corner",
+      "overMusic": true,
+      "days": [
+        1
+      ],
+      "lines": [
+        {
+          "speaker": "Null",
+          "text": "The Quiet Corner. Greg.",
+          "startMs": 44
+        },
+        {
+          "speaker": "Null",
+          "text": "Reviewed.",
+          "startMs": 3246
+        },
+        {
+          "speaker": "Null",
+          "text": "Too loud.",
+          "startMs": 6434
+        },
+        {
+          "speaker": "Null",
+          "text": "Five stars.",
+          "startMs": 8995
+        }
+      ]
+    },
+    {
+      "id": "convergence-missing-moon",
+      "category": "event",
+      "url": "/voice/substation-null/convergence-missing-moon.mp3",
+      "durationMs": 10730,
+      "overMusic": false,
+      "kit": "missing-moon",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Null",
+          "text": "A moon is missing.",
+          "startMs": 39
+        },
+        {
+          "speaker": "Null",
+          "text": "Checked the reactor.",
+          "startMs": 3086
+        },
+        {
+          "speaker": "Null",
+          "text": "Not in the reactor.",
+          "startMs": 5975
+        },
+        {
+          "speaker": "Null",
+          "text": "Continue.",
+          "startMs": 9515
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-smell",
+      "category": "event",
+      "url": "/voice/substation-null/convergence-the-smell.mp3",
+      "durationMs": 10394,
+      "overMusic": false,
+      "kit": "the-smell",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Null",
+          "text": "Smell.",
+          "startMs": 44
+        },
+        {
+          "speaker": "Null",
+          "text": "Toast.",
+          "startMs": 1868
+        },
+        {
+          "speaker": "Null",
+          "text": "Not the coolant.",
+          "startMs": 4250
+        },
+        {
+          "speaker": "Null",
+          "text": "The coolant smells of nothing. The coolant is fine.",
+          "startMs": 7033
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-song",
+      "category": "event",
+      "url": "/voice/substation-null/convergence-the-song.mp3",
+      "durationMs": 11874,
+      "overMusic": false,
+      "kit": "the-song",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Null",
+          "text": "Everyone is humming.",
+          "startMs": 42
+        },
+        {
+          "speaker": "Null",
+          "text": "Same song. No ending.",
+          "startMs": 2806
+        },
+        {
+          "speaker": "Null",
+          "text": "I am humming it too.",
+          "startMs": 6684
+        },
+        {
+          "speaker": "Null",
+          "text": "I don't know the ending either.",
+          "startMs": 9947
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-knock",
+      "category": "event",
+      "url": "/voice/substation-null/convergence-the-knock.mp3",
+      "durationMs": 11598,
+      "overMusic": false,
+      "kit": "the-knock",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Null",
+          "text": "Three knocks.",
+          "startMs": 44
+        },
+        {
+          "speaker": "Null",
+          "text": "Reactor door. Opened it.",
+          "startMs": 2551
+        },
+        {
+          "speaker": "Null",
+          "text": "Nobody.",
+          "startMs": 6528
+        },
+        {
+          "speaker": "Null",
+          "text": "Left it open. It's warm in here.",
+          "startMs": 9148
+        }
+      ]
+    },
+    {
+      "id": "convergence-wrong-colour",
+      "category": "event",
+      "url": "/voice/substation-null/convergence-wrong-colour.mp3",
+      "durationMs": 10043,
+      "overMusic": false,
+      "kit": "wrong-colour",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Null",
+          "text": "Hazard lights.",
+          "startMs": 42
+        },
+        {
+          "speaker": "Null",
+          "text": "New colour.",
+          "startMs": 2306
+        },
+        {
+          "speaker": "Null",
+          "text": "No word for it.",
+          "startMs": 4979
+        },
+        {
+          "speaker": "Null",
+          "text": "Strobing anyway.",
+          "startMs": 8503
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-pigeon",
+      "category": "event",
+      "url": "/voice/substation-null/convergence-the-pigeon.mp3",
+      "durationMs": 10522,
+      "overMusic": false,
+      "kit": "the-pigeon",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Null",
+          "text": "Pigeon.",
+          "startMs": 42
+        },
+        {
+          "speaker": "Null",
+          "text": "On the console.",
+          "startMs": 1912
+        },
+        {
+          "speaker": "Null",
+          "text": "It knows me.",
+          "startMs": 4837
+        },
+        {
+          "speaker": "Null",
+          "text": "It nods on the beat. Welcome.",
+          "startMs": 8061
+        }
+      ]
+    }
+  ]
+}

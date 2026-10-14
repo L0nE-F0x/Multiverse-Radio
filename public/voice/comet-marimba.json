@@ -975,6 +975,153 @@
           "startMs": 40
         }
       ]
+    },
+    {
+      "id": "convergence-missing-moon",
+      "category": "event",
+      "url": "/voice/comet-marimba/convergence-missing-moon.mp3",
+      "durationMs": 9194,
+      "title": "The Convergence: A Moon Goes Missing",
+      "overMusic": false,
+      "kit": "missing-moon",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Coco Halley",
+          "text": "Beach bulletin! Somebody's lost a moon! Nobody knows which!",
+          "startMs": 41
+        },
+        {
+          "speaker": "Coco Halley",
+          "text": "Honestly, it could've been a hat. We lose fourteen hats a day out here. Maybe a moon blew off somebody's planet!",
+          "startMs": 3702
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-smell",
+      "category": "event",
+      "url": "/voice/comet-marimba/convergence-the-smell.mp3",
+      "durationMs": 8902,
+      "title": "The Convergence: Toast, Everywhere",
+      "overMusic": false,
+      "kit": "the-smell",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Coco Halley",
+          "text": "Okay, the whole tail smells like toast right now, and I am into it! Crab, are you making toast?",
+          "startMs": 39
+        },
+        {
+          "speaker": "DJ Sunglass Crab",
+          "text": "Click.",
+          "startMs": 5412
+        },
+        {
+          "speaker": "Coco Halley",
+          "text": "That's a no! It's everywhere! Butter up, beach people!",
+          "startMs": 6255
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-song",
+      "category": "event",
+      "url": "/voice/comet-marimba/convergence-the-song.mp3",
+      "durationMs": 8636,
+      "title": "The Convergence: The Song Nobody Can Finish",
+      "overMusic": false,
+      "kit": "the-song",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Coco Halley",
+          "text": "Everybody's got the same song stuck, and nobody can finish it! Crab, play the end!",
+          "startMs": 43
+        },
+        {
+          "speaker": "DJ Sunglass Crab",
+          "text": "Click.",
+          "startMs": 4920
+        },
+        {
+          "speaker": "Coco Halley",
+          "text": "He refused! He doesn't know it either! He's an artist!",
+          "startMs": 5762
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-knock",
+      "category": "event",
+      "url": "/voice/comet-marimba/convergence-the-knock.mp3",
+      "durationMs": 7253,
+      "title": "The Convergence: Three Knocks",
+      "overMusic": false,
+      "kit": "the-knock",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Coco Halley",
+          "text": "Somebody knocked three times on the beach hut! On a comet! And nobody's there!",
+          "startMs": 38
+        },
+        {
+          "speaker": "Coco Halley",
+          "text": "Whoever you are, there's a hammock free. Come on in!",
+          "startMs": 4493
+        }
+      ]
+    },
+    {
+      "id": "convergence-wrong-colour",
+      "category": "event",
+      "url": "/voice/comet-marimba/convergence-wrong-colour.mp3",
+      "durationMs": 8026,
+      "title": "The Convergence: A Colour With No Name",
+      "overMusic": false,
+      "kit": "wrong-colour",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Coco Halley",
+          "text": "Whoa! The sky just went a colour! Not sunset! Not sunrise! Something new! Crab, what colour was that?",
+          "startMs": 39
+        },
+        {
+          "speaker": "DJ Sunglass Crab",
+          "text": "Click.",
+          "startMs": 5349
+        },
+        {
+          "speaker": "Coco Halley",
+          "text": "Fair! I don't have a word either!",
+          "startMs": 6191
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-pigeon",
+      "category": "event",
+      "url": "/voice/comet-marimba/convergence-the-pigeon.mp3",
+      "durationMs": 10140,
+      "title": "The Convergence: The Pigeon",
+      "overMusic": false,
+      "kit": "the-pigeon",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Coco Halley",
+          "text": "There's a pigeon on the beach! It walked in off the tail, like a regular!",
+          "startMs": 42
+        },
+        {
+          "speaker": "Coco Halley",
+          "text": "It's sitting by the crab, and the crab just gave it sunglasses! The crab never gives anyone anything! Twice in one life!",
+          "startMs": 4098
+        }
+      ]
     }
   ]
 }

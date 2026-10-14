@@ -1,0 +1,723 @@
+{
+  "version": 1,
+  "station": "atomic-bachelor-pad",
+  "clips": [
+    {
+      "id": "id-001",
+      "category": "id",
+      "url": "/voice/atomic-bachelor-pad/id-001.mp3",
+      "durationMs": 9230,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Monty Stereo",
+          "text": "The Atomic Bachelor Pad, one fifteen point six. A high fidelity demonstration. Please sit in the exact centre of the sofa.",
+          "startMs": 36
+        }
+      ]
+    },
+    {
+      "id": "id-002",
+      "category": "id",
+      "url": "/voice/atomic-bachelor-pad/id-002.mp3",
+      "durationMs": 6738,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Monty Stereo",
+          "text": "You're listening to the Atomic Bachelor Pad, in stereo. If you can only hear half of this sentence, you are sitting too far to the left.",
+          "startMs": 42
+        }
+      ]
+    },
+    {
+      "id": "id-003",
+      "category": "id",
+      "url": "/voice/atomic-bachelor-pad/id-003.mp3",
+      "durationMs": 6194,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Monty Stereo",
+          "text": "The Atomic Bachelor Pad. Two speakers. One sofa. Unlimited sophistication.",
+          "startMs": 40
+        }
+      ]
+    },
+    {
+      "id": "id-004",
+      "category": "id",
+      "url": "/voice/atomic-bachelor-pad/id-004.mp3",
+      "durationMs": 6558,
+      "overMusic": true,
+      "daypart": "night",
+      "lines": [
+        {
+          "speaker": "Monty Stereo",
+          "text": "The Atomic Bachelor Pad. The lamps are low, the dials are glowing, and the bongos are in position. Your left. Always your left.",
+          "startMs": 36
+        }
+      ]
+    },
+    {
+      "id": "id-005",
+      "category": "id",
+      "url": "/voice/atomic-bachelor-pad/id-005.mp3",
+      "durationMs": 8187,
+      "overMusic": true,
+      "daypart": "morning",
+      "lines": [
+        {
+          "speaker": "Monty Stereo",
+          "text": "Good morning from the Atomic Bachelor Pad. Monty Stereo, in a dressing gown, between two very large speakers.",
+          "startMs": 36
+        }
+      ]
+    },
+    {
+      "id": "dj-001",
+      "category": "dj",
+      "url": "/voice/atomic-bachelor-pad/dj-001.mp3",
+      "durationMs": 9740,
+      "title": "The Bongos Travel",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Monty Stereo",
+          "text": "Now hear the bongos travel... to your left speaker.",
+          "startMs": 44
+        },
+        {
+          "speaker": "Monty Stereo",
+          "text": "There. Did you feel that? That, my friends, is the future. Some men go to the moon. I sit very still, and let the bongos come to me.",
+          "startMs": 3565
+        }
+      ]
+    },
+    {
+      "id": "dj-002",
+      "category": "dj",
+      "url": "/voice/atomic-bachelor-pad/dj-002.mp3",
+      "durationMs": 12720,
+      "title": "The Bouquet",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Monty Stereo",
+          "text": "Let's take a moment with that vibraphone. Notice the bouquet. A bright attack, a long, warm finish, and notes of chrome and walnut.",
+          "startMs": 40
+        },
+        {
+          "speaker": "Monty Stereo",
+          "text": "Nineteen sixty two was an exceptional year for the vibraphone. Best served slightly chilled, from the right speaker.",
+          "startMs": 6775
+        }
+      ]
+    },
+    {
+      "id": "dj-003",
+      "category": "dj",
+      "url": "/voice/atomic-bachelor-pad/dj-003.mp3",
+      "durationMs": 13682,
+      "title": "Table Tennis",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Monty Stereo",
+          "text": "Since nineteen sixty one, the orchestra on this next one has been playing table tennis across my living room. Trumpet, left. Trombone, right. Trumpet, left.",
+          "startMs": 39
+        },
+        {
+          "speaker": "Monty Stereo",
+          "text": "The score stands at four thousand two hundred and six all. Nobody has ever won. Nobody wants to.",
+          "startMs": 8596
+        }
+      ]
+    },
+    {
+      "id": "dj-004",
+      "category": "dj",
+      "url": "/voice/atomic-bachelor-pad/dj-004.mp3",
+      "durationMs": 11848,
+      "title": "The Theremin Is in the Hallway",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Monty Stereo",
+          "text": "Some of you have written in to ask where the theremin is. It is not in the left speaker. It is not in the right speaker.",
+          "startMs": 37
+        },
+        {
+          "speaker": "Monty Stereo",
+          "text": "In my professional opinion, the theremin is in the hallway. It has been there since Tuesday. I've left it a sandwich.",
+          "startMs": 5924
+        }
+      ]
+    },
+    {
+      "id": "dj-005",
+      "category": "dj",
+      "url": "/voice/atomic-bachelor-pad/dj-005.mp3",
+      "durationMs": 10139,
+      "title": "For Listeners With One Speaker",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Monty Stereo",
+          "text": "A word to listeners with only one speaker. I'm sorry. Truly.",
+          "startMs": 45
+        },
+        {
+          "speaker": "Monty Stereo",
+          "text": "Please tilt your head slightly to one side, and imagine the other half. Many fine people get by this way. They are very brave.",
+          "startMs": 3678
+        }
+      ]
+    },
+    {
+      "id": "dj-006",
+      "category": "dj",
+      "url": "/voice/atomic-bachelor-pad/dj-006.mp3",
+      "durationMs": 14607,
+      "title": "For the Night Shift",
+      "overMusic": true,
+      "daypart": "night",
+      "lines": [
+        {
+          "speaker": "Monty Stereo",
+          "text": "A word for the operator on the relay ship. I understand your console has a great many speakers. Little ones, all over the cabin.",
+          "startMs": 39
+        },
+        {
+          "speaker": "Monty Stereo",
+          "text": "I'd love to come aboard with a tape measure and find you the sweet spot. Everybody deserves a sweet spot. Even in deep space. Especially there.",
+          "startMs": 7037
+        }
+      ]
+    },
+    {
+      "id": "dj-007",
+      "category": "dj",
+      "url": "/voice/atomic-bachelor-pad/dj-007.mp3",
+      "durationMs": 12223,
+      "title": "Sponsored by Grumbel's Ladders",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Monty Stereo",
+          "text": "This demonstration is brought to you by Grumbel's Ladders, for mounting your loudspeakers at the correct height. Which is ear height, plus a little, for drama.",
+          "startMs": 40
+        },
+        {
+          "speaker": "Monty Stereo",
+          "text": "Grumbel's Ladders. Up is a choice. Up and slightly to the left is a lifestyle.",
+          "startMs": 8120
+        }
+      ]
+    },
+    {
+      "id": "dj-008",
+      "category": "dj",
+      "url": "/voice/atomic-bachelor-pad/dj-008.mp3",
+      "durationMs": 11062,
+      "title": "Wide, Not Loud",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Monty Stereo",
+          "text": "The neighbours at Lot Eleven have asked me to turn it down. I've explained to them that it isn't loud. It's wide.",
+          "startMs": 41
+        },
+        {
+          "speaker": "Monty Stereo",
+          "text": "They've asked me to make it narrower. I'm considering it. In the meantime, here is something very, very wide.",
+          "startMs": 5825
+        }
+      ]
+    },
+    {
+      "id": "dj-greg-review",
+      "category": "dj",
+      "url": "/voice/atomic-bachelor-pad/dj-greg-review.mp3",
+      "durationMs": 15418,
+      "title": "Review: The Quiet Corner with Greg",
+      "overMusic": true,
+      "days": [
+        1
+      ],
+      "lines": [
+        {
+          "speaker": "Monty Stereo",
+          "text": "Last night The Quiet Corner with Greg aired on the Lounge at the End of Time. I listened on the Model Twelve, with everything turned all the way up.",
+          "startMs": 45
+        },
+        {
+          "speaker": "Monty Stereo",
+          "text": "Greg was located dead centre, at a level of almost nothing. On a lesser console, you'd hear silence. On mine, you could hear him being shy. Four stars.",
+          "startMs": 7544
+        }
+      ]
+    },
+    {
+      "id": "hifi-open-01",
+      "category": "ad",
+      "url": "/voice/atomic-bachelor-pad/hifi-open-01.mp3",
+      "durationMs": 5024,
+      "overMusic": false,
+      "part": "open",
+      "kit": "hifi",
+      "lines": [
+        {
+          "speaker": "Monty Stereo",
+          "text": "Friends, is your living room only half alive? A message from Starburst Hi-Fi of Futureville.",
+          "startMs": 45
+        }
+      ]
+    },
+    {
+      "id": "hifi-body-01",
+      "category": "ad",
+      "url": "/voice/atomic-bachelor-pad/hifi-body-01.mp3",
+      "durationMs": 9669,
+      "overMusic": false,
+      "part": "body",
+      "kit": "hifi",
+      "lines": [
+        {
+          "speaker": "Monty Stereo",
+          "text": "Introducing the Futureville Fidelity Console, Model Twelve. Eleven feet of solid walnut, forty two glowing valves, and a turntable so smooth the music never knows it's moving.",
+          "startMs": 39
+        }
+      ]
+    },
+    {
+      "id": "hifi-body-02",
+      "category": "ad",
+      "url": "/voice/atomic-bachelor-pad/hifi-body-02.mp3",
+      "durationMs": 8762,
+      "overMusic": false,
+      "part": "body",
+      "kit": "hifi",
+      "lines": [
+        {
+          "speaker": "Monty Stereo",
+          "text": "Now with the Twin Cathedral loudspeakers. So large and so faithful that your trombone section will need a room of its own. We'll build it for you. Extension included.",
+          "startMs": 38
+        }
+      ]
+    },
+    {
+      "id": "hifi-body-03",
+      "category": "ad",
+      "url": "/voice/atomic-bachelor-pad/hifi-body-03.mp3",
+      "durationMs": 4766,
+      "overMusic": false,
+      "part": "body",
+      "kit": "hifi",
+      "lines": [
+        {
+          "speaker": "Monty Stereo",
+          "text": "Hear a pin drop. Hear which side of the room it dropped on. Hear the pin's opinion of the carpet.",
+          "startMs": 43
+        }
+      ]
+    },
+    {
+      "id": "hifi-close-01",
+      "category": "ad",
+      "url": "/voice/atomic-bachelor-pad/hifi-close-01.mp3",
+      "durationMs": 4025,
+      "overMusic": false,
+      "part": "close",
+      "kit": "hifi",
+      "lines": [
+        {
+          "speaker": "Monty Stereo",
+          "text": "Starburst Hi-Fi, on the Atomic Parkway. Hear everything. Twice. In stereo.",
+          "startMs": 36
+        }
+      ]
+    },
+    {
+      "id": "stereo-test-open-01",
+      "category": "psa",
+      "url": "/voice/atomic-bachelor-pad/stereo-test-open-01.mp3",
+      "durationMs": 6214,
+      "overMusic": false,
+      "part": "open",
+      "kit": "stereo-test",
+      "lines": [
+        {
+          "speaker": "Monty Stereo",
+          "text": "Ladies and gentlemen, this is a stereo test. Please put down your drink, find the chalk mark on the carpet, and sit on it.",
+          "startMs": 38
+        }
+      ]
+    },
+    {
+      "id": "stereo-test-body-01",
+      "category": "psa",
+      "url": "/voice/atomic-bachelor-pad/stereo-test-body-01.mp3",
+      "durationMs": 8533,
+      "overMusic": false,
+      "part": "body",
+      "kit": "stereo-test",
+      "lines": [
+        {
+          "speaker": "Monty Stereo",
+          "text": "This is the left speaker. Hello.",
+          "startMs": 45
+        },
+        {
+          "speaker": "Monty Stereo",
+          "text": "This is the right speaker. Hello.",
+          "startMs": 2623
+        },
+        {
+          "speaker": "Monty Stereo",
+          "text": "If those both came from the same place, please call a professional.",
+          "startMs": 5267
+        }
+      ]
+    },
+    {
+      "id": "stereo-test-body-02",
+      "category": "psa",
+      "url": "/voice/atomic-bachelor-pad/stereo-test-body-02.mp3",
+      "durationMs": 8757,
+      "overMusic": false,
+      "part": "body",
+      "kit": "stereo-test",
+      "lines": [
+        {
+          "speaker": "Monty Stereo",
+          "text": "You will now hear a single bongo, placed precisely in the centre. If it seems to come from your kitchen, then there is a bongo in your kitchen. Please deal with that separately.",
+          "startMs": 36
+        }
+      ]
+    },
+    {
+      "id": "stereo-test-body-03",
+      "category": "psa",
+      "url": "/voice/atomic-bachelor-pad/stereo-test-body-03.mp3",
+      "durationMs": 8863,
+      "overMusic": false,
+      "part": "body",
+      "kit": "stereo-test",
+      "lines": [
+        {
+          "speaker": "Monty Stereo",
+          "text": "Next, a test of depth. Here is a cymbal, very far away. Further. Further still.",
+          "startMs": 45
+        },
+        {
+          "speaker": "Monty Stereo",
+          "text": "That cymbal is now in the next county. Your speakers are working beautifully.",
+          "startMs": 4871
+        }
+      ]
+    },
+    {
+      "id": "stereo-test-body-04",
+      "category": "psa",
+      "url": "/voice/atomic-bachelor-pad/stereo-test-body-04.mp3",
+      "durationMs": 10071,
+      "overMusic": false,
+      "part": "body",
+      "kit": "stereo-test",
+      "lines": [
+        {
+          "speaker": "Monty Stereo",
+          "text": "Finally, a test of silence. Please listen carefully.",
+          "startMs": 50
+        },
+        {
+          "speaker": "Monty Stereo",
+          "text": "That was high fidelity silence, in stereo. Some of you heard the left half. Well done.",
+          "startMs": 5773
+        }
+      ]
+    },
+    {
+      "id": "stereo-test-close-01",
+      "category": "psa",
+      "url": "/voice/atomic-bachelor-pad/stereo-test-close-01.mp3",
+      "durationMs": 4156,
+      "overMusic": false,
+      "part": "close",
+      "kit": "stereo-test",
+      "lines": [
+        {
+          "speaker": "Monty Stereo",
+          "text": "That concludes the stereo test. You may relax. Not too much. Mind your posture.",
+          "startMs": 39
+        }
+      ]
+    },
+    {
+      "id": "id-morning-calibration",
+      "category": "id",
+      "url": "/voice/atomic-bachelor-pad/id-morning-calibration.mp3",
+      "durationMs": 7994,
+      "overMusic": true,
+      "part": "open",
+      "show": "morning-calibration",
+      "lines": [
+        {
+          "speaker": "Monty Stereo",
+          "text": "Good morning, and welcome to Morning Calibration, on the Atomic Bachelor Pad. Before coffee, before the newspaper, before anything at all, we tune the room.",
+          "startMs": 37
+        }
+      ]
+    },
+    {
+      "id": "dj-morning-calibration-001",
+      "category": "dj",
+      "url": "/voice/atomic-bachelor-pad/dj-morning-calibration-001.mp3",
+      "durationMs": 12130,
+      "overMusic": true,
+      "show": "morning-calibration",
+      "lines": [
+        {
+          "speaker": "Monty Stereo",
+          "text": "Over breakfast, I've moved the left speaker two inches towards the window. The grapefruit sounds noticeably brighter.",
+          "startMs": 39
+        },
+        {
+          "speaker": "Monty Stereo",
+          "text": "People think high fidelity is about music. It's about everything. The toast has never been so well defined.",
+          "startMs": 6405
+        }
+      ]
+    },
+    {
+      "id": "id-stereo-at-six",
+      "category": "id",
+      "url": "/voice/atomic-bachelor-pad/id-stereo-at-six.mp3",
+      "durationMs": 11119,
+      "overMusic": true,
+      "part": "open",
+      "show": "stereo-at-six",
+      "lines": [
+        {
+          "speaker": "Monty Stereo",
+          "text": "Good evening, and welcome to Stereo at Six, on the Atomic Bachelor Pad. The martinis are cold, the valves are warm, and the speakers are exactly the right distance apart.",
+          "startMs": 37
+        }
+      ]
+    },
+    {
+      "id": "dj-stereo-at-six-001",
+      "category": "dj",
+      "url": "/voice/atomic-bachelor-pad/dj-stereo-at-six-001.mp3",
+      "durationMs": 9811,
+      "title": "Tonight's Pairing",
+      "overMusic": true,
+      "show": "stereo-at-six",
+      "lines": [
+        {
+          "speaker": "Monty Stereo",
+          "text": "Tonight's pairing. A slow bossa nova, with a dry martini and a good armchair.",
+          "startMs": 37
+        },
+        {
+          "speaker": "Monty Stereo",
+          "text": "The martini sits in the centre. The guitar sits on the left. And you sit exactly where I tell you to sit.",
+          "startMs": 4404
+        }
+      ]
+    },
+    {
+      "id": "id-sunken-lounge",
+      "category": "id",
+      "url": "/voice/atomic-bachelor-pad/id-sunken-lounge.mp3",
+      "durationMs": 7898,
+      "overMusic": true,
+      "part": "open",
+      "show": "sunken-lounge",
+      "lines": [
+        {
+          "speaker": "Monty Stereo",
+          "text": "This is the Sunken Lounge, on the Atomic Bachelor Pad. Step down three carpeted steps, into the very best seat in Futureville. Mind the rug.",
+          "startMs": 40
+        }
+      ]
+    },
+    {
+      "id": "dj-sunken-lounge-001",
+      "category": "dj",
+      "url": "/voice/atomic-bachelor-pad/dj-sunken-lounge-001.mp3",
+      "durationMs": 12033,
+      "overMusic": true,
+      "show": "sunken-lounge",
+      "lines": [
+        {
+          "speaker": "Monty Stereo",
+          "text": "Late in the sunken lounge. The starburst clock says ten past eleven, and the rocket on the horizon is lit up for the night.",
+          "startMs": 43
+        },
+        {
+          "speaker": "Monty Stereo",
+          "text": "This is the hour for strings. Strings are at their best after ten, once they've had a chance to breathe.",
+          "startMs": 6909
+        }
+      ]
+    },
+    {
+      "id": "dj-halloween-001",
+      "category": "dj",
+      "url": "/voice/atomic-bachelor-pad/dj-halloween-001.mp3",
+      "durationMs": 12278,
+      "title": "The Haunted Theremin",
+      "overMusic": true,
+      "dates": [
+        "10-24",
+        "10-25",
+        "10-26",
+        "10-27",
+        "10-28",
+        "10-29",
+        "10-30",
+        "10-31"
+      ],
+      "lines": [
+        {
+          "speaker": "Monty Stereo",
+          "text": "A special Halloween demonstration. Hear the haunted theremin travel from your left speaker, to your right speaker, and then out of the room entirely, and up the stairs.",
+          "startMs": 37
+        },
+        {
+          "speaker": "Monty Stereo",
+          "text": "I don't have any stairs. It's a split level. Nevertheless. Footsteps.",
+          "startMs": 9129
+        }
+      ]
+    },
+    {
+      "id": "convergence-missing-moon",
+      "category": "event",
+      "url": "/voice/atomic-bachelor-pad/convergence-missing-moon.mp3",
+      "durationMs": 10234,
+      "overMusic": false,
+      "kit": "missing-moon",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Monty Stereo",
+          "text": "Listeners report a missing moon. I've checked both speakers. It is not in the left. It is not in the right.",
+          "startMs": 40
+        },
+        {
+          "speaker": "Monty Stereo",
+          "text": "If it's anywhere, it's in the centre image, which is where I keep everything I can't explain.",
+          "startMs": 5559
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-smell",
+      "category": "event",
+      "url": "/voice/atomic-bachelor-pad/convergence-the-smell.mp3",
+      "durationMs": 8408,
+      "overMusic": false,
+      "kit": "the-smell",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Monty Stereo",
+          "text": "Smell is not a stereo phenomenon. And yet, this evening, the toast is distinctly to the left.",
+          "startMs": 42
+        },
+        {
+          "speaker": "Monty Stereo",
+          "text": "Lovely separation. Somebody has a very good kitchen.",
+          "startMs": 5483
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-song",
+      "category": "event",
+      "url": "/voice/atomic-bachelor-pad/convergence-the-song.mp3",
+      "durationMs": 8957,
+      "overMusic": false,
+      "kit": "the-song",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Monty Stereo",
+          "text": "Everybody is humming the same song, and nobody can finish it. I can tell you this much.",
+          "startMs": 43
+        },
+        {
+          "speaker": "Monty Stereo",
+          "text": "It starts in the left speaker, crosses the room, and never quite arrives on the right.",
+          "startMs": 5091
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-knock",
+      "category": "event",
+      "url": "/voice/atomic-bachelor-pad/convergence-the-knock.mp3",
+      "durationMs": 7599,
+      "overMusic": false,
+      "kit": "the-knock",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Monty Stereo",
+          "text": "Three knocks at the front door. Left, centre, right. A perfect stereo knock.",
+          "startMs": 46
+        },
+        {
+          "speaker": "Monty Stereo",
+          "text": "There was nobody there. I'd like to buy the knock anyway.",
+          "startMs": 4750
+        }
+      ]
+    },
+    {
+      "id": "convergence-wrong-colour",
+      "category": "event",
+      "url": "/voice/atomic-bachelor-pad/convergence-wrong-colour.mp3",
+      "durationMs": 8109,
+      "overMusic": false,
+      "kit": "wrong-colour",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Monty Stereo",
+          "text": "The sky over Futureville has gone a colour nobody has a word for.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Monty Stereo",
+          "text": "I couldn't tell you what it is. I can tell you it would look terrific on a speaker cabinet.",
+          "startMs": 3962
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-pigeon",
+      "category": "event",
+      "url": "/voice/atomic-bachelor-pad/convergence-the-pigeon.mp3",
+      "durationMs": 10186,
+      "overMusic": false,
+      "kit": "the-pigeon",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Monty Stereo",
+          "text": "A pigeon has walked into the living room, and is standing on the chalk mark, exactly between the speakers.",
+          "startMs": 50
+        },
+        {
+          "speaker": "Monty Stereo",
+          "text": "Found the sweet spot first time. That bird has been in this business longer than I have.",
+          "startMs": 5747
+        }
+      ]
+    }
+  ]
+}

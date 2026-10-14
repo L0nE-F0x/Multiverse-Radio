@@ -933,6 +933,153 @@
           "startMs": 12481
         }
       ]
+    },
+    {
+      "id": "convergence-missing-moon",
+      "category": "event",
+      "url": "/voice/tomorrows-leftovers/convergence-missing-moon.mp3",
+      "durationMs": 8251,
+      "title": "The Convergence: A Moon Goes Missing",
+      "overMusic": false,
+      "kit": "missing-moon",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Pip, the Sous-Chef",
+          "text": "Chef, a moon's gone missing.",
+          "startMs": 43
+        },
+        {
+          "speaker": "Chef Anselm Brodequin",
+          "text": "Yes, Pip. Nobody agrees which. I've been to next week. It's back by Thursday, and it's been somewhere warm.",
+          "startMs": 2075
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-smell",
+      "category": "event",
+      "url": "/voice/tomorrows-leftovers/convergence-the-smell.mp3",
+      "durationMs": 11777,
+      "title": "The Convergence: Toast, Everywhere",
+      "overMusic": false,
+      "kit": "the-smell",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Pip, the Sous-Chef",
+          "text": "Chef, everything smells of toast.",
+          "startMs": 45
+        },
+        {
+          "speaker": "Chef Anselm Brodequin",
+          "text": "Everywhere, at once. I smelled it on Tuesday. I've been waiting for you lot to catch up.",
+          "startMs": 2360
+        },
+        {
+          "speaker": "Pip, the Sous-Chef",
+          "text": "Who's making it?",
+          "startMs": 7936
+        },
+        {
+          "speaker": "Chef Anselm Brodequin",
+          "text": "Everyone. Slightly too long.",
+          "startMs": 9516
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-song",
+      "category": "event",
+      "url": "/voice/tomorrows-leftovers/convergence-the-song.mp3",
+      "durationMs": 9558,
+      "title": "The Convergence: The Song Nobody Can Finish",
+      "overMusic": false,
+      "kit": "the-song",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Pip, the Sous-Chef",
+          "text": "Chef, I've got this song in my head, and I can't finish it.",
+          "startMs": 41
+        },
+        {
+          "speaker": "Chef Anselm Brodequin",
+          "text": "Nor can anyone, Pip. I've been four days ahead, and nobody's finished it there either. Keep stirring. It'll come.",
+          "startMs": 3080
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-knock",
+      "category": "event",
+      "url": "/voice/tomorrows-leftovers/convergence-the-knock.mp3",
+      "durationMs": 9326,
+      "title": "The Convergence: Three Knocks",
+      "overMusic": false,
+      "kit": "the-knock",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Chef Anselm Brodequin",
+          "text": "Three knocks at the kitchen door. Pip, don't answer it.",
+          "startMs": 39
+        },
+        {
+          "speaker": "Pip, the Sous-Chef",
+          "text": "Why not, Chef?",
+          "startMs": 3681
+        },
+        {
+          "speaker": "Chef Anselm Brodequin",
+          "text": "I answered it on Friday. Nobody there. I've saved you the walk.",
+          "startMs": 5301
+        }
+      ]
+    },
+    {
+      "id": "convergence-wrong-colour",
+      "category": "event",
+      "url": "/voice/tomorrows-leftovers/convergence-wrong-colour.mp3",
+      "durationMs": 8262,
+      "title": "The Convergence: A Colour With No Name",
+      "overMusic": false,
+      "kit": "wrong-colour",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Pip, the Sous-Chef",
+          "text": "Chef! The sky!",
+          "startMs": 37
+        },
+        {
+          "speaker": "Chef Anselm Brodequin",
+          "text": "Yes, Pip. I saw it on Monday. There's no word for it yet. By next week, it's going to be a very fashionable sauce.",
+          "startMs": 1559
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-pigeon",
+      "category": "event",
+      "url": "/voice/tomorrows-leftovers/convergence-the-pigeon.mp3",
+      "durationMs": 7466,
+      "title": "The Convergence: The Pigeon",
+      "overMusic": false,
+      "kit": "the-pigeon",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Pip, the Sous-Chef",
+          "text": "Chef, there's a pigeon in the kitchen. It seems to know you.",
+          "startMs": 44
+        },
+        {
+          "speaker": "Chef Anselm Brodequin",
+          "text": "It's early. It isn't due until Saturday. Give it the end of the loaf.",
+          "startMs": 3219
+        }
+      ]
     }
   ]
 }

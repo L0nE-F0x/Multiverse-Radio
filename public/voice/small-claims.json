@@ -1,0 +1,1677 @@
+{
+  "version": 1,
+  "station": "small-claims",
+  "clips": [
+    {
+      "id": "id-001",
+      "category": "id",
+      "url": "/voice/small-claims/id-001.mp3",
+      "durationMs": 4817,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Clerk Odell",
+          "text": "Small Claims of the Multiverse. One hundred and ten point two. All rise.",
+          "startMs": 150
+        }
+      ]
+    },
+    {
+      "id": "id-002",
+      "category": "id",
+      "url": "/voice/small-claims/id-002.mp3",
+      "durationMs": 6642,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Judge Alvarez-Penhallow",
+          "text": "This is Small Claims of the Multiverse. I am Judge Alvarez-Penhallow. Please be seated, in whatever way you sit.",
+          "startMs": 40
+        }
+      ]
+    },
+    {
+      "id": "id-003",
+      "category": "id",
+      "url": "/voice/small-claims/id-003.mp3",
+      "durationMs": 5959,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Clerk Odell",
+          "text": "Small Claims of the Multiverse. Disputes between dimensions, settled with dignity, and a gavel.",
+          "startMs": 38
+        }
+      ]
+    },
+    {
+      "id": "id-004",
+      "category": "id",
+      "url": "/voice/small-claims/id-004.mp3",
+      "durationMs": 6415,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Judge Alvarez-Penhallow",
+          "text": "Small Claims of the Multiverse. No claim too small. Several, frankly, far too small. We hear them anyway.",
+          "startMs": 43
+        }
+      ]
+    },
+    {
+      "id": "id-005",
+      "category": "id",
+      "url": "/voice/small-claims/id-005.mp3",
+      "durationMs": 7133,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Clerk Odell",
+          "text": "You are listening to Courtroom Four, on one one oh point two. The court is in session. The court is always in session.",
+          "startMs": 39
+        }
+      ]
+    },
+    {
+      "id": "case-open-001",
+      "category": "story",
+      "url": "/voice/small-claims/case-open-001.mp3",
+      "durationMs": 9818,
+      "title": "Vell versus Vell",
+      "overMusic": false,
+      "part": "open",
+      "kit": "case",
+      "lines": [
+        {
+          "speaker": "Clerk Odell",
+          "text": "Case four thousand and six. The Upper Atmosphere of Vell, against the Lower Atmosphere of Vell. A cloud, parked across both, for nine days.",
+          "startMs": 550
+        }
+      ]
+    },
+    {
+      "id": "case-open-002",
+      "category": "story",
+      "url": "/voice/small-claims/case-open-002.mp3",
+      "durationMs": 10511,
+      "title": "The Echo and the Shout",
+      "overMusic": false,
+      "part": "open",
+      "kit": "case",
+      "lines": [
+        {
+          "speaker": "Clerk Odell",
+          "text": "The Echo of Hollow Point, against the Original Shout. A claim for unpaid royalties, going back eleven centuries.",
+          "startMs": 437
+        },
+        {
+          "speaker": "Judge Alvarez-Penhallow",
+          "text": "Proceed. Proceed. Proceed.",
+          "startMs": 7968
+        }
+      ]
+    },
+    {
+      "id": "case-open-003",
+      "category": "story",
+      "url": "/voice/small-claims/case-open-003.mp3",
+      "durationMs": 9549,
+      "title": "The Fence Between Nines",
+      "overMusic": false,
+      "part": "open",
+      "kit": "case",
+      "lines": [
+        {
+          "speaker": "Clerk Odell",
+          "text": "Dimension Nine, against Dimension Nine B. A garden fence, eleven inches over the boundary, in a direction neither party can point to.",
+          "startMs": 436
+        }
+      ]
+    },
+    {
+      "id": "case-open-004",
+      "category": "story",
+      "url": "/voice/small-claims/case-open-004.mp3",
+      "durationMs": 9974,
+      "title": "Too Quiet",
+      "overMusic": false,
+      "part": "open",
+      "kit": "case",
+      "lines": [
+        {
+          "speaker": "Clerk Odell",
+          "text": "Mister Barnaby Chell, a ghost, against the tenants of number four, Lantern Row. A noise complaint. The tenants are too quiet. He finds it unsettling.",
+          "startMs": 437
+        }
+      ]
+    },
+    {
+      "id": "case-open-005",
+      "category": "story",
+      "url": "/voice/small-claims/case-open-005.mp3",
+      "durationMs": 8054,
+      "title": "Three Borrowed Hours",
+      "overMusic": false,
+      "part": "open",
+      "kit": "case",
+      "lines": [
+        {
+          "speaker": "Clerk Odell",
+          "text": "The Tuesday of the Grey Reach, against the Wednesday of the Grey Reach. Three hours, borrowed in good faith, never returned.",
+          "startMs": 550
+        }
+      ]
+    },
+    {
+      "id": "case-open-006",
+      "category": "story",
+      "url": "/voice/small-claims/case-open-006.mp3",
+      "durationMs": 9133,
+      "title": "The Sock and the Machine",
+      "overMusic": false,
+      "part": "open",
+      "kit": "case",
+      "lines": [
+        {
+          "speaker": "Clerk Odell",
+          "text": "A single sock, left foot, against a washing machine in the Overlap. Wrongful relocation. The sock seeks the return of its partner.",
+          "startMs": 440
+        }
+      ]
+    },
+    {
+      "id": "case-open-007",
+      "category": "story",
+      "url": "/voice/small-claims/case-open-007.mp3",
+      "durationMs": 8397,
+      "title": "The Moon and the Tide",
+      "overMusic": false,
+      "part": "open",
+      "kit": "case",
+      "lines": [
+        {
+          "speaker": "Clerk Odell",
+          "text": "The Tide of Pellam, against the Moon of Pellam. The tide says it is being pulled about. The moon says it never laid a finger on it.",
+          "startMs": 437
+        }
+      ]
+    },
+    {
+      "id": "case-open-008",
+      "category": "story",
+      "url": "/voice/small-claims/case-open-008.mp3",
+      "durationMs": 9827,
+      "title": "Fairweather versus Fairweather",
+      "overMusic": false,
+      "part": "open",
+      "kit": "case",
+      "lines": [
+        {
+          "speaker": "Clerk Odell",
+          "text": "Mister Gideon Fairweather, against Mister Gideon Fairweather, of next Thursday. Reimbursement for a haircut the plaintiff hasn't had yet, and will regret.",
+          "startMs": 445
+        }
+      ]
+    },
+    {
+      "id": "case-open-009",
+      "category": "story",
+      "url": "/voice/small-claims/case-open-009.mp3",
+      "durationMs": 9007,
+      "title": "The Snow Globe and the Shelf",
+      "overMusic": false,
+      "part": "open",
+      "kit": "case",
+      "lines": [
+        {
+          "speaker": "Clerk Odell",
+          "text": "The residents of a snow globe, against the shelf it stands on. A shaking incident, during a door being slammed, on the evening of the fourth.",
+          "startMs": 437
+        }
+      ]
+    },
+    {
+      "id": "case-open-010",
+      "category": "story",
+      "url": "/voice/small-claims/case-open-010.mp3",
+      "durationMs": 11299,
+      "title": "The Library and the Dragon",
+      "overMusic": false,
+      "part": "open",
+      "kit": "case",
+      "lines": [
+        {
+          "speaker": "Clerk Odell",
+          "text": "The Marrowgate Lending Library, against a small dragon. A book of poems, returned slightly toasted. The dragon counterclaims that the poems were very exciting.",
+          "startMs": 550
+        }
+      ]
+    },
+    {
+      "id": "case-open-011",
+      "category": "story",
+      "url": "/voice/small-claims/case-open-011.mp3",
+      "durationMs": 8280,
+      "title": "The Lighthouse and the Fog",
+      "overMusic": false,
+      "part": "open",
+      "kit": "case",
+      "lines": [
+        {
+          "speaker": "Clerk Odell",
+          "text": "A lighthouse, retired, against a fog bank. The lighthouse alleges it has been followed, every evening, for forty years.",
+          "startMs": 438
+        }
+      ]
+    },
+    {
+      "id": "case-body-001",
+      "category": "story",
+      "url": "/voice/small-claims/case-body-001.mp3",
+      "durationMs": 23201,
+      "overMusic": false,
+      "part": "body",
+      "kit": "case",
+      "lines": [
+        {
+          "speaker": "The Plaintiff",
+          "text": "Your Honour, I have never been so inconvenienced in all my dimensions. And I have a great many dimensions.",
+          "startMs": 448
+        },
+        {
+          "speaker": "The Plaintiff",
+          "text": "I want it noted that I was there first. I was there first in every version of events. I have the versions here, in a folder.",
+          "startMs": 7651
+        },
+        {
+          "speaker": "Judge Alvarez-Penhallow",
+          "text": "The court will take the folder. The court notes the folder is also a dimension. Please don't put it down near the others.",
+          "startMs": 15814
+        }
+      ]
+    },
+    {
+      "id": "case-body-002",
+      "category": "story",
+      "url": "/voice/small-claims/case-body-002.mp3",
+      "durationMs": 13040,
+      "overMusic": false,
+      "part": "body",
+      "kit": "case",
+      "lines": [
+        {
+          "speaker": "The Defendant",
+          "text": "In my defence, Your Honour, it was like that when I found it.",
+          "startMs": 438
+        },
+        {
+          "speaker": "Judge Alvarez-Penhallow",
+          "text": "When did you find it?",
+          "startMs": 5951
+        },
+        {
+          "speaker": "The Defendant",
+          "text": "Just after I did it.",
+          "startMs": 7731
+        },
+        {
+          "speaker": "Ms. Castellane, for the Defence",
+          "text": "My client would like a moment, Your Honour.",
+          "startMs": 10507
+        }
+      ]
+    },
+    {
+      "id": "case-body-003",
+      "category": "story",
+      "url": "/voice/small-claims/case-body-003.mp3",
+      "durationMs": 12636,
+      "overMusic": false,
+      "part": "body",
+      "kit": "case",
+      "lines": [
+        {
+          "speaker": "Ms. Castellane, for the Defence",
+          "text": "Objection, Your Honour. Counsel is leading the witness.",
+          "startMs": 439
+        },
+        {
+          "speaker": "Judge Alvarez-Penhallow",
+          "text": "Leading them where?",
+          "startMs": 3610
+        },
+        {
+          "speaker": "Ms. Castellane, for the Defence",
+          "text": "Somewhere nicer, Your Honour. There's a view.",
+          "startMs": 5170
+        },
+        {
+          "speaker": "Judge Alvarez-Penhallow",
+          "text": "Overruled. Everyone deserves a view. Carry on, Mister Lusk, but come straight back.",
+          "startMs": 7282
+        }
+      ]
+    },
+    {
+      "id": "case-body-004",
+      "category": "story",
+      "url": "/voice/small-claims/case-body-004.mp3",
+      "durationMs": 22052,
+      "overMusic": false,
+      "part": "body",
+      "kit": "case",
+      "lines": [
+        {
+          "speaker": "Mr. Lusk, for the Plaintiff",
+          "text": "I call an expert witness. A professor of comparative ownership.",
+          "startMs": 437
+        },
+        {
+          "speaker": "An Expert Witness",
+          "text": "Your Honour, in my professional opinion, the item in question belongs to whoever is holding it, unless somebody else is also holding it, in which case it belongs to the situation.",
+          "startMs": 5114
+        },
+        {
+          "speaker": "Judge Alvarez-Penhallow",
+          "text": "And who owns the situation?",
+          "startMs": 16290
+        },
+        {
+          "speaker": "An Expert Witness",
+          "text": "Nobody, Your Honour. That's why we're all here.",
+          "startMs": 18574
+        }
+      ]
+    },
+    {
+      "id": "case-body-005",
+      "category": "story",
+      "url": "/voice/small-claims/case-body-005.mp3",
+      "durationMs": 18427,
+      "overMusic": false,
+      "part": "body",
+      "kit": "case",
+      "lines": [
+        {
+          "speaker": "Judge Alvarez-Penhallow",
+          "text": "Have the two parties tried simply talking to one another?",
+          "startMs": 442
+        },
+        {
+          "speaker": "The Plaintiff",
+          "text": "We tried, Your Honour. We're from different dimensions. Every time we talk, one of us is yesterday.",
+          "startMs": 3671
+        },
+        {
+          "speaker": "The Defendant",
+          "text": "It's usually me.",
+          "startMs": 9985
+        },
+        {
+          "speaker": "Judge Alvarez-Penhallow",
+          "text": "Let the record show the court sympathises. The court has been yesterday too. It doesn't suit everybody.",
+          "startMs": 11598
+        }
+      ]
+    },
+    {
+      "id": "case-body-006",
+      "category": "story",
+      "url": "/voice/small-claims/case-body-006.mp3",
+      "durationMs": 16494,
+      "overMusic": false,
+      "part": "body",
+      "kit": "case",
+      "lines": [
+        {
+          "speaker": "Mr. Lusk, for the Plaintiff",
+          "text": "I'd like to enter exhibit A, Your Honour.",
+          "startMs": 438
+        },
+        {
+          "speaker": "Clerk Odell",
+          "text": "Exhibit A. A cardboard box. Inside the box, a second, smaller box. Inside that, a note, which reads, nearly.",
+          "startMs": 3630
+        },
+        {
+          "speaker": "Judge Alvarez-Penhallow",
+          "text": "Nearly what?",
+          "startMs": 11343
+        },
+        {
+          "speaker": "Mr. Lusk, for the Plaintiff",
+          "text": "That's rather the point of the case, Your Honour.",
+          "startMs": 12875
+        }
+      ]
+    },
+    {
+      "id": "case-body-007",
+      "category": "story",
+      "url": "/voice/small-claims/case-body-007.mp3",
+      "durationMs": 11902,
+      "overMusic": false,
+      "part": "body",
+      "kit": "case",
+      "lines": [
+        {
+          "speaker": "Judge Alvarez-Penhallow",
+          "text": "Order. Order. Bailiff, the cloud in the public gallery is raining again.",
+          "startMs": 900
+        },
+        {
+          "speaker": "Bailiff Mutch",
+          "text": "Shall I remove it, Your Honour?",
+          "startMs": 5366
+        },
+        {
+          "speaker": "Judge Alvarez-Penhallow",
+          "text": "No. Give it a tissue. It's been a very emotional morning for everyone.",
+          "startMs": 7320
+        }
+      ]
+    },
+    {
+      "id": "case-body-008",
+      "category": "story",
+      "url": "/voice/small-claims/case-body-008.mp3",
+      "durationMs": 13082,
+      "overMusic": false,
+      "part": "body",
+      "kit": "case",
+      "lines": [
+        {
+          "speaker": "Judge Alvarez-Penhallow",
+          "text": "Is the defendant present?",
+          "startMs": 438
+        },
+        {
+          "speaker": "Ms. Castellane, for the Defence",
+          "text": "Partly, Your Honour.",
+          "startMs": 2487
+        },
+        {
+          "speaker": "Judge Alvarez-Penhallow",
+          "text": "Which part?",
+          "startMs": 3815
+        },
+        {
+          "speaker": "Ms. Castellane, for the Defence",
+          "text": "The part that's sorry, Your Honour. The rest of my client sends its apologies, but it's in another dimension, and it isn't sorry at all.",
+          "startMs": 5186
+        }
+      ]
+    },
+    {
+      "id": "case-body-009",
+      "category": "story",
+      "url": "/voice/small-claims/case-body-009.mp3",
+      "durationMs": 19339,
+      "overMusic": false,
+      "part": "body",
+      "kit": "case",
+      "lines": [
+        {
+          "speaker": "A Dimension",
+          "text": "Your Honour. I wish to give evidence.",
+          "startMs": 431
+        },
+        {
+          "speaker": "Judge Alvarez-Penhallow",
+          "text": "The court recognises the dimension. Please keep your voice down. You're rattling the windows in two other courtrooms.",
+          "startMs": 3244
+        },
+        {
+          "speaker": "A Dimension",
+          "text": "Sorry. I only wished to say that I saw everything.",
+          "startMs": 10164
+        },
+        {
+          "speaker": "Judge Alvarez-Penhallow",
+          "text": "Everything?",
+          "startMs": 13640
+        },
+        {
+          "speaker": "A Dimension",
+          "text": "I'm a dimension, Your Honour. I can't help it. It's all just there.",
+          "startMs": 14928
+        }
+      ]
+    },
+    {
+      "id": "case-body-010",
+      "category": "story",
+      "url": "/voice/small-claims/case-body-010.mp3",
+      "durationMs": 17396,
+      "overMusic": false,
+      "part": "body",
+      "kit": "case",
+      "lines": [
+        {
+          "speaker": "A Very Small Party",
+          "text": "Your Honour! Down here! I'd like to be heard!",
+          "startMs": 439
+        },
+        {
+          "speaker": "Judge Alvarez-Penhallow",
+          "text": "Bailiff, would you lift the very small party onto the witness stand, please. Gently.",
+          "startMs": 3032
+        },
+        {
+          "speaker": "Bailiff Mutch",
+          "text": "Up you come.",
+          "startMs": 7936
+        },
+        {
+          "speaker": "A Very Small Party",
+          "text": "Thank you. I just want to say that this whole business has been very big, from where I'm standing.",
+          "startMs": 9105
+        },
+        {
+          "speaker": "Judge Alvarez-Penhallow",
+          "text": "Noted. It has been very big from up here too.",
+          "startMs": 14283
+        }
+      ]
+    },
+    {
+      "id": "case-body-011",
+      "category": "story",
+      "url": "/voice/small-claims/case-body-011.mp3",
+      "durationMs": 14704,
+      "overMusic": false,
+      "part": "body",
+      "kit": "case",
+      "lines": [
+        {
+          "speaker": "The Plaintiff",
+          "text": "I'd like to call a witness from next week, Your Honour.",
+          "startMs": 439
+        },
+        {
+          "speaker": "Judge Alvarez-Penhallow",
+          "text": "The court allows it. Where is the witness?",
+          "startMs": 3607
+        },
+        {
+          "speaker": "Clerk Odell",
+          "text": "They'll be here next week, Your Honour.",
+          "startMs": 6441
+        },
+        {
+          "speaker": "Judge Alvarez-Penhallow",
+          "text": "Then we shall hear their evidence next week, and pretend, for now, that we have. Everyone look convinced.",
+          "startMs": 8536
+        }
+      ]
+    },
+    {
+      "id": "case-body-012",
+      "category": "story",
+      "url": "/voice/small-claims/case-body-012.mp3",
+      "durationMs": 15129,
+      "overMusic": false,
+      "part": "body",
+      "kit": "case",
+      "lines": [
+        {
+          "speaker": "Ms. Castellane, for the Defence",
+          "text": "Your Honour, my client did not take the item. My client was merely standing very close to the item when it left.",
+          "startMs": 443
+        },
+        {
+          "speaker": "Mr. Lusk, for the Plaintiff",
+          "text": "Your Honour, the item was in the defendant's coat.",
+          "startMs": 7204
+        },
+        {
+          "speaker": "Ms. Castellane, for the Defence",
+          "text": "A coincidence. My client has a very large coat. Things get into it.",
+          "startMs": 10635
+        }
+      ]
+    },
+    {
+      "id": "case-body-013",
+      "category": "story",
+      "url": "/voice/small-claims/case-body-013.mp3",
+      "durationMs": 11906,
+      "overMusic": false,
+      "part": "body",
+      "kit": "case",
+      "lines": [
+        {
+          "speaker": "Mr. Lusk, for the Plaintiff",
+          "text": "Objection, Your Honour. Relevance.",
+          "startMs": 450
+        },
+        {
+          "speaker": "Judge Alvarez-Penhallow",
+          "text": "To what?",
+          "startMs": 3467
+        },
+        {
+          "speaker": "Mr. Lusk, for the Plaintiff",
+          "text": "To anything, Your Honour. Anything at all.",
+          "startMs": 4714
+        },
+        {
+          "speaker": "Judge Alvarez-Penhallow",
+          "text": "Sustained. The court has been wondering about that for some years.",
+          "startMs": 7855
+        }
+      ]
+    },
+    {
+      "id": "case-body-014",
+      "category": "story",
+      "url": "/voice/small-claims/case-body-014.mp3",
+      "durationMs": 19692,
+      "overMusic": false,
+      "part": "body",
+      "kit": "case",
+      "lines": [
+        {
+          "speaker": "The Defendant",
+          "text": "I'd like to say something, Your Honour. In all the dimensions I've lived in, this is the only one where anybody has ever taken me to court.",
+          "startMs": 448
+        },
+        {
+          "speaker": "Judge Alvarez-Penhallow",
+          "text": "And how does that feel?",
+          "startMs": 12700
+        },
+        {
+          "speaker": "The Defendant",
+          "text": "Honestly? Quite flattering. It's nice to be noticed.",
+          "startMs": 14549
+        }
+      ]
+    },
+    {
+      "id": "case-body-015",
+      "category": "story",
+      "url": "/voice/small-claims/case-body-015.mp3",
+      "durationMs": 12240,
+      "overMusic": false,
+      "part": "body",
+      "kit": "case",
+      "lines": [
+        {
+          "speaker": "Judge Alvarez-Penhallow",
+          "text": "Clerk Odell, would you read back the plaintiff's last statement?",
+          "startMs": 436
+        },
+        {
+          "speaker": "Clerk Odell",
+          "text": "The plaintiff said, and I quote: it's the principle of the thing, and also the thing.",
+          "startMs": 3945
+        },
+        {
+          "speaker": "Judge Alvarez-Penhallow",
+          "text": "Thank you. The court has rarely heard it put so clearly.",
+          "startMs": 8788
+        }
+      ]
+    },
+    {
+      "id": "case-body-016",
+      "category": "story",
+      "url": "/voice/small-claims/case-body-016.mp3",
+      "durationMs": 24150,
+      "overMusic": false,
+      "part": "body",
+      "kit": "case",
+      "lines": [
+        {
+          "speaker": "Ms. Castellane, for the Defence",
+          "text": "Your Honour, my client has prepared a statement.",
+          "startMs": 436
+        },
+        {
+          "speaker": "The Defendant",
+          "text": "I am sorry for any inconvenience that may or may not have occurred, in any timeline where it may or may not have occurred, to anybody who was there, or who wasn't, but heard.",
+          "startMs": 3159
+        },
+        {
+          "speaker": "Judge Alvarez-Penhallow",
+          "text": "That is the most thorough apology the court has received. The court is going to frame it.",
+          "startMs": 18762
+        }
+      ]
+    },
+    {
+      "id": "case-body-017",
+      "category": "story",
+      "url": "/voice/small-claims/case-body-017.mp3",
+      "durationMs": 20162,
+      "overMusic": false,
+      "part": "body",
+      "kit": "case",
+      "lines": [
+        {
+          "speaker": "Mr. Lusk, for the Plaintiff",
+          "text": "Your Honour, I direct the court's attention to the plaintiff's face. Look at it. That is the face of someone who has been wronged.",
+          "startMs": 436
+        },
+        {
+          "speaker": "Judge Alvarez-Penhallow",
+          "text": "The court has looked. The court notes the plaintiff's face has been like that since the plaintiff arrived. And in the corridor. And in the photograph on the claim form.",
+          "startMs": 7836
+        },
+        {
+          "speaker": "Mr. Lusk, for the Plaintiff",
+          "text": "Wronged for a long time, Your Honour.",
+          "startMs": 17045
+        }
+      ]
+    },
+    {
+      "id": "case-body-018",
+      "category": "story",
+      "url": "/voice/small-claims/case-body-018.mp3",
+      "durationMs": 13562,
+      "overMusic": false,
+      "part": "body",
+      "kit": "case",
+      "lines": [
+        {
+          "speaker": "Judge Alvarez-Penhallow",
+          "text": "Before we go further, does anybody in this courtroom have any idea what this case is actually about?",
+          "startMs": 436
+        },
+        {
+          "speaker": "Clerk Odell",
+          "text": "The clerk does, Your Honour. Roughly. In outline.",
+          "startMs": 7949
+        },
+        {
+          "speaker": "Judge Alvarez-Penhallow",
+          "text": "Splendid. Then we have a quorum.",
+          "startMs": 10961
+        }
+      ]
+    },
+    {
+      "id": "case-body-019",
+      "category": "story",
+      "url": "/voice/small-claims/case-body-019.mp3",
+      "durationMs": 10855,
+      "overMusic": false,
+      "part": "body",
+      "kit": "case",
+      "lines": [
+        {
+          "speaker": "Bailiff Mutch",
+          "text": "Your Honour, there's a goose in the corridor asking whether it's needed.",
+          "startMs": 442
+        },
+        {
+          "speaker": "Judge Alvarez-Penhallow",
+          "text": "Tell the goose it isn't a suspect here. This isn't that sort of station.",
+          "startMs": 4086
+        },
+        {
+          "speaker": "Bailiff Mutch",
+          "text": "It says it'll wait. Just in case.",
+          "startMs": 8364
+        }
+      ]
+    },
+    {
+      "id": "case-close-001",
+      "category": "story",
+      "url": "/voice/small-claims/case-close-001.mp3",
+      "durationMs": 8348,
+      "overMusic": false,
+      "part": "close",
+      "kit": "case",
+      "lines": [
+        {
+          "speaker": "Judge Alvarez-Penhallow",
+          "text": "The court finds that everybody is a little bit right, which is the most annoying verdict available. Costs shared. Next.",
+          "startMs": 438
+        }
+      ]
+    },
+    {
+      "id": "case-close-002",
+      "category": "story",
+      "url": "/voice/small-claims/case-close-002.mp3",
+      "durationMs": 5783,
+      "overMusic": false,
+      "part": "close",
+      "kit": "case",
+      "lines": [
+        {
+          "speaker": "Judge Alvarez-Penhallow",
+          "text": "Case dismissed. Both parties are to shake hands, using whatever they have.",
+          "startMs": 439
+        }
+      ]
+    },
+    {
+      "id": "case-close-003",
+      "category": "story",
+      "url": "/voice/small-claims/case-close-003.mp3",
+      "durationMs": 8670,
+      "overMusic": false,
+      "part": "close",
+      "kit": "case",
+      "lines": [
+        {
+          "speaker": "Judge Alvarez-Penhallow",
+          "text": "Judgment for the plaintiff in this dimension, and for the defendant in all the others. Please sort it out amongst yourselves, in the car park.",
+          "startMs": 438
+        }
+      ]
+    },
+    {
+      "id": "case-close-004",
+      "category": "story",
+      "url": "/voice/small-claims/case-close-004.mp3",
+      "durationMs": 8722,
+      "overMusic": false,
+      "part": "close",
+      "kit": "case",
+      "lines": [
+        {
+          "speaker": "Judge Alvarez-Penhallow",
+          "text": "The court awards damages of one sincere apology, payable now.",
+          "startMs": 438
+        },
+        {
+          "speaker": "Judge Alvarez-Penhallow",
+          "text": "That will do. Case closed.",
+          "startMs": 6006
+        }
+      ]
+    },
+    {
+      "id": "case-close-005",
+      "category": "story",
+      "url": "/voice/small-claims/case-close-005.mp3",
+      "durationMs": 6602,
+      "overMusic": false,
+      "part": "close",
+      "kit": "case",
+      "lines": [
+        {
+          "speaker": "Judge Alvarez-Penhallow",
+          "text": "Settled out of court, apparently, while I was talking. Well done, both of you. Odell, the next one.",
+          "startMs": 440
+        }
+      ]
+    },
+    {
+      "id": "case-close-006",
+      "category": "story",
+      "url": "/voice/small-claims/case-close-006.mp3",
+      "durationMs": 6992,
+      "overMusic": false,
+      "part": "close",
+      "kit": "case",
+      "lines": [
+        {
+          "speaker": "Judge Alvarez-Penhallow",
+          "text": "Adjourned until the matter makes sense. Odell, mark it as a long adjournment.",
+          "startMs": 436
+        },
+        {
+          "speaker": "Clerk Odell",
+          "text": "The longest, Your Honour.",
+          "startMs": 5108
+        }
+      ]
+    },
+    {
+      "id": "case-close-007",
+      "category": "story",
+      "url": "/voice/small-claims/case-close-007.mp3",
+      "durationMs": 7919,
+      "overMusic": false,
+      "part": "close",
+      "kit": "case",
+      "lines": [
+        {
+          "speaker": "Judge Alvarez-Penhallow",
+          "text": "The court rules for the defendant, but would like it known that it didn't enjoy doing so, and it won't be doing it again.",
+          "startMs": 444
+        }
+      ]
+    },
+    {
+      "id": "case-close-008",
+      "category": "story",
+      "url": "/voice/small-claims/case-close-008.mp3",
+      "durationMs": 7674,
+      "overMusic": false,
+      "part": "close",
+      "kit": "case",
+      "lines": [
+        {
+          "speaker": "Judge Alvarez-Penhallow",
+          "text": "The item is to be returned to whoever misses it most.",
+          "startMs": 438
+        },
+        {
+          "speaker": "Judge Alvarez-Penhallow",
+          "text": "That's both of you. Then share it. On alternate Tuesdays.",
+          "startMs": 3746
+        }
+      ]
+    },
+    {
+      "id": "case-close-009",
+      "category": "story",
+      "url": "/voice/small-claims/case-close-009.mp3",
+      "durationMs": 6052,
+      "overMusic": false,
+      "part": "close",
+      "kit": "case",
+      "lines": [
+        {
+          "speaker": "Judge Alvarez-Penhallow",
+          "text": "Judgment reserved. I'll reserve it somewhere nice, with a view, and come back for it after lunch.",
+          "startMs": 438
+        }
+      ]
+    },
+    {
+      "id": "case-close-010",
+      "category": "story",
+      "url": "/voice/small-claims/case-close-010.mp3",
+      "durationMs": 7866,
+      "overMusic": false,
+      "part": "close",
+      "kit": "case",
+      "lines": [
+        {
+          "speaker": "Judge Alvarez-Penhallow",
+          "text": "The court finds for the plaintiff. The defendant will pay costs of one hour of sitting quietly, thinking about it.",
+          "startMs": 438
+        }
+      ]
+    },
+    {
+      "id": "case-close-011",
+      "category": "story",
+      "url": "/voice/small-claims/case-close-011.mp3",
+      "durationMs": 6355,
+      "overMusic": false,
+      "part": "close",
+      "kit": "case",
+      "lines": [
+        {
+          "speaker": "Judge Alvarez-Penhallow",
+          "text": "No case to answer. There's barely a case to ask. Off you go, the lot of you. Mind the cloud.",
+          "startMs": 440
+        }
+      ]
+    },
+    {
+      "id": "psa-recess-001",
+      "category": "psa",
+      "url": "/voice/small-claims/psa-recess-001.mp3",
+      "durationMs": 12232,
+      "title": "Recess",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Clerk Odell",
+          "text": "The court is in recess. Please remain seated, or, if you have no means of sitting, remain whatever you are.",
+          "startMs": 150
+        },
+        {
+          "speaker": "Clerk Odell",
+          "text": "The tea trolley is in the corridor. Parties from opposing dimensions are asked to take turns.",
+          "startMs": 6744
+        }
+      ]
+    },
+    {
+      "id": "psa-recess-002",
+      "category": "psa",
+      "url": "/voice/small-claims/psa-recess-002.mp3",
+      "durationMs": 9128,
+      "title": "Recess, Briefly",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Judge Alvarez-Penhallow",
+          "text": "We'll take a short recess. Fifteen minutes, local time. If you don't have local time, borrow some from the clerk.",
+          "startMs": 40
+        },
+        {
+          "speaker": "Clerk Odell",
+          "text": "I have plenty, Your Honour. It's in the drawer.",
+          "startMs": 6732
+        }
+      ]
+    },
+    {
+      "id": "psa-recess-003",
+      "category": "psa",
+      "url": "/voice/small-claims/psa-recess-003.mp3",
+      "durationMs": 15162,
+      "title": "Court Notices",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Clerk Odell",
+          "text": "Court notices. Witnesses who exist only in the past tense are asked to give evidence before lunch, while they still can.",
+          "startMs": 36
+        },
+        {
+          "speaker": "Clerk Odell",
+          "text": "Lost property, at the clerk's desk: one umbrella, one shadow, one very small hat. The hat was fined for contempt, and has paid.",
+          "startMs": 7529
+        }
+      ]
+    },
+    {
+      "id": "dj-001",
+      "category": "dj",
+      "url": "/voice/small-claims/dj-001.mp3",
+      "durationMs": 10044,
+      "title": "The Docket",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Clerk Odell",
+          "text": "Today's docket, Your Honour. Forty one cases. Six fences. Three hours, borrowed. Two moons. One hat.",
+          "startMs": 36
+        },
+        {
+          "speaker": "Judge Alvarez-Penhallow",
+          "text": "Just the one hat?",
+          "startMs": 6624
+        },
+        {
+          "speaker": "Clerk Odell",
+          "text": "It's a very serious hat, Your Honour.",
+          "startMs": 8153
+        }
+      ]
+    },
+    {
+      "id": "dj-002",
+      "category": "dj",
+      "url": "/voice/small-claims/dj-002.mp3",
+      "durationMs": 12413,
+      "title": "Fair to the Weather",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Judge Alvarez-Penhallow",
+          "text": "I'm often asked why I take claims from the weather. The answer is simple. Everybody complains about the weather. Nobody asks what the weather thinks.",
+          "startMs": 36
+        },
+        {
+          "speaker": "Judge Alvarez-Penhallow",
+          "text": "It has a great deal to say. It says most of it on Tuesdays.",
+          "startMs": 8782
+        }
+      ]
+    },
+    {
+      "id": "dj-003",
+      "category": "dj",
+      "url": "/voice/small-claims/dj-003.mp3",
+      "durationMs": 11213,
+      "title": "Odell's Voice",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Judge Alvarez-Penhallow",
+          "text": "People ask me why Clerk Odell reads the cases in that voice.",
+          "startMs": 37
+        },
+        {
+          "speaker": "Clerk Odell",
+          "text": "Which voice, Your Honour?",
+          "startMs": 3866
+        },
+        {
+          "speaker": "Judge Alvarez-Penhallow",
+          "text": "That one, Odell. Like a forecast for a sea that isn't there.",
+          "startMs": 5499
+        },
+        {
+          "speaker": "Clerk Odell",
+          "text": "Moderate, Your Honour. Becoming good.",
+          "startMs": 9254
+        }
+      ]
+    },
+    {
+      "id": "dj-004",
+      "category": "dj",
+      "url": "/voice/small-claims/dj-004.mp3",
+      "durationMs": 13309,
+      "title": "Jurisdiction",
+      "overMusic": true,
+      "daypart": "night",
+      "lines": [
+        {
+          "speaker": "Judge Alvarez-Penhallow",
+          "text": "The court notes that a relay ship has drifted into its jurisdiction. Good evening, operator.",
+          "startMs": 39
+        },
+        {
+          "speaker": "Judge Alvarez-Penhallow",
+          "text": "You've done nothing wrong. Drifting is not an offence. Not knowing why you are drifting is not an offence either. It's merely interesting.",
+          "startMs": 5795
+        }
+      ]
+    },
+    {
+      "id": "dj-005",
+      "category": "dj",
+      "url": "/voice/small-claims/dj-005.mp3",
+      "durationMs": 15923,
+      "title": "Green Ink",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Judge Alvarez-Penhallow",
+          "text": "I take my notes in green ink. Red ink is for mistakes. Black ink is for the record. Green ink is for things I found delightful.",
+          "startMs": 36
+        },
+        {
+          "speaker": "Judge Alvarez-Penhallow",
+          "text": "My notebooks are almost entirely green. Clerk Odell says it's unprofessional. Clerk Odell has a green pen too. I've seen it.",
+          "startMs": 8295
+        }
+      ]
+    },
+    {
+      "id": "ad-001",
+      "category": "ad",
+      "url": "/voice/small-claims/ad-001.mp3",
+      "durationMs": 18322,
+      "title": "Fenwright and Daughters, Notaries",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Clerk Odell",
+          "text": "Small Claims of the Multiverse is supported by Fenwright and Daughters, interdimensional notaries.",
+          "startMs": 40
+        },
+        {
+          "speaker": "Clerk Odell",
+          "text": "Witnessing signatures in every dimension since the first contract, which was between a cliff and the sea, and is still being argued about.",
+          "startMs": 5962
+        },
+        {
+          "speaker": "Clerk Odell",
+          "text": "Fenwright and Daughters. We'll stamp anything. Within reason. Reason is extra.",
+          "startMs": 13851
+        }
+      ]
+    },
+    {
+      "id": "ad-002",
+      "category": "ad",
+      "url": "/voice/small-claims/ad-002.mp3",
+      "durationMs": 15559,
+      "title": "Plaintiff's Pastilles",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Mr. Lusk, for the Plaintiff",
+          "text": "Long day in court? Throat raw from objecting? Try Plaintiff's Pastilles.",
+          "startMs": 33
+        },
+        {
+          "speaker": "Mr. Lusk, for the Plaintiff",
+          "text": "Honey, lemon, and a faint taste of justice. Suitable for counsel, witnesses and the occasional dimension.",
+          "startMs": 5010
+        },
+        {
+          "speaker": "Ms. Castellane, for the Defence",
+          "text": "Defendants may experience the same benefits. It's only fair.",
+          "startMs": 12079
+        }
+      ]
+    },
+    {
+      "id": "ad-003",
+      "category": "ad",
+      "url": "/voice/small-claims/ad-003.mp3",
+      "durationMs": 16880,
+      "title": "Grumbel's Ladders, Before the Bench",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Judge Alvarez-Penhallow",
+          "text": "This court is not permitted to endorse products. However.",
+          "startMs": 39
+        },
+        {
+          "speaker": "Judge Alvarez-Penhallow",
+          "text": "Grumbel's Ladders have appeared before this bench forty one times, as plaintiff, defendant and witness, and have never once been found to be anything other than a ladder.",
+          "startMs": 3852
+        },
+        {
+          "speaker": "Judge Alvarez-Penhallow",
+          "text": "That is more than can be said for most of us. Up is a choice.",
+          "startMs": 13378
+        }
+      ]
+    },
+    {
+      "id": "show-petty-open",
+      "category": "id",
+      "url": "/voice/small-claims/show-petty-open.mp3",
+      "durationMs": 6156,
+      "overMusic": true,
+      "part": "open",
+      "show": "petty-sessions",
+      "lines": [
+        {
+          "speaker": "Clerk Odell",
+          "text": "All rise for Petty Sessions. Judge Alvarez-Penhallow presiding. Fences first, then clouds.",
+          "startMs": 150
+        }
+      ]
+    },
+    {
+      "id": "show-petty-001",
+      "category": "dj",
+      "url": "/voice/small-claims/show-petty-001.mp3",
+      "durationMs": 11965,
+      "overMusic": true,
+      "show": "petty-sessions",
+      "lines": [
+        {
+          "speaker": "Judge Alvarez-Penhallow",
+          "text": "Good morning. Before we start, a reminder that the court does not accept evidence in the form of a hunch, a vibe, or a strong feeling about a neighbour.",
+          "startMs": 36
+        },
+        {
+          "speaker": "Judge Alvarez-Penhallow",
+          "text": "Unless the neighbour is the weather, in which case, we'll allow it.",
+          "startMs": 8766
+        }
+      ]
+    },
+    {
+      "id": "show-late-open",
+      "category": "id",
+      "url": "/voice/small-claims/show-late-open.mp3",
+      "durationMs": 8708,
+      "overMusic": true,
+      "daypart": "night",
+      "part": "open",
+      "show": "the-late-list",
+      "lines": [
+        {
+          "speaker": "Clerk Odell",
+          "text": "The court is now sitting for the Late List. Parties who only exist after dark, please come forward. Mind the step. It's darker than it looks.",
+          "startMs": 39
+        }
+      ]
+    },
+    {
+      "id": "show-late-001",
+      "category": "dj",
+      "url": "/voice/small-claims/show-late-001.mp3",
+      "durationMs": 11751,
+      "overMusic": true,
+      "show": "the-late-list",
+      "lines": [
+        {
+          "speaker": "Judge Alvarez-Penhallow",
+          "text": "The Late List. Tonight, eleven noise complaints from the void. The void says everything else is too loud.",
+          "startMs": 35
+        },
+        {
+          "speaker": "Judge Alvarez-Penhallow",
+          "text": "It has a point. It always has a point. It's a very small point, in a very large silence.",
+          "startMs": 6466
+        }
+      ]
+    },
+    {
+      "id": "show-late-002",
+      "category": "dj",
+      "url": "/voice/small-claims/show-late-002.mp3",
+      "durationMs": 14554,
+      "overMusic": true,
+      "show": "the-late-list",
+      "lines": [
+        {
+          "speaker": "Clerk Odell",
+          "text": "Your Honour, the plaintiff in the next case is a shadow, who says it's been walked out on.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Judge Alvarez-Penhallow",
+          "text": "Not Greg?",
+          "startMs": 5051
+        },
+        {
+          "speaker": "Clerk Odell",
+          "text": "No, Your Honour. The other way round. Its person left it.",
+          "startMs": 6428
+        },
+        {
+          "speaker": "Judge Alvarez-Penhallow",
+          "text": "Oh. Oh, that's much worse. Bring it some tea. Bring it a chair it can lie across.",
+          "startMs": 10061
+        }
+      ]
+    },
+    {
+      "id": "show-landmark-open",
+      "category": "id",
+      "url": "/voice/small-claims/show-landmark-open.mp3",
+      "durationMs": 9340,
+      "overMusic": true,
+      "part": "open",
+      "show": "landmark-rulings",
+      "lines": [
+        {
+          "speaker": "Clerk Odell",
+          "text": "It's Friday, and this is Landmark Rulings. The great precedents of the Tribunal, revisited from the bench.",
+          "startMs": 3199
+        }
+      ]
+    },
+    {
+      "id": "show-landmark-001",
+      "category": "story",
+      "url": "/voice/small-claims/show-landmark-001.mp3",
+      "durationMs": 36268,
+      "title": "The Sea against the Shore",
+      "overMusic": false,
+      "show": "landmark-rulings",
+      "lines": [
+        {
+          "speaker": "Judge Alvarez-Penhallow",
+          "text": "Landmark ruling number one. The Sea, against the Shore. The oldest case on our books.",
+          "startMs": 450
+        },
+        {
+          "speaker": "Clerk Odell",
+          "text": "The Sea claimed the beach. The Shore claimed the beach. The beach declined to give evidence, and simply lay there.",
+          "startMs": 5803
+        },
+        {
+          "speaker": "Judge Alvarez-Penhallow",
+          "text": "Counsel for the Sea argued that the beach was wet, and wet things are the Sea's. Counsel for the Shore argued that the beach was sandy, and sandy things are the Shore's.",
+          "startMs": 12212
+        },
+        {
+          "speaker": "Judge Alvarez-Penhallow",
+          "text": "The court ruled that the wet bit belongs to the Sea, and the dry bit belongs to the Shore, and the bit in between belongs to whoever is standing on it at the time, eating an ice cream.",
+          "startMs": 21588
+        },
+        {
+          "speaker": "Clerk Odell",
+          "text": "The ruling stands to this day, Your Honour. Twice a day, it's tested.",
+          "startMs": 32013
+        }
+      ]
+    },
+    {
+      "id": "show-landmark-002",
+      "category": "story",
+      "url": "/voice/small-claims/show-landmark-002.mp3",
+      "durationMs": 35254,
+      "title": "In the Matter of the Last Biscuit",
+      "overMusic": false,
+      "show": "landmark-rulings",
+      "lines": [
+        {
+          "speaker": "Judge Alvarez-Penhallow",
+          "text": "Landmark ruling number two. In the matter of the last biscuit.",
+          "startMs": 436
+        },
+        {
+          "speaker": "Clerk Odell",
+          "text": "Eleven parties, Your Honour, from four dimensions, all of whom had been offered the last biscuit, and all of whom had said, oh, no, you have it.",
+          "startMs": 4576
+        },
+        {
+          "speaker": "Judge Alvarez-Penhallow",
+          "text": "The biscuit sat on the plate for nine years. It became a landmark in its own right. People came to see it.",
+          "startMs": 12865
+        },
+        {
+          "speaker": "Judge Alvarez-Penhallow",
+          "text": "The court ruled that the last biscuit belongs to whoever did not ask for it. Since nobody had, it belonged to everybody, and was broken into eleven pieces, by the Bailiff, very carefully.",
+          "startMs": 19409
+        },
+        {
+          "speaker": "Clerk Odell",
+          "text": "Mutch still talks about it, Your Honour.",
+          "startMs": 30442
+        },
+        {
+          "speaker": "Judge Alvarez-Penhallow",
+          "text": "So do I, Odell. So do I.",
+          "startMs": 32635
+        }
+      ]
+    },
+    {
+      "id": "show-landmark-003",
+      "category": "story",
+      "url": "/voice/small-claims/show-landmark-003.mp3",
+      "durationMs": 34108,
+      "title": "Tuesday against Tuesday",
+      "overMusic": false,
+      "show": "landmark-rulings",
+      "lines": [
+        {
+          "speaker": "Judge Alvarez-Penhallow",
+          "text": "Landmark ruling number three. Tuesday, against Tuesday.",
+          "startMs": 438
+        },
+        {
+          "speaker": "Clerk Odell",
+          "text": "A week in the Grey Reach was found to contain two Tuesdays. Each claimed to be the real one. Each had its own weather, its own bin day, and its own very strong opinion.",
+          "startMs": 4196
+        },
+        {
+          "speaker": "Judge Alvarez-Penhallow",
+          "text": "The week asked the court to choose. The court declined. You cannot ask a week to choose between its days. It's cruel. And the days can hear you.",
+          "startMs": 14588
+        },
+        {
+          "speaker": "Judge Alvarez-Penhallow",
+          "text": "The court ruled that the week may keep both Tuesdays, on condition that it treat them equally, and that Wednesday be told gently.",
+          "startMs": 22711
+        },
+        {
+          "speaker": "Clerk Odell",
+          "text": "Wednesday took it very well, Your Honour. All things considered.",
+          "startMs": 30241
+        }
+      ]
+    },
+    {
+      "id": "convergence-missing-moon",
+      "category": "event",
+      "url": "/voice/small-claims/convergence-missing-moon.mp3",
+      "durationMs": 10427,
+      "overMusic": false,
+      "kit": "missing-moon",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Clerk Odell",
+          "text": "Your Honour, eleven planets have filed claims for the same missing moon.",
+          "startMs": 40
+        },
+        {
+          "speaker": "Judge Alvarez-Penhallow",
+          "text": "Then the moon is ordered to appear before this court. Immediately. Or, failing that, tonight, where people can see it.",
+          "startMs": 4218
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-smell",
+      "category": "event",
+      "url": "/voice/small-claims/convergence-the-smell.mp3",
+      "durationMs": 10082,
+      "overMusic": false,
+      "kit": "the-smell",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Judge Alvarez-Penhallow",
+          "text": "Order. Order. The court is aware that everything smells of toast.",
+          "startMs": 37
+        },
+        {
+          "speaker": "Judge Alvarez-Penhallow",
+          "text": "The court did not make the toast. The court would like that on the record, and also, if possible, some toast.",
+          "startMs": 4365
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-song",
+      "category": "event",
+      "url": "/voice/small-claims/convergence-the-song.mp3",
+      "durationMs": 8960,
+      "overMusic": false,
+      "kit": "the-song",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Clerk Odell",
+          "text": "Your Honour, the whole gallery is humming the same song.",
+          "startMs": 41
+        },
+        {
+          "speaker": "Judge Alvarez-Penhallow",
+          "text": "So is the bench, Odell. Nobody can finish it. Adjourned until somebody remembers how it goes.",
+          "startMs": 3266
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-knock",
+      "category": "event",
+      "url": "/voice/small-claims/convergence-the-knock.mp3",
+      "durationMs": 10563,
+      "overMusic": false,
+      "kit": "the-knock",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Judge Alvarez-Penhallow",
+          "text": "That wasn't the gavel. Somebody knocked. Three times.",
+          "startMs": 500
+        },
+        {
+          "speaker": "Bailiff Mutch",
+          "text": "Nobody at the door, Your Honour.",
+          "startMs": 3734
+        },
+        {
+          "speaker": "Judge Alvarez-Penhallow",
+          "text": "Then let the record show the court was knocked on, by nobody. We'll hear them when they're ready.",
+          "startMs": 5733
+        }
+      ]
+    },
+    {
+      "id": "convergence-wrong-colour",
+      "category": "event",
+      "url": "/voice/small-claims/convergence-wrong-colour.mp3",
+      "durationMs": 9744,
+      "overMusic": false,
+      "kit": "wrong-colour",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Judge Alvarez-Penhallow",
+          "text": "The sky outside the windows is a colour the court has no word for.",
+          "startMs": 39
+        },
+        {
+          "speaker": "Judge Alvarez-Penhallow",
+          "text": "Clerk Odell, enter it in the record as, indescribable, and underline it twice. In green ink.",
+          "startMs": 3929
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-pigeon",
+      "category": "event",
+      "url": "/voice/small-claims/convergence-the-pigeon.mp3",
+      "durationMs": 9536,
+      "overMusic": false,
+      "kit": "the-pigeon",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Bailiff Mutch",
+          "text": "Your Honour, there's a pigeon on the witness stand.",
+          "startMs": 47
+        },
+        {
+          "speaker": "Judge Alvarez-Penhallow",
+          "text": "It seems to know me. Has it been sworn in?",
+          "startMs": 2649
+        },
+        {
+          "speaker": "Bailiff Mutch",
+          "text": "It's nodding, Your Honour.",
+          "startMs": 5440
+        },
+        {
+          "speaker": "Judge Alvarez-Penhallow",
+          "text": "Good enough. Go on, then. Tell us everything.",
+          "startMs": 7180
+        }
+      ]
+    },
+    {
+      "id": "halloween-001",
+      "category": "story",
+      "url": "/voice/small-claims/halloween-001.mp3",
+      "durationMs": 27365,
+      "title": "The Haunted House against Its Ghost",
+      "overMusic": false,
+      "dates": [
+        "10-24",
+        "10-25",
+        "10-26",
+        "10-27",
+        "10-28",
+        "10-29",
+        "10-30",
+        "10-31"
+      ],
+      "lines": [
+        {
+          "speaker": "Clerk Odell",
+          "text": "A special Halloween hearing. Number nine, Crowsfoot Lane, a house, against its ghost. The house claims the ghost hasn't haunted it properly in years.",
+          "startMs": 3500
+        },
+        {
+          "speaker": "Judge Alvarez-Penhallow",
+          "text": "Is this true?",
+          "startMs": 12615
+        },
+        {
+          "speaker": "Ms. Castellane, for the Defence",
+          "text": "My client has been very tired, Your Honour. Two hundred years of rattling. It's taken up knitting.",
+          "startMs": 14042
+        },
+        {
+          "speaker": "Judge Alvarez-Penhallow",
+          "text": "The court orders one proper haunting, on the thirty first, with chains, and the knitting may come along. Case closed. Boo.",
+          "startMs": 19623
+        }
+      ]
+    }
+  ]
+}

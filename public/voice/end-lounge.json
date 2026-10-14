@@ -1091,6 +1091,387 @@
           "startMs": 50
         }
       ]
+    },
+    {
+      "id": "convergence-missing-moon",
+      "category": "event",
+      "url": "/voice/end-lounge/convergence-missing-moon.mp3",
+      "durationMs": 13538,
+      "title": "The Convergence: A Moon Goes Missing",
+      "overMusic": false,
+      "kit": "missing-moon",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Barnaby Velvet",
+          "text": "A moon has gone missing, darling. Everybody agrees one's gone. Nobody agrees which.",
+          "startMs": 28
+        },
+        {
+          "speaker": "Barnaby Velvet",
+          "text": "At the end of time we've lost a great many moons. We never mind. We simply look up, fondly, at the space where it was.",
+          "startMs": 6311
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-smell",
+      "category": "event",
+      "url": "/voice/end-lounge/convergence-the-smell.mp3",
+      "durationMs": 11655,
+      "title": "The Convergence: Toast, Everywhere",
+      "overMusic": false,
+      "kit": "the-smell",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Barnaby Velvet",
+          "text": "Gilbert, is that toast?",
+          "startMs": 50
+        },
+        {
+          "speaker": "Gilbert (Bartender)",
+          "text": "Not mine.",
+          "startMs": 2693
+        },
+        {
+          "speaker": "Barnaby Velvet",
+          "text": "The whole universe smells of toast tonight, darling. Someone, somewhere, is having breakfast at the end of everything. Good for them.",
+          "startMs": 3887
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-song",
+      "category": "event",
+      "url": "/voice/end-lounge/convergence-the-song.mp3",
+      "durationMs": 14042,
+      "title": "The Convergence: The Song Nobody Can Finish",
+      "overMusic": false,
+      "kit": "the-song",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Barnaby Velvet",
+          "text": "There's a song in everybody's head tonight, darling, and nobody can finish it.",
+          "startMs": 40
+        },
+        {
+          "speaker": "Barnaby Velvet",
+          "text": "Smooth Harold gets to the same bar every time, and stops, and looks at the empty microphone. A real heartbreaker. Even without the end.",
+          "startMs": 5384
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-knock",
+      "category": "event",
+      "url": "/voice/end-lounge/convergence-the-knock.mp3",
+      "durationMs": 10480,
+      "title": "The Convergence: Three Knocks",
+      "overMusic": false,
+      "kit": "the-knock",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Barnaby Velvet",
+          "text": "Three knocks at the door of the Lounge.",
+          "startMs": 36
+        },
+        {
+          "speaker": "Gilbert (Bartender)",
+          "text": "Nobody.",
+          "startMs": 3186
+        },
+        {
+          "speaker": "Barnaby Velvet",
+          "text": "Nobody, darling. At the end of time, that's usually who it is. Come in, Nobody. Booth five's free.",
+          "startMs": 4257
+        }
+      ]
+    },
+    {
+      "id": "convergence-wrong-colour",
+      "category": "event",
+      "url": "/voice/end-lounge/convergence-wrong-colour.mp3",
+      "durationMs": 12544,
+      "title": "The Convergence: A Colour With No Name",
+      "overMusic": false,
+      "kit": "wrong-colour",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Barnaby Velvet",
+          "text": "Did you see the big window just now? The sky went a colour I've not seen in eleven billion years. Gilbert, what would you call that?",
+          "startMs": 49
+        },
+        {
+          "speaker": "Gilbert (Bartender)",
+          "text": "I wouldn't.",
+          "startMs": 8401
+        },
+        {
+          "speaker": "Barnaby Velvet",
+          "text": "He wouldn't. Some things you just let be.",
+          "startMs": 9534
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-pigeon",
+      "category": "event",
+      "url": "/voice/end-lounge/convergence-the-pigeon.mp3",
+      "durationMs": 12515,
+      "title": "The Convergence: The Pigeon",
+      "overMusic": false,
+      "kit": "the-pigeon",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Barnaby Velvet",
+          "text": "A pigeon has walked into the Lounge, darling, and taken a stool at the bar, as if it's been coming here for years.",
+          "startMs": 37
+        },
+        {
+          "speaker": "Gilbert (Bartender)",
+          "text": "The usual?",
+          "startMs": 7312
+        },
+        {
+          "speaker": "Barnaby Velvet",
+          "text": "Gilbert knows its usual. I didn't know it had a usual.",
+          "startMs": 8520
+        }
+      ]
+    },
+    {
+      "id": "the-quiet-corner-open",
+      "category": "id",
+      "url": "/voice/end-lounge/the-quiet-corner-open.mp3",
+      "durationMs": 12028,
+      "title": "The Quiet Corner with Greg",
+      "overMusic": true,
+      "part": "open",
+      "show": "the-quiet-corner",
+      "lines": [
+        {
+          "speaker": "Barnaby Velvet",
+          "text": "Dim the lights, Gilbert. Dimmer.",
+          "startMs": 36
+        },
+        {
+          "speaker": "Gilbert (Bartender)",
+          "text": "They're off.",
+          "startMs": 3149
+        },
+        {
+          "speaker": "Barnaby Velvet",
+          "text": "Perfect. Ladies, gentlemen, and booth four. The voice at the end of the bar. The Quiet Corner, with Greg. Lean in, darlings.",
+          "startMs": 4346
+        }
+      ]
+    },
+    {
+      "id": "the-quiet-corner-01",
+      "category": "dj",
+      "url": "/voice/end-lounge/the-quiet-corner-01.mp3",
+      "durationMs": 13971,
+      "overMusic": true,
+      "show": "the-quiet-corner",
+      "lines": [
+        {
+          "speaker": "Greg, a Shadow",
+          "text": "Hello. It's Greg. This is the Quiet Corner.",
+          "startMs": 11
+        },
+        {
+          "speaker": "Greg, a Shadow",
+          "text": "I haven't got a lot to say. So I thought I'd say it quietly. In case it's only for one of you.",
+          "startMs": 4523
+        },
+        {
+          "speaker": "Greg, a Shadow",
+          "text": "If it is. Hello. I'm glad it's you.",
+          "startMs": 11658
+        }
+      ]
+    },
+    {
+      "id": "the-quiet-corner-02",
+      "category": "dj",
+      "url": "/voice/end-lounge/the-quiet-corner-02.mp3",
+      "durationMs": 15496,
+      "overMusic": true,
+      "show": "the-quiet-corner",
+      "lines": [
+        {
+          "speaker": "Greg, a Shadow",
+          "text": "Hollis left the porch light on for eleven years. For me.",
+          "startMs": 24
+        },
+        {
+          "speaker": "Greg, a Shadow",
+          "text": "I've been thinking about what I could leave on, for somebody else.",
+          "startMs": 4580
+        },
+        {
+          "speaker": "Greg, a Shadow",
+          "text": "So. There's a light on, in the corner. It's very small. It's yours. You don't have to come in. It's just on.",
+          "startMs": 9984
+        }
+      ]
+    },
+    {
+      "id": "the-quiet-corner-03",
+      "category": "dj",
+      "url": "/voice/end-lounge/the-quiet-corner-03.mp3",
+      "durationMs": 13118,
+      "overMusic": true,
+      "show": "the-quiet-corner",
+      "lines": [
+        {
+          "speaker": "Greg, a Shadow",
+          "text": "Something I know, from being a shadow.",
+          "startMs": 30
+        },
+        {
+          "speaker": "Greg, a Shadow",
+          "text": "You're never really on your own. There's always something near you, keeping your shape.",
+          "startMs": 4092
+        },
+        {
+          "speaker": "Greg, a Shadow",
+          "text": "Even at night. Especially at night. That's when we're everywhere.",
+          "startMs": 9608
+        }
+      ]
+    },
+    {
+      "id": "the-quiet-corner-04",
+      "category": "dj",
+      "url": "/voice/end-lounge/the-quiet-corner-04.mp3",
+      "durationMs": 13786,
+      "overMusic": true,
+      "show": "the-quiet-corner",
+      "lines": [
+        {
+          "speaker": "Greg, a Shadow",
+          "text": "Gilbert asked what I'd like to play. I said, something you have to lean in for.",
+          "startMs": 27
+        },
+        {
+          "speaker": "Greg, a Shadow",
+          "text": "He said, at the end of time, everything is something you have to lean in for.",
+          "startMs": 5670
+        },
+        {
+          "speaker": "Greg, a Shadow",
+          "text": "He's right. So. Lean in. This one's soft.",
+          "startMs": 11315
+        }
+      ]
+    },
+    {
+      "id": "the-quiet-corner-05",
+      "category": "dj",
+      "url": "/voice/end-lounge/the-quiet-corner-05.mp3",
+      "durationMs": 16611,
+      "overMusic": true,
+      "show": "the-quiet-corner",
+      "lines": [
+        {
+          "speaker": "Greg, a Shadow",
+          "text": "News from home. Hollis and I walked to the shops on Tuesday.",
+          "startMs": 23
+        },
+        {
+          "speaker": "Greg, a Shadow",
+          "text": "At about four in the afternoon, I was very long. Right across the road. He said I looked tall.",
+          "startMs": 5412
+        },
+        {
+          "speaker": "Greg, a Shadow",
+          "text": "It's the nicest thing anybody has ever said to me. I wanted to tell someone.",
+          "startMs": 12221
+        }
+      ]
+    },
+    {
+      "id": "the-quiet-corner-06",
+      "category": "dj",
+      "url": "/voice/end-lounge/the-quiet-corner-06.mp3",
+      "durationMs": 14130,
+      "overMusic": true,
+      "show": "the-quiet-corner",
+      "lines": [
+        {
+          "speaker": "Greg, a Shadow",
+          "text": "If you're the only one still listening, thank you.",
+          "startMs": 30
+        },
+        {
+          "speaker": "Greg, a Shadow",
+          "text": "I know it's hard to hear me. I'm not very good at loud.",
+          "startMs": 4513
+        },
+        {
+          "speaker": "Greg, a Shadow",
+          "text": "But I'm very good at staying. I'll be here till three. Then I'll walk you to the door.",
+          "startMs": 9801
+        }
+      ]
+    },
+    {
+      "id": "the-quiet-corner-07",
+      "category": "dj",
+      "url": "/voice/end-lounge/the-quiet-corner-07.mp3",
+      "durationMs": 14250,
+      "overMusic": true,
+      "show": "the-quiet-corner",
+      "lines": [
+        {
+          "speaker": "Greg, a Shadow",
+          "text": "A message for the operator on the Nightjar.",
+          "startMs": 32
+        },
+        {
+          "speaker": "Greg, a Shadow",
+          "text": "You keep a light on for a lot of people, out there. Somebody should keep one on for you.",
+          "startMs": 4345
+        },
+        {
+          "speaker": "Greg, a Shadow",
+          "text": "So I have. It's the little one, by the door. Goodnight, operator.",
+          "startMs": 10582
+        }
+      ]
+    },
+    {
+      "id": "the-quiet-corner-close",
+      "category": "id",
+      "url": "/voice/end-lounge/the-quiet-corner-close.mp3",
+      "durationMs": 11051,
+      "title": "The Quiet Corner with Greg",
+      "overMusic": true,
+      "part": "close",
+      "show": "the-quiet-corner",
+      "lines": [
+        {
+          "speaker": "Barnaby Velvet",
+          "text": "That was The Quiet Corner, with Greg. I didn't catch a single word, darling, and I've never been so moved.",
+          "startMs": 50
+        },
+        {
+          "speaker": "Gilbert (Bartender)",
+          "text": "He tipped well.",
+          "startMs": 7120
+        },
+        {
+          "speaker": "Barnaby Velvet",
+          "text": "Same time next Sunday.",
+          "startMs": 8488
+        }
+      ]
     }
   ]
 }

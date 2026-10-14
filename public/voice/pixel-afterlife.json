@@ -1099,6 +1099,148 @@
           "startMs": 40
         }
       ]
+    },
+    {
+      "id": "convergence-missing-moon",
+      "category": "event",
+      "url": "/voice/pixel-afterlife/convergence-missing-moon.mp3",
+      "durationMs": 13596,
+      "title": "The Convergence: A Moon Goes Missing",
+      "overMusic": false,
+      "kit": "missing-moon",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Player Two",
+          "text": "Glitch report! A moon's missing! Everyone agrees one's gone, and nobody agrees which!",
+          "startMs": 39
+        },
+        {
+          "speaker": "Player Two",
+          "text": "I checked level six. The moon on level six is still there. It's just a circle. Lag, did you lose a moon?",
+          "startMs": 5183
+        },
+        {
+          "speaker": "Lag (Ghost)",
+          "text": "Probably.",
+          "startMs": 11040
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-smell",
+      "category": "event",
+      "url": "/voice/pixel-afterlife/convergence-the-smell.mp3",
+      "durationMs": 8858,
+      "title": "The Convergence: Toast, Everywhere",
+      "overMusic": false,
+      "kit": "the-smell",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Player Two",
+          "text": "Is it just me, or does the whole afterlife smell like toast?",
+          "startMs": 40
+        },
+        {
+          "speaker": "Player Two",
+          "text": "We don't even have a toaster! We have a picture of a toaster! It doesn't do anything! It's just very brown!",
+          "startMs": 3773
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-song",
+      "category": "event",
+      "url": "/voice/pixel-afterlife/convergence-the-song.mp3",
+      "durationMs": 9098,
+      "title": "The Convergence: The Song Nobody Can Finish",
+      "overMusic": false,
+      "kit": "the-song",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Player Two",
+          "text": "Everybody's humming the same song and nobody can finish it! It's like a level with no exit!",
+          "startMs": 40
+        },
+        {
+          "speaker": "Player Two",
+          "text": "Player One, if you know how it ends, now's a great time to press start!",
+          "startMs": 5258
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-knock",
+      "category": "event",
+      "url": "/voice/pixel-afterlife/convergence-the-knock.mp3",
+      "durationMs": 7474,
+      "title": "The Convergence: Three Knocks",
+      "overMusic": false,
+      "kit": "the-knock",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Player Two",
+          "text": "Three knocks on the arcade door! Player One? Is it Player One?",
+          "startMs": 45
+        },
+        {
+          "speaker": "Player Two",
+          "text": "...Nobody. It's fine! It's fine. That's three more knocks than usual!",
+          "startMs": 3757
+        }
+      ]
+    },
+    {
+      "id": "convergence-wrong-colour",
+      "category": "event",
+      "url": "/voice/pixel-afterlife/convergence-wrong-colour.mp3",
+      "durationMs": 10077,
+      "title": "The Convergence: A Colour With No Name",
+      "overMusic": false,
+      "kit": "wrong-colour",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Player Two",
+          "text": "Whoa! The sky just went a colour that isn't in the palette! We've only got sixteen colours! That was a seventeenth!",
+          "startMs": 40
+        },
+        {
+          "speaker": "Player Two",
+          "text": "Lag tried to save it.",
+          "startMs": 5818
+        },
+        {
+          "speaker": "Lag (Ghost)",
+          "text": "Lost it.",
+          "startMs": 7559
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-pigeon",
+      "category": "event",
+      "url": "/voice/pixel-afterlife/convergence-the-pigeon.mp3",
+      "durationMs": 10094,
+      "title": "The Convergence: The Pigeon",
+      "overMusic": false,
+      "kit": "the-pigeon",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Player Two",
+          "text": "A pigeon just walked into the arcade! It's walking right past the high score table, and... it stopped at triple A. It's nodding.",
+          "startMs": 39
+        },
+        {
+          "speaker": "Player Two",
+          "text": "Is the pigeon triple A? Has it been the pigeon this whole time?",
+          "startMs": 6824
+        }
+      ]
     }
   ]
 }

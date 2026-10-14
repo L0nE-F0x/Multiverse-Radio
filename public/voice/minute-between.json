@@ -1,0 +1,574 @@
+{
+  "version": 1,
+  "station": "minute-between",
+  "clips": [
+    {
+      "id": "id-001",
+      "category": "id",
+      "url": "/voice/minute-between/id-001.mp3",
+      "durationMs": 6907,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The Interval",
+          "text": "This is the Minute Between. It is three thirty three.",
+          "startMs": 38
+        },
+        {
+          "speaker": "The Interval",
+          "text": "It will be, for a while.",
+          "startMs": 4848
+        }
+      ]
+    },
+    {
+      "id": "id-002",
+      "category": "id",
+      "url": "/voice/minute-between/id-002.mp3",
+      "durationMs": 6741,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The Interval",
+          "text": "One hundred and thirty three point three. The Minute Between.",
+          "startMs": 40
+        },
+        {
+          "speaker": "The Interval",
+          "text": "You found the door.",
+          "startMs": 5033
+        }
+      ]
+    },
+    {
+      "id": "id-003",
+      "category": "id",
+      "url": "/voice/minute-between/id-003.mp3",
+      "durationMs": 8637,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The Interval",
+          "text": "The Minute Between. Broadcasting from just after three thirty three.",
+          "startMs": 37
+        },
+        {
+          "speaker": "The Interval",
+          "text": "There's more room in here than you'd think.",
+          "startMs": 5624
+        }
+      ]
+    },
+    {
+      "id": "id-004",
+      "category": "id",
+      "url": "/voice/minute-between/id-004.mp3",
+      "durationMs": 6690,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The Interval",
+          "text": "You're listening to the inside of a minute. Please keep your voice down. The second hand is resting.",
+          "startMs": 31
+        }
+      ]
+    },
+    {
+      "id": "id-005",
+      "category": "id",
+      "url": "/voice/minute-between/id-005.mp3",
+      "durationMs": 6939,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The Interval",
+          "text": "The Minute Between. That was the clock, trying. It does that.",
+          "startMs": 3050
+        }
+      ]
+    },
+    {
+      "id": "id-the-minute",
+      "category": "id",
+      "url": "/voice/minute-between/id-the-minute.mp3",
+      "durationMs": 7886,
+      "title": "The Minute",
+      "overMusic": true,
+      "part": "open",
+      "show": "the-minute",
+      "lines": [
+        {
+          "speaker": "The Interval",
+          "text": "Three thirty three. The door is open.",
+          "startMs": 38
+        },
+        {
+          "speaker": "The Interval",
+          "text": "This is the Minute. I am the Interval. Come in. Take your time.",
+          "startMs": 3796
+        }
+      ]
+    },
+    {
+      "id": "dj-001",
+      "category": "dj",
+      "url": "/voice/minute-between/dj-001.mp3",
+      "durationMs": 10598,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The Interval",
+          "text": "There is a glass on the table that has been falling for as long as I have lived here.",
+          "startMs": 38
+        },
+        {
+          "speaker": "The Interval",
+          "text": "It hasn't reached the floor. I don't think it wants to. I wouldn't either.",
+          "startMs": 6430
+        }
+      ]
+    },
+    {
+      "id": "dj-002",
+      "category": "dj",
+      "url": "/voice/minute-between/dj-002.mp3",
+      "durationMs": 11083,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The Interval",
+          "text": "The dust in the moonlight hasn't moved since I arrived. Every speck is exactly where it was.",
+          "startMs": 40
+        },
+        {
+          "speaker": "The Interval",
+          "text": "I've named some of them. Not all. I'm pacing myself.",
+          "startMs": 7492
+        }
+      ]
+    },
+    {
+      "id": "dj-003",
+      "category": "dj",
+      "url": "/voice/minute-between/dj-003.mp3",
+      "durationMs": 9408,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The Interval",
+          "text": "People ask what I do in here. I wait.",
+          "startMs": 38
+        },
+        {
+          "speaker": "The Interval",
+          "text": "Not for anything. Waiting is simply what the inside of a minute feels like.",
+          "startMs": 4218
+        }
+      ]
+    },
+    {
+      "id": "dj-004",
+      "category": "dj",
+      "url": "/voice/minute-between/dj-004.mp3",
+      "durationMs": 8450,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The Interval",
+          "text": "There's a clock on the wall with its second hand caught halfway.",
+          "startMs": 36
+        },
+        {
+          "speaker": "The Interval",
+          "text": "I've grown fond of it. It's trying very hard.",
+          "startMs": 5147
+        }
+      ]
+    },
+    {
+      "id": "dj-005",
+      "category": "dj",
+      "url": "/voice/minute-between/dj-005.mp3",
+      "durationMs": 10017,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The Interval",
+          "text": "If you came here to put something off, you're welcome. This is the place for it.",
+          "startMs": 37
+        },
+        {
+          "speaker": "The Interval",
+          "text": "Everything you're putting off is out there, in the next minute. It will keep.",
+          "startMs": 5667
+        }
+      ]
+    },
+    {
+      "id": "dj-006",
+      "category": "dj",
+      "url": "/voice/minute-between/dj-006.mp3",
+      "durationMs": 9410,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The Interval",
+          "text": "The next minute knocks, now and then. Very politely.",
+          "startMs": 44
+        },
+        {
+          "speaker": "The Interval",
+          "text": "I tell it, soon. It goes away, and comes back, and it is always the same knock.",
+          "startMs": 4375
+        }
+      ]
+    },
+    {
+      "id": "dj-007",
+      "category": "dj",
+      "url": "/voice/minute-between/dj-007.mp3",
+      "durationMs": 11069,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The Interval",
+          "text": "Everyone awake at three thirty three thinks they are the only one.",
+          "startMs": 36
+        },
+        {
+          "speaker": "The Interval",
+          "text": "They're all in here. A little way apart, like strangers in a waiting room. Hello, all of you.",
+          "startMs": 5061
+        }
+      ]
+    },
+    {
+      "id": "dj-008",
+      "category": "dj",
+      "url": "/voice/minute-between/dj-008.mp3",
+      "durationMs": 10375,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The Interval",
+          "text": "I counted the minute once, from the inside. It took years.",
+          "startMs": 40
+        },
+        {
+          "speaker": "The Interval",
+          "text": "It came to sixty. I was a little disappointed. I had hoped for sixty one.",
+          "startMs": 5197
+        }
+      ]
+    },
+    {
+      "id": "dj-009",
+      "category": "dj",
+      "url": "/voice/minute-between/dj-009.mp3",
+      "durationMs": 8691,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The Interval",
+          "text": "In here, the kettle never boils, and never goes cold.",
+          "startMs": 37
+        },
+        {
+          "speaker": "The Interval",
+          "text": "It's the most restful thing I know. I think the kettle agrees.",
+          "startMs": 4703
+        }
+      ]
+    },
+    {
+      "id": "dj-010",
+      "category": "dj",
+      "url": "/voice/minute-between/dj-010.mp3",
+      "durationMs": 7244,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The Interval",
+          "text": "If you fall asleep in here, you won't miss anything.",
+          "startMs": 36
+        },
+        {
+          "speaker": "The Interval",
+          "text": "Nothing happens. That's the gift.",
+          "startMs": 4646
+        }
+      ]
+    },
+    {
+      "id": "dj-011",
+      "category": "dj",
+      "url": "/voice/minute-between/dj-011.mp3",
+      "durationMs": 10627,
+      "title": "The Ship",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The Interval",
+          "text": "Your ship keeps very good time. Tell her she needn't, in here.",
+          "startMs": 39
+        },
+        {
+          "speaker": "The Interval",
+          "text": "Tell her the Interval says hello. She'll pretend she doesn't remember me. Ships are like that.",
+          "startMs": 5055
+        }
+      ]
+    },
+    {
+      "id": "dj-012",
+      "category": "dj",
+      "url": "/voice/minute-between/dj-012.mp3",
+      "durationMs": 10408,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The Interval",
+          "text": "When you go, it will be three forty six. You'll have been here thirteen minutes, and also no time at all.",
+          "startMs": 38
+        },
+        {
+          "speaker": "The Interval",
+          "text": "Both are true. Take whichever you need.",
+          "startMs": 7590
+        }
+      ]
+    },
+    {
+      "id": "dj-the-minute-1",
+      "category": "dj",
+      "url": "/voice/minute-between/dj-the-minute-1.mp3",
+      "durationMs": 9810,
+      "overMusic": true,
+      "show": "the-minute",
+      "lines": [
+        {
+          "speaker": "The Interval",
+          "text": "It's nearly the end of the minute. It is always nearly the end of the minute.",
+          "startMs": 36
+        },
+        {
+          "speaker": "The Interval",
+          "text": "Come back tomorrow, at the same time. It will be the same time.",
+          "startMs": 5750
+        }
+      ]
+    },
+    {
+      "id": "news-001",
+      "category": "news",
+      "url": "/voice/minute-between/news-001.mp3",
+      "durationMs": 15651,
+      "title": "The News, from Inside the Minute",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "The Interval",
+          "text": "The news, from inside the minute.",
+          "startMs": 36
+        },
+        {
+          "speaker": "The Interval",
+          "text": "Nothing has happened. Nothing is about to.",
+          "startMs": 3908
+        },
+        {
+          "speaker": "The Interval",
+          "text": "That is all the news. It is good news. It will be good news again tomorrow, at the same time, for the same reasons.",
+          "startMs": 8439
+        }
+      ]
+    },
+    {
+      "id": "weather-001",
+      "category": "weather",
+      "url": "/voice/minute-between/weather-001.mp3",
+      "durationMs": 15519,
+      "title": "Weather, Inside the Minute",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "The Interval",
+          "text": "Weather, inside the minute.",
+          "startMs": 49
+        },
+        {
+          "speaker": "The Interval",
+          "text": "Still. Moonlight from the left, at the usual angle. Dust, suspended. No wind.",
+          "startMs": 3368
+        },
+        {
+          "speaker": "The Interval",
+          "text": "A small chance of the second hand moving.",
+          "startMs": 9523
+        },
+        {
+          "speaker": "The Interval",
+          "text": "It won't.",
+          "startMs": 14178
+        }
+      ]
+    },
+    {
+      "id": "psa-001",
+      "category": "psa",
+      "url": "/voice/minute-between/psa-001.mp3",
+      "durationMs": 9869,
+      "title": "Time Check",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "The Interval",
+          "text": "Time check. It is three thirty three, and some of the way to three thirty four.",
+          "startMs": 46
+        },
+        {
+          "speaker": "The Interval",
+          "text": "I won't say how far. It's rude to ask a minute its age.",
+          "startMs": 5984
+        }
+      ]
+    },
+    {
+      "id": "convergence-missing-moon",
+      "category": "event",
+      "url": "/voice/minute-between/convergence-missing-moon.mp3",
+      "durationMs": 12549,
+      "title": "A Moon That Isn't Going Anywhere",
+      "overMusic": false,
+      "kit": "missing-moon",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "The Interval",
+          "text": "A moon has gone missing, they tell me. Not in here. The moon in the window is exactly where it was at three thirty three.",
+          "startMs": 40
+        },
+        {
+          "speaker": "The Interval",
+          "text": "If anyone needs one, I have a moon. It isn't going anywhere.",
+          "startMs": 8373
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-smell",
+      "category": "event",
+      "url": "/voice/minute-between/convergence-the-smell.mp3",
+      "durationMs": 10299,
+      "title": "Toast in the Doorway",
+      "overMusic": false,
+      "kit": "the-smell",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "The Interval",
+          "text": "The toast has reached us. Just the edge of it, stopped in the doorway, like everything else.",
+          "startMs": 40
+        },
+        {
+          "speaker": "The Interval",
+          "text": "It will smell like that in here forever now. I don't mind.",
+          "startMs": 6544
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-song",
+      "category": "event",
+      "url": "/voice/minute-between/convergence-the-song.mp3",
+      "durationMs": 7796,
+      "title": "One Note",
+      "overMusic": false,
+      "kit": "the-song",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "The Interval",
+          "text": "I have the song too. Only one note of it.",
+          "startMs": 40
+        },
+        {
+          "speaker": "The Interval",
+          "text": "The rest is in the next minute. I'm told it's lovely.",
+          "startMs": 4194
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-knock",
+      "category": "event",
+      "url": "/voice/minute-between/convergence-the-knock.mp3",
+      "durationMs": 10370,
+      "title": "Only the First Knock",
+      "overMusic": false,
+      "kit": "the-knock",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "The Interval",
+          "text": "Three knocks, they say. In here, only the first one has arrived.",
+          "startMs": 1750
+        },
+        {
+          "speaker": "The Interval",
+          "text": "The other two are still on their way. I'll let you know.",
+          "startMs": 7057
+        }
+      ]
+    },
+    {
+      "id": "convergence-wrong-colour",
+      "category": "event",
+      "url": "/voice/minute-between/convergence-wrong-colour.mp3",
+      "durationMs": 14042,
+      "title": "A Good Long Look",
+      "overMusic": false,
+      "kit": "wrong-colour",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "The Interval",
+          "text": "The sky in the window has gone the new colour, and in here it will stay that colour.",
+          "startMs": 37
+        },
+        {
+          "speaker": "The Interval",
+          "text": "I'm the only one who'll ever get a good long look at it. It's",
+          "startMs": 6278
+        },
+        {
+          "speaker": "The Interval",
+          "text": "No. I won't name it.",
+          "startMs": 12095
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-pigeon",
+      "category": "event",
+      "url": "/voice/minute-between/convergence-the-pigeon.mp3",
+      "durationMs": 9905,
+      "title": "One Foot Up",
+      "overMusic": false,
+      "kit": "the-pigeon",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "The Interval",
+          "text": "The pigeon is here. Mid-step. One foot up. It has been like that for some time.",
+          "startMs": 37
+        },
+        {
+          "speaker": "The Interval",
+          "text": "It looks at me as if I'm the one who should be embarrassed.",
+          "startMs": 6118
+        }
+      ]
+    }
+  ]
+}

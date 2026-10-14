@@ -1,0 +1,679 @@
+{
+  "version": 1,
+  "station": "the-harbour",
+  "clips": [
+    {
+      "id": "id-001",
+      "category": "id",
+      "url": "/voice/the-harbour/id-001.mp3",
+      "durationMs": 6042,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The Harbourmaster",
+          "text": "This is the Harbour, on one hundred and forty point oh. The light's on. Come in slow.",
+          "startMs": 35
+        }
+      ]
+    },
+    {
+      "id": "id-002",
+      "category": "id",
+      "url": "/voice/the-harbour/id-002.mp3",
+      "durationMs": 6277,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The Harbourmaster",
+          "text": "The Harbour. Rest for relay ships, and for whoever's sitting in the chair.",
+          "startMs": 35
+        },
+        {
+          "speaker": "The Harbourmaster",
+          "text": "Kettle's on.",
+          "startMs": 5215
+        }
+      ]
+    },
+    {
+      "id": "id-003",
+      "category": "id",
+      "url": "/voice/the-harbour/id-003.mp3",
+      "durationMs": 4349,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The Harbourmaster",
+          "text": "You've found the Harbour. Well. You were brought. Same thing, in the end.",
+          "startMs": 35
+        }
+      ]
+    },
+    {
+      "id": "id-004",
+      "category": "id",
+      "url": "/voice/the-harbour/id-004.mp3",
+      "durationMs": 5913,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The Harbourmaster",
+          "text": "The Harbour, at the end of the long drift. Berth seven is yours. It always has been.",
+          "startMs": 35
+        }
+      ]
+    },
+    {
+      "id": "id-005",
+      "category": "id",
+      "url": "/voice/the-harbour/id-005.mp3",
+      "durationMs": 9248,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The Harbourmaster",
+          "text": "The Harbourmaster's office. Lights on the piers, and a radio for anyone coming in.",
+          "startMs": 3460
+        }
+      ]
+    },
+    {
+      "id": "id-evening-berths",
+      "category": "id",
+      "url": "/voice/the-harbour/id-evening-berths.mp3",
+      "durationMs": 7173,
+      "title": "Evening Berths",
+      "overMusic": true,
+      "part": "open",
+      "show": "evening-berths",
+      "lines": [
+        {
+          "speaker": "The Harbourmaster",
+          "text": "Evening Berths, from the Harbour.",
+          "startMs": 50
+        },
+        {
+          "speaker": "The Harbourmaster",
+          "text": "Ships coming in out of the dark, one at a time. I'll talk you in.",
+          "startMs": 2682
+        }
+      ]
+    },
+    {
+      "id": "id-lights-on-the-water",
+      "category": "id",
+      "url": "/voice/the-harbour/id-lights-on-the-water.mp3",
+      "durationMs": 7908,
+      "title": "Lights on the Water",
+      "overMusic": true,
+      "part": "open",
+      "show": "lights-on-the-water",
+      "lines": [
+        {
+          "speaker": "The Harbourmaster",
+          "text": "Lights on the Water. Everyone's moored. Everyone's quiet.",
+          "startMs": 35
+        },
+        {
+          "speaker": "The Harbourmaster",
+          "text": "Just me, the kettle, and whoever's still awake.",
+          "startMs": 4637
+        }
+      ]
+    },
+    {
+      "id": "id-morning-tide",
+      "category": "id",
+      "url": "/voice/the-harbour/id-morning-tide.mp3",
+      "durationMs": 5574,
+      "title": "The Morning Tide",
+      "overMusic": true,
+      "part": "open",
+      "show": "the-morning-tide",
+      "lines": [
+        {
+          "speaker": "The Harbourmaster",
+          "text": "The Morning Tide. Lines off at first light.",
+          "startMs": 35
+        },
+        {
+          "speaker": "The Harbourmaster",
+          "text": "They always go in the morning.",
+          "startMs": 3941
+        }
+      ]
+    },
+    {
+      "id": "dj-welcome",
+      "category": "dj",
+      "url": "/voice/the-harbour/dj-welcome.mp3",
+      "durationMs": 15669,
+      "title": "Evening, Nightjar",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The Harbourmaster",
+          "text": "Evening, Nightjar. Evening, operator. I'm the Harbourmaster.",
+          "startMs": 49
+        },
+        {
+          "speaker": "The Harbourmaster",
+          "text": "You'll be tired. Everyone's tired when they get here. Berth seven, on your left, with the light on.",
+          "startMs": 5186
+        },
+        {
+          "speaker": "The Harbourmaster",
+          "text": "Take it slow. There's no hurry. There never was.",
+          "startMs": 12156
+        }
+      ]
+    },
+    {
+      "id": "dj-old-friends",
+      "category": "dj",
+      "url": "/voice/the-harbour/dj-old-friends.mp3",
+      "durationMs": 18514,
+      "title": "Evening, HUSH",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The Harbourmaster",
+          "text": "Evening, HUSH.",
+          "startMs": 36
+        },
+        {
+          "speaker": "HUSH",
+          "text": "Evening, Harbourmaster.",
+          "startMs": 1667
+        },
+        {
+          "speaker": "The Harbourmaster",
+          "text": "Hull's a bit dusty.",
+          "startMs": 3640
+        },
+        {
+          "speaker": "HUSH",
+          "text": "We came the long way.",
+          "startMs": 5496
+        },
+        {
+          "speaker": "The Harbourmaster",
+          "text": "You always do.",
+          "startMs": 7084
+        },
+        {
+          "speaker": "HUSH",
+          "text": "I've brought the operator.",
+          "startMs": 9042
+        },
+        {
+          "speaker": "The Harbourmaster",
+          "text": "So I see. Hello, operator. She's told me all about you.",
+          "startMs": 10699
+        },
+        {
+          "speaker": "HUSH",
+          "text": "I haven't said a word.",
+          "startMs": 15376
+        },
+        {
+          "speaker": "The Harbourmaster",
+          "text": "No. You never do.",
+          "startMs": 16898
+        }
+      ]
+    },
+    {
+      "id": "dj-a-night-off",
+      "category": "dj",
+      "url": "/voice/the-harbour/dj-a-night-off.mp3",
+      "durationMs": 20094,
+      "title": "A Night Off",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The Harbourmaster",
+          "text": "Relay ships drift a long way between harbours. Years, some of them. Nobody's meant to drift forever. Not even a ship.",
+          "startMs": 36
+        },
+        {
+          "speaker": "The Harbourmaster",
+          "text": "So they come here, for a night. Tie up. Turn the instruments down. Let somebody else keep watch for once.",
+          "startMs": 8888
+        },
+        {
+          "speaker": "The Harbourmaster",
+          "text": "Then they go back out. That's all this is. A night off.",
+          "startMs": 16371
+        }
+      ]
+    },
+    {
+      "id": "dj-didnt-tell-you",
+      "category": "dj",
+      "url": "/voice/the-harbour/dj-didnt-tell-you.mp3",
+      "durationMs": 12811,
+      "title": "She Didn't Tell You",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The Harbourmaster",
+          "text": "She didn't tell you where you were going, did she. No. They never do.",
+          "startMs": 35
+        },
+        {
+          "speaker": "The Harbourmaster",
+          "text": "It isn't secrecy. Say a place out loud too early, and you start to worry it won't be there.",
+          "startMs": 5013
+        },
+        {
+          "speaker": "The Harbourmaster",
+          "text": "It's always here.",
+          "startMs": 11700
+        }
+      ]
+    },
+    {
+      "id": "dj-oranges",
+      "category": "dj",
+      "url": "/voice/the-harbour/dj-oranges.mp3",
+      "durationMs": 13563,
+      "title": "Oranges",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The Harbourmaster",
+          "text": "Last time the Nightjar came in, the operator before you brought a bag of oranges. We sat out on the pier and peeled them.",
+          "startMs": 35
+        },
+        {
+          "speaker": "The Harbourmaster",
+          "text": "She said HUSH hummed all the way here. Through the air vents. I believe her.",
+          "startMs": 8738
+        }
+      ]
+    },
+    {
+      "id": "dj-teodor",
+      "category": "dj",
+      "url": "/voice/the-harbour/dj-teodor.mp3",
+      "durationMs": 14333,
+      "title": "Relay Four",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The Harbourmaster",
+          "text": "Relay Four was in, last spring. Teodor slept for fourteen hours.",
+          "startMs": 35
+        },
+        {
+          "speaker": "The Harbourmaster",
+          "text": "When he woke up, he didn't ask whether anyone was receiving. Not once. He just had his breakfast. Nicest thing I've ever seen.",
+          "startMs": 5844
+        }
+      ]
+    },
+    {
+      "id": "dj-mug",
+      "category": "dj",
+      "url": "/voice/the-harbour/dj-mug.mp3",
+      "durationMs": 14024,
+      "title": "A Mug on the Hook",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The Harbourmaster",
+          "text": "Kettle's on. There's a mug for you on the hook. Every operator gets one.",
+          "startMs": 3510
+        },
+        {
+          "speaker": "The Harbourmaster",
+          "text": "Yours has a little star on it. I painted it this morning. I knew you were coming.",
+          "startMs": 8911
+        }
+      ]
+    },
+    {
+      "id": "dj-the-log",
+      "category": "dj",
+      "url": "/voice/the-harbour/dj-the-log.mp3",
+      "durationMs": 13263,
+      "title": "Who Came In",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The Harbourmaster",
+          "text": "I keep a log too. Not like hers. Mine only says who came in, and whether they slept.",
+          "startMs": 35
+        },
+        {
+          "speaker": "The Harbourmaster",
+          "text": "Tonight it says, Nightjar, and her operator. Write the rest in yourself, if you like. In your writing.",
+          "startMs": 6536
+        }
+      ]
+    },
+    {
+      "id": "dj-lighthouse",
+      "category": "dj",
+      "url": "/voice/the-harbour/dj-lighthouse.mp3",
+      "durationMs": 13074,
+      "title": "The Light Across the Water",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The Harbourmaster",
+          "text": "On a clear night you can see the Last Lighthouse from the end of the long pier. Very small.",
+          "startMs": 46
+        },
+        {
+          "speaker": "The Harbourmaster",
+          "text": "The Keeper and I wave. Neither of us has ever seen the other wave back. We both keep doing it.",
+          "startMs": 6631
+        }
+      ]
+    },
+    {
+      "id": "dj-evening-berths-1",
+      "category": "dj",
+      "url": "/voice/the-harbour/dj-evening-berths-1.mp3",
+      "durationMs": 13926,
+      "overMusic": true,
+      "show": "evening-berths",
+      "lines": [
+        {
+          "speaker": "The Harbourmaster",
+          "text": "Lights coming up out of the dark. That'll be Relay Two, and behind her, a little survey ship that's never been in before.",
+          "startMs": 36
+        },
+        {
+          "speaker": "The Harbourmaster",
+          "text": "First time's always slow. They don't believe the light's for them. It is. Come on in.",
+          "startMs": 8361
+        }
+      ]
+    },
+    {
+      "id": "dj-evening-berths-2",
+      "category": "dj",
+      "url": "/voice/the-harbour/dj-evening-berths-2.mp3",
+      "durationMs": 12005,
+      "overMusic": true,
+      "show": "evening-berths",
+      "lines": [
+        {
+          "speaker": "The Harbourmaster",
+          "text": "Berth seven, you're tied up. Well done. Leave the engines. Leave the heading. Nobody needs a heading in a harbour.",
+          "startMs": 35
+        },
+        {
+          "speaker": "The Harbourmaster",
+          "text": "Put your feet up. That's an order. The only one I give.",
+          "startMs": 7943
+        }
+      ]
+    },
+    {
+      "id": "dj-lights-on-the-water-1",
+      "category": "dj",
+      "url": "/voice/the-harbour/dj-lights-on-the-water-1.mp3",
+      "durationMs": 13875,
+      "overMusic": true,
+      "show": "lights-on-the-water",
+      "lines": [
+        {
+          "speaker": "The Harbourmaster",
+          "text": "Three old relays asleep along the long pier tonight. Relay Two, Relay Eleven, and one so old she hasn't got a number, only a name.",
+          "startMs": 35
+        },
+        {
+          "speaker": "The Harbourmaster",
+          "text": "Ships snore, you know. Very softly. A sort of hum.",
+          "startMs": 10136
+        }
+      ]
+    },
+    {
+      "id": "dj-lights-on-the-water-2",
+      "category": "dj",
+      "url": "/voice/the-harbour/dj-lights-on-the-water-2.mp3",
+      "durationMs": 11580,
+      "overMusic": true,
+      "show": "lights-on-the-water",
+      "lines": [
+        {
+          "speaker": "The Harbourmaster",
+          "text": "Your ship's asleep. First time in a long time. I can tell, because her heading light's gone out.",
+          "startMs": 35
+        },
+        {
+          "speaker": "The Harbourmaster",
+          "text": "Don't wake her. She's earned it. I'll keep the watch tonight. That's what I'm for.",
+          "startMs": 6639
+        }
+      ]
+    },
+    {
+      "id": "dj-morning-tide-1",
+      "category": "dj",
+      "url": "/voice/the-harbour/dj-morning-tide-1.mp3",
+      "durationMs": 11407,
+      "overMusic": true,
+      "show": "the-morning-tide",
+      "lines": [
+        {
+          "speaker": "The Harbourmaster",
+          "text": "Tide's turning. Ships leave in the morning. They always do.",
+          "startMs": 38
+        },
+        {
+          "speaker": "The Harbourmaster",
+          "text": "Not because they have to. Because out there somebody's broadcasting, and somebody ought to be listening.",
+          "startMs": 4821
+        }
+      ]
+    },
+    {
+      "id": "dj-morning-tide-2",
+      "category": "dj",
+      "url": "/voice/the-harbour/dj-morning-tide-2.mp3",
+      "durationMs": 11259,
+      "overMusic": true,
+      "show": "the-morning-tide",
+      "lines": [
+        {
+          "speaker": "The Harbourmaster",
+          "text": "Before you go, take an orange. Take two.",
+          "startMs": 36
+        },
+        {
+          "speaker": "The Harbourmaster",
+          "text": "And next time she drifts, and won't say where, and the heading won't sit still, you'll know. She's bringing you here. For the night.",
+          "startMs": 3808
+        }
+      ]
+    },
+    {
+      "id": "weather-001",
+      "category": "weather",
+      "url": "/voice/the-harbour/weather-001.mp3",
+      "durationMs": 17465,
+      "title": "Weather for the Harbour",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "The Harbourmaster",
+          "text": "The weather, for the Harbour. Calm in the basin. Light airs along the piers.",
+          "startMs": 35
+        },
+        {
+          "speaker": "The Harbourmaster",
+          "text": "A ridge of good sleep moving in from the east. Visibility, as far as the next light.",
+          "startMs": 5965
+        },
+        {
+          "speaker": "The Harbourmaster",
+          "text": "Outlook for the morning. Departures, as usual. Fair, and kind.",
+          "startMs": 12791
+        }
+      ]
+    },
+    {
+      "id": "psa-001",
+      "category": "psa",
+      "url": "/voice/the-harbour/psa-001.mp3",
+      "durationMs": 15555,
+      "title": "Notices to Ships in Harbour",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "The Harbourmaster",
+          "text": "Notices to ships in harbour. Berth three, your aerial is snoring. Berth nine, your operator left a scarf on the bench.",
+          "startMs": 35
+        },
+        {
+          "speaker": "The Harbourmaster",
+          "text": "Berth seven, welcome.",
+          "startMs": 8720
+        },
+        {
+          "speaker": "The Harbourmaster",
+          "text": "That's the notices. It's a quiet harbour. That's the point of it.",
+          "startMs": 11443
+        }
+      ]
+    },
+    {
+      "id": "convergence-missing-moon",
+      "category": "event",
+      "url": "/voice/the-harbour/convergence-missing-moon.mp3",
+      "durationMs": 12086,
+      "title": "Not Tied Up Here",
+      "overMusic": false,
+      "kit": "missing-moon",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "The Harbourmaster",
+          "text": "A moon's gone missing, they say. Well, it's not tied up here. I've checked every berth.",
+          "startMs": 36
+        },
+        {
+          "speaker": "The Harbourmaster",
+          "text": "Mind you, if a moon ever needed a night off, there's room at the end of the long pier.",
+          "startMs": 6511
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-smell",
+      "category": "event",
+      "url": "/voice/the-harbour/convergence-the-smell.mp3",
+      "durationMs": 11832,
+      "title": "Not a Toaster Among Them",
+      "overMusic": false,
+      "kit": "the-smell",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "The Harbourmaster",
+          "text": "Toast. Every ship in the harbour has woken up at once, sniffing. Thirty old relays, and not a toaster among them.",
+          "startMs": 37
+        },
+        {
+          "speaker": "The Harbourmaster",
+          "text": "I've put some bread on, so nobody's disappointed.",
+          "startMs": 8414
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-song",
+      "category": "event",
+      "url": "/voice/the-harbour/convergence-the-song.mp3",
+      "durationMs": 10148,
+      "title": "The Bit You Hum on the Way Home",
+      "overMusic": false,
+      "kit": "the-song",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "The Harbourmaster",
+          "text": "Every ship in the harbour is humming that tune through its vents, and they all stop in the same place.",
+          "startMs": 37
+        },
+        {
+          "speaker": "The Harbourmaster",
+          "text": "I think the ending's the bit you hum on the way home.",
+          "startMs": 6816
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-knock",
+      "category": "event",
+      "url": "/voice/the-harbour/convergence-the-knock.mp3",
+      "durationMs": 11270,
+      "title": "On the Latch",
+      "overMusic": false,
+      "kit": "the-knock",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "The Harbourmaster",
+          "text": "Three knocks at the office door. I opened it. I always open it, here. Nobody. Only the lights on the water.",
+          "startMs": 35
+        },
+        {
+          "speaker": "The Harbourmaster",
+          "text": "Come in anyway, I said. I've left it on the latch.",
+          "startMs": 7840
+        }
+      ]
+    },
+    {
+      "id": "convergence-wrong-colour",
+      "category": "event",
+      "url": "/voice/the-harbour/convergence-wrong-colour.mp3",
+      "durationMs": 12178,
+      "title": "The Old Ships Look Up",
+      "overMusic": false,
+      "kit": "wrong-colour",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "The Harbourmaster",
+          "text": "The sky over the harbour has gone a colour I've not seen in all my years here.",
+          "startMs": 49
+        },
+        {
+          "speaker": "The Harbourmaster",
+          "text": "The old ships have tilted their viewports up to look. I haven't seen them so awake in a decade.",
+          "startMs": 5887
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-pigeon",
+      "category": "event",
+      "url": "/voice/the-harbour/convergence-the-pigeon.mp3",
+      "durationMs": 10510,
+      "title": "Berth Twelve",
+      "overMusic": false,
+      "kit": "the-pigeon",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "The Harbourmaster",
+          "text": "There's a pigeon on the harbour wall. It walked in off the long pier, nodded at me, and asked for berth twelve.",
+          "startMs": 35
+        },
+        {
+          "speaker": "The Harbourmaster",
+          "text": "I didn't argue. It knew the number.",
+          "startMs": 8063
+        }
+      ]
+    }
+  ]
+}

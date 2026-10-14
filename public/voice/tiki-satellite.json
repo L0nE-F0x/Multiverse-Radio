@@ -1,0 +1,675 @@
+{
+  "version": 1,
+  "station": "tiki-satellite",
+  "clips": [
+    {
+      "id": "id-001",
+      "category": "id",
+      "url": "/voice/tiki-satellite/id-001.mp3",
+      "durationMs": 11098,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Lyle Mercury",
+          "text": "Welcome aboard Tiki Satellite, one hundred and twelve megacycles! The year is nineteen fifty eight, and the future is right on schedule.",
+          "startMs": 45
+        }
+      ]
+    },
+    {
+      "id": "id-002",
+      "category": "id",
+      "url": "/voice/tiki-satellite/id-002.mp3",
+      "durationMs": 9026,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Lyle Mercury",
+          "text": "Tiki Satellite. Vibraphone, bongos, and the boundless optimism of the space age. Mind the porthole, folks. That's the Earth.",
+          "startMs": 39
+        }
+      ]
+    },
+    {
+      "id": "id-003",
+      "category": "id",
+      "url": "/voice/tiki-satellite/id-003.mp3",
+      "durationMs": 9450,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Lyle Mercury",
+          "text": "This is Tiki Satellite, from the Lagoon Deck of Orbital Station Seven. Two hundred miles up, and still looking up.",
+          "startMs": 43
+        }
+      ]
+    },
+    {
+      "id": "id-004",
+      "category": "id",
+      "url": "/voice/tiki-satellite/id-004.mp3",
+      "durationMs": 9911,
+      "overMusic": true,
+      "daypart": "morning",
+      "lines": [
+        {
+          "speaker": "Lyle Mercury",
+          "text": "Good morning from Tiki Satellite! The sun has risen. It'll rise again in ninety minutes. That's orbit, friends. Plenty of mornings for everybody.",
+          "startMs": 42
+        }
+      ]
+    },
+    {
+      "id": "id-005",
+      "category": "id",
+      "url": "/voice/tiki-satellite/id-005.mp3",
+      "durationMs": 9736,
+      "overMusic": true,
+      "daypart": "night",
+      "lines": [
+        {
+          "speaker": "Lyle Mercury",
+          "text": "Tiki Satellite. The theremin is warming up, and the future has never looked brighter. Or more like nineteen fifty eight.",
+          "startMs": 39
+        }
+      ]
+    },
+    {
+      "id": "dj-001",
+      "category": "dj",
+      "url": "/voice/tiki-satellite/dj-001.mp3",
+      "durationMs": 20162,
+      "title": "By Nineteen Sixty Five",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Lyle Mercury",
+          "text": "By nineteen sixty five, every family will live in orbit. I know, because I saw it in a magazine, and the magazine had a painting of it.",
+          "startMs": 42
+        },
+        {
+          "speaker": "Lyle Mercury",
+          "text": "A lovely family, in a lovely wheel, with a lovely dog floating gently past a picture window. We're just a little early, that's all. Somebody has to plump the cushions.",
+          "startMs": 9274
+        }
+      ]
+    },
+    {
+      "id": "dj-002",
+      "category": "dj",
+      "url": "/voice/tiki-satellite/dj-002.mp3",
+      "durationMs": 17494,
+      "title": "The Relief Crew",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Lyle Mercury",
+          "text": "A word about the relief crew. They're expected any day now. They've been expected any day now for quite a while.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Lyle Mercury",
+          "text": "I'm sure they're simply held up in traffic. By now there must be thousands of stations just like this one. Bigger. Shinier. Possibly with two lagoons.",
+          "startMs": 7240
+        }
+      ]
+    },
+    {
+      "id": "dj-003",
+      "category": "dj",
+      "url": "/voice/tiki-satellite/dj-003.mp3",
+      "durationMs": 17342,
+      "title": "A Letter From a Listener",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Lyle Mercury",
+          "text": "A listener has written in, and I'll read the letter in full. Dear Lyle. It is not nineteen fifty eight.",
+          "startMs": 36
+        },
+        {
+          "speaker": "Lyle Mercury",
+          "text": "Well! Thank you for writing, sir. That's a very interesting point of view, and we'll certainly look into it. Possibly by nineteen sixty five. Here's a cha cha.",
+          "startMs": 7303
+        }
+      ]
+    },
+    {
+      "id": "dj-004",
+      "category": "dj",
+      "url": "/voice/tiki-satellite/dj-004.mp3",
+      "durationMs": 14654,
+      "title": "Howard on the Bird Calls",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Lyle Mercury",
+          "text": "That was Howard, on the bird calls. There are no birds in orbit. There may never be. Howard has never let that stop him.",
+          "startMs": 49
+        },
+        {
+          "speaker": "Lyle Mercury",
+          "text": "He says that when the birds of tomorrow do come up here, and they will, they'll want to hear something familiar.",
+          "startMs": 8099
+        }
+      ]
+    },
+    {
+      "id": "dj-005",
+      "category": "dj",
+      "url": "/voice/tiki-satellite/dj-005.mp3",
+      "durationMs": 15816,
+      "title": "Miss Vera Voss",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Lyle Mercury",
+          "text": "On the theremin tonight, Miss Vera Voss. She plays it without touching it at all, which our engineers find very reassuring.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Lyle Mercury",
+          "text": "Nobody touches anything on Station Seven without the training. That's the future, folks. Hands off, and humming.",
+          "startMs": 8453
+        }
+      ]
+    },
+    {
+      "id": "dj-006",
+      "category": "dj",
+      "url": "/voice/tiki-satellite/dj-006.mp3",
+      "durationMs": 13011,
+      "title": "Sunrise Number Eleven",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Lyle Mercury",
+          "text": "Another sunrise has just come up over the edge of the Earth. That's our eleventh today, and we toast every one.",
+          "startMs": 41
+        },
+        {
+          "speaker": "Lyle Mercury",
+          "text": "Some of the crew are getting very cheerful. So is the sun. Here's a number for sunrise twelve.",
+          "startMs": 7094
+        }
+      ]
+    },
+    {
+      "id": "dj-007",
+      "category": "dj",
+      "url": "/voice/tiki-satellite/dj-007.mp3",
+      "durationMs": 16037,
+      "title": "Sponsored by Grumbel's Ladders",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Lyle Mercury",
+          "text": "Tonight's programme comes to you courtesy of Grumbel's Ladders. In nineteen sixty three, Grumbel's will build the first ladder to the moon.",
+          "startMs": 36
+        },
+        {
+          "speaker": "Lyle Mercury",
+          "text": "I've seen the drawings. It leans against the moon at a jaunty angle. Grumbel's Ladders. Up is a choice!",
+          "startMs": 9164
+        }
+      ]
+    },
+    {
+      "id": "dj-008",
+      "category": "dj",
+      "url": "/voice/tiki-satellite/dj-008.mp3",
+      "durationMs": 17288,
+      "title": "For the Night Shift",
+      "overMusic": true,
+      "daypart": "night",
+      "lines": [
+        {
+          "speaker": "Lyle Mercury",
+          "text": "Hello down there to the operator on the relay ship. My, what a modern looking vessel. Is that what they'll all look like, by nineteen sixty five?",
+          "startMs": 47
+        },
+        {
+          "speaker": "Lyle Mercury",
+          "text": "Don't tell me. I like to be surprised. Come aboard for a cocktail any time. Dock at the round door. They're all round.",
+          "startMs": 9861
+        }
+      ]
+    },
+    {
+      "id": "dj-009",
+      "category": "dj",
+      "url": "/voice/tiki-satellite/dj-009.mp3",
+      "durationMs": 16880,
+      "title": "A Visitor Called Greg",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Lyle Mercury",
+          "text": "We had a visitor this week. A shadow who called himself Greg. No pressure suit, no ticket. Just walked in through the porthole.",
+          "startMs": 48
+        },
+        {
+          "speaker": "Lyle Mercury",
+          "text": "In the future, I expect shadows will travel freely between the planets. Greg is simply ahead of his time. Like the rest of us.",
+          "startMs": 8425
+        }
+      ]
+    },
+    {
+      "id": "ad-001",
+      "category": "ad",
+      "url": "/voice/tiki-satellite/ad-001.mp3",
+      "durationMs": 21407,
+      "title": "The Halcyon Atomic Kitchen",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Lyle Mercury",
+          "text": "Tired of cooking? Then let the atom do it! The Halcyon Atomic Kitchen roasts a chicken in four seconds, washes the dishes with a gentle beam of light, and keeps the whole house toasty warm until nineteen seventy one.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Lyle Mercury",
+          "text": "Halcyon Atomics. Tomorrow's kitchen, today. Ask your doctor whether a glow is right for you.",
+          "startMs": 15122
+        }
+      ]
+    },
+    {
+      "id": "ad-002",
+      "category": "ad",
+      "url": "/voice/tiki-satellite/ad-002.mp3",
+      "durationMs": 16507,
+      "title": "The Floating Pineapple",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Lyle Mercury",
+          "text": "Thirsty in zero gravity? Try the Floating Pineapple, the cocktail of tomorrow. Served in a perfect sphere, sipped through a silver straw, and pursued at a leisurely pace around the lounge.",
+          "startMs": 50
+        },
+        {
+          "speaker": "Lyle Mercury",
+          "text": "The Floating Pineapple. Ask your bartender. He's on the ceiling.",
+          "startMs": 12948
+        }
+      ]
+    },
+    {
+      "id": "predictions-open-01",
+      "category": "news",
+      "url": "/voice/tiki-satellite/predictions-open-01.mp3",
+      "durationMs": 10296,
+      "overMusic": false,
+      "part": "open",
+      "kit": "predictions",
+      "lines": [
+        {
+          "speaker": "Lyle Mercury",
+          "text": "And now it's time for Tomorrow's Headlines, where we look ahead to the wonderful world of nineteen sixty five.",
+          "startMs": 41
+        }
+      ]
+    },
+    {
+      "id": "predictions-open-02",
+      "category": "news",
+      "url": "/voice/tiki-satellite/predictions-open-02.mp3",
+      "durationMs": 4034,
+      "overMusic": false,
+      "part": "open",
+      "kit": "predictions",
+      "lines": [
+        {
+          "speaker": "Lyle Mercury",
+          "text": "Here's the news from the future, folks. Don't worry. It's all good.",
+          "startMs": 50
+        }
+      ]
+    },
+    {
+      "id": "predictions-body-01",
+      "category": "news",
+      "url": "/voice/tiki-satellite/predictions-body-01.mp3",
+      "durationMs": 9138,
+      "overMusic": false,
+      "part": "body",
+      "kit": "predictions",
+      "lines": [
+        {
+          "speaker": "Lyle Mercury",
+          "text": "By nineteen sixty five, every household will have a robot butler named Clarence. All of them will be named Clarence. It's simpler that way.",
+          "startMs": 40
+        }
+      ]
+    },
+    {
+      "id": "predictions-body-02",
+      "category": "news",
+      "url": "/voice/tiki-satellite/predictions-body-02.mp3",
+      "durationMs": 10942,
+      "overMusic": false,
+      "part": "body",
+      "kit": "predictions",
+      "lines": [
+        {
+          "speaker": "Lyle Mercury",
+          "text": "By nineteen sixty three, the weather will be decided by a committee, and the committee will choose sunny. Rain will be available by appointment, on Tuesdays, for the lawns.",
+          "startMs": 42
+        }
+      ]
+    },
+    {
+      "id": "predictions-body-03",
+      "category": "news",
+      "url": "/voice/tiki-satellite/predictions-body-03.mp3",
+      "durationMs": 9040,
+      "overMusic": false,
+      "part": "body",
+      "kit": "predictions",
+      "lines": [
+        {
+          "speaker": "Lyle Mercury",
+          "text": "By nineteen sixty six, dinner will come in a single pill. Dessert will be a second, smaller pill. The washing up will be a glass of water.",
+          "startMs": 45
+        }
+      ]
+    },
+    {
+      "id": "predictions-body-04",
+      "category": "news",
+      "url": "/voice/tiki-satellite/predictions-body-04.mp3",
+      "durationMs": 10010,
+      "overMusic": false,
+      "part": "body",
+      "kit": "predictions",
+      "lines": [
+        {
+          "speaker": "Lyle Mercury",
+          "text": "By nineteen sixty five, nobody will ever be lonely again. Everybody will have a wrist radio, and every wrist radio will be tuned to this station.",
+          "startMs": 37
+        }
+      ]
+    },
+    {
+      "id": "predictions-close-01",
+      "category": "news",
+      "url": "/voice/tiki-satellite/predictions-close-01.mp3",
+      "durationMs": 6165,
+      "overMusic": false,
+      "part": "close",
+      "kit": "predictions",
+      "lines": [
+        {
+          "speaker": "Lyle Mercury",
+          "text": "Those were tomorrow's headlines. Remember, folks. The future is coming, and it's bringing snacks.",
+          "startMs": 50
+        }
+      ]
+    },
+    {
+      "id": "id-breakfast-in-orbit",
+      "category": "id",
+      "url": "/voice/tiki-satellite/id-breakfast-in-orbit.mp3",
+      "durationMs": 13378,
+      "overMusic": true,
+      "part": "open",
+      "show": "breakfast-in-orbit",
+      "lines": [
+        {
+          "speaker": "Lyle Mercury",
+          "text": "Good morning, good morning! This is Breakfast in Orbit, on Tiki Satellite. Breakfast this morning is a pill. Lunch is a slightly larger pill. Let's have some vibraphone.",
+          "startMs": 49
+        }
+      ]
+    },
+    {
+      "id": "dj-breakfast-in-orbit-001",
+      "category": "dj",
+      "url": "/voice/tiki-satellite/dj-breakfast-in-orbit-001.mp3",
+      "durationMs": 11498,
+      "overMusic": true,
+      "show": "breakfast-in-orbit",
+      "lines": [
+        {
+          "speaker": "Lyle Mercury",
+          "text": "Today's breakfast pill tastes of pancakes, bacon and a sense of purpose. If yours tastes of nothing, you've taken the vitamin.",
+          "startMs": 40
+        },
+        {
+          "speaker": "Lyle Mercury",
+          "text": "Take another one. It's the future. There's plenty.",
+          "startMs": 8723
+        }
+      ]
+    },
+    {
+      "id": "id-cocktail-hour",
+      "category": "id",
+      "url": "/voice/tiki-satellite/id-cocktail-hour.mp3",
+      "durationMs": 10239,
+      "overMusic": true,
+      "part": "open",
+      "show": "cocktail-hour",
+      "lines": [
+        {
+          "speaker": "Lyle Mercury",
+          "text": "Up here the sun sets sixteen times a day, so the cocktail hour comes round rather often. Welcome to the Cocktail Hour of Tomorrow, on Tiki Satellite.",
+          "startMs": 38
+        }
+      ]
+    },
+    {
+      "id": "dj-cocktail-hour-001",
+      "category": "dj",
+      "url": "/voice/tiki-satellite/dj-cocktail-hour-001.mp3",
+      "durationMs": 14243,
+      "overMusic": true,
+      "show": "cocktail-hour",
+      "lines": [
+        {
+          "speaker": "Lyle Mercury",
+          "text": "A note from the bar. Please hold your drink with both hands, and don't let go of it.",
+          "startMs": 36
+        },
+        {
+          "speaker": "Lyle Mercury",
+          "text": "In zero gravity, a cocktail you let go of is a cocktail you will meet again. Perhaps on Thursday. Perhaps on somebody's hat.",
+          "startMs": 5522
+        }
+      ]
+    },
+    {
+      "id": "id-moonlight-lagoon",
+      "category": "id",
+      "url": "/voice/tiki-satellite/id-moonlight-lagoon.mp3",
+      "durationMs": 9415,
+      "overMusic": true,
+      "part": "open",
+      "show": "moonlight-lagoon",
+      "lines": [
+        {
+          "speaker": "Lyle Mercury",
+          "text": "Moonlight on the Lagoon Deck. The water's going round the wheel, the moon's going round the Earth, and the bongos are going round in my head. Lovely.",
+          "startMs": 46
+        }
+      ]
+    },
+    {
+      "id": "dj-moonlight-lagoon-001",
+      "category": "dj",
+      "url": "/voice/tiki-satellite/dj-moonlight-lagoon-001.mp3",
+      "durationMs": 15780,
+      "overMusic": true,
+      "show": "moonlight-lagoon",
+      "lines": [
+        {
+          "speaker": "Lyle Mercury",
+          "text": "Late on the station, and the lagoon has gone very still, in a ring all the way around us, the way lagoons will be in the future.",
+          "startMs": 50
+        },
+        {
+          "speaker": "Lyle Mercury",
+          "text": "The moon is so close tonight you could almost reach it. By nineteen sixty five, you will. Bring a scarf.",
+          "startMs": 8989
+        }
+      ]
+    },
+    {
+      "id": "dj-halloween-001",
+      "category": "dj",
+      "url": "/voice/tiki-satellite/dj-halloween-001.mp3",
+      "durationMs": 21115,
+      "title": "The Pumpkin of Tomorrow",
+      "overMusic": true,
+      "dates": [
+        "10-24",
+        "10-25",
+        "10-26",
+        "10-27",
+        "10-28",
+        "10-29",
+        "10-30",
+        "10-31"
+      ],
+      "lines": [
+        {
+          "speaker": "Lyle Mercury",
+          "text": "Halloween aboard Station Seven! The crew have carved a pumpkin of tomorrow. It's chrome, it glows, and it orbits the lounge every forty minutes.",
+          "startMs": 46
+        },
+        {
+          "speaker": "Lyle Mercury",
+          "text": "Our scientists say that by nineteen sixty five, every pumpkin will glow all by itself. They're working on it in the lab. Something in the lab is glowing already.",
+          "startMs": 9989
+        }
+      ]
+    },
+    {
+      "id": "convergence-missing-moon",
+      "category": "event",
+      "url": "/voice/tiki-satellite/convergence-missing-moon.mp3",
+      "durationMs": 13066,
+      "overMusic": false,
+      "kit": "missing-moon",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Lyle Mercury",
+          "text": "Folks, it seems a moon has gone missing. Now, don't be alarmed. By nineteen sixty five there'll be so many moons, nobody will miss one.",
+          "startMs": 50
+        },
+        {
+          "speaker": "Lyle Mercury",
+          "text": "Our engineers are building three spares as we speak.",
+          "startMs": 9917
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-smell",
+      "category": "event",
+      "url": "/voice/tiki-satellite/convergence-the-smell.mp3",
+      "durationMs": 12378,
+      "overMusic": false,
+      "kit": "the-smell",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Lyle Mercury",
+          "text": "That aroma drifting through the station is toast. And not ordinary toast, friends. Atomic toast, done on both sides in an instant.",
+          "startMs": 45
+        },
+        {
+          "speaker": "Lyle Mercury",
+          "text": "Somebody out there has the kitchen of tomorrow!",
+          "startMs": 9407
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-song",
+      "category": "event",
+      "url": "/voice/tiki-satellite/convergence-the-song.mp3",
+      "durationMs": 12305,
+      "overMusic": false,
+      "kit": "the-song",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Lyle Mercury",
+          "text": "Everybody aboard is humming the same tune, and nobody can finish it.",
+          "startMs": 37
+        },
+        {
+          "speaker": "Lyle Mercury",
+          "text": "Not to worry. Scientists predict that by nineteen sixty four, every song will finish itself, automatically.",
+          "startMs": 4821
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-knock",
+      "category": "event",
+      "url": "/voice/tiki-satellite/convergence-the-knock.mp3",
+      "durationMs": 11393,
+      "overMusic": false,
+      "kit": "the-knock",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Lyle Mercury",
+          "text": "Three knocks on the airlock! Come in, come in!",
+          "startMs": 44
+        },
+        {
+          "speaker": "Lyle Mercury",
+          "text": "Nobody there. We're two hundred miles up. Well, that's the future for you. Always dropping by before it's ready.",
+          "startMs": 4005
+        }
+      ]
+    },
+    {
+      "id": "convergence-wrong-colour",
+      "category": "event",
+      "url": "/voice/tiki-satellite/convergence-wrong-colour.mp3",
+      "durationMs": 12042,
+      "overMusic": false,
+      "kit": "wrong-colour",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Lyle Mercury",
+          "text": "Look at that porthole! The sky has turned a colour I've never seen before.",
+          "startMs": 48
+        },
+        {
+          "speaker": "Lyle Mercury",
+          "text": "Mark my words, folks. By nineteen sixty two, that colour will be on every refrigerator in the land.",
+          "startMs": 5084
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-pigeon",
+      "category": "event",
+      "url": "/voice/tiki-satellite/convergence-the-pigeon.mp3",
+      "durationMs": 10751,
+      "overMusic": false,
+      "kit": "the-pigeon",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Lyle Mercury",
+          "text": "A pigeon has come aboard Station Seven! No pressure suit, no ticket, perfectly calm.",
+          "startMs": 41
+        },
+        {
+          "speaker": "Lyle Mercury",
+          "text": "Folks, this is the pigeon of tomorrow. And frankly, it seems to know me.",
+          "startMs": 6229
+        }
+      ]
+    }
+  ]
+}

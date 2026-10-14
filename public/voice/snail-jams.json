@@ -1124,6 +1124,168 @@
           "startMs": 4684
         }
       ]
+    },
+    {
+      "id": "convergence-missing-moon",
+      "category": "event",
+      "url": "/voice/snail-jams/convergence-missing-moon.mp3",
+      "durationMs": 8688,
+      "title": "The Convergence: A Moon Goes Missing",
+      "overMusic": false,
+      "kit": "missing-moon",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Shelley Shellbourne",
+          "text": "A moon is missing.",
+          "startMs": 37
+        },
+        {
+          "speaker": "Shelley Shellbourne",
+          "text": "Nobody knows which.",
+          "startMs": 2212
+        },
+        {
+          "speaker": "Shelley Shellbourne",
+          "text": "I'll keep an eye out. I see most things... eventually.",
+          "startMs": 4511
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-smell",
+      "category": "event",
+      "url": "/voice/snail-jams/convergence-the-smell.mp3",
+      "durationMs": 8381,
+      "title": "The Convergence: Toast, Everywhere",
+      "overMusic": false,
+      "kit": "the-smell",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Shelley Shellbourne",
+          "text": "Toast.",
+          "startMs": 39
+        },
+        {
+          "speaker": "Shelley Shellbourne",
+          "text": "Everywhere smells of toast.",
+          "startMs": 1331
+        },
+        {
+          "speaker": "Shelley Shellbourne",
+          "text": "By the time I get to the kitchen... it'll be breakfast anyway.",
+          "startMs": 3842
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-song",
+      "category": "event",
+      "url": "/voice/snail-jams/convergence-the-song.mp3",
+      "durationMs": 8892,
+      "title": "The Convergence: The Song Nobody Can Finish",
+      "overMusic": false,
+      "kit": "the-song",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Shelley Shellbourne",
+          "text": "There's a song. Everyone's humming it.",
+          "startMs": 46
+        },
+        {
+          "speaker": "Shelley Shellbourne",
+          "text": "Nobody knows the end.",
+          "startMs": 3127
+        },
+        {
+          "speaker": "Shelley Shellbourne",
+          "text": "I'm still on the first note. Lovely note.",
+          "startMs": 5634
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-knock",
+      "category": "event",
+      "url": "/voice/snail-jams/convergence-the-knock.mp3",
+      "durationMs": 8524,
+      "title": "The Convergence: Three Knocks",
+      "overMusic": false,
+      "kit": "the-knock",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Shelley Shellbourne",
+          "text": "Knock. Knock. Knock.",
+          "startMs": 43
+        },
+        {
+          "speaker": "Shelley Shellbourne",
+          "text": "By the time I got to the door... it was Tuesday.",
+          "startMs": 2258
+        },
+        {
+          "speaker": "Shelley Shellbourne",
+          "text": "Nobody there. Of course.",
+          "startMs": 6216
+        }
+      ]
+    },
+    {
+      "id": "convergence-wrong-colour",
+      "category": "event",
+      "url": "/voice/snail-jams/convergence-wrong-colour.mp3",
+      "durationMs": 7233,
+      "title": "The Convergence: A Colour With No Name",
+      "overMusic": false,
+      "kit": "wrong-colour",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Shelley Shellbourne",
+          "text": "The sky went a colour.",
+          "startMs": 39
+        },
+        {
+          "speaker": "Shelley Shellbourne",
+          "text": "It's gone, you say?",
+          "startMs": 2269
+        },
+        {
+          "speaker": "Shelley Shellbourne",
+          "text": "Not for me. I'm still looking at it.",
+          "startMs": 4397
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-pigeon",
+      "category": "event",
+      "url": "/voice/snail-jams/convergence-the-pigeon.mp3",
+      "durationMs": 9541,
+      "title": "The Convergence: The Pigeon",
+      "overMusic": false,
+      "kit": "the-pigeon",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Shelley Shellbourne",
+          "text": "A pigeon walked in. Very quickly. Too quickly.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Shelley Shellbourne",
+          "text": "It knows me, apparently. Hello.",
+          "startMs": 4418
+        },
+        {
+          "speaker": "Shelley Shellbourne",
+          "text": "...It's gone. Oh well.",
+          "startMs": 7555
+        }
+      ]
     }
   ]
 }

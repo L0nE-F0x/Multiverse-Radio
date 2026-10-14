@@ -11,7 +11,7 @@
 # confidence; retro-future ads (Halcyon Atomics, the Floating Pineapple). Cross-station: Greg
 # the shadow, Grumbel's Ladders. Resident artists in src/content/packs/v4b.ts.
 #
-# TTS: Kokoro reads "theremin" as "thair-MIN", so spoken lines spell it "therramin".
+# TTS: write "theremin"; scripts/voice/lexicon.toml fixes how Kokoro says it (it said "thair-MIN").
 station = "tiki-satellite"
 
 [voices]
@@ -76,7 +76,7 @@ id = "id-005"
 category = "id"
 daypart = "night"
 lines = [
-  { say = "host", text = "Tiki Satellite. The therramin is warming up, and the future has never looked brighter. Or more like nineteen fifty eight." },
+  { say = "host", text = "Tiki Satellite. The theremin is warming up, and the future has never looked brighter. Or more like nineteen fifty eight." },
   { sting = "id" },
 ]
 
@@ -123,7 +123,7 @@ id = "dj-005"
 category = "dj"
 title = "Miss Vera Voss"
 lines = [
-  { say = "host", text = "On the therramin tonight, Miss Vera Voss. She plays it without touching it at all, which our engineers find very reassuring." },
+  { say = "host", text = "On the theremin tonight, Miss Vera Voss. She plays it without touching it at all, which our engineers find very reassuring." },
   { say = "host", text = "Nobody touches anything on Station Seven without the training. That's the future, folks. Hands off, and humming." },
 ]
 

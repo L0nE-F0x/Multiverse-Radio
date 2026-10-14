@@ -2444,6 +2444,218 @@
           "startMs": 42094
         }
       ]
+    },
+    {
+      "id": "convergence-missing-moon",
+      "category": "event",
+      "url": "/voice/classifieds/convergence-missing-moon.mp3",
+      "durationMs": 8849,
+      "title": "The Convergence: A Moon Goes Missing",
+      "overMusic": false,
+      "kit": "missing-moon",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Rex Bellows",
+          "text": "Folks, a moon has gone missing, and nobody knows which one! Lost and found, Linda?",
+          "startMs": 47
+        },
+        {
+          "speaker": "Linda from Accounts",
+          "text": "Found. One moon. Unclaimed. We will not be handing it over until somebody describes it correctly. Nobody has yet.",
+          "startMs": 4619
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-smell",
+      "category": "event",
+      "url": "/voice/classifieds/convergence-the-smell.mp3",
+      "durationMs": 8336,
+      "title": "The Convergence: Toast, Everywhere",
+      "overMusic": false,
+      "kit": "the-smell",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Rex Bellows",
+          "text": "Smell that? That's toast, folks, everywhere, all at once! And Rex has got the toasters!",
+          "startMs": 40
+        },
+        {
+          "speaker": "Linda from Accounts",
+          "text": "Rex has one toaster. It is not the source. The toaster does not smell of toast. The toaster smells of Rex.",
+          "startMs": 4564
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-song",
+      "category": "event",
+      "url": "/voice/classifieds/convergence-the-song.mp3",
+      "durationMs": 9391,
+      "title": "The Convergence: The Song Nobody Can Finish",
+      "overMusic": false,
+      "kit": "the-song",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Rex Bellows",
+          "text": "Got a song stuck in your head with no ending? Bellows Song Endings! Every ending, guaranteed to fit!",
+          "startMs": 37
+        },
+        {
+          "speaker": "Linda from Accounts",
+          "text": "Endings may not fit. Endings may belong to other songs. Nobody has the real ending. Rex has checked.",
+          "startMs": 5711
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-knock",
+      "category": "event",
+      "url": "/voice/classifieds/convergence-the-knock.mp3",
+      "durationMs": 6578,
+      "title": "The Convergence: Three Knocks",
+      "overMusic": false,
+      "kit": "the-knock",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Rex Bellows",
+          "text": "Somebody knocked! Three times! It's a customer!",
+          "startMs": 40
+        },
+        {
+          "speaker": "Linda from Accounts",
+          "text": "There is nobody there, Rex.",
+          "startMs": 2424
+        },
+        {
+          "speaker": "Rex Bellows",
+          "text": "Then it's the best kind of customer, folks! Doesn't haggle!",
+          "startMs": 3991
+        }
+      ]
+    },
+    {
+      "id": "convergence-wrong-colour",
+      "category": "event",
+      "url": "/voice/classifieds/convergence-wrong-colour.mp3",
+      "durationMs": 8138,
+      "title": "The Convergence: A Colour With No Name",
+      "overMusic": false,
+      "kit": "wrong-colour",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Rex Bellows",
+          "text": "The sky's a colour nobody's got a word for, folks, and I'm calling it Bellows Blue!",
+          "startMs": 40
+        },
+        {
+          "speaker": "Linda from Accounts",
+          "text": "It is not blue. Rex cannot name the sky. The sky has been informed, and was very gracious about it.",
+          "startMs": 4480
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-pigeon",
+      "category": "event",
+      "url": "/voice/classifieds/convergence-the-pigeon.mp3",
+      "durationMs": 5876,
+      "title": "The Convergence: The Pigeon",
+      "overMusic": false,
+      "kit": "the-pigeon",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Linda from Accounts",
+          "text": "Found. One pigeon. In the office. It seems to know us. It knows where the biscuits are.",
+          "startMs": 46
+        },
+        {
+          "speaker": "Linda from Accounts",
+          "text": "If this is your pigeon, please collect it. If you are the pigeon, hello. You may stay.",
+          "startMs": 3170
+        }
+      ]
+    },
+    {
+      "id": "story-switchboard",
+      "category": "story",
+      "url": "/voice/classifieds/story-switchboard.mp3",
+      "durationMs": 26604,
+      "title": "Found: A Number",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Rex Bellows",
+          "text": "Lost and found, folks! Linda, what's in the box tonight?",
+          "startMs": 38
+        },
+        {
+          "speaker": "Linda from Accounts",
+          "text": "Found. One glove, left hand, on the night bus. It has been waving at people. If it's yours, wave back.",
+          "startMs": 3011
+        },
+        {
+          "speaker": "Linda from Accounts",
+          "text": "Found. A number, handwritten on the back of an old switchboard ticket. Nine, seven, eight. Eight, nine, three. One, one, four, eight.",
+          "startMs": 6751
+        },
+        {
+          "speaker": "Linda from Accounts",
+          "text": "No name. Just a note underneath, in pencil. Quickly, and in that order. Advice, news, traffic.",
+          "startMs": 11667
+        },
+        {
+          "speaker": "Linda from Accounts",
+          "text": "If this is your number, the operator is still holding.",
+          "startMs": 15534
+        },
+        {
+          "speaker": "Rex Bellows",
+          "text": "Nobody's still holding, Linda! It's nineteen forty six on that ticket!",
+          "startMs": 17670
+        },
+        {
+          "speaker": "Linda from Accounts",
+          "text": "She is, Rex. She's very patient.",
+          "startMs": 21526
+        },
+        {
+          "speaker": "Rex Bellows",
+          "text": "That's lost and found, folks! If any of it's yours, bring a box!",
+          "startMs": 23650
+        }
+      ]
+    },
+    {
+      "id": "ad-outer-band",
+      "category": "ad",
+      "url": "/voice/classifieds/ad-outer-band.mp3",
+      "durationMs": 18581,
+      "title": "Bellows Pre-Owned Frequencies",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Rex Bellows",
+          "text": "Folks, Bellows Pre-Owned Frequencies! Brand new frequencies, just come in past one hundred and eight! Barely broadcast on!",
+          "startMs": 46
+        },
+        {
+          "speaker": "Rex Bellows",
+          "text": "Want your own little patch of the dial? Pick a number! Any number! Point a radio at it, and it's yours!",
+          "startMs": 6621
+        },
+        {
+          "speaker": "Linda from Accounts",
+          "text": "Frequencies may drift. Frequencies may already be occupied by a disco, a courtroom or a pirate. Rex does not own any frequencies. Nobody does. That's the point of them.",
+          "startMs": 12039
+        }
+      ]
     }
   ]
 }

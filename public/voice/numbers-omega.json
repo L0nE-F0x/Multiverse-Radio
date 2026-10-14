@@ -1788,6 +1788,188 @@
           "startMs": 3236
         }
       ]
+    },
+    {
+      "id": "convergence-missing-moon",
+      "category": "event",
+      "url": "/voice/numbers-omega/convergence-missing-moon.mp3",
+      "durationMs": 8232,
+      "title": "The Convergence: A Moon Goes Missing",
+      "overMusic": false,
+      "kit": "missing-moon",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "The Counter",
+          "text": "Attention.",
+          "startMs": 50
+        },
+        {
+          "speaker": "The Counter",
+          "text": "Zero. Zero. One.",
+          "startMs": 1203
+        },
+        {
+          "speaker": "The Counter",
+          "text": "One moon. Not accounted for.",
+          "startMs": 2921
+        },
+        {
+          "speaker": "The Counter",
+          "text": "Do not look for it. It knows where it is. End of message.",
+          "startMs": 4915
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-smell",
+      "category": "event",
+      "url": "/voice/numbers-omega/convergence-the-smell.mp3",
+      "durationMs": 9599,
+      "title": "The Convergence: Toast, Everywhere",
+      "overMusic": false,
+      "kit": "the-smell",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "The Counter",
+          "text": "Attention.",
+          "startMs": 50
+        },
+        {
+          "speaker": "The Counter",
+          "text": "Four. Four.",
+          "startMs": 1203
+        },
+        {
+          "speaker": "The Counter",
+          "text": "Toast. Everywhere. It is not a code. It is breakfast.",
+          "startMs": 2482
+        },
+        {
+          "speaker": "The Counter",
+          "text": "The fox at the bottom of the mast would like some. End of message.",
+          "startMs": 5703
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-song",
+      "category": "event",
+      "url": "/voice/numbers-omega/convergence-the-song.mp3",
+      "durationMs": 9837,
+      "title": "The Convergence: The Song Nobody Can Finish",
+      "overMusic": false,
+      "kit": "the-song",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "The Counter",
+          "text": "Attention.",
+          "startMs": 50
+        },
+        {
+          "speaker": "The Counter",
+          "text": "Three. Three. Three.",
+          "startMs": 1203
+        },
+        {
+          "speaker": "The Counter",
+          "text": "That is not the song. You were hoping it was the song. It is three.",
+          "startMs": 2742
+        },
+        {
+          "speaker": "The Counter",
+          "text": "Nobody has the end. Not even us. End of message.",
+          "startMs": 6664
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-knock",
+      "category": "event",
+      "url": "/voice/numbers-omega/convergence-the-knock.mp3",
+      "durationMs": 7668,
+      "title": "The Convergence: Three Knocks",
+      "overMusic": false,
+      "kit": "the-knock",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "The Counter",
+          "text": "Knock. Knock. Knock.",
+          "startMs": 50
+        },
+        {
+          "speaker": "The Counter",
+          "text": "That was three. Three is a number. This is a numbers station.",
+          "startMs": 1595
+        },
+        {
+          "speaker": "The Counter",
+          "text": "We counted them for you. End of message.",
+          "startMs": 5380
+        }
+      ]
+    },
+    {
+      "id": "convergence-wrong-colour",
+      "category": "event",
+      "url": "/voice/numbers-omega/convergence-wrong-colour.mp3",
+      "durationMs": 9574,
+      "title": "The Convergence: A Colour With No Name",
+      "overMusic": false,
+      "kit": "wrong-colour",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "The Counter",
+          "text": "Attention.",
+          "startMs": 50
+        },
+        {
+          "speaker": "The Counter",
+          "text": "The sky has displayed a colour with no name. It has a number.",
+          "startMs": 1203
+        },
+        {
+          "speaker": "The Counter",
+          "text": "The number is seven. Seven. Four.",
+          "startMs": 5246
+        },
+        {
+          "speaker": "The Counter",
+          "text": "Of course it is. End of message.",
+          "startMs": 7619
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-pigeon",
+      "category": "event",
+      "url": "/voice/numbers-omega/convergence-the-pigeon.mp3",
+      "durationMs": 10013,
+      "title": "The Convergence: The Pigeon",
+      "overMusic": false,
+      "kit": "the-pigeon",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "The Counter",
+          "text": "Attention.",
+          "startMs": 50
+        },
+        {
+          "speaker": "The Counter",
+          "text": "One pigeon. Not a goose. Repeat. Not a goose.",
+          "startMs": 1203
+        },
+        {
+          "speaker": "The Counter",
+          "text": "The pigeon knows this. The pigeon has come to say so in person. The account remains open.",
+          "startMs": 4292
+        }
+      ]
     }
   ]
 }

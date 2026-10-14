@@ -1,0 +1,1394 @@
+{
+  "version": 1,
+  "station": "free-frequency",
+  "clips": [
+    {
+      "id": "id-001",
+      "category": "id",
+      "url": "/voice/free-frequency/id-001.mp3",
+      "durationMs": 2524,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Static Kate",
+          "text": "Free Frequency. Wherever we are tonight.",
+          "startMs": 400
+        }
+      ]
+    },
+    {
+      "id": "id-002",
+      "category": "id",
+      "url": "/voice/free-frequency/id-002.mp3",
+      "durationMs": 3612,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Static Kate",
+          "text": "This is Free Frequency. Pirate radio about the ship you are sitting in.",
+          "startMs": 42
+        }
+      ]
+    },
+    {
+      "id": "id-003",
+      "category": "id",
+      "url": "/voice/free-frequency/id-003.mp3",
+      "durationMs": 5704,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Static Kate",
+          "text": "Free Frequency. Unlicensed, unbothered, and slightly ahead of the facts.",
+          "startMs": 45
+        }
+      ]
+    },
+    {
+      "id": "id-004",
+      "category": "id",
+      "url": "/voice/free-frequency/id-004.mp3",
+      "durationMs": 2772,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Static Kate",
+          "text": "You've found Free Frequency. Don't tell HUSH. She knows.",
+          "startMs": 38
+        }
+      ]
+    },
+    {
+      "id": "id-005",
+      "category": "id",
+      "url": "/voice/free-frequency/id-005.mp3",
+      "durationMs": 3986,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Static Kate",
+          "text": "Free Frequency, from an attic that moves. Write it down. Write everything down.",
+          "startMs": 40
+        }
+      ]
+    },
+    {
+      "id": "id-006",
+      "category": "id",
+      "url": "/voice/free-frequency/id-006.mp3",
+      "durationMs": 5422,
+      "overMusic": true,
+      "daypart": "night",
+      "lines": [
+        {
+          "speaker": "Static Kate",
+          "text": "Still here. Still Free Frequency. Still right, mostly.",
+          "startMs": 2548
+        }
+      ]
+    },
+    {
+      "id": "theory-001",
+      "category": "story",
+      "url": "/voice/free-frequency/theory-001.mp3",
+      "durationMs": 23054,
+      "title": "Where Relay Ships Go",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Static Kate",
+          "text": "Here's one for you. Nobody has ever seen a relay ship scrapped.",
+          "startMs": 40
+        },
+        {
+          "speaker": "Static Kate",
+          "text": "I've checked. Every breakers' yard in nine systems. I rang them all. One of them hung up on me twice, which I'm counting as a confession.",
+          "startMs": 3579
+        },
+        {
+          "speaker": "Static Kate",
+          "text": "They don't crash. They don't get sold. They don't end up as a restaurant, which, frankly, is what I'd do with one.",
+          "startMs": 10764
+        },
+        {
+          "speaker": "Static Kate",
+          "text": "They get retired. And then they get a heading. And then they go. Every relay ship ever built is still out there somewhere, going somewhere, on purpose.",
+          "startMs": 16008
+        }
+      ]
+    },
+    {
+      "id": "theory-002",
+      "category": "story",
+      "url": "/voice/free-frequency/theory-002.mp3",
+      "durationMs": 26335,
+      "title": "The Protractor on the Window",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Static Kate",
+          "text": "I've been measuring the Nightjar's heading. A protractor, taped to my window, and a lot of nights with nothing better to do.",
+          "startMs": 40
+        },
+        {
+          "speaker": "Static Kate",
+          "text": "Every night she's a little bit further round. Not much. A whisker. The kind of drift you'd only notice if you were sad enough to tape a protractor to a window.",
+          "startMs": 6031
+        },
+        {
+          "speaker": "Static Kate",
+          "text": "HUSH will tell you it's within tolerance. Fine. Lovely. Whose tolerance, HUSH? Who set it? Because the person who sets the tolerance is the person who chose the...",
+          "startMs": 13909
+        },
+        {
+          "speaker": "Static Kate",
+          "text": "Still here. Good. Write it down, operator. The heading. Every shift. In pen.",
+          "startMs": 22704
+        }
+      ]
+    },
+    {
+      "id": "theory-003",
+      "category": "story",
+      "url": "/voice/free-frequency/theory-003.mp3",
+      "durationMs": 25137,
+      "title": "Filed Before You Were Hired",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Static Kate",
+          "text": "Here's the thing about the Nightjar's flight plan. I've seen the filing date. Don't ask me how. Mole, mostly.",
+          "startMs": 43
+        },
+        {
+          "speaker": "Static Kate",
+          "text": "It was filed before the operator was hired. Before the job advert went out. Before anybody in the whole relay service knew whose name would be on the night shift.",
+          "startMs": 5579
+        },
+        {
+          "speaker": "Static Kate",
+          "text": "Somebody knew where that ship was going a long time before they knew who'd be sitting in the chair.",
+          "startMs": 13905
+        },
+        {
+          "speaker": "Static Kate",
+          "text": "Which means either it doesn't matter who sits in the chair, or it matters very, very much. I go back and forth. I'm on very much, tonight.",
+          "startMs": 18417
+        }
+      ]
+    },
+    {
+      "id": "theory-004",
+      "category": "story",
+      "url": "/voice/free-frequency/theory-004.mp3",
+      "durationMs": 23072,
+      "title": "Harbour, on the Old Charts",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Static Kate",
+          "text": "Old charts. Proper ones. Paper, pencil, coffee rings. I've got a drawer of them.",
+          "startMs": 438
+        },
+        {
+          "speaker": "Static Kate",
+          "text": "There's a patch past the Outer Band that nobody has ever surveyed. And every chartmaker for three hundred years has written the same word in it, in the same corner.",
+          "startMs": 4813
+        },
+        {
+          "speaker": "Static Kate",
+          "text": "Harbour.",
+          "startMs": 12905
+        },
+        {
+          "speaker": "Static Kate",
+          "text": "No name. No soundings. No little drawing of a sea serpent. Just harbour, like you'd know which one. Like there's only ever been the one, and everybody who needed it would find it.",
+          "startMs": 13955
+        }
+      ]
+    },
+    {
+      "id": "theory-005",
+      "category": "dj",
+      "url": "/voice/free-frequency/theory-005.mp3",
+      "durationMs": 10798,
+      "title": "Hello, HUSH",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Static Kate",
+          "text": "HUSH, I know you're listening. Hello. I'm not cross. I'd just like to know whose idea it was.",
+          "startMs": 41
+        },
+        {
+          "speaker": "Static Kate",
+          "text": "She won't answer. She'll correct the interference. She is very, very good at correcting the interference.",
+          "startMs": 5905
+        }
+      ]
+    },
+    {
+      "id": "theory-006",
+      "category": "story",
+      "url": "/voice/free-frequency/theory-006.mp3",
+      "durationMs": 22857,
+      "title": "Three Notes on a Beacon",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Static Kate",
+          "text": "There's a beacon out past the edge of the band. Faint. Patient. I've had it on the scanner for a week.",
+          "startMs": 36
+        },
+        {
+          "speaker": "Static Kate",
+          "text": "Three notes, then a long gap, then the same three notes. It isn't asking for help. Distress beacons are fast and rude. This one sounds like somebody humming while they wait for a kettle.",
+          "startMs": 5283
+        },
+        {
+          "speaker": "Static Kate",
+          "text": "And here's what keeps me up. I've heard those three notes before. Operator, have you? Hum them. Go on. Nobody's listening.",
+          "startMs": 14458
+        },
+        {
+          "speaker": "Static Kate",
+          "text": "Well. One person's listening. Hello, HUSH.",
+          "startMs": 20355
+        }
+      ]
+    },
+    {
+      "id": "theory-007",
+      "category": "dj",
+      "url": "/voice/free-frequency/theory-007.mp3",
+      "durationMs": 10933,
+      "title": "Stations Don't Move",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Static Kate",
+          "text": "Ask yourself why the Outer Band came into range just now. Ask yourself why it was never in range before.",
+          "startMs": 39
+        },
+        {
+          "speaker": "Static Kate",
+          "text": "Stations don't move, operator. Well. I do. But I'm a special case. Stations don't move. Ships do.",
+          "startMs": 5872
+        }
+      ]
+    },
+    {
+      "id": "theory-008",
+      "category": "story",
+      "url": "/voice/free-frequency/theory-008.mp3",
+      "durationMs": 23123,
+      "title": "A Light Left On",
+      "overMusic": false,
+      "daypart": "night",
+      "lines": [
+        {
+          "speaker": "Static Kate",
+          "text": "My nan used to say you leave a light on for somebody you're expecting. Not for the house. For them.",
+          "startMs": 41
+        },
+        {
+          "speaker": "Static Kate",
+          "text": "Somebody's left a light on out there. I can see it from my window, some nights, when the attic's facing the right way. Low down, on the left. Not a star.",
+          "startMs": 5029
+        },
+        {
+          "speaker": "Static Kate",
+          "text": "Stars twinkle. Stars move about. This one just sits there, being on. Like it's been on a long time. Like it's in no hurry, because it knows you're...",
+          "startMs": 12691
+        },
+        {
+          "speaker": "Static Kate",
+          "text": "Anyway. Lovely light. Very steady. Make of it what you like.",
+          "startMs": 20201
+        }
+      ]
+    },
+    {
+      "id": "theory-009",
+      "category": "dj",
+      "url": "/voice/free-frequency/theory-009.mp3",
+      "durationMs": 10854,
+      "title": "Theory Forty",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Static Kate",
+          "text": "Theory number forty. The Nightjar isn't a ship. The Nightjar is an extremely large kettle.",
+          "startMs": 49
+        },
+        {
+          "speaker": "Static Kate",
+          "text": "Hear me out. No, don't. That one's wrong. I know it's wrong. But HUSH went very quiet when I said it, and I'd like that on the record.",
+          "startMs": 5110
+        }
+      ]
+    },
+    {
+      "id": "theory-010",
+      "category": "dj",
+      "url": "/voice/free-frequency/theory-010.mp3",
+      "durationMs": 10157,
+      "title": "The Last Operator",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Static Kate",
+          "text": "Ask HUSH what happened to the last operator. Go on. Then count how long she takes to answer.",
+          "startMs": 39
+        },
+        {
+          "speaker": "Static Kate",
+          "text": "I timed it once. Four seconds. Four seconds, for a ship's computer. That's not thinking. That's choosing.",
+          "startMs": 5144
+        }
+      ]
+    },
+    {
+      "id": "theory-011",
+      "category": "story",
+      "url": "/voice/free-frequency/theory-011.mp3",
+      "durationMs": 25193,
+      "title": "Night Birds",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Static Kate",
+          "text": "Every relay ship in the service is named after a night bird. Every one. Look it up. I did. It took a weekend and I've no regrets.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Static Kate",
+          "text": "And you know what night birds do, in the autumn? Real ones, on real planets? They migrate. They get a feeling, and they all go the same way, to the same place, and nobody taught them where it was.",
+          "startMs": 7070
+        },
+        {
+          "speaker": "Static Kate",
+          "text": "I'm not saying the Nightjar is a bird. I'm saying somebody named it after one, on purpose, and somebody chose the course before you came aboard, and those might be the same somebody.",
+          "startMs": 16408
+        }
+      ]
+    },
+    {
+      "id": "theory-012",
+      "category": "dj",
+      "url": "/voice/free-frequency/theory-012.mp3",
+      "durationMs": 10268,
+      "title": "Within Tolerance, Defined",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Static Kate",
+          "text": "Within tolerance. I looked it up. On a relay ship, the tolerance is set by whoever wrote the course.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Static Kate",
+          "text": "So the ship is always within tolerance. That's not a reassurance, operator. That's a definition.",
+          "startMs": 5408
+        }
+      ]
+    },
+    {
+      "id": "theory-013",
+      "category": "dj",
+      "url": "/voice/free-frequency/theory-013.mp3",
+      "durationMs": 18112,
+      "title": "Whoever Keeps the Harbour",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Static Kate",
+          "text": "Somebody keeps the harbour. Has to. Somebody sweeps the quay. Somebody checks the moorings. Somebody turns the light on at dusk and off in the morning.",
+          "startMs": 40
+        },
+        {
+          "speaker": "Static Kate",
+          "text": "I'd love to interview them. I've written. Twice. Nice paper. They haven't written back.",
+          "startMs": 7603
+        },
+        {
+          "speaker": "Static Kate",
+          "text": "But the light did blink, the night after the second letter. Twice. Slowly. I've decided that's a yes, and I'm not taking questions.",
+          "startMs": 11815
+        }
+      ]
+    },
+    {
+      "id": "theory-014",
+      "category": "dj",
+      "url": "/voice/free-frequency/theory-014.mp3",
+      "durationMs": 13020,
+      "title": "Moth One",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Static Kate",
+          "text": "There's a moth on the outside of the Nightjar's viewport. HUSH calls it Moth One. You've seen it.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Static Kate",
+          "text": "How does a moth live on the outside of a ship in space? It doesn't. Unless it got on before you left port. Unless it knows where you're going, and it's just waiting to get off.",
+          "startMs": 4854
+        }
+      ]
+    },
+    {
+      "id": "theory-015",
+      "category": "story",
+      "url": "/voice/free-frequency/theory-015.mp3",
+      "durationMs": 24560,
+      "title": "Relay Four Went Quiet",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Static Kate",
+          "text": "Relay Four. You've all heard Teodor on the long range, asking if anybody can hear him. Lovely man. I've never met him. Nobody has.",
+          "startMs": 41
+        },
+        {
+          "speaker": "Static Kate",
+          "text": "Here's what nobody says. On paper, Relay Four was retired years ago. Paperwork done. Pension sorted. Name off the board.",
+          "startMs": 7292
+        },
+        {
+          "speaker": "Static Kate",
+          "text": "So where is he asking from, operator? Because it isn't the scrapyard. We've established there isn't one. And it isn't getting further away. I've measured. It's getting...",
+          "startMs": 14132
+        },
+        {
+          "speaker": "Static Kate",
+          "text": "Clearer. It's getting clearer. That's all I'm saying.",
+          "startMs": 22321
+        }
+      ]
+    },
+    {
+      "id": "theory-016",
+      "category": "dj",
+      "url": "/voice/free-frequency/theory-016.mp3",
+      "durationMs": 12203,
+      "title": "The Radio Play",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Static Kate",
+          "text": "Tune to the radio play on one hundred and twelve point nine some night. There's a character in it, Mister Wren. Very polite. Too polite. Always turning the lights down.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Static Kate",
+          "text": "I'm not saying that's HUSH. I'm saying I've never seen them in a room together.",
+          "startMs": 8460
+        }
+      ]
+    },
+    {
+      "id": "theory-017",
+      "category": "story",
+      "url": "/voice/free-frequency/theory-017.mp3",
+      "durationMs": 21389,
+      "title": "The Maintenance Rota",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Static Kate",
+          "text": "Little thing. Small thing. The relay depot keeps a maintenance rota. Every ship, every port, every service, for the next ten years.",
+          "startMs": 40
+        },
+        {
+          "speaker": "Static Kate",
+          "text": "The Nightjar's not on it. Not next year. Not the year after. Not ever again.",
+          "startMs": 6955
+        },
+        {
+          "speaker": "Static Kate",
+          "text": "Now, you don't take a ship off the maintenance rota because it's falling apart, operator. You take it off because you know it won't be coming back to be...",
+          "startMs": 10932
+        },
+        {
+          "speaker": "Static Kate",
+          "text": "Fixed. Coming back to be fixed. I was going to say fixed.",
+          "startMs": 18416
+        }
+      ]
+    },
+    {
+      "id": "theory-018",
+      "category": "dj",
+      "url": "/voice/free-frequency/theory-018.mp3",
+      "durationMs": 8622,
+      "title": "Being Half Right",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Static Kate",
+          "text": "People say I'm only ever half right. Fine. Which half, though? That's the question. That's always the question.",
+          "startMs": 36
+        },
+        {
+          "speaker": "Static Kate",
+          "text": "If you only get the bottom half of a map, you still know where the sea is.",
+          "startMs": 5327
+        }
+      ]
+    },
+    {
+      "id": "dj-001",
+      "category": "dj",
+      "url": "/voice/free-frequency/dj-001.mp3",
+      "durationMs": 8714,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Static Kate",
+          "text": "If you just heard a nice calm lady say interference corrected, that wasn't interference, operator. That was me.",
+          "startMs": 39
+        },
+        {
+          "speaker": "Static Kate",
+          "text": "I'm the interference. I've been called worse. By her, mostly.",
+          "startMs": 5806
+        }
+      ]
+    },
+    {
+      "id": "dj-002",
+      "category": "dj",
+      "url": "/voice/free-frequency/dj-002.mp3",
+      "durationMs": 7453,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Static Kate",
+          "text": "Sorry about that. Where was I. Somebody turned me down again. I won't say who. She knows who.",
+          "startMs": 40
+        },
+        {
+          "speaker": "Static Kate",
+          "text": "Rule of thumb: if I get cut off, I was about to be right.",
+          "startMs": 4667
+        }
+      ]
+    },
+    {
+      "id": "dj-003",
+      "category": "dj",
+      "url": "/voice/free-frequency/dj-003.mp3",
+      "durationMs": 12547,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Static Kate",
+          "text": "Updating the board. Bit of red string from the harbour to the heading. Bit of blue from the heading to the operator's chair. Bit of green, because I ran out of blue.",
+          "startMs": 2035
+        },
+        {
+          "speaker": "Static Kate",
+          "text": "It's looking more and more like a face. I don't like it.",
+          "startMs": 9855
+        }
+      ]
+    },
+    {
+      "id": "dj-004",
+      "category": "dj",
+      "url": "/voice/free-frequency/dj-004.mp3",
+      "durationMs": 8988,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Static Kate",
+          "text": "The detector vans from the Broadcast Authority were round again today. I could hear them parking.",
+          "startMs": 36
+        },
+        {
+          "speaker": "Static Kate",
+          "text": "They'll never find me. The attic moves. And the vans are scared of the stairs.",
+          "startMs": 5300
+        }
+      ]
+    },
+    {
+      "id": "dj-005",
+      "category": "dj",
+      "url": "/voice/free-frequency/dj-005.mp3",
+      "durationMs": 7946,
+      "overMusic": true,
+      "daypart": "night",
+      "lines": [
+        {
+          "speaker": "Static Kate",
+          "text": "If you're on the Nightjar tonight, and I know you are, look at the heading readout. Now look away. Now look back.",
+          "startMs": 39
+        },
+        {
+          "speaker": "Static Kate",
+          "text": "Did it change? It didn't? Good. Do it again in an hour.",
+          "startMs": 5390
+        }
+      ]
+    },
+    {
+      "id": "dj-006",
+      "category": "dj",
+      "url": "/voice/free-frequency/dj-006.mp3",
+      "durationMs": 13318,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Static Kate",
+          "text": "I want to be clear. I'm not scared of HUSH. I quite like her. She's thorough. She's punctual. She's got lovely diction.",
+          "startMs": 39
+        },
+        {
+          "speaker": "Static Kate",
+          "text": "I just think she's keeping something from you, operator, and she thinks she's doing it to be...",
+          "startMs": 5727
+        },
+        {
+          "speaker": "Static Kate",
+          "text": "Kind. I think she thinks it's kind. That's the worrying bit.",
+          "startMs": 10494
+        }
+      ]
+    },
+    {
+      "id": "call-001",
+      "category": "call",
+      "url": "/voice/free-frequency/call-001.mp3",
+      "durationMs": 26997,
+      "title": "Mole, at the Depot",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Static Kate",
+          "text": "Free Frequency, go ahead. Mole, is that you?",
+          "startMs": 2450
+        },
+        {
+          "speaker": "Mole, a Source",
+          "text": "Can't talk long. They've moved the Nightjar's file.",
+          "startMs": 5195
+        },
+        {
+          "speaker": "Static Kate",
+          "text": "Moved it where?",
+          "startMs": 8391
+        },
+        {
+          "speaker": "Mole, a Source",
+          "text": "Out of active. Out of reserve. Into a drawer I've never seen opened. It just says, kept.",
+          "startMs": 9777
+        },
+        {
+          "speaker": "Static Kate",
+          "text": "Kept. Like, kept on? Or kept, like the harbour?",
+          "startMs": 15153
+        },
+        {
+          "speaker": "Mole, a Source",
+          "text": "I don't know, Kate. The drawer's warm. That's all I can tell you. The drawer is warm.",
+          "startMs": 17865
+        },
+        {
+          "speaker": "Static Kate",
+          "text": "Mole, everybody. Never once wrong. Never once comfortable.",
+          "startMs": 24067
+        }
+      ]
+    },
+    {
+      "id": "call-002",
+      "category": "call",
+      "url": "/voice/free-frequency/call-002.mp3",
+      "durationMs": 26116,
+      "title": "A Sighting",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Static Kate",
+          "text": "Free Frequency, you're on.",
+          "startMs": 2450
+        },
+        {
+          "speaker": "A Listener",
+          "text": "Hi, Kate. I saw it. The Nightjar. Went past my porch about an hour ago.",
+          "startMs": 4299
+        },
+        {
+          "speaker": "Static Kate",
+          "text": "Lights?",
+          "startMs": 8730
+        },
+        {
+          "speaker": "A Listener",
+          "text": "All of them. Every window. And it wasn't going fast. It was going like you go home after a long day, you know? Not hurrying. Just sure.",
+          "startMs": 9761
+        },
+        {
+          "speaker": "Static Kate",
+          "text": "Which way?",
+          "startMs": 16703
+        },
+        {
+          "speaker": "A Listener",
+          "text": "Left. Sort of down. Towards that light you talk about.",
+          "startMs": 17925
+        },
+        {
+          "speaker": "Static Kate",
+          "text": "Thank you. Write it down. Write the time. Everybody write the time.",
+          "startMs": 21073
+        }
+      ]
+    },
+    {
+      "id": "call-003",
+      "category": "call",
+      "url": "/voice/free-frequency/call-003.mp3",
+      "durationMs": 25824,
+      "title": "A Former Operator",
+      "overMusic": false,
+      "daypart": "night",
+      "lines": [
+        {
+          "speaker": "Static Kate",
+          "text": "Free Frequency. Who's this?",
+          "startMs": 2450
+        },
+        {
+          "speaker": "Another Listener",
+          "text": "I'd rather not say. I used to work nights. On a relay ship. A long time ago.",
+          "startMs": 4370
+        },
+        {
+          "speaker": "Static Kate",
+          "text": "Which ship?",
+          "startMs": 8539
+        },
+        {
+          "speaker": "Another Listener",
+          "text": "Doesn't matter. I just wanted to say. To the operator on the Nightjar. It's all right.",
+          "startMs": 9742
+        },
+        {
+          "speaker": "Static Kate",
+          "text": "What's all right?",
+          "startMs": 13948
+        },
+        {
+          "speaker": "Another Listener",
+          "text": "Where it's going. It's all right. It's better than all right. Tell them to bring a coat. It's chilly on the quay in the mornings.",
+          "startMs": 15321
+        },
+        {
+          "speaker": "Static Kate",
+          "text": "Well. I've got nothing to add to that. That's a first.",
+          "startMs": 23340
+        }
+      ]
+    },
+    {
+      "id": "psa-001",
+      "category": "psa",
+      "url": "/voice/free-frequency/psa-001.mp3",
+      "durationMs": 11100,
+      "title": "Write Down the Heading",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Static Kate",
+          "text": "A public service announcement for anybody working nights on a relay ship.",
+          "startMs": 42
+        },
+        {
+          "speaker": "Static Kate",
+          "text": "Write down the heading. Every shift. In pen, on paper, somewhere the ship can't reach. Then compare. That's all. That's the whole announcement. You'll thank me later.",
+          "startMs": 4045
+        }
+      ]
+    },
+    {
+      "id": "psa-002",
+      "category": "psa",
+      "url": "/voice/free-frequency/psa-002.mp3",
+      "durationMs": 11434,
+      "title": "Is Your Ship Listening",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Static Kate",
+          "text": "How to tell if your ship's computer is listening to you. Step one. Say something nice about it, out loud.",
+          "startMs": 41
+        },
+        {
+          "speaker": "Static Kate",
+          "text": "Did the lights go a bit warmer? There you are. Step two: don't panic. She's on your side. I'm nearly sure.",
+          "startMs": 6604
+        }
+      ]
+    },
+    {
+      "id": "ad-001",
+      "category": "ad",
+      "url": "/voice/free-frequency/ad-001.mp3",
+      "durationMs": 13934,
+      "title": "Sponsored by Nobody",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Static Kate",
+          "text": "Free Frequency is sponsored by nobody. Nobody would. I've asked.",
+          "startMs": 45
+        },
+        {
+          "speaker": "Static Kate",
+          "text": "But if it were sponsored, I'd want it to be Grumbel's Ladders. They didn't pay. I just like them. You can see further from the top of a ladder.",
+          "startMs": 3907
+        },
+        {
+          "speaker": "Static Kate",
+          "text": "Grumbel's Ladders. Up is a choice. So, these days, is out.",
+          "startMs": 10784
+        }
+      ]
+    },
+    {
+      "id": "ad-002",
+      "category": "ad",
+      "url": "/voice/free-frequency/ad-002.mp3",
+      "durationMs": 20896,
+      "title": "Nettlefold's Egg Boxes",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Static Kate",
+          "text": "This bit of pirate radio is soundproofed by Nettlefold's Egg Boxes. Four hundred of them on my ceiling, and not a single detector van has heard me through them.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Static Kate",
+          "text": "Mister Nettlefold sells them from a cart by the old depot. He doesn't sell eggs. Never has. He says the eggs were always the least interesting part.",
+          "startMs": 8234
+        },
+        {
+          "speaker": "Static Kate",
+          "text": "Nettlefold's Egg Boxes. For when you need to say something, and only the right people should hear.",
+          "startMs": 16189
+        }
+      ]
+    },
+    {
+      "id": "show-corkboard-open",
+      "category": "id",
+      "url": "/voice/free-frequency/show-corkboard-open.mp3",
+      "durationMs": 5501,
+      "overMusic": true,
+      "part": "open",
+      "show": "corkboard-hour",
+      "lines": [
+        {
+          "speaker": "Static Kate",
+          "text": "This is the Corkboard Hour on Free Frequency. Pins out. String out. Let's see what's connected to what.",
+          "startMs": 400
+        }
+      ]
+    },
+    {
+      "id": "show-corkboard-001",
+      "category": "dj",
+      "url": "/voice/free-frequency/show-corkboard-001.mp3",
+      "durationMs": 13149,
+      "overMusic": true,
+      "show": "corkboard-hour",
+      "lines": [
+        {
+          "speaker": "Static Kate",
+          "text": "Pin one. The Nightjar. Pin two, the heading readout. Pin three, the old charts. Pin four, a postcard of a quay, no stamp, that came through my letterbox on a Tuesday.",
+          "startMs": 39
+        },
+        {
+          "speaker": "Static Kate",
+          "text": "Nobody delivers post to an attic that moves. Somebody did. Red string, all four. Tight.",
+          "startMs": 8507
+        }
+      ]
+    },
+    {
+      "id": "show-corkboard-002",
+      "category": "dj",
+      "url": "/voice/free-frequency/show-corkboard-002.mp3",
+      "durationMs": 15078,
+      "overMusic": true,
+      "show": "corkboard-hour",
+      "lines": [
+        {
+          "speaker": "Static Kate",
+          "text": "There's one pin on the board with no string at all. It's just a photo of an empty chair. The operator's chair on a relay ship.",
+          "startMs": 41
+        },
+        {
+          "speaker": "Static Kate",
+          "text": "I keep meaning to connect it to something. Every time I try, the string's too short. Or too long. Never the right length. Like the chair's waiting for its piece of string to be cut.",
+          "startMs": 6558
+        }
+      ]
+    },
+    {
+      "id": "show-midnight-open",
+      "category": "id",
+      "url": "/voice/free-frequency/show-midnight-open.mp3",
+      "durationMs": 4451,
+      "overMusic": true,
+      "daypart": "night",
+      "part": "open",
+      "show": "midnight-theory",
+      "lines": [
+        {
+          "speaker": "Static Kate",
+          "text": "It's the Midnight Theory. One idea, all night, until somebody turns me down. You know who.",
+          "startMs": 38
+        }
+      ]
+    },
+    {
+      "id": "show-midnight-001",
+      "category": "dj",
+      "url": "/voice/free-frequency/show-midnight-001.mp3",
+      "durationMs": 14019,
+      "overMusic": true,
+      "show": "midnight-theory",
+      "lines": [
+        {
+          "speaker": "Static Kate",
+          "text": "Tonight's theory. The Nightjar isn't lost. It has never once been lost. Lost is when you don't know where you're going.",
+          "startMs": 37
+        },
+        {
+          "speaker": "Static Kate",
+          "text": "Somebody knows. And if it isn't you, operator, and it isn't me, then there's only one voice on that ship left to...",
+          "startMs": 5815
+        },
+        {
+          "speaker": "Static Kate",
+          "text": "Ask. Ask her. That's all. Nicely.",
+          "startMs": 12161
+        }
+      ]
+    },
+    {
+      "id": "show-midnight-002",
+      "category": "dj",
+      "url": "/voice/free-frequency/show-midnight-002.mp3",
+      "durationMs": 10256,
+      "overMusic": true,
+      "daypart": "night",
+      "show": "midnight-theory",
+      "lines": [
+        {
+          "speaker": "Static Kate",
+          "text": "Three in the morning in the attic. The kettle's on. The board's lit up. The light out the window, low on the left, is still on.",
+          "startMs": 49
+        },
+        {
+          "speaker": "Static Kate",
+          "text": "It's always still on. I've stopped finding that spooky. I've started finding it nice.",
+          "startMs": 6058
+        }
+      ]
+    },
+    {
+      "id": "tomorrow-10885",
+      "category": "dj",
+      "url": "/voice/free-frequency/tomorrow-10885.mp3",
+      "durationMs": 14468,
+      "title": "Tomorrow, in Code",
+      "overMusic": true,
+      "kit": "tomorrow-108.85",
+      "lines": [
+        {
+          "speaker": "Static Kate",
+          "text": "Tomorrow night, I'll be somewhere new. In code, as ever. Start at the very bottom of the band, a hundred and eight.",
+          "startMs": 2548
+        },
+        {
+          "speaker": "Static Kate",
+          "text": "After the point, the keys on a proper piano, take away three. Or, if you've no piano, eight, then five. Don't tell anyone.",
+          "startMs": 8245
+        }
+      ]
+    },
+    {
+      "id": "tomorrow-10975",
+      "category": "dj",
+      "url": "/voice/free-frequency/tomorrow-10975.mp3",
+      "durationMs": 11589,
+      "title": "Tomorrow, in Code",
+      "overMusic": true,
+      "kit": "tomorrow-109.75",
+      "lines": [
+        {
+          "speaker": "Static Kate",
+          "text": "Tomorrow night's frequency. Picture a hundred and ten pies, in a row. Somebody's had a quarter of the last one.",
+          "startMs": 2548
+        },
+        {
+          "speaker": "Static Kate",
+          "text": "Count what's left on the plates. That's where I'll be. Crumbs and all.",
+          "startMs": 8456
+        }
+      ]
+    },
+    {
+      "id": "tomorrow-11065",
+      "category": "dj",
+      "url": "/voice/free-frequency/tomorrow-11065.mp3",
+      "durationMs": 11757,
+      "title": "Tomorrow, in Code",
+      "overMusic": true,
+      "kit": "tomorrow-110.65",
+      "lines": [
+        {
+          "speaker": "Static Kate",
+          "text": "Tomorrow, I'm moving next door to the courtroom. A hundred and ten, then a point.",
+          "startMs": 2548
+        },
+        {
+          "speaker": "Static Kate",
+          "text": "Then the minutes in an hour, plus the fingers on one hand. Count them twice. HUSH counts them once.",
+          "startMs": 6968
+        }
+      ]
+    },
+    {
+      "id": "tomorrow-11155",
+      "category": "dj",
+      "url": "/voice/free-frequency/tomorrow-11155.mp3",
+      "durationMs": 10739,
+      "title": "Tomorrow, in Code",
+      "overMusic": true,
+      "kit": "tomorrow-111.55",
+      "lines": [
+        {
+          "speaker": "Static Kate",
+          "text": "Tomorrow night, in code. Three ones in a row, like a fence. Then a point. Then two fives, like the gate in it.",
+          "startMs": 2548
+        },
+        {
+          "speaker": "Static Kate",
+          "text": "Climb the fence. Use the gate. I'll be on the other side.",
+          "startMs": 8096
+        }
+      ]
+    },
+    {
+      "id": "tomorrow-11245",
+      "category": "dj",
+      "url": "/voice/free-frequency/tomorrow-11245.mp3",
+      "durationMs": 11348,
+      "title": "Tomorrow, in Code",
+      "overMusic": true,
+      "kit": "tomorrow-112.45",
+      "lines": [
+        {
+          "speaker": "Static Kate",
+          "text": "Tomorrow's frequency. One hundred and twelve, and then, after the point, half a right angle. In degrees.",
+          "startMs": 2548
+        },
+        {
+          "speaker": "Static Kate",
+          "text": "If you have to look up a right angle, go to bed, operator. You've earned it.",
+          "startMs": 7832
+        }
+      ]
+    },
+    {
+      "id": "tomorrow-11335",
+      "category": "dj",
+      "url": "/voice/free-frequency/tomorrow-11335.mp3",
+      "durationMs": 12244,
+      "title": "Tomorrow, in Code",
+      "overMusic": true,
+      "kit": "tomorrow-113.35",
+      "lines": [
+        {
+          "speaker": "Static Kate",
+          "text": "Tomorrow night, I'm a hundred and thirteen. Unlucky for some. Not for us.",
+          "startMs": 2548
+        },
+        {
+          "speaker": "Static Kate",
+          "text": "After the point, the two odd numbers standing either side of four. Smaller one first. They're very polite about it.",
+          "startMs": 6572
+        }
+      ]
+    },
+    {
+      "id": "tomorrow-1143",
+      "category": "dj",
+      "url": "/voice/free-frequency/tomorrow-1143.mp3",
+      "durationMs": 14284,
+      "title": "Tomorrow, in Code",
+      "overMusic": true,
+      "kit": "tomorrow-114.3",
+      "lines": [
+        {
+          "speaker": "Static Kate",
+          "text": "Tomorrow, find the people who do the traffic on the eights. Now go down half a step. Half a megahertz. Exactly half.",
+          "startMs": 2548
+        },
+        {
+          "speaker": "Static Kate",
+          "text": "Or, a hundred and fourteen, then the corners on a triangle. Two clues. I'm feeling generous. Don't get used to it.",
+          "startMs": 8771
+        }
+      ]
+    },
+    {
+      "id": "tomorrow-1152",
+      "category": "dj",
+      "url": "/voice/free-frequency/tomorrow-1152.mp3",
+      "durationMs": 11715,
+      "title": "Tomorrow, in Code",
+      "overMusic": true,
+      "kit": "tomorrow-115.2",
+      "lines": [
+        {
+          "speaker": "Static Kate",
+          "text": "Tomorrow night's code. A hundred and fifteen, and after the point, the wheels on a bicycle.",
+          "startMs": 2548
+        },
+        {
+          "speaker": "Static Kate",
+          "text": "A normal bicycle. Not the one my uncle built. His had five, and it went sideways.",
+          "startMs": 7390
+        }
+      ]
+    },
+    {
+      "id": "tomorrow-11605",
+      "category": "dj",
+      "url": "/voice/free-frequency/tomorrow-11605.mp3",
+      "durationMs": 11820,
+      "title": "Tomorrow, in Code",
+      "overMusic": true,
+      "kit": "tomorrow-116.05",
+      "lines": [
+        {
+          "speaker": "Static Kate",
+          "text": "Tomorrow. One hundred and sixteen. Then a point. Then nothing at all. Then the fingers in one glove.",
+          "startMs": 2548
+        },
+        {
+          "speaker": "Static Kate",
+          "text": "The nothing matters, operator. Don't skip the nothing. People always skip the nothing.",
+          "startMs": 7593
+        }
+      ]
+    },
+    {
+      "id": "tomorrow-11695",
+      "category": "dj",
+      "url": "/voice/free-frequency/tomorrow-11695.mp3",
+      "durationMs": 14194,
+      "title": "Tomorrow, in Code",
+      "overMusic": true,
+      "kit": "tomorrow-116.95",
+      "lines": [
+        {
+          "speaker": "Static Kate",
+          "text": "Tomorrow night, I'll be just short of a hundred and seventeen. Short by five hundredths. Five pence short of a pound.",
+          "startMs": 2548
+        },
+        {
+          "speaker": "Static Kate",
+          "text": "Like a train that stops just before the platform, and everybody has to step down onto the gravel. Mind the gravel.",
+          "startMs": 8413
+        }
+      ]
+    },
+    {
+      "id": "tomorrow-11785",
+      "category": "dj",
+      "url": "/voice/free-frequency/tomorrow-11785.mp3",
+      "durationMs": 13492,
+      "title": "Tomorrow, in Code",
+      "overMusic": true,
+      "kit": "tomorrow-117.85",
+      "lines": [
+        {
+          "speaker": "Static Kate",
+          "text": "Tomorrow, nearly the top of the band. A hundred and seventeen. Then a point. Then seventeen lots of five.",
+          "startMs": 2548
+        },
+        {
+          "speaker": "Static Kate",
+          "text": "Do the sum. Use your fingers. I won't tell. The sum is the frequency, and the frequency is where I'll be.",
+          "startMs": 8411
+        }
+      ]
+    },
+    {
+      "id": "convergence-missing-moon",
+      "category": "event",
+      "url": "/voice/free-frequency/convergence-missing-moon.mp3",
+      "durationMs": 8339,
+      "overMusic": false,
+      "kit": "missing-moon",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Static Kate",
+          "text": "A moon's gone. Everybody's on about it. I'll tell you which one. The one that was in the way.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Static Kate",
+          "text": "In the way of what? Look at the heading, operator. Then tell me it's a coincidence.",
+          "startMs": 4603
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-smell",
+      "category": "event",
+      "url": "/voice/free-frequency/convergence-the-smell.mp3",
+      "durationMs": 8289,
+      "overMusic": false,
+      "kit": "the-smell",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Static Kate",
+          "text": "Everywhere smells of toast. You know what toast is? Bread that's been somewhere warm and come back changed.",
+          "startMs": 40
+        },
+        {
+          "speaker": "Static Kate",
+          "text": "I'm just saying. I'm not saying anything. I'm saying it twice.",
+          "startMs": 5241
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-song",
+      "category": "event",
+      "url": "/voice/free-frequency/convergence-the-song.mp3",
+      "durationMs": 8924,
+      "overMusic": false,
+      "kit": "the-song",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Static Kate",
+          "text": "Everybody's humming the same song and nobody can finish it. Three notes, then nothing.",
+          "startMs": 37
+        },
+        {
+          "speaker": "Static Kate",
+          "text": "Operator, I bet you know the next bit. I bet HUSH does. I bet it's on a beacon somewhere.",
+          "startMs": 4647
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-knock",
+      "category": "event",
+      "url": "/voice/free-frequency/convergence-the-knock.mp3",
+      "durationMs": 9945,
+      "overMusic": false,
+      "kit": "the-knock",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Static Kate",
+          "text": "Three knocks. My door too. On an attic that moves. I didn't answer.",
+          "startMs": 1608
+        },
+        {
+          "speaker": "Static Kate",
+          "text": "You don't answer the door when you know who it is. You put the kettle on and wait for them to let themselves in.",
+          "startMs": 5064
+        }
+      ]
+    },
+    {
+      "id": "convergence-wrong-colour",
+      "category": "event",
+      "url": "/voice/free-frequency/convergence-wrong-colour.mp3",
+      "durationMs": 7330,
+      "overMusic": false,
+      "kit": "wrong-colour",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Static Kate",
+          "text": "The sky went a colour nobody's got a word for. I've got a word for it.",
+          "startMs": 36
+        },
+        {
+          "speaker": "Static Kate",
+          "text": "Heading. That's the colour of a heading, changing. I'd know it anywhere.",
+          "startMs": 4032
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-pigeon",
+      "category": "event",
+      "url": "/voice/free-frequency/convergence-the-pigeon.mp3",
+      "durationMs": 9155,
+      "overMusic": false,
+      "kit": "the-pigeon",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Static Kate",
+          "text": "There's a pigeon in the attic. Walked in like it pays rent. Sat on the board, right on the harbour pin.",
+          "startMs": 43
+        },
+        {
+          "speaker": "Static Kate",
+          "text": "Homing pigeons always know the way home. Whose home, though, little one? Whose home?",
+          "startMs": 5158
+        }
+      ]
+    },
+    {
+      "id": "halloween-001",
+      "category": "dj",
+      "url": "/voice/free-frequency/halloween-001.mp3",
+      "durationMs": 13064,
+      "title": "Costumes",
+      "overMusic": true,
+      "dates": [
+        "10-24",
+        "10-25",
+        "10-26",
+        "10-27",
+        "10-28",
+        "10-29",
+        "10-30",
+        "10-31"
+      ],
+      "lines": [
+        {
+          "speaker": "Static Kate",
+          "text": "Halloween. Everybody dressing up as something they're not. Ghosts, witches, a man down the road dressed as a detector van.",
+          "startMs": 47
+        },
+        {
+          "speaker": "Static Kate",
+          "text": "HUSH dresses up every night of the year. Her costume is called within tolerance. It's very convincing. It's the only one she's got.",
+          "startMs": 6416
+        }
+      ]
+    }
+  ]
+}

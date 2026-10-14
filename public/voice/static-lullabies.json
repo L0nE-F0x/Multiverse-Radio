@@ -859,6 +859,185 @@
           "startMs": 5305
         }
       ]
+    },
+    {
+      "id": "convergence-missing-moon",
+      "category": "event",
+      "url": "/voice/static-lullabies/convergence-missing-moon.mp3",
+      "durationMs": 13518,
+      "title": "The Convergence: A Moon Goes Missing",
+      "overMusic": false,
+      "kit": "missing-moon",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "The Listener",
+          "text": "One of the moons has gone. Everyone's saying so.",
+          "startMs": 45
+        },
+        {
+          "speaker": "The Listener",
+          "text": "Don't go looking for it tonight. It's probably just tired. It'll come back when it's slept.",
+          "startMs": 5033
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-smell",
+      "category": "event",
+      "url": "/voice/static-lullabies/convergence-the-smell.mp3",
+      "durationMs": 13540,
+      "title": "The Convergence: Toast, Everywhere",
+      "overMusic": false,
+      "kit": "the-smell",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "The Listener",
+          "text": "Can you smell toast? Everywhere can, apparently.",
+          "startMs": 48
+        },
+        {
+          "speaker": "The Listener",
+          "text": "Somebody, somewhere, is making breakfast for everyone. Go back to sleep. It'll keep.",
+          "startMs": 4906
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-song",
+      "category": "event",
+      "url": "/voice/static-lullabies/convergence-the-song.mp3",
+      "durationMs": 13688,
+      "title": "The Convergence: The Song Nobody Can Finish",
+      "overMusic": false,
+      "kit": "the-song",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "The Listener",
+          "text": "There's a song going round. Nobody can finish it.",
+          "startMs": 40
+        },
+        {
+          "speaker": "The Listener",
+          "text": "I'll hum the part I know. You hum the rest in your sleep. Between us, we'll get there.",
+          "startMs": 5074
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-knock",
+      "category": "event",
+      "url": "/voice/static-lullabies/convergence-the-knock.mp3",
+      "durationMs": 7803,
+      "title": "The Convergence: Three Knocks",
+      "overMusic": false,
+      "kit": "the-knock",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "The Listener",
+          "text": "Three knocks. On the door. Nobody there.",
+          "startMs": 50
+        },
+        {
+          "speaker": "The Listener",
+          "text": "That's all right. I'll get it. I'm always up.",
+          "startMs": 4099
+        }
+      ]
+    },
+    {
+      "id": "convergence-wrong-colour",
+      "category": "event",
+      "url": "/voice/static-lullabies/convergence-wrong-colour.mp3",
+      "durationMs": 12367,
+      "title": "The Convergence: A Colour With No Name",
+      "overMusic": false,
+      "kit": "wrong-colour",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "The Listener",
+          "text": "The sky went a colour just now. There isn't a word for it.",
+          "startMs": 39
+        },
+        {
+          "speaker": "The Listener",
+          "text": "You don't need one. Keep it like a dream. Let it fade gently.",
+          "startMs": 5933
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-pigeon",
+      "category": "event",
+      "url": "/voice/static-lullabies/convergence-the-pigeon.mp3",
+      "durationMs": 13558,
+      "title": "The Convergence: The Pigeon",
+      "overMusic": false,
+      "kit": "the-pigeon",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "The Listener",
+          "text": "There's a pigeon on the television. Next to the cat.",
+          "startMs": 50
+        },
+        {
+          "speaker": "The Listener",
+          "text": "It knows my name. Nobody knows my name. Hello, pigeon. Shh.",
+          "startMs": 5385
+        }
+      ]
+    },
+    {
+      "id": "quiet-corner-review",
+      "category": "dj",
+      "url": "/voice/static-lullabies/quiet-corner-review.mp3",
+      "durationMs": 20954,
+      "title": "Review: The Quiet Corner with Greg",
+      "overMusic": true,
+      "days": [
+        1
+      ],
+      "lines": [
+        {
+          "speaker": "The Listener",
+          "text": "Early on Sunday, on the Lounge, Greg had a show of his own. Most people couldn't hear it.",
+          "startMs": 35
+        },
+        {
+          "speaker": "The Listener",
+          "text": "I could. I hear everything quiet. It was lovely.",
+          "startMs": 9598
+        },
+        {
+          "speaker": "The Listener",
+          "text": "No, I won't tell you. It was for whoever was leaning in.",
+          "startMs": 15724
+        }
+      ]
+    },
+    {
+      "id": "dj-outer-band",
+      "category": "dj",
+      "url": "/voice/static-lullabies/dj-outer-band.mp3",
+      "durationMs": 18318,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "The Listener",
+          "text": "The dial's longer than it used to be. Out past one hundred and eight, there are new voices. Very faint.",
+          "startMs": 50
+        },
+        {
+          "speaker": "The Listener",
+          "text": "Don't be frightened of them. They're just more people, awake. Like you.",
+          "startMs": 11588
+        }
+      ]
     }
   ]
 }

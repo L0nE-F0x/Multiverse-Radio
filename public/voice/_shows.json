@@ -17,6 +17,29 @@
         "end": 12
       }
     ],
+    "atomic-bachelor-pad": [
+      {
+        "id": "morning-calibration",
+        "name": "Morning Calibration",
+        "blurb": "Before coffee, before the newspaper, before anything: we tune the room.",
+        "start": 7,
+        "end": 9
+      },
+      {
+        "id": "stereo-at-six",
+        "name": "Stereo at Six",
+        "blurb": "Cold martinis, warm valves, and the speakers exactly the right distance apart. Pairings by Monty.",
+        "start": 18,
+        "end": 20
+      },
+      {
+        "id": "sunken-lounge",
+        "name": "The Sunken Lounge",
+        "blurb": "Three carpeted steps down into the best seat in Futureville. Strings, after ten, when they've had time to breathe.",
+        "start": 21,
+        "end": 24
+      }
+    ],
     "baroque-bots": [
       {
         "id": "the-tuning-hour",
@@ -258,7 +281,7 @@
         "name": "Last Call",
         "blurb": "Last call has been going on for eleven billion years. This is the good part.",
         "start": 0,
-        "end": 3
+        "end": 2
       },
       {
         "id": "the-cocktail-hour",
@@ -266,6 +289,17 @@
         "blurb": "Gilbert mixes, Barnaby introduces heartbreakers, and the universe dims the lights.",
         "start": 18,
         "end": 20
+      },
+      {
+        "id": "the-quiet-corner",
+        "name": "The Quiet Corner with Greg",
+        "blurb": "Sundays, two till three. Greg, a shadow, says a few things very softly from the end of the bar. Lean in.",
+        "start": 2,
+        "end": 3,
+        "host": "Greg, a Shadow",
+        "days": [
+          0
+        ]
       }
     ],
     "event-horizon-surf": [
@@ -316,6 +350,22 @@
         "host": "Skip Daley"
       }
     ],
+    "free-frequency": [
+      {
+        "id": "corkboard-hour",
+        "name": "The Corkboard Hour",
+        "blurb": "Static Kate goes through the string on the board, pin by pin. Some of the pins are right.",
+        "start": 19,
+        "end": 21
+      },
+      {
+        "id": "midnight-theory",
+        "name": "The Midnight Theory",
+        "blurb": "One theory, all night, until HUSH turns it down. Pirate radio for the small hours.",
+        "start": 0,
+        "end": 3
+      }
+    ],
     "gristwick-parish": [
       {
         "id": "the-opening",
@@ -337,6 +387,29 @@
         "blurb": "The fête doesn't close at night. Fairy lights, a lantern on the marrow, and the urn still on.",
         "start": 23,
         "end": 3
+      }
+    ],
+    "heat-death-afterparty": [
+      {
+        "id": "the-warm-up",
+        "name": "The Warm-Up",
+        "blurb": "The universe is two degrees above absolute zero. Somebody has to warm it up.",
+        "start": 20,
+        "end": 23
+      },
+      {
+        "id": "the-long-fade",
+        "name": "The Long Fade",
+        "blurb": "The slowest hours. The beat sinks low, the stars go out faster, and nobody leaves.",
+        "start": 2,
+        "end": 5
+      },
+      {
+        "id": "morning-anyway",
+        "name": "Morning, Anyway",
+        "blurb": "There's no sunrise at the end of the universe. The third guy holds the lamp up high, and we call it dawn.",
+        "start": 7,
+        "end": 10
       }
     ],
     "hold-music": [
@@ -418,6 +491,29 @@
         "end": 5
       }
     ],
+    "island-time": [
+      {
+        "id": "morning-eventually",
+        "name": "Morning, Eventually",
+        "blurb": "The breakfast show. It starts when the kettle does, and the kettle is thinking about it.",
+        "start": 9,
+        "end": 12
+      },
+      {
+        "id": "slow-sunset",
+        "name": "The Slow Sunset",
+        "blurb": "Sooner goes down. Later takes three hours about it. Find a chair facing west and stay in it.",
+        "start": 17,
+        "end": 21
+      },
+      {
+        "id": "lying-down-astronomy",
+        "name": "Lying Down Astronomy",
+        "blurb": "The dome is open, the hammock is strung, and the telescope is pointed roughly up.",
+        "start": 23,
+        "end": 3
+      }
+    ],
     "last-lighthouse": [
       {
         "id": "the-night-forecast",
@@ -455,6 +551,15 @@
         "name": "Rim Watch",
         "blurb": "Overnight with Maureen, a flask and the binoculars, keeping an eye on the hole so you don't have to.",
         "start": 0,
+        "end": 4
+      }
+    ],
+    "minute-between": [
+      {
+        "id": "the-minute",
+        "name": "The Minute",
+        "blurb": "Thirteen minutes from the inside of one. Take your time. There is plenty, all of it the same.",
+        "start": 3,
         "end": 4
       }
     ],
@@ -521,6 +626,29 @@
         "blurb": "Please have a pencil ready.",
         "start": 6,
         "end": 8
+      }
+    ],
+    "orbit-roots": [
+      {
+        "id": "first-light",
+        "name": "First Light Irrigation",
+        "blurb": "The misters come on across the whole ring. Crop reports, pump pressure and something gentle for the lettuce.",
+        "start": 5,
+        "end": 8
+      },
+      {
+        "id": "the-long-table",
+        "name": "The Long Table",
+        "blurb": "Lunch in the packing shed: whatever is ripe, a crate to sit on, and a little talk about who owns the water.",
+        "start": 12,
+        "end": 14
+      },
+      {
+        "id": "deep-roots",
+        "name": "Deep Roots",
+        "blurb": "The greenhouses are dark and the plants are sleeping. The bass goes down into the soil. The roots are awake.",
+        "start": 22,
+        "end": 2
       }
     ],
     "other-horoscopes": [
@@ -624,6 +752,55 @@
         "end": 8
       }
     ],
+    "saturday-night-forever": [
+      {
+        "id": "the-hustle-hour",
+        "name": "The Hustle Hour",
+        "blurb": "Peak time on the rink. Line dances, hustle lessons and a crowd that last looked at a clock in 1977.",
+        "start": 21,
+        "end": 24
+      },
+      {
+        "id": "couples-skate",
+        "name": "Couples Skate",
+        "blurb": "Lights down, slow songs, and the mirror ball turning just for two. Counter-clockwise, please.",
+        "start": 0,
+        "end": 3
+      },
+      {
+        "id": "breakfast-at-the-rink",
+        "name": "Breakfast at the Rink",
+        "blurb": "The morning show from a night that never ended. Pancakes at the snack bar, under the mirror ball.",
+        "start": 7,
+        "end": 10
+      }
+    ],
+    "small-claims": [
+      {
+        "id": "petty-sessions",
+        "name": "Petty Sessions",
+        "blurb": "The morning list: fences, borrowed hours and the odd cloud. Clerk Odell reads; the Judge takes notes in green ink.",
+        "start": 9,
+        "end": 12
+      },
+      {
+        "id": "the-late-list",
+        "name": "The Late List",
+        "blurb": "Cases heard after hours, for parties who only exist at night. Noise complaints from the void a speciality.",
+        "start": 22,
+        "end": 1
+      },
+      {
+        "id": "landmark-rulings",
+        "name": "Landmark Rulings",
+        "blurb": "Fridays: the Judge revisits the great precedents of the Tribunal. The tide. The last biscuit. The two Tuesdays.",
+        "start": 20,
+        "end": 21,
+        "days": [
+          5
+        ]
+      }
+    ],
     "smoke-ring-trio": [
       {
         "id": "supper-club",
@@ -663,6 +840,15 @@
         "end": 24
       }
     ],
+    "something-listening": [
+      {
+        "id": "the-long-listen",
+        "name": "The Long Listen",
+        "blurb": "The small hours, when the static has the most to say, and says it very quietly.",
+        "start": 0,
+        "end": 5
+      }
+    ],
     "static-lullabies": [
       {
         "id": "after-the-anthem",
@@ -677,6 +863,107 @@
         "blurb": "For whoever is still awake. Nobody needs anything from you until morning.",
         "start": 2,
         "end": 6
+      }
+    ],
+    "substation-null": [
+      {
+        "id": "peak-load",
+        "name": "Peak Load",
+        "blurb": "The core at full output. A hundred and thirty-something beats a minute. Nobody talks. Least of all the host.",
+        "start": 0,
+        "end": 3
+      },
+      {
+        "id": "cooldown",
+        "name": "Cooldown",
+        "blurb": "Steam, slower kicks, the crowd sitting on the pipes. The coolant is fine.",
+        "start": 5,
+        "end": 8
+      },
+      {
+        "id": "maintenance-window",
+        "name": "The Maintenance Window",
+        "blurb": "Scheduled maintenance. Nothing is maintained. The music continues.",
+        "start": 13,
+        "end": 16
+      }
+    ],
+    "the-harbour": [
+      {
+        "id": "evening-berths",
+        "name": "Evening Berths",
+        "blurb": "Ships come in out of the dark, one at a time, and the Harbourmaster talks them in.",
+        "start": 19,
+        "end": 23
+      },
+      {
+        "id": "lights-on-the-water",
+        "name": "Lights on the Water",
+        "blurb": "The small hours at the Harbour. Old ships asleep at the piers, and someone keeping watch for them.",
+        "start": 23,
+        "end": 4
+      },
+      {
+        "id": "the-morning-tide",
+        "name": "The Morning Tide",
+        "blurb": "Lines off at first light. Ships leave in the morning. They always do.",
+        "start": 4,
+        "end": 8
+      }
+    ],
+    "the-long-dark": [
+      {
+        "id": "late-matinee",
+        "name": "The Late Matinee",
+        "blurb": "The Penumbra Players at their most theatrical: short plays, long pauses, and an organist who has never seen the script.",
+        "start": 21,
+        "end": 23
+      },
+      {
+        "id": "lights-out-theatre",
+        "name": "Lights Out Theatre",
+        "blurb": "Small-hours radio theatre, performed with the studio lights off. The Players insist it helps. Mr. Wren insists more.",
+        "start": 1,
+        "end": 4
+      }
+    ],
+    "the-switchboard": [
+      {
+        "id": "the-night-exchange",
+        "name": "The Night Exchange",
+        "blurb": "The busiest hours on the lines between universes. Everybody rings home after dark.",
+        "start": 23,
+        "end": 4
+      },
+      {
+        "id": "early-trunk-calls",
+        "name": "Early Trunk Calls",
+        "blurb": "Long-distance calls at first light, when the lines are clear and the past is cheaper.",
+        "start": 5,
+        "end": 9
+      }
+    ],
+    "tiki-satellite": [
+      {
+        "id": "breakfast-in-orbit",
+        "name": "Breakfast in Orbit",
+        "blurb": "The breakfast pill, a sunrise every ninety minutes, and a little vibraphone to start the day of tomorrow.",
+        "start": 7,
+        "end": 10
+      },
+      {
+        "id": "cocktail-hour",
+        "name": "The Cocktail Hour of Tomorrow",
+        "blurb": "Zero-gravity cocktails on the Lagoon Deck. Hold your drink with both hands. It will try to leave.",
+        "start": 17,
+        "end": 20
+      },
+      {
+        "id": "moonlight-lagoon",
+        "name": "Moonlight on the Lagoon Deck",
+        "blurb": "The lagoon goes round the wheel, the moon goes round the Earth, and the theremin goes round the room.",
+        "start": 22,
+        "end": 2
       }
     ],
     "tiny-hour": [
@@ -726,6 +1013,29 @@
         "end": 3
       }
     ],
+    "traffic-on-the-8s": [
+      {
+        "id": "morning-crawl",
+        "name": "The Morning Crawl",
+        "blurb": "Rush hour, every hour from seven, with Rita at the desk and Buzz over the junction. Nobody is late. Everybody is late.",
+        "start": 7,
+        "end": 10
+      },
+      {
+        "id": "evening-crawl",
+        "name": "The Evening Crawl",
+        "blurb": "The homeward jam, live. The same cars as this morning, facing the other way.",
+        "start": 16,
+        "end": 19
+      },
+      {
+        "id": "small-hours-jam",
+        "name": "The Small Hours Jam",
+        "blurb": "Overnight traffic for the lanes that never sleep. Lighter everywhere except the bypass.",
+        "start": 1,
+        "end": 5
+      }
+    ],
     "transmission-zero": [
       {
         "id": "first-light",
@@ -756,6 +1066,29 @@
         "blurb": "The oldest files in the basement, reopened by lamplight and carefully left open.",
         "start": 1,
         "end": 5
+      }
+    ],
+    "velvet-collapse": [
+      {
+        "id": "the-velvet-hour",
+        "name": "The Velvet Hour",
+        "blurb": "Slow funk, low lights and a red giant in the window. Dinner is served with sunglasses.",
+        "start": 21,
+        "end": 24
+      },
+      {
+        "id": "the-final-hour",
+        "name": "The Final Hour",
+        "blurb": "The countdown to four o'clock. The star swells, the bets close, the band plays faster.",
+        "start": 3,
+        "end": 4
+      },
+      {
+        "id": "the-collapse",
+        "name": "The Collapse",
+        "blurb": "Supernova at four sharp. White light, a short silence, and then, somehow, breakfast.",
+        "start": 4,
+        "end": 6
       }
     ],
     "void-beats": [

@@ -230,6 +230,9 @@ class Clip:
     # v4 (all optional)
     arc: Arc | None = None
     days: list[int] | None = None
+    # Pronunciation lexicon: a Speech line's `text` is what Kokoro says. Where the lexicon
+    # respelled it, the written text (for captions) is kept here by index into `lines`.
+    written: dict[int, str] = field(default_factory=dict)
 
     @property
     def kit_key(self) -> str:
@@ -360,6 +363,51 @@ def fmt_mhz(mhz: float) -> str:
     return f"{mhz:.2f}".rstrip("0").rstrip(".")
 
 
+LEXICON_KEY = re.compile(r"^[a-z][a-z' -]*[a-z]$")
+
+
+def load_lexicon(path: Path) -> dict[str, str]:
+    """The pronunciation lexicon (scripts/voice/lexicon.toml): `[words]` maps a written word
+    or phrase (lowercase) to how Kokoro should be told to say it. Raises ValueError."""
+    if not path.exists():
+        return {}
+    try:
+        data = tomllib.loads(path.read_text(encoding="utf-8"))
+    except tomllib.TOMLDecodeError as e:
+        raise ValueError(f"invalid TOML: {e}") from e
+    extra = sorted(set(data) - {"words"})
+    if extra:
+        raise ValueError(f"unknown top-level key(s) {', '.join(extra)}; entries go under [words]")
+    words = data.get("words", {})
+    if not isinstance(words, dict):
+        raise ValueError("[words] must be a table of word = \"respelling\"")
+    for word, spoken in words.items():
+        if not LEXICON_KEY.match(word):
+            raise ValueError(f"{word!r}: keys are lowercase words or phrases (letters, spaces, ' and -)")
+        if not isinstance(spoken, str) or not spoken.strip() or _DIGIT.search(spoken):
+            raise ValueError(f"{word!r}: the respelling must be non-empty text without digits")
+        if spoken.strip().lower() == word:
+            raise ValueError(f"{word!r}: the respelling is the word itself")
+    return {word: " ".join(spoken.split()) for word, spoken in words.items()}
+
+
+def apply_lexicon(text: str, lexicon: dict[str, str]) -> str:
+    """`text` as Kokoro should hear it: whole-word, case-insensitive replacements that keep
+    the case of the written word (theremin, Theremin, THEREMIN)."""
+    if not lexicon:
+        return text
+    words = sorted(lexicon, key=len, reverse=True)
+    pattern = re.compile(r"\b(" + "|".join(re.escape(w) for w in words) + r")\b", re.I)
+
+    def spoken(m: re.Match) -> str:
+        written, out = m.group(0), lexicon[m.group(0).lower()]
+        if len(written) > 1 and written.isupper():
+            return out.upper()
+        return out[0].upper() + out[1:] if written[0].isupper() else out
+
+    return pattern.sub(spoken, text)
+
+
 def valid_days(value) -> bool:
     """v4 `days`: a non-empty list of distinct local weekdays 0-6."""
     return (isinstance(value, list) and bool(value) and all(_is_int(d) and 0 <= d <= 6 for d in value)
@@ -460,13 +508,14 @@ def _is_int(v) -> bool:
 
 class _Loader:
     def __init__(self, path: Path, voices: list[str], roster: list[str], events: list[str],
-                 drift: dict[str, list[float]] | None = None):
+                 drift: dict[str, list[float]] | None = None, lexicon: dict[str, str] | None = None):
         self.path = path
         self.voices = set(voices)
         self.voice_list = voices
         self.roster = roster
         self.events = events
         self.drift = drift or {}
+        self.lexicon = lexicon or {}
         self.issues: list[Issue] = []
         self.raw_lines: list[str] = []
 
@@ -805,6 +854,7 @@ class _Loader:
             self.error(f"{label}: needs a non-empty `lines = [...]` array", lineno)
             return None
         lines: list[Line] = []
+        written: dict[int, str] = {}
         cursor = (lineno or 1) - 1
         for n, raw_line in enumerate(raw_lines, start=1):
             where = f"{label} line {n}"
@@ -815,6 +865,10 @@ class _Loader:
             if line is None:
                 ok = False
             else:
+                if isinstance(line, Speech):
+                    text = " ".join(raw_line["text"].split())
+                    if text != line.text:  # the lexicon respelled it
+                        written[len(lines)] = text
                 lines.append(line)
         if not ok:
             return None
@@ -822,7 +876,7 @@ class _Loader:
             self.error(f"{label}: has only pauses; add something to hear", lineno)
             return None
 
-        clip = Clip(clip_id, category, title, over_music, daypart, bed, stations, lines, lineno, **v3)
+        clip = Clip(clip_id, category, title, over_music, daypart, bed, stations, lines, lineno, **v3, written=written)
         lo, hi = clip.length_guide()
         est = clip.estimate_seconds()
         if est < lo * 0.8 or est > hi * 1.2:
@@ -1081,7 +1135,8 @@ class _Loader:
             return None
         if speed is None or gap is None:
             return None
-        return Speech(alias["voice"], text, round(speed, 4), fx, round(gap, 4), cut, name or "")
+        return Speech(alias["voice"], apply_lexicon(text, self.lexicon), round(speed, 4), fx, round(gap, 4), cut,
+                      name or "")
 
 
 def check_serials(scripts: list[Script]) -> None:
@@ -1117,5 +1172,5 @@ def check_serials(scripts: list[Script]) -> None:
 
 
 def load_script(path: Path, voices: list[str], roster: list[str], events: list[str],
-                drift: dict[str, list[float]] | None = None) -> Script:
-    return _Loader(path, voices, roster, events, drift).load()
+                drift: dict[str, list[float]] | None = None, lexicon: dict[str, str] | None = None) -> Script:
+    return _Loader(path, voices, roster, events, drift, lexicon).load()

@@ -572,6 +572,138 @@
           "startMs": 9482
         }
       ]
+    },
+    {
+      "id": "convergence-missing-moon",
+      "category": "event",
+      "url": "/voice/bubble-economy/convergence-missing-moon.mp3",
+      "durationMs": 10476,
+      "title": "The Convergence: A Moon Goes Missing",
+      "overMusic": false,
+      "kit": "missing-moon",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Kiko Starlight",
+          "text": "Marina City, a moon has gone missing! Nobody knows which!",
+          "startMs": 37
+        },
+        {
+          "speaker": "Kiko Starlight",
+          "text": "The Marina Index has reacted the only way it knows how. It's gone up! The weekend starts now, with one less moon!",
+          "startMs": 3727
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-smell",
+      "category": "event",
+      "url": "/voice/bubble-economy/convergence-the-smell.mp3",
+      "durationMs": 9498,
+      "title": "The Convergence: Toast, Everywhere",
+      "overMusic": false,
+      "kit": "the-smell",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Kiko Starlight",
+          "text": "Is that toast? The whole bay smells like toast! On a Friday night!",
+          "startMs": 37
+        },
+        {
+          "speaker": "Kiko Starlight",
+          "text": "Somebody's planning Saturday breakfast! Honey, there's no Saturday! But I love the optimism!",
+          "startMs": 4114
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-song",
+      "category": "event",
+      "url": "/voice/bubble-economy/convergence-the-song.mp3",
+      "durationMs": 10900,
+      "title": "The Convergence: The Song Nobody Can Finish",
+      "overMusic": false,
+      "kit": "the-song",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Kiko Starlight",
+          "text": "Everybody's humming the same song, Marina City, and nobody knows the end!",
+          "startMs": 38
+        },
+        {
+          "speaker": "Kiko Starlight",
+          "text": "The Overtime Boys say it's theirs! They're still singing the middle! They've been singing the middle since nineteen eighty six!",
+          "startMs": 4573
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-knock",
+      "category": "event",
+      "url": "/voice/bubble-economy/convergence-the-knock.mp3",
+      "durationMs": 9578,
+      "title": "The Convergence: Three Knocks",
+      "overMusic": false,
+      "kit": "the-knock",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Kiko Starlight",
+          "text": "Three knocks on the studio door! I opened it! Nobody!",
+          "startMs": 40
+        },
+        {
+          "speaker": "Kiko Starlight",
+          "text": "Just the neon, and the bay, and a feeling like Monday was standing there a second ago. Lock the door, baby!",
+          "startMs": 3298
+        }
+      ]
+    },
+    {
+      "id": "convergence-wrong-colour",
+      "category": "event",
+      "url": "/voice/bubble-economy/convergence-wrong-colour.mp3",
+      "durationMs": 10461,
+      "title": "The Convergence: A Colour With No Name",
+      "overMusic": false,
+      "kit": "wrong-colour",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Kiko Starlight",
+          "text": "The sky just went a colour I have never seen, Marina City! Not pink, not peach, not sunset!",
+          "startMs": 37
+        },
+        {
+          "speaker": "Kiko Starlight",
+          "text": "Somebody's already bought the view of it for eleven compliments! The Index is up!",
+          "startMs": 5886
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-pigeon",
+      "category": "event",
+      "url": "/voice/bubble-economy/convergence-the-pigeon.mp3",
+      "durationMs": 10242,
+      "title": "The Convergence: The Pigeon",
+      "overMusic": false,
+      "kit": "the-pigeon",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Kiko Starlight",
+          "text": "There's a pigeon in the studio! Wearing a tiny tie! Walked straight in, like it's on the guest list!",
+          "startMs": 37
+        },
+        {
+          "speaker": "Kiko Starlight",
+          "text": "And the way it's looking at me, honey, it's been listening a long, long time. Hi, pigeon!",
+          "startMs": 5357
+        }
+      ]
     }
   ]
 }

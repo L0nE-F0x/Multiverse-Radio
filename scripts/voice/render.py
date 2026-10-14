@@ -32,8 +32,8 @@ import sys
 import time
 from pathlib import Path
 
-from voicescript import (Script, available_voices, bitrate_for, check_serials, load_script, roster_drift,
-                         roster_station_ids, ts_string_array)
+from voicescript import (Script, available_voices, bitrate_for, check_serials, load_lexicon, load_script,
+                         roster_drift, roster_station_ids, ts_string_array)
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent.parent
@@ -52,6 +52,8 @@ CACHE = Path(os.environ.get("VOICE_CACHE", HERE / ".cache"))
 KOKORO_MODEL = Path(os.environ.get("KOKORO_MODEL", "~/.local/share/bb-tts/kokoro-v1.0.onnx")).expanduser()
 KOKORO_VOICES = Path(os.environ.get("KOKORO_VOICES", "~/.local/share/bb-tts/voices-v1.0.bin")).expanduser()
 LOCK_HASH = 16  # hex digits of the clip hash kept in the lock file
+# Pronunciation lexicon: respellings applied to the text Kokoro hears, never to captions.
+LEXICON = Path(os.environ.get("VOICE_LEXICON", HERE / "lexicon.toml"))
 
 
 def rel(path: Path) -> str:
@@ -100,10 +102,14 @@ def load_all(paths: list[Path], content: Path) -> list[Script]:
     if not events:
         sys.exit(f"error: couldn't read EVENT_IDS from {rel(TYPES)}")
     drift = roster_drift(ROSTER)
+    try:
+        lexicon = load_lexicon(LEXICON)
+    except ValueError as e:
+        sys.exit(f"error: {rel(LEXICON)}: {e}")
     voices = available_voices(KOKORO_VOICES)
     wanted = {p.resolve() for p in paths}
     everything = {p.resolve(): p for p in sorted(content.glob("*.toml"))} | {p.resolve(): p for p in paths}
-    loaded = {key: load_script(path, voices, roster, events, drift) for key, path in everything.items()}
+    loaded = {key: load_script(path, voices, roster, events, drift, lexicon) for key, path in everything.items()}
     check_serials(list(loaded.values()))
     scripts = []
     for path in paths:
@@ -232,6 +238,31 @@ def manifest_lookup(out: Path, station: str) -> dict[str, dict]:
     return {c["id"]: c for c in clips if isinstance(c, dict) and isinstance(c.get("id"), str)}
 
 
+def written_captions(clip, lines: list[dict]) -> list[dict]:
+    """Captions with the written text where the lexicon respelled a line for Kokoro. The
+    engine makes one caption per speech line, in order; `cut` lines keep the same share of
+    words as clip.caption_text() does. Idempotent, so it's safe on captions read back from a
+    manifest."""
+    from voicescript import Speech
+
+    if not clip.written:
+        return lines
+    speech = [i for i, line in enumerate(clip.lines) if isinstance(line, Speech)]
+    if len(speech) != len(lines):
+        return lines
+    out = []
+    for index, caption in zip(speech, lines):
+        text = clip.written.get(index)
+        if text is not None:
+            cut = clip.lines[index].cut
+            if cut is not None and cut < 1:
+                words = text.split()
+                text = " ".join(words[:max(1, round(len(words) * cut))]).rstrip(",;:.") + "—"
+            caption = {**caption, "text": text}
+        out.append(caption)
+    return out
+
+
 def manifest_entry(station: str, clip, duration_ms: int, lines: list[dict]) -> dict:
     entry: dict = {
         "id": clip.id,
@@ -264,7 +295,7 @@ def manifest_entry(station: str, clip, duration_ms: int, lines: list[dict]) -> d
         entry["arc"] = {"id": clip.arc.id, "step": clip.arc.step}
     if clip.days:
         entry["days"] = list(clip.days)
-    entry["lines"] = lines
+    entry["lines"] = written_captions(clip, lines)
     return entry
 
 

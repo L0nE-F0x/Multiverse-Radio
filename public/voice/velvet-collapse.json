@@ -1,0 +1,1022 @@
+{
+  "version": 1,
+  "station": "velvet-collapse",
+  "clips": [
+    {
+      "id": "id-001",
+      "category": "id",
+      "url": "/voice/velvet-collapse/id-001.mp3",
+      "durationMs": 7386,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Baron Velour",
+          "text": "The Velvet Collapse, one sixteen point five. Funk, at the edge of a dying star. Mind the window.",
+          "startMs": 41
+        }
+      ]
+    },
+    {
+      "id": "id-002",
+      "category": "id",
+      "url": "/voice/velvet-collapse/id-002.mp3",
+      "durationMs": 6970,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Baron Velour",
+          "text": "You're in the Velvet Lounge, Casino Ultima. The star outside is enormous, and not long for this world. Enjoy them both.",
+          "startMs": 47
+        }
+      ]
+    },
+    {
+      "id": "id-003",
+      "category": "id",
+      "url": "/voice/velvet-collapse/id-003.mp3",
+      "durationMs": 5092,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Baron Velour",
+          "text": "The Baron, on the Velvet Collapse. The groove is mine. The star is somebody else's problem.",
+          "startMs": 48
+        }
+      ]
+    },
+    {
+      "id": "id-004",
+      "category": "id",
+      "url": "/voice/velvet-collapse/id-004.mp3",
+      "durationMs": 6906,
+      "overMusic": true,
+      "daypart": "night",
+      "lines": [
+        {
+          "speaker": "Baron Velour",
+          "text": "The Velvet Collapse. It's late, the star is swelling, and the dress code is fireproof velvet.",
+          "startMs": 45
+        }
+      ]
+    },
+    {
+      "id": "id-005",
+      "category": "id",
+      "url": "/voice/velvet-collapse/id-005.mp3",
+      "durationMs": 5505,
+      "overMusic": true,
+      "daypart": "day",
+      "lines": [
+        {
+          "speaker": "Baron Velour",
+          "text": "The Velvet Collapse. Daytime, they tell me. Out here we only have two times. Before four, and after.",
+          "startMs": 47
+        }
+      ]
+    },
+    {
+      "id": "id-006",
+      "category": "id",
+      "url": "/voice/velvet-collapse/id-006.mp3",
+      "durationMs": 6135,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Odette, the Croupier",
+          "text": "Casino Ultima. The house always wins.",
+          "startMs": 37
+        },
+        {
+          "speaker": "Baron Velour",
+          "text": "And the star always comes back. The Velvet Collapse.",
+          "startMs": 3148
+        }
+      ]
+    },
+    {
+      "id": "dj-001",
+      "category": "dj",
+      "url": "/voice/velvet-collapse/dj-001.mp3",
+      "durationMs": 12004,
+      "title": "Old Ruby",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Baron Velour",
+          "text": "That's Old Ruby out there, filling the window. A red giant, three hundred times wider than she used to be. Aren't we all, darling.",
+          "startMs": 50
+        },
+        {
+          "speaker": "Baron Velour",
+          "text": "She's dying, of course. She's been dying for years. She makes it look absolutely wonderful.",
+          "startMs": 7250
+        }
+      ]
+    },
+    {
+      "id": "dj-002",
+      "category": "dj",
+      "url": "/voice/velvet-collapse/dj-002.mp3",
+      "durationMs": 14324,
+      "title": "A Lighting Cue",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Baron Velour",
+          "text": "People ask me, Baron, aren't you worried about the supernova? Worried? It's the finest lighting rig in the galaxy, and I don't pay a penny for it.",
+          "startMs": 37
+        },
+        {
+          "speaker": "Baron Velour",
+          "text": "Every night at four, the whole room goes white, and the band looks incredible. You can't buy that. Believe me. I've asked.",
+          "startMs": 7968
+        }
+      ]
+    },
+    {
+      "id": "dj-003",
+      "category": "dj",
+      "url": "/voice/velvet-collapse/dj-003.mp3",
+      "durationMs": 15724,
+      "title": "The Roulette Wheel",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Baron Velour",
+          "text": "Our roulette wheel has only red on it. Thirty seven pockets, all red. We had a black one once. It was lost in the year of the big flare, and we never replaced it.",
+          "startMs": 39
+        },
+        {
+          "speaker": "Baron Velour",
+          "text": "Nobody's complained. Everybody wins, a little. That's not how a casino works, but then, very little out here is.",
+          "startMs": 9174
+        }
+      ]
+    },
+    {
+      "id": "dj-004",
+      "category": "dj",
+      "url": "/voice/velvet-collapse/dj-004.mp3",
+      "durationMs": 14072,
+      "title": "Insurance",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Baron Velour",
+          "text": "A word about insurance. Casino Ultima is fully insured against the star exploding. Our insurers have paid out every single night for eleven years.",
+          "startMs": 43
+        },
+        {
+          "speaker": "Baron Velour",
+          "text": "They've been very gracious about it. They send a card. This year's card just says, again?",
+          "startMs": 9172
+        }
+      ]
+    },
+    {
+      "id": "dj-005",
+      "category": "dj",
+      "url": "/voice/velvet-collapse/dj-005.mp3",
+      "durationMs": 10900,
+      "title": "The Band",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Baron Velour",
+          "text": "The house band tonight, as every night, is the Late Expansion. On drums, Ignatius Bell. On keys, the lovely Delphine Starr.",
+          "startMs": 41
+        },
+        {
+          "speaker": "Baron Velour",
+          "text": "And on bass guitar, me. I'm wonderful. Don't tell me. I know.",
+          "startMs": 7632
+        }
+      ]
+    },
+    {
+      "id": "dj-006",
+      "category": "dj",
+      "url": "/voice/velvet-collapse/dj-006.mp3",
+      "durationMs": 14995,
+      "title": "Bev Calls",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Bev",
+          "text": "Hello, love. It's Bev. Is this the request line?",
+          "startMs": 48
+        },
+        {
+          "speaker": "Baron Velour",
+          "text": "Bev, darling, there's no request line at the edge of a dying star. There's just this line, and it's yours. What'll it be?",
+          "startMs": 3181
+        },
+        {
+          "speaker": "Bev",
+          "text": "Something slow, please.",
+          "startMs": 9891
+        },
+        {
+          "speaker": "Baron Velour",
+          "text": "Bev. Nothing here is slow. But I'll see what I can do.",
+          "startMs": 11894
+        }
+      ]
+    },
+    {
+      "id": "dj-007",
+      "category": "dj",
+      "url": "/voice/velvet-collapse/dj-007.mp3",
+      "durationMs": 10819,
+      "title": "Doors",
+      "overMusic": true,
+      "daypart": "evening",
+      "lines": [
+        {
+          "speaker": "Baron Velour",
+          "text": "Good evening. The doors of Casino Ultima are open, the velvet's been brushed, and Ruby is looking especially red tonight.",
+          "startMs": 39
+        },
+        {
+          "speaker": "Baron Velour",
+          "text": "Radiant, really. Don't tell her. She's sensitive about her size.",
+          "startMs": 7254
+        }
+      ]
+    },
+    {
+      "id": "dj-008",
+      "category": "dj",
+      "url": "/voice/velvet-collapse/dj-008.mp3",
+      "durationMs": 11819,
+      "title": "For the Newcomer",
+      "overMusic": true,
+      "daypart": "night",
+      "lines": [
+        {
+          "speaker": "Baron Velour",
+          "text": "A relay ship has drifted into our orbit tonight. Lights low, very polite. Welcome to the outer reaches, newcomer.",
+          "startMs": 39
+        },
+        {
+          "speaker": "Baron Velour",
+          "text": "A word of advice. Don't sit too near the window at four. And do tip the croupier. She remembers.",
+          "startMs": 6778
+        }
+      ]
+    },
+    {
+      "id": "dj-009",
+      "category": "dj",
+      "url": "/voice/velvet-collapse/dj-009.mp3",
+      "durationMs": 9893,
+      "title": "Sponsored by Grumbel's Ladders",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Baron Velour",
+          "text": "Tonight's collapse comes to you courtesy of Grumbel's Ladders. From the top of a Grumbel's ladder, a supernova is just a very bright evening.",
+          "startMs": 37
+        },
+        {
+          "speaker": "Arnold Grumbel",
+          "text": "Grumbel's Ladders. Up is a choice.",
+          "startMs": 8023
+        }
+      ]
+    },
+    {
+      "id": "bets-open-1",
+      "category": "dj",
+      "url": "/voice/velvet-collapse/bets-open-1.mp3",
+      "durationMs": 3283,
+      "overMusic": true,
+      "part": "open",
+      "kit": "bets",
+      "lines": [
+        {
+          "speaker": "Odette, the Croupier",
+          "text": "Place your bets, ladies and gentlemen. Place your bets.",
+          "startMs": 37
+        }
+      ]
+    },
+    {
+      "id": "bets-open-2",
+      "category": "dj",
+      "url": "/voice/velvet-collapse/bets-open-2.mp3",
+      "durationMs": 4560,
+      "overMusic": true,
+      "part": "open",
+      "kit": "bets",
+      "lines": [
+        {
+          "speaker": "Baron Velour",
+          "text": "Let's see how the tables are doing. Odette?",
+          "startMs": 39
+        },
+        {
+          "speaker": "Odette, the Croupier",
+          "text": "Bets are open, Baron.",
+          "startMs": 2798
+        }
+      ]
+    },
+    {
+      "id": "bets-001",
+      "category": "dj",
+      "url": "/voice/velvet-collapse/bets-001.mp3",
+      "durationMs": 14950,
+      "overMusic": true,
+      "part": "body",
+      "kit": "bets",
+      "lines": [
+        {
+          "speaker": "Odette, the Croupier",
+          "text": "The gentleman in the silver jacket bets that tonight, the star won't go. He has placed that bet every night for eleven years. He has lost every night for eleven years.",
+          "startMs": 39
+        },
+        {
+          "speaker": "Odette, the Croupier",
+          "text": "He says the night he wins, he'll be the richest man in the galaxy. For about four seconds.",
+          "startMs": 9904
+        }
+      ]
+    },
+    {
+      "id": "bets-002",
+      "category": "dj",
+      "url": "/voice/velvet-collapse/bets-002.mp3",
+      "durationMs": 7485,
+      "overMusic": true,
+      "part": "body",
+      "kit": "bets",
+      "lines": [
+        {
+          "speaker": "Odette, the Croupier",
+          "text": "Table four would like to bet on the colour of the flash. White, very white, or blinding.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Odette, the Croupier",
+          "text": "The house recommends blinding.",
+          "startMs": 5375
+        }
+      ]
+    },
+    {
+      "id": "bets-003",
+      "category": "dj",
+      "url": "/voice/velvet-collapse/bets-003.mp3",
+      "durationMs": 9821,
+      "overMusic": true,
+      "part": "body",
+      "kit": "bets",
+      "lines": [
+        {
+          "speaker": "Odette, the Croupier",
+          "text": "A lady at the bar bets her coat that she can finish her drink before four o'clock. Her coat is velvet. Her drink is very large.",
+          "startMs": 42
+        },
+        {
+          "speaker": "Odette, the Croupier",
+          "text": "The room is quietly on her side.",
+          "startMs": 7545
+        }
+      ]
+    },
+    {
+      "id": "bets-004",
+      "category": "dj",
+      "url": "/voice/velvet-collapse/bets-004.mp3",
+      "durationMs": 10445,
+      "overMusic": true,
+      "part": "body",
+      "kit": "bets",
+      "lines": [
+        {
+          "speaker": "Baron Velour",
+          "text": "Somebody has bet the house that the star comes back tomorrow.",
+          "startMs": 39
+        },
+        {
+          "speaker": "Odette, the Croupier",
+          "text": "Accepted.",
+          "startMs": 3721
+        },
+        {
+          "speaker": "Baron Velour",
+          "text": "It always comes back. We stopped taking that bet years ago. We take it anyway. It's tradition.",
+          "startMs": 5190
+        }
+      ]
+    },
+    {
+      "id": "bets-005",
+      "category": "dj",
+      "url": "/voice/velvet-collapse/bets-005.mp3",
+      "durationMs": 9294,
+      "overMusic": true,
+      "part": "body",
+      "kit": "bets",
+      "lines": [
+        {
+          "speaker": "Odette, the Croupier",
+          "text": "A first-time guest bets everything that he'll see the dawn. Sir. There is no dawn. There's a supernova, and then breakfast.",
+          "startMs": 42
+        },
+        {
+          "speaker": "Odette, the Croupier",
+          "text": "He has changed his bet to breakfast.",
+          "startMs": 6956
+        }
+      ]
+    },
+    {
+      "id": "bets-006",
+      "category": "dj",
+      "url": "/voice/velvet-collapse/bets-006.mp3",
+      "durationMs": 8507,
+      "overMusic": true,
+      "part": "body",
+      "kit": "bets",
+      "lines": [
+        {
+          "speaker": "Odette, the Croupier",
+          "text": "A reminder that our chips are made of cooled starlight. Please don't put them in your mouth.",
+          "startMs": 36
+        },
+        {
+          "speaker": "Odette, the Croupier",
+          "text": "They are much warmer than they look. So, frankly, is the starlight.",
+          "startMs": 4883
+        }
+      ]
+    },
+    {
+      "id": "bets-close-1",
+      "category": "dj",
+      "url": "/voice/velvet-collapse/bets-close-1.mp3",
+      "durationMs": 4394,
+      "overMusic": true,
+      "part": "close",
+      "kit": "bets",
+      "lines": [
+        {
+          "speaker": "Odette, the Croupier",
+          "text": "No more bets.",
+          "startMs": 46
+        },
+        {
+          "speaker": "Baron Velour",
+          "text": "Nobody ever listens to her. Here's the band.",
+          "startMs": 1632
+        }
+      ]
+    },
+    {
+      "id": "bets-close-2",
+      "category": "dj",
+      "url": "/voice/velvet-collapse/bets-close-2.mp3",
+      "durationMs": 4370,
+      "overMusic": true,
+      "part": "close",
+      "kit": "bets",
+      "lines": [
+        {
+          "speaker": "Odette, the Croupier",
+          "text": "The wheel is spinning.",
+          "startMs": 43
+        },
+        {
+          "speaker": "Odette, the Croupier",
+          "text": "Red. It's always red.",
+          "startMs": 2682
+        }
+      ]
+    },
+    {
+      "id": "id-the-velvet-hour",
+      "category": "id",
+      "url": "/voice/velvet-collapse/id-the-velvet-hour.mp3",
+      "durationMs": 8930,
+      "overMusic": true,
+      "part": "open",
+      "show": "the-velvet-hour",
+      "lines": [
+        {
+          "speaker": "Baron Velour",
+          "text": "Good evening, and welcome to the Velvet Hour. Coats in the cloakroom, sunglasses in the pocket, and the star in the window. For now.",
+          "startMs": 36
+        }
+      ]
+    },
+    {
+      "id": "dj-the-velvet-hour-001",
+      "category": "dj",
+      "url": "/voice/velvet-collapse/dj-the-velvet-hour-001.mp3",
+      "durationMs": 11796,
+      "overMusic": true,
+      "show": "the-velvet-hour",
+      "lines": [
+        {
+          "speaker": "Baron Velour",
+          "text": "The kitchen tonight recommends the flambé. Everything in here is flambé after four o'clock, so the chef likes to get in early.",
+          "startMs": 40
+        },
+        {
+          "speaker": "Baron Velour",
+          "text": "Here's something to eat by. Slowly, darling. There's time. Not much. But some.",
+          "startMs": 7684
+        }
+      ]
+    },
+    {
+      "id": "dj-the-velvet-hour-002",
+      "category": "dj",
+      "url": "/voice/velvet-collapse/dj-the-velvet-hour-002.mp3",
+      "durationMs": 11705,
+      "overMusic": true,
+      "show": "the-velvet-hour",
+      "lines": [
+        {
+          "speaker": "Baron Velour",
+          "text": "Dance with whoever you came with. Or don't. At four o'clock we all leave together anyway, at the speed of light, and come back for breakfast.",
+          "startMs": 50
+        },
+        {
+          "speaker": "Baron Velour",
+          "text": "It's terribly romantic, if you don't think about it too hard. I never do.",
+          "startMs": 7525
+        }
+      ]
+    },
+    {
+      "id": "id-the-final-hour",
+      "category": "id",
+      "url": "/voice/velvet-collapse/id-the-final-hour.mp3",
+      "durationMs": 9143,
+      "overMusic": true,
+      "part": "open",
+      "show": "the-final-hour",
+      "lines": [
+        {
+          "speaker": "Baron Velour",
+          "text": "It's three o'clock at the Velvet Collapse. One hour to collapse. Ladies and gentlemen, the Final Hour.",
+          "startMs": 41
+        }
+      ]
+    },
+    {
+      "id": "dj-the-final-hour-001",
+      "category": "dj",
+      "url": "/voice/velvet-collapse/dj-the-final-hour-001.mp3",
+      "durationMs": 11538,
+      "title": "The Window",
+      "overMusic": true,
+      "show": "the-final-hour",
+      "lines": [
+        {
+          "speaker": "Baron Velour",
+          "text": "The window has gone from red to a sort of very loud red. That's quite normal. Ruby's taking a deep breath.",
+          "startMs": 48
+        },
+        {
+          "speaker": "Baron Velour",
+          "text": "Order your last drinks now, please. Somewhere around four, the bar will be briefly made of light.",
+          "startMs": 6396
+        }
+      ]
+    },
+    {
+      "id": "dj-the-final-hour-002",
+      "category": "dj",
+      "url": "/voice/velvet-collapse/dj-the-final-hour-002.mp3",
+      "durationMs": 12174,
+      "title": "Sunglasses",
+      "overMusic": true,
+      "show": "the-final-hour",
+      "lines": [
+        {
+          "speaker": "Baron Velour",
+          "text": "The staff are coming round with the sunglasses. Please take a pair, and put them on when the band does.",
+          "startMs": 43
+        },
+        {
+          "speaker": "Baron Velour",
+          "text": "The band put theirs on eleven years ago, and have never taken them off. They say it's for the supernova. I have my doubts.",
+          "startMs": 5549
+        }
+      ]
+    },
+    {
+      "id": "dj-the-final-hour-003",
+      "category": "dj",
+      "url": "/voice/velvet-collapse/dj-the-final-hour-003.mp3",
+      "durationMs": 9810,
+      "title": "The Tremor",
+      "overMusic": true,
+      "show": "the-final-hour",
+      "lines": [
+        {
+          "speaker": "Baron Velour",
+          "text": "Did you feel that? That's Ruby. She does this towards the end. A little shiver, right through the floor.",
+          "startMs": 40
+        },
+        {
+          "speaker": "Baron Velour",
+          "text": "The roulette ball has jumped into red. Well. It was always going to be red.",
+          "startMs": 5331
+        }
+      ]
+    },
+    {
+      "id": "dj-the-final-hour-004",
+      "category": "dj",
+      "url": "/voice/velvet-collapse/dj-the-final-hour-004.mp3",
+      "durationMs": 11335,
+      "title": "Bets Close",
+      "overMusic": true,
+      "show": "the-final-hour",
+      "lines": [
+        {
+          "speaker": "Baron Velour",
+          "text": "Odette, I think it's time.",
+          "startMs": 39
+        },
+        {
+          "speaker": "Odette, the Croupier",
+          "text": "Ladies and gentlemen, the house is no longer taking bets on the end of the world. It's too close to call.",
+          "startMs": 2241
+        },
+        {
+          "speaker": "Odette, the Croupier",
+          "text": "We are, however, taking bets on breakfast.",
+          "startMs": 8562
+        }
+      ]
+    },
+    {
+      "id": "dj-the-final-hour-005",
+      "category": "dj",
+      "url": "/voice/velvet-collapse/dj-the-final-hour-005.mp3",
+      "durationMs": 11211,
+      "title": "One More Chorus",
+      "overMusic": true,
+      "show": "the-final-hour",
+      "lines": [
+        {
+          "speaker": "Baron Velour",
+          "text": "The band always plays a little faster in the Final Hour. They're trying to fit in one more chorus before the end.",
+          "startMs": 45
+        },
+        {
+          "speaker": "Baron Velour",
+          "text": "Eleven years, they've never managed it. Tonight, I think they might. Listen to them go.",
+          "startMs": 6453
+        }
+      ]
+    },
+    {
+      "id": "id-the-collapse",
+      "category": "id",
+      "url": "/voice/velvet-collapse/id-the-collapse.mp3",
+      "durationMs": 11342,
+      "title": "Supernova",
+      "overMusic": true,
+      "part": "open",
+      "show": "the-collapse",
+      "lines": [
+        {
+          "speaker": "Baron Velour",
+          "text": "Ladies and gentlemen, it's four o'clock. Sunglasses on, please.",
+          "startMs": 40
+        },
+        {
+          "speaker": "Baron Velour",
+          "text": "Five. Four. Three. Two. One.",
+          "startMs": 5880
+        },
+        {
+          "speaker": "Baron Velour",
+          "text": "Lovely.",
+          "startMs": 10433
+        }
+      ]
+    },
+    {
+      "id": "dj-the-collapse-001",
+      "category": "dj",
+      "url": "/voice/velvet-collapse/dj-the-collapse-001.mp3",
+      "durationMs": 11201,
+      "title": "The White",
+      "overMusic": true,
+      "show": "the-collapse",
+      "lines": [
+        {
+          "speaker": "Baron Velour",
+          "text": "We're in the white now. The room is very bright and very quiet and a little warm, like the inside of a lamp. Don't be alarmed.",
+          "startMs": 48
+        },
+        {
+          "speaker": "Baron Velour",
+          "text": "The band's still playing. You just can't see them. You can hear me, which is the main thing.",
+          "startMs": 6797
+        }
+      ]
+    },
+    {
+      "id": "dj-the-collapse-002",
+      "category": "dj",
+      "url": "/voice/velvet-collapse/dj-the-collapse-002.mp3",
+      "durationMs": 12394,
+      "title": "Taking the Register",
+      "overMusic": true,
+      "show": "the-collapse",
+      "lines": [
+        {
+          "speaker": "Baron Velour",
+          "text": "Right. Is everybody still here? Silver jacket? Yes. The lady with the very large drink? Finished it. Well done. Odette?",
+          "startMs": 45
+        },
+        {
+          "speaker": "Odette, the Croupier",
+          "text": "Present.",
+          "startMs": 6869
+        },
+        {
+          "speaker": "Baron Velour",
+          "text": "Good. Nobody ever goes anywhere. We just get very, very bright for a while.",
+          "startMs": 8122
+        }
+      ]
+    },
+    {
+      "id": "dj-the-collapse-003",
+      "category": "dj",
+      "url": "/voice/velvet-collapse/dj-the-collapse-003.mp3",
+      "durationMs": 10738,
+      "title": "Housekeeping",
+      "overMusic": true,
+      "show": "the-collapse",
+      "lines": [
+        {
+          "speaker": "Baron Velour",
+          "text": "Housekeeping are sweeping the stardust off the dance floor. It all goes in a little velvet bag, and the bags go in the gift shop.",
+          "startMs": 39
+        },
+        {
+          "speaker": "Baron Velour",
+          "text": "Supernova dust. One careful owner. Lightly exploded.",
+          "startMs": 7194
+        }
+      ]
+    },
+    {
+      "id": "dj-morning-001",
+      "category": "dj",
+      "url": "/voice/velvet-collapse/dj-morning-001.mp3",
+      "durationMs": 11556,
+      "title": "She's Fine",
+      "overMusic": true,
+      "daypart": "morning",
+      "lines": [
+        {
+          "speaker": "Baron Velour",
+          "text": "Good morning from the Velvet Collapse. You'll be pleased to hear the star is fine. Ruby pulled herself back together at about half past five, the way she does.",
+          "startMs": 40
+        },
+        {
+          "speaker": "Baron Velour",
+          "text": "She's looking a little embarrassed. Nobody mention it.",
+          "startMs": 8626
+        }
+      ]
+    },
+    {
+      "id": "dj-morning-002",
+      "category": "dj",
+      "url": "/voice/velvet-collapse/dj-morning-002.mp3",
+      "durationMs": 10843,
+      "title": "Breakfast",
+      "overMusic": true,
+      "daypart": "morning",
+      "lines": [
+        {
+          "speaker": "Baron Velour",
+          "text": "Breakfast is served in the lounge. Eggs, toast, coffee, and a view of a red giant who exploded last night and is now acting as if nothing happened.",
+          "startMs": 42
+        },
+        {
+          "speaker": "Baron Velour",
+          "text": "Honestly, darling. We've all been there.",
+          "startMs": 8675
+        }
+      ]
+    },
+    {
+      "id": "ad-001",
+      "category": "ad",
+      "url": "/voice/velvet-collapse/ad-001.mp3",
+      "durationMs": 18236,
+      "title": "Ultima Fireproof Velvet",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Announcer",
+          "text": "Ultima Fireproof Velvet. The jacket that doesn't mind the end of the world.",
+          "startMs": 1582
+        },
+        {
+          "speaker": "Baron Velour",
+          "text": "I've been wearing mine for eleven years. Eleven supernovas. Not a scorch on it. The lapels have never looked better.",
+          "startMs": 6677
+        },
+        {
+          "speaker": "Announcer",
+          "text": "Ultima Fireproof Velvet. Rated to one supernova per night. Dry clean only.",
+          "startMs": 13555
+        }
+      ]
+    },
+    {
+      "id": "psa-001",
+      "category": "psa",
+      "url": "/voice/velvet-collapse/psa-001.mp3",
+      "durationMs": 18039,
+      "title": "In the Event of a Supernova",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Announcer",
+          "text": "A message from the management of Casino Ultima.",
+          "startMs": 50
+        },
+        {
+          "speaker": "Announcer",
+          "text": "In the event of a supernova, please remain in your seat, keep your sunglasses on, and hold your drink level. Do not run. There is nowhere to run to, and the carpet is new.",
+          "startMs": 3372
+        },
+        {
+          "speaker": "Announcer",
+          "text": "And please, do not tip the star. The star is not staff.",
+          "startMs": 14408
+        }
+      ]
+    },
+    {
+      "id": "dj-greg-review",
+      "category": "dj",
+      "url": "/voice/velvet-collapse/dj-greg-review.mp3",
+      "durationMs": 12812,
+      "title": "Reviewing the Quiet Corner",
+      "overMusic": true,
+      "days": [
+        1
+      ],
+      "lines": [
+        {
+          "speaker": "Baron Velour",
+          "text": "I listened to the Quiet Corner last night, on the Lounge at the End of Time. Greg's show. I turned the speaker up so far the star started listening.",
+          "startMs": 36
+        },
+        {
+          "speaker": "Baron Velour",
+          "text": "Not a sound. Marvellous. The man's a minimalist. Four stars. Ruby gives it five.",
+          "startMs": 8194
+        }
+      ]
+    },
+    {
+      "id": "convergence-missing-moon",
+      "category": "event",
+      "url": "/voice/velvet-collapse/convergence-missing-moon.mp3",
+      "durationMs": 9596,
+      "overMusic": false,
+      "kit": "missing-moon",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Baron Velour",
+          "text": "Somebody at the bar says a moon has gone missing. Not ours, darling. We haven't had a moon since Ruby swallowed it. She does that.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Baron Velour",
+          "text": "Check under the roulette table, just in case.",
+          "startMs": 7022
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-smell",
+      "category": "event",
+      "url": "/voice/velvet-collapse/convergence-the-smell.mp3",
+      "durationMs": 11916,
+      "overMusic": false,
+      "kit": "the-smell",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Baron Velour",
+          "text": "Does the whole lounge smell of toast, or is it me? We do smell of toast after four, usually. It's early for toast. Odette?",
+          "startMs": 38
+        },
+        {
+          "speaker": "Odette, the Croupier",
+          "text": "It isn't the star, Baron.",
+          "startMs": 7105
+        },
+        {
+          "speaker": "Baron Velour",
+          "text": "Then somebody, somewhere, is making breakfast.",
+          "startMs": 9288
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-song",
+      "category": "event",
+      "url": "/voice/velvet-collapse/convergence-the-song.mp3",
+      "durationMs": 10279,
+      "overMusic": false,
+      "kit": "the-song",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Baron Velour",
+          "text": "The band has started playing a song nobody wrote. Everybody knows it. Now they've stopped, right before the end, and they're looking at me.",
+          "startMs": 42
+        },
+        {
+          "speaker": "Baron Velour",
+          "text": "I don't know how it ends either, darlings. Play it again.",
+          "startMs": 7278
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-knock",
+      "category": "event",
+      "url": "/voice/velvet-collapse/convergence-the-knock.mp3",
+      "durationMs": 10315,
+      "overMusic": false,
+      "kit": "the-knock",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Baron Velour",
+          "text": "Three knocks on the stage door. Odette opened it. Nothing out there but a red giant and a very long way down.",
+          "startMs": 39
+        },
+        {
+          "speaker": "Baron Velour",
+          "text": "Close it, darling. Whoever it is, they're welcome. They'll need sunglasses.",
+          "startMs": 6479
+        }
+      ]
+    },
+    {
+      "id": "convergence-wrong-colour",
+      "category": "event",
+      "url": "/voice/velvet-collapse/convergence-wrong-colour.mp3",
+      "durationMs": 9389,
+      "overMusic": false,
+      "kit": "wrong-colour",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Baron Velour",
+          "text": "The star has gone a colour. Not red. Not white. A colour I have never seen in eleven years of watching her explode.",
+          "startMs": 46
+        },
+        {
+          "speaker": "Baron Velour",
+          "text": "Odette, put it on the wheel. We'll call it Ruby's Own.",
+          "startMs": 6568
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-pigeon",
+      "category": "event",
+      "url": "/voice/velvet-collapse/convergence-the-pigeon.mp3",
+      "durationMs": 10185,
+      "overMusic": false,
+      "kit": "the-pigeon",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Baron Velour",
+          "text": "A pigeon has just walked into the Velvet Lounge. No ship, no ladder. It walked past the doorman like they were old friends.",
+          "startMs": 43
+        },
+        {
+          "speaker": "Baron Velour",
+          "text": "It's at the bar now. It's having what I'm having. I like it.",
+          "startMs": 6986
+        }
+      ]
+    }
+  ]
+}

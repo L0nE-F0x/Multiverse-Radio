@@ -604,6 +604,176 @@
           "startMs": 7855
         }
       ]
+    },
+    {
+      "id": "convergence-missing-moon",
+      "category": "event",
+      "url": "/voice/wall-of-fog/convergence-missing-moon.mp3",
+      "durationMs": 7250,
+      "title": "The Convergence: A Moon Goes Missing",
+      "overMusic": false,
+      "kit": "missing-moon",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Ellis",
+          "text": "...so... a moon's... gone?...",
+          "startMs": 38
+        },
+        {
+          "speaker": "Ellis",
+          "text": "...nobody knows which... you couldn't see it in here anyway... but I miss it... yeah.",
+          "startMs": 2482
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-smell",
+      "category": "event",
+      "url": "/voice/wall-of-fog/convergence-the-smell.mp3",
+      "durationMs": 7350,
+      "title": "The Convergence: Toast, Everywhere",
+      "overMusic": false,
+      "kit": "the-smell",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Ellis",
+          "text": "...is that... toast?...",
+          "startMs": 42
+        },
+        {
+          "speaker": "Ellis",
+          "text": "...somebody made breakfast in nineteen ninety one... and it's only just come round the back... yeah.",
+          "startMs": 2050
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-song",
+      "category": "event",
+      "url": "/voice/wall-of-fog/convergence-the-song.mp3",
+      "durationMs": 9160,
+      "title": "The Convergence: The Song Nobody Can Finish",
+      "overMusic": false,
+      "kit": "the-song",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Ellis",
+          "text": "...there's this song... everybody's got it... and it goes...",
+          "startMs": 40
+        },
+        {
+          "speaker": "Ellis",
+          "text": "...and then...",
+          "startMs": 3817
+        },
+        {
+          "speaker": "The Reverb",
+          "text": "...and then...",
+          "startMs": 5238
+        },
+        {
+          "speaker": "Ellis",
+          "text": "...yeah... that's as far as anyone gets.",
+          "startMs": 6659
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-knock",
+      "category": "event",
+      "url": "/voice/wall-of-fog/convergence-the-knock.mp3",
+      "durationMs": 7847,
+      "title": "The Convergence: Three Knocks",
+      "overMusic": false,
+      "kit": "the-knock",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Ellis",
+          "text": "...three knocks... or was that the drums from... no...",
+          "startMs": 39
+        },
+        {
+          "speaker": "Ellis",
+          "text": "...nobody there... it'll come round again in about a year... we'll get it then.",
+          "startMs": 3706
+        }
+      ]
+    },
+    {
+      "id": "convergence-wrong-colour",
+      "category": "event",
+      "url": "/voice/wall-of-fog/convergence-wrong-colour.mp3",
+      "durationMs": 7552,
+      "title": "The Convergence: A Colour With No Name",
+      "overMusic": false,
+      "kit": "wrong-colour",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Ellis",
+          "text": "...the fog went a colour... not grey... not...",
+          "startMs": 40
+        },
+        {
+          "speaker": "Ellis",
+          "text": "...there's no word... I had one... it went into the reverb... yeah.",
+          "startMs": 3488
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-pigeon",
+      "category": "event",
+      "url": "/voice/wall-of-fog/convergence-the-pigeon.mp3",
+      "durationMs": 6956,
+      "title": "The Convergence: The Pigeon",
+      "overMusic": false,
+      "kit": "the-pigeon",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Ellis",
+          "text": "...there's a pigeon... by the lamp... it knows the lamp...",
+          "startMs": 39
+        },
+        {
+          "speaker": "Ellis",
+          "text": "...they're old friends... I'm a bit jealous, honestly.",
+          "startMs": 3565
+        }
+      ]
+    },
+    {
+      "id": "quiet-corner-review",
+      "category": "dj",
+      "url": "/voice/wall-of-fog/quiet-corner-review.mp3",
+      "durationMs": 9015,
+      "title": "Review: The Quiet Corner with Greg",
+      "overMusic": true,
+      "days": [
+        1
+      ],
+      "lines": [
+        {
+          "speaker": "Ellis",
+          "text": "...did anyone hear... the Greg thing... on Sunday...",
+          "startMs": 41
+        },
+        {
+          "speaker": "Ellis",
+          "text": "...couldn't make out a word... not one...",
+          "startMs": 3456
+        },
+        {
+          "speaker": "Ellis",
+          "text": "...finally... somebody gets it... yeah.",
+          "startMs": 6316
+        }
+      ]
     }
   ]
 }

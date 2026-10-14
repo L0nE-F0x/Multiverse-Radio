@@ -686,6 +686,138 @@
           "startMs": 9330
         }
       ]
+    },
+    {
+      "id": "convergence-missing-moon",
+      "category": "event",
+      "url": "/voice/cat-fm/convergence-missing-moon.mp3",
+      "durationMs": 10673,
+      "title": "The Convergence: A Moon Goes Missing",
+      "overMusic": false,
+      "kit": "missing-moon",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Dennis (the intern)",
+          "text": "Apparently a moon is missing. Every station's talking about it.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Dennis (the intern)",
+          "text": "Gloria has been staring out of the window since it happened. She knows something. She won't tell me. She just looks very pleased with herself.",
+          "startMs": 3899
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-smell",
+      "category": "event",
+      "url": "/voice/cat-fm/convergence-the-smell.mp3",
+      "durationMs": 10117,
+      "title": "The Convergence: Toast, Everywhere",
+      "overMusic": false,
+      "kit": "the-smell",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Dennis (the intern)",
+          "text": "The whole studio smells of toast. Everywhere does, apparently.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Dennis (the intern)",
+          "text": "Gloria's sniffed the toaster. She's sniffed me. She's decided it's my fault. Programming change: she's sitting on the keyboard now.",
+          "startMs": 3801
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-song",
+      "category": "event",
+      "url": "/voice/cat-fm/convergence-the-song.mp3",
+      "durationMs": 10227,
+      "title": "The Convergence: The Song Nobody Can Finish",
+      "overMusic": false,
+      "kit": "the-song",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Dennis (the intern)",
+          "text": "There's a song everybody's humming and nobody can finish. I was humming it.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Dennis (the intern)",
+          "text": "Gloria knocked my headphones off the desk at the exact moment I got to the hard part. I think she was helping.",
+          "startMs": 4455
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-knock",
+      "category": "event",
+      "url": "/voice/cat-fm/convergence-the-knock.mp3",
+      "durationMs": 10918,
+      "title": "The Convergence: Three Knocks",
+      "overMusic": false,
+      "kit": "the-knock",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Dennis (the intern)",
+          "text": "Three knocks on the studio door. I went to look. Nobody there.",
+          "startMs": 39
+        },
+        {
+          "speaker": "Dennis (the intern)",
+          "text": "And while I was gone, three things got knocked off the desk. She heard the knocks. She felt she should match them.",
+          "startMs": 5248
+        }
+      ]
+    },
+    {
+      "id": "convergence-wrong-colour",
+      "category": "event",
+      "url": "/voice/cat-fm/convergence-wrong-colour.mp3",
+      "durationMs": 10138,
+      "title": "The Convergence: A Colour With No Name",
+      "overMusic": false,
+      "kit": "wrong-colour",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Dennis (the intern)",
+          "text": "The sky went a colour just now. Nobody has a word for it.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Dennis (the intern)",
+          "text": "Gloria went and sat in the patch of light it made on the floor. Then it went back to normal, and she looked at me like I'd switched it off.",
+          "startMs": 3643
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-pigeon",
+      "category": "event",
+      "url": "/voice/cat-fm/convergence-the-pigeon.mp3",
+      "durationMs": 11310,
+      "title": "The Convergence: The Pigeon",
+      "overMusic": false,
+      "kit": "the-pigeon",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Dennis (the intern)",
+          "text": "Oh no. There's a pigeon on the windowsill. Gloria's seen it. Gloria's...",
+          "startMs": 38
+        },
+        {
+          "speaker": "Dennis (the intern)",
+          "text": "She's not chasing it. They're just sitting together. Gloria, how do you know a pigeon?",
+          "startMs": 7118
+        }
+      ]
     }
   ]
 }

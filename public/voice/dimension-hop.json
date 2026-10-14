@@ -2920,6 +2920,193 @@
           "startMs": 13198
         }
       ]
+    },
+    {
+      "id": "convergence-missing-moon",
+      "category": "event",
+      "url": "/voice/dimension-hop/convergence-missing-moon.mp3",
+      "durationMs": 11758,
+      "title": "The Convergence: A Moon Goes Missing",
+      "overMusic": false,
+      "kit": "missing-moon",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Jace",
+          "text": "Mara, everyone's saying a moon's gone missing.",
+          "startMs": 49
+        },
+        {
+          "speaker": "Mara",
+          "text": "Ours is fine. It's on the floor, where moons go.",
+          "startMs": 2987
+        },
+        {
+          "speaker": "Jace",
+          "text": "Ours is... actually, I'm not sure how many we had.",
+          "startMs": 6137
+        },
+        {
+          "speaker": "Mara",
+          "text": "Then it's yours, Jace. Not normal.",
+          "startMs": 9692
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-smell",
+      "category": "event",
+      "url": "/voice/dimension-hop/convergence-the-smell.mp3",
+      "durationMs": 10694,
+      "title": "The Convergence: Toast, Everywhere",
+      "overMusic": false,
+      "kit": "the-smell",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Mara",
+          "text": "Jace, why does everything smell like toast?",
+          "startMs": 36
+        },
+        {
+          "speaker": "Jace",
+          "text": "That's toast. It's bread you burn a little bit, on purpose.",
+          "startMs": 2781
+        },
+        {
+          "speaker": "Mara",
+          "text": "On purpose. Everywhere. All at once?",
+          "startMs": 6492
+        },
+        {
+          "speaker": "Jace",
+          "text": "Not usually all at once.",
+          "startMs": 8941
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-song",
+      "category": "event",
+      "url": "/voice/dimension-hop/convergence-the-song.mp3",
+      "durationMs": 13013,
+      "title": "The Convergence: The Song Nobody Can Finish",
+      "overMusic": false,
+      "kit": "the-song",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Jace",
+          "text": "I've had this song in my head all day. It goes...",
+          "startMs": 40
+        },
+        {
+          "speaker": "Mara",
+          "text": "I know. I heard you stop four seconds ago.",
+          "startMs": 3544
+        },
+        {
+          "speaker": "Jace",
+          "text": "Do you know how it ends?",
+          "startMs": 6459
+        },
+        {
+          "speaker": "Mara",
+          "text": "No. And I'm four seconds ahead. So it doesn't end for at least four more seconds.",
+          "startMs": 8198
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-knock",
+      "category": "event",
+      "url": "/voice/dimension-hop/convergence-the-knock.mp3",
+      "durationMs": 8490,
+      "title": "The Convergence: Three Knocks",
+      "overMusic": false,
+      "kit": "the-knock",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Mara",
+          "text": "Someone's going to knock.",
+          "startMs": 37
+        },
+        {
+          "speaker": "Jace",
+          "text": "Somebody just knocked. Three times.",
+          "startMs": 1657
+        },
+        {
+          "speaker": "Mara",
+          "text": "I answered it four seconds ago. Nobody. I said hello anyway.",
+          "startMs": 4447
+        }
+      ]
+    },
+    {
+      "id": "convergence-wrong-colour",
+      "category": "event",
+      "url": "/voice/dimension-hop/convergence-wrong-colour.mp3",
+      "durationMs": 11470,
+      "title": "The Convergence: A Colour With No Name",
+      "overMusic": false,
+      "kit": "wrong-colour",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Jace",
+          "text": "Mara, look at the sky.",
+          "startMs": 49
+        },
+        {
+          "speaker": "Mara",
+          "text": "Already did. It's the colour we use for Thursdays, upside down.",
+          "startMs": 1843
+        },
+        {
+          "speaker": "Jace",
+          "text": "We haven't got that colour.",
+          "startMs": 6086
+        },
+        {
+          "speaker": "Mara",
+          "text": "Nobody has it, Jace. I made that up. It was beautiful, though.",
+          "startMs": 7814
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-pigeon",
+      "category": "event",
+      "url": "/voice/dimension-hop/convergence-the-pigeon.mp3",
+      "durationMs": 9752,
+      "title": "The Convergence: The Pigeon",
+      "overMusic": false,
+      "kit": "the-pigeon",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Jace",
+          "text": "There's a pigeon in the garage. It walked through the rift.",
+          "startMs": 45
+        },
+        {
+          "speaker": "Mara",
+          "text": "It came through my side first. It says it knows you.",
+          "startMs": 3596
+        },
+        {
+          "speaker": "Jace",
+          "text": "I've never seen it before.",
+          "startMs": 6769
+        },
+        {
+          "speaker": "Mara",
+          "text": "It said you'd say that.",
+          "startMs": 8641
+        }
+      ]
     }
   ]
 }

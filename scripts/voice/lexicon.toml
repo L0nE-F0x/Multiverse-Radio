@@ -1,0 +1,15 @@
+# Pronunciation lexicon for the voice renderer (see content/voice/SCHEMA.md, "Writing for TTS").
+#
+# Kokoro mispronounces a few words. Write them normally in the scripts and add them here:
+# the renderer swaps in the respelling only in the text Kokoro hears, so captions keep the
+# real spelling. Matching is whole-word and case-insensitive, and keeps the written word's
+# case (theremin, Theremin, THEREMIN). Plurals are separate entries ("theremins").
+#
+# A clip's hash covers the text Kokoro hears, so editing an entry re-renders exactly the clips
+# that use it. Check a respelling before adding it: render a line to scratch and listen, or
+# transcribe it with whisper.cpp.
+
+[words]
+# Kokoro says "thair-MIN" (ðɛɹmˈɪn); this gives THERR-a-min (θˈɛɹɐmˈɪn). Checked with whisper on
+# am_michael and am_eric.
+theremin = "therr-a-min"
