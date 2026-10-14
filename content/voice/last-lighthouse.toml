@@ -351,3 +351,77 @@ lines = [
   { say = "keeper", text = "So I keep the light. In case. Just in case.", gap = 1.0 },
   { sfx = "foghorn", level = 0.5 },
 ]
+
+# ── The Convergence (v4): one reaction per kit ────────────────────────────────
+
+[[clip]]
+id = "convergence-missing-moon"
+category = "event"
+event = "convergence"
+kit = "missing-moon"
+title = "Notice to Mariners: Mind the Moon"
+bed = "sea"
+lines = [
+  { say = "keeper", text = "Notice to mariners. A moon is missing from the sky over Saltlight. Tides may be confused.", gap = 0.9 },
+  { say = "keeper", text = "Mariners are advised to steer by the beam. The beam is still here. It isn't going anywhere." },
+]
+
+[[clip]]
+id = "convergence-the-smell"
+category = "event"
+event = "convergence"
+kit = "the-smell"
+title = "The Gull Suspects"
+bed = "sea"
+lines = [
+  { say = "keeper", text = "The lamp room smells of toast. I haven't made toast in forty years.", gap = 0.9 },
+  { say = "keeper", text = "The gull has come to the window and is looking at me with suspicion. It isn't me. I've told it so." },
+]
+
+[[clip]]
+id = "convergence-the-song"
+category = "event"
+event = "convergence"
+kit = "the-song"
+title = "As Far as It Goes"
+bed = "sea"
+lines = [
+  { say = "keeper", text = "There's a tune going round. I've been humming it while I wind the lamp. I stop in the same place every time.", gap = 0.9 },
+  { say = "keeper", text = "I'll write it in the logbook, as far as it goes. Someone after me can finish it." },
+]
+
+[[clip]]
+id = "convergence-the-knock"
+category = "event"
+event = "convergence"
+kit = "the-knock"
+title = "Unbolted"
+bed = "sea"
+lines = [
+  { say = "keeper", text = "Three knocks at the lighthouse door. Nobody comes to the lighthouse. I went down anyway.", gap = 0.9 },
+  { say = "keeper", text = "Nobody there. Only the sea, and the beam going round. I've left the door unbolted. Just in case." },
+]
+
+[[clip]]
+id = "convergence-wrong-colour"
+category = "event"
+event = "convergence"
+kit = "wrong-colour"
+title = "See Sky"
+bed = "sea"
+lines = [
+  { say = "keeper", text = "The sky over the impossible seas has gone a colour. The logbook has no word for it.", gap = 0.9 },
+  { say = "keeper", text = "I have written, see sky. Visibility, good. Wonderful, occasionally." },
+]
+
+[[clip]]
+id = "convergence-the-pigeon"
+category = "event"
+event = "convergence"
+kit = "the-pigeon"
+title = "Inspected"
+bed = "sea"
+lines = [
+  { say = "keeper", text = "A pigeon has landed on the gallery rail. Not a gull. A pigeon. Out here.", gap = 0.9 },
+  { say = "keeper", text = "It looked at the lamp, and then at me, as if checking I was keeping it properly. I am. It seemed satisfied." },
+]
