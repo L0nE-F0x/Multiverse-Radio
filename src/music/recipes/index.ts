@@ -20,6 +20,7 @@ import { Rng } from '../rng';
 import { signatureOf, signScore } from './artist';
 import { BEDS_V3 } from './v3-beds';
 import { GENRES_V3 } from './v3-genres';
+import { GROOVE_V4 } from './v4-groove';
 
 export type Composer = (req: TrackRequest) => Score;
 
@@ -27,6 +28,7 @@ export type Composer = (req: TrackRequest) => Score;
 const COMPOSERS: Partial<Record<RecipeId, Composer>> = {
   ...GENRES_V3,
   ...BEDS_V3,
+  ...GROOVE_V4,
   'lofi-hiphop': composeLofi,
   'lofi-rain': composeLofi,
   'lofi-slow': composeLofi,
