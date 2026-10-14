@@ -35,10 +35,10 @@
 
 import { trackMeta } from '../content/tracks';
 import { artistSeed } from '../music/recipes/artist';
-import { eightsInHour, fullMoonAt, isFullMoonClip, onTheEights, tweaksAt } from './quirks';
+import { eightsInHour, fullMoonNight, isFullMoonClip, onTheEights, tweaksAt } from './quirks';
 import { createRng, hash, weightedPick, type Rng } from './random';
 import { frequencyTomorrow, tomorrowKitFrequency } from './secrets';
-import { browserTzOffset, localMinuteToMs, localTime, nightOf, showAtHour, type TzOffset } from './time';
+import { browserTzOffset, localMinuteToMs, localTime, NIGHT_START_HOUR, nightOf, showAtHour, type TzOffset } from './time';
 import type {
   Daypart,
   RecipeId,
@@ -435,14 +435,19 @@ class HourWriter {
     return `${this.station.id}:${this.hourIndex}:${this.segments.length}`;
   }
 
+  private moon: { night: number; full: boolean } | null = null;
+
   private context(at = this.t): PickContext {
     const local = localTime(at, this.tz);
+    // The night (06:00 to 06:00) this falls in, and whether its moon is full (asked once).
+    const night = local.hour >= NIGHT_START_HOUR ? local.day : local.day - 1;
+    if (this.moon?.night !== night) this.moon = { night, full: fullMoonNight(night, this.tz) };
     return {
       daypart: this.daypart,
       show: showAtHour(this.shows, local.hour, local.weekday)?.id ?? null,
       date: local.date,
       weekday: local.weekday,
-      fullMoon: fullMoonAt(at, this.tz),
+      fullMoon: this.moon.full,
     };
   }
 
@@ -689,9 +694,17 @@ function talkClock(w: HourWriter, rng: Rng, pools: Pools): void {
   if (pools.content.size === 0 && !pools.traffic) return musicClock(w, rng, pools);
   const ads = new Marks([rng.range(17, 23), rng.range(43, 50)]);
   const idents = new Marks([15 + rng.range(0, 2), 30 + rng.range(0, 2), 45 + rng.range(0, 2)]);
-  const interstitial = () => w.track(rng.int(20, 60) * SEC, 75 * SEC);
-  // Traffic on the 8s: a report at the first boundary near each :x8.
+  // Traffic on the 8s: a report at the first boundary near each :x8 (music ends on the mark).
   const eights = pools.traffic ? w.eights().map((ms) => ms - TRAFFIC_TOLERANCE_MS) : [];
+  const music = (lengthMs: number, stretchBelow: number) => {
+    const next = eights[0];
+    if (next !== undefined) {
+      const untilMark = next + TRAFFIC_TOLERANCE_MS - w.elapsed;
+      if (untilMark >= 15 * SEC && untilMark < lengthMs) lengthMs = untilMark;
+    }
+    return w.track(lengthMs, stretchBelow);
+  };
+  const interstitial = () => music(rng.int(20, 60) * SEC, 75 * SEC);
   const trafficDue = () => {
     let due = false;
     while (eights.length && w.elapsed >= eights[0]!) {
@@ -716,7 +729,7 @@ function talkClock(w: HourWriter, rng: Rng, pools: Pools): void {
     if (ads.due(w.elapsed)) aired += w.adBreak(pools, rng.int(1, 3));
     if (idents.due(w.elapsed)) aired += w.voice(pools.idents);
     // Nothing fresh fits right now: a track, then try again (clips free up as time passes).
-    if (!aired) w.track(rng.int(90, 180) * SEC, 75 * SEC);
+    if (!aired) music(rng.int(90, 180) * SEC, 75 * SEC);
     else interstitial();
   }
 }
