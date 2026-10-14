@@ -694,3 +694,17 @@ lines = [
   { say = "teodor", text = "Relay Four. Happy Halloween, whoever you are. Captain has come dressed as a ghost.", gap = 0.8 },
   { say = "teodor", text = "He's a white gull. It's not much of a costume." },
 ]
+
+
+# ── v4: the Outer Band. Relay ships are drifting, and new stations are coming in from
+#    beyond 108 (108-118 MHz). Light mentions only; nobody knows why yet. ──
+
+[[clip]]
+id = "ad-outer-band-01"
+category = "ad"
+title = "Grumbel's Outer Band Extension"
+lines = [
+  { say = "grumbel", text = "They're saying the dial's got longer. New stations, out past one hundred and eight, further than anyone's tuned before." },
+  { say = "grumbel", text = "The Grumbel's Outer Band Extension. Three extra rungs. Clips on to the top of any Grumbel's ladder, so you can hold your radio up that little bit higher, and listen." },
+  { say = "grumbel", text = "My grandfather heard the sea from the top of one. He lived nowhere near the sea. Grumbel's Ladders. Up is a choice. Out is a bit further." },
+]

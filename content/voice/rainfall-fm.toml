@@ -503,3 +503,76 @@ lines = [
   { say = "host", text = "The Halloween forecast. Rain, heavy at times, with a ghostly mist at about midnight." },
   { say = "host", text = "That's just the rain, standing still for a moment, thinking about its life. Leave it be. It'll start falling again when it's ready." },
 ]
+
+
+# ══ v4: The Convergence ═══════════════════════════════════════════════════════
+#
+# Saturdays, 20:00 UTC: every station notices the same thing. One reaction per topic
+# (SCHEMA.md, "The Convergence"); the director airs the _events open, then the tuned
+# station's reaction, then the close.
+
+[[clip]]
+id = "convergence-missing-moon"
+category = "event"
+title = "The Convergence: A Moon Goes Missing"
+event = "convergence"
+kit = "missing-moon"
+lines = [
+  { say = "host", text = "Somebody's lost a moon, apparently. Everyone's ringing in about it." },
+  { say = "host", text = "We've not seen a moon in Precinct Nine for four thousand years, love, so it's not ours. Hope it turns up. Kettle's on, just in case." },
+]
+
+[[clip]]
+id = "convergence-the-smell"
+category = "event"
+title = "The Convergence: Toast, Everywhere"
+event = "convergence"
+kit = "the-smell"
+lines = [
+  { say = "host", text = "It smells of toast. Everywhere, they're saying. Even here, and you can't make toast in Precinct Nine. It goes soggy on the way to the plate." },
+  { say = "host", text = "Somebody's managed it somewhere. Good for them." },
+]
+
+[[clip]]
+id = "convergence-the-song"
+category = "event"
+title = "The Convergence: The Song Nobody Can Finish"
+event = "convergence"
+kit = "the-song"
+lines = [
+  { say = "host", text = "There's a song going round everybody's head, and nobody knows the end." },
+  { say = "host", text = "I think the rain knows it. It keeps tapping out the first bit on the window, and stopping, like it's being polite." },
+]
+
+[[clip]]
+id = "convergence-the-knock"
+category = "event"
+title = "The Convergence: Three Knocks"
+event = "convergence"
+kit = "the-knock"
+lines = [
+  { say = "host", text = "Three knocks at the studio door just then. Nobody there. Just the rain, stood on the step." },
+  { say = "host", text = "Come in, love. Wipe your feet. Not that it helps." },
+]
+
+[[clip]]
+id = "convergence-wrong-colour"
+category = "event"
+title = "The Convergence: A Colour With No Name"
+event = "convergence"
+kit = "wrong-colour"
+lines = [
+  { say = "host", text = "The clouds parted for a second, and the sky behind them was a colour I've never seen. Neither has anyone." },
+  { say = "host", text = "Then they closed again, quite quickly, like they'd shown us something they shouldn't have." },
+]
+
+[[clip]]
+id = "convergence-the-pigeon"
+category = "event"
+title = "The Convergence: The Pigeon"
+event = "convergence"
+kit = "the-pigeon"
+lines = [
+  { say = "host", text = "There's a pigeon in the studio. Wet through, bless it. Walked in like it had a key." },
+  { say = "host", text = "It's sat by the kettle, looking at me as if we've met. Maybe we have." },
+]

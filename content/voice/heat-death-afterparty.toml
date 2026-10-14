@@ -1,0 +1,482 @@
+# Afterparty at the Heat Death — 117.4, the top of the dial, the last warm place in the universe.
+#
+# DJ Entropy hosts: gentle, unhurried, a little sad and very kind; calls everyone "love". The
+# crowd is three guys (Dov, Wendell, and a third guy who has never said his name) and Lorraine,
+# a nebula about forty light years wide who has never missed a night. One warm bulb over the
+# decks. The stars are going out one by one, and the beat loses a little tempo every hour (the
+# director lowers the BPM through the night; the scripts only say it is slowing, never a number).
+#
+# The `goodnight` kit is a dedication: Entropy notices a star going out, one to three short
+# eulogies, and a goodnight. Shows: The Warm-Up (20–23), The Long Fade (2–5), Morning, Anyway
+# (7–10). Cross-station: Bev and the request line, Grumbel's Ladders, Greg's show (Monday).
+station = "heat-death-afterparty"
+
+[voices]
+host = { voice = "bf_emma", speed = 0.9, name = "DJ Entropy" }
+dov = { voice = "am_liam", speed = 0.95, name = "Dov" }
+bev = { voice = "af_nova", fx = "phone", name = "Bev" }
+announcer = { voice = "bm_george", speed = 0.95, name = "Announcer" }
+
+[[show]]
+id = "the-warm-up"
+name = "The Warm-Up"
+blurb = "The universe is two degrees above absolute zero. Somebody has to warm it up."
+start = 20
+end = 23
+
+[[show]]
+id = "the-long-fade"
+name = "The Long Fade"
+blurb = "The slowest hours. The beat sinks low, the stars go out faster, and nobody leaves."
+start = 2
+end = 5
+
+[[show]]
+id = "morning-anyway"
+name = "Morning, Anyway"
+blurb = "There's no sunrise at the end of the universe. The third guy holds the lamp up high, and we call it dawn."
+start = 7
+end = 10
+
+# ── Idents ────────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "id-001"
+category = "id"
+lines = [
+  { say = "host", text = "Afterparty at the Heat Death, one seventeen point four. The top of the dial, and the end of everything. Come in. It's warm." },
+]
+
+[[clip]]
+id = "id-002"
+category = "id"
+lines = [
+  { say = "host", text = "This is DJ Entropy, at the last party in the universe. Plenty of room on the floor, love. There always is, now." },
+]
+
+[[clip]]
+id = "id-003"
+category = "id"
+lines = [
+  { say = "host", text = "Afterparty at the Heat Death. Three guys, a nebula, and you. That's a crowd, love. That's a proper crowd." },
+  { sting = "id" },
+]
+
+[[clip]]
+id = "id-004"
+category = "id"
+daypart = "night"
+lines = [
+  { say = "host", text = "Afterparty at the Heat Death. The stars are going out. We've still got the light over the decks. Come and stand near it." },
+]
+
+[[clip]]
+id = "id-005"
+category = "id"
+daypart = "morning"
+lines = [
+  { say = "host", text = "Good morning from the end of the universe. There isn't a morning any more, technically. We do one anyway." },
+]
+
+[[clip]]
+id = "id-006"
+category = "id"
+lines = [
+  { say = "host", text = "Afterparty at the Heat Death. The beat's slowing down. That's all right. So is everything. We'll go together." },
+]
+
+# ── Host links ────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "dj-001"
+category = "dj"
+title = "Tonight's Crowd"
+lines = [
+  { say = "host", text = "Let me introduce tonight's crowd. On the left, Dov. In the middle, Wendell. On the right, a third guy, who has never told us his name. At this point, love, it would be rude to ask." },
+  { say = "host", text = "And behind them, about forty light years wide, swaying, that's Lorraine. Lorraine's a nebula. She has never missed a night." },
+]
+
+[[clip]]
+id = "dj-002"
+category = "dj"
+title = "Slowing Down"
+lines = [
+  { say = "host", text = "If you've noticed the music getting slower, you're right. We lose a few beats a minute every hour. Everything does, out here." },
+  { say = "host", text = "It's not the end of the song, love. It's the song getting comfortable. It's taking its shoes off." },
+]
+
+[[clip]]
+id = "dj-003"
+category = "dj"
+title = "The Light Over the Decks"
+lines = [
+  { say = "host", text = "There's one light left above the decks. A little warm bulb. It's the brightest thing for a very long way, in every direction." },
+  { say = "host", text = "So if you're lost out there, look for it. That's us. Come in. Mind the cables." },
+]
+
+[[clip]]
+id = "dj-004"
+category = "dj"
+title = "Lorraine"
+lines = [
+  { say = "host", text = "Lorraine's glowing a bit pinker tonight. That's how you know she's enjoying it. Nebulas haven't got hands, so she can't put them in the air." },
+  { say = "host", text = "She does the next best thing. She's making a star, very slowly, just for the drop. It'll be ready in about a million years. We'll wait." },
+]
+
+[[clip]]
+id = "dj-005"
+category = "dj"
+title = "Dov's Request"
+lines = [
+  { say = "dov", text = "Can you play the one from the beginning?" },
+  { say = "host", text = "Dov wants the one from the beginning. Love, they're all from the beginning. Everything is." },
+  { say = "host", text = "But I know the one you mean. Here it is. A little slower than it used to be. Aren't we all." },
+]
+
+[[clip]]
+id = "dj-006"
+category = "dj"
+title = "Sponsored by Grumbel's Ladders"
+lines = [
+  { say = "host", text = "This set is brought to you by Grumbel's Ladders, the last company still trading. Years ago they sent a ladder out here, with a note on it. It said, up is a choice." },
+  { say = "host", text = "We leaned it against the dark. Nobody's had the heart to climb it. It's just nice to know it's there." },
+]
+
+[[clip]]
+id = "dj-007"
+category = "dj"
+daypart = "night"
+title = "For the Newcomer"
+lines = [
+  { say = "host", text = "There's a ship out there. A relay ship, lights on, drifting up the dial. Hello, love. You came all this way. Not many do, any more." },
+  { say = "host", text = "There's room by the speakers. The guys will budge up." },
+]
+
+[[clip]]
+id = "dj-008"
+category = "dj"
+title = "Bev Calls"
+lines = [
+  { say = "bev", text = "Hello, love. It's Bev. Is this the request line?" },
+  { say = "host", text = "Bev. You found us. All the way out here." },
+  { say = "bev", text = "I'm still looking for my song." },
+  { say = "host", text = "I know, love. Stay on the line. If it's anywhere, it's here. Everything ends up here, in the end." },
+]
+
+[[clip]]
+id = "dj-009"
+category = "dj"
+title = "Why We Dance"
+lines = [
+  { say = "host", text = "A little science, for anyone wondering. The heat death means everything ends up the same temperature. Nothing warmer than anything else." },
+  { say = "host", text = "Which is why we dance. Every step, we're a little bit warmer than the dark. That's the whole idea, love. That's the rave." },
+]
+
+[[clip]]
+id = "dj-010"
+category = "dj"
+title = "The Spin"
+lines = [
+  { say = "host", text = "The third guy just did a spin. Nobody has ever seen him spin. Wendell had to sit down. Lorraine went bright blue." },
+  { say = "host", text = "I don't know what it means, love. I've written it down." },
+]
+
+# ── Goodnight: a star goes out, one to three eulogies, a goodnight ───────────
+
+[[clip]]
+id = "goodnight-open-1"
+category = "dj"
+kit = "goodnight"
+part = "open"
+lines = [
+  { say = "host", text = "Excuse me, everybody. Quick dedication. Look up, just there, to the left." },
+]
+
+[[clip]]
+id = "goodnight-open-2"
+category = "dj"
+kit = "goodnight"
+part = "open"
+lines = [
+  { say = "host", text = "Hold on. Look up, everybody. Over there. Just going now." },
+  { pause = 1.0 },
+]
+
+[[clip]]
+id = "goodnight-001"
+category = "dj"
+kit = "goodnight"
+part = "body"
+lines = [
+  { say = "host", text = "That was Little Wenna, a yellow star in the Brass Reach. Eleven billion years old. She warmed four planets, and a comet that kept coming back to visit." },
+  { say = "host", text = "She went out just now, very quietly, the way she did everything." },
+]
+
+[[clip]]
+id = "goodnight-002"
+category = "dj"
+kit = "goodnight"
+part = "body"
+lines = [
+  { say = "host", text = "That was Old Corvane, a red dwarf, out past the Long Spiral. Not much to look at. Never was." },
+  { say = "host", text = "But he burned for a trillion years, steady as anything, and he never once let anybody down." },
+]
+
+[[clip]]
+id = "goodnight-003"
+category = "dj"
+kit = "goodnight"
+part = "body"
+lines = [
+  { say = "host", text = "That was Hespera Nine. Blue, very bright, gone young. She used to be the first star out in the evening, on a little moon called Fallow, and every night a child would wish on her." },
+  { say = "host", text = "The child grew up. The wish came true. Hespera never knew. So I'm telling her now." },
+]
+
+[[clip]]
+id = "goodnight-004"
+category = "dj"
+kit = "goodnight"
+part = "body"
+lines = [
+  { say = "host", text = "That was the Twins, two stars going round each other, out in the Quiet Arm. They went out at exactly the same moment." },
+  { say = "host", text = "Neither of them had to be the one left. That's lucky, love. That's the luckiest thing I know." },
+]
+
+[[clip]]
+id = "goodnight-005"
+category = "dj"
+kit = "goodnight"
+part = "body"
+lines = [
+  { say = "host", text = "That was a little orange star nobody ever named. So I'm naming him now. Gloam. Small, a bit shy, out on the edge of things." },
+  { say = "host", text = "Like us, really. Goodnight, Gloam. You had a name all along." },
+]
+
+[[clip]]
+id = "goodnight-006"
+category = "dj"
+kit = "goodnight"
+part = "body"
+lines = [
+  { say = "host", text = "That was a star called Patience, the last one in her whole galaxy. She waited a very long time for company." },
+  { say = "host", text = "Then she heard the music. And she held on, just long enough, for one more drop." },
+]
+
+[[clip]]
+id = "goodnight-close-1"
+category = "dj"
+kit = "goodnight"
+part = "close"
+lines = [
+  { say = "host", text = "Goodnight, love. Thanks for the light. This one's for you." },
+]
+
+[[clip]]
+id = "goodnight-close-2"
+category = "dj"
+kit = "goodnight"
+part = "close"
+lines = [
+  { say = "host", text = "The guys have their hands up. Lorraine's dimmed a little, out of respect. Here's the next one." },
+]
+
+[[clip]]
+id = "goodnight-close-3"
+category = "dj"
+kit = "goodnight"
+part = "close"
+lines = [
+  { say = "host", text = "We'll keep the beat going for you. That's what we do here. Goodnight." },
+]
+
+# ── The Warm-Up (20–23) ───────────────────────────────────────────────────────
+
+[[clip]]
+id = "id-the-warm-up"
+category = "id"
+show = "the-warm-up"
+part = "open"
+lines = [
+  { say = "host", text = "Good evening, and welcome to the Warm-Up. The universe is about two degrees above absolute zero. Let's see what we can do." },
+]
+
+[[clip]]
+id = "dj-the-warm-up-001"
+category = "dj"
+show = "the-warm-up"
+lines = [
+  { say = "host", text = "The Warm-Up is going well, everybody. We've brought the dance floor up by nearly a whole degree." },
+  { say = "host", text = "The rest of the universe is still freezing. But the dance floor, love. The dance floor is lovely." },
+]
+
+[[clip]]
+id = "dj-the-warm-up-002"
+category = "dj"
+show = "the-warm-up"
+lines = [
+  { say = "host", text = "Early in the night the beat's still quick, and the guys are fresh. Dov's doing the thing with his arms. It hasn't got a name." },
+  { say = "host", text = "Nothing new has had a name for a very long time. So we'll call it the Dov. Well done, Dov." },
+  { say = "dov", text = "Thanks." },
+]
+
+# ── The Long Fade (2–5) ───────────────────────────────────────────────────────
+
+[[clip]]
+id = "id-the-long-fade"
+category = "id"
+show = "the-long-fade"
+part = "open"
+lines = [
+  { say = "host", text = "It's late. This is the Long Fade. The beat has come down a long way tonight. Hold on to each other. It's going to be beautiful." },
+]
+
+[[clip]]
+id = "dj-the-long-fade-001"
+category = "dj"
+show = "the-long-fade"
+lines = [
+  { say = "host", text = "We've been losing beats all night, and now we're right down where it's slow and deep, and every kick takes its time." },
+  { say = "host", text = "Wendell says it's like dancing under water. Wendell's never seen water. There isn't any left. He's guessing. He's right, though." },
+]
+
+[[clip]]
+id = "dj-the-long-fade-002"
+category = "dj"
+show = "the-long-fade"
+lines = [
+  { say = "host", text = "Three guys and a nebula, in the dark, at the end of everything, swaying." },
+  { say = "host", text = "I've played bigger rooms, love. I've never played a better one." },
+]
+
+[[clip]]
+id = "dj-the-long-fade-003"
+category = "dj"
+show = "the-long-fade"
+lines = [
+  { say = "host", text = "Somewhere in the Long Fade, the guys always stop dancing for a bit, and just stand there, arms round each other, looking up." },
+  { say = "host", text = "Then the beat comes round again, and they start again. That's all any of us are doing, really." },
+]
+
+# ── Morning, Anyway (7–10) ────────────────────────────────────────────────────
+
+[[clip]]
+id = "id-morning-anyway"
+category = "id"
+show = "morning-anyway"
+part = "open"
+lines = [
+  { say = "host", text = "Good morning. This is Morning, Anyway. There's no sun now, so the third guy holds the lamp up as high as he can, and we all say, oh, look. Dawn." },
+]
+
+[[clip]]
+id = "dj-morning-anyway-001"
+category = "dj"
+show = "morning-anyway"
+lines = [
+  { say = "host", text = "Breakfast at the end of the universe is a flask of tea that Wendell has been keeping warm since the stars were young." },
+  { say = "host", text = "One cup each. Lorraine has the steam. She says it's the best thing she's had in ages." },
+]
+
+[[clip]]
+id = "dj-morning-anyway-002"
+category = "dj"
+show = "morning-anyway"
+lines = [
+  { say = "host", text = "If you're out there, and it's a real morning where you are, with a real sun in it, go and stand in it for a minute, love." },
+  { say = "host", text = "Just for us. We'll keep the music going till you're back." },
+]
+
+# ── Ads and notices ───────────────────────────────────────────────────────────
+
+[[clip]]
+id = "ad-001"
+category = "ad"
+title = "The Last Advertisement"
+lines = [
+  { say = "announcer", text = "This is the last advertisement in the universe." },
+  { say = "announcer", text = "We would like to thank our sponsors. All of them have now closed. They were lovely. They sold lamps, and soup, and blankets, and they always gave you a little bit extra." },
+  { say = "host", text = "Offer ends at the end." },
+]
+
+[[clip]]
+id = "psa-001"
+category = "psa"
+title = "Conserving Heat"
+lines = [
+  { say = "host", text = "A message from the afterparty. To conserve heat, please dance close together, wave your arms at least once a song, and keep the door shut." },
+  { say = "host", text = "There isn't a door. Keep it shut anyway. It's the thought that counts." },
+]
+
+# ── Monday: a review of Greg's show ──────────────────────────────────────────
+
+[[clip]]
+id = "dj-greg-review"
+category = "dj"
+days = [1]
+title = "Reviewing the Quiet Corner"
+lines = [
+  { say = "host", text = "Did anyone hear the Quiet Corner last night? Greg's show, on the Lounge at the End of Time. I put my ear right up against the speaker." },
+  { say = "host", text = "A little breathing, a long pause, and once, very softly, the word, okay. That's an honest show, love. We played it to Lorraine. She liked the pauses." },
+]
+
+# ── The Convergence: one reaction per weekly topic ───────────────────────────
+
+[[clip]]
+id = "convergence-missing-moon"
+category = "event"
+event = "convergence"
+kit = "missing-moon"
+lines = [
+  { say = "host", text = "Someone says a moon's gone missing. Out here, love, we've been missing moons for ages. Most of them, honestly. But a new one? That's nearly news." },
+  { say = "host", text = "The guys are looking under the speakers. Lorraine's checking her pockets. She hasn't got pockets." },
+]
+
+[[clip]]
+id = "convergence-the-smell"
+category = "event"
+event = "convergence"
+kit = "the-smell"
+lines = [
+  { say = "host", text = "Toast. Everything smells of toast. There hasn't been any toast for a hundred trillion years. Dov's crying." },
+  { say = "host", text = "The third guy says, that's my nan's kitchen. That's the most he's ever said. Somebody, somewhere, is making breakfast. Good." },
+]
+
+[[clip]]
+id = "convergence-the-song"
+category = "event"
+event = "convergence"
+kit = "the-song"
+lines = [
+  { say = "host", text = "Everybody's humming the same song. Even Lorraine, low and slow, from forty light years off. Nobody knows how it ends." },
+  { say = "host", text = "Maybe it doesn't, love. Let's just keep humming." },
+]
+
+[[clip]]
+id = "convergence-the-knock"
+category = "event"
+event = "convergence"
+kit = "the-knock"
+lines = [
+  { say = "host", text = "Three knocks. Out here. There's no door. There's nothing to knock on for a very long way. The guys have gone very quiet." },
+  { say = "host", text = "Come in, whoever you are. It's warm by the decks." },
+]
+
+[[clip]]
+id = "convergence-wrong-colour"
+category = "event"
+event = "convergence"
+kit = "wrong-colour"
+lines = [
+  { say = "host", text = "The dark has gone a colour. Out here, where nothing has had a colour for ages. Not red. Not blue. Something new. Lorraine's trying to match it." },
+  { say = "host", text = "First new colour in a trillion years, love. Let's dance in it." },
+]
+
+[[clip]]
+id = "convergence-the-pigeon"
+category = "event"
+event = "convergence"
+kit = "the-pigeon"
+lines = [
+  { say = "host", text = "A pigeon just walked onto the dance floor. At the end of the universe. The guys have never seen a bird. It's walking round each of them, like it knows them." },
+  { say = "host", text = "Now it's looking at me. Hello, love. Did you come far?" },
+]

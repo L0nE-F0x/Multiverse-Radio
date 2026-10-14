@@ -384,3 +384,76 @@ lines = [
   { say = "gordon", text = "Yesterday was Halloween. It went fine. Every pumpkin was carved, and every door was knocked." },
   { say = "gordon", text = "The sweets ran out at nine, as they always do, and everybody pretended they were all right about it. Nobody was frightened for long." },
 ]
+
+
+# ══ v4: The Convergence ═══════════════════════════════════════════════════════
+#
+# Saturdays, 20:00 UTC: every station notices the same thing. One reaction per topic
+# (SCHEMA.md, "The Convergence"); the director airs the _events open, then the tuned
+# station's reaction, then the close.
+
+[[clip]]
+id = "convergence-missing-moon"
+category = "event"
+title = "The Convergence: A Moon Goes Missing"
+event = "convergence"
+kit = "missing-moon"
+lines = [
+  { say = "gordon", text = "I'm told that today, a moon has gone missing. That's today, you understand. I don't do today." },
+  { say = "gordon", text = "But yesterday, all the moons were exactly where they should be. I counted. It was a lovely night." },
+]
+
+[[clip]]
+id = "convergence-the-smell"
+category = "event"
+title = "The Convergence: Toast, Everywhere"
+event = "convergence"
+kit = "the-smell"
+lines = [
+  { say = "gordon", text = "Yesterday, nobody here made toast. I'm certain of it. So whatever you're smelling today, it isn't us." },
+  { say = "gordon", text = "Though I'll admit, it has me thinking about yesterday's breakfast. It was very good." },
+]
+
+[[clip]]
+id = "convergence-the-song"
+category = "event"
+title = "The Convergence: The Song Nobody Can Finish"
+event = "convergence"
+kit = "the-song"
+lines = [
+  { say = "gordon", text = "There's a song everyone can't finish today, I'm told. Yesterday it was on the radio. Right here. All the way through." },
+  { say = "gordon", text = "I should have paid more attention. You never think you'll need the end of something." },
+]
+
+[[clip]]
+id = "convergence-the-knock"
+category = "event"
+title = "The Convergence: Three Knocks"
+event = "convergence"
+kit = "the-knock"
+lines = [
+  { say = "gordon", text = "Three knocks at your door today, I hear, and nobody there." },
+  { say = "gordon", text = "Yesterday there were three knocks at mine. I didn't answer. So I suppose they went on to you. Sorry about that." },
+]
+
+[[clip]]
+id = "convergence-wrong-colour"
+category = "event"
+title = "The Convergence: A Colour With No Name"
+event = "convergence"
+kit = "wrong-colour"
+lines = [
+  { say = "gordon", text = "The sky went a colour today, they're saying. Yesterday it was blue." },
+  { say = "gordon", text = "Plain old blue. Lovely, really. I'd stop and look at that too, if I were you." },
+]
+
+[[clip]]
+id = "convergence-the-pigeon"
+category = "event"
+title = "The Convergence: The Pigeon"
+event = "convergence"
+kit = "the-pigeon"
+lines = [
+  { say = "gordon", text = "A pigeon walked into the studio yesterday. It looked at the calendar, and nodded." },
+  { say = "gordon", text = "It's been in everyone's studio today, I hear. It came here first. It likes to get the old news out of the way." },
+]

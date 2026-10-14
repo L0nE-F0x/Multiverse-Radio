@@ -1,9 +1,11 @@
 // Checks the rendered voice library in public/voice against the contracts in
 // src/broadcast/types.ts: every VoiceManifest (stations and the pools _shared, _ship, _pirate,
 // _oddities, _events) and the ShowIndex in _shows.json. Shape, unique ids, URLs that point at
-// files that exist, no orphaned MP3s, and the v3 fields (parts, shows, serials, dates, levels,
-// events). Passes trivially until the library has been rendered. Point VOICE_DIR at another
+// files that exist, no orphaned MP3s, the v3 fields (parts, shows, serials, dates, levels,
+// events), the v4 fields (arc, days, convergence reactions, tomorrow kits) and the VoiceIndex in
+// _index.json. Passes trivially until the library has been rendered. Point VOICE_DIR at another
 // render (e.g. one made with `--out`) to check that instead.
+import { createHash } from 'node:crypto';
 import { existsSync, readdirSync, readFileSync, statSync } from 'node:fs';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -13,6 +15,7 @@ import { STATIONS } from '../../src/stations/roster';
 
 const VOICE = process.env.VOICE_DIR ?? fileURLToPath(new URL('../../public/voice/', import.meta.url));
 const SHOWS_FILE = '_shows.json';
+const INDEX_FILE = '_index.json';
 const POOLS = ['_shared', '_ship', '_pirate', '_oddities', '_events'];
 /** Pools whose clips may be restricted to some stations with `stations`. */
 const STATION_FILTER_POOLS = ['_shared', '_ship', '_events'];
@@ -36,14 +39,20 @@ const CLIP_KEYS = new Set([
   'dates',
   'level',
   'event',
+  'arc',
+  'days',
   'lines',
 ]);
 const LINE_KEYS = new Set(['speaker', 'text', 'startMs']);
-const SHOW_KEYS = new Set(['id', 'name', 'blurb', 'start', 'end', 'host']);
+const SHOW_KEYS = new Set(['id', 'name', 'blurb', 'start', 'end', 'host', 'days']);
 const DAYS_IN_MONTH = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+/** v4: The Convergence's weekly topics (content/voice/SCHEMA.md); station files hold one reaction per kit. */
+const CONVERGENCE_KITS = ['missing-moon', 'the-smell', 'the-song', 'the-knock', 'wrong-colour', 'the-pigeon'];
+/** v4: a drifting station's "tomorrow" announcement, e.g. tomorrow-110.65. */
+const TOMORROW_KIT = /^tomorrow-(\d{2,3}(?:\.\d{1,2})?)$/;
 
 const allJson = existsSync(VOICE) ? readdirSync(VOICE).filter((f) => f.endsWith('.json')).sort() : [];
-const manifestFiles = allJson.filter((f) => f !== SHOWS_FILE);
+const manifestFiles = allJson.filter((f) => f !== SHOWS_FILE && f !== INDEX_FILE);
 
 type Json = Record<string, unknown>;
 const isObject = (v: unknown): v is Json => typeof v === 'object' && v !== null && !Array.isArray(v);
@@ -57,6 +66,15 @@ function validDate(value: unknown): boolean {
   const month = Number(m[1]);
   const day = Number(m[2]);
   return month >= 1 && month <= 12 && day >= 1 && day <= DAYS_IN_MONTH[month - 1]!;
+}
+
+/** v4 `days`: distinct local weekdays 0-6, sorted, at least one. */
+function validDays(value: unknown): value is number[] {
+  return (
+    Array.isArray(value) &&
+    value.length > 0 &&
+    value.every((d, i) => Number.isInteger(d) && d >= 0 && d <= 6 && (i === 0 || d > value[i - 1]))
+  );
 }
 
 function showHours(start: number, end: number): number[] {
@@ -108,14 +126,20 @@ function showProblems(data: unknown): string[] {
       const { start, end } = show;
       if (!isCount(start) || start > 23) problems.push(`${where}: start must be an hour 0-23`);
       if (!isCount(end) || end < 1 || end > 24) problems.push(`${where}: end must be an hour 1-24`);
+      if (show.days !== undefined && !validDays(show.days)) problems.push(`${where}: days must be a sorted, non-empty array of weekdays 0-6`);
       if (isCount(start) && isCount(end) && start <= 23 && end >= 1 && end <= 24) {
         if (start === end % 24 && start === end) problems.push(`${where}: start equals end`);
-        else
-          for (const h of showHours(start, end)) {
-            const other = taken.get(h);
-            if (other) problems.push(`${where}: overlaps ${other} at ${h}:00`);
-            taken.set(h, String(show.id));
-          }
+        else {
+          // v4: `days` are the start hour's weekday; hours past midnight fall on the next day.
+          const days = validDays(show.days) ? show.days : [0, 1, 2, 3, 4, 5, 6];
+          for (const day of days)
+            for (const [k, h] of showHours(start, end).entries()) {
+              const slot = ((day + Math.floor((start + k) / 24)) % 7) * 24 + h;
+              const other = taken.get(slot);
+              if (other) problems.push(`${where}: overlaps ${other} on weekday ${Math.floor(slot / 24)} at ${h}:00`);
+              taken.set(slot, String(show.id));
+            }
+        }
       }
     });
   }
@@ -155,7 +179,13 @@ function shapeProblems(data: unknown, station: string): string[] {
     }
     // v3 fields
     if (clip.part !== undefined && !PARTS.includes(clip.part as string)) problems.push(`${where}: part must be open, body or close`);
-    if (clip.kit !== undefined && (typeof clip.kit !== 'string' || !KEBAB.test(clip.kit))) problems.push(`${where}: bad kit`);
+    if (clip.kit !== undefined) {
+      const tomorrow = typeof clip.kit === 'string' ? TOMORROW_KIT.exec(clip.kit) : null;
+      const drift = STATIONS.find((s) => s.id === station)?.drift ?? [];
+      if (tomorrow) {
+        if (!drift.some((mhz) => `tomorrow-${mhz}` === clip.kit)) problems.push(`${where}: ${String(clip.kit)} is not one of ${station}'s drift frequencies`);
+      } else if (typeof clip.kit !== 'string' || !KEBAB.test(clip.kit)) problems.push(`${where}: bad kit`);
+    }
     if (clip.show !== undefined) {
       if (typeof clip.show !== 'string' || !KEBAB.test(clip.show)) problems.push(`${where}: bad show id`);
       else if (!showIds.get(station)?.has(clip.show)) problems.push(`${where}: show "${clip.show}" is not in ${SHOWS_FILE} for ${station}`);
@@ -174,9 +204,22 @@ function shapeProblems(data: unknown, station: string): string[] {
       if (!isCount(clip.level) || clip.level > 3) problems.push(`${where}: level must be an integer 0-3`);
     }
     if (clip.event !== undefined) {
-      if (station !== '_events') problems.push(`${where}: event is only for _events`);
       if (!(EVENT_IDS as readonly unknown[]).includes(clip.event)) problems.push(`${where}: unknown event ${JSON.stringify(clip.event)}`);
+      if (station === '_events') {
+        if (clip.event === 'convergence' && (!CONVERGENCE_KITS.includes(clip.kit as string) || !['open', 'close'].includes(clip.part as string)))
+          problems.push(`${where}: a convergence clip in _events needs a topic kit and part open or close`);
+      } else if (pool) problems.push(`${where}: event is only for _events (and convergence reactions in station manifests)`);
+      else if (clip.event !== 'convergence' || clip.category !== 'event' || !CONVERGENCE_KITS.includes(clip.kit as string) || clip.part !== undefined)
+        problems.push(`${where}: station manifests only hold convergence reactions (category event, a topic kit, no part)`);
     }
+    // v4 fields
+    if (clip.arc !== undefined) {
+      const a = clip.arc;
+      if (station !== '_ship') problems.push(`${where}: arc is only for _ship`);
+      if (!isObject(a) || Object.keys(a).sort().join() !== 'id,step' || typeof a.id !== 'string' || !KEBAB.test(a.id) || !isCount(a.step) || a.step < 1)
+        problems.push(`${where}: arc must be { id: kebab-case, step: integer >= 1 }`);
+    }
+    if (clip.days !== undefined && !validDays(clip.days)) problems.push(`${where}: days must be a sorted, non-empty array of weekdays 0-6`);
     if (!Array.isArray(clip.lines)) {
       problems.push(`${where}: lines must be an array`);
       return;
@@ -229,6 +272,46 @@ describe('voice library (public/voice)', () => {
       return isObject(data) && Array.isArray(data.clips) ? (data.clips as Json[]) : [];
     });
     expect(serialProblems(clips)).toEqual([]);
+  });
+
+  it('has arc steps that run 1, 2, 3 per arc, once each', () => {
+    const steps = new Map<string, number[]>();
+    for (const file of manifestFiles) {
+      const data: unknown = JSON.parse(readFileSync(join(VOICE, file), 'utf8'));
+      for (const clip of isObject(data) && Array.isArray(data.clips) ? (data.clips as Json[]) : []) {
+        const a = clip.arc;
+        if (isObject(a) && typeof a.id === 'string' && isCount(a.step)) steps.set(a.id, [...(steps.get(a.id) ?? []), a.step]);
+      }
+    }
+    for (const [id, list] of steps) expect([...list].sort((a, b) => a - b), id).toEqual(list.map((_, i) => i + 1));
+  });
+
+  it(`${INDEX_FILE} has a current entry for every manifest (VoiceIndex)`, () => {
+    if (!allJson.includes(INDEX_FILE)) {
+      expect(manifestFiles, `${INDEX_FILE} is missing: run npm run voice:render -- --index`).toEqual([]);
+      return;
+    }
+    const index: unknown = JSON.parse(readFileSync(join(VOICE, INDEX_FILE), 'utf8'));
+    expect(isObject(index) && index.version).toBe(1);
+    const entries = isObject(index) && isObject(index.entries) ? index.entries : {};
+    expect(Object.keys(entries).sort()).toEqual(manifestFiles.map((f) => f.replace(/\.json$/, '')).sort());
+    const stale: string[] = [];
+    for (const file of manifestFiles) {
+      const station = file.replace(/\.json$/, '');
+      const raw = readFileSync(join(VOICE, file));
+      const clips = (JSON.parse(raw.toString('utf8')) as { clips: Json[] }).clips;
+      // version = sha256(manifest file, then each clip's MP3 in manifest order), 12 hex digits.
+      const hash = createHash('sha256').update(raw);
+      let bytes = 0;
+      for (const clip of clips) {
+        const mp3 = readFileSync(join(VOICE, String(clip.url).replace(/^\/voice\//, '')));
+        bytes += mp3.length;
+        hash.update(mp3);
+      }
+      const expected = { clips: clips.length, bytes, version: hash.digest('hex').slice(0, 12) };
+      if (JSON.stringify(entries[station]) !== JSON.stringify(expected)) stale.push(station);
+    }
+    expect(stale, `stale ${INDEX_FILE} entries; run npm run voice:render -- --index`).toEqual([]);
   });
 
   it(`${SHOWS_FILE} matches the ShowIndex shape (when present)`, () => {

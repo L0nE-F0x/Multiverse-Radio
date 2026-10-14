@@ -489,3 +489,79 @@ lines = [
   { say = "host", text = "Comet Marimba! Halloween on the tail! Spooky, sandy, and very, very fast!" },
   { sting = "halloween" },
 ]
+
+
+# ══ v4: The Convergence ═══════════════════════════════════════════════════════
+#
+# Saturdays, 20:00 UTC: every station notices the same thing. One reaction per topic
+# (SCHEMA.md, "The Convergence"); the director airs the _events open, then the tuned
+# station's reaction, then the close.
+
+[[clip]]
+id = "convergence-missing-moon"
+category = "event"
+title = "The Convergence: A Moon Goes Missing"
+event = "convergence"
+kit = "missing-moon"
+lines = [
+  { say = "host", text = "Beach bulletin! Somebody's lost a moon! Nobody knows which!" },
+  { say = "host", text = "Honestly, it could've been a hat. We lose fourteen hats a day out here. Maybe a moon blew off somebody's planet!" },
+]
+
+[[clip]]
+id = "convergence-the-smell"
+category = "event"
+title = "The Convergence: Toast, Everywhere"
+event = "convergence"
+kit = "the-smell"
+lines = [
+  { say = "host", text = "Okay, the whole tail smells like toast right now, and I am into it! Crab, are you making toast?" },
+  { say = "crab", text = "Click." },
+  { say = "host", text = "That's a no! It's everywhere! Butter up, beach people!" },
+]
+
+[[clip]]
+id = "convergence-the-song"
+category = "event"
+title = "The Convergence: The Song Nobody Can Finish"
+event = "convergence"
+kit = "the-song"
+lines = [
+  { say = "host", text = "Everybody's got the same song stuck, and nobody can finish it! Crab, play the end!" },
+  { say = "crab", text = "Click." },
+  { say = "host", text = "He refused! He doesn't know it either! He's an artist!" },
+]
+
+[[clip]]
+id = "convergence-the-knock"
+category = "event"
+title = "The Convergence: Three Knocks"
+event = "convergence"
+kit = "the-knock"
+lines = [
+  { say = "host", text = "Somebody knocked three times on the beach hut! On a comet! And nobody's there!" },
+  { say = "host", text = "Whoever you are, there's a hammock free. Come on in!" },
+]
+
+[[clip]]
+id = "convergence-wrong-colour"
+category = "event"
+title = "The Convergence: A Colour With No Name"
+event = "convergence"
+kit = "wrong-colour"
+lines = [
+  { say = "host", text = "Whoa! The sky just went a colour! Not sunset! Not sunrise! Something new! Crab, what colour was that?" },
+  { say = "crab", text = "Click." },
+  { say = "host", text = "Fair! I don't have a word either!" },
+]
+
+[[clip]]
+id = "convergence-the-pigeon"
+category = "event"
+title = "The Convergence: The Pigeon"
+event = "convergence"
+kit = "the-pigeon"
+lines = [
+  { say = "host", text = "There's a pigeon on the beach! It walked in off the tail, like a regular!" },
+  { say = "host", text = "It's sitting by the crab, and the crab just gave it sunglasses! The crab never gives anyone anything! Twice in one life!" },
+]

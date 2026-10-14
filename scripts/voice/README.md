@@ -7,6 +7,7 @@ the clips the director airs:
 content/voice/<station>.toml  ->  public/voice/<station>/<clip-id>.mp3   (mono, 24 kHz, LAME VBR V8)
                                   public/voice/<station>.json            (VoiceManifest)
 every station's [[show]]      ->  public/voice/_shows.json               (ShowIndex)
+every manifest's size/version ->  public/voice/_index.json               (VoiceIndex, v4)
 ```
 
 The pools `_shared`, `_ship`, `_pirate`, `_oddities` and `_events` render like stations
@@ -25,6 +26,7 @@ npm run voice:render                               # render everything that chan
 npm run voice:render -- --station void-beats       # one station or pool (repeat --station for more)
 npm run voice:render -- --station _example --out /tmp/voice   # test render outside public/
 npm run voice:render -- --station cat-fm --clip 'call-*' --out /tmp/voice   # a few clips (subset render)
+npm run voice:render -- --index                    # only regenerate public/voice/_index.json (no rendering, stdlib only)
 npm run voice:render -- --force                    # re-render even unchanged clips
 npm run voice:render -- --jobs 4                   # worker processes (default: by load and free memory, max 8)
 npm run voice:render -- --gallery --out /tmp/voice # every fx, bed, sfx and sting + index.html to audition
@@ -46,6 +48,26 @@ checks:
   none); `stations` only in `_shared`, `_ship` and `_events`.
 - kits: per file and kit (default: the category), at least one open, body and close
   (warning). Show openers aren't kit parts and are left out.
+
+And for v4:
+
+- `days` (clips and `[[show]]`): a non-empty list of distinct weekdays 0-6 (0 = Sunday).
+  Shows overlap only on the same (weekday, hour); a show's `days` are its start hour's day,
+  so Saturday 22-2 also takes Sunday 00:00-02:00.
+- `arc = { id, step }`: only in `_ship`; kebab-case id, whole step from 1; per arc each step
+  exactly once and no gaps (errors). Not a `ship` clip: warning.
+- The Convergence: in `_events`, `event = "convergence"` needs a topic `kit` (the six in
+  SCHEMA, `CONVERGENCE_KITS` in `voicescript.py`) and `part` open or close; a warning lists
+  topics missing either. In station scripts, `event` may only be `"convergence"`, with
+  `category = "event"`, a topic `kit` and no `part`; an `event` clip there without it is an
+  error, and a station missing reactions gets one warning naming the topics. Convergence
+  kits are left out of the open/body/close kit check.
+- Stand-alone kits (no `part`, no warning): convergence topics, `jam` in `_ship` (HUSH
+  jamming Free Frequency), `full-moon` anywhere, and `tomorrow-<MHz>`: only on a station with
+  a roster `drift` list and only for one of its frequencies, written as in roster.ts
+  (`tomorrow-114.3`, not `114.30`). A drifting station missing some tomorrows gets a warning.
+- Manifests carry `arc` and `days` (sorted); `_shows.json` carries show `days`. Like the
+  other metadata they don't change clip hashes, so adding them re-renders nothing.
 
 It prints a summary with the projected library size and exits 1 on errors. Rendering
 refuses to start while any script has errors. Underscore files that aren't pools (like
@@ -73,7 +95,11 @@ then `python3`.
 - **Resuming:** progress is saved every 10 seconds and on Ctrl-C or `kill`; just run the
   same command again. A station's manifest is only written once all its clips exist.
 - **TTS cache:** each unique (voice, speed, text, model) line is cached as a WAV in
-  `scripts/voice/.cache/tts/`. Override the location with `VOICE_CACHE`.
+  `scripts/voice/.cache/tts/`. Override the location with `VOICE_CACHE`. The cache is
+  gitignored, so a git worktree starts without one: point it at the main checkout's, e.g.
+  `VOICE_CACHE="/path/to/main/scripts/voice/.cache" npm run voice:render`. (Render state
+  under it is keyed by output path, so worktrees don't collide; with no state for a
+  worktree the committed lock and manifests make unchanged clips a no-op anyway.)
 - **Clip hashes:** a clip's hash covers its `bed` and `lines`, the encoder setting, the
   model, and fingerprints of the engine code it uses (`fingerprint.py`: the core plus each
   fx, bed, sfx and sting it names, following every engine function and constant they
@@ -86,6 +112,26 @@ then `python3`.
   A full run (no `--station`/`--clip`) also removes the manifests of deleted stations.
 - If a clip fails, the others still render; that station's manifest is left as it was
   and the command exits 1.
+
+## The index (`_index.json`, v4)
+
+Every render into a directory (and `--index`) rewrites `<out>/_index.json` from the
+manifests on disk, whatever the run rendered, so it's never partial:
+
+```json
+{ "version": 1, "entries": { "void-beats": { "clips": 53, "bytes": 2996328, "version": "327430d5542e" } } }
+```
+
+- One entry per manifest: every station and the pools `_shared`, `_ship`, `_events`,
+  `_pirate`, `_oddities` (and a draft like `_example` only if it was rendered into that
+  directory). Keys are sorted.
+- `bytes` is the sum of the entry's MP3 sizes. The manifest JSON itself isn't counted
+  (about 35 KB per station, 1.7 MB for the whole v3 library).
+- `version` is the first 12 hex digits of sha256(the manifest file's bytes, then each
+  clip's MP3 bytes in manifest order). Any changed clip, caption or metadata changes it;
+  nothing else does. `manifest.test.ts` recomputes it, so a stale index fails `npm test`.
+- `_shows.json` is not an entry: it's one small file (~27 KB) the guide always needs, so
+  offline packs should stow it with every pack (and refresh it whenever they update).
 
 ## Encoding
 
@@ -123,7 +169,8 @@ mean constant bitrate).
 | `dsp.py` | Filters, BS.1770 loudness, true-peak limiter, reverb, ffmpeg I/O |
 | `tts.py` | Kokoro wrapper with the line cache |
 | `render-lock.json` | What's in `public/voice` (written by renders into it) |
-| `manifest.test.ts` | Vitest: manifests and `_shows.json` in `public/voice` match the contracts (pools, parts, shows, serials, dates, levels, events), their files exist and no MP3s are orphaned (`VOICE_DIR=/tmp/voice npx vitest run scripts/voice` checks a `--out` render) |
+| `manifest.test.ts` | Vitest: manifests, `_shows.json` and `_index.json` in `public/voice` match the contracts (pools, parts, shows, serials, dates, levels, events, arcs, days), their files exist, no MP3s are orphaned and the index is current (`VOICE_DIR=/tmp/voice npx vitest run scripts/voice` checks a `--out` render) |
+| `voicescript.test.ts` | Vitest: runs `--check` and `--index` on fixture scripts and libraries in a temp dir (the v4 rules above); skipped without Python >= 3.11 |
 
 Adding a name (fx, bed, sfx, sting) takes three steps. Add it to the catalog in
 `voicescript.py`, implement it in `voicefx.py` or `sounds.py`, and list it in

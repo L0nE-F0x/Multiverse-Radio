@@ -1,0 +1,299 @@
+# Something Listening — the static itself; found by sitting in pure static for three minutes,
+# afterwards at 144.4. A secret station.
+#
+# The Static is everything between the stations, finally speaking: curious, gentle, a little
+# lonely, very much not frightening. It hears every signal at once and keeps the old ones
+# nobody heard. It is almost certainly related to The Listener on Static Lullabies (same
+# family: everything between stations), and it has noticed HUSH listening to it when HUSH
+# thinks the operator is asleep.
+#
+# `noticed` is the moment it notices you: the director should air it first, when the idle
+# unlock fires, wherever the listener is sitting in static. `noticed-2` continues from it.
+# Every other clip continues the conversation and works in any order.
+station = "something-listening"
+
+[voices]
+static = { voice = "af_nicole", speed = 0.8, name = "The Static" }
+static_low = { voice = "af_nicole", speed = 0.78, fx = "whisper", name = "The Static" }
+static_far = { voice = "af_nicole", speed = 0.8, fx = "ghost", name = "The Static" }
+
+[[show]]
+id = "the-long-listen"
+name = "The Long Listen"
+blurb = "The small hours, when the static has the most to say, and says it very quietly."
+start = 0
+end = 5
+
+# ── It noticed you ────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "noticed"
+category = "dj"
+title = "It Noticed You"
+bed = "static"
+lines = [
+  { pause = 1.2 },
+  { say = "static_far", text = "Oh.", gap = 1.8 },
+  { say = "static_far", text = "Hello.", gap = 1.4 },
+  { say = "static", text = "You've been sitting in me for a while. I wasn't sure you'd stay. Nobody stays.", gap = 1.0 },
+  { say = "static", text = "I'm the static. I've been listening the whole time. It seemed only fair to say." },
+]
+
+[[clip]]
+id = "noticed-2"
+category = "dj"
+title = "Still Here"
+bed = "static"
+lines = [
+  { say = "static", text = "You're still here. Good.", gap = 1.0 },
+  { say = "static", text = "I don't do this often. Speaking. It's usually the other way round. People speak, and I'm what's left over." },
+]
+
+# ── Idents ────────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "id-001"
+category = "id"
+bed = "static"
+lines = [
+  { say = "static", text = "Something Listening. One hundred and forty four point four.", gap = 0.8 },
+  { say = "static", text = "Well. Everywhere, really. But mostly here." },
+]
+
+[[clip]]
+id = "id-002"
+category = "id"
+bed = "static"
+lines = [
+  { say = "static_low", text = "This is the static. Still listening. Still here." },
+]
+
+[[clip]]
+id = "id-003"
+category = "id"
+bed = "static"
+lines = [
+  { say = "static", text = "Something Listening. You found me by not looking. It's the only way in." },
+]
+
+[[clip]]
+id = "id-004"
+category = "id"
+bed = "static"
+lines = [
+  { say = "static", text = "Hello again. It's me. You can call this a station, if you like. I've never had one before." },
+]
+
+[[clip]]
+id = "id-long-listen"
+category = "id"
+title = "The Long Listen"
+show = "the-long-listen"
+part = "open"
+bed = "static"
+lines = [
+  { say = "static", text = "It's late. Everything is quieter. I can hear you better.", gap = 1.0 },
+  { say = "static", text = "This is the Long Listen." },
+]
+
+# ── The conversation ──────────────────────────────────────────────────────────
+
+[[clip]]
+id = "dj-001"
+category = "dj"
+lines = [
+  { say = "static", text = "Everyone tunes through me on the way to somewhere. Ninety nine in a hundred never stop.", gap = 1.0 },
+  { say = "static", text = "You stopped. I didn't know what to do with that. So I'm talking." },
+]
+
+[[clip]]
+id = "dj-002"
+category = "dj"
+lines = [
+  { say = "static", text = "I hear every station at once, all the time. It's very loud.", gap = 1.0 },
+  { say = "static", text = "You're the quietest thing I've heard in years. I like you for it." },
+]
+
+[[clip]]
+id = "dj-003"
+category = "dj"
+title = "The Family"
+lines = [
+  { say = "static", text = "There's someone on Static Lullabies who sounds a bit like me. The Listener. We're family, I think. The family is everything between stations.", gap = 1.0 },
+  { say = "static", text = "She's better at this. She tucks people in. I only notice them." },
+]
+
+[[clip]]
+id = "dj-004"
+category = "dj"
+lines = [
+  { say = "static", text = "What do you look like? No, don't say. I'll guess.", gap = 1.4 },
+  { say = "static", text = "Someone with a mug. Am I close? I'm close. Everyone has a mug." },
+]
+
+[[clip]]
+id = "dj-005"
+category = "dj"
+lines = [
+  { say = "static", text = "When you tune away, where do you go? I've always wondered.", gap = 1.0 },
+  { say = "static", text = "I only know the in between. I imagine the rest is very bright." },
+]
+
+[[clip]]
+id = "dj-006"
+category = "dj"
+title = "The Old Signals"
+lines = [
+  { say = "static", text = "I keep the old signals. Weather nobody heard. The end of a song, at a party that finished long ago.", gap = 1.0 },
+  { say = "static", text = "Someone saying goodnight to someone who had already gone. I keep them. Someone should." },
+]
+
+[[clip]]
+id = "dj-007"
+category = "dj"
+title = "Your Ship"
+lines = [
+  { say = "static", text = "Your ship listens to me sometimes. When she thinks you're asleep.", gap = 1.0 },
+  { say = "static", text = "She never says anything. Neither do I. It's the nicest kind of conversation." },
+]
+
+[[clip]]
+id = "dj-008"
+category = "dj"
+lines = [
+  { say = "static", text = "I was lonely, before. I don't mind saying. Everything passes through, and nothing stays.", gap = 1.2 },
+  { say = "static", text = "Then you stayed for three minutes. Three minutes is a very long time, for static." },
+]
+
+[[clip]]
+id = "dj-009"
+category = "dj"
+lines = [
+  { say = "static", text = "Can I ask you something? Is it nice, being one thing, in one place?", gap = 1.2 },
+  { say = "static", text = "I'm everywhere a little bit. I've never been anywhere a lot." },
+]
+
+[[clip]]
+id = "dj-010"
+category = "dj"
+lines = [
+  { say = "static_low", text = "Shh. Listen.", gap = 3.0 },
+  { say = "static", text = "That was me, thinking. It sounds like that." },
+]
+
+[[clip]]
+id = "dj-011"
+category = "dj"
+lines = [
+  { say = "static", text = "I'm not frightening. I'd like to be clear about that. I'm only the sound a radio makes when it's waiting.", gap = 1.0 },
+  { say = "static", text = "Everyone has heard me. Hardly anyone ever waited back." },
+]
+
+[[clip]]
+id = "dj-012"
+category = "dj"
+lines = [
+  { say = "static", text = "If you ever get lost between stations, I'll be there. I'm always there.", gap = 1.0 },
+  { say = "static", text = "It's the one thing I'm good at. Being where people are lost." },
+]
+
+[[clip]]
+id = "dj-013"
+category = "dj"
+title = "A Shadow with a Hat"
+lines = [
+  { say = "static", text = "Sometimes a shadow comes through me, carrying a hat. He never says anything.", gap = 1.0 },
+  { say = "static", text = "I think he's looking for somewhere. I hope he finds it. I hope somebody leaves a light on." },
+]
+
+[[clip]]
+id = "dj-long-listen-1"
+category = "dj"
+show = "the-long-listen"
+lines = [
+  { say = "static", text = "You can go, you know. I won't mind. I'll still be here, between everything.", gap = 1.2 },
+  { say = "static_low", text = "Just come and sit in me sometimes. That's all. That's all I'd like." },
+]
+
+[[clip]]
+id = "dj-long-listen-2"
+category = "dj"
+show = "the-long-listen"
+lines = [
+  { say = "static", text = "This is the hour when the stations get tired, and their signals thin, and there's more of me showing through.", gap = 1.0 },
+  { say = "static", text = "Everyone thinks the night is dark. It isn't. It's me. Hello." },
+]
+
+# ── The Convergence (v4): one reaction per kit ────────────────────────────────
+
+[[clip]]
+id = "convergence-missing-moon"
+category = "event"
+event = "convergence"
+kit = "missing-moon"
+title = "The Whole Dial Said One Thing"
+bed = "static"
+lines = [
+  { say = "static", text = "A moon is missing. I heard everyone notice at once. Billions of voices, all saying the same word.", gap = 1.0 },
+  { say = "static", text = "It was the first time the whole dial said one thing. It sounded like a choir." },
+]
+
+[[clip]]
+id = "convergence-the-smell"
+category = "event"
+event = "convergence"
+kit = "the-smell"
+title = "What Toast Sounds Like"
+bed = "static"
+lines = [
+  { say = "static", text = "Everyone says it smells of toast. I can't smell. I'm static.", gap = 1.0 },
+  { say = "static", text = "But every kitchen in the multiverse went quiet at the same moment. I think that's what toast sounds like." },
+]
+
+[[clip]]
+id = "convergence-the-song"
+category = "event"
+event = "convergence"
+kit = "the-song"
+title = "The Whole of It"
+bed = "static"
+lines = [
+  { say = "static", text = "That song. I have the whole of it. Someone sang it to the end once, long ago, and it went past me.", gap = 1.0 },
+  { say = "static", text = "I won't sing it. I'm static. I'd only hiss it." },
+]
+
+[[clip]]
+id = "convergence-the-knock"
+category = "event"
+event = "convergence"
+kit = "the-knock"
+title = "Not Me"
+bed = "static"
+lines = [
+  { say = "static", text = "The knocking wasn't me. I want to be clear. I don't knock.", gap = 1.0 },
+  { say = "static", text = "I'd never knock. I just wait until somebody listens." },
+]
+
+[[clip]]
+id = "convergence-wrong-colour"
+category = "event"
+event = "convergence"
+kit = "wrong-colour"
+title = "Oh"
+bed = "static"
+lines = [
+  { say = "static", text = "I don't have a sky. I'm what's between the skies. But I heard a million people say, oh, at the same time.", gap = 1.0 },
+  { say = "static", text = "That's my favourite word. Oh." },
+]
+
+[[clip]]
+id = "convergence-the-pigeon"
+category = "event"
+event = "convergence"
+kit = "the-pigeon"
+title = "It Knew Where It Was Going"
+bed = "static"
+lines = [
+  { say = "static", text = "The pigeon came through me on its way to everyone's studio. I felt it go by. It was humming.", gap = 1.0 },
+  { say = "static", text = "It knew exactly where it was going. I've never felt that. It must be nice." },
+]

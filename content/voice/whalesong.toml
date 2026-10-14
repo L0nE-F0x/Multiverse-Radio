@@ -309,7 +309,7 @@ category = "dj"
 kit = "dj"
 part = "close"
 lines = [
-  { say = "host", text = "Rest easy.", gap = 0.8 },
+  { say = "host", text = "Sleep easy.", gap = 0.8 },
   { say = "host", text = "Carry on." },
 ]
 
@@ -401,4 +401,96 @@ dates = ["10-24", "10-25", "10-26", "10-27", "10-28", "10-29", "10-30", "10-31"]
 lines = [
   { say = "host", text = "Deep Space Whalesong. Halloween night watch.", gap = 1.2 },
   { say = "host", text = "Nothing out here is scary. Except how big it all is." },
+]
+
+
+# ══ v4: The Convergence ═══════════════════════════════════════════════════════
+#
+# Saturdays, 20:00 UTC: every station notices the same thing. One reaction per topic
+# (SCHEMA.md, "The Convergence"); the director airs the _events open, then the tuned
+# station's reaction, then the close.
+
+[[clip]]
+id = "convergence-missing-moon"
+category = "event"
+title = "The Convergence: A Moon Goes Missing"
+event = "convergence"
+kit = "missing-moon"
+lines = [
+  { say = "host", text = "Ship's log. A moon has gone missing, they say. Nobody can agree which." },
+  { say = "host", text = "We passed a great many moons tonight. I didn't count them. I will now." },
+  { say = "host", text = "The whales are fine." },
+]
+
+[[clip]]
+id = "convergence-the-smell"
+category = "event"
+title = "The Convergence: Toast, Everywhere"
+event = "convergence"
+kit = "the-smell"
+lines = [
+  { say = "host", text = "Ship's log. A smell of toast, in the observation lounge, and, I'm told, everywhere else." },
+  { say = "host", text = "We have no toaster aboard." },
+  { say = "host", text = "The whales are fine." },
+]
+
+[[clip]]
+id = "convergence-the-song"
+category = "event"
+title = "The Convergence: The Song Nobody Can Finish"
+event = "convergence"
+kit = "the-song"
+lines = [
+  { say = "host", text = "The whales are singing a song I've heard somewhere before." },
+  { say = "host", text = "They stop at the same place every time. Then they start again." },
+  { say = "host", text = "I think they're waiting for somebody to finish it." },
+]
+
+[[clip]]
+id = "convergence-the-knock"
+category = "event"
+title = "The Convergence: Three Knocks"
+event = "convergence"
+kit = "the-knock"
+lines = [
+  { say = "host", text = "Three knocks on the hull." },
+  { say = "host", text = "We are between galaxies. There is nobody out there." },
+  { say = "host", text = "I said come in, anyway. It seemed polite." },
+]
+
+[[clip]]
+id = "convergence-wrong-colour"
+category = "event"
+title = "The Convergence: A Colour With No Name"
+event = "convergence"
+kit = "wrong-colour"
+lines = [
+  { say = "host", text = "The nebula off the port side went a colour just now. I've no word for it." },
+  { say = "host", text = "The whales went very quiet. Then they sang it." },
+  { say = "host", text = "Carry on." },
+]
+
+[[clip]]
+id = "convergence-the-pigeon"
+category = "event"
+title = "The Convergence: The Pigeon"
+event = "convergence"
+kit = "the-pigeon"
+lines = [
+  { say = "host", text = "Ship's log. A pigeon is walking along the bridge." },
+  { say = "host", text = "I don't know how it came aboard. It seems to know the ship. It went straight to the coffee." },
+  { say = "host", text = "Carry on." },
+]
+
+
+# ── v4: the Outer Band. Relay ships are drifting, and new stations are coming in from
+#    beyond 108 (108-118 MHz). Light mentions only; nobody knows why yet. ──
+
+[[clip]]
+id = "dj-outer-band"
+category = "dj"
+lines = [
+  { say = "host", text = "Ship's log. The relay ships are drifting. Two passed us this week, well off their lanes." },
+  { say = "host", text = "Past one hundred and eight, there's music I don't know. The whales have started singing back." },
+  { say = "host", text = "They're fine." },
 ]

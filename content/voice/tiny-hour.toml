@@ -405,3 +405,80 @@ lines = [
   { say = "pim", text = "it's warm in there, and full of light." },
   { sting = "halloween" },
 ]
+
+
+# ══ v4: The Convergence ═══════════════════════════════════════════════════════
+#
+# Saturdays, 20:00 UTC: every station notices the same thing. One reaction per topic
+# (SCHEMA.md, "The Convergence"); the director airs the _events open, then the tuned
+# station's reaction, then the close.
+
+[[clip]]
+id = "convergence-missing-moon"
+category = "event"
+title = "The Convergence: A Moon Goes Missing"
+event = "convergence"
+kit = "missing-moon"
+lines = [
+  { say = "pim", text = "Small ones, a moon's gone missing! Nobody knows which one!" },
+  { say = "pim", text = "If you find it, don't pick it up. It's ever so big. Just tell a grown-up, and wave." },
+]
+
+[[clip]]
+id = "convergence-the-smell"
+category = "event"
+title = "The Convergence: Toast, Everywhere"
+event = "convergence"
+kit = "the-smell"
+lines = [
+  { say = "pim", text = "Ooh. Can you smell toast, small ones? Everyone can!" },
+  { say = "pim", text = "One crumb of toast is a whole week's breakfast in here. Somebody, somewhere, is being very generous." },
+]
+
+[[clip]]
+id = "convergence-the-song"
+category = "event"
+title = "The Convergence: The Song Nobody Can Finish"
+event = "convergence"
+kit = "the-song"
+lines = [
+  { say = "pim", text = "There's a little song everyone's humming, and nobody knows how it ends! So let's make up our own ending. Ready, Dot?" },
+  { say = "dot", text = "La!" },
+  { say = "pim", text = "Lovely. That's the end now." },
+]
+
+[[clip]]
+id = "convergence-the-knock"
+category = "event"
+title = "The Convergence: Three Knocks"
+event = "convergence"
+kit = "the-knock"
+lines = [
+  { say = "pim", text = "Three knocks on the matchbox! Who's there?" },
+  { say = "dot", text = "Nobody, Auntie Pim." },
+  { say = "pim", text = "Well, hello, Nobody. Wipe your feet." },
+]
+
+[[clip]]
+id = "convergence-wrong-colour"
+category = "event"
+title = "The Convergence: A Colour With No Name"
+event = "convergence"
+kit = "wrong-colour"
+lines = [
+  { say = "pim", text = "Look at the sky, small ones! It's a colour with no name! Let's give it one. Dot?" },
+  { say = "dot", text = "Gloop." },
+  { say = "pim", text = "Gloop. No, dear. That's what's on the floor." },
+]
+
+[[clip]]
+id = "convergence-the-pigeon"
+category = "event"
+title = "The Convergence: The Pigeon"
+event = "convergence"
+kit = "the-pigeon"
+lines = [
+  { say = "pim", text = "Oh! Keep very still, small ones. A pigeon has walked into the studio. It's the size of a house! It's looking at us very kindly." },
+  { say = "dot", text = "Hello, pigeon." },
+  { say = "pim", text = "I think it knows Dot." },
+]

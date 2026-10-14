@@ -711,3 +711,103 @@ dates = ["10-24", "10-25", "10-26", "10-27", "10-28", "10-29", "10-30", "10-31"]
 lines = [
   { say = "host", text = "This week, the hold music is being performed by the organ in the basement, which has been playing on its own since Tuesday. We do not know who is playing it. We have asked it to hold." },
 ]
+
+
+# ══ v4: The Convergence ═══════════════════════════════════════════════════════
+#
+# Saturdays, 20:00 UTC: every station notices the same thing. One reaction per topic
+# (SCHEMA.md, "The Convergence"); the director airs the _events open, then the tuned
+# station's reaction, then the close.
+
+[[clip]]
+id = "convergence-missing-moon"
+category = "event"
+title = "The Convergence: A Moon Goes Missing"
+event = "convergence"
+kit = "missing-moon"
+lines = [
+  { say = "host", text = "Thank you for holding. We are aware that a moon has gone missing. Please do not call about the moon." },
+  { say = "host", text = "The moon is in the queue. It is behind you. Please hold." },
+]
+
+[[clip]]
+id = "convergence-the-smell"
+category = "event"
+title = "The Convergence: Toast, Everywhere"
+event = "convergence"
+kit = "the-smell"
+lines = [
+  { say = "host", text = "Callers have reported a smell of toast. The Department confirms the smell is everywhere, and is not the Department." },
+  { say = "host", text = "The toaster on Floor minus four has been on hold since the Bronze Age. It has never been allowed to finish. Please hold." },
+]
+
+[[clip]]
+id = "convergence-the-song"
+category = "event"
+title = "The Convergence: The Song Nobody Can Finish"
+event = "convergence"
+kit = "the-song"
+lines = [
+  { say = "host", text = "Many callers have asked whether the hold music is the song they cannot finish. It is not." },
+  { say = "host", text = "The hold music also does not finish. This is a coincidence. Please hold." },
+]
+
+[[clip]]
+id = "convergence-the-knock"
+category = "event"
+title = "The Convergence: Three Knocks"
+event = "convergence"
+kit = "the-knock"
+lines = [
+  { say = "host", text = "There has been a knock at the door of the Department. Three knocks. Nobody is there." },
+  { say = "host", text = "Whoever is knocking, please take a ticket. Your knock is important to us. Please hold." },
+]
+
+[[clip]]
+id = "convergence-wrong-colour"
+category = "event"
+title = "The Convergence: A Colour With No Name"
+event = "convergence"
+kit = "wrong-colour"
+lines = [
+  { say = "host", text = "The sky has briefly been a colour with no name. The Department has opened a file." },
+  { say = "host", text = "To name the colour, please hold. The colour is also holding. Please hold." },
+]
+
+[[clip]]
+id = "convergence-the-pigeon"
+category = "event"
+title = "The Convergence: The Pigeon"
+event = "convergence"
+kit = "the-pigeon"
+lines = [
+  { say = "host", text = "A pigeon has entered the Department, gone straight past the queue, and is now being seen to on Floor minus four." },
+  { say = "host", text = "We have no file on the pigeon. The pigeon appears to have a file on us. Please hold." },
+]
+
+
+# ── v4: clues to The Switchboard (131.1). It answers if you tune 97.8, 89.3, then 114.8
+#    (advice, the news, the traffic), holding each a moment, all within ninety seconds. ──
+
+[[clip]]
+id = "psa-switchboard"
+category = "psa"
+title = "Other Universes"
+lines = [
+  { say = "host", text = "Thank you for holding. Callers wishing to be connected to another universe should not hold." },
+  { say = "host", text = "The Department does not connect calls between universes. That is the Switchboard. The Switchboard does not take calls from the queue." },
+  { say = "host", text = "Please hang up, and try advice, then the news, then the traffic. Briskly. Or, please hold." },
+]
+
+
+# ── v4: the Outer Band. Relay ships are drifting, and new stations are coming in from
+#    beyond 108 (108-118 MHz). Light mentions only; nobody knows why yet. ──
+
+[[clip]]
+id = "hold-body-outer-band"
+category = "psa"
+kit = "hold"
+part = "body"
+lines = [
+  { say = "host", text = "Callers from the Outer Band, past one hundred and eight, welcome. The queue extends to you. It has always extended to you. You are not at the front." },
+]

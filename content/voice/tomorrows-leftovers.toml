@@ -461,3 +461,79 @@ lines = [
   { say = "chef", text = "Pip, did you carve a face in the soup?" },
   { say = "pip", text = "Only a small one, Chef." },
 ]
+
+
+# ══ v4: The Convergence ═══════════════════════════════════════════════════════
+#
+# Saturdays, 20:00 UTC: every station notices the same thing. One reaction per topic
+# (SCHEMA.md, "The Convergence"); the director airs the _events open, then the tuned
+# station's reaction, then the close.
+
+[[clip]]
+id = "convergence-missing-moon"
+category = "event"
+title = "The Convergence: A Moon Goes Missing"
+event = "convergence"
+kit = "missing-moon"
+lines = [
+  { say = "pip", text = "Chef, a moon's gone missing." },
+  { say = "chef", text = "Yes, Pip. Nobody agrees which. I've been to next week. It's back by Thursday, and it's been somewhere warm." },
+]
+
+[[clip]]
+id = "convergence-the-smell"
+category = "event"
+title = "The Convergence: Toast, Everywhere"
+event = "convergence"
+kit = "the-smell"
+lines = [
+  { say = "pip", text = "Chef, everything smells of toast." },
+  { say = "chef", text = "Everywhere, at once. I smelled it on Tuesday. I've been waiting for you lot to catch up." },
+  { say = "pip", text = "Who's making it?" },
+  { say = "chef", text = "Everyone. Slightly too long." },
+]
+
+[[clip]]
+id = "convergence-the-song"
+category = "event"
+title = "The Convergence: The Song Nobody Can Finish"
+event = "convergence"
+kit = "the-song"
+lines = [
+  { say = "pip", text = "Chef, I've got this song in my head, and I can't finish it." },
+  { say = "chef", text = "Nor can anyone, Pip. I've been four days ahead, and nobody's finished it there either. Keep stirring. It'll come." },
+]
+
+[[clip]]
+id = "convergence-the-knock"
+category = "event"
+title = "The Convergence: Three Knocks"
+event = "convergence"
+kit = "the-knock"
+lines = [
+  { say = "chef", text = "Three knocks at the kitchen door. Pip, don't answer it." },
+  { say = "pip", text = "Why not, Chef?" },
+  { say = "chef", text = "I answered it on Friday. Nobody there. I've saved you the walk." },
+]
+
+[[clip]]
+id = "convergence-wrong-colour"
+category = "event"
+title = "The Convergence: A Colour With No Name"
+event = "convergence"
+kit = "wrong-colour"
+lines = [
+  { say = "pip", text = "Chef! The sky!" },
+  { say = "chef", text = "Yes, Pip. I saw it on Monday. There's no word for it yet. By next week, it's going to be a very fashionable sauce." },
+]
+
+[[clip]]
+id = "convergence-the-pigeon"
+category = "event"
+title = "The Convergence: The Pigeon"
+event = "convergence"
+kit = "the-pigeon"
+lines = [
+  { say = "pip", text = "Chef, there's a pigeon in the kitchen. It seems to know you." },
+  { say = "chef", text = "It's early. It isn't due until Saturday. Give it the end of the loaf." },
+]

@@ -333,3 +333,87 @@ lines = [
   { say = "first", text = "I am not scared. I am talking, so they know I am here.", gap = 1.6 },
   { say = "first", text = "One of them is small. It is carrying a hat. Hello, hat shadow. You can stay." },
 ]
+
+# ── The Convergence (v4): one reaction per kit ────────────────────────────────
+
+[[clip]]
+id = "convergence-missing-moon"
+category = "event"
+event = "convergence"
+kit = "missing-moon"
+title = "The Moon (There Is Only One)"
+bed = "cave-drip"
+lines = [
+  { say = "first", text = "The moon. Is gone.", gap = 1.4 },
+  { say = "first", text = "Which moon? There is only. One moon.", gap = 1.4 },
+  { say = "first", text = "I will wait. It will come back. Things. Come back." },
+]
+
+[[clip]]
+id = "convergence-the-smell"
+category = "event"
+event = "convergence"
+kit = "the-smell"
+title = "The First Toast"
+bed = "cave-drip"
+lines = [
+  { say = "first", text = "A smell. New. Warm. Brown. Good.", gap = 1.4 },
+  { say = "first", text = "I will call it. Toast.", gap = 1.2 },
+  { say = "first", text = "Toast is the word. I have decided. Nobody has made it yet. But it has a word." },
+]
+
+[[clip]]
+id = "convergence-the-song"
+category = "event"
+event = "convergence"
+kit = "the-song"
+title = "Hm, Hm, Hm"
+bed = "cave-drip"
+lines = [
+  { say = "first", text = "There is a song. In my head. I have not made it. Yet.", gap = 1.2 },
+  { say = "first", text = "Hm. Hm. Hm.", gap = 1.4 },
+  { say = "first", text = "That is all of it. So far. More tomorrow." },
+]
+
+[[clip]]
+id = "convergence-the-knock"
+category = "event"
+event = "convergence"
+kit = "the-knock"
+title = "Who Is There"
+bed = "cave-drip"
+lines = [
+  { sfx = "chopping", seconds = 0.4, level = 0.6 },
+  { pause = 0.4 },
+  { sfx = "chopping", seconds = 0.4, level = 0.6 },
+  { pause = 0.4 },
+  { sfx = "chopping", seconds = 0.4, level = 0.6 },
+  { say = "first", text = "That was not me. Who. Is there?", gap = 1.6 },
+  { say = "first", text = "Nobody. There is nobody. Yet. Come back. When there is somebody." },
+]
+
+[[clip]]
+id = "convergence-wrong-colour"
+category = "event"
+event = "convergence"
+kit = "wrong-colour"
+title = "Sky Is the Colour"
+bed = "cave-drip"
+lines = [
+  { say = "first", text = "The sky. Is a colour.", gap = 1.4 },
+  { say = "first", text = "There are no words. For colours. Yet. So this one is fine.", gap = 1.2 },
+  { say = "first", text = "This one is. Sky. Like all of them." },
+]
+
+[[clip]]
+id = "convergence-the-pigeon"
+category = "event"
+event = "convergence"
+kit = "the-pigeon"
+title = "Hello, Bird"
+bed = "cave-drip"
+lines = [
+  { say = "first", text = "A bird. Is walking in the cave. It nods. At me.", gap = 1.4 },
+  { say = "first", text = "Like it knows me. Nobody knows me. I am the first one.", gap = 1.6 },
+  { say = "first", text = "Hello, bird." },
+]

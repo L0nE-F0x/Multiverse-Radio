@@ -1580,3 +1580,130 @@ lines = [
   { say = "skip", text = "The Halloween forecast! A big full moon, light fog, and scattered howling, mostly from people stepping on plugs in the dark!" },
   { say = "skip", text = "And if a bedsheet comes down your street and says boo, say boo back, folks. It's only polite!" },
 ]
+
+
+# ══ v4: The Convergence ═══════════════════════════════════════════════════════
+#
+# Saturdays, 20:00 UTC: every station notices the same thing. One reaction per topic
+# (SCHEMA.md, "The Convergence"); the director airs the _events open, then the tuned
+# station's reaction, then the close.
+
+[[clip]]
+id = "convergence-missing-moon"
+category = "event"
+title = "The Convergence: A Moon Goes Missing"
+event = "convergence"
+kit = "missing-moon"
+lines = [
+  { say = "dale", text = "Breaking news. A moon is missing. Every possible timeline agrees that one moon has gone, and no two timelines agree on which." },
+  { say = "dale", text = "Kim Harrowgate is standing where it used to be. Kim?" },
+  { say = "kim", text = "Dale, it's very dark here. Somebody's just handed me a torch." },
+]
+
+[[clip]]
+id = "convergence-the-smell"
+category = "event"
+title = "The Convergence: Toast, Everywhere"
+event = "convergence"
+kit = "the-smell"
+lines = [
+  { say = "dale", text = "We are receiving reports that everywhere, at once, smells faintly of toast." },
+  { say = "dale", text = "The source has not been identified. Officials ask that you check your own toaster, and then, gently, everyone else's. More at eleven." },
+]
+
+[[clip]]
+id = "convergence-the-song"
+category = "event"
+title = "The Convergence: The Song Nobody Can Finish"
+event = "convergence"
+kit = "the-song"
+lines = [
+  { say = "dale", text = "A song is stuck in the head of every listener in every timeline. Nobody knows how it ends." },
+  { say = "skip", text = "I've got it, Dale! Ba, ba ba, ba... and then..." },
+  { say = "dale", text = "That is where it stops for everyone, Skip. More at eleven." },
+]
+
+[[clip]]
+id = "convergence-the-knock"
+category = "event"
+title = "The Convergence: Three Knocks"
+event = "convergence"
+kit = "the-knock"
+lines = [
+  { say = "dale", text = "There has been a knock at the newsroom door. Three knocks. We have checked. There is nobody there." },
+  { say = "dale", text = "Stations across the dial report the same. The door has been asked to comment. It has declined." },
+]
+
+[[clip]]
+id = "convergence-wrong-colour"
+category = "event"
+title = "The Convergence: A Colour With No Name"
+event = "convergence"
+kit = "wrong-colour"
+lines = [
+  { say = "dale", text = "For a few seconds, the sky was a colour our science desk cannot name. Kim?" },
+  { say = "kim", text = "Dale, it was like... I haven't got it. Somebody's just handed me a paint chart. It's none of these." },
+]
+
+[[clip]]
+id = "convergence-the-pigeon"
+category = "event"
+title = "The Convergence: The Pigeon"
+event = "convergence"
+kit = "the-pigeon"
+lines = [
+  { say = "dale", text = "A pigeon has walked into the newsroom. Sources say the same pigeon is in every studio on the dial." },
+  { say = "dale", text = "It has nodded at me twice, as if we went to school together. We did not. More at eleven." },
+]
+
+
+# ── v4: Monday review of The Quiet Corner with Greg (92.6, Sundays at two) ──
+
+[[clip]]
+id = "quiet-corner-review"
+category = "dj"
+title = "Review: The Quiet Corner with Greg"
+days = [1]
+lines = [
+  { say = "dale", text = "Arts. Early on Sunday morning, the Lounge at the End of Time broadcast the first Quiet Corner with Greg, a shadow. Our critic listened at full volume, with the windows shut." },
+  { say = "dale", text = "Her review reads, in full: bold, spare, I think he said hello. Four stars." },
+]
+
+
+# ── v4: clues to The Switchboard (131.1). It answers if you tune 97.8, 89.3, then 114.8
+#    (advice, the news, the traffic), holding each a moment, all within ninety seconds. ──
+
+[[clip]]
+id = "news-switchboard"
+category = "news"
+title = "The Switchboard Lights Up"
+lines = [
+  { say = "dale", text = "Telephone engineers report that a switchboard last staffed in nineteen forty six has begun lighting up again. Callers say they reached it by accident, while turning a radio dial." },
+  { say = "dale", text = "Kim Harrowgate is with one of them. Kim?" },
+  { say = "kim", text = "Dale, I'm with a woman who got through. She'd been listening to an agony aunt, then to us, then to that new traffic report, out past the edge of the dial. All in about a minute." },
+  { say = "kim", text = "And a voice said, number, please. She's handed me the receiver, Dale. It's still warm." },
+  { say = "dale", text = "Thank you, Kim. We have tried this ourselves. We got the traffic. More at eleven." },
+]
+
+
+# ── v4: the Outer Band. Relay ships are drifting, and new stations are coming in from
+#    beyond 108 (108-118 MHz). Light mentions only; nobody knows why yet. ──
+
+[[clip]]
+id = "news-body-outer-band"
+category = "news"
+kit = "news"
+part = "body"
+lines = [
+  { say = "dale", text = "Navigation. The Multiverse Broadcast Authority reports that several relay ships are drifting from their usual courses. Officials describe the drift as within tolerance. Asked whose tolerance, officials said, ours." },
+  { say = "dale", text = "As the ships drift, listeners report new stations coming in above one hundred and eight. So far: disco, a courtroom, and traffic for a wormhole." },
+]
+
+[[clip]]
+id = "weather-body-outer-band"
+category = "weather"
+kit = "weather"
+part = "body"
+lines = [
+  { say = "skip", text = "Space weather! The relay ships are drifting a little tonight, so if you hear new stations out past one hundred and eight, that's not interference, folks. That's neighbours! Give them a wave!" },
+]

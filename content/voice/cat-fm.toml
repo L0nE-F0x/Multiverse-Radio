@@ -378,3 +378,78 @@ lines = [
   { say = "dennis", text = "That's fine. That's all fine. Here's a song. A cheerful one." },
   { sting = "halloween" },
 ]
+
+
+# ══ v4: The Convergence ═══════════════════════════════════════════════════════
+#
+# Saturdays, 20:00 UTC: every station notices the same thing. One reaction per topic
+# (SCHEMA.md, "The Convergence"); the director airs the _events open, then the tuned
+# station's reaction, then the close.
+
+[[clip]]
+id = "convergence-missing-moon"
+category = "event"
+title = "The Convergence: A Moon Goes Missing"
+event = "convergence"
+kit = "missing-moon"
+lines = [
+  { say = "dennis", text = "Apparently a moon is missing. Every station's talking about it." },
+  { say = "dennis", text = "Gloria has been staring out of the window since it happened. She knows something. She won't tell me. She just looks very pleased with herself." },
+]
+
+[[clip]]
+id = "convergence-the-smell"
+category = "event"
+title = "The Convergence: Toast, Everywhere"
+event = "convergence"
+kit = "the-smell"
+lines = [
+  { say = "dennis", text = "The whole studio smells of toast. Everywhere does, apparently." },
+  { say = "dennis", text = "Gloria's sniffed the toaster. She's sniffed me. She's decided it's my fault. Programming change: she's sitting on the keyboard now." },
+]
+
+[[clip]]
+id = "convergence-the-song"
+category = "event"
+title = "The Convergence: The Song Nobody Can Finish"
+event = "convergence"
+kit = "the-song"
+lines = [
+  { say = "dennis", text = "There's a song everybody's humming and nobody can finish. I was humming it." },
+  { say = "dennis", text = "Gloria knocked my headphones off the desk at the exact moment I got to the hard part. I think she was helping." },
+]
+
+[[clip]]
+id = "convergence-the-knock"
+category = "event"
+title = "The Convergence: Three Knocks"
+event = "convergence"
+kit = "the-knock"
+lines = [
+  { say = "dennis", text = "Three knocks on the studio door. I went to look. Nobody there." },
+  { sfx = "knock-over" },
+  { say = "dennis", text = "And while I was gone, three things got knocked off the desk. She heard the knocks. She felt she should match them." },
+]
+
+[[clip]]
+id = "convergence-wrong-colour"
+category = "event"
+title = "The Convergence: A Colour With No Name"
+event = "convergence"
+kit = "wrong-colour"
+lines = [
+  { say = "dennis", text = "The sky went a colour just now. Nobody has a word for it." },
+  { say = "dennis", text = "Gloria went and sat in the patch of light it made on the floor. Then it went back to normal, and she looked at me like I'd switched it off." },
+]
+
+[[clip]]
+id = "convergence-the-pigeon"
+category = "event"
+title = "The Convergence: The Pigeon"
+event = "convergence"
+kit = "the-pigeon"
+lines = [
+  { say = "dennis", text = "Oh no. There's a pigeon on the windowsill. Gloria's seen it. Gloria's..." },
+  { sfx = "purr" },
+  { say = "dennis", text = "She's not chasing it. They're just sitting together. Gloria, how do you know a pigeon?" },
+]

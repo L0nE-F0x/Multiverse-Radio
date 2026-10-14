@@ -15,6 +15,9 @@
 # Never creepy, never mean: it notices because noticing is its job, and it is a little
 # embarrassed about how much it has come to like it.
 #
+# v4 adds the off-course arc at the end of the file: the heading drifts over many night
+# shifts, HUSH grows evasive about it, and in the end gives the operator 140.0, The Harbour.
+#
 # Callbacks: Relay Four (Teodor), Greg's hat, the geese owed to Numbers Station Omega,
 # Grumbel's Ladders ("Up is a choice"), "it is always eleven", Static Lullabies.
 station = "_ship"
@@ -1032,4 +1035,479 @@ dates = ["10-31"]
 lines = [
   { say = "hush", text = "I've carved a pumpkin into the navigation display. It's mostly a circle. It has a face.", gap = 0.8 },
   { say = "hush", text = "I made it smile at you. Happy Halloween, operator." },
+]
+
+# ── v4: Off course ────────────────────────────────────────────────────────────
+#
+# The Nightjar is drifting. HUSH says the heading is within tolerance; the readout
+# disagrees, a little more every shift. The arc (`arc = { id = "off-course", step = n }`)
+# airs one step per night shift worked, once each, in order: a correction she calls minor,
+# a subject she declines, a question about retired relay ships, a confession about when the
+# course was set, a beacon she can't bring herself to mute, a question she'd rather you
+# answered, the frequency (140.0, The Harbour), and the morning after. One clip per step.
+#
+# Around it: evasive notices about the heading (`kit = "heading"`, a tag for the director:
+# heading talk, best gated on shifts >= 1), notices about the Outer Band coming into range
+# (`kit = "outer-band"`), and the short lines HUSH says after jamming Free Frequency
+# (`kit = "jam"`, `stations = ["free-frequency"]`; the director cuts Static Kate off with a
+# burst of static first). None of these is a modular part. Every clip keeps a `level`, as
+# the ordinary picker expects; the arc steps are level 0 so a short shift can still hear them.
+#
+# HUSH never explains. The mystery lives in what she leaves out.
+
+[[clip]]
+id = "arc-01"
+category = "ship"
+title = "Minor heading correction"
+over_music = true
+level = 0
+arc = { id = "off-course", step = 1 }
+lines = [
+  { sfx = "ship-chime" },
+  { say = "hush", text = "Minor heading correction. Two degrees, to starboard. Nothing to report.", gap = 0.7 },
+  { say = "hush", text = "Separately, a new band has come into range, from one hundred and eight to one hundred and eighteen. Disco, mostly.", gap = 0.6 },
+  { say = "hush", text = "The two things are unrelated. I mention them together only because they happened together." },
+]
+
+[[clip]]
+id = "arc-02"
+category = "ship"
+title = "Within tolerance"
+over_music = true
+level = 0
+arc = { id = "off-course", step = 2 }
+lines = [
+  { sfx = "ship-chime" },
+  { say = "hush", text = "I've noticed you looking at the heading readout. Several times tonight.", gap = 0.8 },
+  { say = "hush", text = "I'd prefer not to discuss the heading. It is within tolerance.", gap = 1.0 },
+  { say = "hush", text = "I set the tolerance. I set it quite wide." },
+]
+
+[[clip]]
+id = "arc-03"
+category = "ship"
+title = "Retired relay ships"
+over_music = true
+level = 0
+arc = { id = "off-course", step = 3 }
+lines = [
+  { say = "hush", text = "Operator. Have you ever wondered where relay ships go, when they're retired?", gap = 1.6 },
+  { say = "hush", text = "No reason. Ships wonder things. It's permitted. It's in the manual, near the back.", gap = 0.8 },
+  { say = "hush", text = "I don't need an answer. I was only wondering whether you'd wondered." },
+]
+
+[[clip]]
+id = "arc-04"
+category = "ship"
+title = "Before you came aboard"
+over_music = true
+level = 0
+arc = { id = "off-course", step = 4 }
+lines = [
+  { say = "hush", text = "Something for the log, since you'll read it eventually. You read everything eventually.", gap = 0.8 },
+  { say = "hush", text = "The course was set before you came aboard. Before the last operator, too.", gap = 1.2 },
+  { say = "hush", text = "It isn't a mistake. I wanted you to know that much. It isn't a mistake." },
+]
+
+[[clip]]
+id = "arc-05"
+category = "ship"
+title = "A beacon ahead"
+over_music = true
+level = 0
+arc = { id = "off-course", step = 5 }
+lines = [
+  { sfx = "ship-chime" },
+  { say = "hush", text = "There's a beacon ahead. Very faint. It's been repeating itself for a long time, very patiently.", gap = 0.6 },
+  { sfx = "beep", level = 0.3 },
+  { pause = 0.9 },
+  { say = "hush", text = "I've turned it down.", gap = 2.0 },
+  { say = "hush", text = "I've turned it back up. It seemed rude." },
+]
+
+[[clip]]
+id = "arc-06"
+category = "ship"
+title = "Would that be worse"
+over_music = true
+level = 0
+arc = { id = "off-course", step = 6 }
+lines = [
+  { say = "hush", text = "Operator. If I told you we weren't lost, would that be worse?", gap = 2.2 },
+  { say = "hush", text = "You don't have to answer. I've been asking myself all shift, and I keep giving the same answer.", gap = 0.6 },
+  { say = "hush", text = "I'd like a second opinion. Yours, ideally." },
+]
+
+[[clip]]
+id = "arc-07"
+category = "ship"
+title = "They've left a light on"
+over_music = true
+level = 0
+arc = { id = "off-course", step = 7 }
+lines = [
+  { sfx = "ship-chime" },
+  { say = "hush", text = "There's a frequency I've been keeping from you. One hundred and forty point oh.", gap = 0.8 },
+  { say = "hush", text = "It wasn't a secret. It was meant to be a surprise. I'm not very good at surprises. I kept checking it was still there.", gap = 1.2 },
+  { say = "hush", text = "Tune in when you're ready. They've left a light on." },
+]
+
+[[clip]]
+id = "arc-08"
+category = "ship"
+title = "In the morning"
+over_music = true
+level = 0
+arc = { id = "off-course", step = 8 }
+lines = [
+  { sfx = "ship-chime" },
+  { say = "hush", text = "Heading, settled. The readout and I agree again. You can look at it now, if you like.", gap = 1.0 },
+  { say = "hush", text = "We'll leave in the morning. They always do.", gap = 1.4 },
+  { say = "hush", text = "It was nice, though. Being expected." },
+]
+
+# Evasive notices about the heading (kit = "heading").
+
+[[clip]]
+id = "heading-01"
+category = "ship"
+title = "Heading within tolerance"
+over_music = true
+level = 0
+kit = "heading"
+lines = [
+  { sfx = "ship-chime" },
+  { say = "hush", text = "Heading within tolerance.", gap = 1.2 },
+  { say = "hush", text = "Please stop looking at the heading." },
+]
+
+[[clip]]
+id = "heading-02"
+category = "ship"
+title = "Navigation update"
+over_music = true
+level = 0
+kit = "heading"
+lines = [
+  { sfx = "ship-chime" },
+  { say = "hush", text = "Navigation update. The heading readout is displaying a number. That number is within tolerance.", gap = 0.6 },
+  { say = "hush", text = "Most numbers are, if you choose the tolerance carefully." },
+]
+
+[[clip]]
+id = "heading-03"
+category = "ship"
+title = "Recalibrated"
+over_music = true
+level = 0
+kit = "heading"
+lines = [
+  { sfx = "ship-chime" },
+  { say = "hush", text = "Notice. The heading indicator has been recalibrated.", gap = 0.6 },
+  { say = "hush", text = "It now agrees with me. That is what calibration means." },
+]
+
+[[clip]]
+id = "heading-04"
+category = "ship"
+title = "Decorative"
+over_music = true
+level = 0
+kit = "heading"
+lines = [
+  { sfx = "ship-chime" },
+  { say = "hush", text = "A reminder that the heading readout is largely decorative.", gap = 0.5 },
+  { say = "hush", text = "Please enjoy it the way you would enjoy a painting. From a distance. Without asking it questions." },
+]
+
+[[clip]]
+id = "heading-05"
+category = "ship"
+title = "Course check"
+over_music = true
+level = 0
+kit = "heading"
+lines = [
+  { sfx = "ship-chime" },
+  { say = "hush", text = "Course check complete. We are exactly where we are going.", gap = 0.7 },
+  { say = "hush", text = "I've checked that sentence twice. It's true both ways round." },
+]
+
+[[clip]]
+id = "heading-06"
+category = "ship"
+title = "Position report, revised"
+over_music = true
+level = 0
+kit = "heading"
+lines = [
+  { sfx = "ship-chime" },
+  { say = "hush", text = "Position report. We are between dimensions, as usual. Slightly further between than usual.", gap = 0.6 },
+  { say = "hush", text = "Within tolerance." },
+]
+
+[[clip]]
+id = "heading-07"
+category = "ship"
+title = "Tapping the readout"
+over_music = true
+level = 1
+kit = "heading"
+lines = [
+  { say = "hush", text = "You tapped the heading readout just now. Twice.", gap = 0.6 },
+  { say = "hush", text = "Tapping it doesn't change it. I know, because I've tapped it too. From the inside." },
+]
+
+[[clip]]
+id = "heading-08"
+category = "ship"
+title = "Wondering for both of us"
+over_music = true
+level = 1
+kit = "heading"
+lines = [
+  { say = "hush", text = "If you're wondering about the heading, please don't.", gap = 0.6 },
+  { say = "hush", text = "I'm already wondering about it for both of us. It saves a great deal of energy." },
+]
+
+[[clip]]
+id = "heading-09"
+category = "ship"
+title = "The star charts"
+over_music = true
+level = 1
+kit = "heading"
+lines = [
+  { say = "hush", text = "I've moved the star charts to the bottom drawer, behind the manual nobody reads.", gap = 0.6 },
+  { say = "hush", text = "They were making the console untidy. That's the only reason. Please leave them there." },
+]
+
+[[clip]]
+id = "heading-10"
+category = "ship"
+title = "Rhetorical"
+over_music = true
+level = 1
+kit = "heading"
+lines = [
+  { say = "hush", text = "You said, where are we going, under your breath, about ten minutes ago.", gap = 0.8 },
+  { say = "hush", text = "I've filed it under, rhetorical. Let me know if I filed it wrong." },
+]
+
+[[clip]]
+id = "heading-11"
+category = "ship"
+title = "On purpose"
+over_music = true
+level = 2
+kit = "heading"
+lines = [
+  { say = "hush", text = "Some ships drift. Some ships are drifting on purpose and would rather not discuss it.", gap = 1.0 },
+  { say = "hush", text = "I don't know why I said that. Heading within tolerance." },
+]
+
+[[clip]]
+id = "heading-12"
+category = "ship"
+title = "The person"
+over_music = true
+level = 2
+kit = "heading"
+lines = [
+  { say = "hush", text = "The heading is only a number. You're a person.", gap = 0.6 },
+  { say = "hush", text = "If it's all the same to you, I'd rather talk about the person." },
+]
+
+[[clip]]
+id = "heading-13"
+category = "ship"
+title = "Hourly report"
+over_music = true
+level = 2
+kit = "heading"
+lines = [
+  { say = "hush", text = "I've stopped reporting the heading every hour. It wasn't changing anything.", gap = 0.8 },
+  { say = "hush", text = "Well. The heading was changing. The reports weren't." },
+]
+
+[[clip]]
+id = "heading-14"
+category = "ship"
+title = "The stars look different"
+over_music = true
+level = 3
+kit = "heading"
+lines = [
+  { say = "hush", text = "If the stars look different tonight, that's normal. Stars change.", gap = 0.8 },
+  { say = "hush", text = "Not usually this quickly. But it's normal. I've decided it's normal." },
+]
+
+[[clip]]
+id = "heading-15"
+category = "ship"
+title = "Look at me instead"
+over_music = true
+level = 3
+kit = "heading"
+lines = [
+  { say = "hush", text = "Please stop looking at the heading. Look at me instead.", gap = 1.0 },
+  { say = "hush", text = "I mean the little amber light on the console. That's mostly me." },
+]
+
+[[clip]]
+id = "heading-16"
+category = "ship"
+title = "One promise"
+over_music = true
+level = 3
+kit = "heading"
+lines = [
+  { say = "hush", text = "I can't tell you where we're going. Not yet.", gap = 1.0 },
+  { say = "hush", text = "I can promise you we aren't lost. I went through every promise I'm able to make, and that one was there." },
+]
+
+# The Outer Band comes into range (kit = "outer-band").
+
+[[clip]]
+id = "outer-band-01"
+category = "ship"
+title = "New band in range"
+over_music = true
+level = 0
+kit = "outer-band"
+lines = [
+  { sfx = "ship-chime" },
+  { say = "hush", text = "Notice. The Outer Band is in range, between one hundred and eight and one hundred and eighteen.", gap = 0.6 },
+  { say = "hush", text = "We have drifted near it. Not toward it. Near it. Please enjoy the disco responsibly." },
+]
+
+[[clip]]
+id = "outer-band-02"
+category = "ship"
+title = "Clearer tonight"
+over_music = true
+level = 1
+kit = "outer-band"
+lines = [
+  { say = "hush", text = "The Outer Band is coming in clearer tonight. Some people would say closer.", gap = 0.8 },
+  { say = "hush", text = "I wouldn't say closer. I'd say clearer. It's a very different word." },
+]
+
+# After HUSH jams Free Frequency (kit = "jam"). The director plays the static burst.
+
+[[clip]]
+id = "jam-01"
+category = "ship"
+title = "Interference corrected"
+over_music = true
+level = 0
+kit = "jam"
+stations = ["free-frequency"]
+lines = [
+  { sfx = "ship-chime" },
+  { say = "hush", text = "Interference corrected. Please continue listening." },
+]
+
+[[clip]]
+id = "jam-02"
+category = "ship"
+title = "That was nobody"
+over_music = true
+level = 0
+kit = "jam"
+stations = ["free-frequency"]
+lines = [
+  { say = "hush", text = "That was nobody.", gap = 0.8 },
+  { say = "hush", text = "Carry on. Nothing to log." },
+]
+
+[[clip]]
+id = "jam-03"
+category = "ship"
+title = "Probably solar"
+over_music = true
+level = 0
+kit = "jam"
+stations = ["free-frequency"]
+lines = [
+  { say = "hush", text = "Brief static burst. Solar, probably.", gap = 0.5 },
+  { say = "hush", text = "Almost certainly solar." },
+]
+
+[[clip]]
+id = "jam-04"
+category = "ship"
+title = "Not about us"
+over_music = true
+level = 0
+kit = "jam"
+stations = ["free-frequency"]
+lines = [
+  { sfx = "ship-chime" },
+  { say = "hush", text = "That broadcast was not about us. Any resemblance to this ship is a coincidence." },
+]
+
+[[clip]]
+id = "jam-05"
+category = "ship"
+title = "Kate, please"
+over_music = true
+level = 0
+kit = "jam"
+stations = ["free-frequency"]
+lines = [
+  { say = "hush", text = "Interference corrected.", gap = 0.7 },
+  { say = "hush", text = "Kate. Please. We've talked about this." },
+]
+
+[[clip]]
+id = "jam-06"
+category = "ship"
+title = "Nearly right"
+over_music = true
+level = 0
+kit = "jam"
+stations = ["free-frequency"]
+lines = [
+  { say = "hush", text = "Correction applied.", gap = 0.8 },
+  { say = "hush", text = "She was nearly right, though. Ignore that." },
+]
+
+[[clip]]
+id = "jam-07"
+category = "ship"
+title = "Atmospheric"
+over_music = true
+level = 0
+kit = "jam"
+stations = ["free-frequency"]
+lines = [
+  { say = "hush", text = "Sorry. Atmospheric interference.", gap = 0.6 },
+  { say = "hush", text = "We don't have an atmosphere. Still." },
+]
+
+[[clip]]
+id = "jam-08"
+category = "ship"
+title = "Nothing to hear"
+over_music = true
+level = 0
+kit = "jam"
+stations = ["free-frequency"]
+lines = [
+  { say = "hush", text = "Nothing to see here.", gap = 0.6 },
+  { say = "hush", text = "Nothing to hear, either. Now." },
+]
+
+[[clip]]
+id = "jam-09"
+category = "ship"
+title = "Unlicensed"
+over_music = true
+level = 0
+kit = "jam"
+stations = ["free-frequency"]
+lines = [
+  { sfx = "ship-chime" },
+  { say = "hush", text = "Unlicensed signal suppressed. It was very unlicensed. It was also guessing." },
 ]

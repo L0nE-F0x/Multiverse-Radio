@@ -1182,3 +1182,108 @@ lines = [
   { say = "grenda", text = "It's nearly Halloween, and the thing in my lava lamp has dressed up for it. It's draped a tiny bit of tissue over itself, with two holes cut out.", gap = 0.8 },
   { say = "grenda", text = "It's a ghost, love. Very good. Very frightening. Now back in your lamp. Some of us are taking calls." },
 ]
+
+
+# ══ v4: The Convergence ═══════════════════════════════════════════════════════
+#
+# Saturdays, 20:00 UTC: every station notices the same thing. One reaction per topic
+# (SCHEMA.md, "The Convergence"); the director airs the _events open, then the tuned
+# station's reaction, then the close.
+
+[[clip]]
+id = "convergence-missing-moon"
+category = "event"
+title = "The Convergence: A Moon Goes Missing"
+event = "convergence"
+kit = "missing-moon"
+lines = [
+  { say = "grenda", text = "We've had a lot of calls tonight about a moon. One's gone, love, and nobody can agree which." },
+  { say = "grenda", text = "When you've lost something and you're not sure what, go outside. Look up. Say hello to the ones that stayed." },
+]
+
+[[clip]]
+id = "convergence-the-smell"
+category = "event"
+title = "The Convergence: Toast, Everywhere"
+event = "convergence"
+kit = "the-smell"
+lines = [
+  { say = "grenda", text = "Everywhere smells of toast tonight. I've had calls from all over." },
+  { say = "grenda", text = "Toast is what you make when there's nothing else in, and it's always enough. Make some, love. Two slices. Sit down with them." },
+]
+
+[[clip]]
+id = "convergence-the-song"
+category = "event"
+title = "The Convergence: The Song Nobody Can Finish"
+event = "convergence"
+kit = "the-song"
+lines = [
+  { say = "grenda", text = "Half the dial's got the same song stuck tonight, and nobody can finish it." },
+  { say = "grenda", text = "Don't force it, love. Songs are like names. The moment you stop trying, it'll come to you. In the bath, probably. In about a week." },
+]
+
+[[clip]]
+id = "convergence-the-knock"
+category = "event"
+title = "The Convergence: Three Knocks"
+event = "convergence"
+kit = "the-knock"
+lines = [
+  { say = "grenda", text = "Three knocks on the studio door, and nobody there. You've all had it too, I hear." },
+  { say = "grenda", text = "My mum used to say, a knock with nobody behind it is a kindness on its way. Leave the door on the latch, love." },
+]
+
+[[clip]]
+id = "convergence-wrong-colour"
+category = "event"
+title = "The Convergence: A Colour With No Name"
+event = "convergence"
+kit = "wrong-colour"
+lines = [
+  { say = "grenda", text = "Did you see the sky, love? The colour nobody's got a word for?" },
+  { say = "grenda", text = "You don't need a word for everything. Some things, you just stand at the window with, and then you put the kettle on." },
+]
+
+[[clip]]
+id = "convergence-the-pigeon"
+category = "event"
+title = "The Convergence: The Pigeon"
+event = "convergence"
+kit = "the-pigeon"
+lines = [
+  { say = "grenda", text = "There's a pigeon in Studio B. It walked in under the door. It seems to know me." },
+  { say = "grenda", text = "It's done what everyone does in here. It's sat down, and looked at me, and waited. Go on, love. What's on your mind?" },
+]
+
+
+# ── v4: Monday review of The Quiet Corner with Greg (92.6, Sundays at two) ──
+
+[[clip]]
+id = "quiet-corner-review"
+category = "dj"
+title = "Review: The Quiet Corner with Greg"
+days = [1]
+lines = [
+  { say = "grenda", text = "A few of you rang about Greg's new show, love. Saying you couldn't hear it." },
+  { say = "grenda", text = "Next Sunday, turn everything else off. The fridge, the telly, the worrying. Then you'll hear him. Some people are only quiet because nobody's ever been quiet back." },
+]
+
+
+# ── v4: clues to The Switchboard (131.1). It answers if you tune 97.8, 89.3, then 114.8
+#    (advice, the news, the traffic), holding each a moment, all within ninety seconds. ──
+
+[[clip]]
+id = "call-switchboard"
+category = "call"
+title = "Walter, and the Operator"
+bed = "rain"
+lines = [
+  { say = "grenda", text = "Ask Grenda, go ahead." },
+  { say = "walter", text = "Grenda, it's Walter again. My late wife, June, was a telephone operator. Nineteen forty six, the big board, the one that connected people between universes." },
+  { say = "walter", text = "She used to say, if you ever need to reach somebody very far away, ring advice first. Then the news. Then the traffic. Quick as you like, and in that order." },
+  { say = "grenda", text = "And did it work, love?" },
+  { say = "walter", text = "She always got through. I've never tried. I'm frightened of who might answer." },
+  { say = "grenda", text = "Someone polite, I'd expect. Operators always are. And Walter, you've already done the first bit. You rang advice.", gap = 0.8 },
+  { say = "walter", text = "Oh. So I have." },
+]

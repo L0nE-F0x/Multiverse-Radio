@@ -1267,3 +1267,106 @@ lines = [
   { say = "nature", text = "The cat, sensing its moment, does absolutely nothing." },
   { sfx = "zap" },
 ]
+
+
+# ══ v4: The Convergence ═══════════════════════════════════════════════════════
+#
+# Saturdays, 20:00 UTC: every station notices the same thing. One reaction per topic
+# (SCHEMA.md, "The Convergence"); the director airs the _events open, then the tuned
+# station's reaction, then the close.
+
+[[clip]]
+id = "convergence-missing-moon"
+category = "event"
+title = "The Convergence: A Moon Goes Missing"
+event = "convergence"
+kit = "missing-moon"
+lines = [
+  { say = "dale", text = "Breaking news. A moon is missing." },
+  { sfx = "zap" },
+  { say = "nature", text = "And here, the moon. Which is not here." },
+  { sfx = "zap" },
+  { say = "couch", text = "Which moon?" },
+  { sfx = "zap" },
+  { say = "trent", text = "Everything must go!" },
+]
+
+[[clip]]
+id = "convergence-the-smell"
+category = "event"
+title = "The Convergence: Toast, Everywhere"
+event = "convergence"
+kit = "the-smell"
+lines = [
+  { say = "chef", text = "And you'll notice, now, the smell of toast." },
+  { sfx = "zap" },
+  { say = "weather", text = "Toast, spreading in from the west, and every other direction." },
+  { sfx = "zap" },
+  { say = "couch", text = "I didn't make toast." },
+  { sfx = "zap" },
+  { say = "detective", text = "Nobody made the toast. That's what bothers me." },
+]
+
+[[clip]]
+id = "convergence-the-song"
+category = "event"
+title = "The Convergence: The Song Nobody Can Finish"
+event = "convergence"
+kit = "the-song"
+lines = [
+  { say = "vj", text = "And here's the song everyone's humming! It goes", cut = 0.8 },
+  { sfx = "zap" },
+  { say = "lorraine", text = "Vincent, how does it end?" },
+  { sfx = "zap" },
+  { say = "vincent", text = "I went to get milk, Lorraine. I don't know." },
+  { sfx = "zap" },
+  { say = "couch", text = "Hum it again." },
+]
+
+[[clip]]
+id = "convergence-the-knock"
+category = "event"
+title = "The Convergence: Three Knocks"
+event = "convergence"
+kit = "the-knock"
+lines = [
+  { say = "couch", text = "Did someone knock?" },
+  { sfx = "zap" },
+  { say = "sitcom_him", text = "Now who could that be?" },
+  { sfx = "zap" },
+  { say = "judge", text = "Order! That's three knocks!" },
+  { sfx = "zap" },
+  { say = "nature", text = "And there is no one there. There almost never is." },
+]
+
+[[clip]]
+id = "convergence-wrong-colour"
+category = "event"
+title = "The Convergence: A Colour With No Name"
+event = "convergence"
+kit = "wrong-colour"
+lines = [
+  { say = "weather", text = "The sky, just now, briefly, a colour." },
+  { sfx = "zap" },
+  { say = "antiques", text = "And what would you call this colour?" },
+  { sfx = "zap" },
+  { say = "owner", text = "I've no idea." },
+  { sfx = "zap" },
+  { say = "antiques", text = "Nobody does. Priceless." },
+]
+
+[[clip]]
+id = "convergence-the-pigeon"
+category = "event"
+title = "The Convergence: The Pigeon"
+event = "convergence"
+kit = "the-pigeon"
+lines = [
+  { say = "nature", text = "A pigeon walks into the living room." },
+  { sfx = "zap" },
+  { say = "late", text = "My next guest is a pigeon!" },
+  { sfx = "zap" },
+  { say = "couch", text = "It's on the sofa." },
+  { sfx = "zap" },
+  { say = "pockets", text = "Hello, friend! You know everybody!" },
+]

@@ -542,3 +542,86 @@ lines = [
   { say = "host", text = "Mirror World Polka Hour! Happy Halloween!", gap = 0.6 },
   { say = "ynnhoj", text = "Neewollah yppah!" },
 ]
+
+
+# ══ v4: The Convergence ═══════════════════════════════════════════════════════
+#
+# Saturdays, 20:00 UTC: every station notices the same thing. One reaction per topic
+# (SCHEMA.md, "The Convergence"); the director airs the _events open, then the tuned
+# station's reaction, then the close.
+
+[[clip]]
+id = "convergence-missing-moon"
+category = "event"
+title = "The Convergence: A Moon Goes Missing"
+event = "convergence"
+kit = "missing-moon"
+lines = [
+  { say = "host", text = "Folks, a moon's gone missing! Everybody agrees one's gone!" },
+  { say = "ynnhoj", text = "Everybody agrees!" },
+  { say = "host", text = "Ours is still here! It's just on the left now!" },
+  { say = "ynnhoj", text = "It was always on the left." },
+]
+
+[[clip]]
+id = "convergence-the-smell"
+category = "event"
+title = "The Convergence: Toast, Everywhere"
+event = "convergence"
+kit = "the-smell"
+lines = [
+  { say = "host", text = "Who's making toast? The whole mirror smells of toast!" },
+  { say = "ynnhoj", text = "Toast!" },
+  { say = "host", text = "Over here we butter the other side! Still lovely!" },
+  { say = "ynnhoj", text = "Still lovely!" },
+]
+
+[[clip]]
+id = "convergence-the-song"
+category = "event"
+title = "The Convergence: The Song Nobody Can Finish"
+event = "convergence"
+kit = "the-song"
+lines = [
+  { say = "host", text = "Everybody's got the same song in their head, and nobody can finish it! So the band's playing it backwards!" },
+  { say = "ynnhoj", text = "Backwards!" },
+  { say = "host", text = "Over here, it's the start nobody can remember!" },
+]
+
+[[clip]]
+id = "convergence-the-knock"
+category = "event"
+title = "The Convergence: Three Knocks"
+event = "convergence"
+kit = "the-knock"
+lines = [
+  { say = "host", text = "Three knocks on the bathroom mirror, folks! From your side!" },
+  { say = "ynnhoj", text = "Nobody there." },
+  { say = "host", text = "Ynnhoj, you didn't agree late." },
+  { say = "ynnhoj", text = "I knocked." },
+]
+
+[[clip]]
+id = "convergence-wrong-colour"
+category = "event"
+title = "The Convergence: A Colour With No Name"
+event = "convergence"
+kit = "wrong-colour"
+lines = [
+  { say = "host", text = "The sky just went a colour we've never seen! Not even backwards!" },
+  { say = "ynnhoj", text = "Not even backwards!" },
+  { say = "host", text = "Polka to the left, folks! Maybe it'll come round again!" },
+]
+
+[[clip]]
+id = "convergence-the-pigeon"
+category = "event"
+title = "The Convergence: The Pigeon"
+event = "convergence"
+kit = "the-pigeon"
+lines = [
+  { say = "host", text = "There's a pigeon on the dance floor! Lovely footwork!" },
+  { say = "ynnhoj", text = "Lovely footwork!" },
+  { say = "host", text = "It's going to the left! It's been here before!" },
+  { say = "ynnhoj", text = "It's been here before." },
+]

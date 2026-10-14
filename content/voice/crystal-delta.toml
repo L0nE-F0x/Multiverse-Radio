@@ -493,3 +493,85 @@ lines = [
   { say = "refract", text = "Crystal Radio Dreadful." },
   { say = "host", text = "It's Halloween. We're both in costume." },
 ]
+
+
+# ══ v4: The Convergence ═══════════════════════════════════════════════════════
+#
+# Saturdays, 20:00 UTC: every station notices the same thing. One reaction per topic
+# (SCHEMA.md, "The Convergence"); the director airs the _events open, then the tuned
+# station's reaction, then the close.
+
+[[clip]]
+id = "convergence-missing-moon"
+category = "event"
+title = "The Convergence: A Moon Goes Missing"
+event = "convergence"
+kit = "missing-moon"
+lines = [
+  { say = "host", text = "A moon has gone missing." },
+  { say = "refract", text = "A missing has gone moon." },
+  { say = "host", text = "Every crystal in the cave is still reflecting where it used to be. So in here, at least, it's still up." },
+]
+
+[[clip]]
+id = "convergence-the-smell"
+category = "event"
+title = "The Convergence: Toast, Everywhere"
+event = "convergence"
+kit = "the-smell"
+lines = [
+  { say = "host", text = "Everything smells of toast." },
+  { say = "refract", text = "Toast smells of everything." },
+  { say = "host", text = "The tiny miner says he didn't do it." },
+  { say = "miner", text = "Didn't do it." },
+]
+
+[[clip]]
+id = "convergence-the-song"
+category = "event"
+title = "The Convergence: The Song Nobody Can Finish"
+event = "convergence"
+kit = "the-song"
+lines = [
+  { say = "host", text = "There's a song nobody can finish." },
+  { say = "refract", text = "There's a finish nobody can sing." },
+  { say = "host", text = "The crystals all remember how it starts. Not one of them remembers the end." },
+]
+
+[[clip]]
+id = "convergence-the-knock"
+category = "event"
+title = "The Convergence: Three Knocks"
+event = "convergence"
+kit = "the-knock"
+lines = [
+  { say = "host", text = "Three knocks at the mouth of the cave." },
+  { say = "refract", text = "Three caves at the mouth of the knock." },
+  { say = "miner", text = "Nobody there." },
+  { say = "host", text = "Nobody there." },
+]
+
+[[clip]]
+id = "convergence-wrong-colour"
+category = "event"
+title = "The Convergence: A Colour With No Name"
+event = "convergence"
+kit = "wrong-colour"
+lines = [
+  { say = "host", text = "The sky outside just went a colour." },
+  { say = "refract", text = "The colour inside just went a sky." },
+  { say = "host", text = "Every crystal in the chandelier tried to split it into a rainbow. Not one could. They've gone very quiet." },
+]
+
+[[clip]]
+id = "convergence-the-pigeon"
+category = "event"
+title = "The Convergence: The Pigeon"
+event = "convergence"
+kit = "the-pigeon"
+lines = [
+  { say = "host", text = "A pigeon has walked into the chandelier." },
+  { say = "refract", text = "A chandelier has walked into the pigeon." },
+  { say = "miner", text = "It knows me. Said hello." },
+  { say = "host", text = "It's never said hello to me." },
+]

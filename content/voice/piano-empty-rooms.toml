@@ -305,3 +305,76 @@ lines = [
   { say = "host", text = "Someone has left a carved pumpkin at the end of the west corridor. A candle in it. Lit. I didn't light it. Nobody has been in." },
   { say = "host", text = "It's been glowing all week. I've decided not to look into it. It's company." },
 ]
+
+
+# ══ v4: The Convergence ═══════════════════════════════════════════════════════
+#
+# Saturdays, 20:00 UTC: every station notices the same thing. One reaction per topic
+# (SCHEMA.md, "The Convergence"); the director airs the _events open, then the tuned
+# station's reaction, then the close.
+
+[[clip]]
+id = "convergence-missing-moon"
+category = "event"
+title = "The Convergence: A Moon Goes Missing"
+event = "convergence"
+kit = "missing-moon"
+lines = [
+  { say = "host", text = "They say a moon has gone. Nobody knows which." },
+  { say = "host", text = "There's a space in the sky now. Nobody has been in it. I'll add it to the schedule." },
+]
+
+[[clip]]
+id = "convergence-the-smell"
+category = "event"
+title = "The Convergence: Toast, Everywhere"
+event = "convergence"
+kit = "the-smell"
+lines = [
+  { say = "host", text = "The corridor smells of toast. There's no kitchen in this wing." },
+  { say = "host", text = "I've left the doors open a little. So the rooms can have some." },
+]
+
+[[clip]]
+id = "convergence-the-song"
+category = "event"
+title = "The Convergence: The Song Nobody Can Finish"
+event = "convergence"
+kit = "the-song"
+lines = [
+  { say = "host", text = "The piano is playing a tune that everyone seems to know." },
+  { say = "host", text = "It stops at the same place each time. Then it waits. I think it's waiting for a room to hum the rest." },
+]
+
+[[clip]]
+id = "convergence-the-knock"
+category = "event"
+title = "The Convergence: Three Knocks"
+event = "convergence"
+kit = "the-knock"
+lines = [
+  { say = "host", text = "Three knocks. On the door at the back of the music room. The one that's open about an inch." },
+  { say = "host", text = "Nobody there. I said, come in. It's open. It has always been open." },
+]
+
+[[clip]]
+id = "convergence-wrong-colour"
+category = "event"
+title = "The Convergence: A Colour With No Name"
+event = "convergence"
+kit = "wrong-colour"
+lines = [
+  { say = "host", text = "The light came through the window a colour I've never seen. It lay on the floor of the music room for a moment." },
+  { say = "host", text = "The first thing ever to visit that room. I've taken it off the schedule." },
+]
+
+[[clip]]
+id = "convergence-the-pigeon"
+category = "event"
+title = "The Convergence: The Pigeon"
+event = "convergence"
+kit = "the-pigeon"
+lines = [
+  { say = "host", text = "A pigeon walked down the west corridor. It stopped at every door, as if it knew which ones were empty." },
+  { say = "host", text = "It listened at the music room for a while. Then it left. It didn't disturb the dust." },
+]
