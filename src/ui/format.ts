@@ -25,6 +25,13 @@ export function formatClock(ms: number, seconds = true): string {
   return seconds ? `${two(d.getHours())}:${two(d.getMinutes())}:${two(d.getSeconds())}` : `${two(d.getHours())}:${two(d.getMinutes())}`;
 }
 
+/** The Nightjar's heading, "034.7°" (wrapped to [0, 360), one decimal, zero-padded). */
+export function formatHeading(degrees: number): string {
+  const tenths = Math.round((Number.isFinite(degrees) ? degrees : 0) * 10);
+  const wrapped = ((tenths % 3600) + 3600) % 3600;
+  return `${(wrapped / 10).toFixed(1).padStart(5, '0')}°`;
+}
+
 /** Elapsed time, "00:42" or "1:03:09". */
 export function formatElapsed(ms: number): string {
   const total = Math.max(0, Math.floor(ms / 1000));

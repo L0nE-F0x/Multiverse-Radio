@@ -3,6 +3,7 @@
 // by a dynamic import behind `import.meta.env.DEV`, so it never ships.
 //
 //   off · track · voice · hush · event · partial · static · pirate · oddity · secret · lost
+//   outer (an Outer Band station) · free (Free Frequency on tonight's drift frequency)
 //   dial (a simulated continuous dial: pirates, oddities and static between stations)
 //   log  (seeds the ship's log with a night's intercepts)
 //
@@ -169,6 +170,21 @@ const SCENARIOS: Record<string, () => Patch> = {
       caption: { speaker: SHIP.computer.name, text: 'Oh. You found this. That is fine. Stay if you like.' },
     });
   },
+  outer: () => {
+    const s = station('tiki-satellite');
+    return on(s, {
+      onAir: voice(s, 'dj', 'Tomorrow, Today', s.host.name, 'And now, through the miracle of stereophonic sound, the bongos will travel to your left speaker.'),
+      caption: { speaker: s.host.name, text: 'And now, through the miracle of stereophonic sound, the bongos will travel to your left speaker.' },
+    });
+  },
+  free: () => {
+    const base = station('free-frequency');
+    const tonight = { ...base, frequency: 112.45 };
+    return on(tonight, {
+      stations: useBroadcast.getState().stations.map((s) => (s.id === base.id ? tonight : s)),
+      onAir: voice(tonight, 'dj', 'Theory Night', tonight.host.name, 'They say the heading is within tolerance. Tolerance of what, I ask you.'),
+    });
+  },
   lost: () => ({ status: 'lost', signalMessage: 'The relay could not reach this dimension. It may be closed for cleaning.' }),
   dial: () => {
     installSimulatedDial();
@@ -269,7 +285,8 @@ export function installDemo(): void {
     console.warn(`uidemo: unknown state "${name}". Try: ${Object.keys(SCENARIOS).join(', ')}`);
     return;
   }
-  const patch = scenario();
+  // v4: a few shifts in, and the heading has wandered.
+  const patch: Patch = { heading: 212.4, shifts: 4, ...scenario() };
   if (name !== 'dial' && name !== 'off') useUi.setState({ shiftStart: useUi.getState().shiftStart ?? T0 - 42 * 60_000 });
   pin(patch);
   const panel = params.get('panel');

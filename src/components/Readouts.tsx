@@ -3,7 +3,7 @@ import { useBroadcast } from '../broadcast/store';
 import type { Segment } from '../broadcast/types';
 import { useDocumentVisible } from '../hooks/useDocumentVisible';
 import { segmentElapsed } from '../ui/clock';
-import { inMainBand } from '../ui/dial';
+import { BAND_LABEL, bandOf, drifts } from '../ui/dial';
 import { FORMAT_LABEL, formatDuration, formatMhz, segmentLabel } from '../ui/format';
 import { useOnAir, useSource, useStatus, useTuned } from '../ui/select';
 import { KIND_TAG, ODDITY_SIGNAL } from '../ui/source';
@@ -14,7 +14,8 @@ export function SourceBlock() {
   const source = useSource();
   const frequency = useBroadcast((s) => s.frequency);
   const show = useBroadcast((s) => s.show);
-  const deep = !inMainBand(frequency);
+  const band = bandOf(frequency);
+  const drifting = !!source.station && drifts(source.station);
 
   return (
     <section className="readout readout-source" aria-labelledby="source-name">
@@ -24,7 +25,12 @@ export function SourceBlock() {
           {source.secret ? 'Unlisted' : KIND_TAG[source.kind]}
         </span>
         {source.format && <span className="tag tag-quiet">{FORMAT_LABEL[source.format]}</span>}
-        {deep && <span className="tag tag-deep">Deep band</span>}
+        {band !== 'main' && <span className={`tag tag-${band}`}>{BAND_LABEL[band]}</span>}
+        {drifting && (
+          <span className="tag tag-quiet" title="Somewhere else tomorrow night">
+            Drifting
+          </span>
+        )}
       </header>
       <h2 id="source-name" className="source-name">
         {source.name}

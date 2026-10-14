@@ -4,6 +4,8 @@
 import { DIAL, type PhosphorId, type StationDef } from '../broadcast/types';
 
 export const [MAIN_LO, MAIN_HI] = DIAL.mainBand;
+/** v4: the Outer Band, just above the main band (108 itself belongs to the main band). */
+export const [OUTER_LO, OUTER_HI] = DIAL.outerBand;
 
 const clampMhz = (mhz: number) => Math.min(DIAL.max, Math.max(DIAL.min, mhz));
 
@@ -11,6 +13,18 @@ const clampMhz = (mhz: number) => Math.min(DIAL.max, Math.max(DIAL.min, mhz));
 export const snapMhz = (mhz: number): number => Number((Math.round(clampMhz(mhz) / DIAL.step) * DIAL.step).toFixed(2));
 
 export const inMainBand = (mhz: number): boolean => mhz >= MAIN_LO - 1e-6 && mhz <= MAIN_HI + 1e-6;
+
+export const inOuterBand = (mhz: number): boolean => mhz > OUTER_LO + 1e-6 && mhz <= OUTER_HI + 1e-6;
+
+/** main: the listed stations · outer: the v4 Outer Band, listed too · deep: everything else. */
+export type Band = 'main' | 'outer' | 'deep';
+
+export const bandOf = (mhz: number): Band => (inMainBand(mhz) ? 'main' : inOuterBand(mhz) ? 'outer' : 'deep');
+
+export const BAND_LABEL: Record<Band, string> = { main: 'Main band', outer: 'Outer band', deep: 'Deep band' };
+
+/** A station that moves along the Outer Band from night to night (Free Frequency). */
+export const drifts = (station: Pick<StationDef, 'drift'>): boolean => (station.drift?.length ?? 0) > 1;
 
 /** Names short enough to print on the scale. */
 const DIAL_NAMES: Record<string, string> = {
@@ -79,6 +93,8 @@ export interface DialMarker {
   label: string;
   phosphor: PhosphorId;
   kind: MarkerKind;
+  /** Somewhere else tomorrow night: the marker sits at tonight's frequency. */
+  drift?: boolean;
 }
 
 export interface KnownPirate {
@@ -94,7 +110,14 @@ export function dialMarkers(stations: StationDef[], discovered: string[], pirate
   const out: DialMarker[] = [];
   for (const s of stations) {
     if (s.secret && !found.has(s.id)) continue;
-    out.push({ id: s.id, frequency: s.frequency, label: dialName(s), phosphor: s.phosphor, kind: s.secret ? 'secret' : 'station' });
+    out.push({
+      id: s.id,
+      frequency: s.frequency,
+      label: dialName(s),
+      phosphor: s.phosphor,
+      kind: s.secret ? 'secret' : 'station',
+      ...(drifts(s) ? { drift: true } : {}),
+    });
   }
   for (const id of found) {
     if (!id.startsWith('pirate-')) continue;
