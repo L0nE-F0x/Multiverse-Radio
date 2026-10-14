@@ -1,0 +1,21 @@
+// Scenes for the four v4 talk stations and the four v4 secrets (owned by the scenes-talk
+// workstream). Labels are one sentence each, for screen readers.
+
+import type { SceneId } from '../broadcast/types';
+import type { SceneEntry } from './registry';
+
+export const TALK_SCENES_V4: Partial<Record<SceneId, SceneEntry>> = {
+  // ── Outer Band talk stations ──
+  'radio-theatre': {
+    label: 'Two actors with scripts share a ribbon microphone in a dim studio while an organist plays in a pool of light under a red ON AIR sign.',
+    load: () => import('./defs/radio-theatre'),
+  },
+  courtroom: {
+    label: 'A courtroom at night: a judge writes beneath a crest of overlapping planets, rain runs down tall windows, and something glows in the dock.',
+    load: () => import('./defs/courtroom'),
+  },
+  'wormhole-interchange': {
+    label: 'A vast knot of glowing wormhole lanes jammed bumper to bumper with ship lights, a traffic pod sweeping a searchlight over it.',
+    load: () => import('./defs/wormhole-interchange'),
+  },
+};
