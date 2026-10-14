@@ -53,7 +53,7 @@ export default function ShipLogPanel() {
           {/* Night shifts worked (the store counts one once a night has 10 minutes on air); a new operator is on their first. */}
           <dd className="tabular">{Math.max(1, shifts)}</dd>
         </div>
-        <div>
+        <div className="log-hdg">
           <dt>Heading</dt>
           <dd className="tabular">{formatHeading(heading)}</dd>
         </div>

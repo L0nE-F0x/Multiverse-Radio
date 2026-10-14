@@ -2069,6 +2069,12 @@
     border: 1px dotted var(--mk);
   }
 
+  /* Michroma has no proper degree sign. */
+  .log-hdg dd {
+    font-family: var(--font-term);
+    font-weight: 600;
+  }
+
   .dir-note {
     font-family: var(--font-term);
     font-size: 9.5px;
