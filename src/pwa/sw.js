@@ -16,6 +16,13 @@
 //   tab still running old code can lazy-load its old chunks after Netlify has deleted them.
 // - Voice clips get a small, size-capped, one-day runtime cache. Range requests (from
 //   <audio> elements) pass straight through. Voice manifests are network-first.
+// - Flight-mode packs (src/pwa/offline.ts) stow whole stations in `mvr-packs`, filled by the
+//   page. Clips are served from it first (ranges too), before the runtime cache and the
+//   network. Manifests stay network-first online (so a new deploy shows up) but fall back to
+//   the pack, and come straight from it when the browser knows it's offline or the network
+//   stalls. The pack is never trimmed or versioned away here: only the page removes it.
+//   Requests carrying the `x-mvr-pack` header are the page filling a pack: they go straight
+//   to the network, untouched.
 
 /* eslint-disable */
 const BUILD = __BUILD__;
@@ -27,6 +34,11 @@ const SHELL = SHELL_PREFIX + VERSION;
 const META = 'mvr-meta';
 const VOICE = 'mvr-voice';
 const DATA = 'mvr-data';
+// Flight-mode packs: owned by the page (src/pwa/offline.ts). Never trimmed or deleted here.
+const PACKS = 'mvr-packs';
+const PACK_REQUEST_HEADER = 'x-mvr-pack';
+// With a stowed copy to fall back on, a stalled network ("lie-fi") gets this long.
+const PACKED_DATA_TIMEOUT_MS = 4000;
 const VOICE_MAX_ENTRIES = 60;
 const VOICE_MAX_AGE_MS = 24 * 60 * 60 * 1000;
 const DATA_MAX_ENTRIES = 40;
@@ -57,6 +69,7 @@ self.addEventListener('activate', (event) => {
       const previous = await meta.match('current').then((res) => (res ? res.text() : null));
       const keep = new Set([SHELL]);
       if (previous) keep.add(previous);
+      // Only old shells go: the runtime caches and mvr-packs survive every deploy.
       for (const key of await caches.keys()) {
         if (key.startsWith(SHELL_PREFIX) && !keep.has(key)) await caches.delete(key);
       }
@@ -71,23 +84,29 @@ self.addEventListener('activate', (event) => {
 
 self.addEventListener('fetch', (event) => {
   const { request } = event;
-  // Range requests come from <audio>/<video> elements; a cached full response would break
-  // them, so they always go straight to the network.
-  if (request.method !== 'GET' || request.headers.has('range')) return;
+  if (request.method !== 'GET') return;
   const url = new URL(request.url);
   if (url.origin !== self.location.origin) return;
   const path = url.pathname;
+
+  if (path.startsWith(BASE + 'voice/')) {
+    // The page filling a pack: straight to the network.
+    if (request.headers.has(PACK_REQUEST_HEADER)) return;
+    if (path.endsWith('.mp3')) {
+      event.respondWith(request.headers.has('range') ? voiceRange(request) : voiceClip(event));
+    } else if (path.endsWith('.json') && !request.headers.has('range')) {
+      event.respondWith(voiceData(event));
+    }
+    return;
+  }
+  // Range requests come from <audio>/<video> elements; a cached full response would break
+  // them, so they always go straight to the network.
+  if (request.headers.has('range')) return;
 
   if (request.mode === 'navigate') {
     event.respondWith(navigate(event, path));
   } else if (path.startsWith(BASE + 'assets/')) {
     event.respondWith(immutableAsset(request));
-  } else if (path.startsWith(BASE + 'voice/')) {
-    if (path.endsWith('.mp3')) {
-      event.respondWith(voiceClip(event));
-    } else if (path.endsWith('.json')) {
-      event.respondWith(networkFirst(event, DATA, DATA_MAX_ENTRIES));
-    }
   } else if (PRECACHED.has(path)) {
     event.respondWith(fromShell(request));
   }
@@ -162,6 +181,8 @@ async function fromShell(request) {
 
 async function voiceClip(event) {
   const { request } = event;
+  const stowed = await (await caches.open(PACKS)).match(request);
+  if (stowed) return stowed;
   const cache = await caches.open(VOICE);
   const cached = await cache.match(request);
   if (cached && Date.now() - Number(cached.headers.get(CACHED_AT) || 0) < VOICE_MAX_AGE_MS) {
@@ -175,6 +196,52 @@ async function voiceClip(event) {
     return res;
   } catch (error) {
     if (cached) return cached; // stale beats silence when the signal drops
+    throw error;
+  }
+}
+
+// A clip range (from an <audio> element): cut from the pack if the clip is stowed, otherwise
+// the network as before (a cached full response would break it).
+async function voiceRange(request) {
+  const stowed = await (await caches.open(PACKS)).match(request);
+  if (!stowed) return fetch(request);
+  const body = await stowed.arrayBuffer();
+  const size = body.byteLength;
+  const match = /^bytes=(\d*)-(\d*)$/.exec((request.headers.get('range') || '').trim());
+  let start = 0;
+  let end = size - 1;
+  if (match && (match[1] || match[2])) {
+    start = match[1] ? Number(match[1]) : Math.max(0, size - Number(match[2]));
+    end = match[1] && match[2] ? Math.min(Number(match[2]), size - 1) : size - 1;
+  }
+  const type = stowed.headers.get('content-type') || 'audio/mpeg';
+  if (!match || start > end || start >= size) {
+    return new Response(null, { status: 416, headers: { 'content-range': `bytes */${size}` } });
+  }
+  return new Response(body.slice(start, end + 1), {
+    status: 206,
+    headers: {
+      'content-type': type,
+      'content-length': String(end - start + 1),
+      'content-range': `bytes ${start}-${end}/${size}`,
+      'accept-ranges': 'bytes',
+    },
+  });
+}
+
+// Voice manifests (and _shows/_index): network-first into the small runtime cache; a stowed
+// copy answers when offline, when the network fails, or when it stalls.
+async function voiceData(event) {
+  const { request } = event;
+  const stowed = await (await caches.open(PACKS)).match(request);
+  if (stowed && self.navigator && self.navigator.onLine === false) return stowed;
+  try {
+    const network = networkFirst(event, DATA, DATA_MAX_ENTRIES);
+    if (!stowed) return await network;
+    const res = await withTimeout(network, PACKED_DATA_TIMEOUT_MS);
+    return res.status >= 500 ? stowed : res;
+  } catch (error) {
+    if (stowed) return stowed;
     throw error;
   }
 }
