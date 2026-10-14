@@ -271,6 +271,23 @@ export const RECIPE_INFO: Partial<Record<RecipeId, RecipeInfo>> = {
     label: 'Pirate bed',
     description: 'A hand-made mono beat from an attic: boom-bap played by hand, a sneaky chromatic bassline, keys never quite in tune, crackle, and wobbly tape that sometimes stops.',
   },
+  // v4 groove recipes (music-groove workstream).
+  disco: {
+    label: 'Disco',
+    description: 'Four on the floor with open hats on the off-beats, an octave-jumping bass, guitar chicks, lush strings with runs into every chorus, horns and congas. A breakdown, a snare roll, and the floor comes back.',
+  },
+  'space-funk': {
+    label: 'Space funk',
+    description: 'Minor-ninth vamps on a slap or Moog bass riff, clavinet and wah clav, tight sixteenth hats with ghost notes, Rhodes, a horn section and a gliding synth lead. Some nights, a big build-up and a collapse.',
+  },
+  'warehouse-techno': {
+    label: 'Warehouse techno',
+    description: 'A rumbling kick at 130–135 bpm, an acid line whose filter travels in long arcs, metal on cross-rhythms, a minimal stab in a long echo and a dark drone. Hypnotic, never shrill.',
+  },
+  'heat-death-house': {
+    label: 'Heat-death house',
+    description: 'Deep house with warm minor-ninth chords, a soft round kick, shuffled hats, a melancholy pad and a wordless vocal in the echo. As the tempo falls it thins out and opens up.',
+  },
 };
 
 /**

@@ -6,6 +6,7 @@ import type { GenreSamplePatch, GenreSynthPatch } from './dsp/genres';
 import type { Rng } from './rng';
 import type { BedsSamplePatch, BedsSynthPatch } from './dsp/beds-v3';
 import type { WorldSamplePatch, WorldSynthPatch } from './dsp/v4-world';
+import type { GrooveSamplePatch, GrooveSynthPatch } from './dsp/groove';
 
 export interface NoteEvent {
   /** Start, seconds from track start. */
@@ -101,7 +102,9 @@ export type SamplePatch =
   // v3 genre instruments (dsp/genres.ts)
   | GenreSamplePatch
   // v4 world instruments (dsp/v4-world.ts)
-  | WorldSamplePatch;
+  | WorldSamplePatch
+  // v4 groove instruments (dsp/groove.ts)
+  | GrooveSamplePatch;
 
 export type SynthPatch =
   | BedsSynthPatch
@@ -135,7 +138,9 @@ export type SynthPatch =
   // v3 genre instruments (dsp/genres.ts)
   | GenreSynthPatch
   // v4 world instruments (dsp/v4-world.ts)
-  | WorldSynthPatch;
+  | WorldSynthPatch
+  // v4 groove instruments (dsp/groove.ts)
+  | GrooveSynthPatch;
 
 interface InstrumentMix {
   /** Display name. */

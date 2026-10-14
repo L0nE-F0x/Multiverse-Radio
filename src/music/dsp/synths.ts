@@ -9,6 +9,7 @@ import { Biquad, Noise, sinc, TAU } from './core';
 import { BEDS_SYNTHS } from './beds-v3';
 import { GENRE_SYNTHS } from './genres';
 import { WORLD_SYNTHS } from './v4-world';
+import { GROOVE_SYNTHS } from './groove';
 
 export type Wave =
   | 'sine'
@@ -256,6 +257,7 @@ export const SYNTHS: Record<SynthPatch, SynthDef> = {
   },
   ...GENRE_SYNTHS,
   ...WORLD_SYNTHS,
+  ...GROOVE_SYNTHS,
 };
 
 // ── Waves ─────────────────────────────────────────────────────────────────────
