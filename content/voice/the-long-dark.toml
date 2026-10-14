@@ -154,10 +154,10 @@ id = "dj-001"
 category = "dj"
 title = "Mrs. Ruddle"
 lines = [
-  { say = "announcer", text = "Tonight's sound effects are performed, as ever, by Mrs. Ruddle, who has been closing the same door for the Penumbra Players for forty one years." },
+  { say = "announcer", text = "Tonight's sound effects are performed, as ever, by Missus Ruddle, who has been closing the same door for the Penumbra Players for forty one years." },
   { sfx = "door-creak" },
   { say = "ruddle", text = "It's a good door." },
-  { say = "announcer", text = "It is a very good door, Mrs. Ruddle." },
+  { say = "announcer", text = "It is a very good door, Missus Ruddle." },
 ]
 
 [[clip]]
@@ -203,7 +203,7 @@ id = "dj-006"
 category = "dj"
 title = "The Interval"
 lines = [
-  { say = "announcer", text = "A short interval, while the Players change scripts, and Mrs. Ruddle sweeps up the gravel from the last episode." },
+  { say = "announcer", text = "A short interval, while the Players change scripts, and Missus Ruddle sweeps up the gravel from the last episode." },
   { say = "ruddle", text = "There was a lot of gravel." },
   { say = "announcer", text = "It was a gravelly episode. Do stay with us." },
 ]
@@ -238,7 +238,7 @@ category = "ad"
 title = "Quillfeather Ribbons"
 bed = "organ"
 lines = [
-  { say = "announcer", text = "Every word you hear on The Long Dark was typed by Mrs. Ruddle, on a Quillfeather typewriter ribbon." },
+  { say = "announcer", text = "Every word you hear on The Long Dark was typed by Missus Ruddle, on a Quillfeather typewriter ribbon." },
   { sfx = "typing" },
   { say = "announcer", text = "Quillfeather Ribbons. They never fade, never smudge, and never, ever run out halfway through a cliffhanger. Unlike some ribbons. We won't name them. They know who they are." },
 ]
@@ -264,7 +264,7 @@ serial = { id = "the-long-dark", episode = 1 }
 bed = "fluorescent"
 lines = [
   { sting = "crime" },
-  { say = "announcer", text = "The Penumbra Players present: The Long Dark." },
+  { say = "announcer", text = "The Penumbra Players bring you: The Long Dark." },
   { say = "announcer", text = "Penumbra Station. The last lit place before the Long Dark, a stretch of nothing so wide that light gives up halfway across. Four rings. Eleven hundred souls. One detective." },
   { say = "announcer", text = "And lately, the lights have started going out. Episode one. Lights Out on Ring Four.", gap = 0.8 },
   { sfx = "typing" },
@@ -1101,7 +1101,7 @@ lines = [
   { say = "wren", text = "I know. I'm so sorry." },
   { pause = 1.0 },
   { sfx = "typing" },
-  { say = "announcer", text = "Mrs. Ruddle typed it up on the bar's old machine. One page. Five signatures. It is the shortest treaty ever signed, and possibly the most polite." },
+  { say = "announcer", text = "Missus Ruddle typed it up on the bar's old machine. One page. Five signatures. It is the shortest treaty ever signed, and possibly the most polite." },
   { say = "ashby", text = "What do we call you? For the paperwork." },
   { say = "wren", text = "Ah. I'm afraid Wren is the only part of it you could pronounce. The rest goes on rather a long time, and most of it is silence." },
   { say = "ashby", text = "Wren it is." },
@@ -1185,7 +1185,7 @@ show = "late-matinee"
 part = "open"
 lines = [
   { sting = "crime" },
-  { say = "announcer", text = "The Late Matinee. The Penumbra Players present short plays for long evenings. House lights down, please." },
+  { say = "announcer", text = "The Late Matinee. The Penumbra Players perform short plays for long evenings. House lights down, please." },
 ]
 
 [[clip]]
@@ -1259,7 +1259,7 @@ category = "dj"
 show = "lights-out-theatre"
 daypart = "night"
 lines = [
-  { say = "announcer", text = "It is very late. The organist has gone home. Mrs. Ruddle is asleep at the foley table with her head on the gravel tray." },
+  { say = "announcer", text = "It is very late. The organist has gone home. Missus Ruddle is asleep at the foley table with her head on the gravel tray." },
   { say = "announcer", text = "Only the Announcer remains. And, by the coat stand, someone in a grey coat, being sorry. Goodnight." },
 ]
 
@@ -1282,7 +1282,7 @@ category = "event"
 event = "convergence"
 kit = "the-smell"
 lines = [
-  { say = "announcer", text = "The studio smells of toast. Mrs. Ruddle wishes it known that toast is not, and has never been, one of her effects." },
+  { say = "announcer", text = "The studio smells of toast. Missus Ruddle wishes it known that toast is not, and has never been, one of her effects." },
   { say = "ruddle", text = "I do a very good bacon. That's coconut shells and a frying pan. Not toast. Never toast." },
 ]
 
@@ -1303,7 +1303,7 @@ event = "convergence"
 kit = "the-knock"
 lines = [
   { sfx = "door-creak" },
-  { say = "announcer", text = "Three knocks on the studio door. Mrs. Ruddle insists that wasn't her. She was holding the door." },
+  { say = "announcer", text = "Three knocks on the studio door. Missus Ruddle insists that wasn't her. She was holding the door." },
   { say = "wren", text = "That wasn't me either, before anybody asks. I always knock with the lights." },
 ]
 
@@ -1337,7 +1337,7 @@ bed = "organ"
 dates = ["10-24", "10-25", "10-26", "10-27", "10-28", "10-29", "10-30", "10-31"]
 lines = [
   { sting = "halloween" },
-  { say = "announcer", text = "For Halloween, the Penumbra Players present a traditional ghost story. The role of the ghost is played by Mister Wren, who asked for it, very politely, eleven times." },
+  { say = "announcer", text = "For Halloween, the Penumbra Players perform a traditional ghost story. The role of the ghost is played by Mister Wren, who asked for it, very politely, eleven times." },
   { say = "wren", text = "Woo. Is that right? Woo. I'm so sorry. Woo." },
   { say = "announcer", text = "He is the least frightening ghost the Players have ever cast. He apologises to every door before he walks through it." },
   { say = "announcer", text = "And yet. When the studio lights went out during rehearsal, every single member of the cast screamed. He was so sorry. He brought biscuits the next day. Happy Halloween." },

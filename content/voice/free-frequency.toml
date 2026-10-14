@@ -507,8 +507,8 @@ kit = "tomorrow-109.75"
 title = "Tomorrow, in Code"
 lines = [
   { sfx = "morse" },
-  { say = "kate", text = "Tomorrow night's frequency. Take a hundred and ten, and eat a quarter of it. Like a pie somebody's been at." },
-  { say = "kate", text = "What's left on the plate is where I'll be. Crumbs and all." },
+  { say = "kate", text = "Tomorrow night's frequency. Picture a hundred and ten pies, in a row. Somebody's had a quarter of the last one." },
+  { say = "kate", text = "Count what's left on the plates. That's where I'll be. Crumbs and all." },
 ]
 
 [[clip]]
@@ -595,7 +595,7 @@ kit = "tomorrow-116.95"
 title = "Tomorrow, in Code"
 lines = [
   { sfx = "morse" },
-  { say = "kate", text = "Tomorrow night, I'll be just short of a hundred and seventeen. Five hundredths short." },
+  { say = "kate", text = "Tomorrow night, I'll be just short of a hundred and seventeen. Short by five hundredths. Five pence short of a pound." },
   { say = "kate", text = "Like a train that stops just before the platform, and everybody has to step down onto the gravel. Mind the gravel." },
 ]
 

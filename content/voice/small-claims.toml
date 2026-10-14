@@ -83,7 +83,7 @@ lines = [
 id = "id-005"
 category = "id"
 lines = [
-  { say = "odell", text = "You are listening to Courtroom Four, live, on one one oh point two. The court is in session. The court is always in session." },
+  { say = "odell", text = "You are listening to Courtroom Four, on one one oh point two. The court is in session. The court is always in session." },
 ]
 
 # ── Case kit: the claim, the hearing, the ruling ──────────────────────────────
