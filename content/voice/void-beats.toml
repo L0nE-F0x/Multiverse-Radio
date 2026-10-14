@@ -637,3 +637,16 @@ lines = [
   { say = "host", text = "A pigeon just walked into Room Zero. There's no door. It walked in anyway." },
   { say = "host", text = "It's sitting on my notes, next to the probably a cat. They seem to know each other. Hi, pigeon." },
 ]
+
+
+# ── v4: Monday review of The Quiet Corner with Greg (92.6, Sundays at two) ──
+
+[[clip]]
+id = "quiet-corner-review"
+category = "dj"
+title = "Review: The Quiet Corner with Greg"
+days = [1]
+lines = [
+  { say = "host", text = "Shout-out to Greg, who did his first show on Sunday, on the Lounge at the End of Time. I listened to the whole thing. I didn't hear any of it." },
+  { say = "host", text = "The void heard it. The void says it was about a porch light. The void has been very quiet all day." },
+]

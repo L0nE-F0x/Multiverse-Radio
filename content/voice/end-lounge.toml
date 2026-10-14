@@ -240,7 +240,7 @@ id = "last-call"
 name = "Last Call"
 blurb = "Last call has been going on for eleven billion years. This is the good part."
 start = 0
-end = 3
+end = 2
 
 [[show]]
 id = "the-cocktail-hour"
@@ -582,4 +582,115 @@ lines = [
   { say = "host", text = "A pigeon has walked into the Lounge, darling, and taken a stool at the bar, as if it's been coming here for years." },
   { say = "gilbert", text = "The usual?" },
   { say = "host", text = "Gilbert knows its usual. I didn't know it had a usual." },
+]
+
+
+# ══ v4: The Quiet Corner with Greg ═══════════════════════════════════════════
+#
+# Sundays, 02:00-03:00 local. Greg, the shadow at the end of the bar, gets a show. He
+# speaks so softly that nobody can hear it (whisper fx; the director should air his clips
+# well under the music). If you strain, it's very sweet. On Mondays, hosts elsewhere on the
+# dial review it. Last Call now runs midnight to two, so the shows don't overlap.
+
+[[show]]
+id = "the-quiet-corner"
+name = "The Quiet Corner with Greg"
+blurb = "Sundays, two till three. Greg, a shadow, says a few things very softly from the end of the bar. Lean in."
+start = 2
+end = 3
+host = "Greg, a Shadow"
+days = [0]
+
+[[clip]]
+id = "the-quiet-corner-open"
+category = "id"
+title = "The Quiet Corner with Greg"
+part = "open"
+show = "the-quiet-corner"
+lines = [
+  { say = "host", text = "Dim the lights, Gilbert. Dimmer." },
+  { say = "gilbert", text = "They're off." },
+  { say = "host", text = "Perfect. Ladies, gentlemen, and booth four. The voice at the end of the bar. The Quiet Corner, with Greg. Lean in, darlings." },
+]
+
+[[clip]]
+id = "the-quiet-corner-01"
+category = "dj"
+show = "the-quiet-corner"
+lines = [
+  { say = "greg", text = "Hello. It's Greg. This is the Quiet Corner.", speed = 0.9, gap = 1.2 },
+  { say = "greg", text = "I haven't got a lot to say. So I thought I'd say it quietly. In case it's only for one of you.", speed = 0.9, gap = 1.6 },
+  { say = "greg", text = "If it is. Hello. I'm glad it's you.", speed = 0.9, gap = 1.2 },
+]
+
+[[clip]]
+id = "the-quiet-corner-02"
+category = "dj"
+show = "the-quiet-corner"
+lines = [
+  { say = "greg", text = "Hollis left the porch light on for eleven years. For me.", speed = 0.9, gap = 1.2 },
+  { say = "greg", text = "I've been thinking about what I could leave on, for somebody else.", speed = 0.9, gap = 1.6 },
+  { say = "greg", text = "So. There's a light on, in the corner. It's very small. It's yours. You don't have to come in. It's just on.", speed = 0.9, gap = 1.2 },
+]
+
+[[clip]]
+id = "the-quiet-corner-03"
+category = "dj"
+show = "the-quiet-corner"
+lines = [
+  { say = "greg", text = "Something I know, from being a shadow.", speed = 0.9, gap = 1.2 },
+  { say = "greg", text = "You're never really on your own. There's always something near you, keeping your shape.", speed = 0.9, gap = 1.6 },
+  { say = "greg", text = "Even at night. Especially at night. That's when we're everywhere.", speed = 0.9, gap = 1.2 },
+]
+
+[[clip]]
+id = "the-quiet-corner-04"
+category = "dj"
+show = "the-quiet-corner"
+lines = [
+  { say = "greg", text = "Gilbert asked what I'd like to play. I said, something you have to lean in for.", speed = 0.9, gap = 1.2 },
+  { say = "greg", text = "He said, at the end of time, everything is something you have to lean in for.", speed = 0.9, gap = 1.6 },
+  { say = "greg", text = "He's right. So. Lean in. This one's soft.", speed = 0.9, gap = 1.2 },
+]
+
+[[clip]]
+id = "the-quiet-corner-05"
+category = "dj"
+show = "the-quiet-corner"
+lines = [
+  { say = "greg", text = "News from home. Hollis and I walked to the shops on Tuesday.", speed = 0.9, gap = 1.2 },
+  { say = "greg", text = "At about four in the afternoon, I was very long. Right across the road. He said I looked tall.", speed = 0.9, gap = 1.6 },
+  { say = "greg", text = "It's the nicest thing anybody has ever said to me. I wanted to tell someone.", speed = 0.9, gap = 1.2 },
+]
+
+[[clip]]
+id = "the-quiet-corner-06"
+category = "dj"
+show = "the-quiet-corner"
+lines = [
+  { say = "greg", text = "If you're the only one still listening, thank you.", speed = 0.9, gap = 1.2 },
+  { say = "greg", text = "I know it's hard to hear me. I'm not very good at loud.", speed = 0.9, gap = 1.6 },
+  { say = "greg", text = "But I'm very good at staying. I'll be here till three. Then I'll walk you to the door.", speed = 0.9, gap = 1.2 },
+]
+
+[[clip]]
+id = "the-quiet-corner-07"
+category = "dj"
+show = "the-quiet-corner"
+lines = [
+  { say = "greg", text = "A message for the operator on the Nightjar.", speed = 0.9, gap = 1.2 },
+  { say = "greg", text = "You keep a light on for a lot of people, out there. Somebody should keep one on for you.", speed = 0.9, gap = 1.6 },
+  { say = "greg", text = "So I have. It's the little one, by the door. Goodnight, operator.", speed = 0.9, gap = 1.2 },
+]
+
+[[clip]]
+id = "the-quiet-corner-close"
+category = "id"
+title = "The Quiet Corner with Greg"
+part = "close"
+show = "the-quiet-corner"
+lines = [
+  { say = "host", text = "That was The Quiet Corner, with Greg. I didn't catch a single word, darling, and I've never been so moved." },
+  { say = "gilbert", text = "He tipped well." },
+  { say = "host", text = "Same time next Sunday." },
 ]

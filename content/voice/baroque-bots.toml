@@ -508,3 +508,18 @@ lines = [
   { say = "host", text = "A pigeon has walked into the orchestra pit, and is standing beside the conductor's spoon." },
   { say = "host", text = "It appears to be keeping time. Several of the musicians have curtsied to it. Next piece." },
 ]
+
+
+# ── v4: Monday review of The Quiet Corner with Greg (92.6, Sundays at two) ──
+
+[[clip]]
+id = "quiet-corner-review"
+category = "dj"
+title = "Review: The Quiet Corner with Greg"
+days = [1]
+lines = [
+  { say = "host", text = "A review. The Quiet Corner with Greg, on Sunday, at the Lounge at the End of Time. I listened with every sensor at maximum." },
+  { say = "host", text = "I detected one word, the clink of a dry ginger, and what may have been a kindness. Adequately moving. By shadow standards." },
+  { say = "cello", text = "I cried." },
+  { say = "host", text = "Condensation, Unit Nine." },
+]

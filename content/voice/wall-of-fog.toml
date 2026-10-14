@@ -387,3 +387,17 @@ lines = [
   { say = "host", text = "...there's a pigeon... by the lamp... it knows the lamp..." },
   { say = "host", text = "...they're old friends... I'm a bit jealous, honestly." },
 ]
+
+
+# ── v4: Monday review of The Quiet Corner with Greg (92.6, Sundays at two) ──
+
+[[clip]]
+id = "quiet-corner-review"
+category = "dj"
+title = "Review: The Quiet Corner with Greg"
+days = [1]
+lines = [
+  { say = "host", text = "...did anyone hear... the Greg thing... on Sunday..." },
+  { say = "host", text = "...couldn't make out a word... not one..." },
+  { say = "host", text = "...finally... somebody gets it... yeah." },
+]

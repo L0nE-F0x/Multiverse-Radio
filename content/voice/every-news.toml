@@ -1655,3 +1655,16 @@ lines = [
   { say = "dale", text = "A pigeon has walked into the newsroom. Sources say the same pigeon is in every studio on the dial." },
   { say = "dale", text = "It has nodded at me twice, as if we went to school together. We did not. More at eleven." },
 ]
+
+
+# ── v4: Monday review of The Quiet Corner with Greg (92.6, Sundays at two) ──
+
+[[clip]]
+id = "quiet-corner-review"
+category = "dj"
+title = "Review: The Quiet Corner with Greg"
+days = [1]
+lines = [
+  { say = "dale", text = "Arts. Early on Sunday morning, the Lounge at the End of Time broadcast the first Quiet Corner with Greg, a shadow. Our critic listened at full volume, with the windows shut." },
+  { say = "dale", text = "Her review reads, in full: bold, spare, I think he said hello. Four stars." },
+]

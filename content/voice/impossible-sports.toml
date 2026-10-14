@@ -1066,3 +1066,18 @@ lines = [
   { say = "chip", text = "There's a pigeon on the pitch, folks! It's walking straight through the Gravity Polo! It's waving at Doug! Doug, do you know this pigeon?" },
   { say = "doug", text = "We played Cloudball together, Chip." },
 ]
+
+
+# ── v4: Monday review of The Quiet Corner with Greg (92.6, Sundays at two) ──
+
+[[clip]]
+id = "quiet-corner-review"
+category = "dj"
+title = "Review: The Quiet Corner with Greg"
+days = [1]
+lines = [
+  { say = "chip", text = "Doug, did you catch The Quiet Corner with Greg on Sunday?" },
+  { say = "doug", text = "I did, Chip. The full hour. Didn't hear a thing." },
+  { say = "chip", text = "That's Greg, Number Zero, folks! Same as on the pitch! You never see him coming!" },
+  { say = "doug", text = "Lovely restraint. You can't coach that." },
+]

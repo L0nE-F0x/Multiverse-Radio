@@ -523,3 +523,16 @@ lines = [
   { say = "host", text = "A pigeon just walked into the studio with the attitude of somebody who's been here before." },
   { say = "host", text = "It's sitting on the console like it owns the place. Maybe it does. Pigeon, you are welcome on Neon twenty eighty-seven, any time." },
 ]
+
+
+# ── v4: Monday review of The Quiet Corner with Greg (92.6, Sundays at two) ──
+
+[[clip]]
+id = "quiet-corner-review"
+category = "dj"
+title = "Review: The Quiet Corner with Greg"
+days = [1]
+lines = [
+  { say = "host", text = "Did anybody catch The Quiet Corner with Greg at the weekend? Over on the Lounge? I turned it all the way up. I put my ear on the speaker." },
+  { say = "host", text = "Bold. Spare. I think he said hello. Greg, buddy, that was the most rad hour of radio I have never heard." },
+]
