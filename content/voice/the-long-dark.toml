@@ -638,6 +638,10 @@ lines = [
   { pause = 1.0 },
   { say = "vance", text = "Contact. We're docked. We're docked, Penumbra. Somebody tell my hands to stop shaking." },
   { say = "haskett", text = "Welcome to Penumbra Station, Captain. Mind the step. We've no lights either." },
+  { pause = 1.0 },
+  { say = "wren", text = "Welcome home, Captain. Mind how you go.", fx = "distant" },
+  { say = "vance", text = "Who said that? Penumbra, who's on this channel?" },
+  { say = "haskett", text = "Nobody, Captain. Nobody on this channel at all." },
 ]
 
 [[clip]]
@@ -700,7 +704,8 @@ lines = [
   { say = "announcer", text = "Previously, on The Long Dark. The Tern came in blind, with ten thousand floodlights, every one unscrewed half a turn. And in the Lumen Bar, in the dark, Mags held a coin for something she hadn't sold." },
   { say = "announcer", text = "Episode seven. What Mags Sold.", gap = 0.8 },
   { say = "mags", text = "Opening night. Forty years ago. Last customer gone, I'm wiping down, and there he is at the end of the bar. Grey coat. Glass of water. Sorry to trouble me." },
-  { say = "mags", text = "He says, I'd like to buy an hour of dark, please. Just the one. Every night. From three until four." },
+  { say = "mags", text = "And he says..." },
+  { say = "wren", text = "I'd like to buy an hour of dark, please. Just the one. Every night. From three until four. If it's no trouble.", fx = "ghost" },
   { say = "calder", text = "And you said yes." },
   { say = "mags", text = "I was nineteen. He was polite. I said yes to a lot of polite things at nineteen. So every night, at three, I turn everything off, and I sit with him in the dark." },
   { say = "calder", text = "What do you do?" },

@@ -21,7 +21,7 @@ const V4_PENDING = new Set<string>([
   'saturday-night-forever', 'orbit-roots', 'substation-null', 'tiki-satellite', 'island-time',
   'atomic-bachelor-pad', 'velvet-collapse', 'heat-death-afterparty', 'minute-between', 'the-harbour',
   'something-listening', 'disco', 'space-funk', 'warehouse-techno', 'heat-death-house', 'roots-reggae',
-  'island-reggae', 'exotica', 'space-age-pop', 'court-bed', 'theatre-organ', 'traffic-bed', 'pirate-bed',
+  'island-reggae', 'exotica', 'space-age-pop',
 ]);
 
 describe('rng', () => {
