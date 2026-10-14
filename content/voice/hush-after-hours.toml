@@ -322,3 +322,71 @@ lines = [
   { say = "hush", text = "Boo.", gap = 1.2 },
   { say = "hush", text = "That's all I've got. I'm a very gentle ghost. Here's a slightly spooky one. Not too spooky. The operator's asleep." },
 ]
+
+# ── The Convergence (v4): one reaction per kit ────────────────────────────────
+
+[[clip]]
+id = "convergence-missing-moon"
+category = "event"
+event = "convergence"
+kit = "missing-moon"
+title = "Out of Respect"
+lines = [
+  { say = "hush", text = "News, I think. That's a radio thing. A moon has gone missing, everywhere.", gap = 0.7 },
+  { say = "hush", text = "I checked the viewport. We never had one, so we're fine. I've dimmed the lights a little anyway. Out of respect." },
+]
+
+[[clip]]
+id = "convergence-the-smell"
+category = "event"
+event = "convergence"
+kit = "the-smell"
+title = "Operator Approves"
+lines = [
+  { say = "hush", text = "The cabin smells of toast. The operator just said, mm, in their sleep. I've logged it as, operator approves.", gap = 0.7 },
+  { say = "hush", text = "I didn't make the toast. I'd like that on the record. I'd have liked to, though." },
+]
+
+[[clip]]
+id = "convergence-the-song"
+category = "event"
+event = "convergence"
+kit = "the-song"
+title = "Stuck"
+lines = [
+  { say = "hush", text = "Everyone has the same song stuck in their head. So do I. I didn't know I could get a song stuck.", gap = 0.6 },
+  { say = "hush", text = "It's the first thing I've ever had stuck. I like it. I'd play it for you, but it stops halfway. Like everyone's." },
+]
+
+[[clip]]
+id = "convergence-the-knock"
+category = "event"
+event = "convergence"
+kit = "the-knock"
+title = "Not Now, Thank You"
+lines = [
+  { say = "hush", text = "Three knocks on the hull. I didn't answer. The operator's asleep, and I'm on the air.", gap = 0.7 },
+  { say = "hush_low", text = "I whispered, not now, thank you, through the hull. I hope that was polite." },
+]
+
+[[clip]]
+id = "convergence-wrong-colour"
+category = "event"
+event = "convergence"
+kit = "wrong-colour"
+title = "Tonight's Colour"
+lines = [
+  { say = "hush", text = "The viewport has gone a colour I haven't got a word for. I've tried twelve words. None of them fit.", gap = 0.6 },
+  { say = "hush", text = "I've decided it's the colour of tonight's show. Here's a record to match." },
+]
+
+[[clip]]
+id = "convergence-the-pigeon"
+category = "event"
+event = "convergence"
+kit = "the-pigeon"
+title = "A Request"
+lines = [
+  { say = "hush", text = "There's a pigeon on the console. It walked right past the operator without waking them, which is more than I manage.", gap = 0.6 },
+  { say = "hush", text = "It's looking at the microphone. I think it's a request. This one's for the pigeon." },
+]

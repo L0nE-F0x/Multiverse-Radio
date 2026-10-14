@@ -1,0 +1,284 @@
+# The Minute Between — 133.3, the gap between 3:33 and 3:34. A secret station.
+#
+# On air only from 03:33 to 03:46 local; static at this frequency the rest of the night.
+# The Interval lives inside the minute: a room between two clock ticks, dust hanging in the
+# moonlight, a glass that has been falling for as long as anyone remembers, a clock with its
+# second hand caught halfway. Ambient: voices are rare, short and calm, slightly amused that
+# you found the door. Thirteen minutes of airtime a night, all of which are the same one.
+#
+# The Convergence (Saturdays, 20:00 UTC) can only reach in here when that happens to be 03:33
+# somewhere; the reactions are written for it anyway, and they arrive late and frozen.
+station = "minute-between"
+
+[voices]
+interval = { voice = "bf_lily", speed = 0.82, name = "The Interval" }
+interval_low = { voice = "bf_lily", speed = 0.8, fx = "whisper", name = "The Interval" }
+
+[[show]]
+id = "the-minute"
+name = "The Minute"
+blurb = "Thirteen minutes from the inside of one. Take your time. There is plenty, all of it the same."
+start = 3
+end = 4
+
+# ── Idents ────────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "id-001"
+category = "id"
+lines = [
+  { say = "interval", text = "This is the Minute Between. It is three thirty three.", gap = 1.0 },
+  { say = "interval", text = "It will be, for a while." },
+]
+
+[[clip]]
+id = "id-002"
+category = "id"
+lines = [
+  { say = "interval", text = "One hundred and thirty three point three. The Minute Between.", gap = 0.8 },
+  { say = "interval", text = "You found the door." },
+]
+
+[[clip]]
+id = "id-003"
+category = "id"
+lines = [
+  { say = "interval", text = "The Minute Between. Broadcasting from just after three thirty three.", gap = 0.8 },
+  { say = "interval", text = "There's more room in here than you'd think." },
+]
+
+[[clip]]
+id = "id-004"
+category = "id"
+lines = [
+  { say = "interval_low", text = "You're listening to the inside of a minute. Please keep your voice down. The second hand is resting." },
+]
+
+[[clip]]
+id = "id-005"
+category = "id"
+lines = [
+  { sfx = "bell", level = 0.25 },
+  { pause = 1.0 },
+  { say = "interval", text = "The Minute Between. That was the clock, trying. It does that." },
+]
+
+[[clip]]
+id = "id-the-minute"
+category = "id"
+title = "The Minute"
+show = "the-minute"
+part = "open"
+lines = [
+  { say = "interval", text = "Three thirty three. The door is open.", gap = 1.0 },
+  { say = "interval", text = "This is the Minute. I am the Interval. Come in. Take your time." },
+]
+
+# ── The Interval ──────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "dj-001"
+category = "dj"
+lines = [
+  { say = "interval", text = "There is a glass on the table that has been falling for as long as I have lived here.", gap = 1.2 },
+  { say = "interval", text = "It hasn't reached the floor. I don't think it wants to. I wouldn't either." },
+]
+
+[[clip]]
+id = "dj-002"
+category = "dj"
+lines = [
+  { say = "interval", text = "The dust in the moonlight hasn't moved since I arrived. Every speck is exactly where it was.", gap = 1.0 },
+  { say = "interval", text = "I've named some of them. Not all. I'm pacing myself." },
+]
+
+[[clip]]
+id = "dj-003"
+category = "dj"
+lines = [
+  { say = "interval", text = "People ask what I do in here. I wait.", gap = 1.2 },
+  { say = "interval", text = "Not for anything. Waiting is simply what the inside of a minute feels like." },
+]
+
+[[clip]]
+id = "dj-004"
+category = "dj"
+lines = [
+  { say = "interval", text = "There's a clock on the wall with its second hand caught halfway.", gap = 1.0 },
+  { say = "interval", text = "I've grown fond of it. It's trying very hard." },
+]
+
+[[clip]]
+id = "dj-005"
+category = "dj"
+lines = [
+  { say = "interval", text = "If you came here to put something off, you're welcome. This is the place for it.", gap = 1.0 },
+  { say = "interval", text = "Everything you're putting off is out there, in the next minute. It will keep." },
+]
+
+[[clip]]
+id = "dj-006"
+category = "dj"
+lines = [
+  { say = "interval", text = "The next minute knocks, now and then. Very politely.", gap = 1.0 },
+  { say = "interval", text = "I tell it, soon. It goes away, and comes back, and it is always the same knock." },
+]
+
+[[clip]]
+id = "dj-007"
+category = "dj"
+lines = [
+  { say = "interval", text = "Everyone awake at three thirty three thinks they are the only one.", gap = 1.0 },
+  { say = "interval", text = "They're all in here. A little way apart, like strangers in a waiting room. Hello, all of you." },
+]
+
+[[clip]]
+id = "dj-008"
+category = "dj"
+lines = [
+  { say = "interval", text = "I counted the minute once, from the inside. It took years.", gap = 1.2 },
+  { say = "interval", text = "It came to sixty. I was a little disappointed. I had hoped for sixty one." },
+]
+
+[[clip]]
+id = "dj-009"
+category = "dj"
+lines = [
+  { say = "interval", text = "In here, the kettle never boils, and never goes cold.", gap = 1.0 },
+  { say = "interval", text = "It's the most restful thing I know. I think the kettle agrees." },
+]
+
+[[clip]]
+id = "dj-010"
+category = "dj"
+lines = [
+  { say = "interval", text = "If you fall asleep in here, you won't miss anything.", gap = 1.2 },
+  { say = "interval_low", text = "Nothing happens. That's the gift." },
+]
+
+[[clip]]
+id = "dj-011"
+category = "dj"
+title = "The Ship"
+lines = [
+  { say = "interval", text = "Your ship keeps very good time. Tell her she needn't, in here.", gap = 1.0 },
+  { say = "interval", text = "Tell her the Interval says hello. She'll pretend she doesn't remember me. Ships are like that." },
+]
+
+[[clip]]
+id = "dj-012"
+category = "dj"
+lines = [
+  { say = "interval", text = "When you go, it will be three forty six. You'll have been here thirteen minutes, and also no time at all.", gap = 1.0 },
+  { say = "interval", text = "Both are true. Take whichever you need." },
+]
+
+[[clip]]
+id = "dj-the-minute-1"
+category = "dj"
+show = "the-minute"
+lines = [
+  { say = "interval", text = "It's nearly the end of the minute. It is always nearly the end of the minute.", gap = 1.2 },
+  { say = "interval", text = "Come back tomorrow, at the same time. It will be the same time." },
+]
+
+[[clip]]
+id = "news-001"
+category = "news"
+title = "The News, from Inside the Minute"
+lines = [
+  { say = "interval", text = "The news, from inside the minute.", gap = 1.4 },
+  { say = "interval", text = "Nothing has happened. Nothing is about to.", gap = 1.4 },
+  { say = "interval", text = "That is all the news. It is good news. It will be good news again tomorrow, at the same time, for the same reasons." },
+]
+
+[[clip]]
+id = "weather-001"
+category = "weather"
+title = "Weather, Inside the Minute"
+lines = [
+  { say = "interval", text = "Weather, inside the minute.", gap = 1.0 },
+  { say = "interval", text = "Still. Moonlight from the left, at the usual angle. Dust, suspended. No wind.", gap = 1.0 },
+  { say = "interval", text = "A small chance of the second hand moving.", gap = 1.6 },
+  { say = "interval", text = "It won't." },
+]
+
+[[clip]]
+id = "psa-001"
+category = "psa"
+title = "Time Check"
+lines = [
+  { say = "interval", text = "Time check. It is three thirty three, and some of the way to three thirty four.", gap = 1.0 },
+  { say = "interval", text = "I won't say how far. It's rude to ask a minute its age." },
+]
+
+# ── The Convergence (v4): one reaction per kit ────────────────────────────────
+
+[[clip]]
+id = "convergence-missing-moon"
+category = "event"
+event = "convergence"
+kit = "missing-moon"
+title = "A Moon That Isn't Going Anywhere"
+lines = [
+  { say = "interval", text = "A moon has gone missing, they tell me. Not in here. The moon in the window is exactly where it was at three thirty three.", gap = 1.0 },
+  { say = "interval", text = "If anyone needs one, I have a moon. It isn't going anywhere." },
+]
+
+[[clip]]
+id = "convergence-the-smell"
+category = "event"
+event = "convergence"
+kit = "the-smell"
+title = "Toast in the Doorway"
+lines = [
+  { say = "interval", text = "The toast has reached us. Just the edge of it, stopped in the doorway, like everything else.", gap = 1.0 },
+  { say = "interval", text = "It will smell like that in here forever now. I don't mind." },
+]
+
+[[clip]]
+id = "convergence-the-song"
+category = "event"
+event = "convergence"
+kit = "the-song"
+title = "One Note"
+lines = [
+  { say = "interval", text = "I have the song too. Only one note of it.", gap = 1.0 },
+  { say = "interval", text = "The rest is in the next minute. I'm told it's lovely." },
+]
+
+[[clip]]
+id = "convergence-the-knock"
+category = "event"
+event = "convergence"
+kit = "the-knock"
+title = "Only the First Knock"
+lines = [
+  { sfx = "chopping", seconds = 0.3, level = 0.6 },
+  { pause = 1.4 },
+  { say = "interval", text = "Three knocks, they say. In here, only the first one has arrived.", gap = 1.0 },
+  { say = "interval", text = "The other two are still on their way. I'll let you know." },
+]
+
+[[clip]]
+id = "convergence-wrong-colour"
+category = "event"
+event = "convergence"
+kit = "wrong-colour"
+title = "A Good Long Look"
+lines = [
+  { say = "interval", text = "The sky in the window has gone the new colour, and in here it will stay that colour.", gap = 1.0 },
+  { say = "interval", text = "I'm the only one who'll ever get a good long look at it. It's", gap = 1.6 },
+  { say = "interval", text = "No. I won't name it." },
+]
+
+[[clip]]
+id = "convergence-the-pigeon"
+category = "event"
+event = "convergence"
+kit = "the-pigeon"
+title = "One Foot Up"
+lines = [
+  { say = "interval", text = "The pigeon is here. Mid-step. One foot up. It has been like that for some time.", gap = 1.0 },
+  { say = "interval", text = "It looks at me as if I'm the one who should be embarrassed." },
+]
