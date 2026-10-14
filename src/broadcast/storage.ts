@@ -11,7 +11,8 @@ const KEYS = {
   // v4
   shifts: 'multiverse-radio:shifts',
   arcs: 'multiverse-radio:arcs',
-  welcomed: 'multiverse-radio:welcomed',
+  // Not 'multiverse-radio:welcomed': onboarding's first-visit card owns that key.
+  welcomed: 'multiverse-radio:secret-welcomes',
   listenTime: LISTEN_TIME_KEY,
 } as const;
 
