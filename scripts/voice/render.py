@@ -4,11 +4,13 @@
     content/voice/<station>.toml  ->  public/voice/<station>/<clip-id>.mp3
                                       public/voice/<station>.json   (VoiceManifest)
     every file's [[show]] blocks  ->  public/voice/_shows.json     (ShowIndex)
+    every manifest's size/version ->  public/voice/_index.json     (VoiceIndex)
 
 Usage (see scripts/voice/README.md):
     render.py                         render every station and pool (skips _example and other drafts)
     render.py --station void-beats    just one station (repeatable; also renders drafts by name)
     render.py --check                 validate every script without rendering
+    render.py --index                 only regenerate _index.json from what's on disk
     render.py --force                 re-render clips even if nothing changed
     render.py --out /tmp/voice        render somewhere other than public/voice
     render.py --clip 'id-*' --out D   only matching clips (test renders outside public/voice)
@@ -30,8 +32,8 @@ import sys
 import time
 from pathlib import Path
 
-from voicescript import (Script, available_voices, bitrate_for, check_serials, load_script, roster_station_ids,
-                         ts_string_array)
+from voicescript import (Script, available_voices, bitrate_for, check_serials, load_script, roster_drift,
+                         roster_station_ids, ts_string_array)
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent.parent
@@ -43,6 +45,9 @@ TYPES = ROOT / "src" / "broadcast" / "types.ts"
 # fresh checkout (no .cache) only renders what actually changed.
 LOCK = HERE / "render-lock.json"
 SHOWS = "_shows.json"
+# v4: VoiceIndex (clips, bytes and a content version per manifest) for offline packs.
+INDEX = "_index.json"
+INDEX_HASH = 12  # hex digits of an index entry's version
 CACHE = Path(os.environ.get("VOICE_CACHE", HERE / ".cache"))
 KOKORO_MODEL = Path(os.environ.get("KOKORO_MODEL", "~/.local/share/bb-tts/kokoro-v1.0.onnx")).expanduser()
 KOKORO_VOICES = Path(os.environ.get("KOKORO_VOICES", "~/.local/share/bb-tts/voices-v1.0.bin")).expanduser()
@@ -94,10 +99,11 @@ def load_all(paths: list[Path], content: Path) -> list[Script]:
     events = ts_string_array(TYPES, "EVENT_IDS")
     if not events:
         sys.exit(f"error: couldn't read EVENT_IDS from {rel(TYPES)}")
+    drift = roster_drift(ROSTER)
     voices = available_voices(KOKORO_VOICES)
     wanted = {p.resolve() for p in paths}
     everything = {p.resolve(): p for p in sorted(content.glob("*.toml"))} | {p.resolve(): p for p in paths}
-    loaded = {key: load_script(path, voices, roster, events) for key, path in everything.items()}
+    loaded = {key: load_script(path, voices, roster, events, drift) for key, path in everything.items()}
     check_serials(list(loaded.values()))
     scripts = []
     for path in paths:
@@ -139,6 +145,12 @@ def check(scripts: list[Script]) -> int:
         serials = {c.serial.id for c in script.clips if c.serial}
         if serials:
             extras.append(f"{len(serials)} serial{'s' if len(serials) > 1 else ''}")
+        arc_steps = sum(1 for c in script.clips if c.arc)
+        if arc_steps:
+            extras.append(f"{arc_steps} arc step{'s' if arc_steps > 1 else ''}")
+        reactions = sum(1 for c in script.clips if c.event == "convergence")
+        if reactions and not script.is_pool:
+            extras.append(f"{reactions} convergence")
         extra = f"  ({', '.join(extras)})" if extras else ""
         print(f"  {script.station:<22} {len(script.clips):>4} clips  ~{fmt_seconds(est):>7}  {flag}{extra}")
         if not script.is_draft:
@@ -248,6 +260,10 @@ def manifest_entry(station: str, clip, duration_ms: int, lines: list[dict]) -> d
         entry["level"] = clip.level
     if clip.event:
         entry["event"] = clip.event
+    if clip.arc:
+        entry["arc"] = {"id": clip.arc.id, "step": clip.arc.step}
+    if clip.days:
+        entry["days"] = list(clip.days)
     entry["lines"] = lines
     return entry
 
@@ -306,6 +322,55 @@ def write_shows(out: Path, scripts: list[Script], full: bool) -> bool:
         return False
     write_json(path, data)
     return True
+
+
+def index_entry(out: Path, manifest: Path) -> tuple[dict, list[str]]:
+    """One VoiceIndex entry: clip count, total MP3 bytes, and a version that changes whenever
+    the manifest or any clip's bytes change (sha256 of the manifest file, then each clip's MP3
+    in manifest order; 12 hex digits). Returns the entry and any clips missing on disk."""
+    raw = manifest.read_bytes()
+    clips = json.loads(raw).get("clips", [])
+    digest = hashlib.sha256(raw)
+    total, missing = 0, []
+    for clip in clips:
+        url = str(clip.get("url", ""))
+        mp3 = out / url.removeprefix("/voice/")
+        try:
+            data = mp3.read_bytes()
+        except OSError:
+            missing.append(url)
+            continue
+        total += len(data)
+        digest.update(data)
+    return {"clips": len(clips), "bytes": total, "version": digest.hexdigest()[:INDEX_HASH]}, missing
+
+
+def write_index(out: Path) -> tuple[bool, dict, list[str]]:
+    """Write <out>/_index.json (VoiceIndex) from every manifest in <out>, whatever this run
+    rendered. `_shows.json` isn't an entry (see README). Returns (changed, data, missing clips)."""
+    entries, missing = {}, []
+    if out.is_dir():
+        for manifest in sorted(out.glob("*.json")):
+            if is_manifest(manifest):
+                entries[manifest.stem], gone = index_entry(out, manifest)
+                missing += gone
+    data = {"version": 1, "entries": entries}
+    path = out / INDEX
+    if read_json(path) == data:
+        return False, data, missing
+    write_json(path, data)
+    return True, data, missing
+
+
+def index_only(out: Path) -> int:
+    """`--index`: regenerate _index.json from what's on disk, without rendering."""
+    changed, data, missing = write_index(out)
+    entries = data["entries"].values()
+    print(f"{'Wrote' if changed else 'Unchanged:'} {rel(out / INDEX)}: {len(data['entries'])} entries, "
+          f"{sum(e['clips'] for e in entries)} clips, {sum(e['bytes'] for e in entries) / 1e6:.1f} MB of MP3")
+    for url in missing:
+        print(f"error: {url} is in a manifest but missing on disk", file=sys.stderr)
+    return 1 if missing else 0
 
 
 # ── Rendering ─────────────────────────────────────────────────────────────────
@@ -599,6 +664,8 @@ def render(scripts: list[Script], out: Path, force: bool, workers: int, threads:
                 print(f"  removed orphaned station {station}")
         if write_shows(out, scripts, full):
             print(f"  updated {rel(out / SHOWS)}")
+        if write_index(out)[0]:
+            print(f"  updated {rel(out / INDEX)}")
         lock.save()
         clear_private_tmp()
         clear_stale_tmp()
@@ -704,6 +771,8 @@ def main() -> int:
     parser.add_argument("--clip", action="append", default=[], metavar="GLOB",
                         help="only clips whose id matches (repeatable); needs --out outside public/voice")
     parser.add_argument("--check", action="store_true", help="validate scripts without rendering")
+    parser.add_argument("--index", action="store_true",
+                        help="only regenerate <out>/_index.json from the manifests and clips on disk")
     parser.add_argument("--force", action="store_true", help="re-render clips even if unchanged")
     parser.add_argument("--jobs", type=int, default=0, metavar="N",
                         help="worker processes (default: by load and free memory, 1-8)")
@@ -727,6 +796,8 @@ def main() -> int:
         return gallery(args.out, args.gallery_voice, args.only)
     if args.clip and not outside_public:
         parser.error("--clip renders a subset; use --out somewhere outside public/voice")
+    if args.index:
+        return index_only(args.out)
 
     paths = discover(args.content, args.station)
     scripts = load_all(paths, args.content)
