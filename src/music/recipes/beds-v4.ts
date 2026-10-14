@@ -464,6 +464,6 @@ export function composePirate(req: TrackRequest): Score {
   return b.build({
     key: keyName(tonic, tpl.scale),
     progression: tpl.prog,
-    fx: trackFx({ gain: 0.38, lowpass: lerp(3200, 5500, B), highpass: 110, wow: 1.6 + G * 2.4, wowRate: 0.45, flutter: 0.05 + G * 0.08, drive: 0.25 + G * 0.35, delay: { time: beat * 0.75, feedback: 0.3, tone: 1800, wet: 0.45 }, reverbTone: 3000, reverbLevel: 0 }),
+    fx: trackFx({ gain: 0.31, lowpass: lerp(3200, 5500, B), highpass: 110, wow: 1.6 + G * 2.4, wowRate: 0.45, flutter: 0.05 + G * 0.08, drive: 0.25 + G * 0.35, delay: { time: beat * 0.75, feedback: 0.3, tone: 1800, wet: 0.45 }, reverbTone: 3000, reverbLevel: 0 }),
   });
 }
