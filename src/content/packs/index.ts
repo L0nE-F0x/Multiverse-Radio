@@ -9,6 +9,7 @@ import { V3A_RECIPE_PACKS, V3A_STATION_PACKS } from './v3a';
 import { V3B_RECIPE_PACKS, V3B_STATION_PACKS } from './v3b';
 import { V4A_RECIPE_PACKS, V4A_STATION_PACKS } from './v4a';
 import { V4D_STATION_PACKS } from './v4d';
+import { V4B_RECIPE_PACKS, V4B_STATION_PACKS } from './v4b';
 
 export type { TrackPack } from './types';
 
@@ -17,6 +18,7 @@ export const STATION_PACKS: Readonly<Record<string, TrackPack>> = {
   ...V3A_STATION_PACKS,
   ...V3B_STATION_PACKS,
   ...V4A_STATION_PACKS,
+  ...V4B_STATION_PACKS,
   ...DEEP_STATION_PACKS,
   ...V4D_STATION_PACKS,
   'static-lullabies': staticLullabies,
@@ -48,6 +50,7 @@ export const RECIPE_PACKS: Readonly<Partial<Record<RecipeId, TrackPack>>> = {
   ...V3A_RECIPE_PACKS,
   ...V3B_RECIPE_PACKS,
   ...V4A_RECIPE_PACKS,
+  ...V4B_RECIPE_PACKS,
   'lofi-hiphop': voidBeats,
   'lofi-rain': rainfallFm,
   'lofi-slow': snailJams,
