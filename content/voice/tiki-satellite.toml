@@ -1,0 +1,384 @@
+# Tiki Satellite — 112.0 ("one hundred and twelve megacycles"), the Lagoon Deck of Orbital
+# Station Seven, the space station of tomorrow as imagined in 1958. It still believes it's 1958.
+#
+# Lyle Mercury hosts: smooth, courteous, sunny, puzzled by nothing, and completely sure that
+# by 1965 every family will live in orbit. The relief crew is expected any day now. The house
+# band are the Orbiteers: Miss Vera Voss on theremin (plays without touching anything, which the
+# engineers find reassuring), and Howard on the bird calls (there are no birds in orbit).
+#
+# Running bits: a sunrise every ninety minutes (sixteen a day, toasted every one); a lagoon that
+# goes round the wheel; predictions for the wonderful world of 1965, read with total
+# confidence; retro-future ads (Halcyon Atomics, the Floating Pineapple). Cross-station: Greg
+# the shadow, Grumbel's Ladders. Resident artists in src/content/packs/v4b.ts.
+station = "tiki-satellite"
+
+[voices]
+host = { voice = "am_michael", speed = 0.98, name = "Lyle Mercury" }
+
+[[show]]
+id = "breakfast-in-orbit"
+name = "Breakfast in Orbit"
+blurb = "The breakfast pill, a sunrise every ninety minutes, and a little vibraphone to start the day of tomorrow."
+start = 7
+end = 10
+
+[[show]]
+id = "cocktail-hour"
+name = "The Cocktail Hour of Tomorrow"
+blurb = "Zero-gravity cocktails on the Lagoon Deck. Hold your drink with both hands. It will try to leave."
+start = 17
+end = 20
+
+[[show]]
+id = "moonlight-lagoon"
+name = "Moonlight on the Lagoon Deck"
+blurb = "The lagoon goes round the wheel, the moon goes round the Earth, and the theremin goes round the room."
+start = 22
+end = 2
+
+# ── Idents ────────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "id-001"
+category = "id"
+lines = [
+  { say = "host", text = "Welcome aboard Tiki Satellite, one hundred and twelve megacycles! The year is nineteen fifty eight, and the future is right on schedule." },
+  { sting = "id" },
+]
+
+[[clip]]
+id = "id-002"
+category = "id"
+lines = [
+  { say = "host", text = "Tiki Satellite. Vibraphone, bongos, and the boundless optimism of the space age. Mind the porthole, folks. That's the Earth." },
+]
+
+[[clip]]
+id = "id-003"
+category = "id"
+lines = [
+  { say = "host", text = "This is Tiki Satellite, from the Lagoon Deck of Orbital Station Seven. Two hundred miles up, and still looking up." },
+  { sting = "id" },
+]
+
+[[clip]]
+id = "id-004"
+category = "id"
+daypart = "morning"
+lines = [
+  { say = "host", text = "Good morning from Tiki Satellite! The sun has risen. It'll rise again in ninety minutes. That's orbit, friends. Plenty of mornings for everybody." },
+]
+
+[[clip]]
+id = "id-005"
+category = "id"
+daypart = "night"
+lines = [
+  { say = "host", text = "Tiki Satellite. The theremin is warming up, and the future has never looked brighter. Or more like nineteen fifty eight." },
+  { sting = "id" },
+]
+
+# ── Host links ────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "dj-001"
+category = "dj"
+title = "By Nineteen Sixty Five"
+lines = [
+  { say = "host", text = "By nineteen sixty five, every family will live in orbit. I know, because I read it in a magazine, and the magazine had a painting of it." },
+  { say = "host", text = "A lovely family, in a lovely wheel, with a lovely dog floating gently past a picture window. We're just a little early, that's all. Somebody has to plump the cushions." },
+]
+
+[[clip]]
+id = "dj-002"
+category = "dj"
+title = "The Relief Crew"
+lines = [
+  { say = "host", text = "A word about the relief crew. They're expected any day now. They've been expected any day now for quite a while." },
+  { say = "host", text = "I'm sure they're simply held up in traffic. By now there must be thousands of stations just like this one. Bigger. Shinier. Possibly with two lagoons." },
+]
+
+[[clip]]
+id = "dj-003"
+category = "dj"
+title = "A Letter From a Listener"
+lines = [
+  { say = "host", text = "A listener has written in, and I'll read the letter in full. Dear Lyle. It is not nineteen fifty eight.", gap = 0.8 },
+  { say = "host", text = "Well! Thank you for writing, sir. That's a very interesting point of view, and we'll certainly look into it. Possibly by nineteen sixty five. Here's a cha cha." },
+]
+
+[[clip]]
+id = "dj-004"
+category = "dj"
+title = "Howard on the Bird Calls"
+lines = [
+  { say = "host", text = "That was Howard, on the bird calls. There are no birds in orbit. There may never be. Howard has never let that stop him." },
+  { say = "host", text = "He says that when the birds of tomorrow do come up here, and they will, they'll want to hear something familiar." },
+]
+
+[[clip]]
+id = "dj-005"
+category = "dj"
+title = "Miss Vera Voss"
+lines = [
+  { say = "host", text = "On the theremin tonight, Miss Vera Voss. She plays it without touching it at all, which our engineers find very reassuring." },
+  { say = "host", text = "Nobody touches anything on Station Seven without the training. That's the future, folks. Hands off, and humming." },
+]
+
+[[clip]]
+id = "dj-006"
+category = "dj"
+title = "Sunrise Number Eleven"
+lines = [
+  { say = "host", text = "Another sunrise has just come up over the edge of the Earth. That's our eleventh today, and we toast every one." },
+  { say = "host", text = "Some of the crew are getting very cheerful. So is the sun. Here's a number for sunrise twelve." },
+]
+
+[[clip]]
+id = "dj-007"
+category = "dj"
+title = "Sponsored by Grumbel's Ladders"
+lines = [
+  { say = "host", text = "Tonight's programme comes to you courtesy of Grumbel's Ladders. In nineteen sixty three, Grumbel's will build the first ladder to the moon." },
+  { say = "host", text = "I've seen the drawings. It leans against the moon at a jaunty angle. Grumbel's Ladders. Up is a choice!" },
+]
+
+[[clip]]
+id = "dj-008"
+category = "dj"
+daypart = "night"
+title = "For the Night Shift"
+lines = [
+  { say = "host", text = "Hello down there to the operator on the relay ship. My, what a modern looking vessel. Is that what they'll all look like, by nineteen sixty five?" },
+  { say = "host", text = "Don't tell me. I like to be surprised. Come aboard for a cocktail any time. Dock at the round door. They're all round." },
+]
+
+[[clip]]
+id = "dj-009"
+category = "dj"
+title = "A Visitor Called Greg"
+lines = [
+  { say = "host", text = "We had a visitor this week. A shadow who called himself Greg. No pressure suit, no ticket. Just walked in through the porthole." },
+  { say = "host", text = "In the future, I expect shadows will travel freely between the planets. Greg is simply ahead of his time. Like the rest of us." },
+]
+
+# ── Ads ───────────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "ad-001"
+category = "ad"
+title = "The Halcyon Atomic Kitchen"
+lines = [
+  { say = "host", text = "Tired of cooking? Then let the atom do it! The Halcyon Atomic Kitchen roasts a chicken in four seconds, washes the dishes with a gentle beam of light, and keeps the whole house toasty warm until nineteen seventy one." },
+  { say = "host", text = "Halcyon Atomics. Tomorrow's kitchen, today. Ask your doctor whether a glow is right for you." },
+]
+
+[[clip]]
+id = "ad-002"
+category = "ad"
+title = "The Floating Pineapple"
+lines = [
+  { say = "host", text = "Thirsty in zero gravity? Try the Floating Pineapple, the cocktail of tomorrow. Served in a perfect sphere, sipped through a silver straw, and pursued at a leisurely pace around the lounge." },
+  { say = "host", text = "The Floating Pineapple. Ask your bartender. He's on the ceiling." },
+]
+
+# ── Tomorrow's Headlines kit (open, one to three bodies, close) ──────────────
+
+[[clip]]
+id = "predictions-open-01"
+category = "news"
+kit = "predictions"
+part = "open"
+lines = [
+  { say = "host", text = "And now it's time for Tomorrow's Headlines, where we look ahead to the wonderful world of nineteen sixty five." },
+  { sting = "fanfare" },
+]
+
+[[clip]]
+id = "predictions-open-02"
+category = "news"
+kit = "predictions"
+part = "open"
+lines = [
+  { say = "host", text = "Here's the news from the future, folks. Don't worry. It's all good." },
+]
+
+[[clip]]
+id = "predictions-body-01"
+category = "news"
+kit = "predictions"
+part = "body"
+lines = [
+  { say = "host", text = "By nineteen sixty five, every household will have a robot butler named Clarence. All of them will be named Clarence. It's simpler that way." },
+]
+
+[[clip]]
+id = "predictions-body-02"
+category = "news"
+kit = "predictions"
+part = "body"
+lines = [
+  { say = "host", text = "By nineteen sixty three, the weather will be decided by a committee, and the committee will choose sunny. Rain will be available by appointment, on Tuesdays, for the lawns." },
+]
+
+[[clip]]
+id = "predictions-body-03"
+category = "news"
+kit = "predictions"
+part = "body"
+lines = [
+  { say = "host", text = "By nineteen sixty six, dinner will come in a single pill. Dessert will be a second, smaller pill. The washing up will be a glass of water." },
+]
+
+[[clip]]
+id = "predictions-body-04"
+category = "news"
+kit = "predictions"
+part = "body"
+lines = [
+  { say = "host", text = "By nineteen sixty five, nobody will ever be lonely again. Everybody will have a wrist radio, and every wrist radio will be tuned to this station." },
+]
+
+[[clip]]
+id = "predictions-close-01"
+category = "news"
+kit = "predictions"
+part = "close"
+lines = [
+  { say = "host", text = "Those were tomorrow's headlines. Remember, folks. The future is coming, and it's bringing snacks." },
+]
+
+# ── Breakfast in Orbit (7–10) ─────────────────────────────────────────────────
+
+[[clip]]
+id = "id-breakfast-in-orbit"
+category = "id"
+show = "breakfast-in-orbit"
+part = "open"
+lines = [
+  { say = "host", text = "Good morning, good morning! This is Breakfast in Orbit, on Tiki Satellite. Breakfast this morning is a pill. Lunch is a slightly larger pill. Let's have some vibraphone." },
+  { sting = "id" },
+]
+
+[[clip]]
+id = "dj-breakfast-in-orbit-001"
+category = "dj"
+show = "breakfast-in-orbit"
+lines = [
+  { say = "host", text = "Today's breakfast pill tastes of pancakes, bacon and a sense of purpose. If yours tastes of nothing, you've taken the vitamin." },
+  { say = "host", text = "Take another one. It's the future. There's plenty." },
+]
+
+# ── The Cocktail Hour of Tomorrow (17–20) ─────────────────────────────────────
+
+[[clip]]
+id = "id-cocktail-hour"
+category = "id"
+show = "cocktail-hour"
+part = "open"
+lines = [
+  { say = "host", text = "Up here the sun sets sixteen times a day, so the cocktail hour comes round rather often. Welcome to the Cocktail Hour of Tomorrow, on Tiki Satellite." },
+]
+
+[[clip]]
+id = "dj-cocktail-hour-001"
+category = "dj"
+show = "cocktail-hour"
+lines = [
+  { say = "host", text = "A note from the bar. Please hold your drink with both hands, and don't let go of it." },
+  { say = "host", text = "In zero gravity, a cocktail you let go of is a cocktail you will meet again. Perhaps on Thursday. Perhaps on somebody's hat." },
+]
+
+# ── Moonlight on the Lagoon Deck (22–2) ───────────────────────────────────────
+
+[[clip]]
+id = "id-moonlight-lagoon"
+category = "id"
+show = "moonlight-lagoon"
+part = "open"
+lines = [
+  { say = "host", text = "Moonlight on the Lagoon Deck. The water's going round the wheel, the moon's going round the Earth, and the bongos are going round in my head. Lovely." },
+]
+
+[[clip]]
+id = "dj-moonlight-lagoon-001"
+category = "dj"
+show = "moonlight-lagoon"
+lines = [
+  { say = "host", text = "Late on the station, and the lagoon has gone very still, in a ring all the way around us, the way lagoons will be in the future." },
+  { say = "host", text = "The moon is so close tonight you could almost reach it. By nineteen sixty five, you will. Bring a scarf." },
+]
+
+# ── Halloween ─────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "dj-halloween-001"
+category = "dj"
+title = "The Pumpkin of Tomorrow"
+dates = ["10-24", "10-25", "10-26", "10-27", "10-28", "10-29", "10-30", "10-31"]
+lines = [
+  { say = "host", text = "Halloween aboard Station Seven! The crew have carved a pumpkin of tomorrow. It's chrome, it glows, and it orbits the lounge every forty minutes." },
+  { say = "host", text = "Our scientists say that by nineteen sixty five, every pumpkin will glow all by itself. They're working on it in the lab. Something in the lab is glowing already." },
+]
+
+# ── The Convergence (one reaction per topic) ──────────────────────────────────
+
+[[clip]]
+id = "convergence-missing-moon"
+category = "event"
+event = "convergence"
+kit = "missing-moon"
+lines = [
+  { say = "host", text = "Folks, it seems a moon has gone missing. Now, don't be alarmed. By nineteen sixty five there'll be so many moons, nobody will miss one.", gap = 0.5 },
+  { say = "host", text = "Our engineers are building three spares as we speak." },
+]
+
+[[clip]]
+id = "convergence-the-smell"
+category = "event"
+event = "convergence"
+kit = "the-smell"
+lines = [
+  { say = "host", text = "That aroma drifting through the station is toast. And not ordinary toast, friends. Atomic toast, done on both sides in an instant.", gap = 0.5 },
+  { say = "host", text = "Somebody out there has the kitchen of tomorrow!" },
+]
+
+[[clip]]
+id = "convergence-the-song"
+category = "event"
+event = "convergence"
+kit = "the-song"
+lines = [
+  { say = "host", text = "Everybody aboard is humming the same tune, and nobody can finish it.", gap = 0.5 },
+  { say = "host", text = "Not to worry. Scientists predict that by nineteen sixty four, every song will finish itself, automatically." },
+]
+
+[[clip]]
+id = "convergence-the-knock"
+category = "event"
+event = "convergence"
+kit = "the-knock"
+lines = [
+  { say = "host", text = "Three knocks on the airlock! Come in, come in!", gap = 1.2 },
+  { say = "host", text = "Nobody there. We're two hundred miles up. Well, that's the future for you. Always dropping by before it's ready." },
+]
+
+[[clip]]
+id = "convergence-wrong-colour"
+category = "event"
+event = "convergence"
+kit = "wrong-colour"
+lines = [
+  { say = "host", text = "Look at that porthole! The sky has turned a colour I've never seen before.", gap = 0.5 },
+  { say = "host", text = "Mark my words, folks. By nineteen sixty two, that colour will be on every refrigerator in the land." },
+]
+
+[[clip]]
+id = "convergence-the-pigeon"
+category = "event"
+event = "convergence"
+kit = "the-pigeon"
+lines = [
+  { say = "host", text = "A pigeon has come aboard Station Seven! No pressure suit, no ticket, perfectly calm.", gap = 0.5 },
+  { say = "host", text = "Folks, this is the pigeon of tomorrow. And frankly, it seems to know me." },
+]

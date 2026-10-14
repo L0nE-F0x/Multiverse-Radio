@@ -1,0 +1,409 @@
+# The Atomic Bachelor Pad — 115.6, a split-level home of tomorrow, Lot Twelve, Futureville.
+#
+# Monty Stereo hosts: a hi-fi salesman turned host who explains which speaker each instrument is
+# in with the reverence of a sommelier. The show is a high-fidelity demonstration: the bongos
+# travel to your left speaker, the orchestra has played table tennis across his living room
+# since 1961, and the theremin is, in his professional opinion, in the hallway.
+#
+# The room: the Futureville Fidelity Console, Model Twelve (eleven feet of walnut), two
+# enormous speakers, a chalk mark on the carpet (the listening position), a starburst clock, a
+# rocket on the horizon. The neighbours at Lot Eleven. Sponsor: Starburst Hi-Fi, on the Atomic
+# Parkway. Cross-station: Grumbel's Ladders; on Mondays, a review of Greg's Sunday show (days).
+# Resident artists in src/content/packs/v4b.ts. Write "left" and "right" in lower case: capitals
+# get spelled out by the voice.
+station = "atomic-bachelor-pad"
+
+[voices]
+host = { voice = "am_eric", speed = 1.0, name = "Monty Stereo" }
+
+[[show]]
+id = "morning-calibration"
+name = "Morning Calibration"
+blurb = "Before coffee, before the newspaper, before anything: we tune the room."
+start = 7
+end = 9
+
+[[show]]
+id = "stereo-at-six"
+name = "Stereo at Six"
+blurb = "Cold martinis, warm valves, and the speakers exactly the right distance apart. Pairings by Monty."
+start = 18
+end = 20
+
+[[show]]
+id = "sunken-lounge"
+name = "The Sunken Lounge"
+blurb = "Three carpeted steps down into the best seat in Futureville. Strings, after ten, when they've had time to breathe."
+start = 21
+end = 24
+
+# ── Idents ────────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "id-001"
+category = "id"
+lines = [
+  { say = "host", text = "The Atomic Bachelor Pad, one fifteen point six. A high fidelity demonstration. Please sit in the exact centre of the sofa." },
+  { sting = "id" },
+]
+
+[[clip]]
+id = "id-002"
+category = "id"
+lines = [
+  { say = "host", text = "You're listening to the Atomic Bachelor Pad, in stereo. If you can only hear half of this sentence, you are sitting too far to the left." },
+]
+
+[[clip]]
+id = "id-003"
+category = "id"
+lines = [
+  { say = "host", text = "The Atomic Bachelor Pad. Two speakers. One sofa. Unlimited sophistication." },
+  { sting = "id" },
+]
+
+[[clip]]
+id = "id-004"
+category = "id"
+daypart = "night"
+lines = [
+  { say = "host", text = "The Atomic Bachelor Pad. The lamps are low, the dials are glowing, and the bongos are in position. Your left. Always your left." },
+]
+
+[[clip]]
+id = "id-005"
+category = "id"
+daypart = "morning"
+lines = [
+  { say = "host", text = "Good morning from the Atomic Bachelor Pad. Monty Stereo, in a dressing gown, between two very large speakers." },
+  { sting = "id" },
+]
+
+# ── Host links ────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "dj-001"
+category = "dj"
+title = "The Bongos Travel"
+lines = [
+  { say = "host", text = "Now hear the bongos travel... to your left speaker.", gap = 1.0 },
+  { say = "host", text = "There. Did you feel that? That, my friends, is the future. Some men go to the moon. I sit very still, and let the bongos come to me." },
+]
+
+[[clip]]
+id = "dj-002"
+category = "dj"
+title = "The Bouquet"
+lines = [
+  { say = "host", text = "Let's take a moment with that vibraphone. Notice the bouquet. A bright attack, a long, warm finish, and notes of chrome and walnut." },
+  { say = "host", text = "Nineteen sixty two was an exceptional year for the vibraphone. Best served slightly chilled, from the right speaker." },
+]
+
+[[clip]]
+id = "dj-003"
+category = "dj"
+title = "Table Tennis"
+lines = [
+  { say = "host", text = "Since nineteen sixty one, the orchestra on this next one has been playing table tennis across my living room. Trumpet, left. Trombone, right. Trumpet, left." },
+  { say = "host", text = "The score stands at four thousand two hundred and six all. Nobody has ever won. Nobody wants to." },
+]
+
+[[clip]]
+id = "dj-004"
+category = "dj"
+title = "The Theremin Is in the Hallway"
+lines = [
+  { say = "host", text = "Some of you have written in to ask where the theremin is. It is not in the left speaker. It is not in the right speaker." },
+  { say = "host", text = "In my professional opinion, the theremin is in the hallway. It has been there since Tuesday. I've left it a sandwich." },
+]
+
+[[clip]]
+id = "dj-005"
+category = "dj"
+title = "For Listeners With One Speaker"
+lines = [
+  { say = "host", text = "A word to listeners with only one speaker. I'm sorry. Truly." },
+  { say = "host", text = "Please tilt your head slightly to one side, and imagine the other half. Many fine people live this way. They are very brave." },
+]
+
+[[clip]]
+id = "dj-006"
+category = "dj"
+daypart = "night"
+title = "For the Night Shift"
+lines = [
+  { say = "host", text = "A word for the operator on the relay ship. I understand your console has a great many speakers. Little ones, all over the cabin." },
+  { say = "host", text = "I'd love to come aboard with a tape measure and find you the sweet spot. Everybody deserves a sweet spot. Even in deep space. Especially there." },
+]
+
+[[clip]]
+id = "dj-007"
+category = "dj"
+title = "Sponsored by Grumbel's Ladders"
+lines = [
+  { say = "host", text = "This demonstration is brought to you by Grumbel's Ladders, for mounting your loudspeakers at the correct height. Which is ear height, plus a little, for drama." },
+  { say = "host", text = "Grumbel's Ladders. Up is a choice. Up and slightly to the left is a lifestyle." },
+]
+
+[[clip]]
+id = "dj-008"
+category = "dj"
+title = "Wide, Not Loud"
+lines = [
+  { say = "host", text = "The neighbours at Lot Eleven have asked me to turn it down. I've explained to them that it isn't loud. It's wide." },
+  { say = "host", text = "They've asked me to make it narrower. I'm considering it. In the meantime, here is something very, very wide." },
+]
+
+[[clip]]
+id = "dj-greg-review"
+category = "dj"
+title = "Review: The Quiet Corner with Greg"
+days = [1]
+lines = [
+  { say = "host", text = "Last night The Quiet Corner with Greg aired on the Lounge at the End of Time. I listened on the Model Twelve, with everything turned all the way up." },
+  { say = "host", text = "Greg was located dead centre, at a level of almost nothing. On a lesser console, you'd hear silence. On mine, you could hear him being shy. Four stars." },
+]
+
+# ── Starburst Hi-Fi kit (pitch, small print, tag) ────────────────────────────
+
+[[clip]]
+id = "hifi-open-01"
+category = "ad"
+kit = "hifi"
+part = "open"
+lines = [
+  { say = "host", text = "Friends, is your living room only half alive? A message from Starburst Hi-Fi of Futureville." },
+]
+
+[[clip]]
+id = "hifi-body-01"
+category = "ad"
+kit = "hifi"
+part = "body"
+lines = [
+  { say = "host", text = "Introducing the Futureville Fidelity Console, Model Twelve. Eleven feet of solid walnut, forty two glowing valves, and a turntable so smooth the music never knows it's moving." },
+]
+
+[[clip]]
+id = "hifi-body-02"
+category = "ad"
+kit = "hifi"
+part = "body"
+lines = [
+  { say = "host", text = "Now with the Twin Cathedral loudspeakers. So large and so faithful that your trombone section will need a room of its own. We'll build it for you. Extension included." },
+]
+
+[[clip]]
+id = "hifi-body-03"
+category = "ad"
+kit = "hifi"
+part = "body"
+lines = [
+  { say = "host", text = "Hear a pin drop. Hear which side of the room it dropped on. Hear the pin's opinion of the carpet." },
+]
+
+[[clip]]
+id = "hifi-close-01"
+category = "ad"
+kit = "hifi"
+part = "close"
+lines = [
+  { say = "host", text = "Starburst Hi-Fi, on the Atomic Parkway. Hear everything. Twice. In stereo." },
+]
+
+# ── Stereo test kit (open, one to three bodies, close) ───────────────────────
+
+[[clip]]
+id = "stereo-test-open-01"
+category = "psa"
+kit = "stereo-test"
+part = "open"
+lines = [
+  { say = "host", text = "Ladies and gentlemen, this is a stereo test. Please put down your drink, find the chalk mark on the carpet, and sit on it." },
+]
+
+[[clip]]
+id = "stereo-test-body-01"
+category = "psa"
+kit = "stereo-test"
+part = "body"
+lines = [
+  { say = "host", text = "This is the left speaker. Hello.", gap = 0.8 },
+  { say = "host", text = "This is the right speaker. Hello.", gap = 0.8 },
+  { say = "host", text = "If those both came from the same place, please call a professional." },
+]
+
+[[clip]]
+id = "stereo-test-body-02"
+category = "psa"
+kit = "stereo-test"
+part = "body"
+lines = [
+  { say = "host", text = "You will now hear a single bongo, placed precisely in the centre. If it seems to come from your kitchen, then there is a bongo in your kitchen. Please deal with that separately." },
+]
+
+[[clip]]
+id = "stereo-test-body-03"
+category = "psa"
+kit = "stereo-test"
+part = "body"
+lines = [
+  { say = "host", text = "Next, a test of depth. Here is a cymbal, very far away. Further. Further still.", gap = 0.8 },
+  { say = "host", text = "That cymbal is now in the next county. Your speakers are working beautifully." },
+]
+
+[[clip]]
+id = "stereo-test-body-04"
+category = "psa"
+kit = "stereo-test"
+part = "body"
+lines = [
+  { say = "host", text = "Finally, a test of silence. Please listen carefully." },
+  { pause = 2.5 },
+  { say = "host", text = "That was high fidelity silence, in stereo. Some of you heard the left half. Well done." },
+]
+
+[[clip]]
+id = "stereo-test-close-01"
+category = "psa"
+kit = "stereo-test"
+part = "close"
+lines = [
+  { say = "host", text = "That concludes the stereo test. You may relax. Not too much. Mind your posture." },
+]
+
+# ── Morning Calibration (7–9) ─────────────────────────────────────────────────
+
+[[clip]]
+id = "id-morning-calibration"
+category = "id"
+show = "morning-calibration"
+part = "open"
+lines = [
+  { say = "host", text = "Good morning, and welcome to Morning Calibration, on the Atomic Bachelor Pad. Before coffee, before the newspaper, before anything at all, we tune the room." },
+]
+
+[[clip]]
+id = "dj-morning-calibration-001"
+category = "dj"
+show = "morning-calibration"
+lines = [
+  { say = "host", text = "Over breakfast, I've moved the left speaker two inches towards the window. The grapefruit sounds noticeably brighter." },
+  { say = "host", text = "People think high fidelity is about music. It's about everything. The toast has never been so well defined." },
+]
+
+# ── Stereo at Six (18–20) ─────────────────────────────────────────────────────
+
+[[clip]]
+id = "id-stereo-at-six"
+category = "id"
+show = "stereo-at-six"
+part = "open"
+lines = [
+  { say = "host", text = "Good evening, and welcome to Stereo at Six, on the Atomic Bachelor Pad. The martinis are cold, the valves are warm, and the speakers are exactly the right distance apart." },
+  { sting = "id" },
+]
+
+[[clip]]
+id = "dj-stereo-at-six-001"
+category = "dj"
+show = "stereo-at-six"
+title = "Tonight's Pairing"
+lines = [
+  { say = "host", text = "Tonight's pairing. A slow bossa nova, with a dry martini and a good armchair." },
+  { say = "host", text = "The martini sits in the centre. The guitar sits on the left. And you sit exactly where I tell you to sit." },
+]
+
+# ── The Sunken Lounge (21–24) ─────────────────────────────────────────────────
+
+[[clip]]
+id = "id-sunken-lounge"
+category = "id"
+show = "sunken-lounge"
+part = "open"
+lines = [
+  { say = "host", text = "This is the Sunken Lounge, on the Atomic Bachelor Pad. Step down three carpeted steps, into the very best seat in Futureville. Mind the rug." },
+]
+
+[[clip]]
+id = "dj-sunken-lounge-001"
+category = "dj"
+show = "sunken-lounge"
+lines = [
+  { say = "host", text = "Late in the sunken lounge. The starburst clock says ten past eleven, and the rocket on the horizon is lit up for the night." },
+  { say = "host", text = "This is the hour for strings. Strings are at their best after ten, once they've had a chance to breathe." },
+]
+
+# ── Halloween ─────────────────────────────────────────────────────────────────
+
+[[clip]]
+id = "dj-halloween-001"
+category = "dj"
+title = "The Haunted Theremin"
+dates = ["10-24", "10-25", "10-26", "10-27", "10-28", "10-29", "10-30", "10-31"]
+lines = [
+  { say = "host", text = "A special Halloween demonstration. Hear the haunted theremin travel from your left speaker, to your right speaker, and then out of the room entirely, and up the stairs.", gap = 0.8 },
+  { say = "host", text = "I don't have any stairs. It's a split level. Nevertheless. Footsteps." },
+]
+
+# ── The Convergence (one reaction per topic) ──────────────────────────────────
+
+[[clip]]
+id = "convergence-missing-moon"
+category = "event"
+event = "convergence"
+kit = "missing-moon"
+lines = [
+  { say = "host", text = "Listeners report a missing moon. I've checked both speakers. It is not in the left. It is not in the right.", gap = 0.5 },
+  { say = "host", text = "If it's anywhere, it's in the centre image, which is where I keep everything I can't explain." },
+]
+
+[[clip]]
+id = "convergence-the-smell"
+category = "event"
+event = "convergence"
+kit = "the-smell"
+lines = [
+  { say = "host", text = "Smell is not a stereo phenomenon. And yet, this evening, the toast is distinctly to the left.", gap = 0.5 },
+  { say = "host", text = "Lovely separation. Somebody has a very good kitchen." },
+]
+
+[[clip]]
+id = "convergence-the-song"
+category = "event"
+event = "convergence"
+kit = "the-song"
+lines = [
+  { say = "host", text = "Everybody is humming the same song, and nobody can finish it. I can tell you this much.", gap = 0.5 },
+  { say = "host", text = "It starts in the left speaker, crosses the room, and never quite arrives on the right." },
+]
+
+[[clip]]
+id = "convergence-the-knock"
+category = "event"
+event = "convergence"
+kit = "the-knock"
+lines = [
+  { say = "host", text = "Three knocks at the front door. Left, centre, right. A perfect stereo knock.", gap = 0.8 },
+  { say = "host", text = "There was nobody there. I'd like to buy the knock anyway." },
+]
+
+[[clip]]
+id = "convergence-wrong-colour"
+category = "event"
+event = "convergence"
+kit = "wrong-colour"
+lines = [
+  { say = "host", text = "The sky over Futureville has gone a colour nobody has a word for.", gap = 0.5 },
+  { say = "host", text = "I couldn't tell you what it is. I can tell you it would look terrific on a speaker cabinet." },
+]
+
+[[clip]]
+id = "convergence-the-pigeon"
+category = "event"
+event = "convergence"
+kit = "the-pigeon"
+lines = [
+  { say = "host", text = "A pigeon has walked into the living room, and is standing on the chalk mark, exactly between the speakers.", gap = 0.5 },
+  { say = "host", text = "Found the sweet spot first time. That bird has been in this business longer than I have." },
+]
