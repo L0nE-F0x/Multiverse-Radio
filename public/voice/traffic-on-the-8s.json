@@ -1,0 +1,1483 @@
+{
+  "version": 1,
+  "station": "traffic-on-the-8s",
+  "clips": [
+    {
+      "id": "id-001",
+      "category": "id",
+      "url": "/voice/traffic-on-the-8s/id-001.mp3",
+      "durationMs": 7385,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Rita Gridley",
+          "text": "Traffic on the eights. One hundred and fourteen point eight. Every ten minutes, whether you're moving or not.",
+          "startMs": 36
+        }
+      ]
+    },
+    {
+      "id": "id-002",
+      "category": "id",
+      "url": "/voice/traffic-on-the-8s/id-002.mp3",
+      "durationMs": 4193,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Rita Gridley",
+          "text": "This is Traffic on the eights. Rita Gridley, at the desk. Nothing is moving. Here's how.",
+          "startMs": 38
+        }
+      ]
+    },
+    {
+      "id": "id-003",
+      "category": "id",
+      "url": "/voice/traffic-on-the-8s/id-003.mp3",
+      "durationMs": 6394,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Captain Buzz Ferraro",
+          "text": "Captain Buzz Ferraro, in the pod, over the junction. You're listening to Traffic on the eights.",
+          "startMs": 50
+        }
+      ]
+    },
+    {
+      "id": "id-004",
+      "category": "id",
+      "url": "/voice/traffic-on-the-8s/id-004.mp3",
+      "durationMs": 6091,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Rita Gridley",
+          "text": "Traffic on the eights. Wormholes, timelines and the bypass. Mostly the bypass.",
+          "startMs": 36
+        }
+      ]
+    },
+    {
+      "id": "id-005",
+      "category": "id",
+      "url": "/voice/traffic-on-the-8s/id-005.mp3",
+      "durationMs": 5635,
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Rita Gridley",
+          "text": "One one four point eight. Traffic on the eights. The jam's been here since the Big Bang, and so, it feels like, have I.",
+          "startMs": 42
+        }
+      ]
+    },
+    {
+      "id": "id-006",
+      "category": "id",
+      "url": "/voice/traffic-on-the-8s/id-006.mp3",
+      "durationMs": 5138,
+      "overMusic": true,
+      "daypart": "night",
+      "lines": [
+        {
+          "speaker": "Rita Gridley",
+          "text": "Traffic on the eights, through the night. The lanes are quiet. The bypass is not. The bypass is never quiet.",
+          "startMs": 36
+        }
+      ]
+    },
+    {
+      "id": "traffic-open-001",
+      "category": "weather",
+      "url": "/voice/traffic-on-the-8s/traffic-open-001.mp3",
+      "durationMs": 6680,
+      "overMusic": false,
+      "part": "open",
+      "kit": "traffic",
+      "lines": [
+        {
+          "speaker": "Rita Gridley",
+          "text": "Traffic on the eights. Rita Gridley at the desk. Here's how it isn't moving.",
+          "startMs": 2690
+        }
+      ]
+    },
+    {
+      "id": "traffic-open-002",
+      "category": "weather",
+      "url": "/voice/traffic-on-the-8s/traffic-open-002.mp3",
+      "durationMs": 3849,
+      "overMusic": false,
+      "part": "open",
+      "kit": "traffic",
+      "lines": [
+        {
+          "speaker": "Rita Gridley",
+          "text": "It's that time again. It's always that time again. Traffic.",
+          "startMs": 439
+        }
+      ]
+    },
+    {
+      "id": "traffic-open-003",
+      "category": "weather",
+      "url": "/voice/traffic-on-the-8s/traffic-open-003.mp3",
+      "durationMs": 6043,
+      "overMusic": false,
+      "part": "open",
+      "kit": "traffic",
+      "lines": [
+        {
+          "speaker": "Rita Gridley",
+          "text": "Your traffic and travel, every ten minutes, on the eights. Eyes on the road you're on. It isn't going anywhere.",
+          "startMs": 439
+        }
+      ]
+    },
+    {
+      "id": "traffic-open-004",
+      "category": "weather",
+      "url": "/voice/traffic-on-the-8s/traffic-open-004.mp3",
+      "durationMs": 4080,
+      "overMusic": false,
+      "part": "open",
+      "kit": "traffic",
+      "lines": [
+        {
+          "speaker": "Rita Gridley",
+          "text": "Traffic now. If you're listening in a vehicle, you've got time. Trust me.",
+          "startMs": 437
+        }
+      ]
+    },
+    {
+      "id": "traffic-open-005",
+      "category": "weather",
+      "url": "/voice/traffic-on-the-8s/traffic-open-005.mp3",
+      "durationMs": 5841,
+      "overMusic": false,
+      "part": "open",
+      "kit": "traffic",
+      "lines": [
+        {
+          "speaker": "Rita Gridley",
+          "text": "Traffic on the eights. Same jam, fresh report.",
+          "startMs": 2690
+        }
+      ]
+    },
+    {
+      "id": "traffic-open-006",
+      "category": "weather",
+      "url": "/voice/traffic-on-the-8s/traffic-open-006.mp3",
+      "durationMs": 5547,
+      "overMusic": false,
+      "part": "open",
+      "kit": "traffic",
+      "lines": [
+        {
+          "speaker": "Rita Gridley",
+          "text": "Here's the traffic, brought to you by the traffic. It sponsors itself. Nobody else will go near it.",
+          "startMs": 443
+        }
+      ]
+    },
+    {
+      "id": "traffic-open-007",
+      "category": "weather",
+      "url": "/voice/traffic-on-the-8s/traffic-open-007.mp3",
+      "durationMs": 10002,
+      "overMusic": false,
+      "part": "open",
+      "kit": "traffic",
+      "lines": [
+        {
+          "speaker": "Rita Gridley",
+          "text": "Let's go straight up to Buzz in the pod.",
+          "startMs": 442
+        },
+        {
+          "speaker": "Captain Buzz Ferraro",
+          "text": "Morning, Rita. Or evening. Hard to say from up here.",
+          "startMs": 3668
+        },
+        {
+          "speaker": "Rita Gridley",
+          "text": "It's always hard to say, Buzz. Here's the traffic.",
+          "startMs": 6885
+        }
+      ]
+    },
+    {
+      "id": "traffic-open-008",
+      "category": "weather",
+      "url": "/voice/traffic-on-the-8s/traffic-open-008.mp3",
+      "durationMs": 5707,
+      "overMusic": false,
+      "daypart": "night",
+      "part": "open",
+      "kit": "traffic",
+      "lines": [
+        {
+          "speaker": "Rita Gridley",
+          "text": "Late night traffic. Lighter in most lanes. Still solid on the bypass. Some things don't sleep.",
+          "startMs": 441
+        }
+      ]
+    },
+    {
+      "id": "traffic-body-001",
+      "category": "weather",
+      "url": "/voice/traffic-on-the-8s/traffic-body-001.mp3",
+      "durationMs": 12844,
+      "title": "The Bypass",
+      "overMusic": false,
+      "part": "body",
+      "kit": "traffic",
+      "lines": [
+        {
+          "speaker": "Rita Gridley",
+          "text": "On the bypass, the gridlock that's been there since the Big Bang is still there. Delays of roughly fourteen billion years.",
+          "startMs": 438
+        },
+        {
+          "speaker": "Rita Gridley",
+          "text": "The front car is still waiting for the lights to change. The lights haven't been invented yet. When they are, we'll let you know.",
+          "startMs": 6410
+        }
+      ]
+    },
+    {
+      "id": "traffic-body-002",
+      "category": "weather",
+      "url": "/voice/traffic-on-the-8s/traffic-body-002.mp3",
+      "durationMs": 12002,
+      "title": "The Great Wormhole Interchange",
+      "overMusic": false,
+      "part": "body",
+      "kit": "traffic",
+      "lines": [
+        {
+          "speaker": "Rita Gridley",
+          "text": "Long delays at the Great Wormhole Interchange. Junction nine is backed up to junction four, and junction four is backed up to last Tuesday.",
+          "startMs": 443
+        },
+        {
+          "speaker": "Rita Gridley",
+          "text": "Allow plenty of time. And then allow a little extra time for the time.",
+          "startMs": 8013
+        }
+      ]
+    },
+    {
+      "id": "traffic-body-003",
+      "category": "weather",
+      "url": "/voice/traffic-on-the-8s/traffic-body-003.mp3",
+      "durationMs": 14731,
+      "title": "Jackknifed Comet",
+      "overMusic": false,
+      "part": "body",
+      "kit": "traffic",
+      "lines": [
+        {
+          "speaker": "Rita Gridley",
+          "text": "Buzz, what are you seeing on the Outer Ring?",
+          "startMs": 450
+        },
+        {
+          "speaker": "Captain Buzz Ferraro",
+          "text": "Rita, I've got a jackknifed comet across both lanes, eastbound. Tail's everywhere.",
+          "startMs": 2759
+        },
+        {
+          "speaker": "Captain Buzz Ferraro",
+          "text": "Nobody's hurt. Everybody's slowing down to make a wish. That's what's causing the tailback. The wishing.",
+          "startMs": 8284
+        }
+      ]
+    },
+    {
+      "id": "traffic-body-004",
+      "category": "weather",
+      "url": "/voice/traffic-on-the-8s/traffic-body-004.mp3",
+      "durationMs": 12301,
+      "title": "Rubbernecking at a Supernova",
+      "overMusic": false,
+      "part": "body",
+      "kit": "traffic",
+      "lines": [
+        {
+          "speaker": "Rita Gridley",
+          "text": "Slow traffic northbound past the Varn Nebula, where drivers are rubbernecking at a supernova on the hard shoulder.",
+          "startMs": 438
+        },
+        {
+          "speaker": "Rita Gridley",
+          "text": "It's been going off for three days. Please keep your eyes on your lane. It'll still be exploding when you get home.",
+          "startMs": 6600
+        }
+      ]
+    },
+    {
+      "id": "traffic-body-005",
+      "category": "weather",
+      "url": "/voice/traffic-on-the-8s/traffic-body-005.mp3",
+      "durationMs": 13778,
+      "title": "Contraflow in the Eleventh Century",
+      "overMusic": false,
+      "part": "body",
+      "kit": "traffic",
+      "lines": [
+        {
+          "speaker": "Rita Gridley",
+          "text": "In the timelines, a contraflow is in operation through the eleventh century.",
+          "startMs": 436
+        },
+        {
+          "speaker": "Rita Gridley",
+          "text": "If you're heading for the twelfth, expect a diversion through a short Dark Age. Lights on, windows up, and please don't stop to help anybody build a cathedral. It takes ages.",
+          "startMs": 4523
+        }
+      ]
+    },
+    {
+      "id": "traffic-body-006",
+      "category": "weather",
+      "url": "/voice/traffic-on-the-8s/traffic-body-006.mp3",
+      "durationMs": 13442,
+      "title": "The Ring Road With One Side",
+      "overMusic": false,
+      "part": "body",
+      "kit": "traffic",
+      "lines": [
+        {
+          "speaker": "Rita Gridley",
+          "text": "On the ring road with only one side, the outside lane is also the inside lane.",
+          "startMs": 436
+        },
+        {
+          "speaker": "Rita Gridley",
+          "text": "If you're overtaking, you are also being overtaken, by you. Drivers are asked to stop waving at themselves. It's distracting the other drivers, who are also you.",
+          "startMs": 4709
+        }
+      ]
+    },
+    {
+      "id": "traffic-body-007",
+      "category": "weather",
+      "url": "/voice/traffic-on-the-8s/traffic-body-007.mp3",
+      "durationMs": 11420,
+      "title": "Wormhole in Reverse",
+      "overMusic": false,
+      "part": "body",
+      "kit": "traffic",
+      "lines": [
+        {
+          "speaker": "Rita Gridley",
+          "text": "Lane two of the Hennick wormhole has been stuck in reverse since this morning. Drivers are arriving before they've set off.",
+          "startMs": 439
+        },
+        {
+          "speaker": "Rita Gridley",
+          "text": "If you meet yourself at the other end, please don't discuss the journey. It spoils it for you.",
+          "startMs": 6647
+        }
+      ]
+    },
+    {
+      "id": "traffic-body-008",
+      "category": "weather",
+      "url": "/voice/traffic-on-the-8s/traffic-body-008.mp3",
+      "durationMs": 10666,
+      "title": "The Thursday Flyover",
+      "overMusic": false,
+      "part": "body",
+      "kit": "traffic",
+      "lines": [
+        {
+          "speaker": "Rita Gridley",
+          "text": "The Thursday flyover is closed for maintenance until Wednesday. Which Wednesday hasn't been confirmed.",
+          "startMs": 442
+        },
+        {
+          "speaker": "Rita Gridley",
+          "text": "Diversions are in place through Friday, which is busier than it looks. It always is.",
+          "startMs": 5928
+        }
+      ]
+    },
+    {
+      "id": "traffic-body-009",
+      "category": "weather",
+      "url": "/voice/traffic-on-the-8s/traffic-body-009.mp3",
+      "durationMs": 12057,
+      "title": "A Glacier in the Slow Lane",
+      "overMusic": false,
+      "part": "body",
+      "kit": "traffic",
+      "lines": [
+        {
+          "speaker": "Rita Gridley",
+          "text": "A glacier is moving slowly in the slow lane of the Ice Age Parkway.",
+          "startMs": 438
+        },
+        {
+          "speaker": "Rita Gridley",
+          "text": "It's in the right lane. It's doing the right speed. It's just a very, very long vehicle. Patience, please. It'll be past you by the spring. Not this spring.",
+          "startMs": 4356
+        }
+      ]
+    },
+    {
+      "id": "traffic-body-010",
+      "category": "weather",
+      "url": "/voice/traffic-on-the-8s/traffic-body-010.mp3",
+      "durationMs": 10730,
+      "title": "Lost Property",
+      "overMusic": false,
+      "part": "body",
+      "kit": "traffic",
+      "lines": [
+        {
+          "speaker": "Rita Gridley",
+          "text": "Lost property on the hard shoulder near exit forty. One moon. Small. Slightly dented. Answers to nothing.",
+          "startMs": 438
+        },
+        {
+          "speaker": "Rita Gridley",
+          "text": "If it's yours, please collect it before it gets dark. It'll want to be up by then.",
+          "startMs": 6144
+        }
+      ]
+    },
+    {
+      "id": "traffic-body-011",
+      "category": "weather",
+      "url": "/voice/traffic-on-the-8s/traffic-body-011.mp3",
+      "durationMs": 16679,
+      "title": "Drifting on the Outer Band",
+      "overMusic": false,
+      "part": "body",
+      "kit": "traffic",
+      "lines": [
+        {
+          "speaker": "Captain Buzz Ferraro",
+          "text": "Rita, I've got a relay ship on the Outer Band approach. Drifting across the lanes, one at a time. No indicators. Running lights all on.",
+          "startMs": 450
+        },
+        {
+          "speaker": "Rita Gridley",
+          "text": "Is it lost, Buzz?",
+          "startMs": 9061
+        },
+        {
+          "speaker": "Captain Buzz Ferraro",
+          "text": "Doesn't drive like it's lost, Rita. Drives like it knows the way, and it's in no hurry to get there.",
+          "startMs": 10576
+        }
+      ]
+    },
+    {
+      "id": "traffic-body-012",
+      "category": "weather",
+      "url": "/voice/traffic-on-the-8s/traffic-body-012.mp3",
+      "durationMs": 12224,
+      "title": "Recovery on the Way",
+      "overMusic": false,
+      "part": "body",
+      "kit": "traffic",
+      "lines": [
+        {
+          "speaker": "Rita Gridley",
+          "text": "A broken-down star on the Long Straight is blocking the middle lane. Recovery is on the way.",
+          "startMs": 439
+        },
+        {
+          "speaker": "Rita Gridley",
+          "text": "Recovery has been on the way for some time. Recovery may, itself, have broken down. We're sending recovery for recovery.",
+          "startMs": 5420
+        }
+      ]
+    },
+    {
+      "id": "traffic-body-013",
+      "category": "weather",
+      "url": "/voice/traffic-on-the-8s/traffic-body-013.mp3",
+      "durationMs": 10857,
+      "title": "Whales at the Drift",
+      "overMusic": false,
+      "part": "body",
+      "kit": "traffic",
+      "lines": [
+        {
+          "speaker": "Rita Gridley",
+          "text": "A pod of very slow space whales is crossing all lanes at the Drift.",
+          "startMs": 437
+        },
+        {
+          "speaker": "Rita Gridley",
+          "text": "They have right of way. They have always had right of way. They were here first, and they'll tell you so, at length, in a low voice, for about an hour.",
+          "startMs": 4172
+        }
+      ]
+    },
+    {
+      "id": "traffic-body-014",
+      "category": "weather",
+      "url": "/voice/traffic-on-the-8s/traffic-body-014.mp3",
+      "durationMs": 12986,
+      "title": "Roadworks on the Spiral Arm",
+      "overMusic": false,
+      "part": "body",
+      "kit": "traffic",
+      "lines": [
+        {
+          "speaker": "Rita Gridley",
+          "text": "Roadworks on the Spiral Arm. Three lanes down to one, while a crew fills in a pothole that goes through to another dimension.",
+          "startMs": 442
+        },
+        {
+          "speaker": "Rita Gridley",
+          "text": "They've filled it twice. It keeps filling them back. Expect delays, and a small amount of somebody else's gravel.",
+          "startMs": 6902
+        }
+      ]
+    },
+    {
+      "id": "traffic-body-015",
+      "category": "weather",
+      "url": "/voice/traffic-on-the-8s/traffic-body-015.mp3",
+      "durationMs": 15225,
+      "title": "A Gap in Lane Three",
+      "overMusic": false,
+      "part": "body",
+      "kit": "traffic",
+      "lines": [
+        {
+          "speaker": "Rita Gridley",
+          "text": "Buzz, how's it looking from up there?",
+          "startMs": 438
+        },
+        {
+          "speaker": "Captain Buzz Ferraro",
+          "text": "Rita, I've been circling this junction thirty one years, and I've just seen something I've never seen.",
+          "startMs": 2664
+        },
+        {
+          "speaker": "Rita Gridley",
+          "text": "What?",
+          "startMs": 8134
+        },
+        {
+          "speaker": "Captain Buzz Ferraro",
+          "text": "A gap. Lane three. About a car's length.",
+          "startMs": 8978
+        },
+        {
+          "speaker": "Rita Gridley",
+          "text": "Is it moving?",
+          "startMs": 11338
+        },
+        {
+          "speaker": "Captain Buzz Ferraro",
+          "text": "No, Rita. Somebody's already in it.",
+          "startMs": 12684
+        }
+      ]
+    },
+    {
+      "id": "traffic-body-016",
+      "category": "weather",
+      "url": "/voice/traffic-on-the-8s/traffic-body-016.mp3",
+      "durationMs": 11682,
+      "title": "Expansion Ahead",
+      "overMusic": false,
+      "part": "body",
+      "kit": "traffic",
+      "lines": [
+        {
+          "speaker": "Rita Gridley",
+          "text": "Drivers on the Big Bang approach should expect expansion. The road is getting longer while you drive on it.",
+          "startMs": 436
+        },
+        {
+          "speaker": "Rita Gridley",
+          "text": "You are not going slower. Everything is simply further away than it was. It's not personal. It's the universe.",
+          "startMs": 5996
+        }
+      ]
+    },
+    {
+      "id": "traffic-body-017",
+      "category": "weather",
+      "url": "/voice/traffic-on-the-8s/traffic-body-017.mp3",
+      "durationMs": 14071,
+      "title": "A Commuter on the Bypass",
+      "overMusic": false,
+      "part": "body",
+      "kit": "traffic",
+      "lines": [
+        {
+          "speaker": "Rita Gridley",
+          "text": "We've got a commuter on the line from the bypass. Go ahead, caller.",
+          "startMs": 440
+        },
+        {
+          "speaker": "A Commuter",
+          "text": "Rita, I've been on the bypass since I was nine.",
+          "startMs": 3826
+        },
+        {
+          "speaker": "Rita Gridley",
+          "text": "How's it moving?",
+          "startMs": 6547
+        },
+        {
+          "speaker": "A Commuter",
+          "text": "I moved up one, the summer I turned twenty. I still think about it.",
+          "startMs": 8024
+        },
+        {
+          "speaker": "Rita Gridley",
+          "text": "Hold on to that. Thank you, caller.",
+          "startMs": 11667
+        }
+      ]
+    },
+    {
+      "id": "traffic-body-018",
+      "category": "weather",
+      "url": "/voice/traffic-on-the-8s/traffic-body-018.mp3",
+      "durationMs": 12510,
+      "title": "Junction Thirteen",
+      "overMusic": false,
+      "part": "body",
+      "kit": "traffic",
+      "lines": [
+        {
+          "speaker": "Rita Gridley",
+          "text": "Around the black hole at junction thirteen, traffic is approaching at normal speed, but appears, from outside, to slow to a complete stop.",
+          "startMs": 443
+        },
+        {
+          "speaker": "Rita Gridley",
+          "text": "It isn't stopped. It only looks stopped. Unlike the bypass, which looks stopped because it is.",
+          "startMs": 7514
+        }
+      ]
+    },
+    {
+      "id": "traffic-body-019",
+      "category": "weather",
+      "url": "/voice/traffic-on-the-8s/traffic-body-019.mp3",
+      "durationMs": 8948,
+      "title": "The Parallel Lanes",
+      "overMusic": false,
+      "part": "body",
+      "kit": "traffic",
+      "lines": [
+        {
+          "speaker": "Rita Gridley",
+          "text": "On the parallel lanes, there's a version of you who left ten minutes earlier. They're making good progress.",
+          "startMs": 436
+        },
+        {
+          "speaker": "Rita Gridley",
+          "text": "Don't think about them. They're not thinking about you. They're nearly home.",
+          "startMs": 5551
+        }
+      ]
+    },
+    {
+      "id": "traffic-body-020",
+      "category": "weather",
+      "url": "/voice/traffic-on-the-8s/traffic-body-020.mp3",
+      "durationMs": 15033,
+      "title": "The Sideways Road",
+      "overMusic": false,
+      "part": "body",
+      "kit": "traffic",
+      "lines": [
+        {
+          "speaker": "Rita Gridley",
+          "text": "Word from Waystation Nine dispatch. A wide load on the sideways road, and a strong suggestion from Big Rosalind that you don't take it.",
+          "startMs": 440
+        },
+        {
+          "speaker": "Rita Gridley",
+          "text": "We agree. In thirty years on this desk, we've never once seen anybody come back from the sideways road on time. Or on the same day.",
+          "startMs": 7891
+        }
+      ]
+    },
+    {
+      "id": "traffic-body-021",
+      "category": "weather",
+      "url": "/voice/traffic-on-the-8s/traffic-body-021.mp3",
+      "durationMs": 14235,
+      "title": "The Phantom Jam",
+      "overMusic": false,
+      "part": "body",
+      "kit": "traffic",
+      "lines": [
+        {
+          "speaker": "Captain Buzz Ferraro",
+          "text": "Rita, there's a phantom jam on the Old Lane. Nobody can see the front of it, because there's no front.",
+          "startMs": 450
+        },
+        {
+          "speaker": "Captain Buzz Ferraro",
+          "text": "It formed eleven years ago when somebody braked for a moth. The moth's long gone. The jam stayed. It likes it here.",
+          "startMs": 6533
+        }
+      ]
+    },
+    {
+      "id": "traffic-close-001",
+      "category": "weather",
+      "url": "/voice/traffic-on-the-8s/traffic-close-001.mp3",
+      "durationMs": 5982,
+      "overMusic": false,
+      "part": "close",
+      "kit": "traffic",
+      "lines": [
+        {
+          "speaker": "Rita Gridley",
+          "text": "That's traffic. Next report in ten minutes, on the eights. The jam will still be there. It's very loyal.",
+          "startMs": 437
+        }
+      ]
+    },
+    {
+      "id": "traffic-close-002",
+      "category": "weather",
+      "url": "/voice/traffic-on-the-8s/traffic-close-002.mp3",
+      "durationMs": 3739,
+      "overMusic": false,
+      "part": "close",
+      "kit": "traffic",
+      "lines": [
+        {
+          "speaker": "Rita Gridley",
+          "text": "That's your traffic. Mirror, signal, wait. Mostly wait.",
+          "startMs": 443
+        }
+      ]
+    },
+    {
+      "id": "traffic-close-003",
+      "category": "weather",
+      "url": "/voice/traffic-on-the-8s/traffic-close-003.mp3",
+      "durationMs": 4337,
+      "overMusic": false,
+      "part": "close",
+      "kit": "traffic",
+      "lines": [
+        {
+          "speaker": "Rita Gridley",
+          "text": "Traffic on the eights, back in ten. Stay in your lane. Everyone else is.",
+          "startMs": 437
+        }
+      ]
+    },
+    {
+      "id": "traffic-close-004",
+      "category": "weather",
+      "url": "/voice/traffic-on-the-8s/traffic-close-004.mp3",
+      "durationMs": 4647,
+      "overMusic": false,
+      "part": "close",
+      "kit": "traffic",
+      "lines": [
+        {
+          "speaker": "Rita Gridley",
+          "text": "That's the traffic for now. And for later. It's the same traffic. Back in ten.",
+          "startMs": 442
+        }
+      ]
+    },
+    {
+      "id": "traffic-close-005",
+      "category": "weather",
+      "url": "/voice/traffic-on-the-8s/traffic-close-005.mp3",
+      "durationMs": 5217,
+      "overMusic": false,
+      "part": "close",
+      "kit": "traffic",
+      "lines": [
+        {
+          "speaker": "Rita Gridley",
+          "text": "If you've moved since the last report, ring in. We'd love to hear how. Traffic on the eights.",
+          "startMs": 437
+        }
+      ]
+    },
+    {
+      "id": "traffic-close-006",
+      "category": "weather",
+      "url": "/voice/traffic-on-the-8s/traffic-close-006.mp3",
+      "durationMs": 6328,
+      "overMusic": false,
+      "part": "close",
+      "kit": "traffic",
+      "lines": [
+        {
+          "speaker": "Rita Gridley",
+          "text": "That's the traffic. Drive safely. Arrive eventually.",
+          "startMs": 440
+        }
+      ]
+    },
+    {
+      "id": "traffic-close-007",
+      "category": "weather",
+      "url": "/voice/traffic-on-the-8s/traffic-close-007.mp3",
+      "durationMs": 5718,
+      "overMusic": false,
+      "part": "close",
+      "kit": "traffic",
+      "lines": [
+        {
+          "speaker": "Rita Gridley",
+          "text": "Buzz, anything to add?",
+          "startMs": 440
+        },
+        {
+          "speaker": "Captain Buzz Ferraro",
+          "text": "Negative, Rita.",
+          "startMs": 2072
+        },
+        {
+          "speaker": "Rita Gridley",
+          "text": "Thank you, Buzz. Back in ten.",
+          "startMs": 3372
+        }
+      ]
+    },
+    {
+      "id": "traffic-close-008",
+      "category": "weather",
+      "url": "/voice/traffic-on-the-8s/traffic-close-008.mp3",
+      "durationMs": 4679,
+      "overMusic": false,
+      "part": "close",
+      "kit": "traffic",
+      "lines": [
+        {
+          "speaker": "Rita Gridley",
+          "text": "Back in ten minutes with more of the same. Rita Gridley, at the traffic desk.",
+          "startMs": 450
+        }
+      ]
+    },
+    {
+      "id": "weather-001",
+      "category": "weather",
+      "url": "/voice/traffic-on-the-8s/weather-001.mp3",
+      "durationMs": 13859,
+      "title": "Solar Wind",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Rita Gridley",
+          "text": "The weather for drivers. A brisk solar wind from the east, gusting to strong around the big yellow star at junction two.",
+          "startMs": 37
+        },
+        {
+          "speaker": "Rita Gridley",
+          "text": "High-sided vessels, take care. Small ones, hold on to something. Anything with a sail, you'll be in the next system by tea time, and you won't have enjoyed it.",
+          "startMs": 6401
+        }
+      ]
+    },
+    {
+      "id": "weather-002",
+      "category": "weather",
+      "url": "/voice/traffic-on-the-8s/weather-002.mp3",
+      "durationMs": 15411,
+      "title": "Meteor Showers",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Rita Gridley",
+          "text": "Scattered meteor showers over the Interchange this evening, heavier towards the bypass, where nobody is going anywhere anyway.",
+          "startMs": 39
+        },
+        {
+          "speaker": "Rita Gridley",
+          "text": "Wipers on. And if one lands on your bonnet, it's yours. That's the law out here. Finders keepers.",
+          "startMs": 6560
+        },
+        {
+          "speaker": "Captain Buzz Ferraro",
+          "text": "Rita, one just went past the pod. Didn't indicate. They never indicate.",
+          "startMs": 11430
+        }
+      ]
+    },
+    {
+      "id": "weather-003",
+      "category": "weather",
+      "url": "/voice/traffic-on-the-8s/weather-003.mp3",
+      "durationMs": 15020,
+      "title": "Fog in the Nebula",
+      "overMusic": false,
+      "daypart": "night",
+      "lines": [
+        {
+          "speaker": "Rita Gridley",
+          "text": "Thick fog in the Varn Nebula overnight. Visibility down to about a planet's length.",
+          "startMs": 50
+        },
+        {
+          "speaker": "Rita Gridley",
+          "text": "Dipped headlights, please. Full beam just lights the fog up, and then the fog wants to talk to you about it.",
+          "startMs": 4744
+        },
+        {
+          "speaker": "Rita Gridley",
+          "text": "It's lonely, the fog. It means well. Just don't encourage it. Clearing by morning, or by the morning after.",
+          "startMs": 9946
+        }
+      ]
+    },
+    {
+      "id": "weather-004",
+      "category": "weather",
+      "url": "/voice/traffic-on-the-8s/weather-004.mp3",
+      "durationMs": 13264,
+      "title": "A Front of Tuesdays",
+      "overMusic": false,
+      "daypart": "morning",
+      "lines": [
+        {
+          "speaker": "Rita Gridley",
+          "text": "This morning, a slow-moving front of Tuesdays is pushing in from the timelines. Expect it to feel like Tuesday for most of the day, even where it isn't.",
+          "startMs": 42
+        },
+        {
+          "speaker": "Rita Gridley",
+          "text": "Clearing to Wednesday by the evening, for most of you. Some of you will be in Tuesday till the weekend. Sorry.",
+          "startMs": 8229
+        }
+      ]
+    },
+    {
+      "id": "dj-001",
+      "category": "dj",
+      "url": "/voice/traffic-on-the-8s/dj-001.mp3",
+      "durationMs": 12035,
+      "title": "Thirty One Years in the Pod",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Rita Gridley",
+          "text": "Buzz, how long have you been up there now?",
+          "startMs": 38
+        },
+        {
+          "speaker": "Captain Buzz Ferraro",
+          "text": "Thirty one years, Rita. I land on my birthday. They bring me a cake and a fresh flask.",
+          "startMs": 2375
+        },
+        {
+          "speaker": "Rita Gridley",
+          "text": "And then?",
+          "startMs": 7645
+        },
+        {
+          "speaker": "Captain Buzz Ferraro",
+          "text": "And then I go back up. Somebody's got to watch it not move.",
+          "startMs": 8691
+        }
+      ]
+    },
+    {
+      "id": "dj-002",
+      "category": "dj",
+      "url": "/voice/traffic-on-the-8s/dj-002.mp3",
+      "durationMs": 11500,
+      "title": "Never Seen It Move",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Rita Gridley",
+          "text": "People ask me what it's like to report on traffic that has never once moved.",
+          "startMs": 36
+        },
+        {
+          "speaker": "Rita Gridley",
+          "text": "And I say, it's like any other job. You turn up. You look at it. You tell people how it is. And every ten minutes you hope, just a little, that this is the time.",
+          "startMs": 4015
+        }
+      ]
+    },
+    {
+      "id": "dj-003",
+      "category": "dj",
+      "url": "/voice/traffic-on-the-8s/dj-003.mp3",
+      "durationMs": 8892,
+      "title": "Ten Minutes",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Rita Gridley",
+          "text": "Ten minutes is a long time in traffic. It's also no time at all. I've done a few million of them now.",
+          "startMs": 36
+        },
+        {
+          "speaker": "Rita Gridley",
+          "text": "My advice? Bring a sandwich. Bring two. Bring somebody to share the second one with.",
+          "startMs": 5189
+        }
+      ]
+    },
+    {
+      "id": "dj-004",
+      "category": "dj",
+      "url": "/voice/traffic-on-the-8s/dj-004.mp3",
+      "durationMs": 19939,
+      "title": "The Old Switchboard",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Captain Buzz Ferraro",
+          "text": "Rita, you ever hear the one about the old switchboard?",
+          "startMs": 50
+        },
+        {
+          "speaker": "Rita Gridley",
+          "text": "Which one?",
+          "startMs": 3024
+        },
+        {
+          "speaker": "Captain Buzz Ferraro",
+          "text": "Story goes there's an operator out past the edge of the dial, still putting calls through. She answers if you ring advice, then the news, then the traffic. In that order. Hold each line a moment.",
+          "startMs": 4128
+        },
+        {
+          "speaker": "Rita Gridley",
+          "text": "We're the traffic, Buzz.",
+          "startMs": 16282
+        },
+        {
+          "speaker": "Captain Buzz Ferraro",
+          "text": "I know. I always wondered who was ringing.",
+          "startMs": 17959
+        }
+      ]
+    },
+    {
+      "id": "dj-005",
+      "category": "dj",
+      "url": "/voice/traffic-on-the-8s/dj-005.mp3",
+      "durationMs": 10912,
+      "title": "To the Relay Ship",
+      "overMusic": true,
+      "daypart": "night",
+      "lines": [
+        {
+          "speaker": "Rita Gridley",
+          "text": "A message for the relay ship on the Outer Band tonight. Buzz can see your running lights from the pod.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Rita Gridley",
+          "text": "You're drifting across three lanes. We're not complaining. There's nobody in them. Just, wherever you're headed, indicate. It's polite.",
+          "startMs": 5199
+        }
+      ]
+    },
+    {
+      "id": "dj-006",
+      "category": "dj",
+      "url": "/voice/traffic-on-the-8s/dj-006.mp3",
+      "durationMs": 9111,
+      "title": "The Flask",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Captain Buzz Ferraro",
+          "text": "Rita, my flask's empty.",
+          "startMs": 50
+        },
+        {
+          "speaker": "Rita Gridley",
+          "text": "We'll send one up, Buzz.",
+          "startMs": 1724
+        },
+        {
+          "speaker": "Captain Buzz Ferraro",
+          "text": "How long?",
+          "startMs": 3436
+        },
+        {
+          "speaker": "Rita Gridley",
+          "text": "Well. It'll have to go round by the bypass.",
+          "startMs": 4451
+        },
+        {
+          "speaker": "Captain Buzz Ferraro",
+          "text": "I'll ration the biscuits.",
+          "startMs": 7859
+        }
+      ]
+    },
+    {
+      "id": "ad-001",
+      "category": "ad",
+      "url": "/voice/traffic-on-the-8s/ad-001.mp3",
+      "durationMs": 17347,
+      "title": "Gridlock Grill",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Advert",
+          "text": "Stuck on the bypass? Of course you are. Gridlock Grill comes to you.",
+          "startMs": 44
+        },
+        {
+          "speaker": "Advert",
+          "text": "Our waiters walk between the lanes with hot food, cold drinks and a smile that has been on duty for generations.",
+          "startMs": 4211
+        },
+        {
+          "speaker": "Advert",
+          "text": "Gridlock Grill. Drive thru, at no miles an hour. Table for one? You've got the whole car.",
+          "startMs": 11581
+        }
+      ]
+    },
+    {
+      "id": "ad-002",
+      "category": "ad",
+      "url": "/voice/traffic-on-the-8s/ad-002.mp3",
+      "durationMs": 17712,
+      "title": "Lane Change Lozenges",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Advert",
+          "text": "Feeling the urge to change lanes? Don't. It won't help. It has never helped.",
+          "startMs": 50
+        },
+        {
+          "speaker": "Advert",
+          "text": "Lane Change Lozenges. One soothing lozenge, and the urge to switch lanes simply melts away. Blackcurrant, or patience flavour.",
+          "startMs": 4818
+        },
+        {
+          "speaker": "Advert",
+          "text": "Lane Change Lozenges. Stay where you are. It's lovely, where you are.",
+          "startMs": 13492
+        }
+      ]
+    },
+    {
+      "id": "ad-003",
+      "category": "ad",
+      "url": "/voice/traffic-on-the-8s/ad-003.mp3",
+      "durationMs": 13239,
+      "title": "Grumbel's Ladders, Overhead",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Rita Gridley",
+          "text": "Traffic on the eights is brought to you by Grumbel's Ladders.",
+          "startMs": 36
+        },
+        {
+          "speaker": "Rita Gridley",
+          "text": "Can't see the front of the jam? Climb a Grumbel's. Sixty rungs, folds flat into the boot, and from the top you can see the whole bypass.",
+          "startMs": 3278
+        },
+        {
+          "speaker": "Rita Gridley",
+          "text": "It doesn't help. But you can see it. Grumbel's Ladders. Up is a choice.",
+          "startMs": 10062
+        }
+      ]
+    },
+    {
+      "id": "show-morning-open",
+      "category": "id",
+      "url": "/voice/traffic-on-the-8s/show-morning-open.mp3",
+      "durationMs": 6661,
+      "overMusic": true,
+      "part": "open",
+      "show": "morning-crawl",
+      "lines": [
+        {
+          "speaker": "Rita Gridley",
+          "text": "Good morning. This is the Morning Crawl, on Traffic on the eights. Buzz is up, the kettle's on, and the bypass is exactly where we left it.",
+          "startMs": 37
+        }
+      ]
+    },
+    {
+      "id": "show-morning-001",
+      "category": "dj",
+      "url": "/voice/traffic-on-the-8s/show-morning-001.mp3",
+      "durationMs": 9298,
+      "overMusic": true,
+      "show": "morning-crawl",
+      "lines": [
+        {
+          "speaker": "Rita Gridley",
+          "text": "Morning commuters, a reminder. You don't have to be anywhere on time. Nobody does. Everybody's employer is on the bypass too.",
+          "startMs": 41
+        },
+        {
+          "speaker": "Rita Gridley",
+          "text": "Your boss is three lanes over. Wave. He's waving back.",
+          "startMs": 6508
+        }
+      ]
+    },
+    {
+      "id": "show-evening-open",
+      "category": "id",
+      "url": "/voice/traffic-on-the-8s/show-evening-open.mp3",
+      "durationMs": 4884,
+      "overMusic": true,
+      "part": "open",
+      "show": "evening-crawl",
+      "lines": [
+        {
+          "speaker": "Rita Gridley",
+          "text": "It's the Evening Crawl. Same cars as this morning, facing the other way. Let's get you home. Eventually.",
+          "startMs": 36
+        }
+      ]
+    },
+    {
+      "id": "show-evening-001",
+      "category": "dj",
+      "url": "/voice/traffic-on-the-8s/show-evening-001.mp3",
+      "durationMs": 9293,
+      "overMusic": true,
+      "show": "evening-crawl",
+      "lines": [
+        {
+          "speaker": "A Commuter",
+          "text": "Rita, I've just realised I'm in the morning queue. I've been facing the wrong way since breakfast.",
+          "startMs": 47
+        },
+        {
+          "speaker": "Rita Gridley",
+          "text": "That's all right, love. It's the same queue. Turn your radio round and pretend.",
+          "startMs": 5795
+        }
+      ]
+    },
+    {
+      "id": "show-small-hours-open",
+      "category": "id",
+      "url": "/voice/traffic-on-the-8s/show-small-hours-open.mp3",
+      "durationMs": 6914,
+      "overMusic": true,
+      "daypart": "night",
+      "part": "open",
+      "show": "small-hours-jam",
+      "lines": [
+        {
+          "speaker": "Rita Gridley",
+          "text": "This is the Small Hours Jam. The wormholes are quiet, the timelines are dozing, and the bypass is wide awake. It always is.",
+          "startMs": 43
+        }
+      ]
+    },
+    {
+      "id": "show-small-hours-001",
+      "category": "dj",
+      "url": "/voice/traffic-on-the-8s/show-small-hours-001.mp3",
+      "durationMs": 16387,
+      "overMusic": true,
+      "show": "small-hours-jam",
+      "lines": [
+        {
+          "speaker": "Captain Buzz Ferraro",
+          "text": "Rita, it's three in the morning and I can see every headlight in the jam from up here. Billions of them.",
+          "startMs": 50
+        },
+        {
+          "speaker": "Captain Buzz Ferraro",
+          "text": "From the pod, it looks like a river. A very slow, very patient river of people trying to get home. It's the prettiest thing I know.",
+          "startMs": 6352
+        },
+        {
+          "speaker": "Rita Gridley",
+          "text": "Don't tell them that, Buzz. They'll stop and look.",
+          "startMs": 14143
+        }
+      ]
+    },
+    {
+      "id": "convergence-missing-moon",
+      "category": "event",
+      "url": "/voice/traffic-on-the-8s/convergence-missing-moon.mp3",
+      "durationMs": 7560,
+      "overMusic": false,
+      "kit": "missing-moon",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Rita Gridley",
+          "text": "Breaking traffic news. A moon has gone missing. We had one in lost property on the hard shoulder. It's gone too.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Captain Buzz Ferraro",
+          "text": "Rita, I think it took the slip road.",
+          "startMs": 5745
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-smell",
+      "category": "event",
+      "url": "/voice/traffic-on-the-8s/convergence-the-smell.mp3",
+      "durationMs": 9925,
+      "overMusic": false,
+      "kit": "the-smell",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Rita Gridley",
+          "text": "Reports from every lane of a strong smell of toast. Buzz, is that you?",
+          "startMs": 46
+        },
+        {
+          "speaker": "Captain Buzz Ferraro",
+          "text": "Not me, Rita. The whole jam smells of it. Fourteen billion years of traffic, and it smells like breakfast.",
+          "startMs": 3806
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-song",
+      "category": "event",
+      "url": "/voice/traffic-on-the-8s/convergence-the-song.mp3",
+      "durationMs": 8442,
+      "overMusic": false,
+      "kit": "the-song",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Rita Gridley",
+          "text": "Every driver on the bypass is humming the same song. I can hear it through the desk.",
+          "startMs": 36
+        },
+        {
+          "speaker": "Rita Gridley",
+          "text": "Nobody knows how it ends. That's the bypass for you. Nothing here has ever got to the end.",
+          "startMs": 4305
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-knock",
+      "category": "event",
+      "url": "/voice/traffic-on-the-8s/convergence-the-knock.mp3",
+      "durationMs": 6825,
+      "overMusic": false,
+      "kit": "the-knock",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Captain Buzz Ferraro",
+          "text": "Rita, somebody just knocked on the pod. Three times.",
+          "startMs": 49
+        },
+        {
+          "speaker": "Rita Gridley",
+          "text": "Buzz, you're four miles up.",
+          "startMs": 3228
+        },
+        {
+          "speaker": "Captain Buzz Ferraro",
+          "text": "I know, Rita. I'm not opening it.",
+          "startMs": 5108
+        }
+      ]
+    },
+    {
+      "id": "convergence-wrong-colour",
+      "category": "event",
+      "url": "/voice/traffic-on-the-8s/convergence-wrong-colour.mp3",
+      "durationMs": 9785,
+      "overMusic": false,
+      "kit": "wrong-colour",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Rita Gridley",
+          "text": "Drivers, the sky has gone a colour nobody has a word for. Please don't stop to look. You're stopped anyway, I know, but don't.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Rita Gridley",
+          "text": "Buzz says it's the colour of a green light. Nobody here has ever seen one.",
+          "startMs": 6258
+        }
+      ]
+    },
+    {
+      "id": "convergence-the-pigeon",
+      "category": "event",
+      "url": "/voice/traffic-on-the-8s/convergence-the-pigeon.mp3",
+      "durationMs": 9443,
+      "overMusic": false,
+      "kit": "the-pigeon",
+      "event": "convergence",
+      "lines": [
+        {
+          "speaker": "Rita Gridley",
+          "text": "There's a pigeon walking along the bypass. Lane one. Overtaking everyone.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Captain Buzz Ferraro",
+          "text": "Fastest thing on the bypass in fourteen billion years, Rita. I'm giving it a round of applause.",
+          "startMs": 4204
+        }
+      ]
+    },
+    {
+      "id": "halloween-001",
+      "category": "dj",
+      "url": "/voice/traffic-on-the-8s/halloween-001.mp3",
+      "durationMs": 14560,
+      "title": "The Ghost Lane",
+      "overMusic": true,
+      "dates": [
+        "10-24",
+        "10-25",
+        "10-26",
+        "10-27",
+        "10-28",
+        "10-29",
+        "10-30",
+        "10-31"
+      ],
+      "lines": [
+        {
+          "speaker": "Rita Gridley",
+          "text": "Halloween traffic. Reports of a ghost car in lane four of the bypass, with nobody driving it, and the indicator going.",
+          "startMs": 43
+        },
+        {
+          "speaker": "Captain Buzz Ferraro",
+          "text": "Rita, I've had a look. It's been indicating left since before the war. Which war, I can't tell you.",
+          "startMs": 6327
+        },
+        {
+          "speaker": "Rita Gridley",
+          "text": "Let it in, everyone. It's waited long enough.",
+          "startMs": 12331
+        }
+      ]
+    }
+  ]
+}
