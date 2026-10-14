@@ -246,15 +246,21 @@ function shapeProblems(data: unknown, station: string): string[] {
 }
 
 /** Serials run 1, 2, 3, ... per serial id across the library (a storyline may hop stations). */
-function serialProblems(clips: Json[]): string[] {
-  const episodes = new Map<string, number[]>();
-  for (const clip of clips) {
-    const s = clip.serial;
-    if (isObject(s) && typeof s.id === 'string' && isCount(s.episode)) episodes.set(s.id, [...(episodes.get(s.id) ?? []), s.episode]);
-  }
+/** An episode may span several clips on one station (aired whole, in id order), never two stations. */
+function serialProblems(clips: { station: string; clip: Json }[]): string[] {
+  const episodes = new Map<string, Map<number, string>>();
   const problems: string[] = [];
-  for (const [id, list] of episodes) {
-    const sorted = [...list].sort((a, b) => a - b);
+  for (const { station, clip } of clips) {
+    const s = clip.serial;
+    if (!isObject(s) || typeof s.id !== 'string' || !isCount(s.episode)) continue;
+    const seen = episodes.get(s.id) ?? new Map<number, string>();
+    episodes.set(s.id, seen);
+    const owner = seen.get(s.episode);
+    if (owner === undefined) seen.set(s.episode, station);
+    else if (owner !== station) problems.push(`serial ${s.id}: episode ${s.episode} is on both ${owner} and ${station}`);
+  }
+  for (const [id, seen] of episodes) {
+    const sorted = [...seen.keys()].sort((a, b) => a - b);
     const expected = sorted.map((_, i) => i + 1);
     if (sorted.join() !== expected.join()) problems.push(`serial ${id}: episodes ${sorted.join(', ')} should be ${expected.join(', ')}`);
   }
@@ -269,7 +275,8 @@ describe('voice library (public/voice)', () => {
   it('has continuous serials across all manifests', () => {
     const clips = manifestFiles.flatMap((file) => {
       const data: unknown = JSON.parse(readFileSync(join(VOICE, file), 'utf8'));
-      return isObject(data) && Array.isArray(data.clips) ? (data.clips as Json[]) : [];
+      const station = file.replace(/\.json$/, '');
+      return isObject(data) && Array.isArray(data.clips) ? (data.clips as Json[]).map((clip) => ({ station, clip })) : [];
     });
     expect(serialProblems(clips)).toEqual([]);
   });
