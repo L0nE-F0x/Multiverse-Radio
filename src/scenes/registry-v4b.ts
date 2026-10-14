@@ -32,4 +32,8 @@ export const TALK_SCENES_V4: Partial<Record<SceneId, SceneEntry>> = {
     label: 'A moonlit room held still between two ticks: dust hangs in the air and a falling glass waits mid-air beside a glowing radio.',
     load: () => import('./defs/between-minutes'),
   },
+  'static-presence': {
+    label: 'Soft, dark television static slowly gathers into the suggestion of a face leaning closer to listen, then lets go.',
+    load: () => import('./defs/static-presence'),
+  },
 };
