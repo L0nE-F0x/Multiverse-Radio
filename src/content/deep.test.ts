@@ -101,8 +101,11 @@ describe('shipLogNote', () => {
 // ── Voice scripts ─────────────────────────────────────────────────────────────
 
 const SCRIPTS = import.meta.glob<string>('/content/voice/*.toml', { query: '?raw', import: 'default', eager: true });
-const MINE = ['_ship', '_pirate', '_oddities', '_events', 'hush-after-hours', 'last-lighthouse', 'transmission-zero'];
-const SECRET = ['hush-after-hours', 'last-lighthouse', 'transmission-zero'];
+const V4_SECRET = ['the-switchboard', 'minute-between', 'the-harbour', 'something-listening'];
+const MINE = ['_ship', '_pirate', '_oddities', '_events', 'hush-after-hours', 'last-lighthouse', 'transmission-zero', ...V4_SECRET];
+const SECRET = ['hush-after-hours', 'last-lighthouse', 'transmission-zero', ...V4_SECRET];
+/** The Convergence's weekly topics (content/voice/SCHEMA.md). */
+const CONVERGENCE_KITS = ['missing-moon', 'the-smell', 'the-song', 'the-knock', 'wrong-colour', 'the-pigeon'];
 
 interface Block {
   kind: 'clip' | 'show';
@@ -167,8 +170,67 @@ describe('deep voice scripts', () => {
       expect(c.fields.category, c.fields.id).toBe('event');
       expect(EVENT_IDS as readonly string[], c.fields.id).toContain(c.fields.event);
     }
-    // TODO(v4 integration): include 'convergence' once writers-arcs delivers its clips.
-    for (const event of EVENT_IDS.filter((e) => e !== 'convergence')) expect(clips.filter((c) => c.fields.event === event).length, event).toBeGreaterThanOrEqual(5);
+    for (const event of EVENT_IDS) expect(clips.filter((c) => c.fields.event === event).length, event).toBeGreaterThanOrEqual(5);
+  });
+
+  it('_ship: the off-course arc has steps 1 to 8, once each, in order', () => {
+    const steps = clipsOf('_ship')
+      .map((c) => ({ id: c.fields.id!, arc: /^arc = \{ id = "([a-z-]+)", step = (\d+) \}$/m.exec(c.body) }))
+      .filter((c) => c.arc);
+    expect(steps.every((s) => s.arc![1] === 'off-course'), 'only the off-course arc').toBe(true);
+    expect(steps.map((s) => Number(s.arc![2]))).toEqual([1, 2, 3, 4, 5, 6, 7, 8]);
+    // Step 7 names The Harbour's frequency; it must say it the way the dial shows it.
+    const seven = clipsOf('_ship').find((c) => c.fields.id === steps[6]!.id)!;
+    expect(seven.body).toMatch(/one hundred and forty point oh/i);
+    expect(seven.body).toMatch(/left a light on/);
+  });
+
+  it('_ship: a jam kit for Free Frequency, and evasive heading notices at every level', () => {
+    const clips = clipsOf('_ship');
+    const jam = clips.filter((c) => c.fields.kit === 'jam');
+    expect(jam.length).toBeGreaterThanOrEqual(8);
+    for (const c of jam) {
+      expect(c.fields.stations, c.fields.id).toBe('["free-frequency"]');
+      expect(c.fields.part, `${c.fields.id}: jam lines stand alone`).toBeUndefined();
+    }
+    const heading = clips.filter((c) => c.fields.kit === 'heading');
+    expect(heading.length).toBeGreaterThanOrEqual(15);
+    for (const level of ['0', '1', '2', '3']) expect(heading.some((c) => c.fields.level === level), `heading level ${level}`).toBe(true);
+    expect(clips.filter((c) => c.fields.kit === 'outer-band').length).toBeGreaterThanOrEqual(1);
+  });
+
+  it('_events: the Convergence has an open and a close per kit, with variants', () => {
+    const conv = clipsOf('_events').filter((c) => c.fields.event === 'convergence');
+    for (const c of conv) {
+      expect(CONVERGENCE_KITS, c.fields.id).toContain(c.fields.kit);
+      expect(['open', 'close'], c.fields.id).toContain(c.fields.part);
+    }
+    for (const kit of CONVERGENCE_KITS) {
+      for (const part of ['open', 'close']) {
+        const n = conv.filter((c) => c.fields.kit === kit && c.fields.part === part).length;
+        expect(n, `${kit} ${part}`).toBeGreaterThanOrEqual(2);
+      }
+    }
+  });
+
+  for (const id of SECRET) {
+    it(`${id}: one Convergence reaction per kit`, () => {
+      const reactions = clipsOf(id).filter((c) => c.fields.event === 'convergence');
+      for (const c of reactions) {
+        expect(c.fields.category, c.fields.id).toBe('event');
+        expect(c.fields.part, `${c.fields.id}: reactions aren't modular parts`).toBeUndefined();
+      }
+      expect(reactions.map((c) => c.fields.kit).sort()).toEqual([...CONVERGENCE_KITS].sort());
+    });
+  }
+
+  it('the-switchboard: a complete calls kit', () => {
+    const calls = clipsOf('the-switchboard').filter((c) => c.fields.kit === 'calls');
+    for (const part of ['open', 'body', 'close']) expect(calls.filter((c) => c.fields.part === part).length, part).toBeGreaterThanOrEqual(part === 'body' ? 8 : 4);
+  });
+
+  it('something-listening: it notices you first', () => {
+    expect(clipsOf('something-listening').some((c) => c.fields.id === 'noticed')).toBe(true);
   });
 
   it('_oddities: clip ids are keyed by oddity', () => {
