@@ -7,7 +7,7 @@
 // brightening, as if a door had opened somewhere.
 
 import { hex, mix } from '../kit/color';
-import { clamp, envelope, smoothstep } from '../kit/fx';
+import { envelope, smoothstep } from '../kit/fx';
 import type { SceneDef } from '../types';
 
 // The fields are baked on a grid in "face space": u across (−1..1), v down (−1.3..1.5).
@@ -35,7 +35,8 @@ function bake(fn: (u: number, v: number) => number): Float32Array {
 /** A head and shoulders leaning in: brow, cheekbones and nose in light, eyes and mouth in shadow. */
 const faceField = (u: number, v: number) => {
   const head = (u / 0.6) ** 2 + ((v + 0.1) / 0.8) ** 2;
-  let f = head < 1 ? 0.28 : -0.45 * Math.exp(-(head - 1) * 3);
+  // a soft edge: the head fades into the static rather than being cut out of it
+  let f = 0.28 * Math.exp(-(head ** 3) * 0.7) - 0.4 * Math.exp(-((head - 1.25) ** 2) * 6);
   // shoulders and the neck below
   const sh = (u / 1.25) ** 2 + ((v - 1.42) / 0.55) ** 2;
   if (sh < 1) f = Math.max(f, 0.16 * (1 - sh * 0.5));
@@ -98,7 +99,7 @@ const def: SceneDef = {
     const warm = hex('#c89a6a');
     // the grey ramp the static is quantised to (16 steps, dark-heavy)
     const ramp: number[] = [];
-    for (let i = 0; i < 16; i++) ramp.push(mix(lo, hi, (i / 15) ** 1.6 * 0.62));
+    for (let i = 0; i < 16; i++) ramp.push(mix(lo, hi, (i / 15) ** 1.7 * 0.52));
 
     // per-pixel persistence: each grain eases toward its new value, so the static is soft
     let prev = new Uint8Array(0);
@@ -119,7 +120,7 @@ const def: SceneDef = {
 
         // how far the static has gathered, and into what
         const phase = (t % CYCLE) / CYCLE;
-        let gather = smoothstep(0.08, 0.42, phase) * (1 - smoothstep(0.58, 0.86, phase));
+        let gather = 0.8 * smoothstep(0.08, 0.42, phase) * (1 - smoothstep(0.58, 0.86, phase));
         let field = face;
         let scale = 1 + 0.16 * gather; // it leans closer as it gathers
         let tilt = 0;
@@ -201,7 +202,6 @@ const def: SceneDef = {
           // where it leans close, the light finds the edge of it
           g.glow(FACE.x + 16, FACE.y - 20, 30, warm, 0.05 * (gather - 0.3) * live, 5);
         }
-        void clamp;
       },
     };
   },
