@@ -33,6 +33,3 @@ export function useLayoutSync(): Layout {
   }, [layout]);
   return layout;
 }
-
-/** Touch-first screens: no keyboard hints. */
-export const COARSE_QUERY = '(hover: none) and (pointer: coarse)';
