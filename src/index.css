@@ -2649,6 +2649,16 @@
     }
   }
 
+  /* The cold-console card sits clear of the mini-player, and makes way for the open sheet. */
+  html[data-layout='drawer'] .power {
+    bottom: calc(var(--dock-h, 120px) + 8px);
+    padding-top: calc(var(--safe-t) + 44px);
+  }
+
+  .console:has(.drawer:is([data-open='true'], [data-dragging='true'])) .power {
+    visibility: hidden;
+  }
+
   html[data-layout='drawer'] .caption {
     font-size: 13.5px;
   }
