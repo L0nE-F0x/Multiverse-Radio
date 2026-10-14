@@ -98,8 +98,8 @@ export function figure(g: Gfx, x: number, footY: number, h: number, p: Pose, c: 
   const lean = p.lean;
   const sl = Math.sin(lean);
   const cl = Math.cos(lean);
-  const lw = Math.max(1, Math.round(h / 11));
-  const aw = Math.max(1, Math.round(h / 15));
+  const lw = Math.max(1, Math.round(h / 9.5));
+  const aw = Math.max(1, Math.round(h / 13));
   // hips and shoulders
   const legLen = h * 0.47;
   const hipY = footY - legLen * Math.cos(Math.max(Math.abs(p.legL), Math.abs(p.legR)) * 0.6) + bob * 0.5;
@@ -107,11 +107,11 @@ export function figure(g: Gfx, x: number, footY: number, h: number, p: Pose, c: 
   const torso = h * 0.32;
   const shX = hipX + sl * torso;
   const shY = hipY - cl * torso + bob * 0.5;
-  const hw = Math.max(1.5, h * 0.11);
-  const hipW = Math.max(1, h * 0.08);
+  const hw = Math.max(1.5, h * 0.12);
+  const hipW = Math.max(1, h * 0.085);
   // legs (thigh + shin)
   const leg = (a: number, knee: number, side: number) => {
-    const hx = hipX + side * hipW * 0.6;
+    const hx = hipX + side * hipW * 0.85;
     const th = legLen * 0.52;
     const kx = hx + Math.sin(a) * th;
     const ky = hipY + Math.cos(a) * th;
@@ -144,7 +144,7 @@ export function figure(g: Gfx, x: number, footY: number, h: number, p: Pose, c: 
   arm(p.armL, p.elbowL ?? 0, -1);
   arm(p.armR, p.elbowR ?? 0, 1);
   // neck and head
-  const hr = Math.max(1.2, h * 0.085);
+  const hr = Math.max(1.2, h * 0.095);
   const hx = shX + sl * hr * 1.6 + (p.nod ?? 0);
   const hy = shY - hr * 1.35;
   g.vline(Math.round(shX), Math.round(hy), Math.round(shY), c);
