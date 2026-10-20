@@ -87,12 +87,13 @@ export class Overlay {
 
   private lastWall: number | null = null;
   private nextHushMs: number;
-  private readonly picker = new HushPicker();
+  readonly picker: HushPicker;
   private pending: { clip: VoiceClip; since: number } | null = null;
   private hushCount = 0;
   private airings: Airing[] = [];
   private readonly plans = new Map<string, EventPlan>();
   private treatment: { key: string; parts: Treatment[]; quietStatic: boolean } | null = null;
+  private activeEvent: ActiveEvent | null = null;
   private spans: DuckSpan[] = [];
   private duckUntil = -Infinity;
   /** Convergence reactions already aired (`<event key>:react:<station>`), for the event on now. */
@@ -104,8 +105,24 @@ export class Overlay {
     private readonly cache: () => AudioBufferCache | null,
     private readonly library: VoiceLibrary,
     private readonly random: () => number = Math.random,
+    picker?: HushPicker,
   ) {
+    this.picker = picker ?? new HushPicker();
     this.nextHushMs = nextHushDelay(this.random, true);
+  }
+
+  // ── HUSH behavior tracking ────────────────────────────────────────────────
+
+  recordSkip(nowMs: number): void {
+    this.picker.recordSkip(nowMs);
+  }
+
+  recordTune(freq: number, stationId: string | null, isPirate = false, nearSecret = false, nowMs = 0): void {
+    this.picker.recordTune(freq, stationId, isPirate, nearSecret, nowMs);
+  }
+
+  recordEventEnd(eventKind: EventId, nowMs: number): void {
+    this.picker.recordEventEnd(eventKind, nowMs);
   }
 
   // ── Queries ───────────────────────────────────────────────────────────────
@@ -128,7 +145,7 @@ export class Overlay {
   }
 
   plan(event: ActiveEvent, stationId: string | null): EventPlan {
-    const key = `${event.id}@${event.startMs}`;
+    const key = `${event.id}@${event.startMs}:${stationId ?? ''}:${event.stationA ?? ''}:${event.stationB ?? ''}`;
     let plan = this.plans.get(key);
     if (!plan) {
       plan = planEvent(event, this.library.pool(POOLS.events), stationId ?? undefined);
@@ -224,6 +241,10 @@ export class Overlay {
 
     // Events: treatment, clips, and the station's level underneath.
     const event = this.eventAt(wall);
+    if (this.activeEvent && (!event || event.id !== this.activeEvent.id || event.startMs !== this.activeEvent.startMs)) {
+      this.picker.recordEventEnd(this.activeEvent.id, wall);
+    }
+    this.activeEvent = event;
     const plan = event ? this.plan(event, program.stationId) : null;
     const key = event ? `${event.id}@${event.startMs}` : null;
     if (this.treatment && this.treatment.key !== key) this.endTreatment(1.2);
@@ -422,7 +443,16 @@ export class Overlay {
       const clip = this.picker.pick(
         pool,
         this.level(),
-        { date: program.date, daypart: program.daypart, weekday: program.weekday, shifts: view.shifts, aired: view.aired, holdArc: view.holdArc },
+        {
+          date: program.date,
+          daypart: program.daypart,
+          weekday: program.weekday,
+          shifts: view.shifts,
+          aired: view.aired,
+          holdArc: view.holdArc,
+          nowMs: wall,
+          stationId: program.stationId,
+        },
         this.random,
       );
       if (!clip) {

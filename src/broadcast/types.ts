@@ -354,6 +354,15 @@ export interface VoiceClip {
   arc?: { id: string; step: number };
   /** v4: only air on these local weekdays (0 = Sunday … 6 = Saturday). Preferred that day, like `dates`. */
   days?: number[];
+  /** Storyline continuity: only air when the listener's night shifts `shifts` is in `[min, max]` (inclusive). */
+  shifts?: [number, number];
+  /**
+   * Ship computer only: this notice airs when the matching operator behaviour is active
+   * (`on_skip_streak`, `scanning_static`, `on_pirate`, `after_event`, `near_secret`, `on_station`).
+   */
+  trigger?: 'on_skip_streak' | 'scanning_static' | 'on_pirate' | 'after_event' | 'near_secret' | 'on_station';
+  /** Station-swap crossovers: the other station in the pair (`swap_with` in the script). */
+  swapWith?: string;
   lines: CaptionLine[];
 }
 

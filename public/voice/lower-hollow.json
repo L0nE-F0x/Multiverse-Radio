@@ -1041,6 +1041,161 @@
           "startMs": 7411
         }
       ]
+    },
+    {
+      "id": "committee-hour-close",
+      "category": "id",
+      "url": "/voice/lower-hollow/committee-hour-close.mp3",
+      "durationMs": 8962,
+      "title": "The Committee Hour",
+      "overMusic": true,
+      "part": "close",
+      "show": "committee-hour",
+      "lines": [
+        {
+          "speaker": "Councillor Dibbs",
+          "text": "That was the Committee Hour. On behalf of the parish council, good night.",
+          "startMs": 444
+        },
+        {
+          "speaker": "Councillor Dibbs",
+          "text": "The hole remains. The minutes remain. The biscuits, Maureen, are noted.",
+          "startMs": 4589
+        }
+      ]
+    },
+    {
+      "id": "committee-hour-03",
+      "category": "news",
+      "url": "/voice/lower-hollow/committee-hour-03.mp3",
+      "durationMs": 39885,
+      "title": "A Receipt From The Hole",
+      "overMusic": false,
+      "show": "committee-hour",
+      "lines": [
+        {
+          "speaker": "Councillor Dibbs",
+          "text": "Item four. The parish council has been sent a receipt by the hole. The hole would like to be reimbursed for one fence, which it has swallowed, and for the echo of the fence, which it has kept.",
+          "startMs": 436
+        },
+        {
+          "speaker": "Councillor Dibbs",
+          "text": "The committee has considered the claim. The committee notes that the hole is not on the payroll. The committee also notes that the fence is, regrettably, inside the hole, where the committee cannot minute it properly.",
+          "startMs": 10223
+        },
+        {
+          "speaker": "Councillor Dibbs",
+          "text": "Maureen has asked that the biscuits be entered as their own item. The committee thanks Maureen. The committee will take the biscuits under any other business, which is to say, never, but kindly.",
+          "startMs": 21132
+        },
+        {
+          "speaker": "Councillor Dibbs",
+          "text": "The hole remains. The receipt remains. It is slightly warm, and it smells of soil, and it has been filed beside the minutes, which do not mention the smell.",
+          "startMs": 31320
+        }
+      ]
+    },
+    {
+      "id": "committee-hour-04",
+      "category": "call",
+      "url": "/voice/lower-hollow/committee-hour-04.mp3",
+      "durationMs": 53889,
+      "title": "Maureen, On The Biscuits",
+      "overMusic": false,
+      "show": "committee-hour",
+      "lines": [
+        {
+          "speaker": "Councillor Dibbs",
+          "text": "The Committee Hour. The parish council is in session. Do keep it brief.",
+          "startMs": 2850
+        },
+        {
+          "speaker": "Maureen Pettigrew",
+          "text": "Councillor Dibbs, it's Maureen. I'm in my kitchen, and I've got the minutes in front of me, and once again the biscuits are not in them. The parish can live with a mystery hole. It cannot live with a meeting that pretends nobody brought a tin.",
+          "startMs": 6790
+        },
+        {
+          "speaker": "Councillor Dibbs",
+          "text": "The committee notes your call, Maureen. The committee notes the tin. The committee does not intend to discuss the tin on the air.",
+          "startMs": 17950
+        },
+        {
+          "speaker": "Maureen Pettigrew",
+          "text": "Then discuss the pie. You left it in the hall and talked to the hole instead. People came for the pie. The hole did not come for the pie. The hole has never once brought a plate.",
+          "startMs": 24602
+        },
+        {
+          "speaker": "Councillor Dibbs",
+          "text": "The pie is not an agenda item.",
+          "startMs": 33250
+        },
+        {
+          "speaker": "Maureen Pettigrew",
+          "text": "It is the only item anyone came for. Put it in the minutes, Councillor. Item, pie. Status, eaten by the committee while pretending to think. I'll be round with the flask.",
+          "startMs": 35213
+        },
+        {
+          "speaker": "Councillor Dibbs",
+          "text": "The committee will add a footnote. The footnote will be very small. Good night, Maureen.",
+          "startMs": 44105
+        },
+        {
+          "speaker": "Councillor Dibbs",
+          "text": "The footnote is noted. The hole remains. We move on.",
+          "startMs": 50225
+        }
+      ]
+    },
+    {
+      "id": "committee-hour-05",
+      "category": "dj",
+      "url": "/voice/lower-hollow/committee-hour-05.mp3",
+      "durationMs": 27465,
+      "overMusic": true,
+      "show": "committee-hour",
+      "lines": [
+        {
+          "speaker": "Councillor Dibbs",
+          "text": "A word, while the committee gathers its papers. If you are new to the Hollow, the hole is not on the map. The committee has been asked to put it on the map. The committee has, after careful thought, ordered a larger margin.",
+          "startMs": 437
+        },
+        {
+          "speaker": "Councillor Dibbs",
+          "text": "Biscuit the spaniel is at the rim, and is not lost. He is attending. He does not vote. He has never needed to. The hole likes him, and the committee does not discuss what the hole likes.",
+          "startMs": 11587
+        },
+        {
+          "speaker": "Councillor Dibbs",
+          "text": "Item five can wait for the music. The music is not an item. The committee is grateful anyway.",
+          "startMs": 21186
+        }
+      ]
+    },
+    {
+      "id": "committee-hour-06",
+      "category": "news",
+      "url": "/voice/lower-hollow/committee-hour-06.mp3",
+      "durationMs": 35510,
+      "title": "Correspondence, Unread Aloud",
+      "overMusic": false,
+      "show": "committee-hour",
+      "lines": [
+        {
+          "speaker": "Councillor Dibbs",
+          "text": "Correspondence. The parish council has received a second letter from the hole. It is polite. It asks after the fence, and after Maureen, and after whether the committee slept well. The committee slept adequately.",
+          "startMs": 438
+        },
+        {
+          "speaker": "Councillor Dibbs",
+          "text": "The committee has replied, thanking the hole for its letter, and noting its contents, and not reading the postscript on the air. The postscript is warm, and slightly damp, and not the business of a Thursday.",
+          "startMs": 11648
+        },
+        {
+          "speaker": "Councillor Dibbs",
+          "text": "Residents are reminded not to lower microphones, pies, or questions into the hole. The hole answers. That is the difficulty. The hole remains. Item six is the flowers on the rim, which are doing nicely, and may be minuted in full.",
+          "startMs": 22573
+        }
+      ]
     }
   ]
 }

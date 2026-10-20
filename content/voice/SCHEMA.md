@@ -40,7 +40,7 @@ title = "Station ident"      # optional display title (ads: product name; shows:
 over_music = true            # optional; default true for id/dj/interrupt, false otherwise
 daypart = "night"            # optional: morning | day | evening | night
 bed = "rain"                 # optional ambience baked under the whole clip
-stations = ["void-beats"]    # optional, _shared.toml only: restrict to these stations
+stations = ["void-beats"]    # optional, _shared/_ship/_events.toml: restrict to these stations
 # v3 (all optional):
 part = "open"                # modular part: open | body | close (see "Modular parts")
 kit = "news"                 # which set of parts (default: the category)
@@ -52,12 +52,15 @@ event = "dimensional-storm"  # _events.toml only: which event (v4: also "converg
 # v4 (all optional):
 days = [1]                   # only on these local weekdays (0 = Sunday … 6 = Saturday); preferred that day
 arc = { id = "off-course", step = 3 }   # _ship.toml only: airs once, after >= 3 night shifts
+shifts = [2, 10]             # _ship.toml or station scripts: only when night shifts worked is in [min, max] (0–999)
+trigger = "on_skip_streak"   # _ship.toml only: on_skip_streak | scanning_static | on_pirate | after_event | near_secret | on_station
+swap_with = "snail-jams"     # _events.toml (event = "station-swap") only: partner station for a crossover swap
 lines = [
-  { say = "host", text = "You're tuned to Void Beats." },
+  { say = "host", text = "You're tuned to Void Beats.", gap = -0.35, pan = -0.4 },
   { pause = 0.4 },
-  { say = "host", text = "The void says hi. The void is lying. Sort of.", speed = 0.9 },
+  { say = "host", text = "The void says hi. The void is lying. Sort of.", speed = 0.9, gain = -3.0 },
   { sfx = "record-scratch" },
-  { say = "caller", text = "Hi, long time listener, first time existing." },
+  { say = "caller", text = "Hi, long time listener, first time existing.", pan = 0.5 },
   { sting = "id" },
 ]
 ```
@@ -114,10 +117,16 @@ the tuned station's reaction → close.
 
 | Line | Fields | Notes |
 | --- | --- | --- |
-| speech | `say`, `text`, optional `speed`, `fx`, `gap`, `cut`, `name` | `gap` = silence after (default 0.35 s). `cut` = keep only this fraction, for an abrupt channel flip. `name` overrides the caption speaker. |
+| speech | `say`, `text`, optional `speed`, `fx`, `gap`, `cut`, `name`, `gain`, `pan` | `gap` = silence after (`-3` to `15` s, default `0.35` s; negative `gap` starts the next line before this one finishes for true crosstalk/interruption). `cut` = keep only this fraction, for an abrupt channel flip. `name` overrides the caption speaker. `gain` = level offset in dB (`-18` to `6`, default `0`) for off-mic, whispered or shouted lines. `pan` = constant-power stereo position (`-1` hard left to `1` hard right, default `0` centre; clips stay mono when all lines have `pan = 0`). |
 | pause | `pause` (seconds) | |
 | sfx | `sfx`, optional `seconds`, `level` | one-shot sound effect |
 | sting | `sting` | short musical jingle |
+
+### Continuity gating, reactive triggers and crossover swaps
+
+- **`shifts = [min_shift, max_shift]`** (`_ship.toml` or station scripts, `0 <= min_shift <= max_shift <= 999`): gates a clip to listeners who have worked between `min_shift` and `max_shift` night shifts, for multi-shift storyline continuity.
+- **`trigger`** (`_ship.toml` only): marks a reactive HUSH notice for a specific listener action or context: `on_skip_streak`, `scanning_static`, `on_pirate`, `after_event`, `near_secret`, or `on_station`.
+- **`swap_with = "<station-id>"`** (`_events.toml` with `event = "station-swap"` only): pairs a station-swap clip with a specific roster station (e.g. alongside `stations = ["<other-station>"]` for bespoke two-station crossover scenes).
 
 ### Voice effects (`fx`)
 

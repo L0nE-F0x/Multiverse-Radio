@@ -72,6 +72,222 @@ export interface ScheduleOptions {
   tzOffset?: TzOffset;
   /** 'oddity': long stretches of the oddity's own sound with the occasional announcement. */
   clock?: 'oddity';
+  /** Listener's night shifts worked (or a getter), for gating `clip.shifts: [min, max]`. Default: 0. */
+  shifts?: number | (() => number);
+  /** Global episode list (or episode count) per serial id across all stations. */
+  serialTotals?: ReadonlyMap<string, readonly number[] | number> | Readonly<Record<string, readonly number[] | number>>;
+}
+
+// ── Cross-station serial directory ───────────────────────────────────────────
+
+export interface SerialEpisodeInfo {
+  episode: number;
+  stationId: string;
+  clipId: string;
+  title: string;
+}
+
+export interface SerialDirectoryEntry {
+  id: string;
+  serialId: string;
+  title: string;
+  totalEpisodes: number;
+  episodes: SerialEpisodeInfo[];
+}
+
+export interface ActiveSerialStatus {
+  serialId: string;
+  title: string;
+  totalEpisodes: number;
+  episode: number;
+  stationId: string;
+  clipId: string;
+  episodeTitle: string;
+  airMinutes: number[];
+  nextEpisode: number;
+  nextStationId: string;
+  nextClipId: string;
+  nextEpisodeTitle: string;
+}
+
+const KNOWN_SERIAL_DIRECTORY: readonly Omit<SerialDirectoryEntry, 'id' | 'totalEpisodes'>[] = [
+  {
+    serialId: 'bev-gets-her-song',
+    title: 'Bev Gets Her Song',
+    episodes: [
+      { episode: 1, stationId: 'ask-grenda', clipId: 'bev-gets-her-song-01', title: 'Bev Gets Her Song, Part One: Eleven Years' },
+      { episode: 2, stationId: 'every-news', clipId: 'bev-gets-her-song-02', title: 'Bev Gets Her Song, Part Two: Lift Number Two' },
+      { episode: 3, stationId: 'hold-music', clipId: 'bev-gets-her-song-03', title: 'Bev Gets Her Song, Part Three: Off the Record' },
+      { episode: 4, stationId: 'numbers-omega', clipId: 'bev-gets-her-song-04', title: 'Bev Gets Her Song, Part Four: Two. Two. One.' },
+      { episode: 5, stationId: 'impossible-sports', clipId: 'bev-gets-her-song-05', title: 'Bev Gets Her Song, Part Five: The Lift Boy' },
+      { episode: 6, stationId: 'classifieds', clipId: 'bev-gets-her-song-06', title: 'Bev Gets Her Song, Part Six: Seeking the Request Line' },
+      { episode: 7, stationId: 'void-beats', clipId: 'bev-gets-her-song-07', title: 'Bev Gets Her Song, Part Seven: The Other Half' },
+      { episode: 8, stationId: 'end-lounge', clipId: 'bev-gets-her-song-08', title: 'Bev Gets Her Song, Part Eight: The Space After the Third Note' },
+      { episode: 9, stationId: 'dimension-hop', clipId: 'bev-gets-her-song-09', title: 'Bev Gets Her Song, Part Nine: Hello, Night Shift' },
+      { episode: 10, stationId: 'channel-surf', clipId: 'bev-gets-her-song-10', title: 'Bev Gets Her Song, Part Ten: For the Car' },
+      { episode: 11, stationId: 'ask-grenda', clipId: 'bev-gets-her-song-11', title: 'Bev Gets Her Song, Part Eleven: Is This the Request Line?' },
+      { episode: 12, stationId: 'hold-music', clipId: 'bev-gets-her-song-12', title: 'Bev Gets Her Song, Part Twelve: Pleasant Interval' },
+    ],
+  },
+  {
+    serialId: 'greg-comes-home',
+    title: 'Greg Comes Home',
+    episodes: [
+      { episode: 1, stationId: 'whalesong', clipId: 'greg-comes-home-01', title: 'Greg Comes Home, Part One: The Stowaway Decides' },
+      { episode: 2, stationId: 'comet-marimba', clipId: 'greg-comes-home-02', title: 'Greg Comes Home, Part Two: Hitching a Comet' },
+      { episode: 3, stationId: 'moon-dub', clipId: 'greg-comes-home-03', title: 'Greg Comes Home, Part Three: A Ride on the Moonlight' },
+      { episode: 4, stationId: 'rainfall-fm', clipId: 'greg-comes-home-04', title: 'Greg Comes Home, Part Four: Nobody Here Has a Shadow' },
+      { episode: 5, stationId: 'snail-jams', clipId: 'greg-comes-home-05', title: 'Greg Comes Home, Part Five: Half a Hat' },
+      { episode: 6, stationId: 'pixel-afterlife', clipId: 'greg-comes-home-06', title: 'Greg Comes Home, Part Six: Player One' },
+      { episode: 7, stationId: 'mirror-polka', clipId: 'greg-comes-home-07', title: 'Greg Comes Home, Part Seven: Going Second' },
+      { episode: 8, stationId: 'end-lounge', clipId: 'greg-comes-home-08', title: 'Greg Comes Home, Part Eight: Last Call' },
+      { episode: 9, stationId: 'impossible-sports', clipId: 'greg-comes-home-09', title: 'Greg Comes Home, Part Nine: The Wrong Way Round' },
+      { episode: 10, stationId: 'every-news', clipId: 'greg-comes-home-10', title: 'Greg Comes Home, Part Ten: The Long Bridge' },
+      { episode: 11, stationId: 'ask-grenda', clipId: 'greg-comes-home-11', title: 'Greg Comes Home, Part Eleven: The Phone Box' },
+      { episode: 12, stationId: 'static-lullabies', clipId: 'greg-comes-home-12', title: 'Greg Comes Home, Part Twelve: The Porch Light' },
+      { episode: 13, stationId: 'dimension-hop', clipId: 'greg-comes-home-13', title: 'Greg Comes Home, Part Thirteen: Two Shapes' },
+    ],
+  },
+  {
+    serialId: 'teodor-is-heard',
+    title: 'Teodor Is Heard',
+    episodes: [
+      { episode: 1, stationId: 'every-news', clipId: 'teodor-is-heard-01', title: 'Teodor Is Heard, Part One: The Receiver' },
+      { episode: 2, stationId: 'static-lullabies', clipId: 'teodor-is-heard-02', title: 'Teodor Is Heard, Part Two: The Static Says Yes' },
+      { episode: 3, stationId: 'moon-dub', clipId: 'teodor-is-heard-03', title: 'Teodor Is Heard, Part Three: The Moon Says Yes' },
+      { episode: 4, stationId: 'numbers-omega', clipId: 'teodor-is-heard-04', title: 'Teodor Is Heard, Part Four: Four. Four. Four.' },
+      { episode: 5, stationId: 'whalesong', clipId: 'teodor-is-heard-05', title: 'Teodor Is Heard, Part Five: Some Rush' },
+      { episode: 6, stationId: 'ask-grenda', clipId: 'teodor-is-heard-06', title: 'Teodor Is Heard, Part Six: The Request Line Was Mine' },
+      { episode: 7, stationId: 'pixel-afterlife', clipId: 'teodor-is-heard-07', title: 'Teodor Is Heard, Part Seven: Press Start' },
+      { episode: 8, stationId: 'wild-multiverse', clipId: 'teodor-is-heard-08', title: 'Teodor Is Heard, Part Eight: The Relay Gull' },
+      { episode: 9, stationId: 'crystal-delta', clipId: 'teodor-is-heard-09', title: 'Teodor Is Heard, Part Nine: A Crystal for Relay Four' },
+      { episode: 10, stationId: 'rainfall-fm', clipId: 'teodor-is-heard-10', title: 'Teodor Is Heard, Part Ten: Rain at Relay Four' },
+      { episode: 11, stationId: 'dimension-hop', clipId: 'teodor-is-heard-11', title: 'Teodor Is Heard, Part Eleven: Relay Seven' },
+      { episode: 12, stationId: 'every-news', clipId: 'teodor-is-heard-12', title: 'Teodor Is Heard, Part Twelve: Relay Seven' },
+    ],
+  },
+  {
+    serialId: 'the-long-dark',
+    title: 'The Long Dark',
+    episodes: [
+      { episode: 1, stationId: 'the-long-dark', clipId: 'ep-01-a', title: 'Episode One: Lights Out on Ring Four' },
+      { episode: 2, stationId: 'the-long-dark', clipId: 'ep-02-a', title: 'Episode Two: The Man Who Paid for the Dark' },
+      { episode: 3, stationId: 'the-long-dark', clipId: 'ep-03-a', title: 'Episode Three: Neat Handwriting' },
+      { episode: 4, stationId: 'the-long-dark', clipId: 'ep-04-a', title: 'Episode Four: A Match in the Lamp Room' },
+      { episode: 5, stationId: 'the-long-dark', clipId: 'ep-05-a', title: "Episode Five: The Station Master's Torch" },
+      { episode: 6, stationId: 'the-long-dark', clipId: 'ep-06-a', title: 'Episode Six: The Tern Comes In' },
+      { episode: 7, stationId: 'the-long-dark', clipId: 'ep-07-a', title: 'Episode Seven: What Mags Sold' },
+      { episode: 8, stationId: 'the-long-dark', clipId: 'ep-08-a', title: 'Episode Eight: Full Bright' },
+      { episode: 9, stationId: 'the-long-dark', clipId: 'ep-09-a', title: 'Episode Nine: The Lamp Gives Out' },
+      { episode: 10, stationId: 'the-long-dark', clipId: 'ep-10-a', title: 'Episode Ten: Terms' },
+      { episode: 11, stationId: 'the-long-dark', clipId: 'ep-11-a', title: 'Episode Eleven: Next Door' },
+      { episode: 12, stationId: 'the-long-dark', clipId: 'ep-12-a', title: 'Episode Twelve: The Wrong Side of the Door' },
+      { episode: 13, stationId: 'the-long-dark', clipId: 'ep-13-a', title: 'Episode Thirteen: The Treaty of the Lumen Bar' },
+      { episode: 14, stationId: 'the-long-dark', clipId: 'ep-14-a', title: 'Episode Fourteen: The Long Dark Hour' },
+    ],
+  },
+  {
+    serialId: 'the-new-guy',
+    title: 'The New Guy',
+    episodes: [
+      { episode: 1, stationId: 'waystation-9', clipId: 'serial-new-guy-001', title: 'The New Guy' },
+      { episode: 2, stationId: 'waystation-9', clipId: 'serial-new-guy-002', title: 'The New Guy Takes the Sideways Road' },
+      { episode: 3, stationId: 'waystation-9', clipId: 'serial-new-guy-003', title: "Thursday's First Fragile Load" },
+    ],
+  },
+];
+
+const KNOWN_SERIAL_MAP = new Map<string, Omit<SerialDirectoryEntry, 'id' | 'totalEpisodes'>>(
+  KNOWN_SERIAL_DIRECTORY.map((s) => [s.serialId, s]),
+);
+
+/** Dynamic serial episodes registered at runtime via `registerSerialClips` or `parseManifest`. */
+const dynamicSerialRegistry = new Map<string, Map<number, SerialEpisodeInfo>>();
+
+function formatSerialTitle(serialId: string): string {
+  return (
+    KNOWN_SERIAL_MAP.get(serialId)?.title ??
+    serialId
+      .split('-')
+      .map((w) => (w.length ? w[0]!.toUpperCase() + w.slice(1) : w))
+      .join(' ')
+  );
+}
+
+/** Registers a station's serial clips in the global cross-station serial directory. */
+export function registerSerialClips(stationId: string, clips: readonly VoiceClip[]): void {
+  if (!stationId || stationId.startsWith('_')) return;
+  const serialClips = clips.filter((c): c is VoiceClip & { serial: NonNullable<VoiceClip['serial']> } => c.serial !== undefined);
+  if (serialClips.length === 0) return;
+  const sorted = [...serialClips].sort((a, b) => (a.id < b.id ? -1 : a.id > b.id ? 1 : 0));
+  for (const c of sorted) {
+    let eps = dynamicSerialRegistry.get(c.serial.id);
+    if (!eps) dynamicSerialRegistry.set(c.serial.id, (eps = new Map()));
+    const existing = eps.get(c.serial.episode);
+    if (!existing || existing.stationId !== stationId) {
+      eps.set(c.serial.episode, {
+        episode: c.serial.episode,
+        stationId,
+        clipId: c.id,
+        title: c.title ?? c.id,
+      });
+    }
+  }
+}
+
+/** Resets dynamically registered serial clips (restoring the baseline dial directory). */
+export function clearSerialRegistry(): void {
+  dynamicSerialRegistry.clear();
+}
+
+/** Full cross-station serial directory (known dial serials merged with any dynamically registered clips). */
+export function getSerialDirectory(): SerialDirectoryEntry[] {
+  const ids = new Set<string>([...KNOWN_SERIAL_MAP.keys(), ...dynamicSerialRegistry.keys()]);
+  return [...ids].sort().map((serialId) => {
+    const known = KNOWN_SERIAL_MAP.get(serialId);
+    const dynamic = dynamicSerialRegistry.get(serialId);
+    const merged = new Map<number, SerialEpisodeInfo>();
+    if (known) {
+      for (const ep of known.episodes) merged.set(ep.episode, { ...ep });
+    }
+    if (dynamic) {
+      for (const [epNum, ep] of dynamic) merged.set(epNum, { ...ep });
+    }
+    const episodes = [...merged.values()].sort((a, b) => a.episode - b.episode);
+    return {
+      id: serialId,
+      serialId,
+      title: formatSerialTitle(serialId),
+      totalEpisodes: episodes.length,
+      episodes,
+    };
+  });
+}
+
+/** Looks up which episode & station is airing on `localDay` for `serialId`, and which station holds the next episode. */
+export function activeSerialForDay(serialId: string, localDay: number): ActiveSerialStatus | undefined {
+  const entry = getSerialDirectory().find((e) => e.serialId === serialId);
+  if (!entry || entry.episodes.length === 0) return undefined;
+  const episodeNums = entry.episodes.map((e) => e.episode);
+  const currentNum = serialEpisode(episodeNums, localDay);
+  const nextNum = serialEpisode(episodeNums, localDay + 1);
+  if (currentNum === undefined || nextNum === undefined) return undefined;
+  const current = entry.episodes.find((e) => e.episode === currentNum) ?? entry.episodes[0]!;
+  const next = entry.episodes.find((e) => e.episode === nextNum) ?? entry.episodes[0]!;
+  return {
+    serialId: entry.serialId,
+    title: entry.title,
+    totalEpisodes: entry.episodes.length,
+    episode: current.episode,
+    stationId: current.stationId,
+    clipId: current.clipId,
+    episodeTitle: current.title,
+    airMinutes: serialMinutes(serialId, localDay),
+    nextEpisode: next.episode,
+    nextStationId: next.stationId,
+    nextClipId: next.clipId,
+    nextEpisodeTitle: next.title,
+  };
 }
 
 export function daypartForHour(hour: number): Daypart {
@@ -136,6 +352,8 @@ const REPEAT_AVOID_MS = 3 * HOUR_MS;
 /** Clips heard within this long never air again; music fills instead. Idents may come round sooner. */
 const REPEAT_FLOOR_MS = 45 * MIN;
 const IDENT_REPEAT_FLOOR_MS = 10 * MIN;
+/** Takeover shows with a smaller dedicated clip pool may cycle their own clips after this floor. */
+const SHOW_REPEAT_FLOOR_MS = 15 * MIN;
 
 /** Traffic reports may come round this soon (six an hour need a short floor). */
 const TRAFFIC_REPEAT_FLOOR_MS = 12 * MIN;
@@ -147,24 +365,53 @@ interface PickContext {
   daypart: Daypart;
   /** The show on air (id), if any. */
   show: string | null;
+  /** Custom host for the active show (`show.host`), if any. */
+  showHost: string | null;
+  /** Primary station host (`station.host.name`) when displaced by a different `show.host`. */
+  displacedHost: string | null;
   /** Local "MM-DD". */
   date: string;
   /** v4: local weekday, 0 = Sunday. */
   weekday: number;
   /** v4: a full-moon night. */
   fullMoon: boolean;
+  /** v4: completed night shifts for storyline continuity gating. */
+  shifts: number;
 }
 
 /** Idents and the opens/closes of modular parts are short and meant to come round often. */
 const floorFor = (c: VoiceClip) =>
   c.category === 'id' || c.part === 'open' || c.part === 'close' ? IDENT_REPEAT_FLOOR_MS : REPEAT_FLOOR_MS;
 
-/** Can this clip air at all right now? (Its date, weekday, moon and show, if it has them.) */
+/**
+ * True if a general station clip is voiced by the displaced primary station host during
+ * a show hosted by someone else (`show.host !== station.host.name`).
+ */
+const isSpokenByDisplacedHost = (c: VoiceClip, ctx: PickContext): boolean => {
+  if (!ctx.displacedHost) return false;
+  if (ctx.show && c.show === ctx.show) return false;
+  if (c.url.includes('/_shared/')) return false;
+  const displaced = ctx.displacedHost.toLowerCase();
+  const showHost = ctx.showHost?.toLowerCase();
+  for (const line of c.lines) {
+    const speaker = line.speaker.trim().toLowerCase();
+    if (!speaker) continue;
+    if (showHost && speaker === showHost) continue;
+    if (speaker === displaced || (speaker === 'host' && showHost !== 'host')) {
+      return true;
+    }
+  }
+  return false;
+};
+
+/** Can this clip air at all right now? (Its date, weekday, moon, shifts, show and host takeover.) */
 const available = (c: VoiceClip, ctx: PickContext) =>
   (!c.dates || c.dates.includes(ctx.date)) &&
   (!c.days || c.days.includes(ctx.weekday)) &&
   (!isFullMoonClip(c) || ctx.fullMoon) &&
-  (!c.show || c.show === ctx.show);
+  (!c.show || c.show === ctx.show) &&
+  (!c.shifts || (ctx.shifts >= c.shifts[0] && ctx.shifts <= c.shifts[1])) &&
+  !isSpokenByDisplacedHost(c, ctx);
 
 /** Least-recently-used picker with a seeded per-day shuffle for never-aired clips. */
 class ClipPicker {
@@ -211,6 +458,16 @@ class ClipPicker {
     const times = rotation.map(last).sort((a, b) => a - b);
     const threshold = times[Math.ceil(times.length / 2) - 1]!;
     let eligible = rotation.filter((c) => last(c) <= threshold && c.durationMs <= maxMs && age(c) >= (floorMs ?? floorFor(c)));
+    if (eligible.length === 0 && allowRepeat && ctx.show && floorMs === undefined) {
+      const showPool = rotation.filter((c) => c.show === ctx.show);
+      if (showPool.length > 0) {
+        const showTimes = showPool.map(last).sort((a, b) => a - b);
+        const showThreshold = showTimes[Math.ceil(showTimes.length / 2) - 1]!;
+        eligible = showPool.filter(
+          (c) => last(c) <= showThreshold && c.durationMs <= maxMs && age(c) >= Math.min(floorFor(c), SHOW_REPEAT_FLOOR_MS),
+        );
+      }
+    }
     if (eligible.length === 0) return undefined;
     // Today's clips first: dated ones always, weekday and full-moon ones while fresh.
     const dated = eligible.filter((c) => c.dates || ((c.days || isFullMoonClip(c)) && age(c) > REPEAT_AVOID_MS));
@@ -218,11 +475,19 @@ class ClipPicker {
       eligible = dated;
     } else {
       const fresh = eligible.filter((c) => age(c) > REPEAT_AVOID_MS);
-      if (fresh.length > 0) eligible = fresh;
-      else if (!allowRepeat) return undefined;
-      if (ctx.show) {
-        const ours = eligible.filter((c) => c.show === ctx.show);
-        if (ours.length > 0) eligible = ours;
+      if (ctx.displacedHost && ctx.show && allowRepeat) {
+        const freshOurs = fresh.filter((c) => c.show === ctx.show);
+        const allOurs = eligible.filter((c) => c.show === ctx.show);
+        if (freshOurs.length > 0) eligible = freshOurs;
+        else if (allOurs.length > 0) eligible = allOurs;
+        else if (fresh.length > 0) eligible = fresh;
+      } else {
+        if (fresh.length > 0) eligible = fresh;
+        else if (!allowRepeat) return undefined;
+        if (ctx.show) {
+          const ours = eligible.filter((c) => c.show === ctx.show);
+          if (ours.length > 0) eligible = ours;
+        }
       }
     }
     eligible.sort((a, b) => last(a) - last(b) || this.rank(a) - this.rank(b));
@@ -285,6 +550,8 @@ interface Pools {
   ambientKits: Kit[];
   /** Show id → its openers. */
   showOpeners: Map<string, VoiceClip[]>;
+  /** Show id → its closers. */
+  showClosers: Map<string, VoiceClip[]>;
   /** Serial id → episode → its clips, in order. */
   serials: Map<string, Map<number, VoiceClip[]>>;
   /** v4: announcements of tomorrow's frequency (drifting stations). */
@@ -294,8 +561,8 @@ interface Pools {
   any: boolean;
 }
 
-/** Splits clips into standalone ones, kits of parts, show openers and serial episodes. */
-function sortClips(list: readonly VoiceClip[], owner: string, pools: Pick<Pools, 'showOpeners' | 'serials'>) {
+/** Splits clips into standalone ones, kits of parts, show openers, show closers and serial episodes. */
+function sortClips(list: readonly VoiceClip[], owner: string, pools: Pick<Pools, 'showOpeners' | 'showClosers' | 'serials'>) {
   const standalone: VoiceClip[] = [];
   const kits = new Map<string, Kit & { votes: Map<VoiceCategory, number> }>();
   for (const c of list) {
@@ -306,11 +573,16 @@ function sortClips(list: readonly VoiceClip[], owner: string, pools: Pick<Pools,
       clips.push(c);
       clips.sort((a, b) => (a.id < b.id ? -1 : a.id > b.id ? 1 : 0));
       episodes.set(c.serial.episode, clips);
-    } else if (c.show && c.part === 'open') {
+    } else if (c.show && c.part === 'open' && !c.kit) {
       // A show's opener airs at the show's start, never inside a chain.
       const openers = pools.showOpeners.get(c.show) ?? [];
       openers.push(c);
       pools.showOpeners.set(c.show, openers);
+    } else if (c.show && c.part === 'close' && !c.kit) {
+      // A show's closer airs near the end of the show's final hour, never dropped as a bodyless kit.
+      const closers = pools.showClosers.get(c.show) ?? [];
+      closers.push(c);
+      pools.showClosers.set(c.show, closers);
     } else if (c.part) {
       const key = `${owner}:${c.kit ?? c.category}`;
       let kit = kits.get(key);
@@ -331,7 +603,11 @@ function sortClips(list: readonly VoiceClip[], owner: string, pools: Pick<Pools,
 }
 
 function buildPools(stationId: string, clips: StationClips): Pools {
-  const meta: Pick<Pools, 'showOpeners' | 'serials'> = { showOpeners: new Map(), serials: new Map() };
+  const meta: Pick<Pools, 'showOpeners' | 'showClosers' | 'serials'> = {
+    showOpeners: new Map(),
+    showClosers: new Map(),
+    serials: new Map(),
+  };
   // Event clips (Convergence reactions) belong to the overlay; tomorrow's frequency airs at fixed times.
   const sharedRaw = clips.shared.filter((c) => !c.event && (!c.stations?.length || c.stations.includes(stationId)));
   // (A secret's first-visit welcome airs from the overlay, once.)
@@ -382,12 +658,14 @@ function buildPools(stationId: string, clips: StationClips): Pools {
 
 // ── Hour building ─────────────────────────────────────────────────────────────
 
-/** Something due at a fixed time in the hour: a show's opener or a serial episode. */
+/** Something due at a fixed time in the hour: a show's opener, a show's closer, or a serial episode. */
 interface Special {
   atMs: number;
   clips: VoiceClip[];
-  /** Set for show openers. */
+  /** Set for show openers and closers. */
   show?: string;
+  /** Set for show closers: the timestamp at which the show ends. */
+  closeAtMs?: number;
 }
 
 /** Oddities don't have songs; their "tracks" are named after what they are. */
@@ -418,6 +696,7 @@ class HourWriter {
     private readonly shows: readonly ShowDef[] | undefined,
     private readonly specials: Special[],
     private readonly oddity: boolean,
+    private readonly shifts = 0,
   ) {
     this.start = this.t = hourIndex * HOUR_MS;
     this.end = this.start + HOUR_MS;
@@ -443,12 +722,20 @@ class HourWriter {
     // The night (06:00 to 06:00) this falls in, and whether its moon is full (asked once).
     const night = local.hour >= NIGHT_START_HOUR ? local.day : local.day - 1;
     if (this.moon?.night !== night) this.moon = { night, full: fullMoonNight(night, this.tz) };
+    const activeShow = showAtHour(this.shows, local.hour, local.weekday);
+    const showHost = activeShow?.host?.trim() || null;
+    const primaryHost = this.station.host.name.trim();
+    const displacedHost =
+      showHost && primaryHost && showHost.toLowerCase() !== primaryHost.toLowerCase() ? primaryHost : null;
     return {
       daypart: this.daypart,
-      show: showAtHour(this.shows, local.hour, local.weekday)?.id ?? null,
+      show: activeShow?.id ?? null,
+      showHost,
+      displacedHost,
       date: local.date,
       weekday: local.weekday,
       fullMoon: this.moon.full,
+      shifts: this.shifts,
     };
   }
 
@@ -464,10 +751,47 @@ class HourWriter {
     return { ...trackMeta(this.station, seed, 'soft-rock'), note: 'On loop since 1974.' };
   }
 
+  private airCloser(closer: Special): number {
+    const closeEnd = closer.closeAtMs ?? this.end;
+    if (this.t >= closeEnd) return 0;
+    const maxMs = Math.min(closeEnd - this.t, this.remaining - this.minTail);
+    if (maxMs <= 0) return 0;
+    const clip = this.picker.pick(this.rng, closer.clips, this.context(), this.t, maxMs, true, 0);
+    return clip ? this.push(clip, this.bedFor(clip)) : 0;
+  }
+
   /** A generated track. If too little of the hour would be left after it, it stretches to the hour. */
   track(lengthMs: number, stretchBelow: number): number {
+    // If a show closer is already due before this track starts, air it first.
+    const closerIdx = this.specials.findIndex((s) => s.closeAtMs !== undefined);
+    if (closerIdx >= 0) {
+      const closer = this.specials[closerIdx]!;
+      if (this.t >= closer.closeAtMs!) {
+        this.specials.splice(closerIdx, 1);
+      } else if (this.t >= closer.atMs) {
+        this.specials.splice(closerIdx, 1);
+        this.airCloser(closer);
+      } else {
+        const maxClipMs = Math.max(...closer.clips.map((c) => c.durationMs));
+        const deadline = Math.min(closer.closeAtMs!, this.end - this.minTail) - maxClipMs;
+        let tentative = Math.min(lengthMs, this.remaining);
+        if (this.remaining - tentative < stretchBelow) tentative = this.remaining;
+        if (this.t + tentative > deadline) {
+          if (closer.atMs - this.t >= 15 * SEC && closer.atMs <= deadline) {
+            lengthMs = closer.atMs - this.t;
+            stretchBelow = 0;
+          } else if (deadline - this.t >= 15 * SEC) {
+            lengthMs = deadline - this.t;
+            stretchBelow = 0;
+          } else {
+            this.specials.splice(closerIdx, 1);
+            this.airCloser(closer);
+          }
+        }
+      }
+    }
     // A show's opener airs on the dot (the supernova is at four sharp): end the track there.
-    const opener = this.specials.find((s) => s.show !== undefined && s.atMs > this.t);
+    const opener = this.specials.find((s) => s.show !== undefined && s.closeAtMs === undefined && s.atMs > this.t);
     if (opener && opener.atMs - this.t >= 15 * SEC && opener.atMs - this.t < lengthMs) lengthMs = opener.atMs - this.t;
     let length = Math.min(lengthMs, this.remaining);
     if (this.remaining - length < stretchBelow) length = this.remaining;
@@ -582,16 +906,18 @@ class HourWriter {
     return total;
   }
 
-  /** Airs whatever fixed-time items have come due: show openers and serial episodes. */
+  /** Airs whatever fixed-time items have come due: show openers, show closers and serial episodes. */
   specialsDue(): number {
     let total = 0;
     while (this.specials.length > 0 && this.specials[0]!.atMs <= this.t) {
       const special = this.specials.shift()!;
       if (special.show) {
-        total += this.voice(special.clips);
+        total += special.closeAtMs !== undefined ? this.airCloser(special) : this.voice(special.clips);
         continue;
       }
       // A serial episode airs whole or not at all.
+      const ctx = this.context();
+      if (!special.clips.every((c) => available(c, ctx))) continue;
       const length = special.clips.reduce((n, c) => n + c.durationMs, 0);
       if (length > this.remaining - this.minTail) continue;
       for (const clip of special.clips) {
@@ -604,7 +930,7 @@ class HourWriter {
 
   /** The top-of-hour ident, or the opener of a show starting now. */
   ident(pools: Pools): number {
-    const opener = this.specials[0]?.show !== undefined && this.specials[0].atMs <= this.t;
+    const opener = this.specials[0]?.show !== undefined && this.specials[0].closeAtMs === undefined && this.specials[0].atMs <= this.t;
     const special = this.specialsDue();
     return opener && special ? special : special + this.voice(pools.idents);
   }
@@ -723,7 +1049,7 @@ function talkClock(w: HourWriter, rng: Rng, pools: Pools): void {
     aired += trafficDue();
     const block = rng.int(1, 3);
     for (let i = 0; i < block; i++) {
-      if (i > 0) aired += trafficDue();
+      if (i > 0) aired += w.specialsDue() + trafficDue();
       if (w.remaining <= 0) break;
       const length = w.talk(pools);
       if (!length) break;
@@ -781,6 +1107,7 @@ class DaySim {
   constructor(
     readonly day: number,
     stationId: string,
+    readonly shifts: number,
   ) {
     this.picker = new ClipPicker(stationId, day);
   }
@@ -793,6 +1120,10 @@ export class StationSchedule {
   private readonly daypartOf: (ms: number) => Daypart;
   private readonly tz: TzOffset;
   private readonly oddity: boolean;
+  private readonly shiftsOf: () => number;
+  private readonly serialTotals?:
+    | ReadonlyMap<string, readonly number[] | number>
+    | Readonly<Record<string, readonly number[] | number>>;
   /** The station's shows, by the listener's local time. */
   readonly shows: readonly ShowDef[];
   private readonly days = new Map<number, DaySim>();
@@ -810,6 +1141,12 @@ export class StationSchedule {
     const tz = this.tz;
     this.daypartOf = options.daypartOf ?? (options.tzOffset ? (ms) => daypartForHour(localTime(ms, tz).hour) : localDaypart);
     this.oddity = options.clock === 'oddity';
+    const shiftsOpt = options.shifts;
+    this.shiftsOf =
+      typeof shiftsOpt === 'function'
+        ? () => Math.max(0, Math.floor(shiftsOpt()))
+        : () => Math.max(0, Math.floor(shiftsOpt ?? 0));
+    this.serialTotals = options.serialTotals;
   }
 
   /** The show on air at a moment (listener's local time), if any. */
@@ -826,27 +1163,63 @@ export class StationSchedule {
   /** The complete programme for one UTC hour, contiguous from :00 to the next :00. */
   hour(hourIndex: number): Segment[] {
     const day = Math.floor(hourIndex / 24);
+    const currentShifts = this.shiftsOf();
     let sim = this.days.get(day);
-    if (sim) {
+    if (sim && sim.shifts === currentShifts) {
       this.days.delete(day);
       this.days.set(day, sim);
     } else {
-      sim = new DaySim(day, this.station.id);
+      sim = new DaySim(day, this.station.id, currentShifts);
       this.days.set(day, sim);
+      this.runCache.clear();
       for (const old of this.days.keys()) {
         if (this.days.size <= CACHED_DAYS) break;
         this.days.delete(old);
       }
     }
     const target = hourIndex - day * 24;
-    while (sim.hours.length <= target) sim.hours.push(this.buildHour(day * 24 + sim.hours.length, sim.picker));
+    while (sim.hours.length <= target) sim.hours.push(this.buildHour(day * 24 + sim.hours.length, sim.picker, currentShifts));
     return sim.hours[target]!;
   }
 
-  /** Show openers and serial airings that fall due during an hour, in order. */
+  /**
+   * Resolves the global episode sequence for `serialId` so multi-station serials advance
+   * across the dial rather than looping a single station's subset every day.
+   */
+  private globalEpisodesFor(serialId: string, localEpisodes: ReadonlyMap<number, VoiceClip[]>): number[] {
+    if (this.serialTotals) {
+      const spec =
+        this.serialTotals instanceof Map
+          ? this.serialTotals.get(serialId)
+          : (this.serialTotals as Readonly<Record<string, readonly number[] | number>>)[serialId];
+      if (typeof spec === 'number' && Number.isFinite(spec) && spec > 0) {
+        return Array.from({ length: Math.floor(spec) }, (_, i) => i + 1);
+      }
+      if (Array.isArray(spec) && spec.length > 0) return [...spec];
+    }
+    const localEps = [...localEpisodes.keys()].sort((a, b) => a - b);
+    const dyn = dynamicSerialRegistry.get(serialId);
+    if (dyn && dyn.size > 0) {
+      const allLocalMatchStation = localEps.every((ep) => dyn.get(ep)?.stationId === this.station.id);
+      if (allLocalMatchStation && dyn.size > localEps.length) {
+        const dynMax = Math.max(...dyn.keys(), ...localEps);
+        return Array.from({ length: dynMax }, (_, i) => i + 1);
+      }
+    }
+    if (localEps.length > 1 && localEps[0] === 1 && localEps[localEps.length - 1] === localEps.length) {
+      return localEps;
+    }
+    const knownMax = KNOWN_SERIAL_MAP.get(serialId)?.episodes.length ?? 0;
+    const dynMax = dyn ? Math.max(0, ...dyn.keys()) : 0;
+    const localMax = localEps[localEps.length - 1] ?? 0;
+    const total = Math.max(knownMax, dynMax, localMax);
+    return total > 1 ? Array.from({ length: total }, (_, i) => i + 1) : localEps;
+  }
+
+  /** Show openers, show closers and serial airings that fall due during an hour, in order. */
   private specialsIn(hourIndex: number): Special[] {
-    const { showOpeners, serials, tomorrow } = this.pools;
-    if (showOpeners.size === 0 && serials.size === 0 && tomorrow.length === 0) return [];
+    const { showOpeners, showClosers, serials, tomorrow } = this.pools;
+    if (showOpeners.size === 0 && showClosers.size === 0 && serials.size === 0 && tomorrow.length === 0) return [];
     const start = hourIndex * HOUR_MS;
     const end = start + HOUR_MS;
     const out: Special[] = [];
@@ -858,6 +1231,23 @@ export class StationSchedule {
         const clips = showOpeners.get(show.id);
         const today = !show.days || show.days.includes(weekday);
         if (at < end && show.start === hour && today && clips?.length) out.push({ atMs: at, clips, show: show.id });
+      }
+    }
+    if (showClosers.size > 0) {
+      // The local o'clock ending within (start, end] (usually `end`).
+      const boundary = end - (localTime(end, this.tz).minuteOfDay % 60) * MIN;
+      if (boundary > start && boundary <= end) {
+        const prev = localTime(boundary - 1, this.tz);
+        const next = localTime(boundary, this.tz);
+        const endingShow = showAtHour(this.shows, prev.hour, prev.weekday);
+        const nextShow = showAtHour(this.shows, next.hour, next.weekday);
+        if (endingShow && nextShow?.id !== endingShow.id) {
+          const clips = showClosers.get(endingShow.id);
+          if (clips?.length) {
+            const at = Math.max(start, boundary - 8 * MIN);
+            out.push({ atMs: at, clips, show: endingShow.id, closeAtMs: boundary });
+          }
+        }
       }
     }
     if (tomorrow.length > 0) {
@@ -876,8 +1266,9 @@ export class StationSchedule {
     }
     const days = new Set([localTime(start, this.tz).day, localTime(end - 1, this.tz).day]);
     for (const [serialId, episodes] of serials) {
+      const globalEpisodes = this.globalEpisodesFor(serialId, episodes);
       for (const day of days) {
-        const episode = serialEpisode([...episodes.keys()], day);
+        const episode = serialEpisode(globalEpisodes, day);
         const clips = episode === undefined ? undefined : episodes.get(episode);
         if (!clips) continue;
         for (const minute of serialMinutes(serialId, day)) {
@@ -889,7 +1280,7 @@ export class StationSchedule {
     return out.sort((a, b) => a.atMs - b.atMs);
   }
 
-  private buildHour(hourIndex: number, picker: ClipPicker): Segment[] {
+  private buildHour(hourIndex: number, picker: ClipPicker, shifts: number): Segment[] {
     const rng = createRng(hash(this.station.id, hourIndex));
     const daypart = this.daypartOf(hourIndex * HOUR_MS + HOUR_MS / 2);
     const w = new HourWriter(
@@ -903,6 +1294,7 @@ export class StationSchedule {
       this.shows,
       this.specialsIn(hourIndex),
       this.oddity,
+      shifts,
     );
     if (this.oddity) {
       oddityClock(w, rng, this.pools);

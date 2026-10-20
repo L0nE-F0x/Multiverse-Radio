@@ -8,3 +8,4 @@ scripts/.cache
 .claude/worktrees
 playwright-report
 test-results
+promo/out

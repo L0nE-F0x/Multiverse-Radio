@@ -21,6 +21,10 @@ odette = { voice = "bf_lily", speed = 1.0, name = "Odette, the Croupier" }
 bev = { voice = "af_nova", fx = "phone", name = "Bev" }
 announcer = { voice = "am_michael", speed = 1.05, name = "Announcer" }
 grumbel = { voice = "am_eric", name = "Arnold Grumbel" }
+ruby = { voice = "bf_emma", speed = 0.8, name = "Old Ruby" }
+probe = { voice = "am_echo", speed = 1.0, fx = "radio", name = "Unmanned Probe" }
+probe_b = { voice = "am_fenrir", speed = 0.98, fx = "radio", name = "Second Probe" }
+comet = { voice = "af_sky", speed = 1.04, fx = "ghost", name = "A Comet" }
 
 [[show]]
 id = "the-velvet-hour"
@@ -539,4 +543,71 @@ kit = "the-pigeon"
 lines = [
   { say = "host", text = "A pigeon has just walked into the Velvet Lounge. No ship, no ladder. It walked past the doorman like they were old friends." },
   { say = "host", text = "It's at the bar now. It's having what I'm having. I like it." },
+]
+
+
+# ── Old Ruby on the open channel: probes late by light hours, a comet cutting close.
+
+[[clip]]
+id = "star-01"
+category = "dj"
+bed = "space"
+title = "Four Light Hours Late"
+lines = [
+  { say = "probe", text = "Old Ruby, dusk-limb probe. Helium shell is flashing. I am counting the climb.", fx = "radio", pan = -0.8, gap = 0.25 },
+  { say = "ruby", text = "I know my own shell. I flash when I please, not when a tin box says climb.", gap = 0.3 },
+  { say = "comet", text = "She's brighter on this side than the number you're reading, probe. Your light is late.", fx = "ghost", pan = 0.8, gap = 0.2 },
+  { say = "probe", text = "Four light hours late. I am logging an afternoon she has already left.", fx = "radio", pan = -0.8 },
+  { say = "ruby", text = "Then log the kindness. This afternoon I still had some." },
+]
+
+[[clip]]
+id = "star-02"
+category = "dj"
+bed = "space"
+title = "The Skim"
+lines = [
+  { say = "comet", text = "Ruby. I'm coming through your dust. I don't intend to stay.", fx = "ghost", pan = 0.8, gap = 0.25 },
+  { say = "ruby", text = "Nothing stays. The distance where I pull you apart is closer than your pride, and I am larger than I was at dinner.", gap = 0.3 },
+  { say = "comet", text = "I'll skim the light. I've done it with smaller stars.", fx = "ghost", pan = 0.8, gap = -0.3 },
+  { say = "probe", text = "Last skim left a debris fan. I am still cataloguing the pieces. They do not answer.", fx = "radio", pan = -0.8 },
+  { say = "ruby", text = "Ask them what is left of confidence. Then give me the room." },
+]
+
+[[clip]]
+id = "star-03"
+category = "dj"
+bed = "space"
+title = "Two Counts"
+lines = [
+  { say = "probe", text = "Neutrino count is climbing. She is closer to the white than the model on my slate.", fx = "radio", pan = -0.8, gap = -0.35 },
+  { say = "probe_b", text = "Your slate is six light hours old. The count I hold was already too high when the light left her.", fx = "radio", pan = 0.8 },
+  { say = "ruby", text = "Stop invoicing me. I am not a column. I go when the bass drops, not when your tin agrees." },
+  { say = "comet", text = "They'll still be arguing when you go, Ruby. I'll be the one already turning my face away.", fx = "ghost", pan = 0.8 },
+]
+
+[[clip]]
+id = "star-04"
+category = "dj"
+bed = "space"
+title = "The Running Order"
+lines = [
+  { say = "host", text = "Ruby, the lounge wants a forecast. The band is already in sunglasses." },
+  { say = "ruby", text = "Tell them the shell is burning helium, and under that I am only deciding. When I decide, I go white.", gap = 0.3 },
+  { say = "probe", text = "Shock breakout will lead the visible flash. Hard light, minutes ahead of what your window sees.", fx = "radio", pan = -0.8, gap = -0.3 },
+  { say = "comet", text = "I'll be behind her when she does it. I want the shadow, not the burn.", fx = "ghost", pan = 0.8 },
+  { say = "host", text = "Sunglasses stay on. The star has given us the running order." },
+]
+
+[[clip]]
+id = "star-05"
+category = "dj"
+bed = "space"
+title = "A Number Already Gone"
+lines = [
+  { say = "probe", text = "Confirm radius. Last fix had you at three hundred times the sun, and rising.", fx = "radio", pan = -0.8, gap = 0.2 },
+  { say = "ruby", text = "That fix left me hours ago. I have swollen since. The number is already a ghost.", gap = 0.25 },
+  { say = "comet", text = "I can see the new edge from out here. Probe, you're flying on a memory of her.", fx = "ghost", pan = 0.8, gap = -0.3 },
+  { say = "probe", text = "Then the memory is the log. Writing it down anyway.", fx = "radio", pan = -0.8 },
+  { say = "host", text = "She doesn't hold still for the measurement. None of the great ones do. Odette, leave the wheel on red." },
 ]

@@ -76,7 +76,7 @@ id = "id-005"
 category = "id"
 daypart = "night"
 lines = [
-  { say = "host", text = "Island Time Observatory. The dome is open, and some of the stars are from last week. Take your time. They did." },
+  { say = "host", text = "Island Time Observatory. The dome is open, and the stars are from last week. Take your time. They did." },
   { sting = "id" },
 ]
 

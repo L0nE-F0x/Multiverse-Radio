@@ -21,6 +21,10 @@ buzz = { voice = "am_puck", fx = "radio", name = "Captain Buzz Ferraro" }
 commuter = { voice = "am_eric", fx = "phone", name = "A Commuter" }
 commuter2 = { voice = "bf_lily", fx = "phone", name = "A Commuter" }
 voiceover = { voice = "am_michael", speed = 1.1, name = "Advert" }
+driver = { voice = "am_adam", speed = 1.05, fx = "cb", name = "Arterial Driver" }
+driver2 = { voice = "am_liam", speed = 1.0, fx = "cb", name = "Bypass Driver" }
+toll = { voice = "af_sarah", speed = 1.0, fx = "radio", name = "Toll Operator" }
+phantom = { voice = "bf_isabella", speed = 0.92, fx = "radio", name = "A Phantom Passenger" }
 
 [[show]]
 id = "morning-crawl"
@@ -799,4 +803,219 @@ lines = [
   { say = "rita", text = "Halloween traffic. Reports of a ghost car in lane four of the bypass, with nobody driving it, and the indicator going." },
   { say = "buzz", text = "Rita, I've had a look. It's been indicating left since before the war. Which war, I can't tell you." },
   { say = "rita", text = "Let it in, everyone. It's waited long enough." },
+]
+
+
+# ── Dispatch kit: live patches off the sodium-vapour arterials ───────────────
+# Opens never name the minute. Bodies are one incident each, in any order.
+# The jump-seat voice was not picked up. Do not pick it up.
+
+[[clip]]
+id = "dispatch-open-01"
+category = "weather"
+kit = "dispatch"
+part = "open"
+bed = "studio"
+title = "Dispatch Is Live"
+lines = [
+  { sfx = "squelch" },
+  { say = "rita", text = "Dispatch is live. Sodium vapour on every arterial, and nobody's shadow is the right length. Go ahead." },
+]
+
+[[clip]]
+id = "dispatch-open-02"
+category = "weather"
+kit = "dispatch"
+part = "open"
+bed = "studio"
+title = "Orange Lanes"
+lines = [
+  { say = "rita", text = "Gridley at the desk. I'm taking patches off the orange lanes. Keep the manifest in your hand and the story out of it." },
+]
+
+[[clip]]
+id = "dispatch-open-03"
+category = "weather"
+kit = "dispatch"
+part = "open"
+bed = "studio"
+title = "From the Pod"
+lines = [
+  { say = "buzz", text = "Rita, the pod's over the west arterial. It's all sodium and brake lights.", gain = -8.0, gap = -0.4 },
+  { say = "rita", text = "Copy, Buzz. Dispatch is open. Who's still pretending to move?" },
+]
+
+[[clip]]
+id = "dispatch-body-01"
+category = "weather"
+kit = "dispatch"
+part = "body"
+bed = "studio"
+title = "Manifest Seven Seven Four One"
+lines = [
+  { say = "driver", text = "Dispatch, arterial four, eastbound. Hauler stopped under the vapour. Manifest seven seven four one. Load is glass, and the glass is humming.", fx = "cb", gap = -0.4 },
+  { say = "rita", text = "Seven seven four one, I have you. Is the humming in the load or in the lane?" },
+  { say = "driver", text = "Both. The lane started it. The glass is just keeping time.", fx = "cb", gain = -8.0 },
+]
+
+[[clip]]
+id = "dispatch-body-02"
+category = "weather"
+kit = "dispatch"
+part = "body"
+bed = "studio"
+title = "The Arm Forgot"
+lines = [
+  { say = "toll", text = "Toll point, west ramp. The arm is up. It has been up since the lamps came on. Nobody is paying, because the arm forgot how to come down.", fx = "radio", gap = 0.2 },
+  { say = "rita", text = "What's the booth reading for vehicles through?", gap = -0.4 },
+  { say = "toll", text = "Manifest of the hour is nine zero two. One of them had no driver. I waved anyway.", fx = "radio", gain = -8.0 },
+]
+
+[[clip]]
+id = "dispatch-body-03"
+category = "weather"
+kit = "dispatch"
+part = "body"
+bed = "studio"
+title = "The Jump Seat"
+lines = [
+  { say = "phantom", text = "Dispatch. I'm at the merge. I need a lane that doesn't end. You had one last century.", fx = "radio", gain = -8.0, gap = -0.4 },
+  { say = "rita", text = "Say your manifest number.", gap = 0.2 },
+  { say = "phantom", text = "I don't have one. The car I'm in does. It isn't mine. It never was.", fx = "radio" },
+  { say = "driver", text = "Dispatch, that's my cab. There's nobody in the jump seat. There's been nobody all shift.", fx = "cb", gap = -0.35 },
+  { say = "rita", text = "Both of you, hold the orange light. Do not open a door." },
+]
+
+[[clip]]
+id = "dispatch-body-04"
+category = "weather"
+kit = "dispatch"
+part = "body"
+bed = "studio"
+title = "A Door, Opening"
+lines = [
+  { say = "buzz", text = "Rita, from up here the west arterial is one solid bar of sodium. Nothing in it is moving except a door, opening.", gap = 0.25 },
+  { say = "driver", text = "That's not my door. Manifest three eight eight. I'm in the cab with both hands on the wheel.", fx = "cb", gain = -8.0, gap = -0.4 },
+  { say = "rita", text = "Three eight eight, stay buckled. Buzz, is the door still opening?" },
+  { say = "buzz", text = "It opened. Nobody got out. The vapour went in.", gain = -8.0 },
+]
+
+[[clip]]
+id = "dispatch-body-05"
+category = "weather"
+kit = "dispatch"
+part = "body"
+bed = "studio"
+title = "Already Through"
+lines = [
+  { say = "toll", text = "Dispatch, the arm came down on a bumper that wasn't there a second ago. Manifest four zero zero seven.", fx = "radio", gap = -0.4 },
+  { say = "driver", text = "That's my bumper, and I haven't reached the booth. I'm still under the third lamp.", fx = "cb", gap = -0.35 },
+  { say = "rita", text = "Four zero zero seven, you are either early or already through. Do not reverse. The lane behind you is full of people who are also you." },
+]
+
+[[clip]]
+id = "dispatch-body-06"
+category = "weather"
+kit = "dispatch"
+part = "body"
+bed = "studio"
+title = "Lamps Out"
+lines = [
+  { say = "driver", text = "Gridley, the vapour just went out on arterial nine. Dark for half a mile. I can hear engines and I can't see plates.", fx = "cb", gain = -8.0, gap = -0.4 },
+  { say = "rita", text = "Arterial nine, lamps out. Call your manifest.", gap = 0.15 },
+  { say = "driver", text = "Six one five. And there's a voice in the dark asking me for a lift to the front of the jam.", fx = "cb" },
+  { say = "phantom", text = "Tell her I said please.", fx = "radio", gain = -8.0, gap = -0.35 },
+  { say = "rita", text = "Do not give the dark a lift. Lamps or no lamps." },
+]
+
+[[clip]]
+id = "dispatch-close-01"
+category = "weather"
+kit = "dispatch"
+part = "close"
+bed = "studio"
+lines = [
+  { say = "rita", text = "That's the patch. Stay under the vapour, keep the manifest where you can read it, and do not pick anyone up." },
+]
+
+[[clip]]
+id = "dispatch-close-02"
+category = "weather"
+kit = "dispatch"
+part = "close"
+bed = "studio"
+lines = [
+  { sfx = "squelch" },
+  { say = "rita", text = "Dispatch clear. The orange lanes keep whatever you told them. I won't." },
+]
+
+[[clip]]
+id = "dispatch-close-03"
+category = "weather"
+kit = "dispatch"
+part = "close"
+bed = "studio"
+lines = [
+  { say = "buzz", text = "Pod's staying up, Rita. The vapour looks worse from here.", gain = -8.0, gap = -0.35 },
+  { say = "rita", text = "Then don't look down, Buzz. Dispatch out." },
+]
+
+# ── Dispatch scenes: the desk, the booth, the pod, the empty seat ────────────
+
+[[clip]]
+id = "dispatch-scene-01"
+category = "weather"
+title = "You Slowed"
+bed = "studio"
+lines = [
+  { sfx = "squelch" },
+  { say = "rita", text = "Live patch, west arterial. You're on the desk." },
+  { say = "driver", text = "Gridley, manifest two two nine. I've got sodium in the mirrors and a passenger I didn't stop for.", fx = "cb", gap = -0.4 },
+  { say = "phantom", text = "You slowed. That's stopping, where I'm from.", fx = "radio", gain = -8.0, pan = 0.7 },
+  { say = "driver", text = "I didn't slow. The lane slowed. Tell her to get out of the jump seat.", fx = "cb", gap = -0.35 },
+  { say = "rita", text = "Nobody gets out under the vapour. Phantom, name a destination or clear the channel." },
+  { say = "phantom", text = "The front of the jam. I'll walk the rest, if the rest is still there.", fx = "radio", gain = -8.0 },
+]
+
+[[clip]]
+id = "dispatch-scene-02"
+category = "weather"
+title = "The Arm and the Air"
+bed = "studio"
+lines = [
+  { sfx = "squelch" },
+  { say = "rita", text = "Toll point, you're patched to the desk and to the pod. Go ahead." },
+  { say = "toll", text = "The arm is down on nothing. Manifest one one eight zero. The nothing is revving.", fx = "radio", gap = -0.4 },
+  { say = "buzz", text = "Rita, I can see the booth. Sodium on the roof. No vehicle. The arm is arguing with the air.", gain = -8.0, gap = 0.2 },
+  { say = "driver", text = "Dispatch, that's my manifest. I'm still a mile back. The vapour is so thick I can chew it.", fx = "cb", gain = -8.0, gap = -0.35 },
+  { say = "rita", text = "One one eight zero, do not approach your own toll. Buzz, if the air pays, let it through." },
+  { say = "toll", text = "The air doesn't pay. The air knows the rate better than I do.", fx = "radio" },
+]
+
+[[clip]]
+id = "dispatch-scene-03"
+category = "weather"
+title = "Two Cabs, One Channel"
+bed = "studio"
+lines = [
+  { sfx = "squelch" },
+  { say = "rita", text = "I've got two cabs on one channel. Arterial two, and the bypass. You can hear each other. Try not to make it worse." },
+  { say = "driver", text = "Manifest five five zero. The car in front has been there since the lamps were invented.", fx = "cb", pan = -0.55, gap = -0.4 },
+  { say = "driver2", text = "That's me in front. Your headlights have been in my mirror since I learned to drive.", fx = "cb", pan = 0.55, gap = 0.2 },
+  { say = "phantom", text = "There's room if one of you breathes out. I've been between you the whole time.", fx = "radio", gain = -8.0, gap = -0.35 },
+  { say = "rita", text = "Five five zero, do not make room. There is no between. Buzz, tell me you see two cabs and nothing else." },
+  { say = "buzz", text = "Two cabs, Rita. And a shape the vapour won't quite commit to.", gain = -8.0 },
+]
+
+[[clip]]
+id = "dispatch-scene-04"
+category = "weather"
+title = "Coat on the Shoulder"
+bed = "studio"
+lines = [
+  { say = "toll", text = "Dispatch, west shoulder, under the third gantry. A coat is standing there. No car. Manifest blank.", fx = "radio", gap = -0.4 },
+  { say = "buzz", text = "I have the gantry. The coat is facing the lanes, like it expects a door to open.", gain = -8.0, gap = 0.15 },
+  { say = "driver", text = "I'm under that gantry. Manifest eight four two. I am not opening the door. I am not opening the door.", fx = "cb", gain = -8.0, gap = -0.35 },
+  { say = "phantom", text = "You don't have to stop. You already did, three exits ago. I kept the seat warm.", fx = "radio", gain = -8.0 },
+  { say = "rita", text = "Eight four two, windows up, eyes on the vapour. The shoulder is not a stop. The coat is not a passenger." },
 ]

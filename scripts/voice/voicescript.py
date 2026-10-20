@@ -114,7 +114,14 @@ DEFAULT_GAP = 0.35
 WORDS_PER_SECOND = 3.1  # measured on the rendered library (SCHEMA.md says ~2.5 to be safe)
 MAX_TEXT = 300
 SPEED_RANGE = (0.5, 2.0)  # what Kokoro accepts
+GAP_RANGE = (-3.0, 15.0)
+GAIN_RANGE = (-18.0, 6.0)
+PAN_RANGE = (-1.0, 1.0)
+SHIFT_MAX = 999
 SHIP_LEVELS = (0, 3)
+SHIP_TRIGGERS = (
+    "on_skip_streak", "scanning_static", "on_pirate", "after_event", "near_secret", "on_station",
+)
 # MP3 encoding (mono, 24 kHz): LAME VBR quality 8. On this library it averages ~36 kbps on
 # long speech and ~43 on short or noisy clips (v2 used CBR 48k), keeping the same ~9.5 kHz
 # bandwidth; see bitrate_for(). "48k"-style values mean constant bitrate.
@@ -172,6 +179,8 @@ class Speech:
     gap: float
     cut: float | None
     speaker: str
+    gain: float = 0.0
+    pan: float = 0.0
 
     @property
     def lang(self) -> str:
@@ -232,6 +241,9 @@ class Clip:
     # v4 (all optional)
     arc: Arc | None = None
     days: list[int] | None = None
+    shifts: list[int] | None = None
+    trigger: str | None = None
+    swap_with: str | None = None
     # Pronunciation lexicon: a Speech line's `text` is what Kokoro says. Where the lexicon
     # respelled it, the written text (for captions) is kept here by index into `lines`.
     written: dict[int, str] = field(default_factory=dict)
@@ -255,7 +267,7 @@ class Clip:
             if isinstance(line, Speech):
                 words = len(line.text.split())
                 spoken = words / (WORDS_PER_SECOND * line.speed)
-                total += spoken * (line.cut or 1.0) + line.gap
+                total = max(0.0, total + spoken * (line.cut or 1.0) + line.gap)
             elif isinstance(line, Pause):
                 total += line.seconds
             elif isinstance(line, Sfx):
@@ -268,9 +280,18 @@ class Clip:
         """Everything that affects the rendered audio and captions. Metadata (title,
         category, daypart, over_music, stations) is left out: editing it only rewrites
         the manifest."""
+        lines = []
+        for line in self.lines:
+            d = {"type": type(line).__name__, **line.__dict__}
+            if isinstance(line, Speech):
+                if line.gain == 0.0:
+                    d.pop("gain", None)
+                if line.pan == 0.0:
+                    d.pop("pan", None)
+            lines.append(d)
         return {
             "bed": self.bed,
-            "lines": [{"type": type(line).__name__, **line.__dict__} for line in self.lines],
+            "lines": lines,
         }
 
 
@@ -487,13 +508,13 @@ SHOW_KEYS = {"id", "name", "blurb", "start", "end", "host", "days"}
 CLIP_KEYS = {
     "id", "category", "title", "over_music", "daypart", "bed", "stations", "lines",
     "part", "kit", "show", "serial", "dates", "level", "event",
-    "arc", "days",
+    "arc", "days", "shifts", "trigger", "swap_with",
 }
 SERIAL_KEYS = {"id", "episode"}
 ARC_KEYS = {"id", "step"}
 DAYS_HINT = "must be a non-empty list of local weekdays 0-6 (0 = Sunday), each once, e.g. [1] for Mondays"
 LINE_KEYS = {
-    "say": {"say", "text", "speed", "fx", "gap", "cut", "name"},
+    "say": {"say", "text", "speed", "fx", "gap", "cut", "name", "gain", "pan"},
     "pause": {"pause"},
     "sfx": {"sfx", "seconds", "level"},
     "sting": {"sting"},
@@ -1026,6 +1047,41 @@ class _Loader:
             else:
                 out["days"] = sorted(days)
 
+        shifts = raw.get("shifts")
+        if shifts is not None:
+            # Shared-pool continuity (Greg's return) gates the same way as a station script.
+            if station not in (SHIP, SHARED) and not in_station_file:
+                bad(f"shifts is only for {SHIP}.toml and station scripts")
+            elif (not isinstance(shifts, list) or len(shifts) != 2
+                  or not all(_is_int(v) for v in shifts)
+                  or not (0 <= shifts[0] <= shifts[1] <= SHIFT_MAX)):
+                bad(f"shifts must be [min_shift, max_shift] with whole numbers 0 <= min <= max <= {SHIFT_MAX}; "
+                    f"got {shifts!r}")
+            else:
+                out["shifts"] = list(shifts)
+
+        trigger = raw.get("trigger")
+        if trigger is not None:
+            if station != SHIP:
+                bad(f"trigger is only for {SHIP}.toml")
+            elif not isinstance(trigger, str) or trigger not in SHIP_TRIGGERS:
+                bad(f"trigger must be one of {', '.join(SHIP_TRIGGERS)}; got {trigger!r}"
+                    f"{_suggest(str(trigger), SHIP_TRIGGERS)}")
+            else:
+                out["trigger"] = trigger
+
+        swap_with = raw.get("swap_with")
+        if swap_with is not None:
+            if station != EVENTS or event != "station-swap":
+                bad(f"swap_with is only for {EVENTS}.toml clips with event = \"station-swap\"")
+            elif not isinstance(swap_with, str) or swap_with not in self.roster:
+                bad(f"swap_with must be a station id in the roster; got {swap_with!r}"
+                    f"{_suggest(str(swap_with), self.roster)}")
+            elif raw.get("stations") == [swap_with]:
+                bad(f"swap_with {swap_with!r} must be a different station than `stations`")
+            else:
+                out["swap_with"] = swap_with
+
         if category == "ship" and station != SHIP:
             self.warn(f"{label}: ship clips (HUSH) belong in {SHIP}.toml", lineno)
         if category == "event" and not in_station_file and station != EVENTS:
@@ -1130,15 +1186,21 @@ class _Loader:
                 return None
         gap = 0.0 if cut is not None else DEFAULT_GAP
         if "gap" in raw:
-            gap = self.number(raw["gap"], f"{where}: gap", 0, 15, lineno)
+            gap = self.number(raw["gap"], f"{where}: gap", *GAP_RANGE, lineno)
+        gain = 0.0
+        if "gain" in raw:
+            gain = self.number(raw["gain"], f"{where}: gain", *GAIN_RANGE, lineno)
+        pan = 0.0
+        if "pan" in raw:
+            pan = self.number(raw["pan"], f"{where}: pan", *PAN_RANGE, lineno)
         name = raw.get("name", alias["name"])
         if name is not None and not isinstance(name, str):
             self.error(f"{where}: name must be a string", lineno)
             return None
-        if speed is None or gap is None:
+        if speed is None or gap is None or gain is None or pan is None:
             return None
         return Speech(alias["voice"], apply_lexicon(text, self.lexicon), round(speed, 4), fx, round(gap, 4), cut,
-                      name or "")
+                      name or "", round(gain, 4), round(pan, 4))
 
 
 def check_serials(scripts: list[Script]) -> None:

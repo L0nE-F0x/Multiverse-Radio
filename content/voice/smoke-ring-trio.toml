@@ -272,7 +272,7 @@ category = "id"
 show = "the-morning-after"
 part = "open"
 lines = [
-  { say = "host", text = "Good morning. This is the Morning After, on Smoke Ring Trio. The chairs are on the tables, the coffee's on, and the trio is still playing. Nobody has had the heart to tell them." },
+  { say = "host", text = "Good morning. This is the Morning After, on Smoke Ring Trio. The chairs are on the tables, the coffee's on, and the trio is playing. Nobody's had the heart to tell them." },
 ]
 
 [[clip]]

@@ -173,14 +173,16 @@ describe('deep voice scripts', () => {
     for (const event of EVENT_IDS) expect(clips.filter((c) => c.fields.event === event).length, event).toBeGreaterThanOrEqual(5);
   });
 
-  it('_ship: the off-course arc has steps 1 to 8, once each, in order', () => {
+  it('_ship: off-course and the cartographer each have steps 1 to 8, once each, in order', () => {
     const steps = clipsOf('_ship')
       .map((c) => ({ id: c.fields.id!, arc: /^arc = \{ id = "([a-z-]+)", step = (\d+) \}$/m.exec(c.body) }))
       .filter((c) => c.arc);
-    expect(steps.every((s) => s.arc![1] === 'off-course'), 'only the off-course arc').toBe(true);
-    expect(steps.map((s) => Number(s.arc![2]))).toEqual([1, 2, 3, 4, 5, 6, 7, 8]);
-    // Step 7 names The Harbour's frequency; it must say it the way the dial shows it.
-    const seven = clipsOf('_ship').find((c) => c.fields.id === steps[6]!.id)!;
+    const arcSteps = (id: string) => steps.filter((s) => s.arc![1] === id).map((s) => Number(s.arc![2]));
+    expect(arcSteps('off-course')).toEqual([1, 2, 3, 4, 5, 6, 7, 8]);
+    expect(arcSteps('the-cartographer')).toEqual([1, 2, 3, 4, 5, 6, 7, 8]);
+    // Off-course step 7 names The Harbour's frequency; it must say it the way the dial shows it.
+    const sevenId = steps.filter((s) => s.arc![1] === 'off-course')[6]!.id;
+    const seven = clipsOf('_ship').find((c) => c.fields.id === sevenId)!;
     expect(seven.body).toMatch(/one hundred and forty point oh/i);
     expect(seven.body).toMatch(/left a light on/);
   });

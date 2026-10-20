@@ -23,7 +23,7 @@ import { createMusicEngine, type MusicEngine, type TrackRequest } from '../music
 import { AudioBufferCache, contextDecoder } from './audioCache';
 import { bleedOf, clampFrequency, currentLayout, onPirateNames, receptionAt, setDialLayout, signalOf, stationForId, type Reception, type Transmitter } from './dial';
 import { eventAt as seededEventAt } from './events';
-import { isJamClip, type HushLevel } from './hush';
+import { HushPicker, isJamClip, type HushLevel } from './hush';
 import { POOLS, type VoiceLibrary } from './library';
 import { voiceGain } from './quirks';
 import { resolveAsset } from './manifest';
@@ -33,7 +33,7 @@ import { daypartForHour, joinOffset, skipOffset, type MusicRun, type StationSche
 import { dialLayout, layoutKey, type DialLayout, type Visitor } from './secrets';
 import { createTicker, type Ticker } from './ticker';
 import { browserTzOffset, localTime, type TzOffset } from './time';
-import type { ActiveEvent, PlayStatus, StationDef, VoiceClip, VoiceSegment } from './types';
+import type { ActiveEvent, EventId, PlayStatus, StationDef, VoiceClip, VoiceSegment } from './types';
 
 export interface Clock {
   now(): number;
@@ -136,6 +136,8 @@ export class Director {
   readonly log: LogEntry[] = [];
   /** Events and HUSH (loaded on first power-on: a separate chunk). */
   overlay: Overlay | null = null;
+  /** HUSH behavior tracker & clip picker, shared with the overlay once loaded. */
+  readonly hushPicker = new HushPicker();
   /** True once loading the overlay has failed (offline before it was cached): HUSH can't speak. */
   overlayFailed = false;
 
@@ -232,6 +234,7 @@ export class Director {
     this.reception = receptionAt(this.frequency);
     this.program = this.reception.lock;
     this.lastStationId = this.program && this.program.kind !== 'oddity' ? this.program.id : start.id;
+    this.reportDialToHush(this.clock.now());
     // Pirates get their real names a moment after first being tuned: look again.
     onPirateNames(() => {
       this.reception = receptionAt(this.frequency);
@@ -323,6 +326,8 @@ export class Director {
           () => this.mixer,
           () => this.cache,
           this.library,
+          Math.random,
+          this.hushPicker,
         );
         overlay.levelOverride = this.hushOverride;
         overlay.shiftView = () => this.shiftView();
@@ -337,6 +342,29 @@ export class Director {
       },
     );
     return this.overlayLoad;
+  }
+
+  /** Records an operator skip for HUSH's behavioral tracker. */
+  recordSkip(nowMs = this.clock.now()): void {
+    this.hushPicker.recordSkip(nowMs);
+  }
+
+  /** Records operator dial tuning for HUSH's behavioral tracker. */
+  recordTune(freq: number, stationId: string | null, isPirate = false, nearSecret = false, nowMs = this.clock.now()): void {
+    this.hushPicker.recordTune(freq, stationId, isPirate, nearSecret, nowMs);
+  }
+
+  /** Records the end of an anomaly event for HUSH's behavioral tracker. */
+  recordEventEnd(eventKind: EventId, nowMs = this.clock.now()): void {
+    this.hushPicker.recordEventEnd(eventKind, nowMs);
+  }
+
+  private reportDialToHush(nowMs = this.clock.now()): void {
+    const tuned = this.reception.tuned;
+    const isPirate = tuned.kind === 'pirate';
+    const stationId = tuned.kind === 'station' || tuned.kind === 'pirate' ? tuned.station.id : null;
+    const nearSecret = this.stations.some((s) => s.secret && Math.abs(s.frequency - this.frequency) <= 0.25);
+    this.recordTune(this.frequency, stationId, isPirate, nearSecret, nowMs);
   }
 
   /** Pins HUSH's strangeness (tests, `?hush=`); null follows the session. */
@@ -565,6 +593,7 @@ export class Director {
     const frequency = Math.round(clampFrequency(mhz) * 1000) / 1000;
     this.frequency = frequency;
     this.reception = receptionAt(frequency);
+    this.reportDialToHush(this.clock.now());
     this.updateReception();
     const lock = this.reception.lock;
     const target = lock?.id ?? null;
@@ -600,8 +629,10 @@ export class Director {
   /** Jumps this programme's clock to the end of what's on air. Gesture. */
   skip(): void {
     if (!this.program) return;
+    const now = this.clock.now();
+    this.recordSkip(now);
     const id = this.stationId;
-    this.offsets.set(id, skipOffset(this.schedule(), this.clock.now() + this.appliedShift, this.offsetOf(id)));
+    this.offsets.set(id, skipOffset(this.schedule(), now + this.appliedShift, this.offsetOf(id)));
     void this.start('skip');
   }
 
@@ -896,11 +927,12 @@ export class Director {
     if (this.powered && mixer && mixer.ctx.state === 'running') {
       if (this.live && this.program) this.scheduleAudio();
       const wall = this.clock.now();
+      this.reportDialToHush(wall);
       const local = localTime(wall, this.tz);
       this.overlay?.tick(wall, {
         schedule: this.live && this.program ? this.schedule() : null,
         now: this.stationNow(),
-        stationId: this.program?.id ?? null,
+        stationId: this.program?.kind === 'station' ? this.program.station.id : null,
         daypart: daypartForHour(local.hour),
         date: local.date,
         weekday: local.weekday,

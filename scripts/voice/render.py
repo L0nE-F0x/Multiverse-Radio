@@ -295,6 +295,12 @@ def manifest_entry(station: str, clip, duration_ms: int, lines: list[dict]) -> d
         entry["arc"] = {"id": clip.arc.id, "step": clip.arc.step}
     if clip.days:
         entry["days"] = list(clip.days)
+    if clip.shifts is not None:
+        entry["shifts"] = list(clip.shifts)
+    if clip.trigger:
+        entry["trigger"] = clip.trigger
+    if clip.swap_with:
+        entry["swap_with"] = clip.swap_with
     entry["lines"] = written_captions(clip, lines)
     return entry
 

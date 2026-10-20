@@ -98,19 +98,19 @@
       "id": "dj-002",
       "category": "dj",
       "url": "/voice/atomic-bachelor-pad/dj-002.mp3",
-      "durationMs": 12720,
+      "durationMs": 12717,
       "title": "The Bouquet",
       "overMusic": true,
       "lines": [
         {
           "speaker": "Monty Stereo",
           "text": "Let's take a moment with that vibraphone. Notice the bouquet. A bright attack, a long, warm finish, and notes of chrome and walnut.",
-          "startMs": 40
+          "startMs": 37
         },
         {
           "speaker": "Monty Stereo",
           "text": "Nineteen sixty two was an exceptional year for the vibraphone. Best served slightly chilled, from the right speaker.",
-          "startMs": 6775
+          "startMs": 6772
         }
       ]
     },
@@ -118,19 +118,34 @@
       "id": "dj-003",
       "category": "dj",
       "url": "/voice/atomic-bachelor-pad/dj-003.mp3",
-      "durationMs": 13682,
+      "durationMs": 15508,
       "title": "Table Tennis",
       "overMusic": true,
       "lines": [
         {
           "speaker": "Monty Stereo",
-          "text": "Since nineteen sixty one, the orchestra on this next one has been playing table tennis across my living room. Trumpet, left. Trombone, right. Trumpet, left.",
-          "startMs": 39
+          "text": "Since nineteen sixty one, the orchestra on this next one has been playing table tennis across my living room.",
+          "startMs": 41
+        },
+        {
+          "speaker": "Monty Stereo",
+          "text": "Trumpet, left.",
+          "startMs": 6062
+        },
+        {
+          "speaker": "Monty Stereo",
+          "text": "Trombone, right.",
+          "startMs": 7529
+        },
+        {
+          "speaker": "Monty Stereo",
+          "text": "Trumpet, left.",
+          "startMs": 9055
         },
         {
           "speaker": "Monty Stereo",
           "text": "The score stands at four thousand two hundred and six all. Nobody has ever won. Nobody wants to.",
-          "startMs": 8596
+          "startMs": 10422
         }
       ]
     },
@@ -138,19 +153,29 @@
       "id": "dj-004",
       "category": "dj",
       "url": "/voice/atomic-bachelor-pad/dj-004.mp3",
-      "durationMs": 11848,
+      "durationMs": 12938,
       "title": "The Theremin Is in the Hallway",
       "overMusic": true,
       "lines": [
         {
           "speaker": "Monty Stereo",
-          "text": "Some of you have written in to ask where the theremin is. It is not in the left speaker. It is not in the right speaker.",
-          "startMs": 37
+          "text": "Some of you have written in to ask where the theremin is.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Monty Stereo",
+          "text": "It is not in the left speaker.",
+          "startMs": 2878
+        },
+        {
+          "speaker": "Monty Stereo",
+          "text": "It is not in the right speaker.",
+          "startMs": 4952
         },
         {
           "speaker": "Monty Stereo",
           "text": "In my professional opinion, the theremin is in the hallway. It has been there since Tuesday. I've left it a sandwich.",
-          "startMs": 5924
+          "startMs": 7012
         }
       ]
     },
@@ -260,10 +285,10 @@
     },
     {
       "id": "hifi-open-01",
-      "category": "ad",
+      "category": "dj",
       "url": "/voice/atomic-bachelor-pad/hifi-open-01.mp3",
       "durationMs": 5024,
-      "overMusic": false,
+      "overMusic": true,
       "part": "open",
       "kit": "hifi",
       "lines": [
@@ -276,10 +301,10 @@
     },
     {
       "id": "hifi-body-01",
-      "category": "ad",
+      "category": "dj",
       "url": "/voice/atomic-bachelor-pad/hifi-body-01.mp3",
       "durationMs": 9669,
-      "overMusic": false,
+      "overMusic": true,
       "part": "body",
       "kit": "hifi",
       "lines": [
@@ -292,10 +317,10 @@
     },
     {
       "id": "hifi-body-02",
-      "category": "ad",
+      "category": "dj",
       "url": "/voice/atomic-bachelor-pad/hifi-body-02.mp3",
       "durationMs": 8762,
-      "overMusic": false,
+      "overMusic": true,
       "part": "body",
       "kit": "hifi",
       "lines": [
@@ -308,10 +333,10 @@
     },
     {
       "id": "hifi-body-03",
-      "category": "ad",
+      "category": "dj",
       "url": "/voice/atomic-bachelor-pad/hifi-body-03.mp3",
       "durationMs": 4766,
-      "overMusic": false,
+      "overMusic": true,
       "part": "body",
       "kit": "hifi",
       "lines": [
@@ -324,10 +349,10 @@
     },
     {
       "id": "hifi-close-01",
-      "category": "ad",
+      "category": "dj",
       "url": "/voice/atomic-bachelor-pad/hifi-close-01.mp3",
       "durationMs": 4025,
-      "overMusic": false,
+      "overMusic": true,
       "part": "close",
       "kit": "hifi",
       "lines": [
@@ -358,7 +383,7 @@
       "id": "stereo-test-body-01",
       "category": "psa",
       "url": "/voice/atomic-bachelor-pad/stereo-test-body-01.mp3",
-      "durationMs": 8533,
+      "durationMs": 8532,
       "overMusic": false,
       "part": "body",
       "kit": "stereo-test",
@@ -366,7 +391,7 @@
         {
           "speaker": "Monty Stereo",
           "text": "This is the left speaker. Hello.",
-          "startMs": 45
+          "startMs": 46
         },
         {
           "speaker": "Monty Stereo",
@@ -567,7 +592,7 @@
       "id": "dj-halloween-001",
       "category": "dj",
       "url": "/voice/atomic-bachelor-pad/dj-halloween-001.mp3",
-      "durationMs": 12278,
+      "durationMs": 13556,
       "title": "The Haunted Theremin",
       "overMusic": true,
       "dates": [
@@ -583,13 +608,28 @@
       "lines": [
         {
           "speaker": "Monty Stereo",
-          "text": "A special Halloween demonstration. Hear the haunted theremin travel from your left speaker, to your right speaker, and then out of the room entirely, and up the stairs.",
-          "startMs": 37
+          "text": "A special Halloween demonstration.",
+          "startMs": 39
+        },
+        {
+          "speaker": "Monty Stereo",
+          "text": "Hear the haunted theremin travel from your left speaker.",
+          "startMs": 2419
+        },
+        {
+          "speaker": "Monty Stereo",
+          "text": "To your right speaker.",
+          "startMs": 5597
+        },
+        {
+          "speaker": "Monty Stereo",
+          "text": "And then out of the room entirely, and up the stairs.",
+          "startMs": 7299
         },
         {
           "speaker": "Monty Stereo",
           "text": "I don't have any stairs. It's a split level. Nevertheless. Footsteps.",
-          "startMs": 9129
+          "startMs": 10407
         }
       ]
     },
@@ -716,6 +756,278 @@
           "speaker": "Monty Stereo",
           "text": "Found the sweet spot first time. That bird has been in this business longer than I have.",
           "startMs": 5747
+        }
+      ]
+    },
+    {
+      "id": "hifi-open-02",
+      "category": "dj",
+      "url": "/voice/atomic-bachelor-pad/hifi-open-02.mp3",
+      "durationMs": 9047,
+      "title": "From the Bar",
+      "overMusic": true,
+      "part": "open",
+      "kit": "hifi",
+      "lines": [
+        {
+          "speaker": "Monty Stereo",
+          "text": "Monty Stereo, from the bar, well off the sweet spot. The demonstration continues without me. It prefers it that way.",
+          "startMs": 39
+        },
+        {
+          "speaker": "The Console",
+          "text": "Host displaced. Centre image holding. Proceed.",
+          "startMs": 5994
+        }
+      ]
+    },
+    {
+      "id": "hifi-open-03",
+      "category": "dj",
+      "url": "/voice/atomic-bachelor-pad/hifi-open-03.mp3",
+      "durationMs": 5774,
+      "title": "Left, Then Right",
+      "overMusic": true,
+      "part": "open",
+      "kit": "hifi",
+      "lines": [
+        {
+          "speaker": "Monty Stereo",
+          "text": "A high fidelity demonstration. First the left speaker.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Monty Stereo",
+          "text": "Then the right. If you turned your head, turn it back.",
+          "startMs": 3428
+        }
+      ]
+    },
+    {
+      "id": "hifi-open-04",
+      "category": "dj",
+      "url": "/voice/atomic-bachelor-pad/hifi-open-04.mp3",
+      "durationMs": 7199,
+      "title": "Incorrect Range",
+      "overMusic": true,
+      "part": "open",
+      "kit": "hifi",
+      "lines": [
+        {
+          "speaker": "The Console",
+          "text": "Demonstration loaded. Walnut, valves, and one host at incorrect range.",
+          "startMs": 28
+        },
+        {
+          "speaker": "Monty Stereo",
+          "text": "Incorrect range is the bar, thank you. We begin.",
+          "startMs": 4580
+        }
+      ]
+    },
+    {
+      "id": "hifi-body-04",
+      "category": "dj",
+      "url": "/voice/atomic-bachelor-pad/hifi-body-04.mp3",
+      "durationMs": 15418,
+      "title": "A Log of the Host",
+      "overMusic": true,
+      "part": "body",
+      "kit": "hifi",
+      "lines": [
+        {
+          "speaker": "Monty Stereo",
+          "text": "The Futureville Fidelity Console keeps a log of every note. It has started keeping a log of me.",
+          "startMs": 35
+        },
+        {
+          "speaker": "The Console",
+          "text": "Host crossed the room at nineteen forty. Drink detected. Not on the schematic.",
+          "startMs": 4669
+        },
+        {
+          "speaker": "Monty Stereo",
+          "text": "That drink is a prop. The schematic can mind its own walnut.",
+          "startMs": 9255
+        },
+        {
+          "speaker": "The Console",
+          "text": "Prop logged. Schematic offended. Continuing.",
+          "startMs": 12714
+        }
+      ]
+    },
+    {
+      "id": "hifi-body-05",
+      "category": "dj",
+      "url": "/voice/atomic-bachelor-pad/hifi-body-05.mp3",
+      "durationMs": 12384,
+      "title": "Hard Left, Hard Right",
+      "overMusic": true,
+      "part": "body",
+      "kit": "hifi",
+      "lines": [
+        {
+          "speaker": "Monty Stereo",
+          "text": "Bongos, hard left. They have been asked to stay there.",
+          "startMs": 36
+        },
+        {
+          "speaker": "Monty Stereo",
+          "text": "Vibraphone, hard right. Chilled, as promised, and slightly judgmental.",
+          "startMs": 3206
+        },
+        {
+          "speaker": "The Console",
+          "text": "Left channel nominal. Right channel filing a complaint.",
+          "startMs": 7218
+        },
+        {
+          "speaker": "Monty Stereo",
+          "text": "The complaint is part of the bouquet. Leave it in.",
+          "startMs": 9958
+        }
+      ]
+    },
+    {
+      "id": "hifi-body-06",
+      "category": "dj",
+      "url": "/voice/atomic-bachelor-pad/hifi-body-06.mp3",
+      "durationMs": 12444,
+      "title": "Valve Nineteen",
+      "overMusic": true,
+      "part": "body",
+      "kit": "hifi",
+      "lines": [
+        {
+          "speaker": "Monty Stereo",
+          "text": "Forty two glowing valves, and one of them has started answering back. I did not order a conversational valve.",
+          "startMs": 42
+        },
+        {
+          "speaker": "The Console",
+          "text": "Valve nineteen has opinions. Valve nineteen is incorrect.",
+          "startMs": 5581
+        },
+        {
+          "speaker": "Monty Stereo",
+          "text": "Valve nineteen can take it up with the bar. I am at the bar.",
+          "startMs": 9509
+        }
+      ]
+    },
+    {
+      "id": "hifi-body-07",
+      "category": "dj",
+      "url": "/voice/atomic-bachelor-pad/hifi-body-07.mp3",
+      "durationMs": 13107,
+      "title": "Brass in the Hallway",
+      "overMusic": true,
+      "part": "body",
+      "kit": "hifi",
+      "lines": [
+        {
+          "speaker": "The Console",
+          "text": "Warning. The trombone has left the right speaker and is in the hallway with the theremin.",
+          "startMs": 21
+        },
+        {
+          "speaker": "Monty Stereo",
+          "text": "The hallway is not a channel. I have told the hallway. I have told the trombone.",
+          "startMs": 4695
+        },
+        {
+          "speaker": "Monty Stereo",
+          "text": "If you can hear brass coming from your coat cupboard, that is high fidelity, and also a problem.",
+          "startMs": 8541
+        }
+      ]
+    },
+    {
+      "id": "hifi-body-08",
+      "category": "dj",
+      "url": "/voice/atomic-bachelor-pad/hifi-body-08.mp3",
+      "durationMs": 11873,
+      "title": "The Handshake",
+      "overMusic": true,
+      "part": "body",
+      "kit": "hifi",
+      "lines": [
+        {
+          "speaker": "Monty Stereo",
+          "text": "Hear a handshake from across the room. Mine. I am at the bar, and the console is taking minutes.",
+          "startMs": 37
+        },
+        {
+          "speaker": "The Console",
+          "text": "Minutes corrupted. Handshake assigned to the left speaker by mistake.",
+          "startMs": 4465
+        },
+        {
+          "speaker": "Monty Stereo",
+          "text": "Leave it on the left. A handshake should know where it stands.",
+          "startMs": 8870
+        }
+      ]
+    },
+    {
+      "id": "hifi-close-02",
+      "category": "dj",
+      "url": "/voice/atomic-bachelor-pad/hifi-close-02.mp3",
+      "durationMs": 5964,
+      "title": "Notes from the Bar",
+      "overMusic": true,
+      "part": "close",
+      "kit": "hifi",
+      "lines": [
+        {
+          "speaker": "Monty Stereo",
+          "text": "That was the demonstration. I heard it from the bar. The bar has notes.",
+          "startMs": 35
+        },
+        {
+          "speaker": "The Console",
+          "text": "Notes rejected. Bar is not a calibrated seat.",
+          "startMs": 2991
+        }
+      ]
+    },
+    {
+      "id": "hifi-close-03",
+      "category": "dj",
+      "url": "/voice/atomic-bachelor-pad/hifi-close-03.mp3",
+      "durationMs": 5123,
+      "title": "Not in the Script",
+      "overMusic": true,
+      "part": "close",
+      "kit": "hifi",
+      "lines": [
+        {
+          "speaker": "Monty Stereo",
+          "text": "Starburst Hi-Fi, on the Atomic Parkway. If the console spoke to you, it was not in the script.",
+          "startMs": 38
+        }
+      ]
+    },
+    {
+      "id": "hifi-close-04",
+      "category": "dj",
+      "url": "/voice/atomic-bachelor-pad/hifi-close-04.mp3",
+      "durationMs": 6292,
+      "title": "The Olive",
+      "overMusic": true,
+      "part": "close",
+      "kit": "hifi",
+      "lines": [
+        {
+          "speaker": "The Console",
+          "text": "End of demonstration. Host still at the bar. Centre image lonely.",
+          "startMs": 28
+        },
+        {
+          "speaker": "Monty Stereo",
+          "text": "The centre image can have my olive. I'm not moving.",
+          "startMs": 3455
         }
       ]
     }

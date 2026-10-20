@@ -141,6 +141,7 @@ id = "call-001"
 category = "call"
 title = "Hollis, Whose Shadow Left"
 bed = "rain"
+shifts = [0, 5]
 lines = [
   { sfx = "phone-ring" },
   { say = "grenda", text = "You're on Ask Grenda. Who've I got?" },
@@ -168,6 +169,7 @@ id = "call-002"
 category = "call"
 title = "Greg, a Shadow, at the Sea"
 bed = "ocean"
+shifts = [0, 5]
 lines = [
   { sfx = "phone-ring" },
   { say = "grenda", text = "Ask Grenda, you're on the air." },
@@ -682,7 +684,7 @@ title = "A Lighthouse"
 lines = [
   { sfx = "phone-ring", seconds = 1.6 },
   { say = "grenda", text = "Ask Grenda, you're on." },
-  { say = "lighthouse", text = "Hello, Grenda. I'm a lighthouse. Ships keep coming in close to say thank you, and I never know what to say. I just sort of flash." },
+  { say = "lighthouse", text = "Hello, Grenda. I'm a lighthouse. Ships keep coming in close to say thank you, and I never know what to say. I just flash." },
 ]
 
 [[clip]]
@@ -811,7 +813,7 @@ title = "A Retired Storm"
 lines = [
   { sfx = "phone-ring", seconds = 1.6 },
   { say = "grenda", text = "Ask Grenda. Go ahead, love." },
-  { say = "storm", text = "I used to be a hurricane, Grenda. Now I'm just a breeze in a garden in Lower Stilt. Nobody's afraid of me. I miss it." },
+  { say = "storm", text = "I used to be a hurricane, Grenda. Now I'm a breeze in a garden in Lower Stilt. Nobody's afraid of me. I miss it." },
 ]
 
 # ── Calls kit: Grenda's advice (fits any problem) ─────────────────────────────
@@ -1286,4 +1288,49 @@ lines = [
   { say = "walter", text = "She always got through. I've never tried. I'm frightened of who might answer." },
   { say = "grenda", text = "Someone polite, I'd expect. Operators always are. And Walter, you've already done the first bit. You rang advice.", gap = 0.8 },
   { say = "walter", text = "Oh. So I have." },
+]
+
+
+# ── Greg is home (night shifts six and on). The sea call and Hollis's loss stay shifts 0–5. ──
+
+[[clip]]
+id = "call-hollis-greg-home"
+category = "call"
+title = "Hollis, Now That Greg Is Home"
+bed = "rain"
+shifts = [6, 999]
+lines = [
+  { sfx = "phone-ring" },
+  { say = "grenda", text = "Ask Grenda. Who've I got?" },
+  { say = "hollis", text = "Hi, Grenda. It's Hollis. He came back. From behind the mirror. I heard the key, and then I heard nothing, which is how you hear Greg." },
+  { say = "grenda", text = "Oh, love. And where is he now?" },
+  { say = "hollis", text = "He's got his own flat, two streets over. He doesn't stand on my feet any more. On Tuesdays he's slightly translucent. I can see the kettle through him. He still puts it on." },
+  { say = "grenda", text = "And how does that feel, Hollis?" },
+  { say = "hollis", text = "Proud. A bit see-through myself, if I'm honest. On Sunday nights he hosts a show. The Lounge at the End of Time. I sit with the radio in my lap and I lean in." },
+  { say = "hollis", text = "Sometimes I think I hear hello. Should I go down there?" },
+  { say = "grenda", text = "If you want to, love. Not to collect him. To hear him. He's allowed a room of his own, and a Tuesday that shows the wallpaper, and a Sunday night that is his." },
+  { say = "grenda", text = "Leave the porch light on anyway. Not because he's missing. Because it makes the path kind." },
+  { say = "hollis", text = "Thank you, Grenda." },
+  { sfx = "phone-hangup" },
+  { say = "grenda", text = "There we are. The ones who leave the light on do get an answer. It just isn't always the answer they packed a bag for." },
+]
+
+[[clip]]
+id = "call-greg-at-home"
+category = "call"
+title = "Greg, From The Flat"
+bed = "room"
+shifts = [6, 999]
+lines = [
+  { sfx = "phone-ring" },
+  { say = "grenda", text = "Ask Grenda, you're on the air." },
+  { say = "greg", text = "Hello. It's Greg. I'm in the flat. My flat. I came back from behind the mirror. Sorry. I'm still quiet." },
+  { say = "grenda", text = "Don't be sorry, love. How is the flat?" },
+  { say = "greg", text = "It stays when I leave it. I'm not used to that. On Tuesdays I'm slightly translucent. Drivers look through me. Hollis waved anyway. He could see the hallway, and he waved at the hallway." },
+  { say = "grenda", text = "That sounds like Hollis." },
+  { say = "greg", text = "On Sunday nights I host. The Lounge at the End of Time. I don't think anyone can hear me. I talk anyway. There is a little light by the door." },
+  { say = "grenda", text = "Then they're hearing you, Greg. People don't lean in for nothing. And a Tuesday that lets the wallpaper show is still a Tuesday. Put the kettle on. Let them see you do it." },
+  { say = "greg", text = "I will. Thank you, Grenda." },
+  { sfx = "phone-hangup" },
+  { say = "grenda", text = "Go on, then, love. Home is allowed to be a bit see-through, as long as somebody waves." },
 ]

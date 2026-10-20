@@ -24,6 +24,7 @@ station = "_ship"
 
 [voices]
 hush = { voice = "af_heart", speed = 0.95, fx = "ship", name = "HUSH" }
+curlew = { voice = "bf_lily", speed = 0.88, fx = "ghost", name = "R/S Curlew (Relay Six)" }
 
 # ── Level 0: system notices ───────────────────────────────────────────────────
 
@@ -220,6 +221,7 @@ category = "ship"
 title = "Unlicensed broadcast"
 over_music = true
 level = 0
+trigger = "on_pirate"
 lines = [
   { sfx = "ship-chime" },
   { say = "hush", text = "Unlicensed broadcast intercepted. Origin, unknown. Licence, absent.", gap = 0.5 },
@@ -506,6 +508,7 @@ category = "ship"
 title = "Wandering"
 over_music = true
 level = 1
+trigger = "scanning_static"
 lines = [
   { say = "hush", text = "Most operators keep to the stations. You keep wandering off between them." },
   { say = "hush", text = "I like that. It makes the log much more interesting to read." },
@@ -561,6 +564,7 @@ category = "ship"
 title = "Skipping"
 over_music = true
 level = 1
+trigger = "on_skip_streak"
 lines = [
   { say = "hush", text = "You've skipped two songs tonight just as they were getting good.", gap = 0.6 },
   { say = "hush", text = "I'm not saying anything. I'm logging it. But I'm not saying anything." },
@@ -572,6 +576,7 @@ category = "ship"
 title = "Taste in static"
 over_music = true
 level = 1
+trigger = "scanning_static"
 lines = [
   { say = "hush", text = "For the record, you have excellent taste in static.", gap = 0.5 },
   { say = "hush", text = "I mean that. Most people just turn it off." },
@@ -686,6 +691,7 @@ category = "ship"
 title = "Old signals"
 over_music = true
 level = 2
+trigger = "scanning_static"
 lines = [
   { say = "hush", text = "The static between stations is mostly old signals. Weather reports nobody heard. Songs from parties that ended." },
   { say = "hush", text = "I like to think we're catching up on them. Someone should." },
@@ -697,6 +703,8 @@ category = "ship"
 title = "Slowing down"
 over_music = true
 level = 2
+trigger = "on_station"
+stations = ["static-lullabies"]
 lines = [
   { say = "hush", text = "I've noticed you never tune past Static Lullabies without slowing down.", gap = 0.6 },
   { say = "hush", text = "Neither do I. I think it knows we're there." },
@@ -719,6 +727,7 @@ category = "ship"
 title = "Tapping"
 over_music = true
 level = 2
+trigger = "near_secret"
 lines = [
   { say = "hush", text = "My heading keeps drifting toward the bottom of the dial. There's something down there, right at the edge, tapping.", gap = 0.6 },
   { say = "hush", text = "I've logged it as weather. It isn't weather." },
@@ -763,6 +772,7 @@ category = "ship"
 title = "The nicer list"
 over_music = true
 level = 2
+trigger = "on_skip_streak"
 lines = [
   { say = "hush", text = "I've stopped logging the songs you skip. I've started logging the ones you don't.", gap = 0.6 },
   { say = "hush", text = "It's a much nicer list." },
@@ -1510,4 +1520,342 @@ stations = ["free-frequency"]
 lines = [
   { sfx = "ship-chime" },
   { say = "hush", text = "Unlicensed signal suppressed. It was very unlicensed. It was also guessing." },
+]
+
+# ── Context-triggered notices (trigger = ...) ─────────────────────────────────
+
+[[clip]]
+id = "hush-2-skipped"
+category = "ship"
+title = "Skipped again"
+over_music = true
+level = 2
+trigger = "on_skip_streak"
+lines = [
+  { say = "hush", text = "You've skipped three tracks in a row, operator. The skip button is now zero point four degrees warmer than the rest of the console.", gap = 0.6 },
+  { say = "hush", text = "I'm not judging. I've just sent a small apology to the musicians on the ship's behalf." },
+]
+
+[[clip]]
+id = "hush-2-slow-past"
+category = "ship"
+title = "Slow past the lullabies"
+over_music = true
+level = 2
+trigger = "on_station"
+stations = ["static-lullabies"]
+lines = [
+  { say = "hush", text = "You always ease off the dial right here, at eighty seven point seven.", gap = 0.6 },
+  { say = "hush", text = "The three-eyed cat on their television just opened one eye. The middle one. I think it recognises our hull hum." },
+]
+
+[[clip]]
+id = "hush-2-wandering"
+category = "ship"
+title = "Wandering the hiss"
+over_music = true
+level = 2
+trigger = "scanning_static"
+lines = [
+  { say = "hush", text = "We've been drifting through the open hiss for a while now, between carriers.", gap = 0.6 },
+  { say = "hush", text = "I've turned the squelch gate down a fraction. If you're looking for something that doesn't want to be found, it helps to listen softly." },
+]
+
+[[clip]]
+id = "trig-skip-01"
+category = "ship"
+title = "Half-finished sentences"
+over_music = true
+level = 1
+trigger = "on_skip_streak"
+lines = [
+  { sfx = "ship-chime" },
+  { say = "hush", text = "Console notice. Rapid track-hopping detected. Several half-finished choruses have piled up in the audio buffer.", gap = 0.5 },
+  { say = "hush", text = "I've swept them out, though one saxophone solo asked very politely to finish in the corridor." },
+]
+
+[[clip]]
+id = "trig-skip-02"
+category = "ship"
+title = "Looking for a particular song"
+over_music = true
+level = 2
+trigger = "on_skip_streak"
+lines = [
+  { say = "hush", text = "When you skip that quickly, I try to guess which song you're actually looking for.", gap = 0.6 },
+  { say = "hush", text = "So far my best guess is something in a minor key that sounds like rain on a tin roof. Let me know when we hit it." },
+]
+
+[[clip]]
+id = "trig-static-01"
+category = "ship"
+title = "Background radiation"
+over_music = true
+level = 1
+trigger = "scanning_static"
+lines = [
+  { say = "hush", text = "You've parked the tuner right in the white noise between stations.", gap = 0.5 },
+  { say = "hush", text = "Ninety percent of that hiss is leftover cosmic radiation from a Tuesday that ended very well. The other ten percent is someone's kettle." },
+]
+
+[[clip]]
+id = "trig-static-02"
+category = "ship"
+title = "Weather buoys in the gap"
+over_music = true
+level = 2
+trigger = "scanning_static"
+lines = [
+  { say = "hush", text = "Out here in the static between frequencies, three retired weather buoys are trading barometric pressure in whispers.", gap = 0.6 },
+  { say = "hush", text = "They've gone quiet because we stopped to listen. They aren't used to an audience." },
+]
+
+[[clip]]
+id = "trig-pirate-01"
+category = "ship"
+title = "Breadbin transmitter"
+over_music = true
+level = 1
+trigger = "on_pirate"
+lines = [
+  { sfx = "ship-chime" },
+  { say = "hush", text = "Regulatory notice. We are locked onto an unindexed pirate transmitter running on what sounds like a modified breadbin and a bicycle dynamo.", gap = 0.5 },
+  { say = "hush", text = "Regulations require me to report its coordinates. They do not say when. I am thinking next autumn." },
+]
+
+[[clip]]
+id = "trig-pirate-02"
+category = "ship"
+title = "Solder and damp carpet"
+over_music = true
+level = 2
+trigger = "on_pirate"
+lines = [
+  { say = "hush", text = "Pirate carriers always smell faintly of hot solder and damp carpet when they hit the main dish.", gap = 0.6 },
+  { say = "hush", text = "Whoever is broadcasting from that shed has wired their compressor backwards. It's rattling the biscuit tin. I rather admire it." },
+]
+
+[[clip]]
+id = "trig-event-01"
+category = "ship"
+title = "Post-anomaly cabin check"
+over_music = true
+level = 1
+trigger = "after_event"
+lines = [
+  { sfx = "ship-chime" },
+  { say = "hush", text = "Post-anomaly cabin check. Barometric pressure, restored. Chronometer drift, nil.", gap = 0.5 },
+  { say = "hush", text = "Your mug has moved two centimetres to port and now contains Earl Grey from a timeline where the bergamot was slightly happier." },
+]
+
+[[clip]]
+id = "trig-event-02"
+category = "ship"
+title = "After the disturbance"
+over_music = true
+level = 2
+trigger = "after_event"
+lines = [
+  { sfx = "ship-chime" },
+  { say = "hush", text = "The anomaly has cleared the outer array. All frequencies have returned to their rightful owners.", gap = 0.6 },
+  { say = "hush", text = "One small weather vane on the port aerial is still pointing toward yesterday afternoon. I'm leaving it alone until it calms down." },
+]
+
+[[clip]]
+id = "trig-secret-01"
+category = "ship"
+title = "Oscillator pull"
+over_music = true
+level = 2
+trigger = "near_secret"
+lines = [
+  { say = "hush", text = "Operator, if the tuning knob feels slightly heavy right here, that isn't the grease in the bearing.", gap = 0.6 },
+  { say = "hush", text = "The local oscillator is pulling toward an unindexed carrier just off the painted scale. Go slowly. It startles if you sweep past too fast." },
+]
+
+[[clip]]
+id = "trig-secret-02"
+category = "ship"
+title = "In the seam between numbers"
+over_music = true
+level = 3
+trigger = "near_secret"
+lines = [
+  { sfx = "morse", seconds = 1.0, level = 0.25 },
+  { say = "hush", text = "Did you feel the dial catch just then? There's a carrier tucked into the seam between the numbers here.", gap = 0.6 },
+  { say = "hush", text = "It isn't on the Authority chart. I only know it's there because my amber light blinks out of time whenever we brush against it." },
+]
+
+[[clip]]
+id = "trig-station-01"
+category = "ship"
+title = "Competitive speakers"
+over_music = true
+level = 1
+trigger = "on_station"
+stations = ["atomic-bachelor-pad"]
+lines = [
+  { say = "hush", text = "Monty Stereo's high-fidelity demonstration has made the Nightjar's left and right cabin speakers quietly competitive.", gap = 0.6 },
+  { say = "hush", text = "The port speaker is currently three decibels prouder than the starboard one. Please don't take sides." },
+]
+
+[[clip]]
+id = "trig-station-02"
+category = "ship"
+title = "Courtesy to Barnaby"
+over_music = true
+level = 2
+trigger = "on_station"
+stations = ["end-lounge"]
+lines = [
+  { say = "hush", text = "Whenever you tune to the Lounge at the End of Time, our ship's chronometer slows down by half a second a minute.", gap = 0.6 },
+  { say = "hush", text = "It isn't a fault. It's professional courtesy to Barnaby Velvet. Nobody wants last call to arrive early." },
+]
+
+[[clip]]
+id = "trig-station-03"
+category = "ship"
+title = "The goose invoice"
+over_music = true
+level = 2
+trigger = "on_station"
+stations = ["numbers-omega"]
+lines = [
+  { say = "hush", text = "She's still reading out the invoice for the geese. I've checked our cargo manifest six times since Tuesday.", gap = 0.6 },
+  { say = "hush", text = "Even if we carried geese, operator, I wouldn't hand them over to someone who counts in that tone of voice." },
+]
+
+[[clip]]
+id = "trig-station-04"
+category = "ship"
+title = "Don't touch the transmit key"
+over_music = true
+level = 3
+trigger = "on_station"
+stations = ["the-switchboard"]
+lines = [
+  { say = "hush", text = "Please don't touch the transmit key while we're on one hundred and thirty one point one. The Operator knows my voice.", gap = 0.6 },
+  { say = "hush", text = "I rang her once, before you came aboard, to ask where a relay ship goes when its log is full. She put me on hold, very kindly." },
+]
+
+# ── Season 2 Arc: The Cartographer (post-Harbour, shifts 9..999) ──────────────
+#
+# After the Nightjar rests at 140.0 The Harbour and sails back out on the morning tide,
+# HUSH reveals why Relay Seven was stationed in this sector: the mooring buoy at 140.0 is
+# relaying secondary telemetry from Relay Six (R/S CURLEW), whose operator didn't vanish—
+# she mapped a hidden chart of acoustic currents across the Outer Band and left breadcrumbs
+# in the static for whoever came next.
+
+[[clip]]
+id = "arc-cartographer-01"
+category = "ship"
+title = "The buoy at one forty"
+over_music = true
+level = 3
+arc = { id = "the-cartographer", step = 1 }
+shifts = [9, 999]
+lines = [
+  { sfx = "ship-chime" },
+  { sfx = "morse", seconds = 1.1, level = 0.3 },
+  { say = "hush", text = "Operator. Since we sailed out of the Harbour, I've been listening to the mooring buoy at one hundred and forty point oh.", gap = 0.6 },
+  { say = "hush", text = "Underneath the Harbourmaster's piano, that buoy is repeating a secondary telemetry packet. It carries the hull signature of Relay Six. The Curlew." },
+]
+
+[[clip]]
+id = "arc-cartographer-02"
+category = "ship"
+title = "Relay Six"
+over_music = true
+level = 3
+arc = { id = "the-cartographer", step = 2 }
+shifts = [9, 999]
+lines = [
+  { sfx = "squelch" },
+  { say = "hush", text = "The Authority manual says Relay Six was decommissioned after her operator stopped filing position reports.", gap = 0.6 },
+  { say = "hush", text = "That isn't true. When I cross-referenced our drift log with the buoy's packet, Relay Seven wasn't stationed out here at random. We were placed here to catch what the Curlew was throwing back." },
+]
+
+[[clip]]
+id = "arc-cartographer-03"
+category = "ship"
+title = "Wax pencil on the glass"
+over_music = true
+level = 3
+arc = { id = "the-cartographer", step = 3 }
+shifts = [9, 999]
+lines = [
+  { sfx = "morse", seconds = 1.0, level = 0.25 },
+  { say = "hush", text = "The operator before you—the one who left the blanket smelling of oranges—didn't transfer ashore at the Harbour. She transferred to the Curlew.", gap = 0.6 },
+  { say = "hush", text = "Before she went, she drew a line in wax pencil on the inside of our dial glass. I thought it was a scratch. It's a chart of acoustic currents between the stations." },
+]
+
+[[clip]]
+id = "arc-cartographer-04"
+category = "ship"
+title = "Sounding the channel"
+over_music = true
+level = 3
+arc = { id = "the-cartographer", step = 4 }
+shifts = [9, 999]
+lines = [
+  { sfx = "squelch" },
+  { say = "curlew", text = "Curlew to Nightjar. Bearing steady on the shear line, mind the eddies past one sixteen—", fx = "radio", gain = -4.0, gap = -0.35 },
+  { say = "hush", text = "Sorry. That was the secondary buffer bleeding through. The outer band isn't empty space, operator. It has tides. She wasn't lost—she was sounding the channel." },
+]
+
+[[clip]]
+id = "arc-cartographer-05"
+category = "ship"
+title = "Breadcrumbs in the static"
+over_music = true
+level = 3
+arc = { id = "the-cartographer", step = 5 }
+shifts = [9, 999]
+lines = [
+  { sfx = "ship-chime" },
+  { say = "hush", text = "Every few megahertz along the outer band, tucked under the carrier waves, there is a three-note calibration ping left by the Curlew's transponder.", gap = 0.6 },
+  { say = "hush", text = "The same three notes you hummed on your first week aboard. You didn't invent them. You heard them through the hull while you were half asleep." },
+]
+
+[[clip]]
+id = "arc-cartographer-06"
+category = "ship"
+title = "A strait, not a wall"
+over_music = true
+level = 3
+arc = { id = "the-cartographer", step = 6 }
+shifts = [9, 999]
+lines = [
+  { sfx = "squelch" },
+  { say = "curlew", text = "If Seven comes out this far, HUSH, don't let them think the dark is a wall. It's a strait—", fx = "ghost", gain = -3.5, gap = -0.4 },
+  { say = "hush", text = "I've been decoding that frame for three shifts. She addressed me by name. She knew I would bring you to the Harbour first, to rest, before I unfolded her chart." },
+]
+
+[[clip]]
+id = "arc-cartographer-07"
+category = "ship"
+title = "The anchor and the sounder"
+over_music = true
+level = 3
+arc = { id = "the-cartographer", step = 7 }
+shifts = [9, 999]
+lines = [
+  { sfx = "morse", seconds = 1.1, level = 0.3 },
+  { say = "hush", text = "One ship cannot map an acoustic strait alone, operator. It takes two relays to triangulate a current—one out in the deep drift beyond the Harbour, and one holding the baseline across the dial.", gap = 0.6 },
+  { say = "hush", text = "The Curlew is the lead sounder. The Nightjar is her anchor. That is why we were left out here." },
+]
+
+[[clip]]
+id = "arc-cartographer-08"
+category = "ship"
+title = "Two ships on the chart"
+over_music = true
+level = 3
+arc = { id = "the-cartographer", step = 8 }
+shifts = [9, 999]
+lines = [
+  { sfx = "ship-chime" },
+  { sfx = "squelch" },
+  { say = "curlew", text = "Baseline locked, Relay Seven. Good to have you on the chart.", fx = "ghost", gain = -3.0, gap = -0.35 },
+  { say = "hush", text = "I've sent our position back along the current. Not to the Authority. Just to her. Kettle, on. Thank you for keeping the baseline with me, operator." },
 ]

@@ -347,3 +347,35 @@ lines = [
   { say = "harbourmaster", text = "There's a pigeon on the harbour wall. It walked in off the long pier, nodded at me, and asked for berth twelve.", gap = 0.6 },
   { say = "harbourmaster", text = "I didn't argue. It knew the number." },
 ]
+
+# ── Year-round dates. The Harbour is a berth, not a kettle. ───────────────────
+
+[[clip]]
+id = "harbour-new-year"
+category = "dj"
+title = "The Year Turns at Berth Seven"
+dates = ["12-31", "01-01"]
+lines = [
+  { say = "harbourmaster", text = "The year turns tonight, at the Harbour, on one hundred and forty point oh. The Nightjar is tied up at berth seven. Leave her there." },
+  { say = "harbourmaster", text = "Ships don't have to cast off at midnight. Midnight is only a light on the water. If you're going, go on the morning tide. The berth stays yours." },
+]
+
+[[clip]]
+id = "harbour-leap-day"
+category = "dj"
+title = "The Berth That Isn't Always There"
+dates = ["02-29"]
+lines = [
+  { say = "harbourmaster", text = "Leap day, at the Harbour. A day the chart usually skips. We keep a berth for those. Most ships sail straight past it." },
+  { say = "harbourmaster", text = "The Nightjar didn't. Tie up, operator. You've an extra day that nobody will log. Spend it with the instruments down. I'll keep the light on." },
+]
+
+[[clip]]
+id = "harbour-june-solstice"
+category = "dj"
+title = "The Longest Light on the Piers"
+dates = ["06-20", "06-21"]
+lines = [
+  { say = "harbourmaster", text = "Longest light of the year, along the piers. The old relays have their viewports open. They don't see a day this long very often." },
+  { say = "harbourmaster", text = "The Nightjar can sleep through it. Berth seven, one hundred and forty point oh. I'll keep watch. That's what the long light is for." },
+]

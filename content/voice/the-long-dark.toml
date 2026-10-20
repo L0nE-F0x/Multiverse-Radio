@@ -1347,3 +1347,45 @@ lines = [
   { say = "announcer", text = "He is the least frightening ghost the Players have ever cast. He apologises to every door before he walks through it." },
   { say = "announcer", text = "And yet. When the studio lights went out during rehearsal, every single member of the cast screamed. He was so sorry. He brought biscuits the next day. Happy Halloween." },
 ]
+
+# ── Year-round dates. Radio theatre in the dark, not a tea room. ──────────────
+
+[[clip]]
+id = "dark-new-year"
+category = "story"
+title = "The Year Comes Back Around"
+bed = "organ"
+dates = ["12-31", "01-01"]
+lines = [
+  { sting = "crime" },
+  { say = "announcer", text = "Previously, on The Long Dark: the year ended. And then, as it always does on this station, it began again, in the same corridor." },
+  { say = "wren", text = "Happy new year. I'm so sorry. I was here for the last one, and the one before. I brought the dark. It wanted fireworks. There aren't any." },
+  { say = "mags", text = "The Lumen Bar is open. First round of the year is on the house. The house is mostly dark. Mind the step you can't see." },
+]
+
+[[clip]]
+id = "dark-april-fools"
+category = "story"
+title = "The Punchline Was the Dark"
+bed = "organ"
+dates = ["04-01"]
+lines = [
+  { sting = "crime" },
+  { say = "announcer", text = "For April Fools, the Penumbra Players promised a comedy. The lights were meant to come up on the punchline." },
+  { say = "wren", text = "I'm so sorry. I believe I am the punchline. I was standing in the dark, which is where I live. I didn't mean to be funny." },
+  { say = "calder", text = "Nobody laughed, Wren. The lights stayed out. On this station that isn't a joke. That's the night shift." },
+  { say = "announcer", text = "The Players apologise. Mister Wren has already done so, eleven times, which we are counting as the encore." },
+]
+
+[[clip]]
+id = "dark-december-solstice"
+category = "story"
+title = "The Longest Dark"
+bed = "organ"
+dates = ["12-21", "12-22"]
+lines = [
+  { say = "announcer", text = "The longest dark of the year. The Penumbra Players have been rehearsing for this night since the Lamp was first lit." },
+  { say = "haskett", text = "Steady, old girl. It's a long one. You don't have to burn the whole of it. Just enough that we can see the dark properly." },
+  { say = "calder", text = "Solstice on Penumbra Station. The Long Dark leans in the doorway and stays. Calder, still on nights. Torch in the coat. As usual." },
+  { say = "announcer", text = "Leave a light on. Not a bright one. Just enough to be found by, on the longest dark there is. The Players will be here until it lifts." },
+]

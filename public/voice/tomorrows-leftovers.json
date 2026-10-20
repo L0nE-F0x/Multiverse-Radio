@@ -1080,6 +1080,166 @@
           "startMs": 3219
         }
       ]
+    },
+    {
+      "id": "pip-cooks-today-close",
+      "category": "id",
+      "url": "/voice/tomorrows-leftovers/pip-cooks-today-close.mp3",
+      "durationMs": 7672,
+      "title": "Pip Cooks Today",
+      "overMusic": true,
+      "part": "close",
+      "show": "pip-cooks-today",
+      "lines": [
+        {
+          "speaker": "Pip, the Sous-Chef",
+          "text": "That was Pip Cooks Today. The ingredients were already here.",
+          "startMs": 444
+        },
+        {
+          "speaker": "Pip, the Sous-Chef",
+          "text": "Chef can have tomorrow back. Please wash your hands. They exist.",
+          "startMs": 3679
+        }
+      ]
+    },
+    {
+      "id": "pip-cooks-today-03",
+      "category": "dj",
+      "url": "/voice/tomorrows-leftovers/pip-cooks-today-03.mp3",
+      "durationMs": 20456,
+      "overMusic": true,
+      "show": "pip-cooks-today",
+      "lines": [
+        {
+          "speaker": "Pip, the Sous-Chef",
+          "text": "Right. Toast. This is bread. It is bread today. This is butter. The butter has not been to the future, and it does not want to go.",
+          "startMs": 448
+        },
+        {
+          "speaker": "Chef Anselm Brodequin",
+          "text": "Quaint.",
+          "startMs": 6791
+        },
+        {
+          "speaker": "Pip, the Sous-Chef",
+          "text": "Thank you, Chef. I'm going to eat it now, while it is still now. If you are also now, you can do the same. Butter on bread. That's the whole trick.",
+          "startMs": 7281
+        },
+        {
+          "speaker": "Pip, the Sous-Chef",
+          "text": "If your butter is from Thursday, put it back. Thursday will be wanting it. This show is for the butter that turned up on time.",
+          "startMs": 14187
+        }
+      ]
+    },
+    {
+      "id": "pip-cooks-today-04",
+      "category": "call",
+      "url": "/voice/tomorrows-leftovers/pip-cooks-today-04.mp3",
+      "durationMs": 51204,
+      "title": "Chef, Calling From Thursday",
+      "overMusic": false,
+      "show": "pip-cooks-today",
+      "lines": [
+        {
+          "speaker": "Pip, the Sous-Chef",
+          "text": "Pip Cooks Today! If you're calling from the present, hello!",
+          "startMs": 2850
+        },
+        {
+          "speaker": "Chef Anselm Brodequin",
+          "text": "Pip. It is Thursday. I am standing in Thursday, and the butter dish is empty. You used it. On a Tuesday. I had plans for that butter. The plans were a sauce.",
+          "startMs": 5905
+        },
+        {
+          "speaker": "Pip, the Sous-Chef",
+          "text": "The butter was here, Chef. In the dish. In the present. That's where butter lives, until somebody eats it. I ate it. On toast. The toast also existed.",
+          "startMs": 14683
+        },
+        {
+          "speaker": "Chef Anselm Brodequin",
+          "text": "Existence is not a recipe, Pip. It is a lack of ambition. Put the butter back. I don't mind which Tuesday you take it from. Leave me Thursday.",
+          "startMs": 22305
+        },
+        {
+          "speaker": "Pip, the Sous-Chef",
+          "text": "I can't put toast back, Chef. That's not how toast works. That's how regret works, and regret is your department.",
+          "startMs": 30649
+        },
+        {
+          "speaker": "Chef Anselm Brodequin",
+          "text": "I shall remember this conversation before you have it. Be warned. And wash the knife. The knife is already dirty in my tomorrow.",
+          "startMs": 36701
+        },
+        {
+          "speaker": "Pip, the Sous-Chef",
+          "text": "He's gone. The butter is also gone. If you're making toast, make it now. Thursday has been told.",
+          "startMs": 45828
+        }
+      ]
+    },
+    {
+      "id": "pip-cooks-today-05",
+      "category": "story",
+      "url": "/voice/tomorrows-leftovers/pip-cooks-today-05.mp3",
+      "durationMs": 37683,
+      "title": "The Soup That Was Ready Now",
+      "overMusic": false,
+      "show": "pip-cooks-today",
+      "lines": [
+        {
+          "speaker": "Pip, the Sous-Chef",
+          "text": "A story from today's stove. Yesterday, this soup was tomorrow's soup. Chef tasted it before it was onions. He said it was promising, and also already eaten, which I think was a complaint.",
+          "startMs": 440
+        },
+        {
+          "speaker": "Pip, the Sous-Chef",
+          "text": "Today I chopped the onions while they were onions. They made me cry, which means they were real. I cried into the pot. Chef says tears are a garnish from next winter. I say they are Tuesday.",
+          "startMs": 10038
+        },
+        {
+          "speaker": "Pip, the Sous-Chef",
+          "text": "The soup is done. It tastes like now. Now tastes of onion, salt, and the radio being on. I took a bowl out to the step. A minute later I was still there. That's how I know it worked.",
+          "startMs": 19509
+        },
+        {
+          "speaker": "Pip, the Sous-Chef",
+          "text": "If you are hungry in the present, you don't have to wait for the version of you who has already eaten. There's a bowl. It's hot. That's the end of the story, which is also the start of lunch.",
+          "startMs": 28693
+        }
+      ]
+    },
+    {
+      "id": "pip-cooks-today-06",
+      "category": "ad",
+      "url": "/voice/tomorrows-leftovers/pip-cooks-today-06.mp3",
+      "durationMs": 27530,
+      "title": "Butter That Already Exists",
+      "overMusic": false,
+      "show": "pip-cooks-today",
+      "lines": [
+        {
+          "speaker": "Pip, the Sous-Chef",
+          "text": "A word from today's butter. It exists. It is in the dish, or it was, before the toast. It would like you to know it has never been to Thursday, and it has no plans.",
+          "startMs": 448
+        },
+        {
+          "speaker": "Pip, the Sous-Chef",
+          "text": "Pip's Butter, which is just butter. Spread it on something that is also here. Bread is a good start. A spoon is a cry for help, but the butter will not judge you.",
+          "startMs": 8804
+        },
+        {
+          "speaker": "Chef Anselm Brodequin",
+          "text": "I will judge you. From Thursday. I have already judged you.",
+          "startMs": 16814
+        },
+        {
+          "speaker": "Pip, the Sous-Chef",
+          "text": "Ignore the future, listeners. Wash your hands. Eat the butter while it agrees to be butter. That was the word. The word is done. The toast is not.",
+          "startMs": 20110
+        }
+      ]
     }
   ]
 }

@@ -3589,6 +3589,102 @@
           "startMs": 25510
         }
       ]
+    },
+    {
+      "id": "dark-new-year",
+      "category": "story",
+      "url": "/voice/the-long-dark/dark-new-year.mp3",
+      "durationMs": 28194,
+      "title": "The Year Comes Back Around",
+      "overMusic": false,
+      "dates": [
+        "01-01",
+        "12-31"
+      ],
+      "lines": [
+        {
+          "speaker": "The Announcer",
+          "text": "Previously, on The Long Dark: the year ended. And then, as it always does on this station, it began again, in the same corridor.",
+          "startMs": 3300
+        },
+        {
+          "speaker": "Mr. Wren",
+          "text": "Happy new year. I'm so sorry. I was here for the last one, and the one before. I brought the dark. It wanted fireworks. There aren't any.",
+          "startMs": 12458
+        },
+        {
+          "speaker": "Mags",
+          "text": "The Lumen Bar is open. First round of the year is on the house. The house is mostly dark. Mind the step you can't see.",
+          "startMs": 21062
+        }
+      ]
+    },
+    {
+      "id": "dark-april-fools",
+      "category": "story",
+      "url": "/voice/the-long-dark/dark-april-fools.mp3",
+      "durationMs": 32046,
+      "title": "The Punchline Was the Dark",
+      "overMusic": false,
+      "dates": [
+        "04-01"
+      ],
+      "lines": [
+        {
+          "speaker": "The Announcer",
+          "text": "For April Fools, the Penumbra Players promised a comedy. The lights were meant to come up on the punchline.",
+          "startMs": 3300
+        },
+        {
+          "speaker": "Mr. Wren",
+          "text": "I'm so sorry. I believe I am the punchline. I was standing in the dark, which is where I live. I didn't mean to be funny.",
+          "startMs": 10350
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "Nobody laughed, Wren. The lights stayed out. On this station that isn't a joke. That's the night shift.",
+          "startMs": 18215
+        },
+        {
+          "speaker": "The Announcer",
+          "text": "The Players apologise. Mister Wren has already done so, eleven times, which we are counting as the encore.",
+          "startMs": 24076
+        }
+      ]
+    },
+    {
+      "id": "dark-december-solstice",
+      "category": "story",
+      "url": "/voice/the-long-dark/dark-december-solstice.mp3",
+      "durationMs": 32733,
+      "title": "The Longest Dark",
+      "overMusic": false,
+      "dates": [
+        "12-21",
+        "12-22"
+      ],
+      "lines": [
+        {
+          "speaker": "The Announcer",
+          "text": "The longest dark of the year. The Penumbra Players have been rehearsing for this night since the Lamp was first lit.",
+          "startMs": 435
+        },
+        {
+          "speaker": "Dov Haskett",
+          "text": "Steady, old girl. It's a long one. You don't have to burn the whole of it. Just enough that we can see the dark properly.",
+          "startMs": 7789
+        },
+        {
+          "speaker": "Detective Ines Calder",
+          "text": "Solstice on Penumbra Station. The Long Dark leans in the doorway and stays. Calder, still on nights. Torch in the coat. As usual.",
+          "startMs": 15111
+        },
+        {
+          "speaker": "The Announcer",
+          "text": "Leave a light on. Not a bright one. Just enough to be found by, on the longest dark there is. The Players will be here until it lifts.",
+          "startMs": 23548
+        }
+      ]
     }
   ]
 }

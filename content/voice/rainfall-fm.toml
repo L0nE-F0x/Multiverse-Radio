@@ -70,7 +70,7 @@ lines = [
 id = "id-007"
 category = "id"
 lines = [
-  { say = "host", text = "Rainfall FM. If you can hear the rain louder than usual, your window's open. Close it, love. Or don't. It's nice." },
+  { say = "host", text = "Rainfall FM. If you can hear the rain louder, your window's open. Close it, love. Or don't. It's nice." },
   { sting = "id" },
 ]
 

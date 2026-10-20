@@ -46,7 +46,7 @@ end = 2
 id = "id-001"
 category = "id"
 lines = [
-  { say = "host", text = "Orbit Roots, one oh nine point three. Roots music from the Greenhouse Ring, where nothing is in a hurry. Least of all me." },
+  { say = "host", text = "Orbit Roots, one oh nine point three. From the Greenhouse Ring, where nothing is in a hurry. Least of all me." },
   { sting = "id" },
 ]
 
@@ -78,7 +78,7 @@ id = "id-005"
 category = "id"
 daypart = "night"
 lines = [
-  { say = "host", text = "Orbit Roots, late on the farm moon. The ring is low, and the bass is going down to the roots. Where it belongs." },
+  { say = "host", text = "Orbit Roots, on the farm moon. The ring is low, and the bass goes down to the roots. Where it belongs." },
   { sting = "id" },
 ]
 

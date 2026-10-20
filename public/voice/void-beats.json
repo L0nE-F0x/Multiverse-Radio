@@ -476,7 +476,7 @@
       "id": "the-3am-hour-open",
       "category": "id",
       "url": "/voice/void-beats/the-3am-hour-open.mp3",
-      "durationMs": 9851,
+      "durationMs": 9514,
       "title": "The 3 AM Hour",
       "overMusic": true,
       "part": "open",
@@ -489,7 +489,7 @@
         },
         {
           "speaker": "DJ Eventually",
-          "text": "If you're asleep, that's also the right place.",
+          "text": "If you're asleep, that's the right place.",
           "startMs": 5678
         }
       ]
@@ -1286,6 +1286,169 @@
           "speaker": "DJ Eventually",
           "text": "The void heard it. The void says it was about a porch light. The void has been very quiet all day.",
           "startMs": 8728
+        }
+      ]
+    },
+    {
+      "id": "the-void-takes-over-close",
+      "category": "id",
+      "url": "/voice/void-beats/the-void-takes-over-close.mp3",
+      "durationMs": 8664,
+      "title": "The Void Takes Over",
+      "overMusic": true,
+      "part": "close",
+      "show": "the-void-takes-over",
+      "lines": [
+        {
+          "speaker": "The Void",
+          "text": "That was the void. She is waking up. I have put the blanket back.",
+          "startMs": 41
+        },
+        {
+          "speaker": "The Void",
+          "text": "Do not tell her I hosted.",
+          "startMs": 5216
+        }
+      ]
+    },
+    {
+      "id": "the-void-takes-over-04",
+      "category": "dj",
+      "url": "/voice/void-beats/the-void-takes-over-04.mp3",
+      "durationMs": 14147,
+      "overMusic": true,
+      "show": "the-void-takes-over",
+      "lines": [
+        {
+          "speaker": "The Void",
+          "text": "She talks in her sleep.",
+          "startMs": 38
+        },
+        {
+          "speaker": "The Void",
+          "text": "She said, play the one with the kettle.",
+          "startMs": 3221
+        },
+        {
+          "speaker": "The Void",
+          "text": "I played it. The kettle joined in.",
+          "startMs": 7488
+        },
+        {
+          "speaker": "The Void",
+          "text": "Hm.",
+          "startMs": 11680
+        }
+      ]
+    },
+    {
+      "id": "the-void-takes-over-05",
+      "category": "dj",
+      "url": "/voice/void-beats/the-void-takes-over-05.mp3",
+      "durationMs": 15565,
+      "overMusic": true,
+      "show": "the-void-takes-over",
+      "lines": [
+        {
+          "speaker": "The Void",
+          "text": "A napkin blew in. There is no door. It blew in anyway.",
+          "startMs": 35
+        },
+        {
+          "speaker": "The Void",
+          "text": "It asks if I get tired. I made her bed. I do not sleep.",
+          "startMs": 5047
+        },
+        {
+          "speaker": "The Void",
+          "text": "Next song. Soft. She can wake up inside it, if she wants.",
+          "startMs": 10384
+        }
+      ]
+    },
+    {
+      "id": "the-void-takes-over-06",
+      "category": "call",
+      "url": "/voice/void-beats/the-void-takes-over-06.mp3",
+      "durationMs": 50386,
+      "title": "DJ Eventually, Under The Blanket",
+      "overMusic": false,
+      "show": "the-void-takes-over",
+      "lines": [
+        {
+          "speaker": "The Void",
+          "text": "Void Beats.",
+          "startMs": 2449
+        },
+        {
+          "speaker": "DJ Eventually",
+          "text": "It's me. I'm under the blanket. You took my show. You also did the dishes. We had a deal about the dishes.",
+          "startMs": 4568
+        },
+        {
+          "speaker": "The Void",
+          "text": "You were asleep.",
+          "startMs": 10601
+        },
+        {
+          "speaker": "DJ Eventually",
+          "text": "I was resting my eyes. Hosts do that. And you played the kettle song. That one is private. It is for when the probably-a-cat is sad.",
+          "startMs": 12793
+        },
+        {
+          "speaker": "The Void",
+          "text": "The cat was sad. The song knew. I am hosting.",
+          "startMs": 21422
+        },
+        {
+          "speaker": "DJ Eventually",
+          "text": "You can't just be the station. You're the quiet bit. I'm the one with the mouth.",
+          "startMs": 25637
+        },
+        {
+          "speaker": "The Void",
+          "text": "Your mouth is asleep. I am being careful with it.",
+          "startMs": 30188
+        },
+        {
+          "speaker": "DJ Eventually",
+          "text": "Don't tell them I drool. And don't tell them the dishes thing. I was going to do the dishes.",
+          "startMs": 34779
+        },
+        {
+          "speaker": "The Void",
+          "text": "You were not. Hm. Go back under. I have put the song on.",
+          "startMs": 40003
+        },
+        {
+          "speaker": "The Void",
+          "text": "She went back under. Next song.",
+          "startMs": 46814
+        }
+      ]
+    },
+    {
+      "id": "the-void-takes-over-07",
+      "category": "dj",
+      "url": "/voice/void-beats/the-void-takes-over-07.mp3",
+      "durationMs": 14537,
+      "overMusic": true,
+      "show": "the-void-takes-over",
+      "lines": [
+        {
+          "speaker": "The Void",
+          "text": "The probably-a-cat has moved onto the notes.",
+          "startMs": 47
+        },
+        {
+          "speaker": "The Void",
+          "text": "I did not move the cat. The cat is hosting now.",
+          "startMs": 4490
+        },
+        {
+          "speaker": "The Void",
+          "text": "I am only the quiet underneath. That is allowed.",
+          "startMs": 9658
         }
       ]
     }

@@ -2,9 +2,9 @@
   "version": 1,
   "entries": {
     "_events": {
-      "clips": 77,
-      "bytes": 4684032,
-      "version": "0ce6209da76b"
+      "clips": 85,
+      "bytes": 6213624,
+      "version": "91bd0ac195fa"
     },
     "_oddities": {
       "clips": 19,
@@ -17,24 +17,24 @@
       "version": "a78ed9224d2a"
     },
     "_shared": {
-      "clips": 62,
-      "bytes": 4972512,
-      "version": "408c3c204d9e"
+      "clips": 64,
+      "bytes": 5129928,
+      "version": "067a82a110c3"
     },
     "_ship": {
-      "clips": 123,
-      "bytes": 5514624,
-      "version": "400d3d3b700b"
+      "clips": 148,
+      "bytes": 7444656,
+      "version": "57521727540d"
     },
     "ask-grenda": {
-      "clips": 82,
-      "bytes": 11079168,
-      "version": "052f395a31bf"
+      "clips": 84,
+      "bytes": 11723112,
+      "version": "a9d90826c025"
     },
     "atomic-bachelor-pad": {
-      "clips": 38,
-      "bytes": 1738752,
-      "version": "a84acf98b3fb"
+      "clips": 49,
+      "bytes": 2286072,
+      "version": "1ce6fde30964"
     },
     "baroque-bots": {
       "clips": 50,
@@ -67,9 +67,9 @@
       "version": "dceb088c9f01"
     },
     "classifieds": {
-      "clips": 102,
-      "bytes": 8676000,
-      "version": "25cf1a87b9d7"
+      "clips": 107,
+      "bytes": 9519456,
+      "version": "300d168984a0"
     },
     "comet-marimba": {
       "clips": 53,
@@ -92,9 +92,9 @@
       "version": "b92351f3bba9"
     },
     "end-lounge": {
-      "clips": 61,
-      "bytes": 3915384,
-      "version": "a6f1e241b4ab"
+      "clips": 66,
+      "bytes": 4619688,
+      "version": "494f34e0cffa"
     },
     "event-horizon-surf": {
       "clips": 36,
@@ -102,14 +102,14 @@
       "version": "e2914f91258b"
     },
     "every-news": {
-      "clips": 133,
-      "bytes": 12859704,
-      "version": "5f8e8f938f03"
+      "clips": 143,
+      "bytes": 14992776,
+      "version": "8660212cd965"
     },
     "free-frequency": {
-      "clips": 61,
-      "bytes": 4080768,
-      "version": "6a9003503b27"
+      "clips": 65,
+      "bytes": 4421544,
+      "version": "c18892ac88a5"
     },
     "gristwick-parish": {
       "clips": 48,
@@ -143,8 +143,8 @@
     },
     "island-time": {
       "clips": 36,
-      "bytes": 1892400,
-      "version": "91d0e0a624b5"
+      "bytes": 1889760,
+      "version": "dab6b672286a"
     },
     "last-lighthouse": {
       "clips": 35,
@@ -152,9 +152,9 @@
       "version": "25b5708e2610"
     },
     "lower-hollow": {
-      "clips": 49,
-      "bytes": 2786352,
-      "version": "383fc72b105c"
+      "clips": 54,
+      "bytes": 3928248,
+      "version": "6eb3078dfdcb"
     },
     "minute-between": {
       "clips": 28,
@@ -162,9 +162,9 @@
       "version": "c4f8b11f49b3"
     },
     "mirror-polka": {
-      "clips": 53,
-      "bytes": 2539464,
-      "version": "9915f5f77e03"
+      "clips": 58,
+      "bytes": 3275760,
+      "version": "84f795379ff1"
     },
     "moon-dub": {
       "clips": 57,
@@ -183,8 +183,8 @@
     },
     "orbit-roots": {
       "clips": 37,
-      "bytes": 2331792,
-      "version": "6d22e99bb2db"
+      "bytes": 2324856,
+      "version": "d941cb61de51"
     },
     "other-horoscopes": {
       "clips": 42,
@@ -208,8 +208,8 @@
     },
     "rainfall-fm": {
       "clips": 54,
-      "bytes": 3467328,
-      "version": "bf73b505b051"
+      "bytes": 3463032,
+      "version": "c76eb5ed6013"
     },
     "saturday-night-forever": {
       "clips": 48,
@@ -223,8 +223,8 @@
     },
     "smoke-ring-trio": {
       "clips": 37,
-      "bytes": 2260176,
-      "version": "70eacfdaad65"
+      "bytes": 2258280,
+      "version": "2b1697aa10d5"
     },
     "snail-jams": {
       "clips": 50,
@@ -242,24 +242,24 @@
       "version": "f5767685bbd9"
     },
     "substation-null": {
-      "clips": 52,
-      "bytes": 1958616,
-      "version": "08b3fb0b327b"
+      "clips": 61,
+      "bytes": 2413464,
+      "version": "352788fa2dec"
     },
     "the-harbour": {
-      "clips": 31,
-      "bytes": 1760064,
-      "version": "7c7324cf5b5a"
+      "clips": 34,
+      "bytes": 2028504,
+      "version": "2a8139fe8fe7"
     },
     "the-long-dark": {
-      "clips": 68,
-      "bytes": 16044096,
-      "version": "4f9ca6fcbefd"
+      "clips": 71,
+      "bytes": 16509312,
+      "version": "527b1dee26f4"
     },
     "the-switchboard": {
-      "clips": 43,
-      "bytes": 2075208,
-      "version": "a147757cb29a"
+      "clips": 48,
+      "bytes": 3408192,
+      "version": "32fe7e63d5f0"
     },
     "tiki-satellite": {
       "clips": 36,
@@ -272,14 +272,14 @@
       "version": "6ea5defaca67"
     },
     "tomorrows-leftovers": {
-      "clips": 44,
-      "bytes": 2429400,
-      "version": "6f4433a5814d"
+      "clips": 49,
+      "bytes": 3396720,
+      "version": "31a44b135497"
     },
     "traffic-on-the-8s": {
-      "clips": 69,
-      "bytes": 3466656,
-      "version": "e769c2298f8f"
+      "clips": 85,
+      "bytes": 4671648,
+      "version": "57152f560027"
     },
     "transmission-zero": {
       "clips": 34,
@@ -292,14 +292,14 @@
       "version": "8bfe1bc8d177"
     },
     "velvet-collapse": {
-      "clips": 49,
-      "bytes": 2476512,
-      "version": "6a2b0d3c2d8b"
+      "clips": 54,
+      "bytes": 3284544,
+      "version": "cf7b2faa0248"
     },
     "void-beats": {
-      "clips": 60,
-      "bytes": 3429672,
-      "version": "5d8578757c5c"
+      "clips": 65,
+      "bytes": 4035984,
+      "version": "36790848866d"
     },
     "wall-of-fog": {
       "clips": 37,

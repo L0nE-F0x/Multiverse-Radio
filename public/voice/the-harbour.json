@@ -674,6 +674,77 @@
           "startMs": 8063
         }
       ]
+    },
+    {
+      "id": "harbour-new-year",
+      "category": "dj",
+      "url": "/voice/the-harbour/harbour-new-year.mp3",
+      "durationMs": 18511,
+      "title": "The Year Turns at Berth Seven",
+      "overMusic": true,
+      "dates": [
+        "01-01",
+        "12-31"
+      ],
+      "lines": [
+        {
+          "speaker": "The Harbourmaster",
+          "text": "The year turns tonight, at the Harbour, on one hundred and forty point oh. The Nightjar is tied up at berth seven. Leave her there.",
+          "startMs": 39
+        },
+        {
+          "speaker": "The Harbourmaster",
+          "text": "Ships don't have to cast off at midnight. Midnight is only a light on the water. If you're going, go on the morning tide. The berth stays yours.",
+          "startMs": 8940
+        }
+      ]
+    },
+    {
+      "id": "harbour-leap-day",
+      "category": "dj",
+      "url": "/voice/the-harbour/harbour-leap-day.mp3",
+      "durationMs": 17674,
+      "title": "The Berth That Isn't Always There",
+      "overMusic": true,
+      "dates": [
+        "02-29"
+      ],
+      "lines": [
+        {
+          "speaker": "The Harbourmaster",
+          "text": "Leap day, at the Harbour. A day the chart usually skips. We keep a berth for those. Most ships sail straight past it.",
+          "startMs": 35
+        },
+        {
+          "speaker": "The Harbourmaster",
+          "text": "The Nightjar didn't. Tie up, operator. You've an extra day that nobody will log. Spend it with the instruments down. I'll keep the light on.",
+          "startMs": 8186
+        }
+      ]
+    },
+    {
+      "id": "harbour-june-solstice",
+      "category": "dj",
+      "url": "/voice/the-harbour/harbour-june-solstice.mp3",
+      "durationMs": 17149,
+      "title": "The Longest Light on the Piers",
+      "overMusic": true,
+      "dates": [
+        "06-20",
+        "06-21"
+      ],
+      "lines": [
+        {
+          "speaker": "The Harbourmaster",
+          "text": "Longest light of the year, along the piers. The old relays have their viewports open. They don't see a day this long very often.",
+          "startMs": 39
+        },
+        {
+          "speaker": "The Harbourmaster",
+          "text": "The Nightjar can sleep through it. Berth seven, one hundred and forty point oh. I'll keep watch. That's what the long light is for.",
+          "startMs": 8849
+        }
+      ]
     }
   ]
 }

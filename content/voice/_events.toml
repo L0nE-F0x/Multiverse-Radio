@@ -43,6 +43,15 @@ visitor = { voice = "af_nicole", speed = 0.85, fx = "ghost", name = "Unknown Sig
 visitors = { voice = "am_onyx", speed = 0.8, fx = "alien", name = "Unknown Signal" }
 # v4: HUSH closes the Convergence with a log entry from the Nightjar.
 hush = { voice = "af_heart", speed = 0.95, fx = "ship", name = "HUSH" }
+# Paired station-swap crossovers. Only aliases this file did not already have.
+null = { voice = "am_echo", speed = 0.9, name = "Null" }
+monty = { voice = "am_eric", speed = 1.0, name = "Monty Stereo" }
+velour = { voice = "bm_daniel", speed = 0.96, name = "Baron Velour" }
+linda = { voice = "af_jessica", speed = 1.35, name = "Linda from Accounts" }
+rita = { voice = "af_jessica", speed = 1.08, name = "Rita Gridley" }
+chef = { voice = "bm_fable", speed = 0.95, name = "Chef Anselm Brodequin" }
+judge = { voice = "bf_isabella", speed = 0.95, name = "Judge Alvarez-Penhallow" }
+operator = { voice = "bf_alice", speed = 0.95, name = "The Operator" }
 
 # ── Dimensional storm ─────────────────────────────────────────────────────────
 
@@ -381,6 +390,8 @@ lines = [
 id = "swap-007"
 category = "event"
 event = "station-swap"
+stations = ["win-this-planet"]
+swap_with = "snail-jams"
 title = "Sharing"
 lines = [
   { say = "chaz", text = "Hello and welcome to, oh! This isn't my studio! Where's my podium? Who's this?" },
@@ -388,6 +399,123 @@ lines = [
   { say = "chaz", text = "Shelley! Lovely! Quick question, Shelley, for ten points! Where are we?" },
   { say = "shelley", text = "I'll get back to you.", gap = 0.8 },
   { say = "chaz", text = "Take all the time you need! Folks, she's taking all the time she needs!" },
+]
+
+# Paired crossovers: two hosts, opposite sides of the stereo, neither willing to yield.
+
+[[clip]]
+id = "swap-008"
+category = "event"
+event = "station-swap"
+stations = ["ask-grenda"]
+swap_with = "substation-null"
+title = "Biscuits and Sump Pressure"
+lines = [
+  { sfx = "alarm", level = 0.4 },
+  { say = "grenda", text = "Hello, love. Grenda here. I don't know whose klaxon that is, but the advice still stands. Sit down and have a biscuit.", pan = -0.6, gap = -0.4 },
+  { say = "null", text = "Sump pressure. Rising. Diligence Safety wants it logged. Not a biscuit.", pan = 0.6, gap = -0.35 },
+  { say = "grenda", text = "Even so, love. Eat the biscuit, and tell the sump you'll ring it back when it can speak in full sentences.", pan = -0.6, gap = -0.4 },
+  { say = "null", text = "Sump doesn't take calls. Pressure still rising. Logged.", pan = 0.6 },
+]
+
+[[clip]]
+id = "swap-009"
+category = "event"
+event = "station-swap"
+stations = ["every-news"]
+swap_with = "whalesong"
+title = "Breaking News from the Pod"
+bed = "space"
+lines = [
+  { say = "dale", text = "This is Dale Quarterly, with breaking timeline news, live from inside a whale. I was not briefed on the whale.", pan = -0.6, gap = -0.45 },
+  { say = "captain_hum", text = "You're in the pod. Speak softly. The whale is listening.", pan = 0.6, gap = -0.35 },
+  { say = "dale", text = "The news is, a timeline has gone missing. More at eleven. The whale may wish to comment. The whale is declining.", pan = -0.6, gap = -0.4 },
+  { say = "captain_hum", text = "The whale is fine. I asked. Please don't interview it.", pan = 0.6 },
+]
+
+[[clip]]
+id = "swap-010"
+category = "event"
+event = "station-swap"
+stations = ["atomic-bachelor-pad"]
+swap_with = "velvet-collapse"
+title = "Left Speaker, Dying Star"
+lines = [
+  { say = "monty", text = "Monty Stereo, with a high fidelity demonstration. This sentence is in your left speaker. The bongos live here.", pan = -0.8, gap = -0.4 },
+  { say = "velour", text = "Baron Velour, darling, from the right. That glow is Old Ruby, a dying star. She is the lighting rig. Do not applaud her.", pan = 0.8, gap = -0.35 },
+  { say = "monty", text = "Extraordinary imaging. I can hear the supernova cross from the walnut console all the way to the roulette wheel.", pan = -0.8, gap = -0.4 },
+  { say = "velour", text = "Do sit in the exact centre of the booth, Mister Stereo. She goes at four. Breakfast at six. Dress accordingly.", pan = 0.8 },
+]
+
+[[clip]]
+id = "swap-011"
+category = "event"
+event = "station-swap"
+stations = ["classifieds"]
+swap_with = "void-beats"
+title = "The Small Print and the Void"
+lines = [
+  { say = "linda", text = "Linda from Accounts. The small print applies even here. Especially here. The void is not a refundable item.", pan = -0.6, gap = -0.4 },
+  { say = "eventually", text = "Hi. This is the void. It's studying. Please don't invoice it.", pan = 0.6, gap = -0.35 },
+  { say = "linda", text = "Staring into the void constitutes acceptance. No returns. I don't make the rules. I read them very quickly.", pan = -0.6, gap = -0.45 },
+  { say = "eventually", text = "The void says it didn't sign anything. The void is lying. Sort of. Hi, Linda.", pan = 0.6 },
+]
+
+[[clip]]
+id = "swap-012"
+category = "event"
+event = "station-swap"
+stations = ["traffic-on-the-8s"]
+swap_with = "tomorrows-leftovers"
+title = "The Bypass Is a Sauce"
+bed = "kitchen"
+lines = [
+  { say = "rita", text = "Rita Gridley, traffic on the eights. Nothing is moving on the wormhole interchange, and I appear to be in a kitchen.", pan = -0.6, gap = -0.4 },
+  { say = "chef", text = "Chef Anselm Brodequin. You are in tomorrow's kitchen. The jam you are reporting, I started yesterday.", pan = 0.6, gap = -0.35 },
+  { say = "rita", text = "Listeners, avoid the bypass. It's a sauce. I repeat, the bypass is a sauce, and it is not moving.", pan = -0.6, gap = -0.4 },
+  { say = "chef", text = "Leave it. It will be ready the day after you arrive. You never arrive. That's the recipe.", pan = 0.6 },
+]
+
+[[clip]]
+id = "swap-013"
+category = "event"
+event = "station-swap"
+stations = ["end-lounge"]
+swap_with = "small-claims"
+title = "The Case of the Universe"
+lines = [
+  { say = "barnaby", text = "Good evening. Barnaby Velvet, at the Lounge at the End of Time. Last call, my friends. It has been last call for rather a while.", pan = -0.6, gap = -0.4 },
+  { say = "judge", text = "This court is now in session. The matter before us is the case of the universe. All rise, if you still have anywhere to rise to.", pan = 0.6, gap = -0.35 },
+  { say = "barnaby", text = "Your honour, the universe is in the booth by the window. It's nursing a drink. It asked me not to hurry it.", pan = -0.6, gap = -0.45 },
+  { say = "judge", text = "Noted. The universe may finish its drink. Judgment is reserved until last call, which I am told is never.", pan = 0.6 },
+]
+
+[[clip]]
+id = "swap-014"
+category = "event"
+event = "station-swap"
+stations = ["the-switchboard"]
+swap_with = "mirror-polka"
+title = "Cross-Plugged"
+lines = [
+  { say = "operator", text = "Exchange. The Operator speaking. I have been cross-plugged into a mirror. Number, please.", pan = -0.6, gap = -0.4 },
+  { say = "ynnhoj", text = "Esaelp, rebmun.", pan = 0.6, gap = -0.35 },
+  { say = "operator", text = "I'll take that as a number. Putting you through. Please hold. The accordion is also holding.", pan = -0.6, gap = -0.4 },
+  { say = "ynnhoj", text = "Yes. Sorry. Yes. Ruoh Aklop.", pan = 0.6 },
+]
+
+[[clip]]
+id = "swap-015"
+category = "event"
+event = "station-swap"
+stations = ["lower-hollow"]
+swap_with = "impossible-sports"
+title = "Item Three, and They're Off"
+lines = [
+  { say = "maureen", text = "Minutes of the parish, read by Maureen Pettigrew. Item one, the hole. Item two, the fence. Item three, any other", pan = -0.6, gap = -0.4 },
+  { say = "chip", text = "And they're off! Chip Thunderbuckle here! The fence is in the lead! The hole is gaining! This should not be possible!", pan = 0.6, gap = -0.35 },
+  { say = "maureen", text = "Thank you. The minutes will note that item three left the room at speed. We wish it well. Biscuits after.", pan = -0.6, gap = -0.4 },
+  { say = "chip", text = "The fence has gone into the hole! The hole has gone into the fence! What a race! Nobody knows the rules!", pan = 0.6 },
 ]
 
 # ── Signal from beyond ────────────────────────────────────────────────────────

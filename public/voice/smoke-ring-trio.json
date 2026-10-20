@@ -481,15 +481,15 @@
       "id": "id-the-morning-after",
       "category": "id",
       "url": "/voice/smoke-ring-trio/id-the-morning-after.mp3",
-      "durationMs": 9965,
+      "durationMs": 9622,
       "overMusic": true,
       "part": "open",
       "show": "the-morning-after",
       "lines": [
         {
           "speaker": "Octavia Lowe",
-          "text": "Good morning. This is the Morning After, on Smoke Ring Trio. The chairs are on the tables, the coffee's on, and the trio is still playing. Nobody has had the heart to tell them.",
-          "startMs": 37
+          "text": "Good morning. This is the Morning After, on Smoke Ring Trio. The chairs are on the tables, the coffee's on, and the trio is playing. Nobody's had the heart to tell them.",
+          "startMs": 38
         }
       ]
     },

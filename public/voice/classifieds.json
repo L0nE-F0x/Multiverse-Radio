@@ -2656,6 +2656,186 @@
           "startMs": 12039
         }
       ]
+    },
+    {
+      "id": "lindas-hour-close",
+      "category": "id",
+      "url": "/voice/classifieds/lindas-hour-close.mp3",
+      "durationMs": 5738,
+      "title": "Linda's Hour",
+      "overMusic": true,
+      "part": "close",
+      "show": "lindas-hour",
+      "lines": [
+        {
+          "speaker": "Linda from Accounts",
+          "text": "That was Linda's Hour. The small print goes back to being fast now.",
+          "startMs": 42
+        },
+        {
+          "speaker": "Linda from Accounts",
+          "text": "Thank you for not buying anything.",
+          "startMs": 3730
+        }
+      ]
+    },
+    {
+      "id": "lindas-hour-04",
+      "category": "ad",
+      "url": "/voice/classifieds/lindas-hour-04.mp3",
+      "durationMs": 26442,
+      "title": "Petty Cash, Itemised",
+      "overMusic": false,
+      "show": "lindas-hour",
+      "lines": [
+        {
+          "speaker": "Linda from Accounts",
+          "text": "Petty cash. I am going to read this receipt the way it deserves. Slowly.",
+          "startMs": 37
+        },
+        {
+          "speaker": "Linda from Accounts",
+          "text": "Item. One bun. Claimed as travel. The bun did not travel. The bun was eaten at the desk, at noon, by Rex.",
+          "startMs": 3873
+        },
+        {
+          "speaker": "Linda from Accounts",
+          "text": "Item. A stamp. The stamp is still in the book. The letter it was for has not been written. The letter was to Accounts. I am Accounts.",
+          "startMs": 9855
+        },
+        {
+          "speaker": "Linda from Accounts",
+          "text": "Item. Sundries. Sundries is not a thing, Rex. Sundries is where money goes when it is embarrassed.",
+          "startMs": 16451
+        },
+        {
+          "speaker": "Linda from Accounts",
+          "text": "The tin is short by the price of the bun. I have made a note. The note is longer than the bun.",
+          "startMs": 21884
+        }
+      ]
+    },
+    {
+      "id": "lindas-hour-05",
+      "category": "dj",
+      "url": "/voice/classifieds/lindas-hour-05.mp3",
+      "durationMs": 17275,
+      "overMusic": true,
+      "show": "lindas-hour",
+      "lines": [
+        {
+          "speaker": "Linda from Accounts",
+          "text": "Welcome back. I have the petty cash tin on the desk, and I have a pencil, and I am not in a hurry.",
+          "startMs": 44
+        },
+        {
+          "speaker": "Linda from Accounts",
+          "text": "There is a receipt in here from a Tuesday that did not happen in this timeline. I am keeping it. It is evidence, and it is also quite well written.",
+          "startMs": 4993
+        },
+        {
+          "speaker": "Linda from Accounts",
+          "text": "If you have lost a receipt, it may be in the tin. The tin does not give things back. I do.",
+          "startMs": 12861
+        }
+      ]
+    },
+    {
+      "id": "lindas-hour-06",
+      "category": "call",
+      "url": "/voice/classifieds/lindas-hour-06.mp3",
+      "durationMs": 39589,
+      "title": "Rex, On The Receipt",
+      "overMusic": false,
+      "show": "lindas-hour",
+      "lines": [
+        {
+          "speaker": "Linda from Accounts",
+          "text": "Linda's Hour. You're on the accounts line.",
+          "startMs": 2450
+        },
+        {
+          "speaker": "Rex Bellows",
+          "text": "Linda! It's Rex! I'm in the car park and I can hear you reading my bun!",
+          "startMs": 4971
+        },
+        {
+          "speaker": "Linda from Accounts",
+          "text": "It was not your bun, Rex. It was the company's bun. The company did not ask for a bun.",
+          "startMs": 8227
+        },
+        {
+          "speaker": "Rex Bellows",
+          "text": "It was an emergency bun! I was fading! A man cannot sell planets on an empty stomach!",
+          "startMs": 12626
+        },
+        {
+          "speaker": "Linda from Accounts",
+          "text": "There is no emergency bun column. I checked. I checked twice. The second time I used a ruler.",
+          "startMs": 17892
+        },
+        {
+          "speaker": "Rex Bellows",
+          "text": "Put the tin down, Linda! It's my hour of the day too! The listeners want deals!",
+          "startMs": 23506
+        },
+        {
+          "speaker": "Linda from Accounts",
+          "text": "The listeners have written in. They want the total. The total is one bun, one unused stamp, and a feeling.",
+          "startMs": 27163
+        },
+        {
+          "speaker": "Rex Bellows",
+          "text": "What feeling?",
+          "startMs": 32699
+        },
+        {
+          "speaker": "Linda from Accounts",
+          "text": "Regret, Rex. It's itemised. Goodbye.",
+          "startMs": 33743
+        },
+        {
+          "speaker": "Linda from Accounts",
+          "text": "Where were we. Ah. Sundries.",
+          "startMs": 37836
+        }
+      ]
+    },
+    {
+      "id": "lindas-hour-07",
+      "category": "story",
+      "url": "/voice/classifieds/lindas-hour-07.mp3",
+      "durationMs": 38752,
+      "title": "The Receipt That Kept The Afternoon",
+      "overMusic": false,
+      "show": "lindas-hour",
+      "lines": [
+        {
+          "speaker": "Linda from Accounts",
+          "text": "A short story, from the bottom of the tin. There was a receipt with no shop on it. No date. No total. Just a line, in pencil. Thank you for staying.",
+          "startMs": 37
+        },
+        {
+          "speaker": "Linda from Accounts",
+          "text": "Rex says he never wrote it. I believe him. His writing leans, and this writing sits up very straight, like somebody who has been waiting at a counter.",
+          "startMs": 8181
+        },
+        {
+          "speaker": "Linda from Accounts",
+          "text": "I held it up to the lamp. On the back, very faint, it said, paid in full, by the afternoon. The afternoon in question has not been seen since Thursday.",
+          "startMs": 16119
+        },
+        {
+          "speaker": "Linda from Accounts",
+          "text": "If that afternoon is listening, your receipt is safe. I have filed it under found. I will not staple it. Staples are for things that are finished.",
+          "startMs": 24368
+        },
+        {
+          "speaker": "Linda from Accounts",
+          "text": "That is the story. There is no moral. There is a balance, and the balance is kind, and the balance is in the tin, under the bun.",
+          "startMs": 32238
+        }
+      ]
     }
   ]
 }

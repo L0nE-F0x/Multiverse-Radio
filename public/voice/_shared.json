@@ -825,6 +825,10 @@
       "durationMs": 20397,
       "title": "If You Find a Shadow",
       "overMusic": false,
+      "shifts": [
+        0,
+        5
+      ],
       "lines": [
         {
           "speaker": "Multiverse Broadcast Authority",
@@ -1265,6 +1269,10 @@
       "durationMs": 4034,
       "title": "A Message for Greg",
       "overMusic": true,
+      "shifts": [
+        0,
+        5
+      ],
       "lines": [
         {
           "speaker": "Hollis",
@@ -1725,6 +1733,54 @@
           "speaker": "Arnold Grumbel",
           "text": "My grandfather heard the sea from the top of one. He lived nowhere near the sea. Grumbel's Ladders. Up is a choice. Out is a bit further.",
           "startMs": 14519
+        }
+      ]
+    },
+    {
+      "id": "psa-greg-home",
+      "category": "psa",
+      "url": "/voice/_shared/psa-greg-home.mp3",
+      "durationMs": 24079,
+      "title": "Greg Has Come Home",
+      "overMusic": false,
+      "shifts": [
+        6,
+        999
+      ],
+      "lines": [
+        {
+          "speaker": "Multiverse Broadcast Authority",
+          "text": "An update from the Multiverse Broadcast Authority. The shadow who answers to Greg has come home. He came back from behind the mirror.",
+          "startMs": 35
+        },
+        {
+          "speaker": "Multiverse Broadcast Authority",
+          "text": "He lives in his flat. On Tuesdays he is slightly translucent. This is not an emergency. It is a Tuesday. Please do not try to fold him.",
+          "startMs": 8238
+        },
+        {
+          "speaker": "Multiverse Broadcast Authority",
+          "text": "On Sunday nights he hosts a quiet hour on the Lounge at the End of Time. Lean in. The porch light is for guests now.",
+          "startMs": 17081
+        }
+      ]
+    },
+    {
+      "id": "interrupt-greg-home",
+      "category": "interrupt",
+      "url": "/voice/_shared/interrupt-greg-home.mp3",
+      "durationMs": 7692,
+      "title": "Hollis, Now That Greg Is Home",
+      "overMusic": true,
+      "shifts": [
+        6,
+        999
+      ],
+      "lines": [
+        {
+          "speaker": "Hollis",
+          "text": "Greg. You came back from behind the mirror. The flat is yours. Tuesdays, slightly translucent. Sunday nights, you host on the Lounge at the End.",
+          "startMs": 50
         }
       ]
     }

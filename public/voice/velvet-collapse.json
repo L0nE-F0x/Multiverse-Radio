@@ -1017,6 +1017,176 @@
           "startMs": 6986
         }
       ]
+    },
+    {
+      "id": "star-01",
+      "category": "dj",
+      "url": "/voice/velvet-collapse/star-01.mp3",
+      "durationMs": 24412,
+      "title": "Four Light Hours Late",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Unmanned Probe",
+          "text": "Old Ruby, dusk-limb probe. Helium shell is flashing. I am counting the climb.",
+          "startMs": 450
+        },
+        {
+          "speaker": "Old Ruby",
+          "text": "I know my own shell. I flash when I please, not when a tin box says climb.",
+          "startMs": 5317
+        },
+        {
+          "speaker": "A Comet",
+          "text": "She's brighter on this side than the number you're reading, probe. Your light is late.",
+          "startMs": 10834
+        },
+        {
+          "speaker": "Unmanned Probe",
+          "text": "Four light hours late. I am logging an afternoon she has already left.",
+          "startMs": 15197
+        },
+        {
+          "speaker": "Old Ruby",
+          "text": "Then log the kindness. This afternoon I still had some.",
+          "startMs": 19520
+        }
+      ]
+    },
+    {
+      "id": "star-02",
+      "category": "dj",
+      "url": "/voice/velvet-collapse/star-02.mp3",
+      "durationMs": 24083,
+      "title": "The Skim",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "A Comet",
+          "text": "Ruby. I'm coming through your dust. I don't intend to stay.",
+          "startMs": 434
+        },
+        {
+          "speaker": "Old Ruby",
+          "text": "Nothing stays. The distance where I pull you apart is closer than your pride, and I am larger than I was at dinner.",
+          "startMs": 3597
+        },
+        {
+          "speaker": "A Comet",
+          "text": "I'll skim the light. I've done it with smaller stars.",
+          "startMs": 11851
+        },
+        {
+          "speaker": "Unmanned Probe",
+          "text": "Last skim left a debris fan. I am still cataloguing the pieces. They do not answer.",
+          "startMs": 14152
+        },
+        {
+          "speaker": "Old Ruby",
+          "text": "Ask them what is left of confidence. Then give me the room.",
+          "startMs": 19287
+        }
+      ]
+    },
+    {
+      "id": "star-03",
+      "category": "dj",
+      "url": "/voice/velvet-collapse/star-03.mp3",
+      "durationMs": 24069,
+      "title": "Two Counts",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Unmanned Probe",
+          "text": "Neutrino count is climbing. She is closer to the white than the model on my slate.",
+          "startMs": 449
+        },
+        {
+          "speaker": "Second Probe",
+          "text": "Your slate is six light hours old. The count I hold was already too high when the light left her.",
+          "startMs": 4743
+        },
+        {
+          "speaker": "Old Ruby",
+          "text": "Stop invoicing me. I am not a column. I go when the bass drops, not when your tin agrees.",
+          "startMs": 10937
+        },
+        {
+          "speaker": "A Comet",
+          "text": "They'll still be arguing when you go, Ruby. I'll be the one already turning my face away.",
+          "startMs": 17584
+        }
+      ]
+    },
+    {
+      "id": "star-04",
+      "category": "dj",
+      "url": "/voice/velvet-collapse/star-04.mp3",
+      "durationMs": 25124,
+      "title": "The Running Order",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Baron Velour",
+          "text": "Ruby, the lounge wants a forecast. The band is already in sunglasses.",
+          "startMs": 442
+        },
+        {
+          "speaker": "Old Ruby",
+          "text": "Tell them the shell is burning helium, and under that I am only deciding. When I decide, I go white.",
+          "startMs": 4937
+        },
+        {
+          "speaker": "Unmanned Probe",
+          "text": "Shock breakout will lead the visible flash. Hard light, minutes ahead of what your window sees.",
+          "startMs": 12610
+        },
+        {
+          "speaker": "A Comet",
+          "text": "I'll be behind her when she does it. I want the shadow, not the burn.",
+          "startMs": 17415
+        },
+        {
+          "speaker": "Baron Velour",
+          "text": "Sunglasses stay on. The star has given us the running order.",
+          "startMs": 20995
+        }
+      ]
+    },
+    {
+      "id": "star-05",
+      "category": "dj",
+      "url": "/voice/velvet-collapse/star-05.mp3",
+      "durationMs": 24381,
+      "title": "A Number Already Gone",
+      "overMusic": true,
+      "lines": [
+        {
+          "speaker": "Unmanned Probe",
+          "text": "Confirm radius. Last fix had you at three hundred times the sun, and rising.",
+          "startMs": 449
+        },
+        {
+          "speaker": "Old Ruby",
+          "text": "That fix left me hours ago. I have swollen since. The number is already a ghost.",
+          "startMs": 5298
+        },
+        {
+          "speaker": "A Comet",
+          "text": "I can see the new edge from out here. Probe, you're flying on a memory of her.",
+          "startMs": 11350
+        },
+        {
+          "speaker": "Unmanned Probe",
+          "text": "Then the memory is the log. Writing it down anyway.",
+          "startMs": 15061
+        },
+        {
+          "speaker": "Baron Velour",
+          "text": "She doesn't hold still for the measurement. None of the great ones do. Odette, leave the wheel on red.",
+          "startMs": 18548
+        }
+      ]
     }
   ]
 }

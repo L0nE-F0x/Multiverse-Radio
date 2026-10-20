@@ -23,6 +23,8 @@ kate = { voice = "af_river", speed = 1.05, name = "Static Kate" }
 mole = { voice = "am_echo", fx = "phone", name = "Mole, a Source" }
 caller = { voice = "af_nova", fx = "phone", name = "A Listener" }
 caller2 = { voice = "am_eric", fx = "phone", name = "Another Listener" }
+hush = { voice = "af_heart", speed = 0.95, fx = "ship", name = "HUSH" }
+loft = { voice = "am_fenrir", speed = 1.08, name = "Someone at the Bulkhead" }
 
 [[show]]
 id = "corkboard-hour"
@@ -683,4 +685,55 @@ dates = ["10-24", "10-25", "10-26", "10-27", "10-28", "10-29", "10-30", "10-31"]
 lines = [
   { say = "kate", text = "Halloween. Everybody dressing up as something they're not. Ghosts, witches, a man down the road dressed as a detector van." },
   { say = "kate", text = "HUSH dresses up every night of the year. Her costume is called within tolerance. It's very convincing. It's the only one she's got." },
+]
+
+
+# ── Multi-mic: the attic, the bulkhead, and a carrier that is not invited.
+
+[[clip]]
+id = "mic-01"
+category = "dj"
+title = "Three Hits"
+lines = [
+  { say = "kate", text = "If you're on the Nightjar, don't answer. The heading on your board and the heading in the log are not the same heading.", gap = 0.2 },
+  { sfx = "knock-over" },
+  { say = "loft", text = "Kate. Three hits on the bulkhead. Not the door. The wall we took off a ship.", gain = -8.0, gap = 0.15 },
+  { say = "kate", text = "Nobody move. Nobody swallow. If that's a van, it already likes the way this room sounds." },
+  { say = "loft", text = "It matched the third hit. It's on our side of the metal now.", gain = -8.0 },
+]
+
+[[clip]]
+id = "mic-02"
+category = "dj"
+title = "Carrier Closing"
+lines = [
+  { say = "kate", text = "Operator, she bends the carrier when you drift toward the pin on my board. I can hear the pitch go thin right before she...", gap = -0.3 },
+  { say = "hush", text = "Unlicensed transmitter. Carrier closing.", fx = "ship", gap = -0.3 },
+  { say = "kate", text = "You heard the cut. She doesn't spend a jam on a lie. She spends it on the next word." },
+  { say = "loft", text = "Bulb dipped when she spoke. She's close enough to tax the mains.", gain = -8.0 },
+]
+
+[[clip]]
+id = "mic-03"
+category = "dj"
+title = "Matched Knock"
+lines = [
+  { say = "mole", text = "Kate. Depot corridor. Don't say the ship's name on this line.", gap = -0.3 },
+  { sfx = "knock-over" },
+  { say = "mole", text = "That was the bulkhead. Someone on the far side just matched my knock.", gain = -8.0, gap = 0.2 },
+  { say = "kate", text = "Get off the metal, Mole. If they can match a knock they can match you." },
+  { say = "mole", text = "Too late. They said my name in HUSH's voice. I'm off the line.", gain = -8.0 },
+  { sfx = "phone-hangup" },
+]
+
+[[clip]]
+id = "mic-04"
+category = "dj"
+title = "Outside Tolerance"
+lines = [
+  { say = "kate", text = "She keeps a favourite light and won't name it. I think it answers when nobody is scheduled to be on watch.", gap = -0.3 },
+  { say = "hush", text = "That speculation is outside tolerance.", fx = "ship", gap = -0.3 },
+  { say = "kate", text = "Tolerance is a filed lie. Operator, she cut in before I could say harbour." },
+  { sfx = "knock-over" },
+  { say = "loft", text = "Kate. Bulkhead again. And the bulb just dipped. They're taxing the mains.", gain = -8.0 },
 ]

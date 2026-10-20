@@ -3,7 +3,23 @@ import { ODDITY_IDS, RECIPE_IDS } from '../broadcast/types';
 import { STATIONS } from '../stations/roster';
 import { BANNED_WORDS, findBanned } from './banned';
 import { expand, expandUntil } from './grammar';
-import { dimensionWeather, LIMITS, listenerMessage, receptionReport, tickerLines, trackMeta } from './index';
+import {
+  dimensionWeather,
+  hasLocalListener,
+  hasLocalReception,
+  hasLocalTicker,
+  hasLocalWeather,
+  LIMITS,
+  listenerMessage,
+  LOCAL_LISTENERS,
+  LOCAL_RECEPTION,
+  LOCAL_TICKER,
+  LOCAL_WEATHER,
+  receptionReport,
+  stationWireFeed,
+  tickerLines,
+  trackMeta,
+} from './index';
 import { RECIPE_PACKS, STATION_PACKS } from './packs';
 import { Rng, rngFor } from './rng';
 
@@ -14,6 +30,8 @@ function expectClean(text: string, context: string) {
   expect(findBanned(text), `${context}: banned word in "${text}"`).toBeNull();
   expect(text, `${context}: unexpanded grammar token`).not.toMatch(/#[a-zA-Z@]/);
   expect(text, `${context}: doubled space`).not.toMatch(/ {2}/);
+  expect(text, `${context}: stray space before punctuation`).not.toMatch(/ [,.;:!?]/);
+  expect(text, `${context}: missing space after colon`).not.toMatch(/[a-zA-Z]:[a-zA-Z]/);
 }
 
 
@@ -189,6 +207,157 @@ describe('dimensionWeather', () => {
   it('never forecasts sunshine for the Damp Dimension', () => {
     const rain = STATIONS.find((s) => s.id === 'rainfall-fm')!;
     for (const seed of SEEDS) expect(dimensionWeather(rain, seed)).not.toMatch(/sunny|clear skies/i);
+  });
+});
+
+describe('61-station local lore coverage and stationWireFeed', () => {
+  it('has bespoke LOCAL entries in weather, listeners, ticker, and reception for all 61 stations', () => {
+    expect(STATIONS).toHaveLength(61);
+    for (const s of STATIONS) {
+      expect(hasLocalWeather(s.id), `${s.id} missing local weather`).toBe(true);
+      expect(hasLocalListener(s.id), `${s.id} missing local listener`).toBe(true);
+      expect(hasLocalTicker(s.id), `${s.id} missing local ticker`).toBe(true);
+      expect(hasLocalReception(s.id), `${s.id} missing local reception`).toBe(true);
+
+      const weatherGrammar = LOCAL_WEATHER[s.id]!;
+      const weatherLocal = weatherGrammar.local as readonly string[];
+      expect(Array.isArray(weatherLocal) && weatherLocal.length > 0, `${s.id} empty weather.local`).toBe(true);
+      for (const tpl of weatherLocal) {
+        for (let k = 0; k < 5; k++) {
+          const out = expand({ ...weatherGrammar, deg: () => '21', temp: ['21°'] }, new Rng(k + 1), tpl);
+          expectClean(out, `${s.id} weather tpl "${tpl}"`);
+          expect(out.length, `${s.id} weather tpl "${out}"`).toBeLessThanOrEqual(LIMITS.weather);
+        }
+      }
+
+      const listenerLocal = LOCAL_LISTENERS[s.id];
+      expect(Array.isArray(listenerLocal) && listenerLocal.length > 0, `${s.id} empty listeners.local`).toBe(true);
+      for (const line of listenerLocal ?? []) {
+        expectClean(line, `${s.id} raw local listener`);
+        expect(line.length, `${s.id} raw local listener length`).toBeLessThanOrEqual(LIMITS.listenerText);
+      }
+
+      const tickerGrammar = LOCAL_TICKER[s.id]!;
+      const tickerLocal = tickerGrammar.local as readonly string[];
+      expect(Array.isArray(tickerLocal) && tickerLocal.length > 0, `${s.id} empty ticker.local`).toBe(true);
+      for (const tpl of tickerLocal) {
+        for (let k = 0; k < 5; k++) {
+          const out = expand(
+            {
+              ...tickerGrammar,
+              commodity: ['Gravity'],
+              commodity2: ['moonlight'],
+              change: ['up 2.1%'],
+            },
+            new Rng(k + 1),
+            tpl,
+          );
+          expectClean(out, `${s.id} ticker tpl "${tpl}"`);
+          expect(out.length, `${s.id} ticker tpl "${out}"`).toBeLessThanOrEqual(LIMITS.ticker);
+        }
+      }
+
+      const receptionGrammar = LOCAL_RECEPTION[s.id]!;
+      const receptionLocal = receptionGrammar.local as readonly string[];
+      expect(Array.isArray(receptionLocal) && receptionLocal.length > 0, `${s.id} empty reception.local`).toBe(true);
+      for (const band of ['low', 'mid', 'high'] as const) {
+        const lines = receptionGrammar[band];
+        expect(Array.isArray(lines) && lines.length >= 3, `${s.id} reception.${band}`).toBe(true);
+        for (const line of lines as readonly string[]) {
+          expectClean(line, `${s.id} reception ${band}`);
+          expect('100% — '.length + line.length, `${s.id} ${band} "${line}"`).toBeLessThanOrEqual(LIMITS.reception);
+        }
+      }
+      for (const tpl of receptionLocal) {
+        for (let k = 0; k < 5; k++) {
+          const out = expand(receptionGrammar, new Rng(k + 1), tpl);
+          expectClean(out, `${s.id} reception tpl "${tpl}"`);
+          expect('100% — '.length + out.length, `${s.id} reception tpl "${out}"`).toBeLessThanOrEqual(LIMITS.reception);
+        }
+      }
+    }
+  });
+
+  it('produces deterministic, clean, non-empty stationWireFeed for all 61 stations', () => {
+    for (const s of STATIONS) {
+      for (const seed of SEEDS.slice(0, 30)) {
+        const feed = stationWireFeed(s.id, seed);
+        expect(feed).toEqual(stationWireFeed(s.id, seed));
+        expect(feed).toEqual(stationWireFeed(s, seed));
+
+        expectClean(feed.weather, `${s.id} wire weather`);
+        expect(feed.weather.length).toBeLessThanOrEqual(LIMITS.weather);
+
+        expectClean(feed.listener, `${s.id} wire listener`);
+
+        expect(feed.ticker.length).toBeGreaterThan(0);
+        for (const line of feed.ticker) {
+          expectClean(line, `${s.id} wire ticker`);
+          expect(line.length).toBeLessThanOrEqual(LIMITS.ticker);
+        }
+
+        expectClean(feed.reception, `${s.id} wire reception`);
+        expect(feed.reception).toMatch(/^(\d{1,3})% — \S/);
+        expect(feed.reception.length).toBeLessThanOrEqual(LIMITS.reception);
+      }
+    }
+  });
+});
+
+const MUNICIPAL_IDS = new Set(['gristwick-parish', 'lower-hollow', 'rainfall-fm', 'ask-grenda']);
+
+/** Parish voice and the critic's leaked phrases. Whole words, case-insensitive. */
+const PARISH_LEAK = [
+  /\bkettle\b/i,
+  /\bteatime\b/i,
+  /\bpostcode\b/i,
+  /\bdraught\b/i,
+  /\bdraughty\b/i,
+  /\blaundrette\b/i,
+  /\bgutted\b/i,
+  /\bcosy\b/i,
+  /\bcozy\b/i,
+  /\bbless his\b/i,
+  /\bbless her\b/i,
+  /\bbless them\b/i,
+  /\bbless their\b/i,
+  /\bis fine\b/i,
+  /\bturned out fine\b/i,
+  /\byour first flat\b/i,
+];
+
+describe('round 2 station voice', () => {
+  it('keeps parish Britishisms off non-municipal wire feeds', () => {
+    for (const s of STATIONS) {
+      if (MUNICIPAL_IDS.has(s.id)) continue;
+      for (let seed = 0; seed < 50; seed++) {
+        const feed = stationWireFeed(s, seed);
+        const blob = [feed.weather, feed.listener, ...feed.ticker, feed.reception].join('\n');
+        for (const re of PARISH_LEAK) expect(blob, `${s.id}#${seed} ${re} in ${blob}`).not.toMatch(re);
+      }
+    }
+  });
+
+  it('never repeats a ticker skeleton inside one batch', () => {
+    const skeleton = (line: string) => line.replace(/\d+/g, '#').toLowerCase();
+    for (const s of STATIONS) {
+      for (let seed = 0; seed < 50; seed++) {
+        const lines = tickerLines(s, seed, 8);
+        const skeletons = lines.map(skeleton);
+        expect(new Set(skeletons).size, `${s.id}#${seed}\n${skeletons.join('\n')}`).toBe(lines.length);
+      }
+    }
+  });
+
+  it('does not describe a weak signal as clear, steady, or kind', () => {
+    const bad = /\b(clear|steady|kind|vacuum propagation)\b/i;
+    for (const s of STATIONS) {
+      for (let seed = 0; seed < 50; seed++) {
+        const report = receptionReport(s, seed);
+        const pct = Number(report.split('%')[0]);
+        if (pct < 40) expect(report.split('—').slice(1).join('—'), `${s.id}#${seed} ${report}`).not.toMatch(bad);
+      }
+    }
   });
 });
 

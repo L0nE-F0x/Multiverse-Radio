@@ -380,3 +380,236 @@ describe.skipIf(!PYTHON)('voice:render --index', () => {
     expect(output).toContain('/voice/void-beats/b.mp3 is in a manifest but missing on disk');
   });
 });
+
+describe.skipIf(!PYTHON)('audio-dramaturgy & continuity pipeline (negative gap, gain, pan, shifts, trigger, swap_with)', () => {
+  const HERE = fileURLToPath(new URL('.', import.meta.url));
+  function py(code: string, env: Record<string, string> = {}) {
+    const result = spawnSync(PYTHON!, ['-c', code], { encoding: 'utf8', cwd: HERE, env: { ...process.env, ...env } });
+    if (result.status !== 0) throw new Error(result.stderr || result.stdout);
+    return JSON.parse(result.stdout);
+  }
+
+  it('validates negative gap, gain, and pan on speech lines via --check', () => {
+    const goodLines = `lines = [
+      { say = "host", text = "Wait a second, let me finish—", gap = -0.35, gain = -6.0, pan = -1.0 },
+      { say = "host", text = "No, I am cutting right in over you!", gap = 0.0, gain = 4.5, pan = 1.0 },
+      { say = "host", text = "And I am murmuring from the back of the booth.", gap = -3.0, gain = -18.0, pan = 0.0 },
+    ]`;
+    const ok = check({
+      'void-beats.toml': station('void-beats', reactions() + clip('crosstalk', 'category = "dj"', goodLines)),
+    });
+    expect(ok.errors).toEqual([]);
+    expect(ok.status).toBe(0);
+
+    const badLines = [
+      'lines = [{ say = "host", text = "Too negative gap.", gap = -3.5 }]',
+      'lines = [{ say = "host", text = "Too positive gap.", gap = 16.0 }]',
+      'lines = [{ say = "host", text = "Too quiet gain.", gain = -19.0 }]',
+      'lines = [{ say = "host", text = "Too loud gain.", gain = 6.5 }]',
+      'lines = [{ say = "host", text = "Too far left.", pan = -1.1 }]',
+      'lines = [{ say = "host", text = "Too far right.", pan = 1.1 }]',
+    ];
+    const body = badLines.map((l, i) => clip(`bad-${i}`, 'category = "dj"', l)).join('');
+    const bad = check({ 'void-beats.toml': station('void-beats', reactions() + body) });
+    expect(bad.status).toBe(1);
+    expect(bad.errors).toEqual([
+      expect.stringMatching(/gap must be in \[-3, 15\], got -3\.5/),
+      expect.stringMatching(/gap must be in \[-3, 15\], got 16/),
+      expect.stringMatching(/gain must be in \[-18, 6\], got -19/),
+      expect.stringMatching(/gain must be in \[-18, 6\], got 6\.5/),
+      expect.stringMatching(/pan must be in \[-1, 1\], got -1\.1/),
+      expect.stringMatching(/pan must be in \[-1, 1\], got 1\.1/),
+    ]);
+  });
+
+  it('validates shifts, trigger, and swap_with via --check and serializes them in manifest_entry', () => {
+    const triggers = ['on_skip_streak', 'scanning_static', 'on_pirate', 'after_event', 'near_secret', 'on_station'];
+    const shipClips = triggers
+      .map((t, i) => clip(`trig-${i}`, `category = "ship"\ntrigger = "${t}"\nshifts = [${i}, ${i + 10}]`, HUSH_LINE))
+      .join('');
+    const eventClips = TOPICS.flatMap((kit) => [
+      clip(`conv-${kit}-open`, `category = "event"\nevent = "convergence"\nkit = "${kit}"\npart = "open"`),
+      clip(`conv-${kit}-close`, `category = "event"\nevent = "convergence"\nkit = "${kit}"\npart = "close"`),
+    ]).join('') + clip('swap-pair', 'category = "event"\nevent = "station-swap"\nstations = ["void-beats"]\nswap_with = "snail-jams"');
+
+    const ok = check({
+      '_ship.toml': station('_ship', shipClips),
+      '_events.toml': station('_events', eventClips),
+      'void-beats.toml': station('void-beats', reactions() + clip('gated', 'category = "dj"\nshifts = [2, 25]')),
+    });
+    expect(ok.errors).toEqual([]);
+    expect(ok.status).toBe(0);
+
+    // Invalid usages of shifts, trigger, and swap_with
+    const badShip = [
+      clip('s-order', 'category = "ship"\nshifts = [5, 2]', HUSH_LINE),
+      clip('s-neg', 'category = "ship"\nshifts = [-1, 3]', HUSH_LINE),
+      clip('s-high', 'category = "ship"\nshifts = [0, 1000]', HUSH_LINE),
+      clip('s-len', 'category = "ship"\nshifts = [1]', HUSH_LINE),
+      clip('t-bad', 'category = "ship"\ntrigger = "on_lunch_break"', HUSH_LINE),
+      clip('sw-ship', 'category = "ship"\nswap_with = "void-beats"', HUSH_LINE),
+    ].join('');
+    const badEvents = [
+      clip('sw-wrong-event', 'category = "event"\nevent = "dimensional-storm"\nswap_with = "void-beats"'),
+      clip('sw-bad-station', 'category = "event"\nevent = "station-swap"\nswap_with = "nonexistent-fm"'),
+      clip('sw-same-station', 'category = "event"\nevent = "station-swap"\nstations = ["void-beats"]\nswap_with = "void-beats"'),
+      clip('s-events', 'category = "event"\nevent = "the-hum"\nshifts = [1, 5]'),
+    ].join('');
+    const badStation = reactions()
+      + clip('t-station', 'category = "dj"\ntrigger = "on_station"')
+      + clip('sw-station', 'category = "dj"\nswap_with = "snail-jams"');
+
+    const bad = check({
+      '_ship.toml': station('_ship', badShip),
+      '_events.toml': station('_events', badEvents),
+      'void-beats.toml': station('void-beats', badStation),
+    });
+    expect(bad.status).toBe(1);
+    expect(bad.errors).toEqual([
+      expect.stringMatching(/'sw-wrong-event': swap_with is only for _events\.toml clips with event = "station-swap"/),
+      expect.stringMatching(/'sw-bad-station': swap_with must be a station id in the roster/),
+      expect.stringMatching(/'sw-same-station': swap_with 'void-beats' must be a different station/),
+      expect.stringMatching(/'s-events': shifts is only for _ship\.toml and station scripts/),
+      expect.stringMatching(/'s-order': shifts must be \[min_shift, max_shift\]/),
+      expect.stringMatching(/'s-neg': shifts must be \[min_shift, max_shift\]/),
+      expect.stringMatching(/'s-high': shifts must be \[min_shift, max_shift\]/),
+      expect.stringMatching(/'s-len': shifts must be \[min_shift, max_shift\]/),
+      expect.stringMatching(/'t-bad': trigger must be one of/),
+      expect.stringMatching(/'sw-ship': swap_with is only for _events\.toml/),
+      expect.stringMatching(/'t-station': trigger is only for _ship\.toml/),
+      expect.stringMatching(/'sw-station': swap_with is only for _events\.toml/),
+    ]);
+
+    // Verify manifest_entry serialization and audio_canonical backwards compatibility
+    const serialized = py(`
+import json
+import render
+from voicescript import Clip, Speech
+
+c_default = Clip(
+    id="plain", category="dj", title=None, over_music=True, daypart=None, bed=None, stations=None,
+    lines=[Speech("af_heart", "Hello there.", 1.0, "clean", 0.35, None, "DJ")]
+)
+c_drama = Clip(
+    id="drama", category="ship", title=None, over_music=True, daypart=None, bed=None, stations=["void-beats"],
+    lines=[Speech("af_heart", "Hold on.", 1.0, "ship", -0.35, None, "HUSH", gain=-6.0, pan=-0.5)],
+    shifts=[1, 10], trigger="on_skip_streak", swap_with="snail-jams"
+)
+print(json.dumps({
+    "default_canonical": c_default.audio_canonical(),
+    "drama_canonical": c_drama.audio_canonical(),
+    "default_manifest": render.manifest_entry("void-beats", c_default, 1200, []),
+    "drama_manifest": render.manifest_entry("_ship", c_drama, 1500, []),
+    "est_underflow": Clip(
+        id="u", category="dj", title=None, over_music=True, daypart=None, bed=None, stations=None,
+        lines=[Speech("af_heart", "Short.", 1.0, "clean", -3.0, None, "DJ")]
+    ).estimate_seconds(),
+}))`);
+    expect(serialized.default_canonical.lines[0]).not.toHaveProperty('gain');
+    expect(serialized.default_canonical.lines[0]).not.toHaveProperty('pan');
+    expect(serialized.drama_canonical.lines[0]).toMatchObject({ gap: -0.35, gain: -6.0, pan: -0.5 });
+    expect(serialized.default_manifest).not.toHaveProperty('shifts');
+    expect(serialized.default_manifest).not.toHaveProperty('trigger');
+    expect(serialized.default_manifest).not.toHaveProperty('swap_with');
+    expect(serialized.drama_manifest).toMatchObject({
+      shifts: [1, 10],
+      trigger: 'on_skip_streak',
+      swap_with: 'snail-jams',
+    });
+    expect(serialized.est_underflow).toBeGreaterThanOrEqual(0);
+  });
+
+  it('assembles negative gap crosstalk, gain attenuation, and constant-power stereo pan', () => {
+    const out = py(`
+import json, tempfile
+import numpy as np
+import clip, dsp
+from voicescript import Clip, Speech
+
+class DummyTTS:
+    generated_seconds = 0.0
+    def say(self, voice: str, text: str, speed: float, lang: str) -> np.ndarray:
+        t = np.arange(dsp.SR, dtype=np.float64) / dsp.SR
+        freq = 440.0 if "first" in text else 660.0
+        return (np.sin(2 * np.pi * freq * t) * 0.25).astype(np.float32)
+
+clip._tts = DummyTTS()
+
+def make_clip(lines):
+    return Clip(id="test", category="dj", title=None, over_music=True, daypart=None, bed=None, stations=None, lines=lines)
+
+# 1. Negative gap reduces total assembled duration by the overlap amount
+mix_seq, cap_seq = clip.assemble(make_clip([
+    Speech("af_heart", "first line", 1.0, "clean", 0.0, None, "A"),
+    Speech("af_heart", "second line", 1.0, "clean", 0.0, None, "B"),
+]), np.random.default_rng(1))
+
+overlap_sec = 0.4
+mix_ovl, cap_ovl = clip.assemble(make_clip([
+    Speech("af_heart", "first line", 1.0, "clean", -overlap_sec, None, "A"),
+    Speech("af_heart", "second line", 1.0, "clean", 0.0, None, "B"),
+]), np.random.default_rng(1))
+
+# 2. Per-line gain = -6.0 dB attenuates amplitude
+s_0, _ = clip.speech(Speech("af_heart", "first line", 1.0, "clean", 0.0, None, "A", gain=0.0), np.random.default_rng(2))
+s_neg6, _ = clip.speech(Speech("af_heart", "first line", 1.0, "clean", 0.0, None, "A", gain=-6.0), np.random.default_rng(2))
+gain_ratio = float(dsp.rms(s_neg6) / dsp.rms(s_0))
+
+# 3. Stereo pan (-1.0 hard left, +1.0 hard right) produces 2-channel L/R separation
+mix_stereo, _ = clip.assemble(make_clip([
+    Speech("af_heart", "first line", 1.0, "clean", 0.1, None, "Left", pan=-1.0),
+    Speech("af_heart", "second line", 1.0, "clean", 0.0, None, "Right", pan=1.0),
+]), np.random.default_rng(3))
+
+n = len(mix_stereo)
+q1, q2 = slice(int(n * 0.1), int(n * 0.4)), slice(int(n * 0.6), int(n * 0.9))
+left_first_L = float(dsp.rms(mix_stereo[q1, 0]))
+left_first_R = float(dsp.rms(mix_stereo[q1, 1]))
+right_second_L = float(dsp.rms(mix_stereo[q2, 0]))
+right_second_R = float(dsp.rms(mix_stereo[q2, 1]))
+
+with tempfile.NamedTemporaryFile(suffix=".mp3") as f_mono, tempfile.NamedTemporaryFile(suffix=".mp3") as f_stereo:
+    dsp.encode_mp3(mix_seq, f_mono.name, "48k")
+    dec_mono = dsp.decode(f_mono.name)
+    dsp.encode_mp3(mix_stereo, f_stereo.name, "48k")
+    dec_stereo = dsp.decode(f_stereo.name)
+    dq1, dq2 = slice(int(len(dec_stereo) * 0.1), int(len(dec_stereo) * 0.4)), slice(int(len(dec_stereo) * 0.6), int(len(dec_stereo) * 0.9))
+    mp3_left_ratio = float(dsp.rms(dec_stereo[dq1, 0]) / (dsp.rms(dec_stereo[dq1, 1]) + 1e-9))
+    mp3_right_ratio = float(dsp.rms(dec_stereo[dq2, 1]) / (dsp.rms(dec_stereo[dq2, 0]) + 1e-9))
+
+print(json.dumps({
+    "mono_ndim": mix_seq.ndim,
+    "sample_diff": int(len(mix_seq) - len(mix_ovl)),
+    "expected_diff": int(round(overlap_sec * dsp.SR)),
+    "cap_diff_ms": int(cap_seq[1]["startMs"] - cap_ovl[1]["startMs"]),
+    "gain_ratio": gain_ratio,
+    "expected_gain_ratio": float(dsp.db(-6.0)),
+    "stereo_shape": list(mix_stereo.shape),
+    "left_first_L": left_first_L,
+    "left_first_R": left_first_R,
+    "right_second_L": right_second_L,
+    "right_second_R": right_second_R,
+    "dec_mono_ndim": dec_mono.ndim,
+    "dec_stereo_ndim": dec_stereo.ndim,
+    "dec_stereo_channels": int(dec_stereo.shape[1]) if dec_stereo.ndim == 2 else 1,
+    "mp3_left_ratio": mp3_left_ratio,
+    "mp3_right_ratio": mp3_right_ratio,
+}))`);
+
+    expect(out.mono_ndim).toBe(1);
+    expect(Math.abs(out.sample_diff - out.expected_diff)).toBeLessThanOrEqual(5);
+    expect(out.cap_diff_ms).toBe(400);
+    expect(out.gain_ratio).toBeCloseTo(out.expected_gain_ratio, 4);
+    expect(out.stereo_shape).toHaveLength(2);
+    expect(out.stereo_shape[1]).toBe(2);
+    expect(out.left_first_L).toBeGreaterThan(0.05);
+    expect(out.left_first_R).toBeLessThan(1e-6);
+    expect(out.right_second_R).toBeGreaterThan(0.05);
+    expect(out.right_second_L).toBeLessThan(1e-6);
+    expect(out.dec_mono_ndim).toBe(1);
+    expect(out.dec_stereo_ndim).toBe(2);
+    expect(out.dec_stereo_channels).toBe(2);
+    expect(out.mp3_left_ratio).toBeGreaterThan(20);
+    expect(out.mp3_right_ratio).toBeGreaterThan(20);
+  });
+});

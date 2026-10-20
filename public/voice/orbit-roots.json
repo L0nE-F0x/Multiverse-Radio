@@ -6,13 +6,13 @@
       "id": "id-001",
       "category": "id",
       "url": "/voice/orbit-roots/id-001.mp3",
-      "durationMs": 9310,
+      "durationMs": 8467,
       "overMusic": true,
       "lines": [
         {
           "speaker": "Sister Meridian",
-          "text": "Orbit Roots, one oh nine point three. Roots music from the Greenhouse Ring, where nothing is in a hurry. Least of all me.",
-          "startMs": 38
+          "text": "Orbit Roots, one oh nine point three. From the Greenhouse Ring, where nothing is in a hurry. Least of all me.",
+          "startMs": 36
         }
       ]
     },
@@ -63,14 +63,14 @@
       "id": "id-005",
       "category": "id",
       "url": "/voice/orbit-roots/id-005.mp3",
-      "durationMs": 8670,
+      "durationMs": 7984,
       "overMusic": true,
       "daypart": "night",
       "lines": [
         {
           "speaker": "Sister Meridian",
-          "text": "Orbit Roots, late on the farm moon. The ring is low, and the bass is going down to the roots. Where it belongs.",
-          "startMs": 36
+          "text": "Orbit Roots, on the farm moon. The ring is low, and the bass goes down to the roots. Where it belongs.",
+          "startMs": 45
         }
       ]
     },

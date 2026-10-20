@@ -1,5 +1,5 @@
 import { afterEach, describe, expect, it } from 'vitest';
-import { eventAt, eventsBetween, eventsOnDay, makeEvent, nextEvent, planEvent } from './events';
+import { EventCenter, eventAt, eventsBetween, eventsOnDay, makeEvent, nextEvent, planEvent } from './events';
 import { HushPicker, hushLevel } from './hush';
 import { DAY_MS } from './time';
 import { EVENT_IDS, type EventId, type VoiceClip } from './types';
@@ -119,6 +119,55 @@ describe('multiverse events', () => {
     expect(plan.clips[0]!.startMs + 8000).toBeLessThanOrEqual(slip.startMs + slip.durationMs);
     // Without clips the whole event is the replay.
     expect(planEvent(slip, []).slip!.toMs).toBe(slip.startMs + slip.durationMs);
+  });
+
+  it('prioritizes paired station-swap crossover clips when both stations match, and never chooses them for unrelated swaps', () => {
+    const generic1 = clip('swap-generic-1', { event: 'station-swap' }, 12);
+    const generic2 = clip('swap-generic-2', { event: 'station-swap' }, 12);
+    const singleVoid = clip('swap-single-void', { event: 'station-swap', stations: ['void-beats'] }, 12);
+    const singleMoon = clip('swap-single-moon', { event: 'station-swap', stations: ['moon-dub'] }, 12);
+    const pairedBoth = clip('swap-paired-void-moon', { event: 'station-swap', stations: ['void-beats', 'moon-dub'] }, 14);
+    const pairedSwapWith = clip('swap-paired-news-rain', { event: 'station-swap', stations: ['every-news'], swapWith: 'rainfall-fm' }, 14);
+    const pool = [generic1, generic2, singleVoid, singleMoon, pairedBoth, pairedSwapWith];
+
+    // When void-beats and moon-dub swap (in either order), the paired crossover clip is chosen ahead of single-station and generic clips.
+    const swapAB = makeEvent('station-swap', 3_000_000, 120_000, { stationA: 'void-beats', stationB: 'moon-dub' });
+    const swapBA = makeEvent('station-swap', 3_000_000, 120_000, { stationA: 'moon-dub', stationB: 'void-beats' });
+    expect(planEvent(swapAB, pool).clips.map((c) => c.clip.id)).toEqual(['swap-paired-void-moon']);
+    expect(planEvent(swapBA, pool).clips.map((c) => c.clip.id)).toEqual(['swap-paired-void-moon']);
+    expect(planEvent(swapAB, pool, 'void-beats').clips.map((c) => c.clip.id)).toEqual(['swap-paired-void-moon']);
+    expect(planEvent(swapAB, pool, 'moon-dub').clips.map((c) => c.clip.id)).toEqual(['swap-paired-void-moon']);
+
+    // When every-news and rainfall-fm swap (using swapWith), the paired clip is chosen.
+    const swapNewsRain = makeEvent('station-swap', 4_000_000, 120_000, 'rainfall-fm', 'every-news');
+    const center = new EventCenter(pool);
+    expect(center.pickClips(swapNewsRain).map((c) => c.id)).toEqual(['swap-paired-news-rain']);
+
+    // When unrelated stations swap (e.g. void-beats and snail-jams), paired clips for other pairs are NEVER chosen.
+    const unrelatedSwap = makeEvent('station-swap', 5_000_000, 120_000, { stationA: 'void-beats', stationB: 'snail-jams' });
+    const unrelatedIds = planEvent(unrelatedSwap, pool, 'void-beats').clips.map((c) => c.clip.id);
+    expect(unrelatedIds).not.toContain('swap-paired-void-moon');
+    expect(unrelatedIds).not.toContain('swap-paired-news-rain');
+    expect(unrelatedIds[0]).toBe('swap-single-void');
+
+    // Live Overlay.plan mode (only single stationId passed, no explicit partner on event):
+    // selects paired swap clips involving that station (including built-in swap-007 and snake_case swap_with).
+    const swap007 = clip('swap-007', { event: 'station-swap' }, 14);
+    const snakeSwap = clip('swap-snake', { event: 'station-swap', stations: ['neon-2087'], swap_with: 'crystal-delta' }, 14);
+    const livePool = [generic1, generic2, singleVoid, pairedBoth, swap007, snakeSwap];
+    const seededSwap = makeEvent('station-swap', 6_000_000, 120_000);
+
+    expect(planEvent(seededSwap, livePool, 'win-this-planet').clips.map((c) => c.clip.id)).toEqual(['swap-007']);
+    expect(planEvent(seededSwap, livePool, 'snail-jams').clips.map((c) => c.clip.id)).toEqual(['swap-007']);
+    expect(planEvent(seededSwap, livePool, 'crystal-delta').clips.map((c) => c.clip.id)).toEqual(['swap-snake']);
+    expect(planEvent(seededSwap, livePool, 'void-beats').clips.map((c) => c.clip.id)).toEqual(['swap-paired-void-moon']);
+
+    // When both stations are explicitly specified and do NOT match swap-007 or snakeSwap, those paired clips are rejected.
+    const explicitMismatch = makeEvent('station-swap', 6_000_000, 120_000, { stationA: 'win-this-planet', stationB: 'void-beats' });
+    const mismatchIds = planEvent(explicitMismatch, livePool, 'win-this-planet').clips.map((c) => c.clip.id);
+    expect(mismatchIds).not.toContain('swap-007');
+    expect(mismatchIds).not.toContain('swap-paired-void-moon');
+    expect(mismatchIds).not.toContain('swap-snake');
   });
 });
 

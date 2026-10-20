@@ -537,3 +537,74 @@ lines = [
   { say = "pip", text = "Chef, there's a pigeon in the kitchen. It seems to know you." },
   { say = "chef", text = "It's early. It isn't due until Saturday. Give it the end of the loaf." },
 ]
+
+
+# ── Pip Cooks Today: ingredients that already exist. Chef rings from later. ──
+
+[[clip]]
+id = "pip-cooks-today-close"
+category = "id"
+title = "Pip Cooks Today"
+part = "close"
+show = "pip-cooks-today"
+bed = "kitchen"
+lines = [
+  { say = "pip", text = "That was Pip Cooks Today. The ingredients were already here." },
+  { say = "pip", text = "Chef can have tomorrow back. Please wash your hands. They exist." },
+]
+
+[[clip]]
+id = "pip-cooks-today-03"
+category = "dj"
+show = "pip-cooks-today"
+bed = "kitchen"
+lines = [
+  { say = "pip", text = "Right. Toast. This is bread. It is bread today. This is butter. The butter has not been to the future, and it does not want to go.", pan = -0.5 },
+  { say = "chef", text = "Quaint.", gain = -6.0, pan = 0.5, gap = -0.35 },
+  { say = "pip", text = "Thank you, Chef. I'm going to eat it now, while it is still now. If you are also now, you can do the same. Butter on bread. That's the whole trick." },
+  { say = "pip", text = "If your butter is from Thursday, put it back. Thursday will be wanting it. This show is for the butter that turned up on time.", gain = -6.0 },
+]
+
+[[clip]]
+id = "pip-cooks-today-04"
+category = "call"
+title = "Chef, Calling From Thursday"
+show = "pip-cooks-today"
+bed = "kitchen"
+lines = [
+  { sfx = "phone-ring" },
+  { say = "pip", text = "Pip Cooks Today! If you're calling from the present, hello!", pan = -0.5 },
+  { say = "chef", text = "Pip. It is Thursday. I am standing in Thursday, and the butter dish is empty. You used it. On a Tuesday. I had plans for that butter. The plans were a sauce.", fx = "phone", pan = 0.5, gap = -0.35 },
+  { say = "pip", text = "The butter was here, Chef. In the dish. In the present. That's where butter lives, until somebody eats it. I ate it. On toast. The toast also existed." },
+  { say = "chef", text = "Existence is not a recipe, Pip. It is a lack of ambition. Put the butter back. I don't mind which Tuesday you take it from. Leave me Thursday.", fx = "phone", pan = 0.5 },
+  { say = "pip", text = "I can't put toast back, Chef. That's not how toast works. That's how regret works, and regret is your department.", gain = -6.0 },
+  { say = "chef", text = "I shall remember this conversation before you have it. Be warned. And wash the knife. The knife is already dirty in my tomorrow.", fx = "phone", pan = 0.5 },
+  { sfx = "phone-hangup" },
+  { say = "pip", text = "He's gone. The butter is also gone. If you're making toast, make it now. Thursday has been told." },
+]
+
+[[clip]]
+id = "pip-cooks-today-05"
+category = "story"
+title = "The Soup That Was Ready Now"
+show = "pip-cooks-today"
+bed = "kitchen"
+lines = [
+  { say = "pip", text = "A story from today's stove. Yesterday, this soup was tomorrow's soup. Chef tasted it before it was onions. He said it was promising, and also already eaten, which I think was a complaint.", pan = -0.5 },
+  { say = "pip", text = "Today I chopped the onions while they were onions. They made me cry, which means they were real. I cried into the pot. Chef says tears are a garnish from next winter. I say they are Tuesday." },
+  { say = "pip", text = "The soup is done. It tastes like now. Now tastes of onion, salt, and the radio being on. I took a bowl out to the step. A minute later I was still there. That's how I know it worked.", gain = -6.0 },
+  { say = "pip", text = "If you are hungry in the present, you don't have to wait for the version of you who has already eaten. There's a bowl. It's hot. That's the end of the story, which is also the start of lunch." },
+]
+
+[[clip]]
+id = "pip-cooks-today-06"
+category = "ad"
+title = "Butter That Already Exists"
+show = "pip-cooks-today"
+bed = "kitchen"
+lines = [
+  { say = "pip", text = "A word from today's butter. It exists. It is in the dish, or it was, before the toast. It would like you to know it has never been to Thursday, and it has no plans." },
+  { say = "pip", text = "Pip's Butter, which is just butter. Spread it on something that is also here. Bread is a good start. A spoon is a cry for help, but the butter will not judge you.", pan = -0.5 },
+  { say = "chef", text = "I will judge you. From Thursday. I have already judged you.", fx = "phone", pan = 0.5, gap = -0.35 },
+  { say = "pip", text = "Ignore the future, listeners. Wash your hands. Eat the butter while it agrees to be butter. That was the word. The word is done. The toast is not.", gain = -6.0 },
+]

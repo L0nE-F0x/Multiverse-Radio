@@ -1,6 +1,8 @@
 import { useEffect, useMemo, useState, type CSSProperties, type KeyboardEvent } from 'react';
 import { useBroadcast } from '../broadcast/store';
 import type { ShowIndex, StationDef, StationFormat } from '../broadcast/types';
+import { localTime } from '../broadcast/time';
+import { stationWireFeed } from '../content';
 import { useLayout } from '../hooks/useLayout';
 import * as act from '../ui/actions';
 import { drifts, inMainBand, pirateFrequency } from '../ui/dial';
@@ -101,6 +103,12 @@ export default function Guide() {
         .filter((g) => g.rows.length)
     : groups;
   const total = groups.reduce((n, g) => n + g.rows.length, 0);
+  const localDay = localTime(Date.now()).day;
+  const tunedStation = tuned.kind === 'station' ? tuned.station : null;
+  const wire = useMemo(
+    () => (tunedStation ? stationWireFeed(tunedStation, localDay, 3) : null),
+    [tunedStation, localDay],
+  );
 
   const choose = (row: Row) => {
     if (row.roster) act.tune(row.id);
@@ -142,6 +150,33 @@ export default function Guide() {
   return (
     <Panel id="guide" kicker={`Directory · ${total} sources · Local hour ${String(hour).padStart(2, '0')}:00`} title="Station guide" footer={phone ? find : undefined}>
       {!phone && find}
+      {wire && tunedStation && (
+        <section className="wire" aria-label={`${tunedStation.name} dossier`}>
+          <h3 className="dir-heading">
+            Dossier
+            <span className="dir-note">{tunedStation.name}</span>
+          </h3>
+          <dl className="wire-lines">
+            <div>
+              <dt>Reception</dt>
+              <dd>{wire.reception}</dd>
+            </div>
+            <div>
+              <dt>Weather</dt>
+              <dd>{wire.weather}</dd>
+            </div>
+            <div>
+              <dt>Listener</dt>
+              <dd>{wire.listener}</dd>
+            </div>
+          </dl>
+          <ul className="wire-ticker">
+            {wire.ticker.map((line, i) => (
+              <li key={`${i}:${line}`}>{line}</li>
+            ))}
+          </ul>
+        </section>
+      )}
       <div className="dir" onKeyDown={onKeyDown}>
         <div className="dir-columns" aria-hidden>
           <span />

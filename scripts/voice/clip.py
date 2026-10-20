@@ -101,41 +101,46 @@ def speech(line: Speech, rng: np.random.Generator) -> tuple[np.ndarray, int]:
     if line.cut is not None and line.cut < 1:
         advance = max(1, int(len(body) * line.cut))
         treated = dsp.fade(treated[:advance], 0, CUT_FADE)
+    if line.gain != 0.0:
+        treated = dsp.f32(treated * dsp.db(line.gain))
     return treated, advance
 
 
 def assemble(clip: Clip, rng: np.random.Generator) -> tuple[np.ndarray, list[dict]]:
+    stereo = any(isinstance(line, Speech) and line.pan != 0.0 for line in clip.lines)
     events: list[tuple[int, np.ndarray]] = []
     captions: list[tuple[int, str, str]] = []
     cursor = 0
     for line in clip.lines:
         if isinstance(line, Speech):
             audio, advance = speech(line, rng)
-            events.append((cursor, audio))
+            events.append((cursor, dsp.pan(audio, line.pan) if stereo else audio))
             captions.append((cursor, line.speaker, caption_text(line)))
-            cursor += advance + ns(line.gap)
+            cursor = max(0, cursor + advance + int(round(line.gap * SR)))
         elif isinstance(line, Pause):
             cursor += ns(line.seconds)
         elif isinstance(line, Sfx):
-            events.append((cursor, sounds.make_sfx(line.name, line.seconds, line.level, rng)))
+            sfx = sounds.make_sfx(line.name, line.seconds, line.level, rng)
+            events.append((cursor, dsp.pan(sfx, 0.0) if stereo else sfx))
             cursor += ns(line.seconds)
         elif isinstance(line, Sting):
             audio = sounds.make_sting(line.name, rng)
-            events.append((cursor, audio))
+            events.append((cursor, dsp.pan(audio, 0.0) if stereo else audio))
             cursor += min(len(audio), ns(STING_SECONDS[line.name])) + ns(STING_GAP)
 
     length = max((start + len(audio) for start, audio in events), default=0)
-    mix = np.zeros(max(length, 1), np.float32)
+    mix = np.zeros((max(length, 1), 2) if stereo else max(length, 1), np.float32)
     for start, audio in events:
         mix[start : start + len(audio)] += audio
 
     # Trim to the audible region, keeping EDGE seconds of silence at each end.
-    peak = float(np.abs(mix).max())
-    loud = np.flatnonzero(np.abs(mix) > peak * dsp.db(-50)) if peak > 0 else np.array([0, len(mix) - 1])
+    mag = np.abs(mix).max(axis=1) if stereo else np.abs(mix)
+    peak = float(mag.max())
+    loud = np.flatnonzero(mag > peak * dsp.db(-50)) if peak > 0 else np.array([0, len(mix) - 1])
     first, last = int(loud[0]), int(loud[-1])
     start = first - ns(EDGE)
     end = last + 1 + ns(EDGE)
-    padded = np.zeros(end - start, np.float32)
+    padded = np.zeros((end - start, 2) if stereo else end - start, np.float32)
     src_from, src_to = max(0, start), min(len(mix), end)
     padded[src_from - start : src_to - start] = mix[src_from:src_to]
     mix = dsp.fade(padded, 0, EDGE)
@@ -146,7 +151,7 @@ def assemble(clip: Clip, rng: np.random.Generator) -> tuple[np.ndarray, list[dic
         total = lead + len(mix) + tail
         bed = sounds.make_bed(clip.bed, total / SR, rng)
         bed = dsp.fade(bed, BED_LEAD, BED_TAIL + 0.2)
-        out = bed[:total].copy()
+        out = dsp.pan(bed[:total], 0.0) if stereo else bed[:total].copy()
         out[lead : lead + len(mix)] += mix
         mix, offset = out, offset + lead
 

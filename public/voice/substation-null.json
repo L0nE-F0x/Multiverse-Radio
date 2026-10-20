@@ -1444,6 +1444,260 @@
           "startMs": 8061
         }
       ]
+    },
+    {
+      "id": "shaft-open-01",
+      "category": "dj",
+      "url": "/voice/substation-null/shaft-open-01.mp3",
+      "durationMs": 6101,
+      "overMusic": true,
+      "part": "open",
+      "kit": "shaft-report",
+      "lines": [
+        {
+          "speaker": "Null",
+          "text": "Shaft report.",
+          "startMs": 2449
+        },
+        {
+          "speaker": "Null",
+          "text": "Booth to sump.",
+          "startMs": 4650
+        }
+      ]
+    },
+    {
+      "id": "shaft-open-02",
+      "category": "dj",
+      "url": "/voice/substation-null/shaft-open-02.mp3",
+      "durationMs": 5586,
+      "overMusic": true,
+      "part": "open",
+      "kit": "shaft-report",
+      "lines": [
+        {
+          "speaker": "Diligence Safety System",
+          "text": "Diligence Safety System. Unscheduled shaft report. Remain at your station.",
+          "startMs": 40
+        },
+        {
+          "speaker": "Null",
+          "text": "Booth. Listening.",
+          "startMs": 4164
+        }
+      ]
+    },
+    {
+      "id": "shaft-body-01",
+      "category": "dj",
+      "url": "/voice/substation-null/shaft-body-01.mp3",
+      "durationMs": 12729,
+      "title": "The Third Weld",
+      "overMusic": true,
+      "part": "body",
+      "kit": "shaft-report",
+      "lines": [
+        {
+          "speaker": "Null",
+          "text": "Sump level.",
+          "startMs": 443
+        },
+        {
+          "speaker": "Sump Watch",
+          "text": "Above the third weld. The third weld was the line.",
+          "startMs": 2120
+        },
+        {
+          "speaker": "Null",
+          "text": "Third weld is history.",
+          "startMs": 5367
+        },
+        {
+          "speaker": "Sump Watch",
+          "text": "History is wet.",
+          "startMs": 8125
+        },
+        {
+          "speaker": "Null",
+          "text": "Logged. Not nominal.",
+          "startMs": 10400
+        }
+      ]
+    },
+    {
+      "id": "shaft-body-02",
+      "category": "dj",
+      "url": "/voice/substation-null/shaft-body-02.mp3",
+      "durationMs": 12998,
+      "title": "Bearing Two",
+      "overMusic": true,
+      "part": "body",
+      "kit": "shaft-report",
+      "lines": [
+        {
+          "speaker": "Lower Deck",
+          "text": "Lower deck. Shaft bearing two is singing. It isn't a song.",
+          "startMs": 2449
+        },
+        {
+          "speaker": "Null",
+          "text": "Bearing two.",
+          "startMs": 5539
+        },
+        {
+          "speaker": "Diligence Safety System",
+          "text": "Bearing song is not a monitored parameter. Cease the parameter.",
+          "startMs": 7572
+        },
+        {
+          "speaker": "Null",
+          "text": "It doesn't cease. Log the pitch.",
+          "startMs": 10789
+        }
+      ]
+    },
+    {
+      "id": "shaft-body-03",
+      "category": "dj",
+      "url": "/voice/substation-null/shaft-body-03.mp3",
+      "durationMs": 15634,
+      "title": "The Seal Breathing",
+      "overMusic": true,
+      "part": "body",
+      "kit": "shaft-report",
+      "lines": [
+        {
+          "speaker": "Null",
+          "text": "Hatch seals. Shaft three.",
+          "startMs": 439
+        },
+        {
+          "speaker": "Sump Watch",
+          "text": "Seal on the sump side is breathing. In, not out.",
+          "startMs": 3223
+        },
+        {
+          "speaker": "Null",
+          "text": "Breathing is not a seal.",
+          "startMs": 6807
+        },
+        {
+          "speaker": "Lower Deck",
+          "text": "Phone check. We can hear it on the lower deck. It has a rhythm.",
+          "startMs": 9582
+        },
+        {
+          "speaker": "Null",
+          "text": "Do not answer the rhythm.",
+          "startMs": 13268
+        }
+      ]
+    },
+    {
+      "id": "shaft-body-04",
+      "category": "dj",
+      "url": "/voice/substation-null/shaft-body-04.mp3",
+      "durationMs": 15037,
+      "title": "The List",
+      "overMusic": true,
+      "part": "body",
+      "kit": "shaft-report",
+      "lines": [
+        {
+          "speaker": "Diligence Safety System",
+          "text": "Freighter list, two degrees to port. Correction recommended.",
+          "startMs": 49
+        },
+        {
+          "speaker": "Null",
+          "text": "List is four. Your number is old.",
+          "startMs": 3017
+        },
+        {
+          "speaker": "Sump Watch",
+          "text": "From down here it feels like six. The water has an opinion.",
+          "startMs": 6103
+        },
+        {
+          "speaker": "Null",
+          "text": "Opinion logged. No correction. The floor is dancing.",
+          "startMs": 11407
+        }
+      ]
+    },
+    {
+      "id": "shaft-body-05",
+      "category": "dj",
+      "url": "/voice/substation-null/shaft-body-05.mp3",
+      "durationMs": 16663,
+      "title": "Sixty One",
+      "overMusic": true,
+      "part": "body",
+      "kit": "shaft-report",
+      "lines": [
+        {
+          "speaker": "Lower Deck",
+          "text": "Residual heat in the shaft wall. Ticks on the counter went from forty to sixty one.",
+          "startMs": 2449
+        },
+        {
+          "speaker": "Null",
+          "text": "Sixty one.",
+          "startMs": 7247
+        },
+        {
+          "speaker": "Diligence Safety System",
+          "text": "Sixty one is above the posted card. The posted card is forty years old.",
+          "startMs": 9250
+        },
+        {
+          "speaker": "Null",
+          "text": "So is the ship. Continue the count.",
+          "startMs": 14161
+        }
+      ]
+    },
+    {
+      "id": "shaft-close-01",
+      "category": "dj",
+      "url": "/voice/substation-null/shaft-close-01.mp3",
+      "durationMs": 5179,
+      "overMusic": true,
+      "part": "close",
+      "kit": "shaft-report",
+      "lines": [
+        {
+          "speaker": "Null",
+          "text": "End of shaft report.",
+          "startMs": 43
+        },
+        {
+          "speaker": "Null",
+          "text": "Booth clear. Sump, stay on the line.",
+          "startMs": 2731
+        }
+      ]
+    },
+    {
+      "id": "shaft-close-02",
+      "category": "dj",
+      "url": "/voice/substation-null/shaft-close-02.mp3",
+      "durationMs": 5943,
+      "overMusic": true,
+      "part": "close",
+      "kit": "shaft-report",
+      "lines": [
+        {
+          "speaker": "Diligence Safety System",
+          "text": "Shaft report received. The Diligence thanks you for the bad news.",
+          "startMs": 48
+        },
+        {
+          "speaker": "Null",
+          "text": "Bad news logged. Dance continues.",
+          "startMs": 3366
+        }
+      ]
     }
   ]
 }

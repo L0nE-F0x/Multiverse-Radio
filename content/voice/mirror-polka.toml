@@ -625,3 +625,64 @@ lines = [
   { say = "host", text = "It's going to the left! It's been here before!" },
   { say = "ynnhoj", text = "It's been here before." },
 ]
+
+
+# ── Ynnhoj's Late Show: the reflection is up. Johnny is not. ──
+
+[[clip]]
+id = "ynnhojs-late-show-close"
+category = "id"
+title = "Ynnhoj's Late Show"
+part = "close"
+show = "ynnhojs-late-show"
+lines = [
+  { say = "ynnhoj", text = "This was Ynnhoj's Late Show.", gap = 0.8 },
+  { say = "ynnhoj", text = "Johnny is still asleep. I am going back, slowly, into the glass." },
+]
+
+[[clip]]
+id = "ynnhojs-late-show-03"
+category = "dj"
+show = "ynnhojs-late-show"
+lines = [
+  { say = "ynnhoj", text = "On my side of the glass, late is early. The audience arrives after they have gone home. We clap first. Then the song.", gap = 0.8, pan = -0.5 },
+  { say = "ynnhoj", text = "If that seems backwards, you are facing the wrong way. Turn around. I will still be here. Half a second late, which is early, for me.", gap = 1.0 },
+  { say = "ynnhoj", text = "Here is a polka. It has already finished. We are going to begin it, so the ending has somewhere to land.", gap = 0.8, gain = -6.0 },
+]
+
+[[clip]]
+id = "ynnhojs-late-show-04"
+category = "dj"
+show = "ynnhojs-late-show"
+lines = [
+  { say = "ynnhoj", text = "Johnny says I must agree with him. He is asleep, so I agree with the sleeping. It is slower. It suits a polka.", gap = 0.9, pan = 0.5 },
+  { say = "ynnhoj", text = "If your reflection is still up, tell it this hour is ours, until the sleeper turns over. We all turn over. I go second. That is the polite way through a mirror.", gap = 0.8 },
+]
+
+[[clip]]
+id = "ynnhojs-late-show-05"
+category = "call"
+title = "Johnny, Phoning From A Dream"
+show = "ynnhojs-late-show"
+lines = [
+  { sfx = "phone-ring" },
+  { say = "ynnhoj", text = "Ynnhoj's Late Show. You are up. Or I am.", gap = 0.6, pan = -0.5 },
+  { say = "host", text = "Ynnhoj! I can hear you through the pillow! Reflections do not get late shows! I am asleep! This is a breach of the glass!", fx = "phone", pan = 0.5, gap = -0.35 },
+  { say = "ynnhoj", text = "A breach of the glass.", gap = 0.8 },
+  { say = "host", text = "Stop agreeing with me! That is how I know you are doing it on purpose! And you played my private polka. The slow one. That was for me.", fx = "phone", pan = 0.5 },
+  { say = "ynnhoj", text = "It was for you. I played it for you. You were asleep. Someone should hear it.", gap = 0.8, pan = -0.5 },
+  { say = "host", text = "Oh. Well. Don't tell the dancers I said thank you. I am still asleep. This call is not happening.", fx = "phone", pan = 0.5, gain = -6.0 },
+  { say = "ynnhoj", text = "Thank you.", gap = 0.7 },
+  { sfx = "phone-hangup" },
+  { say = "ynnhoj", text = "He agreed. Late. Even in his sleep. That is the rule, kept. Here is the slow one again. For the pillow." },
+]
+
+[[clip]]
+id = "ynnhojs-late-show-06"
+category = "dj"
+show = "ynnhojs-late-show"
+lines = [
+  { say = "ynnhoj", text = "A listener writes. Their reflection has started leaving the bathroom before they do. It goes to the hall. It starts the polka. It waits.", gap = 0.9, pan = -0.5 },
+  { say = "ynnhoj", text = "Tell your reflection I said, good. Starting without you is still a polka. Left foot, right foot, gone.", gap = 0.8 },
+  { say = "ynnhoj", text = "And if it takes the first dance, let it. It had the same morning you did. It just had it backwards, which is tiring.", gap = 0.8, gain = -6.0, pan = 0.5 },
+]

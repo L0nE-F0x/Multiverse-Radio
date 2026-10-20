@@ -1478,6 +1478,457 @@
           "startMs": 12331
         }
       ]
+    },
+    {
+      "id": "dispatch-open-01",
+      "category": "weather",
+      "url": "/voice/traffic-on-the-8s/dispatch-open-01.mp3",
+      "durationMs": 6626,
+      "title": "Dispatch Is Live",
+      "overMusic": false,
+      "part": "open",
+      "kit": "dispatch",
+      "lines": [
+        {
+          "speaker": "Rita Gridley",
+          "text": "Dispatch is live. Sodium vapour on every arterial, and nobody's shadow is the right length. Go ahead.",
+          "startMs": 800
+        }
+      ]
+    },
+    {
+      "id": "dispatch-open-02",
+      "category": "weather",
+      "url": "/voice/traffic-on-the-8s/dispatch-open-02.mp3",
+      "durationMs": 6654,
+      "title": "Orange Lanes",
+      "overMusic": false,
+      "part": "open",
+      "kit": "dispatch",
+      "lines": [
+        {
+          "speaker": "Rita Gridley",
+          "text": "Gridley at the desk. I'm taking patches off the orange lanes. Keep the manifest in your hand and the story out of it.",
+          "startMs": 436
+        }
+      ]
+    },
+    {
+      "id": "dispatch-open-03",
+      "category": "weather",
+      "url": "/voice/traffic-on-the-8s/dispatch-open-03.mp3",
+      "durationMs": 7992,
+      "title": "From the Pod",
+      "overMusic": false,
+      "part": "open",
+      "kit": "dispatch",
+      "lines": [
+        {
+          "speaker": "Captain Buzz Ferraro",
+          "text": "Rita, the pod's over the west arterial. It's all sodium and brake lights.",
+          "startMs": 432
+        },
+        {
+          "speaker": "Rita Gridley",
+          "text": "Copy, Buzz. Dispatch is open. Who's still pretending to move?",
+          "startMs": 4328
+        }
+      ]
+    },
+    {
+      "id": "dispatch-body-01",
+      "category": "weather",
+      "url": "/voice/traffic-on-the-8s/dispatch-body-01.mp3",
+      "durationMs": 16187,
+      "title": "Manifest Seven Seven Four One",
+      "overMusic": false,
+      "part": "body",
+      "kit": "dispatch",
+      "lines": [
+        {
+          "speaker": "Arterial Driver",
+          "text": "Dispatch, arterial four, eastbound. Hauler stopped under the vapour. Manifest seven seven four one. Load is glass, and the glass is humming.",
+          "startMs": 450
+        },
+        {
+          "speaker": "Rita Gridley",
+          "text": "Seven seven four one, I have you. Is the humming in the load or in the lane?",
+          "startMs": 8183
+        },
+        {
+          "speaker": "Arterial Driver",
+          "text": "Both. The lane started it. The glass is just keeping time.",
+          "startMs": 12113
+        }
+      ]
+    },
+    {
+      "id": "dispatch-body-02",
+      "category": "weather",
+      "url": "/voice/traffic-on-the-8s/dispatch-body-02.mp3",
+      "durationMs": 16436,
+      "title": "The Arm Forgot",
+      "overMusic": false,
+      "part": "body",
+      "kit": "dispatch",
+      "lines": [
+        {
+          "speaker": "Toll Operator",
+          "text": "Toll point, west ramp. The arm is up. It has been up since the lamps came on. Nobody is paying, because the arm forgot how to come down.",
+          "startMs": 450
+        },
+        {
+          "speaker": "Rita Gridley",
+          "text": "What's the booth reading for vehicles through?",
+          "startMs": 8750
+        },
+        {
+          "speaker": "Toll Operator",
+          "text": "Manifest of the hour is nine zero two. One of them had no driver. I waved anyway.",
+          "startMs": 10374
+        }
+      ]
+    },
+    {
+      "id": "dispatch-body-03",
+      "category": "weather",
+      "url": "/voice/traffic-on-the-8s/dispatch-body-03.mp3",
+      "durationMs": 18286,
+      "title": "The Jump Seat",
+      "overMusic": false,
+      "part": "body",
+      "kit": "dispatch",
+      "lines": [
+        {
+          "speaker": "A Phantom Passenger",
+          "text": "Dispatch. I'm at the merge. I need a lane that doesn't end. You had one last century.",
+          "startMs": 439
+        },
+        {
+          "speaker": "Rita Gridley",
+          "text": "Say your manifest number.",
+          "startMs": 4853
+        },
+        {
+          "speaker": "A Phantom Passenger",
+          "text": "I don't have one. The car I'm in does. It isn't mine. It never was.",
+          "startMs": 6559
+        },
+        {
+          "speaker": "Arterial Driver",
+          "text": "Dispatch, that's my cab. There's nobody in the jump seat. There's been nobody all shift.",
+          "startMs": 10835
+        },
+        {
+          "speaker": "Rita Gridley",
+          "text": "Both of you, hold the orange light. Do not open a door.",
+          "startMs": 15091
+        }
+      ]
+    },
+    {
+      "id": "dispatch-body-04",
+      "category": "weather",
+      "url": "/voice/traffic-on-the-8s/dispatch-body-04.mp3",
+      "durationMs": 18357,
+      "title": "A Door, Opening",
+      "overMusic": false,
+      "part": "body",
+      "kit": "dispatch",
+      "lines": [
+        {
+          "speaker": "Captain Buzz Ferraro",
+          "text": "Rita, from up here the west arterial is one solid bar of sodium. Nothing in it is moving except a door, opening.",
+          "startMs": 450
+        },
+        {
+          "speaker": "Arterial Driver",
+          "text": "That's not my door. Manifest three eight eight. I'm in the cab with both hands on the wheel.",
+          "startMs": 7813
+        },
+        {
+          "speaker": "Rita Gridley",
+          "text": "Three eight eight, stay buckled. Buzz, is the door still opening?",
+          "startMs": 12115
+        },
+        {
+          "speaker": "Captain Buzz Ferraro",
+          "text": "It opened. Nobody got out. The vapour went in.",
+          "startMs": 15347
+        }
+      ]
+    },
+    {
+      "id": "dispatch-body-05",
+      "category": "weather",
+      "url": "/voice/traffic-on-the-8s/dispatch-body-05.mp3",
+      "durationMs": 17399,
+      "title": "Already Through",
+      "overMusic": false,
+      "part": "body",
+      "kit": "dispatch",
+      "lines": [
+        {
+          "speaker": "Toll Operator",
+          "text": "Dispatch, the arm came down on a bumper that wasn't there a second ago. Manifest four zero zero seven.",
+          "startMs": 450
+        },
+        {
+          "speaker": "Arterial Driver",
+          "text": "That's my bumper, and I haven't reached the booth. I'm still under the third lamp.",
+          "startMs": 6492
+        },
+        {
+          "speaker": "Rita Gridley",
+          "text": "Four zero zero seven, you are either early or already through. Do not reverse. The lane behind you is full of people who are also you.",
+          "startMs": 10078
+        }
+      ]
+    },
+    {
+      "id": "dispatch-body-06",
+      "category": "weather",
+      "url": "/voice/traffic-on-the-8s/dispatch-body-06.mp3",
+      "durationMs": 18559,
+      "title": "Lamps Out",
+      "overMusic": false,
+      "part": "body",
+      "kit": "dispatch",
+      "lines": [
+        {
+          "speaker": "Arterial Driver",
+          "text": "Gridley, the vapour just went out on arterial nine. Dark for half a mile. I can hear engines and I can't see plates.",
+          "startMs": 449
+        },
+        {
+          "speaker": "Rita Gridley",
+          "text": "Arterial nine, lamps out. Call your manifest.",
+          "startMs": 6493
+        },
+        {
+          "speaker": "Arterial Driver",
+          "text": "Six one five. And there's a voice in the dark asking me for a lift to the front of the jam.",
+          "startMs": 9038
+        },
+        {
+          "speaker": "A Phantom Passenger",
+          "text": "Tell her I said please.",
+          "startMs": 14116
+        },
+        {
+          "speaker": "Rita Gridley",
+          "text": "Do not give the dark a lift. Lamps or no lamps.",
+          "startMs": 15455
+        }
+      ]
+    },
+    {
+      "id": "dispatch-close-01",
+      "category": "weather",
+      "url": "/voice/traffic-on-the-8s/dispatch-close-01.mp3",
+      "durationMs": 5557,
+      "overMusic": false,
+      "part": "close",
+      "kit": "dispatch",
+      "lines": [
+        {
+          "speaker": "Rita Gridley",
+          "text": "That's the patch. Stay under the vapour, keep the manifest where you can read it, and do not pick anyone up.",
+          "startMs": 442
+        }
+      ]
+    },
+    {
+      "id": "dispatch-close-02",
+      "category": "weather",
+      "url": "/voice/traffic-on-the-8s/dispatch-close-02.mp3",
+      "durationMs": 4654,
+      "overMusic": false,
+      "part": "close",
+      "kit": "dispatch",
+      "lines": [
+        {
+          "speaker": "Rita Gridley",
+          "text": "Dispatch clear. The orange lanes keep whatever you told them. I won't.",
+          "startMs": 800
+        }
+      ]
+    },
+    {
+      "id": "dispatch-close-03",
+      "category": "weather",
+      "url": "/voice/traffic-on-the-8s/dispatch-close-03.mp3",
+      "durationMs": 5556,
+      "overMusic": false,
+      "part": "close",
+      "kit": "dispatch",
+      "lines": [
+        {
+          "speaker": "Captain Buzz Ferraro",
+          "text": "Pod's staying up, Rita. The vapour looks worse from here.",
+          "startMs": 447
+        },
+        {
+          "speaker": "Rita Gridley",
+          "text": "Then don't look down, Buzz. Dispatch out.",
+          "startMs": 2851
+        }
+      ]
+    },
+    {
+      "id": "dispatch-scene-01",
+      "category": "weather",
+      "url": "/voice/traffic-on-the-8s/dispatch-scene-01.mp3",
+      "durationMs": 23307,
+      "title": "You Slowed",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Rita Gridley",
+          "text": "Live patch, west arterial. You're on the desk.",
+          "startMs": 800
+        },
+        {
+          "speaker": "Arterial Driver",
+          "text": "Gridley, manifest two two nine. I've got sodium in the mirrors and a passenger I didn't stop for.",
+          "startMs": 3375
+        },
+        {
+          "speaker": "A Phantom Passenger",
+          "text": "You slowed. That's stopping, where I'm from.",
+          "startMs": 8442
+        },
+        {
+          "speaker": "Arterial Driver",
+          "text": "I didn't slow. The lane slowed. Tell her to get out of the jump seat.",
+          "startMs": 11184
+        },
+        {
+          "speaker": "Rita Gridley",
+          "text": "Nobody gets out under the vapour. Phantom, name a destination or clear the channel.",
+          "startMs": 14188
+        },
+        {
+          "speaker": "A Phantom Passenger",
+          "text": "The front of the jam. I'll walk the rest, if the rest is still there.",
+          "startMs": 18833
+        }
+      ]
+    },
+    {
+      "id": "dispatch-scene-02",
+      "category": "weather",
+      "url": "/voice/traffic-on-the-8s/dispatch-scene-02.mp3",
+      "durationMs": 26280,
+      "title": "The Arm and the Air",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Rita Gridley",
+          "text": "Toll point, you're patched to the desk and to the pod. Go ahead.",
+          "startMs": 800
+        },
+        {
+          "speaker": "Toll Operator",
+          "text": "The arm is down on nothing. Manifest one one eight zero. The nothing is revving.",
+          "startMs": 3881
+        },
+        {
+          "speaker": "Captain Buzz Ferraro",
+          "text": "Rita, I can see the booth. Sodium on the roof. No vehicle. The arm is arguing with the air.",
+          "startMs": 8267
+        },
+        {
+          "speaker": "Arterial Driver",
+          "text": "Dispatch, that's my manifest. I'm still a mile back. The vapour is so thick I can chew it.",
+          "startMs": 13663
+        },
+        {
+          "speaker": "Rita Gridley",
+          "text": "One one eight zero, do not approach your own toll. Buzz, if the air pays, let it through.",
+          "startMs": 18248
+        },
+        {
+          "speaker": "Toll Operator",
+          "text": "The air doesn't pay. The air knows the rate better than I do.",
+          "startMs": 22452
+        }
+      ]
+    },
+    {
+      "id": "dispatch-scene-03",
+      "category": "weather",
+      "url": "/voice/traffic-on-the-8s/dispatch-scene-03.mp3",
+      "durationMs": 27685,
+      "title": "Two Cabs, One Channel",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Rita Gridley",
+          "text": "I've got two cabs on one channel. Arterial two, and the bypass. You can hear each other. Try not to make it worse.",
+          "startMs": 800
+        },
+        {
+          "speaker": "Arterial Driver",
+          "text": "Manifest five five zero. The car in front has been there since the lamps were invented.",
+          "startMs": 6633
+        },
+        {
+          "speaker": "Bypass Driver",
+          "text": "That's me in front. Your headlights have been in my mirror since I learned to drive.",
+          "startMs": 10941
+        },
+        {
+          "speaker": "A Phantom Passenger",
+          "text": "There's room if one of you breathes out. I've been between you the whole time.",
+          "startMs": 15030
+        },
+        {
+          "speaker": "Rita Gridley",
+          "text": "Five five zero, do not make room. There is no between. Buzz, tell me you see two cabs and nothing else.",
+          "startMs": 18633
+        },
+        {
+          "speaker": "Captain Buzz Ferraro",
+          "text": "Two cabs, Rita. And a shape the vapour won't quite commit to.",
+          "startMs": 23879
+        }
+      ]
+    },
+    {
+      "id": "dispatch-scene-04",
+      "category": "weather",
+      "url": "/voice/traffic-on-the-8s/dispatch-scene-04.mp3",
+      "durationMs": 26570,
+      "title": "Coat on the Shoulder",
+      "overMusic": false,
+      "lines": [
+        {
+          "speaker": "Toll Operator",
+          "text": "Dispatch, west shoulder, under the third gantry. A coat is standing there. No car. Manifest blank.",
+          "startMs": 449
+        },
+        {
+          "speaker": "Captain Buzz Ferraro",
+          "text": "I have the gantry. The coat is facing the lanes, like it expects a door to open.",
+          "startMs": 5967
+        },
+        {
+          "speaker": "Arterial Driver",
+          "text": "I'm under that gantry. Manifest eight four two. I am not opening the door. I am not opening the door.",
+          "startMs": 10838
+        },
+        {
+          "speaker": "A Phantom Passenger",
+          "text": "You don't have to stop. You already did, three exits ago. I kept the seat warm.",
+          "startMs": 15831
+        },
+        {
+          "speaker": "Rita Gridley",
+          "text": "Eight four two, windows up, eyes on the vapour. The shoulder is not a stop. The coat is not a passenger.",
+          "startMs": 20798
+        }
+      ]
     }
   ]
 }

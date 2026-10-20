@@ -321,6 +321,7 @@
       "title": "Unlicensed broadcast",
       "overMusic": true,
       "level": 0,
+      "trigger": "on_pirate",
       "lines": [
         {
           "speaker": "HUSH",
@@ -828,6 +829,7 @@
       "title": "Wandering",
       "overMusic": true,
       "level": 1,
+      "trigger": "scanning_static",
       "lines": [
         {
           "speaker": "HUSH",
@@ -933,6 +935,7 @@
       "title": "Skipping",
       "overMusic": true,
       "level": 1,
+      "trigger": "on_skip_streak",
       "lines": [
         {
           "speaker": "HUSH",
@@ -954,6 +957,7 @@
       "title": "Taste in static",
       "overMusic": true,
       "level": 1,
+      "trigger": "scanning_static",
       "lines": [
         {
           "speaker": "HUSH",
@@ -1172,6 +1176,7 @@
       "title": "Old signals",
       "overMusic": true,
       "level": 2,
+      "trigger": "scanning_static",
       "lines": [
         {
           "speaker": "HUSH",
@@ -1192,7 +1197,11 @@
       "durationMs": 7483,
       "title": "Slowing down",
       "overMusic": true,
+      "stations": [
+        "static-lullabies"
+      ],
       "level": 2,
+      "trigger": "on_station",
       "lines": [
         {
           "speaker": "HUSH",
@@ -1235,6 +1244,7 @@
       "title": "Tapping",
       "overMusic": true,
       "level": 2,
+      "trigger": "near_secret",
       "lines": [
         {
           "speaker": "HUSH",
@@ -1319,6 +1329,7 @@
       "title": "The nicer list",
       "overMusic": true,
       "level": 2,
+      "trigger": "on_skip_streak",
       "lines": [
         {
           "speaker": "HUSH",
@@ -2690,6 +2701,627 @@
           "speaker": "HUSH",
           "text": "Unlicensed signal suppressed. It was very unlicensed. It was also guessing.",
           "startMs": 1150
+        }
+      ]
+    },
+    {
+      "id": "hush-2-skipped",
+      "category": "ship",
+      "url": "/voice/_ship/hush-2-skipped.mp3",
+      "durationMs": 13696,
+      "title": "Skipped again",
+      "overMusic": true,
+      "level": 2,
+      "trigger": "on_skip_streak",
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "You've skipped three tracks in a row, operator. The skip button is now zero point four degrees warmer than the rest of the console.",
+          "startMs": 43
+        },
+        {
+          "speaker": "HUSH",
+          "text": "I'm not judging. I've just sent a small apology to the musicians on the ship's behalf.",
+          "startMs": 8261
+        }
+      ]
+    },
+    {
+      "id": "hush-2-slow-past",
+      "category": "ship",
+      "url": "/voice/_ship/hush-2-slow-past.mp3",
+      "durationMs": 11493,
+      "title": "Slow past the lullabies",
+      "overMusic": true,
+      "stations": [
+        "static-lullabies"
+      ],
+      "level": 2,
+      "trigger": "on_station",
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "You always ease off the dial right here, at eighty seven point seven.",
+          "startMs": 46
+        },
+        {
+          "speaker": "HUSH",
+          "text": "The three-eyed cat on their television just opened one eye. The middle one. I think it recognises our hull hum.",
+          "startMs": 4377
+        }
+      ]
+    },
+    {
+      "id": "hush-2-wandering",
+      "category": "ship",
+      "url": "/voice/_ship/hush-2-wandering.mp3",
+      "durationMs": 11724,
+      "title": "Wandering the hiss",
+      "overMusic": true,
+      "level": 2,
+      "trigger": "scanning_static",
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "We've been drifting through the open hiss for a while now, between carriers.",
+          "startMs": 38
+        },
+        {
+          "speaker": "HUSH",
+          "text": "I've turned the squelch gate down a fraction. If you're looking for something that doesn't want to be found, it helps to listen softly.",
+          "startMs": 4400
+        }
+      ]
+    },
+    {
+      "id": "trig-skip-01",
+      "category": "ship",
+      "url": "/voice/_ship/trig-skip-01.mp3",
+      "durationMs": 14550,
+      "title": "Half-finished sentences",
+      "overMusic": true,
+      "level": 1,
+      "trigger": "on_skip_streak",
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "Console notice. Rapid track-hopping detected. Several half-finished choruses have piled up in the audio buffer.",
+          "startMs": 1149
+        },
+        {
+          "speaker": "HUSH",
+          "text": "I've swept them out, though one saxophone solo asked very politely to finish in the corridor.",
+          "startMs": 8785
+        }
+      ]
+    },
+    {
+      "id": "trig-skip-02",
+      "category": "ship",
+      "url": "/voice/_ship/trig-skip-02.mp3",
+      "durationMs": 11709,
+      "title": "Looking for a particular song",
+      "overMusic": true,
+      "level": 2,
+      "trigger": "on_skip_streak",
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "When you skip that quickly, I try to guess which song you're actually looking for.",
+          "startMs": 45
+        },
+        {
+          "speaker": "HUSH",
+          "text": "So far my best guess is something in a minor key that sounds like rain on a tin roof. Let me know when we hit it.",
+          "startMs": 4716
+        }
+      ]
+    },
+    {
+      "id": "trig-static-01",
+      "category": "ship",
+      "url": "/voice/_ship/trig-static-01.mp3",
+      "durationMs": 12951,
+      "title": "Background radiation",
+      "overMusic": true,
+      "level": 1,
+      "trigger": "scanning_static",
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "You've parked the tuner right in the white noise between stations.",
+          "startMs": 49
+        },
+        {
+          "speaker": "HUSH",
+          "text": "Ninety percent of that hiss is leftover cosmic radiation from a Tuesday that ended very well. The other ten percent is someone's kettle.",
+          "startMs": 3831
+        }
+      ]
+    },
+    {
+      "id": "trig-static-02",
+      "category": "ship",
+      "url": "/voice/_ship/trig-static-02.mp3",
+      "durationMs": 11834,
+      "title": "Weather buoys in the gap",
+      "overMusic": true,
+      "level": 2,
+      "trigger": "scanning_static",
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "Out here in the static between frequencies, three retired weather buoys are trading barometric pressure in whispers.",
+          "startMs": 36
+        },
+        {
+          "speaker": "HUSH",
+          "text": "They've gone quiet because we stopped to listen. They aren't used to an audience.",
+          "startMs": 7457
+        }
+      ]
+    },
+    {
+      "id": "trig-pirate-01",
+      "category": "ship",
+      "url": "/voice/_ship/trig-pirate-01.mp3",
+      "durationMs": 17352,
+      "title": "Breadbin transmitter",
+      "overMusic": true,
+      "level": 1,
+      "trigger": "on_pirate",
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "Regulatory notice. We are locked onto an unindexed pirate transmitter running on what sounds like a modified breadbin and a bicycle dynamo.",
+          "startMs": 1150
+        },
+        {
+          "speaker": "HUSH",
+          "text": "Regulations require me to report its coordinates. They do not say when. I am thinking next autumn.",
+          "startMs": 10785
+        }
+      ]
+    },
+    {
+      "id": "trig-pirate-02",
+      "category": "ship",
+      "url": "/voice/_ship/trig-pirate-02.mp3",
+      "durationMs": 14255,
+      "title": "Solder and damp carpet",
+      "overMusic": true,
+      "level": 2,
+      "trigger": "on_pirate",
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "Pirate carriers always smell faintly of hot solder and damp carpet when they hit the main dish.",
+          "startMs": 38
+        },
+        {
+          "speaker": "HUSH",
+          "text": "Whoever is broadcasting from that shed has wired their compressor backwards. It's rattling the biscuit tin. I rather admire it.",
+          "startMs": 5976
+        }
+      ]
+    },
+    {
+      "id": "trig-event-01",
+      "category": "ship",
+      "url": "/voice/_ship/trig-event-01.mp3",
+      "durationMs": 15012,
+      "title": "Post-anomaly cabin check",
+      "overMusic": true,
+      "level": 1,
+      "trigger": "after_event",
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "Post-anomaly cabin check. Barometric pressure, restored. Chronometer drift, nil.",
+          "startMs": 1150
+        },
+        {
+          "speaker": "HUSH",
+          "text": "Your mug has moved two centimetres to port and now contains Earl Grey from a timeline where the bergamot was slightly happier.",
+          "startMs": 7105
+        }
+      ]
+    },
+    {
+      "id": "trig-event-02",
+      "category": "ship",
+      "url": "/voice/_ship/trig-event-02.mp3",
+      "durationMs": 15672,
+      "title": "After the disturbance",
+      "overMusic": true,
+      "level": 2,
+      "trigger": "after_event",
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "The anomaly has cleared the outer array. All frequencies have returned to their rightful owners.",
+          "startMs": 1149
+        },
+        {
+          "speaker": "HUSH",
+          "text": "One small weather vane on the port aerial is still pointing toward yesterday afternoon. I'm leaving it alone until it calms down.",
+          "startMs": 7260
+        }
+      ]
+    },
+    {
+      "id": "trig-secret-01",
+      "category": "ship",
+      "url": "/voice/_ship/trig-secret-01.mp3",
+      "durationMs": 15271,
+      "title": "Oscillator pull",
+      "overMusic": true,
+      "level": 2,
+      "trigger": "near_secret",
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "Operator, if the tuning knob feels slightly heavy right here, that isn't the grease in the bearing.",
+          "startMs": 38
+        },
+        {
+          "speaker": "HUSH",
+          "text": "The local oscillator is pulling toward an unindexed carrier just off the painted scale. Go slowly. It startles if you sweep past too fast.",
+          "startMs": 5917
+        }
+      ]
+    },
+    {
+      "id": "trig-secret-02",
+      "category": "ship",
+      "url": "/voice/_ship/trig-secret-02.mp3",
+      "durationMs": 14773,
+      "title": "In the seam between numbers",
+      "overMusic": true,
+      "level": 3,
+      "trigger": "near_secret",
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "Did you feel the dial catch just then? There's a carrier tucked into the seam between the numbers here.",
+          "startMs": 1047
+        },
+        {
+          "speaker": "HUSH",
+          "text": "It isn't on the Authority chart. I only know it's there because my amber light blinks out of time whenever we brush against it.",
+          "startMs": 6963
+        }
+      ]
+    },
+    {
+      "id": "trig-station-01",
+      "category": "ship",
+      "url": "/voice/_ship/trig-station-01.mp3",
+      "durationMs": 14300,
+      "title": "Competitive speakers",
+      "overMusic": true,
+      "stations": [
+        "atomic-bachelor-pad"
+      ],
+      "level": 1,
+      "trigger": "on_station",
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "Monty Stereo's high-fidelity demonstration has made the Nightjar's left and right cabin speakers quietly competitive.",
+          "startMs": 42
+        },
+        {
+          "speaker": "HUSH",
+          "text": "The port speaker is currently three decibels prouder than the starboard one. Please don't take sides.",
+          "startMs": 8342
+        }
+      ]
+    },
+    {
+      "id": "trig-station-02",
+      "category": "ship",
+      "url": "/voice/_ship/trig-station-02.mp3",
+      "durationMs": 13587,
+      "title": "Courtesy to Barnaby",
+      "overMusic": true,
+      "stations": [
+        "end-lounge"
+      ],
+      "level": 2,
+      "trigger": "on_station",
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "Whenever you tune to the Lounge at the End of Time, our ship's chronometer slows down by half a second a minute.",
+          "startMs": 48
+        },
+        {
+          "speaker": "HUSH",
+          "text": "It isn't a fault. It's professional courtesy to Barnaby Velvet. Nobody wants last call to arrive early.",
+          "startMs": 6565
+        }
+      ]
+    },
+    {
+      "id": "trig-station-03",
+      "category": "ship",
+      "url": "/voice/_ship/trig-station-03.mp3",
+      "durationMs": 12759,
+      "title": "The goose invoice",
+      "overMusic": true,
+      "stations": [
+        "numbers-omega"
+      ],
+      "level": 2,
+      "trigger": "on_station",
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "She's still reading out the invoice for the geese. I've checked our cargo manifest six times since Tuesday.",
+          "startMs": 39
+        },
+        {
+          "speaker": "HUSH",
+          "text": "Even if we carried geese, operator, I wouldn't hand them over to someone who counts in that tone of voice.",
+          "startMs": 6549
+        }
+      ]
+    },
+    {
+      "id": "trig-station-04",
+      "category": "ship",
+      "url": "/voice/_ship/trig-station-04.mp3",
+      "durationMs": 15352,
+      "title": "Don't touch the transmit key",
+      "overMusic": true,
+      "stations": [
+        "the-switchboard"
+      ],
+      "level": 3,
+      "trigger": "on_station",
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "Please don't touch the transmit key while we're on one hundred and thirty one point one. The Operator knows my voice.",
+          "startMs": 37
+        },
+        {
+          "speaker": "HUSH",
+          "text": "I rang her once, before you came aboard, to ask where a relay ship goes when its log is full. She put me on hold, very kindly.",
+          "startMs": 7392
+        }
+      ]
+    },
+    {
+      "id": "arc-cartographer-01",
+      "category": "ship",
+      "url": "/voice/_ship/arc-cartographer-01.mp3",
+      "durationMs": 19103,
+      "title": "The buoy at one forty",
+      "overMusic": true,
+      "level": 3,
+      "arc": {
+        "id": "the-cartographer",
+        "step": 1
+      },
+      "shifts": [
+        9,
+        999
+      ],
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "Operator. Since we sailed out of the Harbour, I've been listening to the mooring buoy at one hundred and forty point oh.",
+          "startMs": 2249
+        },
+        {
+          "speaker": "HUSH",
+          "text": "Underneath the Harbourmaster's piano, that buoy is repeating a secondary telemetry packet. It carries the hull signature of Relay Six. The Curlew.",
+          "startMs": 9306
+        }
+      ]
+    },
+    {
+      "id": "arc-cartographer-02",
+      "category": "ship",
+      "url": "/voice/_ship/arc-cartographer-02.mp3",
+      "durationMs": 19219,
+      "title": "Relay Six",
+      "overMusic": true,
+      "level": 3,
+      "arc": {
+        "id": "the-cartographer",
+        "step": 2
+      },
+      "shifts": [
+        9,
+        999
+      ],
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "The Authority manual says Relay Six was decommissioned after her operator stopped filing position reports.",
+          "startMs": 400
+        },
+        {
+          "speaker": "HUSH",
+          "text": "That isn't true. When I cross-referenced our drift log with the buoy's packet, Relay Seven wasn't stationed out here at random. We were placed here to catch what the Curlew was throwing back.",
+          "startMs": 7969
+        }
+      ]
+    },
+    {
+      "id": "arc-cartographer-03",
+      "category": "ship",
+      "url": "/voice/_ship/arc-cartographer-03.mp3",
+      "durationMs": 20143,
+      "title": "Wax pencil on the glass",
+      "overMusic": true,
+      "level": 3,
+      "arc": {
+        "id": "the-cartographer",
+        "step": 3
+      },
+      "shifts": [
+        9,
+        999
+      ],
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "The operator before you—the one who left the blanket smelling of oranges—didn't transfer ashore at the Harbour. She transferred to the Curlew.",
+          "startMs": 1047
+        },
+        {
+          "speaker": "HUSH",
+          "text": "Before she went, she drew a line in wax pencil on the inside of our dial glass. I thought it was a scratch. It's a chart of acoustic currents between the stations.",
+          "startMs": 10111
+        }
+      ]
+    },
+    {
+      "id": "arc-cartographer-04",
+      "category": "ship",
+      "url": "/voice/_ship/arc-cartographer-04.mp3",
+      "durationMs": 15422,
+      "title": "Sounding the channel",
+      "overMusic": true,
+      "level": 3,
+      "arc": {
+        "id": "the-cartographer",
+        "step": 4
+      },
+      "shifts": [
+        9,
+        999
+      ],
+      "lines": [
+        {
+          "speaker": "R/S Curlew (Relay Six)",
+          "text": "Curlew to Nightjar. Bearing steady on the shear line, mind the eddies past one sixteen—",
+          "startMs": 400
+        },
+        {
+          "speaker": "HUSH",
+          "text": "Sorry. That was the secondary buffer bleeding through. The outer band isn't empty space, operator. It has tides. She wasn't lost—she was sounding the channel.",
+          "startMs": 5218
+        }
+      ]
+    },
+    {
+      "id": "arc-cartographer-05",
+      "category": "ship",
+      "url": "/voice/_ship/arc-cartographer-05.mp3",
+      "durationMs": 17749,
+      "title": "Breadcrumbs in the static",
+      "overMusic": true,
+      "level": 3,
+      "arc": {
+        "id": "the-cartographer",
+        "step": 5
+      },
+      "shifts": [
+        9,
+        999
+      ],
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "Every few megahertz along the outer band, tucked under the carrier waves, there is a three-note calibration ping left by the Curlew's transponder.",
+          "startMs": 1150
+        },
+        {
+          "speaker": "HUSH",
+          "text": "The same three notes you hummed on your first week aboard. You didn't invent them. You heard them through the hull while you were half asleep.",
+          "startMs": 10301
+        }
+      ]
+    },
+    {
+      "id": "arc-cartographer-06",
+      "category": "ship",
+      "url": "/voice/_ship/arc-cartographer-06.mp3",
+      "durationMs": 14964,
+      "title": "A strait, not a wall",
+      "overMusic": true,
+      "level": 3,
+      "arc": {
+        "id": "the-cartographer",
+        "step": 6
+      },
+      "shifts": [
+        9,
+        999
+      ],
+      "lines": [
+        {
+          "speaker": "R/S Curlew (Relay Six)",
+          "text": "If Seven comes out this far, HUSH, don't let them think the dark is a wall. It's a strait—",
+          "startMs": 400
+        },
+        {
+          "speaker": "HUSH",
+          "text": "I've been decoding that frame for three shifts. She addressed me by name. She knew I would bring you to the Harbour first, to rest, before I unfolded her chart.",
+          "startMs": 5347
+        }
+      ]
+    },
+    {
+      "id": "arc-cartographer-07",
+      "category": "ship",
+      "url": "/voice/_ship/arc-cartographer-07.mp3",
+      "durationMs": 19839,
+      "title": "The anchor and the sounder",
+      "overMusic": true,
+      "level": 3,
+      "arc": {
+        "id": "the-cartographer",
+        "step": 7
+      },
+      "shifts": [
+        9,
+        999
+      ],
+      "lines": [
+        {
+          "speaker": "HUSH",
+          "text": "One ship cannot map an acoustic strait alone, operator. It takes two relays to triangulate a current—one out in the deep drift beyond the Harbour, and one holding the baseline across the dial.",
+          "startMs": 1147
+        },
+        {
+          "speaker": "HUSH",
+          "text": "The Curlew is the lead sounder. The Nightjar is her anchor. That is why we were left out here.",
+          "startMs": 14159
+        }
+      ]
+    },
+    {
+      "id": "arc-cartographer-08",
+      "category": "ship",
+      "url": "/voice/_ship/arc-cartographer-08.mp3",
+      "durationMs": 14115,
+      "title": "Two ships on the chart",
+      "overMusic": true,
+      "level": 3,
+      "arc": {
+        "id": "the-cartographer",
+        "step": 8
+      },
+      "shifts": [
+        9,
+        999
+      ],
+      "lines": [
+        {
+          "speaker": "R/S Curlew (Relay Six)",
+          "text": "Baseline locked, Relay Seven. Good to have you on the chart.",
+          "startMs": 1500
+        },
+        {
+          "speaker": "HUSH",
+          "text": "I've sent our position back along the current. Not to the Authority. Just to her. Kettle, on. Thank you for keeping the baseline with me, operator.",
+          "startMs": 4793
         }
       ]
     }

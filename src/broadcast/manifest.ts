@@ -10,6 +10,7 @@ import {
   type VoiceClip,
   type VoiceManifest,
 } from './types';
+import { registerSerialClips } from './scheduler';
 
 const DAYPARTS: readonly Daypart[] = ['morning', 'day', 'evening', 'night'];
 
@@ -46,6 +47,9 @@ export function parseManifest(data: unknown, expectedStation?: string): VoiceMan
     seen.add(clip.id);
     clips.push(clip);
   });
+  if (station && !station.startsWith('_')) {
+    registerSerialClips(station, clips);
+  }
   return { version: 1, station, clips };
 }
 
@@ -100,6 +104,13 @@ function parseClip(raw: unknown): VoiceClip | null {
   }
   const days = parseDays(raw.days);
   if (days) clip.days = days;
+  const shifts = parseShifts(raw.shifts);
+  if (shifts) clip.shifts = shifts;
+  if (typeof raw.trigger === 'string' && SHIP_TRIGGERS.has(raw.trigger)) {
+    clip.trigger = raw.trigger as VoiceClip['trigger'];
+  }
+  const swapWith = raw.swapWith ?? raw.swap_with;
+  if (typeof swapWith === 'string' && swapWith) clip.swapWith = swapWith;
   return clip;
 }
 
@@ -108,6 +119,24 @@ function parseDays(raw: unknown): number[] | undefined {
   if (!Array.isArray(raw)) return undefined;
   const days = [...new Set(raw.map(Number).filter((d) => Number.isInteger(d) && d >= 0 && d <= 6))].sort((a, b) => a - b);
   return days.length ? days : undefined;
+}
+
+const SHIP_TRIGGERS = new Set<string>([
+  'on_skip_streak',
+  'scanning_static',
+  'on_pirate',
+  'after_event',
+  'near_secret',
+  'on_station',
+]);
+
+/** Inclusive `[minShift, maxShift]` range (`0 <= min <= max`, integers); undefined if invalid. */
+function parseShifts(raw: unknown): [number, number] | undefined {
+  if (!Array.isArray(raw) || raw.length !== 2) return undefined;
+  const min = Number(raw[0]);
+  const max = Number(raw[1]);
+  if (!Number.isInteger(min) || !Number.isInteger(max) || min < 0 || max < min) return undefined;
+  return [min, max];
 }
 
 type Part = NonNullable<VoiceClip['part']>;

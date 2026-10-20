@@ -92,13 +92,13 @@
       "id": "id-007",
       "category": "id",
       "url": "/voice/rainfall-fm/id-007.mp3",
-      "durationMs": 9062,
+      "durationMs": 8414,
       "overMusic": true,
       "lines": [
         {
           "speaker": "Drizzle Montgomery",
-          "text": "Rainfall FM. If you can hear the rain louder than usual, your window's open. Close it, love. Or don't. It's nice.",
-          "startMs": 35
+          "text": "Rainfall FM. If you can hear the rain louder, your window's open. Close it, love. Or don't. It's nice.",
+          "startMs": 37
         }
       ]
     },

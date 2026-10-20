@@ -15,6 +15,7 @@ station = "atomic-bachelor-pad"
 
 [voices]
 host = { voice = "am_eric", speed = 1.0, name = "Monty Stereo" }
+console = { voice = "am_onyx", speed = 1.0, fx = "robot", name = "The Console" }
 
 [[show]]
 id = "morning-calibration"
@@ -51,7 +52,7 @@ lines = [
 id = "id-002"
 category = "id"
 lines = [
-  { say = "host", text = "You're listening to the Atomic Bachelor Pad, in stereo. If you can only hear half of this sentence, you are sitting too far to the left." },
+  { say = "host", text = "You're listening to the Atomic Bachelor Pad, in stereo. If you can only hear half of this sentence, you are sitting too far to the left.", pan = -1.0 },
 ]
 
 [[clip]]
@@ -67,7 +68,7 @@ id = "id-004"
 category = "id"
 daypart = "night"
 lines = [
-  { say = "host", text = "The Atomic Bachelor Pad. The lamps are low, the dials are glowing, and the bongos are in position. Your left. Always your left." },
+  { say = "host", text = "The Atomic Bachelor Pad. The lamps are low, the dials are glowing, and the bongos are in position. Your left. Always your left.", pan = -1.0 },
 ]
 
 [[clip]]
@@ -86,7 +87,7 @@ id = "dj-001"
 category = "dj"
 title = "The Bongos Travel"
 lines = [
-  { say = "host", text = "Now hear the bongos travel... to your left speaker.", gap = 1.0 },
+  { say = "host", text = "Now hear the bongos travel... to your left speaker.", gap = 1.0, pan = -1.0 },
   { say = "host", text = "There. Did you feel that? That, my friends, is the future. Some men go to the moon. I sit very still, and let the bongos come to me." },
 ]
 
@@ -96,7 +97,7 @@ category = "dj"
 title = "The Bouquet"
 lines = [
   { say = "host", text = "Let's take a moment with that vibraphone. Notice the bouquet. A bright attack, a long, warm finish, and notes of chrome and walnut." },
-  { say = "host", text = "Nineteen sixty two was an exceptional year for the vibraphone. Best served slightly chilled, from the right speaker." },
+  { say = "host", text = "Nineteen sixty two was an exceptional year for the vibraphone. Best served slightly chilled, from the right speaker.", pan = 1.0 },
 ]
 
 [[clip]]
@@ -104,7 +105,10 @@ id = "dj-003"
 category = "dj"
 title = "Table Tennis"
 lines = [
-  { say = "host", text = "Since nineteen sixty one, the orchestra on this next one has been playing table tennis across my living room. Trumpet, left. Trombone, right. Trumpet, left." },
+  { say = "host", text = "Since nineteen sixty one, the orchestra on this next one has been playing table tennis across my living room." },
+  { say = "host", text = "Trumpet, left.", pan = -1.0, gap = 0.45 },
+  { say = "host", text = "Trombone, right.", pan = 1.0, gap = 0.45 },
+  { say = "host", text = "Trumpet, left.", pan = -1.0 },
   { say = "host", text = "The score stands at four thousand two hundred and six all. Nobody has ever won. Nobody wants to." },
 ]
 
@@ -113,7 +117,9 @@ id = "dj-004"
 category = "dj"
 title = "The Theremin Is in the Hallway"
 lines = [
-  { say = "host", text = "Some of you have written in to ask where the theremin is. It is not in the left speaker. It is not in the right speaker." },
+  { say = "host", text = "Some of you have written in to ask where the theremin is." },
+  { say = "host", text = "It is not in the left speaker.", pan = -1.0, gap = 0.45 },
+  { say = "host", text = "It is not in the right speaker.", pan = 1.0 },
   { say = "host", text = "In my professional opinion, the theremin is in the hallway. It has been there since Tuesday. I've left it a sandwich." },
 ]
 
@@ -164,11 +170,11 @@ lines = [
   { say = "host", text = "Greg was located dead centre, at a level of almost nothing. On a lesser console, you'd hear silence. On mine, you could hear him being shy. Four stars." },
 ]
 
-# ── Starburst Hi-Fi kit (pitch, small print, tag) ────────────────────────────
+# ── Hi-fi kit (category dj): the demonstration, the bar, a console that argues ─
 
 [[clip]]
 id = "hifi-open-01"
-category = "ad"
+category = "dj"
 kit = "hifi"
 part = "open"
 lines = [
@@ -177,7 +183,7 @@ lines = [
 
 [[clip]]
 id = "hifi-body-01"
-category = "ad"
+category = "dj"
 kit = "hifi"
 part = "body"
 lines = [
@@ -186,7 +192,7 @@ lines = [
 
 [[clip]]
 id = "hifi-body-02"
-category = "ad"
+category = "dj"
 kit = "hifi"
 part = "body"
 lines = [
@@ -195,7 +201,7 @@ lines = [
 
 [[clip]]
 id = "hifi-body-03"
-category = "ad"
+category = "dj"
 kit = "hifi"
 part = "body"
 lines = [
@@ -204,7 +210,7 @@ lines = [
 
 [[clip]]
 id = "hifi-close-01"
-category = "ad"
+category = "dj"
 kit = "hifi"
 part = "close"
 lines = [
@@ -228,8 +234,8 @@ category = "psa"
 kit = "stereo-test"
 part = "body"
 lines = [
-  { say = "host", text = "This is the left speaker. Hello.", gap = 0.8 },
-  { say = "host", text = "This is the right speaker. Hello.", gap = 0.8 },
+  { say = "host", text = "This is the left speaker. Hello.", gap = 0.8, pan = -1.0 },
+  { say = "host", text = "This is the right speaker. Hello.", gap = 0.8, pan = 1.0 },
   { say = "host", text = "If those both came from the same place, please call a professional." },
 ]
 
@@ -342,7 +348,10 @@ category = "dj"
 title = "The Haunted Theremin"
 dates = ["10-24", "10-25", "10-26", "10-27", "10-28", "10-29", "10-30", "10-31"]
 lines = [
-  { say = "host", text = "A special Halloween demonstration. Hear the haunted theremin travel from your left speaker, to your right speaker, and then out of the room entirely, and up the stairs.", gap = 0.8 },
+  { say = "host", text = "A special Halloween demonstration.", gap = 0.3 },
+  { say = "host", text = "Hear the haunted theremin travel from your left speaker.", pan = -1.0, gap = 0.45 },
+  { say = "host", text = "To your right speaker.", pan = 1.0, gap = 0.45 },
+  { say = "host", text = "And then out of the room entirely, and up the stairs.", gap = 0.6 },
   { say = "host", text = "I don't have any stairs. It's a split level. Nevertheless. Footsteps." },
 ]
 
@@ -406,4 +415,134 @@ kit = "the-pigeon"
 lines = [
   { say = "host", text = "A pigeon has walked into the living room, and is standing on the chalk mark, exactly between the speakers.", gap = 0.5 },
   { say = "host", text = "Found the sweet spot first time. That bird has been in this business longer than I have." },
+]
+
+
+# ── Hi-fi kit, continued: Monty off-mic at the bar, the console interrupting ─
+
+[[clip]]
+id = "hifi-open-02"
+category = "dj"
+kit = "hifi"
+part = "open"
+title = "From the Bar"
+lines = [
+  { say = "host", text = "Monty Stereo, from the bar, well off the sweet spot. The demonstration continues without me. It prefers it that way.", gain = -6.0, gap = -0.35 },
+  { say = "console", text = "Host displaced. Centre image holding. Proceed.", fx = "robot" },
+]
+
+[[clip]]
+id = "hifi-open-03"
+category = "dj"
+kit = "hifi"
+part = "open"
+title = "Left, Then Right"
+lines = [
+  { say = "host", text = "A high fidelity demonstration. First the left speaker.", pan = -1.0, gap = 0.45 },
+  { say = "host", text = "Then the right. If you turned your head, turn it back.", pan = 1.0 },
+]
+
+[[clip]]
+id = "hifi-open-04"
+category = "dj"
+kit = "hifi"
+part = "open"
+title = "Incorrect Range"
+lines = [
+  { say = "console", text = "Demonstration loaded. Walnut, valves, and one host at incorrect range.", fx = "robot", gap = -0.35 },
+  { say = "host", text = "Incorrect range is the bar, thank you. We begin.", gain = -6.0 },
+]
+
+[[clip]]
+id = "hifi-body-04"
+category = "dj"
+kit = "hifi"
+part = "body"
+title = "A Log of the Host"
+lines = [
+  { say = "host", text = "The Futureville Fidelity Console keeps a log of every note. It has started keeping a log of me.", gap = -0.35 },
+  { say = "console", text = "Host crossed the room at nineteen forty. Drink detected. Not on the schematic.", fx = "robot", gap = 0.3 },
+  { say = "host", text = "That drink is a prop. The schematic can mind its own walnut.", gain = -6.0, gap = 0.4 },
+  { say = "console", text = "Prop logged. Schematic offended. Continuing.", fx = "robot" },
+]
+
+[[clip]]
+id = "hifi-body-05"
+category = "dj"
+kit = "hifi"
+part = "body"
+title = "Hard Left, Hard Right"
+lines = [
+  { say = "host", text = "Bongos, hard left. They have been asked to stay there.", pan = -1.0, gap = 0.5 },
+  { say = "host", text = "Vibraphone, hard right. Chilled, as promised, and slightly judgmental.", pan = 1.0, gap = 0.45 },
+  { say = "console", text = "Left channel nominal. Right channel filing a complaint.", fx = "robot", gap = -0.35 },
+  { say = "host", text = "The complaint is part of the bouquet. Leave it in.", gain = -6.0 },
+]
+
+[[clip]]
+id = "hifi-body-06"
+category = "dj"
+kit = "hifi"
+part = "body"
+title = "Valve Nineteen"
+lines = [
+  { say = "host", text = "Forty two glowing valves, and one of them has started answering back. I did not order a conversational valve.", gap = -0.35 },
+  { say = "console", text = "Valve nineteen has opinions. Valve nineteen is incorrect.", fx = "robot", gap = 0.25 },
+  { say = "host", text = "Valve nineteen can take it up with the bar. I am at the bar.", gain = -6.0 },
+]
+
+[[clip]]
+id = "hifi-body-07"
+category = "dj"
+kit = "hifi"
+part = "body"
+title = "Brass in the Hallway"
+lines = [
+  { say = "console", text = "Warning. The trombone has left the right speaker and is in the hallway with the theremin.", fx = "robot", gap = -0.35 },
+  { say = "host", text = "The hallway is not a channel. I have told the hallway. I have told the trombone.", gap = 0.3 },
+  { say = "host", text = "If you can hear brass coming from your coat cupboard, that is high fidelity, and also a problem.", gain = -6.0 },
+]
+
+[[clip]]
+id = "hifi-body-08"
+category = "dj"
+kit = "hifi"
+part = "body"
+title = "The Handshake"
+lines = [
+  { say = "host", text = "Hear a handshake from across the room. Mine. I am at the bar, and the console is taking minutes.", gain = -6.0, gap = -0.35 },
+  { say = "console", text = "Minutes corrupted. Handshake assigned to the left speaker by mistake.", fx = "robot", gap = 0.3 },
+  { say = "host", text = "Leave it on the left. A handshake should know where it stands.", pan = -1.0 },
+]
+
+[[clip]]
+id = "hifi-close-02"
+category = "dj"
+kit = "hifi"
+part = "close"
+title = "Notes from the Bar"
+lines = [
+  { say = "host", text = "That was the demonstration. I heard it from the bar. The bar has notes.", gain = -6.0, gap = -0.35 },
+  { say = "console", text = "Notes rejected. Bar is not a calibrated seat.", fx = "robot" },
+]
+
+[[clip]]
+id = "hifi-close-03"
+category = "dj"
+kit = "hifi"
+part = "close"
+title = "Not in the Script"
+lines = [
+  { say = "host", text = "Starburst Hi-Fi, on the Atomic Parkway. If the console spoke to you, it was not in the script." },
+]
+
+[[clip]]
+id = "hifi-close-04"
+category = "dj"
+kit = "hifi"
+part = "close"
+title = "The Olive"
+lines = [
+  { say = "console", text = "End of demonstration. Host still at the bar. Centre image lonely.", fx = "robot", gap = -0.35 },
+  { say = "host", text = "The centre image can have my olive. I'm not moving.", gain = -6.0 },
 ]

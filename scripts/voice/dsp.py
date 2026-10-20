@@ -34,6 +34,14 @@ def db(gain_db: float) -> float:
     return float(10 ** (gain_db / 20))
 
 
+def pan(x: np.ndarray, pos: float = 0.0) -> np.ndarray:
+    """Constant-power stereo pan of a 1D mono signal into an (N, 2) float32 array."""
+    angle = (pos + 1.0) * (np.pi / 4.0)
+    left = float(np.cos(angle))
+    right = float(np.sin(angle))
+    return np.column_stack([x * left, x * right]).astype(np.float32)
+
+
 # ── Noise ─────────────────────────────────────────────────────────────────────
 
 
@@ -83,6 +91,8 @@ def _apply_gain(x: np.ndarray, gain_fn) -> np.ndarray:
     n = len(x)
     if n == 0:
         return f32(x)
+    if x.ndim == 2:
+        return np.column_stack([_apply_gain(x[:, c], gain_fn) for c in range(x.shape[1])]).astype(np.float32)
     size = n + _PAD
     spec = np.fft.rfft(x, size)
     f = np.fft.rfftfreq(size, 1 / SR)
@@ -188,10 +198,18 @@ def loudness(x: np.ndarray, sr: int = SR) -> float:
     if n == 0:
         return -120.0
     size = n + _PAD
-    spec = np.fft.rfft(np.asarray(x, np.float64), size)
     f = np.fft.rfftfreq(size, 1 / sr)
-    y = np.fft.irfft(spec * np.sqrt(_k_weighting_power(f, sr)), size)[:n]
-    power = y * y
+    kw = np.sqrt(_k_weighting_power(f, sr))
+    if x.ndim == 2:
+        power = np.zeros(n, dtype=np.float64)
+        for ch in range(x.shape[1]):
+            spec = np.fft.rfft(np.asarray(x[:, ch], np.float64), size)
+            y = np.fft.irfft(spec * kw, size)[:n]
+            power += y * y
+    else:
+        spec = np.fft.rfft(np.asarray(x, np.float64), size)
+        y = np.fft.irfft(spec * kw, size)[:n]
+        power = y * y
     block, hop = int(0.4 * sr), int(0.1 * sr)
     if n <= block:
         return float(-0.691 + 10 * np.log10(power.mean() + 1e-20))
@@ -237,6 +255,8 @@ def peak_envelope(x: np.ndarray) -> np.ndarray:
     """True-peak magnitude around each sample (max of the 4x oversampled values)."""
     if len(x) == 0:
         return np.zeros(0, np.float32)
+    if x.ndim == 2:
+        return np.maximum.reduce([peak_envelope(x[:, c]) for c in range(x.shape[1])])
     up = np.abs(_upsample4(x)).reshape(len(x), 4).max(axis=1)
     return np.maximum(up, np.abs(x))
 
@@ -282,7 +302,7 @@ def limit(x: np.ndarray, ceiling_db: float, attack_ms: float = 1.5, smooth_ms: f
     look = w1 + w2
     held = _sliding_min(np.concatenate([np.ones(hold), need]), hold + look)[: len(need)]
     gain = _causal_mean(_causal_mean(held, w1), w2)
-    return f32(x * gain)
+    return f32(x * (gain[:, None] if x.ndim == 2 else gain))
 
 
 # ── Envelopes and tones ───────────────────────────────────────────────────────
@@ -292,11 +312,13 @@ def fade(x: np.ndarray, fade_in: float = 0.0, fade_out: float = 0.0) -> np.ndarr
     x = f32(x).copy()
     if fade_in > 0:
         n = min(len(x), ns(fade_in))
-        x[:n] *= np.sin(np.linspace(0, np.pi / 2, n)) ** 2
+        curve = np.sin(np.linspace(0, np.pi / 2, n)) ** 2
+        x[:n] *= curve[:, None] if x.ndim == 2 else curve
     if fade_out > 0:
         n = min(len(x), ns(fade_out))
         if n:
-            x[len(x) - n :] *= np.cos(np.linspace(0, np.pi / 2, n)) ** 2
+            curve = np.cos(np.linspace(0, np.pi / 2, n)) ** 2
+            x[len(x) - n :] *= curve[:, None] if x.ndim == 2 else curve
     return x
 
 
@@ -427,24 +449,42 @@ def mp3_rate_args(bitrate: str) -> list[str]:
 def encode_mp3(x: np.ndarray, path: str, bitrate: str = "48k", sr: int = SR) -> None:
     if not np.all(np.isfinite(x)):
         raise RuntimeError(f"refusing to encode NaN/inf samples into {path}")
+    ac = str(x.shape[1]) if x.ndim == 2 else "1"
     proc = subprocess.run(
         [
-            "ffmpeg", "-v", "error", "-nostdin", "-y", "-f", "f32le", "-ar", str(sr), "-ac", "1", "-i", "pipe:0",
-            "-c:a", "libmp3lame", *mp3_rate_args(bitrate), "-ar", str(sr), "-ac", "1",
+            "ffmpeg", "-v", "error", "-nostdin", "-y", "-f", "f32le", "-ar", str(sr), "-ac", ac, "-i", "pipe:0",
+            "-c:a", "libmp3lame", *mp3_rate_args(bitrate), "-ar", str(sr), "-ac", ac,
             "-map_metadata", "-1", "-id3v2_version", "0", "-write_id3v1", "0", "-f", "mp3", path,
         ],
-        input=f32(x).astype("<f4").tobytes(),
+        input=np.ascontiguousarray(f32(x), dtype="<f4").tobytes(),
         capture_output=True,
     )
     if proc.returncode != 0:
         raise RuntimeError(f"mp3 encode failed: {proc.stderr.decode(errors='replace').strip()}")
 
 
-def decode(path: str, sr: int = SR) -> np.ndarray:
+def _mp3_channels(path: str) -> int:
+    try:
+        with open(path, "rb") as f:
+            head = f.read(10)
+            if head[:3] == b"ID3" and len(head) >= 10:
+                size = ((head[6] & 0x7F) << 21) | ((head[7] & 0x7F) << 14) | ((head[8] & 0x7F) << 7) | (head[9] & 0x7F)
+                f.seek(10 + size)
+                head = f.read(4)
+        if len(head) >= 4 and head[0] == 0xFF and (head[1] & 0xE0) == 0xE0:
+            return 1 if ((head[3] >> 6) & 0x3) == 3 else 2
+    except OSError:
+        pass
+    return 1
+
+
+def decode(path: str, sr: int = SR, channels: int | None = None) -> np.ndarray:
+    ch = channels if channels is not None else _mp3_channels(path)
     proc = subprocess.run(
-        ["ffmpeg", "-v", "error", "-nostdin", "-i", path, "-f", "f32le", "-ar", str(sr), "-ac", "1", "pipe:1"],
+        ["ffmpeg", "-v", "error", "-nostdin", "-i", path, "-f", "f32le", "-ar", str(sr), "-ac", str(ch), "pipe:1"],
         capture_output=True,
     )
     if proc.returncode != 0:
         raise RuntimeError(f"decode failed for {path}: {proc.stderr.decode(errors='replace').strip()}")
-    return np.frombuffer(proc.stdout, dtype="<f4").astype(np.float32)
+    out = np.frombuffer(proc.stdout, dtype="<f4").astype(np.float32)
+    return out.reshape(-1, ch) if ch > 1 else out

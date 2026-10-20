@@ -1,14 +1,21 @@
-import { useState, type CSSProperties } from 'react';
+import { useMemo, useState, type CSSProperties } from 'react';
 import { useBroadcast } from '../broadcast/store';
-import { shipLogNote } from '../content';
+import { activeSerialForDay, getSerialDirectory } from '../broadcast/scheduler';
+import { localTime } from '../broadcast/time';
+import { shipLogNote, stationWireFeed } from '../content';
+import { stationById } from '../stations/roster';
 import { SHIP } from '../stations/ship';
 import * as act from '../ui/actions';
 import { pirateFrequency } from '../ui/dial';
 import { formatClock, formatHeading, formatMhzPadded, hash } from '../ui/format';
 import { phosphorHex } from '../ui/phosphor';
+import { useTuned } from '../ui/select';
 import { clearShipLog, LOG_MAX, useShipLog, type LogEntry } from '../ui/shiplog';
 import { openPanel, useUi } from '../ui/store';
 import { Panel } from './Panel';
+
+const clockOf = (minuteOfDay: number) =>
+  `${String(Math.floor(minuteOfDay / 60)).padStart(2, '0')}:${String(minuteOfDay % 60).padStart(2, '0')}`;
 
 const dayLabel = (ms: number) =>
   new Date(ms).toLocaleDateString(undefined, { weekday: 'short', day: 'numeric', month: 'short' }).toUpperCase();
@@ -23,7 +30,27 @@ export default function ShipLogPanel() {
   const shifts = useBroadcast((s) => s.shifts);
   const heading = useBroadcast((s) => s.heading);
   const shiftStart = useUi((s) => s.shiftStart);
+  const tuned = useTuned();
   const [confirm, setConfirm] = useState(false);
+  const localDay = localTime(Date.now()).day;
+  const serials = useMemo(
+    () =>
+      getSerialDirectory()
+        .map((entry) => activeSerialForDay(entry.serialId, localDay))
+        .filter((status) => status !== undefined)
+        .map((status) => ({
+          ...status,
+          station: stationById(status.stationId)?.name ?? status.stationId,
+          nextStation: stationById(status.nextStationId)?.name ?? status.nextStationId,
+          frequency: stationById(status.stationId)?.frequency,
+        })),
+    [localDay],
+  );
+  const tunedStation = tuned.kind === 'station' ? tuned.station : null;
+  const wire = useMemo(
+    () => (tunedStation ? stationWireFeed(tunedStation, localDay) : null),
+    [tunedStation, localDay],
+  );
 
   const contacts = discovered
     .map((id) => {
@@ -72,6 +99,75 @@ export default function ShipLogPanel() {
           <dd className="tabular">{contacts.length}</dd>
         </div>
       </dl>
+
+      <section className="log-section" aria-labelledby="log-serials">
+        <h3 id="log-serials" className="dir-heading">
+          Serials on the dial
+          <span className="dir-count">{serials.length}</span>
+        </h3>
+        {serials.length === 0 ? (
+          <p className="log-empty">No serial is booked on today’s clock.</p>
+        ) : (
+          <ul className="log-serials">
+            {serials.map((serial) => (
+              <li key={serial.serialId}>
+                <span className="log-serial-title">{serial.title}</span>
+                <span className="log-serial-ep">
+                  Episode {serial.episode} of {serial.totalEpisodes}
+                  {serial.episodeTitle && serial.episodeTitle !== serial.title ? ` · ${serial.episodeTitle}` : ''}
+                </span>
+                <span className="log-serial-where">
+                  Today on {serial.station}
+                  {serial.airMinutes.length > 0 ? ` · ${serial.airMinutes.map(clockOf).join(', ')}` : ''}
+                </span>
+                <span className="log-serial-next">
+                  Next: episode {serial.nextEpisode} on {serial.nextStation}
+                </span>
+                {serial.frequency !== undefined && (
+                  <button
+                    type="button"
+                    className="chip"
+                    onClick={() => {
+                      act.tune(serial.stationId);
+                      openPanel(null);
+                    }}
+                  >
+                    Tune
+                  </button>
+                )}
+              </li>
+            ))}
+          </ul>
+        )}
+      </section>
+
+      {wire && tunedStation && (
+        <section className="log-section wire" aria-labelledby="log-wire">
+          <h3 id="log-wire" className="dir-heading">
+            Station wire
+            <span className="dir-note">{tunedStation.name}</span>
+          </h3>
+          <dl className="wire-lines">
+            <div>
+              <dt>Reception</dt>
+              <dd>{wire.reception}</dd>
+            </div>
+            <div>
+              <dt>Weather</dt>
+              <dd>{wire.weather}</dd>
+            </div>
+            <div>
+              <dt>Listener</dt>
+              <dd>{wire.listener}</dd>
+            </div>
+          </dl>
+          <ul className="wire-ticker">
+            {wire.ticker.map((line, i) => (
+              <li key={`${i}:${line}`}>{line}</li>
+            ))}
+          </ul>
+        </section>
+      )}
 
       <section className="log-section" aria-labelledby="log-contacts">
         <h3 id="log-contacts" className="dir-heading">

@@ -274,7 +274,7 @@ part = "open"
 title = "The 3 AM Hour"
 lines = [
   { say = "host", text = "This is the three in the morning hour, on Void Beats. If you're awake, you're in the right place." },
-  { say = "host", text = "If you're asleep, that's also the right place." },
+  { say = "host", text = "If you're asleep, that's the right place." },
   { sting = "id" },
 ]
 
@@ -649,4 +649,66 @@ days = [1]
 lines = [
   { say = "host", text = "Shout-out to Greg, who did his first show on Sunday, on the Lounge at the End of Time. I listened to the whole thing. I didn't hear any of it." },
   { say = "host", text = "The void heard it. The void says it was about a porch light. The void has been very quiet all day." },
+]
+
+[[clip]]
+id = "the-void-takes-over-close"
+category = "id"
+title = "The Void Takes Over"
+part = "close"
+show = "the-void-takes-over"
+lines = [
+  { say = "void", text = "That was the void. She is waking up. I have put the blanket back.", gap = 0.8 },
+  { say = "void", text = "Do not tell her I hosted.", gap = 0.8 },
+]
+
+[[clip]]
+id = "the-void-takes-over-04"
+category = "dj"
+show = "the-void-takes-over"
+lines = [
+  { say = "void", text = "She talks in her sleep.", gap = 1.0, pan = -0.5 },
+  { say = "void", text = "She said, play the one with the kettle.", gap = 1.2 },
+  { say = "void", text = "I played it. The kettle joined in.", gap = 1.0 },
+  { say = "void", text = "Hm.", gap = 0.8, gain = -6.0 },
+]
+
+[[clip]]
+id = "the-void-takes-over-05"
+category = "dj"
+show = "the-void-takes-over"
+lines = [
+  { say = "void", text = "A napkin blew in. There is no door. It blew in anyway.", gap = 1.1, pan = -0.5 },
+  { say = "void", text = "It asks if I get tired. I made her bed. I do not sleep.", gap = 1.2 },
+  { say = "void", text = "Next song. Soft. She can wake up inside it, if she wants.", gap = 1.0 },
+]
+
+[[clip]]
+id = "the-void-takes-over-06"
+category = "call"
+title = "DJ Eventually, Under The Blanket"
+show = "the-void-takes-over"
+lines = [
+  { sfx = "phone-ring" },
+  { say = "void", text = "Void Beats.", gap = 0.8, pan = -0.5 },
+  { say = "host", text = "It's me. I'm under the blanket. You took my show. You also did the dishes. We had a deal about the dishes.", fx = "phone", pan = 0.5, gap = -0.35 },
+  { say = "void", text = "You were asleep.", gap = 0.9 },
+  { say = "host", text = "I was resting my eyes. Hosts do that. And you played the kettle song. That one is private. It is for when the probably-a-cat is sad.", fx = "phone", pan = 0.5 },
+  { say = "void", text = "The cat was sad. The song knew. I am hosting.", gap = 1.0, pan = -0.5 },
+  { say = "host", text = "You can't just be the station. You're the quiet bit. I'm the one with the mouth.", fx = "phone", pan = 0.5, gain = -6.0 },
+  { say = "void", text = "Your mouth is asleep. I am being careful with it.", gap = 1.0 },
+  { say = "host", text = "Don't tell them I drool. And don't tell them the dishes thing. I was going to do the dishes.", fx = "phone", pan = 0.5 },
+  { say = "void", text = "You were not. Hm. Go back under. I have put the song on.", gap = 0.8 },
+  { sfx = "phone-hangup" },
+  { say = "void", text = "She went back under. Next song.", gap = 0.6 },
+]
+
+[[clip]]
+id = "the-void-takes-over-07"
+category = "dj"
+show = "the-void-takes-over"
+lines = [
+  { say = "void", text = "The probably-a-cat has moved onto the notes.", gap = 1.2, pan = -0.5 },
+  { say = "void", text = "I did not move the cat. The cat is hosting now.", gap = 1.2 },
+  { say = "void", text = "I am only the quiet underneath. That is allowed.", gap = 1.0, gain = -6.0, pan = 0.5 },
 ]

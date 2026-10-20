@@ -10,6 +10,18 @@ import { createRng, hash, weightedPick } from './random';
 import { DAY_MS, MIN_MS } from './time';
 import { EVENT_IDS, type ActiveEvent, type EventId, type VoiceClip } from './types';
 
+declare module './types' {
+  interface ActiveEvent {
+    kind?: EventId;
+    stationA?: string;
+    stationB?: string;
+  }
+  interface VoiceClip {
+    swapWith?: string;
+    swap_with?: string;
+  }
+}
+
 export const EVENT_NAMES: Record<EventId, string> = {
   'dimensional-storm': 'Dimensional storm',
   'emergency-broadcast': 'Emergency Multiverse Broadcast',
@@ -161,9 +173,84 @@ export function eventsBetween(fromMs: number, toMs: number): ActiveEvent[] {
 }
 
 /** A manual event (the lab's "force event"), starting at `startMs`. */
-export function makeEvent(id: EventId, startMs: number, durationMs?: number): ActiveEvent {
+export function makeEvent(
+  id: EventId,
+  startMs: number,
+  durationMs?: number,
+  stations?: { stationA?: string; stationB?: string } | string,
+  stationB?: string,
+): ActiveEvent {
   const [lo, hi] = LENGTH_S[id];
-  return { id, name: EVENT_NAMES[id], startMs, durationMs: durationMs ?? Math.round((lo + hi) / 2) * 1000 };
+  const event: ActiveEvent = {
+    id,
+    name: EVENT_NAMES[id],
+    startMs,
+    durationMs: durationMs ?? Math.round((lo + hi) / 2) * 1000,
+  };
+  if (typeof stations === 'string') {
+    event.stationA = stations;
+    if (stationB) event.stationB = stationB;
+  } else if (stations) {
+    if (stations.stationA) event.stationA = stations.stationA;
+    if (stations.stationB) event.stationB = stations.stationB;
+  }
+  return event;
+}
+
+// ── Paired station-swap crossovers ────────────────────────────────────────────
+
+/** Built-in paired station-swap rules for `_events` clip IDs before manifest re-rendering. */
+export const PAIRED_SWAP_RULES: Readonly<Record<string, readonly [string, string]>> = {
+  'swap-007': ['win-this-planet', 'snail-jams'],
+};
+
+/** Returns the swap partner on a clip (supporting both camelCase `swapWith` and snake_case `swap_with`). */
+export function swapPartnerOf(clip: VoiceClip): string | undefined {
+  return clip.swapWith ?? (clip as { swap_with?: string }).swap_with;
+}
+
+/** Effective stations array for a clip (combining `clip.stations` and `PAIRED_SWAP_RULES`). */
+function effectiveSwapStations(clip: VoiceClip): readonly string[] | undefined {
+  if (clip.stations?.length) return clip.stations;
+  return PAIRED_SWAP_RULES[clip.id];
+}
+
+/** True if this clip is a two-station paired crossover clip (`stations` has ≥2 entries, `swapWith`/`swap_with` is set, or in `PAIRED_SWAP_RULES`). */
+export function isPairedSwapClip(clip: VoiceClip): boolean {
+  const stations = effectiveSwapStations(clip);
+  return Boolean((stations && stations.length >= 2) || swapPartnerOf(clip));
+}
+
+/** True if a paired crossover clip matches the swapping pair `(stationA, stationB)` in either order. */
+export function matchesPairedSwap(clip: VoiceClip, stationA?: string, stationB?: string): boolean {
+  if (!stationA || !stationB || stationA === stationB) return false;
+  if (!isPairedSwapClip(clip)) return false;
+  const stations = effectiveSwapStations(clip);
+  const partner = swapPartnerOf(clip);
+  if (stations && stations.length >= 2) {
+    const hasBoth = stations.includes(stationA) && stations.includes(stationB);
+    if (!hasBoth) return false;
+    if (partner && partner !== stationA && partner !== stationB) return false;
+    return true;
+  }
+  if (partner) {
+    if (stations && stations.length === 1) {
+      const own = stations[0]!;
+      return (own === stationA && partner === stationB) || (own === stationB && partner === stationA);
+    }
+    return partner === stationA || partner === stationB;
+  }
+  return false;
+}
+
+/** True if a paired crossover clip includes `stationId` as one of its two stations. */
+export function pairIncludesStation(clip: VoiceClip, stationId?: string): boolean {
+  if (!stationId || !isPairedSwapClip(clip)) return false;
+  const stations = effectiveSwapStations(clip);
+  const partner = swapPartnerOf(clip);
+  if (stations?.includes(stationId)) return true;
+  if (partner === stationId) return true;
+  return false;
 }
 
 // ── Plans ─────────────────────────────────────────────────────────────────────
@@ -208,24 +295,73 @@ const MAX_CLIPS = 3;
 /**
  * What airs during an event: which `event` clips, when, and how the station is treated.
  * Deterministic for an event; `stationId` only narrows clips that name their stations.
+ * For `station-swap`, paired crossover clips matching `(stationA, stationB)` are prioritized
+ * over single-station and generic swap clips, and never air for unrelated station pairs.
  */
-export function planEvent(event: ActiveEvent, pool: readonly VoiceClip[], stationId?: string): EventPlan {
-  if (event.id === 'convergence') return planConvergence(event, pool, stationId);
-  const shape = SHAPE[event.id];
+export function planEvent(
+  event: ActiveEvent,
+  pool: readonly VoiceClip[],
+  stationId?: string,
+  partnerStationId?: string,
+): EventPlan {
+  const eventId = event.id ?? event.kind!;
+  if (eventId === 'convergence') return planConvergence(event, pool, stationId);
+  const shape = SHAPE[eventId];
   const end = event.startMs + event.durationMs;
   const order = (c: VoiceClip) => (c.part === 'open' ? 0 : c.part === 'close' ? 2 : 1);
+
+  const stationA = event.stationA ?? stationId;
+  const stationB = event.stationB ?? (event.stationA && stationId && stationId !== event.stationA ? stationId : partnerStationId);
+  const hasBothStations = Boolean(stationA && stationB && stationA !== stationB);
+  const singleStation = !hasBothStations ? (stationA || stationB) : undefined;
+  const pairAppliesToTuned = !stationId || stationId === stationA || stationId === stationB;
+
+  const matchesClip = (c: VoiceClip): boolean => {
+    if (c.event !== eventId) return false;
+    if (eventId === 'station-swap') {
+      if (isPairedSwapClip(c)) {
+        if (hasBothStations) {
+          return pairAppliesToTuned && matchesPairedSwap(c, stationA, stationB);
+        }
+        if (singleStation) {
+          return pairIncludesStation(c, singleStation);
+        }
+        return false;
+      }
+      if (c.stations?.length) {
+        if (stationId !== undefined) return c.stations.includes(stationId);
+        return (stationA !== undefined && c.stations.includes(stationA)) || (stationB !== undefined && c.stations.includes(stationB));
+      }
+      return true;
+    }
+    return !c.stations?.length || (stationId !== undefined && c.stations.includes(stationId));
+  };
+
+  const tier = (c: VoiceClip): number => {
+    if (eventId === 'station-swap') {
+      if (isPairedSwapClip(c)) return 0;
+      if (c.stations?.length) return 1;
+    }
+    return 2;
+  };
+
   const candidates = pool
-    .filter((c) => c.event === event.id && (!c.stations?.length || (stationId !== undefined && c.stations.includes(stationId))))
-    .map((clip) => ({ clip, rank: hash('event-clip', event.startMs, clip.url) }))
-    .sort((a, b) => order(a.clip) - order(b.clip) || a.rank - b.rank)
+    .filter(matchesClip)
+    .map((clip) => ({ clip, tier: tier(clip), rank: hash('event-clip', event.startMs, clip.url) }))
+    .sort((a, b) => order(a.clip) - order(b.clip) || a.tier - b.tier || a.rank - b.rank)
     .map((x) => x.clip);
 
   // At most one open and one close; bodies (and untagged clips) in between.
   const open = candidates.find((c) => c.part === 'open');
   const close = candidates.find((c) => c.part === 'close');
-  const bodies = candidates.filter((c) => c.part !== 'open' && c.part !== 'close');
-  const chosen: VoiceClip[] = [];
+  const allBodies = candidates.filter((c) => c.part !== 'open' && c.part !== 'close');
   const room = event.durationMs - shape.lead - 2000;
+
+  // When paired crossover clips exist for (stationA, stationB) and fit the event, prefer them exclusively over generic/single-station swap clips.
+  const pairedBodies = eventId === 'station-swap' ? allBodies.filter((c) => isPairedSwapClip(c) && c.durationMs <= room) : [];
+  const bodies = pairedBodies.length > 0 ? pairedBodies : allBodies;
+
+  const chosen: VoiceClip[] = [];
   let used = 0;
   const fits = (c: VoiceClip) => used + c.durationMs + (chosen.length ? CLIP_GAP_MS : 0) <= room;
   const take = (c: VoiceClip) => {
@@ -242,7 +378,7 @@ export function planEvent(event: ActiveEvent, pool: readonly VoiceClip[], statio
 
   let slip: EventPlan['slip'] = null;
   let t = event.startMs + shape.lead;
-  if (event.id === 'time-slip') {
+  if (eventId === 'time-slip') {
     // The replay runs first; whatever the hosts make of it airs once we snap back.
     let tail = chosen.length ? used + 2500 : 0;
     if (event.durationMs - tail < 30_000) {
@@ -258,6 +394,23 @@ export function planEvent(event: ActiveEvent, pool: readonly VoiceClip[], statio
     t += clip.durationMs + CLIP_GAP_MS;
   }
   return { event, clips, base: shape.base, underClip: shape.underClip, slip };
+}
+
+/** Helper facade for planning and picking event clips (including paired `station-swap` crossovers). */
+export class EventCenter {
+  constructor(private readonly defaultPool: readonly VoiceClip[] = []) {}
+
+  plan(event: ActiveEvent, pool: readonly VoiceClip[] = this.defaultPool, stationId?: string, partnerStationId?: string): EventPlan {
+    return planEvent(event, pool, stationId, partnerStationId);
+  }
+
+  pickClip(event: ActiveEvent, pool: readonly VoiceClip[] = this.defaultPool, stationId?: string, partnerStationId?: string): VoiceClip | undefined {
+    return this.plan(event, pool, stationId, partnerStationId).clips[0]?.clip;
+  }
+
+  pickClips(event: ActiveEvent, pool: readonly VoiceClip[] = this.defaultPool, stationId?: string, partnerStationId?: string): VoiceClip[] {
+    return this.plan(event, pool, stationId, partnerStationId).clips.map((c) => c.clip);
+  }
 }
 
 // ── The Convergence ───────────────────────────────────────────────────────────

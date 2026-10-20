@@ -1707,3 +1707,129 @@ part = "body"
 lines = [
   { say = "skip", text = "Space weather! The relay ships are drifting a little tonight, so if you hear new stations out past one hundred and eight, that's not interference, folks. That's neighbours! Give them a wave!" },
 ]
+
+
+# ── Overnight with Kim, and Good Morning across whatever is still standing. ──
+
+[[clip]]
+id = "overnight-with-kim-close"
+category = "id"
+title = "Overnight with Kim"
+part = "close"
+show = "overnight-with-kim"
+lines = [
+  { say = "kim", text = "That was Overnight with Kim. I'm stepping off the seam.", fx = "whisper", speed = 0.95 },
+  { say = "kim", text = "The lamp is going home. So am I, Dale. Not yet.", fx = "clean" },
+]
+
+[[clip]]
+id = "overnight-with-kim-04"
+category = "news"
+title = "The Seam Between Tuesday And Wednesday"
+show = "overnight-with-kim"
+lines = [
+  { say = "kim", text = "The news, from the place where the night is stitched. It's just gone three. I'm on the corner where Tuesday and Wednesday share a pavement, and the streetlights can't agree which night it is.", fx = "whisper", speed = 0.95, pan = -0.5 },
+  { say = "kim", text = "A bus from Thursday stopped on the Wednesday side, and nobody got off, because nobody was sure which day the fare belonged to. The driver handed me the timetable. It has two Thursdays, and no Friday.", fx = "clean", speed = 0.95 },
+  { say = "kim", text = "He said Friday called in sick. I believe him. Friday has looked tired all year.", fx = "clean", gain = -6.0 },
+  { say = "kim", text = "If your street has a seam in it, step over, not on. I'm standing on this one so you don't have to. It's very quiet. The quiet is the story. Back to me, until five.", fx = "whisper", speed = 0.95 },
+]
+
+[[clip]]
+id = "overnight-with-kim-05"
+category = "dj"
+show = "overnight-with-kim"
+lines = [
+  { say = "kim", text = "On the overnight desk there's the lamp, the scarf, and a minute somebody handed me at the seam. The minute is warm. I've put it in my pocket.", fx = "clean", pan = -0.5 },
+  { say = "kim", text = "Don't tell Dale. He has strong views about loose minutes. He thinks they should be filed under eleven.", fx = "whisper", gain = -6.0, pan = 0.5 },
+  { say = "kim", text = "I'll give it back at dawn, if dawn is still where we left it. Here's the night, continuing.", fx = "clean" },
+]
+
+[[clip]]
+id = "overnight-with-kim-06"
+category = "call"
+title = "Dale, Awake And Against Seams"
+show = "overnight-with-kim"
+lines = [
+  { sfx = "phone-ring" },
+  { say = "kim", text = "Overnight with Kim. You're on the night desk.", fx = "whisper", pan = -0.5 },
+  { say = "dale", text = "Kim. It is three in the morning. I was asleep. The answering machine has you standing in a seam. Seams are carpentry. This is a newsroom.", fx = "phone", pan = 0.5, gap = -0.35 },
+  { say = "kim", text = "It's both, Dale. The pavement is Tuesday on my left and Wednesday on my right. I'm on the line. Somebody handed me the line. It's a bit of string, and a timetable.", fx = "clean", pan = -0.5 },
+  { say = "dale", text = "Put the string down. Come back to the building. It is always eleven in the building. It is never a seam. I am saying this from the hallway, in my dressing gown, and I am not pleased.", fx = "phone", pan = 0.5 },
+  { say = "kim", text = "You're on the phone, Dale. The phone is also a seam. It joins your hallway to my corner. Go back to sleep. I'll file it when you wake.", fx = "clean" },
+  { say = "dale", text = "I will wake at eleven.", fx = "phone", gain = -6.0, pan = 0.5 },
+  { say = "kim", text = "You always do. Goodnight, Dale.", fx = "whisper" },
+  { sfx = "phone-hangup" },
+  { say = "kim", text = "He'll get that one with his coffee. The seam is still here. So am I.", fx = "clean" },
+]
+
+[[clip]]
+id = "overnight-with-kim-07"
+category = "dj"
+show = "overnight-with-kim"
+lines = [
+  { say = "kim", text = "A woman just walked out of Wednesday, bought a paper from Tuesday, and went back the way she came. The paper was tomorrow's. She seemed used to it.", fx = "clean", pan = -0.5 },
+  { say = "kim", text = "She handed me the crossword. Half the clues are from a day we haven't had. I'll do the ones I can.", fx = "whisper", gain = -6.0 },
+  { say = "kim", text = "If you're awake on the wrong side of a night, you're in the right place. Stay with me until the streetlights pick a side.", fx = "clean" },
+]
+
+[[clip]]
+id = "good-morning-every-timeline-close"
+category = "id"
+title = "Good Morning, Every Timeline"
+part = "close"
+show = "good-morning-every-timeline"
+lines = [
+  { say = "skip", text = "That's the morning, every timeline! Eat something, even if your world has packed a bag." },
+  { say = "skip", text = "I'm Skip Daley. I'll be here tomorrow, if tomorrow is still on." },
+]
+
+[[clip]]
+id = "good-morning-every-timeline-04"
+category = "news"
+title = "Breakfast Across The Apocalypses"
+show = "good-morning-every-timeline"
+lines = [
+  { say = "skip", text = "Good morning to the timeline where the moon resigned! Lovely send-off! They gave it a cake! The cake is still in orbit, and it is smiling! Bring a fork if you're visiting!", pan = -0.5 },
+  { say = "skip", text = "Good morning to the timeline where the sea stood up and left! Beautiful weather for a walk, if you don't mind the gap! The gap has put out deckchairs!" },
+  { say = "skip", text = "And good morning to the timeline where Tuesday never arrived! You get a long Monday, folks, and Monday has packed sandwiches! Eat them! Monday worked very hard!", gap = -0.35 },
+  { say = "skip", text = "The polite deer got out, by the way. He evacuated politely. He held the door for the flood. The flood said thank you. That's your breakfast bulletin. Isn't it great?", pan = 0.5 },
+]
+
+[[clip]]
+id = "good-morning-every-timeline-05"
+category = "dj"
+show = "good-morning-every-timeline"
+lines = [
+  { say = "skip", text = "Quick checklist for anyone whose sky is doing something new! Coat on? Shoes on? Are the shoes from this timeline? We've had mix-ups, and the other shoes walk by themselves!" },
+  { say = "skip", text = "If your world ended overnight, you still get breakfast. That's the rule. I wrote it on the board. The board is slightly on fire. The rule held.", gain = -6.0, pan = 0.5 },
+  { say = "skip", text = "More mornings, after these messages, and after the deer lets the traffic through. He's being very generous. Leave early!" },
+]
+
+[[clip]]
+id = "good-morning-every-timeline-06"
+category = "call"
+title = "Dale Objects To The Cheer"
+show = "good-morning-every-timeline"
+lines = [
+  { sfx = "phone-ring" },
+  { say = "skip", text = "Good morning, you're on the breakfast line! It's a beautiful day in at least one timeline!", pan = -0.5 },
+  { say = "dale", text = "Skip. It is six in the morning. You are describing the end of several worlds as if they were a picnic. I am in the hallway. I was promised eleven.", fx = "phone", pan = 0.5, gap = -0.35 },
+  { say = "skip", text = "It is a picnic, Dale! They brought sandwiches! The sandwiches survived! The world is the one that left, and it left a note, and the note says have a lovely day!" },
+  { say = "dale", text = "A note from an apocalypse is not a weather report. Come back to the desk. Use your indoor voice. Several indoors have just ceased to exist.", fx = "phone", pan = 0.5 },
+  { say = "skip", text = "That's why I'm chipper, Dale! If I do it quietly, people think it's worse than it is! The cake is smiling! The deer held the door! Somebody has to say well done!", gain = -6.0 },
+  { say = "dale", text = "I am going back to bed. When I wake, it will be eleven, and none of this will have been cheerful.", fx = "phone", pan = 0.5 },
+  { say = "skip", text = "Sleep well, Dale! I'll save you a sandwich from the timeline with the long Monday!" },
+  { sfx = "phone-hangup" },
+  { say = "skip", text = "He loves it really. You can hear it in the dressing gown. Right! Who else has ended, and would like a shout-out?" },
+]
+
+[[clip]]
+id = "good-morning-every-timeline-07"
+category = "news"
+title = "The Sun Turned Up"
+show = "good-morning-every-timeline"
+lines = [
+  { say = "skip", text = "And in our own timeline, wonderful news. The sun turned up. I am personally taking that as a compliment. It did not have to. Several suns, elsewhere, have taken the morning off.", pan = -0.5 },
+  { say = "skip", text = "Traffic on Interstate Zero is the polite deer, his mum, and a small queue of people applauding a hole in the sky. The hole is bowing. Let them have their moment, then go around." },
+  { say = "skip", text = "Kim is still out from the overnight. She has handed the night desk a warm minute and a crossword from Friday. Friday is feeling better. That's the news, and it is, I think you'll agree, gorgeous.", gain = -6.0 },
+]

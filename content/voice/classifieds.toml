@@ -1202,3 +1202,73 @@ lines = [
   { say = "rex", text = "Want your own little patch of the dial? Pick a number! Any number! Point a radio at it, and it's yours!" },
   { say = "linda", text = "Frequencies may drift. Frequencies may already be occupied by a disco, a courtroom or a pirate. Rex does not own any frequencies. Nobody does. That's the point of them." },
 ]
+
+
+# ── Linda's Hour: receipts, the petty cash tin, and Rex on the phone. ──
+
+[[clip]]
+id = "lindas-hour-close"
+category = "id"
+title = "Linda's Hour"
+part = "close"
+show = "lindas-hour"
+lines = [
+  { say = "linda", text = "That was Linda's Hour. The small print goes back to being fast now.", speed = 1.0 },
+  { say = "linda", text = "Thank you for not buying anything.", speed = 1.0 },
+]
+
+[[clip]]
+id = "lindas-hour-04"
+category = "ad"
+title = "Petty Cash, Itemised"
+show = "lindas-hour"
+lines = [
+  { say = "linda", text = "Petty cash. I am going to read this receipt the way it deserves. Slowly.", speed = 1.0, pan = -0.5 },
+  { say = "linda", text = "Item. One bun. Claimed as travel. The bun did not travel. The bun was eaten at the desk, at noon, by Rex.", speed = 1.0 },
+  { say = "linda", text = "Item. A stamp. The stamp is still in the book. The letter it was for has not been written. The letter was to Accounts. I am Accounts.", speed = 1.0 },
+  { say = "linda", text = "Item. Sundries. Sundries is not a thing, Rex. Sundries is where money goes when it is embarrassed.", speed = 1.0, gain = -6.0 },
+  { say = "linda", text = "The tin is short by the price of the bun. I have made a note. The note is longer than the bun.", speed = 1.0 },
+]
+
+[[clip]]
+id = "lindas-hour-05"
+category = "dj"
+show = "lindas-hour"
+lines = [
+  { say = "linda", text = "Welcome back. I have the petty cash tin on the desk, and I have a pencil, and I am not in a hurry.", speed = 0.95, pan = -0.5 },
+  { say = "linda", text = "There is a receipt in here from a Tuesday that did not happen in this timeline. I am keeping it. It is evidence, and it is also quite well written.", speed = 0.95 },
+  { say = "linda", text = "If you have lost a receipt, it may be in the tin. The tin does not give things back. I do.", speed = 0.95, gain = -6.0, pan = 0.5 },
+]
+
+[[clip]]
+id = "lindas-hour-06"
+category = "call"
+title = "Rex, On The Receipt"
+show = "lindas-hour"
+lines = [
+  { sfx = "phone-ring" },
+  { say = "linda", text = "Linda's Hour. You're on the accounts line.", speed = 1.0, pan = -0.5 },
+  { say = "rex", text = "Linda! It's Rex! I'm in the car park and I can hear you reading my bun!", fx = "phone", pan = 0.5, gap = -0.35 },
+  { say = "linda", text = "It was not your bun, Rex. It was the company's bun. The company did not ask for a bun.", speed = 1.0, pan = -0.5 },
+  { say = "rex", text = "It was an emergency bun! I was fading! A man cannot sell planets on an empty stomach!", fx = "phone", pan = 0.5 },
+  { say = "linda", text = "There is no emergency bun column. I checked. I checked twice. The second time I used a ruler.", speed = 1.0 },
+  { say = "rex", text = "Put the tin down, Linda! It's my hour of the day too! The listeners want deals!", fx = "phone", pan = 0.5, gap = -0.35 },
+  { say = "linda", text = "The listeners have written in. They want the total. The total is one bun, one unused stamp, and a feeling.", speed = 1.0, gain = -6.0 },
+  { say = "rex", text = "What feeling?", fx = "phone", pan = 0.5 },
+  { say = "linda", text = "Regret, Rex. It's itemised. Goodbye.", speed = 1.0 },
+  { sfx = "phone-hangup" },
+  { say = "linda", text = "Where were we. Ah. Sundries.", speed = 1.0 },
+]
+
+[[clip]]
+id = "lindas-hour-07"
+category = "story"
+title = "The Receipt That Kept The Afternoon"
+show = "lindas-hour"
+lines = [
+  { say = "linda", text = "A short story, from the bottom of the tin. There was a receipt with no shop on it. No date. No total. Just a line, in pencil. Thank you for staying.", speed = 0.95, pan = -0.5 },
+  { say = "linda", text = "Rex says he never wrote it. I believe him. His writing leans, and this writing sits up very straight, like somebody who has been waiting at a counter.", speed = 0.95 },
+  { say = "linda", text = "I held it up to the lamp. On the back, very faint, it said, paid in full, by the afternoon. The afternoon in question has not been seen since Thursday.", speed = 0.95 },
+  { say = "linda", text = "If that afternoon is listening, your receipt is safe. I have filed it under found. I will not staple it. Staples are for things that are finished.", speed = 0.95, gain = -6.0 },
+  { say = "linda", text = "That is the story. There is no moral. There is a balance, and the balance is kind, and the balance is in the tin, under the bun.", speed = 0.95 },
+]

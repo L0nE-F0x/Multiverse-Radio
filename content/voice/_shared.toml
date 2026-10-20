@@ -347,6 +347,7 @@ lines = [
 id = "psa-001"
 category = "psa"
 title = "If You Find a Shadow"
+shifts = [0, 5]
 lines = [
   { say = "authority", text = "A message from the Multiverse Broadcast Authority." },
   { say = "authority", text = "If you find a shadow without a person, please do not step on it. Do not fold it. Do not try it on. Shadows are not lost property. They are on a journey. Leave a light on, and let it decide." },
@@ -546,6 +547,7 @@ lines = [
 id = "interrupt-010"
 category = "interrupt"
 title = "A Message for Greg"
+shifts = [0, 5]
 lines = [
   { say = "hollis", text = "Greg, if you're listening. You don't have to come back. But the porch light's on." },
 ]
@@ -707,4 +709,27 @@ lines = [
   { say = "grumbel", text = "They're saying the dial's got longer. New stations, out past one hundred and eight, further than anyone's tuned before." },
   { say = "grumbel", text = "The Grumbel's Outer Band Extension. Three extra rungs. Clips on to the top of any Grumbel's ladder, so you can hold your radio up that little bit higher, and listen." },
   { say = "grumbel", text = "My grandfather heard the sea from the top of one. He lived nowhere near the sea. Grumbel's Ladders. Up is a choice. Out is a bit further." },
+]
+
+
+# ── Greg came home (night shifts six and on). The early notices stay shifts 0–5. ──
+
+[[clip]]
+id = "psa-greg-home"
+category = "psa"
+title = "Greg Has Come Home"
+shifts = [6, 999]
+lines = [
+  { say = "authority", text = "An update from the Multiverse Broadcast Authority. The shadow who answers to Greg has come home. He came back from behind the mirror." },
+  { say = "authority", text = "He lives in his flat. On Tuesdays he is slightly translucent. This is not an emergency. It is a Tuesday. Please do not try to fold him." },
+  { say = "authority", text = "On Sunday nights he hosts a quiet hour on the Lounge at the End of Time. Lean in. The porch light is for guests now." },
+]
+
+[[clip]]
+id = "interrupt-greg-home"
+category = "interrupt"
+title = "Hollis, Now That Greg Is Home"
+shifts = [6, 999]
+lines = [
+  { say = "hollis", text = "Greg. You came back from behind the mirror. The flat is yours. Tuesdays, slightly translucent. Sunday nights, you host on the Lounge at the End." },
 ]

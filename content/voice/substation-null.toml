@@ -16,6 +16,8 @@ host = { voice = "am_echo", speed = 0.9, name = "Null" }
 safety = { voice = "af_sarah", speed = 1.05, fx = "megaphone", name = "Diligence Safety System" }
 bev = { voice = "af_nova", fx = "phone", name = "Bev" }
 teodor = { voice = "bm_daniel", fx = "radio", name = "Teodor, Relay Four" }
+sump = { voice = "bm_george", speed = 0.88, fx = "cave", name = "Sump Watch" }
+deck = { voice = "af_bella", speed = 1.02, fx = "phone", name = "Lower Deck" }
 
 [[show]]
 id = "peak-load"
@@ -626,4 +628,119 @@ lines = [
   { say = "host", text = "On the console.", gap = 1.6 },
   { say = "host", text = "It knows me.", gap = 2.0 },
   { say = "host", text = "It nods on the beat. Welcome." },
+]
+
+
+# ── Shaft report: booth versus the sump. Distinct incidents. Not the usual question.
+
+[[clip]]
+id = "shaft-open-01"
+category = "dj"
+kit = "shaft-report"
+part = "open"
+lines = [
+  { sfx = "alarm" },
+  { say = "host", text = "Shaft report.", gap = 0.8 },
+  { say = "host", text = "Booth to sump.", gap = 0.5 },
+]
+
+[[clip]]
+id = "shaft-open-02"
+category = "dj"
+kit = "shaft-report"
+part = "open"
+lines = [
+  { say = "safety", text = "Diligence Safety System. Unscheduled shaft report. Remain at your station.", fx = "megaphone", gap = -0.35 },
+  { say = "host", text = "Booth. Listening.", gap = 0.7 },
+]
+
+[[clip]]
+id = "shaft-body-01"
+category = "dj"
+kit = "shaft-report"
+part = "body"
+bed = "cave-drip"
+title = "The Third Weld"
+lines = [
+  { say = "host", text = "Sump level.", gap = 0.7 },
+  { say = "sump", text = "Above the third weld. The third weld was the line.", fx = "cave", gain = -7.0, gap = -0.35 },
+  { say = "host", text = "Third weld is history.", gap = 0.8 },
+  { say = "sump", text = "History is wet.", fx = "cave", gain = -7.0, gap = 0.6 },
+  { say = "host", text = "Logged. Not nominal.", gap = 0.5 },
+]
+
+[[clip]]
+id = "shaft-body-02"
+category = "dj"
+kit = "shaft-report"
+part = "body"
+title = "Bearing Two"
+lines = [
+  { sfx = "alarm" },
+  { say = "deck", text = "Lower deck. Shaft bearing two is singing. It isn't a song.", fx = "phone", gain = -7.0, gap = -0.35 },
+  { say = "host", text = "Bearing two.", gap = 0.8 },
+  { say = "safety", text = "Bearing song is not a monitored parameter. Cease the parameter.", fx = "megaphone", gap = -0.3 },
+  { say = "host", text = "It doesn't cease. Log the pitch.", gap = 0.6 },
+]
+
+[[clip]]
+id = "shaft-body-03"
+category = "dj"
+kit = "shaft-report"
+part = "body"
+bed = "cave-drip"
+title = "The Seal Breathing"
+lines = [
+  { say = "host", text = "Hatch seals. Shaft three.", gap = 0.8 },
+  { say = "sump", text = "Seal on the sump side is breathing. In, not out.", fx = "cave", gain = -7.0, gap = -0.35 },
+  { say = "host", text = "Breathing is not a seal.", gap = 0.9 },
+  { say = "deck", text = "Phone check. We can hear it on the lower deck. It has a rhythm.", fx = "phone", gap = 0.4 },
+  { say = "host", text = "Do not answer the rhythm.", gap = 0.6 },
+]
+
+[[clip]]
+id = "shaft-body-04"
+category = "dj"
+kit = "shaft-report"
+part = "body"
+title = "The List"
+lines = [
+  { say = "safety", text = "Freighter list, two degrees to port. Correction recommended.", fx = "megaphone", gap = -0.35 },
+  { say = "host", text = "List is four. Your number is old.", gap = 0.7 },
+  { say = "sump", text = "From down here it feels like six. The water has an opinion.", fx = "cave", gain = -7.0, gap = 0.5 },
+  { say = "host", text = "Opinion logged. No correction. The floor is dancing.", gap = 0.5 },
+]
+
+[[clip]]
+id = "shaft-body-05"
+category = "dj"
+kit = "shaft-report"
+part = "body"
+title = "Sixty One"
+lines = [
+  { sfx = "alarm" },
+  { say = "deck", text = "Residual heat in the shaft wall. Ticks on the counter went from forty to sixty one.", fx = "phone", gain = -7.0, gap = -0.35 },
+  { say = "host", text = "Sixty one.", gap = 0.8 },
+  { say = "safety", text = "Sixty one is above the posted card. The posted card is forty years old.", fx = "megaphone", gap = 0.3 },
+  { say = "host", text = "So is the ship. Continue the count.", gap = 0.5 },
+]
+
+[[clip]]
+id = "shaft-close-01"
+category = "dj"
+kit = "shaft-report"
+part = "close"
+lines = [
+  { say = "host", text = "End of shaft report.", gap = 0.9 },
+  { say = "host", text = "Booth clear. Sump, stay on the line.", gap = 0.4 },
+]
+
+[[clip]]
+id = "shaft-close-02"
+category = "dj"
+kit = "shaft-report"
+part = "close"
+lines = [
+  { say = "safety", text = "Shaft report received. The Diligence thanks you for the bad news.", fx = "megaphone", gap = -0.3 },
+  { say = "host", text = "Bad news logged. Dance continues.", gap = 0.6 },
 ]

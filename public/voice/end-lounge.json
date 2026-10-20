@@ -20,12 +20,12 @@
       "id": "id-002",
       "category": "id",
       "url": "/voice/end-lounge/id-002.mp3",
-      "durationMs": 9067,
+      "durationMs": 9026,
       "overMusic": true,
       "lines": [
         {
           "speaker": "Barnaby Velvet",
-          "text": "The Lounge at the End of Time. Ninety-two point six. Last call has been going on for eleven billion years.",
+          "text": "The Lounge at the End of Time. Ninety-two point six. Last call has been going for eleven billion years.",
           "startMs": 50
         }
       ]
@@ -82,13 +82,13 @@
       "id": "id-006",
       "category": "id",
       "url": "/voice/end-lounge/id-006.mp3",
-      "durationMs": 8363,
+      "durationMs": 7962,
       "overMusic": true,
       "daypart": "morning",
       "lines": [
         {
           "speaker": "Barnaby Velvet",
-          "text": "Good morning, if you'll allow it. The Lounge at the End of Time is still open. We never really closed.",
+          "text": "Good morning, if you'll allow it. The Lounge at the End of Time is still open. We never closed.",
           "startMs": 50
         }
       ]
@@ -208,6 +208,10 @@
       "url": "/voice/end-lounge/dj-006.mp3",
       "durationMs": 18125,
       "overMusic": true,
+      "shifts": [
+        0,
+        5
+      ],
       "lines": [
         {
           "speaker": "Barnaby Velvet",
@@ -1470,6 +1474,171 @@
           "speaker": "Barnaby Velvet",
           "text": "Same time next Sunday.",
           "startMs": 8488
+        }
+      ]
+    },
+    {
+      "id": "the-quiet-corner-08",
+      "category": "dj",
+      "url": "/voice/end-lounge/the-quiet-corner-08.mp3",
+      "durationMs": 16836,
+      "overMusic": true,
+      "show": "the-quiet-corner",
+      "lines": [
+        {
+          "speaker": "Greg, a Shadow",
+          "text": "I have been thinking about flats. A flat is a room that stays when you leave it.",
+          "startMs": 4
+        },
+        {
+          "speaker": "Greg, a Shadow",
+          "text": "I am still getting used to staying. Hollis has the porch light. I have a lamp. Mine is smaller. It is on.",
+          "startMs": 5775
+        },
+        {
+          "speaker": "Greg, a Shadow",
+          "text": "If you are walking home, I will talk until the key turns. No hurry.",
+          "startMs": 12763
+        }
+      ]
+    },
+    {
+      "id": "the-quiet-corner-09",
+      "category": "dj",
+      "url": "/voice/end-lounge/the-quiet-corner-09.mp3",
+      "durationMs": 16743,
+      "overMusic": true,
+      "show": "the-quiet-corner",
+      "lines": [
+        {
+          "speaker": "Greg, a Shadow",
+          "text": "A song, now. It is a quiet one. You may have to lean in. That is all right. I lean in too.",
+          "startMs": 24
+        },
+        {
+          "speaker": "Gilbert (Bartender)",
+          "text": "Another ginger, Greg?",
+          "startMs": 6001
+        },
+        {
+          "speaker": "Greg, a Shadow",
+          "text": "Yes. Put it where the light can see it. Thank you, Gilbert.",
+          "startMs": 7294
+        },
+        {
+          "speaker": "Greg, a Shadow",
+          "text": "There. That is the song. It does not ask anything of you, except that you stay to the end.",
+          "startMs": 11854
+        }
+      ]
+    },
+    {
+      "id": "the-quiet-corner-10",
+      "category": "call",
+      "url": "/voice/end-lounge/the-quiet-corner-10.mp3",
+      "durationMs": 49965,
+      "title": "Barnaby, From The Cloakroom",
+      "overMusic": false,
+      "show": "the-quiet-corner",
+      "lines": [
+        {
+          "speaker": "Greg, a Shadow",
+          "text": "Quiet Corner.",
+          "startMs": 2450
+        },
+        {
+          "speaker": "Barnaby Velvet",
+          "text": "Darling, it's Barnaby. I am in the cloakroom. I have stepped out of my own Sunday, and I still cannot hear a word. This is a complaint. A fond one.",
+          "startMs": 4491
+        },
+        {
+          "speaker": "Greg, a Shadow",
+          "text": "Hello, Barnaby. I am speaking. I think.",
+          "startMs": 13716
+        },
+        {
+          "speaker": "Barnaby Velvet",
+          "text": "I know. Gilbert says your lips are doing something noble. My complaint is that the lounge has a corner I cannot eavesdrop on.",
+          "startMs": 17622
+        },
+        {
+          "speaker": "Greg, a Shadow",
+          "text": "You can sit closer.",
+          "startMs": 24881
+        },
+        {
+          "speaker": "Barnaby Velvet",
+          "text": "If I sit closer I will talk, and if I talk I will ruin it. And it is the best thing we have done in several eternities.",
+          "startMs": 27388
+        },
+        {
+          "speaker": "Greg, a Shadow",
+          "text": "Then stay in the cloakroom. I will leave the little light on.",
+          "startMs": 35320
+        },
+        {
+          "speaker": "Barnaby Velvet",
+          "text": "You terrible, perfect man. Carry on. I shall complain again next Sunday, if I can find the courage.",
+          "startMs": 39916
+        },
+        {
+          "speaker": "Gilbert (Bartender)",
+          "text": "He took a ginger with him.",
+          "startMs": 48337
+        }
+      ]
+    },
+    {
+      "id": "the-quiet-corner-11",
+      "category": "dj",
+      "url": "/voice/end-lounge/the-quiet-corner-11.mp3",
+      "durationMs": 16301,
+      "overMusic": true,
+      "show": "the-quiet-corner",
+      "lines": [
+        {
+          "speaker": "Greg, a Shadow",
+          "text": "If you are the only one still here, I know. It is hard to hear me. I am not very good at loud.",
+          "startMs": 29
+        },
+        {
+          "speaker": "Greg, a Shadow",
+          "text": "I am good at staying. The song after this one is softer. You can close your eyes. I will watch the door.",
+          "startMs": 6254
+        },
+        {
+          "speaker": "Greg, a Shadow",
+          "text": "Not in a worrying way. In the way a porch light does.",
+          "startMs": 13186
+        }
+      ]
+    },
+    {
+      "id": "dj-greg-home",
+      "category": "dj",
+      "url": "/voice/end-lounge/dj-greg-home.mp3",
+      "durationMs": 19144,
+      "title": "Greg Lives In The Flat Now",
+      "overMusic": true,
+      "shifts": [
+        6,
+        999
+      ],
+      "lines": [
+        {
+          "speaker": "Barnaby Velvet",
+          "text": "A note from the end of the bar, darling. Greg came back from behind the mirror. He isn't hiding. He lives in his flat.",
+          "startMs": 45
+        },
+        {
+          "speaker": "Barnaby Velvet",
+          "text": "On Tuesdays he's slightly translucent, which the candles rather like. Sunday nights, this corner is his. He hosts. He still tips.",
+          "startMs": 7548
+        },
+        {
+          "speaker": "Gilbert (Bartender)",
+          "text": "Dry ginger. On the house, on Sundays.",
+          "startMs": 16401
         }
       ]
     }

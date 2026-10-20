@@ -586,3 +586,73 @@ lines = [
   { say = "host", text = "Notice. The ship that drifts over the Hollow at night is a little further east than usual. Several residents have waved and not been waved back at." },
   { say = "host", text = "Please don't take it personally. I'm told it's picking up a lot of new stations. It's busy." },
 ]
+
+
+# ── The Committee Hour: the parish council, the hole, and the biscuits. ──
+
+[[clip]]
+id = "committee-hour-close"
+category = "id"
+title = "The Committee Hour"
+part = "close"
+show = "committee-hour"
+bed = "hall"
+lines = [
+  { say = "dibbs", text = "That was the Committee Hour. On behalf of the parish council, good night." },
+  { say = "dibbs", text = "The hole remains. The minutes remain. The biscuits, Maureen, are noted." },
+]
+
+[[clip]]
+id = "committee-hour-03"
+category = "news"
+title = "A Receipt From The Hole"
+show = "committee-hour"
+bed = "hall"
+lines = [
+  { say = "dibbs", text = "Item four. The parish council has been sent a receipt by the hole. The hole would like to be reimbursed for one fence, which it has swallowed, and for the echo of the fence, which it has kept.", pan = -0.5 },
+  { say = "dibbs", text = "The committee has considered the claim. The committee notes that the hole is not on the payroll. The committee also notes that the fence is, regrettably, inside the hole, where the committee cannot minute it properly." },
+  { say = "dibbs", text = "Maureen has asked that the biscuits be entered as their own item. The committee thanks Maureen. The committee will take the biscuits under any other business, which is to say, never, but kindly.", gain = -6.0, pan = 0.5 },
+  { say = "dibbs", text = "The hole remains. The receipt remains. It is slightly warm, and it smells of soil, and it has been filed beside the minutes, which do not mention the smell." },
+]
+
+[[clip]]
+id = "committee-hour-04"
+category = "call"
+title = "Maureen, On The Biscuits"
+show = "committee-hour"
+bed = "hall"
+lines = [
+  { sfx = "phone-ring" },
+  { say = "dibbs", text = "The Committee Hour. The parish council is in session. Do keep it brief.", pan = -0.5 },
+  { say = "host", text = "Councillor Dibbs, it's Maureen. I'm in my kitchen, and I've got the minutes in front of me, and once again the biscuits are not in them. The parish can live with a mystery hole. It cannot live with a meeting that pretends nobody brought a tin.", fx = "phone", pan = 0.5, gap = -0.35 },
+  { say = "dibbs", text = "The committee notes your call, Maureen. The committee notes the tin. The committee does not intend to discuss the tin on the air." },
+  { say = "host", text = "Then discuss the pie. You left it in the hall and talked to the hole instead. People came for the pie. The hole did not come for the pie. The hole has never once brought a plate.", fx = "phone", pan = 0.5 },
+  { say = "dibbs", text = "The pie is not an agenda item.", gain = -6.0, pan = -0.5, gap = -0.35 },
+  { say = "host", text = "It is the only item anyone came for. Put it in the minutes, Councillor. Item, pie. Status, eaten by the committee while pretending to think. I'll be round with the flask.", fx = "phone", pan = 0.5 },
+  { say = "dibbs", text = "The committee will add a footnote. The footnote will be very small. Good night, Maureen." },
+  { sfx = "phone-hangup" },
+  { say = "dibbs", text = "The footnote is noted. The hole remains. We move on." },
+]
+
+[[clip]]
+id = "committee-hour-05"
+category = "dj"
+show = "committee-hour"
+bed = "hall"
+lines = [
+  { say = "dibbs", text = "A word, while the committee gathers its papers. If you are new to the Hollow, the hole is not on the map. The committee has been asked to put it on the map. The committee has, after careful thought, ordered a larger margin.", pan = -0.5 },
+  { say = "dibbs", text = "Biscuit the spaniel is at the rim, and is not lost. He is attending. He does not vote. He has never needed to. The hole likes him, and the committee does not discuss what the hole likes.", gain = -6.0 },
+  { say = "dibbs", text = "Item five can wait for the music. The music is not an item. The committee is grateful anyway." },
+]
+
+[[clip]]
+id = "committee-hour-06"
+category = "news"
+title = "Correspondence, Unread Aloud"
+show = "committee-hour"
+bed = "hall"
+lines = [
+  { say = "dibbs", text = "Correspondence. The parish council has received a second letter from the hole. It is polite. It asks after the fence, and after Maureen, and after whether the committee slept well. The committee slept adequately.", pan = -0.5 },
+  { say = "dibbs", text = "The committee has replied, thanking the hole for its letter, and noting its contents, and not reading the postscript on the air. The postscript is warm, and slightly damp, and not the business of a Thursday." },
+  { say = "dibbs", text = "Residents are reminded not to lower microphones, pies, or questions into the hole. The hole answers. That is the difficulty. The hole remains. Item six is the flowers on the rim, which are doing nicely, and may be minuted in full." },
+]

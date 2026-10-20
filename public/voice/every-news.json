@@ -3769,6 +3769,315 @@
           "startMs": 37
         }
       ]
+    },
+    {
+      "id": "overnight-with-kim-close",
+      "category": "id",
+      "url": "/voice/every-news/overnight-with-kim-close.mp3",
+      "durationMs": 6330,
+      "title": "Overnight with Kim",
+      "overMusic": true,
+      "part": "close",
+      "show": "overnight-with-kim",
+      "lines": [
+        {
+          "speaker": "Kim Harrowgate",
+          "text": "That was Overnight with Kim. I'm stepping off the seam.",
+          "startMs": 32
+        },
+        {
+          "speaker": "Kim Harrowgate",
+          "text": "The lamp is going home. So am I, Dale. Not yet.",
+          "startMs": 3454
+        }
+      ]
+    },
+    {
+      "id": "overnight-with-kim-04",
+      "category": "news",
+      "url": "/voice/every-news/overnight-with-kim-04.mp3",
+      "durationMs": 37740,
+      "title": "The Seam Between Tuesday And Wednesday",
+      "overMusic": false,
+      "show": "overnight-with-kim",
+      "lines": [
+        {
+          "speaker": "Kim Harrowgate",
+          "text": "The news, from the place where the night is stitched. It's just gone three. I'm on the corner where Tuesday and Wednesday share a pavement, and the streetlights can't agree which night it is.",
+          "startMs": 25
+        },
+        {
+          "speaker": "Kim Harrowgate",
+          "text": "A bus from Thursday stopped on the Wednesday side, and nobody got off, because nobody was sure which day the fare belonged to. The driver handed me the timetable. It has two Thursdays, and no Friday.",
+          "startMs": 10382
+        },
+        {
+          "speaker": "Kim Harrowgate",
+          "text": "He said Friday called in sick. I believe him. Friday has looked tired all year.",
+          "startMs": 22878
+        },
+        {
+          "speaker": "Kim Harrowgate",
+          "text": "If your street has a seam in it, step over, not on. I'm standing on this one so you don't have to. It's very quiet. The quiet is the story. Back to me, until five.",
+          "startMs": 27980
+        }
+      ]
+    },
+    {
+      "id": "overnight-with-kim-05",
+      "category": "dj",
+      "url": "/voice/every-news/overnight-with-kim-05.mp3",
+      "durationMs": 18788,
+      "overMusic": true,
+      "show": "overnight-with-kim",
+      "lines": [
+        {
+          "speaker": "Kim Harrowgate",
+          "text": "On the overnight desk there's the lamp, the scarf, and a minute somebody handed me at the seam. The minute is warm. I've put it in my pocket.",
+          "startMs": 38
+        },
+        {
+          "speaker": "Kim Harrowgate",
+          "text": "Don't tell Dale. He has strong views about loose minutes. He thinks they should be filed under eleven.",
+          "startMs": 8213
+        },
+        {
+          "speaker": "Kim Harrowgate",
+          "text": "I'll give it back at dawn, if dawn is still where we left it. Here's the night, continuing.",
+          "startMs": 14081
+        }
+      ]
+    },
+    {
+      "id": "overnight-with-kim-06",
+      "category": "call",
+      "url": "/voice/every-news/overnight-with-kim-06.mp3",
+      "durationMs": 52173,
+      "title": "Dale, Awake And Against Seams",
+      "overMusic": false,
+      "show": "overnight-with-kim",
+      "lines": [
+        {
+          "speaker": "Kim Harrowgate",
+          "text": "Overnight with Kim. You're on the night desk.",
+          "startMs": 2450
+        },
+        {
+          "speaker": "Dale Quarterly",
+          "text": "Kim. It is three in the morning. I was asleep. The answering machine has you standing in a seam. Seams are carpentry. This is a newsroom.",
+          "startMs": 4948
+        },
+        {
+          "speaker": "Kim Harrowgate",
+          "text": "It's both, Dale. The pavement is Tuesday on my left and Wednesday on my right. I'm on the line. Somebody handed me the line. It's a bit of string, and a timetable.",
+          "startMs": 13363
+        },
+        {
+          "speaker": "Dale Quarterly",
+          "text": "Put the string down. Come back to the building. It is always eleven in the building. It is never a seam. I am saying this from the hallway, in my dressing gown, and I am not pleased.",
+          "startMs": 23356
+        },
+        {
+          "speaker": "Kim Harrowgate",
+          "text": "You're on the phone, Dale. The phone is also a seam. It joins your hallway to my corner. Go back to sleep. I'll file it when you wake.",
+          "startMs": 34923
+        },
+        {
+          "speaker": "Dale Quarterly",
+          "text": "I will wake at eleven.",
+          "startMs": 42940
+        },
+        {
+          "speaker": "Kim Harrowgate",
+          "text": "You always do. Goodnight, Dale.",
+          "startMs": 44961
+        },
+        {
+          "speaker": "Kim Harrowgate",
+          "text": "He'll get that one with his coffee. The seam is still here. So am I.",
+          "startMs": 48678
+        }
+      ]
+    },
+    {
+      "id": "overnight-with-kim-07",
+      "category": "dj",
+      "url": "/voice/every-news/overnight-with-kim-07.mp3",
+      "durationMs": 20267,
+      "overMusic": true,
+      "show": "overnight-with-kim",
+      "lines": [
+        {
+          "speaker": "Kim Harrowgate",
+          "text": "A woman just walked out of Wednesday, bought a paper from Tuesday, and went back the way she came. The paper was tomorrow's. She seemed used to it.",
+          "startMs": 37
+        },
+        {
+          "speaker": "Kim Harrowgate",
+          "text": "She handed me the crossword. Half the clues are from a day we haven't had. I'll do the ones I can.",
+          "startMs": 8494
+        },
+        {
+          "speaker": "Kim Harrowgate",
+          "text": "If you're awake on the wrong side of a night, you're in the right place. Stay with me until the streetlights pick a side.",
+          "startMs": 14284
+        }
+      ]
+    },
+    {
+      "id": "good-morning-every-timeline-close",
+      "category": "id",
+      "url": "/voice/every-news/good-morning-every-timeline-close.mp3",
+      "durationMs": 7910,
+      "title": "Good Morning, Every Timeline",
+      "overMusic": true,
+      "part": "close",
+      "show": "good-morning-every-timeline",
+      "lines": [
+        {
+          "speaker": "Skip Daley",
+          "text": "That's the morning, every timeline! Eat something, even if your world has packed a bag.",
+          "startMs": 39
+        },
+        {
+          "speaker": "Skip Daley",
+          "text": "I'm Skip Daley. I'll be here tomorrow, if tomorrow is still on.",
+          "startMs": 4826
+        }
+      ]
+    },
+    {
+      "id": "good-morning-every-timeline-04",
+      "category": "news",
+      "url": "/voice/every-news/good-morning-every-timeline-04.mp3",
+      "durationMs": 34076,
+      "title": "Breakfast Across The Apocalypses",
+      "overMusic": false,
+      "show": "good-morning-every-timeline",
+      "lines": [
+        {
+          "speaker": "Skip Daley",
+          "text": "Good morning to the timeline where the moon resigned! Lovely send-off! They gave it a cake! The cake is still in orbit, and it is smiling! Bring a fork if you're visiting!",
+          "startMs": 40
+        },
+        {
+          "speaker": "Skip Daley",
+          "text": "Good morning to the timeline where the sea stood up and left! Beautiful weather for a walk, if you don't mind the gap! The gap has put out deckchairs!",
+          "startMs": 9665
+        },
+        {
+          "speaker": "Skip Daley",
+          "text": "And good morning to the timeline where Tuesday never arrived! You get a long Monday, folks, and Monday has packed sandwiches! Eat them! Monday worked very hard!",
+          "startMs": 17287
+        },
+        {
+          "speaker": "Skip Daley",
+          "text": "The polite deer got out, by the way. He evacuated politely. He held the door for the flood. The flood said thank you. That's your breakfast bulletin. Isn't it great?",
+          "startMs": 25862
+        }
+      ]
+    },
+    {
+      "id": "good-morning-every-timeline-05",
+      "category": "dj",
+      "url": "/voice/every-news/good-morning-every-timeline-05.mp3",
+      "durationMs": 23957,
+      "overMusic": true,
+      "show": "good-morning-every-timeline",
+      "lines": [
+        {
+          "speaker": "Skip Daley",
+          "text": "Quick checklist for anyone whose sky is doing something new! Coat on? Shoes on? Are the shoes from this timeline? We've had mix-ups, and the other shoes walk by themselves!",
+          "startMs": 35
+        },
+        {
+          "speaker": "Skip Daley",
+          "text": "If your world ended overnight, you still get breakfast. That's the rule. I wrote it on the board. The board is slightly on fire. The rule held.",
+          "startMs": 9540
+        },
+        {
+          "speaker": "Skip Daley",
+          "text": "More mornings, after these messages, and after the deer lets the traffic through. He's being very generous. Leave early!",
+          "startMs": 17662
+        }
+      ]
+    },
+    {
+      "id": "good-morning-every-timeline-06",
+      "category": "call",
+      "url": "/voice/every-news/good-morning-every-timeline-06.mp3",
+      "durationMs": 59999,
+      "title": "Dale Objects To The Cheer",
+      "overMusic": false,
+      "show": "good-morning-every-timeline",
+      "lines": [
+        {
+          "speaker": "Skip Daley",
+          "text": "Good morning, you're on the breakfast line! It's a beautiful day in at least one timeline!",
+          "startMs": 2450
+        },
+        {
+          "speaker": "Dale Quarterly",
+          "text": "Skip. It is six in the morning. You are describing the end of several worlds as if they were a picnic. I am in the hallway. I was promised eleven.",
+          "startMs": 7399
+        },
+        {
+          "speaker": "Skip Daley",
+          "text": "It is a picnic, Dale! They brought sandwiches! The sandwiches survived! The world is the one that left, and it left a note, and the note says have a lovely day!",
+          "startMs": 16176
+        },
+        {
+          "speaker": "Dale Quarterly",
+          "text": "A note from an apocalypse is not a weather report. Come back to the desk. Use your indoor voice. Several indoors have just ceased to exist.",
+          "startMs": 24552
+        },
+        {
+          "speaker": "Skip Daley",
+          "text": "That's why I'm chipper, Dale! If I do it quietly, people think it's worse than it is! The cake is smiling! The deer held the door! Somebody has to say well done!",
+          "startMs": 34025
+        },
+        {
+          "speaker": "Dale Quarterly",
+          "text": "I am going back to bed. When I wake, it will be eleven, and none of this will have been cheerful.",
+          "startMs": 42564
+        },
+        {
+          "speaker": "Skip Daley",
+          "text": "Sleep well, Dale! I'll save you a sandwich from the timeline with the long Monday!",
+          "startMs": 48692
+        },
+        {
+          "speaker": "Skip Daley",
+          "text": "He loves it really. You can hear it in the dressing gown. Right! Who else has ended, and would like a shout-out?",
+          "startMs": 54711
+        }
+      ]
+    },
+    {
+      "id": "good-morning-every-timeline-07",
+      "category": "news",
+      "url": "/voice/every-news/good-morning-every-timeline-07.mp3",
+      "durationMs": 31497,
+      "title": "The Sun Turned Up",
+      "overMusic": false,
+      "show": "good-morning-every-timeline",
+      "lines": [
+        {
+          "speaker": "Skip Daley",
+          "text": "And in our own timeline, wonderful news. The sun turned up. I am personally taking that as a compliment. It did not have to. Several suns, elsewhere, have taken the morning off.",
+          "startMs": 40
+        },
+        {
+          "speaker": "Skip Daley",
+          "text": "Traffic on Interstate Zero is the polite deer, his mum, and a small queue of people applauding a hole in the sky. The hole is bowing. Let them have their moment, then go around.",
+          "startMs": 10906
+        },
+        {
+          "speaker": "Skip Daley",
+          "text": "Kim is still out from the overnight. She has handed the night desk a warm minute and a crossword from Friday. Friday is feeling better. That's the news, and it is, I think you'll agree, gorgeous.",
+          "startMs": 21252
+        }
+      ]
     }
   ]
 }

@@ -25,7 +25,7 @@ lines = [
 id = "id-002"
 category = "id"
 lines = [
-  { say = "host", text = "The Lounge at the End of Time. Ninety-two point six. Last call has been going on for eleven billion years." },
+  { say = "host", text = "The Lounge at the End of Time. Ninety-two point six. Last call has been going for eleven billion years." },
   { sting = "id" },
 ]
 
@@ -60,7 +60,7 @@ id = "id-006"
 category = "id"
 daypart = "morning"
 lines = [
-  { say = "host", text = "Good morning, if you'll allow it. The Lounge at the End of Time is still open. We never really closed." },
+  { say = "host", text = "Good morning, if you'll allow it. The Lounge at the End of Time is still open. We never closed." },
   { sting = "id" },
 ]
 
@@ -117,6 +117,7 @@ lines = [
 [[clip]]
 id = "dj-006"
 category = "dj"
+shifts = [0, 5]
 lines = [
   { say = "host", text = "There's a shadow at the end of the bar. No one attached. Orders a dry ginger, tips well, says his name is Greg. Barely speaks." },
   { say = "host", text = "I think he's waiting for somebody, or hiding from somebody, which at this hour is the same thing. Somebody called Hollis, I gather. Greg, darling. Call home." },
@@ -693,4 +694,68 @@ lines = [
   { say = "host", text = "That was The Quiet Corner, with Greg. I didn't catch a single word, darling, and I've never been so moved." },
   { say = "gilbert", text = "He tipped well." },
   { say = "host", text = "Same time next Sunday." },
+]
+
+[[clip]]
+id = "the-quiet-corner-08"
+category = "dj"
+show = "the-quiet-corner"
+lines = [
+  { say = "greg", text = "I have been thinking about flats. A flat is a room that stays when you leave it.", speed = 0.9, gap = 1.0, pan = -0.5 },
+  { say = "greg", text = "I am still getting used to staying. Hollis has the porch light. I have a lamp. Mine is smaller. It is on.", speed = 0.9, gap = 1.2 },
+  { say = "greg", text = "If you are walking home, I will talk until the key turns. No hurry.", speed = 0.9, gap = 1.0 },
+]
+
+[[clip]]
+id = "the-quiet-corner-09"
+category = "dj"
+show = "the-quiet-corner"
+lines = [
+  { say = "greg", text = "A song, now. It is a quiet one. You may have to lean in. That is all right. I lean in too.", speed = 0.9, gap = 1.1, pan = -0.5 },
+  { say = "gilbert", text = "Another ginger, Greg?", gain = -6.0, pan = 0.5, gap = -0.35 },
+  { say = "greg", text = "Yes. Put it where the light can see it. Thank you, Gilbert.", speed = 0.9, gap = 1.0 },
+  { say = "greg", text = "There. That is the song. It does not ask anything of you, except that you stay to the end.", speed = 0.9, gap = 1.0 },
+]
+
+[[clip]]
+id = "the-quiet-corner-10"
+category = "call"
+title = "Barnaby, From The Cloakroom"
+show = "the-quiet-corner"
+lines = [
+  { sfx = "phone-ring" },
+  { say = "greg", text = "Quiet Corner.", speed = 0.9, gap = 0.8, pan = -0.5 },
+  { say = "host", text = "Darling, it's Barnaby. I am in the cloakroom. I have stepped out of my own Sunday, and I still cannot hear a word. This is a complaint. A fond one.", fx = "phone", pan = 0.5 },
+  { say = "greg", text = "Hello, Barnaby. I am speaking. I think.", speed = 0.9, gap = 0.9, pan = -0.5 },
+  { say = "host", text = "I know. Gilbert says your lips are doing something noble. My complaint is that the lounge has a corner I cannot eavesdrop on.", fx = "phone", pan = 0.5, gap = -0.35 },
+  { say = "greg", text = "You can sit closer.", speed = 0.9, gap = 0.8 },
+  { say = "host", text = "If I sit closer I will talk, and if I talk I will ruin it. And it is the best thing we have done in several eternities.", fx = "phone", pan = 0.5, gain = -6.0 },
+  { say = "greg", text = "Then stay in the cloakroom. I will leave the little light on.", speed = 0.9, gap = 1.0 },
+  { say = "host", text = "You terrible, perfect man. Carry on. I shall complain again next Sunday, if I can find the courage.", fx = "phone", pan = 0.5 },
+  { sfx = "phone-hangup" },
+  { say = "gilbert", text = "He took a ginger with him.", pan = 0.5 },
+]
+
+[[clip]]
+id = "the-quiet-corner-11"
+category = "dj"
+show = "the-quiet-corner"
+lines = [
+  { say = "greg", text = "If you are the only one still here, I know. It is hard to hear me. I am not very good at loud.", speed = 0.9, gap = 1.1, pan = -0.5 },
+  { say = "greg", text = "I am good at staying. The song after this one is softer. You can close your eyes. I will watch the door.", speed = 0.9, gap = 1.2 },
+  { say = "greg", text = "Not in a worrying way. In the way a porch light does.", speed = 0.9, gap = 1.0, gain = -6.0 },
+]
+
+
+# ── Greg is home: no longer the stranger who should call Hollis. ──
+
+[[clip]]
+id = "dj-greg-home"
+category = "dj"
+title = "Greg Lives In The Flat Now"
+shifts = [6, 999]
+lines = [
+  { say = "host", text = "A note from the end of the bar, darling. Greg came back from behind the mirror. He isn't hiding. He lives in his flat." },
+  { say = "host", text = "On Tuesdays he's slightly translucent, which the candles rather like. Sunday nights, this corner is his. He hosts. He still tips." },
+  { say = "gilbert", text = "Dry ginger. On the house, on Sundays." },
 ]

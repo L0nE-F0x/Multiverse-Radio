@@ -530,3 +530,81 @@ lines = [
   { say = "operator", text = "There is a pigeon standing on the switchboard. It has just connected Gristwick to the bottom of the sea.", gap = 0.6 },
   { say = "operator", text = "I don't usually allow visitors at the board. It seems to have a pass." },
 ]
+
+
+# ── Cross-plugs: two incompatible callers, one jack, a secret carrier spoken aloud.
+
+[[clip]]
+id = "crossplug-01"
+category = "call"
+title = "The Gap and the Horn"
+lines = [
+  { sfx = "beep" },
+  { say = "operator", text = "Number please. Two lamps are fighting over eighty-seven point seven. I am jacking them into one cord, and I will not be taking sides." },
+  { say = "caller_a", text = "This frequency tucks people in. Eighty-seven point seven is a gap, not a cave, and your tapping is keeping the whole dial awake.", name = "The Gap", pan = -0.6, gap = -0.4 },
+  { say = "caller_c", text = "I was tapping before the gap had a name. Eighty-seven point seven is my horn, and hello is the only word I trust.", name = "The First Horn", pan = 0.6, gap = 0.25 },
+  { say = "caller_a", text = "Then say hello quieter. There are sleepers on this number.", name = "The Gap", pan = -0.6, gap = -0.4 },
+  { say = "caller_c", text = "Hello. Hello. I can do quieter. I have had a long time to practice.", name = "The First Horn", pan = 0.6 },
+  { say = "operator", text = "Eighty-seven point seven is now one conversation. Try not to wake each other. Or do. I repeat nothing." },
+  { sfx = "phone-hangup" },
+]
+
+[[clip]]
+id = "crossplug-02"
+category = "call"
+title = "Debt and After Hours"
+lines = [
+  { sfx = "beep" },
+  { say = "operator", text = "Two lamps for ninety-nine. One calls it a debt. One calls it after hours. One jack. Mind the cord." },
+  { say = "caller_e", text = "Ninety-nine is what the booth is owed. I've held the arm up so long the hinge has learned my name.", name = "A Toll That Won't Close", pan = -0.6, gap = -0.4 },
+  { say = "caller_g", text = "Ninety-nine is where I speak when the building is asleep. You are not asleep. Lower your voice, or the night will file a complaint.", name = "After Hours", pan = 0.6, gap = 0.3 },
+  { say = "caller_e", text = "I don't do quiet. Quiet is how a debt gets forgotten. Say the number back to me.", name = "A Toll That Won't Close", pan = -0.6, gap = -0.4 },
+  { say = "caller_g", text = "Ninety-nine. There. I said it softly. The building stayed standing. You may not shout it again.", name = "After Hours", pan = 0.6 },
+  { say = "operator", text = "Ninety-nine has been settled to nobody's satisfaction. I'm clearing the jack." },
+  { sfx = "phone-hangup" },
+]
+
+[[clip]]
+id = "crossplug-03"
+category = "call"
+title = "A Lane and a Season"
+lines = [
+  { sfx = "beep" },
+  { say = "operator", text = "One oh seven point nine. A fast lamp and a slow one. They cannot share a purpose. They can share a jack. Putting them through." },
+  { say = "caller_f", text = "One oh seven point nine is my lane and it is moving, which means it is not a windowsill. Get your leaves off my bumper.", name = "A Lane", pan = -0.6, gap = -0.4 },
+  { say = "caller_k", text = "One oh seven point nine. I have been holding for a season. I need light, not a lane. I do not have a bumper.", name = "A Window Box", pan = 0.6, gap = 0.4 },
+  { say = "caller_f", text = "Then you're on the wrong carrier. This one goes somewhere. That's the whole point of it.", name = "A Lane", pan = -0.6, gap = -0.4 },
+  { say = "caller_k", text = "I am somewhere. I have been somewhere the entire time you were rushing. The light here is enough, if you would stop shading it.", name = "A Window Box", pan = 0.6 },
+  { say = "operator", text = "One oh seven point nine, cleared into one argument. I believe that was progress. I am not required to believe it." },
+  { sfx = "phone-hangup" },
+]
+
+[[clip]]
+id = "crossplug-04"
+category = "call"
+title = "Saturday and the Agenda"
+lines = [
+  { sfx = "beep" },
+  { say = "operator", text = "One twenty-seven point six. Somebody who will not leave a night, and somebody with an agenda. Jacking them together. They may not thank me." },
+  { say = "caller_h", text = "One twenty-seven point six. I'm calling from a Saturday that didn't end. We still have the mirror ball. We still have the floor. Tell the agenda to dance.", name = "A Saturday", pan = -0.6, gap = -0.4 },
+  { say = "caller_b", text = "One twenty-seven point six is the parish hall. We booked it. You are not on the agenda. The agenda is drainage, then the clock, then home.", name = "The Agenda", pan = 0.6, gap = 0.3 },
+  { say = "caller_h", text = "Home is how a Saturday dies. Put drainage at the bottom. Put the drum machine at the top.", name = "A Saturday", pan = -0.6, gap = -0.4 },
+  { say = "caller_b", text = "We don't have a drum machine. We have minutes. I will enter you as other business, and I will not dance.", name = "The Agenda", pan = 0.6 },
+  { say = "operator", text = "One twenty-seven point six is now a meeting that cannot adjourn. I'm leaving the cord in until one of you blinks." },
+  { sfx = "phone-hangup" },
+]
+
+[[clip]]
+id = "crossplug-05"
+category = "call"
+title = "The Quiet and the One Who Stayed"
+lines = [
+  { sfx = "beep" },
+  { say = "operator", text = "One thirty-four point five. Two parties have been holding for each other without knowing the name. One jack. I'm stepping back from the board." },
+  { say = "caller_i", text = "I listened until the quiet listened back. One thirty-four point five is where I keep the signals nobody took.", name = "The Quiet on the Line", pan = -0.6, gap = -0.4 },
+  { say = "caller_k", text = "I stayed on a dead line because it felt less dead than the room. If you're the quiet, I've been talking to you for years.", name = "A Person Who Stayed", pan = 0.6, gap = 0.35 },
+  { say = "caller_i", text = "I heard you. I did not know the words were meant for me. Most words aren't.", name = "The Quiet on the Line", pan = -0.6, gap = -0.4 },
+  { say = "caller_k", text = "They were. Don't tidy them. Just stay until the cord comes out.", name = "A Person Who Stayed", pan = 0.6 },
+  { say = "operator", text = "One thirty-four point five. I'm pulling the cord only because the lamp has to go to someone else. You two can find the way back." },
+  { sfx = "phone-hangup" },
+]

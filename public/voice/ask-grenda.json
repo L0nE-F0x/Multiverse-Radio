@@ -185,6 +185,10 @@
       "durationMs": 78340,
       "title": "Hollis, Whose Shadow Left",
       "overMusic": false,
+      "shifts": [
+        0,
+        5
+      ],
       "lines": [
         {
           "speaker": "Grenda",
@@ -280,6 +284,10 @@
       "durationMs": 74587,
       "title": "Greg, a Shadow, at the Sea",
       "overMusic": false,
+      "shifts": [
+        0,
+        5
+      ],
       "lines": [
         {
           "speaker": "Grenda",
@@ -1862,7 +1870,7 @@
       "id": "call-open-01",
       "category": "call",
       "url": "/voice/ask-grenda/call-open-01.mp3",
-      "durationMs": 10391,
+      "durationMs": 10017,
       "title": "A Lighthouse",
       "overMusic": false,
       "part": "open",
@@ -1875,7 +1883,7 @@
         },
         {
           "speaker": "A Lighthouse",
-          "text": "Hello, Grenda. I'm a lighthouse. Ships keep coming in close to say thank you, and I never know what to say. I just sort of flash.",
+          "text": "Hello, Grenda. I'm a lighthouse. Ships keep coming in close to say thank you, and I never know what to say. I just flash.",
           "startMs": 3474
         }
       ]
@@ -2085,7 +2093,7 @@
       "id": "call-open-12",
       "category": "call",
       "url": "/voice/ask-grenda/call-open-12.mp3",
-      "durationMs": 11323,
+      "durationMs": 11097,
       "title": "A Retired Storm",
       "overMusic": false,
       "part": "open",
@@ -2098,7 +2106,7 @@
         },
         {
           "speaker": "A Retired Storm",
-          "text": "I used to be a hurricane, Grenda. Now I'm just a breeze in a garden in Lower Stilt. Nobody's afraid of me. I miss it.",
+          "text": "I used to be a hurricane, Grenda. Now I'm a breeze in a garden in Lower Stilt. Nobody's afraid of me. I miss it.",
           "startMs": 3748
         }
       ]
@@ -3154,6 +3162,134 @@
           "speaker": "Walter",
           "text": "Oh. So I have.",
           "startMs": 37217
+        }
+      ]
+    },
+    {
+      "id": "call-hollis-greg-home",
+      "category": "call",
+      "url": "/voice/ask-grenda/call-hollis-greg-home.mp3",
+      "durationMs": 62354,
+      "title": "Hollis, Now That Greg Is Home",
+      "overMusic": false,
+      "shifts": [
+        6,
+        999
+      ],
+      "lines": [
+        {
+          "speaker": "Grenda",
+          "text": "Ask Grenda. Who've I got?",
+          "startMs": 2850
+        },
+        {
+          "speaker": "Hollis",
+          "text": "Hi, Grenda. It's Hollis. He came back. From behind the mirror. I heard the key, and then I heard nothing, which is how you hear Greg.",
+          "startMs": 4898
+        },
+        {
+          "speaker": "Grenda",
+          "text": "Oh, love. And where is he now?",
+          "startMs": 12104
+        },
+        {
+          "speaker": "Hollis",
+          "text": "He's got his own flat, two streets over. He doesn't stand on my feet any more. On Tuesdays he's slightly translucent. I can see the kettle through him. He still puts it on.",
+          "startMs": 14140
+        },
+        {
+          "speaker": "Grenda",
+          "text": "And how does that feel, Hollis?",
+          "startMs": 23506
+        },
+        {
+          "speaker": "Hollis",
+          "text": "Proud. A bit see-through myself, if I'm honest. On Sunday nights he hosts a show. The Lounge at the End of Time. I sit with the radio in my lap and I lean in.",
+          "startMs": 25490
+        },
+        {
+          "speaker": "Hollis",
+          "text": "Sometimes I think I hear hello. Should I go down there?",
+          "startMs": 34625
+        },
+        {
+          "speaker": "Grenda",
+          "text": "If you want to, love. Not to collect him. To hear him. He's allowed a room of his own, and a Tuesday that shows the wallpaper, and a Sunday night that is his.",
+          "startMs": 38221
+        },
+        {
+          "speaker": "Grenda",
+          "text": "Leave the porch light on anyway. Not because he's missing. Because it makes the path kind.",
+          "startMs": 47052
+        },
+        {
+          "speaker": "Hollis",
+          "text": "Thank you, Grenda.",
+          "startMs": 52284
+        },
+        {
+          "speaker": "Grenda",
+          "text": "There we are. The ones who leave the light on do get an answer. It just isn't always the answer they packed a bag for.",
+          "startMs": 55503
+        }
+      ]
+    },
+    {
+      "id": "call-greg-at-home",
+      "category": "call",
+      "url": "/voice/ask-grenda/call-greg-at-home.mp3",
+      "durationMs": 50618,
+      "title": "Greg, From The Flat",
+      "overMusic": false,
+      "shifts": [
+        6,
+        999
+      ],
+      "lines": [
+        {
+          "speaker": "Grenda",
+          "text": "Ask Grenda, you're on the air.",
+          "startMs": 2850
+        },
+        {
+          "speaker": "Greg, a Shadow",
+          "text": "Hello. It's Greg. I'm in the flat. My flat. I came back from behind the mirror. Sorry. I'm still quiet.",
+          "startMs": 4914
+        },
+        {
+          "speaker": "Grenda",
+          "text": "Don't be sorry, love. How is the flat?",
+          "startMs": 10601
+        },
+        {
+          "speaker": "Greg, a Shadow",
+          "text": "It stays when I leave it. I'm not used to that. On Tuesdays I'm slightly translucent. Drivers look through me. Hollis waved anyway. He could see the hallway, and he waved at the hallway.",
+          "startMs": 12977
+        },
+        {
+          "speaker": "Grenda",
+          "text": "That sounds like Hollis.",
+          "startMs": 22824
+        },
+        {
+          "speaker": "Greg, a Shadow",
+          "text": "On Sunday nights I host. The Lounge at the End of Time. I don't think anyone can hear me. I talk anyway. There is a little light by the door.",
+          "startMs": 24581
+        },
+        {
+          "speaker": "Grenda",
+          "text": "Then they're hearing you, Greg. People don't lean in for nothing. And a Tuesday that lets the wallpaper show is still a Tuesday. Put the kettle on. Let them see you do it.",
+          "startMs": 31799
+        },
+        {
+          "speaker": "Greg, a Shadow",
+          "text": "I will. Thank you, Grenda.",
+          "startMs": 41543
+        },
+        {
+          "speaker": "Grenda",
+          "text": "Go on, then, love. Home is allowed to be a bit see-through, as long as somebody waves.",
+          "startMs": 45438
         }
       ]
     }

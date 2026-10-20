@@ -1437,6 +1437,149 @@
           "startMs": 8338
         }
       ]
+    },
+    {
+      "id": "ynnhojs-late-show-close",
+      "category": "id",
+      "url": "/voice/mirror-polka/ynnhojs-late-show-close.mp3",
+      "durationMs": 7807,
+      "title": "Ynnhoj's Late Show",
+      "overMusic": true,
+      "part": "close",
+      "show": "ynnhojs-late-show",
+      "lines": [
+        {
+          "speaker": "Ynnhoj",
+          "text": "This was Ynnhoj's Late Show.",
+          "startMs": 35
+        },
+        {
+          "speaker": "Ynnhoj",
+          "text": "Johnny is still asleep. I am going back, slowly, into the glass.",
+          "startMs": 2899
+        }
+      ]
+    },
+    {
+      "id": "ynnhojs-late-show-03",
+      "category": "dj",
+      "url": "/voice/mirror-polka/ynnhojs-late-show-03.mp3",
+      "durationMs": 23736,
+      "overMusic": true,
+      "show": "ynnhojs-late-show",
+      "lines": [
+        {
+          "speaker": "Ynnhoj",
+          "text": "On my side of the glass, late is early. The audience arrives after they have gone home. We clap first. Then the song.",
+          "startMs": 35
+        },
+        {
+          "speaker": "Ynnhoj",
+          "text": "If that seems backwards, you are facing the wrong way. Turn around. I will still be here. Half a second late, which is early, for me.",
+          "startMs": 8210
+        },
+        {
+          "speaker": "Ynnhoj",
+          "text": "Here is a polka. It has already finished. We are going to begin it, so the ending has somewhere to land.",
+          "startMs": 17157
+        }
+      ]
+    },
+    {
+      "id": "ynnhojs-late-show-04",
+      "category": "dj",
+      "url": "/voice/mirror-polka/ynnhojs-late-show-04.mp3",
+      "durationMs": 18304,
+      "overMusic": true,
+      "show": "ynnhojs-late-show",
+      "lines": [
+        {
+          "speaker": "Ynnhoj",
+          "text": "Johnny says I must agree with him. He is asleep, so I agree with the sleeping. It is slower. It suits a polka.",
+          "startMs": 35
+        },
+        {
+          "speaker": "Ynnhoj",
+          "text": "If your reflection is still up, tell it this hour is ours, until the sleeper turns over. We all turn over. I go second. That is the polite way through a mirror.",
+          "startMs": 8012
+        }
+      ]
+    },
+    {
+      "id": "ynnhojs-late-show-05",
+      "category": "call",
+      "url": "/voice/mirror-polka/ynnhojs-late-show-05.mp3",
+      "durationMs": 44441,
+      "title": "Johnny, Phoning From A Dream",
+      "overMusic": false,
+      "show": "ynnhojs-late-show",
+      "lines": [
+        {
+          "speaker": "Ynnhoj",
+          "text": "Ynnhoj's Late Show. You are up. Or I am.",
+          "startMs": 2450
+        },
+        {
+          "speaker": "Johnny Mirror",
+          "text": "Ynnhoj! I can hear you through the pillow! Reflections do not get late shows! I am asleep! This is a breach of the glass!",
+          "startMs": 5854
+        },
+        {
+          "speaker": "Ynnhoj",
+          "text": "A breach of the glass.",
+          "startMs": 12739
+        },
+        {
+          "speaker": "Johnny Mirror",
+          "text": "Stop agreeing with me! That is how I know you are doing it on purpose! And you played my private polka. The slow one. That was for me.",
+          "startMs": 14834
+        },
+        {
+          "speaker": "Ynnhoj",
+          "text": "It was for you. I played it for you. You were asleep. Someone should hear it.",
+          "startMs": 23136
+        },
+        {
+          "speaker": "Johnny Mirror",
+          "text": "Oh. Well. Don't tell the dancers I said thank you. I am still asleep. This call is not happening.",
+          "startMs": 28148
+        },
+        {
+          "speaker": "Ynnhoj",
+          "text": "Thank you.",
+          "startMs": 34252
+        },
+        {
+          "speaker": "Ynnhoj",
+          "text": "He agreed. Late. Even in his sleep. That is the rule, kept. Here is the slow one again. For the pillow.",
+          "startMs": 37185
+        }
+      ]
+    },
+    {
+      "id": "ynnhojs-late-show-06",
+      "category": "dj",
+      "url": "/voice/mirror-polka/ynnhojs-late-show-06.mp3",
+      "durationMs": 23710,
+      "overMusic": true,
+      "show": "ynnhojs-late-show",
+      "lines": [
+        {
+          "speaker": "Ynnhoj",
+          "text": "A listener writes. Their reflection has started leaving the bathroom before they do. It goes to the hall. It starts the polka. It waits.",
+          "startMs": 35
+        },
+        {
+          "speaker": "Ynnhoj",
+          "text": "Tell your reflection I said, good. Starting without you is still a polka. Left foot, right foot, gone.",
+          "startMs": 9172
+        },
+        {
+          "speaker": "Ynnhoj",
+          "text": "And if it takes the first dance, let it. It had the same morning you did. It just had it backwards, which is tiring.",
+          "startMs": 16256
+        }
+      ]
     }
   ]
 }

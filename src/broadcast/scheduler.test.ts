@@ -7,8 +7,12 @@ import { hash } from './random';
 import {
   HOUR_MS,
   StationSchedule,
+  activeSerialForDay,
+  clearSerialRegistry,
   daypartForHour,
+  getSerialDirectory,
   joinOffset,
+  registerSerialClips,
   segmentAt,
   segmentsBetween,
   serialEpisode,
@@ -565,6 +569,9 @@ describe('the living schedule (v3)', () => {
           dates: ['10-31', 'Halloween'],
           level: 7,
           event: 'the-hum',
+          trigger: 'on_pirate',
+          swap_with: 'snail-jams',
+          shifts: [2, 9],
         },
         { id: 'b', category: 'ship', url: '/b.mp3', durationMs: 4000, part: 'middle', serial: { id: 'x' }, event: 'nope', level: -1 },
       ],
@@ -578,6 +585,9 @@ describe('the living schedule (v3)', () => {
       dates: ['10-31'],
       level: 3,
       event: 'the-hum',
+      trigger: 'on_pirate',
+      swapWith: 'snail-jams',
+      shifts: [2, 9],
     });
     expect(b!.part).toBeUndefined();
     expect(b!.serial).toBeUndefined();
@@ -597,5 +607,228 @@ describe('the living schedule (v3)', () => {
     expect(index?.shows['void-beats']!.map((x) => x.id)).toEqual(['late']);
     expect(index?.shows.nope).toBeUndefined();
     expect(parseShowIndex('<html>')).toBeNull();
+  });
+
+  it('coordinates cross-station serials across the dial and exposes the global serial directory', () => {
+    clearSerialRegistry();
+    const dir = getSerialDirectory();
+    expect(dir.map((s) => s.id)).toEqual([
+      'bev-gets-her-song',
+      'greg-comes-home',
+      'teodor-is-heard',
+      'the-long-dark',
+      'the-new-guy',
+    ]);
+    const gregDir = dir.find((s) => s.id === 'greg-comes-home')!;
+    expect(gregDir.totalEpisodes).toBe(13);
+    expect(gregDir.episodes[0]?.stationId).toBe('whalesong');
+    expect(gregDir.episodes[12]?.stationId).toBe('dimension-hop');
+
+    // Build schedules for all 13 stations that carry parts of `greg-comes-home`.
+    const gregByStation: Record<string, number[]> = {
+      whalesong: [1],
+      'comet-marimba': [2],
+      'moon-dub': [3],
+      'rainfall-fm': [4],
+      'snail-jams': [5],
+      'pixel-afterlife': [6],
+      'mirror-polka': [7],
+      'end-lounge': [8],
+      'impossible-sports': [9],
+      'every-news': [10],
+      'ask-grenda': [11],
+      'static-lullabies': [12],
+      'dimension-hop': [13],
+    };
+    const tz = fixedTzOffset(0);
+    const schedules = new Map<string, StationSchedule>();
+    for (const [sid, eps] of Object.entries(gregByStation)) {
+      const st = station(sid);
+      const base = library(sid);
+      const serialClips = eps.map(
+        (episode) => clips(sid, 'story', 1, { serial: { id: 'greg-comes-home', episode } })[0]!,
+      );
+      schedules.set(sid, new StationSchedule(st, { own: [...base.own, ...serialClips], shared: base.shared }, { tzOffset: tz }));
+    }
+
+    const startDay = localTime(DAY0, tz).day;
+    for (let day = startDay; day < startDay + 13; day++) {
+      const status = activeSerialForDay('greg-comes-home', day)!;
+      expect(status).not.toBeNull();
+      expect(status.episode).toBe((day % 13) + 1);
+      const from = localMinuteToMs(day, 0, tz);
+      const to = from + 24 * HOUR_MS;
+      for (const [sid, sched] of schedules) {
+        const airings = voices(sched.segmentsBetween(from, to)).filter(
+          (x) => x.clip.serial?.id === 'greg-comes-home',
+        );
+        if (sid === status.stationId) {
+          expect(airings.length).toBeGreaterThanOrEqual(2);
+          for (const a of airings) expect(a.clip.serial?.episode).toBe(status.episode);
+        } else {
+          expect(airings).toHaveLength(0);
+        }
+      }
+    }
+
+    // Also verify `bev-gets-her-song` on `ask-grenda` ([1, 11] of 12) does not ping-pong every day.
+    const grenda = station('ask-grenda');
+    const grendaBase = library(grenda.id);
+    const bevClips = [1, 11].map(
+      (episode) => clips(grenda.id, 'call', 1, { serial: { id: 'bev-gets-her-song', episode } })[0]!,
+    );
+    const grendaSched = new StationSchedule(
+      grenda,
+      { own: [...grendaBase.own, ...bevClips], shared: grendaBase.shared },
+      { tzOffset: tz },
+    );
+    const bevDaysAired: number[] = [];
+    for (let day = startDay; day < startDay + 12; day++) {
+      const from = localMinuteToMs(day, 0, tz);
+      const airings = voices(grendaSched.segmentsBetween(from, from + 24 * HOUR_MS)).filter(
+        (x) => x.clip.serial?.id === 'bev-gets-her-song',
+      );
+      if (airings.length > 0) bevDaysAired.push((day % 12) + 1);
+    }
+    expect(bevDaysAired.sort((a, b) => a - b)).toEqual([1, 11]);
+
+    // Dynamic registration (`registerSerialClips`) also coordinates custom multi-station serials.
+    registerSerialClips('void-beats', clips('void-beats', 'story', 1, { serial: { id: 'custom-arc', episode: 1 } }));
+    registerSerialClips('moon-dub', clips('moon-dub', 'story', 1, { serial: { id: 'custom-arc', episode: 2 } }));
+    expect(activeSerialForDay('custom-arc', 0)?.stationId).toBe('void-beats');
+    expect(activeSerialForDay('custom-arc', 1)?.stationId).toBe('moon-dub');
+    clearSerialRegistry();
+  });
+
+  it('airs show closers near the end of a show’s final hour instead of dropping them', () => {
+    const s = station('void-beats');
+    const show: ShowDef = { id: 'the-3am-hour', name: 'The 3 AM Hour', blurb: '', start: 2, end: 5 };
+    const base = library(s.id);
+    const openers = clips(s.id, 'id', 2, { show: show.id, part: 'open' });
+    const closers = clips(s.id, 'id', 2, { show: show.id, part: 'close' });
+    const showLinks = clips(s.id, 'dj', 8, { show: show.id });
+    const lib: StationClips = {
+      own: [...base.own, ...openers, ...closers, ...showLinks],
+      shared: base.shared,
+      shows: [show],
+    };
+    for (const offset of [0, 330]) {
+      const tz = fixedTzOffset(offset);
+      const schedule = new StationSchedule(s, lib, { tzOffset: tz });
+      const segments = schedule.segmentsBetween(DAY0, DAY0 + 24 * HOUR_MS);
+      const airedClosers = voices(segments).filter((x) => x.clip.show === show.id && x.clip.part === 'close');
+      expect(airedClosers.length).toBeGreaterThanOrEqual(1);
+      for (const c of airedClosers) {
+        const local = localTime(c.startMs, tz);
+        // Must air in the final hour of the show (04:00..05:00 local), near the end of the show.
+        expect(local.hour).toBe(4);
+        expect(local.minuteOfDay).toBeGreaterThanOrEqual(4 * 60 + 48);
+        expect(local.minuteOfDay).toBeLessThan(5 * 60);
+      }
+    }
+  });
+
+  it('protects guest-host takeover shows from airing clips voiced by the displaced primary host', () => {
+    const s = station('end-lounge');
+    const show: ShowDef = {
+      id: 'vespers-hour',
+      name: 'The Vespers Hour',
+      blurb: '',
+      start: 2,
+      end: 4,
+      host: 'Brother Paul',
+    };
+    const primaryHostDj = clips(s.id, 'dj', 10, {
+      lines: [{ speaker: s.host.name, text: 'Primary host here.', startMs: 0 }],
+    });
+    const primaryHostIdents = clips(s.id, 'id', 4, {
+      lines: [{ speaker: s.host.name, text: 'Station ident.', startMs: 0 }],
+    });
+    const takeoverOpen = clips(s.id, 'id', 1, {
+      show: show.id,
+      part: 'open',
+      lines: [{ speaker: s.host.name, text: 'Handing over to Brother Paul.', startMs: 0 }],
+    });
+    const takeoverClose = clips(s.id, 'id', 1, {
+      show: show.id,
+      part: 'close',
+      lines: [{ speaker: 'Brother Paul', text: 'Goodnight from Vespers.', startMs: 0 }],
+    });
+    const takeoverDj = clips(s.id, 'dj', 6, {
+      show: show.id,
+      lines: [{ speaker: 'Brother Paul', text: 'Brother Paul speaking.', startMs: 0 }],
+    });
+    const tz = fixedTzOffset(0);
+    const schedule = new StationSchedule(
+      s,
+      {
+        own: [...primaryHostDj, ...primaryHostIdents, ...takeoverOpen, ...takeoverClose, ...takeoverDj],
+        shared: [],
+        shows: [show],
+      },
+      { tzOffset: tz },
+    );
+
+    const duringShow = voices(schedule.segmentsBetween(DAY0 + 2 * HOUR_MS, DAY0 + 4 * HOUR_MS));
+    expect(duringShow.length).toBeGreaterThan(4);
+    for (const seg of duringShow) {
+      // Every clip during the takeover show must belong to the show (never a general primary-host clip).
+      expect(seg.clip.show).toBe(show.id);
+    }
+    expect(duringShow.some((seg) => seg.clip.part === 'open')).toBe(true);
+    expect(duringShow.some((seg) => seg.clip.part === 'close')).toBe(true);
+
+    // Outside the takeover show, the primary host's general clips air as usual.
+    const outsideShow = voices(schedule.segmentsBetween(DAY0 + 5 * HOUR_MS, DAY0 + 8 * HOUR_MS));
+    expect(outsideShow.length).toBeGreaterThan(4);
+    expect(outsideShow.some((seg) => primaryHostDj.includes(seg.clip))).toBe(true);
+  });
+
+  it('gates storyline continuity clips by completed shifts (`clip.shifts`) and parses shifts in manifests', () => {
+    const parsed = parseManifest({
+      version: 1,
+      station: 'waystation-9',
+      clips: [
+        { id: 'early', category: 'dj', url: '/early.mp3', durationMs: 10000, shifts: [0, 1] },
+        { id: 'late', category: 'dj', url: '/late.mp3', durationMs: 10000, shifts: [4, 999] },
+        { id: 'bad1', category: 'dj', url: '/bad1.mp3', durationMs: 10000, shifts: [-1, 2] },
+        { id: 'bad2', category: 'dj', url: '/bad2.mp3', durationMs: 10000, shifts: [5, 2] },
+        { id: 'bad3', category: 'dj', url: '/bad3.mp3', durationMs: 10000, shifts: [1] },
+      ],
+    })!;
+    expect(parsed.clips[0]!.shifts).toEqual([0, 1]);
+    expect(parsed.clips[1]!.shifts).toEqual([4, 999]);
+    expect(parsed.clips[2]!.shifts).toBeUndefined();
+    expect(parsed.clips[3]!.shifts).toBeUndefined();
+    expect(parsed.clips[4]!.shifts).toBeUndefined();
+
+    const s = station('waystation-9');
+    const earlyClips = clips(s.id, 'dj', 8, { shifts: [0, 1] });
+    const midClips = clips(s.id, 'dj', 8, { shifts: [2, 3] });
+    const lateClips = clips(s.id, 'dj', 8, { shifts: [4, 999] });
+    const idents = clips(s.id, 'id', 4);
+    let currentShifts = 0;
+    const schedule = new StationSchedule(
+      s,
+      { own: [...earlyClips, ...midClips, ...lateClips, ...idents], shared: [] },
+      { ...utc, shifts: () => currentShifts },
+    );
+
+    const djAtShift = (shiftCount: number) => {
+      currentShifts = shiftCount;
+      return voices(schedule.segmentsBetween(DAY0, DAY0 + 4 * HOUR_MS)).filter((v) => v.clip.category === 'dj');
+    };
+
+    const at0 = djAtShift(0);
+    expect(at0.length).toBeGreaterThan(0);
+    for (const v of at0) expect(v.clip.shifts).toEqual([0, 1]);
+
+    const at2 = djAtShift(2);
+    expect(at2.length).toBeGreaterThan(0);
+    for (const v of at2) expect(v.clip.shifts).toEqual([2, 3]);
+
+    const at5 = djAtShift(5);
+    expect(at5.length).toBeGreaterThan(0);
+    for (const v of at5) expect(v.clip.shifts).toEqual([4, 999]);
   });
 });
