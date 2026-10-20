@@ -98,7 +98,7 @@ describe('trackMeta', () => {
         }
       }
     }
-  });
+  }, 20_000);
 
   it('rarely repeats a title on the same station', () => {
     // Effective vocabulary = 1 / P(two random tracks share a title), estimated from

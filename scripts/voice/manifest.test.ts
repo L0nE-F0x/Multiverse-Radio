@@ -42,7 +42,12 @@ const CLIP_KEYS = new Set([
   'arc',
   'days',
   'lines',
+  'shifts',
+  'trigger',
+  'swap_with',
 ]);
+const SHIP_TRIGGERS = ['on_skip_streak', 'scanning_static', 'on_pirate', 'after_event', 'near_secret', 'on_station'];
+const SHIFT_MAX = 999;
 const LINE_KEYS = new Set(['speaker', 'text', 'startMs']);
 const SHOW_KEYS = new Set(['id', 'name', 'blurb', 'start', 'end', 'host', 'days']);
 const DAYS_IN_MONTH = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
@@ -220,6 +225,22 @@ function shapeProblems(data: unknown, station: string): string[] {
         problems.push(`${where}: arc must be { id: kebab-case, step: integer >= 1 }`);
     }
     if (clip.days !== undefined && !validDays(clip.days)) problems.push(`${where}: days must be a sorted, non-empty array of weekdays 0-6`);
+    if (clip.shifts !== undefined) {
+      const shifts = clip.shifts;
+      const pair = Array.isArray(shifts) && shifts.length === 2 && shifts.every(isCount);
+      if (!pair || shifts[0]! > shifts[1]! || shifts[1]! > SHIFT_MAX) {
+        problems.push(`${where}: shifts must be [min, max] with integers 0 <= min <= max <= ${SHIFT_MAX}`);
+      }
+      if (station !== '_ship' && station !== '_shared' && pool) problems.push(`${where}: shifts is only for _ship, _shared, and station manifests`);
+    }
+    if (clip.trigger !== undefined) {
+      if (station !== '_ship') problems.push(`${where}: trigger is only for _ship`);
+      if (!SHIP_TRIGGERS.includes(clip.trigger as string)) problems.push(`${where}: unknown trigger ${JSON.stringify(clip.trigger)}`);
+    }
+    if (clip.swap_with !== undefined) {
+      if (station !== '_events') problems.push(`${where}: swap_with is only for _events`);
+      if (typeof clip.swap_with !== 'string' || !STATION_IDS.has(clip.swap_with)) problems.push(`${where}: swap_with must be a roster station id`);
+    }
     if (!Array.isArray(clip.lines)) {
       problems.push(`${where}: lines must be an array`);
       return;

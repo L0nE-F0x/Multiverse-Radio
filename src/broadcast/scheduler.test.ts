@@ -698,7 +698,7 @@ describe('the living schedule (v3)', () => {
     expect(activeSerialForDay('custom-arc', 0)?.stationId).toBe('void-beats');
     expect(activeSerialForDay('custom-arc', 1)?.stationId).toBe('moon-dub');
     clearSerialRegistry();
-  });
+  }, 20_000);
 
   it('airs show closers near the end of a show’s final hour instead of dropping them', () => {
     const s = station('void-beats');

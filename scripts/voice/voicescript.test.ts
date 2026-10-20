@@ -24,6 +24,10 @@ function findPython(): string | null {
 }
 
 const PYTHON = findPython();
+/** The dramaturgy assembly test synthesizes audio. `--check` itself stays on the standard library. */
+const HAS_NUMPY = PYTHON
+  ? spawnSync(PYTHON, ['-c', 'import numpy'], { encoding: 'utf8' }).status === 0
+  : false;
 const dirs: string[] = [];
 afterAll(() => {
   for (const dir of dirs) rmSync(dir, { recursive: true, force: true });
@@ -519,7 +523,7 @@ print(json.dumps({
     expect(serialized.est_underflow).toBeGreaterThanOrEqual(0);
   });
 
-  it('assembles negative gap crosstalk, gain attenuation, and constant-power stereo pan', () => {
+  it.skipIf(!HAS_NUMPY)('assembles negative gap crosstalk, gain attenuation, and constant-power stereo pan', () => {
     const out = py(`
 import json, tempfile
 import numpy as np
