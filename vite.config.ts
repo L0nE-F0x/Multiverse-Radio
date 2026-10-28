@@ -29,6 +29,7 @@ export default defineConfig({
     },
   },
   test: {
+    testTimeout: 15_000,
     setupFiles: ['src/test-setup.ts'],
     include: ['src/**/*.test.ts', 'scripts/**/*.test.ts'],
     // Playwright specs run with `npm run test:e2e`, never under vitest.

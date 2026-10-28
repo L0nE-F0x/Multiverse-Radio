@@ -4,6 +4,7 @@
 // made her peace with it. They wave at each other through the rift.
 
 import { gloom, haze, lightPool, motes, rain } from '../kit/atmos';
+import { callLamp, onAirLamp } from '../kit/broadcast';
 import { type Color, hex, mix, shade } from '../kit/color';
 import { blinking, clamp, envelope, steam } from '../kit/fx';
 import type { Gfx } from '../kit/gfx';
@@ -250,10 +251,30 @@ const def: SceneDef = {
         const { t } = f;
         const ev = f.rareT;
         const rd = f.reduced;
+        const sp = f.speech ?? 0;
+        const isVoice = f.segmentKind === 'voice' || sp > 0.05;
         const talker = Math.floor(t / 6) % 2;
         const cyc = t % 18;
         const waving = f.awake > 0.3 && cyc > 14 && cyc < 16.5 ? envelope(cyc - 14, 2.5, 0.4, 0.4) : 0;
         const five = f.rare === 1 && ev < 6 ? envelope(ev, 6, 1.2, 1) : 0;
+
+        // ON AIR boxes pulse when a host is speaking; mixer call lamps blink on calls.
+        onAirLamp(g, 92, 27, f, { label: true });
+        for (const [sx, , up] of [
+          [92, A, false],
+          [200, B, true],
+        ] as const) {
+          if (up) {
+            const lit = isVoice ? clamp(0.65 + sp * 0.35) : 0.25 * f.awake;
+            g.rect(sx - 1, 26, 30, 11, ink);
+            g.rect(sx, 27, 28, 9, mix(hex('#3a0c10'), hex('#ec3428'), lit));
+            g.textCenter('ON AIR', sx + 14, 29, mix(hex('#6a2024'), hex('#fff0d8'), lit));
+            flipV(g, sx - 1, 26, 30, 11);
+            if (isVoice) g.glow(sx + 14, 31, 14 + sp * 12, hex('#ec3428'), 0.2 + sp * 0.35, 4);
+          }
+        }
+        callLamp(g, 70, DESK_Y - 5, f);
+        callLamp(g, 230, DESK_Y - 5, f);
 
         // Weather: rain falls in A, rises in B.
         if (!rd) {
@@ -274,11 +295,16 @@ const def: SceneDef = {
         }
 
         // Hosts.
-        const nearWave = Math.max(waving, five > 0.2 ? five : 0);
-        host(g, 112, DESK_Y, jace, 1, t, talker === 0 ? f.energy + 0.2 : 0, nearWave, 1, 0);
-        host(g, 208, DESK_Y, mara, -1, t + 0.7, talker === 1 ? f.energy + 0.2 : 0, nearWave, 2, 1);
+        const nearWave = Math.max(waving, five > 0.2 ? five : 0, sp > 0.35 ? (sp - 0.35) * 0.6 : 0);
+        const talkStrength = Math.max(f.energy + 0.2, sp * 1.4);
+        host(g, 112, DESK_Y, jace, 1, t, talker === 0 || sp > 0.2 ? talkStrength : 0, nearWave, 1, 0);
+        host(g, 208, DESK_Y, mara, -1, t + 0.7, talker === 1 || sp > 0.2 ? talkStrength : 0, nearWave, 2, 1);
         mic(g, 146, 128, DESK_Y - 37, -1);
         mic(g, 174, 192, DESK_Y - 37, 1);
+        if (isVoice) {
+          g.glow(128, DESK_Y - 37, 6 + sp * 6, A.lamp, 0.18 + sp * 0.3, 3);
+          g.glow(192, DESK_Y - 37, 6 + sp * 6, B.lamp, 0.18 + sp * 0.3, 3);
+        }
 
         // A's mug drifts through the rift and turns over on the way.
         if (crossing) {
@@ -292,7 +318,7 @@ const def: SceneDef = {
         // The rift: a jagged seam of light with a wide soft halo.
         const crackle = rd ? 0.2 : 1;
         let prevX = RIFT;
-        const halo = 0.1 + f.energy * 0.08 + five * 0.15;
+        const halo = 0.1 + f.energy * 0.08 + sp * 0.12 + five * 0.15;
         for (let y = g.top; y < g.bottom; y++) {
           const off = (noise1(y * 0.13 + t * 0.5 * crackle, 3) - 0.5) * 6 + (noise1(y * 0.5 - t * 1.6 * crackle, 5) - 0.5) * 2;
           const x = Math.round(RIFT + off);

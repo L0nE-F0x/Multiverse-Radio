@@ -1,7 +1,9 @@
 // Drives one scene on one canvas: sizing, the frame loop, audio-energy smoothing,
 // rare-event scheduling and power saving (pauses when hidden or offscreen).
 
-import { hex } from './kit/color';
+import type { BroadcastSceneState } from '../broadcast/types';
+import { applyBroadcastLens, sectionDrive } from './kit/broadcast';
+import { type Color, hex } from './kit/color';
 import { Gfx } from './kit/gfx';
 import { Post } from './kit/post';
 import { Rng, hashString } from './kit/rng';
@@ -11,6 +13,7 @@ import { computeView } from './viewport';
 export interface RunnerInputs {
   playing: boolean;
   energy?: () => number;
+  broadcast?: () => Partial<BroadcastSceneState>;
   reducedMotion: boolean;
 }
 
@@ -38,9 +41,12 @@ export class SceneRunner {
   /** The graded picture that goes to the canvas. */
   private out = new Int32Array(0);
   private post: Post | null;
+  private accentColor: Color;
+  private bgExposure: Float32Array | null = null;
+  private bgExposureVersion = 0;
   /** Lab switch: false shows the raw raster without grade, vignette, grain or bloom. */
   postEnabled = true;
-  private frame: Frame = {
+  readonly frame: Frame = {
     t: 0,
     dt: 0,
     energy: 0,
@@ -54,6 +60,15 @@ export class SceneRunner {
     rareSeed: 0,
     hour: 12,
     n: 0,
+    segmentKind: 'music',
+    voiceCategory: null,
+    speech: 0,
+    section: 'verse',
+    sectionProgress: 0,
+    event: null,
+    hush: false,
+    signal: 1,
+    bleed: 0,
   };
   private rng: Rng;
   private slowEnergy = 0;
@@ -90,18 +105,21 @@ export class SceneRunner {
     variant = 0,
   ) {
     this.ctx = canvas.getContext('2d', { alpha: false })!;
+    this.accentColor = hex(accent);
     this.rng = new Rng((hashString(def.id) ^ 0x9e3779b9 ^ variant) >>> 0);
     this.post = def.grade === false ? null : new Post(def.grade);
-    this.scene = def.create({ accent: hex(accent), rng: new Rng(hashString(def.id)), variant });
+    this.scene = def.create({ accent: this.accentColor, rng: new Rng(hashString(def.id)), variant });
     this.frame.hour = localHour();
     this.frame.awake = inputs.playing ? 1 : 0;
     this.nextRare = this.rng.range(RARE_MIN_S * 0.5, RARE_MAX_S * 0.6);
 
-    this.pageVisible = document.visibilityState !== 'hidden';
-    document.addEventListener('visibilitychange', this.onVisibility);
-    this.resizeObs = new ResizeObserver(() => this.layout());
-    this.resizeObs.observe(container);
-    if ('IntersectionObserver' in window) {
+    this.pageVisible = typeof document !== 'undefined' ? document.visibilityState !== 'hidden' : true;
+    if (typeof document !== 'undefined') document.addEventListener('visibilitychange', this.onVisibility);
+    if (typeof ResizeObserver !== 'undefined') {
+      this.resizeObs = new ResizeObserver(() => this.layout());
+      this.resizeObs.observe(container);
+    }
+    if (typeof window !== 'undefined' && 'IntersectionObserver' in window) {
       this.interObs = new IntersectionObserver((entries) => {
         const e = entries[entries.length - 1];
         if (!e) return;
@@ -116,7 +134,7 @@ export class SceneRunner {
   destroy() {
     this.destroyed = true;
     this.stop();
-    document.removeEventListener('visibilitychange', this.onVisibility);
+    if (typeof document !== 'undefined') document.removeEventListener('visibilitychange', this.onVisibility);
     this.resizeObs?.disconnect();
     this.interObs?.disconnect();
   }
@@ -143,8 +161,13 @@ export class SceneRunner {
     this.drawNow();
   }
 
+  /** Draw one frame advancing by `dt` seconds. */
+  draw(dt = 0) {
+    this.step(dt, true);
+  }
+
   private onVisibility = () => {
-    this.pageVisible = document.visibilityState !== 'hidden';
+    this.pageVisible = typeof document !== 'undefined' ? document.visibilityState !== 'hidden' : true;
     this.update();
   };
 
@@ -216,24 +239,38 @@ export class SceneRunner {
       g.target(g.bg);
       this.scene.background(g);
       g.target();
+      this.bgExposure = g.exposure ? g.exposure.slice() : null;
+      this.bgExposureVersion = g.exposureVersion;
       this.canvas.width = v.w;
       this.canvas.height = v.h;
       this.out = new Int32Array(v.w * v.h);
-      this.image = new ImageData(new Uint8ClampedArray(this.out.buffer as ArrayBuffer), v.w, v.h);
+      this.image =
+        typeof ImageData !== 'undefined'
+          ? new ImageData(new Uint8ClampedArray(this.out.buffer as ArrayBuffer), v.w, v.h)
+          : ({ data: new Uint8ClampedArray(this.out.buffer as ArrayBuffer), width: v.w, height: v.h } as unknown as ImageData);
       this.stats.w = v.w;
       this.stats.h = v.h;
       this.drawNow();
     }
     // Nearest-neighbour only when each art pixel covers at least two device pixels;
     // smaller thumbnails look better smoothed.
-    const scale = (Math.max(cw / v.w, ch / v.h) * (window.devicePixelRatio || 1));
-    this.canvas.style.imageRendering = scale >= 1.75 ? 'pixelated' : 'auto';
+    const dpr = typeof window !== 'undefined' ? window.devicePixelRatio || 1 : 1;
+    const scale = Math.max(cw / v.w, ch / v.h) * dpr;
+    if (this.canvas.style) this.canvas.style.imageRendering = scale >= 1.75 ? 'pixelated' : 'auto';
     this.update();
   }
 
   private drawNow() {
     if (!this.image) return;
     this.step(0, true);
+  }
+
+  private restoreExposure() {
+    const g = this.gfx;
+    if (this.bgExposure && g.exposure && g.exposureVersion !== this.bgExposureVersion) {
+      g.exposure.set(this.bgExposure);
+      g.exposureVersion = this.bgExposureVersion;
+    }
   }
 
   private step(dt: number, draw: boolean) {
@@ -247,7 +284,29 @@ export class SceneRunner {
     f.playing = inp.playing;
     f.reduced = reduced;
 
-    // Audio energy → envelope + onset pulse.
+    // Broadcast state (v5).
+    const b = inp.broadcast?.();
+    f.segmentKind = b?.segmentKind ?? 'music';
+    f.voiceCategory = b?.voiceCategory ?? null;
+    f.section = b?.section ?? 'verse';
+    f.sectionProgress = b?.sectionProgress ?? 0;
+    f.event = b?.event ?? null;
+    f.hush = b?.hush ?? false;
+    f.signal = b?.signal ?? 1;
+    f.bleed = b?.bleed ?? 0;
+
+    const rawSpeech = b?.speech !== undefined ? (b.speech > 0 ? (b.speech < 1 ? b.speech : 1) : 0) : 0;
+    if (dt > 0) {
+      const sAtt = 1 - Math.exp(-dt * 20);
+      const sRel = 1 - Math.exp(-dt * 6);
+      const cur = f.speech ?? 0;
+      f.speech = cur + (rawSpeech - cur) * (rawSpeech > cur ? sAtt : sRel);
+    } else {
+      f.speech = rawSpeech;
+    }
+    if (reduced) f.speech = (f.speech ?? 0) * 0.3;
+
+    // Audio energy → envelope + onset pulse (nudged by musical section drive).
     let raw = 0;
     if (inp.playing) {
       if (inp.energy) {
@@ -257,6 +316,10 @@ export class SceneRunner {
         // No analyser wired up: a gentle pretend groove at ~84 bpm.
         const ph = (this.realT * 1.4) % 1;
         raw = 0.28 + 0.3 * Math.pow(1 - ph, 6);
+      }
+      if (b?.section && f.segmentKind === 'music') {
+        const drive = sectionDrive(f);
+        raw = Math.min(1, Math.max(0, raw * (0.8 + 0.2 * drive)));
       }
     }
     if (dt > 0) {
@@ -290,18 +353,26 @@ export class SceneRunner {
     if (!draw || !this.image) {
       // Simulate without drawing (used by advance()).
       this.gfx.restore();
+      this.restoreExposure();
       this.scene.frame(this.gfx, f);
+      if (this.postEnabled) {
+        applyBroadcastLens(this.gfx.buf, this.gfx.w, this.gfx.h, f, this.accentColor);
+      }
       return;
     }
 
     const t0 = performance.now();
     const g = this.gfx;
     g.restore();
+    this.restoreExposure();
     this.scene.frame(g, f);
+    if (this.postEnabled) {
+      applyBroadcastLens(g.buf, g.w, g.h, f, this.accentColor);
+    }
     if (this.post && this.postEnabled) {
       this.post.apply(g.frame, this.out, g.w, g.h, g.ox, g.oy, g.exposure, g.exposureVersion, !reduced);
     } else this.out.set(g.frame);
-    this.ctx.putImageData(this.image, 0, 0);
+    this.ctx?.putImageData?.(this.image, 0, 0);
     f.n++;
     const t1 = performance.now();
 

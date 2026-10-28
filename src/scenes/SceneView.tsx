@@ -2,7 +2,7 @@
 // StationScene is the public wrapper; the lab uses this directly for its extra knobs.
 
 import { useEffect, useLayoutEffect, useRef, useState } from 'react';
-import type { SceneId } from '../broadcast/types';
+import type { BroadcastSceneState, SceneId } from '../broadcast/types';
 import { hashString } from './kit/rng';
 import { loadScene, sceneEntry } from './registry';
 import { type RunnerInputs, SceneRunner } from './runner';
@@ -15,6 +15,7 @@ export interface SceneViewProps {
   variantKey?: string;
   playing: boolean;
   energy?: () => number;
+  broadcast?: () => Partial<BroadcastSceneState>;
   reducedMotion?: boolean;
   className?: string;
   /** Overrides the default aria-label. */
@@ -35,6 +36,7 @@ export function SceneView({
   variantKey,
   playing,
   energy,
+  broadcast,
   reducedMotion = false,
   className = '',
   label,
@@ -46,7 +48,7 @@ export function SceneView({
   const containerRef = useRef<HTMLDivElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const runnerRef = useRef<SceneRunner | null>(null);
-  const inputs = useRef<RunnerInputs>({ playing, energy, reducedMotion });
+  const inputs = useRef<RunnerInputs>({ playing, energy, broadcast, reducedMotion });
   const onRunnerRef = useRef(onRunner);
   const rawRef = useRef(raw);
   const [ready, setReady] = useState(false);
@@ -56,6 +58,7 @@ export function SceneView({
     const changed = i.playing !== playing || i.reducedMotion !== reducedMotion;
     i.playing = playing;
     i.energy = energy;
+    i.broadcast = broadcast;
     i.reducedMotion = reducedMotion;
     onRunnerRef.current = onRunner;
     const r = runnerRef.current;

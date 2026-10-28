@@ -75,7 +75,7 @@ export function composeSeaShanty(req: TrackRequest): Score {
     ? b.inst({ kind: 'synth', patch: 'flute', name: 'Tin whistle', gain: 0.5, reverb: 0.3, pan: 0.15, detune: weirdDetune(song, W, 15) })
     : b.inst({ kind: 'sample', patch: 'bowed-fiddle', name: 'Fiddle', gain: 0.55, reverb: 0.3, pan: 0.18, release: 0.1, detune: weirdDetune(song, W, 15) });
   const fiddle = whistle ? b.inst({ kind: 'sample', patch: 'bowed-fiddle', name: 'Fiddle', gain: 0.45, reverb: 0.3, pan: 0.25, release: 0.1 }) : callInst;
-  const crew = b.inst({ kind: 'synth', patch: 'crew', name: 'The crew', gain: 0.55, reverb: 0.4, pan: -0.05, detune: weirdDetune(song, W, 25), lowpass: 3200 });
+  const crew = b.inst({ kind: 'synth', patch: 'shanty-choir', name: 'The crew', gain: 0.55, reverb: 0.4, pan: -0.05, detune: weirdDetune(song, W, 25), lowpass: 3200 });
   const crewLow = b.inst({ kind: 'synth', patch: 'crew', name: 'The crew, low', gain: 0.42, reverb: 0.4, pan: -0.2, detune: -7, lowpass: 2600 });
   const box = b.inst({ kind: 'synth', patch: 'accordion', name: 'Accordion', gain: 0.5, reverb: 0.2, pan: -0.25, lowpass: lerp(2500, 5000, B) });
   const boxBass = b.inst({ kind: 'synth', patch: 'accordion', name: 'Accordion bass', gain: 0.48, pan: -0.15, lowpass: 1200 });

@@ -2,6 +2,7 @@
 // under one warm spotlight; candle-lit tables float on the cloud floor; lightning glows
 // softly inside the walls; now and then a waiter crosses the fog, very carefully.
 
+import { onAirLamp, sectionDrive } from '../kit/broadcast';
 import { type Color, hex, mix, ramp, shade } from '../kit/color';
 import { clamp, envelope, smoothstep } from '../kit/fx';
 import { type Gfx, addPx, bayer } from '../kit/gfx';
@@ -394,13 +395,19 @@ const def: SceneDef = {
 
         if (flashK > 0) g.tintAll(hex('#c8d4ff'), flashK * (f.reduced ? 0.05 : 0.22));
 
-        // The spotlight, breathing slightly with the music.
-        g.glow(SPOT_X, STAGE.y - 4, 30, warm, (0.03 + e * 0.05) * awake);
-        motes(g, t, SPOT_X - 36, 20, 72, 88, 26, warm, 0.35 * awake + 0.1, 2, 0.6);
+        // The spotlight, breathing slightly with the music and musical section.
+        const drive = sectionDrive(f);
+        const sp = f.speech ?? 0;
+        onAirLamp(g, 114, 104, f);
+        if (drive > 1.2 && !f.reduced) {
+          flashAt(g, STAGE.cx, 54, 65, 0.22 * (drive - 1) * awake);
+        }
+        g.glow(SPOT_X, STAGE.y - 4, Math.round(30 * drive), warm, (0.04 + e * 0.06) * drive * awake);
+        motes(g, t, SPOT_X - 36, 20, 72, 88, 26, warm, (0.35 * awake + 0.1) * drive, 2, 0.6);
 
         // ── the trio ──
         const droop = (1 - awake) * 2;
-        const bob = f.reduced ? 0 : Math.round(Math.sin(t * 2.2) * 0.7 * awake + f.pulse * 0.8 * awake);
+        const bob = f.reduced ? 0 : Math.round((Math.sin(t * 2.2) * 0.7 + f.pulse * 0.8 + sp * 0.8) * drive * awake);
         pianist(g, rim, 0, -1, bob, droop);
         pianist(g, rim, 1, 0, bob, droop);
         pianist(g, sil, 0, 0, bob, droop);
@@ -416,20 +423,20 @@ const def: SceneDef = {
           }
         }
         // fingers on the keys
-        if (awake > 0.3) for (let i = 0; i < 3; i++) if (hash3(Math.floor(t * 6), i, 2) < 0.3 + e * 0.6) g.px(144 + i * 2 + ((t * 5 + i) % 2), 94, hex('#fff8e8'));
+        if (awake > 0.3) for (let i = 0; i < 3; i++) if (hash3(Math.floor(t * 6), i, 2) < (0.3 + e * 0.6) * drive) g.px(144 + i * 2 + ((t * 5 + i) % 2), 94, hex('#fff8e8'));
 
-        const sway = f.reduced ? 0 : Math.round(Math.sin(t * 0.9) * 1.2 * awake);
-        const nod = f.reduced ? 0 : Math.round(f.pulse * awake + droop * 0.6);
+        const sway = f.reduced ? 0 : Math.round(Math.sin(t * 0.9) * 1.2 * drive * awake);
+        const nod = f.reduced ? 0 : Math.round(f.pulse * drive * awake + droop * 0.6);
         const frizz = strike && rareT > 0.7 ? clamp((rareT - 0.7) * 3) * (1 - smoothstep(8, 11, rareT)) : 0;
         bassist(g, rim, 0, -1, sway, nod, frizz);
         bassist(g, rim, -1, 0, sway, nod, frizz);
         bassist(g, sil, 0, 0, sway, nod, frizz);
         bass(g, sway);
-        const brushE = f.reduced ? 0.2 : 0.4 + e * 1.4 * awake;
+        const brushE = f.reduced ? 0.2 : (0.4 + e * 1.4 * awake) * drive;
         drummer(g, rim, 0, -1, t, brushE, droop);
         drummer(g, sil, 0, 0, t, brushE, droop);
-        g.pxAdd(199, 82, rim, 0.5 + f.pulse * 0.5);
-        g.pxAdd(228, 86, rim, 0.3 + e * 0.6);
+        g.pxAdd(199, 82, rim, (0.5 + f.pulse * 0.5) * drive);
+        g.pxAdd(228, 86, rim, (0.3 + e * 0.6) * drive);
 
         // Rings of cloud rise from the floor into the light.
         const rp = (t % 13) / 13;

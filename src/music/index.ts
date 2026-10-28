@@ -36,6 +36,16 @@ export interface TrackRequest {
    * a sound (palette, tempo range, a motif) while `seed` still makes each song different.
    */
   artist?: number;
+  /**
+   * v5: seconds at the start of the run during which a host/ident speaks over the intro
+   * ("hitting the post"). The engine keeps the intro vamp warm and ducked until `talkoverSeconds`,
+   * then opens the filter and drops in the main hook right as the host finishes.
+   */
+  talkoverSeconds?: number;
+  /** v5: weave a short melodic station call-sign jingle motif into the opening bars. */
+  jingle?: boolean;
+  /** v5: station id used to seed the melodic station call-sign jingle motif. */
+  stationId?: string;
 }
 
 export interface PlayOptions {
@@ -54,6 +64,12 @@ export interface MusicEngine {
   play(track: TrackRequest, options?: PlayOptions): void;
   /** Fades out and stops whatever is playing. */
   stop(options?: { when?: number; fade?: number }): void;
+  /** v5: what's playing right now (score, position in seconds, current section), if anything. */
+  nowPlaying?(): {
+    score: { duration: number; barDur: number; bars: number; sections: { name: string; startBar: number; bars: number; t: number }[] };
+    position: number;
+    section: { name: string; startBar: number; bars: number; t: number } | undefined;
+  } | null;
   /** Releases every node. The engine is unusable afterwards. */
   dispose(): void;
 }

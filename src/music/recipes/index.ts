@@ -16,6 +16,7 @@ import { composePolka } from './polka';
 import { composeSynthwave } from './synthwave';
 import { composeTropical } from './tropical';
 
+import { applyTalkoverAndJingle } from '../jingle';
 import { Rng } from '../rng';
 import { signatureOf, signScore } from './artist';
 import { BEDS_V3 } from './v3-beds';
@@ -65,14 +66,19 @@ export function compose(req: TrackRequest): Score {
   }
   const fn = COMPOSERS[safe.recipe];
   const run = (): Score => (fn ? fn(safe) : { ...composeLofi({ ...safe, recipe: 'lofi-hiphop' }), recipe: safe.recipe });
-  if (safe.artist === undefined) return run();
-  // An artist's track: their taste steers named choices, their mix goes on top (artist.ts).
-  const sig = signatureOf(safe.artist);
-  const outer = Rng.taste;
-  Rng.taste = sig.taste;
-  try {
-    return signScore(run(), sig);
-  } finally {
-    Rng.taste = outer;
+  let score: Score;
+  if (safe.artist === undefined) {
+    score = run();
+  } else {
+    // An artist's track: their taste steers named choices, their mix goes on top (artist.ts).
+    const sig = signatureOf(safe.artist);
+    const outer = Rng.taste;
+    Rng.taste = sig.taste;
+    try {
+      score = signScore(run(), sig);
+    } finally {
+      Rng.taste = outer;
+    }
   }
+  return applyTalkoverAndJingle(score, safe);
 }

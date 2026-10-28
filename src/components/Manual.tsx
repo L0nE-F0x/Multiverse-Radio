@@ -13,6 +13,9 @@ const KEYS: [string[], string][] = [
   [['L'], "Ship's log"],
   [['O'], 'Offline: prepare for dead space'],
   [['C'], 'Captions on / off'],
+  [['A'], 'Nightjar cabin ambience on / off'],
+  [['V'], 'Cycle scope mode (WAVE · FALL · SSTV)'],
+  [['P'], 'Transmit subspace reception ping'],
   [['H'], 'Hide the HUD (tap or H to restore)'],
   [['?'], 'This manual'],
 ];

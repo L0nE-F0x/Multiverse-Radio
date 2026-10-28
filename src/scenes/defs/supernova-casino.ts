@@ -4,6 +4,7 @@
 // sulky ember. A funk band plays in silhouette against it; a croupier waits at the wheel; a
 // little easel by the stage counts down to the supernova.
 
+import { onAirLamp, sectionDrive } from '../kit/broadcast';
 import { type Color, hex, mix, ramp, shade } from '../kit/color';
 import { clamp, envelope, smoothstep } from '../kit/fx';
 import { type Gfx, bayer } from '../kit/gfx';
@@ -430,12 +431,15 @@ const def: SceneDef = {
         }
 
         // ── the band, in silhouette against the star ──
-        band(g, t, f, sil);
-        rimLight(g, 196, 60, 90, STAGE.y - 58, (c) => c === sil, mix(fire, hex('#ffc890'), 0.3), 0.12 + b * 0.25, true);
-        // stage light: a violet glint on the bass, brighter in rare event 3
-        const spot = f.rare === 3 && ev < 10 ? envelope(ev, 10, 1.5, 2) : 0;
-        g.glow(236, STAGE.y - 22, 22 + spot * 14, violet, (0.06 + f.pulse * 0.05 * awake) + spot * 0.18);
-        if (spot > 0) g.ellipseA(236, STAGE.y + 1, 20, 3, violetL, 0.2 * spot);
+        const drive = sectionDrive(f);
+        const sp = f.speech ?? 0;
+        onAirLamp(g, 272, STAGE.y - 10, f);
+        band(g, t, { pulse: f.pulse * drive + sp * 0.5, awake: f.awake * (0.7 + 0.3 * drive), reduced: f.reduced, energy: f.energy * drive }, sil);
+        rimLight(g, 196, 60, 90, STAGE.y - 58, (c) => c === sil, mix(fire, hex('#ffc890'), 0.3), (0.12 + b * 0.25) * drive, true);
+        // stage light: a violet glint on the bass, brighter in rare event 3 and on drops
+        const spot = (f.rare === 3 && ev < 10 ? envelope(ev, 10, 1.5, 2) : 0) + Math.max(0, drive - 1) * 0.9;
+        g.glow(236, STAGE.y - 22, Math.round((22 + spot * 14) * drive), violet, (0.06 + f.pulse * 0.05 * awake) * drive + spot * 0.18 + sp * 0.15);
+        if (spot > 0) g.ellipseA(236, STAGE.y + 1, 20, 3, violetL, clamp(0.2 * spot));
 
         // ── the croupier and the wheel ──
         const spin = f.rare === 1 && ev < 10 ? envelope(ev, 10, 0.3, 4) : 0;

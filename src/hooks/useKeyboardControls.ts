@@ -90,6 +90,15 @@ export function useKeyboardControls(): void {
           case 'c':
             if (once) act.toggleCaptions();
             return true;
+          case 'a':
+            if (once) act.toggleCabin();
+            return true;
+          case 'v':
+            if (once) act.cycleScope();
+            return true;
+          case 'p':
+            if (once) act.sendPing();
+            return true;
           case 'h':
             if (once) act.toggleHud();
             return true;

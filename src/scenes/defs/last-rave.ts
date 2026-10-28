@@ -3,6 +3,7 @@
 // nebula that sways along with two long arms of dust. Over the local night the stars go out,
 // one at a time; by dawn only a handful are left, and in the evening they're all back.
 
+import { onAirLamp, sectionDrive } from '../kit/broadcast';
 import { hex, mix, ramp } from '../kit/color';
 import { clamp, envelope, lightCone, smoothstep } from '../kit/fx';
 import { type Gfx, bayer } from '../kit/gfx';
@@ -244,16 +245,19 @@ const def: SceneDef = {
         }
 
         // ── the nebula, swaying along ──
-        const sway = f.reduced ? 0 : Math.sin(t * 1.1) * (0.4 + 0.6 * awake) + f.pulse * 0.3 * awake;
-        const nk = 0.55 + 0.12 * e * awake;
+        const drive = sectionDrive(f);
+        const sp = f.speech ?? 0;
+        const sway = f.reduced ? 0 : (Math.sin(t * 1.1) * (0.4 + 0.6 * awake) + f.pulse * 0.3 * awake) * drive;
+        const nk = (0.52 + 0.14 * e * awake) * (0.75 + 0.25 * drive);
         drawNebula(g, t, sway, nk);
         const wave = f.rare === 3 && ev < 12 ? envelope(ev, 12, 3, 3) : 0;
-        const lift = 0.35 + 0.25 * Math.max(0, Math.sin(t * 0.55)) * awake + wave * 0.6;
+        const lift = (0.35 + 0.25 * Math.max(0, Math.sin(t * 0.55)) * awake) * drive + wave * 0.6;
         arm(g, NEB.x - 34 + Math.round(sway * 3), NEB.y - 18, -1, lift, sway, nk);
         arm(g, NEB.x + 30 + Math.round(sway * 3), NEB.y - 24, 1, lift * 0.9, -sway, nk);
 
         // ── the speaker stack's cones ──
-        const hit = f.reduced ? 0 : f.pulse * awake;
+        onAirLamp(g, 114, 82, f);
+        const hit = f.reduced ? 0 : f.pulse * awake * drive;
         for (const [cx, cy, r] of [
           [110, 90, 6],
           [110, 109, 7],
@@ -263,28 +267,28 @@ const def: SceneDef = {
           g.ring(cx, cy, r - 2 + Math.round(hit), r - 2 + Math.round(hit), hex('#0c0a0a'));
           g.disc(cx, cy, 1.5, mix(hex('#2a2220'), warm, 0.3));
         }
-        g.px(120, 83, mix(hex('#401010'), ember, 0.4 + 0.6 * (e > 0.5 ? 1 : 0)));
+        g.px(120, 83, mix(hex('#401010'), ember, 0.4 + 0.6 * (e * drive > 0.5 ? 1 : 0)));
 
         // ── the lamp: one warm bulb on a crooked pole ──
-        const fl = f.reduced ? 1 : flicker(t, 7, 3) * 0.15 + 0.85;
+        const fl = (f.reduced ? 1 : flicker(t, 7, 3) * 0.15 + 0.85) * (0.75 + 0.25 * drive);
         g.rect(LAMP.x - 3, LAMP.y - 4, 7, 3, hex('#1a1210'));
         g.px(LAMP.x, LAMP.y - 1, hex('#fff2d8'));
-        g.glow(LAMP.x, LAMP.y, 9, warm, 0.45 * fl);
-        lightCone(g, LAMP.x, LAMP.y + 1, 4, 44, ROCK.top - LAMP.y - 1, warm, 0.07 * fl);
+        g.glow(LAMP.x, LAMP.y, Math.round(9 * drive), warm, 0.45 * fl);
+        lightCone(g, LAMP.x, LAMP.y + 1, 4, Math.round(44 * drive), ROCK.top - LAMP.y - 1, warm, 0.07 * fl);
         g.glow(LAMP.x, LAMP.y + 26, 46, warm, 0.07 * fl, 6);
 
         // ── DJ Entropy behind her decks ──
-        pose.lean = 0.05;
+        pose.lean = 0.05 + sp * 0.08;
         pose.legL = 0;
         pose.legR = 0;
         pose.kneeL = 0;
         pose.kneeR = 0;
-        pose.armL = 1.0 + (f.reduced ? 0 : Math.sin(t * 1.3) * 0.15);
-        pose.armR = -2.3;
+        pose.armL = 1.0 + (f.reduced ? 0 : Math.sin(t * 1.3) * 0.15 * drive);
+        pose.armR = sp > 0.15 ? -2.7 : -2.3;
         pose.elbowL = 0.6;
         pose.elbowR = -1.5;
-        pose.bob = Math.round(hit);
-        pose.nod = f.reduced ? 0 : Math.round(Math.sin(t * 1.9) * 0.6 * awake);
+        pose.bob = Math.round(hit + sp);
+        pose.nod = f.reduced ? 0 : Math.round((Math.sin(t * 1.9) * 0.6 + sp * 1.1) * awake);
         pose.hair = 2;
         pose.flare = false;
         pose.skirt = false;
@@ -301,7 +305,7 @@ const def: SceneDef = {
         for (let i = 0; i < DANCERS.length; i++) {
           const d = DANCERS[i]!;
           const ph = t * 1.6 + d.ph;
-          const groove = f.reduced ? 0 : Math.sin(ph) * awake * (1 - look);
+          const groove = f.reduced ? 0 : Math.sin(ph) * awake * (1 - look) * drive;
           const lighter = f.rare === 1 && i === 1 && ev < 12 ? envelope(ev, 12, 2, 2) : 0;
           pose.lean = groove * 0.14;
           pose.legL = -0.28 + Math.max(0, groove) * 0.25;
@@ -321,7 +325,7 @@ const def: SceneDef = {
           pose.hair = d.hair;
           const x = d.x + Math.round(groove * 1.5);
           figure(g, x, ROCK.top + 1, d.h, pose, body);
-          rimLight(g, x - 16, ROCK.top - d.h - 6, 32, d.h + 7, (c) => c === body, warm, 0.25, false);
+          rimLight(g, x - 16, ROCK.top - d.h - 6, 32, d.h + 7, (c) => c === body, warm, 0.25 * drive, false);
           if (lighter > 0) {
             const lx = x + Math.sin(2.7 + Math.sin(ev * 1.2) * 0.2) * d.h * 0.39 + 2;
             const ly = ROCK.top - d.h * 0.98;
@@ -331,11 +335,11 @@ const def: SceneDef = {
         }
         // the floor tiles catch the beat
         for (let c = 0; c < 7; c++) {
-          const on = hash3(c, f.beat, 3) < 0.35;
+          const on = hash3(c, f.beat, 3) < 0.35 * drive;
           if (!on) continue;
-          g.rectAdd(129 + c * 8, ROCK.top - 1, 7, 1, ember, (0.08 + hit * 0.18) * awake);
+          g.rectAdd(129 + c * 8, ROCK.top - 1, 7, 1, ember, (0.08 + hit * 0.18) * drive * awake);
         }
-        g.glow(154, ROCK.top + 2, 34, ember, 0.03 + hit * 0.05 * awake);
+        g.glow(154, ROCK.top + 2, Math.round(34 * drive), ember, (0.03 + hit * 0.05 * awake) * drive);
 
         // Rare: a star right over the floor goes out with a tiny pop; everyone looks up.
         if (f.rare === 0 && ev < 12) {

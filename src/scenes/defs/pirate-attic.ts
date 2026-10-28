@@ -7,6 +7,7 @@
 // the window); a new length of string goes up on the board; the Nightjar passes close enough
 // to light the room; the kettle on the shelf comes to the boil.
 
+import { callLamp, onAirLamp, sectionDrive } from '../kit/broadcast';
 import { type Color, hex, mix, shade } from '../kit/color';
 import { clamp, envelope, smoothstep, steam } from '../kit/fx';
 import type { Gfx } from '../kit/gfx';
@@ -375,16 +376,22 @@ const def: SceneDef = {
         }
 
         // ── the transmitter: valves glow, meters swing, the scope traces (or snows) ──
+        const sp = f.speech ?? 0;
+        const isVoice = f.segmentKind === 'voice' || sp > 0.05;
+        const drive = sectionDrive(f);
         {
           const T = TX;
+          onAirLamp(g, T.x + 28, T.y - 11, f);
+          callLamp(g, T.x + 4, T.y + 21, f);
           for (let i = 0; i < 4; i++) {
-            const k = live * (0.75 + 0.25 * noise1(t * 3 + i * 7, i)) * (1 - jam * 0.6);
-            g.rect(T.x + 9 + i * 6, T.y - 8, 3, 5, mix(hex('#3a1a0a'), valve, k));
-            g.px(T.x + 10 + i * 6, T.y - 7, mix(valve, hex('#fff0c0'), 0.5 * k));
-            g.glow(T.x + 10 + i * 6, T.y - 6, 7, valve, 0.22 * k, 4);
+            const k = live * (0.75 + 0.25 * noise1(t * 3 + i * 7, i) + sp * 0.25) * (1 - jam * 0.6);
+            g.rect(T.x + 9 + i * 6, T.y - 8, 3, 5, mix(hex('#3a1a0a'), valve, clamp(k)));
+            g.px(T.x + 10 + i * 6, T.y - 7, mix(valve, hex('#fff0c0'), 0.5 * clamp(k)));
+            g.glow(T.x + 10 + i * 6, T.y - 6, 7, valve, 0.22 * clamp(k), 4);
           }
+          const sigLevel = Math.max(f.energy * drive, sp * 1.4);
           for (let i = 0; i < 2; i++) {
-            const v = clamp(f.energy * 1.1 + noise1(t * 5, i + 3) * 0.2) * live;
+            const v = clamp(sigLevel * 1.1 + noise1(t * 5, i + 3) * 0.2) * live;
             const cx = T.x + 20 + i * 9;
             g.line(cx, T.y + 9, cx - 2 + Math.round(v * 4), T.y + 6, hex('#1a1408'));
             g.glow(cx, T.y + 7, 5, hex('#e8b050'), 0.12 * live, 3);
@@ -395,11 +402,11 @@ const def: SceneDef = {
               if (jam > 0.3 && hash3(x, y, Math.floor(t * 15)) < 0.5 * jam) g.px(T.x + 4 + x, T.y + 5 + y, hex('#6a8a7a'));
             }
             if (jam <= 0.3) {
-              const y = 4 + Math.round(Math.sin(x * 1.3 + t * 9) * f.energy * 3.5);
+              const y = clamp(4 + Math.round(Math.sin(x * 1.3 + t * 9) * sigLevel * 3.5), 0, 7);
               g.px(T.x + 4 + x, T.y + 5 + y, hex('#5aff9a'));
             }
           }
-          g.glow(T.x + 9, T.y + 9, 8, hex('#3aff8a'), 0.1 * live, 3);
+          g.glow(T.x + 9, T.y + 9, 8, hex('#3aff8a'), (0.1 + sp * 0.15) * live, 3);
           // the dial
           g.rectAdd(T.x + 20, T.y + 28, 16, 3, hex('#ffb648'), 0.35 * live);
           g.vline(T.x + 24 + Math.round(Math.sin(t * 0.05) * 3), T.y + 28, T.y + 30, hex('#c83a2a'));
@@ -409,11 +416,12 @@ const def: SceneDef = {
         {
           const x = KATE.x;
           const y = KATE.seat;
-          const talking = f.energy > 0.15 && !f.reduced && jam < 0.3;
+          const talking = (isVoice || f.energy > 0.15) && !f.reduced && jam < 0.3;
           const lean = talking ? 1 : 0;
-          const nod = talking && Math.sin(t * 7) > 0.2 ? 1 : 0;
-          const glare = R(0) && ev > 1 && ev < 8.5;
+          const nod = talking && Math.sin(t * (isVoice ? 9 : 7)) > 0.2 ? 1 : 0;
+          const glare = (R(0) && ev > 1 && ev < 8.5) || Boolean(f.hush);
           const look = glare || (R(2) && ev > 3 && ev < 8);
+          if (isVoice) g.glow(MIC.x - 1, MIC.y + 1, 6 + sp * 7, bulbC, 0.16 + sp * 0.3, 3);
           // the chair back behind her
           g.rect(x + 5, y - 24, 4, 22, hex('#141210'));
           g.hline(x + 5, x + 8, y - 24, hex('#2a2620'));

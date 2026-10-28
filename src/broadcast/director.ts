@@ -27,13 +27,13 @@ import { HushPicker, isJamClip, type HushLevel } from './hush';
 import { POOLS, type VoiceLibrary } from './library';
 import { voiceGain } from './quirks';
 import { resolveAsset } from './manifest';
-import { Mixer, type OutputMode, type VoiceHandle } from './mixer';
+import { Mixer, type Bus, type OutputMode, type VoiceHandle } from './mixer';
 import type { Overlay, ShiftView } from './overlay';
 import { daypartForHour, joinOffset, skipOffset, type MusicRun, type StationSchedule } from './scheduler';
 import { dialLayout, layoutKey, type DialLayout, type Visitor } from './secrets';
 import { createTicker, type Ticker } from './ticker';
 import { browserTzOffset, localTime, type TzOffset } from './time';
-import type { ActiveEvent, EventId, PlayStatus, StationDef, VoiceClip, VoiceSegment } from './types';
+import type { ActiveEvent, EventId, MusicSectionKind, PlayStatus, RecipeId, StationDef, VoiceClip, VoiceSegment } from './types';
 
 export interface Clock {
   now(): number;
@@ -117,13 +117,44 @@ const JAM_EVENT_CLEARANCE_MS = 75_000;
 
 const delay = (ms: number) => new Promise<void>((resolve) => setTimeout(resolve, ms));
 
-function request(run: MusicRun): TrackRequest {
+const HIGH_ENERGY_RECIPES = new Set<RecipeId>([
+  'drum-and-bass',
+  'warehouse-techno',
+  'heat-death-house',
+  'disco',
+  'space-funk',
+  'synthwave',
+  'chiptune',
+  'city-pop',
+  'surf-rock',
+]);
+
+/** Maps a score section name to a normalized `MusicSectionKind` for broadcast-reactive scenes. */
+export function normalizeMusicSection(name: string | undefined, recipe?: RecipeId): MusicSectionKind {
+  if (!name) return 'verse';
+  const trimmed = name.trim();
+  const lower = trimmed.toLowerCase();
+  if (lower === 'intro') return 'intro';
+  if (lower === 'outro') return 'outro';
+  if (lower === 'drop') return 'drop';
+  if (lower.startsWith('break') || trimmed.startsWith('C')) return 'breakdown';
+  if (lower.startsWith('bridge') || lower.startsWith('chorus') || trimmed.startsWith('B')) return 'chorus';
+  if ((trimmed === 'A′' || trimmed === 'A″' || trimmed === 'A‴') && recipe && HIGH_ENERGY_RECIPES.has(recipe)) {
+    return 'drop';
+  }
+  return 'verse';
+}
+
+export function request(run: MusicRun): TrackRequest {
   return {
     recipe: run.recipe,
     seed: run.seed,
     durationSeconds: (run.endMs - run.startMs) / 1000,
     ...(run.tweaks ? { tweaks: run.tweaks } : {}),
     ...(run.artist !== undefined ? { artist: run.artist } : {}),
+    ...(run.talkoverSeconds !== undefined && run.talkoverSeconds > 0 ? { talkoverSeconds: run.talkoverSeconds } : {}),
+    ...(run.jingle !== undefined ? { jingle: run.jingle } : {}),
+    ...(run.stationId !== undefined ? { stationId: run.stationId } : {}),
   };
 }
 
@@ -168,6 +199,7 @@ export class Director {
   private engineFailed = false;
   private volume: number;
   private muted = false;
+  private cabinLevel = 0;
 
   /** Bumped by every start/pause; async work from an older generation bails out. */
   private generation = 0;
@@ -306,6 +338,85 @@ export class Director {
 
   getAnalyser(): AnalyserNode | null {
     return this.mixer?.analyser ?? null;
+  }
+
+  /** v5: live analyser on a specific mixer bus ('music' | 'voice' | 'overlay' | 'mix'). */
+  getBusAnalyser(bus: Bus): AnalyserNode | null {
+    return this.mixer ? this.mixer.tap(bus) : null;
+  }
+
+  /** v5: current Nightjar cabin ambience level (0–1). */
+  get cabin(): number {
+    return this.cabinLevel;
+  }
+
+  /** v5: sets Nightjar cabin ambience level (0–1) and applies it to the mixer if active. */
+  setCabin(level: number): void {
+    this.cabinLevel = Math.min(1, Math.max(0, Number.isFinite(level) ? level : 0));
+    this.mixer?.setCabin(this.cabinLevel);
+    this.emit();
+  }
+
+  /** v5: current normalized musical section and 0–1 progress within it. */
+  musicSection(): { section: MusicSectionKind; progress: number } {
+    const live = this.engine?.nowPlaying?.();
+    if (live?.section) {
+      const section = normalizeMusicSection(live.section.name, this.musicNow?.recipe ?? this.station.recipe);
+      const dur = Math.max(0.1, live.section.bars * live.score.barDur);
+      const progress = Math.min(1, Math.max(0, (live.position - live.section.t) / dur));
+      return { section, progress: Math.round(progress * 1000) / 1000 };
+    }
+    const run = this.musicNow;
+    if (run) {
+      const now = this.stationNow();
+      const total = Math.max(1000, run.endMs - run.startMs);
+      const elapsed = Math.min(total, Math.max(0, now - run.startMs));
+      const ratio = elapsed / total;
+      if (ratio < 0.1) return { section: 'intro', progress: Math.round((ratio / 0.1) * 1000) / 1000 };
+      if (ratio > 0.88) return { section: 'outro', progress: Math.round(((ratio - 0.88) / 0.12) * 1000) / 1000 };
+      const cycle = (ratio - 0.1) / 0.78;
+      const idx = Math.min(3, Math.floor(cycle * 4));
+      const subProgress = Math.round((cycle * 4 - idx) * 1000) / 1000;
+      const kinds: MusicSectionKind[] = HIGH_ENERGY_RECIPES.has(run.recipe)
+        ? ['verse', 'chorus', 'breakdown', 'drop']
+        : ['verse', 'chorus', 'breakdown', 'chorus'];
+      return { section: kinds[idx]!, progress: subProgress };
+    }
+    return { section: 'verse', progress: 0 };
+  }
+
+  /** v5: smoothed 0–1 speech envelope when a station voice or overlay (HUSH/event) is speaking. */
+  speechEnvelope(): number {
+    if (this.status !== 'playing') return 0;
+    const wall = this.clock.now();
+    const over = this.overlay?.speaking(wall, this.latencyMs) ?? null;
+    const program = this.program;
+    let voiceOnAir = false;
+    if (!over && !this.jammed && program) {
+      const seg = this.schedule(program.station).segmentAt(this.stationNow(program.id));
+      voiceOnAir = seg.kind === 'voice' && !this.isFailed(seg.id);
+    }
+    if (!over && !voiceOnAir && !this.jammed) return 0;
+
+    if (this.mixer) {
+      const bus: Bus = over || this.jammed ? 'overlay' : 'voice';
+      const tap = this.mixer.tap(bus);
+      tap.getFloatTimeDomainData(this.levelBuffer);
+      let sum = 0;
+      for (let i = 0; i < this.levelBuffer.length; i++) {
+        const v = this.levelBuffer[i]!;
+        sum += v * v;
+      }
+      const rms = Math.sqrt(sum / this.levelBuffer.length);
+      if (rms > 1e-4) {
+        return Math.min(1, Math.round(rms * 4.2 * 1000) / 1000);
+      }
+    }
+
+    // Deterministic syllable-cadence fallback when AudioContext is mocked or buffer is silent in tests.
+    const t = wall / 1000;
+    const env = 0.52 + 0.24 * Math.sin(t * 23.5) + 0.16 * Math.sin(t * 15.3 + 1.1) + 0.08 * Math.cos(t * 37.1);
+    return Math.min(1, Math.max(0.15, Math.round(env * 1000) / 1000));
   }
 
   /** The mixer, once powered on (the lab uses it for bus meters). */
@@ -727,6 +838,7 @@ export class Director {
     try {
       const mixer = new Mixer(this.output);
       mixer.setVolume(this.volume, this.muted);
+      if (this.cabinLevel > 0) mixer.setCabin(this.cabinLevel);
       mixer.onInterrupted = () => this.interrupted();
       this.cache = new AudioBufferCache(contextDecoder(mixer.ctx));
       this.mixer = mixer;

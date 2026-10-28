@@ -5,7 +5,7 @@
 // the element is offscreen, react subtly to `energy()`, doze when not playing, and go
 // near-static with `reducedMotion`.
 
-import type { StationDef } from '../broadcast/types';
+import type { BroadcastSceneState, StationDef } from '../broadcast/types';
 import { SceneView } from './SceneView';
 
 export interface StationSceneProps {
@@ -14,13 +14,15 @@ export interface StationSceneProps {
   playing: boolean;
   /** Current audio level, 0–1. Call it inside your animation loop; may return 0 when silent. */
   energy?: () => number;
+  /** Live broadcast context (segment kind, voice category, speech envelope, musical section, events). */
+  broadcast?: () => Partial<BroadcastSceneState>;
   /** Disable or drastically reduce motion. */
   reducedMotion?: boolean;
   className?: string;
 }
 
 /** Fills its container (position it yourself). */
-export function StationScene({ station, playing, energy, reducedMotion, className }: StationSceneProps) {
+export function StationScene({ station, playing, energy, broadcast, reducedMotion, className }: StationSceneProps) {
   return (
     <SceneView
       sceneId={station.scene}
@@ -28,6 +30,7 @@ export function StationScene({ station, playing, energy, reducedMotion, classNam
       accent={station.color}
       playing={playing}
       energy={energy}
+      broadcast={broadcast}
       reducedMotion={reducedMotion}
       className={className}
     />

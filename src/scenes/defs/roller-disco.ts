@@ -3,6 +3,7 @@
 // polished floor; skaters circle in silhouette; the DJ booth is framed in chasing bulbs. The
 // clock above the rink has no hands, and nobody has noticed in a few million hours.
 
+import { callLamp, onAirLamp, sectionDrive } from '../kit/broadcast';
 import { type Color, hex, mix, shade } from '../kit/color';
 import { clamp, envelope, smoothstep } from '../kit/fx';
 import { type Gfx, bayer } from '../kit/gfx';
@@ -319,13 +320,15 @@ const def: SceneDef = {
         const { t } = f;
         const ev = f.rareT;
         const awake = f.awake;
-        const e = f.energy;
+        const drive = sectionDrive(f);
+        const sp = f.speech ?? 0;
+        const e = f.energy * drive;
         const slow = f.rare === 2 && ev < 12 ? envelope(ev, 12, 2, 2.5) : 0;
-        const spin = 0.32 * (1 - slow * 0.6) * (0.3 + 0.7 * awake);
+        const spin = 0.32 * drive * (1 - slow * 0.6) * (0.3 + 0.7 * awake);
         const rot = t * spin;
 
         // ── specks from the mirror ball ──
-        const tint = mix(speckC, rose, slow * 0.6);
+        const tint = mix(speckC, rose, slow * 0.6 + (drive < 0.8 ? 0.35 : 0));
         for (let i = 0; i < SPECKS; i++) {
           const th = az[i]! + rot;
           const ce = Math.cos(el[i]!);
@@ -334,7 +337,7 @@ const def: SceneDef = {
           const down = -Math.sin(el[i]!);
           let x = 0;
           let y = 0;
-          let k = sb[i]! * (0.75 + 0.3 * e) * (0.35 + 0.65 * awake);
+          let k = sb[i]! * (0.65 + 0.35 * e) * drive * (0.35 + 0.65 * awake);
           let onWall = false;
           if (down > 0.05) {
             const s = 1 / down;
@@ -364,7 +367,11 @@ const def: SceneDef = {
 
         // ── the mirror ball ──
         g.vline(BALL.x, g.top, BALL.y - BALL.r - 1, hex('#2a2430'));
-        g.glow(BALL.x, BALL.y, 26, warm, 0.18 + 0.08 * e * awake);
+        g.glow(BALL.x, BALL.y, Math.round(24 * drive), warm, (0.16 + 0.1 * e * awake) * drive);
+        if (drive > 1.2 && !f.reduced) {
+          shaft(g, BALL.x, BALL.y, RINK.cx - 48, RINK.cy + 4, 4, 28, gold, 0.1 * (drive - 1) * awake, 0.2, 5);
+          shaft(g, BALL.x, BALL.y, RINK.cx + 48, RINK.cy + 4, 4, 28, rose, 0.1 * (drive - 1) * awake, 0.2, 5);
+        }
         for (let yy = -BALL.r; yy <= BALL.r; yy++) {
           for (let xx = -BALL.r; xx <= BALL.r; xx++) {
             const d2 = xx * xx + yy * yy;
@@ -382,12 +389,12 @@ const def: SceneDef = {
         g.px(BALL.x - 3, BALL.y - 3, hex('#ffffff'));
 
         // ── chasing bulbs around the booth ──
-        const step = Math.floor(t * 6);
+        const step = Math.floor(t * 6 * drive);
         for (let i = 0; i < bulbs.length; i++) {
           const b = bulbs[i]!;
           const on = slow > 0.5 ? i % 2 === 0 : (i + step) % 3 === 0;
-          const k = slow > 0.5 ? 0.55 : on ? 1 : 0.15;
-          g.px(b.x, b.y, mix(goldD, warm, k));
+          const k = (slow > 0.5 ? 0.55 : on ? 1 : 0.15) * clamp(drive * 0.9, 0.5, 1.3);
+          g.px(b.x, b.y, mix(goldD, warm, clamp(k)));
           if (k > 0.3) {
             g.glow(b.x, b.y, 4, gold, 0.28 * k);
             // and their streaks in the gloss of the floor
@@ -396,14 +403,16 @@ const def: SceneDef = {
         }
 
         // ── the DJ ──
-        const nod = f.reduced ? 0 : Math.round(f.pulse * awake + Math.sin(t * 2.4) * 0.4 * awake);
-        pose.lean = 0;
+        onAirLamp(g, BOOTH.x0 + 3, BOOTH.y0 + 3, f);
+        callLamp(g, BOOTH.x1 - 5, BOOTH.y0 + 4, f);
+        const nod = f.reduced ? 0 : Math.round((f.pulse * drive + sp * 1.2) * awake + Math.sin(t * 2.4) * 0.4 * awake);
+        pose.lean = sp > 0.1 ? 0.08 : 0;
         pose.legL = 0;
         pose.legR = 0;
         pose.kneeL = 0;
         pose.kneeR = 0;
-        pose.armL = 0.9 + Math.sin(t * 3) * 0.15 * awake;
-        pose.armR = -2.6;
+        pose.armL = 0.9 + Math.sin(t * 3) * 0.15 * awake * drive;
+        pose.armR = sp > 0.15 ? -2.9 : -2.6;
         pose.elbowL = 0.8;
         pose.elbowR = -0.9;
         pose.bob = nod;

@@ -343,6 +343,12 @@ export interface MusicRun {
   tweaks?: Partial<RecipeTweaks>;
   /** Artist signature seed (hash of the track's artist); absent for beds. */
   artist?: number;
+  /** v5: seconds at the start of the run during which a host/ident speaks over the intro ("hitting the post"). */
+  talkoverSeconds?: number;
+  /** v5: weave a short melodic station call-sign jingle motif into the opening bars. */
+  jingle?: boolean;
+  /** v5: station id used to seed the melodic station call-sign jingle motif. */
+  stationId?: string;
 }
 
 // ── Clip picking ──────────────────────────────────────────────────────────────
@@ -1376,15 +1382,17 @@ export class StationSchedule {
   }
 }
 
-function computeRuns(station: StationDef, segments: Segment[], failed?: ReadonlySet<string>, tz: TzOffset = browserTzOffset): MusicRun[] {
+export function computeRuns(station: StationDef, segments: Segment[], failed?: ReadonlySet<string>, tz: TzOffset = browserTzOffset): MusicRun[] {
   const runs: MusicRun[] = [];
   let pending: VoiceSegment[] = [];
+  const canJingle = station.format === 'music' || station.format === 'mixed';
   // Station quirks may change the tweaks with the time of day (the afterparty's tempo).
   const tweaksFor = (recipe: RecipeId, at: number) => (recipe === station.recipe ? tweaksAt(station, at, tz) : undefined);
   const flushBed = () => {
     const first = pending[0];
     const last = pending[pending.length - 1];
     if (!first || !last) return;
+    const jingle = pending.some((v) => v.clip.category === 'id');
     runs.push({
       id: `bed:${first.id}@${first.startMs}`,
       startMs: first.startMs,
@@ -1392,12 +1400,19 @@ function computeRuns(station: StationDef, segments: Segment[], failed?: Readonly
       recipe: station.recipe,
       seed: hash(first.id, 'bed'),
       tweaks: tweaksAt(station, first.startMs, tz),
+      jingle,
+      stationId: station.id,
     });
     pending = [];
   };
   for (const s of segments) {
     if (s.kind === 'track') {
       const startMs = pending[0]?.startMs ?? s.startMs;
+      const talkoverSeconds = pending.length > 0 ? Math.round(((s.startMs - startMs) / 1000) * 100) / 100 : undefined;
+      const jingle = canJingle
+        ? pending.some((v) => v.clip.category === 'id' || v.clip.category === 'dj' || v.clip.category === 'show') ||
+          (pending.length === 0 && hash(s.id, 'jingle') % 3 === 0)
+        : undefined;
       runs.push({
         id: `${s.id}@${startMs}`,
         startMs,
@@ -1406,6 +1421,9 @@ function computeRuns(station: StationDef, segments: Segment[], failed?: Readonly
         seed: s.seed,
         tweaks: tweaksFor(s.recipe, startMs),
         artist: artistSeed(s.meta.artist),
+        ...(talkoverSeconds !== undefined && talkoverSeconds > 0 ? { talkoverSeconds } : {}),
+        ...(jingle !== undefined ? { jingle } : {}),
+        stationId: station.id,
       });
       pending = [];
     } else if (s.bed || failed?.has(s.id)) {

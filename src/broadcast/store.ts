@@ -23,17 +23,18 @@ import { create } from 'zustand';
 import { loadTrackPacks } from '../content/tracks';
 import { SHIP } from '../stations/ship';
 import { DEFAULT_STATION_ID, MAIN_STATIONS, STATIONS, stationById } from '../stations/roster';
-import { DISCOVER_MS, DISCOVER_SIGNAL, pirates, pureStatic, stationForId, stepFrom } from './dial';
+import { DISCOVER_MS, DISCOVER_SIGNAL, bleedOf, pirates, pureStatic, stationForId, stepFrom } from './dial';
 import { Director } from './director';
 import { OFF_COURSE } from './hush';
 import { isWelcomeClip, WELCOME_STATIONS } from './quirks';
 import { POOLS, VoiceLibrary } from './library';
 import type { OutputMode } from './mixer';
+import { RelayPresence } from './presence';
 import { SecretWatcher, type Visitor } from './secrets';
 import { ArcLog, ListenLog, ShiftLog } from './shifts';
 import { storage } from './storage';
 import { localTime, showAt } from './time';
-import type { BroadcastState, BroadcastStore, Segment, StationDef, Tuned } from './types';
+import type { BroadcastSceneState, BroadcastState, BroadcastStore, RelayPeer, RelayPing, Segment, StationDef, Tuned, VoiceCategory } from './types';
 import { initialFrequency } from './url';
 
 const RECENT_MAX = 30;
@@ -71,6 +72,8 @@ function outputMode(): OutputMode {
 }
 
 const initialVolume = storage.getVolume() ?? 0.8;
+const initialCabin = storage.getCabin() ?? 0;
+let lastActiveCabin = initialCabin > 0 ? initialCabin : 0.65;
 
 export const library = new VoiceLibrary();
 
@@ -81,6 +84,13 @@ export const director = new Director({
   frequency: startFrequency(),
   volume: initialVolume,
   output: outputMode(),
+});
+if (initialCabin > 0) director.setCabin(initialCabin);
+
+/** v5: Relay fleet presence engine (deterministic sister ships + live cross-tab BroadcastChannel / WS). */
+export const presence = new RelayPresence({
+  initialPings: storage.getPings(),
+  stationRoster: STATIONS,
 });
 
 // v4: the listener's progress: night shifts, listening time, HUSH's arc, and the secrets watch.
@@ -160,11 +170,38 @@ export const useBroadcast = create<BroadcastStore>()((set, get) => {
   /** Tells the director about new finds (after the current refresh has been applied). */
   const syncSecrets = (discovered: string[]) => queueMicrotask(() => director.setSecrets(discovered, visitor));
 
-  const dialState = (): Pick<BroadcastState, 'frequency' | 'signal' | 'tuned'> => ({
-    frequency: director.frequency,
-    signal: director.reception.signal,
-    tuned: director.reception.tuned,
-  });
+  const dialState = (): Pick<BroadcastState, 'frequency' | 'signal' | 'tuned' | 'bleed'> => {
+    const lock = director.reception.lock;
+    const rawBleed = lock ? bleedOf(lock, director.frequency) : 0;
+    const bleed = Math.round(rawBleed * (1 - director.reception.signal) * 1000) / 1000;
+    return {
+      frequency: director.frequency,
+      signal: director.reception.signal,
+      tuned: director.reception.tuned,
+      bleed,
+    };
+  };
+
+  let lastRelayBucket = -1;
+  let lastPingBucket = -1;
+
+  const sameRelays = (a: readonly RelayPeer[] | undefined, b: readonly RelayPeer[]): boolean => {
+    if (!a || a.length !== b.length) return false;
+    for (let i = 0; i < a.length; i++) {
+      if (a[i]!.id !== b[i]!.id || a[i]!.frequency !== b[i]!.frequency || a[i]!.stationId !== b[i]!.stationId || a[i]!.live !== b[i]!.live) {
+        return false;
+      }
+    }
+    return true;
+  };
+
+  const samePings = (a: readonly RelayPing[] | undefined, b: readonly RelayPing[]): boolean => {
+    if (!a || a.length !== b.length) return false;
+    for (let i = 0; i < a.length; i++) {
+      if (a[i]!.id !== b[i]!.id) return false;
+    }
+    return true;
+  };
 
   const refresh = () => {
     const state = get();
@@ -272,6 +309,15 @@ export const useBroadcast = create<BroadcastStore>()((set, get) => {
 
     const show = tuned.kind === 'station' ? showAt(library.shows(tuned.station.id), localTime(director.stationNow(tuned.station.id))) : null;
     const event = director.eventAt();
+    const rawBleed = lock ? bleedOf(lock, director.frequency) : 0;
+    const bleed = Math.round(rawBleed * (1 - director.reception.signal) * 1000) / 1000;
+    const { section: musicSection, progress: musicSectionProgress } = director.musicSection();
+    const relayBucket = Math.floor(clockNow / 180_000);
+    const pingBucket = Math.floor(clockNow / 120_000);
+    const relays = relayBucket !== lastRelayBucket || !state.relays ? presence.peersAt(clockNow) : state.relays;
+    const pings = pingBucket !== lastPingBucket || !state.pings ? presence.pingsAt(clockNow) : state.pings;
+    lastRelayBucket = relayBucket;
+    lastPingBucket = pingBucket;
 
     const patch: Partial<BroadcastState> = {};
     if (state.onAir !== onAir) patch.onAir = onAir;
@@ -286,11 +332,17 @@ export const useBroadcast = create<BroadcastStore>()((set, get) => {
     if (state.stationId !== director.lastStationId) patch.stationId = director.lastStationId;
     if (state.frequency !== director.frequency) patch.frequency = director.frequency;
     if (state.signal !== director.reception.signal) patch.signal = director.reception.signal;
+    if (state.bleed !== bleed) patch.bleed = bleed;
     if (!sameTuned(state.tuned, tuned)) patch.tuned = tuned;
     if (state.show !== show) patch.show = show;
     if (state.event?.startMs !== event?.startMs || state.event?.id !== event?.id) patch.event = event;
     if (state.status !== director.status) patch.status = director.status;
     if (state.signalMessage !== director.message) patch.signalMessage = director.message;
+    if (state.cabin !== director.cabin) patch.cabin = director.cabin;
+    if (state.musicSection !== musicSection) patch.musicSection = musicSection;
+    if (state.musicSectionProgress !== musicSectionProgress) patch.musicSectionProgress = musicSectionProgress;
+    if (!sameRelays(state.relays, relays)) patch.relays = relays;
+    if (!samePings(state.pings, pings)) patch.pings = pings;
     if (Object.keys(patch).length > 0) set(patch);
   };
 
@@ -300,12 +352,18 @@ export const useBroadcast = create<BroadcastStore>()((set, get) => {
     persistTimer = setTimeout(() => {
       storage.setLastFrequency(director.frequency);
       storage.setLastStation(director.lastStationId);
+      presence.announceTune(director.frequency, tunedId(director.reception.tuned), director.clock.now());
     }, 600);
   };
 
   director.subscribe(() => {
     refresh();
     persist();
+  });
+  presence.subscribe(() => {
+    lastRelayBucket = -1;
+    lastPingBucket = -1;
+    refresh();
   });
   // Unsaved listening time goes to storage when the page is hidden or closed.
   const flush = () => {
@@ -325,7 +383,10 @@ export const useBroadcast = create<BroadcastStore>()((set, get) => {
   void library.loadShows();
   queueMicrotask(refresh);
   // Hot reload would otherwise leave the old director playing underneath the new one.
-  import.meta.hot?.dispose(() => director.dispose());
+  import.meta.hot?.dispose(() => {
+    director.dispose();
+    presence.dispose();
+  });
 
   /** Tuning is a gesture: it powers the radio on, or resumes it. */
   const powerOn = () => {
@@ -335,6 +396,7 @@ export const useBroadcast = create<BroadcastStore>()((set, get) => {
   const tune = (stationId: string) => {
     if (!stationForId(stationId)) return;
     director.tune(stationId);
+    presence.announceTune(director.frequency, tunedId(director.reception.tuned), director.clock.now());
     persist();
     refresh();
   };
@@ -350,6 +412,7 @@ export const useBroadcast = create<BroadcastStore>()((set, get) => {
     const patch: Partial<BroadcastState> = {};
     if (state.frequency !== dial.frequency) patch.frequency = dial.frequency;
     if (state.signal !== dial.signal) patch.signal = dial.signal;
+    if (state.bleed !== dial.bleed) patch.bleed = dial.bleed;
     if (!sameTuned(state.tuned, dial.tuned)) {
       patch.tuned = dial.tuned;
       set(patch);
@@ -360,6 +423,8 @@ export const useBroadcast = create<BroadcastStore>()((set, get) => {
   };
 
   const initialStation = stationForId(director.lastStationId) ?? STATIONS[0]!;
+  const initialClock = director.clock.now();
+  const initialSec = director.musicSection();
 
   return {
     stations: director.layout.roster,
@@ -378,6 +443,11 @@ export const useBroadcast = create<BroadcastStore>()((set, get) => {
     caption: null,
     volume: initialVolume,
     muted: false,
+    cabin: initialCabin,
+    musicSection: initialSec.section,
+    musicSectionProgress: initialSec.progress,
+    relays: presence.peersAt(initialClock),
+    pings: presence.pingsAt(initialClock),
 
     togglePlay() {
       director.togglePlay();
@@ -420,8 +490,88 @@ export const useBroadcast = create<BroadcastStore>()((set, get) => {
     getAnalyser() {
       return director.getAnalyser();
     },
+    setCabin(level) {
+      const value = Math.min(1, Math.max(0, Number.isFinite(level) ? level : 0));
+      if (value > 0) lastActiveCabin = value;
+      director.setCabin(value);
+      storage.setCabin(value);
+      set({ cabin: value });
+    },
+    toggleCabin() {
+      const current = get().cabin ?? 0;
+      const next = current > 0 ? 0 : lastActiveCabin;
+      director.setCabin(next);
+      storage.setCabin(next);
+      set({ cabin: next });
+    },
+    sendPing(text, code) {
+      const state = get();
+      const now = director.clock.now();
+      const ping = presence.sendPing(state.frequency, state.tuned, text, code, now);
+      storage.setPings(presence.userTransmittedPings());
+      set({ pings: presence.pingsAt(now) });
+      return ping;
+    },
+    getBusAnalyser(bus) {
+      return director.getBusAnalyser(bus);
+    },
   };
 });
+
+/**
+ * v5: Returns the live `BroadcastSceneState` snapshot for pixel-art scenes on every animation
+ * frame (`<StationScene broadcast={getBroadcastSceneState} />`).
+ */
+export function getBroadcastSceneState(): BroadcastSceneState {
+  const state = useBroadcast.getState();
+  const playing = state.status === 'playing' || director.status === 'playing';
+  const wall = director.clock.now();
+  const over = playing ? (director.overlay?.speaking(wall, director.latencyMs) ?? null) : null;
+  const hush = director.jammed || over?.kind === 'ship' || state.caption?.speaker === SHIP.computer.name;
+
+  let segmentKind: BroadcastSceneState['segmentKind'] = 'static';
+  let voiceCategory: VoiceCategory | null = null;
+
+  if (hush) {
+    segmentKind = 'voice';
+    voiceCategory = 'ship';
+  } else if (over) {
+    segmentKind = 'voice';
+    voiceCategory = 'event';
+  } else if (state.tuned.kind !== 'static' && state.onAir) {
+    if (state.onAir.kind === 'voice' && !director.isFailed(state.onAir.id)) {
+      segmentKind = 'voice';
+      voiceCategory = state.onAir.clip.category;
+    } else {
+      segmentKind = 'music';
+      voiceCategory = null;
+    }
+  }
+
+  let speech = director.speechEnvelope();
+  if (speech === 0 && playing && (segmentKind === 'voice' || state.caption !== null)) {
+    const t = wall / 1000;
+    const env = 0.52 + 0.24 * Math.sin(t * 23.5) + 0.16 * Math.sin(t * 15.3 + 1.1) + 0.08 * Math.cos(t * 37.1);
+    speech = Math.min(1, Math.max(0.15, Math.round(env * 1000) / 1000));
+  }
+
+  const liveSec = director.musicSection();
+  const hasLiveMusic = liveSec.progress > 0 || liveSec.section !== 'verse';
+  const section = hasLiveMusic ? liveSec.section : (state.musicSection ?? liveSec.section);
+  const sectionProgress = hasLiveMusic ? liveSec.progress : (state.musicSectionProgress ?? liveSec.progress);
+
+  return {
+    segmentKind,
+    voiceCategory,
+    speech,
+    section,
+    sectionProgress,
+    event: state.event?.id ?? null,
+    hush,
+    signal: state.signal,
+    bleed: state.bleed ?? 0,
+  };
+}
 
 /** Caption speaker used for HUSH (the UI may style it as the ship's own voice). */
 export const SHIP_SPEAKER = SHIP.computer.name;

@@ -487,6 +487,63 @@ export type Tuned =
  */
 export const LISTEN_TIME_KEY = 'multiverse-radio:listen-time';
 
+// ── v5: Synesthesia, operator instruments & relay fleet ───────────────────────
+
+/** Normalized musical section kind for broadcast-reactive scenes. */
+export type MusicSectionKind = 'intro' | 'verse' | 'chorus' | 'breakdown' | 'drop' | 'outro';
+
+/** Live broadcast context passed into pixel-art scenes on every frame. */
+export interface BroadcastSceneState {
+  /** Active segment type on the tuned station ('static' when untuned or settling). */
+  segmentKind: 'music' | 'voice' | 'static';
+  /** Voice clip category when a voice is on air (or 'ship'/'event' during overlay). */
+  voiceCategory: VoiceCategory | null;
+  /** 0–1 smoothed speech envelope while a host, caller, or HUSH is speaking. */
+  speech: number;
+  /** Normalized musical section when music is playing. */
+  section: MusicSectionKind;
+  /** 0–1 progress through the current musical section. */
+  sectionProgress: number;
+  /** Active multiverse-wide event id, if any. */
+  event: EventId | null;
+  /** True while HUSH is speaking or jamming the frequency. */
+  hush: boolean;
+  /** Reception 0–1 at the current frequency. */
+  signal: number;
+  /** Bleed 0–1 from an adjacent transmitter. */
+  bleed: number;
+}
+
+/** Another relay vessel active on the dial (fleet telemetry + live peer tabs/sockets). */
+export interface RelayPeer {
+  /** Vessel designation, e.g. 'R/S KESTREL · RELAY 4'. */
+  id: string;
+  /** Tuned frequency in MHz. */
+  frequency: number;
+  /** Station id if locked onto a known station/pirate, or null in static. */
+  stationId: string | null;
+  /** True when this peer comes from a live tab/socket rather than fleet telemetry. */
+  live?: boolean;
+}
+
+/** A one-line subspace reception report or anomaly ping on the wire. */
+export interface RelayPing {
+  id: string;
+  /** Vessel designation that transmitted the ping. */
+  relay: string;
+  frequency: number;
+  stationId: string | null;
+  stationName: string;
+  /** Short telemetry code, e.g. 'SIG', 'ANOM', 'LOCK', 'ECHO'. */
+  code: string;
+  /** One-line subspace report. */
+  text: string;
+  /** Epoch ms. */
+  at: number;
+  /** True if transmitted by this operator or a live peer. */
+  live?: boolean;
+}
+
 // ── Broadcast store (the UI ↔ engine contract) ────────────────────────────────
 
 /**
@@ -531,6 +588,18 @@ export interface BroadcastState {
   caption: { speaker: string; text: string } | null;
   volume: number;
   muted: boolean;
+  /** v5: Nightjar cabin ambience level 0–1 (0 = off; persisted). */
+  cabin?: number;
+  /** v5: active musical section on air (for broadcast-reactive scenes). */
+  musicSection?: MusicSectionKind;
+  /** v5: 0–1 progress through the active musical section. */
+  musicSectionProgress?: number;
+  /** v5: bleed level 0–1 from adjacent stations at the current dial position. */
+  bleed?: number;
+  /** v5: other relay vessels currently active on the dial. */
+  relays?: RelayPeer[];
+  /** v5: recent subspace wire pings across the fleet, newest first. */
+  pings?: RelayPing[];
 }
 
 export interface BroadcastActions {
@@ -552,6 +621,14 @@ export interface BroadcastActions {
   toggleMute(): void;
   /** Live audio analyser (post-mix, pre-volume) for visualizers; null before power-on. */
   getAnalyser(): AnalyserNode | null;
+  /** v5: set Nightjar cabin ambience level (0–1). */
+  setCabin?(level: number): void;
+  /** v5: toggle cabin ambience between 0 and the active level. */
+  toggleCabin?(): void;
+  /** v5: transmit a subspace reception ping for the current frequency. */
+  sendPing?(text?: string, code?: string): RelayPing;
+  /** v5: live analyser on a specific mixer bus ('music' | 'voice' | 'overlay' | 'mix'). */
+  getBusAnalyser?(bus: 'music' | 'voice' | 'overlay' | 'mix'): AnalyserNode | null;
 }
 
 export type BroadcastStore = BroadcastState & BroadcastActions;

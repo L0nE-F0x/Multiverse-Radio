@@ -8,6 +8,11 @@ export type PanelId = 'guide' | 'log' | 'help' | 'offline';
 /** auto: shown, then dims and hides when idle. hidden: kept out of the way (H). */
 export type HudMode = 'auto' | 'hidden';
 
+/** v5: 3-mode interactive oscilloscope / spectrum waterfall / SSTV slow-scan decoder. */
+export type ScopeMode = 'wave' | 'fall' | 'sstv';
+
+const SCOPE_MODES: readonly ScopeMode[] = ['wave', 'fall', 'sstv'];
+
 export interface Toast {
   id: number;
   text: string;
@@ -17,6 +22,7 @@ interface UiState {
   panel: PanelId | null;
   captions: boolean;
   hud: HudMode;
+  scopeMode: ScopeMode;
   toast: Toast | null;
   /** Bumped when the listener tunes, so the ident card can replay for the same station. */
   identNonce: number;
@@ -40,6 +46,7 @@ export const useUi = create<UiState>()(() => ({
   panel: null,
   captions: loadPrefs().captions ?? true,
   hud: 'auto',
+  scopeMode: 'wave',
   toast: null,
   identNonce: 0,
   shiftStart: null,
@@ -67,6 +74,22 @@ export function togglePanel(panel: PanelId): void {
 
 export function setDrawer(drawer: boolean): void {
   if (ui().drawer !== drawer) useUi.setState({ drawer });
+}
+
+export function useScopeMode(): ScopeMode {
+  return useUi((s) => s.scopeMode);
+}
+
+export function setScopeMode(scopeMode: ScopeMode): ScopeMode {
+  useUi.setState({ scopeMode });
+  return scopeMode;
+}
+
+export function cycleScopeMode(): ScopeMode {
+  const current = ui().scopeMode;
+  const next = SCOPE_MODES[(SCOPE_MODES.indexOf(current) + 1) % SCOPE_MODES.length]!;
+  useUi.setState({ scopeMode: next });
+  return next;
 }
 
 let toastId = 0;

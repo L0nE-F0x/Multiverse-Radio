@@ -3,6 +3,7 @@
 // vintage microphone waits; rain runs down the window.
 
 import { gloom, lightPool, motes } from '../kit/atmos';
+import { callLamp, onAirLamp, sectionDrive } from '../kit/broadcast';
 import { hex, mix, mute, ramp, shade } from '../kit/color';
 import { blinking, clamp, envelope, steam } from '../kit/fx';
 import type { Gfx } from '../kit/gfx';
@@ -183,12 +184,17 @@ const def: SceneDef = {
         // Below the HUD's top band, clear of the mic's boom.
         const sx = 138;
         const sy = 26;
-        const lit = f.playing ? 1 : 0.15;
+        const sp = f.speech ?? 0;
+        const isVoice = f.segmentKind === 'voice' || sp > 0.05;
+        const isCall = f.voiceCategory === 'call';
+        const drive = sectionDrive(f);
+        const lit = isVoice ? clamp(0.7 + sp * 0.3) : f.playing ? 0.35 : 0.15;
         const buzz = !f.reduced && f.rare === 2 && ev < 7 ? 1 : 0;
         roundRect(g, sx - 2, sy - 2, 54, 18, 3, ink);
         roundRect(g, sx, sy, 50, 14, 3, mix(hex('#2a0606'), mute(onAir, 0.85, 0.85), 0.2 + lit * 0.8));
         g.textCenter('ON AIR', sx + 25, sy + 4, mix(hex('#4a1a1a'), hex('#ffe0d8'), lit), 1);
-        if (lit > 0.5) g.glow(sx + 25, sy + 7, 40, onAir, 0.16 + f.energy * 0.2, 4);
+        if (lit > 0.25) g.glow(sx + 25, sy + 7, 36 + sp * 16, onAir, (isVoice ? 0.24 + sp * 0.36 : 0.1 + f.energy * 0.12), 4);
+        onAirLamp(g, 192, DESK_Y - 10, f);
         if (buzz) {
           // a moth, enchanted by the sign
           const a = ev * 5;
@@ -199,6 +205,7 @@ const def: SceneDef = {
         }
 
         // Caller lights: some waiting, one ringing, now and then all at once.
+        callLamp(g, SWITCH.x + 51, SWITCH.y + 6, f);
         const allBlink = f.rare === 1 && ev < 7;
         for (let r = 0; r < 3; r++)
           for (let c = 0; c < 4; c++) {
@@ -209,19 +216,23 @@ const def: SceneDef = {
             const ringing = i === Math.floor(hash3(Math.floor(t / 8), 9) * 12);
             let on = waiting || (ringing && Math.floor(t * 3) % 2 === 0);
             let c2 = hex('#ffb04a');
+            if (isCall) {
+              on = f.reduced ? i % 2 === 0 : (i + Math.floor(t * 5)) % 2 === 0;
+              c2 = (i + Math.floor(t * 4)) % 2 === 0 ? hex('#ffb04a') : hex('#5ceeff');
+            }
             if (allBlink) {
               on = ev < 4 ? Math.floor(ev * 4) % 2 === 0 || f.reduced : i === 6;
               if (ev >= 4 && i === 6) c2 = hex('#5aff8a');
             }
-            if (live < 0.3 && !allBlink) on = waiting;
+            if (live < 0.3 && !allBlink && !isCall) on = waiting;
             g.disc(lx, ly, 2, on ? c2 : hex('#4a3020'));
-            if (on) g.glow(lx, ly, 5, c2, 0.35, 3);
+            if (on) g.glow(lx, ly, 5, c2, isCall ? 0.45 : 0.35, 3);
           }
 
         // VU needles.
         for (let k = 0; k < 2; k++) {
           const vx = 100 + k * 24;
-          const lvl = clamp(f.energy * 1.2 + (k ? 0.05 : 0) * Math.sin(t * 9));
+          const lvl = clamp(Math.max(f.energy * drive, sp * 1.25) * 1.2 + (k ? 0.05 : 0) * Math.sin(t * 9));
           const a = Math.PI * (1.2 + lvl * 0.6);
           g.line(vx, DESK_Y - 4, vx + Math.cos(a) * 8, DESK_Y - 4 + Math.sin(a) * 8, ink);
         }
@@ -240,10 +251,10 @@ const def: SceneDef = {
         roundRect(g, mx - 11, my - 21, 22, 42, 9, chrome[1]!);
         for (let y = my - 16; y < my + 16; y += 2) g.hline(mx - 8, mx + 8, y, chrome[0]!);
         g.rect(mx - 11, my - 2, 22, 3, chrome[2]!);
-        g.rect(mx - 11, my - 1, 22, 1, chrome[3]!);
+        g.rect(mx - 11, my - 1, 22, 1, isVoice ? mix(chrome[3]!, onAir, clamp(0.45 + sp * 0.55)) : chrome[3]!);
         g.vline(mx - 7, my - 18, my + 16, chrome[2]!);
         g.rect(mx - 3, my + 21, 6, 6, chrome[0]!);
-        g.glow(mx - 6, my - 10, 8, hex('#ffffff'), 0.12 + f.energy * 0.2);
+        g.glow(mx - 6, my - 10, 8 + sp * 10, isVoice ? warm : hex('#ffffff'), 0.12 + f.energy * 0.2 + sp * 0.35);
 
         // Steam from the mug; headphones hanging off the mic arm, swaying.
         steam(g, t, 68, DESK_Y - 11, hex('#f4ece0'), 5, 14, 2, 0.5);

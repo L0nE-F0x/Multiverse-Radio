@@ -6,7 +6,7 @@ import type { Tuned } from '../broadcast/types';
 import { shareStation, type ShareResult } from '../pwa/share';
 import { snapMhz } from './dial';
 import * as sfx from './sfx';
-import { toast, ui, useUi } from './store';
+import { cycleScopeMode, setScopeMode, toast, ui, useUi, type ScopeMode } from './store';
 import { resetDial } from './tuning';
 
 const radio = () => useBroadcast.getState();
@@ -87,6 +87,38 @@ export function toggleCaptions(): void {
 export function toggleHud(): void {
   const hud = ui().hud === 'hidden' ? 'auto' : 'hidden';
   useUi.setState({ hud });
+}
+
+export function toggleCabin(): void {
+  sfx.unlock();
+  const before = (radio().cabin ?? 0) > 0;
+  radio().toggleCabin?.();
+  const after = (radio().cabin ?? 0) > 0;
+  const on = after !== before ? after : !before;
+  toast(on ? 'Cabin ambience on.' : 'Cabin ambience off.', 1800);
+}
+
+const SCOPE_TOAST: Record<ScopeMode, string> = {
+  wave: 'Scope: waveform (WAVE).',
+  fall: 'Scope: spectrum waterfall (FALL).',
+  sstv: 'Scope: slow-scan telemetry (SSTV).',
+};
+
+export function cycleScope(): ScopeMode {
+  const next = cycleScopeMode();
+  toast(SCOPE_TOAST[next], 1800);
+  return next;
+}
+
+export function setScope(mode: ScopeMode): ScopeMode {
+  setScopeMode(mode);
+  toast(SCOPE_TOAST[mode], 1800);
+  return mode;
+}
+
+export function sendPing(text?: string, code?: string): void {
+  radio().sendPing?.(text, code);
+  toast('Subspace ping transmitted.', 2200);
 }
 
 const SHARE_MESSAGES: Record<ShareResult, string | null> = {

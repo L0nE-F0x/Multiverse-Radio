@@ -871,16 +871,69 @@
     height: 58px;
     border: 1px solid var(--ph-line);
     background: rgb(0 0 0 / 0.35);
+    cursor: pointer;
+    image-rendering: pixelated;
   }
 
   .scope-head {
     display: flex;
+    align-items: center;
     justify-content: space-between;
+    gap: 6px;
     margin-bottom: 5px;
     font-size: 9px;
-    letter-spacing: 0.18em;
+    letter-spacing: 0.16em;
     text-transform: uppercase;
     color: var(--ph-mute);
+    cursor: pointer;
+  }
+
+  .scope-head:hover {
+    color: var(--ph);
+  }
+
+  .scope-modes {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+  }
+
+  .scope-pill {
+    padding: 1px 4px;
+    border: 1px solid var(--ph-faint);
+    color: var(--ph-mute);
+    font-size: 8.5px;
+    letter-spacing: 0.14em;
+    line-height: 1.2;
+    transition:
+      background-color 0.15s ease,
+      border-color 0.15s ease,
+      color 0.15s ease;
+  }
+
+  .scope-pill:hover {
+    border-color: var(--ph-dim);
+    color: var(--ph-hi);
+  }
+
+  .scope-pill[data-active] {
+    border-color: var(--ph);
+    background: var(--ph);
+    color: var(--ink);
+    font-weight: 600;
+  }
+
+  .scope-status {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .scope-status[data-decoded='true'] {
+    color: var(--ph-hi);
+    text-shadow: 0 0 8px var(--ph-glow);
+    letter-spacing: 0.08em;
   }
 
   /* ── The dial ────────────────────────────────────────────────────────────── */
@@ -1253,6 +1306,52 @@
     background: var(--ph-hi);
     box-shadow: 0 0 6px var(--ph);
     transition: left 0.45s var(--ease-out);
+  }
+
+  .dial-relays {
+    color: var(--ph-mute);
+    font-size: 9px;
+    letter-spacing: 0.14em;
+  }
+
+  .dial-relay {
+    position: absolute;
+    top: 1px;
+    width: 4px;
+    height: 4px;
+    margin-left: -2px;
+    border-radius: 50%;
+    background: color-mix(in oklab, var(--ship) 75%, var(--ph));
+    box-shadow: 0 0 6px var(--ship);
+    opacity: 0.72;
+    pointer-events: auto;
+  }
+
+  .dial-relay[data-live] {
+    width: 5px;
+    height: 5px;
+    background: var(--ph-hi);
+    box-shadow:
+      0 0 6px var(--ph-hi),
+      0 0 12px var(--ph);
+    opacity: 1;
+  }
+
+  .bandmap-relay {
+    position: absolute;
+    top: -1px;
+    width: 3px;
+    height: 3px;
+    margin-left: -1.5px;
+    border-radius: 50%;
+    background: var(--ship);
+    opacity: 0.8;
+  }
+
+  .bandmap-relay[data-live] {
+    background: var(--ph-hi);
+    box-shadow: 0 0 5px var(--ph-hi);
+    opacity: 1;
   }
 
   /* ── Function keys ───────────────────────────────────────────────────────── */
@@ -1958,6 +2057,78 @@
     border-top: 1px dashed var(--ph-faint);
   }
 
+  .subspace-tx {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px 12px;
+    padding: 6px 0 8px;
+    border-bottom: 1px dashed var(--ph-faint);
+  }
+
+  .subspace-tx-label {
+    font-size: 9.5px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--ph-mute);
+  }
+
+  .subspace-presets {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .subspace-pings {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .subspace-ping {
+    display: grid;
+    grid-template-columns: 44px 54px 52px minmax(0, 1fr) auto;
+    column-gap: 10px;
+    align-items: center;
+    padding: 7px 0;
+    border-bottom: 1px dashed var(--ph-faint);
+    font-size: 12.5px;
+  }
+
+  .subspace-code {
+    padding: 1px 5px;
+    border: 1px solid var(--ph-line);
+    justify-self: start;
+    color: var(--ph);
+  }
+
+  .subspace-ping[data-live] .subspace-code {
+    border-color: var(--ph);
+    background: var(--ph);
+    color: var(--ink);
+  }
+
+  .subspace-body {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    min-width: 0;
+  }
+
+  .subspace-relay {
+    font-size: 10px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--ph-dim);
+  }
+
+  .subspace-text {
+    color: var(--ph-hi);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
   .log-contact-name {
     flex: 1;
     color: var(--ph-hi);
@@ -2648,7 +2819,7 @@
     letter-spacing: 0.14em;
   }
 
-  html[data-layout='drawer'] :is(.sb-hull, .sb-relay, .sb-sec, .sb-label, .sb-show, .sb-shift, .sb-spacer, .sb-hush) {
+  html[data-layout='drawer'] :is(.sb-hull, .sb-relay, .sb-relays, .sb-sec, .sb-label, .sb-show, .sb-shift, .sb-spacer, .sb-hush) {
     display: none;
   }
 
@@ -2847,7 +3018,8 @@
       display: none;
     }
 
-    .sb-shift {
+    .sb-shift,
+    .sb-relays {
       display: none;
     }
 
@@ -3215,6 +3387,10 @@
 
     .log-entry {
       grid-template-columns: 40px 50px minmax(0, 1fr);
+    }
+
+    .subspace-ping {
+      grid-template-columns: 40px 50px minmax(0, 1fr) auto;
     }
 
     .log-code {

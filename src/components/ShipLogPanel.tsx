@@ -20,12 +20,22 @@ const clockOf = (minuteOfDay: number) =>
 const dayLabel = (ms: number) =>
   new Date(ms).toLocaleDateString(undefined, { weekday: 'short', day: 'numeric', month: 'short' }).toUpperCase();
 
+const PING_PRESETS: readonly { text: string; code: string }[] = [
+  { text: 'Signal locked', code: 'LOCK' },
+  { text: 'Carrier drift', code: 'DRFT' },
+  { text: 'Anomaly on band', code: 'ANOM' },
+  { text: 'Requesting relay check', code: 'ECHO' },
+];
+
 /** The ship's log: this shift's intercepts, earlier shifts, and contacts found off the guide. */
 export default function ShipLogPanel() {
   const entries = useShipLog((s) => s.entries);
   const pirates = useShipLog((s) => s.pirates);
   const discovered = useBroadcast((s) => s.discovered);
   const stations = useBroadcast((s) => s.stations);
+  const frequency = useBroadcast((s) => s.frequency);
+  const relays = useBroadcast((s) => s.relays) ?? [];
+  const pings = useBroadcast((s) => s.pings) ?? [];
   const recentCount = useBroadcast((s) => s.recent.length);
   const shifts = useBroadcast((s) => s.shifts);
   const heading = useBroadcast((s) => s.heading);
@@ -33,6 +43,10 @@ export default function ShipLogPanel() {
   const tuned = useTuned();
   const [confirm, setConfirm] = useState(false);
   const localDay = localTime(Date.now()).day;
+  const tunedId = tuned.kind === 'station' || tuned.kind === 'pirate' ? tuned.station.id : null;
+  const lockedRelays = relays.filter(
+    (peer) => (tunedId !== null && peer.stationId === tunedId) || Math.abs(peer.frequency - frequency) <= 0.12,
+  ).length;
   const serials = useMemo(
     () =>
       getSerialDirectory()
@@ -98,7 +112,73 @@ export default function ShipLogPanel() {
           <dt>Contacts</dt>
           <dd className="tabular">{contacts.length}</dd>
         </div>
+        <div>
+          <dt>Sister relays</dt>
+          <dd className="tabular">
+            {relays.length}
+            {lockedRelays > 0 ? ` (${lockedRelays} locked)` : ''}
+          </dd>
+        </div>
       </dl>
+
+      <section className="log-section subspace" aria-labelledby="log-subspace">
+        <h3 id="log-subspace" className="dir-heading">
+          Subspace wire
+          <span className="dir-count">{relays.length} active</span>
+          {lockedRelays > 0 && <span className="dir-note">{lockedRelays} locked to station</span>}
+        </h3>
+        <div className="subspace-tx">
+          <span className="subspace-tx-label">Transmit ping</span>
+          <div className="subspace-presets">
+            {PING_PRESETS.map((preset) => (
+              <button
+                key={preset.code}
+                type="button"
+                className="chip"
+                onClick={() => act.sendPing(preset.text, preset.code)}
+              >
+                {preset.text}
+              </button>
+            ))}
+          </div>
+        </div>
+        {pings.length === 0 ? (
+          <p className="log-empty">No subspace pings received on this watch yet.</p>
+        ) : (
+          <ol className="subspace-pings">
+            {pings.map((ping) => (
+              <li key={ping.id} className="subspace-ping" data-live={ping.live || undefined}>
+                <time className="log-time tabular" dateTime={new Date(ping.at).toISOString()}>
+                  {formatClock(ping.at, false)}
+                </time>
+                <span className="log-freq tabular">{formatMhzPadded(ping.frequency)}</span>
+                <span className="log-code subspace-code">{ping.code}</span>
+                <span className="subspace-body">
+                  <span className="subspace-relay">{ping.relay}</span>
+                  <span className="subspace-text">
+                    {ping.text}
+                    {ping.stationName ? ` · ${ping.stationName}` : ''}
+                  </span>
+                </span>
+                <button
+                  type="button"
+                  className="chip"
+                  onClick={() => {
+                    if (ping.stationId && stations.some((s) => s.id === ping.stationId && (!s.secret || discovered.includes(s.id)))) {
+                      act.tune(ping.stationId);
+                    } else {
+                      act.tuneFrequency(ping.frequency);
+                    }
+                    openPanel(null);
+                  }}
+                >
+                  Tune
+                </button>
+              </li>
+            ))}
+          </ol>
+        )}
+      </section>
 
       <section className="log-section" aria-labelledby="log-serials">
         <h3 id="log-serials" className="dir-heading">

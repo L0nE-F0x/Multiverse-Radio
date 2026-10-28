@@ -1,6 +1,6 @@
 import { memo, useEffect, useLayoutEffect, useMemo, useRef, useState, type CSSProperties, type KeyboardEvent, type PointerEvent } from 'react';
 import { useBroadcast } from '../broadcast/store';
-import { DIAL } from '../broadcast/types';
+import { DIAL, type RelayPeer } from '../broadcast/types';
 import { usePrefersReducedMotion } from '../hooks/usePrefersReducedMotion';
 import * as act from '../ui/actions';
 import { BAND_LABEL, bandOf, dialMarkers, inMainBand, inOuterBand, MAIN_HI, MAIN_LO, OUTER_HI, snapMhz, type DialMarker } from '../ui/dial';
@@ -33,6 +33,7 @@ export function Dial({ variant = 'full' }: { variant?: 'full' | 'strip' }) {
   const pirates = useShipLog((s) => s.pirates);
   const stored = useBroadcast((s) => s.frequency);
   const signal = useBroadcast((s) => s.signal);
+  const relays = useBroadcast((s) => s.relays) ?? [];
   const pending = useTuning((s) => s.pending);
   const status = useStatus();
   const tuned = useTuned();
@@ -42,6 +43,13 @@ export function Dial({ variant = 'full' }: { variant?: 'full' | 'strip' }) {
   const shown = pending ?? stored;
   const markers = useMemo(() => dialMarkers(stations, discovered, pirates), [stations, discovered, pirates]);
   const tunedId = tuned.kind === 'station' || tuned.kind === 'pirate' ? tuned.station.id : null;
+  const lockedRelays = useMemo(
+    () =>
+      relays.filter(
+        (peer) => (tunedId !== null && peer.stationId === tunedId) || Math.abs(peer.frequency - shown) <= 0.12,
+      ).length,
+    [relays, tunedId, shown],
+  );
 
   const windowRef = useRef<HTMLDivElement>(null);
   const stripRef = useRef<HTMLDivElement>(null);
@@ -225,7 +233,7 @@ export function Dial({ variant = 'full' }: { variant?: 'full' | 'strip' }) {
       style={{ '--ppm': `${ppm}px` } as CSSProperties}
     >
       <div ref={stripRef} className="dial-strip" style={{ width: SPAN * ppm }}>
-        <Scale ppm={ppm} markers={markers} tunedId={tunedId} />
+        <Scale ppm={ppm} markers={markers} tunedId={tunedId} relays={relays} />
       </div>
       <div className="dial-needle" aria-hidden>
         <span className="dial-needle-tag tabular">{formatMhz(shown)}</span>
@@ -249,7 +257,22 @@ export function Dial({ variant = 'full' }: { variant?: 'full' | 'strip' }) {
           {formatMhz(shown)}
           <small>MHz</small>
         </span>
-        <span className="dial-band">{BAND_LABEL[band]}</span>
+        <span className="dial-band">
+          {BAND_LABEL[band]}
+          {relays.length > 0 && (
+            <span
+              className="dial-relays tabular"
+              title={
+                lockedRelays > 0
+                  ? `${lockedRelays} of ${relays.length} sister relays locked here`
+                  : `${relays.length} sister relays active on band`
+              }
+            >
+              {' · '}
+              {lockedRelays > 0 ? `${lockedRelays} locked` : `${relays.length} relays`}
+            </span>
+          )}
+        </span>
       </div>
 
       <button type="button" className="dial-step" onClick={() => act.step(-1)} aria-label="Previous station">
@@ -268,7 +291,7 @@ export function Dial({ variant = 'full' }: { variant?: 'full' | 'strip' }) {
         <span className="dial-signal-code">{link.code}</span>
       </div>
 
-      <BandMap frequency={shown} markers={markers} />
+      <BandMap frequency={shown} markers={markers} relays={relays} />
     </div>
   );
 }
@@ -276,7 +299,17 @@ export function Dial({ variant = 'full' }: { variant?: 'full' | 'strip' }) {
 const clamp = (mhz: number) => Math.min(DIAL.max, Math.max(DIAL.min, mhz));
 
 /** The printed scale: band regions, graduations, numbers, the carrier landscape and markers. */
-const Scale = memo(function Scale({ ppm, markers, tunedId }: { ppm: number; markers: DialMarker[]; tunedId: string | null }) {
+const Scale = memo(function Scale({
+  ppm,
+  markers,
+  tunedId,
+  relays,
+}: {
+  ppm: number;
+  markers: DialMarker[];
+  tunedId: string | null;
+  relays: RelayPeer[];
+}) {
   const numbers = useMemo(() => {
     const out: number[] = [];
     for (let f = Math.ceil(DIAL.min); f <= DIAL.max; f++) out.push(f);
@@ -308,6 +341,15 @@ const Scale = memo(function Scale({ ppm, markers, tunedId }: { ppm: number; mark
         <span key={f} className="dial-number" data-deep={!inMainBand(f) && !inOuterBand(f)} style={{ left: x(f) }}>
           {f}
         </span>
+      ))}
+      {relays.map((peer) => (
+        <span
+          key={peer.id}
+          className="dial-relay"
+          data-live={peer.live || undefined}
+          title={peer.id}
+          style={{ left: x(peer.frequency) }}
+        />
       ))}
       {markers.map((m, i) => (
         <span
@@ -350,7 +392,7 @@ function carrierPath(markers: DialMarker[]): string {
 }
 
 /** The whole dial in miniature: where the main and outer bands sit and where the needle is. */
-function BandMap({ frequency, markers }: { frequency: number; markers: DialMarker[] }) {
+function BandMap({ frequency, markers, relays }: { frequency: number; markers: DialMarker[]; relays: RelayPeer[] }) {
   const pct = (mhz: number) => `${(((mhz - DIAL.min) / SPAN) * 100).toFixed(3)}%`;
   return (
     <div className="bandmap" aria-hidden>
@@ -360,6 +402,14 @@ function BandMap({ frequency, markers }: { frequency: number; markers: DialMarke
         <span className="bandmap-outer" style={{ left: pct(MAIN_HI), width: `${((OUTER_HI - MAIN_HI) / SPAN) * 100}%` }} />
         {markers.map((m) => (
           <span key={m.id} className="bandmap-dot" data-kind={m.kind} style={{ left: pct(m.frequency) }} />
+        ))}
+        {relays.map((peer) => (
+          <span
+            key={peer.id}
+            className="bandmap-relay"
+            data-live={peer.live || undefined}
+            style={{ left: pct(peer.frequency) }}
+          />
         ))}
         <span className="bandmap-needle" style={{ left: pct(snapMhz(frequency)) }} />
       </div>

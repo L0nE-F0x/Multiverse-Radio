@@ -7,6 +7,7 @@ import type { SynthPatch } from '../score';
 import { midiToFreq } from '../theory';
 import { Biquad, Noise, sinc, TAU } from './core';
 import { BEDS_SYNTHS } from './beds-v3';
+import { applyFormantFilter, FORMANT_SYNTHS, type FormantSynthPatch } from './formant';
 import { GENRE_SYNTHS } from './genres';
 import { WORLD_SYNTHS } from './v4-world';
 import { GROOVE_SYNTHS } from './groove';
@@ -61,6 +62,8 @@ export interface SynthDef {
   breath?: number;
   /** Pitch scoop at the attack, cents. */
   scoop?: number;
+  /** Formant vowel resonator profile (v5). */
+  formant?: FormantSynthPatch;
   gain: number;
 }
 
@@ -258,6 +261,7 @@ export const SYNTHS: Record<SynthPatch, SynthDef> = {
   ...GENRE_SYNTHS,
   ...WORLD_SYNTHS,
   ...GROOVE_SYNTHS,
+  ...FORMANT_SYNTHS,
 };
 
 // ── Waves ─────────────────────────────────────────────────────────────────────
@@ -432,6 +436,9 @@ export function renderSynthZone(def: SynthDef, midi: number, velocity: number, s
       x = filter.tick(x);
     }
     out[i] = x;
+  }
+  if (def.formant) {
+    applyFormantFilter(out, sr, def.formant, f0);
   }
   // Seamless loop: blend the end of the loop into what precedes the loop start.
   const ls = Math.floor(transient * sr);

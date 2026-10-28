@@ -7,6 +7,7 @@
 // off in the dark another operator's lamp comes on, and goes off; the clock runs backward for
 // a few seconds; the operator glances over her shoulder at you, nods, and gets on with it.
 
+import { callLamp, onAirLamp } from '../kit/broadcast';
 import { type Color, hex, mix, shade } from '../kit/color';
 import { clamp, envelope, smoothstep } from '../kit/fx';
 import { hash3, noise1 } from '../kit/rng';
@@ -306,13 +307,18 @@ const def: SceneDef = {
         const live = 0.55 + 0.45 * f.awake;
 
         // ── lamps winking down the line ──
+        const sp = f.speech ?? 0;
+        const isCall = f.voiceCategory === 'call';
+        const isVoice = f.segmentKind === 'voice' || sp > 0.05;
+        onAirLamp(g, sx(-BANK, OP.z) - 2, sy(TOP + 0.08, OP.z), f);
+        callLamp(g, sx(-BANK + 0.08, OP.z - 0.15), sy(SHELF + 0.05, OP.z - 0.15), f);
         const wave = R(0) ? ev : -1;
         for (let i = 0; i < lamps.length; i++) {
           const L = lamps[i]!;
           const period = 3 + L.seed * 11;
           const phase = (t / period + L.seed * 17) % 1;
-          let on = L.seed < 0.16 && phase < 0.55 ? 1 : 0;
-          if (f.reduced) on = L.seed < 0.08 ? 1 : 0;
+          let on = (L.seed < (isCall ? 0.34 : isVoice ? 0.24 : 0.16)) && phase < 0.55 ? 1 : 0;
+          if (f.reduced) on = L.seed < (isCall ? 0.2 : 0.08) ? 1 : 0;
           if (wave >= 0) {
             // a call from the far end: lamps light in turn, far to near, then let go
             const arrive = (1 - Math.log(L.z / Z0) / Math.log(ZFAR / Z0)) * 4;
@@ -323,11 +329,11 @@ const def: SceneDef = {
           const fade = clamp(2.2 / L.z) ** 0.6;
           const x = sx(L.side * BANK, L.z);
           const y = sy(L.y, L.z);
-          const c = L.seed < 0.05 ? lampWhite : lampOn;
-          g.pxAdd(x, y, c, on * fade * 0.9 * live);
+          const c = isCall && (i % 3 === 0) ? hex('#5ceeff') : L.seed < 0.05 ? lampWhite : lampOn;
+          g.pxAdd(x, y, c, on * fade * (0.9 + sp * 0.25) * live);
           if (L.z < 5) {
             g.pxAdd(x - L.side, y, c, on * fade * 0.5 * live);
-            g.glow(x, y, 3, c, on * fade * 0.12 * live, 3);
+            g.glow(x, y, 3, c, on * fade * (0.12 + sp * 0.15) * live, 3);
           }
         }
 
@@ -377,7 +383,9 @@ const def: SceneDef = {
           const glance = R(3) ? smoothstep(2, 3, ev) * (1 - smoothstep(6.5, 7.5, ev)) : 0;
           // every so often she takes a call: reaches up and plugs a cord in
           const cyc = (t % 13) / 13;
-          const reach = f.reduced ? 0 : smoothstep(0.1, 0.2, cyc) * (1 - smoothstep(0.32, 0.45, cyc));
+          const baseReach = f.reduced ? 0 : smoothstep(0.1, 0.2, cyc) * (1 - smoothstep(0.32, 0.45, cyc));
+          const callReach = !f.reduced && (isCall || sp > 0.15) ? 0.5 + 0.4 * Math.abs(Math.sin(t * 2.5)) : 0;
+          const reach = Math.max(baseReach, callReach);
           const lit = (c: Color, k: number) => mix(c, warm, k * lk);
           // legs: knees forward toward the board, heels hooked on the stool's rail
           g.poly([x - 6, seat - 1, x - 15, seat + 1, x - 16, seat + 5, x - 5, seat + 4], hex('#1c1a22'));
@@ -388,8 +396,9 @@ const def: SceneDef = {
           g.rect(x - 11, rail - 2, 3, 2, ink);
           // body and head: small sprites, dark against the lamp, rimmed on top
           g.blit(bodySpr, x - 8, seat - 22);
+          const nod = !f.reduced && sp > 0.1 && Math.sin(t * 7) > 0.25 ? 1 : 0;
           const hx = x - 1 + Math.round(glance * 2);
-          const hy = seat - 36;
+          const hy = seat - 36 + nod;
           g.blit(headSpr, hx - 5, hy - 2);
           if (glance > 0.3) {
             // turned over her shoulder toward us: a cheek, an eye, a polite nod

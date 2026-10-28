@@ -1,7 +1,7 @@
 // localStorage can throw (private browsing, disabled storage, quota), so every access is
 // wrapped and failures are treated as "nothing saved".
 
-import { LISTEN_TIME_KEY } from './types';
+import { LISTEN_TIME_KEY, type RelayPing } from './types';
 
 const KEYS = {
   station: 'multiverse-radio:last-station',
@@ -14,6 +14,9 @@ const KEYS = {
   // Not 'multiverse-radio:welcomed': onboarding's first-visit card owns that key.
   welcomed: 'multiverse-radio:secret-welcomes',
   listenTime: LISTEN_TIME_KEY,
+  // v5
+  cabin: 'multiverse-radio:cabin',
+  pings: 'multiverse-radio:pings',
 } as const;
 
 function read(key: string): string | null {
@@ -109,6 +112,39 @@ export const storage = {
   },
   setListenTime(times: Record<string, number>): void {
     write(KEYS.listenTime, JSON.stringify(times));
+  },
+  /** v5: Nightjar cabin ambience level (0–1). */
+  getCabin(): number | null {
+    const value = finite(read(KEYS.cabin));
+    return value === null ? null : Math.min(1, Math.max(0, value));
+  },
+  setCabin(level: number): void {
+    const clamped = Math.min(1, Math.max(0, Number.isFinite(level) ? level : 0));
+    write(KEYS.cabin, clamped.toFixed(3));
+  },
+  /** v5: operator/peer subspace pings persisted across sessions. */
+  getPings(): RelayPing[] {
+    const value = readJson(KEYS.pings);
+    if (!Array.isArray(value)) return [];
+    return value
+      .filter(
+        (p): p is RelayPing =>
+          isRecord(p) &&
+          typeof p.id === 'string' &&
+          typeof p.relay === 'string' &&
+          typeof p.frequency === 'number' &&
+          Number.isFinite(p.frequency) &&
+          (typeof p.stationId === 'string' || p.stationId === null) &&
+          typeof p.stationName === 'string' &&
+          typeof p.code === 'string' &&
+          typeof p.text === 'string' &&
+          typeof p.at === 'number' &&
+          Number.isFinite(p.at),
+      )
+      .slice(0, 50);
+  },
+  setPings(pings: RelayPing[]): void {
+    write(KEYS.pings, JSON.stringify(pings.slice(0, 50)));
   },
 };
 

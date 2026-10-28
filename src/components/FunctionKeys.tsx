@@ -17,6 +17,7 @@ export function FunctionKeys({ variant = 'dock' }: { variant?: 'dock' | 'drawer'
   const status = useStatus();
   const muted = useBroadcast((s) => s.muted);
   const volume = useBroadcast((s) => s.volume);
+  const cabin = useBroadcast((s) => s.cabin) ?? 0;
   const tuned = useTuned();
   const panel = useUi((s) => s.panel);
   const captions = useUi((s) => s.captions);
@@ -31,6 +32,16 @@ export function FunctionKeys({ variant = 'dock' }: { variant?: 'dock' | 'drawer'
     else if (result === 'unavailable') toast('Installation unavailable on this terminal.');
   };
 
+  const cabinKey = (
+    <Key
+      cap="A"
+      label="Cabin"
+      lamp={cabin > 0}
+      pressed={cabin > 0}
+      onClick={act.toggleCabin}
+      title="Toggle Nightjar cabin ambience (A)"
+    />
+  );
   const share = (
     <Key
       cap="⇪"
@@ -55,6 +66,7 @@ export function FunctionKeys({ variant = 'dock' }: { variant?: 'dock' | 'drawer'
         <div className="fkeys-group fkeys-secondary">
           <Key cap="M" label={muted ? 'Muted' : 'Mute'} lamp={muted} pressed={muted} onClick={act.toggleMute} />
           <Key cap="C" label="Captions" lamp={captions} pressed={captions} onClick={act.toggleCaptions} />
+          {cabinKey}
           {share}
           {offline}
           {installKey}
@@ -77,6 +89,7 @@ export function FunctionKeys({ variant = 'dock' }: { variant?: 'dock' | 'drawer'
         <Key cap="M" label={muted ? 'Muted' : 'Mute'} lamp={muted} pressed={muted} onClick={act.toggleMute} />
         <Volume volume={volume} muted={muted} />
         <Key cap="C" label="Captions" lamp={captions} pressed={captions} onClick={act.toggleCaptions} className="fkey-cc" />
+        {cabinKey}
         {share}
         {offline}
         {installKey}

@@ -140,7 +140,12 @@ export type SynthPatch =
   // v4 world instruments (dsp/v4-world.ts)
   | WorldSynthPatch
   // v4 groove instruments (dsp/groove.ts)
-  | GrooveSynthPatch;
+  | GrooveSynthPatch
+  // v5 formant & vocal synthesis (dsp/formant.ts)
+  | 'formant-choir'
+  | 'vocoder-pad'
+  | 'vocal-chop'
+  | 'shanty-choir';
 
 interface InstrumentMix {
   /** Display name. */

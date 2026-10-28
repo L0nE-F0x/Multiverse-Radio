@@ -98,7 +98,6 @@ export function composeRootsReggae(req: TrackRequest): Score {
   const spring = b.inst({ kind: 'sample', patch: 'spring-snare', name: 'Spring snare', gain: 0.45, pan: 0.08, reverb: 0.1, delay: 0 });
   const hat = b.inst({ kind: 'sample', patch: 'hat-closed', name: 'Hi-hat', gain: 0.38, pan: 0.28, lowpass: lerp(7000, 11000, B) });
   const ohat = b.inst({ kind: 'sample', patch: 'hat-open', name: 'Open hat', gain: 0.16, pan: 0.28 });
-  const tom = b.inst({ kind: 'sample', patch: 'tom', name: 'Toms', gain: 0.24, reverb: 0.2, pan: -0.1 });
   const chop = b.inst({ kind: 'sample', patch: 'folk-guitar', name: 'Skank guitar', gain: 0.75, pan: -0.32, highpass: 380, lowpass: 4200, reverb: 0.12, release: 0.04 });
   const stab = b.inst({ kind: 'sample', patch: pianoPatch, name: 'Skank piano', gain: pianoPatch === 'piano' ? 0.35 : 0.45, pan: 0.18, reverb: 0.2, lowpass: 3000, release: 0.07 });
   const organ = b.inst({ kind: 'synth', patch: 'organ', name: 'Organ bubble', gain: 0.42, pan: 0.34, lowpass: 2000, highpass: 160, tremolo: { rate: 5.8, depth: 0.25 } });
@@ -116,10 +115,10 @@ export function composeRootsReggae(req: TrackRequest): Score {
   let gVoicing: number[] | null = null;
   let pVoicing: number[] | null = null;
 
-  /** A drum fill into the next section: a triplet roll on the spring snare, or the toms. */
+  /** A drum fill into the next section: a triplet roll on the spring snare, or the cross-stick. */
   const fill = (bar: number, big: boolean) => {
     if (big && song.chance(0.6)) {
-      for (let k = 0; k < 6; k++) b.hit(k < 3 ? tom : spring, b.grid.bar(bar) + (2 + k / 3) * beat, vel(song, 0.5 + k * 0.06), k < 3 ? 62 - k * 3 : 60, 0.6);
+      for (let k = 0; k < 6; k++) b.hit(k < 3 ? rim : spring, b.grid.bar(bar) + (2 + k / 3) * beat, vel(song, 0.5 + k * 0.06), k < 3 ? 62 - k * 3 : 60, 0.6);
     } else {
       for (let k = 0; k < 3; k++) b.hit(rim, b.grid.bar(bar) + (3 + k / 3) * beat, vel(song, 0.45 + k * 0.1));
       b.hit(spring, b.grid.bar(bar) + 3.67 * beat, vel(song, 0.6));

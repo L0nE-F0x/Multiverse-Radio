@@ -16,6 +16,7 @@
 // <audio> element: that keeps iOS/Android treating us as a media player (lock screen,
 // Media Session, background playback, the iOS silent switch).
 
+import { CabinAmbience } from './cabin';
 import { loadSfxBuffer, synthClick, synthStatic } from './sfx';
 import { resolveAsset } from './manifest';
 
@@ -68,6 +69,8 @@ interface DialNoise {
   gain: GainNode;
   whistle: OscillatorNode;
   whistleGain: GainNode;
+  heterodyne: OscillatorNode;
+  heterodyneGain: GainNode;
 }
 
 interface Wobble {
@@ -117,6 +120,7 @@ export class Mixer {
   private readonly mix: GainNode;
   private readonly master: GainNode;
   private readonly taps = new Map<Bus, AnalyserNode>();
+  readonly cabin: CabinAmbience;
 
   private element: HTMLAudioElement | null = null;
   private streamDestination: MediaStreamAudioDestinationNode | null = null;
@@ -176,6 +180,7 @@ export class Mixer {
     this.lowpass.connect(this.reception).connect(this.mix);
     this.staticBus.connect(this.mix);
     this.overlayBus.connect(this.mix);
+    this.cabin = new CabinAmbience(ctx, this.mix);
     this.mix.connect(this.analyser);
     this.mix.connect(this.master);
     this.connectOutput(mode === 'auto' ? (prefersElementOutput() ? 'element' : 'destination') : mode);
@@ -282,6 +287,16 @@ export class Mixer {
   setVolume(volume: number, muted: boolean): void {
     // Perceptual-ish curve.
     setGain(this.ctx, this.master.gain, muted ? 0 : Math.min(1, Math.max(0, volume)) ** 2, 0.03);
+  }
+
+  /** v5: Nightjar ship cabin ambience level (0–1), mixed pre-master so it respects volume and mute. */
+  setCabin(level: number): void {
+    this.cabin.setLevel(level);
+  }
+
+  /** v5: True while the Nightjar ship cabin ambience generator is active. */
+  get cabinActive(): boolean {
+    return this.cabin.active;
   }
 
   /** Fades the programme (music + voice) in or out; static is unaffected. */
@@ -478,12 +493,24 @@ export class Mixer {
     setGain(ctx, this.highpass.frequency, 20 + HP_MAX * (1 - s) ** 2, FILTER_TAU * tauScale);
 
     const noiseLevel = this.staticVoice ? 0 : NOISE_LEVEL * clamp01(noise) ** 1.35;
-    const whistleLevel = !this.staticVoice && s > 0.06 && s < 0.94 ? WHISTLE_LEVEL * Math.sin(Math.PI * s) : 0;
-    if (noiseLevel < 0.001 && whistleLevel < 0.0005) {
+    const nearCarrier = s > 0.04 && s < 0.96;
+    const b = s >= 0.96 ? 0 : clamp01(bleed);
+    const whistleLevel = !this.staticVoice && nearCarrier ? WHISTLE_LEVEL * Math.sin(Math.PI * s) : 0;
+    const heterodyneLevel = !this.staticVoice
+      ? nearCarrier
+        ? WHISTLE_LEVEL * 0.65 * Math.sin(Math.PI * s)
+        : b > 0.1
+          ? WHISTLE_LEVEL * 0.55 * b
+          : b > 0.05
+            ? WHISTLE_LEVEL * 0.3 * b
+            : 0
+      : 0;
+    if (noiseLevel < 0.001 && whistleLevel < 0.0005 && heterodyneLevel < 0.0005) {
       const dial = this.dialNoise;
       if (dial) {
         setGain(ctx, dial.gain.gain, 0, DIAL_TAU * tauScale);
         setGain(ctx, dial.whistleGain.gain, 0, DIAL_TAU);
+        setGain(ctx, dial.heterodyneGain.gain, 0, DIAL_TAU);
         // Release the nodes once they've been silent a while (saves battery when tuned in).
         if (this.dialRelease === undefined) this.dialRelease = setTimeout(() => this.releaseDialNoise(), 3000);
       }
@@ -492,10 +519,15 @@ export class Mixer {
     clearTimeout(this.dialRelease);
     this.dialRelease = undefined;
     const dial = this.ensureDialNoise();
+    const absDetune = Math.min(0.5, Math.abs(detune));
+    const beatPitch = 140 + absDetune * 6800;
+    const heteroPitch = nearCarrier ? beatPitch + 7 + absDetune * 110 : 480 + absDetune * 4200;
     setGain(ctx, dial.gain.gain, noiseLevel, DIAL_TAU * tauScale);
-    setGain(ctx, dial.filter.frequency, 1300 + Math.min(1, Math.abs(detune) * 3) * 2600, FILTER_TAU);
+    setGain(ctx, dial.filter.frequency, 1300 + Math.min(1, absDetune * 3) * 2600, FILTER_TAU);
     setGain(ctx, dial.whistleGain.gain, whistleLevel, DIAL_TAU);
-    setGain(ctx, dial.whistle.frequency, 180 + Math.min(0.5, Math.abs(detune)) * 7000, FILTER_TAU);
+    setGain(ctx, dial.whistle.frequency, beatPitch, FILTER_TAU);
+    setGain(ctx, dial.heterodyneGain.gain, heterodyneLevel, DIAL_TAU);
+    setGain(ctx, dial.heterodyne.frequency, heteroPitch, FILTER_TAU);
   }
 
   private ensureDialNoise(): DialNoise {
@@ -519,11 +551,18 @@ export class Mixer {
     whistle.frequency.value = 600;
     const whistleGain = ctx.createGain();
     whistleGain.gain.value = 0;
+    const heterodyne = ctx.createOscillator();
+    heterodyne.type = 'triangle';
+    heterodyne.frequency.value = 612;
+    const heterodyneGain = ctx.createGain();
+    heterodyneGain.gain.value = 0;
     source.connect(filter).connect(gain).connect(this.staticBus);
     whistle.connect(whistleGain).connect(this.staticBus);
+    heterodyne.connect(heterodyneGain).connect(this.staticBus);
     source.start(ctx.currentTime, Math.random() * length * 0.6);
     whistle.start();
-    return (this.dialNoise = { source, filter, gain, whistle, whistleGain });
+    heterodyne.start();
+    return (this.dialNoise = { source, filter, gain, whistle, whistleGain, heterodyne, heterodyneGain });
   }
 
   private releaseDialNoise(): void {
@@ -534,11 +573,13 @@ export class Mixer {
     try {
       dial.source.stop();
       dial.whistle.stop();
+      dial.heterodyne.stop();
     } catch {
       // Already stopped.
     }
     dial.gain.disconnect();
     dial.whistleGain.disconnect();
+    dial.heterodyneGain.disconnect();
   }
 
   /** Silences the dial noise at once (pause, power off). */
@@ -547,6 +588,7 @@ export class Mixer {
     if (!dial) return;
     setGain(this.ctx, dial.gain.gain, 0, 0.03);
     setGain(this.ctx, dial.whistleGain.gain, 0, 0.03);
+    setGain(this.ctx, dial.heterodyneGain.gain, 0, 0.03);
     clearTimeout(this.dialRelease);
     this.dialRelease = setTimeout(() => this.releaseDialNoise(), 400);
   }

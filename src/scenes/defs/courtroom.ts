@@ -6,6 +6,7 @@
 // Rare events: the gavel comes down; the defendant rises a little to look round, and settles;
 // the weather takes the witness stand (and rains on it); the clerk unrolls a very long list.
 
+import { callLamp, onAirLamp } from '../kit/broadcast';
 import { hex, mix, shade } from '../kit/color';
 import { clamp, envelope, smoothstep } from '../kit/fx';
 import type { Gfx } from '../kit/gfx';
@@ -331,21 +332,25 @@ const def: SceneDef = {
         }
 
         // the bench lamp: a green glass shade, a warm pool on the papers
+        const sp = f.speech ?? 0;
+        const isVoice = f.segmentKind === 'voice' || sp > 0.05;
         const lampX = BENCH.x + 28;
         const lampY = BENCH.y - 9;
-        const lk = live * (0.95 + 0.05 * noise1(t * 1.5, 3));
+        const lk = live * (0.95 + 0.05 * noise1(t * 1.5, 3) + sp * 0.25);
         g.poly([lampX - 9, lampY + 2, lampX + 9, lampY + 2, lampX + 6, lampY - 3, lampX - 6, lampY - 3], lampG);
         g.hline(lampX - 6, lampX + 5, lampY - 3, mix(lampG, hex('#7ab088'), 0.6));
         g.hline(lampX - 8, lampX + 8, lampY + 2, mix(warm, hex('#ffffff'), 0.3));
-        g.glow(lampX, lampY + 3, 22, warm, 0.22 * lk, 5);
+        g.glow(lampX, lampY + 3, 22 + sp * 6, warm, 0.22 * lk, 5);
+        onAirLamp(g, CLERK.x + 18, CLERK.desk - 5, f);
+        callLamp(g, STAND.x + 10, STAND.y - 3, f);
 
         // the judge, writing; she looks up now and then; the gavel when it's called for
         {
           const x = JUDGE.x;
           const y = JUDGE.y;
           const gavel = R(0) ? ev : -1;
-          const looksUp = gavel >= 0 || Math.sin(t * 0.23) > 0.75;
-          const bob = looksUp || f.reduced ? 0 : 1;
+          const looksUp = gavel >= 0 || sp > 0.15 || Math.sin(t * 0.23) > 0.75;
+          const bob = (looksUp && sp <= 0.15) || f.reduced ? 0 : sp > 0.15 ? (Math.sin(t * 6.5) > 0.3 ? 1 : 0) : 1;
           // robes and shoulders
           g.poly([x - 10, BENCH.y, x - 9, y + 16, x - 4, y + 12, x + 4, y + 12, x + 9, y + 16, x + 10, BENCH.y], robe);
           g.poly([x - 3, y + 12, x + 3, y + 12, x, y + 18], hex('#c8c4bc')); // the collar
@@ -392,8 +397,12 @@ const def: SceneDef = {
         {
           const x = CLERK.x - 4;
           const y = CLERK.desk - 22;
-          const reads = f.energy > 0.15 && !f.reduced;
-          const nod = reads && Math.sin(t * 6) > 0.4 ? 1 : 0;
+          const reads = (isVoice || f.energy > 0.15) && !f.reduced;
+          const nod = reads && Math.sin(t * (isVoice ? 8 : 6)) > 0.3 ? 1 : 0;
+          if (isVoice) {
+            g.px(CLERK.x + 12, CLERK.desk - 13, hex('#ff5040'));
+            g.glow(CLERK.x + 12, CLERK.desk - 11, 6 + sp * 8, warm, 0.18 + sp * 0.32, 3);
+          }
           const suit = hex('#16161c');
           g.poly([x - 9, CLERK.desk, x - 8, y + 12, x + 8, y + 12, x + 9, CLERK.desk], suit);
           g.vline(x - 8, y + 12, CLERK.desk - 1, hex('#24242c'));

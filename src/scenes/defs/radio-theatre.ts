@@ -8,6 +8,7 @@
 // detective's script and see-saws to the floor; the organist leans into a swell.
 
 import { type Color, hex, mix } from '../kit/color';
+import { callLamp, onAirLamp, sectionDrive } from '../kit/broadcast';
 import { rimLight } from '../kit/atmos';
 import { clamp, envelope, smoothstep } from '../kit/fx';
 import type { Gfx } from '../kit/gfx';
@@ -389,17 +390,22 @@ const def: SceneDef = {
         const live = 0.55 + 0.45 * f.awake;
         const still = f.reduced ? 0 : 1;
 
-        // ON AIR: steady, with the faint hum of an old tube
+        // ON AIR: steady, with the faint hum of an old tube, brightening with speech
+        const sp = f.speech ?? 0;
+        const isVoice = f.segmentKind === 'voice' || sp > 0.05;
+        const drive = sectionDrive(f);
         const hum = f.reduced ? 1 : 0.94 + 0.06 * noise1(t * 3, 4);
-        const on = live * hum;
-        g.rect(SIGN.x - 16, SIGN.y - 5, 33, 11, mix(redDim, hex('#7a1610'), on));
-        g.textCenter('ON AIR', SIGN.x + 1, SIGN.y - 2, mix(hex('#5a1a14'), hex('#ffd8c8'), on * 0.9));
-        g.glow(SIGN.x, SIGN.y, 34, red, 0.22 * on, 5);
+        const on = live * hum * (isVoice ? clamp(0.85 + sp * 0.35) : 0.55);
+        g.rect(SIGN.x - 16, SIGN.y - 5, 33, 11, mix(redDim, hex('#b02218'), on));
+        g.textCenter('ON AIR', SIGN.x + 1, SIGN.y - 2, mix(hex('#5a1a14'), hex('#ffe4d4'), clamp(on * 1.1)));
+        g.glow(SIGN.x, SIGN.y, 32 + sp * 14, red, (0.18 + sp * 0.32) * on, 5);
+        onAirLamp(g, BOOTH.x + 34, BOOTH.y + BOOTH.h - 6, f);
+        callLamp(g, BOOTH.x + 44, BOOTH.y + BOOTH.h - 6, f);
 
         // the control room: meters move with the programme; the engineer nods along
         const B = BOOTH;
         for (let i = 0; i < 2; i++) {
-          const v = clamp(f.energy * (0.8 + i * 0.3) + noise1(t * 4, i) * 0.2) * live;
+          const v = clamp(Math.max(f.energy * drive, sp * 1.2) * (0.8 + i * 0.3) + noise1(t * 4, i) * 0.2) * live;
           const cx = B.x + 13 + i * 13;
           const cy = B.y + B.h - 8;
           g.line(cx, cy, cx - 3 + v * 6, cy - 5, hex('#1a1408'));
@@ -473,7 +479,8 @@ const def: SceneDef = {
 
         // the actors: they trade lines; the speaker nods into the mic
         const turn = Math.floor(t / 4.5) % 2;
-        const nod = (who: number) => (turn === who && f.energy > 0.15 && !f.reduced ? (Math.sin(t * 7 + who) > 0.3 ? 1 : 0) : 0);
+        const activeTalk = sp > 0.06 || f.energy > 0.15;
+        const nod = (who: number) => (turn === who && activeTalk && !f.reduced ? (Math.sin(t * (isVoice ? 9 : 7) + who) > 0.2 ? 1 : 0) : 0);
         const look = R(0) ? smoothstep(0.5, 1.2, ev) * (1 - smoothstep(4, 5, ev)) : 0;
         const drop = R(2) ? smoothstep(1, 1.2, ev) : 0;
         actor(g, INES.x, INES.foot, 1, 0, nod(0), look, drop);
@@ -493,7 +500,8 @@ const def: SceneDef = {
               }
             }
         }
-        ribbonMic(g, MIC.x, MIC.y, 0.4 + 0.3 * Math.sin(t * 0.7));
+        ribbonMic(g, MIC.x, MIC.y, clamp(0.4 + 0.3 * Math.sin(t * 0.7) + sp * 0.45));
+        if (isVoice) g.glow(MIC.x, MIC.y, 8 + sp * 8, cool, 0.15 + sp * 0.3, 3);
 
         // a page see-saws down from the detective's script
         if (R(2) && ev > 1) {
@@ -507,8 +515,8 @@ const def: SceneDef = {
 
         // the organist, swaying, hands on the manuals
         {
-          const swell = R(3) ? envelope(ev, 10, 2, 3) : 0;
-          const sway = f.reduced ? 0 : Math.sin(t * 1.3) * (0.6 + f.energy) + swell * 2;
+          const swell = (R(3) ? envelope(ev, 10, 2, 3) : 0) + Math.max(0, drive - 1) * 0.8;
+          const sway = f.reduced ? 0 : Math.sin(t * 1.3) * (0.6 + f.energy * drive) + swell * 2;
           const x = ORGANIST.x + Math.round(sway * 0.6);
           const y = ORGANIST.seat;
           const body = hex('#1c1712');

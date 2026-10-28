@@ -2,6 +2,7 @@
 // with one paw on a fader; papers lie knocked on the floor; a mug waits at the very edge.
 // Late sun comes through the blinds, and a patch of it creeps slowly across the carpet.
 
+import { callLamp, onAirLamp, sectionDrive } from '../kit/broadcast';
 import { hex, mix, shade } from '../kit/color';
 import { blinking, clamp, envelope, smoothstep } from '../kit/fx';
 import { type Gfx } from '../kit/gfx';
@@ -231,16 +232,22 @@ const def: SceneDef = {
           for (let xx = Math.floor(xl); xx < xl + 46; xx++) if (slat(xx, yy * 1.4)) g.pxAdd(xx, yy, sun, pk);
         }
 
-        // ON AIR, while on air.
-        const onAir = awake * (f.rare === 1 && ev < 9 ? (Math.floor(ev * 6) % 2 ? 1 : 0.3) : 1);
+        // ON AIR, while on air (brightens with speech, plus call indicator on the meter bridge).
+        const drive = sectionDrive(f);
+        const sp = f.speech ?? 0;
+        const isVoice = f.segmentKind === 'voice' || sp > 0.05;
+        onAirLamp(g, 147, 31, f, { label: true });
+        callLamp(g, DESK.x0 + 184, DESK.top - 11, f);
+        const onAir = awake * (f.rare === 1 && ev < 9 ? (Math.floor(ev * 6) % 2 ? 1 : 0.3) : isVoice ? clamp(0.75 + sp * 0.35) : 0.45);
         g.text('ON AIR', 149, 33, mix(hex('#4a1a1a'), red, onAir));
-        g.glow(161, 35, 20, red, 0.25 * onAir);
+        g.glow(161, 35, 20 + sp * 10, red, (0.2 + sp * 0.25) * onAir);
+        if (isVoice) g.glow(264, 68, 7 + sp * 6, sun, 0.18 + sp * 0.3, 3);
 
-        // Fader position: the paw rests on it; the cat pushes it up in one rare moment.
-        let fader = 0.2 + e * 0.15;
+        // Fader position: the paw rests on it; the cat pushes it up on drops or in rare event 1.
+        let fader = clamp((0.2 + e * 0.2) * drive + sp * 0.15);
         if (f.rare === 1 && ev < 9) fader = envelope(ev, 9, 1.5, 2);
         // Meter bridge: two LED bars and a row of small meters.
-        const level = clamp(e * 1.2 * awake + (f.rare === 1 && ev < 9 ? fader * 0.8 : 0) + (f.rare === 3 && ev > 3 && ev < 5 ? 0.7 : 0));
+        const level = clamp(Math.max(e * 1.2 * drive, sp * 1.3) * awake + (f.rare === 1 && ev < 9 ? fader * 0.8 : 0) + (f.rare === 3 && ev > 3 && ev < 5 ? 0.7 : 0));
         for (let ch = 0; ch < 2; ch++) {
           const lv = clamp(level - ch * 0.06 + Math.sin(t * 7 + ch) * 0.03);
           for (let i = 0; i < 24; i++) {
@@ -256,7 +263,7 @@ const def: SceneDef = {
 
         // A spot of reflected light dances on the wall (rare); the cat tracks it.
         let look = 0;
-        let lift = clamp(1 - awake) * 0;
+        let lift = clamp(sp * 0.65);
         if (f.rare === 2 && ev < 9) {
           const p = ev / 9;
           const sx = 120 + Math.sin(p * 9) * 40 + p * 60;

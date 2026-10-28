@@ -15,12 +15,18 @@ export function StatusBar({ live }: { live: boolean }) {
   const status = useStatus();
   const tuned = useTuned();
   const signal = useBroadcast((s) => s.signal);
+  const frequency = useBroadcast((s) => s.frequency);
+  const relays = useBroadcast((s) => s.relays) ?? [];
   const show = useBroadcast((s) => s.show?.name ?? null);
   const hushSpeaking = useBroadcast((s) => s.caption?.speaker === SHIP.computer.name);
   const shiftStart = useUi((s) => s.shiftStart);
   const heading = useBroadcast((s) => s.heading);
   const link = linkStatus(status, tuned.kind, signal);
   const [hull, relay] = SHIP.designation.split(' · ');
+  const tunedId = tuned.kind === 'station' || tuned.kind === 'pirate' ? tuned.station.id : null;
+  const lockedRelays = relays.filter(
+    (peer) => (tunedId !== null && peer.stationId === tunedId) || Math.abs(peer.frequency - frequency) <= 0.12,
+  ).length;
 
   return (
     <div className="statusbar">
@@ -45,6 +51,21 @@ export function StatusBar({ live }: { live: boolean }) {
         <span className="sr-only">Heading</span>
         <span className="sb-value tabular">{formatHeading(heading)}</span>
       </span>
+      {relays.length > 0 && (
+        <span
+          className="sb-field sb-relays"
+          title={
+            lockedRelays > 0
+              ? `${lockedRelays} of ${relays.length} sister relays locked on this frequency`
+              : `${relays.length} sister relays active on band`
+          }
+        >
+          <span className="sb-label">Relays</span>
+          <span className="sb-value tabular">
+            {lockedRelays > 0 ? `${lockedRelays}/${relays.length}` : relays.length}
+          </span>
+        </span>
+      )}
       <span className="sb-field sb-show">
         <span className="sb-label">On air</span>
         <span className="sb-value truncate">{show ?? (tuned.kind === 'static' ? '—' : 'Continuous programming')}</span>

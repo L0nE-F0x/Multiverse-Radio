@@ -1,4 +1,4 @@
-import type { SceneId } from '../broadcast/types';
+import type { EventId, MusicSectionKind, SceneId, VoiceCategory } from '../broadcast/types';
 import type { Color } from './kit/color';
 import type { Gfx } from './kit/gfx';
 import type { Grade } from './kit/post';
@@ -31,6 +31,24 @@ export interface Frame {
   hour: number;
   /** Frames drawn so far. */
   n: number;
+  /** v5: active segment kind on the broadcast ('music' | 'voice' | 'static'). */
+  segmentKind?: 'music' | 'voice' | 'static';
+  /** v5: voice clip category when a voice is on air (e.g. 'dj', 'call', 'news', 'ship'). */
+  voiceCategory?: VoiceCategory | null;
+  /** v5: smoothed speech envelope 0–1 while a host, caller, or HUSH is speaking. */
+  speech?: number;
+  /** v5: normalized musical section ('intro' | 'verse' | 'chorus' | 'breakdown' | 'drop' | 'outro'). */
+  section?: MusicSectionKind;
+  /** v5: 0–1 progress through the current musical section. */
+  sectionProgress?: number;
+  /** v5: active multiverse-wide event id, if any. */
+  event?: EventId | null;
+  /** v5: true while HUSH is speaking or jamming the station. */
+  hush?: boolean;
+  /** v5: reception strength 0–1 (1 = clear). */
+  signal?: number;
+  /** v5: adjacent station bleed 0–1. */
+  bleed?: number;
 }
 
 export interface Scene {

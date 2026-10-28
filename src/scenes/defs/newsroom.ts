@@ -2,6 +2,7 @@
 // crawls, the anchor's side part is perfect, and every clock on the wall is wrong.
 
 import { gloom } from '../kit/atmos';
+import { callLamp, onAirLamp } from '../kit/broadcast';
 import { type Color, hex, mix, mute, ramp, shade } from '../kit/color';
 import { envelope, smoothstep, TAU } from '../kit/fx';
 import { textWidth } from '../kit/font';
@@ -209,7 +210,9 @@ const def: SceneDef = {
         g.ring(gx, gy, GLOBE.r, GLOBE.r, hex('#c8e0ff'));
 
         // ── anchors ──
-        const nod = Math.round(f.energy * 2 * Math.abs(Math.sin(t * 5)));
+        const sp = f.speech ?? 0;
+        const isVoice = f.segmentKind === 'voice' || sp > 0.05;
+        const nod = Math.round(Math.max(f.energy, sp * 1.5) * 2 * Math.abs(Math.sin(t * 5)));
         const flip = f.rare === 0 && ev < 7 && envelope(ev, 7, 0.1, 0.1) > 0.5 && ev > 2;
         const dbl = f.rare === 1 && ev < 7;
         let look = 0;
@@ -219,18 +222,21 @@ const def: SceneDef = {
           anchor(g, 300 - k * 90, ANCHOR.y, 0, true, -look);
         }
         anchor(g, ANCHOR.x, ANCHOR.y, nod, !flip, look);
-        // shuffling papers every so often
+        // shuffling papers every so often, or gesturing with speech
         const shuffle = (t % 11) / 11;
-        const lift = shuffle > 0.8 ? Math.round(Math.abs(Math.sin((shuffle - 0.8) * 5 * TAU * 1.5)) * 4) : 0;
+        const speechLift = !f.reduced && sp > 0.1 ? Math.round(sp * 3 * Math.abs(Math.sin(t * 6.5))) : 0;
+        const lift = Math.max(speechLift, shuffle > 0.8 ? Math.round(Math.abs(Math.sin((shuffle - 0.8) * 5 * TAU * 1.5)) * 4) : 0);
         g.rect(146, DESK_Y - 3 - lift, 28, 3, hex('#c8c0b4'));
         g.rect(147, DESK_Y - 4 - lift, 26, 1, hex('#a8a098'));
         g.rect(142, DESK_Y - 5 - lift, 6, 4, sil);
         g.rect(172, DESK_Y - 5 - lift, 6, 4, sil);
 
-        // On-air light pulses while the voice is going.
-        g.disc(270, 70, 3, f.playing ? hex('#e04a50') : hex('#4a1a20'));
-        if (f.playing) g.glow(270, 70, 10, hex('#e04a50'), 0.25 + f.energy * 0.3);
-        g.text('LIVE', 276, 68, f.playing ? hex('#d8808a') : hex('#4a3a40'));
+        // On-air light pulses while the voice is going; desk call lamp blinks on reporter/caller links.
+        onAirLamp(g, 266, 56, f, { label: true });
+        callLamp(g, 116, DESK_Y - 4, f);
+        g.disc(270, 70, 3, isVoice ? hex('#ff4a50') : f.playing ? hex('#a0343a') : hex('#4a1a20'));
+        if (f.playing || isVoice) g.glow(270, 70, 10 + sp * 8, hex('#e04a50'), (isVoice ? 0.35 + sp * 0.4 : 0.18 + f.energy * 0.2));
+        g.text('LIVE', 276, 68, isVoice ? hex('#ffd8dc') : f.playing ? hex('#d8808a') : hex('#4a3a40'));
 
         // ── the ticker ──
         const bar = mix(pink, hex('#2a1420'), 0.2);
